@@ -13,7 +13,7 @@ export const MedicationStatusValueSet = {
     /**
      * The medication is available for use.
      */
-    medication_status_Active: Coding.FromStrict({
+    medication_status_Active: new Coding({
         code: "active",
         display: "Active",
         system: "http://hl7.org/fhir/CodeSystem/medication-status"
@@ -21,7 +21,7 @@ export const MedicationStatusValueSet = {
     /**
      * The medication was entered in error.
      */
-    medication_status_EnteredInError: Coding.FromStrict({
+    medication_status_EnteredInError: new Coding({
         code: "entered-in-error",
         display: "Entered in Error",
         system: "http://hl7.org/fhir/CodeSystem/medication-status"
@@ -29,7 +29,7 @@ export const MedicationStatusValueSet = {
     /**
      * The medication is not available for use.
      */
-    medication_status_Inactive: Coding.FromStrict({
+    medication_status_Inactive: new Coding({
         code: "inactive",
         display: "Inactive",
         system: "http://hl7.org/fhir/CodeSystem/medication-status"

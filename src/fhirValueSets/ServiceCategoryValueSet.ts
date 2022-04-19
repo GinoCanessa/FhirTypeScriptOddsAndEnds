@@ -13,7 +13,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Adoption
    */
-  service_category_Adoption: Coding.FromStrict({
+  service_category_Adoption: new Coding({
     code: "1",
     display: "Adoption",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -21,7 +21,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Dental
    */
-  service_category_Dental: Coding.FromStrict({
+  service_category_Dental: new Coding({
     code: "10",
     display: "Dental",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -29,7 +29,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Disability Support
    */
-  service_category_DisabilitySupport: Coding.FromStrict({
+  service_category_DisabilitySupport: new Coding({
     code: "11",
     display: "Disability Support",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -37,7 +37,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Drug/Alcohol
    */
-  service_category_DrugAlcohol: Coding.FromStrict({
+  service_category_DrugAlcohol: new Coding({
     code: "12",
     display: "Drug/Alcohol",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -45,7 +45,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Education &amp; Learning
    */
-  service_category_EducationAndLearning: Coding.FromStrict({
+  service_category_EducationAndLearning: new Coding({
     code: "13",
     display: "Education & Learning",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -53,7 +53,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Emergency Department
    */
-  service_category_EmergencyDepartment: Coding.FromStrict({
+  service_category_EmergencyDepartment: new Coding({
     code: "14",
     display: "Emergency Department",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -61,7 +61,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Employment
    */
-  service_category_Employment: Coding.FromStrict({
+  service_category_Employment: new Coding({
     code: "15",
     display: "Employment",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -69,7 +69,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Financial &amp; Material aid
    */
-  service_category_FinancialAndMaterialAid: Coding.FromStrict({
+  service_category_FinancialAndMaterialAid: new Coding({
     code: "16",
     display: "Financial & Material Aid",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -77,7 +77,7 @@ export const ServiceCategoryValueSet = {
   /**
    * General Practice/GP (doctor)
    */
-  service_category_GeneralPractice: Coding.FromStrict({
+  service_category_GeneralPractice: new Coding({
     code: "17",
     display: "General Practice",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -85,7 +85,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Housing/Homelessness
    */
-  service_category_HousingHomelessness: Coding.FromStrict({
+  service_category_HousingHomelessness: new Coding({
     code: "18",
     display: "Housing/Homelessness",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -93,7 +93,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Interpreting
    */
-  service_category_Interpreting: Coding.FromStrict({
+  service_category_Interpreting: new Coding({
     code: "19",
     display: "Interpreting",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -101,7 +101,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Aged Care
    */
-  service_category_AgedCare: Coding.FromStrict({
+  service_category_AgedCare: new Coding({
     code: "2",
     display: "Aged Care",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -109,7 +109,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Justice
    */
-  service_category_Justice: Coding.FromStrict({
+  service_category_Justice: new Coding({
     code: "20",
     display: "Justice",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -117,7 +117,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Legal
    */
-  service_category_Legal: Coding.FromStrict({
+  service_category_Legal: new Coding({
     code: "21",
     display: "Legal",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -125,7 +125,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Mental Health
    */
-  service_category_MentalHealth: Coding.FromStrict({
+  service_category_MentalHealth: new Coding({
     code: "22",
     display: "Mental Health",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -133,7 +133,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Physical Activity &amp; Recreation
    */
-  service_category_PhysicalActivityAndRecreation: Coding.FromStrict({
+  service_category_PhysicalActivityAndRecreation: new Coding({
     code: "23",
     display: "Physical Activity & Recreation",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -141,7 +141,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Regulation
    */
-  service_category_Regulation: Coding.FromStrict({
+  service_category_Regulation: new Coding({
     code: "24",
     display: "Regulation",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -149,7 +149,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Respite/Carer Support
    */
-  service_category_RespiteCarerSupport: Coding.FromStrict({
+  service_category_RespiteCarerSupport: new Coding({
     code: "25",
     display: "Respite/Carer Support",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -157,7 +157,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Specialist Clinical Pathology - requires referral
    */
-  service_category_SpecialistClinicalPathology: Coding.FromStrict({
+  service_category_SpecialistClinicalPathology: new Coding({
     code: "26",
     display: "Specialist Clinical Pathology",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -165,7 +165,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Specialist Medical - requires referral
    */
-  service_category_SpecialistMedical: Coding.FromStrict({
+  service_category_SpecialistMedical: new Coding({
     code: "27",
     display: "Specialist Medical",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -173,7 +173,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Specialist Obstetrics &amp; Gynecology - requires referral
    */
-  service_category_SpecialistObstetricsAndGynecology: Coding.FromStrict({
+  service_category_SpecialistObstetricsAndGynecology: new Coding({
     code: "28",
     display: "Specialist Obstetrics & Gynecology",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -181,7 +181,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Specialist Paediatric - requires referral
    */
-  service_category_SpecialistPaediatric: Coding.FromStrict({
+  service_category_SpecialistPaediatric: new Coding({
     code: "29",
     display: "Specialist Paediatric",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -189,7 +189,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Alternative &amp; Complementary Therapies
    */
-  service_category_AlternativeComplementaryTherapies: Coding.FromStrict({
+  service_category_AlternativeComplementaryTherapies: new Coding({
     code: "3",
     display: "Alternative/Complementary Therapies",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -197,7 +197,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Specialist Radiology/Imaging - requires referral
    */
-  service_category_SpecialistRadiologyImaging: Coding.FromStrict({
+  service_category_SpecialistRadiologyImaging: new Coding({
     code: "30",
     display: "Specialist Radiology/Imaging",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -205,7 +205,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Specialist Surgical - requires referral
    */
-  service_category_SpecialistSurgical: Coding.FromStrict({
+  service_category_SpecialistSurgical: new Coding({
     code: "31",
     display: "Specialist Surgical",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -213,7 +213,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Support group/s
    */
-  service_category_SupportGroupS: Coding.FromStrict({
+  service_category_SupportGroupS: new Coding({
     code: "32",
     display: "Support Group/s",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -221,7 +221,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Transport
    */
-  service_category_Transport: Coding.FromStrict({
+  service_category_Transport: new Coding({
     code: "33",
     display: "Transport",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -229,7 +229,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Allied Health
    */
-  service_category_AlliedHealth: Coding.FromStrict({
+  service_category_AlliedHealth: new Coding({
     code: "34",
     display: "Allied Health",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -237,7 +237,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Hospital
    */
-  service_category_Hospital: Coding.FromStrict({
+  service_category_Hospital: new Coding({
     code: "35",
     display: "Hospital",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -245,7 +245,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Crisis Line (GPAH use only)
    */
-  service_category_CrisisLineGPAHUseOnly: Coding.FromStrict({
+  service_category_CrisisLineGPAHUseOnly: new Coding({
     code: "36",
     display: "Crisis Line (GPAH use only)",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -253,7 +253,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Test Message (HSD admin use only)
    */
-  service_category_TestMessageHSDAdmin: Coding.FromStrict({
+  service_category_TestMessageHSDAdmin: new Coding({
     code: "37",
     display: "Test Message (HSD admin)",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -261,7 +261,7 @@ export const ServiceCategoryValueSet = {
   /**
    * NDIA
    */
-  service_category_NDIA: Coding.FromStrict({
+  service_category_NDIA: new Coding({
     code: "38",
     display: "NDIA",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -269,7 +269,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Child Care and/or Kindergarten
    */
-  service_category_ChildCareKindergarten: Coding.FromStrict({
+  service_category_ChildCareKindergarten: new Coding({
     code: "4",
     display: "Child Care /Kindergarten",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -277,7 +277,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Child Development
    */
-  service_category_ChildDevelopment: Coding.FromStrict({
+  service_category_ChildDevelopment: new Coding({
     code: "5",
     display: "Child Development",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -285,7 +285,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Child Protection &amp; Family Services
    */
-  service_category_ChildProtectionAndFamilyServices: Coding.FromStrict({
+  service_category_ChildProtectionAndFamilyServices: new Coding({
     code: "6",
     display: "Child Protection & Family Services",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -293,7 +293,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Community Health Care
    */
-  service_category_CommunityHealthCare: Coding.FromStrict({
+  service_category_CommunityHealthCare: new Coding({
     code: "7",
     display: "Community Health Care",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -301,7 +301,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Counselling
    */
-  service_category_Counselling: Coding.FromStrict({
+  service_category_Counselling: new Coding({
     code: "8",
     display: "Counselling",
     system: "http://terminology.hl7.org/CodeSystem/service-category"
@@ -309,7 +309,7 @@ export const ServiceCategoryValueSet = {
   /**
    * Death Services
    */
-  service_category_DeathServices: Coding.FromStrict({
+  service_category_DeathServices: new Coding({
     code: "9",
     display: "Death Services",
     system: "http://terminology.hl7.org/CodeSystem/service-category"

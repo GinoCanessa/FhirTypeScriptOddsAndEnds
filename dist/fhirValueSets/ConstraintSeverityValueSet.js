@@ -13,7 +13,7 @@ export const ConstraintSeverityValueSet = {
     /**
      * If the constraint is violated, the resource is not conformant.
      */
-    constraint_severity_Error: Coding.FromStrict({
+    constraint_severity_Error: new Coding({
         code: "error",
         display: "Error",
         system: "http://hl7.org/fhir/constraint-severity"
@@ -21,7 +21,7 @@ export const ConstraintSeverityValueSet = {
     /**
      * If the constraint is violated, the resource is conformant, but it is not necessarily following best practice.
      */
-    constraint_severity_Warning: Coding.FromStrict({
+    constraint_severity_Warning: new Coding({
         code: "warning",
         display: "Warning",
         system: "http://hl7.org/fhir/constraint-severity"

@@ -13,7 +13,7 @@ export const ActionCardinalityBehaviorValueSet = {
   /**
    * The action may be selected multiple times.
    */
-  action_cardinality_behavior_Multiple: Coding.FromStrict({
+  action_cardinality_behavior_Multiple: new Coding({
     code: "multiple",
     display: "Multiple",
     system: "http://hl7.org/fhir/action-cardinality-behavior"
@@ -21,7 +21,7 @@ export const ActionCardinalityBehaviorValueSet = {
   /**
    * The action may only be selected one time.
    */
-  action_cardinality_behavior_Single: Coding.FromStrict({
+  action_cardinality_behavior_Single: new Coding({
     code: "single",
     display: "Single",
     system: "http://hl7.org/fhir/action-cardinality-behavior"

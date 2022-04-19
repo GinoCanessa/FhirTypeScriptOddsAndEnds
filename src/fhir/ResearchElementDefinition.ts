@@ -404,18 +404,18 @@ export class ResearchElementDefinitionCharacteristic extends fhir.BackboneElemen
   /**
    * Check if the current ResearchElementDefinitionCharacteristic contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ResearchElementDefinitionCharacteristic from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IResearchElementDefinitionCharacteristic):ResearchElementDefinitionCharacteristic {
+  static override fromStrict(source:fhir.IResearchElementDefinitionCharacteristic):ResearchElementDefinitionCharacteristic {
     var dest:ResearchElementDefinitionCharacteristic = new ResearchElementDefinitionCharacteristic(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ResearchElementDefinitionCharacteristic is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -656,21 +656,21 @@ export class ResearchElementDefinition extends fhir.DomainResource implements fh
   /**
    * Check if the current ResearchElementDefinition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["characteristic"]) || (this["characteristic"].length === 0)) { missingElements.push("characteristic"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ResearchElementDefinition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IResearchElementDefinition):ResearchElementDefinition {
+  static override fromStrict(source:fhir.IResearchElementDefinition):ResearchElementDefinition {
     var dest:ResearchElementDefinition = new ResearchElementDefinition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ResearchElementDefinition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

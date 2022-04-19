@@ -13,7 +13,7 @@ export const AuditEntityTypeValueSet = {
     /**
      * Person
      */
-    audit_entity_type_Person: Coding.FromStrict({
+    audit_entity_type_Person: new Coding({
         code: "1",
         display: "Person",
         system: "http://terminology.hl7.org/CodeSystem/audit-entity-type"
@@ -21,7 +21,7 @@ export const AuditEntityTypeValueSet = {
     /**
      * System Object
      */
-    audit_entity_type_SystemObject: Coding.FromStrict({
+    audit_entity_type_SystemObject: new Coding({
         code: "2",
         display: "System Object",
         system: "http://terminology.hl7.org/CodeSystem/audit-entity-type"
@@ -29,7 +29,7 @@ export const AuditEntityTypeValueSet = {
     /**
      * Organization
      */
-    audit_entity_type_Organization: Coding.FromStrict({
+    audit_entity_type_Organization: new Coding({
         code: "3",
         display: "Organization",
         system: "http://terminology.hl7.org/CodeSystem/audit-entity-type"
@@ -37,7 +37,7 @@ export const AuditEntityTypeValueSet = {
     /**
      * Other
      */
-    audit_entity_type_Other: Coding.FromStrict({
+    audit_entity_type_Other: new Coding({
         code: "4",
         display: "Other",
         system: "http://terminology.hl7.org/CodeSystem/audit-entity-type"

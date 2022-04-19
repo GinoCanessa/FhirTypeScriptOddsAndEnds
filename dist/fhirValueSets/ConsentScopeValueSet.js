@@ -13,7 +13,7 @@ export const ConsentScopeValueSet = {
     /**
      * Actions to be taken if they are no longer able to make decisions for themselves
      */
-    consent_scope_AdvancedCareDirective: Coding.FromStrict({
+    consent_scope_AdvancedCareDirective: new Coding({
         code: "adr",
         display: "Advanced Care Directive",
         system: "http://terminology.hl7.org/CodeSystem/consentscope"
@@ -21,7 +21,7 @@ export const ConsentScopeValueSet = {
     /**
      * Agreement to collect, access, use or disclose (share) information
      */
-    consent_scope_PrivacyConsent: Coding.FromStrict({
+    consent_scope_PrivacyConsent: new Coding({
         code: "patient-privacy",
         display: "Privacy Consent",
         system: "http://terminology.hl7.org/CodeSystem/consentscope"
@@ -29,7 +29,7 @@ export const ConsentScopeValueSet = {
     /**
      * Consent to participate in research protocol and information sharing required
      */
-    consent_scope_Research: Coding.FromStrict({
+    consent_scope_Research: new Coding({
         code: "research",
         display: "Research",
         system: "http://terminology.hl7.org/CodeSystem/consentscope"
@@ -37,7 +37,7 @@ export const ConsentScopeValueSet = {
     /**
      * Consent to undergo a specific treatment
      */
-    consent_scope_Treatment: Coding.FromStrict({
+    consent_scope_Treatment: new Coding({
         code: "treatment",
         display: "Treatment",
         system: "http://terminology.hl7.org/CodeSystem/consentscope"

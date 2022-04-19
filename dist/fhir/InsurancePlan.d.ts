@@ -262,11 +262,11 @@ export declare class InsurancePlanContact extends fhir.BackboneElement implement
     /**
      * Check if the current InsurancePlanContact contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a InsurancePlanContact from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IInsurancePlanContact): InsurancePlanContact;
+    static fromStrict(source: fhir.IInsurancePlanContact): InsurancePlanContact;
 }
 /**
  * The specific limits on the benefit.
@@ -287,11 +287,11 @@ export declare class InsurancePlanCoverageBenefitLimit extends fhir.BackboneElem
     /**
      * Check if the current InsurancePlanCoverageBenefitLimit contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a InsurancePlanCoverageBenefitLimit from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IInsurancePlanCoverageBenefitLimit): InsurancePlanCoverageBenefitLimit;
+    static fromStrict(source: fhir.IInsurancePlanCoverageBenefitLimit): InsurancePlanCoverageBenefitLimit;
 }
 /**
  * Specific benefits under this type of coverage.
@@ -317,11 +317,11 @@ export declare class InsurancePlanCoverageBenefit extends fhir.BackboneElement i
     /**
      * Check if the current InsurancePlanCoverageBenefit contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a InsurancePlanCoverageBenefit from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IInsurancePlanCoverageBenefit): InsurancePlanCoverageBenefit;
+    static fromStrict(source: fhir.IInsurancePlanCoverageBenefit): InsurancePlanCoverageBenefit;
 }
 /**
  * Details about the coverage offered by the insurance product.
@@ -346,11 +346,11 @@ export declare class InsurancePlanCoverage extends fhir.BackboneElement implemen
     /**
      * Check if the current InsurancePlanCoverage contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a InsurancePlanCoverage from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IInsurancePlanCoverage): InsurancePlanCoverage;
+    static fromStrict(source: fhir.IInsurancePlanCoverage): InsurancePlanCoverage;
 }
 /**
  * Overall costs associated with the plan.
@@ -381,11 +381,11 @@ export declare class InsurancePlanPlanGeneralCost extends fhir.BackboneElement i
     /**
      * Check if the current InsurancePlanPlanGeneralCost contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a InsurancePlanPlanGeneralCost from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IInsurancePlanPlanGeneralCost): InsurancePlanPlanGeneralCost;
+    static fromStrict(source: fhir.IInsurancePlanPlanGeneralCost): InsurancePlanPlanGeneralCost;
 }
 /**
  * List of the costs associated with a specific benefit.
@@ -414,11 +414,11 @@ export declare class InsurancePlanPlanSpecificCostBenefitCost extends fhir.Backb
     /**
      * Check if the current InsurancePlanPlanSpecificCostBenefitCost contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a InsurancePlanPlanSpecificCostBenefitCost from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IInsurancePlanPlanSpecificCostBenefitCost): InsurancePlanPlanSpecificCostBenefitCost;
+    static fromStrict(source: fhir.IInsurancePlanPlanSpecificCostBenefitCost): InsurancePlanPlanSpecificCostBenefitCost;
 }
 /**
  * List of the specific benefits under this category of benefit.
@@ -439,11 +439,11 @@ export declare class InsurancePlanPlanSpecificCostBenefit extends fhir.BackboneE
     /**
      * Check if the current InsurancePlanPlanSpecificCostBenefit contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a InsurancePlanPlanSpecificCostBenefit from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IInsurancePlanPlanSpecificCostBenefit): InsurancePlanPlanSpecificCostBenefit;
+    static fromStrict(source: fhir.IInsurancePlanPlanSpecificCostBenefit): InsurancePlanPlanSpecificCostBenefit;
 }
 /**
  * Costs associated with the coverage provided by the product.
@@ -464,11 +464,11 @@ export declare class InsurancePlanPlanSpecificCost extends fhir.BackboneElement 
     /**
      * Check if the current InsurancePlanPlanSpecificCost contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a InsurancePlanPlanSpecificCost from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IInsurancePlanPlanSpecificCost): InsurancePlanPlanSpecificCost;
+    static fromStrict(source: fhir.IInsurancePlanPlanSpecificCost): InsurancePlanPlanSpecificCost;
 }
 /**
  * Details about an insurance plan.
@@ -505,11 +505,11 @@ export declare class InsurancePlanPlan extends fhir.BackboneElement implements f
     /**
      * Check if the current InsurancePlanPlan contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a InsurancePlanPlan from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IInsurancePlanPlan): InsurancePlanPlan;
+    static fromStrict(source: fhir.IInsurancePlanPlan): InsurancePlanPlan;
 }
 /**
  * Details of a Health Insurance product/plan provided by an organization.
@@ -585,11 +585,11 @@ export declare class InsurancePlan extends fhir.DomainResource implements fhir.I
     /**
      * Check if the current InsurancePlan contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a InsurancePlan from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IInsurancePlan): InsurancePlan;
+    static fromStrict(source: fhir.IInsurancePlan): InsurancePlan;
 }
 /**
  * Code Values for the InsurancePlan.status field

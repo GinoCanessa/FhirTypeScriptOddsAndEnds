@@ -13,7 +13,7 @@ export const ContractActorroleValueSet = {
   /**
    * A receiver, human or animal, of health care related goods and services.
    */
-  contract_actorrole_Patient: Coding.FromStrict({
+  contract_actorrole_Patient: new Coding({
     code: "patient",
     display: "Patient",
     system: "http://terminology.hl7.org/CodeSystem/contractactorrole"
@@ -21,7 +21,7 @@ export const ContractActorroleValueSet = {
   /**
    * Someone who provides health care related services to people or animals including both clinical and support services.
    */
-  contract_actorrole_Practitioner: Coding.FromStrict({
+  contract_actorrole_Practitioner: new Coding({
     code: "practitioner",
     display: "Practitioner",
     system: "http://terminology.hl7.org/CodeSystem/contractactorrole"

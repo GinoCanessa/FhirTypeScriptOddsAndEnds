@@ -153,11 +153,11 @@ export declare class SubstanceReferenceInformationGene extends fhir.BackboneElem
     /**
      * Check if the current SubstanceReferenceInformationGene contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceReferenceInformationGene from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceReferenceInformationGene): SubstanceReferenceInformationGene;
+    static fromStrict(source: fhir.ISubstanceReferenceInformationGene): SubstanceReferenceInformationGene;
 }
 /**
  * Todo.
@@ -182,11 +182,11 @@ export declare class SubstanceReferenceInformationGeneElement extends fhir.Backb
     /**
      * Check if the current SubstanceReferenceInformationGeneElement contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceReferenceInformationGeneElement from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceReferenceInformationGeneElement): SubstanceReferenceInformationGeneElement;
+    static fromStrict(source: fhir.ISubstanceReferenceInformationGeneElement): SubstanceReferenceInformationGeneElement;
 }
 /**
  * Todo.
@@ -215,11 +215,11 @@ export declare class SubstanceReferenceInformationClassification extends fhir.Ba
     /**
      * Check if the current SubstanceReferenceInformationClassification contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceReferenceInformationClassification from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceReferenceInformationClassification): SubstanceReferenceInformationClassification;
+    static fromStrict(source: fhir.ISubstanceReferenceInformationClassification): SubstanceReferenceInformationClassification;
 }
 /**
  * Todo.
@@ -273,11 +273,11 @@ export declare class SubstanceReferenceInformationTarget extends fhir.BackboneEl
     /**
      * Check if the current SubstanceReferenceInformationTarget contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceReferenceInformationTarget from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceReferenceInformationTarget): SubstanceReferenceInformationTarget;
+    static fromStrict(source: fhir.ISubstanceReferenceInformationTarget): SubstanceReferenceInformationTarget;
 }
 /**
  * Todo.
@@ -315,10 +315,10 @@ export declare class SubstanceReferenceInformation extends fhir.DomainResource i
     /**
      * Check if the current SubstanceReferenceInformation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceReferenceInformation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceReferenceInformation): SubstanceReferenceInformation;
+    static fromStrict(source: fhir.ISubstanceReferenceInformation): SubstanceReferenceInformation;
 }
 //# sourceMappingURL=SubstanceReferenceInformation.d.ts.map

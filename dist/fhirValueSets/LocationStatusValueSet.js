@@ -13,7 +13,7 @@ export const LocationStatusValueSet = {
     /**
      * The location is operational.
      */
-    location_status_Active: Coding.FromStrict({
+    location_status_Active: new Coding({
         code: "active",
         display: "Active",
         system: "http://hl7.org/fhir/location-status"
@@ -21,7 +21,7 @@ export const LocationStatusValueSet = {
     /**
      * The location is no longer used.
      */
-    location_status_Inactive: Coding.FromStrict({
+    location_status_Inactive: new Coding({
         code: "inactive",
         display: "Inactive",
         system: "http://hl7.org/fhir/location-status"
@@ -29,7 +29,7 @@ export const LocationStatusValueSet = {
     /**
      * The location is temporarily closed.
      */
-    location_status_Suspended: Coding.FromStrict({
+    location_status_Suspended: new Coding({
         code: "suspended",
         display: "Suspended",
         system: "http://hl7.org/fhir/location-status"

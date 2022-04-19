@@ -252,21 +252,21 @@ export class DeviceDefinitionUdiDeviceIdentifier extends fhir.BackboneElement im
   /**
    * Check if the current DeviceDefinitionUdiDeviceIdentifier contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["deviceIdentifier"] === undefined) { missingElements.push("deviceIdentifier"); }
     if (this["issuer"] === undefined) { missingElements.push("issuer"); }
     if (this["jurisdiction"] === undefined) { missingElements.push("jurisdiction"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DeviceDefinitionUdiDeviceIdentifier from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDeviceDefinitionUdiDeviceIdentifier):DeviceDefinitionUdiDeviceIdentifier {
+  static override fromStrict(source:fhir.IDeviceDefinitionUdiDeviceIdentifier):DeviceDefinitionUdiDeviceIdentifier {
     var dest:DeviceDefinitionUdiDeviceIdentifier = new DeviceDefinitionUdiDeviceIdentifier(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DeviceDefinitionUdiDeviceIdentifier is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -303,20 +303,20 @@ export class DeviceDefinitionDeviceName extends fhir.BackboneElement implements 
   /**
    * Check if the current DeviceDefinitionDeviceName contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["name"] === undefined) { missingElements.push("name"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DeviceDefinitionDeviceName from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDeviceDefinitionDeviceName):DeviceDefinitionDeviceName {
+  static override fromStrict(source:fhir.IDeviceDefinitionDeviceName):DeviceDefinitionDeviceName {
     var dest:DeviceDefinitionDeviceName = new DeviceDefinitionDeviceName(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DeviceDefinitionDeviceName is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -350,19 +350,19 @@ export class DeviceDefinitionSpecialization extends fhir.BackboneElement impleme
   /**
    * Check if the current DeviceDefinitionSpecialization contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["systemType"] === undefined) { missingElements.push("systemType"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DeviceDefinitionSpecialization from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDeviceDefinitionSpecialization):DeviceDefinitionSpecialization {
+  static override fromStrict(source:fhir.IDeviceDefinitionSpecialization):DeviceDefinitionSpecialization {
     var dest:DeviceDefinitionSpecialization = new DeviceDefinitionSpecialization(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DeviceDefinitionSpecialization is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -392,19 +392,19 @@ export class DeviceDefinitionCapability extends fhir.BackboneElement implements 
   /**
    * Check if the current DeviceDefinitionCapability contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DeviceDefinitionCapability from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDeviceDefinitionCapability):DeviceDefinitionCapability {
+  static override fromStrict(source:fhir.IDeviceDefinitionCapability):DeviceDefinitionCapability {
     var dest:DeviceDefinitionCapability = new DeviceDefinitionCapability(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DeviceDefinitionCapability is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -439,19 +439,19 @@ export class DeviceDefinitionProperty extends fhir.BackboneElement implements fh
   /**
    * Check if the current DeviceDefinitionProperty contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DeviceDefinitionProperty from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDeviceDefinitionProperty):DeviceDefinitionProperty {
+  static override fromStrict(source:fhir.IDeviceDefinitionProperty):DeviceDefinitionProperty {
     var dest:DeviceDefinitionProperty = new DeviceDefinitionProperty(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DeviceDefinitionProperty is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -490,19 +490,19 @@ export class DeviceDefinitionMaterial extends fhir.BackboneElement implements fh
   /**
    * Check if the current DeviceDefinitionMaterial contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["substance"] === undefined) { missingElements.push("substance"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DeviceDefinitionMaterial from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDeviceDefinitionMaterial):DeviceDefinitionMaterial {
+  static override fromStrict(source:fhir.IDeviceDefinitionMaterial):DeviceDefinitionMaterial {
     var dest:DeviceDefinitionMaterial = new DeviceDefinitionMaterial(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DeviceDefinitionMaterial is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -650,18 +650,18 @@ export class DeviceDefinition extends fhir.DomainResource implements fhir.IDevic
   /**
    * Check if the current DeviceDefinition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DeviceDefinition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDeviceDefinition):DeviceDefinition {
+  static override fromStrict(source:fhir.IDeviceDefinition):DeviceDefinition {
     var dest:DeviceDefinition = new DeviceDefinition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DeviceDefinition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

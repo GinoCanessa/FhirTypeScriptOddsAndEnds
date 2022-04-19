@@ -13,7 +13,7 @@ export const ConsentDataMeaningValueSet = {
   /**
    * The consent applies to instances of resources that are authored by.
    */
-  consent_data_meaning_AuthoredBy: Coding.FromStrict({
+  consent_data_meaning_AuthoredBy: new Coding({
     code: "authoredby",
     display: "AuthoredBy",
     system: "http://hl7.org/fhir/consent-data-meaning"
@@ -21,7 +21,7 @@ export const ConsentDataMeaningValueSet = {
   /**
    * The consent applies directly to the instance of the resource and instances that refer to it.
    */
-  consent_data_meaning_Dependents: Coding.FromStrict({
+  consent_data_meaning_Dependents: new Coding({
     code: "dependents",
     display: "Dependents",
     system: "http://hl7.org/fhir/consent-data-meaning"
@@ -29,7 +29,7 @@ export const ConsentDataMeaningValueSet = {
   /**
    * The consent applies directly to the instance of the resource.
    */
-  consent_data_meaning_Instance: Coding.FromStrict({
+  consent_data_meaning_Instance: new Coding({
     code: "instance",
     display: "Instance",
     system: "http://hl7.org/fhir/consent-data-meaning"
@@ -37,7 +37,7 @@ export const ConsentDataMeaningValueSet = {
   /**
    * The consent applies directly to the instance of the resource and instances it refers to.
    */
-  consent_data_meaning_Related: Coding.FromStrict({
+  consent_data_meaning_Related: new Coding({
     code: "related",
     display: "Related",
     system: "http://hl7.org/fhir/consent-data-meaning"

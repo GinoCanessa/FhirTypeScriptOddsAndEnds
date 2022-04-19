@@ -213,11 +213,11 @@ export declare class SpecimenCollection extends fhir.BackboneElement implements 
     /**
      * Check if the current SpecimenCollection contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SpecimenCollection from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISpecimenCollection): SpecimenCollection;
+    static fromStrict(source: fhir.ISpecimenCollection): SpecimenCollection;
 }
 /**
  * Details concerning processing and processing steps for the specimen.
@@ -252,11 +252,11 @@ export declare class SpecimenProcessing extends fhir.BackboneElement implements 
     /**
      * Check if the current SpecimenProcessing contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SpecimenProcessing from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISpecimenProcessing): SpecimenProcessing;
+    static fromStrict(source: fhir.ISpecimenProcessing): SpecimenProcessing;
 }
 /**
  * The container holding the specimen.  The recursive nature of containers; i.e. blood in tube in tray in rack is not addressed here.
@@ -298,11 +298,11 @@ export declare class SpecimenContainer extends fhir.BackboneElement implements f
     /**
      * Check if the current SpecimenContainer contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SpecimenContainer from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISpecimenContainer): SpecimenContainer;
+    static fromStrict(source: fhir.ISpecimenContainer): SpecimenContainer;
 }
 /**
  * A sample to be used for analysis.
@@ -373,11 +373,11 @@ export declare class Specimen extends fhir.DomainResource implements fhir.ISpeci
     /**
      * Check if the current Specimen contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Specimen from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISpecimen): Specimen;
+    static fromStrict(source: fhir.ISpecimen): Specimen;
 }
 /**
  * Code Values for the Specimen.status field

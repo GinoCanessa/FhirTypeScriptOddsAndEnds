@@ -48,18 +48,18 @@ export class Money extends fhir.FhirElement implements fhir.IMoney {
   /**
    * Check if the current Money contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Money from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMoney):Money {
+  static override fromStrict(source:fhir.IMoney):Money {
     var dest:Money = new Money(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Money is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

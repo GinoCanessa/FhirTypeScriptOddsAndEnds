@@ -172,11 +172,11 @@ export declare class SearchParameterComponent extends fhir.BackboneElement imple
     /**
      * Check if the current SearchParameterComponent contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SearchParameterComponent from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISearchParameterComponent): SearchParameterComponent;
+    static fromStrict(source: fhir.ISearchParameterComponent): SearchParameterComponent;
 }
 /**
  * A search parameter that defines a named search item that can be used to search/filter on a resource.
@@ -321,11 +321,11 @@ export declare class SearchParameter extends fhir.DomainResource implements fhir
     /**
      * Check if the current SearchParameter contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SearchParameter from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISearchParameter): SearchParameter;
+    static fromStrict(source: fhir.ISearchParameter): SearchParameter;
 }
 /**
  * Code Values for the SearchParameter.comparator field

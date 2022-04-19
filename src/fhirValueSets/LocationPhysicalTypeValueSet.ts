@@ -13,7 +13,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A defined physical boundary of something, such as a flood risk zone, region, postcode
    */
-  location_physical_type_Area: Coding.FromStrict({
+  location_physical_type_Area: new Coding({
     code: "area",
     display: "Area",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -21,7 +21,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A space that is allocated for sleeping/laying on. This is not the physical bed/trolley that may be moved about, but the space it may occupy.
    */
-  location_physical_type_Bed: Coding.FromStrict({
+  location_physical_type_Bed: new Coding({
     code: "bd",
     display: "Bed",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -29,7 +29,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * Any Building or structure. This may contain rooms, corridors, wings, etc. It might not have walls, or a roof, but is considered a defined/allocated space.
    */
-  location_physical_type_Building: Coding.FromStrict({
+  location_physical_type_Building: new Coding({
     code: "bu",
     display: "Building",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -37,7 +37,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A container that can store goods, equipment, medications or other items.
    */
-  location_physical_type_Cabinet: Coding.FromStrict({
+  location_physical_type_Cabinet: new Coding({
     code: "ca",
     display: "Cabinet",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -45,7 +45,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * Any corridor within a Building, that may connect rooms.
    */
-  location_physical_type_Corridor: Coding.FromStrict({
+  location_physical_type_Corridor: new Coding({
     code: "co",
     display: "Corridor",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -53,7 +53,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A residential dwelling. Usually used to reference a location that a person/patient may reside.
    */
-  location_physical_type_House: Coding.FromStrict({
+  location_physical_type_House: new Coding({
     code: "ho",
     display: "House",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -61,7 +61,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A wide scope that covers a conceptual domain, such as a Nation (Country wide community or Federal Government - e.g. Ministry of Health),  Province or State (community or Government), Business (throughout the enterprise), Nation with a business scope of an agency (e.g. CDC, FDA etc.) or a Business segment (UK Pharmacy), not just an physical boundary
    */
-  location_physical_type_Jurisdiction: Coding.FromStrict({
+  location_physical_type_Jurisdiction: new Coding({
     code: "jdn",
     display: "Jurisdiction",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -69,7 +69,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A Level in a multi-level Building/Structure.
    */
-  location_physical_type_Level: Coding.FromStrict({
+  location_physical_type_Level: new Coding({
     code: "lvl",
     display: "Level",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -77,7 +77,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A defined path to travel between 2 points that has a known name.
    */
-  location_physical_type_Road: Coding.FromStrict({
+  location_physical_type_Road: new Coding({
     code: "rd",
     display: "Road",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -85,7 +85,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A space that is allocated as a room, it may have walls/roof etc., but does not require these.
    */
-  location_physical_type_Room: Coding.FromStrict({
+  location_physical_type_Room: new Coding({
     code: "ro",
     display: "Room",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -93,7 +93,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A collection of buildings or other locations such as a site or a campus.
    */
-  location_physical_type_Site: Coding.FromStrict({
+  location_physical_type_Site: new Coding({
     code: "si",
     display: "Site",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -101,7 +101,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A means of transportation.
    */
-  location_physical_type_Vehicle: Coding.FromStrict({
+  location_physical_type_Vehicle: new Coding({
     code: "ve",
     display: "Vehicle",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -109,7 +109,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A Ward is a section of a medical facility that may contain rooms and other types of location.
    */
-  location_physical_type_Ward: Coding.FromStrict({
+  location_physical_type_Ward: new Coding({
     code: "wa",
     display: "Ward",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -117,7 +117,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A Wing within a Building, this often contains levels, rooms and corridors.
    */
-  location_physical_type_Wing: Coding.FromStrict({
+  location_physical_type_Wing: new Coding({
     code: "wi",
     display: "Wing",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"

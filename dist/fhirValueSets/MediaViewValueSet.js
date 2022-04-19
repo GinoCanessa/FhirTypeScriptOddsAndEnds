@@ -10,1382 +10,1382 @@ import { Coding } from '../fhir';
  * Codes defined in SNOMED CT that can be used to record Media Recording views.
  */
 export const MediaViewValueSet = {
-    MediaViewValueSet_LLOProjection: Coding.FromStrict({
+    MediaViewValueSet_LLOProjection: new Coding({
         code: "260421001",
         display: "LLO projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_C1C2LeftOblique: Coding.FromStrict({
+    MediaViewValueSet_C1C2LeftOblique: new Coding({
         code: "260422008",
         display: "C1-C2 left oblique",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_RLOProjection: Coding.FromStrict({
+    MediaViewValueSet_RLOProjection: new Coding({
         code: "260424009",
         display: "RLO projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_C1C2RightOblique: Coding.FromStrict({
+    MediaViewValueSet_C1C2RightOblique: new Coding({
         code: "260425005",
         display: "C1-C2 right oblique",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_MedialOblique: Coding.FromStrict({
+    MediaViewValueSet_MedialOblique: new Coding({
         code: "260426006",
         display: "Medial oblique",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ObliqueLateral: Coding.FromStrict({
+    MediaViewValueSet_ObliqueLateral: new Coding({
         code: "260427002",
         display: "Oblique lateral",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_MandibleXRayLateralOblique: Coding.FromStrict({
+    MediaViewValueSet_MandibleXRayLateralOblique: new Coding({
         code: "260428007",
         display: "Mandible X-ray - lateral oblique",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_AnteroposteriorLeftLateralDecubitus: Coding.FromStrict({
+    MediaViewValueSet_AnteroposteriorLeftLateralDecubitus: new Coding({
         code: "260430009",
         display: "Anteroposterior left lateral decubitus",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_C1C2LeftLateral: Coding.FromStrict({
+    MediaViewValueSet_C1C2LeftLateral: new Coding({
         code: "260431008",
         display: "C1-C2 left lateral",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LeftTrueLateral: Coding.FromStrict({
+    MediaViewValueSet_LeftTrueLateral: new Coding({
         code: "260432001",
         display: "Left true lateral",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_AnteroposteriorRightLateralDecubitus: Coding.FromStrict({
+    MediaViewValueSet_AnteroposteriorRightLateralDecubitus: new Coding({
         code: "260434000",
         display: "Anteroposterior right lateral decubitus",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_C1C2RightLateral: Coding.FromStrict({
+    MediaViewValueSet_C1C2RightLateral: new Coding({
         code: "260435004",
         display: "C1-C2 right lateral",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_RightTrueLateral: Coding.FromStrict({
+    MediaViewValueSet_RightTrueLateral: new Coding({
         code: "260436003",
         display: "Right true lateral",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LateralVerticalBeam: Coding.FromStrict({
+    MediaViewValueSet_LateralVerticalBeam: new Coding({
         code: "260437007",
         display: "Lateral vertical beam",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LateralHorizontalBeam: Coding.FromStrict({
+    MediaViewValueSet_LateralHorizontalBeam: new Coding({
         code: "260438002",
         display: "Lateral horizontal beam",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LateralInverted: Coding.FromStrict({
+    MediaViewValueSet_LateralInverted: new Coding({
         code: "260439005",
         display: "Lateral inverted",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_TrueLateralOfMandible: Coding.FromStrict({
+    MediaViewValueSet_TrueLateralOfMandible: new Coding({
         code: "260440007",
         display: "True lateral of mandible",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_FrogLateral: Coding.FromStrict({
+    MediaViewValueSet_FrogLateral: new Coding({
         code: "260441006",
         display: "Frog lateral",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ErectLateral: Coding.FromStrict({
+    MediaViewValueSet_ErectLateral: new Coding({
         code: "260442004",
         display: "Erect lateral",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_AnteroposteriorInverted: Coding.FromStrict({
+    MediaViewValueSet_AnteroposteriorInverted: new Coding({
         code: "260443009",
         display: "Anteroposterior inverted",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_PARotatedPosteroanterior: Coding.FromStrict({
+    MediaViewValueSet_PARotatedPosteroanterior: new Coding({
         code: "260444003",
         display: "PA - Rotated posteroanterior",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_Posteroanterior20Degree: Coding.FromStrict({
+    MediaViewValueSet_Posteroanterior20Degree: new Coding({
         code: "260445002",
         display: "Posteroanterior 20 degree",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_PosteroanteriorInUlnarDeviation: Coding.FromStrict({
+    MediaViewValueSet_PosteroanteriorInUlnarDeviation: new Coding({
         code: "260446001",
         display: "Posteroanterior in ulnar deviation",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_PenetratedPosteroanterior: Coding.FromStrict({
+    MediaViewValueSet_PenetratedPosteroanterior: new Coding({
         code: "260447005",
         display: "Penetrated posteroanterior",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LordoticProjection: Coding.FromStrict({
+    MediaViewValueSet_LordoticProjection: new Coding({
         code: "260450008",
         display: "Lordotic projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_SupineDecubitus: Coding.FromStrict({
+    MediaViewValueSet_SupineDecubitus: new Coding({
         code: "260451007",
         display: "Supine decubitus",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_Decubitus: Coding.FromStrict({
+    MediaViewValueSet_Decubitus: new Coding({
         code: "260452000",
         display: "Decubitus",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_InternalExternalRotation: Coding.FromStrict({
+    MediaViewValueSet_InternalExternalRotation: new Coding({
         code: "260453005",
         display: "Internal/external rotation",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_VAL45DegreeProjection: Coding.FromStrict({
+    MediaViewValueSet_VAL45DegreeProjection: new Coding({
         code: "260454004",
         display: "45 degree projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_HeadAndNeckProjection: Coding.FromStrict({
+    MediaViewValueSet_HeadAndNeckProjection: new Coding({
         code: "260455003",
         display: "Head and neck projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_SlitTowne: Coding.FromStrict({
+    MediaViewValueSet_SlitTowne: new Coding({
         code: "260458001",
         display: "Slit Towne",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ReverseTowne: Coding.FromStrict({
+    MediaViewValueSet_ReverseTowne: new Coding({
         code: "260459009",
         display: "Reverse Towne",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_Slit35DegreeFrontoOccipital: Coding.FromStrict({
+    MediaViewValueSet_Slit35DegreeFrontoOccipital: new Coding({
         code: "260460004",
         display: "Slit 35 degree fronto-occipital",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_VertexProjection: Coding.FromStrict({
+    MediaViewValueSet_VertexProjection: new Coding({
         code: "260461000",
         display: "Vertex projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LeftStenver: Coding.FromStrict({
+    MediaViewValueSet_LeftStenver: new Coding({
         code: "260463002",
         display: "Left Stenver",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_RightStenver: Coding.FromStrict({
+    MediaViewValueSet_RightStenver: new Coding({
         code: "260464008",
         display: "Right Stenver",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_OccipitofrontalProjection: Coding.FromStrict({
+    MediaViewValueSet_OccipitofrontalProjection: new Coding({
         code: "260465009",
         display: "Occipitofrontal projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_OccipitomentalProjection: Coding.FromStrict({
+    MediaViewValueSet_OccipitomentalProjection: new Coding({
         code: "260466005",
         display: "Occipitomental projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_OccipitomentalErect: Coding.FromStrict({
+    MediaViewValueSet_OccipitomentalErect: new Coding({
         code: "260467001",
         display: "Occipitomental - erect",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_OccipitomentalTilted: Coding.FromStrict({
+    MediaViewValueSet_OccipitomentalTilted: new Coding({
         code: "260468006",
         display: "Occipitomental - tilted",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_OccipitomentalProne: Coding.FromStrict({
+    MediaViewValueSet_OccipitomentalProne: new Coding({
         code: "260469003",
         display: "Occipitomental - prone",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_Occipitomental15Degree: Coding.FromStrict({
+    MediaViewValueSet_Occipitomental15Degree: new Coding({
         code: "260470002",
         display: "Occipitomental - 15 degree",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_Occipitomental30Degree: Coding.FromStrict({
+    MediaViewValueSet_Occipitomental30Degree: new Coding({
         code: "260471003",
         display: "Occipitomental - 30 degree",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_Occipitomental45Degree: Coding.FromStrict({
+    MediaViewValueSet_Occipitomental45Degree: new Coding({
         code: "260472005",
         display: "Occipitomental - 45 degree",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_Waters35DegreeTiltToRadiographicBaseline: Coding.FromStrict({
+    MediaViewValueSet_Waters35DegreeTiltToRadiographicBaseline: new Coding({
         code: "260473000",
         display: "Waters - 35 degree tilt to radiographic baseline",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_SubmentoverticalReducedExposureForZygomaticArches: Coding.FromStrict({
+    MediaViewValueSet_SubmentoverticalReducedExposureForZygomaticArches: new Coding({
         code: "260475007",
         display: "Submentovertical reduced exposure for zygomatic arches",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_SlitSMV: Coding.FromStrict({
+    MediaViewValueSet_SlitSMV: new Coding({
         code: "260476008",
         display: "Slit SMV",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_DentalOralProjection: Coding.FromStrict({
+    MediaViewValueSet_DentalOralProjection: new Coding({
         code: "260477004",
         display: "Dental/oral projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_BodyMolar: Coding.FromStrict({
+    MediaViewValueSet_BodyMolar: new Coding({
         code: "260478009",
         display: "Body - molar",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_BodyPremolar: Coding.FromStrict({
+    MediaViewValueSet_BodyPremolar: new Coding({
         code: "260479001",
         display: "Body - premolar",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_RamusProjection: Coding.FromStrict({
+    MediaViewValueSet_RamusProjection: new Coding({
         code: "260481004",
         display: "Ramus projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_BimolarProjection: Coding.FromStrict({
+    MediaViewValueSet_BimolarProjection: new Coding({
         code: "260482006",
         display: "Bimolar projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_TollerProjection: Coding.FromStrict({
+    MediaViewValueSet_TollerProjection: new Coding({
         code: "260483001",
         display: "Toller projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_TransmaxillaryProjection: Coding.FromStrict({
+    MediaViewValueSet_TransmaxillaryProjection: new Coding({
         code: "260484007",
         display: "Transmaxillary projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_TemporomandibularJointSetting: Coding.FromStrict({
+    MediaViewValueSet_TemporomandibularJointSetting: new Coding({
         code: "260485008",
         display: "Temporomandibular joint setting",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_MaxillarySinusSetting: Coding.FromStrict({
+    MediaViewValueSet_MaxillarySinusSetting: new Coding({
         code: "260486009",
         display: "Maxillary sinus setting",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_DentalPanoramic: Coding.FromStrict({
+    MediaViewValueSet_DentalPanoramic: new Coding({
         code: "260487000",
         display: "Dental panoramic",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ImplantSettingProjection: Coding.FromStrict({
+    MediaViewValueSet_ImplantSettingProjection: new Coding({
         code: "260489002",
         display: "Implant setting projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_SegmentalSetting: Coding.FromStrict({
+    MediaViewValueSet_SegmentalSetting: new Coding({
         code: "260490006",
         display: "Segmental setting",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_AxialViewForSesamoidBones: Coding.FromStrict({
+    MediaViewValueSet_AxialViewForSesamoidBones: new Coding({
         code: "260491005",
         display: "Axial view for sesamoid bones",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_BrewertonProjection: Coding.FromStrict({
+    MediaViewValueSet_BrewertonProjection: new Coding({
         code: "260492003",
         display: "Brewerton projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_HarrisBeathAxialProjection: Coding.FromStrict({
+    MediaViewValueSet_HarrisBeathAxialProjection: new Coding({
         code: "260493008",
         display: "Harris Beath axial projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_TunnelProjection: Coding.FromStrict({
+    MediaViewValueSet_TunnelProjection: new Coding({
         code: "260494002",
         display: "Tunnel projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_JudetProjection: Coding.FromStrict({
+    MediaViewValueSet_JudetProjection: new Coding({
         code: "260496000",
         display: "Judet projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_MorticeProjection: Coding.FromStrict({
+    MediaViewValueSet_MorticeProjection: new Coding({
         code: "260497009",
         display: "Mortice projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_OcclusalProjection: Coding.FromStrict({
+    MediaViewValueSet_OcclusalProjection: new Coding({
         code: "260499007",
         display: "Occlusal projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ProjectedObliqueOcclusal: Coding.FromStrict({
+    MediaViewValueSet_ProjectedObliqueOcclusal: new Coding({
         code: "260500003",
         display: "Projected oblique occlusal",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LowerTrueOcclusal: Coding.FromStrict({
+    MediaViewValueSet_LowerTrueOcclusal: new Coding({
         code: "260501004",
         display: "Lower true occlusal",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_PowerGripSeries: Coding.FromStrict({
+    MediaViewValueSet_PowerGripSeries: new Coding({
         code: "260502006",
         display: "Power grip series",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_RadialHeadProjection: Coding.FromStrict({
+    MediaViewValueSet_RadialHeadProjection: new Coding({
         code: "260503001",
         display: "Radial head projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_SkylineProjection: Coding.FromStrict({
+    MediaViewValueSet_SkylineProjection: new Coding({
         code: "260504007",
         display: "Skyline projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_VanRosenProjection: Coding.FromStrict({
+    MediaViewValueSet_VanRosenProjection: new Coding({
         code: "260506009",
         display: "Van Rosen projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_InferosuperiorProjection: Coding.FromStrict({
+    MediaViewValueSet_InferosuperiorProjection: new Coding({
         code: "272455005",
         display: "Inferosuperior projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ApicalProjection: Coding.FromStrict({
+    MediaViewValueSet_ApicalProjection: new Coding({
         code: "272456006",
         display: "Apical projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_VerticalProjection: Coding.FromStrict({
+    MediaViewValueSet_VerticalProjection: new Coding({
         code: "272457002",
         display: "Vertical projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ProneProjection: Coding.FromStrict({
+    MediaViewValueSet_ProneProjection: new Coding({
         code: "272458007",
         display: "Prone projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_SupineProjection: Coding.FromStrict({
+    MediaViewValueSet_SupineProjection: new Coding({
         code: "272459004",
         display: "Supine projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_AnteriorProjection: Coding.FromStrict({
+    MediaViewValueSet_AnteriorProjection: new Coding({
         code: "272460009",
         display: "Anterior projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_RightPosteriorProjection: Coding.FromStrict({
+    MediaViewValueSet_RightPosteriorProjection: new Coding({
         code: "272461008",
         display: "Right posterior projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LeftPosteriorProjection: Coding.FromStrict({
+    MediaViewValueSet_LeftPosteriorProjection: new Coding({
         code: "272462001",
         display: "Left posterior projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_PerorbitalProjection: Coding.FromStrict({
+    MediaViewValueSet_PerorbitalProjection: new Coding({
         code: "272464000",
         display: "Perorbital projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_TemporomandibularJointProjection: Coding.FromStrict({
+    MediaViewValueSet_TemporomandibularJointProjection: new Coding({
         code: "272465004",
         display: "Temporomandibular joint projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_OpticForamenProjection: Coding.FromStrict({
+    MediaViewValueSet_OpticForamenProjection: new Coding({
         code: "272466003",
         display: "Optic foramen projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LateralFacialSkeletonProjection: Coding.FromStrict({
+    MediaViewValueSet_LateralFacialSkeletonProjection: new Coding({
         code: "272467007",
         display: "Lateral facial skeleton projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_EarProjection: Coding.FromStrict({
+    MediaViewValueSet_EarProjection: new Coding({
         code: "272468002",
         display: "Ear projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_MidFaceProjection: Coding.FromStrict({
+    MediaViewValueSet_MidFaceProjection: new Coding({
         code: "272469005",
         display: "Mid face projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_CervicalSpineProjection: Coding.FromStrict({
+    MediaViewValueSet_CervicalSpineProjection: new Coding({
         code: "272470006",
         display: "Cervical spine projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_MacroProjection: Coding.FromStrict({
+    MediaViewValueSet_MacroProjection: new Coding({
         code: "272472003",
         display: "Macro projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_OutletProjection: Coding.FromStrict({
+    MediaViewValueSet_OutletProjection: new Coding({
         code: "272473008",
         display: "Outlet projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_SwimmerQuoteSProjection: Coding.FromStrict({
+    MediaViewValueSet_SwimmerQuoteSProjection: new Coding({
         code: "272474002",
         display: "Swimmer's projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_TibialTuberosityProjection: Coding.FromStrict({
+    MediaViewValueSet_TibialTuberosityProjection: new Coding({
         code: "272475001",
         display: "Tibial tuberosity projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_TransthoracicProjection: Coding.FromStrict({
+    MediaViewValueSet_TransthoracicProjection: new Coding({
         code: "272476000",
         display: "Transthoracic projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_TranscranialProjection: Coding.FromStrict({
+    MediaViewValueSet_TranscranialProjection: new Coding({
         code: "272478004",
         display: "Transcranial projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_PosteroanteriorProjection: Coding.FromStrict({
+    MediaViewValueSet_PosteroanteriorProjection: new Coding({
         code: "272479007",
         display: "Posteroanterior projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_HorizontalProjection: Coding.FromStrict({
+    MediaViewValueSet_HorizontalProjection: new Coding({
         code: "272480005",
         display: "Horizontal projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ErectProjection: Coding.FromStrict({
+    MediaViewValueSet_ErectProjection: new Coding({
         code: "272481009",
         display: "Erect projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_AdductionProjection: Coding.FromStrict({
+    MediaViewValueSet_AdductionProjection: new Coding({
         code: "272482002",
         display: "Adduction projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_TrueProjection: Coding.FromStrict({
+    MediaViewValueSet_TrueProjection: new Coding({
         code: "272483007",
         display: "True projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ContralateralProjection: Coding.FromStrict({
+    MediaViewValueSet_ContralateralProjection: new Coding({
         code: "272484001",
         display: "Contralateral projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_PosteriorProjection: Coding.FromStrict({
+    MediaViewValueSet_PosteriorProjection: new Coding({
         code: "278255003",
         display: "Posterior projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_AbductionProjection: Coding.FromStrict({
+    MediaViewValueSet_AbductionProjection: new Coding({
         code: "278267001",
         display: "Abduction projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ZimmerProjection: Coding.FromStrict({
+    MediaViewValueSet_ZimmerProjection: new Coding({
         code: "278318001",
         display: "Zimmer projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LeonardGeorgeProjection: Coding.FromStrict({
+    MediaViewValueSet_LeonardGeorgeProjection: new Coding({
         code: "398996004",
         display: "Leonard-George projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_MayerProjection: Coding.FromStrict({
+    MediaViewValueSet_MayerProjection: new Coding({
         code: "399000008",
         display: "Mayer projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_PosteriorEmissiveProjection: Coding.FromStrict({
+    MediaViewValueSet_PosteriorEmissiveProjection: new Coding({
         code: "399001007",
         display: "Posterior emissive projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_NolkeProjection: Coding.FromStrict({
+    MediaViewValueSet_NolkeProjection: new Coding({
         code: "399002000",
         display: "Nolke projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_HughstonProjection: Coding.FromStrict({
+    MediaViewValueSet_HughstonProjection: new Coding({
         code: "399003005",
         display: "Hughston projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ObliqueAxialProjection: Coding.FromStrict({
+    MediaViewValueSet_ObliqueAxialProjection: new Coding({
         code: "399004004",
         display: "Oblique axial projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_MillerProjection: Coding.FromStrict({
+    MediaViewValueSet_MillerProjection: new Coding({
         code: "399005003",
         display: "Miller projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LeftPosteriorObliqueProjection: Coding.FromStrict({
+    MediaViewValueSet_LeftPosteriorObliqueProjection: new Coding({
         code: "399006002",
         display: "Left posterior oblique projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_AxillaryTailMammographyView: Coding.FromStrict({
+    MediaViewValueSet_AxillaryTailMammographyView: new Coding({
         code: "399011000",
         display: "Axillary tail mammography view",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_MedialLateralEmissiveProjection: Coding.FromStrict({
+    MediaViewValueSet_MedialLateralEmissiveProjection: new Coding({
         code: "399012007",
         display: "Medial-lateral emissive projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ChassardLapinProjection: Coding.FromStrict({
+    MediaViewValueSet_ChassardLapinProjection: new Coding({
         code: "399013002",
         display: "Chassard-Lapin projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_PirieProjection: Coding.FromStrict({
+    MediaViewValueSet_PirieProjection: new Coding({
         code: "399022001",
         display: "Pirie projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_MayProjection: Coding.FromStrict({
+    MediaViewValueSet_MayProjection: new Coding({
         code: "399024000",
         display: "May projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_IscherwoodProjection: Coding.FromStrict({
+    MediaViewValueSet_IscherwoodProjection: new Coding({
         code: "399025004",
         display: "Ischerwood projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ZanelliProjection: Coding.FromStrict({
+    MediaViewValueSet_ZanelliProjection: new Coding({
         code: "399026003",
         display: "Zanelli projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ClementsProjection: Coding.FromStrict({
+    MediaViewValueSet_ClementsProjection: new Coding({
         code: "399028002",
         display: "Clements projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_FrontalProjection: Coding.FromStrict({
+    MediaViewValueSet_FrontalProjection: new Coding({
         code: "399033003",
         display: "Frontal projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LewisProjection: Coding.FromStrict({
+    MediaViewValueSet_LewisProjection: new Coding({
         code: "399037002",
         display: "Lewis projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_RightPosteriorObliqueProjection: Coding.FromStrict({
+    MediaViewValueSet_RightPosteriorObliqueProjection: new Coding({
         code: "399038007",
         display: "Right posterior oblique projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_PosteroAnteriorObliqueProjection: Coding.FromStrict({
+    MediaViewValueSet_PosteroAnteriorObliqueProjection: new Coding({
         code: "399059000",
         display: "Postero-anterior oblique projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_AxialProjection: Coding.FromStrict({
+    MediaViewValueSet_AxialProjection: new Coding({
         code: "399061009",
         display: "Axial projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_CaustonProjection: Coding.FromStrict({
+    MediaViewValueSet_CaustonProjection: new Coding({
         code: "399065000",
         display: "Causton projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LateralProjection: Coding.FromStrict({
+    MediaViewValueSet_LateralProjection: new Coding({
         code: "399067008",
         display: "Lateral projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_PlantodorsalProjection: Coding.FromStrict({
+    MediaViewValueSet_PlantodorsalProjection: new Coding({
         code: "399071006",
         display: "Plantodorsal projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_FuchsProjection: Coding.FromStrict({
+    MediaViewValueSet_FuchsProjection: new Coding({
         code: "399073009",
         display: "Fuchs projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LeftAnteriorObliqueEmissiveProjection: Coding.FromStrict({
+    MediaViewValueSet_LeftAnteriorObliqueEmissiveProjection: new Coding({
         code: "399074003",
         display: "Left anterior oblique emissive projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_RightPosteriorObliqueEmissiveProjection: Coding.FromStrict({
+    MediaViewValueSet_RightPosteriorObliqueEmissiveProjection: new Coding({
         code: "399075002",
         display: "Right posterior oblique emissive projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_KuchendorfProjection: Coding.FromStrict({
+    MediaViewValueSet_KuchendorfProjection: new Coding({
         code: "399080006",
         display: "Kuchendorf projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_GaynorHartProjection: Coding.FromStrict({
+    MediaViewValueSet_GaynorHartProjection: new Coding({
         code: "399082003",
         display: "Gaynor-Hart projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_HsiehProjection: Coding.FromStrict({
+    MediaViewValueSet_HsiehProjection: new Coding({
         code: "399083008",
         display: "Hsieh projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ObliqueAxialEmissiveProjection: Coding.FromStrict({
+    MediaViewValueSet_ObliqueAxialEmissiveProjection: new Coding({
         code: "399089007",
         display: "Oblique axial emissive projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_StaunigProjection: Coding.FromStrict({
+    MediaViewValueSet_StaunigProjection: new Coding({
         code: "399098005",
         display: "Staunig projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LateroMedialObliqueProjection: Coding.FromStrict({
+    MediaViewValueSet_LateroMedialObliqueProjection: new Coding({
         code: "399099002",
         display: "Latero-medial oblique projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_CranioCaudalProjectionExaggeratedMedially: Coding.FromStrict({
+    MediaViewValueSet_CranioCaudalProjectionExaggeratedMedially: new Coding({
         code: "399101009",
         display: "Cranio-caudal projection exaggerated medially",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_FriedmanProjection: Coding.FromStrict({
+    MediaViewValueSet_FriedmanProjection: new Coding({
         code: "399103007",
         display: "Friedman projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_RightAnteriorObliqueEmissiveProjection: Coding.FromStrict({
+    MediaViewValueSet_RightAnteriorObliqueEmissiveProjection: new Coding({
         code: "399108003",
         display: "Right anterior oblique emissive projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_TangentialProjection: Coding.FromStrict({
+    MediaViewValueSet_TangentialProjection: new Coding({
         code: "399110001",
         display: "Tangential projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_EponymousProjection: Coding.FromStrict({
+    MediaViewValueSet_EponymousProjection: new Coding({
         code: "399113004",
         display: "Eponymous projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LeftLateralEmissiveProjection: Coding.FromStrict({
+    MediaViewValueSet_LeftLateralEmissiveProjection: new Coding({
         code: "399118008",
         display: "Left lateral emissive projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_TwiningProjection: Coding.FromStrict({
+    MediaViewValueSet_TwiningProjection: new Coding({
         code: "399125001",
         display: "Twining projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_TeufelProjection: Coding.FromStrict({
+    MediaViewValueSet_TeufelProjection: new Coding({
         code: "399127009",
         display: "Teufel projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_HollyProjection: Coding.FromStrict({
+    MediaViewValueSet_HollyProjection: new Coding({
         code: "399129007",
         display: "Holly projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_WestPointProjection: Coding.FromStrict({
+    MediaViewValueSet_WestPointProjection: new Coding({
         code: "399130002",
         display: "West Point projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_FrontalObliqueAxialProjection: Coding.FromStrict({
+    MediaViewValueSet_FrontalObliqueAxialProjection: new Coding({
         code: "399132005",
         display: "Frontal-oblique axial projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LeftAnteriorObliqueProjection: Coding.FromStrict({
+    MediaViewValueSet_LeftAnteriorObliqueProjection: new Coding({
         code: "399135007",
         display: "Left anterior oblique projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LeftPosteriorObliqueEmissiveProjection: Coding.FromStrict({
+    MediaViewValueSet_LeftPosteriorObliqueEmissiveProjection: new Coding({
         code: "399136008",
         display: "Left posterior oblique emissive projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_PennerProjection: Coding.FromStrict({
+    MediaViewValueSet_PennerProjection: new Coding({
         code: "399138009",
         display: "Penner projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_AlbersSchonbergProjection: Coding.FromStrict({
+    MediaViewValueSet_AlbersSchonbergProjection: new Coding({
         code: "399142007",
         display: "Albers-Schonberg projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_GrasheyProjection: Coding.FromStrict({
+    MediaViewValueSet_GrasheyProjection: new Coding({
         code: "399146005",
         display: "Grashey projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ChamberlainProjection: Coding.FromStrict({
+    MediaViewValueSet_ChamberlainProjection: new Coding({
         code: "399148006",
         display: "Chamberlain projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_KandelProjection: Coding.FromStrict({
+    MediaViewValueSet_KandelProjection: new Coding({
         code: "399152006",
         display: "Kandel projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LaquerrierePierquinProjection: Coding.FromStrict({
+    MediaViewValueSet_LaquerrierePierquinProjection: new Coding({
         code: "399156009",
         display: "Laquerriere-Pierquin projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_NorgaardQuoteSProjection: Coding.FromStrict({
+    MediaViewValueSet_NorgaardQuoteSProjection: new Coding({
         code: "399157000",
         display: "Norgaard's projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LateroMedialObliqueEmissiveProjection: Coding.FromStrict({
+    MediaViewValueSet_LateroMedialObliqueEmissiveProjection: new Coding({
         code: "399159002",
         display: "Latero-medial oblique emissive projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_FrontalObliqueProjection: Coding.FromStrict({
+    MediaViewValueSet_FrontalObliqueProjection: new Coding({
         code: "399160007",
         display: "Frontal oblique projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_CleavageMammographyView: Coding.FromStrict({
+    MediaViewValueSet_CleavageMammographyView: new Coding({
         code: "399161006",
         display: "Cleavage mammography view",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_CranioCaudalProjection: Coding.FromStrict({
+    MediaViewValueSet_CranioCaudalProjection: new Coding({
         code: "399162004",
         display: "Cranio-caudal projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_MagnifiedProjection: Coding.FromStrict({
+    MediaViewValueSet_MagnifiedProjection: new Coding({
         code: "399163009",
         display: "Magnified projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_HoughProjection: Coding.FromStrict({
+    MediaViewValueSet_HoughProjection: new Coding({
         code: "399168000",
         display: "Hough projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LauensteinProjection: Coding.FromStrict({
+    MediaViewValueSet_LauensteinProjection: new Coding({
         code: "399169008",
         display: "Lauenstein projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_OttonelloProjection: Coding.FromStrict({
+    MediaViewValueSet_OttonelloProjection: new Coding({
         code: "399171008",
         display: "Ottonello projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LeftLateralProjection: Coding.FromStrict({
+    MediaViewValueSet_LeftLateralProjection: new Coding({
         code: "399173006",
         display: "Left lateral projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LawrenceProjection: Coding.FromStrict({
+    MediaViewValueSet_LawrenceProjection: new Coding({
         code: "399179005",
         display: "Lawrence projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_PawlowProjection: Coding.FromStrict({
+    MediaViewValueSet_PawlowProjection: new Coding({
         code: "399181007",
         display: "Pawlow projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ObliqueProjection: Coding.FromStrict({
+    MediaViewValueSet_ObliqueProjection: new Coding({
         code: "399182000",
         display: "Oblique projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LeftObliqueProjection: Coding.FromStrict({
+    MediaViewValueSet_LeftObliqueProjection: new Coding({
         code: "399184004",
         display: "Left oblique projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_SuperolateralToInferomedialObliqueProjection: Coding.FromStrict({
+    MediaViewValueSet_SuperolateralToInferomedialObliqueProjection: new Coding({
         code: "399188001",
         display: "Superolateral to inferomedial oblique projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_CranioCaudalProjectionExaggeratedLaterally: Coding.FromStrict({
+    MediaViewValueSet_CranioCaudalProjectionExaggeratedLaterally: new Coding({
         code: "399192008",
         display: "Cranio-caudal projection exaggerated laterally",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_CaudoCranialProjection: Coding.FromStrict({
+    MediaViewValueSet_CaudoCranialProjection: new Coding({
         code: "399196006",
         display: "Caudo-cranial projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_RightLateralProjection: Coding.FromStrict({
+    MediaViewValueSet_RightLateralProjection: new Coding({
         code: "399198007",
         display: "Right lateral projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_HenschenProjection: Coding.FromStrict({
+    MediaViewValueSet_HenschenProjection: new Coding({
         code: "399199004",
         display: "Henschen projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_JuddProjection: Coding.FromStrict({
+    MediaViewValueSet_JuddProjection: new Coding({
         code: "399201002",
         display: "Judd projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LawProjection: Coding.FromStrict({
+    MediaViewValueSet_LawProjection: new Coding({
         code: "399206007",
         display: "Law projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_CampCoventryProjection: Coding.FromStrict({
+    MediaViewValueSet_CampCoventryProjection: new Coding({
         code: "399212002",
         display: "Camp-Coventry projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_WigbyTaylorProjection: Coding.FromStrict({
+    MediaViewValueSet_WigbyTaylorProjection: new Coding({
         code: "399215000",
         display: "Wigby-Taylor projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ArcelinProjection: Coding.FromStrict({
+    MediaViewValueSet_ArcelinProjection: new Coding({
         code: "399218003",
         display: "Arcelin projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ObliqueCaudoCranialProjection: Coding.FromStrict({
+    MediaViewValueSet_ObliqueCaudoCranialProjection: new Coding({
         code: "399225005",
         display: "Oblique caudo-cranial projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_KempHarperProjection: Coding.FromStrict({
+    MediaViewValueSet_KempHarperProjection: new Coding({
         code: "399227002",
         display: "Kemp Harper projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_RheseProjection: Coding.FromStrict({
+    MediaViewValueSet_RheseProjection: new Coding({
         code: "399234000",
         display: "Rhese projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_RightObliqueProjection: Coding.FromStrict({
+    MediaViewValueSet_RightObliqueProjection: new Coding({
         code: "399236003",
         display: "Right oblique projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_AlexanderProjection: Coding.FromStrict({
+    MediaViewValueSet_AlexanderProjection: new Coding({
         code: "399237007",
         display: "Alexander projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_TitteringtonProjection: Coding.FromStrict({
+    MediaViewValueSet_TitteringtonProjection: new Coding({
         code: "399241006",
         display: "Titterington projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_AcanthioparietalProjection: Coding.FromStrict({
+    MediaViewValueSet_AcanthioparietalProjection: new Coding({
         code: "399242004",
         display: "Acanthioparietal projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_SettegastProjection: Coding.FromStrict({
+    MediaViewValueSet_SettegastProjection: new Coding({
         code: "399243009",
         display: "Settegast projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_CleavesProjection: Coding.FromStrict({
+    MediaViewValueSet_CleavesProjection: new Coding({
         code: "399245002",
         display: "Cleaves projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_BlackettHealyProjection: Coding.FromStrict({
+    MediaViewValueSet_BlackettHealyProjection: new Coding({
         code: "399246001",
         display: "Blackett-Healy projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_TarrantProjection: Coding.FromStrict({
+    MediaViewValueSet_TarrantProjection: new Coding({
         code: "399247005",
         display: "Tarrant projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LorenzProjection: Coding.FromStrict({
+    MediaViewValueSet_LorenzProjection: new Coding({
         code: "399251007",
         display: "Lorenz projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_SubmentoverticalProjection: Coding.FromStrict({
+    MediaViewValueSet_SubmentoverticalProjection: new Coding({
         code: "399255003",
         display: "Submentovertical projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_MedialLateralProjection: Coding.FromStrict({
+    MediaViewValueSet_MedialLateralProjection: new Coding({
         code: "399260004",
         display: "Medial-lateral projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_BeclereProjection: Coding.FromStrict({
+    MediaViewValueSet_BeclereProjection: new Coding({
         code: "399263002",
         display: "Beclere projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ExaggeratedCranioCaudalProjection: Coding.FromStrict({
+    MediaViewValueSet_ExaggeratedCranioCaudalProjection: new Coding({
         code: "399265009",
         display: "Exaggerated cranio-caudal projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_MedioLateralObliqueEmissiveProjection: Coding.FromStrict({
+    MediaViewValueSet_MedioLateralObliqueEmissiveProjection: new Coding({
         code: "399268006",
         display: "Medio-lateral oblique emissive projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_TowneQuoteSProjection: Coding.FromStrict({
+    MediaViewValueSet_TowneQuoteSProjection: new Coding({
         code: "399270002",
         display: "Towne's projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ParietoacanthialProjection: Coding.FromStrict({
+    MediaViewValueSet_ParietoacanthialProjection: new Coding({
         code: "399272005",
         display: "Parietoacanthial projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_SagittalObliqueAxialEmissiveProjection: Coding.FromStrict({
+    MediaViewValueSet_SagittalObliqueAxialEmissiveProjection: new Coding({
         code: "399273000",
         display: "Sagittal-oblique axial emissive projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_HickeyProjection: Coding.FromStrict({
+    MediaViewValueSet_HickeyProjection: new Coding({
         code: "399277004",
         display: "Hickey projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_CahoonProjection: Coding.FromStrict({
+    MediaViewValueSet_CahoonProjection: new Coding({
         code: "399278009",
         display: "Cahoon projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_KasabachProjection: Coding.FromStrict({
+    MediaViewValueSet_KasabachProjection: new Coding({
         code: "399280003",
         display: "Kasabach projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_FleischnerProjection: Coding.FromStrict({
+    MediaViewValueSet_FleischnerProjection: new Coding({
         code: "399281004",
         display: "Fleischner projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_MerchantProjection: Coding.FromStrict({
+    MediaViewValueSet_MerchantProjection: new Coding({
         code: "399284007",
         display: "Merchant projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_HolmbladProjection: Coding.FromStrict({
+    MediaViewValueSet_HolmbladProjection: new Coding({
         code: "399285008",
         display: "Holmblad projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ObliqueCranioCaudalProjection: Coding.FromStrict({
+    MediaViewValueSet_ObliqueCranioCaudalProjection: new Coding({
         code: "399288005",
         display: "Oblique cranio-caudal projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_SchullerProjection: Coding.FromStrict({
+    MediaViewValueSet_SchullerProjection: new Coding({
         code: "399290006",
         display: "Schuller projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_StecherProjection: Coding.FromStrict({
+    MediaViewValueSet_StecherProjection: new Coding({
         code: "399292003",
         display: "Stecher projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_TaylorProjection: Coding.FromStrict({
+    MediaViewValueSet_TaylorProjection: new Coding({
         code: "399296000",
         display: "Taylor projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_RightLateralEmissiveProjection: Coding.FromStrict({
+    MediaViewValueSet_RightLateralEmissiveProjection: new Coding({
         code: "399297009",
         display: "Right lateral emissive projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LateralMedialEmissiveProjection: Coding.FromStrict({
+    MediaViewValueSet_LateralMedialEmissiveProjection: new Coding({
         code: "399300004",
         display: "Lateral-medial emissive projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_DunlapProjection: Coding.FromStrict({
+    MediaViewValueSet_DunlapProjection: new Coding({
         code: "399303002",
         display: "Dunlap projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LindblomProjection: Coding.FromStrict({
+    MediaViewValueSet_LindblomProjection: new Coding({
         code: "399308006",
         display: "Lindblom projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_GrandyProjection: Coding.FromStrict({
+    MediaViewValueSet_GrandyProjection: new Coding({
         code: "399311007",
         display: "Grandy projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_AnteroPosteriorObliqueProjection: Coding.FromStrict({
+    MediaViewValueSet_AnteroPosteriorObliqueProjection: new Coding({
         code: "399312000",
         display: "Antero-posterior oblique projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_SwansonProjection: Coding.FromStrict({
+    MediaViewValueSet_SwansonProjection: new Coding({
         code: "399313005",
         display: "Swanson projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ParietoOrbitalProjection: Coding.FromStrict({
+    MediaViewValueSet_ParietoOrbitalProjection: new Coding({
         code: "399316002",
         display: "Parieto-orbital projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_KovacsProjection: Coding.FromStrict({
+    MediaViewValueSet_KovacsProjection: new Coding({
         code: "399318001",
         display: "Kovacs projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ClementsNakayamaProjection: Coding.FromStrict({
+    MediaViewValueSet_ClementsNakayamaProjection: new Coding({
         code: "399320003",
         display: "Clements-Nakayama projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_AnteriorEmissiveProjection: Coding.FromStrict({
+    MediaViewValueSet_AnteriorEmissiveProjection: new Coding({
         code: "399321004",
         display: "Anterior emissive projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_SagittalObliqueAxialProjection: Coding.FromStrict({
+    MediaViewValueSet_SagittalObliqueAxialProjection: new Coding({
         code: "399325008",
         display: "Sagittal-oblique axial projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LowBeerProjection: Coding.FromStrict({
+    MediaViewValueSet_LowBeerProjection: new Coding({
         code: "399327000",
         display: "Low-Beer projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ValdiniProjection: Coding.FromStrict({
+    MediaViewValueSet_ValdiniProjection: new Coding({
         code: "399330007",
         display: "Valdini projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_KurzbauerProjection: Coding.FromStrict({
+    MediaViewValueSet_KurzbauerProjection: new Coding({
         code: "399332004",
         display: "Kurzbauer projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_DorsoplantarProjection: Coding.FromStrict({
+    MediaViewValueSet_DorsoplantarProjection: new Coding({
         code: "399335002",
         display: "Dorsoplantar projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_HaasProjection: Coding.FromStrict({
+    MediaViewValueSet_HaasProjection: new Coding({
         code: "399341009",
         display: "Haas projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LilienfeldProjection: Coding.FromStrict({
+    MediaViewValueSet_LilienfeldProjection: new Coding({
         code: "399342002",
         display: "Lilienfeld projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_BrodenProjection: Coding.FromStrict({
+    MediaViewValueSet_BrodenProjection: new Coding({
         code: "399344001",
         display: "Broden projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_AnteroPosteriorProjection: Coding.FromStrict({
+    MediaViewValueSet_AnteroPosteriorProjection: new Coding({
         code: "399348003",
         display: "Antero-posterior projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_StenverQuoteSProjection: Coding.FromStrict({
+    MediaViewValueSet_StenverQuoteSProjection: new Coding({
         code: "399349006",
         display: "Stenver's projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_OrbitoParietalProjection: Coding.FromStrict({
+    MediaViewValueSet_OrbitoParietalProjection: new Coding({
         code: "399351005",
         display: "Orbito-parietal projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LateralMedialProjection: Coding.FromStrict({
+    MediaViewValueSet_LateralMedialProjection: new Coding({
         code: "399352003",
         display: "Lateral-medial projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ChausseProjection: Coding.FromStrict({
+    MediaViewValueSet_ChausseProjection: new Coding({
         code: "399355001",
         display: "Chausse projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_RightAnteriorObliqueProjection: Coding.FromStrict({
+    MediaViewValueSet_RightAnteriorObliqueProjection: new Coding({
         code: "399356000",
         display: "Right anterior oblique projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_CaldwellProjection: Coding.FromStrict({
+    MediaViewValueSet_CaldwellProjection: new Coding({
         code: "399358004",
         display: "Caldwell projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_VerticosubmentalProjection: Coding.FromStrict({
+    MediaViewValueSet_VerticosubmentalProjection: new Coding({
         code: "399360002",
         display: "Verticosubmental projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_NuclearMedicineProjection: Coding.FromStrict({
+    MediaViewValueSet_NuclearMedicineProjection: new Coding({
         code: "399361003",
         display: "Nuclear medicine projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_BertelProjection: Coding.FromStrict({
+    MediaViewValueSet_BertelProjection: new Coding({
         code: "399362005",
         display: "Bertel projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_PearsonProjection: Coding.FromStrict({
+    MediaViewValueSet_PearsonProjection: new Coding({
         code: "399365007",
         display: "Pearson projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_MedioLateralObliqueProjection: Coding.FromStrict({
+    MediaViewValueSet_MedioLateralObliqueProjection: new Coding({
         code: "399368009",
         display: "Medio-lateral oblique projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LysholmProjection: Coding.FromStrict({
+    MediaViewValueSet_LysholmProjection: new Coding({
         code: "399370000",
         display: "Lysholm projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_FergusonProjection: Coding.FromStrict({
+    MediaViewValueSet_FergusonProjection: new Coding({
         code: "399372008",
         display: "Ferguson projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_CranialLAO: Coding.FromStrict({
+    MediaViewValueSet_CranialLAO: new Coding({
         code: "408723005",
         display: "Cranial LAO",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_CaudalLAO: Coding.FromStrict({
+    MediaViewValueSet_CaudalLAO: new Coding({
         code: "408724004",
         display: "Caudal LAO",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_CranialRAO: Coding.FromStrict({
+    MediaViewValueSet_CranialRAO: new Coding({
         code: "408725003",
         display: "Cranial RAO",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_CaudalRAO: Coding.FromStrict({
+    MediaViewValueSet_CaudalRAO: new Coding({
         code: "408726002",
         display: "Caudal RAO",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_RafertLongProjection: Coding.FromStrict({
+    MediaViewValueSet_RafertLongProjection: new Coding({
         code: "422534007",
         display: "Rafert-Long projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_MooreProjection: Coding.FromStrict({
+    MediaViewValueSet_MooreProjection: new Coding({
         code: "422568001",
         display: "Moore projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_AppleProjection: Coding.FromStrict({
+    MediaViewValueSet_AppleProjection: new Coding({
         code: "422670003",
         display: "Apple projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_NeerProjection: Coding.FromStrict({
+    MediaViewValueSet_NeerProjection: new Coding({
         code: "422795009",
         display: "Neer projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_BurmanProjection: Coding.FromStrict({
+    MediaViewValueSet_BurmanProjection: new Coding({
         code: "422861003",
         display: "Burman projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_StrykerProjection: Coding.FromStrict({
+    MediaViewValueSet_StrykerProjection: new Coding({
         code: "422954003",
         display: "Stryker projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_WolfProjection: Coding.FromStrict({
+    MediaViewValueSet_WolfProjection: new Coding({
         code: "422996004",
         display: "Wolf projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ColcherSussmanProjection: Coding.FromStrict({
+    MediaViewValueSet_ColcherSussmanProjection: new Coding({
         code: "423091003",
         display: "Colcher-Sussman projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_RaferProjection: Coding.FromStrict({
+    MediaViewValueSet_RaferProjection: new Coding({
         code: "423720000",
         display: "Rafer projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_HirtzModificationProjection: Coding.FromStrict({
+    MediaViewValueSet_HirtzModificationProjection: new Coding({
         code: "424086005",
         display: "Hirtz Modification projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_ErasoModificationProjection: Coding.FromStrict({
+    MediaViewValueSet_ErasoModificationProjection: new Coding({
         code: "424655003",
         display: "Eraso Modification projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_DaneliusMillerProjection: Coding.FromStrict({
+    MediaViewValueSet_DaneliusMillerProjection: new Coding({
         code: "424811006",
         display: "Danelius-Miller projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_FiskProjection: Coding.FromStrict({
+    MediaViewValueSet_FiskProjection: new Coding({
         code: "424962005",
         display: "Fisk projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_KiteProjection: Coding.FromStrict({
+    MediaViewValueSet_KiteProjection: new Coding({
         code: "425030002",
         display: "Kite projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_RobertProjection: Coding.FromStrict({
+    MediaViewValueSet_RobertProjection: new Coding({
         code: "425035007",
         display: "Robert projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_RosenbergProjection: Coding.FromStrict({
+    MediaViewValueSet_RosenbergProjection: new Coding({
         code: "425042007",
         display: "Rosenberg projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_FolioProjection: Coding.FromStrict({
+    MediaViewValueSet_FolioProjection: new Coding({
         code: "425157002",
         display: "Folio projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_GarthProjection: Coding.FromStrict({
+    MediaViewValueSet_GarthProjection: new Coding({
         code: "425188003",
         display: "Garth projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_DorsopalmarProjection: Coding.FromStrict({
+    MediaViewValueSet_DorsopalmarProjection: new Coding({
         code: "441505008",
         display: "Dorsopalmar projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_InferomedialToSuperolateralObliqueView: Coding.FromStrict({
+    MediaViewValueSet_InferomedialToSuperolateralObliqueView: new Coding({
         code: "441555000",
         display: "Inferomedial to superolateral oblique view",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_DorsoVentralProjection: Coding.FromStrict({
+    MediaViewValueSet_DorsoVentralProjection: new Coding({
         code: "441672003",
         display: "Dorso-ventral projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_MammographyView: Coding.FromStrict({
+    MediaViewValueSet_MammographyView: new Coding({
         code: "441753009",
         display: "Mammography view",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_StereoscopicView: Coding.FromStrict({
+    MediaViewValueSet_StereoscopicView: new Coding({
         code: "442361004",
         display: "Stereoscopic view",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_VentroDorsalProjection: Coding.FromStrict({
+    MediaViewValueSet_VentroDorsalProjection: new Coding({
         code: "442441009",
         display: "Ventro-dorsal projection",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_AxillaryTissueMammographyView: Coding.FromStrict({
+    MediaViewValueSet_AxillaryTissueMammographyView: new Coding({
         code: "442580003",
         display: "Axillary tissue mammography view",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_NippleInProfileMammographyView: Coding.FromStrict({
+    MediaViewValueSet_NippleInProfileMammographyView: new Coding({
         code: "442581004",
         display: "Nipple in profile mammography view",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_InfraMammaryFoldMammographyView: Coding.FromStrict({
+    MediaViewValueSet_InfraMammaryFoldMammographyView: new Coding({
         code: "442593008",
         display: "Infra-mammary fold mammography view",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_RightStereoscopicView: Coding.FromStrict({
+    MediaViewValueSet_RightStereoscopicView: new Coding({
         code: "442594002",
         display: "Right stereoscopic view",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_LeftStereoscopicView: Coding.FromStrict({
+    MediaViewValueSet_LeftStereoscopicView: new Coding({
         code: "442640004",
         display: "Left stereoscopic view",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_StereoscopicViewIncrementedFromBaseline: Coding.FromStrict({
+    MediaViewValueSet_StereoscopicViewIncrementedFromBaseline: new Coding({
         code: "442653001",
         display: "Stereoscopic view incremented from baseline",
         system: "http://snomed.info/sct"
     }),
-    MediaViewValueSet_StereoscopicViewDecrementedFromBaseline: Coding.FromStrict({
+    MediaViewValueSet_StereoscopicViewDecrementedFromBaseline: new Coding({
         code: "442667005",
         display: "Stereoscopic view decremented from baseline",
         system: "http://snomed.info/sct"

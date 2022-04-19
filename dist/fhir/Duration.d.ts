@@ -14,10 +14,10 @@ export declare class Duration extends fhir.Quantity implements fhir.IDuration {
     /**
      * Check if the current Duration contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Duration from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDuration): Duration;
+    static fromStrict(source: fhir.IDuration): Duration;
 }
 //# sourceMappingURL=Duration.d.ts.map

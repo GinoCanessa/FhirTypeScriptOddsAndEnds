@@ -13,7 +13,7 @@ export const AccountStatusValueSet = {
   /**
    * This account is active and may be used.
    */
-  account_status_Active: Coding.FromStrict({
+  account_status_Active: new Coding({
     code: "active",
     display: "Active",
     system: "http://hl7.org/fhir/account-status"
@@ -21,7 +21,7 @@ export const AccountStatusValueSet = {
   /**
    * This instance should not have been part of this patient's medical record.
    */
-  account_status_EnteredInError: Coding.FromStrict({
+  account_status_EnteredInError: new Coding({
     code: "entered-in-error",
     display: "Entered in error",
     system: "http://hl7.org/fhir/account-status"
@@ -29,7 +29,7 @@ export const AccountStatusValueSet = {
   /**
    * This account is inactive and should not be used to track financial information.
    */
-  account_status_Inactive: Coding.FromStrict({
+  account_status_Inactive: new Coding({
     code: "inactive",
     display: "Inactive",
     system: "http://hl7.org/fhir/account-status"
@@ -37,7 +37,7 @@ export const AccountStatusValueSet = {
   /**
    * This account is on hold.
    */
-  account_status_OnHold: Coding.FromStrict({
+  account_status_OnHold: new Coding({
     code: "on-hold",
     display: "On Hold",
     system: "http://hl7.org/fhir/account-status"
@@ -45,7 +45,7 @@ export const AccountStatusValueSet = {
   /**
    * The account status is unknown.
    */
-  account_status_Unknown: Coding.FromStrict({
+  account_status_Unknown: new Coding({
     code: "unknown",
     display: "Unknown",
     system: "http://hl7.org/fhir/account-status"

@@ -125,18 +125,18 @@ export class CareTeamParticipant extends fhir.BackboneElement implements fhir.IC
   /**
    * Check if the current CareTeamParticipant contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CareTeamParticipant from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICareTeamParticipant):CareTeamParticipant {
+  static override fromStrict(source:fhir.ICareTeamParticipant):CareTeamParticipant {
     var dest:CareTeamParticipant = new CareTeamParticipant(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CareTeamParticipant is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -228,18 +228,18 @@ export class CareTeam extends fhir.DomainResource implements fhir.ICareTeam {
   /**
    * Check if the current CareTeam contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CareTeam from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICareTeam):CareTeam {
+  static override fromStrict(source:fhir.ICareTeam):CareTeam {
     var dest:CareTeam = new CareTeam(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CareTeam is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

@@ -13,7 +13,7 @@ export const ListEmptyReasonValueSet = {
   /**
    * This list has now closed or has ceased to be relevant or useful.
    */
-  list_empty_reason_Closed: Coding.FromStrict({
+  list_empty_reason_Closed: new Coding({
     code: "closed",
     display: "Closed",
     system: "http://terminology.hl7.org/CodeSystem/list-empty-reason"
@@ -21,7 +21,7 @@ export const ListEmptyReasonValueSet = {
   /**
    * Clinical judgment that there are no known items for this list after reasonable investigation. Note that this a positive statement by a clinical user, and not a default position asserted by a computer system in the lack of other information. Example uses:  * For allergies: the patient or patient's agent/guardian has asserted that he/she is not aware of any allergies (NKA - nil known allergies)  * For medications: the patient or patient's agent/guardian has asserted that the patient is known to be taking no medications  * For diagnoses, problems and procedures: the patient or patient's agent/guardian has asserted that there is no known event to record.
    */
-  list_empty_reason_NilKnown: Coding.FromStrict({
+  list_empty_reason_NilKnown: new Coding({
     code: "nilknown",
     display: "Nil Known",
     system: "http://terminology.hl7.org/CodeSystem/list-empty-reason"
@@ -29,7 +29,7 @@ export const ListEmptyReasonValueSet = {
   /**
    * The investigation to find out whether there are items for this list has not occurred.
    */
-  list_empty_reason_NotAsked: Coding.FromStrict({
+  list_empty_reason_NotAsked: new Coding({
     code: "notasked",
     display: "Not Asked",
     system: "http://terminology.hl7.org/CodeSystem/list-empty-reason"
@@ -37,7 +37,7 @@ export const ListEmptyReasonValueSet = {
   /**
    * The work to populate this list has not yet begun.
    */
-  list_empty_reason_NotStarted: Coding.FromStrict({
+  list_empty_reason_NotStarted: new Coding({
     code: "notstarted",
     display: "Not Started",
     system: "http://terminology.hl7.org/CodeSystem/list-empty-reason"
@@ -45,7 +45,7 @@ export const ListEmptyReasonValueSet = {
   /**
    * Information to populate this list cannot be obtained; e.g. unconscious patient.
    */
-  list_empty_reason_Unavailable: Coding.FromStrict({
+  list_empty_reason_Unavailable: new Coding({
     code: "unavailable",
     display: "Unavailable",
     system: "http://terminology.hl7.org/CodeSystem/list-empty-reason"
@@ -53,7 +53,7 @@ export const ListEmptyReasonValueSet = {
   /**
    * The content of the list was not provided due to privacy or confidentiality concerns. Note that it should not be assumed that this means that the particular information in question was withheld due to its contents - it can also be a policy decision.
    */
-  list_empty_reason_InformationWithheld: Coding.FromStrict({
+  list_empty_reason_InformationWithheld: new Coding({
     code: "withheld",
     display: "Information Withheld",
     system: "http://terminology.hl7.org/CodeSystem/list-empty-reason"

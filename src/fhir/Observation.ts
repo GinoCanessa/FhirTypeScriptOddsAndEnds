@@ -320,18 +320,18 @@ export class ObservationReferenceRange extends fhir.BackboneElement implements f
   /**
    * Check if the current ObservationReferenceRange contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ObservationReferenceRange from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IObservationReferenceRange):ObservationReferenceRange {
+  static override fromStrict(source:fhir.IObservationReferenceRange):ObservationReferenceRange {
     var dest:ObservationReferenceRange = new ObservationReferenceRange(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ObservationReferenceRange is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -437,19 +437,19 @@ export class ObservationComponent extends fhir.BackboneElement implements fhir.I
   /**
    * Check if the current ObservationComponent contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ObservationComponent from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IObservationComponent):ObservationComponent {
+  static override fromStrict(source:fhir.IObservationComponent):ObservationComponent {
     var dest:ObservationComponent = new ObservationComponent(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ObservationComponent is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -681,20 +681,20 @@ export class Observation extends fhir.DomainResource implements fhir.IObservatio
   /**
    * Check if the current Observation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Observation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IObservation):Observation {
+  static override fromStrict(source:fhir.IObservation):Observation {
     var dest:Observation = new Observation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Observation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

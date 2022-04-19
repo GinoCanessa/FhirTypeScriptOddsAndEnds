@@ -13,7 +13,7 @@ export const ItemTypeValueSet = {
   /**
    * Question with binary content such as an image, PDF, etc. as an answer (valueAttachment).
    */
-  item_type_Attachment: Coding.FromStrict({
+  item_type_Attachment: new Coding({
     code: "attachment",
     display: "Attachment",
     system: "http://hl7.org/fhir/item-type"
@@ -21,7 +21,7 @@ export const ItemTypeValueSet = {
   /**
    * Question with a yes/no answer (valueBoolean).
    */
-  item_type_Boolean: Coding.FromStrict({
+  item_type_Boolean: new Coding({
     code: "boolean",
     display: "Boolean",
     system: "http://hl7.org/fhir/item-type"
@@ -29,7 +29,7 @@ export const ItemTypeValueSet = {
   /**
    * Question with a Coding drawn from a list of possible answers (specified in either the answerOption property, or via the valueset referenced in the answerValueSet property) as an answer (valueCoding).
    */
-  item_type_Choice: Coding.FromStrict({
+  item_type_Choice: new Coding({
     code: "choice",
     display: "Choice",
     system: "http://hl7.org/fhir/item-type"
@@ -37,7 +37,7 @@ export const ItemTypeValueSet = {
   /**
    * Question with a date answer (valueDate).
    */
-  item_type_Date: Coding.FromStrict({
+  item_type_Date: new Coding({
     code: "date",
     display: "Date",
     system: "http://hl7.org/fhir/item-type"
@@ -45,7 +45,7 @@ export const ItemTypeValueSet = {
   /**
    * Question with a date and time answer (valueDateTime).
    */
-  item_type_DateTime: Coding.FromStrict({
+  item_type_DateTime: new Coding({
     code: "dateTime",
     display: "Date Time",
     system: "http://hl7.org/fhir/item-type"
@@ -53,7 +53,7 @@ export const ItemTypeValueSet = {
   /**
    * Question with is a real number answer (valueDecimal).
    */
-  item_type_Decimal: Coding.FromStrict({
+  item_type_Decimal: new Coding({
     code: "decimal",
     display: "Decimal",
     system: "http://hl7.org/fhir/item-type"
@@ -61,7 +61,7 @@ export const ItemTypeValueSet = {
   /**
    * Text for display that will not capture an answer or have child items.
    */
-  item_type_Display: Coding.FromStrict({
+  item_type_Display: new Coding({
     code: "display",
     display: "Display",
     system: "http://hl7.org/fhir/item-type"
@@ -69,7 +69,7 @@ export const ItemTypeValueSet = {
   /**
    * An item with no direct answer but should have at least one child item.
    */
-  item_type_Group: Coding.FromStrict({
+  item_type_Group: new Coding({
     code: "group",
     display: "Group",
     system: "http://hl7.org/fhir/item-type"
@@ -77,7 +77,7 @@ export const ItemTypeValueSet = {
   /**
    * Question with an integer answer (valueInteger).
    */
-  item_type_Integer: Coding.FromStrict({
+  item_type_Integer: new Coding({
     code: "integer",
     display: "Integer",
     system: "http://hl7.org/fhir/item-type"
@@ -85,7 +85,7 @@ export const ItemTypeValueSet = {
   /**
    * Answer is a Coding drawn from a list of possible answers (as with the choice type) or a free-text entry in a string (valueCoding or valueString).
    */
-  item_type_OpenChoice: Coding.FromStrict({
+  item_type_OpenChoice: new Coding({
     code: "open-choice",
     display: "Open Choice",
     system: "http://hl7.org/fhir/item-type"
@@ -93,7 +93,7 @@ export const ItemTypeValueSet = {
   /**
    * Question with a combination of a numeric value and unit, potentially with a comparator (&lt;, &gt;, etc.) as an answer. (valueQuantity) There is an extension 'http://hl7.org/fhir/StructureDefinition/questionnaire-unit' that can be used to define what unit should be captured (or the unit that has a ucum conversion from the provided unit).
    */
-  item_type_Quantity: Coding.FromStrict({
+  item_type_Quantity: new Coding({
     code: "quantity",
     display: "Quantity",
     system: "http://hl7.org/fhir/item-type"
@@ -101,7 +101,7 @@ export const ItemTypeValueSet = {
   /**
    * An item that defines a specific answer to be captured, and which may have child items. (the answer provided in the QuestionnaireResponse should be of the defined datatype).
    */
-  item_type_Question: Coding.FromStrict({
+  item_type_Question: new Coding({
     code: "question",
     display: "Question",
     system: "http://hl7.org/fhir/item-type"
@@ -109,7 +109,7 @@ export const ItemTypeValueSet = {
   /**
    * Question with a reference to another resource (practitioner, organization, etc.) as an answer (valueReference).
    */
-  item_type_Reference: Coding.FromStrict({
+  item_type_Reference: new Coding({
     code: "reference",
     display: "Reference",
     system: "http://hl7.org/fhir/item-type"
@@ -117,7 +117,7 @@ export const ItemTypeValueSet = {
   /**
    * Question with a short (few words to short sentence) free-text entry answer (valueString).
    */
-  item_type_String: Coding.FromStrict({
+  item_type_String: new Coding({
     code: "string",
     display: "String",
     system: "http://hl7.org/fhir/item-type"
@@ -125,7 +125,7 @@ export const ItemTypeValueSet = {
   /**
    * Question with a long (potentially multi-paragraph) free-text entry answer (valueString).
    */
-  item_type_Text: Coding.FromStrict({
+  item_type_Text: new Coding({
     code: "text",
     display: "Text",
     system: "http://hl7.org/fhir/item-type"
@@ -133,7 +133,7 @@ export const ItemTypeValueSet = {
   /**
    * Question with a time (hour:minute:second) answer independent of date. (valueTime).
    */
-  item_type_Time: Coding.FromStrict({
+  item_type_Time: new Coding({
     code: "time",
     display: "Time",
     system: "http://hl7.org/fhir/item-type"
@@ -141,7 +141,7 @@ export const ItemTypeValueSet = {
   /**
    * Question with a URL (website, FTP site, etc.) answer (valueUri).
    */
-  item_type_Url: Coding.FromStrict({
+  item_type_Url: new Coding({
     code: "url",
     display: "Url",
     system: "http://hl7.org/fhir/item-type"

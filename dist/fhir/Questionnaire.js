@@ -90,7 +90,7 @@ export class QuestionnaireItemEnableWhen extends fhir.BackboneElement {
     /**
      * Check if the current QuestionnaireItemEnableWhen contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["operator"] === undefined) {
             missingElements.push("operator");
@@ -98,16 +98,16 @@ export class QuestionnaireItemEnableWhen extends fhir.BackboneElement {
         if (this["question"] === undefined) {
             missingElements.push("question");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a QuestionnaireItemEnableWhen from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new QuestionnaireItemEnableWhen(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `QuestionnaireItemEnableWhen is missing elements: ${missingElements.join(", ")}`;
         }
@@ -163,18 +163,18 @@ export class QuestionnaireItemAnswerOption extends fhir.BackboneElement {
     /**
      * Check if the current QuestionnaireItemAnswerOption contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a QuestionnaireItemAnswerOption from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new QuestionnaireItemAnswerOption(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `QuestionnaireItemAnswerOption is missing elements: ${missingElements.join(", ")}`;
         }
@@ -254,18 +254,18 @@ export class QuestionnaireItemInitial extends fhir.BackboneElement {
     /**
      * Check if the current QuestionnaireItemInitial contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a QuestionnaireItemInitial from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new QuestionnaireItemInitial(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `QuestionnaireItemInitial is missing elements: ${missingElements.join(", ")}`;
         }
@@ -374,7 +374,7 @@ export class QuestionnaireItem extends fhir.BackboneElement {
     /**
      * Check if the current QuestionnaireItem contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["linkId"] === undefined) {
             missingElements.push("linkId");
@@ -382,16 +382,16 @@ export class QuestionnaireItem extends fhir.BackboneElement {
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a QuestionnaireItem from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new QuestionnaireItem(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `QuestionnaireItem is missing elements: ${missingElements.join(", ")}`;
         }
@@ -527,21 +527,21 @@ export class Questionnaire extends fhir.DomainResource {
     /**
      * Check if the current Questionnaire contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a Questionnaire from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new Questionnaire(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `Questionnaire is missing elements: ${missingElements.join(", ")}`;
         }

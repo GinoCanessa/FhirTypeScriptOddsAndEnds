@@ -142,11 +142,11 @@ export declare class DataRequirementCodeFilter extends fhir.FhirElement implemen
     /**
      * Check if the current DataRequirementCodeFilter contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DataRequirementCodeFilter from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDataRequirementCodeFilter): DataRequirementCodeFilter;
+    static fromStrict(source: fhir.IDataRequirementCodeFilter): DataRequirementCodeFilter;
 }
 /**
  * Date filters specify additional constraints on the data in terms of the applicable date range for specific elements. Each date filter specifies an additional constraint on the data, i.e. date filters are AND'ed, not OR'ed.
@@ -182,11 +182,11 @@ export declare class DataRequirementDateFilter extends fhir.FhirElement implemen
     /**
      * Check if the current DataRequirementDateFilter contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DataRequirementDateFilter from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDataRequirementDateFilter): DataRequirementDateFilter;
+    static fromStrict(source: fhir.IDataRequirementDateFilter): DataRequirementDateFilter;
 }
 /**
  * This element can be used in combination with the sort element to specify quota requirements such as "the most recent 5" or "the highest 5". When multiple sorts are specified, they are applied in the order they appear in the resource.
@@ -209,11 +209,11 @@ export declare class DataRequirementSort extends fhir.FhirElement implements fhi
     /**
      * Check if the current DataRequirementSort contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DataRequirementSort from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDataRequirementSort): DataRequirementSort;
+    static fromStrict(source: fhir.IDataRequirementSort): DataRequirementSort;
 }
 /**
  * Describes a required data item for evaluation in terms of the type of data, and optional code or date-based filters of the data.
@@ -267,11 +267,11 @@ export declare class DataRequirement extends fhir.FhirElement implements fhir.ID
     /**
      * Check if the current DataRequirement contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DataRequirement from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDataRequirement): DataRequirement;
+    static fromStrict(source: fhir.IDataRequirement): DataRequirement;
 }
 /**
  * Code Values for the DataRequirement.sort.direction field

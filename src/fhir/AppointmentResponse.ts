@@ -125,20 +125,20 @@ export class AppointmentResponse extends fhir.DomainResource implements fhir.IAp
   /**
    * Check if the current AppointmentResponse contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["appointment"] === undefined) { missingElements.push("appointment"); }
     if (this["participantStatus"] === undefined) { missingElements.push("participantStatus"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a AppointmentResponse from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IAppointmentResponse):AppointmentResponse {
+  static override fromStrict(source:fhir.IAppointmentResponse):AppointmentResponse {
     var dest:AppointmentResponse = new AppointmentResponse(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `AppointmentResponse is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

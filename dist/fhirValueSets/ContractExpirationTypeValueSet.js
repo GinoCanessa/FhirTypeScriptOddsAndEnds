@@ -13,7 +13,7 @@ export const ContractExpirationTypeValueSet = {
     /**
      * To be completed
      */
-    contract_expiration_type_Breach: Coding.FromStrict({
+    contract_expiration_type_Breach: new Coding({
         code: "breach",
         display: "Breach",
         system: "http://hl7.org/fhir/contract-expiration-type"

@@ -13,7 +13,7 @@ export const SearchComparatorValueSet = {
     /**
      * the value for the parameter in the resource is approximately the same to the provided value.
      */
-    search_comparator_Approximately: Coding.FromStrict({
+    search_comparator_Approximately: new Coding({
         code: "ap",
         display: "Approximately",
         system: "http://hl7.org/fhir/search-comparator"
@@ -21,7 +21,7 @@ export const SearchComparatorValueSet = {
     /**
      * the value for the parameter in the resource ends before the provided value.
      */
-    search_comparator_EndsBefore: Coding.FromStrict({
+    search_comparator_EndsBefore: new Coding({
         code: "eb",
         display: "Ends Before",
         system: "http://hl7.org/fhir/search-comparator"
@@ -29,7 +29,7 @@ export const SearchComparatorValueSet = {
     /**
      * the value for the parameter in the resource is equal to the provided value.
      */
-    search_comparator_Equals: Coding.FromStrict({
+    search_comparator_Equals: new Coding({
         code: "eq",
         display: "Equals",
         system: "http://hl7.org/fhir/search-comparator"
@@ -37,7 +37,7 @@ export const SearchComparatorValueSet = {
     /**
      * the value for the parameter in the resource is greater or equal to the provided value.
      */
-    search_comparator_GreaterOrEquals: Coding.FromStrict({
+    search_comparator_GreaterOrEquals: new Coding({
         code: "ge",
         display: "Greater or Equals",
         system: "http://hl7.org/fhir/search-comparator"
@@ -45,7 +45,7 @@ export const SearchComparatorValueSet = {
     /**
      * the value for the parameter in the resource is greater than the provided value.
      */
-    search_comparator_GreaterThan: Coding.FromStrict({
+    search_comparator_GreaterThan: new Coding({
         code: "gt",
         display: "Greater Than",
         system: "http://hl7.org/fhir/search-comparator"
@@ -53,7 +53,7 @@ export const SearchComparatorValueSet = {
     /**
      * the value for the parameter in the resource is less or equal to the provided value.
      */
-    search_comparator_LessOfEqual: Coding.FromStrict({
+    search_comparator_LessOfEqual: new Coding({
         code: "le",
         display: "Less of Equal",
         system: "http://hl7.org/fhir/search-comparator"
@@ -61,7 +61,7 @@ export const SearchComparatorValueSet = {
     /**
      * the value for the parameter in the resource is less than the provided value.
      */
-    search_comparator_LessThan: Coding.FromStrict({
+    search_comparator_LessThan: new Coding({
         code: "lt",
         display: "Less Than",
         system: "http://hl7.org/fhir/search-comparator"
@@ -69,7 +69,7 @@ export const SearchComparatorValueSet = {
     /**
      * the value for the parameter in the resource is not equal to the provided value.
      */
-    search_comparator_NotEquals: Coding.FromStrict({
+    search_comparator_NotEquals: new Coding({
         code: "ne",
         display: "Not Equals",
         system: "http://hl7.org/fhir/search-comparator"
@@ -77,7 +77,7 @@ export const SearchComparatorValueSet = {
     /**
      * the value for the parameter in the resource starts after the provided value.
      */
-    search_comparator_StartsAfter: Coding.FromStrict({
+    search_comparator_StartsAfter: new Coding({
         code: "sa",
         display: "Starts After",
         system: "http://hl7.org/fhir/search-comparator"

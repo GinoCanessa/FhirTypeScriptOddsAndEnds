@@ -58,18 +58,18 @@ export class SubstanceProteinSubunit extends fhir.BackboneElement {
     /**
      * Check if the current SubstanceProteinSubunit contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SubstanceProteinSubunit from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SubstanceProteinSubunit(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SubstanceProteinSubunit is missing elements: ${missingElements.join(", ")}`;
         }
@@ -108,18 +108,18 @@ export class SubstanceProtein extends fhir.DomainResource {
     /**
      * Check if the current SubstanceProtein contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SubstanceProtein from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SubstanceProtein(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SubstanceProtein is missing elements: ${missingElements.join(", ")}`;
         }

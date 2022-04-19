@@ -196,11 +196,11 @@ export declare class ProcedurePerformer extends fhir.BackboneElement implements 
     /**
      * Check if the current ProcedurePerformer contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ProcedurePerformer from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IProcedurePerformer): ProcedurePerformer;
+    static fromStrict(source: fhir.IProcedurePerformer): ProcedurePerformer;
 }
 /**
  * A device that is implanted, removed or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.
@@ -221,11 +221,11 @@ export declare class ProcedureFocalDevice extends fhir.BackboneElement implement
     /**
      * Check if the current ProcedureFocalDevice contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ProcedureFocalDevice from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IProcedureFocalDevice): ProcedureFocalDevice;
+    static fromStrict(source: fhir.IProcedureFocalDevice): ProcedureFocalDevice;
 }
 /**
  * An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.
@@ -377,11 +377,11 @@ export declare class Procedure extends fhir.DomainResource implements fhir.IProc
     /**
      * Check if the current Procedure contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Procedure from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IProcedure): Procedure;
+    static fromStrict(source: fhir.IProcedure): Procedure;
 }
 /**
  * Code Values for the Procedure.status field

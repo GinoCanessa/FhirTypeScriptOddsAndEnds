@@ -64,20 +64,20 @@ export class ProductShelfLife extends fhir.BackboneElement implements fhir.IProd
   /**
    * Check if the current ProductShelfLife contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["period"] === undefined) { missingElements.push("period"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ProductShelfLife from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IProductShelfLife):ProductShelfLife {
+  static override fromStrict(source:fhir.IProductShelfLife):ProductShelfLife {
     var dest:ProductShelfLife = new ProductShelfLife(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ProductShelfLife is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

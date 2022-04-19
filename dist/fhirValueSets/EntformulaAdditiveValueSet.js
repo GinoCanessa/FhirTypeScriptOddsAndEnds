@@ -13,7 +13,7 @@ export const EntformulaAdditiveValueSet = {
     /**
      * Modular carbohydrate enteral formula component
      */
-    entformula_additive_Carbohydrate: Coding.FromStrict({
+    entformula_additive_Carbohydrate: new Coding({
         code: "carbohydrate",
         display: "Carbohydrate",
         system: "http://terminology.hl7.org/CodeSystem/entformula-additive"
@@ -21,7 +21,7 @@ export const EntformulaAdditiveValueSet = {
     /**
      * Modular fiber enteral formula component
      */
-    entformula_additive_Fiber: Coding.FromStrict({
+    entformula_additive_Fiber: new Coding({
         code: "fiber",
         display: "Fiber",
         system: "http://terminology.hl7.org/CodeSystem/entformula-additive"
@@ -29,7 +29,7 @@ export const EntformulaAdditiveValueSet = {
     /**
      * Modular lipid enteral formula component
      */
-    entformula_additive_Lipid: Coding.FromStrict({
+    entformula_additive_Lipid: new Coding({
         code: "lipid",
         display: "Lipid",
         system: "http://terminology.hl7.org/CodeSystem/entformula-additive"
@@ -37,7 +37,7 @@ export const EntformulaAdditiveValueSet = {
     /**
      * Modular protein enteral formula component
      */
-    entformula_additive_Protein: Coding.FromStrict({
+    entformula_additive_Protein: new Coding({
         code: "protein",
         display: "Protein",
         system: "http://terminology.hl7.org/CodeSystem/entformula-additive"
@@ -45,7 +45,7 @@ export const EntformulaAdditiveValueSet = {
     /**
      * Added water
      */
-    entformula_additive_Water: Coding.FromStrict({
+    entformula_additive_Water: new Coding({
         code: "water",
         display: "Water",
         system: "http://terminology.hl7.org/CodeSystem/entformula-additive"

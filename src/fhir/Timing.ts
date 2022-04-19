@@ -237,18 +237,18 @@ export class TimingRepeat extends fhir.FhirElement implements fhir.ITimingRepeat
   /**
    * Check if the current TimingRepeat contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TimingRepeat from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITimingRepeat):TimingRepeat {
+  static override fromStrict(source:fhir.ITimingRepeat):TimingRepeat {
     var dest:TimingRepeat = new TimingRepeat(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TimingRepeat is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -283,18 +283,18 @@ export class Timing extends fhir.BackboneElement implements fhir.ITiming {
   /**
    * Check if the current Timing contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Timing from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITiming):Timing {
+  static override fromStrict(source:fhir.ITiming):Timing {
     var dest:Timing = new Timing(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Timing is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

@@ -266,20 +266,20 @@ export class EncounterStatusHistory extends fhir.BackboneElement implements fhir
   /**
    * Check if the current EncounterStatusHistory contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["period"] === undefined) { missingElements.push("period"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a EncounterStatusHistory from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IEncounterStatusHistory):EncounterStatusHistory {
+  static override fromStrict(source:fhir.IEncounterStatusHistory):EncounterStatusHistory {
     var dest:EncounterStatusHistory = new EncounterStatusHistory(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `EncounterStatusHistory is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -311,20 +311,20 @@ export class EncounterClassHistory extends fhir.BackboneElement implements fhir.
   /**
    * Check if the current EncounterClassHistory contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["class"] === undefined) { missingElements.push("class"); }
     if (this["period"] === undefined) { missingElements.push("period"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a EncounterClassHistory from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IEncounterClassHistory):EncounterClassHistory {
+  static override fromStrict(source:fhir.IEncounterClassHistory):EncounterClassHistory {
     var dest:EncounterClassHistory = new EncounterClassHistory(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `EncounterClassHistory is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -357,18 +357,18 @@ export class EncounterParticipant extends fhir.BackboneElement implements fhir.I
   /**
    * Check if the current EncounterParticipant contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a EncounterParticipant from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IEncounterParticipant):EncounterParticipant {
+  static override fromStrict(source:fhir.IEncounterParticipant):EncounterParticipant {
     var dest:EncounterParticipant = new EncounterParticipant(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `EncounterParticipant is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -405,19 +405,19 @@ export class EncounterDiagnosis extends fhir.BackboneElement implements fhir.IEn
   /**
    * Check if the current EncounterDiagnosis contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["condition"] === undefined) { missingElements.push("condition"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a EncounterDiagnosis from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IEncounterDiagnosis):EncounterDiagnosis {
+  static override fromStrict(source:fhir.IEncounterDiagnosis):EncounterDiagnosis {
     var dest:EncounterDiagnosis = new EncounterDiagnosis(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `EncounterDiagnosis is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -481,18 +481,18 @@ export class EncounterHospitalization extends fhir.BackboneElement implements fh
   /**
    * Check if the current EncounterHospitalization contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a EncounterHospitalization from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IEncounterHospitalization):EncounterHospitalization {
+  static override fromStrict(source:fhir.IEncounterHospitalization):EncounterHospitalization {
     var dest:EncounterHospitalization = new EncounterHospitalization(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `EncounterHospitalization is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -535,19 +535,19 @@ export class EncounterLocation extends fhir.BackboneElement implements fhir.IEnc
   /**
    * Check if the current EncounterLocation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["location"] === undefined) { missingElements.push("location"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a EncounterLocation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IEncounterLocation):EncounterLocation {
+  static override fromStrict(source:fhir.IEncounterLocation):EncounterLocation {
     var dest:EncounterLocation = new EncounterLocation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `EncounterLocation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -693,20 +693,20 @@ export class Encounter extends fhir.DomainResource implements fhir.IEncounter {
   /**
    * Check if the current Encounter contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["class"] === undefined) { missingElements.push("class"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Encounter from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IEncounter):Encounter {
+  static override fromStrict(source:fhir.IEncounter):Encounter {
     var dest:Encounter = new Encounter(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Encounter is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

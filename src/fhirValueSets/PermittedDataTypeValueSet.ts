@@ -13,7 +13,7 @@ export const PermittedDataTypeValueSet = {
   /**
    * true or false.
    */
-  permitted_data_type_Boolean: Coding.FromStrict({
+  permitted_data_type_Boolean: new Coding({
     code: "boolean",
     display: "boolean",
     system: "http://hl7.org/fhir/permitted-data-type"
@@ -21,7 +21,7 @@ export const PermittedDataTypeValueSet = {
   /**
    * A coded concept from a reference terminology and/or text.
    */
-  permitted_data_type_CodeableConcept: Coding.FromStrict({
+  permitted_data_type_CodeableConcept: new Coding({
     code: "CodeableConcept",
     display: "CodeableConcept",
     system: "http://hl7.org/fhir/permitted-data-type"
@@ -29,7 +29,7 @@ export const PermittedDataTypeValueSet = {
   /**
    * A date, date-time or partial date (e.g. just year or year + month) as used in human communication.
    */
-  permitted_data_type_DateTime: Coding.FromStrict({
+  permitted_data_type_DateTime: new Coding({
     code: "dateTime",
     display: "dateTime",
     system: "http://hl7.org/fhir/permitted-data-type"
@@ -37,7 +37,7 @@ export const PermittedDataTypeValueSet = {
   /**
    * A signed integer.
    */
-  permitted_data_type_Integer: Coding.FromStrict({
+  permitted_data_type_Integer: new Coding({
     code: "integer",
     display: "integer",
     system: "http://hl7.org/fhir/permitted-data-type"
@@ -45,7 +45,7 @@ export const PermittedDataTypeValueSet = {
   /**
    * A time range defined by start and end date/time.
    */
-  permitted_data_type_Period: Coding.FromStrict({
+  permitted_data_type_Period: new Coding({
     code: "Period",
     display: "Period",
     system: "http://hl7.org/fhir/permitted-data-type"
@@ -53,7 +53,7 @@ export const PermittedDataTypeValueSet = {
   /**
    * A measured amount.
    */
-  permitted_data_type_Quantity: Coding.FromStrict({
+  permitted_data_type_Quantity: new Coding({
     code: "Quantity",
     display: "Quantity",
     system: "http://hl7.org/fhir/permitted-data-type"
@@ -61,7 +61,7 @@ export const PermittedDataTypeValueSet = {
   /**
    * A set of values bounded by low and high.
    */
-  permitted_data_type_Range: Coding.FromStrict({
+  permitted_data_type_Range: new Coding({
     code: "Range",
     display: "Range",
     system: "http://hl7.org/fhir/permitted-data-type"
@@ -69,7 +69,7 @@ export const PermittedDataTypeValueSet = {
   /**
    * A ratio of two Quantity values - a numerator and a denominator.
    */
-  permitted_data_type_Ratio: Coding.FromStrict({
+  permitted_data_type_Ratio: new Coding({
     code: "Ratio",
     display: "Ratio",
     system: "http://hl7.org/fhir/permitted-data-type"
@@ -77,7 +77,7 @@ export const PermittedDataTypeValueSet = {
   /**
    * A series of measurements taken by a device.
    */
-  permitted_data_type_SampledData: Coding.FromStrict({
+  permitted_data_type_SampledData: new Coding({
     code: "SampledData",
     display: "SampledData",
     system: "http://hl7.org/fhir/permitted-data-type"
@@ -85,7 +85,7 @@ export const PermittedDataTypeValueSet = {
   /**
    * A sequence of Unicode characters.
    */
-  permitted_data_type_String: Coding.FromStrict({
+  permitted_data_type_String: new Coding({
     code: "string",
     display: "string",
     system: "http://hl7.org/fhir/permitted-data-type"
@@ -93,7 +93,7 @@ export const PermittedDataTypeValueSet = {
   /**
    * A time during the day, in the format hh:mm:ss.
    */
-  permitted_data_type_Time: Coding.FromStrict({
+  permitted_data_type_Time: new Coding({
     code: "time",
     display: "time",
     system: "http://hl7.org/fhir/permitted-data-type"

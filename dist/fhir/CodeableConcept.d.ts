@@ -33,10 +33,10 @@ export declare class CodeableConcept extends fhir.FhirElement implements fhir.IC
     /**
      * Check if the current CodeableConcept contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CodeableConcept from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICodeableConcept): CodeableConcept;
+    static fromStrict(source: fhir.ICodeableConcept): CodeableConcept;
 }
 //# sourceMappingURL=CodeableConcept.d.ts.map

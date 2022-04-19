@@ -10,2212 +10,2212 @@ import { Coding } from '../fhir';
  * Example codes indicating the change that happened to the device during the procedure.  Note that these are in no way complete and might not even be appropriate for some uses.
  */
 export const DeviceActionValueSet = {
-    DeviceActionValueSet_PatientEvaluationAction: Coding.FromStrict({
+    DeviceActionValueSet_PatientEvaluationAction: new Coding({
         code: "129265001",
         display: "Patient evaluation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MeasurementAction: Coding.FromStrict({
+    DeviceActionValueSet_MeasurementAction: new Coding({
         code: "129266000",
         display: "Measurement - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_AdministrativeAction: Coding.FromStrict({
+    DeviceActionValueSet_AdministrativeAction: new Coding({
         code: "129267009",
         display: "Administrative action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ObservationAction: Coding.FromStrict({
+    DeviceActionValueSet_ObservationAction: new Coding({
         code: "129268004",
         display: "Observation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_AssistingAction: Coding.FromStrict({
+    DeviceActionValueSet_AssistingAction: new Coding({
         code: "129269007",
         display: "Assisting - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ManagementAction: Coding.FromStrict({
+    DeviceActionValueSet_ManagementAction: new Coding({
         code: "129271007",
         display: "Management - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_StimulationAction: Coding.FromStrict({
+    DeviceActionValueSet_StimulationAction: new Coding({
         code: "129272000",
         display: "Stimulation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_AdmissionAction: Coding.FromStrict({
+    DeviceActionValueSet_AdmissionAction: new Coding({
         code: "129273005",
         display: "Admission - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DischargeAction: Coding.FromStrict({
+    DeviceActionValueSet_DischargeAction: new Coding({
         code: "129274004",
         display: "Discharge - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_AdministrativeTransferAction: Coding.FromStrict({
+    DeviceActionValueSet_AdministrativeTransferAction: new Coding({
         code: "129275003",
         display: "Administrative transfer - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ReferralAction: Coding.FromStrict({
+    DeviceActionValueSet_ReferralAction: new Coding({
         code: "129276002",
         display: "Referral - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_AdministrativeDispositionAction: Coding.FromStrict({
+    DeviceActionValueSet_AdministrativeDispositionAction: new Coding({
         code: "129277006",
         display: "Administrative disposition - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_AuditAction: Coding.FromStrict({
+    DeviceActionValueSet_AuditAction: new Coding({
         code: "129278001",
         display: "Audit - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MedicolegalAction: Coding.FromStrict({
+    DeviceActionValueSet_MedicolegalAction: new Coding({
         code: "129279009",
         display: "Medicolegal action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MedicolegalTestimonyAction: Coding.FromStrict({
+    DeviceActionValueSet_MedicolegalTestimonyAction: new Coding({
         code: "129280007",
         display: "Medicolegal testimony - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TrainingAction: Coding.FromStrict({
+    DeviceActionValueSet_TrainingAction: new Coding({
         code: "129283009",
         display: "Training - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SurgicalActionValues: Coding.FromStrict({
+    DeviceActionValueSet_SurgicalActionValues: new Coding({
         code: "129284003",
         display: "Surgical action values",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MicrosurgeryAction: Coding.FromStrict({
+    DeviceActionValueSet_MicrosurgeryAction: new Coding({
         code: "129286001",
         display: "Microsurgery - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_IncisionAction: Coding.FromStrict({
+    DeviceActionValueSet_IncisionAction: new Coding({
         code: "129287005",
         display: "Incision - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ExploratoryIncisionAction: Coding.FromStrict({
+    DeviceActionValueSet_ExploratoryIncisionAction: new Coding({
         code: "129288000",
         display: "Exploratory incision - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DrainageAction: Coding.FromStrict({
+    DeviceActionValueSet_DrainageAction: new Coding({
         code: "129289008",
         display: "Drainage - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DrillingAction: Coding.FromStrict({
+    DeviceActionValueSet_DrillingAction: new Coding({
         code: "129291000",
         display: "Drilling - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_EvacuationAction: Coding.FromStrict({
+    DeviceActionValueSet_EvacuationAction: new Coding({
         code: "129292007",
         display: "Evacuation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DissectionAction: Coding.FromStrict({
+    DeviceActionValueSet_DissectionAction: new Coding({
         code: "129293002",
         display: "Dissection - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DiscissionAction: Coding.FromStrict({
+    DeviceActionValueSet_DiscissionAction: new Coding({
         code: "129294008",
         display: "Discission - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SlittingAction: Coding.FromStrict({
+    DeviceActionValueSet_SlittingAction: new Coding({
         code: "129295009",
         display: "Slitting - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_BisectionAction: Coding.FromStrict({
+    DeviceActionValueSet_BisectionAction: new Coding({
         code: "129296005",
         display: "Bisection - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_BifurcationAction: Coding.FromStrict({
+    DeviceActionValueSet_BifurcationAction: new Coding({
         code: "129297001",
         display: "Bifurcation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SurgicalDivision: Coding.FromStrict({
+    DeviceActionValueSet_SurgicalDivision: new Coding({
         code: "129298006",
         display: "Surgical division",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ReleaseAction: Coding.FromStrict({
+    DeviceActionValueSet_ReleaseAction: new Coding({
         code: "129299003",
         display: "Release - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_PunctureAction: Coding.FromStrict({
+    DeviceActionValueSet_PunctureAction: new Coding({
         code: "129300006",
         display: "Puncture - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ScarificationAction: Coding.FromStrict({
+    DeviceActionValueSet_ScarificationAction: new Coding({
         code: "129301005",
         display: "Scarification - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_RemovalAction: Coding.FromStrict({
+    DeviceActionValueSet_RemovalAction: new Coding({
         code: "129303008",
         display: "Removal - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ExcisionAction: Coding.FromStrict({
+    DeviceActionValueSet_ExcisionAction: new Coding({
         code: "129304002",
         display: "Excision - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_WedgeExcisionAction: Coding.FromStrict({
+    DeviceActionValueSet_WedgeExcisionAction: new Coding({
         code: "129305001",
         display: "Wedge excision - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SurgicalRemovalAction: Coding.FromStrict({
+    DeviceActionValueSet_SurgicalRemovalAction: new Coding({
         code: "129306000",
         display: "Surgical removal - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ExpulsionAction: Coding.FromStrict({
+    DeviceActionValueSet_ExpulsionAction: new Coding({
         code: "129307009",
         display: "Expulsion - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ReexcisionAction: Coding.FromStrict({
+    DeviceActionValueSet_ReexcisionAction: new Coding({
         code: "129308004",
         display: "Reexcision - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_AmputationAction: Coding.FromStrict({
+    DeviceActionValueSet_AmputationAction: new Coding({
         code: "129309007",
         display: "Amputation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TransfixionAction: Coding.FromStrict({
+    DeviceActionValueSet_TransfixionAction: new Coding({
         code: "129310002",
         display: "Transfixion - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_EviscerationAction: Coding.FromStrict({
+    DeviceActionValueSet_EviscerationAction: new Coding({
         code: "129311003",
         display: "Evisceration - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_EnucleationAction: Coding.FromStrict({
+    DeviceActionValueSet_EnucleationAction: new Coding({
         code: "129312005",
         display: "Enucleation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TrephineAction: Coding.FromStrict({
+    DeviceActionValueSet_TrephineAction: new Coding({
         code: "129313000",
         display: "Trephine - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_BXBiopsy: Coding.FromStrict({
+    DeviceActionValueSet_BXBiopsy: new Coding({
         code: "129314006",
         display: "BX - Biopsy",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_IncisionBiopsy: Coding.FromStrict({
+    DeviceActionValueSet_IncisionBiopsy: new Coding({
         code: "129315007",
         display: "Incision biopsy",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_AspirationAction: Coding.FromStrict({
+    DeviceActionValueSet_AspirationAction: new Coding({
         code: "129316008",
         display: "Aspiration - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DebridementAction: Coding.FromStrict({
+    DeviceActionValueSet_DebridementAction: new Coding({
         code: "129317004",
         display: "Debridement - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SaucerizationAction: Coding.FromStrict({
+    DeviceActionValueSet_SaucerizationAction: new Coding({
         code: "129318009",
         display: "Saucerization - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_CurettageAction: Coding.FromStrict({
+    DeviceActionValueSet_CurettageAction: new Coding({
         code: "129319001",
         display: "Curettage - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TrimmingAction: Coding.FromStrict({
+    DeviceActionValueSet_TrimmingAction: new Coding({
         code: "129321006",
         display: "Trimming - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ShavingAction: Coding.FromStrict({
+    DeviceActionValueSet_ShavingAction: new Coding({
         code: "129322004",
         display: "Shaving - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ScrapingAction: Coding.FromStrict({
+    DeviceActionValueSet_ScrapingAction: new Coding({
         code: "129323009",
         display: "Scraping - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_FilletingAction: Coding.FromStrict({
+    DeviceActionValueSet_FilletingAction: new Coding({
         code: "129324003",
         display: "Filleting - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_IntroductionAction: Coding.FromStrict({
+    DeviceActionValueSet_IntroductionAction: new Coding({
         code: "129325002",
         display: "Introduction - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Injection: Coding.FromStrict({
+    DeviceActionValueSet_Injection: new Coding({
         code: "129326001",
         display: "Injection",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TattooingAction: Coding.FromStrict({
+    DeviceActionValueSet_TattooingAction: new Coding({
         code: "129327005",
         display: "Tattooing - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_InflationAction: Coding.FromStrict({
+    DeviceActionValueSet_InflationAction: new Coding({
         code: "129328000",
         display: "Inflation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_InfusionAction: Coding.FromStrict({
+    DeviceActionValueSet_InfusionAction: new Coding({
         code: "129330003",
         display: "Infusion - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_PerfusionAction: Coding.FromStrict({
+    DeviceActionValueSet_PerfusionAction: new Coding({
         code: "129331004",
         display: "Perfusion - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_IrrigationAction: Coding.FromStrict({
+    DeviceActionValueSet_IrrigationAction: new Coding({
         code: "129332006",
         display: "Irrigation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_InsufflationAction: Coding.FromStrict({
+    DeviceActionValueSet_InsufflationAction: new Coding({
         code: "129333001",
         display: "Insufflation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_InstillationAction: Coding.FromStrict({
+    DeviceActionValueSet_InstillationAction: new Coding({
         code: "129334007",
         display: "Instillation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_EmbolizationAction: Coding.FromStrict({
+    DeviceActionValueSet_EmbolizationAction: new Coding({
         code: "129335008",
         display: "Embolization - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Replantation: Coding.FromStrict({
+    DeviceActionValueSet_Replantation: new Coding({
         code: "129337000",
         display: "Replantation",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_IntubationAction: Coding.FromStrict({
+    DeviceActionValueSet_IntubationAction: new Coding({
         code: "129339002",
         display: "Intubation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SoundingAction: Coding.FromStrict({
+    DeviceActionValueSet_SoundingAction: new Coding({
         code: "129340000",
         display: "Sounding - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SurgicalRecessionAction: Coding.FromStrict({
+    DeviceActionValueSet_SurgicalRecessionAction: new Coding({
         code: "129344009",
         display: "Surgical recession - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ResectionRecessionAction: Coding.FromStrict({
+    DeviceActionValueSet_ResectionRecessionAction: new Coding({
         code: "129345005",
         display: "Resection-recession - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_RadialIncisionAction: Coding.FromStrict({
+    DeviceActionValueSet_RadialIncisionAction: new Coding({
         code: "129346006",
         display: "Radial incision - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TransferAction: Coding.FromStrict({
+    DeviceActionValueSet_TransferAction: new Coding({
         code: "129347002",
         display: "Transfer - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ZPlastyAction: Coding.FromStrict({
+    DeviceActionValueSet_ZPlastyAction: new Coding({
         code: "129348007",
         display: "Z-plasty - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_LengtheningProcedure: Coding.FromStrict({
+    DeviceActionValueSet_LengtheningProcedure: new Coding({
         code: "129349004",
         display: "Lengthening procedure",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Shortening: Coding.FromStrict({
+    DeviceActionValueSet_Shortening: new Coding({
         code: "129350004",
         display: "Shortening",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Augmentation: Coding.FromStrict({
+    DeviceActionValueSet_Augmentation: new Coding({
         code: "129351000",
         display: "Augmentation",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Advancement: Coding.FromStrict({
+    DeviceActionValueSet_Advancement: new Coding({
         code: "129352007",
         display: "Advancement",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SuspensionAndFixationAction: Coding.FromStrict({
+    DeviceActionValueSet_SuspensionAndFixationAction: new Coding({
         code: "129353002",
         display: "Suspension and fixation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ExteriorizationAction: Coding.FromStrict({
+    DeviceActionValueSet_ExteriorizationAction: new Coding({
         code: "129354008",
         display: "Exteriorization - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MarsupializationAction: Coding.FromStrict({
+    DeviceActionValueSet_MarsupializationAction: new Coding({
         code: "129355009",
         display: "Marsupialization - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ReinforcementAction: Coding.FromStrict({
+    DeviceActionValueSet_ReinforcementAction: new Coding({
         code: "129356005",
         display: "Reinforcement - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ClosureAction: Coding.FromStrict({
+    DeviceActionValueSet_ClosureAction: new Coding({
         code: "129357001",
         display: "Closure - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_LayeredClosureAction: Coding.FromStrict({
+    DeviceActionValueSet_LayeredClosureAction: new Coding({
         code: "129358006",
         display: "Layered closure - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_OversewingAction: Coding.FromStrict({
+    DeviceActionValueSet_OversewingAction: new Coding({
         code: "129360008",
         display: "Oversewing - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ClosureByBucklingAction: Coding.FromStrict({
+    DeviceActionValueSet_ClosureByBucklingAction: new Coding({
         code: "129366002",
         display: "Closure by buckling - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_CerclageAction: Coding.FromStrict({
+    DeviceActionValueSet_CerclageAction: new Coding({
         code: "129368001",
         display: "Cerclage - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_LigationAction: Coding.FromStrict({
+    DeviceActionValueSet_LigationAction: new Coding({
         code: "129369009",
         display: "Ligation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_FixationAction: Coding.FromStrict({
+    DeviceActionValueSet_FixationAction: new Coding({
         code: "129371009",
         display: "Fixation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_CryopexyAction: Coding.FromStrict({
+    DeviceActionValueSet_CryopexyAction: new Coding({
         code: "129372002",
         display: "Cryopexy - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_PlicationAction: Coding.FromStrict({
+    DeviceActionValueSet_PlicationAction: new Coding({
         code: "129373007",
         display: "Plication - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ImbricationAction: Coding.FromStrict({
+    DeviceActionValueSet_ImbricationAction: new Coding({
         code: "129374001",
         display: "Imbrication - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Creation: Coding.FromStrict({
+    DeviceActionValueSet_Creation: new Coding({
         code: "129376004",
         display: "Creation",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ReconstructionAction: Coding.FromStrict({
+    DeviceActionValueSet_ReconstructionAction: new Coding({
         code: "129377008",
         display: "Reconstruction - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_StabilizationAction: Coding.FromStrict({
+    DeviceActionValueSet_StabilizationAction: new Coding({
         code: "129378003",
         display: "Stabilization - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_FusionAction: Coding.FromStrict({
+    DeviceActionValueSet_FusionAction: new Coding({
         code: "129379006",
         display: "Fusion - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_AnchoringAction: Coding.FromStrict({
+    DeviceActionValueSet_AnchoringAction: new Coding({
         code: "129380009",
         display: "Anchoring - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_EnlargementAction: Coding.FromStrict({
+    DeviceActionValueSet_EnlargementAction: new Coding({
         code: "129381008",
         display: "Enlargement - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DestructionAction: Coding.FromStrict({
+    DeviceActionValueSet_DestructionAction: new Coding({
         code: "129382001",
         display: "Destruction - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_AvulsionAction: Coding.FromStrict({
+    DeviceActionValueSet_AvulsionAction: new Coding({
         code: "129383006",
         display: "Avulsion - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DecorticationAction: Coding.FromStrict({
+    DeviceActionValueSet_DecorticationAction: new Coding({
         code: "129384000",
         display: "Decortication - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_StrippingAction: Coding.FromStrict({
+    DeviceActionValueSet_StrippingAction: new Coding({
         code: "129385004",
         display: "Stripping - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_StrippingAndLigationAction: Coding.FromStrict({
+    DeviceActionValueSet_StrippingAndLigationAction: new Coding({
         code: "129386003",
         display: "Stripping and ligation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_AbrasionAction: Coding.FromStrict({
+    DeviceActionValueSet_AbrasionAction: new Coding({
         code: "129387007",
         display: "Abrasion - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SalabrasionAction: Coding.FromStrict({
+    DeviceActionValueSet_SalabrasionAction: new Coding({
         code: "129388002",
         display: "Salabrasion - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_GrindingAction: Coding.FromStrict({
+    DeviceActionValueSet_GrindingAction: new Coding({
         code: "129389005",
         display: "Grinding - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_CoagulationAction: Coding.FromStrict({
+    DeviceActionValueSet_CoagulationAction: new Coding({
         code: "129390001",
         display: "Coagulation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ObliterationAction: Coding.FromStrict({
+    DeviceActionValueSet_ObliterationAction: new Coding({
         code: "129391002",
         display: "Obliteration - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_CauterizationAction: Coding.FromStrict({
+    DeviceActionValueSet_CauterizationAction: new Coding({
         code: "129392009",
         display: "Cauterization - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_CryosurgeryAction: Coding.FromStrict({
+    DeviceActionValueSet_CryosurgeryAction: new Coding({
         code: "129393004",
         display: "Cryosurgery - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ThermocauteryAction: Coding.FromStrict({
+    DeviceActionValueSet_ThermocauteryAction: new Coding({
         code: "129394005",
         display: "Thermocautery - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_FulgurationAction: Coding.FromStrict({
+    DeviceActionValueSet_FulgurationAction: new Coding({
         code: "129395006",
         display: "Fulguration - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ElectrodesiccationAction: Coding.FromStrict({
+    DeviceActionValueSet_ElectrodesiccationAction: new Coding({
         code: "129396007",
         display: "Electrodesiccation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ElectrocoagulationAction: Coding.FromStrict({
+    DeviceActionValueSet_ElectrocoagulationAction: new Coding({
         code: "129397003",
         display: "Electrocoagulation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Electrocautery: Coding.FromStrict({
+    DeviceActionValueSet_Electrocautery: new Coding({
         code: "129398008",
         display: "Electrocautery",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ElectrodestructionAction: Coding.FromStrict({
+    DeviceActionValueSet_ElectrodestructionAction: new Coding({
         code: "129399000",
         display: "Electrodestruction - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_CrushingAction: Coding.FromStrict({
+    DeviceActionValueSet_CrushingAction: new Coding({
         code: "129400007",
         display: "Crushing - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_FragmentationAction: Coding.FromStrict({
+    DeviceActionValueSet_FragmentationAction: new Coding({
         code: "129401006",
         display: "Fragmentation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_EmulsificationAction: Coding.FromStrict({
+    DeviceActionValueSet_EmulsificationAction: new Coding({
         code: "129402004",
         display: "Emulsification - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ChemosurgeryAction: Coding.FromStrict({
+    DeviceActionValueSet_ChemosurgeryAction: new Coding({
         code: "129403009",
         display: "Chemosurgery - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ChemicalCautery: Coding.FromStrict({
+    DeviceActionValueSet_ChemicalCautery: new Coding({
         code: "129404003",
         display: "Chemical cautery",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_PhotocoagulationAction: Coding.FromStrict({
+    DeviceActionValueSet_PhotocoagulationAction: new Coding({
         code: "129405002",
         display: "Photocoagulation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TransplantationAction: Coding.FromStrict({
+    DeviceActionValueSet_TransplantationAction: new Coding({
         code: "129406001",
         display: "Transplantation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Grafting: Coding.FromStrict({
+    DeviceActionValueSet_Grafting: new Coding({
         code: "129407005",
         display: "Grafting",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ManipulativeProcedure: Coding.FromStrict({
+    DeviceActionValueSet_ManipulativeProcedure: new Coding({
         code: "129408000",
         display: "Manipulative procedure",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MobilizationAction: Coding.FromStrict({
+    DeviceActionValueSet_MobilizationAction: new Coding({
         code: "129409008",
         display: "Mobilization - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_RemobilizationAction: Coding.FromStrict({
+    DeviceActionValueSet_RemobilizationAction: new Coding({
         code: "129410003",
         display: "Remobilization - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TractionAction: Coding.FromStrict({
+    DeviceActionValueSet_TractionAction: new Coding({
         code: "129411004",
         display: "Traction - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ManualReductionAction: Coding.FromStrict({
+    DeviceActionValueSet_ManualReductionAction: new Coding({
         code: "129412006",
         display: "Manual reduction - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ElevationAction: Coding.FromStrict({
+    DeviceActionValueSet_ElevationAction: new Coding({
         code: "129413001",
         display: "Elevation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_InstrumentalElevationAction: Coding.FromStrict({
+    DeviceActionValueSet_InstrumentalElevationAction: new Coding({
         code: "129414007",
         display: "Instrumental elevation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ExtractionAction: Coding.FromStrict({
+    DeviceActionValueSet_ExtractionAction: new Coding({
         code: "129415008",
         display: "Extraction - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SurgicalExtractionAction: Coding.FromStrict({
+    DeviceActionValueSet_SurgicalExtractionAction: new Coding({
         code: "129416009",
         display: "Surgical extraction - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ExpressionAction: Coding.FromStrict({
+    DeviceActionValueSet_ExpressionAction: new Coding({
         code: "129418005",
         display: "Expression - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DilatationAction: Coding.FromStrict({
+    DeviceActionValueSet_DilatationAction: new Coding({
         code: "129419002",
         display: "Dilatation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SurgicalStretching: Coding.FromStrict({
+    DeviceActionValueSet_SurgicalStretching: new Coding({
         code: "129420008",
         display: "Surgical stretching",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DilationAndStretchingAction: Coding.FromStrict({
+    DeviceActionValueSet_DilationAndStretchingAction: new Coding({
         code: "129421007",
         display: "Dilation and stretching - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Bouginage: Coding.FromStrict({
+    DeviceActionValueSet_Bouginage: new Coding({
         code: "129423005",
         display: "Bouginage",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_FittingAction: Coding.FromStrict({
+    DeviceActionValueSet_FittingAction: new Coding({
         code: "129424004",
         display: "Fitting - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ApplicationActions: Coding.FromStrict({
+    DeviceActionValueSet_ApplicationActions: new Coding({
         code: "129425003",
         display: "Application actions",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_AdjustmentAction: Coding.FromStrict({
+    DeviceActionValueSet_AdjustmentAction: new Coding({
         code: "129426002",
         display: "Adjustment - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ReductionAction: Coding.FromStrict({
+    DeviceActionValueSet_ReductionAction: new Coding({
         code: "129427006",
         display: "Reduction - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ConsultationAction: Coding.FromStrict({
+    DeviceActionValueSet_ConsultationAction: new Coding({
         code: "129430004",
         display: "Consultation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_HistoryTakingAction: Coding.FromStrict({
+    DeviceActionValueSet_HistoryTakingAction: new Coding({
         code: "129431000",
         display: "History taking - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Inspection: Coding.FromStrict({
+    DeviceActionValueSet_Inspection: new Coding({
         code: "129433002",
         display: "Inspection",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_PalpationAction: Coding.FromStrict({
+    DeviceActionValueSet_PalpationAction: new Coding({
         code: "129434008",
         display: "Palpation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_PercussionAction: Coding.FromStrict({
+    DeviceActionValueSet_PercussionAction: new Coding({
         code: "129435009",
         display: "Percussion - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ListeningAction: Coding.FromStrict({
+    DeviceActionValueSet_ListeningAction: new Coding({
         code: "129436005",
         display: "Listening - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_OpticalTransilluminationAction: Coding.FromStrict({
+    DeviceActionValueSet_OpticalTransilluminationAction: new Coding({
         code: "129437001",
         display: "Optical transillumination - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_PrescriptionAction: Coding.FromStrict({
+    DeviceActionValueSet_PrescriptionAction: new Coding({
         code: "129438006",
         display: "Prescription - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_CounselingAction: Coding.FromStrict({
+    DeviceActionValueSet_CounselingAction: new Coding({
         code: "129441002",
         display: "Counseling - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_IontophoresisAction: Coding.FromStrict({
+    DeviceActionValueSet_IontophoresisAction: new Coding({
         code: "129442009",
         display: "Iontophoresis - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ElectrolysisAction: Coding.FromStrict({
+    DeviceActionValueSet_ElectrolysisAction: new Coding({
         code: "129443004",
         display: "Electrolysis - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SurgicalGalvanismAction: Coding.FromStrict({
+    DeviceActionValueSet_SurgicalGalvanismAction: new Coding({
         code: "129444005",
         display: "Surgical galvanism - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_AdministrationAction: Coding.FromStrict({
+    DeviceActionValueSet_AdministrationAction: new Coding({
         code: "129445006",
         display: "Administration - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_FunctionalAssessmentAction: Coding.FromStrict({
+    DeviceActionValueSet_FunctionalAssessmentAction: new Coding({
         code: "129449000",
         display: "Functional assessment - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_LongTermAssistance: Coding.FromStrict({
+    DeviceActionValueSet_LongTermAssistance: new Coding({
         code: "183648002",
         display: "Long-term assistance",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ProximalAnastomosis: Coding.FromStrict({
+    DeviceActionValueSet_ProximalAnastomosis: new Coding({
         code: "245854003",
         display: "Proximal anastomosis",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DistalAnastomosis: Coding.FromStrict({
+    DeviceActionValueSet_DistalAnastomosis: new Coding({
         code: "245855002",
         display: "Distal anastomosis",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DebulkingAction: Coding.FromStrict({
+    DeviceActionValueSet_DebulkingAction: new Coding({
         code: "255595002",
         display: "Debulking - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DarningAction: Coding.FromStrict({
+    DeviceActionValueSet_DarningAction: new Coding({
         code: "256644001",
         display: "Darning - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Ablation: Coding.FromStrict({
+    DeviceActionValueSet_Ablation: new Coding({
         code: "257729003",
         display: "Ablation",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ChemicalDestruction: Coding.FromStrict({
+    DeviceActionValueSet_ChemicalDestruction: new Coding({
         code: "257730008",
         display: "Chemical destruction",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_OpenAdjustment: Coding.FromStrict({
+    DeviceActionValueSet_OpenAdjustment: new Coding({
         code: "257739009",
         display: "Open adjustment",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Anastomosis: Coding.FromStrict({
+    DeviceActionValueSet_Anastomosis: new Coding({
         code: "257741005",
         display: "Anastomosis",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DirectAnastomosisAction: Coding.FromStrict({
+    DeviceActionValueSet_DirectAnastomosisAction: new Coding({
         code: "257742003",
         display: "Direct anastomosis - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_LecompteManeuver: Coding.FromStrict({
+    DeviceActionValueSet_LecompteManeuver: new Coding({
         code: "257743008",
         display: "Lecompte maneuver",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_EndToEndAnastomosisAction: Coding.FromStrict({
+    DeviceActionValueSet_EndToEndAnastomosisAction: new Coding({
         code: "257744002",
         display: "End-to-end anastomosis - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DoubleBarrelledEndToEndAnastomosisAction: Coding.FromStrict({
+    DeviceActionValueSet_DoubleBarrelledEndToEndAnastomosisAction: new Coding({
         code: "257745001",
         display: "Double barrelled end-to-end anastomosis - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_EndToSideAnastomosisAction: Coding.FromStrict({
+    DeviceActionValueSet_EndToSideAnastomosisAction: new Coding({
         code: "257746000",
         display: "End-to-side anastomosis - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_RouxEnYAction: Coding.FromStrict({
+    DeviceActionValueSet_RouxEnYAction: new Coding({
         code: "257747009",
         display: "Roux-en-Y - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_EndToSideAnastomosisWithoutTunnel: Coding.FromStrict({
+    DeviceActionValueSet_EndToSideAnastomosisWithoutTunnel: new Coding({
         code: "257748004",
         display: "End-to-side anastomosis without tunnel",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_EndToSideAnastomosisWithTunnel: Coding.FromStrict({
+    DeviceActionValueSet_EndToSideAnastomosisWithTunnel: new Coding({
         code: "257749007",
         display: "End-to-side anastomosis with tunnel",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SideToSideAnastomosis: Coding.FromStrict({
+    DeviceActionValueSet_SideToSideAnastomosis: new Coding({
         code: "257750007",
         display: "Side-to-side anastomosis",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_WallaceQuotation69QuotationSideToEndAnastomosisAction: Coding.FromStrict({
+    DeviceActionValueSet_WallaceQuotation69QuotationSideToEndAnastomosisAction: new Coding({
         code: "257751006",
         display: "Wallace \"69\" side-to-end anastomosis - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_FineNeedleAspirationBiopsyAction: Coding.FromStrict({
+    DeviceActionValueSet_FineNeedleAspirationBiopsyAction: new Coding({
         code: "257759008",
         display: "Fine needle aspiration biopsy - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_BindingAction: Coding.FromStrict({
+    DeviceActionValueSet_BindingAction: new Coding({
         code: "257768005",
         display: "Binding - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ChemicalInactivation: Coding.FromStrict({
+    DeviceActionValueSet_ChemicalInactivation: new Coding({
         code: "257777003",
         display: "Chemical inactivation",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Chemodissolution: Coding.FromStrict({
+    DeviceActionValueSet_Chemodissolution: new Coding({
         code: "257778008",
         display: "Chemodissolution",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MassClosure: Coding.FromStrict({
+    DeviceActionValueSet_MassClosure: new Coding({
         code: "257780002",
         display: "Mass closure",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_InterruptedMassClosure: Coding.FromStrict({
+    DeviceActionValueSet_InterruptedMassClosure: new Coding({
         code: "257781003",
         display: "Interrupted mass closure",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ContinuousMassClosure: Coding.FromStrict({
+    DeviceActionValueSet_ContinuousMassClosure: new Coding({
         code: "257782005",
         display: "Continuous mass closure",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Thermocoagulation: Coding.FromStrict({
+    DeviceActionValueSet_Thermocoagulation: new Coding({
         code: "257783000",
         display: "Thermocoagulation",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SemmThermalCoagulation: Coding.FromStrict({
+    DeviceActionValueSet_SemmThermalCoagulation: new Coding({
         code: "257784006",
         display: "Semm thermal coagulation",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_WolfThermalCoagulation: Coding.FromStrict({
+    DeviceActionValueSet_WolfThermalCoagulation: new Coding({
         code: "257785007",
         display: "Wolf thermal coagulation",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_CryotherapyAction: Coding.FromStrict({
+    DeviceActionValueSet_CryotherapyAction: new Coding({
         code: "257786008",
         display: "Cryotherapy - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Delamination: Coding.FromStrict({
+    DeviceActionValueSet_Delamination: new Coding({
         code: "257788009",
         display: "Delamination",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Hydrodelamination: Coding.FromStrict({
+    DeviceActionValueSet_Hydrodelamination: new Coding({
         code: "257789001",
         display: "Hydrodelamination",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DesiccationAction: Coding.FromStrict({
+    DeviceActionValueSet_DesiccationAction: new Coding({
         code: "257791009",
         display: "Desiccation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_AnteriorDisplacement: Coding.FromStrict({
+    DeviceActionValueSet_AnteriorDisplacement: new Coding({
         code: "257802002",
         display: "Anterior displacement",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_PosteriorDisplacement: Coding.FromStrict({
+    DeviceActionValueSet_PosteriorDisplacement: new Coding({
         code: "257803007",
         display: "Posterior displacement",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_LateralDisplacement: Coding.FromStrict({
+    DeviceActionValueSet_LateralDisplacement: new Coding({
         code: "257804001",
         display: "Lateral displacement",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MedialDisplacement: Coding.FromStrict({
+    DeviceActionValueSet_MedialDisplacement: new Coding({
         code: "257805000",
         display: "Medial displacement",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_CloseRectalDissection: Coding.FromStrict({
+    DeviceActionValueSet_CloseRectalDissection: new Coding({
         code: "257806004",
         display: "Close rectal dissection",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_UltrasonicDissection: Coding.FromStrict({
+    DeviceActionValueSet_UltrasonicDissection: new Coding({
         code: "257808003",
         display: "Ultrasonic dissection",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ExternalDrainage: Coding.FromStrict({
+    DeviceActionValueSet_ExternalDrainage: new Coding({
         code: "257811002",
         display: "External drainage",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DigitalEvacuation: Coding.FromStrict({
+    DeviceActionValueSet_DigitalEvacuation: new Coding({
         code: "257817003",
         display: "Digital evacuation",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ManualExpression: Coding.FromStrict({
+    DeviceActionValueSet_ManualExpression: new Coding({
         code: "257821005",
         display: "Manual expression",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ExtracapsularExtraction: Coding.FromStrict({
+    DeviceActionValueSet_ExtracapsularExtraction: new Coding({
         code: "257822003",
         display: "Extracapsular extraction",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_IntracapsularExtraction: Coding.FromStrict({
+    DeviceActionValueSet_IntracapsularExtraction: new Coding({
         code: "257824002",
         display: "Intracapsular extraction",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_FenestrationAction: Coding.FromStrict({
+    DeviceActionValueSet_FenestrationAction: new Coding({
         code: "257825001",
         display: "Fenestration - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_BallisticFragmentation: Coding.FromStrict({
+    DeviceActionValueSet_BallisticFragmentation: new Coding({
         code: "257846005",
         display: "Ballistic fragmentation",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MechanicalFragmentation: Coding.FromStrict({
+    DeviceActionValueSet_MechanicalFragmentation: new Coding({
         code: "257850003",
         display: "Mechanical fragmentation",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ElectromagneticPulseFragmentation: Coding.FromStrict({
+    DeviceActionValueSet_ElectromagneticPulseFragmentation: new Coding({
         code: "257855008",
         display: "Electromagnetic pulse fragmentation",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Galvanism: Coding.FromStrict({
+    DeviceActionValueSet_Galvanism: new Coding({
         code: "257857000",
         display: "Galvanism",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_HighIntensityFocusedUltrasound: Coding.FromStrict({
+    DeviceActionValueSet_HighIntensityFocusedUltrasound: new Coding({
         code: "257859002",
         display: "High intensity focused ultrasound",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_RadioactiveDestruction: Coding.FromStrict({
+    DeviceActionValueSet_RadioactiveDestruction: new Coding({
         code: "257863009",
         display: "Radioactive destruction",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_InsertionAction: Coding.FromStrict({
+    DeviceActionValueSet_InsertionAction: new Coding({
         code: "257867005",
         display: "Insertion - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_KeelingAction: Coding.FromStrict({
+    DeviceActionValueSet_KeelingAction: new Coding({
         code: "257878002",
         display: "Keeling - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Localization: Coding.FromStrict({
+    DeviceActionValueSet_Localization: new Coding({
         code: "257880008",
         display: "Localization",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ImmobilizationAction: Coding.FromStrict({
+    DeviceActionValueSet_ImmobilizationAction: new Coding({
         code: "257884004",
         display: "Immobilization - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Occlusion: Coding.FromStrict({
+    DeviceActionValueSet_Occlusion: new Coding({
         code: "257885003",
         display: "Occlusion",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_OperativeUltrasound: Coding.FromStrict({
+    DeviceActionValueSet_OperativeUltrasound: new Coding({
         code: "257886002",
         display: "Operative ultrasound",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Padding: Coding.FromStrict({
+    DeviceActionValueSet_Padding: new Coding({
         code: "257889009",
         display: "Padding",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_PeelingAction: Coding.FromStrict({
+    DeviceActionValueSet_PeelingAction: new Coding({
         code: "257890000",
         display: "Peeling - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Pressure: Coding.FromStrict({
+    DeviceActionValueSet_Pressure: new Coding({
         code: "257893003",
         display: "Pressure",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_OneHandedPressure: Coding.FromStrict({
+    DeviceActionValueSet_OneHandedPressure: new Coding({
         code: "257894009",
         display: "One handed pressure",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TwoHandedPressure: Coding.FromStrict({
+    DeviceActionValueSet_TwoHandedPressure: new Coding({
         code: "257895005",
         display: "Two handed pressure",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_RealignmentAction: Coding.FromStrict({
+    DeviceActionValueSet_RealignmentAction: new Coding({
         code: "257897002",
         display: "Realignment - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SurgicalRepair: Coding.FromStrict({
+    DeviceActionValueSet_SurgicalRepair: new Coding({
         code: "257903006",
         display: "Surgical repair",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_KeelRepair: Coding.FromStrict({
+    DeviceActionValueSet_KeelRepair: new Coding({
         code: "257905004",
         display: "Keel repair",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MayoRepair: Coding.FromStrict({
+    DeviceActionValueSet_MayoRepair: new Coding({
         code: "257906003",
         display: "Mayo repair",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_PatchingAction: Coding.FromStrict({
+    DeviceActionValueSet_PatchingAction: new Coding({
         code: "257907007",
         display: "Patching - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_RepairOfRecurrence: Coding.FromStrict({
+    DeviceActionValueSet_RepairOfRecurrence: new Coding({
         code: "257911001",
         display: "Repair of recurrence",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_RotationAction: Coding.FromStrict({
+    DeviceActionValueSet_RotationAction: new Coding({
         code: "257912008",
         display: "Rotation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_IRInternalRotation: Coding.FromStrict({
+    DeviceActionValueSet_IRInternalRotation: new Coding({
         code: "257913003",
         display: "IR - Internal rotation",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ExternalRotation: Coding.FromStrict({
+    DeviceActionValueSet_ExternalRotation: new Coding({
         code: "257914009",
         display: "External rotation",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Sampling: Coding.FromStrict({
+    DeviceActionValueSet_Sampling: new Coding({
         code: "257915005",
         display: "Sampling",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_BilateralSampling: Coding.FromStrict({
+    DeviceActionValueSet_BilateralSampling: new Coding({
         code: "257916006",
         display: "Bilateral sampling",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_BilateralSequentialSampling: Coding.FromStrict({
+    DeviceActionValueSet_BilateralSequentialSampling: new Coding({
         code: "257917002",
         display: "Bilateral sequential sampling",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_BilateralSimultaneousSampling: Coding.FromStrict({
+    DeviceActionValueSet_BilateralSimultaneousSampling: new Coding({
         code: "257918007",
         display: "Bilateral simultaneous sampling",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SamplingWithoutTrap: Coding.FromStrict({
+    DeviceActionValueSet_SamplingWithoutTrap: new Coding({
         code: "257923007",
         display: "Sampling without trap",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_UnilateralSampling: Coding.FromStrict({
+    DeviceActionValueSet_UnilateralSampling: new Coding({
         code: "257926004",
         display: "Unilateral sampling",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Segmentation: Coding.FromStrict({
+    DeviceActionValueSet_Segmentation: new Coding({
         code: "257928003",
         display: "Segmentation",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TamponadeAction: Coding.FromStrict({
+    DeviceActionValueSet_TamponadeAction: new Coding({
         code: "257933004",
         display: "Tamponade - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TaperingAction: Coding.FromStrict({
+    DeviceActionValueSet_TaperingAction: new Coding({
         code: "257935006",
         display: "Tapering - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SoftTissueTransfer: Coding.FromStrict({
+    DeviceActionValueSet_SoftTissueTransfer: new Coding({
         code: "257937003",
         display: "Soft tissue transfer",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TransferOfBoneBlock: Coding.FromStrict({
+    DeviceActionValueSet_TransferOfBoneBlock: new Coding({
         code: "257938008",
         display: "Transfer of bone block",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TranspositionAction: Coding.FromStrict({
+    DeviceActionValueSet_TranspositionAction: new Coding({
         code: "257940003",
         display: "Transposition - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_PhoticStimulation: Coding.FromStrict({
+    DeviceActionValueSet_PhoticStimulation: new Coding({
         code: "258061005",
         display: "Photic stimulation",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SinglePhotonEmissionComputedTomographyAction: Coding.FromStrict({
+    DeviceActionValueSet_SinglePhotonEmissionComputedTomographyAction: new Coding({
         code: "260222006",
         display: "Single photon emission computed tomography - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SequentialAnastomosis: Coding.FromStrict({
+    DeviceActionValueSet_SequentialAnastomosis: new Coding({
         code: "261027000",
         display: "Sequential anastomosis",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_OpenExtractionAction: Coding.FromStrict({
+    DeviceActionValueSet_OpenExtractionAction: new Coding({
         code: "261191006",
         display: "Open extraction - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DopplerColorFlow: Coding.FromStrict({
+    DeviceActionValueSet_DopplerColorFlow: new Coding({
         code: "261197005",
         display: "Doppler color flow",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DopplerContinuousWave: Coding.FromStrict({
+    DeviceActionValueSet_DopplerContinuousWave: new Coding({
         code: "261198000",
         display: "Doppler continuous wave",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DopplerPulsed: Coding.FromStrict({
+    DeviceActionValueSet_DopplerPulsed: new Coding({
         code: "261199008",
         display: "Doppler pulsed",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ResurfacingAction: Coding.FromStrict({
+    DeviceActionValueSet_ResurfacingAction: new Coding({
         code: "261391004",
         display: "Resurfacing - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_AlloplasticGrafting: Coding.FromStrict({
+    DeviceActionValueSet_AlloplasticGrafting: new Coding({
         code: "261398005",
         display: "Alloplastic grafting",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_BonePatellarTendonBoneReconstruction: Coding.FromStrict({
+    DeviceActionValueSet_BonePatellarTendonBoneReconstruction: new Coding({
         code: "261498006",
         display: "Bone-patellar tendon-bone reconstruction",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_BraidedProstheticLigamentReconstruction: Coding.FromStrict({
+    DeviceActionValueSet_BraidedProstheticLigamentReconstruction: new Coding({
         code: "261499003",
         display: "Braided prosthetic ligament reconstruction",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_CystodiathermyAction: Coding.FromStrict({
+    DeviceActionValueSet_CystodiathermyAction: new Coding({
         code: "261518005",
         display: "Cystodiathermy - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DiathermyExcision: Coding.FromStrict({
+    DeviceActionValueSet_DiathermyExcision: new Coding({
         code: "261519002",
         display: "Diathermy excision",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DiathermySnareAction: Coding.FromStrict({
+    DeviceActionValueSet_DiathermySnareAction: new Coding({
         code: "261520008",
         display: "Diathermy snare - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ElectromagneticFragmentation: Coding.FromStrict({
+    DeviceActionValueSet_ElectromagneticFragmentation: new Coding({
         code: "261526002",
         display: "Electromagnetic fragmentation",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_LoopDiathermyExcision: Coding.FromStrict({
+    DeviceActionValueSet_LoopDiathermyExcision: new Coding({
         code: "261545006",
         display: "Loop diathermy excision",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_REDYRegenerationOfDialysate: Coding.FromStrict({
+    DeviceActionValueSet_REDYRegenerationOfDialysate: new Coding({
         code: "261553003",
         display: "REDY - Regeneration of dialysate",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Thermocompaction: Coding.FromStrict({
+    DeviceActionValueSet_Thermocompaction: new Coding({
         code: "261569005",
         display: "Thermocompaction",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_UltrasoundFragmentationAction: Coding.FromStrict({
+    DeviceActionValueSet_UltrasoundFragmentationAction: new Coding({
         code: "261576000",
         display: "Ultrasound fragmentation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SideToEndAnastomosisAction: Coding.FromStrict({
+    DeviceActionValueSet_SideToEndAnastomosisAction: new Coding({
         code: "262143007",
         display: "Side-to-end anastomosis - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Compression: Coding.FromStrict({
+    DeviceActionValueSet_Compression: new Coding({
         code: "263720003",
         display: "Compression",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_IntravesicalDrugTherapy: Coding.FromStrict({
+    DeviceActionValueSet_IntravesicalDrugTherapy: new Coding({
         code: "264592006",
         display: "Intravesical drug therapy",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_LaserAction: Coding.FromStrict({
+    DeviceActionValueSet_LaserAction: new Coding({
         code: "264594007",
         display: "Laser - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_LateralRotationAction: Coding.FromStrict({
+    DeviceActionValueSet_LateralRotationAction: new Coding({
         code: "264730003",
         display: "Lateral rotation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MedialRotationAction: Coding.FromStrict({
+    DeviceActionValueSet_MedialRotationAction: new Coding({
         code: "264739002",
         display: "Medial rotation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_PrescriptionOfOpticalAidAction: Coding.FromStrict({
+    DeviceActionValueSet_PrescriptionOfOpticalAidAction: new Coding({
         code: "264947006",
         display: "Prescription of optical aid - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MicrovascularAnastomosisAction: Coding.FromStrict({
+    DeviceActionValueSet_MicrovascularAnastomosisAction: new Coding({
         code: "272381008",
         display: "Microvascular anastomosis - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_EUAExaminationUnderAnesthetic: Coding.FromStrict({
+    DeviceActionValueSet_EUAExaminationUnderAnesthetic: new Coding({
         code: "274392008",
         display: "EUA - Examination under anesthetic",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MechanicalAssistance: Coding.FromStrict({
+    DeviceActionValueSet_MechanicalAssistance: new Coding({
         code: "276734006",
         display: "Mechanical assistance",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ExcisionBiopsy: Coding.FromStrict({
+    DeviceActionValueSet_ExcisionBiopsy: new Coding({
         code: "277261002",
         display: "Excision biopsy",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DigitalRemoval: Coding.FromStrict({
+    DeviceActionValueSet_DigitalRemoval: new Coding({
         code: "277607009",
         display: "Digital removal",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Refashioning: Coding.FromStrict({
+    DeviceActionValueSet_Refashioning: new Coding({
         code: "277763000",
         display: "Refashioning",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ConduitAnastomosis: Coding.FromStrict({
+    DeviceActionValueSet_ConduitAnastomosis: new Coding({
         code: "277851003",
         display: "Conduit anastomosis",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ReservoirAnastomosis: Coding.FromStrict({
+    DeviceActionValueSet_ReservoirAnastomosis: new Coding({
         code: "277852005",
         display: "Reservoir anastomosis",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_RadiographicImagingAction: Coding.FromStrict({
+    DeviceActionValueSet_RadiographicImagingAction: new Coding({
         code: "278110001",
         display: "Radiographic imaging - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_UltrasoundImagingAction: Coding.FromStrict({
+    DeviceActionValueSet_UltrasoundImagingAction: new Coding({
         code: "278292003",
         display: "Ultrasound imaging - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ReattachmentAction: Coding.FromStrict({
+    DeviceActionValueSet_ReattachmentAction: new Coding({
         code: "278312000",
         display: "Reattachment - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_RegenerationAction: Coding.FromStrict({
+    DeviceActionValueSet_RegenerationAction: new Coding({
         code: "278313005",
         display: "Regeneration - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Sealing: Coding.FromStrict({
+    DeviceActionValueSet_Sealing: new Coding({
         code: "278420002",
         display: "Sealing",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_CryoablationAction: Coding.FromStrict({
+    DeviceActionValueSet_CryoablationAction: new Coding({
         code: "281609006",
         display: "Cryoablation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DecompressionAction: Coding.FromStrict({
+    DeviceActionValueSet_DecompressionAction: new Coding({
         code: "281613004",
         display: "Decompression - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ExplorationAction: Coding.FromStrict({
+    DeviceActionValueSet_ExplorationAction: new Coding({
         code: "281615006",
         display: "Exploration - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_CryocauteryAction: Coding.FromStrict({
+    DeviceActionValueSet_CryocauteryAction: new Coding({
         code: "281698007",
         display: "Cryocautery - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ManualDilatation: Coding.FromStrict({
+    DeviceActionValueSet_ManualDilatation: new Coding({
         code: "281767003",
         display: "Manual dilatation",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DisarticulationAction: Coding.FromStrict({
+    DeviceActionValueSet_DisarticulationAction: new Coding({
         code: "281838007",
         display: "Disarticulation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Exenteration: Coding.FromStrict({
+    DeviceActionValueSet_Exenteration: new Coding({
         code: "281839004",
         display: "Exenteration",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ShaveBiopsyAction: Coding.FromStrict({
+    DeviceActionValueSet_ShaveBiopsyAction: new Coding({
         code: "282015008",
         display: "Shave biopsy - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ReplacementAction: Coding.FromStrict({
+    DeviceActionValueSet_ReplacementAction: new Coding({
         code: "282089006",
         display: "Replacement - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_UltrasoundDestruction: Coding.FromStrict({
+    DeviceActionValueSet_UltrasoundDestruction: new Coding({
         code: "282722008",
         display: "Ultrasound destruction",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_PlasticOperation: Coding.FromStrict({
+    DeviceActionValueSet_PlasticOperation: new Coding({
         code: "286553006",
         display: "Plastic operation",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_BlockDissection: Coding.FromStrict({
+    DeviceActionValueSet_BlockDissection: new Coding({
         code: "286637000",
         display: "Block dissection",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Denervation: Coding.FromStrict({
+    DeviceActionValueSet_Denervation: new Coding({
         code: "286792001",
         display: "Denervation",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ApplicationOfCaustics: Coding.FromStrict({
+    DeviceActionValueSet_ApplicationOfCaustics: new Coding({
         code: "287682008",
         display: "Application of caustics",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_EversionAction: Coding.FromStrict({
+    DeviceActionValueSet_EversionAction: new Coding({
         code: "288324002",
         display: "Eversion - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DiathermyIncision: Coding.FromStrict({
+    DeviceActionValueSet_DiathermyIncision: new Coding({
         code: "288466002",
         display: "Diathermy incision",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DisimpactionAction: Coding.FromStrict({
+    DeviceActionValueSet_DisimpactionAction: new Coding({
         code: "288468001",
         display: "Disimpaction - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SurgicalReduction: Coding.FromStrict({
+    DeviceActionValueSet_SurgicalReduction: new Coding({
         code: "289928003",
         display: "Surgical reduction",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_EnzymeDestruction: Coding.FromStrict({
+    DeviceActionValueSet_EnzymeDestruction: new Coding({
         code: "289930001",
         display: "Enzyme destruction",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ShaveExcision: Coding.FromStrict({
+    DeviceActionValueSet_ShaveExcision: new Coding({
         code: "289936007",
         display: "Shave excision",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MicrosurgicalRepair: Coding.FromStrict({
+    DeviceActionValueSet_MicrosurgicalRepair: new Coding({
         code: "289938008",
         display: "Microsurgical repair",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_RecessionAction: Coding.FromStrict({
+    DeviceActionValueSet_RecessionAction: new Coding({
         code: "290001001",
         display: "Recession - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MicrosurgicalAnastomosis: Coding.FromStrict({
+    DeviceActionValueSet_MicrosurgicalAnastomosis: new Coding({
         code: "297179000",
         display: "Microsurgical anastomosis",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Revascularization: Coding.FromStrict({
+    DeviceActionValueSet_Revascularization: new Coding({
         code: "297183000",
         display: "Revascularization",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DevascularizationAction: Coding.FromStrict({
+    DeviceActionValueSet_DevascularizationAction: new Coding({
         code: "298053008",
         display: "Devascularization - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ApplicationOfSubstance: Coding.FromStrict({
+    DeviceActionValueSet_ApplicationOfSubstance: new Coding({
         code: "298116000",
         display: "Application of substance",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_OsteoclasisAction: Coding.FromStrict({
+    DeviceActionValueSet_OsteoclasisAction: new Coding({
         code: "299712004",
         display: "Osteoclasis - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_OsteotomyAction: Coding.FromStrict({
+    DeviceActionValueSet_OsteotomyAction: new Coding({
         code: "299713009",
         display: "Osteotomy - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_InterpositionAnastomosisAction: Coding.FromStrict({
+    DeviceActionValueSet_InterpositionAnastomosisAction: new Coding({
         code: "299893001",
         display: "Interposition anastomosis - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ActionsByModality: Coding.FromStrict({
+    DeviceActionValueSet_ActionsByModality: new Coding({
         code: "302193003",
         display: "Actions by modality",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_FreeingAction: Coding.FromStrict({
+    DeviceActionValueSet_FreeingAction: new Coding({
         code: "302196006",
         display: "Freeing - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ClinicalExaminationAction: Coding.FromStrict({
+    DeviceActionValueSet_ClinicalExaminationAction: new Coding({
         code: "302199004",
         display: "Clinical examination - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_UltrasoundAction: Coding.FromStrict({
+    DeviceActionValueSet_UltrasoundAction: new Coding({
         code: "302204005",
         display: "Ultrasound - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MicrowaveAction: Coding.FromStrict({
+    DeviceActionValueSet_MicrowaveAction: new Coding({
         code: "302205006",
         display: "Microwave - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_FunctionalModification: Coding.FromStrict({
+    DeviceActionValueSet_FunctionalModification: new Coding({
         code: "303893007",
         display: "Functional modification",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_StructuralModification: Coding.FromStrict({
+    DeviceActionValueSet_StructuralModification: new Coding({
         code: "303894001",
         display: "Structural modification",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TransfusionAction: Coding.FromStrict({
+    DeviceActionValueSet_TransfusionAction: new Coding({
         code: "303955003",
         display: "Transfusion - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Terminalization: Coding.FromStrict({
+    DeviceActionValueSet_Terminalization: new Coding({
         code: "303996000",
         display: "Terminalization",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_UnusedActionValues: Coding.FromStrict({
+    DeviceActionValueSet_UnusedActionValues: new Coding({
         code: "303998004",
         display: "Unused action values",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_StructuralSupportAction: Coding.FromStrict({
+    DeviceActionValueSet_StructuralSupportAction: new Coding({
         code: "304054006",
         display: "Structural support - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ManualEvacuation: Coding.FromStrict({
+    DeviceActionValueSet_ManualEvacuation: new Coding({
         code: "304904003",
         display: "Manual evacuation",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DuplexUltrasound: Coding.FromStrict({
+    DeviceActionValueSet_DuplexUltrasound: new Coding({
         code: "312236008",
         display: "Duplex ultrasound",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MagneticResonanceImagingAction: Coding.FromStrict({
+    DeviceActionValueSet_MagneticResonanceImagingAction: new Coding({
         code: "312250003",
         display: "Magnetic resonance imaging - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ComputedTomographyImagingAction: Coding.FromStrict({
+    DeviceActionValueSet_ComputedTomographyImagingAction: new Coding({
         code: "312251004",
         display: "Computed tomography imaging - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_PlainFilmTechnique: Coding.FromStrict({
+    DeviceActionValueSet_PlainFilmTechnique: new Coding({
         code: "312254007",
         display: "Plain film technique",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_FluoroscopicImagingAction: Coding.FromStrict({
+    DeviceActionValueSet_FluoroscopicImagingAction: new Coding({
         code: "312275004",
         display: "Fluoroscopic imaging - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_OpeningAction: Coding.FromStrict({
+    DeviceActionValueSet_OpeningAction: new Coding({
         code: "312336005",
         display: "Opening - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ThermographyImagingAction: Coding.FromStrict({
+    DeviceActionValueSet_ThermographyImagingAction: new Coding({
         code: "312337001",
         display: "Thermography imaging - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_RadionuclideImagingAction: Coding.FromStrict({
+    DeviceActionValueSet_RadionuclideImagingAction: new Coding({
         code: "312421008",
         display: "Radionuclide imaging - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DesensitizationAction: Coding.FromStrict({
+    DeviceActionValueSet_DesensitizationAction: new Coding({
         code: "312883004",
         display: "Desensitization - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_BrachytherapyAction: Coding.FromStrict({
+    DeviceActionValueSet_BrachytherapyAction: new Coding({
         code: "313029009",
         display: "Brachytherapy - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ClippingAction: Coding.FromStrict({
+    DeviceActionValueSet_ClippingAction: new Coding({
         code: "360017003",
         display: "Clipping - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_StimulusDosingTechnique: Coding.FromStrict({
+    DeviceActionValueSet_StimulusDosingTechnique: new Coding({
         code: "360018008",
         display: "Stimulus dosing technique",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ExtirpationAction: Coding.FromStrict({
+    DeviceActionValueSet_ExtirpationAction: new Coding({
         code: "360020006",
         display: "Extirpation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_BypassAction: Coding.FromStrict({
+    DeviceActionValueSet_BypassAction: new Coding({
         code: "360021005",
         display: "Bypass - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_HarvestingAction: Coding.FromStrict({
+    DeviceActionValueSet_HarvestingAction: new Coding({
         code: "360025001",
         display: "Harvesting - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_InterpositionAction: Coding.FromStrict({
+    DeviceActionValueSet_InterpositionAction: new Coding({
         code: "360027009",
         display: "Interposition - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SurgicalBiopsyAction: Coding.FromStrict({
+    DeviceActionValueSet_SurgicalBiopsyAction: new Coding({
         code: "360028004",
         display: "Surgical biopsy - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_NonsurgicalBiopsyAction: Coding.FromStrict({
+    DeviceActionValueSet_NonsurgicalBiopsyAction: new Coding({
         code: "360029007",
         display: "Nonsurgical biopsy - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_FlapReconstructionAction: Coding.FromStrict({
+    DeviceActionValueSet_FlapReconstructionAction: new Coding({
         code: "360032005",
         display: "Flap reconstruction - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ImagingMethod: Coding.FromStrict({
+    DeviceActionValueSet_ImagingMethod: new Coding({
         code: "360037004",
         display: "Imaging method",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_GluingAction: Coding.FromStrict({
+    DeviceActionValueSet_GluingAction: new Coding({
         code: "360038009",
         display: "Gluing - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SurgicalToiletAction: Coding.FromStrict({
+    DeviceActionValueSet_SurgicalToiletAction: new Coding({
         code: "360051004",
         display: "Surgical toilet - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ApproximationAction: Coding.FromStrict({
+    DeviceActionValueSet_ApproximationAction: new Coding({
         code: "360060007",
         display: "Approximation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_AppositionAction: Coding.FromStrict({
+    DeviceActionValueSet_AppositionAction: new Coding({
         code: "360082000",
         display: "Apposition - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SeptationAction: Coding.FromStrict({
+    DeviceActionValueSet_SeptationAction: new Coding({
         code: "360084004",
         display: "Septation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_IndirectAnastomosisAction: Coding.FromStrict({
+    DeviceActionValueSet_IndirectAnastomosisAction: new Coding({
         code: "360087006",
         display: "Indirect anastomosis - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_RepositioningAction: Coding.FromStrict({
+    DeviceActionValueSet_RepositioningAction: new Coding({
         code: "360146007",
         display: "Repositioning - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_AttentionAction: Coding.FromStrict({
+    DeviceActionValueSet_AttentionAction: new Coding({
         code: "360147003",
         display: "Attention - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ObstetricAction: Coding.FromStrict({
+    DeviceActionValueSet_ObstetricAction: new Coding({
         code: "360148008",
         display: "Obstetric action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DeliveryAction: Coding.FromStrict({
+    DeviceActionValueSet_DeliveryAction: new Coding({
         code: "360149000",
         display: "Delivery - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_InlayReplacementAction: Coding.FromStrict({
+    DeviceActionValueSet_InlayReplacementAction: new Coding({
         code: "360150000",
         display: "Inlay replacement - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MonitoringAction: Coding.FromStrict({
+    DeviceActionValueSet_MonitoringAction: new Coding({
         code: "360152008",
         display: "Monitoring - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TakeImpressionAction: Coding.FromStrict({
+    DeviceActionValueSet_TakeImpressionAction: new Coding({
         code: "360153003",
         display: "Take impression - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TrialFitOfDeviceAction: Coding.FromStrict({
+    DeviceActionValueSet_TrialFitOfDeviceAction: new Coding({
         code: "360154009",
         display: "Trial fit of device - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_CheckingAction: Coding.FromStrict({
+    DeviceActionValueSet_CheckingAction: new Coding({
         code: "360160009",
         display: "Checking - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_InductionAction: Coding.FromStrict({
+    DeviceActionValueSet_InductionAction: new Coding({
         code: "360161008",
         display: "Induction - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_InfiltrationAction: Coding.FromStrict({
+    DeviceActionValueSet_InfiltrationAction: new Coding({
         code: "360163006",
         display: "Infiltration - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ApheresisAction: Coding.FromStrict({
+    DeviceActionValueSet_ApheresisAction: new Coding({
         code: "360165004",
         display: "Apheresis - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_FiltrationAction: Coding.FromStrict({
+    DeviceActionValueSet_FiltrationAction: new Coding({
         code: "360166003",
         display: "Filtration - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MappingAction: Coding.FromStrict({
+    DeviceActionValueSet_MappingAction: new Coding({
         code: "360220002",
         display: "Mapping - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MassageAction: Coding.FromStrict({
+    DeviceActionValueSet_MassageAction: new Coding({
         code: "360222005",
         display: "Massage - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_CineImagingAction: Coding.FromStrict({
+    DeviceActionValueSet_CineImagingAction: new Coding({
         code: "360223000",
         display: "Cine imaging - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ElectricalDischargeAction: Coding.FromStrict({
+    DeviceActionValueSet_ElectricalDischargeAction: new Coding({
         code: "360226008",
         display: "Electrical discharge - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_VideoImagingAction: Coding.FromStrict({
+    DeviceActionValueSet_VideoImagingAction: new Coding({
         code: "360231005",
         display: "Video imaging - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SpectroscopyAction: Coding.FromStrict({
+    DeviceActionValueSet_SpectroscopyAction: new Coding({
         code: "360232003",
         display: "Spectroscopy - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TerminationAction: Coding.FromStrict({
+    DeviceActionValueSet_TerminationAction: new Coding({
         code: "360239007",
         display: "Termination - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ConnectionAction: Coding.FromStrict({
+    DeviceActionValueSet_ConnectionAction: new Coding({
         code: "360240009",
         display: "Connection - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TherapyAction: Coding.FromStrict({
+    DeviceActionValueSet_TherapyAction: new Coding({
         code: "360270004",
         display: "Therapy - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DiscussionAction: Coding.FromStrict({
+    DeviceActionValueSet_DiscussionAction: new Coding({
         code: "360272007",
         display: "Discussion - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ProvisionAction: Coding.FromStrict({
+    DeviceActionValueSet_ProvisionAction: new Coding({
         code: "360273002",
         display: "Provision - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_CuttingAction: Coding.FromStrict({
+    DeviceActionValueSet_CuttingAction: new Coding({
         code: "360314001",
         display: "Cutting - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_FilingAction: Coding.FromStrict({
+    DeviceActionValueSet_FilingAction: new Coding({
         code: "360315000",
         display: "Filing - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_RestoreAction: Coding.FromStrict({
+    DeviceActionValueSet_RestoreAction: new Coding({
         code: "360323003",
         display: "Restore - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ObturationAction: Coding.FromStrict({
+    DeviceActionValueSet_ObturationAction: new Coding({
         code: "360324009",
         display: "Obturation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SimpleRemovalAction: Coding.FromStrict({
+    DeviceActionValueSet_SimpleRemovalAction: new Coding({
         code: "360325005",
         display: "Simple removal - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DisinsertionAction: Coding.FromStrict({
+    DeviceActionValueSet_DisinsertionAction: new Coding({
         code: "360393008",
         display: "Disinsertion - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DissolutionAction: Coding.FromStrict({
+    DeviceActionValueSet_DissolutionAction: new Coding({
         code: "362939006",
         display: "Dissolution - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_PacingAction: Coding.FromStrict({
+    DeviceActionValueSet_PacingAction: new Coding({
         code: "363659002",
         display: "Pacing - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_PositronEmissionTomographicImagingAction: Coding.FromStrict({
+    DeviceActionValueSet_PositronEmissionTomographicImagingAction: new Coding({
         code: "363678002",
         display: "Positron emission tomographic imaging - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_LendingAction: Coding.FromStrict({
+    DeviceActionValueSet_LendingAction: new Coding({
         code: "367529003",
         display: "Lending - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ContouringAction: Coding.FromStrict({
+    DeviceActionValueSet_ContouringAction: new Coding({
         code: "367558000",
         display: "Contouring - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_PreparationAction: Coding.FromStrict({
+    DeviceActionValueSet_PreparationAction: new Coding({
         code: "367559008",
         display: "Preparation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_BucklingAction: Coding.FromStrict({
+    DeviceActionValueSet_BucklingAction: new Coding({
         code: "367560003",
         display: "Buckling - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_InversionAction: Coding.FromStrict({
+    DeviceActionValueSet_InversionAction: new Coding({
         code: "367642006",
         display: "Inversion - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SuspensionAction: Coding.FromStrict({
+    DeviceActionValueSet_SuspensionAction: new Coding({
         code: "367740008",
         display: "Suspension - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_HyfrecationAction: Coding.FromStrict({
+    DeviceActionValueSet_HyfrecationAction: new Coding({
         code: "369242005",
         display: "Hyfrecation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MaintenanceAction: Coding.FromStrict({
+    DeviceActionValueSet_MaintenanceAction: new Coding({
         code: "386746003",
         display: "Maintenance - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_BModeUltrasound: Coding.FromStrict({
+    DeviceActionValueSet_BModeUltrasound: new Coding({
         code: "399009009",
         display: "B mode ultrasound",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TomographicImagingPlainRadiologicAction: Coding.FromStrict({
+    DeviceActionValueSet_TomographicImagingPlainRadiologicAction: new Coding({
         code: "399015009",
         display: "Tomographic imaging, plain radiologic - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TomographicImagingAction: Coding.FromStrict({
+    DeviceActionValueSet_TomographicImagingAction: new Coding({
         code: "399035005",
         display: "Tomographic imaging - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_VAL2DModeUltrasound: Coding.FromStrict({
+    DeviceActionValueSet_VAL2DModeUltrasound: new Coding({
         code: "399064001",
         display: "2D mode ultrasound",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MModeUltrasound: Coding.FromStrict({
+    DeviceActionValueSet_MModeUltrasound: new Coding({
         code: "399155008",
         display: "M-mode ultrasound",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_Illumination: Coding.FromStrict({
+    DeviceActionValueSet_Illumination: new Coding({
         code: "410460000",
         display: "Illumination",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DualDiffuseDirectIllumination: Coding.FromStrict({
+    DeviceActionValueSet_DualDiffuseDirectIllumination: new Coding({
         code: "410461001",
         display: "Dual diffuse direct illumination",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_FineSlitBeamDirectIllumination: Coding.FromStrict({
+    DeviceActionValueSet_FineSlitBeamDirectIllumination: new Coding({
         code: "410462008",
         display: "Fine slit beam direct illumination",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_BroadTangentialDirectIllumination: Coding.FromStrict({
+    DeviceActionValueSet_BroadTangentialDirectIllumination: new Coding({
         code: "410463003",
         display: "Broad tangential direct illumination",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_IndirectScleroticScatterIllumination: Coding.FromStrict({
+    DeviceActionValueSet_IndirectScleroticScatterIllumination: new Coding({
         code: "410464009",
         display: "Indirect sclerotic scatter illumination",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_IndirectRetroilluminationFromTheIris: Coding.FromStrict({
+    DeviceActionValueSet_IndirectRetroilluminationFromTheIris: new Coding({
         code: "410465005",
         display: "Indirect retroillumination from the iris",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_IndirectRetroilluminationFromTheRetina: Coding.FromStrict({
+    DeviceActionValueSet_IndirectRetroilluminationFromTheRetina: new Coding({
         code: "410466006",
         display: "Indirect retroillumination from the retina",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_IndirectIrisTransillumination: Coding.FromStrict({
+    DeviceActionValueSet_IndirectIrisTransillumination: new Coding({
         code: "410467002",
         display: "Indirect iris transillumination",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SurgicalDecompressionAction: Coding.FromStrict({
+    DeviceActionValueSet_SurgicalDecompressionAction: new Coding({
         code: "410756002",
         display: "Surgical decompression - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DecompressiveExcisionAction: Coding.FromStrict({
+    DeviceActionValueSet_DecompressiveExcisionAction: new Coding({
         code: "410757006",
         display: "Decompressive excision - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DecompressiveIncisionAction: Coding.FromStrict({
+    DeviceActionValueSet_DecompressiveIncisionAction: new Coding({
         code: "410758001",
         display: "Decompressive incision - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DecompressiveDivisionAction: Coding.FromStrict({
+    DeviceActionValueSet_DecompressiveDivisionAction: new Coding({
         code: "410759009",
         display: "Decompressive division - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ElevationReductionAction: Coding.FromStrict({
+    DeviceActionValueSet_ElevationReductionAction: new Coding({
         code: "410769003",
         display: "Elevation reduction - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SurgicalReductionAction: Coding.FromStrict({
+    DeviceActionValueSet_SurgicalReductionAction: new Coding({
         code: "410814006",
         display: "Surgical reduction - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DilationRepairAction: Coding.FromStrict({
+    DeviceActionValueSet_DilationRepairAction: new Coding({
         code: "410817004",
         display: "Dilation repair - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SurgicalTransplantationAction: Coding.FromStrict({
+    DeviceActionValueSet_SurgicalTransplantationAction: new Coding({
         code: "410820007",
         display: "Surgical transplantation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ProximalIlluminationAction: Coding.FromStrict({
+    DeviceActionValueSet_ProximalIlluminationAction: new Coding({
         code: "415186003",
         display: "Proximal illumination - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_InternalDrainageAction: Coding.FromStrict({
+    DeviceActionValueSet_InternalDrainageAction: new Coding({
         code: "416677001",
         display: "Internal drainage - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ExaminationANDORHistoryTakingAction: Coding.FromStrict({
+    DeviceActionValueSet_ExaminationANDORHistoryTakingAction: new Coding({
         code: "419656003",
         display: "Examination AND/OR history taking - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ActionOfDrugAdministration: Coding.FromStrict({
+    DeviceActionValueSet_ActionOfDrugAdministration: new Coding({
         code: "419988009",
         display: "Action of drug administration",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ShuntAction: Coding.FromStrict({
+    DeviceActionValueSet_ShuntAction: new Coding({
         code: "424208002",
         display: "Shunt - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SurgicalIntroductionAction: Coding.FromStrict({
+    DeviceActionValueSet_SurgicalIntroductionAction: new Coding({
         code: "424832003",
         display: "Surgical introduction - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_RecommendationAction: Coding.FromStrict({
+    DeviceActionValueSet_RecommendationAction: new Coding({
         code: "424900004",
         display: "Recommendation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SurgicalInsertionAction: Coding.FromStrict({
+    DeviceActionValueSet_SurgicalInsertionAction: new Coding({
         code: "425362007",
         display: "Surgical insertion - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TeachingAction: Coding.FromStrict({
+    DeviceActionValueSet_TeachingAction: new Coding({
         code: "425689005",
         display: "Teaching - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_PowerDopplerUltrasound: Coding.FromStrict({
+    DeviceActionValueSet_PowerDopplerUltrasound: new Coding({
         code: "425704008",
         display: "Power doppler ultrasound",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TransectionAction: Coding.FromStrict({
+    DeviceActionValueSet_TransectionAction: new Coding({
         code: "425764006",
         display: "Transection - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ClosedReductionAction: Coding.FromStrict({
+    DeviceActionValueSet_ClosedReductionAction: new Coding({
         code: "426413004",
         display: "Closed reduction - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_OpenReductionAction: Coding.FromStrict({
+    DeviceActionValueSet_OpenReductionAction: new Coding({
         code: "426530000",
         display: "Open reduction - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_VAL3DModeUltrasound: Coding.FromStrict({
+    DeviceActionValueSet_VAL3DModeUltrasound: new Coding({
         code: "426865009",
         display: "3D mode ultrasound",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_OpenEmbolizationAction: Coding.FromStrict({
+    DeviceActionValueSet_OpenEmbolizationAction: new Coding({
         code: "428010000",
         display: "Open embolization - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DiathermyAction: Coding.FromStrict({
+    DeviceActionValueSet_DiathermyAction: new Coding({
         code: "428381003",
         display: "Diathermy - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SurgicalPiercingAction: Coding.FromStrict({
+    DeviceActionValueSet_SurgicalPiercingAction: new Coding({
         code: "430975009",
         display: "Surgical piercing - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SurgicalCataractAspirationAction: Coding.FromStrict({
+    DeviceActionValueSet_SurgicalCataractAspirationAction: new Coding({
         code: "439054007",
         display: "Surgical cataract aspiration - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MechanicalRepairAction: Coding.FromStrict({
+    DeviceActionValueSet_MechanicalRepairAction: new Coding({
         code: "439237009",
         display: "Mechanical repair - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_WedgeOsteotomyAction: Coding.FromStrict({
+    DeviceActionValueSet_WedgeOsteotomyAction: new Coding({
         code: "439315000",
         display: "Wedge osteotomy - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ClosedManualReductionAction: Coding.FromStrict({
+    DeviceActionValueSet_ClosedManualReductionAction: new Coding({
         code: "439417007",
         display: "Closed manual reduction - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SurgicalSizeReductionAction: Coding.FromStrict({
+    DeviceActionValueSet_SurgicalSizeReductionAction: new Coding({
         code: "439513008",
         display: "Surgical size reduction - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DispensingAction: Coding.FromStrict({
+    DeviceActionValueSet_DispensingAction: new Coding({
         code: "440338007",
         display: "Dispensing - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_MechanicalConstructionAction: Coding.FromStrict({
+    DeviceActionValueSet_MechanicalConstructionAction: new Coding({
         code: "440647007",
         display: "Mechanical construction - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SurgicalManipulationAction: Coding.FromStrict({
+    DeviceActionValueSet_SurgicalManipulationAction: new Coding({
         code: "441504007",
         display: "Surgical manipulation - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ExcisionDebridementAction: Coding.FromStrict({
+    DeviceActionValueSet_ExcisionDebridementAction: new Coding({
         code: "442837002",
         display: "Excision debridement - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_FixationByWedgingAction: Coding.FromStrict({
+    DeviceActionValueSet_FixationByWedgingAction: new Coding({
         code: "445103003",
         display: "Fixation by wedging - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TransmissionIllumination: Coding.FromStrict({
+    DeviceActionValueSet_TransmissionIllumination: new Coding({
         code: "698788008",
         display: "Transmission illumination",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ReflectionIllumination: Coding.FromStrict({
+    DeviceActionValueSet_ReflectionIllumination: new Coding({
         code: "698789000",
         display: "Reflection illumination",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_EpifluorescenceIllumination: Coding.FromStrict({
+    DeviceActionValueSet_EpifluorescenceIllumination: new Coding({
         code: "698790009",
         display: "Epifluorescence illumination",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_BrightfieldIllumination: Coding.FromStrict({
+    DeviceActionValueSet_BrightfieldIllumination: new Coding({
         code: "698792001",
         display: "Brightfield illumination",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DarkfieldIllumination: Coding.FromStrict({
+    DeviceActionValueSet_DarkfieldIllumination: new Coding({
         code: "698793006",
         display: "Darkfield illumination",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ObliqueIllumination: Coding.FromStrict({
+    DeviceActionValueSet_ObliqueIllumination: new Coding({
         code: "698794000",
         display: "Oblique illumination",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_PhaseContrastIllumination: Coding.FromStrict({
+    DeviceActionValueSet_PhaseContrastIllumination: new Coding({
         code: "698796003",
         display: "Phase contrast illumination",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_DifferentialInterferenceContrast: Coding.FromStrict({
+    DeviceActionValueSet_DifferentialInterferenceContrast: new Coding({
         code: "698797007",
         display: "Differential interference contrast",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_TotalInternalReflectionFluorescence: Coding.FromStrict({
+    DeviceActionValueSet_TotalInternalReflectionFluorescence: new Coding({
         code: "698798002",
         display: "Total internal reflection fluorescence",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_ConeBeamComputedTomographyImagingAction: Coding.FromStrict({
+    DeviceActionValueSet_ConeBeamComputedTomographyImagingAction: new Coding({
         code: "702569007",
         display: "Cone beam computed tomography imaging - action",
         system: "http://snomed.info/sct"
     }),
-    DeviceActionValueSet_SurgicalReplacementAction: Coding.FromStrict({
+    DeviceActionValueSet_SurgicalReplacementAction: new Coding({
         code: "713295009",
         display: "Surgical replacement - action",
         system: "http://snomed.info/sct"

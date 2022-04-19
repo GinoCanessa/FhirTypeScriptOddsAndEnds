@@ -10,14997 +10,14997 @@ import { Coding } from '../fhir'
  * This examples value set defines the set of codes that can be used to indicate reasons for an encounter.
  */
 export const EncounterReasonValueSet = {
-  EncounterReasonValueSet_CauterizationOfBartholinQuoteSGland: Coding.FromStrict({
+  EncounterReasonValueSet_CauterizationOfBartholinQuoteSGland: new Coding({
     code: "1001000",
     display: "Cauterization of Bartholin's gland",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OperationOnNerveGanglion: Coding.FromStrict({
+  EncounterReasonValueSet_OperationOnNerveGanglion: new Coding({
     code: "1008006",
     display: "Operation on nerve ganglion",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfCornealEpithelium: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfCornealEpithelium: new Coding({
     code: "1019009",
     display: "Removal of corneal epithelium",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfScrotum: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfScrotum: new Coding({
     code: "1021004",
     display: "Repair of scrotum",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MudSlide: Coding.FromStrict({
+  EncounterReasonValueSet_MudSlide: new Coding({
     code: "102406006",
     display: "Mud slide",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Pollution: Coding.FromStrict({
+  EncounterReasonValueSet_Pollution: new Coding({
     code: "102410009",
     display: "Pollution",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EnvironmentalPollution: Coding.FromStrict({
+  EncounterReasonValueSet_EnvironmentalPollution: new Coding({
     code: "102411008",
     display: "Environmental pollution",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoisePolution: Coding.FromStrict({
+  EncounterReasonValueSet_NoisePolution: new Coding({
     code: "102412001",
     display: "Noise polution",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AirPollution: Coding.FromStrict({
+  EncounterReasonValueSet_AirPollution: new Coding({
     code: "102413006",
     display: "Air pollution",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_WaterPollution: Coding.FromStrict({
+  EncounterReasonValueSet_WaterPollution: new Coding({
     code: "102414000",
     display: "Water pollution",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DrinkingWaterPollution: Coding.FromStrict({
+  EncounterReasonValueSet_DrinkingWaterPollution: new Coding({
     code: "102415004",
     display: "Drinking water pollution",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BathingWaterPollution: Coding.FromStrict({
+  EncounterReasonValueSet_BathingWaterPollution: new Coding({
     code: "102416003",
     display: "Bathing water pollution",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SoilPollution: Coding.FromStrict({
+  EncounterReasonValueSet_SoilPollution: new Coding({
     code: "102417007",
     display: "Soil pollution",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DustPollution: Coding.FromStrict({
+  EncounterReasonValueSet_DustPollution: new Coding({
     code: "102418002",
     display: "Dust pollution",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToPollution: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToPollution: new Coding({
     code: "102420004",
     display: "Exposure to pollution",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToEnvironmentalPollution: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToEnvironmentalPollution: new Coding({
     code: "102421000",
     display: "Exposure to environmental pollution",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToEnvironmentalPollutionOccupational: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToEnvironmentalPollutionOccupational: new Coding({
     code: "102422007",
     display: "Exposure to environmental pollution, occupational",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToEnvironmentalPollutionNonOccupational: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToEnvironmentalPollutionNonOccupational: new Coding({
     code: "102423002",
     display: "Exposure to environmental pollution, non-occupational",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToPollutedAir: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToPollutedAir: new Coding({
     code: "102424008",
     display: "Exposure to polluted air",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToPollutedAirOccupational: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToPollutedAirOccupational: new Coding({
     code: "102425009",
     display: "Exposure to polluted air, occupational",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToPollutedAirNonOccupational: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToPollutedAirNonOccupational: new Coding({
     code: "102426005",
     display: "Exposure to polluted air, non-occupational",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToWaterPollution: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToWaterPollution: new Coding({
     code: "102427001",
     display: "Exposure to water pollution",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToPollutedWaterOccupational: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToPollutedWaterOccupational: new Coding({
     code: "102428006",
     display: "Exposure to polluted water, occupational",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToPollutedWaterNonOccupational: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToPollutedWaterNonOccupational: new Coding({
     code: "102429003",
     display: "Exposure to polluted water, non-occupational",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToPollutedDrinkingWater: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToPollutedDrinkingWater: new Coding({
     code: "102430008",
     display: "Exposure to polluted drinking water",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToPollutedBathingWater: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToPollutedBathingWater: new Coding({
     code: "102431007",
     display: "Exposure to polluted bathing water",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToPollutedSoil: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToPollutedSoil: new Coding({
     code: "102432000",
     display: "Exposure to polluted soil",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToPollutedSoilOccupational: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToPollutedSoilOccupational: new Coding({
     code: "102433005",
     display: "Exposure to polluted soil, occupational",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToPollutedSoilNonOccupational: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToPollutedSoilNonOccupational: new Coding({
     code: "102434004",
     display: "Exposure to polluted soil, non-occupational",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToChemicalPollution: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToChemicalPollution: new Coding({
     code: "102435003",
     display: "Exposure to chemical pollution",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToChemicalPollutionOccupational: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToChemicalPollutionOccupational: new Coding({
     code: "102436002",
     display: "Exposure to chemical pollution, occupational",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToChemicalPollutionNonOccupational: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToChemicalPollutionNonOccupational: new Coding({
     code: "102437006",
     display: "Exposure to chemical pollution, non-occupational",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToToxicWasteOccupational: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToToxicWasteOccupational: new Coding({
     code: "102439009",
     display: "Exposure to toxic waste, occupational",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToToxicWasteNonOccupational: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToToxicWasteNonOccupational: new Coding({
     code: "102440006",
     display: "Exposure to toxic waste, non-occupational",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToToxicAgriculturalAgents: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToToxicAgriculturalAgents: new Coding({
     code: "102441005",
     display: "Exposure to toxic agricultural agents",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToToxicAgriculturalAgentsOccupational: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToToxicAgriculturalAgentsOccupational: new Coding({
     code: "102442003",
     display: "Exposure to toxic agricultural agents, occupational",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToToxicAgriculturalAgentsNonOccupational: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToToxicAgriculturalAgentsNonOccupational: new Coding({
     code: "102443008",
     display: "Exposure to toxic agricultural agents, non-occupational",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToToxicDust: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToToxicDust: new Coding({
     code: "102444002",
     display: "Exposure to toxic dust",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToToxicDustOccupational: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToToxicDustOccupational: new Coding({
     code: "102445001",
     display: "Exposure to toxic dust, occupational",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToToxicDustNonOccupational: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToToxicDustNonOccupational: new Coding({
     code: "102446000",
     display: "Exposure to toxic dust, non-occupational",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Fetoscopy: Coding.FromStrict({
+  EncounterReasonValueSet_Fetoscopy: new Coding({
     code: "1029002",
     display: "Fetoscopy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AbsenceOfGuilt: Coding.FromStrict({
+  EncounterReasonValueSet_AbsenceOfGuilt: new Coding({
     code: "102905003",
     display: "Absence of guilt",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralHeadache: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralHeadache: new Coding({
     code: "103006007",
     display: "Unilateral headache",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EnucleationOfParotidGlandCyst: Coding.FromStrict({
+  EncounterReasonValueSet_EnucleationOfParotidGlandCyst: new Coding({
     code: "1032004",
     display: "Enucleation of parotid gland cyst",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MinimumBactericidalConcentrationTestMicrodilutionMethod: Coding.FromStrict({
+  EncounterReasonValueSet_MinimumBactericidalConcentrationTestMicrodilutionMethod: new Coding({
     code: "1035002",
     display: "Minimum bactericidal concentration test, microdilution method",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InsertionOfIntravascularDeviceInCommonIliacVeinComplete: Coding.FromStrict({
+  EncounterReasonValueSet_InsertionOfIntravascularDeviceInCommonIliacVeinComplete: new Coding({
     code: "1036001",
     display: "Insertion of intravascular device in common iliac vein, complete",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FailedAttemptedProcedure: Coding.FromStrict({
+  EncounterReasonValueSet_FailedAttemptedProcedure: new Coding({
     code: "103709008",
     display: "Failed attempted procedure",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfLesionOfPatella: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfLesionOfPatella: new Coding({
     code: "104001",
     display: "Excision of lesion of patella",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DebridementOfOpenFractureOfPhalangesOfFoot: Coding.FromStrict({
+  EncounterReasonValueSet_DebridementOfOpenFractureOfPhalangesOfFoot: new Coding({
     code: "1041009",
     display: "Debridement of open fracture of phalanges of foot",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PaternityTesting: Coding.FromStrict({
+  EncounterReasonValueSet_PaternityTesting: new Coding({
     code: "1042002",
     display: "Paternity testing",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DopplerColorFlowVelocityMapping: Coding.FromStrict({
+  EncounterReasonValueSet_DopplerColorFlowVelocityMapping: new Coding({
     code: "1043007",
     display: "Doppler color flow velocity mapping",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiagnosticUltrasoundOfAbdomenAndRetroperitoneum: Coding.FromStrict({
+  EncounterReasonValueSet_DiagnosticUltrasoundOfAbdomenAndRetroperitoneum: new Coding({
     code: "1044001",
     display: "Diagnostic ultrasound of abdomen and retroperitoneum",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CapillaryBloodSampling: Coding.FromStrict({
+  EncounterReasonValueSet_CapillaryBloodSampling: new Coding({
     code: "1048003",
     display: "Capillary blood sampling",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SphincterotomyOfPapillaOfVater: Coding.FromStrict({
+  EncounterReasonValueSet_SphincterotomyOfPapillaOfVater: new Coding({
     code: "1054002",
     display: "Sphincterotomy of papilla of Vater",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathOfSpouse: Coding.FromStrict({
+  EncounterReasonValueSet_DeathOfSpouse: new Coding({
     code: "105441003",
     display: "Death of spouse",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathOfCompanion: Coding.FromStrict({
+  EncounterReasonValueSet_DeathOfCompanion: new Coding({
     code: "105442005",
     display: "Death of companion",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathOfParent: Coding.FromStrict({
+  EncounterReasonValueSet_DeathOfParent: new Coding({
     code: "105443000",
     display: "Death of parent",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathOfChild: Coding.FromStrict({
+  EncounterReasonValueSet_DeathOfChild: new Coding({
     code: "105444006",
     display: "Death of child",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathOfSibling: Coding.FromStrict({
+  EncounterReasonValueSet_DeathOfSibling: new Coding({
     code: "105445007",
     display: "Death of sibling",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuicideOfRelative: Coding.FromStrict({
+  EncounterReasonValueSet_SuicideOfRelative: new Coding({
     code: "105446008",
     display: "Suicide of relative",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathOfPet: Coding.FromStrict({
+  EncounterReasonValueSet_DeathOfPet: new Coding({
     code: "105447004",
     display: "Death of pet",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RefusalOfTreatmentByPatient: Coding.FromStrict({
+  EncounterReasonValueSet_RefusalOfTreatmentByPatient: new Coding({
     code: "105480006",
     display: "Refusal of treatment by patient",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PNDPerinatalDeath: Coding.FromStrict({
+  EncounterReasonValueSet_PNDPerinatalDeath: new Coding({
     code: "10588007",
     display: "PND - Perinatal death",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ContactWithHandTool: Coding.FromStrict({
+  EncounterReasonValueSet_ContactWithHandTool: new Coding({
     code: "10598001",
     display: "Contact with hand tool",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ProximalSplenorenalAnastomosis: Coding.FromStrict({
+  EncounterReasonValueSet_ProximalSplenorenalAnastomosis: new Coding({
     code: "1071001",
     display: "Proximal splenorenal anastomosis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfPerinephricCyst: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfPerinephricCyst: new Coding({
     code: "1084005",
     display: "Excision of perinephric cyst",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfAbdominalVaricoseVein: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfAbdominalVaricoseVein: new Coding({
     code: "1093006",
     display: "Excision of abdominal varicose vein",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralCleftOfPrimaryPalate: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralCleftOfPrimaryPalate: new Coding({
     code: "109547005",
     display: "Unilateral cleft of primary palate",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralCoronoidHyperplasiaOfMandible: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralCoronoidHyperplasiaOfMandible: new Coding({
     code: "109719008",
     display: "Unilateral coronoid hyperplasia of mandible",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralCoronoidHypoplasiaOfMandible: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralCoronoidHypoplasiaOfMandible: new Coding({
     code: "109723000",
     display: "Unilateral coronoid hypoplasia of mandible",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TranscruralMobilizationOfStapes: Coding.FromStrict({
+  EncounterReasonValueSet_TranscruralMobilizationOfStapes: new Coding({
     code: "1103000",
     display: "Transcrural mobilization of stapes",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TriadKneeRepair: Coding.FromStrict({
+  EncounterReasonValueSet_TriadKneeRepair: new Coding({
     code: "1104006",
     display: "Triad knee repair",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Floods: Coding.FromStrict({
+  EncounterReasonValueSet_Floods: new Coding({
     code: "111056004",
     display: "Floods",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Decortication: Coding.FromStrict({
+  EncounterReasonValueSet_Decortication: new Coding({
     code: "1115001",
     display: "Decortication",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralTraumaticAmputationOfArmWithoutComplication: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralTraumaticAmputationOfArmWithoutComplication: new Coding({
     code: "111690007",
     display: "Unilateral traumatic amputation of arm without complication",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ClosedReductionOfDislocationOfFootAndToe: Coding.FromStrict({
+  EncounterReasonValueSet_ClosedReductionOfDislocationOfFootAndToe: new Coding({
     code: "1119007",
     display: "Closed reduction of dislocation of foot and toe",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_JudicialExecutionByLethalInjection: Coding.FromStrict({
+  EncounterReasonValueSet_JudicialExecutionByLethalInjection: new Coding({
     code: "111942003",
     display: "Judicial execution by lethal injection",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_KineticActivitiesForRangeOfMotion: Coding.FromStrict({
+  EncounterReasonValueSet_KineticActivitiesForRangeOfMotion: new Coding({
     code: "1121002",
     display: "Kinetic activities for range of motion",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InterstitialRadiumApplication: Coding.FromStrict({
+  EncounterReasonValueSet_InterstitialRadiumApplication: new Coding({
     code: "1127003",
     display: "Interstitial radium application",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfIntactMammaryImplantBilateral: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfIntactMammaryImplantBilateral: new Coding({
     code: "1133007",
     display: "Removal of intact mammary implant, bilateral",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralInguinalHerniaWithGangreneANDObstruction: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralInguinalHerniaWithGangreneANDObstruction: new Coding({
     code: "11363007",
     display: "Unilateral inguinal hernia with gangrene AND obstruction",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AssaultAndBattery: Coding.FromStrict({
+  EncounterReasonValueSet_AssaultAndBattery: new Coding({
     code: "11385001",
     display: "Assault and battery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FitRemovableOrthodonticAppliance: Coding.FromStrict({
+  EncounterReasonValueSet_FitRemovableOrthodonticAppliance: new Coding({
     code: "115006",
     display: "Fit removable orthodontic appliance",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToNonMechanicalForce: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToNonMechanicalForce: new Coding({
     code: "115964003",
     display: "Exposure to non-mechanical force",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToMagneticField: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToMagneticField: new Coding({
     code: "115965002",
     display: "Exposure to magnetic field",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Ureteroenterostomy: Coding.FromStrict({
+  EncounterReasonValueSet_Ureteroenterostomy: new Coding({
     code: "1163003",
     display: "Ureteroenterostomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AutologousWholeBloodIssued: Coding.FromStrict({
+  EncounterReasonValueSet_AutologousWholeBloodIssued: new Coding({
     code: "116789007",
     display: "Autologous whole blood issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CytomegalovirusImmuneGlobulinIssued: Coding.FromStrict({
+  EncounterReasonValueSet_CytomegalovirusImmuneGlobulinIssued: new Coding({
     code: "116791004",
     display: "Cytomegalovirus immune globulin issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CryoprecipitateIssued: Coding.FromStrict({
+  EncounterReasonValueSet_CryoprecipitateIssued: new Coding({
     code: "116794007",
     display: "Cryoprecipitate issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FactorIXIssued: Coding.FromStrict({
+  EncounterReasonValueSet_FactorIXIssued: new Coding({
     code: "116796009",
     display: "Factor IX issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FactorVIIIIssued: Coding.FromStrict({
+  EncounterReasonValueSet_FactorVIIIIssued: new Coding({
     code: "116799002",
     display: "Factor VIII issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HepatitisBVirusImmuneGlobulinHumanIssued: Coding.FromStrict({
+  EncounterReasonValueSet_HepatitisBVirusImmuneGlobulinHumanIssued: new Coding({
     code: "116801004",
     display: "Hepatitis B Virus immune globulin, human, issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DispensingOfHumanImmuneSerumGlobulinIntravenousIVIg: Coding.FromStrict({
+  EncounterReasonValueSet_DispensingOfHumanImmuneSerumGlobulinIntravenousIVIg: new Coding({
     code: "116804007",
     display: "Dispensing of human immune serum globulin, intravenous (IVIg)",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PlasmaProductIssued: Coding.FromStrict({
+  EncounterReasonValueSet_PlasmaProductIssued: new Coding({
     code: "116807000",
     display: "Plasma product issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PlateletProductIssued: Coding.FromStrict({
+  EncounterReasonValueSet_PlateletProductIssued: new Coding({
     code: "116809002",
     display: "Platelet product issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RhImmuneGlobulinIssued: Coding.FromStrict({
+  EncounterReasonValueSet_RhImmuneGlobulinIssued: new Coding({
     code: "116811006",
     display: "Rh immune globulin issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_VaricellaVirusImmuneGlobulinIssued: Coding.FromStrict({
+  EncounterReasonValueSet_VaricellaVirusImmuneGlobulinIssued: new Coding({
     code: "116814003",
     display: "Varicella virus immune globulin issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FreshFrozenPlasmaIssued: Coding.FromStrict({
+  EncounterReasonValueSet_FreshFrozenPlasmaIssued: new Coding({
     code: "116860001",
     display: "Fresh frozen plasma issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PackedRedBloodCellsIssued: Coding.FromStrict({
+  EncounterReasonValueSet_PackedRedBloodCellsIssued: new Coding({
     code: "116862009",
     display: "Packed red blood cells issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_WholeBloodIssued: Coding.FromStrict({
+  EncounterReasonValueSet_WholeBloodIssued: new Coding({
     code: "116864005",
     display: "Whole blood issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AlbuminIssued: Coding.FromStrict({
+  EncounterReasonValueSet_AlbuminIssued: new Coding({
     code: "116866007",
     display: "Albumin issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PlateletpheresisProductIssued: Coding.FromStrict({
+  EncounterReasonValueSet_PlateletpheresisProductIssued: new Coding({
     code: "117067008",
     display: "Plateletpheresis product issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PlateletConcentrateIssued: Coding.FromStrict({
+  EncounterReasonValueSet_PlateletConcentrateIssued: new Coding({
     code: "117068003",
     display: "Platelet concentrate issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AutologousRedBloodCellsIssued: Coding.FromStrict({
+  EncounterReasonValueSet_AutologousRedBloodCellsIssued: new Coding({
     code: "117077005",
     display: "Autologous red blood cells issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CryoPoorPlasmaIssued: Coding.FromStrict({
+  EncounterReasonValueSet_CryoPoorPlasmaIssued: new Coding({
     code: "117079008",
     display: "Cryo-poor plasma issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FactorVIIIssued: Coding.FromStrict({
+  EncounterReasonValueSet_FactorVIIIssued: new Coding({
     code: "117080006",
     display: "Factor VII issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BotulismImmuneGlobulinHumanIssued: Coding.FromStrict({
+  EncounterReasonValueSet_BotulismImmuneGlobulinHumanIssued: new Coding({
     code: "117082003",
     display: "Botulism immune globulin, human, issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RabiesImmuneGlobulinHumanIssued: Coding.FromStrict({
+  EncounterReasonValueSet_RabiesImmuneGlobulinHumanIssued: new Coding({
     code: "117084002",
     display: "Rabies immune globulin, human, issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RespiratorySyncytialVirusImmuneGlobulinHumanIssued: Coding.FromStrict({
+  EncounterReasonValueSet_RespiratorySyncytialVirusImmuneGlobulinHumanIssued: new Coding({
     code: "117088004",
     display: "Respiratory syncytial virus immune globulin, human, issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TetanusImmuneGlobulinHumanIssued: Coding.FromStrict({
+  EncounterReasonValueSet_TetanusImmuneGlobulinHumanIssued: new Coding({
     code: "117091004",
     display: "Tetanus immune globulin, human, issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_VacciniaImmuneGlobulinHumanIssued: Coding.FromStrict({
+  EncounterReasonValueSet_VacciniaImmuneGlobulinHumanIssued: new Coding({
     code: "117094007",
     display: "Vaccinia immune globulin, human, issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LeukocyteProductIssued: Coding.FromStrict({
+  EncounterReasonValueSet_LeukocyteProductIssued: new Coding({
     code: "117097000",
     display: "Leukocyte product issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RedBloodCellsIssued: Coding.FromStrict({
+  EncounterReasonValueSet_RedBloodCellsIssued: new Coding({
     code: "117098005",
     display: "Red blood cells issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SolventDetergentTreatedPlasmaProductIssued: Coding.FromStrict({
+  EncounterReasonValueSet_SolventDetergentTreatedPlasmaProductIssued: new Coding({
     code: "117099002",
     display: "Solvent-detergent treated plasma product issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HumanImmuneGlobulinProductIssued: Coding.FromStrict({
+  EncounterReasonValueSet_HumanImmuneGlobulinProductIssued: new Coding({
     code: "117100005",
     display: "Human immune globulin product issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CoagulationFactorProductIssued: Coding.FromStrict({
+  EncounterReasonValueSet_CoagulationFactorProductIssued: new Coding({
     code: "117101009",
     display: "Coagulation factor product issued",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionOfInguinalRegion: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionOfInguinalRegion: new Coding({
     code: "1176009",
     display: "Incision of inguinal region",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfTendonForGraft: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfTendonForGraft: new Coding({
     code: "1181000",
     display: "Excision of tendon for graft",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnesthesiaForProcedureOnBonyPelvis: Coding.FromStrict({
+  EncounterReasonValueSet_AnesthesiaForProcedureOnBonyPelvis: new Coding({
     code: "1186005",
     display: "Anesthesia for procedure on bony pelvis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ThoracoscopicPartialLobectomyOfLung: Coding.FromStrict({
+  EncounterReasonValueSet_ThoracoscopicPartialLobectomyOfLung: new Coding({
     code: "119000",
     display: "Thoracoscopic partial lobectomy of lung",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionalBiopsyOfBoneOfScapula: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionalBiopsyOfBoneOfScapula: new Coding({
     code: "1198000",
     display: "Excisional biopsy of bone of scapula",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AngiographyOfArteriesOfExtremityUnilateral: Coding.FromStrict({
+  EncounterReasonValueSet_AngiographyOfArteriesOfExtremityUnilateral: new Coding({
     code: "11981004",
     display: "Angiography of arteries of extremity, unilateral",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ArthroscopicRepairLateralMeniscus: Coding.FromStrict({
+  EncounterReasonValueSet_ArthroscopicRepairLateralMeniscus: new Coding({
     code: "1209007",
     display: "Arthroscopic repair lateral meniscus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StruckByFallingLumber: Coding.FromStrict({
+  EncounterReasonValueSet_StruckByFallingLumber: new Coding({
     code: "1210002",
     display: "Struck by falling lumber",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RetrobulbarInjectionOfTherapeuticAgent: Coding.FromStrict({
+  EncounterReasonValueSet_RetrobulbarInjectionOfTherapeuticAgent: new Coding({
     code: "121005",
     display: "Retrobulbar injection of therapeutic agent",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UpperArmXRay: Coding.FromStrict({
+  EncounterReasonValueSet_UpperArmXRay: new Coding({
     code: "1225002",
     display: "Upper arm X-ray",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionOfSubvalvularTissueForDiscreteSubvalvularAorticStenosis: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionOfSubvalvularTissueForDiscreteSubvalvularAorticStenosis: new Coding({
     code: "1227005",
     display: "Incision of subvalvular tissue for discrete subvalvular aortic stenosis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToIonizingRadiation: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToIonizingRadiation: new Coding({
     code: "122866006",
     display: "Exposure to ionizing radiation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MuscleTransfer: Coding.FromStrict({
+  EncounterReasonValueSet_MuscleTransfer: new Coding({
     code: "1235008",
     display: "Muscle transfer",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ApplicationOfCastSugarTong: Coding.FromStrict({
+  EncounterReasonValueSet_ApplicationOfCastSugarTong: new Coding({
     code: "1237000",
     display: "Application of cast, sugar tong",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EpiphysealArrestByStaplingOfDistalRadius: Coding.FromStrict({
+  EncounterReasonValueSet_EpiphysealArrestByStaplingOfDistalRadius: new Coding({
     code: "1238005",
     display: "Epiphyseal arrest by stapling of distal radius",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_KernigSignPositive: Coding.FromStrict({
+  EncounterReasonValueSet_KernigSignPositive: new Coding({
     code: "124743003",
     display: "Kernig sign positive",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BrudzinskiSignPositive: Coding.FromStrict({
+  EncounterReasonValueSet_BrudzinskiSignPositive: new Coding({
     code: "124744009",
     display: "Brudzinski sign positive",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ChvostekSignPositive: Coding.FromStrict({
+  EncounterReasonValueSet_ChvostekSignPositive: new Coding({
     code: "124745005",
     display: "Chvostek sign positive",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrousseauSignPositive: Coding.FromStrict({
+  EncounterReasonValueSet_TrousseauSignPositive: new Coding({
     code: "124746006",
     display: "Trousseau sign positive",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionalBiopsyOfTestis: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionalBiopsyOfTestis: new Coding({
     code: "1251000",
     display: "Incisional biopsy of testis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RefusionOfSpine: Coding.FromStrict({
+  EncounterReasonValueSet_RefusionOfSpine: new Coding({
     code: "1253002",
     display: "Refusion of spine",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfMeniscusOfWrist: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfMeniscusOfWrist: new Coding({
     code: "1258006",
     display: "Excision of meniscus of wrist",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ClosureOfTympanicMembranePerforation: Coding.FromStrict({
+  EncounterReasonValueSet_ClosureOfTympanicMembranePerforation: new Coding({
     code: "1266002",
     display: "Closure of tympanic membrane perforation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ElectrocoagulationOfLesionOfVagina: Coding.FromStrict({
+  EncounterReasonValueSet_ElectrocoagulationOfLesionOfVagina: new Coding({
     code: "1267006",
     display: "Electrocoagulation of lesion of vagina",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralParesis: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralParesis: new Coding({
     code: "127377003",
     display: "Unilateral paresis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OpenReductionOfClosedShoulderDislocationWithFractureOfGreaterTuberosity: Coding.FromStrict({
+  EncounterReasonValueSet_OpenReductionOfClosedShoulderDislocationWithFractureOfGreaterTuberosity: new Coding({
     code: "1278003",
     display: "Open reduction of closed shoulder dislocation with fracture of greater tuberosity",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfCardiacPacemakerPocketInSkinANDORSubcutaneousTissue: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfCardiacPacemakerPocketInSkinANDORSubcutaneousTissue: new Coding({
     code: "1279006",
     display: "Repair of cardiac pacemaker pocket in skin AND/OR subcutaneous tissue",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HandMicroscopeExaminationOfSkin: Coding.FromStrict({
+  EncounterReasonValueSet_HandMicroscopeExaminationOfSkin: new Coding({
     code: "128004",
     display: "Hand microscope examination of skin",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ContextDependentProcedure: Coding.FromStrict({
+  EncounterReasonValueSet_ContextDependentProcedure: new Coding({
     code: "129125009",
     display: "Context-dependent procedure",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MRIOfBladder: Coding.FromStrict({
+  EncounterReasonValueSet_MRIOfBladder: new Coding({
     code: "1292009",
     display: "MRI of bladder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralRecurrentFemoralHerniaWithoutObstructionANDWithoutGangrene: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralRecurrentFemoralHerniaWithoutObstructionANDWithoutGangrene: new Coding({
     code: "1296007",
     display: "Unilateral recurrent femoral hernia without obstruction AND without gangrene",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AsphyxiationByHanging: Coding.FromStrict({
+  EncounterReasonValueSet_AsphyxiationByHanging: new Coding({
     code: "129674006",
     display: "Asphyxiation by hanging",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfAppendicealStump: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfAppendicealStump: new Coding({
     code: "1299000",
     display: "Excision of appendiceal stump",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AsphyxiationByEnvironmentalOxygenLack: Coding.FromStrict({
+  EncounterReasonValueSet_AsphyxiationByEnvironmentalOxygenLack: new Coding({
     code: "12994004",
     display: "Asphyxiation by environmental oxygen lack",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AbsenceOfStress: Coding.FromStrict({
+  EncounterReasonValueSet_AbsenceOfStress: new Coding({
     code: "13117000",
     display: "Absence of stress",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReconstructionOfEyebrow: Coding.FromStrict({
+  EncounterReasonValueSet_ReconstructionOfEyebrow: new Coding({
     code: "1315009",
     display: "Reconstruction of eyebrow",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UpperPartialDentureCastMetalBaseWithoutResinSaddlesIncludingAnyConventionalClaspsRestsAndTeeth: Coding.FromStrict({
+  EncounterReasonValueSet_UpperPartialDentureCastMetalBaseWithoutResinSaddlesIncludingAnyConventionalClaspsRestsAndTeeth: new Coding({
     code: "1316005",
     display: "Upper partial denture, cast metal base without resin saddles, including any conventional clasps, rests and teeth",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathDuringAnestheticInduction: Coding.FromStrict({
+  EncounterReasonValueSet_DeathDuringAnestheticInduction: new Coding({
     code: "13234002",
     display: "Death during anesthetic induction",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CerebrospinalFluidImmunoglobulinGRatioAndImmunoglobulinGIndex: Coding.FromStrict({
+  EncounterReasonValueSet_CerebrospinalFluidImmunoglobulinGRatioAndImmunoglobulinGIndex: new Coding({
     code: "1324000",
     display: "Cerebrospinal fluid immunoglobulin G ratio and immunoglobulin G index",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ProcedureOnMeckelDiverticulum: Coding.FromStrict({
+  EncounterReasonValueSet_ProcedureOnMeckelDiverticulum: new Coding({
     code: "1327007",
     display: "Procedure on Meckel diverticulum",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallFromSwing: Coding.FromStrict({
+  EncounterReasonValueSet_FallFromSwing: new Coding({
     code: "13278006",
     display: "Fall from swing",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IlioiliacShunt: Coding.FromStrict({
+  EncounterReasonValueSet_IlioiliacShunt: new Coding({
     code: "1328002",
     display: "Ilioiliac shunt",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DivisionOfCongenitalWebOfLarynx: Coding.FromStrict({
+  EncounterReasonValueSet_DivisionOfCongenitalWebOfLarynx: new Coding({
     code: "1329005",
     display: "Division of congenital web of larynx",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PercutaneousImplantationOfNeurostimulatorElectrodesIntoNeuromuscularComponent: Coding.FromStrict({
+  EncounterReasonValueSet_PercutaneousImplantationOfNeurostimulatorElectrodesIntoNeuromuscularComponent: new Coding({
     code: "133000",
     display: "Percutaneous implantation of neurostimulator electrodes into neuromuscular component",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Colosigmoidostomy: Coding.FromStrict({
+  EncounterReasonValueSet_Colosigmoidostomy: new Coding({
     code: "1337002",
     display: "Colosigmoidostomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ManualEvacuationOfFeces: Coding.FromStrict({
+  EncounterReasonValueSet_ManualEvacuationOfFeces: new Coding({
     code: "1339004",
     display: "Manual evacuation of feces",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReferralToDieticianDeclined: Coding.FromStrict({
+  EncounterReasonValueSet_ReferralToDieticianDeclined: new Coding({
     code: "134385008",
     display: "Referral to dietician declined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReferralToChiropodistDeclined: Coding.FromStrict({
+  EncounterReasonValueSet_ReferralToChiropodistDeclined: new Coding({
     code: "134386009",
     display: "Referral to chiropodist declined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AngiotensinConvertingEnzymeInhibitorNotIndicated: Coding.FromStrict({
+  EncounterReasonValueSet_AngiotensinConvertingEnzymeInhibitorNotIndicated: new Coding({
     code: "134390006",
     display: "Angiotensin converting enzyme inhibitor not indicated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StatinNotIndicated: Coding.FromStrict({
+  EncounterReasonValueSet_StatinNotIndicated: new Coding({
     code: "134391005",
     display: "Statin not indicated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_WarfarinNotIndicated: Coding.FromStrict({
+  EncounterReasonValueSet_WarfarinNotIndicated: new Coding({
     code: "134392003",
     display: "Warfarin not indicated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AspirinNotIndicated: Coding.FromStrict({
+  EncounterReasonValueSet_AspirinNotIndicated: new Coding({
     code: "134394002",
     display: "Aspirin not indicated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StatinDeclined: Coding.FromStrict({
+  EncounterReasonValueSet_StatinDeclined: new Coding({
     code: "134396000",
     display: "Statin declined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AngiotensinConvertingEnzymeInhibitorDeclined: Coding.FromStrict({
+  EncounterReasonValueSet_AngiotensinConvertingEnzymeInhibitorDeclined: new Coding({
     code: "134397009",
     display: "Angiotensin converting enzyme inhibitor declined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_WarfarinDeclined: Coding.FromStrict({
+  EncounterReasonValueSet_WarfarinDeclined: new Coding({
     code: "134398004",
     display: "Warfarin declined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuspectedBreastCancer: Coding.FromStrict({
+  EncounterReasonValueSet_SuspectedBreastCancer: new Coding({
     code: "134405005",
     display: "Suspected breast cancer",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoSuicidalThoughts: Coding.FromStrict({
+  EncounterReasonValueSet_NoSuicidalThoughts: new Coding({
     code: "134420004",
     display: "No suicidal thoughts",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHPrematureCoronaryHeartDisease: Coding.FromStrict({
+  EncounterReasonValueSet_FHPrematureCoronaryHeartDisease: new Coding({
     code: "134439009",
     display: "FH: premature coronary heart disease",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MedicalProcedureOnPalate: Coding.FromStrict({
+  EncounterReasonValueSet_MedicalProcedureOnPalate: new Coding({
     code: "1347004",
     display: "Medical procedure on palate",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ArthrotomyOfWristJointWithExplorationAndBiopsy: Coding.FromStrict({
+  EncounterReasonValueSet_ArthrotomyOfWristJointWithExplorationAndBiopsy: new Coding({
     code: "135007",
     display: "Arthrotomy of wrist joint with exploration and biopsy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnteriorSpinalRhizotomy: Coding.FromStrict({
+  EncounterReasonValueSet_AnteriorSpinalRhizotomy: new Coding({
     code: "1352009",
     display: "Anterior spinal rhizotomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DrugIndicated: Coding.FromStrict({
+  EncounterReasonValueSet_DrugIndicated: new Coding({
     code: "135794007",
     display: "Drug indicated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NitrateIndicated: Coding.FromStrict({
+  EncounterReasonValueSet_NitrateIndicated: new Coding({
     code: "135795008",
     display: "Nitrate indicated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CalciumChannelBlockerIndicated: Coding.FromStrict({
+  EncounterReasonValueSet_CalciumChannelBlockerIndicated: new Coding({
     code: "135796009",
     display: "Calcium channel blocker indicated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LipidLoweringTherapyIndicated: Coding.FromStrict({
+  EncounterReasonValueSet_LipidLoweringTherapyIndicated: new Coding({
     code: "135797000",
     display: "Lipid lowering therapy indicated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiureticIndicated: Coding.FromStrict({
+  EncounterReasonValueSet_DiureticIndicated: new Coding({
     code: "135798005",
     display: "Diuretic indicated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AngiotensinConvertingEnzymeInhibitorIndicated: Coding.FromStrict({
+  EncounterReasonValueSet_AngiotensinConvertingEnzymeInhibitorIndicated: new Coding({
     code: "135799002",
     display: "Angiotensin converting enzyme inhibitor indicated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AspirinIndicated: Coding.FromStrict({
+  EncounterReasonValueSet_AspirinIndicated: new Coding({
     code: "135800003",
     display: "Aspirin indicated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AntiHumanGlobulinTestEnzymeTechniqueTiter: Coding.FromStrict({
+  EncounterReasonValueSet_AntiHumanGlobulinTestEnzymeTechniqueTiter: new Coding({
     code: "1358008",
     display: "Anti-human globulin test, enzyme technique, titer",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BetaBlockerIndicated: Coding.FromStrict({
+  EncounterReasonValueSet_BetaBlockerIndicated: new Coding({
     code: "135801004",
     display: "Beta blocker indicated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_WarfarinIndicated: Coding.FromStrict({
+  EncounterReasonValueSet_WarfarinIndicated: new Coding({
     code: "135803001",
     display: "Warfarin indicated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NitrateNotIndicated: Coding.FromStrict({
+  EncounterReasonValueSet_NitrateNotIndicated: new Coding({
     code: "135805008",
     display: "Nitrate not indicated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CalciumChannelBlockerNotIndicated: Coding.FromStrict({
+  EncounterReasonValueSet_CalciumChannelBlockerNotIndicated: new Coding({
     code: "135806009",
     display: "Calcium channel blocker not indicated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LipidLoweringTherapyNotIndicated: Coding.FromStrict({
+  EncounterReasonValueSet_LipidLoweringTherapyNotIndicated: new Coding({
     code: "135807000",
     display: "Lipid lowering therapy not indicated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiureticNotIndicated: Coding.FromStrict({
+  EncounterReasonValueSet_DiureticNotIndicated: new Coding({
     code: "135808005",
     display: "Diuretic not indicated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NitrateContraindicated: Coding.FromStrict({
+  EncounterReasonValueSet_NitrateContraindicated: new Coding({
     code: "135809002",
     display: "Nitrate contraindicated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiureticContraindicated: Coding.FromStrict({
+  EncounterReasonValueSet_DiureticContraindicated: new Coding({
     code: "135811006",
     display: "Diuretic contraindicated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NitrateDeclined: Coding.FromStrict({
+  EncounterReasonValueSet_NitrateDeclined: new Coding({
     code: "135812004",
     display: "Nitrate declined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiureticDeclined: Coding.FromStrict({
+  EncounterReasonValueSet_DiureticDeclined: new Coding({
     code: "135814003",
     display: "Diuretic declined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LipidLoweringTherapyContraindicated: Coding.FromStrict({
+  EncounterReasonValueSet_LipidLoweringTherapyContraindicated: new Coding({
     code: "135822005",
     display: "Lipid lowering therapy contraindicated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CalciumChannelBlockerContraindicated: Coding.FromStrict({
+  EncounterReasonValueSet_CalciumChannelBlockerContraindicated: new Coding({
     code: "135823000",
     display: "Calcium channel blocker contraindicated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CalciumChannelBlockerDeclined: Coding.FromStrict({
+  EncounterReasonValueSet_CalciumChannelBlockerDeclined: new Coding({
     code: "135825007",
     display: "Calcium channel blocker declined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LipidLoweringTherapyDeclined: Coding.FromStrict({
+  EncounterReasonValueSet_LipidLoweringTherapyDeclined: new Coding({
     code: "135826008",
     display: "Lipid lowering therapy declined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AccidentalIngestionOfWhiteSpirit: Coding.FromStrict({
+  EncounterReasonValueSet_AccidentalIngestionOfWhiteSpirit: new Coding({
     code: "135829001",
     display: "Accidental ingestion of white spirit",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AssessmentOfNeedsOfCarerCompleted: Coding.FromStrict({
+  EncounterReasonValueSet_AssessmentOfNeedsOfCarerCompleted: new Coding({
     code: "135844000",
     display: "Assessment of needs of carer completed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PartiallyInformedOfTestResults: Coding.FromStrict({
+  EncounterReasonValueSet_PartiallyInformedOfTestResults: new Coding({
     code: "135866007",
     display: "Partially informed of test results",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathOfPartner: Coding.FromStrict({
+  EncounterReasonValueSet_DeathOfPartner: new Coding({
     code: "135868008",
     display: "Death of partner",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HODislocatedShoulder: Coding.FromStrict({
+  EncounterReasonValueSet_HODislocatedShoulder: new Coding({
     code: "135879003",
     display: "H/O: dislocated shoulder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BreathingTreatment: Coding.FromStrict({
+  EncounterReasonValueSet_BreathingTreatment: new Coding({
     code: "1366004",
     display: "Breathing treatment",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallFromSlide: Coding.FromStrict({
+  EncounterReasonValueSet_FallFromSlide: new Coding({
     code: "13711007",
     display: "Fall from slide",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EchographyScanBModeForFoetalAgeDetermination: Coding.FromStrict({
+  EncounterReasonValueSet_EchographyScanBModeForFoetalAgeDetermination: new Coding({
     code: "1385001",
     display: "Echography, scan B-mode for foetal age determination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LaparoscopicSigmoidColectomy: Coding.FromStrict({
+  EncounterReasonValueSet_LaparoscopicSigmoidColectomy: new Coding({
     code: "1390003",
     display: "Laparoscopic sigmoid colectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallDownElevatorShaft: Coding.FromStrict({
+  EncounterReasonValueSet_FallDownElevatorShaft: new Coding({
     code: "13935005",
     display: "Fall down elevator shaft",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DirectThrombectomyOfIliacVeinByLegIncision: Coding.FromStrict({
+  EncounterReasonValueSet_DirectThrombectomyOfIliacVeinByLegIncision: new Coding({
     code: "1398005",
     display: "Direct thrombectomy of iliac vein by leg incision",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionAndExplorationOfUreter: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionAndExplorationOfUreter: new Coding({
     code: "1399002",
     display: "Incision and exploration of ureter",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathByHanging: Coding.FromStrict({
+  EncounterReasonValueSet_DeathByHanging: new Coding({
     code: "14035003",
     display: "Death by hanging",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallFromBuilding: Coding.FromStrict({
+  EncounterReasonValueSet_FallFromBuilding: new Coding({
     code: "14047009",
     display: "Fall from building",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ApplicationOfLongLegCastBraceType: Coding.FromStrict({
+  EncounterReasonValueSet_ApplicationOfLongLegCastBraceType: new Coding({
     code: "1407007",
     display: "Application of long leg cast, brace type",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnesthesiaForTympanotomy: Coding.FromStrict({
+  EncounterReasonValueSet_AnesthesiaForTympanotomy: new Coding({
     code: "1410000",
     display: "Anesthesia for tympanotomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OperationOnPapillaryMuscleOfHeart: Coding.FromStrict({
+  EncounterReasonValueSet_OperationOnPapillaryMuscleOfHeart: new Coding({
     code: "1411001",
     display: "Operation on papillary muscle of heart",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PenetratingKeratoplastyWithHomograft: Coding.FromStrict({
+  EncounterReasonValueSet_PenetratingKeratoplastyWithHomograft: new Coding({
     code: "1413003",
     display: "Penetrating keratoplasty with homograft",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AngiographyOfArteriovenousShunt: Coding.FromStrict({
+  EncounterReasonValueSet_AngiographyOfArteriovenousShunt: new Coding({
     code: "1414009",
     display: "Angiography of arteriovenous shunt",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OperationOnFace: Coding.FromStrict({
+  EncounterReasonValueSet_OperationOnFace: new Coding({
     code: "1417002",
     display: "Operation on face",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfTumorFromShoulderAreaDeepIntramuscular: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfTumorFromShoulderAreaDeepIntramuscular: new Coding({
     code: "142007",
     display: "Excision of tumor from shoulder area, deep, intramuscular",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralVasotomy: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralVasotomy: new Coding({
     code: "14252008",
     display: "Unilateral vasotomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AsphyxiaDueToForeignBodyInLarynx: Coding.FromStrict({
+  EncounterReasonValueSet_AsphyxiaDueToForeignBodyInLarynx: new Coding({
     code: "1428003",
     display: "Asphyxia due to foreign body in larynx",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Pexy: Coding.FromStrict({
+  EncounterReasonValueSet_Pexy: new Coding({
     code: "1431002",
     display: "pexy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairWithResectionRecession: Coding.FromStrict({
+  EncounterReasonValueSet_RepairWithResectionRecession: new Coding({
     code: "1440003",
     display: "Repair with resection-recession",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfHair: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfHair: new Coding({
     code: "1449002",
     display: "Removal of hair",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BiofeedbackGalvanicSkinResponse: Coding.FromStrict({
+  EncounterReasonValueSet_BiofeedbackGalvanicSkinResponse: new Coding({
     code: "1453000",
     display: "Biofeedback, galvanic skin response",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Cerclage: Coding.FromStrict({
+  EncounterReasonValueSet_Cerclage: new Coding({
     code: "1455007",
     display: "Cerclage",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TruncalVagotomyWithPyloroplastyAndGastrostomy: Coding.FromStrict({
+  EncounterReasonValueSet_TruncalVagotomyWithPyloroplastyAndGastrostomy: new Coding({
     code: "1457004",
     display: "Truncal vagotomy with pyloroplasty and gastrostomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfNonunionOfMetatarsalWithBoneGraft: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfNonunionOfMetatarsalWithBoneGraft: new Coding({
     code: "146005",
     display: "Repair of nonunion of metatarsal with bone graft",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RubellaScreeningNotOffered: Coding.FromStrict({
+  EncounterReasonValueSet_RubellaScreeningNotOffered: new Coding({
     code: "146922001",
     display: "Rubella screening not offered",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DoubleTestNotOffered: Coding.FromStrict({
+  EncounterReasonValueSet_DoubleTestNotOffered: new Coding({
     code: "147022006",
     display: "Double test not offered",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LuteinizingHormoneAndFollicleStimulatingHormoneChecked: Coding.FromStrict({
+  EncounterReasonValueSet_LuteinizingHormoneAndFollicleStimulatingHormoneChecked: new Coding({
     code: "148176006",
     display: "Luteinizing hormone and follicle stimulating hormone checked",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TravelVaccinationGiven: Coding.FromStrict({
+  EncounterReasonValueSet_TravelVaccinationGiven: new Coding({
     code: "148297000",
     display: "Travel vaccination given",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ScreeningNotOffered: Coding.FromStrict({
+  EncounterReasonValueSet_ScreeningNotOffered: new Coding({
     code: "148324002",
     display: "Screening not offered",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ImmunizationNotOffered: Coding.FromStrict({
+  EncounterReasonValueSet_ImmunizationNotOffered: new Coding({
     code: "148477008",
     display: "Immunization not offered",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LungAdhesionsFreed: Coding.FromStrict({
+  EncounterReasonValueSet_LungAdhesionsFreed: new Coding({
     code: "149129005",
     display: "Lung adhesions freed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OsmolarityMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_OsmolarityMeasurement: new Coding({
     code: "1494008",
     display: "Osmolarity measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BilateralEpididymovasostomy: Coding.FromStrict({
+  EncounterReasonValueSet_BilateralEpididymovasostomy: new Coding({
     code: "1500007",
     display: "Bilateral epididymovasostomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AltemeierOperationPerinealRectalPullThrough: Coding.FromStrict({
+  EncounterReasonValueSet_AltemeierOperationPerinealRectalPullThrough: new Coding({
     code: "1501006",
     display: "Altemeier operation, perineal rectal pull-through",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HandMuscleForeignBodyRemoved: Coding.FromStrict({
+  EncounterReasonValueSet_HandMuscleForeignBodyRemoved: new Coding({
     code: "150159003",
     display: "Hand muscle foreign body removed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HospitalAdmissionForIsolation: Coding.FromStrict({
+  EncounterReasonValueSet_HospitalAdmissionForIsolation: new Coding({
     code: "1505002",
     display: "Hospital admission for isolation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ContactWithMachinery: Coding.FromStrict({
+  EncounterReasonValueSet_ContactWithMachinery: new Coding({
     code: "15185003",
     display: "Contact with machinery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BreastReconstructionUnilateralWithSinglePedicleTRAMFlapAndOppositeBreastReductionMastopexy: Coding.FromStrict({
+  EncounterReasonValueSet_BreastReconstructionUnilateralWithSinglePedicleTRAMFlapAndOppositeBreastReductionMastopexy: new Coding({
     code: "15274006",
     display: "Breast reconstruction, unilateral, with single pedicle TRAM flap and opposite breast reduction/mastopexy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AspirationOfSoftTissue: Coding.FromStrict({
+  EncounterReasonValueSet_AspirationOfSoftTissue: new Coding({
     code: "1529009",
     display: "Aspiration of soft tissue",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CystourethroscopyWithResectionOfUreterocele: Coding.FromStrict({
+  EncounterReasonValueSet_CystourethroscopyWithResectionOfUreterocele: new Coding({
     code: "153001",
     display: "Cystourethroscopy with resection of ureterocele",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Ureteroplication: Coding.FromStrict({
+  EncounterReasonValueSet_Ureteroplication: new Coding({
     code: "1533002",
     display: "Ureteroplication",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnattendedDeath: Coding.FromStrict({
+  EncounterReasonValueSet_UnattendedDeath: new Coding({
     code: "15355001",
     display: "Unattended death",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AmikacinLevel: Coding.FromStrict({
+  EncounterReasonValueSet_AmikacinLevel: new Coding({
     code: "1550000",
     display: "Amikacin level",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BriefGroupPsychotherapy: Coding.FromStrict({
+  EncounterReasonValueSet_BriefGroupPsychotherapy: new Coding({
     code: "1555005",
     display: "Brief group psychotherapy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InterleukinIL2Assay: Coding.FromStrict({
+  EncounterReasonValueSet_InterleukinIL2Assay: new Coding({
     code: "1559004",
     display: "Interleukin (IL)-2 assay",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DrowningInLiquidOtherThanWater: Coding.FromStrict({
+  EncounterReasonValueSet_DrowningInLiquidOtherThanWater: new Coding({
     code: "15654006",
     display: "Drowning in liquid other than water",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfIntestinouterineFistula: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfIntestinouterineFistula: new Coding({
     code: "1576000",
     display: "Repair of intestinouterine fistula",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ImplantationOfCardiacSingleChamberDeviceReplacementRateResponsive: Coding.FromStrict({
+  EncounterReasonValueSet_ImplantationOfCardiacSingleChamberDeviceReplacementRateResponsive: new Coding({
     code: "1577009",
     display: "Implantation of cardiac single-chamber device replacement, rate-responsive",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReconstructionOfOssiclesWithStapedectomy: Coding.FromStrict({
+  EncounterReasonValueSet_ReconstructionOfOssiclesWithStapedectomy: new Coding({
     code: "1578004",
     display: "Reconstruction of ossicles with stapedectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TractotomyOfMesencephalon: Coding.FromStrict({
+  EncounterReasonValueSet_TractotomyOfMesencephalon: new Coding({
     code: "1583007",
     display: "Tractotomy of mesencephalon",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LengtheningOfGastrocnemiusMuscle: Coding.FromStrict({
+  EncounterReasonValueSet_LengtheningOfGastrocnemiusMuscle: new Coding({
     code: "1585000",
     display: "Lengthening of gastrocnemius muscle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnesthesiaForTotalElbowReplacement: Coding.FromStrict({
+  EncounterReasonValueSet_AnesthesiaForTotalElbowReplacement: new Coding({
     code: "1596008",
     display: "Anesthesia for total elbow replacement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SkeletalXRayOfAnkleAndFoot: Coding.FromStrict({
+  EncounterReasonValueSet_SkeletalXRayOfAnkleAndFoot: new Coding({
     code: "1597004",
     display: "Skeletal X-ray of ankle and foot",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfForeignBodyOfTendonAndOrTendonSheath: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfForeignBodyOfTendonAndOrTendonSheath: new Coding({
     code: "160007",
     display: "Removal of foreign body of tendon and/or tendon sheath",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SocialServiceInterviewWithPlanning: Coding.FromStrict({
+  EncounterReasonValueSet_SocialServiceInterviewWithPlanning: new Coding({
     code: "1602006",
     display: "Social service interview with planning",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BriefHistoryTaken: Coding.FromStrict({
+  EncounterReasonValueSet_BriefHistoryTaken: new Coding({
     code: "160240006",
     display: "Brief history taken",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IntermediateHistoryTaken: Coding.FromStrict({
+  EncounterReasonValueSet_IntermediateHistoryTaken: new Coding({
     code: "160241005",
     display: "Intermediate history taken",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FullHistoryTaken: Coding.FromStrict({
+  EncounterReasonValueSet_FullHistoryTaken: new Coding({
     code: "160242003",
     display: "Full history taken",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoFamilyHistoryOfMalignancy: Coding.FromStrict({
+  EncounterReasonValueSet_NoFamilyHistoryOfMalignancy: new Coding({
     code: "160250007",
     display: "No family history of malignancy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoFamilyHistoryOfCardiovascularAccidentOrStroke: Coding.FromStrict({
+  EncounterReasonValueSet_NoFamilyHistoryOfCardiovascularAccidentOrStroke: new Coding({
     code: "160252004",
     display: "No family history of cardiovascular accident or stroke",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoSignificantSocialHistory: Coding.FromStrict({
+  EncounterReasonValueSet_NoSignificantSocialHistory: new Coding({
     code: "160253009",
     display: "No significant social history",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoHistoryOfCardiovascularSystemDisease: Coding.FromStrict({
+  EncounterReasonValueSet_NoHistoryOfCardiovascularSystemDisease: new Coding({
     code: "160254003",
     display: "No history of cardiovascular system disease",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoHistoryOfGastrointestinalTractDisease: Coding.FromStrict({
+  EncounterReasonValueSet_NoHistoryOfGastrointestinalTractDisease: new Coding({
     code: "160255002",
     display: "No history of gastrointestinal tract disease",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoHistoryOfGenitourinaryTractDisease: Coding.FromStrict({
+  EncounterReasonValueSet_NoHistoryOfGenitourinaryTractDisease: new Coding({
     code: "160256001",
     display: "No history of genitourinary tract disease",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoHistoryOfCentralNervousSystemDisease: Coding.FromStrict({
+  EncounterReasonValueSet_NoHistoryOfCentralNervousSystemDisease: new Coding({
     code: "160257005",
     display: "No history of central nervous system disease",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoHistoryOfRespiratorySystemDisease: Coding.FromStrict({
+  EncounterReasonValueSet_NoHistoryOfRespiratorySystemDisease: new Coding({
     code: "160258000",
     display: "No history of respiratory system disease",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoHistoryOfPsychiatricDisorder: Coding.FromStrict({
+  EncounterReasonValueSet_NoHistoryOfPsychiatricDisorder: new Coding({
     code: "160259008",
     display: "No history of psychiatric disorder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FamilyHistoryTaken: Coding.FromStrict({
+  EncounterReasonValueSet_FamilyHistoryTaken: new Coding({
     code: "160265008",
     display: "Family history taken",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoSignificantFamilyHistory: Coding.FromStrict({
+  EncounterReasonValueSet_NoSignificantFamilyHistory: new Coding({
     code: "160266009",
     display: "No significant family history",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoFamilyHistoryOfGlaucoma: Coding.FromStrict({
+  EncounterReasonValueSet_NoFamilyHistoryOfGlaucoma: new Coding({
     code: "160267000",
     display: "No family history of glaucoma",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoFHAllergy: Coding.FromStrict({
+  EncounterReasonValueSet_NoFHAllergy: new Coding({
     code: "160268005",
     display: "No FH: Allergy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHLongevity: Coding.FromStrict({
+  EncounterReasonValueSet_FHLongevity: new Coding({
     code: "160269002",
     display: "FH: Longevity",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoSignificantFamilyHistoryOfCardiovascularDisease: Coding.FromStrict({
+  EncounterReasonValueSet_NoSignificantFamilyHistoryOfCardiovascularDisease: new Coding({
     code: "160270001",
     display: "No significant family history of cardiovascular disease",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoFHCVAStrokeTIA: Coding.FromStrict({
+  EncounterReasonValueSet_NoFHCVAStrokeTIA: new Coding({
     code: "160271002",
     display: "No FH: CVA/Stroke/TIA",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoSignificantFamilyHistoryOfHypertension: Coding.FromStrict({
+  EncounterReasonValueSet_NoSignificantFamilyHistoryOfHypertension: new Coding({
     code: "160273004",
     display: "No significant family history of hypertension",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoSignificantFamilyHistoryOfDiabetes: Coding.FromStrict({
+  EncounterReasonValueSet_NoSignificantFamilyHistoryOfDiabetes: new Coding({
     code: "160274005",
     display: "No significant family history of diabetes",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHInfectiousDisease: Coding.FromStrict({
+  EncounterReasonValueSet_FHInfectiousDisease: new Coding({
     code: "160279000",
     display: "FH: Infectious disease",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHTuberculosis: Coding.FromStrict({
+  EncounterReasonValueSet_FHTuberculosis: new Coding({
     code: "160280002",
     display: "FH: Tuberculosis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHSyphilis: Coding.FromStrict({
+  EncounterReasonValueSet_FHSyphilis: new Coding({
     code: "160281003",
     display: "FH: Syphilis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHGonorrhea: Coding.FromStrict({
+  EncounterReasonValueSet_FHGonorrhea: new Coding({
     code: "160282005",
     display: "FH: Gonorrhea",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHNeoplasmOfSkin: Coding.FromStrict({
+  EncounterReasonValueSet_FHNeoplasmOfSkin: new Coding({
     code: "160288009",
     display: "FH: neoplasm of skin",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHNeoplasmOfMaleGenitalOrgan: Coding.FromStrict({
+  EncounterReasonValueSet_FHNeoplasmOfMaleGenitalOrgan: new Coding({
     code: "160290005",
     display: "FH: neoplasm of male genital organ",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FamilyHistoryOfUrologicalNeoplasm: Coding.FromStrict({
+  EncounterReasonValueSet_FamilyHistoryOfUrologicalNeoplasm: new Coding({
     code: "160291009",
     display: "Family history of urological neoplasm",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHLeukemia: Coding.FromStrict({
+  EncounterReasonValueSet_FHLeukemia: new Coding({
     code: "160292002",
     display: "FH: leukemia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHNeoplasmOfOvary: Coding.FromStrict({
+  EncounterReasonValueSet_FHNeoplasmOfOvary: new Coding({
     code: "160297008",
     display: "FH: neoplasm of ovary",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHNeoplasmOfCervix: Coding.FromStrict({
+  EncounterReasonValueSet_FHNeoplasmOfCervix: new Coding({
     code: "160298003",
     display: "FH: neoplasm of cervix",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHNeoplasmOfUterus: Coding.FromStrict({
+  EncounterReasonValueSet_FHNeoplasmOfUterus: new Coding({
     code: "160299006",
     display: "FH: neoplasm of uterus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHEndocrineDisorders: Coding.FromStrict({
+  EncounterReasonValueSet_FHEndocrineDisorders: new Coding({
     code: "160301004",
     display: "FH: Endocrine disorders",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHThyroidDisorder: Coding.FromStrict({
+  EncounterReasonValueSet_FHThyroidDisorder: new Coding({
     code: "160302006",
     display: "FH: Thyroid disorder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHDiabetesMellitus: Coding.FromStrict({
+  EncounterReasonValueSet_FHDiabetesMellitus: new Coding({
     code: "160303001",
     display: "FH: Diabetes mellitus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHMetabolicDisorder: Coding.FromStrict({
+  EncounterReasonValueSet_FHMetabolicDisorder: new Coding({
     code: "160305008",
     display: "FH: Metabolic disorder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHNutritionalDeficiency: Coding.FromStrict({
+  EncounterReasonValueSet_FHNutritionalDeficiency: new Coding({
     code: "160306009",
     display: "FH: Nutritional deficiency",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHGout: Coding.FromStrict({
+  EncounterReasonValueSet_FHGout: new Coding({
     code: "160308005",
     display: "FH: Gout",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHCysticFibrosis: Coding.FromStrict({
+  EncounterReasonValueSet_FHCysticFibrosis: new Coding({
     code: "160309002",
     display: "FH: Cystic fibrosis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHPorphyria: Coding.FromStrict({
+  EncounterReasonValueSet_FHPorphyria: new Coding({
     code: "160310007",
     display: "FH: Porphyria",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHObesity: Coding.FromStrict({
+  EncounterReasonValueSet_FHObesity: new Coding({
     code: "160311006",
     display: "FH: Obesity",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHCholinesteraseDeficiency: Coding.FromStrict({
+  EncounterReasonValueSet_FHCholinesteraseDeficiency: new Coding({
     code: "160312004",
     display: "FH: Cholinesterase deficiency",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHOsteoporosis: Coding.FromStrict({
+  EncounterReasonValueSet_FHOsteoporosis: new Coding({
     code: "160313009",
     display: "FH: Osteoporosis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHHypercholesterolemia: Coding.FromStrict({
+  EncounterReasonValueSet_FHHypercholesterolemia: new Coding({
     code: "160314003",
     display: "FH: Hypercholesterolemia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHBloodDisorder: Coding.FromStrict({
+  EncounterReasonValueSet_FHBloodDisorder: new Coding({
     code: "160316001",
     display: "FH: Blood disorder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FamilyHistoryOfHereditarySpherocytosis: Coding.FromStrict({
+  EncounterReasonValueSet_FamilyHistoryOfHereditarySpherocytosis: new Coding({
     code: "160318000",
     display: "Family history of hereditary spherocytosis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHThalassemia: Coding.FromStrict({
+  EncounterReasonValueSet_FHThalassemia: new Coding({
     code: "160319008",
     display: "FH: Thalassemia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FamilyHistoryOfSickleCellAnemia: Coding.FromStrict({
+  EncounterReasonValueSet_FamilyHistoryOfSickleCellAnemia: new Coding({
     code: "160320002",
     display: "Family history of sickle cell anemia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHSickleCellTrait: Coding.FromStrict({
+  EncounterReasonValueSet_FHSickleCellTrait: new Coding({
     code: "160321003",
     display: "FH: Sickle cell trait",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FamilyHistoryOfMentalDisorder: Coding.FromStrict({
+  EncounterReasonValueSet_FamilyHistoryOfMentalDisorder: new Coding({
     code: "160324006",
     display: "Family history of mental disorder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHSenileDementia: Coding.FromStrict({
+  EncounterReasonValueSet_FHSenileDementia: new Coding({
     code: "160325007",
     display: "FH: Senile dementia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHDrugDependency: Coding.FromStrict({
+  EncounterReasonValueSet_FHDrugDependency: new Coding({
     code: "160327004",
     display: "FH: Drug dependency",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FamilyHistoryOfSchizophrenia: Coding.FromStrict({
+  EncounterReasonValueSet_FamilyHistoryOfSchizophrenia: new Coding({
     code: "160328009",
     display: "Family history of schizophrenia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHDepression: Coding.FromStrict({
+  EncounterReasonValueSet_FHDepression: new Coding({
     code: "160329001",
     display: "FH: Depression",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHManicDepressiveState: Coding.FromStrict({
+  EncounterReasonValueSet_FHManicDepressiveState: new Coding({
     code: "160331005",
     display: "FH: Manic-depressive state",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FamilyHistoryOfAnxietyDisorder: Coding.FromStrict({
+  EncounterReasonValueSet_FamilyHistoryOfAnxietyDisorder: new Coding({
     code: "160332003",
     display: "Family history of anxiety disorder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHSuicide: Coding.FromStrict({
+  EncounterReasonValueSet_FHSuicide: new Coding({
     code: "160333008",
     display: "FH: Suicide",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FamilyHistoryOfHuntingtonQuoteSChorea: Coding.FromStrict({
+  EncounterReasonValueSet_FamilyHistoryOfHuntingtonQuoteSChorea: new Coding({
     code: "160336000",
     display: "Family history of Huntington's chorea",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHMultipleSclerosis: Coding.FromStrict({
+  EncounterReasonValueSet_FHMultipleSclerosis: new Coding({
     code: "160337009",
     display: "FH: Multiple sclerosis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHHemiplegia: Coding.FromStrict({
+  EncounterReasonValueSet_FHHemiplegia: new Coding({
     code: "160338004",
     display: "FH: Hemiplegia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHParaplegia: Coding.FromStrict({
+  EncounterReasonValueSet_FHParaplegia: new Coding({
     code: "160339007",
     display: "FH: Paraplegia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FamilyHistoryCerebralPalsy: Coding.FromStrict({
+  EncounterReasonValueSet_FamilyHistoryCerebralPalsy: new Coding({
     code: "160340009",
     display: "Family history: Cerebral palsy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHEpilepsy: Coding.FromStrict({
+  EncounterReasonValueSet_FHEpilepsy: new Coding({
     code: "160341008",
     display: "FH: Epilepsy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FamilyHistoryOfMigraine: Coding.FromStrict({
+  EncounterReasonValueSet_FamilyHistoryOfMigraine: new Coding({
     code: "160342001",
     display: "Family history of migraine",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHMuscularDystrophy: Coding.FromStrict({
+  EncounterReasonValueSet_FHMuscularDystrophy: new Coding({
     code: "160343006",
     display: "FH: Muscular dystrophy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FamilyHistoryOfMotorNeuroneDisease: Coding.FromStrict({
+  EncounterReasonValueSet_FamilyHistoryOfMotorNeuroneDisease: new Coding({
     code: "160344000",
     display: "Family history of motor neurone disease",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHEyeDisorder: Coding.FromStrict({
+  EncounterReasonValueSet_FHEyeDisorder: new Coding({
     code: "160346003",
     display: "FH: Eye disorder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FamilyHistoryOfGlaucoma: Coding.FromStrict({
+  EncounterReasonValueSet_FamilyHistoryOfGlaucoma: new Coding({
     code: "160347007",
     display: "Family history of glaucoma",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHCataract: Coding.FromStrict({
+  EncounterReasonValueSet_FHCataract: new Coding({
     code: "160348002",
     display: "FH: Cataract",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHSquint: Coding.FromStrict({
+  EncounterReasonValueSet_FHSquint: new Coding({
     code: "160350005",
     display: "FH: Squint",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHEarDisorder: Coding.FromStrict({
+  EncounterReasonValueSet_FHEarDisorder: new Coding({
     code: "160352002",
     display: "FH: Ear disorder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FamilyHistoryOfDeafness: Coding.FromStrict({
+  EncounterReasonValueSet_FamilyHistoryOfDeafness: new Coding({
     code: "160353007",
     display: "Family history of deafness",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHOtosclerosis: Coding.FromStrict({
+  EncounterReasonValueSet_FHOtosclerosis: new Coding({
     code: "160354001",
     display: "FH: Otosclerosis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FamilyHistoryOfHypertension: Coding.FromStrict({
+  EncounterReasonValueSet_FamilyHistoryOfHypertension: new Coding({
     code: "160357008",
     display: "Family history of hypertension",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FamilyHistoryOfAtherosclerosis: Coding.FromStrict({
+  EncounterReasonValueSet_FamilyHistoryOfAtherosclerosis: new Coding({
     code: "160362009",
     display: "Family history of atherosclerosis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHTIA: Coding.FromStrict({
+  EncounterReasonValueSet_FHTIA: new Coding({
     code: "160363004",
     display: "FH: TIA",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHCongenHeartDisease: Coding.FromStrict({
+  EncounterReasonValueSet_FHCongenHeartDisease: new Coding({
     code: "160364005",
     display: "FH: Congen heart disease",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHAsthma: Coding.FromStrict({
+  EncounterReasonValueSet_FHAsthma: new Coding({
     code: "160377001",
     display: "FH: Asthma",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHOccupationalLungDis: Coding.FromStrict({
+  EncounterReasonValueSet_FHOccupationalLungDis: new Coding({
     code: "160378006",
     display: "FH: Occupational lung dis.",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHHayFever: Coding.FromStrict({
+  EncounterReasonValueSet_FHHayFever: new Coding({
     code: "160379003",
     display: "FH: Hay fever",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHGastrointestinalDisease: Coding.FromStrict({
+  EncounterReasonValueSet_FHGastrointestinalDisease: new Coding({
     code: "160381001",
     display: "FH: Gastrointestinal disease",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FamilyHistoryOfCrohnQuoteSDisease: Coding.FromStrict({
+  EncounterReasonValueSet_FamilyHistoryOfCrohnQuoteSDisease: new Coding({
     code: "160386006",
     display: "Family history of Crohn's disease",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FamilyHistoryOfPolycysticKidney: Coding.FromStrict({
+  EncounterReasonValueSet_FamilyHistoryOfPolycysticKidney: new Coding({
     code: "160389004",
     display: "Family history of polycystic kidney",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHMaleInfertility: Coding.FromStrict({
+  EncounterReasonValueSet_FHMaleInfertility: new Coding({
     code: "160390008",
     display: "FH: Male infertility",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FamilyHistoryOfFemaleInfertility: Coding.FromStrict({
+  EncounterReasonValueSet_FamilyHistoryOfFemaleInfertility: new Coding({
     code: "160391007",
     display: "Family history of female infertility",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHBreastDisease: Coding.FromStrict({
+  EncounterReasonValueSet_FHBreastDisease: new Coding({
     code: "160392000",
     display: "FH: Breast disease",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHPeriodProblem: Coding.FromStrict({
+  EncounterReasonValueSet_FHPeriodProblem: new Coding({
     code: "160393005",
     display: "FH: Period problem",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHEarlyMenarche: Coding.FromStrict({
+  EncounterReasonValueSet_FHEarlyMenarche: new Coding({
     code: "160394004",
     display: "FH: Early menarche",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHLateMenarche: Coding.FromStrict({
+  EncounterReasonValueSet_FHLateMenarche: new Coding({
     code: "160396002",
     display: "FH: Late menarche",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHEarlyMenopause: Coding.FromStrict({
+  EncounterReasonValueSet_FHEarlyMenopause: new Coding({
     code: "160397006",
     display: "FH: Early menopause",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHLateMenopause: Coding.FromStrict({
+  EncounterReasonValueSet_FHLateMenopause: new Coding({
     code: "160398001",
     display: "FH: Late menopause",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FamilyHistoryOfObstetricDisorder: Coding.FromStrict({
+  EncounterReasonValueSet_FamilyHistoryOfObstetricDisorder: new Coding({
     code: "160400002",
     display: "Family history of obstetric disorder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHRaisedBPInPregnancy: Coding.FromStrict({
+  EncounterReasonValueSet_FHRaisedBPInPregnancy: new Coding({
     code: "160401003",
     display: "FH: Raised B.P. in pregnancy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHDiabetesInPregnancy: Coding.FromStrict({
+  EncounterReasonValueSet_FHDiabetesInPregnancy: new Coding({
     code: "160402005",
     display: "FH: Diabetes in pregnancy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHPuerperalDepression: Coding.FromStrict({
+  EncounterReasonValueSet_FHPuerperalDepression: new Coding({
     code: "160403000",
     display: "FH: Puerperal depression",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHSkinDisease: Coding.FromStrict({
+  EncounterReasonValueSet_FHSkinDisease: new Coding({
     code: "160406008",
     display: "FH: Skin disease",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHEczema: Coding.FromStrict({
+  EncounterReasonValueSet_FHEczema: new Coding({
     code: "160407004",
     display: "FH: Eczema",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHPsoriasis: Coding.FromStrict({
+  EncounterReasonValueSet_FHPsoriasis: new Coding({
     code: "160408009",
     display: "FH: Psoriasis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHAlopecia: Coding.FromStrict({
+  EncounterReasonValueSet_FHAlopecia: new Coding({
     code: "160409001",
     display: "FH: Alopecia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHHirsutism: Coding.FromStrict({
+  EncounterReasonValueSet_FHHirsutism: new Coding({
     code: "160410006",
     display: "FH: Hirsutism",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHRheumatoidArthritis: Coding.FromStrict({
+  EncounterReasonValueSet_FHRheumatoidArthritis: new Coding({
     code: "160413008",
     display: "FH: Rheumatoid arthritis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHOsteoarthritis: Coding.FromStrict({
+  EncounterReasonValueSet_FHOsteoarthritis: new Coding({
     code: "160414002",
     display: "FH: Osteoarthritis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHCongenitalAnomaly: Coding.FromStrict({
+  EncounterReasonValueSet_FHCongenitalAnomaly: new Coding({
     code: "160417009",
     display: "FH: Congenital anomaly",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHAnencephaly: Coding.FromStrict({
+  EncounterReasonValueSet_FHAnencephaly: new Coding({
     code: "160418004",
     display: "FH: Anencephaly",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHSpinaBifida: Coding.FromStrict({
+  EncounterReasonValueSet_FHSpinaBifida: new Coding({
     code: "160419007",
     display: "FH: Spina bifida",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHCongenitalRSAnomaly: Coding.FromStrict({
+  EncounterReasonValueSet_FHCongenitalRSAnomaly: new Coding({
     code: "160421002",
     display: "FH: Congenital RS anomaly",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHCongenitalGITAnomaly: Coding.FromStrict({
+  EncounterReasonValueSet_FHCongenitalGITAnomaly: new Coding({
     code: "160422009",
     display: "FH: Congenital GIT anomaly",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHCongenitalGUAnomaly: Coding.FromStrict({
+  EncounterReasonValueSet_FHCongenitalGUAnomaly: new Coding({
     code: "160423004",
     display: "FH: Congenital GU anomaly",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHCongOrthopedicAnomaly: Coding.FromStrict({
+  EncounterReasonValueSet_FHCongOrthopedicAnomaly: new Coding({
     code: "160424005",
     display: "FH: Cong. orthopedic anomaly",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHChromosomalAnomaly: Coding.FromStrict({
+  EncounterReasonValueSet_FHChromosomalAnomaly: new Coding({
     code: "160425006",
     display: "FH: Chromosomal anomaly",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHMother: Coding.FromStrict({
+  EncounterReasonValueSet_FHMother: new Coding({
     code: "160427003",
     display: "FH: Mother",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHMotherAliveAndWell: Coding.FromStrict({
+  EncounterReasonValueSet_FHMotherAliveAndWell: new Coding({
     code: "160428008",
     display: "FH: Mother alive and well",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHMotherAliveWithProblem: Coding.FromStrict({
+  EncounterReasonValueSet_FHMotherAliveWithProblem: new Coding({
     code: "160429000",
     display: "FH: Mother alive with problem",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHMotherDead: Coding.FromStrict({
+  EncounterReasonValueSet_FHMotherDead: new Coding({
     code: "160430005",
     display: "FH: Mother dead",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHMotherUnwell: Coding.FromStrict({
+  EncounterReasonValueSet_FHMotherUnwell: new Coding({
     code: "160431009",
     display: "FH: Mother unwell",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHFather: Coding.FromStrict({
+  EncounterReasonValueSet_FHFather: new Coding({
     code: "160433007",
     display: "FH: Father",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHFatherAliveAndWell: Coding.FromStrict({
+  EncounterReasonValueSet_FHFatherAliveAndWell: new Coding({
     code: "160434001",
     display: "FH: Father alive and well",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHFatherAliveWithProblem: Coding.FromStrict({
+  EncounterReasonValueSet_FHFatherAliveWithProblem: new Coding({
     code: "160435000",
     display: "FH: Father alive with problem",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHFatherDead: Coding.FromStrict({
+  EncounterReasonValueSet_FHFatherDead: new Coding({
     code: "160436004",
     display: "FH: Father dead",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHFatherDeaf: Coding.FromStrict({
+  EncounterReasonValueSet_FHFatherDeaf: new Coding({
     code: "160437008",
     display: "FH: Father deaf",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHSister: Coding.FromStrict({
+  EncounterReasonValueSet_FHSister: new Coding({
     code: "160439006",
     display: "FH: Sister",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHSisterAliveAndWell: Coding.FromStrict({
+  EncounterReasonValueSet_FHSisterAliveAndWell: new Coding({
     code: "160440008",
     display: "FH: Sister alive and well",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHSisterAliveWithProblem: Coding.FromStrict({
+  EncounterReasonValueSet_FHSisterAliveWithProblem: new Coding({
     code: "160441007",
     display: "FH: Sister alive with problem",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHSisterDead: Coding.FromStrict({
+  EncounterReasonValueSet_FHSisterDead: new Coding({
     code: "160442000",
     display: "FH: Sister dead",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHBrother: Coding.FromStrict({
+  EncounterReasonValueSet_FHBrother: new Coding({
     code: "160444004",
     display: "FH: Brother",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHBrotherAliveAndWell: Coding.FromStrict({
+  EncounterReasonValueSet_FHBrotherAliveAndWell: new Coding({
     code: "160445003",
     display: "FH: Brother alive and well",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHBrotherAliveWithProblem: Coding.FromStrict({
+  EncounterReasonValueSet_FHBrotherAliveWithProblem: new Coding({
     code: "160446002",
     display: "FH: Brother alive with problem",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHBrotherDead: Coding.FromStrict({
+  EncounterReasonValueSet_FHBrotherDead: new Coding({
     code: "160447006",
     display: "FH: Brother dead",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHSon: Coding.FromStrict({
+  EncounterReasonValueSet_FHSon: new Coding({
     code: "160449009",
     display: "FH: Son",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHSonAliveAndWell: Coding.FromStrict({
+  EncounterReasonValueSet_FHSonAliveAndWell: new Coding({
     code: "160450009",
     display: "FH: Son alive and well",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHSonAliveWithProblem: Coding.FromStrict({
+  EncounterReasonValueSet_FHSonAliveWithProblem: new Coding({
     code: "160451008",
     display: "FH: Son alive with problem",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHSonDead: Coding.FromStrict({
+  EncounterReasonValueSet_FHSonDead: new Coding({
     code: "160452001",
     display: "FH: Son dead",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHDaughter: Coding.FromStrict({
+  EncounterReasonValueSet_FHDaughter: new Coding({
     code: "160454000",
     display: "FH: Daughter",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHDaughterAliveAndWell: Coding.FromStrict({
+  EncounterReasonValueSet_FHDaughterAliveAndWell: new Coding({
     code: "160455004",
     display: "FH: Daughter alive and well",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHDaughterAliveWithProblem: Coding.FromStrict({
+  EncounterReasonValueSet_FHDaughterAliveWithProblem: new Coding({
     code: "160456003",
     display: "FH: Daughter alive with problem",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHDaughterDead: Coding.FromStrict({
+  EncounterReasonValueSet_FHDaughterDead: new Coding({
     code: "160457007",
     display: "FH: Daughter dead",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHMaternalGrandfather: Coding.FromStrict({
+  EncounterReasonValueSet_FHMaternalGrandfather: new Coding({
     code: "160460000",
     display: "FH: Maternal grandfather",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHPaternalGrandfather: Coding.FromStrict({
+  EncounterReasonValueSet_FHPaternalGrandfather: new Coding({
     code: "160461001",
     display: "FH: Paternal grandfather",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHMaternalGrandmother: Coding.FromStrict({
+  EncounterReasonValueSet_FHMaternalGrandmother: new Coding({
     code: "160462008",
     display: "FH: Maternal grandmother",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHPaternalGrandmother: Coding.FromStrict({
+  EncounterReasonValueSet_FHPaternalGrandmother: new Coding({
     code: "160463003",
     display: "FH: Paternal grandmother",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHAunt: Coding.FromStrict({
+  EncounterReasonValueSet_FHAunt: new Coding({
     code: "160464009",
     display: "FH: Aunt",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHUncle: Coding.FromStrict({
+  EncounterReasonValueSet_FHUncle: new Coding({
     code: "160465005",
     display: "FH: Uncle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHAllergy: Coding.FromStrict({
+  EncounterReasonValueSet_FHAllergy: new Coding({
     code: "160469004",
     display: "FH: Allergy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HistoryOfCotDeathInFamily: Coding.FromStrict({
+  EncounterReasonValueSet_HistoryOfCotDeathInFamily: new Coding({
     code: "160471004",
     display: "History of - cot death in family",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHChildBattering: Coding.FromStrict({
+  EncounterReasonValueSet_FHChildBattering: new Coding({
     code: "160472006",
     display: "FH: Child battering",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHDeathUnder60Years: Coding.FromStrict({
+  EncounterReasonValueSet_FHDeathUnder60Years: new Coding({
     code: "160473001",
     display: "FH: Death under 60 years",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHAtopy: Coding.FromStrict({
+  EncounterReasonValueSet_FHAtopy: new Coding({
     code: "160474007",
     display: "FH: Atopy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHConsanguinity: Coding.FromStrict({
+  EncounterReasonValueSet_FHConsanguinity: new Coding({
     code: "160475008",
     display: "FH: Consanguinity",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HomeHelpOrganized: Coding.FromStrict({
+  EncounterReasonValueSet_HomeHelpOrganized: new Coding({
     code: "160776008",
     display: "Home help organized",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FatherRemarried: Coding.FromStrict({
+  EncounterReasonValueSet_FatherRemarried: new Coding({
     code: "160806000",
     display: "Father remarried",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotherRemarried: Coding.FromStrict({
+  EncounterReasonValueSet_MotherRemarried: new Coding({
     code: "160807009",
     display: "Mother remarried",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PartnerBeginsWork: Coding.FromStrict({
+  EncounterReasonValueSet_PartnerBeginsWork: new Coding({
     code: "160853002",
     display: "Partner begins work",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PartnerStopsWork: Coding.FromStrict({
+  EncounterReasonValueSet_PartnerStopsWork: new Coding({
     code: "160854008",
     display: "Partner stops work",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PartnerRetires: Coding.FromStrict({
+  EncounterReasonValueSet_PartnerRetires: new Coding({
     code: "160855009",
     display: "Partner retires",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PartnerWorksAfterRetirement: Coding.FromStrict({
+  EncounterReasonValueSet_PartnerWorksAfterRetirement: new Coding({
     code: "160856005",
     display: "Partner works after retirement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ImprisonmentOfFamilyMember: Coding.FromStrict({
+  EncounterReasonValueSet_ImprisonmentOfFamilyMember: new Coding({
     code: "160859003",
     display: "Imprisonment of family member",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HusbandInPrison: Coding.FromStrict({
+  EncounterReasonValueSet_HusbandInPrison: new Coding({
     code: "160860008",
     display: "Husband in prison",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpouseArrested: Coding.FromStrict({
+  EncounterReasonValueSet_SpouseArrested: new Coding({
     code: "160861007",
     display: "Spouse arrested",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PartnerUnemployed: Coding.FromStrict({
+  EncounterReasonValueSet_PartnerUnemployed: new Coding({
     code: "160875000",
     display: "Partner unemployed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_WifePregnant: Coding.FromStrict({
+  EncounterReasonValueSet_WifePregnant: new Coding({
     code: "160884000",
     display: "Wife pregnant",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_WifeWell: Coding.FromStrict({
+  EncounterReasonValueSet_WifeWell: new Coding({
     code: "160885004",
     display: "Wife well",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_WifeAlive: Coding.FromStrict({
+  EncounterReasonValueSet_WifeAlive: new Coding({
     code: "160886003",
     display: "Wife alive",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FamilyMemberOnProtectionRegister: Coding.FromStrict({
+  EncounterReasonValueSet_FamilyMemberOnProtectionRegister: new Coding({
     code: "160888002",
     display: "Family member on protection register",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FamilyMemberRemovedFromProtectionRegister: Coding.FromStrict({
+  EncounterReasonValueSet_FamilyMemberRemovedFromProtectionRegister: new Coding({
     code: "160890001",
     display: "Family member removed from protection register",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_VulnerableChildInFamily: Coding.FromStrict({
+  EncounterReasonValueSet_VulnerableChildInFamily: new Coding({
     code: "160891002",
     display: "Vulnerable child in family",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ParentIsHandicapped: Coding.FromStrict({
+  EncounterReasonValueSet_ParentIsHandicapped: new Coding({
     code: "160947001",
     display: "Parent is handicapped",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpouseIsHandicapped: Coding.FromStrict({
+  EncounterReasonValueSet_SpouseIsHandicapped: new Coding({
     code: "160948006",
     display: "Spouse is handicapped",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SiblingIsHandicapped: Coding.FromStrict({
+  EncounterReasonValueSet_SiblingIsHandicapped: new Coding({
     code: "160949003",
     display: "Sibling is handicapped",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RelativeAcuteMedicalDisorder: Coding.FromStrict({
+  EncounterReasonValueSet_RelativeAcuteMedicalDisorder: new Coding({
     code: "160953001",
     display: "Relative - acute medical disorder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathOfInfant: Coding.FromStrict({
+  EncounterReasonValueSet_DeathOfInfant: new Coding({
     code: "160956009",
     display: "Death of infant",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuddenInfantDeath: Coding.FromStrict({
+  EncounterReasonValueSet_SuddenInfantDeath: new Coding({
     code: "160957000",
     display: "Sudden infant death",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathOfSon: Coding.FromStrict({
+  EncounterReasonValueSet_DeathOfSon: new Coding({
     code: "160958005",
     display: "Death of son",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathOfDaughter: Coding.FromStrict({
+  EncounterReasonValueSet_DeathOfDaughter: new Coding({
     code: "160960007",
     display: "Death of daughter",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathOfFather: Coding.FromStrict({
+  EncounterReasonValueSet_DeathOfFather: new Coding({
     code: "160961006",
     display: "Death of father",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathOfMother: Coding.FromStrict({
+  EncounterReasonValueSet_DeathOfMother: new Coding({
     code: "160962004",
     display: "Death of mother",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathOfBrother: Coding.FromStrict({
+  EncounterReasonValueSet_DeathOfBrother: new Coding({
     code: "160963009",
     display: "Death of brother",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathOfSister: Coding.FromStrict({
+  EncounterReasonValueSet_DeathOfSister: new Coding({
     code: "160964003",
     display: "Death of sister",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuicideOfCloseRelative: Coding.FromStrict({
+  EncounterReasonValueSet_SuicideOfCloseRelative: new Coding({
     code: "160965002",
     display: "Suicide of close relative",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RelativeKilled: Coding.FromStrict({
+  EncounterReasonValueSet_RelativeKilled: new Coding({
     code: "160966001",
     display: "Relative killed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ChildAbuseInFamily: Coding.FromStrict({
+  EncounterReasonValueSet_ChildAbuseInFamily: new Coding({
     code: "161062006",
     display: "Child abuse in family",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LegalProblemInFamily: Coding.FromStrict({
+  EncounterReasonValueSet_LegalProblemInFamily: new Coding({
     code: "161067000",
     display: "Legal problem in family",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpouseWorksAwayFromHome: Coding.FromStrict({
+  EncounterReasonValueSet_SpouseWorksAwayFromHome: new Coding({
     code: "161075006",
     display: "Spouse works away from home",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FatherSmokes: Coding.FromStrict({
+  EncounterReasonValueSet_FatherSmokes: new Coding({
     code: "161077003",
     display: "Father smokes",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotherSmokes: Coding.FromStrict({
+  EncounterReasonValueSet_MotherSmokes: new Coding({
     code: "161078008",
     display: "Mother smokes",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BothParentsSmoke: Coding.FromStrict({
+  EncounterReasonValueSet_BothParentsSmoke: new Coding({
     code: "161079000",
     display: "Both parents smoke",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathOfUnrelatedPerson: Coding.FromStrict({
+  EncounterReasonValueSet_DeathOfUnrelatedPerson: new Coding({
     code: "161151009",
     display: "Death of unrelated person",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BilateralRepairOfInguinalHerniaDirect: Coding.FromStrict({
+  EncounterReasonValueSet_BilateralRepairOfInguinalHerniaDirect: new Coding({
     code: "1614003",
     display: "Bilateral repair of inguinal hernia, direct",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOInfectiousDisease: Coding.FromStrict({
+  EncounterReasonValueSet_HOInfectiousDisease: new Coding({
     code: "161413004",
     display: "H/O: infectious disease",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOTuberculosis: Coding.FromStrict({
+  EncounterReasonValueSet_HOTuberculosis: new Coding({
     code: "161414005",
     display: "H/O: tuberculosis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOPoliomyelitis: Coding.FromStrict({
+  EncounterReasonValueSet_HOPoliomyelitis: new Coding({
     code: "161415006",
     display: "H/O: poliomyelitis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOMalaria: Coding.FromStrict({
+  EncounterReasonValueSet_HOMalaria: new Coding({
     code: "161416007",
     display: "H/O: malaria",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOScarlatina: Coding.FromStrict({
+  EncounterReasonValueSet_HOScarlatina: new Coding({
     code: "161417003",
     display: "H/O: scarlatina",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOMeasles: Coding.FromStrict({
+  EncounterReasonValueSet_HOMeasles: new Coding({
     code: "161419000",
     display: "H/O: measles",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOMumps: Coding.FromStrict({
+  EncounterReasonValueSet_HOMumps: new Coding({
     code: "161420006",
     display: "H/O: mumps",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HORubella: Coding.FromStrict({
+  EncounterReasonValueSet_HORubella: new Coding({
     code: "161421005",
     display: "H/O: rubella",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOPertussis: Coding.FromStrict({
+  EncounterReasonValueSet_HOPertussis: new Coding({
     code: "161422003",
     display: "H/O: pertussis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOChickenpox: Coding.FromStrict({
+  EncounterReasonValueSet_HOChickenpox: new Coding({
     code: "161423008",
     display: "H/O: chickenpox",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOViralIllness: Coding.FromStrict({
+  EncounterReasonValueSet_HOViralIllness: new Coding({
     code: "161424002",
     display: "H/O: viral illness",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOMalignantMelanoma: Coding.FromStrict({
+  EncounterReasonValueSet_HOMalignantMelanoma: new Coding({
     code: "161432005",
     display: "H/O Malignant melanoma",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOLeukemia: Coding.FromStrict({
+  EncounterReasonValueSet_HOLeukemia: new Coding({
     code: "161436008",
     display: "H/O: leukemia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOHyperthyroidism: Coding.FromStrict({
+  EncounterReasonValueSet_HOHyperthyroidism: new Coding({
     code: "161442007",
     display: "H/O: hyperthyroidism",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOHypothyroidism: Coding.FromStrict({
+  EncounterReasonValueSet_HOHypothyroidism: new Coding({
     code: "161443002",
     display: "H/O: hypothyroidism",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HODiabetesMellitus: Coding.FromStrict({
+  EncounterReasonValueSet_HODiabetesMellitus: new Coding({
     code: "161445009",
     display: "H/O: diabetes mellitus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HONutritionDisorder: Coding.FromStrict({
+  EncounterReasonValueSet_HONutritionDisorder: new Coding({
     code: "161449003",
     display: "H/O: nutrition disorder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HORaisedBloodLipids: Coding.FromStrict({
+  EncounterReasonValueSet_HORaisedBloodLipids: new Coding({
     code: "161450003",
     display: "H/O: raised blood lipids",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOGout: Coding.FromStrict({
+  EncounterReasonValueSet_HOGout: new Coding({
     code: "161451004",
     display: "H/O: gout",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOObesity: Coding.FromStrict({
+  EncounterReasonValueSet_HOObesity: new Coding({
     code: "161453001",
     display: "H/O: obesity",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOAnemiaIronDeficient: Coding.FromStrict({
+  EncounterReasonValueSet_HOAnemiaIronDeficient: new Coding({
     code: "161456009",
     display: "H/O: anemia - iron deficient",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HistoryOfAnemiaVitaminB12Deficient: Coding.FromStrict({
+  EncounterReasonValueSet_HistoryOfAnemiaVitaminB12Deficient: new Coding({
     code: "161457000",
     display: "History of anemia vitamin B12 deficient",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOHemolyticAnemia: Coding.FromStrict({
+  EncounterReasonValueSet_HOHemolyticAnemia: new Coding({
     code: "161458005",
     display: "H/O: hemolytic anemia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOBleedingDisorder: Coding.FromStrict({
+  EncounterReasonValueSet_HOBleedingDisorder: new Coding({
     code: "161460007",
     display: "H/O: bleeding disorder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOPurpura: Coding.FromStrict({
+  EncounterReasonValueSet_HOPurpura: new Coding({
     code: "161461006",
     display: "H/O: purpura",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOFailedBloodDonorTest: Coding.FromStrict({
+  EncounterReasonValueSet_HOFailedBloodDonorTest: new Coding({
     code: "161462004",
     display: "H/O: Failed blood donor test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOPsychiatricDisorder: Coding.FromStrict({
+  EncounterReasonValueSet_HOPsychiatricDisorder: new Coding({
     code: "161464003",
     display: "H/O: psychiatric disorder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HODementia: Coding.FromStrict({
+  EncounterReasonValueSet_HODementia: new Coding({
     code: "161465002",
     display: "H/O: dementia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOAlcoholism: Coding.FromStrict({
+  EncounterReasonValueSet_HOAlcoholism: new Coding({
     code: "161466001",
     display: "H/O: alcoholism",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HODrugDependency: Coding.FromStrict({
+  EncounterReasonValueSet_HODrugDependency: new Coding({
     code: "161467005",
     display: "H/O: drug dependency",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOSchizophrenia: Coding.FromStrict({
+  EncounterReasonValueSet_HOSchizophrenia: new Coding({
     code: "161468000",
     display: "H/O: schizophrenia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HODepression: Coding.FromStrict({
+  EncounterReasonValueSet_HODepression: new Coding({
     code: "161469008",
     display: "H/O: depression",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOAnxietyState: Coding.FromStrict({
+  EncounterReasonValueSet_HOAnxietyState: new Coding({
     code: "161470009",
     display: "H/O: anxiety state",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOAnorexiaNervosa: Coding.FromStrict({
+  EncounterReasonValueSet_HOAnorexiaNervosa: new Coding({
     code: "161471008",
     display: "H/O: anorexia nervosa",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOPsychologicalTrauma: Coding.FromStrict({
+  EncounterReasonValueSet_HOPsychologicalTrauma: new Coding({
     code: "161472001",
     display: "H/O: psychological trauma",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOBehaviorProblem: Coding.FromStrict({
+  EncounterReasonValueSet_HOBehaviorProblem: new Coding({
     code: "161473006",
     display: "H/O: behavior problem",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOAttemptedSuicide: Coding.FromStrict({
+  EncounterReasonValueSet_HOAttemptedSuicide: new Coding({
     code: "161474000",
     display: "H/O: attempted suicide",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOMeningitis: Coding.FromStrict({
+  EncounterReasonValueSet_HOMeningitis: new Coding({
     code: "161478002",
     display: "H/O: meningitis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOEncephalitis: Coding.FromStrict({
+  EncounterReasonValueSet_HOEncephalitis: new Coding({
     code: "161479005",
     display: "H/O: encephalitis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOEpilepsy: Coding.FromStrict({
+  EncounterReasonValueSet_HOEpilepsy: new Coding({
     code: "161480008",
     display: "H/O: epilepsy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOMigraine: Coding.FromStrict({
+  EncounterReasonValueSet_HOMigraine: new Coding({
     code: "161481007",
     display: "H/O: migraine",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOTrigeminalNeuralgia: Coding.FromStrict({
+  EncounterReasonValueSet_HOTrigeminalNeuralgia: new Coding({
     code: "161482000",
     display: "H/O: trigeminal neuralgia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOBellQuoteSPalsy: Coding.FromStrict({
+  EncounterReasonValueSet_HOBellQuoteSPalsy: new Coding({
     code: "161483005",
     display: "H/O: Bell's palsy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOEyeDisorder: Coding.FromStrict({
+  EncounterReasonValueSet_HOEyeDisorder: new Coding({
     code: "161486002",
     display: "H/O: eye disorder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HORetinalDetachment: Coding.FromStrict({
+  EncounterReasonValueSet_HORetinalDetachment: new Coding({
     code: "161487006",
     display: "H/O: retinal detachment",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOGlaucoma: Coding.FromStrict({
+  EncounterReasonValueSet_HOGlaucoma: new Coding({
     code: "161488001",
     display: "H/O: glaucoma",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOCataract: Coding.FromStrict({
+  EncounterReasonValueSet_HOCataract: new Coding({
     code: "161489009",
     display: "H/O: cataract",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOVisualDisturbance: Coding.FromStrict({
+  EncounterReasonValueSet_HOVisualDisturbance: new Coding({
     code: "161490000",
     display: "H/O: visual disturbance",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOCornealUlcer: Coding.FromStrict({
+  EncounterReasonValueSet_HOCornealUlcer: new Coding({
     code: "161491001",
     display: "H/O: corneal ulcer",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOEarDisorder: Coding.FromStrict({
+  EncounterReasonValueSet_HOEarDisorder: new Coding({
     code: "161494009",
     display: "H/O: ear disorder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOChronicEarInfection: Coding.FromStrict({
+  EncounterReasonValueSet_HOChronicEarInfection: new Coding({
     code: "161496006",
     display: "H/O: chronic ear infection",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOHearingProblem: Coding.FromStrict({
+  EncounterReasonValueSet_HOHearingProblem: new Coding({
     code: "161497002",
     display: "H/O: hearing problem",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HORheumaticFever: Coding.FromStrict({
+  EncounterReasonValueSet_HORheumaticFever: new Coding({
     code: "161500008",
     display: "H/O: rheumatic fever",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RelineUpperPartialDentureChairside: Coding.FromStrict({
+  EncounterReasonValueSet_RelineUpperPartialDentureChairside: new Coding({
     code: "1615002",
     display: "Reline upper partial denture, chairside",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOHypertension: Coding.FromStrict({
+  EncounterReasonValueSet_HOHypertension: new Coding({
     code: "161501007",
     display: "H/O: hypertension",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOMyocardialInfarctAtLessThan60: Coding.FromStrict({
+  EncounterReasonValueSet_HOMyocardialInfarctAtLessThan60: new Coding({
     code: "161502000",
     display: "H/O: myocardial infarct at less than 60",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOMyocardialInfarctAtGreaterThan60: Coding.FromStrict({
+  EncounterReasonValueSet_HOMyocardialInfarctAtGreaterThan60: new Coding({
     code: "161503005",
     display: "H/O: myocardial infarct at greater than 60",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOAnginaPectoris: Coding.FromStrict({
+  EncounterReasonValueSet_HOAnginaPectoris: new Coding({
     code: "161504004",
     display: "H/O: angina pectoris",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOHeartFailure: Coding.FromStrict({
+  EncounterReasonValueSet_HOHeartFailure: new Coding({
     code: "161505003",
     display: "H/O: heart failure",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HODeepVeinThrombosis: Coding.FromStrict({
+  EncounterReasonValueSet_HODeepVeinThrombosis: new Coding({
     code: "161508001",
     display: "H/O: Deep vein thrombosis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOVaricoseVeins: Coding.FromStrict({
+  EncounterReasonValueSet_HOVaricoseVeins: new Coding({
     code: "161509009",
     display: "H/O: varicose veins",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOTIA: Coding.FromStrict({
+  EncounterReasonValueSet_HOTIA: new Coding({
     code: "161511000",
     display: "H/O: TIA",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOPulmonaryEmbolus: Coding.FromStrict({
+  EncounterReasonValueSet_HOPulmonaryEmbolus: new Coding({
     code: "161512007",
     display: "H/O: pulmonary embolus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOVentricularFibrillation: Coding.FromStrict({
+  EncounterReasonValueSet_HOVentricularFibrillation: new Coding({
     code: "161513002",
     display: "H/O ventricular fibrillation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOAorticAneurysm: Coding.FromStrict({
+  EncounterReasonValueSet_HOAorticAneurysm: new Coding({
     code: "161514008",
     display: "H/O: aortic aneurysm",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOSubarachnoidHemorrhage: Coding.FromStrict({
+  EncounterReasonValueSet_HOSubarachnoidHemorrhage: new Coding({
     code: "161515009",
     display: "H/O subarachnoid hemorrhage",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HORespiratoryDisease: Coding.FromStrict({
+  EncounterReasonValueSet_HORespiratoryDisease: new Coding({
     code: "161523006",
     display: "H/O: respiratory disease",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOHayFever: Coding.FromStrict({
+  EncounterReasonValueSet_HOHayFever: new Coding({
     code: "161524000",
     display: "H/O: hay fever",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOPneumonia: Coding.FromStrict({
+  EncounterReasonValueSet_HOPneumonia: new Coding({
     code: "161525004",
     display: "H/O: pneumonia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOAsthma: Coding.FromStrict({
+  EncounterReasonValueSet_HOAsthma: new Coding({
     code: "161527007",
     display: "H/O: asthma",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOPneumothorax: Coding.FromStrict({
+  EncounterReasonValueSet_HOPneumothorax: new Coding({
     code: "161528002",
     display: "H/O: pneumothorax",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOAppendicitis: Coding.FromStrict({
+  EncounterReasonValueSet_HOAppendicitis: new Coding({
     code: "161532008",
     display: "H/O: appendicitis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOAbdominalHernia: Coding.FromStrict({
+  EncounterReasonValueSet_HOAbdominalHernia: new Coding({
     code: "161533003",
     display: "H/O: abdominal hernia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOLiverDisease: Coding.FromStrict({
+  EncounterReasonValueSet_HOLiverDisease: new Coding({
     code: "161535005",
     display: "H/O: liver disease",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOJaundice: Coding.FromStrict({
+  EncounterReasonValueSet_HOJaundice: new Coding({
     code: "161536006",
     display: "H/O: jaundice",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOHematemesis: Coding.FromStrict({
+  EncounterReasonValueSet_HOHematemesis: new Coding({
     code: "161538007",
     display: "H/O: hematemesis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOMelena: Coding.FromStrict({
+  EncounterReasonValueSet_HOMelena: new Coding({
     code: "161539004",
     display: "H/O: melena",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOUpperGITNeoplasm: Coding.FromStrict({
+  EncounterReasonValueSet_HOUpperGITNeoplasm: new Coding({
     code: "161541003",
     display: "H/O upper GIT neoplasm",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOLowerGITNeoplasm: Coding.FromStrict({
+  EncounterReasonValueSet_HOLowerGITNeoplasm: new Coding({
     code: "161542005",
     display: "H/O lower GIT neoplasm",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HONephritis: Coding.FromStrict({
+  EncounterReasonValueSet_HONephritis: new Coding({
     code: "161546008",
     display: "H/O: nephritis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOKidneyInfection: Coding.FromStrict({
+  EncounterReasonValueSet_HOKidneyInfection: new Coding({
     code: "161547004",
     display: "H/O: kidney infection",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOUrinaryStone: Coding.FromStrict({
+  EncounterReasonValueSet_HOUrinaryStone: new Coding({
     code: "161548009",
     display: "H/O: urinary stone",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HORecurrentCystitis: Coding.FromStrict({
+  EncounterReasonValueSet_HORecurrentCystitis: new Coding({
     code: "161549001",
     display: "H/O: recurrent cystitis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOHematuria: Coding.FromStrict({
+  EncounterReasonValueSet_HOHematuria: new Coding({
     code: "161550001",
     display: "H/O: hematuria",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOUrethralStricture: Coding.FromStrict({
+  EncounterReasonValueSet_HOUrethralStricture: new Coding({
     code: "161551002",
     display: "H/O: urethral stricture",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOMaleGenitalDisorder: Coding.FromStrict({
+  EncounterReasonValueSet_HOMaleGenitalDisorder: new Coding({
     code: "161554005",
     display: "H/O: male genital disorder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOProstatism: Coding.FromStrict({
+  EncounterReasonValueSet_HOProstatism: new Coding({
     code: "161555006",
     display: "H/O: prostatism",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOInfertilityMale: Coding.FromStrict({
+  EncounterReasonValueSet_HOInfertilityMale: new Coding({
     code: "161556007",
     display: "H/O: infertility - male",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOVasectomy: Coding.FromStrict({
+  EncounterReasonValueSet_HOVasectomy: new Coding({
     code: "161558008",
     display: "H/O: vasectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOSkinDisorder: Coding.FromStrict({
+  EncounterReasonValueSet_HOSkinDisorder: new Coding({
     code: "161560005",
     display: "H/O: skin disorder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOEczema: Coding.FromStrict({
+  EncounterReasonValueSet_HOEczema: new Coding({
     code: "161561009",
     display: "H/O: eczema",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOPsoriasis: Coding.FromStrict({
+  EncounterReasonValueSet_HOPsoriasis: new Coding({
     code: "161562002",
     display: "H/O: psoriasis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOChronicSkinUlcer: Coding.FromStrict({
+  EncounterReasonValueSet_HOChronicSkinUlcer: new Coding({
     code: "161563007",
     display: "H/O: chronic skin ulcer",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HORheumatoidArthritis: Coding.FromStrict({
+  EncounterReasonValueSet_HORheumatoidArthritis: new Coding({
     code: "161567008",
     display: "H/O: rheumatoid arthritis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOOsteoarthritis: Coding.FromStrict({
+  EncounterReasonValueSet_HOOsteoarthritis: new Coding({
     code: "161568003",
     display: "H/O: osteoarthritis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOBackProblem: Coding.FromStrict({
+  EncounterReasonValueSet_HOBackProblem: new Coding({
     code: "161570007",
     display: "H/O: back problem",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOCongenitalAnomaly: Coding.FromStrict({
+  EncounterReasonValueSet_HOCongenitalAnomaly: new Coding({
     code: "161572004",
     display: "H/O: congenital anomaly",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOCardiacAnomaly: Coding.FromStrict({
+  EncounterReasonValueSet_HOCardiacAnomaly: new Coding({
     code: "161573009",
     display: "H/O: cardiac anomaly",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOCleftPalate: Coding.FromStrict({
+  EncounterReasonValueSet_HOCleftPalate: new Coding({
     code: "161574003",
     display: "H/O: cleft palate",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOCleftLip: Coding.FromStrict({
+  EncounterReasonValueSet_HOCleftLip: new Coding({
     code: "161575002",
     display: "H/O: cleft lip",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOUrinaryAnomaly: Coding.FromStrict({
+  EncounterReasonValueSet_HOUrinaryAnomaly: new Coding({
     code: "161576001",
     display: "H/O: urinary anomaly",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HistoryOfCongenitalDislocationOfHip: Coding.FromStrict({
+  EncounterReasonValueSet_HistoryOfCongenitalDislocationOfHip: new Coding({
     code: "161577005",
     display: "History of congenital dislocation of hip",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOPerinatalProblem: Coding.FromStrict({
+  EncounterReasonValueSet_HOPerinatalProblem: new Coding({
     code: "161579008",
     display: "H/O: perinatal problem",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOBirthTrauma: Coding.FromStrict({
+  EncounterReasonValueSet_HOBirthTrauma: new Coding({
     code: "161580006",
     display: "H/O: birth trauma",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOBirthAsphyxia: Coding.FromStrict({
+  EncounterReasonValueSet_HOBirthAsphyxia: new Coding({
     code: "161581005",
     display: "H/O: birth asphyxia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOHemolyticDisease: Coding.FromStrict({
+  EncounterReasonValueSet_HOHemolyticDisease: new Coding({
     code: "161582003",
     display: "H/O: hemolytic disease",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOPerinatalConvulsion: Coding.FromStrict({
+  EncounterReasonValueSet_HOPerinatalConvulsion: new Coding({
     code: "161583008",
     display: "H/O: perinatal convulsion",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HistoryOfPerinatalCerebralIrritability: Coding.FromStrict({
+  EncounterReasonValueSet_HistoryOfPerinatalCerebralIrritability: new Coding({
     code: "161584002",
     display: "History of perinatal cerebral irritability",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOInjury: Coding.FromStrict({
+  EncounterReasonValueSet_HOInjury: new Coding({
     code: "161586000",
     display: "H/O: injury",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOHeadInjury: Coding.FromStrict({
+  EncounterReasonValueSet_HOHeadInjury: new Coding({
     code: "161587009",
     display: "H/O: head injury",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOPoisoning: Coding.FromStrict({
+  EncounterReasonValueSet_HOPoisoning: new Coding({
     code: "161589007",
     display: "H/O: poisoning",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_GalactosylceramideBetaGalactosidaseMeasurementLeukocytes: Coding.FromStrict({
+  EncounterReasonValueSet_GalactosylceramideBetaGalactosidaseMeasurementLeukocytes: new Coding({
     code: "1616001",
     display: "Galactosylceramide beta-galactosidase measurement, leukocytes",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HONonDrugAllergy: Coding.FromStrict({
+  EncounterReasonValueSet_HONonDrugAllergy: new Coding({
     code: "161611007",
     display: "H/O: non-drug allergy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOMultipleAllergies: Coding.FromStrict({
+  EncounterReasonValueSet_HOMultipleAllergies: new Coding({
     code: "161614004",
     display: "H/O: multiple allergies",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOSurgery: Coding.FromStrict({
+  EncounterReasonValueSet_HOSurgery: new Coding({
     code: "161615003",
     display: "H/O: surgery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOMajorVascularSurgery: Coding.FromStrict({
+  EncounterReasonValueSet_HOMajorVascularSurgery: new Coding({
     code: "161616002",
     display: "H/O: major vascular surgery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOMajorAbdominalSurgery: Coding.FromStrict({
+  EncounterReasonValueSet_HOMajorAbdominalSurgery: new Coding({
     code: "161617006",
     display: "H/O: major abdominal surgery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOMajorOrthopedicSurgery: Coding.FromStrict({
+  EncounterReasonValueSet_HOMajorOrthopedicSurgery: new Coding({
     code: "161618001",
     display: "H/O: major orthopedic surgery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOSpinalSurgery: Coding.FromStrict({
+  EncounterReasonValueSet_HOSpinalSurgery: new Coding({
     code: "161619009",
     display: "H/O Spinal surgery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOUpperLimbAmputation: Coding.FromStrict({
+  EncounterReasonValueSet_HOUpperLimbAmputation: new Coding({
     code: "161621004",
     display: "H/O: upper limb amputation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOLowerLimbAmputation: Coding.FromStrict({
+  EncounterReasonValueSet_HOLowerLimbAmputation: new Coding({
     code: "161622006",
     display: "H/O: lower limb amputation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOPneumonectomy: Coding.FromStrict({
+  EncounterReasonValueSet_HOPneumonectomy: new Coding({
     code: "161624007",
     display: "H/O: pneumonectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOCardiacSurgery: Coding.FromStrict({
+  EncounterReasonValueSet_HOCardiacSurgery: new Coding({
     code: "161625008",
     display: "H/O cardiac surgery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOSplenectomy: Coding.FromStrict({
+  EncounterReasonValueSet_HOSplenectomy: new Coding({
     code: "161626009",
     display: "H/O splenectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOOrchidectomy: Coding.FromStrict({
+  EncounterReasonValueSet_HOOrchidectomy: new Coding({
     code: "161627000",
     display: "H/O orchidectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HORiskFactor: Coding.FromStrict({
+  EncounterReasonValueSet_HORiskFactor: new Coding({
     code: "161632004",
     display: "H/O: risk factor",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HORadiationExposure: Coding.FromStrict({
+  EncounterReasonValueSet_HORadiationExposure: new Coding({
     code: "161633009",
     display: "H/O: radiation exposure",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOAsbestosExposure: Coding.FromStrict({
+  EncounterReasonValueSet_HOAsbestosExposure: new Coding({
     code: "161635002",
     display: "H/O: asbestos exposure",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOIsocyanateExposure: Coding.FromStrict({
+  EncounterReasonValueSet_HOIsocyanateExposure: new Coding({
     code: "161636001",
     display: "H/O: isocyanate exposure",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InsuranceRefusedMedicalReasons: Coding.FromStrict({
+  EncounterReasonValueSet_InsuranceRefusedMedicalReasons: new Coding({
     code: "161637005",
     display: "Insurance refused - medical reasons",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HepatitisBOccupationalRisk: Coding.FromStrict({
+  EncounterReasonValueSet_HepatitisBOccupationalRisk: new Coding({
     code: "161638000",
     display: "Hepatitis B Occupational risk",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOHighRiskMedication: Coding.FromStrict({
+  EncounterReasonValueSet_HOHighRiskMedication: new Coding({
     code: "161646004",
     display: "H/O: high risk medication",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOAnticoagulantTherapy: Coding.FromStrict({
+  EncounterReasonValueSet_HOAnticoagulantTherapy: new Coding({
     code: "161647008",
     display: "H/O: anticoagulant therapy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOSteroidTherapy: Coding.FromStrict({
+  EncounterReasonValueSet_HOSteroidTherapy: new Coding({
     code: "161648003",
     display: "H/O: steroid therapy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOInsulinTherapy: Coding.FromStrict({
+  EncounterReasonValueSet_HOInsulinTherapy: new Coding({
     code: "161649006",
     display: "H/O: insulin therapy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOAnticonvulsantTherapy: Coding.FromStrict({
+  EncounterReasonValueSet_HOAnticonvulsantTherapy: new Coding({
     code: "161650006",
     display: "H/O: anticonvulsant therapy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HistoryOfImmunosuppressiveTherapy: Coding.FromStrict({
+  EncounterReasonValueSet_HistoryOfImmunosuppressiveTherapy: new Coding({
     code: "161651005",
     display: "History of immunosuppressive therapy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOHormoneReplacementHRT: Coding.FromStrict({
+  EncounterReasonValueSet_HOHormoneReplacementHRT: new Coding({
     code: "161652003",
     display: "H/O: hormone replacement (HRT)",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOChemotherapy: Coding.FromStrict({
+  EncounterReasonValueSet_HOChemotherapy: new Coding({
     code: "161653008",
     display: "H/O: chemotherapy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HORepeatMedication: Coding.FromStrict({
+  EncounterReasonValueSet_HORepeatMedication: new Coding({
     code: "161656000",
     display: "H/O: repeat medication",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOKidneyDonation: Coding.FromStrict({
+  EncounterReasonValueSet_HOKidneyDonation: new Coding({
     code: "161659007",
     display: "H/O: kidney donation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOSkinDonation: Coding.FromStrict({
+  EncounterReasonValueSet_HOSkinDonation: new Coding({
     code: "161660002",
     display: "H/O: skin donation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOTissueOrganRecipient: Coding.FromStrict({
+  EncounterReasonValueSet_HOTissueOrganRecipient: new Coding({
     code: "161663000",
     display: "H/O: tissue/organ recipient",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOBloodTransfusion: Coding.FromStrict({
+  EncounterReasonValueSet_HOBloodTransfusion: new Coding({
     code: "161664006",
     display: "H/O: blood transfusion",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOKidneyRecipient: Coding.FromStrict({
+  EncounterReasonValueSet_HOKidneyRecipient: new Coding({
     code: "161665007",
     display: "H/O: kidney recipient",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOHeartRecipient: Coding.FromStrict({
+  EncounterReasonValueSet_HOHeartRecipient: new Coding({
     code: "161666008",
     display: "H/O: heart recipient",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOHeartValveRecipient: Coding.FromStrict({
+  EncounterReasonValueSet_HOHeartValveRecipient: new Coding({
     code: "161667004",
     display: "H/O: heart valve recipient",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOSkinRecipient: Coding.FromStrict({
+  EncounterReasonValueSet_HOSkinRecipient: new Coding({
     code: "161668009",
     display: "H/O: skin recipient",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOBoneTissueRecipient: Coding.FromStrict({
+  EncounterReasonValueSet_HOBoneTissueRecipient: new Coding({
     code: "161669001",
     display: "H/O: bone tissue recipient",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOCorneaRecipient: Coding.FromStrict({
+  EncounterReasonValueSet_HOCorneaRecipient: new Coding({
     code: "161670000",
     display: "H/O: cornea recipient",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOLiverRecipient: Coding.FromStrict({
+  EncounterReasonValueSet_HOLiverRecipient: new Coding({
     code: "161671001",
     display: "H/O: liver recipient",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOLungRecipient: Coding.FromStrict({
+  EncounterReasonValueSet_HOLungRecipient: new Coding({
     code: "161672008",
     display: "H/O: lung recipient",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOArtificialOrganTissue: Coding.FromStrict({
+  EncounterReasonValueSet_HOArtificialOrganTissue: new Coding({
     code: "161674009",
     display: "H/O: artificial organ/tissue",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOArtificialEyeglobe: Coding.FromStrict({
+  EncounterReasonValueSet_HOArtificialEyeglobe: new Coding({
     code: "161675005",
     display: "H/O: artificial eyeglobe",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOArtificialEyeLens: Coding.FromStrict({
+  EncounterReasonValueSet_HOArtificialEyeLens: new Coding({
     code: "161676006",
     display: "H/O: artificial eye lens",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOArtificialHeartValve: Coding.FromStrict({
+  EncounterReasonValueSet_HOArtificialHeartValve: new Coding({
     code: "161677002",
     display: "H/O: artificial heart valve",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOArtificialBloodVessel: Coding.FromStrict({
+  EncounterReasonValueSet_HOArtificialBloodVessel: new Coding({
     code: "161678007",
     display: "H/O: artificial blood vessel",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOArtificialJoint: Coding.FromStrict({
+  EncounterReasonValueSet_HOArtificialJoint: new Coding({
     code: "161679004",
     display: "H/O: artificial joint",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOArtificialLimb: Coding.FromStrict({
+  EncounterReasonValueSet_HOArtificialLimb: new Coding({
     code: "161680001",
     display: "H/O: artificial limb",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOArtificialHeart: Coding.FromStrict({
+  EncounterReasonValueSet_HOArtificialHeart: new Coding({
     code: "161681002",
     display: "H/O: artificial heart",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOArtificialBladder: Coding.FromStrict({
+  EncounterReasonValueSet_HOArtificialBladder: new Coding({
     code: "161682009",
     display: "H/O: artificial bladder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOTracheostomy: Coding.FromStrict({
+  EncounterReasonValueSet_HOTracheostomy: new Coding({
     code: "161685006",
     display: "H/O: tracheostomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOIleostomy: Coding.FromStrict({
+  EncounterReasonValueSet_HOIleostomy: new Coding({
     code: "161686007",
     display: "H/O: ileostomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOColostomy: Coding.FromStrict({
+  EncounterReasonValueSet_HOColostomy: new Coding({
     code: "161687003",
     display: "H/O: colostomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOGastrostomy: Coding.FromStrict({
+  EncounterReasonValueSet_HOGastrostomy: new Coding({
     code: "161689000",
     display: "H/O: gastrostomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOCardiacPacemakerInSitu: Coding.FromStrict({
+  EncounterReasonValueSet_HOCardiacPacemakerInSitu: new Coding({
     code: "161692001",
     display: "H/O: cardiac pacemaker in situ",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOKidneyDialysis: Coding.FromStrict({
+  EncounterReasonValueSet_HOKidneyDialysis: new Coding({
     code: "161693006",
     display: "H/O: kidney dialysis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOCSFDrainageDevice: Coding.FromStrict({
+  EncounterReasonValueSet_HOCSFDrainageDevice: new Coding({
     code: "161694000",
     display: "H/O: CSF drainage device",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOArthrodesis: Coding.FromStrict({
+  EncounterReasonValueSet_HOArthrodesis: new Coding({
     code: "161696003",
     display: "H/O: arthrodesis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HistoryOfArthrodesisOfInterphalangealJointOfToe: Coding.FromStrict({
+  EncounterReasonValueSet_HistoryOfArthrodesisOfInterphalangealJointOfToe: new Coding({
     code: "161697007",
     display: "History of arthrodesis of interphalangeal joint of toe",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOMachineDependence: Coding.FromStrict({
+  EncounterReasonValueSet_HOMachineDependence: new Coding({
     code: "161700006",
     display: "H/O: machine dependence",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HORespiratorDependence: Coding.FromStrict({
+  EncounterReasonValueSet_HORespiratorDependence: new Coding({
     code: "161701005",
     display: "H/O: respirator dependence",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOStillbirth: Coding.FromStrict({
+  EncounterReasonValueSet_HOStillbirth: new Coding({
     code: "161743003",
     display: "H/O: stillbirth",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOMiscarriage: Coding.FromStrict({
+  EncounterReasonValueSet_HOMiscarriage: new Coding({
     code: "161744009",
     display: "H/O: miscarriage",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoHistoryOfMiscarriage: Coding.FromStrict({
+  EncounterReasonValueSet_NoHistoryOfMiscarriage: new Coding({
     code: "161745005",
     display: "No history of miscarriage",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HO1Miscarriage: Coding.FromStrict({
+  EncounterReasonValueSet_HO1Miscarriage: new Coding({
     code: "161747002",
     display: "H/O: 1 miscarriage",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HO2Miscarriages: Coding.FromStrict({
+  EncounterReasonValueSet_HO2Miscarriages: new Coding({
     code: "161748007",
     display: "H/O: 2 miscarriages",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HO3Miscarriages: Coding.FromStrict({
+  EncounterReasonValueSet_HO3Miscarriages: new Coding({
     code: "161749004",
     display: "H/O: 3 miscarriages",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HO4Miscarriages: Coding.FromStrict({
+  EncounterReasonValueSet_HO4Miscarriages: new Coding({
     code: "161750004",
     display: "H/O: 4 miscarriages",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HO5Miscarriages: Coding.FromStrict({
+  EncounterReasonValueSet_HO5Miscarriages: new Coding({
     code: "161751000",
     display: "H/O: 5 miscarriages",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HO6Miscarriages: Coding.FromStrict({
+  EncounterReasonValueSet_HO6Miscarriages: new Coding({
     code: "161752007",
     display: "H/O: 6 miscarriages",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoHistoryOfAbortion: Coding.FromStrict({
+  EncounterReasonValueSet_NoHistoryOfAbortion: new Coding({
     code: "161755009",
     display: "No history of abortion",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOEctopicPregnancy: Coding.FromStrict({
+  EncounterReasonValueSet_HOEctopicPregnancy: new Coding({
     code: "161763005",
     display: "H/O: ectopic pregnancy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOPrematureDelivery: Coding.FromStrict({
+  EncounterReasonValueSet_HOPrematureDelivery: new Coding({
     code: "161765003",
     display: "H/O: premature delivery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOInfantFeedingMethod: Coding.FromStrict({
+  EncounterReasonValueSet_HOInfantFeedingMethod: new Coding({
     code: "161767006",
     display: "H/O: infant feeding method",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOInfantBreastFed: Coding.FromStrict({
+  EncounterReasonValueSet_HOInfantBreastFed: new Coding({
     code: "161768001",
     display: "H/O: infant breast fed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOInfantBottleFed: Coding.FromStrict({
+  EncounterReasonValueSet_HOInfantBottleFed: new Coding({
     code: "161769009",
     display: "H/O: infant bottle fed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOOralContraceptiveUsage: Coding.FromStrict({
+  EncounterReasonValueSet_HOOralContraceptiveUsage: new Coding({
     code: "161772002",
     display: "H/O: oral contraceptive usage",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOIUDUsage: Coding.FromStrict({
+  EncounterReasonValueSet_HOIUDUsage: new Coding({
     code: "161773007",
     display: "H/O: IUD usage",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOContraceptiveCapUsage: Coding.FromStrict({
+  EncounterReasonValueSet_HOContraceptiveCapUsage: new Coding({
     code: "161774001",
     display: "H/O: contraceptive cap usage",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOCondomUsage: Coding.FromStrict({
+  EncounterReasonValueSet_HOCondomUsage: new Coding({
     code: "161775000",
     display: "H/O: condom usage",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOMenstrualDisorder: Coding.FromStrict({
+  EncounterReasonValueSet_HOMenstrualDisorder: new Coding({
     code: "161779006",
     display: "H/O: menstrual disorder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOAmenorrhea: Coding.FromStrict({
+  EncounterReasonValueSet_HOAmenorrhea: new Coding({
     code: "161780009",
     display: "H/O: amenorrhea",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOPolymenorrhea: Coding.FromStrict({
+  EncounterReasonValueSet_HOPolymenorrhea: new Coding({
     code: "161781008",
     display: "H/O: polymenorrhea",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOHeavyPeriods: Coding.FromStrict({
+  EncounterReasonValueSet_HOHeavyPeriods: new Coding({
     code: "161782001",
     display: "H/O: heavy periods",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOPainfulPeriods: Coding.FromStrict({
+  EncounterReasonValueSet_HOPainfulPeriods: new Coding({
     code: "161783006",
     display: "H/O: painful periods",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOPostcoitalBleeding: Coding.FromStrict({
+  EncounterReasonValueSet_HOPostcoitalBleeding: new Coding({
     code: "161786003",
     display: "H/O: postcoital bleeding",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOInterMenstrualBleeding: Coding.FromStrict({
+  EncounterReasonValueSet_HOInterMenstrualBleeding: new Coding({
     code: "161787007",
     display: "H/O: inter-menstrual bleeding",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOPostmenopausalBleeding: Coding.FromStrict({
+  EncounterReasonValueSet_HOPostmenopausalBleeding: new Coding({
     code: "161788002",
     display: "H/O: postmenopausal bleeding",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HistoryOfRecurrentVaginalDischarge: Coding.FromStrict({
+  EncounterReasonValueSet_HistoryOfRecurrentVaginalDischarge: new Coding({
     code: "161792009",
     display: "History of recurrent vaginal discharge",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOStressIncontinence: Coding.FromStrict({
+  EncounterReasonValueSet_HOStressIncontinence: new Coding({
     code: "161794005",
     display: "H/O: stress incontinence",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HODyspareunia: Coding.FromStrict({
+  EncounterReasonValueSet_HODyspareunia: new Coding({
     code: "161796007",
     display: "H/O: dyspareunia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOBreastProblem: Coding.FromStrict({
+  EncounterReasonValueSet_HOBreastProblem: new Coding({
     code: "161797003",
     display: "H/O: breast problem",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOInfertilityFemale: Coding.FromStrict({
+  EncounterReasonValueSet_HOInfertilityFemale: new Coding({
     code: "161798008",
     display: "H/O: infertility - female",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOHysterectomy: Coding.FromStrict({
+  EncounterReasonValueSet_HOHysterectomy: new Coding({
     code: "161800001",
     display: "H/O: hysterectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOObstetricProblem: Coding.FromStrict({
+  EncounterReasonValueSet_HOObstetricProblem: new Coding({
     code: "161803004",
     display: "H/O: obstetric problem",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOAntepartumHemorrhage: Coding.FromStrict({
+  EncounterReasonValueSet_HOAntepartumHemorrhage: new Coding({
     code: "161804005",
     display: "H/O: antepartum hemorrhage",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOCesareanSection: Coding.FromStrict({
+  EncounterReasonValueSet_HOCesareanSection: new Coding({
     code: "161805006",
     display: "H/O: cesarean section",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOEclampsia: Coding.FromStrict({
+  EncounterReasonValueSet_HOEclampsia: new Coding({
     code: "161806007",
     display: "H/O: eclampsia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOSeverePreEclampsia: Coding.FromStrict({
+  EncounterReasonValueSet_HOSeverePreEclampsia: new Coding({
     code: "161807003",
     display: "H/O: severe pre-eclampsia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOManualRemovalOfPlacenta: Coding.FromStrict({
+  EncounterReasonValueSet_HOManualRemovalOfPlacenta: new Coding({
     code: "161808008",
     display: "H/O:manual removal of placenta",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOPostpartumHemorrhage: Coding.FromStrict({
+  EncounterReasonValueSet_HOPostpartumHemorrhage: new Coding({
     code: "161809000",
     display: "H/O: postpartum hemorrhage",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOLongLabor: Coding.FromStrict({
+  EncounterReasonValueSet_HOLongLabor: new Coding({
     code: "161810005",
     display: "H/O: long labor",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOPerinatalFetalLoss: Coding.FromStrict({
+  EncounterReasonValueSet_HOPerinatalFetalLoss: new Coding({
     code: "161811009",
     display: "H/O: perinatal fetal loss",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HOPreviousForcepsDelivery: Coding.FromStrict({
+  EncounterReasonValueSet_HOPreviousForcepsDelivery: new Coding({
     code: "161813007",
     display: "H/O: previous forceps delivery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoTemperatureSymptom: Coding.FromStrict({
+  EncounterReasonValueSet_NoTemperatureSymptom: new Coding({
     code: "161851007",
     display: "No temperature symptom",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NotTired: Coding.FromStrict({
+  EncounterReasonValueSet_NotTired: new Coding({
     code: "161869003",
     display: "Not tired",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoStiffNeck: Coding.FromStrict({
+  EncounterReasonValueSet_NoStiffNeck: new Coding({
     code: "161881004",
     display: "No stiff neck",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DoesNotBruiseEasily: Coding.FromStrict({
+  EncounterReasonValueSet_DoesNotBruiseEasily: new Coding({
     code: "161886009",
     display: "Does not bruise easily",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoBackache: Coding.FromStrict({
+  EncounterReasonValueSet_NoBackache: new Coding({
     code: "161890006",
     display: "No backache",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoGeneralSymptom: Coding.FromStrict({
+  EncounterReasonValueSet_NoGeneralSymptom: new Coding({
     code: "161915001",
     display: "No general symptom",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoCough: Coding.FromStrict({
+  EncounterReasonValueSet_NoCough: new Coding({
     code: "161922009",
     display: "No cough",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NightCoughPresent: Coding.FromStrict({
+  EncounterReasonValueSet_NightCoughPresent: new Coding({
     code: "161927003",
     display: "Night cough present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NightCoughAbsent: Coding.FromStrict({
+  EncounterReasonValueSet_NightCoughAbsent: new Coding({
     code: "161928008",
     display: "Night cough absent",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoBreathlessness: Coding.FromStrict({
+  EncounterReasonValueSet_NoBreathlessness: new Coding({
     code: "161938003",
     display: "No breathlessness",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoHiccough: Coding.FromStrict({
+  EncounterReasonValueSet_NoHiccough: new Coding({
     code: "161953006",
     display: "No hiccough",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HiccoughPresent: Coding.FromStrict({
+  EncounterReasonValueSet_HiccoughPresent: new Coding({
     code: "161954000",
     display: "Hiccough present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoRespiratorySymptoms: Coding.FromStrict({
+  EncounterReasonValueSet_NoRespiratorySymptoms: new Coding({
     code: "161962008",
     display: "No respiratory symptoms",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoPalpitations: Coding.FromStrict({
+  EncounterReasonValueSet_NoPalpitations: new Coding({
     code: "161966006",
     display: "No palpitations",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ChestPainNotPresent: Coding.FromStrict({
+  EncounterReasonValueSet_ChestPainNotPresent: new Coding({
     code: "161971004",
     display: "Chest pain not present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoEdemaPresent: Coding.FromStrict({
+  EncounterReasonValueSet_NoEdemaPresent: new Coding({
     code: "161980004",
     display: "No edema present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoCardiovascularSymptom: Coding.FromStrict({
+  EncounterReasonValueSet_NoCardiovascularSymptom: new Coding({
     code: "162001003",
     display: "No cardiovascular symptom",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoToothProblem: Coding.FromStrict({
+  EncounterReasonValueSet_NoToothProblem: new Coding({
     code: "162005007",
     display: "No tooth problem",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoMouthProblem: Coding.FromStrict({
+  EncounterReasonValueSet_NoMouthProblem: new Coding({
     code: "162010006",
     display: "No mouth problem",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoProblemChewing: Coding.FromStrict({
+  EncounterReasonValueSet_NoProblemChewing: new Coding({
     code: "162019007",
     display: "No problem chewing",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoProblemSwallowing: Coding.FromStrict({
+  EncounterReasonValueSet_NoProblemSwallowing: new Coding({
     code: "162023004",
     display: "No problem swallowing",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoAbdominalPain: Coding.FromStrict({
+  EncounterReasonValueSet_NoAbdominalPain: new Coding({
     code: "162037008",
     display: "No abdominal pain",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoNausea: Coding.FromStrict({
+  EncounterReasonValueSet_NoNausea: new Coding({
     code: "162056003",
     display: "No nausea",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NauseaPresent: Coding.FromStrict({
+  EncounterReasonValueSet_NauseaPresent: new Coding({
     code: "162057007",
     display: "Nausea present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoVomiting: Coding.FromStrict({
+  EncounterReasonValueSet_NoVomiting: new Coding({
     code: "162062008",
     display: "No vomiting",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AbdomenNotDistended: Coding.FromStrict({
+  EncounterReasonValueSet_AbdomenNotDistended: new Coding({
     code: "162069004",
     display: "Abdomen not distended",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoExcessiveUpperGastrointestinalGas: Coding.FromStrict({
+  EncounterReasonValueSet_NoExcessiveUpperGastrointestinalGas: new Coding({
     code: "162075008",
     display: "No excessive upper gastrointestinal gas",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoTenesmus: Coding.FromStrict({
+  EncounterReasonValueSet_NoTenesmus: new Coding({
     code: "162085009",
     display: "No tenesmus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TenesmusPresent: Coding.FromStrict({
+  EncounterReasonValueSet_TenesmusPresent: new Coding({
     code: "162086005",
     display: "Tenesmus present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiarrheaNotPresent: Coding.FromStrict({
+  EncounterReasonValueSet_DiarrheaNotPresent: new Coding({
     code: "162104009",
     display: "Diarrhea not present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoGastrointestinalSymptom: Coding.FromStrict({
+  EncounterReasonValueSet_NoGastrointestinalSymptom: new Coding({
     code: "162111008",
     display: "No gastrointestinal symptom",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoGenitourinaryPain: Coding.FromStrict({
+  EncounterReasonValueSet_NoGenitourinaryPain: new Coding({
     code: "162139009",
     display: "No genitourinary pain",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoUrethralDischarge: Coding.FromStrict({
+  EncounterReasonValueSet_NoUrethralDischarge: new Coding({
     code: "162154003",
     display: "No urethral discharge",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_VaginalDischargeAbsent: Coding.FromStrict({
+  EncounterReasonValueSet_VaginalDischargeAbsent: new Coding({
     code: "162157005",
     display: "Vaginal discharge absent",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_VaginalDischargePresent: Coding.FromStrict({
+  EncounterReasonValueSet_VaginalDischargePresent: new Coding({
     code: "162158000",
     display: "Vaginal discharge present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoBreastLump: Coding.FromStrict({
+  EncounterReasonValueSet_NoBreastLump: new Coding({
     code: "162161004",
     display: "No breast lump",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BreastLumpPresent: Coding.FromStrict({
+  EncounterReasonValueSet_BreastLumpPresent: new Coding({
     code: "162162006",
     display: "Breast lump present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoGenitourinarySymptom: Coding.FromStrict({
+  EncounterReasonValueSet_NoGenitourinarySymptom: new Coding({
     code: "162185007",
     display: "No genitourinary symptom",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoMotorSymptom: Coding.FromStrict({
+  EncounterReasonValueSet_NoMotorSymptom: new Coding({
     code: "162235006",
     display: "No motor symptom",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ParalysisPresent: Coding.FromStrict({
+  EncounterReasonValueSet_ParalysisPresent: new Coding({
     code: "162241004",
     display: "Paralysis present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Coordinated: Coding.FromStrict({
+  EncounterReasonValueSet_Coordinated: new Coding({
     code: "162258009",
     display: "Coordinated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DizzinessPresent: Coding.FromStrict({
+  EncounterReasonValueSet_DizzinessPresent: new Coding({
     code: "162260006",
     display: "Dizziness present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_GiddinessPresent: Coding.FromStrict({
+  EncounterReasonValueSet_GiddinessPresent: new Coding({
     code: "162261005",
     display: "Giddiness present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoConsciousnessDisturbance: Coding.FromStrict({
+  EncounterReasonValueSet_NoConsciousnessDisturbance: new Coding({
     code: "162264002",
     display: "No consciousness disturbance",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FeltFaint: Coding.FromStrict({
+  EncounterReasonValueSet_FeltFaint: new Coding({
     code: "162271007",
     display: "Felt faint",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoVisualSymptom: Coding.FromStrict({
+  EncounterReasonValueSet_NoVisualSymptom: new Coding({
     code: "162275003",
     display: "No visual symptom",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpeechNormal: Coding.FromStrict({
+  EncounterReasonValueSet_SpeechNormal: new Coding({
     code: "162293002",
     display: "Speech normal",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoHeadache: Coding.FromStrict({
+  EncounterReasonValueSet_NoHeadache: new Coding({
     code: "162298006",
     display: "No headache",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralDeafness: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralDeafness: new Coding({
     code: "162342008",
     display: "Unilateral deafness",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoTinnitusPresent: Coding.FromStrict({
+  EncounterReasonValueSet_NoTinnitusPresent: new Coding({
     code: "162350004",
     display: "No tinnitus present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoEarache: Coding.FromStrict({
+  EncounterReasonValueSet_NoEarache: new Coding({
     code: "162357001",
     display: "No earache",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralEarache: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralEarache: new Coding({
     code: "162358006",
     display: "Unilateral earache",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EarDischargeAbsent: Coding.FromStrict({
+  EncounterReasonValueSet_EarDischargeAbsent: new Coding({
     code: "162363005",
     display: "Ear discharge absent",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EarDischargePresent: Coding.FromStrict({
+  EncounterReasonValueSet_EarDischargePresent: new Coding({
     code: "162364004",
     display: "Ear discharge present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DoesNotSneeze: Coding.FromStrict({
+  EncounterReasonValueSet_DoesNotSneeze: new Coding({
     code: "162368001",
     display: "Does not sneeze",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DoesNotHaveNosebleeds: Coding.FromStrict({
+  EncounterReasonValueSet_DoesNotHaveNosebleeds: new Coding({
     code: "162372002",
     display: "Does not have nosebleeds",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DoesNotSnore: Coding.FromStrict({
+  EncounterReasonValueSet_DoesNotSnore: new Coding({
     code: "162376004",
     display: "Does not snore",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoNasalSymptoms: Coding.FromStrict({
+  EncounterReasonValueSet_NoNasalSymptoms: new Coding({
     code: "162379006",
     display: "No nasal symptoms",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoSoreThroat: Coding.FromStrict({
+  EncounterReasonValueSet_NoSoreThroat: new Coding({
     code: "162387007",
     display: "No sore throat",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SoreThroatPresent: Coding.FromStrict({
+  EncounterReasonValueSet_SoreThroatPresent: new Coding({
     code: "162388002",
     display: "Sore throat present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoThroatSymptom: Coding.FromStrict({
+  EncounterReasonValueSet_NoThroatSymptom: new Coding({
     code: "162395006",
     display: "No throat symptom",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoEarNoseOrThroatSymptom: Coding.FromStrict({
+  EncounterReasonValueSet_NoEarNoseOrThroatSymptom: new Coding({
     code: "162406001",
     display: "No ear, nose or throat symptom",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FreeOfSymptoms: Coding.FromStrict({
+  EncounterReasonValueSet_FreeOfSymptoms: new Coding({
     code: "162467007",
     display: "Free of symptoms",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuspectedCancer: Coding.FromStrict({
+  EncounterReasonValueSet_SuspectedCancer: new Coding({
     code: "162572001",
     display: "Suspected cancer",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuspectedLungCancer: Coding.FromStrict({
+  EncounterReasonValueSet_SuspectedLungCancer: new Coding({
     code: "162573006",
     display: "Suspected lung cancer",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuspectedDrugAbuse: Coding.FromStrict({
+  EncounterReasonValueSet_SuspectedDrugAbuse: new Coding({
     code: "162591001",
     display: "Suspected drug abuse",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuspectedAbuseSoftDrugs: Coding.FromStrict({
+  EncounterReasonValueSet_SuspectedAbuseSoftDrugs: new Coding({
     code: "162592008",
     display: "Suspected abuse soft drugs",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuspectedAbuseHardDrugs: Coding.FromStrict({
+  EncounterReasonValueSet_SuspectedAbuseHardDrugs: new Coding({
     code: "162593003",
     display: "Suspected abuse hard drugs",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuspectedDeafness: Coding.FromStrict({
+  EncounterReasonValueSet_SuspectedDeafness: new Coding({
     code: "162594009",
     display: "Suspected deafness",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuspectedVictimOfChildAbuse: Coding.FromStrict({
+  EncounterReasonValueSet_SuspectedVictimOfChildAbuse: new Coding({
     code: "162596006",
     display: "Suspected victim of child abuse",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DepthOfExamination: Coding.FromStrict({
+  EncounterReasonValueSet_DepthOfExamination: new Coding({
     code: "162649008",
     display: "Depth of examination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PatientNotExamined: Coding.FromStrict({
+  EncounterReasonValueSet_PatientNotExamined: new Coding({
     code: "162650008",
     display: "Patient not examined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PatientExamined: Coding.FromStrict({
+  EncounterReasonValueSet_PatientExamined: new Coding({
     code: "162651007",
     display: "Patient examined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OneOrMoreOrgansExamined: Coding.FromStrict({
+  EncounterReasonValueSet_OneOrMoreOrgansExamined: new Coding({
     code: "162653005",
     display: "One or more organs examined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OneOrMoreSystemsExamined: Coding.FromStrict({
+  EncounterReasonValueSet_OneOrMoreSystemsExamined: new Coding({
     code: "162654004",
     display: "One or more systems examined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FullExaminationPerformed: Coding.FromStrict({
+  EncounterReasonValueSet_FullExaminationPerformed: new Coding({
     code: "162655003",
     display: "Full examination performed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DepthOfGeneralExamination: Coding.FromStrict({
+  EncounterReasonValueSet_DepthOfGeneralExamination: new Coding({
     code: "162674006",
     display: "Depth of general examination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_GeneralExaminationNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_GeneralExaminationNotDone: new Coding({
     code: "162675007",
     display: "General examination not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEEdemaNotPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OEEdemaNotPresent: new Coding({
     code: "162780006",
     display: "O/E - edema not present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralLegEdema: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralLegEdema: new Coding({
     code: "162784002",
     display: "Unilateral leg edema",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OECataractPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OECataractPresent: new Coding({
     code: "162811006",
     display: "O/E - cataract present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OnExaminationUnilateralThyroidSwelling: Coding.FromStrict({
+  EncounterReasonValueSet_OnExaminationUnilateralThyroidSwelling: new Coding({
     code: "162838004",
     display: "On examination - unilateral thyroid swelling",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DepthOfRespiratorySystemExamination: Coding.FromStrict({
+  EncounterReasonValueSet_DepthOfRespiratorySystemExamination: new Coding({
     code: "162881001",
     display: "Depth of respiratory system examination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RespiratorySystemNotExamined: Coding.FromStrict({
+  EncounterReasonValueSet_RespiratorySystemNotExamined: new Coding({
     code: "162882008",
     display: "Respiratory system not examined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoAdventitiousSounds: Coding.FromStrict({
+  EncounterReasonValueSet_OENoAdventitiousSounds: new Coding({
     code: "162963000",
     display: "O/E - no adventitious sounds",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEConsolidationPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OEConsolidationPresent: new Coding({
     code: "162971001",
     display: "O/E - consolidation present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OECavitation: Coding.FromStrict({
+  EncounterReasonValueSet_OECavitation: new Coding({
     code: "162972008",
     display: "O/E - cavitation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DepthOfCVSExamination: Coding.FromStrict({
+  EncounterReasonValueSet_DepthOfCVSExamination: new Coding({
     code: "162979004",
     display: "Depth of CVS examination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CVSNotExamined: Coding.FromStrict({
+  EncounterReasonValueSet_CVSNotExamined: new Coding({
     code: "162980001",
     display: "CVS not examined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoArterialBruit: Coding.FromStrict({
+  EncounterReasonValueSet_OENoArterialBruit: new Coding({
     code: "163045005",
     display: "O/E - no arterial bruit",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OECarotidBruitPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OECarotidBruitPresent: new Coding({
     code: "163046006",
     display: "O/E - carotid bruit present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEFemoralBruitPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OEFemoralBruitPresent: new Coding({
     code: "163047002",
     display: "O/E - femoral bruit present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OERenalBruitPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OERenalBruitPresent: new Coding({
     code: "163048007",
     display: "O/E - renal bruit present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoCardiacThrill: Coding.FromStrict({
+  EncounterReasonValueSet_OENoCardiacThrill: new Coding({
     code: "163068001",
     display: "O/E - no cardiac thrill",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEPericardialRubAbsent: Coding.FromStrict({
+  EncounterReasonValueSet_OEPericardialRubAbsent: new Coding({
     code: "163084000",
     display: "O/E - pericardial rub absent",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoCardiacMurmur: Coding.FromStrict({
+  EncounterReasonValueSet_OENoCardiacMurmur: new Coding({
     code: "163088002",
     display: "O/E - no cardiac murmur",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DepthOfGITExamination: Coding.FromStrict({
+  EncounterReasonValueSet_DepthOfGITExamination: new Coding({
     code: "163127007",
     display: "Depth of GIT examination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_GITNotExamined: Coding.FromStrict({
+  EncounterReasonValueSet_GITNotExamined: new Coding({
     code: "163128002",
     display: "GIT not examined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEMouthExamined: Coding.FromStrict({
+  EncounterReasonValueSet_OEMouthExamined: new Coding({
     code: "163142005",
     display: "O/E - mouth examined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OnExaminationNoAbdominalMovement: Coding.FromStrict({
+  EncounterReasonValueSet_OnExaminationNoAbdominalMovement: new Coding({
     code: "163198005",
     display: "On examination - no abdominal movement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OnExaminationNoIntraAbdominalMovement: Coding.FromStrict({
+  EncounterReasonValueSet_OnExaminationNoIntraAbdominalMovement: new Coding({
     code: "163207001",
     display: "On examination - no intra-abdominal movement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OnExaminationNoAbdominalPainOnPalpation: Coding.FromStrict({
+  EncounterReasonValueSet_OnExaminationNoAbdominalPainOnPalpation: new Coding({
     code: "163213005",
     display: "On examination - no abdominal pain on palpation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoGuardingOnPalpation: Coding.FromStrict({
+  EncounterReasonValueSet_OENoGuardingOnPalpation: new Coding({
     code: "163225008",
     display: "O/E - no guarding on palpation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoReboundTenderness: Coding.FromStrict({
+  EncounterReasonValueSet_OENoReboundTenderness: new Coding({
     code: "163237005",
     display: "O/E - no rebound tenderness",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoAbdominalRigidity: Coding.FromStrict({
+  EncounterReasonValueSet_OENoAbdominalRigidity: new Coding({
     code: "163249006",
     display: "O/E - no abdominal rigidity",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OELiverNotPalpable: Coding.FromStrict({
+  EncounterReasonValueSet_OELiverNotPalpable: new Coding({
     code: "163253008",
     display: "O/E - liver not palpable",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OELiverNotPainful: Coding.FromStrict({
+  EncounterReasonValueSet_OELiverNotPainful: new Coding({
     code: "163266008",
     display: "O/E - liver not painful",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEGallbladderNotPalpable: Coding.FromStrict({
+  EncounterReasonValueSet_OEGallbladderNotPalpable: new Coding({
     code: "163271001",
     display: "O/E - gallbladder not palpable",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OnExaminationAbdominalMassNotPalpated: Coding.FromStrict({
+  EncounterReasonValueSet_OnExaminationAbdominalMassNotPalpated: new Coding({
     code: "163279004",
     display: "On examination - abdominal mass not palpated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEAscitesNotDemonstrated: Coding.FromStrict({
+  EncounterReasonValueSet_OEAscitesNotDemonstrated: new Coding({
     code: "163310006",
     display: "O/E - ascites not demonstrated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoHerniaDemonstrated: Coding.FromStrict({
+  EncounterReasonValueSet_OENoHerniaDemonstrated: new Coding({
     code: "163316000",
     display: "O/E - no hernia demonstrated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DepthOfGenitourinaryExamination: Coding.FromStrict({
+  EncounterReasonValueSet_DepthOfGenitourinaryExamination: new Coding({
     code: "163347006",
     display: "Depth of genitourinary examination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_GUSystemNotExamined: Coding.FromStrict({
+  EncounterReasonValueSet_GUSystemNotExamined: new Coding({
     code: "163348001",
     display: "GU system not examined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEKidneyPalpated: Coding.FromStrict({
+  EncounterReasonValueSet_OEKidneyPalpated: new Coding({
     code: "163354000",
     display: "O/E - kidney palpated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEKidneysNotPalpable: Coding.FromStrict({
+  EncounterReasonValueSet_OEKidneysNotPalpable: new Coding({
     code: "163355004",
     display: "O/E - kidneys not palpable",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEBladderNotPalpable: Coding.FromStrict({
+  EncounterReasonValueSet_OEBladderNotPalpable: new Coding({
     code: "163361001",
     display: "O/E - bladder not palpable",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoScrotalSwelling: Coding.FromStrict({
+  EncounterReasonValueSet_OENoScrotalSwelling: new Coding({
     code: "163375008",
     display: "O/E - no scrotal swelling",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoVaginalDischarge: Coding.FromStrict({
+  EncounterReasonValueSet_OENoVaginalDischarge: new Coding({
     code: "163423003",
     display: "O/E - no vaginal discharge",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoNippleDischarge: Coding.FromStrict({
+  EncounterReasonValueSet_OENoNippleDischarge: new Coding({
     code: "163458001",
     display: "O/E - no nipple discharge",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoBreastLumpPalpable: Coding.FromStrict({
+  EncounterReasonValueSet_OENoBreastLumpPalpable: new Coding({
     code: "163466005",
     display: "O/E - no breast lump palpable",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEBreastLumpNotTethered: Coding.FromStrict({
+  EncounterReasonValueSet_OEBreastLumpNotTethered: new Coding({
     code: "163492003",
     display: "O/E - breast lump not tethered",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoFetalMovements: Coding.FromStrict({
+  EncounterReasonValueSet_OENoFetalMovements: new Coding({
     code: "163536000",
     display: "O/E - no fetal movements",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEFetalHeartNotHeard: Coding.FromStrict({
+  EncounterReasonValueSet_OEFetalHeartNotHeard: new Coding({
     code: "163543006",
     display: "O/E - fetal heart not heard",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEVEPelvisNotAdequate: Coding.FromStrict({
+  EncounterReasonValueSet_OEVEPelvisNotAdequate: new Coding({
     code: "163557008",
     display: "O/E - VE - pelvis not adequate",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEVECervixNotRipe: Coding.FromStrict({
+  EncounterReasonValueSet_OEVECervixNotRipe: new Coding({
     code: "163560001",
     display: "O/E - VE - cervix not ripe",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DepthOfNervousSystemExamination: Coding.FromStrict({
+  EncounterReasonValueSet_DepthOfNervousSystemExamination: new Coding({
     code: "163581001",
     display: "Depth of nervous system examination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NervousSystemNotExamined: Coding.FromStrict({
+  EncounterReasonValueSet_NervousSystemNotExamined: new Coding({
     code: "163582008",
     display: "Nervous system not examined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoFitConvulsionSeen: Coding.FromStrict({
+  EncounterReasonValueSet_OENoFitConvulsionSeen: new Coding({
     code: "163589004",
     display: "O/E - no fit/convulsion seen",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoParalysis: Coding.FromStrict({
+  EncounterReasonValueSet_OENoParalysis: new Coding({
     code: "163599009",
     display: "O/E - no paralysis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InjectionOfSclerosingAgentInVaricoseVein: Coding.FromStrict({
+  EncounterReasonValueSet_InjectionOfSclerosingAgentInVaricoseVein: new Coding({
     code: "1636000",
     display: "Injection of sclerosing agent in varicose vein",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SensorySystemNotExamined: Coding.FromStrict({
+  EncounterReasonValueSet_SensorySystemNotExamined: new Coding({
     code: "163628001",
     display: "Sensory system not examined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoTrophicChanges: Coding.FromStrict({
+  EncounterReasonValueSet_OENoTrophicChanges: new Coding({
     code: "163631000",
     display: "O/E - no trophic changes",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoMuscleContracture: Coding.FromStrict({
+  EncounterReasonValueSet_OENoMuscleContracture: new Coding({
     code: "163657002",
     display: "O/E - no muscle contracture",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoInvoluntaryMovements: Coding.FromStrict({
+  EncounterReasonValueSet_OENoInvoluntaryMovements: new Coding({
     code: "163663006",
     display: "O/E - no involuntary movements",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEAnalgesiaPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OEAnalgesiaPresent: new Coding({
     code: "163731007",
     display: "O/E - analgesia present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoSuppression: Coding.FromStrict({
+  EncounterReasonValueSet_OENoSuppression: new Coding({
     code: "163757005",
     display: "O/E - no suppression",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoVisualAgnosia: Coding.FromStrict({
+  EncounterReasonValueSet_OENoVisualAgnosia: new Coding({
     code: "163763001",
     display: "O/E - no visual agnosia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEVisualAgnosiaPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OEVisualAgnosiaPresent: new Coding({
     code: "163764007",
     display: "O/E - visual agnosia present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEPastPointingPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OEPastPointingPresent: new Coding({
     code: "163772009",
     display: "O/E - past pointing present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEDysdiadochokinesia: Coding.FromStrict({
+  EncounterReasonValueSet_OEDysdiadochokinesia: new Coding({
     code: "163773004",
     display: "O/E - dysdiadochokinesia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CineplastyWithCineplasticProsthesisOfExtremity: Coding.FromStrict({
+  EncounterReasonValueSet_CineplastyWithCineplasticProsthesisOfExtremity: new Coding({
     code: "1638004",
     display: "Cineplasty with cineplastic prosthesis of extremity",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoClonus: Coding.FromStrict({
+  EncounterReasonValueSet_OENoClonus: new Coding({
     code: "163846005",
     display: "O/E - no clonus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OECNSNotExamined: Coding.FromStrict({
+  EncounterReasonValueSet_OECNSNotExamined: new Coding({
     code: "163900009",
     display: "O/E - CNS not examined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoRaisedICPressure: Coding.FromStrict({
+  EncounterReasonValueSet_OENoRaisedICPressure: new Coding({
     code: "163904000",
     display: "O/E - no raised I/C pressure",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEMeningismAbsent: Coding.FromStrict({
+  EncounterReasonValueSet_OEMeningismAbsent: new Coding({
     code: "163909005",
     display: "O/E - meningism absent",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEKernigQuoteSSignNegative: Coding.FromStrict({
+  EncounterReasonValueSet_OEKernigQuoteSSignNegative: new Coding({
     code: "163913003",
     display: "O/E - Kernig's sign negative",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEBrudzinskiQuoteSSignNegative: Coding.FromStrict({
+  EncounterReasonValueSet_OEBrudzinskiQuoteSSignNegative: new Coding({
     code: "163915005",
     display: "O/E-Brudzinski's sign negative",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoSpeechDefect: Coding.FromStrict({
+  EncounterReasonValueSet_OENoSpeechDefect: new Coding({
     code: "163918007",
     display: "O/E - no speech defect",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HistoryAndPhysicalExaminationInsurance: Coding.FromStrict({
+  EncounterReasonValueSet_HistoryAndPhysicalExaminationInsurance: new Coding({
     code: "1640009",
     display: "History and physical examination, insurance",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEPtosisAbsent: Coding.FromStrict({
+  EncounterReasonValueSet_OEPtosisAbsent: new Coding({
     code: "164016004",
     display: "O/E - ptosis absent",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEAccommodPupilNotReact: Coding.FromStrict({
+  EncounterReasonValueSet_OEAccommodPupilNotReact: new Coding({
     code: "164041006",
     display: "O/E - accommod-pupil not react",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoNystagmus: Coding.FromStrict({
+  EncounterReasonValueSet_OENoNystagmus: new Coding({
     code: "164073000",
     display: "O/E - no nystagmus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENotClinicallyAnemic: Coding.FromStrict({
+  EncounterReasonValueSet_OENotClinicallyAnemic: new Coding({
     code: "164140005",
     display: "O/E - not clinically anemic",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OESpleenNotPalpable: Coding.FromStrict({
+  EncounterReasonValueSet_OESpleenNotPalpable: new Coding({
     code: "164163000",
     display: "O/E - spleen not palpable",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ENTExaminationNotPerformed: Coding.FromStrict({
+  EncounterReasonValueSet_ENTExaminationNotPerformed: new Coding({
     code: "164176006",
     display: "ENT examination not performed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoNasalDischarge: Coding.FromStrict({
+  EncounterReasonValueSet_OENoNasalDischarge: new Coding({
     code: "164183004",
     display: "O/E - no nasal discharge",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoDischargeFromEar: Coding.FromStrict({
+  EncounterReasonValueSet_OENoDischargeFromEar: new Coding({
     code: "164212007",
     display: "O/E - no discharge from ear",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEEarNotPainful: Coding.FromStrict({
+  EncounterReasonValueSet_OEEarNotPainful: new Coding({
     code: "164220009",
     display: "O/E - ear not painful",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoLaryngealSigns: Coding.FromStrict({
+  EncounterReasonValueSet_OENoLaryngealSigns: new Coding({
     code: "164273009",
     display: "O/E - no laryngeal signs",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OETemperatureNotTaken: Coding.FromStrict({
+  EncounterReasonValueSet_OETemperatureNotTaken: new Coding({
     code: "164286000",
     display: "O/E - temperature not taken",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OESkinNotExamined: Coding.FromStrict({
+  EncounterReasonValueSet_OESkinNotExamined: new Coding({
     code: "164321005",
     display: "O/E - skin not examined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoMacules: Coding.FromStrict({
+  EncounterReasonValueSet_OENoMacules: new Coding({
     code: "164329007",
     display: "O/E - no macules",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEEcchymosesPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OEEcchymosesPresent: new Coding({
     code: "164332005",
     display: "O/E - ecchymoses present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OECapillaryNeviPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OECapillaryNeviPresent: new Coding({
     code: "164333000",
     display: "O/E - capillary nevi present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEPapulesNotPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OEPapulesNotPresent: new Coding({
     code: "164336008",
     display: "O/E - papules not present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OESkinNodulesNotPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OESkinNodulesNotPresent: new Coding({
     code: "164340004",
     display: "O/E - skin nodules not present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEVesiclesNotPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OEVesiclesNotPresent: new Coding({
     code: "164344008",
     display: "O/E - vesicles not present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OESkinBullaeNotPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OESkinBullaeNotPresent: new Coding({
     code: "164348006",
     display: "O/E - skin bullae not present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoPustulesPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OENoPustulesPresent: new Coding({
     code: "164355008",
     display: "O/E - no pustules present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OnExaminationWhealsNotPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OnExaminationWhealsNotPresent: new Coding({
     code: "164362004",
     display: "On examination - wheals not present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OESkinScalesNotPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OESkinScalesNotPresent: new Coding({
     code: "164366001",
     display: "O/E - skin scales not present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoSkinBurrows: Coding.FromStrict({
+  EncounterReasonValueSet_OENoSkinBurrows: new Coding({
     code: "164372001",
     display: "O/E - no skin burrows",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEBlackheadsNotPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OEBlackheadsNotPresent: new Coding({
     code: "164376003",
     display: "O/E - blackheads not present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEBlackheadsPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OEBlackheadsPresent: new Coding({
     code: "164377007",
     display: "O/E - blackheads present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoSkinPlaque: Coding.FromStrict({
+  EncounterReasonValueSet_OENoSkinPlaque: new Coding({
     code: "164380008",
     display: "O/E - no skin plaque",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OESkinCystNotPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OESkinCystNotPresent: new Coding({
     code: "164384004",
     display: "O/E - skin cyst not present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoSkinFissures: Coding.FromStrict({
+  EncounterReasonValueSet_OENoSkinFissures: new Coding({
     code: "164390000",
     display: "O/E - no skin fissures",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoSkinUlcer: Coding.FromStrict({
+  EncounterReasonValueSet_OENoSkinUlcer: new Coding({
     code: "164396006",
     display: "O/E - no skin ulcer",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoSkinScarring: Coding.FromStrict({
+  EncounterReasonValueSet_OENoSkinScarring: new Coding({
     code: "164400006",
     display: "O/E - no skin scarring",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoSkinCrust: Coding.FromStrict({
+  EncounterReasonValueSet_OENoSkinCrust: new Coding({
     code: "164406000",
     display: "O/E - no skin crust",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OESkinSinusNotPresent: Coding.FromStrict({
+  EncounterReasonValueSet_OESkinSinusNotPresent: new Coding({
     code: "164415007",
     display: "O/E - skin sinus not present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEExtremitiesNotExamined: Coding.FromStrict({
+  EncounterReasonValueSet_OEExtremitiesNotExamined: new Coding({
     code: "164445005",
     display: "O/E - extremities not examined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HomosexualForcibleAssault: Coding.FromStrict({
+  EncounterReasonValueSet_HomosexualForcibleAssault: new Coding({
     code: "16445007",
     display: "Homosexual forcible assault",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TransduodenalSphincterotomy: Coding.FromStrict({
+  EncounterReasonValueSet_TransduodenalSphincterotomy: new Coding({
     code: "1645004",
     display: "Transduodenal sphincterotomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OrthopedicExamNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_OrthopedicExamNotDone: new Coding({
     code: "164503006",
     display: "Orthopedic exam. not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoJointAbnormality: Coding.FromStrict({
+  EncounterReasonValueSet_OENoJointAbnormality: new Coding({
     code: "164507007",
     display: "O/E - no joint abnormality",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEJointNotSwollen: Coding.FromStrict({
+  EncounterReasonValueSet_OEJointNotSwollen: new Coding({
     code: "164525000",
     display: "O/E - joint not swollen",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OEJointNotStiff: Coding.FromStrict({
+  EncounterReasonValueSet_OEJointNotStiff: new Coding({
     code: "164549002",
     display: "O/E - joint not stiff",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoJointContraction: Coding.FromStrict({
+  EncounterReasonValueSet_OENoJointContraction: new Coding({
     code: "164558009",
     display: "O/E - no joint contraction",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoBoneAbnormal: Coding.FromStrict({
+  EncounterReasonValueSet_OENoBoneAbnormal: new Coding({
     code: "164574004",
     display: "O/E - no bone abnormal",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoBoneAbnormality: Coding.FromStrict({
+  EncounterReasonValueSet_OENoBoneAbnormality: new Coding({
     code: "164588000",
     display: "O/E - no bone abnormality",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OENoSoftTissueAbnormality: Coding.FromStrict({
+  EncounterReasonValueSet_OENoSoftTissueAbnormality: new Coding({
     code: "164598006",
     display: "O/E-no soft tissue abnormality",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_GeneralSignQualifications: Coding.FromStrict({
+  EncounterReasonValueSet_GeneralSignQualifications: new Coding({
     code: "164618002",
     display: "General sign qualifications",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OESignNotTethered: Coding.FromStrict({
+  EncounterReasonValueSet_OESignNotTethered: new Coding({
     code: "164682005",
     display: "O/E - sign not tethered",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OESignNotPainful: Coding.FromStrict({
+  EncounterReasonValueSet_OESignNotPainful: new Coding({
     code: "164689001",
     display: "O/E - sign not painful",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OESignNotPulsatile: Coding.FromStrict({
+  EncounterReasonValueSet_OESignNotPulsatile: new Coding({
     code: "164695000",
     display: "O/E - sign not pulsatile",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NeurologicalDiagnosticProcedureNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_NeurologicalDiagnosticProcedureNotDone: new Coding({
     code: "164713001",
     display: "Neurological diagnostic procedure - not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NeurologicalDiagnosticProcedureDone: Coding.FromStrict({
+  EncounterReasonValueSet_NeurologicalDiagnosticProcedureDone: new Coding({
     code: "164715008",
     display: "Neurological diagnostic procedure - done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SensoryMappingCarriedOut: Coding.FromStrict({
+  EncounterReasonValueSet_SensoryMappingCarriedOut: new Coding({
     code: "164719002",
     display: "Sensory mapping carried out",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_VisualTestingNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_VisualTestingNotDone: new Coding({
     code: "164725003",
     display: "Visual testing not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_VisualTestingDone: Coding.FromStrict({
+  EncounterReasonValueSet_VisualTestingDone: new Coding({
     code: "164726002",
     display: "Visual testing done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AuditoryVestibularTestNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_AuditoryVestibularTestNotDone: new Coding({
     code: "164746007",
     display: "Auditory/vestibular test not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AuditoryVestibularTestDone: Coding.FromStrict({
+  EncounterReasonValueSet_AuditoryVestibularTestDone: new Coding({
     code: "164747003",
     display: "Auditory/vestibular test done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpecialENTProcedureNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_SpecialENTProcedureNotDone: new Coding({
     code: "164766003",
     display: "Special ENT procedure not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpecialENTProcedureDone: Coding.FromStrict({
+  EncounterReasonValueSet_SpecialENTProcedureDone: new Coding({
     code: "164767007",
     display: "Special ENT procedure done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpecialCVSTestNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_SpecialCVSTestNotDone: new Coding({
     code: "164776000",
     display: "Special CVS test not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpecialCVSTestDone: Coding.FromStrict({
+  EncounterReasonValueSet_SpecialCVSTestDone: new Coding({
     code: "164777009",
     display: "Special CVS test done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpecialGITTestNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_SpecialGITTestNotDone: new Coding({
     code: "164786004",
     display: "Special GIT test not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpecialGITTestDone: Coding.FromStrict({
+  EncounterReasonValueSet_SpecialGITTestDone: new Coding({
     code: "164787008",
     display: "Special GIT test done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpecialUrinaryTestNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_SpecialUrinaryTestNotDone: new Coding({
     code: "164795007",
     display: "Special urinary test not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpecialUrinaryTestDone: Coding.FromStrict({
+  EncounterReasonValueSet_SpecialUrinaryTestDone: new Coding({
     code: "164796008",
     display: "Special urinary test done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpecialFemaleTestNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_SpecialFemaleTestNotDone: new Coding({
     code: "164808009",
     display: "Special female test not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpecialFemaleTestDone: Coding.FromStrict({
+  EncounterReasonValueSet_SpecialFemaleTestDone: new Coding({
     code: "164810006",
     display: "Special female test done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpecialMaleTestNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_SpecialMaleTestNotDone: new Coding({
     code: "164823004",
     display: "Special male test not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpecialMaleTestDone: Coding.FromStrict({
+  EncounterReasonValueSet_SpecialMaleTestDone: new Coding({
     code: "164824005",
     display: "Special male test done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MusculoskeletalTestNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_MusculoskeletalTestNotDone: new Coding({
     code: "164831009",
     display: "Musculoskeletal test not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MusculoskeletalTestDone: Coding.FromStrict({
+  EncounterReasonValueSet_MusculoskeletalTestDone: new Coding({
     code: "164832002",
     display: "Musculoskeletal test done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ECGRequested: Coding.FromStrict({
+  EncounterReasonValueSet_ECGRequested: new Coding({
     code: "164846002",
     display: "ECG requested",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ECGNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_ECGNotDone: new Coding({
     code: "164853006",
     display: "ECG not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SusceptibilitySkinTestDone: Coding.FromStrict({
+  EncounterReasonValueSet_SusceptibilitySkinTestDone: new Coding({
     code: "164963004",
     display: "Susceptibility skin test done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SusceptibilitySkinTestNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_SusceptibilitySkinTestNotDone: new Coding({
     code: "164964005",
     display: "Susceptibility skin test not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MantouxTestDone: Coding.FromStrict({
+  EncounterReasonValueSet_MantouxTestDone: new Coding({
     code: "164977001",
     display: "Mantoux test done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MantouxTestNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_MantouxTestNotDone: new Coding({
     code: "164978006",
     display: "Mantoux test not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_KveimTestDone: Coding.FromStrict({
+  EncounterReasonValueSet_KveimTestDone: new Coding({
     code: "164984009",
     display: "Kveim test done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_KveimTestNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_KveimTestNotDone: new Coding({
     code: "164985005",
     display: "Kveim test not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HypersensitivitySkinTestDone: Coding.FromStrict({
+  EncounterReasonValueSet_HypersensitivitySkinTestDone: new Coding({
     code: "164996002",
     display: "Hypersensitivity skin test done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HypersensitivitySkinTestNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_HypersensitivitySkinTestNotDone: new Coding({
     code: "164997006",
     display: "Hypersensitivity skin test not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AllergyTestingDone: Coding.FromStrict({
+  EncounterReasonValueSet_AllergyTestingDone: new Coding({
     code: "165007007",
     display: "Allergy testing done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AllergyTestingNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_AllergyTestingNotDone: new Coding({
     code: "165008002",
     display: "Allergy testing not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LungFunctionTestingDone: Coding.FromStrict({
+  EncounterReasonValueSet_LungFunctionTestingDone: new Coding({
     code: "165016006",
     display: "Lung function testing done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LungFunctionTestingNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_LungFunctionTestingNotDone: new Coding({
     code: "165017002",
     display: "Lung function testing not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LungVolumeTestDone: Coding.FromStrict({
+  EncounterReasonValueSet_LungVolumeTestDone: new Coding({
     code: "165025000",
     display: "Lung volume test done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LungVolumeTestNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_LungVolumeTestNotDone: new Coding({
     code: "165026004",
     display: "Lung volume test not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RespiratoryFlowRateMeasured: Coding.FromStrict({
+  EncounterReasonValueSet_RespiratoryFlowRateMeasured: new Coding({
     code: "165034005",
     display: "Respiratory flow rate measured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RespiratoryFlowRateNotMeasured: Coding.FromStrict({
+  EncounterReasonValueSet_RespiratoryFlowRateNotMeasured: new Coding({
     code: "165035006",
     display: "Respiratory flow rate not measured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OvulationTemperatureChartStarted: Coding.FromStrict({
+  EncounterReasonValueSet_OvulationTemperatureChartStarted: new Coding({
     code: "165068004",
     display: "Ovulation temperature chart started",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CardiacFunctionTestDone: Coding.FromStrict({
+  EncounterReasonValueSet_CardiacFunctionTestDone: new Coding({
     code: "165073005",
     display: "Cardiac function test done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CardiacFunctionTestNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_CardiacFunctionTestNotDone: new Coding({
     code: "165074004",
     display: "Cardiac function test not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExerciseToleranceTestDone: Coding.FromStrict({
+  EncounterReasonValueSet_ExerciseToleranceTestDone: new Coding({
     code: "165080007",
     display: "Exercise tolerance test done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExerciseToleranceTestNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_ExerciseToleranceTestNotDone: new Coding({
     code: "165081006",
     display: "Exercise tolerance test not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfTendonSheath: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfTendonSheath: new Coding({
     code: "1651009",
     display: "Excision of tendon sheath",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MetabolicFunctionNotTested: Coding.FromStrict({
+  EncounterReasonValueSet_MetabolicFunctionNotTested: new Coding({
     code: "165104002",
     display: "Metabolic function not tested",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NonSurgicalBiopsyDone: Coding.FromStrict({
+  EncounterReasonValueSet_NonSurgicalBiopsyDone: new Coding({
     code: "165121006",
     display: "Non-surgical biopsy done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NonSurgicalBiopsyNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_NonSurgicalBiopsyNotDone: new Coding({
     code: "165122004",
     display: "Non-surgical biopsy not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EndoscopyArranged: Coding.FromStrict({
+  EncounterReasonValueSet_EndoscopyArranged: new Coding({
     code: "165137000",
     display: "Endoscopy arranged",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EndoscopyCarriedOut: Coding.FromStrict({
+  EncounterReasonValueSet_EndoscopyCarriedOut: new Coding({
     code: "165138005",
     display: "Endoscopy carried out",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EndoscopyNotCarriedOut: Coding.FromStrict({
+  EncounterReasonValueSet_EndoscopyNotCarriedOut: new Coding({
     code: "165139002",
     display: "Endoscopy not carried out",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CheckEndoscopyConditionResolved: Coding.FromStrict({
+  EncounterReasonValueSet_CheckEndoscopyConditionResolved: new Coding({
     code: "165146006",
     display: "Check endoscopy - condition resolved",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BiopsySpecimenNotRetrieved: Coding.FromStrict({
+  EncounterReasonValueSet_BiopsySpecimenNotRetrieved: new Coding({
     code: "165278005",
     display: "Biopsy specimen not retrieved",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InternalFixationOfBoneWithoutFractureReduction: Coding.FromStrict({
+  EncounterReasonValueSet_InternalFixationOfBoneWithoutFractureReduction: new Coding({
     code: "1653007",
     display: "Internal fixation of bone without fracture reduction",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LaboratoryTestNotNecessary: Coding.FromStrict({
+  EncounterReasonValueSet_LaboratoryTestNotNecessary: new Coding({
     code: "165330008",
     display: "Laboratory test not necessary",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LaboratoryProcedurePerformed: Coding.FromStrict({
+  EncounterReasonValueSet_LaboratoryProcedurePerformed: new Coding({
     code: "165331007",
     display: "Laboratory procedure performed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LaboratoryTestRequested: Coding.FromStrict({
+  EncounterReasonValueSet_LaboratoryTestRequested: new Coding({
     code: "165332000",
     display: "Laboratory test requested",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SampleSentToLaboratoryForTest: Coding.FromStrict({
+  EncounterReasonValueSet_SampleSentToLaboratoryForTest: new Coding({
     code: "165333005",
     display: "Sample sent to laboratory for test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StoolSampleSentToLab: Coding.FromStrict({
+  EncounterReasonValueSet_StoolSampleSentToLab: new Coding({
     code: "165334004",
     display: "Stool sample sent to lab.",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodSampleSentToHematologyLaboratory: Coding.FromStrict({
+  EncounterReasonValueSet_BloodSampleSentToHematologyLaboratory: new Coding({
     code: "165335003",
     display: "Blood sample sent to hematology laboratory",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodSampleSentToBiochemistryLaboratory: Coding.FromStrict({
+  EncounterReasonValueSet_BloodSampleSentToBiochemistryLaboratory: new Coding({
     code: "165336002",
     display: "Blood sample sent to biochemistry laboratory",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodSampleSentToMicrobiologyLaboratory: Coding.FromStrict({
+  EncounterReasonValueSet_BloodSampleSentToMicrobiologyLaboratory: new Coding({
     code: "165337006",
     display: "Blood sample sent to microbiology laboratory",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UrineSampleSentToLab: Coding.FromStrict({
+  EncounterReasonValueSet_UrineSampleSentToLab: new Coding({
     code: "165339009",
     display: "Urine sample sent to Lab",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SwabSentToLab: Coding.FromStrict({
+  EncounterReasonValueSet_SwabSentToLab: new Coding({
     code: "165340006",
     display: "Swab sent to Lab",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PatientRefusedLaboratoryTest: Coding.FromStrict({
+  EncounterReasonValueSet_PatientRefusedLaboratoryTest: new Coding({
     code: "165342003",
     display: "Patient refused laboratory test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LaboratoryTestRequestedNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_LaboratoryTestRequestedNotDone: new Coding({
     code: "165343008",
     display: "Laboratory test requested - not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LaboratoryTestResultAbnormal: Coding.FromStrict({
+  EncounterReasonValueSet_LaboratoryTestResultAbnormal: new Coding({
     code: "165346000",
     display: "Laboratory test result abnormal",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LaboratoryTestDue: Coding.FromStrict({
+  EncounterReasonValueSet_LaboratoryTestDue: new Coding({
     code: "165348004",
     display: "Laboratory test due",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodTestDue: Coding.FromStrict({
+  EncounterReasonValueSet_BloodTestDue: new Coding({
     code: "165349007",
     display: "Blood test due",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UrineTestDue: Coding.FromStrict({
+  EncounterReasonValueSet_UrineTestDue: new Coding({
     code: "165350007",
     display: "Urine test due",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FecesTestDue: Coding.FromStrict({
+  EncounterReasonValueSet_FecesTestDue: new Coding({
     code: "165351006",
     display: "Feces test due",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CSFTestDue: Coding.FromStrict({
+  EncounterReasonValueSet_CSFTestDue: new Coding({
     code: "165352004",
     display: "CSF test due",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SemenAnalysisDue: Coding.FromStrict({
+  EncounterReasonValueSet_SemenAnalysisDue: new Coding({
     code: "165353009",
     display: "Semen analysis due",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PatientInformedTestResult: Coding.FromStrict({
+  EncounterReasonValueSet_PatientInformedTestResult: new Coding({
     code: "165355002",
     display: "Patient informed - test result",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TestResultByLetterToPatient: Coding.FromStrict({
+  EncounterReasonValueSet_TestResultByLetterToPatient: new Coding({
     code: "165356001",
     display: "Test result by letter to patient",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TestResultToPatientByTelephone: Coding.FromStrict({
+  EncounterReasonValueSet_TestResultToPatientByTelephone: new Coding({
     code: "165357005",
     display: "Test result to patient by telephone",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TestResultToPatientPersonally: Coding.FromStrict({
+  EncounterReasonValueSet_TestResultToPatientPersonally: new Coding({
     code: "165358000",
     display: "Test result to patient personally",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HematologyTestNotNeeded: Coding.FromStrict({
+  EncounterReasonValueSet_HematologyTestNotNeeded: new Coding({
     code: "165372009",
     display: "Hematology test not needed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HematologyTestPerformed: Coding.FromStrict({
+  EncounterReasonValueSet_HematologyTestPerformed: new Coding({
     code: "165373004",
     display: "Hematology test performed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HematologyTestRequested: Coding.FromStrict({
+  EncounterReasonValueSet_HematologyTestRequested: new Coding({
     code: "165374005",
     display: "Hematology test requested",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodSentForHematologyTest: Coding.FromStrict({
+  EncounterReasonValueSet_BloodSentForHematologyTest: new Coding({
     code: "165375006",
     display: "Blood sent for hematology test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PatientRefusedHematologyTest: Coding.FromStrict({
+  EncounterReasonValueSet_PatientRefusedHematologyTest: new Coding({
     code: "165376007",
     display: "Patient refused hematology test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HematologyTestRequestNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_HematologyTestRequestNotDone: new Coding({
     code: "165377003",
     display: "Hematology test request - not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HematologyResultNotBackYet: Coding.FromStrict({
+  EncounterReasonValueSet_HematologyResultNotBackYet: new Coding({
     code: "165378008",
     display: "Hematology result not back yet",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HemoglobinNotEstimated: Coding.FromStrict({
+  EncounterReasonValueSet_HemoglobinNotEstimated: new Coding({
     code: "165393007",
     display: "Hemoglobin not estimated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HemoglobinRequested: Coding.FromStrict({
+  EncounterReasonValueSet_HemoglobinRequested: new Coding({
     code: "165394001",
     display: "Hemoglobin requested",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HemoglobinSampleSent: Coding.FromStrict({
+  EncounterReasonValueSet_HemoglobinSampleSent: new Coding({
     code: "165395000",
     display: "Hemoglobin - sample sent",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodSentForGrouping: Coding.FromStrict({
+  EncounterReasonValueSet_BloodSentForGrouping: new Coding({
     code: "165742001",
     display: "Blood sent for grouping",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodSentForCrossMatching: Coding.FromStrict({
+  EncounterReasonValueSet_BloodSentForCrossMatching: new Coding({
     code: "165761002",
     display: "Blood sent for cross-matching",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodBeenCrossMatched: Coding.FromStrict({
+  EncounterReasonValueSet_BloodBeenCrossMatched: new Coding({
     code: "165762009",
     display: "Blood been cross-matched",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TransfusionCenterRefNo: Coding.FromStrict({
+  EncounterReasonValueSet_TransfusionCenterRefNo: new Coding({
     code: "165766007",
     display: "Transfusion center ref. no.",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RhesusAntibodyAbsent: Coding.FromStrict({
+  EncounterReasonValueSet_RhesusAntibodyAbsent: new Coding({
     code: "165768008",
     display: "Rhesus antibody absent",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodSentRubellaAntibody: Coding.FromStrict({
+  EncounterReasonValueSet_BloodSentRubellaAntibody: new Coding({
     code: "165790008",
     display: "Blood sent - rubella antibody",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodSentSHAntigenTest: Coding.FromStrict({
+  EncounterReasonValueSet_BloodSentSHAntigenTest: new Coding({
     code: "165803005",
     display: "Blood sent: SH-antigen test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodSentForHTLV3Serology: Coding.FromStrict({
+  EncounterReasonValueSet_BloodSentForHTLV3Serology: new Coding({
     code: "165814008",
     display: "Blood sent for HTLV-3 serology",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodSentForLegionellaTest: Coding.FromStrict({
+  EncounterReasonValueSet_BloodSentForLegionellaTest: new Coding({
     code: "165819003",
     display: "Blood sent for legionella test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodSentInfectiousTiters: Coding.FromStrict({
+  EncounterReasonValueSet_BloodSentInfectiousTiters: new Coding({
     code: "165824000",
     display: "Blood sent - infectious titers",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LECellsAbsent: Coding.FromStrict({
+  EncounterReasonValueSet_LECellsAbsent: new Coding({
     code: "165928001",
     display: "L.E. cells absent",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BehavioralTherapy: Coding.FromStrict({
+  EncounterReasonValueSet_BehavioralTherapy: new Coding({
     code: "166001",
     display: "Behavioral therapy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodSentForChemistry: Coding.FromStrict({
+  EncounterReasonValueSet_BloodSentForChemistry: new Coding({
     code: "166314008",
     display: "Blood sent for chemistry",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodSentAlphaFetoprotein: Coding.FromStrict({
+  EncounterReasonValueSet_BloodSentAlphaFetoprotein: new Coding({
     code: "166557002",
     display: "Blood sent: alpha-fetoprotein",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodSentCardiacEnzymes: Coding.FromStrict({
+  EncounterReasonValueSet_BloodSentCardiacEnzymes: new Coding({
     code: "166660001",
     display: "Blood sent: cardiac enzymes",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodSentForElectrolytes: Coding.FromStrict({
+  EncounterReasonValueSet_BloodSentForElectrolytes: new Coding({
     code: "166684009",
     display: "Blood sent for electrolytes",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodSentForSerumLipids: Coding.FromStrict({
+  EncounterReasonValueSet_BloodSentForSerumLipids: new Coding({
     code: "166813006",
     display: "Blood sent for serum lipids",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MakingOccupiedBed: Coding.FromStrict({
+  EncounterReasonValueSet_MakingOccupiedBed: new Coding({
     code: "1669000",
     display: "Making occupied bed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodSentForToxicology: Coding.FromStrict({
+  EncounterReasonValueSet_BloodSentForToxicology: new Coding({
     code: "167007008",
     display: "Blood sent for toxicology",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CarcinoembryonicAntigenAbsent: Coding.FromStrict({
+  EncounterReasonValueSet_CarcinoembryonicAntigenAbsent: new Coding({
     code: "167056009",
     display: "Carcinoembryonic antigen absent",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UrineNotExamined: Coding.FromStrict({
+  EncounterReasonValueSet_UrineNotExamined: new Coding({
     code: "167219008",
     display: "Urine not examined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UrinalysisRequested: Coding.FromStrict({
+  EncounterReasonValueSet_UrinalysisRequested: new Coding({
     code: "167220002",
     display: "Urinalysis requested",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MSUSentToLab: Coding.FromStrict({
+  EncounterReasonValueSet_MSUSentToLab: new Coding({
     code: "167223000",
     display: "MSU sent to lab.",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UrinePregnancyTestRequested: Coding.FromStrict({
+  EncounterReasonValueSet_UrinePregnancyTestRequested: new Coding({
     code: "167253007",
     display: "Urine pregnancy test requested",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UrineGlucoseTestNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_UrineGlucoseTestNotDone: new Coding({
     code: "167260001",
     display: "Urine glucose test not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UrineProteinTestNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_UrineProteinTestNotDone: new Coding({
     code: "167272007",
     display: "Urine protein test not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UrineKetoneTestNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_UrineKetoneTestNotDone: new Coding({
     code: "167286006",
     display: "Urine ketone test not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UrineBloodTestNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_UrineBloodTestNotDone: new Coding({
     code: "167296002",
     display: "Urine blood test not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UrinePHTestNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_UrinePHTestNotDone: new Coding({
     code: "167306007",
     display: "Urine pH test not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UrineBacteriaTestNotDone: Coding.FromStrict({
+  EncounterReasonValueSet_UrineBacteriaTestNotDone: new Coding({
     code: "167317008",
     display: "Urine bacteria test not done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UrineUrobilinogenNotTested: Coding.FromStrict({
+  EncounterReasonValueSet_UrineUrobilinogenNotTested: new Coding({
     code: "167322008",
     display: "Urine urobilinogen not tested",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UrineSentForMicroscopy: Coding.FromStrict({
+  EncounterReasonValueSet_UrineSentForMicroscopy: new Coding({
     code: "167331008",
     display: "Urine sent for microscopy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FecesNotExamined: Coding.FromStrict({
+  EncounterReasonValueSet_FecesNotExamined: new Coding({
     code: "167594003",
     display: "Feces not examined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FecesSentForExamination: Coding.FromStrict({
+  EncounterReasonValueSet_FecesSentForExamination: new Coding({
     code: "167595002",
     display: "Feces sent for examination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FecalOccultBloodRequested: Coding.FromStrict({
+  EncounterReasonValueSet_FecalOccultBloodRequested: new Coding({
     code: "167666002",
     display: "Fecal occult blood requested",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HaagensenTest: Coding.FromStrict({
+  EncounterReasonValueSet_HaagensenTest: new Coding({
     code: "1677001",
     display: "Haagensen test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CSFNotExamined: Coding.FromStrict({
+  EncounterReasonValueSet_CSFNotExamined: new Coding({
     code: "167701000",
     display: "CSF: not examined",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CSFSentForExamination: Coding.FromStrict({
+  EncounterReasonValueSet_CSFSentForExamination: new Coding({
     code: "167702007",
     display: "CSF: sent for examination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CSFChemistryNotTested: Coding.FromStrict({
+  EncounterReasonValueSet_CSFChemistryNotTested: new Coding({
     code: "167728005",
     display: "CSF chemistry - not tested",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SemenSentForExamination: Coding.FromStrict({
+  EncounterReasonValueSet_SemenSentForExamination: new Coding({
     code: "167760002",
     display: "Semen sent for examination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EndoscopicProcedureOfNerve: Coding.FromStrict({
+  EncounterReasonValueSet_EndoscopicProcedureOfNerve: new Coding({
     code: "1678006",
     display: "Endoscopic procedure of nerve",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_VomitSentForExamination: Coding.FromStrict({
+  EncounterReasonValueSet_VomitSentForExamination: new Coding({
     code: "167822002",
     display: "Vomit sent for examination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_VomitSentForToxicology: Coding.FromStrict({
+  EncounterReasonValueSet_VomitSentForToxicology: new Coding({
     code: "167854006",
     display: "Vomit sent for toxicology",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SynovialFluidSentForExamination: Coding.FromStrict({
+  EncounterReasonValueSet_SynovialFluidSentForExamination: new Coding({
     code: "167861005",
     display: "Synovial fluid sent for examination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BoneMarrowSentForExamination: Coding.FromStrict({
+  EncounterReasonValueSet_BoneMarrowSentForExamination: new Coding({
     code: "167909009",
     display: "Bone marrow sent for examination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PleuralFluidSentForExamination: Coding.FromStrict({
+  EncounterReasonValueSet_PleuralFluidSentForExamination: new Coding({
     code: "167946008",
     display: "Pleural fluid sent for examination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SputumSentForExamination: Coding.FromStrict({
+  EncounterReasonValueSet_SputumSentForExamination: new Coding({
     code: "167984002",
     display: "Sputum sent for examination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SecondaryChemoprophylaxis: Coding.FromStrict({
+  EncounterReasonValueSet_SecondaryChemoprophylaxis: new Coding({
     code: "1680000",
     display: "Secondary chemoprophylaxis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AsciticFluidSentForExamination: Coding.FromStrict({
+  EncounterReasonValueSet_AsciticFluidSentForExamination: new Coding({
     code: "168009009",
     display: "Ascitic fluid sent for examination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CalculusSentForExamination: Coding.FromStrict({
+  EncounterReasonValueSet_CalculusSentForExamination: new Coding({
     code: "168033003",
     display: "Calculus sent for examination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AmnioticFluidSentForExamination: Coding.FromStrict({
+  EncounterReasonValueSet_AmnioticFluidSentForExamination: new Coding({
     code: "168085001",
     display: "Amniotic fluid sent for examination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SampleSentForExamination: Coding.FromStrict({
+  EncounterReasonValueSet_SampleSentForExamination: new Coding({
     code: "168123008",
     display: "Sample sent for examination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SweatCollectedForTest: Coding.FromStrict({
+  EncounterReasonValueSet_SweatCollectedForTest: new Coding({
     code: "168173006",
     display: "Sweat collected for test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SampleSentForBacteriology: Coding.FromStrict({
+  EncounterReasonValueSet_SampleSentForBacteriology: new Coding({
     code: "168195005",
     display: "Sample sent for bacteriology",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SampleSentForCultureSensitivities: Coding.FromStrict({
+  EncounterReasonValueSet_SampleSentForCultureSensitivities: new Coding({
     code: "168196006",
     display: "Sample sent for culture/sensitivities",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SampleSentForMycology: Coding.FromStrict({
+  EncounterReasonValueSet_SampleSentForMycology: new Coding({
     code: "168215000",
     display: "Sample sent for mycology",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SampleSentForParasitology: Coding.FromStrict({
+  EncounterReasonValueSet_SampleSentForParasitology: new Coding({
     code: "168221001",
     display: "Sample sent for parasitology",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EyeSwabSentForCS: Coding.FromStrict({
+  EncounterReasonValueSet_EyeSwabSentForCS: new Coding({
     code: "168286009",
     display: "Eye swab sent for C/S",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EyeSwabForVirology: Coding.FromStrict({
+  EncounterReasonValueSet_EyeSwabForVirology: new Coding({
     code: "168287000",
     display: "Eye swab for virology",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DirectClosureOfLacerationOfConjunctiva: Coding.FromStrict({
+  EncounterReasonValueSet_DirectClosureOfLacerationOfConjunctiva: new Coding({
     code: "1683003",
     display: "Direct closure of laceration of conjunctiva",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SputumSentForCS: Coding.FromStrict({
+  EncounterReasonValueSet_SputumSentForCS: new Coding({
     code: "168302007",
     display: "Sputum sent for C/S",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SkinSwabTaken: Coding.FromStrict({
+  EncounterReasonValueSet_SkinSwabTaken: new Coding({
     code: "168305009",
     display: "Skin swab taken",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SkinScrapingsTaken: Coding.FromStrict({
+  EncounterReasonValueSet_SkinScrapingsTaken: new Coding({
     code: "168306005",
     display: "Skin scrapings taken",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SkinUlcerSwabTaken: Coding.FromStrict({
+  EncounterReasonValueSet_SkinUlcerSwabTaken: new Coding({
     code: "168307001",
     display: "Skin ulcer swab taken",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SkinWoundSwabTaken: Coding.FromStrict({
+  EncounterReasonValueSet_SkinWoundSwabTaken: new Coding({
     code: "168308006",
     display: "Skin wound swab taken",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_GastrointestinalTractSampleForOrganism: Coding.FromStrict({
+  EncounterReasonValueSet_GastrointestinalTractSampleForOrganism: new Coding({
     code: "168312000",
     display: "Gastrointestinal tract sample for organism",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StomachWashingsForCS: Coding.FromStrict({
+  EncounterReasonValueSet_StomachWashingsForCS: new Coding({
     code: "168313005",
     display: "Stomach washings for C/S",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IntestinalWashingsForCS: Coding.FromStrict({
+  EncounterReasonValueSet_IntestinalWashingsForCS: new Coding({
     code: "168314004",
     display: "Intestinal washings for C/S",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RectalWallScrapingForCS: Coding.FromStrict({
+  EncounterReasonValueSet_RectalWallScrapingForCS: new Coding({
     code: "168315003",
     display: "Rectal wall scraping for C/S",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StoolSampleForCS: Coding.FromStrict({
+  EncounterReasonValueSet_StoolSampleForCS: new Coding({
     code: "168316002",
     display: "Stool sample for C/S",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MouthSwab: Coding.FromStrict({
+  EncounterReasonValueSet_MouthSwab: new Coding({
     code: "168321004",
     display: "Mouth swab",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodSentForCulture: Coding.FromStrict({
+  EncounterReasonValueSet_BloodSentForCulture: new Coding({
     code: "168330007",
     display: "Blood sent for culture",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodSentForVirology: Coding.FromStrict({
+  EncounterReasonValueSet_BloodSentForVirology: new Coding({
     code: "168331006",
     display: "Blood sent for virology",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodSentForBacteriology: Coding.FromStrict({
+  EncounterReasonValueSet_BloodSentForBacteriology: new Coding({
     code: "168332004",
     display: "Blood sent for bacteriology",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MSUSentForCS: Coding.FromStrict({
+  EncounterReasonValueSet_MSUSentForCS: new Coding({
     code: "168336001",
     display: "MSU sent for C/S",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MSUSentForBacteriology: Coding.FromStrict({
+  EncounterReasonValueSet_MSUSentForBacteriology: new Coding({
     code: "168337005",
     display: "MSU sent for bacteriology",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UrineSentForCulture: Coding.FromStrict({
+  EncounterReasonValueSet_UrineSentForCulture: new Coding({
     code: "168338000",
     display: "Urine sent for culture",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CatheterUrineSentForCulture: Coding.FromStrict({
+  EncounterReasonValueSet_CatheterUrineSentForCulture: new Coding({
     code: "168339008",
     display: "Catheter urine sent for culture",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UrethralSwabTaken: Coding.FromStrict({
+  EncounterReasonValueSet_UrethralSwabTaken: new Coding({
     code: "168342002",
     display: "Urethral swab taken",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HighVaginalSwabTaken: Coding.FromStrict({
+  EncounterReasonValueSet_HighVaginalSwabTaken: new Coding({
     code: "168345000",
     display: "High vaginal swab taken",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LowVaginalSwabTaken: Coding.FromStrict({
+  EncounterReasonValueSet_LowVaginalSwabTaken: new Coding({
     code: "168352003",
     display: "Low vaginal swab taken",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_VulvalSwabTaken: Coding.FromStrict({
+  EncounterReasonValueSet_VulvalSwabTaken: new Coding({
     code: "168353008",
     display: "Vulval swab taken",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CervicalSwabTaken: Coding.FromStrict({
+  EncounterReasonValueSet_CervicalSwabTaken: new Coding({
     code: "168354002",
     display: "Cervical swab taken",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PenileSwabTaken: Coding.FromStrict({
+  EncounterReasonValueSet_PenileSwabTaken: new Coding({
     code: "168359007",
     display: "Penile swab taken",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MiscellaneousSampleForOrganism: Coding.FromStrict({
+  EncounterReasonValueSet_MiscellaneousSampleForOrganism: new Coding({
     code: "168364006",
     display: "Miscellaneous sample for organism",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PeritonealFluidForOrganism: Coding.FromStrict({
+  EncounterReasonValueSet_PeritonealFluidForOrganism: new Coding({
     code: "168369001",
     display: "Peritoneal fluid for organism",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SemenSentForCS: Coding.FromStrict({
+  EncounterReasonValueSet_SemenSentForCS: new Coding({
     code: "168372008",
     display: "Semen sent for C/S",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NailClippings: Coding.FromStrict({
+  EncounterReasonValueSet_NailClippings: new Coding({
     code: "168373003",
     display: "Nail clippings",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NailClippingsFungusPositive: Coding.FromStrict({
+  EncounterReasonValueSet_NailClippingsFungusPositive: new Coding({
     code: "168374009",
     display: "Nail clippings fungus positive",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NailClippingsFungusNegative: Coding.FromStrict({
+  EncounterReasonValueSet_NailClippingsFungusNegative: new Coding({
     code: "168375005",
     display: "Nail clippings fungus negative",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TissueSentForHistology: Coding.FromStrict({
+  EncounterReasonValueSet_TissueSentForHistology: new Coding({
     code: "168395004",
     display: "Tissue sent for histology",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpecimenSentForHistology: Coding.FromStrict({
+  EncounterReasonValueSet_SpecimenSentForHistology: new Coding({
     code: "168396003",
     display: "Specimen sent for histology",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CervicalSmearActionNeeded: Coding.FromStrict({
+  EncounterReasonValueSet_CervicalSmearActionNeeded: new Coding({
     code: "168428009",
     display: "Cervical smear - action needed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CervicalSmearRepeatAfterTreatment: Coding.FromStrict({
+  EncounterReasonValueSet_CervicalSmearRepeatAfterTreatment: new Coding({
     code: "168429001",
     display: "Cervical smear: repeat after treatment",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CervicalSmearRepeat1Month: Coding.FromStrict({
+  EncounterReasonValueSet_CervicalSmearRepeat1Month: new Coding({
     code: "168430006",
     display: "Cervical smear: repeat 1 month",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CervicalSmearRepeat3Months: Coding.FromStrict({
+  EncounterReasonValueSet_CervicalSmearRepeat3Months: new Coding({
     code: "168431005",
     display: "Cervical smear: repeat 3 months",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CervicalSmearRepeat4Months: Coding.FromStrict({
+  EncounterReasonValueSet_CervicalSmearRepeat4Months: new Coding({
     code: "168432003",
     display: "Cervical smear: repeat 4 months",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CervicalSmearRepeat6Months: Coding.FromStrict({
+  EncounterReasonValueSet_CervicalSmearRepeat6Months: new Coding({
     code: "168433008",
     display: "Cervical smear: repeat 6 months",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CervicalSmearRepeat9Months: Coding.FromStrict({
+  EncounterReasonValueSet_CervicalSmearRepeat9Months: new Coding({
     code: "168434002",
     display: "Cervical smear: repeat 9 months",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CervicalSmearRepeat12Months: Coding.FromStrict({
+  EncounterReasonValueSet_CervicalSmearRepeat12Months: new Coding({
     code: "168435001",
     display: "Cervical smear: repeat 12 months",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CervicalSmearColposcopyNeeded: Coding.FromStrict({
+  EncounterReasonValueSet_CervicalSmearColposcopyNeeded: new Coding({
     code: "168436000",
     display: "Cervical smear: colposcopy needed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CervicalSmearCervicalBiopsyNeeded: Coding.FromStrict({
+  EncounterReasonValueSet_CervicalSmearCervicalBiopsyNeeded: new Coding({
     code: "168437009",
     display: "Cervical smear - cervical biopsy needed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CervicalSmearUterineCurettageNeeded: Coding.FromStrict({
+  EncounterReasonValueSet_CervicalSmearUterineCurettageNeeded: new Coding({
     code: "168438004",
     display: "Cervical smear: uterine curettage needed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TissueSentForCytology: Coding.FromStrict({
+  EncounterReasonValueSet_TissueSentForCytology: new Coding({
     code: "168441008",
     display: "Tissue sent for cytology",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CellChromosomeExaminationRequest: Coding.FromStrict({
+  EncounterReasonValueSet_CellChromosomeExaminationRequest: new Coding({
     code: "168446003",
     display: "Cell chromosome examination request",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ForensicExaminationRequested: Coding.FromStrict({
+  EncounterReasonValueSet_ForensicExaminationRequested: new Coding({
     code: "168451009",
     display: "Forensic examination requested",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PostmortemExaminationRequested: Coding.FromStrict({
+  EncounterReasonValueSet_PostmortemExaminationRequested: new Coding({
     code: "168462009",
     display: "Postmortem examination requested",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PostmortemExaminationDone: Coding.FromStrict({
+  EncounterReasonValueSet_PostmortemExaminationDone: new Coding({
     code: "168465006",
     display: "Postmortem examination done",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LocalExcisionOfOvary: Coding.FromStrict({
+  EncounterReasonValueSet_LocalExcisionOfOvary: new Coding({
     code: "1689004",
     display: "Local excision of ovary",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DrainageOfAbscessOfTonsil: Coding.FromStrict({
+  EncounterReasonValueSet_DrainageOfAbscessOfTonsil: new Coding({
     code: "1691007",
     display: "Drainage of abscess of tonsil",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathInHospital: Coding.FromStrict({
+  EncounterReasonValueSet_DeathInHospital: new Coding({
     code: "16983000",
     display: "Death in hospital",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpecialDosimetry: Coding.FromStrict({
+  EncounterReasonValueSet_SpecialDosimetry: new Coding({
     code: "1699009",
     display: "Special dosimetry",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpecialPotencyDiskIdentificationVancomycinTest: Coding.FromStrict({
+  EncounterReasonValueSet_SpecialPotencyDiskIdentificationVancomycinTest: new Coding({
     code: "170009",
     display: "Special potency disk identification, vancomycin test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LabialVeneerResinLaminateLaboratory: Coding.FromStrict({
+  EncounterReasonValueSet_LabialVeneerResinLaminateLaboratory: new Coding({
     code: "1702002",
     display: "Labial veneer, resin laminate, laboratory",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CorrectionOfTibialPseudoarthrosis: Coding.FromStrict({
+  EncounterReasonValueSet_CorrectionOfTibialPseudoarthrosis: new Coding({
     code: "1704001",
     display: "Correction of tibial pseudoarthrosis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnthraxExposure: Coding.FromStrict({
+  EncounterReasonValueSet_AnthraxExposure: new Coding({
     code: "170475009",
     display: "Anthrax exposure",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BreastReconstructionBilateralWithBilateralPedicleTransverseRectusAbdominisMyocutaneousFlaps: Coding.FromStrict({
+  EncounterReasonValueSet_BreastReconstructionBilateralWithBilateralPedicleTransverseRectusAbdominisMyocutaneousFlaps: new Coding({
     code: "1709006",
     display: "Breast reconstruction, bilateral, with bilateral pedicle transverse rectus abdominis myocutaneous flaps",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ImmunoglobulinTypingImmunoglobulinG: Coding.FromStrict({
+  EncounterReasonValueSet_ImmunoglobulinTypingImmunoglobulinG: new Coding({
     code: "1712009",
     display: "Immunoglobulin typing, immunoglobulin G",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HypothermiaTotalBodyInductionAndMaintenance: Coding.FromStrict({
+  EncounterReasonValueSet_HypothermiaTotalBodyInductionAndMaintenance: new Coding({
     code: "1713004",
     display: "Hypothermia, total body, induction and maintenance",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SutureOfSkinWoundOfHindfoot: Coding.FromStrict({
+  EncounterReasonValueSet_SutureOfSkinWoundOfHindfoot: new Coding({
     code: "1730002",
     display: "Suture of skin wound of hindfoot",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralPartialExcisionOfFallopianTube: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralPartialExcisionOfFallopianTube: new Coding({
     code: "17397008",
     display: "Unilateral partial excision of fallopian tube",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HarrisonRichardsonOperationOnVagina: Coding.FromStrict({
+  EncounterReasonValueSet_HarrisonRichardsonOperationOnVagina: new Coding({
     code: "174000",
     display: "Harrison-Richardson operation on vagina",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BucklingOfScleraUsingImplant: Coding.FromStrict({
+  EncounterReasonValueSet_BucklingOfScleraUsingImplant: new Coding({
     code: "1746005",
     display: "Buckling of sclera using implant",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReplacementOfSkeletalMuscleStimulator: Coding.FromStrict({
+  EncounterReasonValueSet_ReplacementOfSkeletalMuscleStimulator: new Coding({
     code: "1747001",
     display: "Replacement of skeletal muscle stimulator",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ResectionOfUvealTissue: Coding.FromStrict({
+  EncounterReasonValueSet_ResectionOfUvealTissue: new Coding({
     code: "1753001",
     display: "Resection of uveal tissue",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_WorkAccident: Coding.FromStrict({
+  EncounterReasonValueSet_WorkAccident: new Coding({
     code: "17542004",
     display: "Work accident",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ArthroscopyOfWristWithPartialSynovectomy: Coding.FromStrict({
+  EncounterReasonValueSet_ArthroscopyOfWristWithPartialSynovectomy: new Coding({
     code: "1757000",
     display: "Arthroscopy of wrist with partial synovectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AssessmentOfNutritionalStatus: Coding.FromStrict({
+  EncounterReasonValueSet_AssessmentOfNutritionalStatus: new Coding({
     code: "1759002",
     display: "Assessment of nutritional status",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnastomosisOfRectum: Coding.FromStrict({
+  EncounterReasonValueSet_AnastomosisOfRectum: new Coding({
     code: "176003",
     display: "Anastomosis of rectum",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FetalDeathFromAsphyxiaANDORAnoxiaDuringLabor: Coding.FromStrict({
+  EncounterReasonValueSet_FetalDeathFromAsphyxiaANDORAnoxiaDuringLabor: new Coding({
     code: "1762004",
     display: "Fetal death from asphyxia AND/OR anoxia during labor",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MitralValvotomy: Coding.FromStrict({
+  EncounterReasonValueSet_MitralValvotomy: new Coding({
     code: "1770009",
     display: "Mitral valvotomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NasopharyngealRehabilitation: Coding.FromStrict({
+  EncounterReasonValueSet_NasopharyngealRehabilitation: new Coding({
     code: "1774000",
     display: "Nasopharyngeal rehabilitation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SubmaxillaryIncisionWithDrainage: Coding.FromStrict({
+  EncounterReasonValueSet_SubmaxillaryIncisionWithDrainage: new Coding({
     code: "1775004",
     display: "Submaxillary incision with drainage",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FetalDeathFromAsphyxiaANDORAnoxiaNotClearIfNotedBeforeORAfterOnsetOfLabor: Coding.FromStrict({
+  EncounterReasonValueSet_FetalDeathFromAsphyxiaANDORAnoxiaNotClearIfNotedBeforeORAfterOnsetOfLabor: new Coding({
     code: "17766007",
     display: "Fetal death from asphyxia AND/OR anoxia, not clear if noted before OR after onset of labor",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FecalStercobilinQualitative: Coding.FromStrict({
+  EncounterReasonValueSet_FecalStercobilinQualitative: new Coding({
     code: "1784004",
     display: "Fecal stercobilin, qualitative",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralImplantOfSiliconeIntoBreast: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralImplantOfSiliconeIntoBreast: new Coding({
     code: "17862002",
     display: "Unilateral implant of silicone into breast",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UltrasonicGuidanceForPericardiocentesis: Coding.FromStrict({
+  EncounterReasonValueSet_UltrasonicGuidanceForPericardiocentesis: new Coding({
     code: "1787006",
     display: "Ultrasonic guidance for pericardiocentesis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodUnitCollectionForDirectedDonationDonor: Coding.FromStrict({
+  EncounterReasonValueSet_BloodUnitCollectionForDirectedDonationDonor: new Coding({
     code: "1788001",
     display: "Blood unit collection for directed donation, donor",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallInvolvingWheelchair: Coding.FromStrict({
+  EncounterReasonValueSet_FallInvolvingWheelchair: new Coding({
     code: "17886000",
     display: "Fall involving wheelchair",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToAttackByReptile: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToAttackByReptile: new Coding({
     code: "17982002",
     display: "Exposure to attack by reptile",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EndoscopicBiopsyOfDuodenum: Coding.FromStrict({
+  EncounterReasonValueSet_EndoscopicBiopsyOfDuodenum: new Coding({
     code: "1801001",
     display: "Endoscopic biopsy of duodenum",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TakeDownOfStoma: Coding.FromStrict({
+  EncounterReasonValueSet_TakeDownOfStoma: new Coding({
     code: "1805005",
     display: "Take-down of stoma",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MurderOfFriend: Coding.FromStrict({
+  EncounterReasonValueSet_MurderOfFriend: new Coding({
     code: "18055005",
     display: "Murder of friend",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ForcepsDeliveryFailed: Coding.FromStrict({
+  EncounterReasonValueSet_ForcepsDeliveryFailed: new Coding({
     code: "1807002",
     display: "Forceps delivery failed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AspirationOfBursaOfHand: Coding.FromStrict({
+  EncounterReasonValueSet_AspirationOfBursaOfHand: new Coding({
     code: "1811008",
     display: "Aspiration of bursa of hand",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CryotherapyOfGenitalWarts: Coding.FromStrict({
+  EncounterReasonValueSet_CryotherapyOfGenitalWarts: new Coding({
     code: "1813006",
     display: "Cryotherapy of genital warts",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EthanolMeasurementBreath: Coding.FromStrict({
+  EncounterReasonValueSet_EthanolMeasurementBreath: new Coding({
     code: "1820004",
     display: "Ethanol measurement, breath",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralRecurrentInguinalHerniaWithObstructionButNoGangrene: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralRecurrentInguinalHerniaWithObstructionButNoGangrene: new Coding({
     code: "18253009",
     display: "Unilateral recurrent inguinal hernia with obstruction but no gangrene",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OpenReductionOfOpenSacralFracture: Coding.FromStrict({
+  EncounterReasonValueSet_OpenReductionOfOpenSacralFracture: new Coding({
     code: "1830008",
     display: "Open reduction of open sacral fracture",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfDiverticulumOfVentricleOfHeart: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfDiverticulumOfVentricleOfHeart: new Coding({
     code: "1836002",
     display: "Excision of diverticulum of ventricle of heart",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralCongenitalMacrostomia: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralCongenitalMacrostomia: new Coding({
     code: "18385005",
     display: "Unilateral congenital macrostomia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PlicationOfLigament: Coding.FromStrict({
+  EncounterReasonValueSet_PlicationOfLigament: new Coding({
     code: "1844002",
     display: "Plication of ligament",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionOfNose: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionOfNose: new Coding({
     code: "1854003",
     display: "Incision of nose",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HandTendonForeignBodyRemoved: Coding.FromStrict({
+  EncounterReasonValueSet_HandTendonForeignBodyRemoved: new Coding({
     code: "1859008",
     display: "Hand tendon foreign body removed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnesthesiaForClosedProcedureOnHumerusAndElbow: Coding.FromStrict({
+  EncounterReasonValueSet_AnesthesiaForClosedProcedureOnHumerusAndElbow: new Coding({
     code: "1861004",
     display: "Anesthesia for closed procedure on humerus and elbow",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ThoracicPhlebectomy: Coding.FromStrict({
+  EncounterReasonValueSet_ThoracicPhlebectomy: new Coding({
     code: "1862006",
     display: "Thoracic phlebectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BilateralTotalNephrectomy: Coding.FromStrict({
+  EncounterReasonValueSet_BilateralTotalNephrectomy: new Coding({
     code: "1866009",
     display: "Bilateral total nephrectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FBRemovalOfForeignBodyFromBrain: Coding.FromStrict({
+  EncounterReasonValueSet_FBRemovalOfForeignBodyFromBrain: new Coding({
     code: "1868005",
     display: "FB - Removal of foreign body from brain",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InsertionOfHaloDeviceOfSkullWithSynchronousSkeletalTraction: Coding.FromStrict({
+  EncounterReasonValueSet_InsertionOfHaloDeviceOfSkullWithSynchronousSkeletalTraction: new Coding({
     code: "1870001",
     display: "Insertion of halo device of skull with synchronous skeletal traction",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfAneurysmOfCoronaryArtery: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfAneurysmOfCoronaryArtery: new Coding({
     code: "1871002",
     display: "Repair of aneurysm of coronary artery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SutureOfMalePerineum: Coding.FromStrict({
+  EncounterReasonValueSet_SutureOfMalePerineum: new Coding({
     code: "1872009",
     display: "Suture of male perineum",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RecessionOfPrognathicJaw: Coding.FromStrict({
+  EncounterReasonValueSet_RecessionOfPrognathicJaw: new Coding({
     code: "1876007",
     display: "Recession of prognathic jaw",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FluorescentAntigenMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_FluorescentAntigenMeasurement: new Coding({
     code: "1879000",
     display: "Fluorescent antigen measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MurderOfSpouse: Coding.FromStrict({
+  EncounterReasonValueSet_MurderOfSpouse: new Coding({
     code: "18870005",
     display: "Murder of spouse",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PatientTransferInHospitalUnitToUnit: Coding.FromStrict({
+  EncounterReasonValueSet_PatientTransferInHospitalUnitToUnit: new Coding({
     code: "1889001",
     display: "Patient transfer, in-hospital, unit-to-unit",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NonTrafficVehicularAccidentalDeath: Coding.FromStrict({
+  EncounterReasonValueSet_NonTrafficVehicularAccidentalDeath: new Coding({
     code: "18893004",
     display: "Non-traffic vehicular accidental death",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfLesionOfArtery: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfLesionOfArtery: new Coding({
     code: "189009",
     display: "Excision of lesion of artery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InsertionOfProsthesisOrProstheticDeviceOfArmBioelectricOrCineplastic: Coding.FromStrict({
+  EncounterReasonValueSet_InsertionOfProsthesisOrProstheticDeviceOfArmBioelectricOrCineplastic: new Coding({
     code: "1906007",
     display: "Insertion of prosthesis or prosthetic device of arm, bioelectric or cineplastic",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BifurcationOfBone: Coding.FromStrict({
+  EncounterReasonValueSet_BifurcationOfBone: new Coding({
     code: "1907003",
     display: "Bifurcation of bone",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Fall: Coding.FromStrict({
+  EncounterReasonValueSet_Fall: new Coding({
     code: "1912002",
     display: "Fall",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PatientDischargeDeceasedMedicolegalCase: Coding.FromStrict({
+  EncounterReasonValueSet_PatientDischargeDeceasedMedicolegalCase: new Coding({
     code: "1917008",
     display: "Patient discharge, deceased, medicolegal case",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TidalWave: Coding.FromStrict({
+  EncounterReasonValueSet_TidalWave: new Coding({
     code: "19224001",
     display: "Tidal wave",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HepaticotomyWithDrainage: Coding.FromStrict({
+  EncounterReasonValueSet_HepaticotomyWithDrainage: new Coding({
     code: "1924009",
     display: "Hepaticotomy with drainage",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StruckByFallingTree: Coding.FromStrict({
+  EncounterReasonValueSet_StruckByFallingTree: new Coding({
     code: "19349004",
     display: "Struck by falling tree",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DrainageOfNasalSeptalAbscess: Coding.FromStrict({
+  EncounterReasonValueSet_DrainageOfNasalSeptalAbscess: new Coding({
     code: "1950008",
     display: "Drainage of nasal septal abscess",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_GraftingOfBoneOfThumbWithTransferOfSkinFlap: Coding.FromStrict({
+  EncounterReasonValueSet_GraftingOfBoneOfThumbWithTransferOfSkinFlap: new Coding({
     code: "1958001",
     display: "Grafting of bone of thumb with transfer of skin flap",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CentralBlockAnesthesia: Coding.FromStrict({
+  EncounterReasonValueSet_CentralBlockAnesthesia: new Coding({
     code: "1966005",
     display: "Central block anesthesia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MoldToYeastConversionTest: Coding.FromStrict({
+  EncounterReasonValueSet_MoldToYeastConversionTest: new Coding({
     code: "197002",
     display: "Mold to yeast conversion test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TotalUrethrectomyIncludingCystostomyInFemale: Coding.FromStrict({
+  EncounterReasonValueSet_TotalUrethrectomyIncludingCystostomyInFemale: new Coding({
     code: "1983001",
     display: "Total urethrectomy including cystostomy in female",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralImagingOfVeinOfUpperExtremity: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralImagingOfVeinOfUpperExtremity: new Coding({
     code: "19853007",
     display: "Unilateral imaging of vein of upper extremity",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StrippingOfCerebralMeninges: Coding.FromStrict({
+  EncounterReasonValueSet_StrippingOfCerebralMeninges: new Coding({
     code: "1995001",
     display: "Stripping of cerebral meninges",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IntrauterineDeathDelivered: Coding.FromStrict({
+  EncounterReasonValueSet_IntrauterineDeathDelivered: new Coding({
     code: "199607009",
     display: "Intrauterine death - delivered",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IntrauterineDeathWithAntenatalProblem: Coding.FromStrict({
+  EncounterReasonValueSet_IntrauterineDeathWithAntenatalProblem: new Coding({
     code: "199608004",
     display: "Intrauterine death with antenatal problem",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PsychologicTest: Coding.FromStrict({
+  EncounterReasonValueSet_PsychologicTest: new Coding({
     code: "1999007",
     display: "Psychologic test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathFromAnyObstetricCauseOccurringMoreThan42DaysButLessThanOneYearAfterDelivery: Coding.FromStrict({
+  EncounterReasonValueSet_DeathFromAnyObstetricCauseOccurringMoreThan42DaysButLessThanOneYearAfterDelivery: new Coding({
     code: "200155004",
     display: "Death from any obstetric cause occurring more than 42 days but less than one year after delivery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathFromSequelaeOfDirectObstetricCause: Coding.FromStrict({
+  EncounterReasonValueSet_DeathFromSequelaeOfDirectObstetricCause: new Coding({
     code: "200156003",
     display: "Death from sequelae of direct obstetric cause",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ConstructionOfSubcutaneousTunnelWithoutEsophagealAnastomosis: Coding.FromStrict({
+  EncounterReasonValueSet_ConstructionOfSubcutaneousTunnelWithoutEsophagealAnastomosis: new Coding({
     code: "2002009",
     display: "Construction of subcutaneous tunnel without esophageal anastomosis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralTraumaticAmputationAtORAboveElbowWithComplication: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralTraumaticAmputationAtORAboveElbowWithComplication: new Coding({
     code: "20210009",
     display: "Unilateral traumatic amputation at OR above elbow with complication",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InternalFixationOfRadiusAndUlnaWithoutFractureReduction: Coding.FromStrict({
+  EncounterReasonValueSet_InternalFixationOfRadiusAndUlnaWithoutFractureReduction: new Coding({
     code: "2021001",
     display: "Internal fixation of radius and ulna without fracture reduction",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RedCellIronUtilizationStudy: Coding.FromStrict({
+  EncounterReasonValueSet_RedCellIronUtilizationStudy: new Coding({
     code: "2051007",
     display: "Red cell iron utilization study",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BarbituratesMeasurementQuantitativeAndQualitative: Coding.FromStrict({
+  EncounterReasonValueSet_BarbituratesMeasurementQuantitativeAndQualitative: new Coding({
     code: "2054004",
     display: "Barbiturates measurement, quantitative and qualitative",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FetalDeathDueToPrelaborAnoxia: Coding.FromStrict({
+  EncounterReasonValueSet_FetalDeathDueToPrelaborAnoxia: new Coding({
     code: "206258000",
     display: "Fetal death due to prelabor anoxia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FetalDeathDueToLaborAnoxia: Coding.FromStrict({
+  EncounterReasonValueSet_FetalDeathDueToLaborAnoxia: new Coding({
     code: "206259008",
     display: "Fetal death due to labor anoxia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ImplantationOfElectromagneticHearingAid: Coding.FromStrict({
+  EncounterReasonValueSet_ImplantationOfElectromagneticHearingAid: new Coding({
     code: "2067001",
     display: "Implantation of electromagnetic hearing aid",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DentalSubperiostealImplant: Coding.FromStrict({
+  EncounterReasonValueSet_DentalSubperiostealImplant: new Coding({
     code: "2069003",
     display: "Dental subperiosteal implant",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CleftHardPalateWithCleftSoftPalateUnilateral: Coding.FromStrict({
+  EncounterReasonValueSet_CleftHardPalateWithCleftSoftPalateUnilateral: new Coding({
     code: "20729004",
     display: "Cleft hard palate with cleft soft palate, unilateral",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_JudicialExecutionByHanging: Coding.FromStrict({
+  EncounterReasonValueSet_JudicialExecutionByHanging: new Coding({
     code: "20757006",
     display: "Judicial execution by hanging",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PunctureOfBursaOfHand: Coding.FromStrict({
+  EncounterReasonValueSet_PunctureOfBursaOfHand: new Coding({
     code: "2078009",
     display: "Puncture of bursa of hand",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReimplantationOfAnomalousPulmonaryArtery: Coding.FromStrict({
+  EncounterReasonValueSet_ReimplantationOfAnomalousPulmonaryArtery: new Coding({
     code: "2079001",
     display: "Reimplantation of anomalous pulmonary artery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AngiectomyWithAnastomosisOfLowerLimbArtery: Coding.FromStrict({
+  EncounterReasonValueSet_AngiectomyWithAnastomosisOfLowerLimbArtery: new Coding({
     code: "2080003",
     display: "Angiectomy with anastomosis of lower limb artery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallInvolvingBed: Coding.FromStrict({
+  EncounterReasonValueSet_FallInvolvingBed: new Coding({
     code: "20902002",
     display: "Fall involving bed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FireStorm: Coding.FromStrict({
+  EncounterReasonValueSet_FireStorm: new Coding({
     code: "20936008",
     display: "Fire storm",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Matricide: Coding.FromStrict({
+  EncounterReasonValueSet_Matricide: new Coding({
     code: "20974000",
     display: "Matricide",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OpenReductionOfOpenMandibularFractureWithExternalFixation: Coding.FromStrict({
+  EncounterReasonValueSet_OpenReductionOfOpenMandibularFractureWithExternalFixation: new Coding({
     code: "2098004",
     display: "Open reduction of open mandibular fracture with external fixation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DentalProphylaxisChildren: Coding.FromStrict({
+  EncounterReasonValueSet_DentalProphylaxisChildren: new Coding({
     code: "2115003",
     display: "Dental prophylaxis, children",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfBloodVessel: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfBloodVessel: new Coding({
     code: "2119009",
     display: "Repair of blood vessel",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReductionOfClosedSacralFracture: Coding.FromStrict({
+  EncounterReasonValueSet_ReductionOfClosedSacralFracture: new Coding({
     code: "2127000",
     display: "Reduction of closed sacral fracture",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuffocationByStrangulation: Coding.FromStrict({
+  EncounterReasonValueSet_SuffocationByStrangulation: new Coding({
     code: "212976008",
     display: "Suffocation by strangulation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuffocationByMechanicalCause: Coding.FromStrict({
+  EncounterReasonValueSet_SuffocationByMechanicalCause: new Coding({
     code: "212979001",
     display: "Suffocation by mechanical cause",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NutritionalDeprivationOfChild: Coding.FromStrict({
+  EncounterReasonValueSet_NutritionalDeprivationOfChild: new Coding({
     code: "213004004",
     display: "Nutritional deprivation of child",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MultipleDeprivationOfChild: Coding.FromStrict({
+  EncounterReasonValueSet_MultipleDeprivationOfChild: new Coding({
     code: "213007006",
     display: "Multiple deprivation of child",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SexualAbuse: Coding.FromStrict({
+  EncounterReasonValueSet_SexualAbuse: new Coding({
     code: "213017001",
     display: "Sexual abuse",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfPericardialTumor: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfPericardialTumor: new Coding({
     code: "2137005",
     display: "Excision of pericardial tumor",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RailwayAccident: Coding.FromStrict({
+  EncounterReasonValueSet_RailwayAccident: new Coding({
     code: "213770003",
     display: "Railway accident",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainAccidentInvolvingCollisionWithRollingStock: Coding.FromStrict({
+  EncounterReasonValueSet_TrainAccidentInvolvingCollisionWithRollingStock: new Coding({
     code: "213771004",
     display: "Train accident involving collision with rolling stock",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CollisionBetweenRailwayVehiclesOfAnyKind: Coding.FromStrict({
+  EncounterReasonValueSet_CollisionBetweenRailwayVehiclesOfAnyKind: new Coding({
     code: "213772006",
     display: "Collision between railway vehicles of any kind",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CollisionBetweenRailwayVehiclesRailwayEmployeeInjured: Coding.FromStrict({
+  EncounterReasonValueSet_CollisionBetweenRailwayVehiclesRailwayEmployeeInjured: new Coding({
     code: "213773001",
     display: "Collision between railway vehicles, railway employee injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CollisionBetweenRailwayVehiclesPassengerInjured: Coding.FromStrict({
+  EncounterReasonValueSet_CollisionBetweenRailwayVehiclesPassengerInjured: new Coding({
     code: "213774007",
     display: "Collision between railway vehicles, passenger injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CollisionBetweenRailwayVehiclesPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_CollisionBetweenRailwayVehiclesPedestrianInjured: new Coding({
     code: "213775008",
     display: "Collision between railway vehicles, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CollisionBetweenRailwayVehiclesPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_CollisionBetweenRailwayVehiclesPedalCyclistInjured: new Coding({
     code: "213776009",
     display: "Collision between railway vehicles, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CollisionBetweenRailwayVehiclesFollowedByDerailment: Coding.FromStrict({
+  EncounterReasonValueSet_CollisionBetweenRailwayVehiclesFollowedByDerailment: new Coding({
     code: "213779002",
     display: "Collision between railway vehicles followed by derailment",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CollisionBetweenRailwayVehiclesFollowedByDerailmentRailwayEmployeeInjured: Coding.FromStrict({
+  EncounterReasonValueSet_CollisionBetweenRailwayVehiclesFollowedByDerailmentRailwayEmployeeInjured: new Coding({
     code: "213780004",
     display: "Collision between railway vehicles followed by derailment, railway employee injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CollisionBetweenRailwayVehiclesFollowedByDerailmentPassengerInjured: Coding.FromStrict({
+  EncounterReasonValueSet_CollisionBetweenRailwayVehiclesFollowedByDerailmentPassengerInjured: new Coding({
     code: "213781000",
     display: "Collision between railway vehicles followed by derailment, passenger injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CollisionBetweenRailwayVehiclesFollowedByDerailmentPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_CollisionBetweenRailwayVehiclesFollowedByDerailmentPedestrianInjured: new Coding({
     code: "213782007",
     display: "Collision between railway vehicles followed by derailment, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CollisionBetweenRailwayVehiclesFollowedByDerailmentPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_CollisionBetweenRailwayVehiclesFollowedByDerailmentPedalCyclistInjured: new Coding({
     code: "213783002",
     display: "Collision between railway vehicles followed by derailment, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithBuffers: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithBuffers: new Coding({
     code: "213795002",
     display: "Train collision with buffers",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithBuffersRailwayEmployeeInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithBuffersRailwayEmployeeInjured: new Coding({
     code: "213796001",
     display: "Train collision with buffers, railway employee injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithBuffersPassengerInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithBuffersPassengerInjured: new Coding({
     code: "213797005",
     display: "Train collision with buffers, passenger injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithBuffersPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithBuffersPedestrianInjured: new Coding({
     code: "213798000",
     display: "Train collision with buffers, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithBuffersPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithBuffersPedalCyclistInjured: new Coding({
     code: "213799008",
     display: "Train collision with buffers, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithFallenTreeOnRailway: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithFallenTreeOnRailway: new Coding({
     code: "213802004",
     display: "Train collision with fallen tree on railway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithFallenTreeRailwayEmployeeInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithFallenTreeRailwayEmployeeInjured: new Coding({
     code: "213803009",
     display: "Train collision with fallen tree, railway employee injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithFallenTreePassengerInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithFallenTreePassengerInjured: new Coding({
     code: "213804003",
     display: "Train collision with fallen tree, passenger injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithFallenTreePedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithFallenTreePedestrianInjured: new Coding({
     code: "213805002",
     display: "Train collision with fallen tree, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithFallenTreePedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithFallenTreePedalCyclistInjured: new Coding({
     code: "213806001",
     display: "Train collision with fallen tree, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithGates: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithGates: new Coding({
     code: "213809008",
     display: "Train collision with gates",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithGatesRailwayEmployeeInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithGatesRailwayEmployeeInjured: new Coding({
     code: "213810003",
     display: "Train collision with gates, railway employee injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithGatesPassengerInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithGatesPassengerInjured: new Coding({
     code: "213811004",
     display: "Train collision with gates, passenger injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithGatesPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithGatesPedestrianInjured: new Coding({
     code: "213812006",
     display: "Train collision with gates, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithGatesPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithGatesPedalCyclistInjured: new Coding({
     code: "213813001",
     display: "Train collision with gates, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithPlatform: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithPlatform: new Coding({
     code: "213816009",
     display: "Train collision with platform",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithPlatformRailwayEmployeeInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithPlatformRailwayEmployeeInjured: new Coding({
     code: "213817000",
     display: "Train collision with platform, railway employee injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithPlatformPassengerInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithPlatformPassengerInjured: new Coding({
     code: "213818005",
     display: "Train collision with platform, passenger injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithPlatformPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithPlatformPedestrianInjured: new Coding({
     code: "213819002",
     display: "Train collision with platform, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithPlatformPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithPlatformPedalCyclistInjured: new Coding({
     code: "213820008",
     display: "Train collision with platform, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithRockOnRailway: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithRockOnRailway: new Coding({
     code: "213823005",
     display: "Train collision with rock on railway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithRockRailwayEmployeeInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithRockRailwayEmployeeInjured: new Coding({
     code: "213824004",
     display: "Train collision with rock, railway employee injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithRockPassengerInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithRockPassengerInjured: new Coding({
     code: "213825003",
     display: "Train collision with rock, passenger injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithRockPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithRockPedestrianInjured: new Coding({
     code: "213826002",
     display: "Train collision with rock, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithRockPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithRockPedalCyclistInjured: new Coding({
     code: "213827006",
     display: "Train collision with rock, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithStreetcarRailwayEmployeeInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithStreetcarRailwayEmployeeInjured: new Coding({
     code: "213831000",
     display: "Train collision with streetcar, railway employee injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithStreetcarPassengerInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithStreetcarPassengerInjured: new Coding({
     code: "213833002",
     display: "Train collision with streetcar, passenger injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithStreetcarPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithStreetcarPedestrianInjured: new Coding({
     code: "213834008",
     display: "Train collision with streetcar, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainCollisionWithStreetcarPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainCollisionWithStreetcarPedalCyclistInjured: new Coding({
     code: "213835009",
     display: "Train collision with streetcar, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RailwayAccidentInvolvingDerailmentWithoutAntecedentCollision: Coding.FromStrict({
+  EncounterReasonValueSet_RailwayAccidentInvolvingDerailmentWithoutAntecedentCollision: new Coding({
     code: "213859004",
     display: "Railway accident involving derailment without antecedent collision",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DerailmentDueToTrackProblemWithoutAntecedentCollision: Coding.FromStrict({
+  EncounterReasonValueSet_DerailmentDueToTrackProblemWithoutAntecedentCollision: new Coding({
     code: "213860009",
     display: "Derailment due to track problem without antecedent collision",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DerailmentDueToTrackProblemWithoutAntecedentCollisionRailwayEmployeeInjured: Coding.FromStrict({
+  EncounterReasonValueSet_DerailmentDueToTrackProblemWithoutAntecedentCollisionRailwayEmployeeInjured: new Coding({
     code: "213861008",
     display: "Derailment due to track problem, without antecedent collision, railway employee injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DerailmentDueToTrackProblemWithoutAntecedentCollisionPassengerInjured: Coding.FromStrict({
+  EncounterReasonValueSet_DerailmentDueToTrackProblemWithoutAntecedentCollisionPassengerInjured: new Coding({
     code: "213862001",
     display: "Derailment due to track problem, without antecedent collision, passenger injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DerailmentDueToTrackProblemWithoutAntecedentCollisionPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_DerailmentDueToTrackProblemWithoutAntecedentCollisionPedestrianInjured: new Coding({
     code: "213863006",
     display: "Derailment due to track problem, without antecedent collision, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DerailmentDueToTrackProblemWithoutAntecedentCollisionPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_DerailmentDueToTrackProblemWithoutAntecedentCollisionPedalCyclistInjured: new Coding({
     code: "213864000",
     display: "Derailment due to track problem, without antecedent collision, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DerailmentDueToTrainProblemWithoutAntecedentCollision: Coding.FromStrict({
+  EncounterReasonValueSet_DerailmentDueToTrainProblemWithoutAntecedentCollision: new Coding({
     code: "213867007",
     display: "Derailment due to train problem, without antecedent collision",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DerailmentDueToTrainProblemWithoutAntecedentCollisionPassengerInjured: Coding.FromStrict({
+  EncounterReasonValueSet_DerailmentDueToTrainProblemWithoutAntecedentCollisionPassengerInjured: new Coding({
     code: "213869005",
     display: "Derailment due to train problem, without antecedent collision, passenger injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DerailmentDueToTrainProblemWithoutAntecedentCollisionPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_DerailmentDueToTrainProblemWithoutAntecedentCollisionPedestrianInjured: new Coding({
     code: "213870006",
     display: "Derailment due to train problem, without antecedent collision, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DerailmentDueToTrainProblemWithoutAntecedentCollisionPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_DerailmentDueToTrainProblemWithoutAntecedentCollisionPedalCyclistInjured: new Coding({
     code: "213871005",
     display: "Derailment due to train problem, without antecedent collision, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainAccidentInvolvingExplosionFireOrBurning: Coding.FromStrict({
+  EncounterReasonValueSet_TrainAccidentInvolvingExplosionFireOrBurning: new Coding({
     code: "213881009",
     display: "Train accident involving explosion, fire or burning",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainAccidentInvolvingExplosion: Coding.FromStrict({
+  EncounterReasonValueSet_TrainAccidentInvolvingExplosion: new Coding({
     code: "213882002",
     display: "Train accident involving explosion",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainAccidentInvolvingExplosionRailwayEmployeeInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainAccidentInvolvingExplosionRailwayEmployeeInjured: new Coding({
     code: "213883007",
     display: "Train accident involving explosion, railway employee injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainAccidentInvolvingExplosionPassengerInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainAccidentInvolvingExplosionPassengerInjured: new Coding({
     code: "213884001",
     display: "Train accident involving explosion, passenger injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainAccidentInvolvingExplosionPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainAccidentInvolvingExplosionPedestrianInjured: new Coding({
     code: "213885000",
     display: "Train accident involving explosion, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainAccidentInvolvingExplosionPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainAccidentInvolvingExplosionPedalCyclistInjured: new Coding({
     code: "213886004",
     display: "Train accident involving explosion, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainAccidentInvolvingFire: Coding.FromStrict({
+  EncounterReasonValueSet_TrainAccidentInvolvingFire: new Coding({
     code: "213889006",
     display: "Train accident involving fire",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainAccidentInvolvingFireRailwayEmployeeInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainAccidentInvolvingFireRailwayEmployeeInjured: new Coding({
     code: "213890002",
     display: "Train accident involving fire, railway employee injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainAccidentInvolvingFirePedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainAccidentInvolvingFirePedestrianInjured: new Coding({
     code: "213893000",
     display: "Train accident involving fire, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainAccidentInvolvingFirePedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainAccidentInvolvingFirePedalCyclistInjured: new Coding({
     code: "213894006",
     display: "Train accident involving fire, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainAccidentInvolvingBurning: Coding.FromStrict({
+  EncounterReasonValueSet_TrainAccidentInvolvingBurning: new Coding({
     code: "213897004",
     display: "Train accident involving burning",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainAccidentInvolvingBurningRailwayEmployeeInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainAccidentInvolvingBurningRailwayEmployeeInjured: new Coding({
     code: "213898009",
     display: "Train accident involving burning, railway employee injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainAccidentInvolvingBurningPassengerInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainAccidentInvolvingBurningPassengerInjured: new Coding({
     code: "213899001",
     display: "Train accident involving burning, passenger injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainAccidentInvolvingBurningPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainAccidentInvolvingBurningPedestrianInjured: new Coding({
     code: "213900006",
     display: "Train accident involving burning, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainAccidentInvolvingBurningPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainAccidentInvolvingBurningPedalCyclistInjured: new Coding({
     code: "213901005",
     display: "Train accident involving burning, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallInOnOrFromTrain: Coding.FromStrict({
+  EncounterReasonValueSet_FallInOnOrFromTrain: new Coding({
     code: "213911003",
     display: "Fall in, on, or from train",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallInTrain: Coding.FromStrict({
+  EncounterReasonValueSet_FallInTrain: new Coding({
     code: "213912005",
     display: "Fall in train",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallInTrainRailwayEmployeeInjured: Coding.FromStrict({
+  EncounterReasonValueSet_FallInTrainRailwayEmployeeInjured: new Coding({
     code: "213913000",
     display: "Fall in train, railway employee injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallInTrainPassengerInjured: Coding.FromStrict({
+  EncounterReasonValueSet_FallInTrainPassengerInjured: new Coding({
     code: "213914006",
     display: "Fall in train, passenger injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallOnTrain: Coding.FromStrict({
+  EncounterReasonValueSet_FallOnTrain: new Coding({
     code: "213917004",
     display: "Fall on train",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallOnTrainRailwayEmployeeInjured: Coding.FromStrict({
+  EncounterReasonValueSet_FallOnTrainRailwayEmployeeInjured: new Coding({
     code: "213918009",
     display: "Fall on train, railway employee injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallOnTrainPassengerInjured: Coding.FromStrict({
+  EncounterReasonValueSet_FallOnTrainPassengerInjured: new Coding({
     code: "213919001",
     display: "Fall on train, passenger injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallOnTrainPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_FallOnTrainPedestrianInjured: new Coding({
     code: "213920007",
     display: "Fall on train, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallOnTrainPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_FallOnTrainPedalCyclistInjured: new Coding({
     code: "213922004",
     display: "Fall on train, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallFromTrain: Coding.FromStrict({
+  EncounterReasonValueSet_FallFromTrain: new Coding({
     code: "213925002",
     display: "Fall from train",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallFromTrainRailwayEmployeeInjured: Coding.FromStrict({
+  EncounterReasonValueSet_FallFromTrainRailwayEmployeeInjured: new Coding({
     code: "213926001",
     display: "Fall from train, railway employee injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallFromTrainPassengerInjured: Coding.FromStrict({
+  EncounterReasonValueSet_FallFromTrainPassengerInjured: new Coding({
     code: "213927005",
     display: "Fall from train, passenger injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HitByRailwayRollingStock: Coding.FromStrict({
+  EncounterReasonValueSet_HitByRailwayRollingStock: new Coding({
     code: "213937000",
     display: "Hit by railway rolling stock",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CrushedByRollingStock: Coding.FromStrict({
+  EncounterReasonValueSet_CrushedByRollingStock: new Coding({
     code: "213938005",
     display: "Crushed by rolling stock",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CrushedByRollingStockRailwayEmployee: Coding.FromStrict({
+  EncounterReasonValueSet_CrushedByRollingStockRailwayEmployee: new Coding({
     code: "213939002",
     display: "Crushed by rolling stock - railway employee",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CrushedByRollingStockPassenger: Coding.FromStrict({
+  EncounterReasonValueSet_CrushedByRollingStockPassenger: new Coding({
     code: "213940000",
     display: "Crushed by rolling stock - passenger",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CrushedByRollingStockPedestrian: Coding.FromStrict({
+  EncounterReasonValueSet_CrushedByRollingStockPedestrian: new Coding({
     code: "213941001",
     display: "Crushed by rolling stock - pedestrian",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CrushedByRollingStockPedalCyclist: Coding.FromStrict({
+  EncounterReasonValueSet_CrushedByRollingStockPedalCyclist: new Coding({
     code: "213942008",
     display: "Crushed by rolling stock - pedal cyclist",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_KnockedDownByRollingStock: Coding.FromStrict({
+  EncounterReasonValueSet_KnockedDownByRollingStock: new Coding({
     code: "213945005",
     display: "Knocked down by rolling stock",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_KnockedDownByRollingStockRailwayEmployee: Coding.FromStrict({
+  EncounterReasonValueSet_KnockedDownByRollingStockRailwayEmployee: new Coding({
     code: "213946006",
     display: "Knocked down by rolling stock - railway employee",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_KnockedDownByRollingStockPassenger: Coding.FromStrict({
+  EncounterReasonValueSet_KnockedDownByRollingStockPassenger: new Coding({
     code: "213947002",
     display: "Knocked down by rolling stock - passenger",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_KnockedDownByRollingStockPedestrian: Coding.FromStrict({
+  EncounterReasonValueSet_KnockedDownByRollingStockPedestrian: new Coding({
     code: "213948007",
     display: "Knocked down by rolling stock - pedestrian",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_KnockedDownByRollingStockPedalCyclist: Coding.FromStrict({
+  EncounterReasonValueSet_KnockedDownByRollingStockPedalCyclist: new Coding({
     code: "213949004",
     display: "Knocked down by rolling stock - pedal cyclist",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RunOverByRollingStock: Coding.FromStrict({
+  EncounterReasonValueSet_RunOverByRollingStock: new Coding({
     code: "213952007",
     display: "Run over by rolling stock",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RunOverByRollingStockRailwayEmployee: Coding.FromStrict({
+  EncounterReasonValueSet_RunOverByRollingStockRailwayEmployee: new Coding({
     code: "213953002",
     display: "Run over by rolling stock - railway employee",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RunOverByRollingStockPassenger: Coding.FromStrict({
+  EncounterReasonValueSet_RunOverByRollingStockPassenger: new Coding({
     code: "213954008",
     display: "Run over by rolling stock - passenger",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RunOverByRollingStockPedestrian: Coding.FromStrict({
+  EncounterReasonValueSet_RunOverByRollingStockPedestrian: new Coding({
     code: "213955009",
     display: "Run over by rolling stock - pedestrian",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RunOverByRollingStockPedalCyclist: Coding.FromStrict({
+  EncounterReasonValueSet_RunOverByRollingStockPedalCyclist: new Coding({
     code: "213956005",
     display: "Run over by rolling stock - pedal cyclist",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_KilledByRollingStock: Coding.FromStrict({
+  EncounterReasonValueSet_KilledByRollingStock: new Coding({
     code: "213959003",
     display: "Killed by rolling stock",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_KilledByRollingStockRailwayEmployee: Coding.FromStrict({
+  EncounterReasonValueSet_KilledByRollingStockRailwayEmployee: new Coding({
     code: "213960008",
     display: "Killed by rolling stock - railway employee",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_KilledByRollingStockPassenger: Coding.FromStrict({
+  EncounterReasonValueSet_KilledByRollingStockPassenger: new Coding({
     code: "213961007",
     display: "Killed by rolling stock - passenger",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_KilledByRollingStockPedestrian: Coding.FromStrict({
+  EncounterReasonValueSet_KilledByRollingStockPedestrian: new Coding({
     code: "213962000",
     display: "Killed by rolling stock - pedestrian",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_KilledByRollingStockPedalCyclist: Coding.FromStrict({
+  EncounterReasonValueSet_KilledByRollingStockPedalCyclist: new Coding({
     code: "213963005",
     display: "Killed by rolling stock - pedal cyclist",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HitByObjectFallingInTrain: Coding.FromStrict({
+  EncounterReasonValueSet_HitByObjectFallingInTrain: new Coding({
     code: "213974001",
     display: "Hit by object falling in train",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HitByObjectFallingInTrainRailwayEmployee: Coding.FromStrict({
+  EncounterReasonValueSet_HitByObjectFallingInTrainRailwayEmployee: new Coding({
     code: "213975000",
     display: "Hit by object falling in train - railway employee",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HitByObjectFallingInTrainPassenger: Coding.FromStrict({
+  EncounterReasonValueSet_HitByObjectFallingInTrainPassenger: new Coding({
     code: "213976004",
     display: "Hit by object falling in train - passenger",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InjuredByTrainDoorOrWindowRailwayEmployee: Coding.FromStrict({
+  EncounterReasonValueSet_InjuredByTrainDoorOrWindowRailwayEmployee: new Coding({
     code: "213980009",
     display: "Injured by train door or window - railway employee",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InjuredByTrainDoorOrWindowPassenger: Coding.FromStrict({
+  EncounterReasonValueSet_InjuredByTrainDoorOrWindowPassenger: new Coding({
     code: "213981008",
     display: "Injured by train door or window - passenger",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InjuredByTrainDoorOrWindowPedestrian: Coding.FromStrict({
+  EncounterReasonValueSet_InjuredByTrainDoorOrWindowPedestrian: new Coding({
     code: "213982001",
     display: "Injured by train door or window - pedestrian",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InjuredByTrainDoorOrWindowPedalCyclist: Coding.FromStrict({
+  EncounterReasonValueSet_InjuredByTrainDoorOrWindowPedalCyclist: new Coding({
     code: "213983006",
     display: "Injured by train door or window - pedal cyclist",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InjuredByObjectSetInMotionByTrain: Coding.FromStrict({
+  EncounterReasonValueSet_InjuredByObjectSetInMotionByTrain: new Coding({
     code: "213986003",
     display: "Injured by object set in motion by train",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InjuredByObjectSetInMotionByTrainRailwayEmployee: Coding.FromStrict({
+  EncounterReasonValueSet_InjuredByObjectSetInMotionByTrainRailwayEmployee: new Coding({
     code: "213987007",
     display: "Injured by object set in motion by train - railway employee",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InjuredByObjectSetInMotionByTrainPassenger: Coding.FromStrict({
+  EncounterReasonValueSet_InjuredByObjectSetInMotionByTrainPassenger: new Coding({
     code: "213988002",
     display: "Injured by object set in motion by train - passenger",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InjuredByObjectSetInMotionByTrainPedestrian: Coding.FromStrict({
+  EncounterReasonValueSet_InjuredByObjectSetInMotionByTrainPedestrian: new Coding({
     code: "213989005",
     display: "Injured by object set in motion by train - pedestrian",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InjuredByObjectSetInMotionByTrainPedalCyclist: Coding.FromStrict({
+  EncounterReasonValueSet_InjuredByObjectSetInMotionByTrainPedalCyclist: new Coding({
     code: "213990001",
     display: "Injured by object set in motion by train - pedal cyclist",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainHitByFallingObject: Coding.FromStrict({
+  EncounterReasonValueSet_TrainHitByFallingObject: new Coding({
     code: "213993004",
     display: "Train hit by falling object",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainHitByFallingObjectRailwayEmployeeInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainHitByFallingObjectRailwayEmployeeInjured: new Coding({
     code: "213995006",
     display: "Train hit by falling object - railway employee injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainHitByFallingObjectPassengerInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainHitByFallingObjectPassengerInjured: new Coding({
     code: "213996007",
     display: "Train hit by falling object - passenger injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainHitByFallingObjectPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainHitByFallingObjectPedestrianInjured: new Coding({
     code: "213997003",
     display: "Train hit by falling object - pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainHitByFallingObjectPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_TrainHitByFallingObjectPedalCyclistInjured: new Coding({
     code: "213998008",
     display: "Train hit by falling object - pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccident: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccident: new Coding({
     code: "214031005",
     display: "Motor vehicle traffic accident",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithTrain: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithTrain: new Coding({
     code: "214032003",
     display: "Motor vehicle on road in collision with train",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingReEntrantCollisionWithAnotherMotorVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingReEntrantCollisionWithAnotherMotorVehicle: new Coding({
     code: "214056004",
     display: "Motor vehicle traffic accident involving re-entrant collision with another motor vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithParkedMotorVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithParkedMotorVehicle: new Coding({
     code: "214080000",
     display: "Motor vehicle on road in collision with parked motor vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleParkedDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleParkedDriverOfMotorVehicleInjured: new Coding({
     code: "214081001",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, parked, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleParkedPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleParkedPassengerOfMotorVehicleInjured: new Coding({
     code: "214082008",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, parked, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleParkedPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleParkedPassengerOnMotorCycleInjured: new Coding({
     code: "214085005",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, parked, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleParkedOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleParkedOccupantOfTramInjured: new Coding({
     code: "214086006",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, parked, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleParkedPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleParkedPedestrianInjured: new Coding({
     code: "214089004",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, parked, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleParkedOtherSpecifiedPersonInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleParkedOtherSpecifiedPersonInjured: new Coding({
     code: "214090008",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, parked, other specified person injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithStoppedMotorVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithStoppedMotorVehicle: new Coding({
     code: "214092000",
     display: "Motor vehicle on road in collision with stopped motor vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStoppedMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStoppedMotorCyclistInjured: new Coding({
     code: "214095003",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, stopped, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStoppedPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStoppedPassengerOnMotorCycleInjured: new Coding({
     code: "214096002",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, stopped, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStoppedOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStoppedOccupantOfTramInjured: new Coding({
     code: "214098001",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, stopped, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStoppedRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStoppedRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214099009",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, stopped, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStoppedPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStoppedPedalCyclistInjured: new Coding({
     code: "214100001",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, stopped, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStoppedPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStoppedPedestrianInjured: new Coding({
     code: "214101002",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, stopped, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStoppedOtherSpecifiedPersonInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStoppedOtherSpecifiedPersonInjured: new Coding({
     code: "214102009",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, stopped, other specified person injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStalled: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStalled: new Coding({
     code: "214104005",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, stalled",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStalledPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStalledPassengerOfMotorVehicleInjured: new Coding({
     code: "214106007",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, stalled, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStalledMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStalledMotorCyclistInjured: new Coding({
     code: "214107003",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, stalled, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStalledPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStalledPassengerOnMotorCycleInjured: new Coding({
     code: "214108008",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, stalled, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStalledOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStalledOccupantOfTramInjured: new Coding({
     code: "214109000",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, stalled, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStalledRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStalledRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214110005",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, stalled, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStalledPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStalledPedalCyclistInjured: new Coding({
     code: "214111009",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, stalled, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStalledPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStalledPedestrianInjured: new Coding({
     code: "214112002",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, stalled, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStalledOtherSpecifiedPersonInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleStalledOtherSpecifiedPersonInjured: new Coding({
     code: "214113007",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, stalled, other specified person injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithDisabledMotorVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithDisabledMotorVehicle: new Coding({
     code: "214115000",
     display: "Motor vehicle on road in collision with disabled motor vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleDisabledDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleDisabledDriverOfMotorVehicleInjured: new Coding({
     code: "214116004",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, disabled, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleDisabledMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleDisabledMotorCyclistInjured: new Coding({
     code: "214118003",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, disabled, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleDisabledPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleDisabledPassengerOnMotorCycleInjured: new Coding({
     code: "214119006",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, disabled, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleDisabledOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleDisabledOccupantOfTramInjured: new Coding({
     code: "214120000",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, disabled, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleDisabledRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleDisabledRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214121001",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, disabled, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleDisabledPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleDisabledPedestrianInjured: new Coding({
     code: "214123003",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, disabled, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleDisabledOtherSpecifiedPersonInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleDisabledOtherSpecifiedPersonInjured: new Coding({
     code: "214124009",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, disabled, other specified person injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithAbandonedMotorVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithAbandonedMotorVehicle: new Coding({
     code: "214126006",
     display: "Motor vehicle on road in collision with abandoned motor vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleAbandonedOnHighwayDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleAbandonedOnHighwayDriverOfMotorVehicleInjured: new Coding({
     code: "214127002",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, abandoned on highway, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleAbandonedOnHighwayPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleAbandonedOnHighwayPassengerOfMotorVehicleInjured: new Coding({
     code: "214128007",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, abandoned on highway, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleAbandonedOnHighwayMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleAbandonedOnHighwayMotorCyclistInjured: new Coding({
     code: "214129004",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, abandoned on highway, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleAbandonedOnHighwayOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleAbandonedOnHighwayOccupantOfTramInjured: new Coding({
     code: "214131008",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, abandoned on highway, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleAbandonedOnHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleAbandonedOnHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214132001",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, abandoned on highway, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleAbandonedOnHighwayPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleAbandonedOnHighwayPedestrianInjured: new Coding({
     code: "214134000",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, abandoned on highway, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleAbandonedOnHighwayOtherSpecifiedPersonInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionWithAnotherMotorVehicleAbandonedOnHighwayOtherSpecifiedPersonInjured: new Coding({
     code: "214135004",
     display: "Motor vehicle traffic accident involving collision with another motor vehicle, abandoned on highway, other specified person injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithRiddenAnimal: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithRiddenAnimal: new Coding({
     code: "214149008",
     display: "Motor vehicle on road in collision with ridden animal",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalCarryingAPersonDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalCarryingAPersonDriverOfMotorVehicleInjured: new Coding({
     code: "214150008",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and animal carrying a person, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalCarryingAPersonPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalCarryingAPersonPassengerOfMotorVehicleInjured: new Coding({
     code: "214151007",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and animal carrying a person, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalCarryingAPersonOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalCarryingAPersonOccupantOfTramInjured: new Coding({
     code: "214154004",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and animal carrying a person, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalCarryingAPersonRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalCarryingAPersonRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214155003",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and animal carrying a person, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalCarryingAPersonPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalCarryingAPersonPedalCyclistInjured: new Coding({
     code: "214156002",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and animal carrying a person, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithAnimalDrawnVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithAnimalDrawnVehicle: new Coding({
     code: "214160004",
     display: "Motor vehicle on road in collision with animal-drawn vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalDrawnVehicleDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalDrawnVehicleDriverOfMotorVehicleInjured: new Coding({
     code: "214161000",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and animal-drawn vehicle, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalDrawnVehiclePassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalDrawnVehiclePassengerOfMotorVehicleInjured: new Coding({
     code: "214162007",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and animal-drawn vehicle, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalDrawnVehiclePassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalDrawnVehiclePassengerOnMotorCycleInjured: new Coding({
     code: "214164008",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and animal-drawn vehicle, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalDrawnVehicleOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalDrawnVehicleOccupantOfTramInjured: new Coding({
     code: "214165009",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and animal-drawn vehicle, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalDrawnVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalDrawnVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214166005",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and animal-drawn vehicle, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalDrawnVehiclePedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndAnimalDrawnVehiclePedestrianInjured: new Coding({
     code: "214168006",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and animal-drawn vehicle, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithPedalCycle: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithPedalCycle: new Coding({
     code: "214171003",
     display: "Motor vehicle on road in collision with pedal cycle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndPedalCycleDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndPedalCycleDriverOfMotorVehicleInjured: new Coding({
     code: "214172005",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and pedal cycle, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndPedalCyclePassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndPedalCyclePassengerOfMotorVehicleInjured: new Coding({
     code: "214174006",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and pedal cycle, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndPedalCycleMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndPedalCycleMotorCyclistInjured: new Coding({
     code: "214175007",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and pedal cycle, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndPedalCyclePassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndPedalCyclePassengerOnMotorCycleInjured: new Coding({
     code: "214176008",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and pedal cycle, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndPedalCycleOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndPedalCycleOccupantOfTramInjured: new Coding({
     code: "214177004",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and pedal cycle, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndPedalCyclePedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndPedalCyclePedalCyclistInjured: new Coding({
     code: "214179001",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and pedal cycle, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndPedalCyclePedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndPedalCyclePedestrianInjured: new Coding({
     code: "214180003",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and pedal cycle, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithTram: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithTram: new Coding({
     code: "214183001",
     display: "Motor vehicle on road in collision with tram",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndTramcarDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndTramcarDriverOfMotorVehicleInjured: new Coding({
     code: "214184007",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and tramcar, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndTramcarPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndTramcarPassengerOfMotorVehicleInjured: new Coding({
     code: "214185008",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and tramcar, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndTramcarMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndTramcarMotorCyclistInjured: new Coding({
     code: "214186009",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and tramcar, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndTramcarOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndTramcarOccupantOfTramInjured: new Coding({
     code: "214188005",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and tramcar, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndTramcarRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndTramcarRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214189002",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and tramcar, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndTramcarPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndTramcarPedalCyclistInjured: new Coding({
     code: "214190006",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and tramcar, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndTramcarPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionBetweenMotorVehicleAndTramcarPedestrianInjured: new Coding({
     code: "214191005",
     display: "Motor vehicle traffic accident involving collision between motor vehicle and tramcar, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithPedestrian: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithPedestrian: new Coding({
     code: "214206004",
     display: "Motor vehicle on road in collision with pedestrian",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PedestrianDraggedByMotorVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_PedestrianDraggedByMotorVehicle: new Coding({
     code: "214207008",
     display: "Pedestrian dragged by motor vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianDraggedByMotorVehicleDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianDraggedByMotorVehicleDriverOfMotorVehicleInjured: new Coding({
     code: "214208003",
     display: "Motor vehicle traffic accident involving pedestrian dragged by motor vehicle, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianDraggedByMotorVehiclePassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianDraggedByMotorVehiclePassengerOfMotorVehicleInjured: new Coding({
     code: "214209006",
     display: "Motor vehicle traffic accident involving pedestrian dragged by motor vehicle, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianDraggedByMotorVehicleMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianDraggedByMotorVehicleMotorCyclistInjured: new Coding({
     code: "214210001",
     display: "Motor vehicle traffic accident involving pedestrian dragged by motor vehicle, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianDraggedByMotorVehiclePassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianDraggedByMotorVehiclePassengerOnMotorCycleInjured: new Coding({
     code: "214211002",
     display: "Motor vehicle traffic accident involving pedestrian dragged by motor vehicle, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianDraggedByMotorVehicleOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianDraggedByMotorVehicleOccupantOfTramInjured: new Coding({
     code: "214212009",
     display: "Motor vehicle traffic accident involving pedestrian dragged by motor vehicle, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianDraggedByMotorVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianDraggedByMotorVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214213004",
     display: "Motor vehicle traffic accident involving pedestrian dragged by motor vehicle, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianDraggedByMotorVehiclePedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianDraggedByMotorVehiclePedestrianInjured: new Coding({
     code: "214215006",
     display: "Motor vehicle traffic accident involving pedestrian dragged by motor vehicle, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PedestrianHitByMotorVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_PedestrianHitByMotorVehicle: new Coding({
     code: "214218008",
     display: "Pedestrian hit by motor vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianHitByMotorVehicleDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianHitByMotorVehicleDriverOfMotorVehicleInjured: new Coding({
     code: "214219000",
     display: "Motor vehicle traffic accident involving pedestrian hit by motor vehicle, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianHitByMotorVehiclePassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianHitByMotorVehiclePassengerOfMotorVehicleInjured: new Coding({
     code: "214220006",
     display: "Motor vehicle traffic accident involving pedestrian hit by motor vehicle, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianHitByMotorVehicleMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianHitByMotorVehicleMotorCyclistInjured: new Coding({
     code: "214221005",
     display: "Motor vehicle traffic accident involving pedestrian hit by motor vehicle, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianHitByMotorVehiclePassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianHitByMotorVehiclePassengerOnMotorCycleInjured: new Coding({
     code: "214222003",
     display: "Motor vehicle traffic accident involving pedestrian hit by motor vehicle, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianHitByMotorVehicleOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianHitByMotorVehicleOccupantOfTramInjured: new Coding({
     code: "214223008",
     display: "Motor vehicle traffic accident involving pedestrian hit by motor vehicle, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianHitByMotorVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianHitByMotorVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214224002",
     display: "Motor vehicle traffic accident involving pedestrian hit by motor vehicle, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianHitByMotorVehiclePedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianHitByMotorVehiclePedalCyclistInjured: new Coding({
     code: "214225001",
     display: "Motor vehicle traffic accident involving pedestrian hit by motor vehicle, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianHitByMotorVehiclePedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianHitByMotorVehiclePedestrianInjured: new Coding({
     code: "214227009",
     display: "Motor vehicle traffic accident involving pedestrian hit by motor vehicle, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PedestrianRunOverByMotorVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_PedestrianRunOverByMotorVehicle: new Coding({
     code: "214230002",
     display: "Pedestrian run over by motor vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianRunOverByMotorVehicleDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianRunOverByMotorVehicleDriverOfMotorVehicleInjured: new Coding({
     code: "214231003",
     display: "Motor vehicle traffic accident involving pedestrian run over by motor vehicle, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianRunOverByMotorVehiclePassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianRunOverByMotorVehiclePassengerOfMotorVehicleInjured: new Coding({
     code: "214232005",
     display: "Motor vehicle traffic accident involving pedestrian run over by motor vehicle, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianRunOverByMotorVehicleMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianRunOverByMotorVehicleMotorCyclistInjured: new Coding({
     code: "214233000",
     display: "Motor vehicle traffic accident involving pedestrian run over by motor vehicle, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianRunOverByMotorVehiclePassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianRunOverByMotorVehiclePassengerOnMotorCycleInjured: new Coding({
     code: "214234006",
     display: "Motor vehicle traffic accident involving pedestrian run over by motor vehicle, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianRunOverByMotorVehicleOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianRunOverByMotorVehicleOccupantOfTramInjured: new Coding({
     code: "214235007",
     display: "Motor vehicle traffic accident involving pedestrian run over by motor vehicle, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianRunOverByMotorVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianRunOverByMotorVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214236008",
     display: "Motor vehicle traffic accident involving pedestrian run over by motor vehicle, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianRunOverByMotorVehiclePedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingPedestrianRunOverByMotorVehiclePedalCyclistInjured: new Coding({
     code: "214237004",
     display: "Motor vehicle traffic accident involving pedestrian run over by motor vehicle, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionBetweenMotorVehicleAndBridge: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionBetweenMotorVehicleAndBridge: new Coding({
     code: "214253001",
     display: "Motor vehicle on road in collision between motor vehicle and bridge",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBridgeDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBridgeDriverOfMotorVehicleInjured: new Coding({
     code: "214254007",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and bridge, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBridgePassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBridgePassengerOfMotorVehicleInjured: new Coding({
     code: "214255008",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and bridge, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBridgeMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBridgeMotorCyclistInjured: new Coding({
     code: "214256009",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and bridge, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBridgePassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBridgePassengerOnMotorCycleInjured: new Coding({
     code: "214257000",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and bridge, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBridgeOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBridgeOccupantOfTramInjured: new Coding({
     code: "214258005",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and bridge, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBridgeRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBridgeRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214259002",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and bridge, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBridgePedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBridgePedalCyclistInjured: new Coding({
     code: "214260007",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and bridge, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndAnimal: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndAnimal: new Coding({
     code: "214265002",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and animal",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndAnimalDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndAnimalDriverOfMotorVehicleInjured: new Coding({
     code: "214266001",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and animal, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndAnimalPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndAnimalPassengerOfMotorVehicleInjured: new Coding({
     code: "214267005",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and animal, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndAnimalPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndAnimalPassengerOnMotorCycleInjured: new Coding({
     code: "214269008",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and animal, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndAnimalOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndAnimalOccupantOfTramInjured: new Coding({
     code: "214270009",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and animal, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndAnimalRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndAnimalRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214271008",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and animal, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndAnimalPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndAnimalPedalCyclistInjured: new Coding({
     code: "214272001",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and animal, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndAnimalPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndAnimalPedestrianInjured: new Coding({
     code: "214273006",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and animal, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndFallenStoneTrafficSignTreeOrUtilityPole: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndFallenStoneTrafficSignTreeOrUtilityPole: new Coding({
     code: "214276003",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and fallen stone, traffic sign, tree or utility pole",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndFallenStoneTrafficSignTreeOrUtilityPoleDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndFallenStoneTrafficSignTreeOrUtilityPoleDriverOfMotorVehicleInjured: new Coding({
     code: "214277007",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and fallen stone, traffic sign, tree or utility pole, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndFallenStoneTrafficSignTreeOrUtilityPolePassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndFallenStoneTrafficSignTreeOrUtilityPolePassengerOfMotorVehicleInjured: new Coding({
     code: "214278002",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and fallen stone, traffic sign, tree or utility pole, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndFallenStoneTrafficSignTreeOrUtilityPoleMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndFallenStoneTrafficSignTreeOrUtilityPoleMotorCyclistInjured: new Coding({
     code: "214279005",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and fallen stone, traffic sign, tree or utility pole, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndFallenStoneTrafficSignTreeOrUtilityPolePassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndFallenStoneTrafficSignTreeOrUtilityPolePassengerOnMotorCycleInjured: new Coding({
     code: "214280008",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and fallen stone, traffic sign, tree or utility pole, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndFallenStoneTrafficSignTreeOrUtilityPoleOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndFallenStoneTrafficSignTreeOrUtilityPoleOccupantOfTramInjured: new Coding({
     code: "214281007",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and fallen stone, traffic sign, tree or utility pole, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndFallenStoneTrafficSignTreeOrUtilityPoleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndFallenStoneTrafficSignTreeOrUtilityPoleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214282000",
     display: "Motor vehicle traffic accident involving collision,on highway, between motor vehicle and fallen stone, traffic sign, tree or utility pole, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndFallenStoneTrafficSignTreeOrUtilityPolePedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndFallenStoneTrafficSignTreeOrUtilityPolePedestrianInjured: new Coding({
     code: "214284004",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and fallen stone, traffic sign, tree or utility pole, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithThrownObject: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithThrownObject: new Coding({
     code: "214287006",
     display: "Motor vehicle on road in collision with thrown object",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndObjectThrownInFrontOfMotorVehicleDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndObjectThrownInFrontOfMotorVehicleDriverOfMotorVehicleInjured: new Coding({
     code: "214288001",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and object thrown in front of motor vehicle, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndObjectThrownInFrontOfMotorVehiclePassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndObjectThrownInFrontOfMotorVehiclePassengerOfMotorVehicleInjured: new Coding({
     code: "214289009",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and object thrown in front of motor vehicle, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndObjectThrownInFrontOfMotorVehicleMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndObjectThrownInFrontOfMotorVehicleMotorCyclistInjured: new Coding({
     code: "214291001",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and object thrown in front of motor vehicle, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndObjectThrownInFrontOfMotorVehiclePassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndObjectThrownInFrontOfMotorVehiclePassengerOnMotorCycleInjured: new Coding({
     code: "214292008",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and object thrown in front of motor vehicle, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndObjectThrownInFrontOfMotorVehicleOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndObjectThrownInFrontOfMotorVehicleOccupantOfTramInjured: new Coding({
     code: "214293003",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and object thrown in front of motor vehicle, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndObjectThrownInFrontOfMotorVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndObjectThrownInFrontOfMotorVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214294009",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and object thrown in front of motor vehicle, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndObjectThrownInFrontOfMotorVehiclePedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndObjectThrownInFrontOfMotorVehiclePedalCyclistInjured: new Coding({
     code: "214295005",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and object thrown in front of motor vehicle, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndObjectThrownInFrontOfMotorVehiclePedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndObjectThrownInFrontOfMotorVehiclePedestrianInjured: new Coding({
     code: "214296006",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and object thrown in front of motor vehicle, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBoundaryFence: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBoundaryFence: new Coding({
     code: "214299004",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and boundary fence",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBoundaryFenceOrGuardRailDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBoundaryFenceOrGuardRailDriverOfMotorVehicleInjured: new Coding({
     code: "214300007",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and boundary fence or guard rail, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBoundaryFenceOrGuardRailPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBoundaryFenceOrGuardRailPassengerOfMotorVehicleInjured: new Coding({
     code: "214301006",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and boundary fence or guard rail, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBoundaryFenceOrGuardRailPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBoundaryFenceOrGuardRailPassengerOnMotorCycleInjured: new Coding({
     code: "214304003",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and boundary fence or guard rail, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBoundaryFenceOrGuardRailOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBoundaryFenceOrGuardRailOccupantOfTramInjured: new Coding({
     code: "214305002",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and boundary fence or guard rail, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBoundaryFenceOrGuardRailRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBoundaryFenceOrGuardRailRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214306001",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and boundary fence or guard rail, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBoundaryFenceOrGuardRailPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBoundaryFenceOrGuardRailPedalCyclistInjured: new Coding({
     code: "214307005",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and boundary fence or guard rail, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBoundaryFenceOrGuardRailPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndBoundaryFenceOrGuardRailPedestrianInjured: new Coding({
     code: "214308000",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and boundary fence or guard rail, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithLandslide: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithLandslide: new Coding({
     code: "214311004",
     display: "Motor vehicle on road in collision with landslide",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndLandslideDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndLandslideDriverOfMotorVehicleInjured: new Coding({
     code: "214312006",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and landslide, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndLandslidePassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndLandslidePassengerOfMotorVehicleInjured: new Coding({
     code: "214313001",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and landslide, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndLandslideMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndLandslideMotorCyclistInjured: new Coding({
     code: "214314007",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and landslide, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndLandslidePassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndLandslidePassengerOnMotorCycleInjured: new Coding({
     code: "214315008",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and landslide, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndLandslideOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndLandslideOccupantOfTramInjured: new Coding({
     code: "214316009",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and landslide, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndLandslideRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndLandslideRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214317000",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and landslide, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndLandslidePedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndLandslidePedalCyclistInjured: new Coding({
     code: "214318005",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and landslide, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndLandslidePedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndLandslidePedestrianInjured: new Coding({
     code: "214319002",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and landslide, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithSafetyIsland: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleOnRoadInCollisionWithSafetyIsland: new Coding({
     code: "214322000",
     display: "Motor vehicle on road in collision with safety island",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndSafetyIslandDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndSafetyIslandDriverOfMotorVehicleInjured: new Coding({
     code: "214323005",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and safety island, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndSafetyIslandPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndSafetyIslandPassengerOfMotorVehicleInjured: new Coding({
     code: "214324004",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and safety island, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndSafetyIslandMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndSafetyIslandMotorCyclistInjured: new Coding({
     code: "214325003",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and safety island, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndSafetyIslandPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndSafetyIslandPassengerOnMotorCycleInjured: new Coding({
     code: "214326002",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and safety island, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndSafetyIslandOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndSafetyIslandOccupantOfTramInjured: new Coding({
     code: "214327006",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and safety island, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndSafetyIslandRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndSafetyIslandRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214328001",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and safety island, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndSafetyIslandPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndSafetyIslandPedalCyclistInjured: new Coding({
     code: "214329009",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and safety island, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndSafetyIslandPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentInvolvingCollisionOnHighwayBetweenMotorVehicleAndSafetyIslandPedestrianInjured: new Coding({
     code: "214330004",
     display: "Motor vehicle traffic accident involving collision, on highway, between motor vehicle and safety island, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToLossOfControlWithoutCollisionOnTheHighway: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToLossOfControlWithoutCollisionOnTheHighway: new Coding({
     code: "214344005",
     display: "Motor vehicle traffic accident due to loss of control, without collision on the highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleFailingToMakeCurveWithoutCollisionOnTheHighway: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleFailingToMakeCurveWithoutCollisionOnTheHighway: new Coding({
     code: "214345006",
     display: "Motor vehicle traffic accident due to motor vehicle failing to make curve, without collision on the highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleFailingToMakeCurveWithoutCollisionOnTheHighwayDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleFailingToMakeCurveWithoutCollisionOnTheHighwayDriverOfMotorVehicleInjured: new Coding({
     code: "214346007",
     display: "Motor vehicle traffic accident due to motor vehicle failing to make curve, without collision on the highway, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleFailingToMakeCurveWithoutCollisionOnTheHighwayPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleFailingToMakeCurveWithoutCollisionOnTheHighwayPassengerOfMotorVehicleInjured: new Coding({
     code: "214347003",
     display: "Motor vehicle traffic accident due to motor vehicle failing to make curve, without collision on the highway, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleFailingToMakeCurveWithoutCollisionOnTheHighwayMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleFailingToMakeCurveWithoutCollisionOnTheHighwayMotorCyclistInjured: new Coding({
     code: "214348008",
     display: "Motor vehicle traffic accident due to motor vehicle failing to make curve, without collision on the highway, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleFailingToMakeCurveWithoutCollisionOnTheHighwayPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleFailingToMakeCurveWithoutCollisionOnTheHighwayPassengerOnMotorCycleInjured: new Coding({
     code: "214349000",
     display: "Motor vehicle traffic accident due to motor vehicle failing to make curve, without collision on the highway, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleFailingToMakeCurveWithoutCollisionOnTheHighwayOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleFailingToMakeCurveWithoutCollisionOnTheHighwayOccupantOfTramInjured: new Coding({
     code: "214350000",
     display: "Motor vehicle traffic accident due to motor vehicle failing to make curve, without collision on the highway, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleFailingToMakeCurveWithoutCollisionOnTheHighwayPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleFailingToMakeCurveWithoutCollisionOnTheHighwayPedalCyclistInjured: new Coding({
     code: "214352008",
     display: "Motor vehicle traffic accident due to motor vehicle failing to make curve, without collision on the highway, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleFailingToMakeCurveWithoutCollisionOnTheHighwayPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleFailingToMakeCurveWithoutCollisionOnTheHighwayPedestrianInjured: new Coding({
     code: "214353003",
     display: "Motor vehicle traffic accident due to motor vehicle failing to make curve, without collision on the highway, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBlowoutWithoutCollisionOnTheHighway: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBlowoutWithoutCollisionOnTheHighway: new Coding({
     code: "214356006",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to blowout, without collision on the highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBlowoutWithoutCollisionOnTheHighwayDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBlowoutWithoutCollisionOnTheHighwayDriverOfMotorVehicleInjured: new Coding({
     code: "214357002",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to blowout, without collision on the highway, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBlowoutWithoutCollisionOnTheHighwayPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBlowoutWithoutCollisionOnTheHighwayPassengerOfMotorVehicleInjured: new Coding({
     code: "214358007",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to blowout, without collision on the highway, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBlowoutWithoutCollisionOnTheHighwayMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBlowoutWithoutCollisionOnTheHighwayMotorCyclistInjured: new Coding({
     code: "214359004",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to blowout, without collision on the highway, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBlowoutWithoutCollisionOnTheHighwayPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBlowoutWithoutCollisionOnTheHighwayPassengerOnMotorCycleInjured: new Coding({
     code: "214360009",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to blowout, without collision on the highway, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBlowoutWithoutCollisionOnTheHighwayOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBlowoutWithoutCollisionOnTheHighwayOccupantOfTramInjured: new Coding({
     code: "214361008",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to blowout, without collision on the highway, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBlowoutWithoutCollisionOnTheHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBlowoutWithoutCollisionOnTheHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214362001",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to blowout, without collision on the highway, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBlowoutWithoutCollisionOnTheHighwayPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBlowoutWithoutCollisionOnTheHighwayPedalCyclistInjured: new Coding({
     code: "214363006",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to blowout, without collision on the highway, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBlowoutWithoutCollisionOnTheHighwayPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBlowoutWithoutCollisionOnTheHighwayPedestrianInjured: new Coding({
     code: "214364000",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to blowout, without collision on the highway, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBurstTireWithoutCollisionOnTheHighway: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBurstTireWithoutCollisionOnTheHighway: new Coding({
     code: "214367007",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to burst tire, without collision on the highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBurstTireWithoutCollisionOnTheHighwayDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBurstTireWithoutCollisionOnTheHighwayDriverOfMotorVehicleInjured: new Coding({
     code: "214368002",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to burst tire, without collision on the highway, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBurstTireWithoutCollisionOnTheHighwayPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBurstTireWithoutCollisionOnTheHighwayPassengerOfMotorVehicleInjured: new Coding({
     code: "214369005",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to burst tire, without collision on the highway, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBurstTireWithoutCollisionOnTheHighwayMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBurstTireWithoutCollisionOnTheHighwayMotorCyclistInjured: new Coding({
     code: "214370006",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to burst tire, without collision on the highway, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBurstTireWithoutCollisionOnTheHighwayPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBurstTireWithoutCollisionOnTheHighwayPassengerOnMotorCycleInjured: new Coding({
     code: "214371005",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to burst tire, without collision on the highway, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBurstTireWithoutCollisionOnTheHighwayOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBurstTireWithoutCollisionOnTheHighwayOccupantOfTramInjured: new Coding({
     code: "214372003",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to burst tire, without collision on the highway, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBurstTireWithoutCollisionOnTheHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBurstTireWithoutCollisionOnTheHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214373008",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to burst tire, without collision on the highway, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBurstTireWithoutCollisionOnTheHighwayPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToBurstTireWithoutCollisionOnTheHighwayPedalCyclistInjured: new Coding({
     code: "214374002",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to burst tire, without collision on the highway, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverFallingAsleepWithoutCollisionOnTheHighway: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverFallingAsleepWithoutCollisionOnTheHighway: new Coding({
     code: "214378004",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to driver falling asleep, without collision on the highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverFallingAsleepWithoutCollisionOnTheHighwayDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverFallingAsleepWithoutCollisionOnTheHighwayDriverOfMotorVehicleInjured: new Coding({
     code: "214379007",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to driver falling asleep, without collision on the highway, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverFallingAsleepWithoutCollisionOnTheHighwayPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverFallingAsleepWithoutCollisionOnTheHighwayPassengerOfMotorVehicleInjured: new Coding({
     code: "214380005",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to driver falling asleep, without collision on the highway, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverFallingAsleepWithoutCollisionOnTheHighwayMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverFallingAsleepWithoutCollisionOnTheHighwayMotorCyclistInjured: new Coding({
     code: "214381009",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to driver falling asleep, without collision on the highway, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverFallingAsleepWithoutCollisionOnTheHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverFallingAsleepWithoutCollisionOnTheHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214384001",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to driver falling asleep, without collision on the highway, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverFallingAsleepWithoutCollisionOnTheHighwayPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverFallingAsleepWithoutCollisionOnTheHighwayPedalCyclistInjured: new Coding({
     code: "214385000",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to driver falling asleep, without collision on the highway, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverFallingAsleepWithoutCollisionOnTheHighwayPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverFallingAsleepWithoutCollisionOnTheHighwayPedestrianInjured: new Coding({
     code: "214386004",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to driver falling asleep, without collision on the highway, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverInattentionWithoutCollisionOnTheHighway: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverInattentionWithoutCollisionOnTheHighway: new Coding({
     code: "214389006",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to driver inattention, without collision on the highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverInattentionWithoutCollisionOnTheHighwayDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverInattentionWithoutCollisionOnTheHighwayDriverOfMotorVehicleInjured: new Coding({
     code: "214390002",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to driver inattention, without collision on the highway, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverInattentionWithoutCollisionOnTheHighwayPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverInattentionWithoutCollisionOnTheHighwayPassengerOfMotorVehicleInjured: new Coding({
     code: "214391003",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to driver inattention, without collision on the highway, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverInattentionWithoutCollisionOnTheHighwayMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverInattentionWithoutCollisionOnTheHighwayMotorCyclistInjured: new Coding({
     code: "214392005",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to driver inattention, without collision on the highway, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverInattentionWithoutCollisionOnTheHighwayPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverInattentionWithoutCollisionOnTheHighwayPassengerOnMotorCycleInjured: new Coding({
     code: "214393000",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to driver inattention, without collision on the highway, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverInattentionWithoutCollisionOnTheHighwayOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverInattentionWithoutCollisionOnTheHighwayOccupantOfTramInjured: new Coding({
     code: "214394006",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to driver inattention, without collision on the highway, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverInattentionWithoutCollisionOnTheHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverInattentionWithoutCollisionOnTheHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214395007",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to driver inattention, without collision on the highway, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverInattentionWithoutCollisionOnTheHighwayPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverInattentionWithoutCollisionOnTheHighwayPedalCyclistInjured: new Coding({
     code: "214396008",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to driver inattention, without collision on the highway, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverInattentionWithoutCollisionOnTheHighwayPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToDriverInattentionWithoutCollisionOnTheHighwayPedestrianInjured: new Coding({
     code: "214397004",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to driver inattention, without collision on the highway, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToExcessiveSpeedWithoutCollisionOnTheHighway: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToExcessiveSpeedWithoutCollisionOnTheHighway: new Coding({
     code: "214400008",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to excessive speed, without collision on the highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToExcessiveSpeedWithoutCollisionOnTheHighwayDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToExcessiveSpeedWithoutCollisionOnTheHighwayDriverOfMotorVehicleInjured: new Coding({
     code: "214401007",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to excessive speed, without collision on the highway, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToExcessiveSpeedWithoutCollisionOnTheHighwayPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToExcessiveSpeedWithoutCollisionOnTheHighwayPassengerOfMotorVehicleInjured: new Coding({
     code: "214402000",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to excessive speed, without collision on the highway, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToExcessiveSpeedWithoutCollisionOnTheHighwayMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToExcessiveSpeedWithoutCollisionOnTheHighwayMotorCyclistInjured: new Coding({
     code: "214403005",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to excessive speed, without collision on the highway, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToExcessiveSpeedWithoutCollisionOnTheHighwayPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToExcessiveSpeedWithoutCollisionOnTheHighwayPassengerOnMotorCycleInjured: new Coding({
     code: "214405003",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to excessive speed, without collision on the highway, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToExcessiveSpeedWithoutCollisionOnTheHighwayOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToExcessiveSpeedWithoutCollisionOnTheHighwayOccupantOfTramInjured: new Coding({
     code: "214406002",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to excessive speed, without collision on the highway, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToExcessiveSpeedWithoutCollisionOnTheHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToExcessiveSpeedWithoutCollisionOnTheHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214407006",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to excessive speed, without collision on the highway, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToExcessiveSpeedWithoutCollisionOnTheHighwayPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToExcessiveSpeedWithoutCollisionOnTheHighwayPedalCyclistInjured: new Coding({
     code: "214408001",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to excessive speed, without collision on the highway, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToExcessiveSpeedWithoutCollisionOnTheHighwayPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToExcessiveSpeedWithoutCollisionOnTheHighwayPedestrianInjured: new Coding({
     code: "214409009",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to excessive speed, without collision on the highway, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToFailureOfMechanicalPartWithoutCollisionOnTheHighway: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToFailureOfMechanicalPartWithoutCollisionOnTheHighway: new Coding({
     code: "214412007",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to failure of mechanical part, without collision on the highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToFailureOfMechanicalPartWithoutCollisionOnTheHighwayDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToFailureOfMechanicalPartWithoutCollisionOnTheHighwayDriverOfMotorVehicleInjured: new Coding({
     code: "214413002",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to failure of mechanical part, without collision on the highway, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToFailureOfMechanicalPartWithoutCollisionOnTheHighwayPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToFailureOfMechanicalPartWithoutCollisionOnTheHighwayPassengerOfMotorVehicleInjured: new Coding({
     code: "214414008",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to failure of mechanical part, without collision on the highway, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToFailureOfMechanicalPartWithoutCollisionOnTheHighwayMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToFailureOfMechanicalPartWithoutCollisionOnTheHighwayMotorCyclistInjured: new Coding({
     code: "214415009",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to failure of mechanical part, without collision on the highway, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToFailureOfMechanicalPartWithoutCollisionOnTheHighwayPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToFailureOfMechanicalPartWithoutCollisionOnTheHighwayPassengerOnMotorCycleInjured: new Coding({
     code: "214416005",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to failure of mechanical part, without collision on the highway, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToFailureOfMechanicalPartWithoutCollisionOnTheHighwayOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToFailureOfMechanicalPartWithoutCollisionOnTheHighwayOccupantOfTramInjured: new Coding({
     code: "214417001",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to failure of mechanical part, without collision on the highway, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToFailureOfMechanicalPartWithoutCollisionOnHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToFailureOfMechanicalPartWithoutCollisionOnHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214418006",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to failure of mechanical part, without collision on highway, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToFailureOfMechanicalPartWithoutCollisionOnTheHighwayPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToFailureOfMechanicalPartWithoutCollisionOnTheHighwayPedalCyclistInjured: new Coding({
     code: "214419003",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to failure of mechanical part, without collision on the highway, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToFailureOfMechanicalPartWithoutCollisionOnTheHighwayPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleTrafficAccidentDueToMotorVehicleGoingOutOfControlDueToFailureOfMechanicalPartWithoutCollisionOnTheHighwayPedestrianInjured: new Coding({
     code: "214420009",
     display: "Motor vehicle traffic accident due to motor vehicle going out of control due to failure of mechanical part, without collision on the highway, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentWhileBoardingOrAlighting: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentWhileBoardingOrAlighting: new Coding({
     code: "214435005",
     display: "Noncollision motor vehicle traffic accident while boarding or alighting",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallDownStairsOfMotorBusWhileBoardingOrAlighting: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallDownStairsOfMotorBusWhileBoardingOrAlighting: new Coding({
     code: "214436006",
     display: "Noncollision motor vehicle traffic accident involving fall down stairs of motor bus while boarding or alighting",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallDownStairsOfMotorBusWhileBoardingOrAlightingDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallDownStairsOfMotorBusWhileBoardingOrAlightingDriverOfMotorVehicleInjured: new Coding({
     code: "214437002",
     display: "Noncollision motor vehicle traffic accident involving fall down stairs of motor bus while boarding or alighting, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallDownStairsOfMotorBusWhileBoardingOrAlightingPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallDownStairsOfMotorBusWhileBoardingOrAlightingPassengerOfMotorVehicleInjured: new Coding({
     code: "214438007",
     display: "Noncollision motor vehicle traffic accident involving fall down stairs of motor bus while boarding or alighting, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallDownStairsOfMotorBusWhileBoardingOrAlightingMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallDownStairsOfMotorBusWhileBoardingOrAlightingMotorCyclistInjured: new Coding({
     code: "214439004",
     display: "Noncollision motor vehicle traffic accident involving fall down stairs of motor bus while boarding or alighting, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallDownStairsOfMotorBusWhileBoardingOrAlightingPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallDownStairsOfMotorBusWhileBoardingOrAlightingPassengerOnMotorCycleInjured: new Coding({
     code: "214440002",
     display: "Noncollision motor vehicle traffic accident involving fall down stairs of motor bus while boarding or alighting, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallDownStairsOfMotorBusWhileBoardingOrAlightingOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallDownStairsOfMotorBusWhileBoardingOrAlightingOccupantOfTramInjured: new Coding({
     code: "214441003",
     display: "Noncollision motor vehicle traffic accident involving fall down stairs of motor bus while boarding or alighting, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallDownStairsOfMotorBusWhileBoardingOrAlightingRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallDownStairsOfMotorBusWhileBoardingOrAlightingRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214442005",
     display: "Noncollision motor vehicle traffic accident involving fall down stairs of motor bus while boarding or alighting, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallDownStairsOfMotorBusWhileBoardingOrAlightingPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallDownStairsOfMotorBusWhileBoardingOrAlightingPedalCyclistInjured: new Coding({
     code: "214443000",
     display: "Noncollision motor vehicle traffic accident involving fall down stairs of motor bus while boarding or alighting, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallDownStairsOfMotorBusWhileBoardingOrAlightingPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallDownStairsOfMotorBusWhileBoardingOrAlightingPedestrianInjured: new Coding({
     code: "214444006",
     display: "Noncollision motor vehicle traffic accident involving fall down stairs of motor bus while boarding or alighting, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromCarInStreetWhileBoardingOrAlighting: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromCarInStreetWhileBoardingOrAlighting: new Coding({
     code: "214447004",
     display: "Noncollision motor vehicle traffic accident involving fall from car in street while boarding or alighting",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromCarInStreetWhileBoardingOrAlightingDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromCarInStreetWhileBoardingOrAlightingDriverOfMotorVehicleInjured: new Coding({
     code: "214448009",
     display: "Noncollision motor vehicle traffic accident involving fall from car in street while boarding or alighting, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromCarInStreetWhileBoardingOrAlightingPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromCarInStreetWhileBoardingOrAlightingPassengerOfMotorVehicleInjured: new Coding({
     code: "214449001",
     display: "Noncollision motor vehicle traffic accident involving fall from car in street while boarding or alighting, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromCarInStreetWhileBoardingOrAlightingMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromCarInStreetWhileBoardingOrAlightingMotorCyclistInjured: new Coding({
     code: "214450001",
     display: "Noncollision motor vehicle traffic accident involving fall from car in street while boarding or alighting, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromCarInStreetWhileBoardingOrAlightingPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromCarInStreetWhileBoardingOrAlightingPassengerOnMotorCycleInjured: new Coding({
     code: "214451002",
     display: "Noncollision motor vehicle traffic accident involving fall from car in street while boarding or alighting, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromCarInStreetWhileBoardingOrAlightingOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromCarInStreetWhileBoardingOrAlightingOccupantOfTramInjured: new Coding({
     code: "214452009",
     display: "Noncollision motor vehicle traffic accident involving fall from car in street while boarding or alighting, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromCarInStreetWhileBoardingOrAlightingRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromCarInStreetWhileBoardingOrAlightingRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214453004",
     display: "Noncollision motor vehicle traffic accident involving fall from car in street while boarding or alighting, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromCarInStreetWhileBoardingOrAlightingPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromCarInStreetWhileBoardingOrAlightingPedalCyclistInjured: new Coding({
     code: "214454005",
     display: "Noncollision motor vehicle traffic accident involving fall from car in street while boarding or alighting, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromCarInStreetWhileBoardingOrAlightingPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromCarInStreetWhileBoardingOrAlightingPedestrianInjured: new Coding({
     code: "214455006",
     display: "Noncollision motor vehicle traffic accident involving fall from car in street while boarding or alighting, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByMovingPartOfTheVehicleWhileBoardingOrAlighting: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByMovingPartOfTheVehicleWhileBoardingOrAlighting: new Coding({
     code: "214458008",
     display: "Noncollision motor vehicle traffic accident involving injury by moving part of the vehicle while boarding or alighting",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByMovingPartOfTheVehicleWhileBoardingOrAlightingDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByMovingPartOfTheVehicleWhileBoardingOrAlightingDriverOfMotorVehicleInjured: new Coding({
     code: "214459000",
     display: "Noncollision motor vehicle traffic accident involving injury by moving part of the vehicle while boarding or alighting, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByMovingPartOfTheVehicleWhileBoardingOrAlightingPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByMovingPartOfTheVehicleWhileBoardingOrAlightingPassengerOfMotorVehicleInjured: new Coding({
     code: "214460005",
     display: "Noncollision motor vehicle traffic accident involving injury by moving part of the vehicle while boarding or alighting, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByMovingPartOfTheVehicleWhileBoardingOrAlightingPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByMovingPartOfTheVehicleWhileBoardingOrAlightingPassengerOnMotorCycleInjured: new Coding({
     code: "214462002",
     display: "Noncollision motor vehicle traffic accident involving injury by moving part of the vehicle while boarding or alighting, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByMovingPartOfTheVehicleWhileBoardingOrAlightingRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByMovingPartOfTheVehicleWhileBoardingOrAlightingRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214464001",
     display: "Noncollision motor vehicle traffic accident involving injury by moving part of the vehicle while boarding or alighting, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByMovingPartOfTheVehicleWhileBoardingOrAlightingPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByMovingPartOfTheVehicleWhileBoardingOrAlightingPedalCyclistInjured: new Coding({
     code: "214465000",
     display: "Noncollision motor vehicle traffic accident involving injury by moving part of the vehicle while boarding or alighting, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByMovingPartOfTheVehicleWhileBoardingOrAlightingPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByMovingPartOfTheVehicleWhileBoardingOrAlightingPedestrianInjured: new Coding({
     code: "214466004",
     display: "Noncollision motor vehicle traffic accident involving injury by moving part of the vehicle while boarding or alighting, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingTrappedByDoorOfMotorBusWhileBoardingOrAlighting: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingTrappedByDoorOfMotorBusWhileBoardingOrAlighting: new Coding({
     code: "214469006",
     display: "Noncollision motor vehicle traffic accident involving being trapped by door of motor bus while boarding or alighting",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingTrappedByDoorOfMotorBusWhileBoardingOrAlightingPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingTrappedByDoorOfMotorBusWhileBoardingOrAlightingPassengerOfMotorVehicleInjured: new Coding({
     code: "214471006",
     display: "Noncollision motor vehicle traffic accident involving being trapped by door of motor bus while boarding or alighting, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingTrappedByDoorOfMotorBusWhileBoardingOrAlightingMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingTrappedByDoorOfMotorBusWhileBoardingOrAlightingMotorCyclistInjured: new Coding({
     code: "214472004",
     display: "Noncollision motor vehicle traffic accident involving being trapped by door of motor bus while boarding or alighting, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingTrappedByDoorOfMotorBusWhileBoardingOrAlightingPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingTrappedByDoorOfMotorBusWhileBoardingOrAlightingPassengerOnMotorCycleInjured: new Coding({
     code: "214473009",
     display: "Noncollision motor vehicle traffic accident involving being trapped by door of motor bus while boarding or alighting, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingTrappedByDoorOfMotorBusWhileBoardingOrAlightingOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingTrappedByDoorOfMotorBusWhileBoardingOrAlightingOccupantOfTramInjured: new Coding({
     code: "214474003",
     display: "Noncollision motor vehicle traffic accident involving being trapped by door of motor bus while boarding or alighting, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingTrappedByDoorOfMotorBusWhileBoardingOrAlightingRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingTrappedByDoorOfMotorBusWhileBoardingOrAlightingRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214475002",
     display: "Noncollision motor vehicle traffic accident involving being trapped by door of motor bus while boarding or alighting, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingTrappedByDoorOfMotorBusWhileBoardingOrAlightingPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingTrappedByDoorOfMotorBusWhileBoardingOrAlightingPedalCyclistInjured: new Coding({
     code: "214476001",
     display: "Noncollision motor vehicle traffic accident involving being trapped by door of motor bus while boarding or alighting, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingTrappedByDoorOfMotorBusWhileBoardingOrAlightingPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingTrappedByDoorOfMotorBusWhileBoardingOrAlightingPedestrianInjured: new Coding({
     code: "214477005",
     display: "Noncollision motor vehicle traffic accident involving being trapped by door of motor bus while boarding or alighting, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AccidentDueToBreakageOfAnyPartOfMovingMotorVehicleOnRoad: Coding.FromStrict({
+  EncounterReasonValueSet_AccidentDueToBreakageOfAnyPartOfMovingMotorVehicleOnRoad: new Coding({
     code: "214515007",
     display: "Accident due to breakage of any part of moving motor vehicle on road",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBreakageOfAnyPartOfMotorVehicleWhileInMotionDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBreakageOfAnyPartOfMotorVehicleWhileInMotionDriverOfMotorVehicleInjured: new Coding({
     code: "214516008",
     display: "Noncollision motor vehicle traffic accident involving breakage of any part of motor vehicle while in motion, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBreakageOfAnyPartOfMotorVehicleWhileInMotionPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBreakageOfAnyPartOfMotorVehicleWhileInMotionPassengerOfMotorVehicleInjured: new Coding({
     code: "214517004",
     display: "Noncollision motor vehicle traffic accident involving breakage of any part of motor vehicle while in motion, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBreakageOfAnyPartOfMotorVehicleWhileInMotionMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBreakageOfAnyPartOfMotorVehicleWhileInMotionMotorCyclistInjured: new Coding({
     code: "214518009",
     display: "Noncollision motor vehicle traffic accident involving breakage of any part of motor vehicle while in motion, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBreakageOfAnyPartOfMotorVehicleWhileInMotionOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBreakageOfAnyPartOfMotorVehicleWhileInMotionOccupantOfTramInjured: new Coding({
     code: "214520007",
     display: "Noncollision motor vehicle traffic accident involving breakage of any part of motor vehicle while in motion, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBreakageOfAnyPartOfMotorVehicleWhileInMotionRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBreakageOfAnyPartOfMotorVehicleWhileInMotionRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214521006",
     display: "Noncollision motor vehicle traffic accident involving breakage of any part of motor vehicle while in motion, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBreakageOfAnyPartOfMotorVehicleWhileInMotionPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBreakageOfAnyPartOfMotorVehicleWhileInMotionPedestrianInjured: new Coding({
     code: "214523009",
     display: "Noncollision motor vehicle traffic accident involving breakage of any part of motor vehicle while in motion, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AccidentDueToExplosionInMovingMotorVehicleOnRoad: Coding.FromStrict({
+  EncounterReasonValueSet_AccidentDueToExplosionInMovingMotorVehicleOnRoad: new Coding({
     code: "214526001",
     display: "Accident due to explosion in moving motor vehicle on road",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleWhileInMotionDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleWhileInMotionDriverOfMotorVehicleInjured: new Coding({
     code: "214527005",
     display: "Noncollision motor vehicle traffic accident involving explosion of any part of motor vehicle while in motion, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleWhileInMotionPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleWhileInMotionPassengerOfMotorVehicleInjured: new Coding({
     code: "214528000",
     display: "Noncollision motor vehicle traffic accident involving explosion of any part of motor vehicle while in motion, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleWhileInMotionMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleWhileInMotionMotorCyclistInjured: new Coding({
     code: "214529008",
     display: "Noncollision motor vehicle traffic accident involving explosion of any part of motor vehicle while in motion, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleWhileInMotionPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleWhileInMotionPassengerOnMotorCycleInjured: new Coding({
     code: "214530003",
     display: "Noncollision motor vehicle traffic accident involving explosion of any part of motor vehicle while in motion, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleWhileInMotionOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleWhileInMotionOccupantOfTramInjured: new Coding({
     code: "214531004",
     display: "Noncollision motor vehicle traffic accident involving explosion of any part of motor vehicle while in motion, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleWhileInMotionRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleWhileInMotionRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214532006",
     display: "Noncollision motor vehicle traffic accident involving explosion of any part of motor vehicle while in motion, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleWhileInMotionPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleWhileInMotionPedalCyclistInjured: new Coding({
     code: "214533001",
     display: "Noncollision motor vehicle traffic accident involving explosion of any part of motor vehicle while in motion, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleWhileInMotionPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleWhileInMotionPedestrianInjured: new Coding({
     code: "214534007",
     display: "Noncollision motor vehicle traffic accident involving explosion of any part of motor vehicle while in motion, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallFromMovingMotorVehicleOnRoad: Coding.FromStrict({
+  EncounterReasonValueSet_FallFromMovingMotorVehicleOnRoad: new Coding({
     code: "214537000",
     display: "Fall from moving motor vehicle on road",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromMotorVehicleWhileInMotionDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromMotorVehicleWhileInMotionDriverOfMotorVehicleInjured: new Coding({
     code: "214538005",
     display: "Noncollision motor vehicle traffic accident involving fall from motor vehicle while in motion, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromMotorVehicleWhileInMotionPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromMotorVehicleWhileInMotionPassengerOfMotorVehicleInjured: new Coding({
     code: "214539002",
     display: "Noncollision motor vehicle traffic accident involving fall from motor vehicle while in motion, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromMotorVehicleWhileInMotionMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromMotorVehicleWhileInMotionMotorCyclistInjured: new Coding({
     code: "214540000",
     display: "Noncollision motor vehicle traffic accident involving fall from motor vehicle while in motion, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromMotorVehicleWhileInMotionPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromMotorVehicleWhileInMotionPassengerOnMotorCycleInjured: new Coding({
     code: "214541001",
     display: "Noncollision motor vehicle traffic accident involving fall from motor vehicle while in motion, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromMotorVehicleWhileInMotionOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromMotorVehicleWhileInMotionOccupantOfTramInjured: new Coding({
     code: "214542008",
     display: "Noncollision motor vehicle traffic accident involving fall from motor vehicle while in motion, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromMotorVehicleWhileInMotionRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromMotorVehicleWhileInMotionRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214543003",
     display: "Noncollision motor vehicle traffic accident involving fall from motor vehicle while in motion, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromMotorVehicleWhileInMotionPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromMotorVehicleWhileInMotionPedalCyclistInjured: new Coding({
     code: "214544009",
     display: "Noncollision motor vehicle traffic accident involving fall from motor vehicle while in motion, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromMotorVehicleWhileInMotionPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFallFromMotorVehicleWhileInMotionPedestrianInjured: new Coding({
     code: "214545005",
     display: "Noncollision motor vehicle traffic accident involving fall from motor vehicle while in motion, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AccidentDueToJumpingFromMovingMotorVehicleOnRoad: Coding.FromStrict({
+  EncounterReasonValueSet_AccidentDueToJumpingFromMovingMotorVehicleOnRoad: new Coding({
     code: "214548007",
     display: "Accident due to jumping from moving motor vehicle on road",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingJumpFromMotorVehicleWhileInMotionDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingJumpFromMotorVehicleWhileInMotionDriverOfMotorVehicleInjured: new Coding({
     code: "214549004",
     display: "Noncollision motor vehicle traffic accident involving jump from motor vehicle while in motion, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingJumpFromMotorVehicleWhileInMotionPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingJumpFromMotorVehicleWhileInMotionPassengerOfMotorVehicleInjured: new Coding({
     code: "214550004",
     display: "Noncollision motor vehicle traffic accident involving jump from motor vehicle while in motion, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingJumpFromMotorVehicleWhileInMotionMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingJumpFromMotorVehicleWhileInMotionMotorCyclistInjured: new Coding({
     code: "214551000",
     display: "Noncollision motor vehicle traffic accident involving jump from motor vehicle while in motion, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingJumpFromMotorVehicleWhileInMotionPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingJumpFromMotorVehicleWhileInMotionPassengerOnMotorCycleInjured: new Coding({
     code: "214552007",
     display: "Noncollision motor vehicle traffic accident involving jump from motor vehicle while in motion, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingJumpFromMotorVehicleWhileInMotionOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingJumpFromMotorVehicleWhileInMotionOccupantOfTramInjured: new Coding({
     code: "214553002",
     display: "Noncollision motor vehicle traffic accident involving jump from motor vehicle while in motion, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingJumpFromMotorVehicleWhileInMotionPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingJumpFromMotorVehicleWhileInMotionPedalCyclistInjured: new Coding({
     code: "214555009",
     display: "Noncollision motor vehicle traffic accident involving jump from motor vehicle while in motion, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingJumpFromMotorVehicleWhileInMotionPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingJumpFromMotorVehicleWhileInMotionPedestrianInjured: new Coding({
     code: "214556005",
     display: "Noncollision motor vehicle traffic accident involving jump from motor vehicle while in motion, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AccidentallyPushedFromMovingMotorVehicleOnRoad: Coding.FromStrict({
+  EncounterReasonValueSet_AccidentallyPushedFromMovingMotorVehicleOnRoad: new Coding({
     code: "214559003",
     display: "Accidentally pushed from moving motor vehicle on road",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleWhileInMotionDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleWhileInMotionDriverOfMotorVehicleInjured: new Coding({
     code: "214560008",
     display: "Noncollision motor vehicle traffic accident involving being accidentally pushed from motor vehicle while in motion, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleWhileInMotionPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleWhileInMotionPassengerOfMotorVehicleInjured: new Coding({
     code: "214561007",
     display: "Noncollision motor vehicle traffic accident involving being accidentally pushed from motor vehicle while in motion, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleWhileInMotionMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleWhileInMotionMotorCyclistInjured: new Coding({
     code: "214562000",
     display: "Noncollision motor vehicle traffic accident involving being accidentally pushed from motor vehicle while in motion, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleWhileInMotionPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleWhileInMotionPassengerOnMotorCycleInjured: new Coding({
     code: "214563005",
     display: "Noncollision motor vehicle traffic accident involving being accidentally pushed from motor vehicle while in motion, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleWhileInMotionOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleWhileInMotionOccupantOfTramInjured: new Coding({
     code: "214564004",
     display: "Noncollision motor vehicle traffic accident involving being accidentally pushed from motor vehicle while in motion, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleWhileInMotionRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleWhileInMotionRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214565003",
     display: "Noncollision motor vehicle traffic accident involving being accidentally pushed from motor vehicle while in motion, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleWhileInMotionPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleWhileInMotionPedalCyclistInjured: new Coding({
     code: "214566002",
     display: "Noncollision motor vehicle traffic accident involving being accidentally pushed from motor vehicle while in motion, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FireStartingInMotorVehicleWhileInMotionOnRoad: Coding.FromStrict({
+  EncounterReasonValueSet_FireStartingInMotorVehicleWhileInMotionOnRoad: new Coding({
     code: "214570005",
     display: "Fire starting in motor vehicle while in motion on road",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFireStartingInMotorVehicleWhileInMotionDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFireStartingInMotorVehicleWhileInMotionDriverOfMotorVehicleInjured: new Coding({
     code: "214571009",
     display: "Noncollision motor vehicle traffic accident involving fire starting in motor vehicle while in motion, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFireStartingInMotorVehicleWhileInMotionPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFireStartingInMotorVehicleWhileInMotionPassengerOfMotorVehicleInjured: new Coding({
     code: "214572002",
     display: "Noncollision motor vehicle traffic accident involving fire starting in motor vehicle while in motion, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFireStartingInMotorVehicleWhileInMotionMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFireStartingInMotorVehicleWhileInMotionMotorCyclistInjured: new Coding({
     code: "214573007",
     display: "Noncollision motor vehicle traffic accident involving fire starting in motor vehicle while in motion, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFireStartingInMotorVehicleWhileInMotionPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFireStartingInMotorVehicleWhileInMotionPassengerOnMotorCycleInjured: new Coding({
     code: "214574001",
     display: "Noncollision motor vehicle traffic accident involving fire starting in motor vehicle while in motion, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFireStartingInMotorVehicleWhileInMotionOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFireStartingInMotorVehicleWhileInMotionOccupantOfTramInjured: new Coding({
     code: "214575000",
     display: "Noncollision motor vehicle traffic accident involving fire starting in motor vehicle while in motion, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFireStartingInMotorVehicleWhileInMotionRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFireStartingInMotorVehicleWhileInMotionRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214576004",
     display: "Noncollision motor vehicle traffic accident involving fire starting in motor vehicle while in motion, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFireStartingInMotorVehicleWhileInMotionPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFireStartingInMotorVehicleWhileInMotionPedalCyclistInjured: new Coding({
     code: "214577008",
     display: "Noncollision motor vehicle traffic accident involving fire starting in motor vehicle while in motion, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFireStartingInMotorVehicleWhileInMotionPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingFireStartingInMotorVehicleWhileInMotionPedestrianInjured: new Coding({
     code: "214578003",
     display: "Noncollision motor vehicle traffic accident involving fire starting in motor vehicle while in motion, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HitByObjectThrownIntoOrOnMovingMotorVehicleOnRoad: Coding.FromStrict({
+  EncounterReasonValueSet_HitByObjectThrownIntoOrOnMovingMotorVehicleOnRoad: new Coding({
     code: "214581008",
     display: "Hit by object thrown into or on moving motor vehicle on road",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingHitByObjectThrownIntoOrOnMotorVehicleWhileInMotionDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingHitByObjectThrownIntoOrOnMotorVehicleWhileInMotionDriverOfMotorVehicleInjured: new Coding({
     code: "214582001",
     display: "Noncollision motor vehicle traffic accident involving being hit by object thrown into or on motor vehicle while in motion, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingHitByObjectThrownIntoOrOnMotorVehicleWhileInMotionMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingHitByObjectThrownIntoOrOnMotorVehicleWhileInMotionMotorCyclistInjured: new Coding({
     code: "214584000",
     display: "Noncollision motor vehicle traffic accident involving being hit by object thrown into or on motor vehicle while in motion, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingHitByObjectThrownIntoOrOnMotorVehicleWhileInMotionPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingHitByObjectThrownIntoOrOnMotorVehicleWhileInMotionPassengerOnMotorCycleInjured: new Coding({
     code: "214585004",
     display: "Noncollision motor vehicle traffic accident involving being hit by object thrown into or on motor vehicle while in motion, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingHitByObjectThrownIntoOrOnMotorVehicleWhileInMotionOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingHitByObjectThrownIntoOrOnMotorVehicleWhileInMotionOccupantOfTramInjured: new Coding({
     code: "214586003",
     display: "Noncollision motor vehicle traffic accident involving being hit by object thrown into or on motor vehicle while in motion, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingHitByObjectThrownIntoOrOnMotorVehicleWhileInMotionRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingHitByObjectThrownIntoOrOnMotorVehicleWhileInMotionRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214587007",
     display: "Noncollision motor vehicle traffic accident involving being hit by object thrown into or on motor vehicle while in motion, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingHitByObjectThrownIntoOrOnMotorVehicleWhileInMotionPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingHitByObjectThrownIntoOrOnMotorVehicleWhileInMotionPedalCyclistInjured: new Coding({
     code: "214588002",
     display: "Noncollision motor vehicle traffic accident involving being hit by object thrown into or on motor vehicle while in motion, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingHitByObjectThrownIntoOrOnMotorVehicleWhileInMotionPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingBeingHitByObjectThrownIntoOrOnMotorVehicleWhileInMotionPedestrianInjured: new Coding({
     code: "214589005",
     display: "Noncollision motor vehicle traffic accident involving being hit by object thrown into or on motor vehicle while in motion, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InjuredByBeingThrownAgainstMovingMotorVehicleOnRoad: Coding.FromStrict({
+  EncounterReasonValueSet_InjuredByBeingThrownAgainstMovingMotorVehicleOnRoad: new Coding({
     code: "214592009",
     display: "Injured by being thrown against moving motor vehicle on road",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByBeingThrownAgainstSomePartOfOrObjectInMotorVehicleWhileInMotionDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByBeingThrownAgainstSomePartOfOrObjectInMotorVehicleWhileInMotionDriverOfMotorVehicleInjured: new Coding({
     code: "214593004",
     display: "Noncollision motor vehicle traffic accident involving injury by being thrown against some part of, or object in, motor vehicle while in motion, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByBeingThrownAgainstSomePartOfOrObjectInMotorVehicleWhileInMotionPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByBeingThrownAgainstSomePartOfOrObjectInMotorVehicleWhileInMotionPassengerOfMotorVehicleInjured: new Coding({
     code: "214594005",
     display: "Noncollision motor vehicle traffic accident involving injury by being thrown against some part of, or object in, motor vehicle while in motion, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByBeingThrownAgainstSomePartOfOrObjectInMotorVehicleWhileInMotionMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByBeingThrownAgainstSomePartOfOrObjectInMotorVehicleWhileInMotionMotorCyclistInjured: new Coding({
     code: "214595006",
     display: "Noncollision motor vehicle traffic accident involving injury by being thrown against some part of, or object in, motor vehicle while in motion, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByBeingThrownAgainstSomePartOfOrObjectInMotorVehicleWhileInMotionPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByBeingThrownAgainstSomePartOfOrObjectInMotorVehicleWhileInMotionPassengerOnMotorCycleInjured: new Coding({
     code: "214596007",
     display: "Noncollision motor vehicle traffic accident involving injury by being thrown against some part of, or object in, motor vehicle while in motion, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByBeingThrownAgainstSomePartOfOrObjectInMotorVehicleWhileInMotionOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByBeingThrownAgainstSomePartOfOrObjectInMotorVehicleWhileInMotionOccupantOfTramInjured: new Coding({
     code: "214597003",
     display: "Noncollision motor vehicle traffic accident involving injury by being thrown against some part of, or object in, motor vehicle while in motion, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentWithInjuryByBeingThrownAgainstSomePartOfOrObjectInMotorVehicleWhileInMotionRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentWithInjuryByBeingThrownAgainstSomePartOfOrObjectInMotorVehicleWhileInMotionRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214598008",
     display: "Noncollision motor vehicle traffic accident with injury by being thrown against some part of, or object in, motor vehicle while in motion, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByBeingThrownAgainstSomePartOfOrObjectInMotorVehicleWhileInMotionPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByBeingThrownAgainstSomePartOfOrObjectInMotorVehicleWhileInMotionPedalCyclistInjured: new Coding({
     code: "214599000",
     display: "Noncollision motor vehicle traffic accident involving injury by being thrown against some part of, or object in, motor vehicle while in motion, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByBeingThrownAgainstSomePartOfOrObjectInMotorVehicleWhileInMotionPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingInjuryByBeingThrownAgainstSomePartOfOrObjectInMotorVehicleWhileInMotionPedestrianInjured: new Coding({
     code: "214601003",
     display: "Noncollision motor vehicle traffic accident involving injury by being thrown against some part of, or object in, motor vehicle while in motion, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AccidentDueToObjectFallingInOrOnMovingMotorVehicleOnRoad: Coding.FromStrict({
+  EncounterReasonValueSet_AccidentDueToObjectFallingInOrOnMovingMotorVehicleOnRoad: new Coding({
     code: "214604006",
     display: "Accident due to object falling in or on moving motor vehicle on road",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingObjectFallingInOrOnMotorVehicleWhileInMotionDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingObjectFallingInOrOnMotorVehicleWhileInMotionDriverOfMotorVehicleInjured: new Coding({
     code: "214605007",
     display: "Noncollision motor vehicle traffic accident involving object falling in or on motor vehicle while in motion, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingObjectFallingInOrOnMotorVehicleWhileInMotionPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingObjectFallingInOrOnMotorVehicleWhileInMotionPassengerOfMotorVehicleInjured: new Coding({
     code: "214606008",
     display: "Noncollision motor vehicle traffic accident involving object falling in or on motor vehicle while in motion, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingObjectFallingInOrOnMotorVehicleWhileInMotionMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingObjectFallingInOrOnMotorVehicleWhileInMotionMotorCyclistInjured: new Coding({
     code: "214607004",
     display: "Noncollision motor vehicle traffic accident involving object falling in or on motor vehicle while in motion, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingObjectFallingInOrOnMotorVehicleWhileInMotionPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingObjectFallingInOrOnMotorVehicleWhileInMotionPassengerOnMotorCycleInjured: new Coding({
     code: "214609001",
     display: "Noncollision motor vehicle traffic accident involving object falling in or on motor vehicle while in motion, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingObjectFallingInOrOnMotorVehicleWhileInMotionOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingObjectFallingInOrOnMotorVehicleWhileInMotionOccupantOfTramInjured: new Coding({
     code: "214610006",
     display: "Noncollision motor vehicle traffic accident involving object falling in or on motor vehicle while in motion, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingObjectFallingInOrOnMotorVehicleWhileInMotionRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingObjectFallingInOrOnMotorVehicleWhileInMotionRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214611005",
     display: "Noncollision motor vehicle traffic accident involving object falling in or on motor vehicle while in motion, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingObjectFallingInOrOnMotorVehicleWhileInMotionPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NoncollisionMotorVehicleTrafficAccidentInvolvingObjectFallingInOrOnMotorVehicleWhileInMotionPedestrianInjured: new Coding({
     code: "214613008",
     display: "Noncollision motor vehicle traffic accident involving object falling in or on motor vehicle while in motion, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleAccidentOffPublicRoad: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleAccidentOffPublicRoad: new Coding({
     code: "214640008",
     display: "Motor vehicle accident off public road",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AccidentOffPublicRoadInvolvingMotorDrivenSnowVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_AccidentOffPublicRoadInvolvingMotorDrivenSnowVehicle: new Coding({
     code: "214641007",
     display: "Accident off public road involving motor-driven snow vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AccidentWithBreakageOfPartOfMotorDrivenSnowVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_AccidentWithBreakageOfPartOfMotorDrivenSnowVehicle: new Coding({
     code: "214642000",
     display: "Accident with breakage of part of motor-driven snow vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorDrivenSnowVehicleDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorDrivenSnowVehicleDriverOfMotorVehicleInjured: new Coding({
     code: "214643005",
     display: "Nontraffic accident involving breakage of part of motor-driven snow vehicle, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorDrivenSnowVehiclePassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorDrivenSnowVehiclePassengerOfMotorVehicleInjured: new Coding({
     code: "214644004",
     display: "Nontraffic accident involving breakage of part of motor-driven snow vehicle, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorDrivenSnowVehicleMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorDrivenSnowVehicleMotorCyclistInjured: new Coding({
     code: "214645003",
     display: "Nontraffic accident involving breakage of part of motor-driven snow vehicle, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorDrivenSnowVehiclePassengerOnMotorcycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorDrivenSnowVehiclePassengerOnMotorcycleInjured: new Coding({
     code: "214646002",
     display: "Nontraffic accident involving breakage of part of motor-driven snow vehicle, passenger on motorcycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorDrivenSnowVehicleOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorDrivenSnowVehicleOccupantOfTramInjured: new Coding({
     code: "214647006",
     display: "Nontraffic accident involving breakage of part of motor-driven snow vehicle, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorDrivenSnowVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorDrivenSnowVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214648001",
     display: "Nontraffic accident involving breakage of part of motor-driven snow vehicle, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorDrivenSnowVehiclePedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorDrivenSnowVehiclePedalCyclistInjured: new Coding({
     code: "214649009",
     display: "Nontraffic accident involving breakage of part of motor-driven snow vehicle, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorDrivenSnowVehiclePedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorDrivenSnowVehiclePedestrianInjured: new Coding({
     code: "214650009",
     display: "Nontraffic accident involving breakage of part of motor-driven snow vehicle, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallFromMotorDrivenSnowVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_FallFromMotorDrivenSnowVehicle: new Coding({
     code: "214653006",
     display: "Fall from motor-driven snow vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorDrivenSnowVehicleDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorDrivenSnowVehicleDriverOfMotorVehicleInjured: new Coding({
     code: "214654000",
     display: "Nontraffic accident involving fall from motor-driven snow vehicle, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorDrivenSnowVehicleMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorDrivenSnowVehicleMotorCyclistInjured: new Coding({
     code: "214656003",
     display: "Nontraffic accident involving fall from motor-driven snow vehicle, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorDrivenSnowVehiclePassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorDrivenSnowVehiclePassengerOnMotorCycleInjured: new Coding({
     code: "214657007",
     display: "Nontraffic accident involving fall from motor-driven snow vehicle, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorDrivenSnowVehicleOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorDrivenSnowVehicleOccupantOfTramInjured: new Coding({
     code: "214658002",
     display: "Nontraffic accident involving fall from motor-driven snow vehicle, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorDrivenSnowVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorDrivenSnowVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214659005",
     display: "Nontraffic accident involving fall from motor-driven snow vehicle, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorDrivenSnowVehiclePedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorDrivenSnowVehiclePedalCyclistInjured: new Coding({
     code: "214661001",
     display: "Nontraffic accident involving fall from motor-driven snow vehicle, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorDrivenSnowVehiclePedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorDrivenSnowVehiclePedestrianInjured: new Coding({
     code: "214662008",
     display: "Nontraffic accident involving fall from motor-driven snow vehicle, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HitByMotorDrivenSnowVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_HitByMotorDrivenSnowVehicle: new Coding({
     code: "214665005",
     display: "Hit by motor-driven snow vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByMotorDrivenSnowVehicleDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByMotorDrivenSnowVehicleDriverOfMotorVehicleInjured: new Coding({
     code: "214666006",
     display: "Nontraffic accident involving being hit by motor-driven snow vehicle, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByMotorDrivenSnowVehiclePassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByMotorDrivenSnowVehiclePassengerOfMotorVehicleInjured: new Coding({
     code: "214667002",
     display: "Nontraffic accident involving being hit by motor-driven snow vehicle, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByMotorDrivenSnowVehicleMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByMotorDrivenSnowVehicleMotorCyclistInjured: new Coding({
     code: "214668007",
     display: "Nontraffic accident involving being hit by motor-driven snow vehicle, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByMotorDrivenSnowVehiclePassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByMotorDrivenSnowVehiclePassengerOnMotorCycleInjured: new Coding({
     code: "214669004",
     display: "Nontraffic accident involving being hit by motor-driven snow vehicle, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByMotorDrivenSnowVehicleOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByMotorDrivenSnowVehicleOccupantOfTramInjured: new Coding({
     code: "214670003",
     display: "Nontraffic accident involving being hit by motor-driven snow vehicle, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByMotorDrivenSnowVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByMotorDrivenSnowVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214671004",
     display: "Nontraffic accident involving being hit by motor-driven snow vehicle, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByMotorDrivenSnowVehiclePedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByMotorDrivenSnowVehiclePedalCyclistInjured: new Coding({
     code: "214672006",
     display: "Nontraffic accident involving being hit by motor-driven snow vehicle, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByMotorDrivenSnowVehiclePedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByMotorDrivenSnowVehiclePedestrianInjured: new Coding({
     code: "214673001",
     display: "Nontraffic accident involving being hit by motor-driven snow vehicle, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OverturningOfMotorDrivenSnowVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_OverturningOfMotorDrivenSnowVehicle: new Coding({
     code: "214676009",
     display: "Overturning of motor-driven snow vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfMotorDrivenSnowVehiclePassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfMotorDrivenSnowVehiclePassengerOfMotorVehicleInjured: new Coding({
     code: "214678005",
     display: "Nontraffic accident involving overturning of motor-driven snow vehicle, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfMotorDrivenSnowVehiclePassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfMotorDrivenSnowVehiclePassengerOnMotorCycleInjured: new Coding({
     code: "214680004",
     display: "Nontraffic accident involving overturning of motor-driven snow vehicle, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfMotorDrivenSnowVehicleOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfMotorDrivenSnowVehicleOccupantOfTramInjured: new Coding({
     code: "214681000",
     display: "Nontraffic accident involving overturning of motor-driven snow vehicle, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfMotorDrivenSnowVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfMotorDrivenSnowVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214682007",
     display: "Nontraffic accident involving overturning of motor-driven snow vehicle, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfMotorDrivenSnowVehiclePedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfMotorDrivenSnowVehiclePedalCyclistInjured: new Coding({
     code: "214683002",
     display: "Nontraffic accident involving overturning of motor-driven snow vehicle, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByMotorDrivenSnowVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByMotorDrivenSnowVehicle: new Coding({
     code: "214687001",
     display: "Nontraffic accident involving being run over or dragged by motor-driven snow vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByMotorDrivenSnowVehicleDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByMotorDrivenSnowVehicleDriverOfMotorVehicleInjured: new Coding({
     code: "214688006",
     display: "Nontraffic accident involving being run over or dragged by motor-driven snow vehicle, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByMotorDrivenSnowVehiclePassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByMotorDrivenSnowVehiclePassengerOfMotorVehicleInjured: new Coding({
     code: "214689003",
     display: "Nontraffic accident involving being run over or dragged by motor-driven snow vehicle, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByMotorDrivenSnowVehicleMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByMotorDrivenSnowVehicleMotorCyclistInjured: new Coding({
     code: "214690007",
     display: "Nontraffic accident involving being run over or dragged by motor-driven snow vehicle, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByMotorDrivenSnowVehiclePassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByMotorDrivenSnowVehiclePassengerOnMotorCycleInjured: new Coding({
     code: "214691006",
     display: "Nontraffic accident involving being run over or dragged by motor-driven snow vehicle, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByMotorDrivenSnowVehicleOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByMotorDrivenSnowVehicleOccupantOfTramInjured: new Coding({
     code: "214692004",
     display: "Nontraffic accident involving being run over or dragged by motor-driven snow vehicle, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByMotorDrivenSnowVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByMotorDrivenSnowVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214693009",
     display: "Nontraffic accident involving being run over or dragged by motor-driven snow vehicle, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByMotorDrivenSnowVehiclePedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByMotorDrivenSnowVehiclePedalCyclistInjured: new Coding({
     code: "214694003",
     display: "Nontraffic accident involving being run over or dragged by motor-driven snow vehicle, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByMotorDrivenSnowVehiclePedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByMotorDrivenSnowVehiclePedestrianInjured: new Coding({
     code: "214695002",
     display: "Nontraffic accident involving being run over or dragged by motor-driven snow vehicle, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionOfMotorDrivenSnowVehicleNotOnPublicHighway: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionOfMotorDrivenSnowVehicleNotOnPublicHighway: new Coding({
     code: "214698000",
     display: "Nontraffic accident involving collision of motor-driven snow vehicle, not on public highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionOfMotorDrivenSnowVehicleNotOnPublicHighwayDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionOfMotorDrivenSnowVehicleNotOnPublicHighwayDriverOfMotorVehicleInjured: new Coding({
     code: "214699008",
     display: "Nontraffic accident involving collision of motor-driven snow vehicle, not on public highway, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionOfMotorDrivenSnowVehicleNotOnPublicHighwayPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionOfMotorDrivenSnowVehicleNotOnPublicHighwayPassengerOnMotorCycleInjured: new Coding({
     code: "214702001",
     display: "Nontraffic accident involving collision of motor-driven snow vehicle, not on public highway, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionOfMotorDrivenSnowVehicleNotOnPublicHighwayOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionOfMotorDrivenSnowVehicleNotOnPublicHighwayOccupantOfTramInjured: new Coding({
     code: "214703006",
     display: "Nontraffic accident involving collision of motor-driven snow vehicle, not on public highway, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionOfMotorDrivenSnowVehicleNotOnPublicHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionOfMotorDrivenSnowVehicleNotOnPublicHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214704000",
     display: "Nontraffic accident involving collision of motor-driven snow vehicle, not on public highway, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionOfMotorDrivenSnowVehicleNotOnPublicHighwayPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionOfMotorDrivenSnowVehicleNotOnPublicHighwayPedalCyclistInjured: new Coding({
     code: "214705004",
     display: "Nontraffic accident involving collision of motor-driven snow vehicle, not on public highway, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfOffRoadMotorVehicleExceptSnowVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfOffRoadMotorVehicleExceptSnowVehicle: new Coding({
     code: "214722002",
     display: "Nontraffic accident involving breakage of part of off-road motor vehicle, except snow vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfOffRoadMotorVehicleExceptSnowVehiclePassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfOffRoadMotorVehicleExceptSnowVehiclePassengerOfMotorVehicleInjured: new Coding({
     code: "214724001",
     display: "Nontraffic accident involving breakage of part of off-road motor vehicle, except snow vehicle, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfOffRoadMotorVehicleExceptSnowVehicleMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfOffRoadMotorVehicleExceptSnowVehicleMotorCyclistInjured: new Coding({
     code: "214725000",
     display: "Nontraffic accident involving breakage of part of off-road motor vehicle, except snow vehicle, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfOffRoadMotorVehicleExceptSnowVehiclePassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfOffRoadMotorVehicleExceptSnowVehiclePassengerOnMotorCycleInjured: new Coding({
     code: "214726004",
     display: "Nontraffic accident involving breakage of part of off-road motor vehicle, except snow vehicle, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfOffRoadMotorVehicleExceptSnowVehicleOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfOffRoadMotorVehicleExceptSnowVehicleOccupantOfTramInjured: new Coding({
     code: "214727008",
     display: "Nontraffic accident involving breakage of part of off-road motor vehicle, except snow vehicle, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfOffRoadMotorVehicleExceptSnowVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfOffRoadMotorVehicleExceptSnowVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214728003",
     display: "Nontraffic accident involving breakage of part of off-road motor vehicle, except snow vehicle, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfOffRoadMotorVehicleExceptSnowVehiclePedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfOffRoadMotorVehicleExceptSnowVehiclePedalCyclistInjured: new Coding({
     code: "214729006",
     display: "Nontraffic accident involving breakage of part of off-road motor vehicle, except snow vehicle, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfOffRoadMotorVehicleExceptSnowVehiclePedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfOffRoadMotorVehicleExceptSnowVehiclePedestrianInjured: new Coding({
     code: "214730001",
     display: "Nontraffic accident involving breakage of part of off-road motor vehicle, except snow vehicle, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallFromOffRoadLandMotorVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_FallFromOffRoadLandMotorVehicle: new Coding({
     code: "214733004",
     display: "Fall from off-road land motor vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromOffRoadMotorVehicleExceptSnowVehicleDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromOffRoadMotorVehicleExceptSnowVehicleDriverOfMotorVehicleInjured: new Coding({
     code: "214734005",
     display: "Nontraffic accident involving fall from off-road motor vehicle, except snow vehicle, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromOffRoadMotorVehicleExceptSnowVehiclePassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromOffRoadMotorVehicleExceptSnowVehiclePassengerOfMotorVehicleInjured: new Coding({
     code: "214735006",
     display: "Nontraffic accident involving fall from off-road motor vehicle, except snow vehicle, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromOffRoadMotorVehicleExceptSnowVehicleMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromOffRoadMotorVehicleExceptSnowVehicleMotorCyclistInjured: new Coding({
     code: "214736007",
     display: "Nontraffic accident involving fall from off-road motor vehicle, except snow vehicle, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromOffRoadMotorVehicleExceptSnowVehiclePassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromOffRoadMotorVehicleExceptSnowVehiclePassengerOnMotorCycleInjured: new Coding({
     code: "214737003",
     display: "Nontraffic accident involving fall from off-road motor vehicle, except snow vehicle, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromOffRoadMotorVehicleExceptSnowVehicleOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromOffRoadMotorVehicleExceptSnowVehicleOccupantOfTramInjured: new Coding({
     code: "214738008",
     display: "Nontraffic accident involving fall from off-road motor vehicle, except snow vehicle, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromOffRoadMotorVehicleExceptSnowVehiclePedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromOffRoadMotorVehicleExceptSnowVehiclePedalCyclistInjured: new Coding({
     code: "214740003",
     display: "Nontraffic accident involving fall from off-road motor vehicle, except snow vehicle, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromOffRoadMotorVehicleExceptSnowVehiclePedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromOffRoadMotorVehicleExceptSnowVehiclePedestrianInjured: new Coding({
     code: "214741004",
     display: "Nontraffic accident involving fall from off-road motor vehicle, except snow vehicle, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HitByOffRoadLandMotorVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_HitByOffRoadLandMotorVehicle: new Coding({
     code: "214744007",
     display: "Hit by off-road land motor vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByOffRoadMotorVehicleExceptSnowVehicleDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByOffRoadMotorVehicleExceptSnowVehicleDriverOfMotorVehicleInjured: new Coding({
     code: "214745008",
     display: "Nontraffic accident involving being hit by off-road motor vehicle, except snow vehicle, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByOffRoadMotorVehicleExceptSnowVehiclePassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByOffRoadMotorVehicleExceptSnowVehiclePassengerOfMotorVehicleInjured: new Coding({
     code: "214746009",
     display: "Nontraffic accident involving being hit by off-road motor vehicle, except snow vehicle, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByOffRoadMotorVehicleExceptSnowVehicleMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByOffRoadMotorVehicleExceptSnowVehicleMotorCyclistInjured: new Coding({
     code: "214747000",
     display: "Nontraffic accident involving being hit by off-road motor vehicle, except snow vehicle, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByOffRoadMotorVehicleExceptSnowVehiclePassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByOffRoadMotorVehicleExceptSnowVehiclePassengerOnMotorCycleInjured: new Coding({
     code: "214748005",
     display: "Nontraffic accident involving being hit by off-road motor vehicle, except snow vehicle, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByOffRoadMotorVehicleExceptSnowVehicleOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByOffRoadMotorVehicleExceptSnowVehicleOccupantOfTramInjured: new Coding({
     code: "214749002",
     display: "Nontraffic accident involving being hit by off-road motor vehicle, except snow vehicle, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByOffRoadMotorVehicleExceptSnowVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByOffRoadMotorVehicleExceptSnowVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214750002",
     display: "Nontraffic accident involving being hit by off-road motor vehicle, except snow vehicle, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByOffRoadMotorVehicleExceptSnowVehiclePedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByOffRoadMotorVehicleExceptSnowVehiclePedalCyclistInjured: new Coding({
     code: "214751003",
     display: "Nontraffic accident involving being hit by off-road motor vehicle, except snow vehicle, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByOffRoadMotorVehicleExceptSnowVehiclePedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByOffRoadMotorVehicleExceptSnowVehiclePedestrianInjured: new Coding({
     code: "214752005",
     display: "Nontraffic accident involving being hit by off-road motor vehicle, except snow vehicle, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfOffRoadMotorVehicleExceptSnowVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfOffRoadMotorVehicleExceptSnowVehicle: new Coding({
     code: "214755007",
     display: "Nontraffic accident involving overturning of off-road motor vehicle, except snow vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfOffRoadMotorVehicleExceptSnowVehicleDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfOffRoadMotorVehicleExceptSnowVehicleDriverOfMotorVehicleInjured: new Coding({
     code: "214756008",
     display: "Nontraffic accident involving overturning of off-road motor vehicle, except snow vehicle, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfOffRoadMotorVehicleExceptSnowVehiclePassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfOffRoadMotorVehicleExceptSnowVehiclePassengerOfMotorVehicleInjured: new Coding({
     code: "214757004",
     display: "Nontraffic accident involving overturning of off-road motor vehicle, except snow vehicle, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfOffRoadMotorVehicleExceptSnowVehicleMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfOffRoadMotorVehicleExceptSnowVehicleMotorCyclistInjured: new Coding({
     code: "214758009",
     display: "Nontraffic accident involving overturning of off-road motor vehicle, except snow vehicle, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfOffRoadMotorVehicleExceptSnowVehiclePassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfOffRoadMotorVehicleExceptSnowVehiclePassengerOnMotorCycleInjured: new Coding({
     code: "214759001",
     display: "Nontraffic accident involving overturning of off-road motor vehicle, except snow vehicle, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfOffRoadMotorVehicleExceptSnowVehicleOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfOffRoadMotorVehicleExceptSnowVehicleOccupantOfTramInjured: new Coding({
     code: "214760006",
     display: "Nontraffic accident involving overturning of off-road motor vehicle, except snow vehicle, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfOffRoadMotorVehicleExceptSnowVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfOffRoadMotorVehicleExceptSnowVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214761005",
     display: "Nontraffic accident involving overturning of off-road motor vehicle, except snow vehicle, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfOffRoadMotorVehicleExceptSnowVehiclePedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfOffRoadMotorVehicleExceptSnowVehiclePedalCyclistInjured: new Coding({
     code: "214762003",
     display: "Nontraffic accident involving overturning of off-road motor vehicle, except snow vehicle, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfOffRoadMotorVehicleExceptSnowVehiclePedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingOverturningOfOffRoadMotorVehicleExceptSnowVehiclePedestrianInjured: new Coding({
     code: "214763008",
     display: "Nontraffic accident involving overturning of off-road motor vehicle, except snow vehicle, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByOffRoadMotorVehicleExceptSnowVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByOffRoadMotorVehicleExceptSnowVehicle: new Coding({
     code: "214766000",
     display: "Nontraffic accident involving being run over or dragged by off-road motor vehicle, except snow vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByOffRoadMotorVehicleExceptSnowVehicleDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByOffRoadMotorVehicleExceptSnowVehicleDriverOfMotorVehicleInjured: new Coding({
     code: "214767009",
     display: "Nontraffic accident involving being run over or dragged by off-road motor vehicle, except snow vehicle, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByOffRoadMotorVehicleExceptSnowVehiclePassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByOffRoadMotorVehicleExceptSnowVehiclePassengerOfMotorVehicleInjured: new Coding({
     code: "214768004",
     display: "Nontraffic accident involving being run over or dragged by off-road motor vehicle, except snow vehicle, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByOffRoadMotorVehicleExceptSnowVehicleMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByOffRoadMotorVehicleExceptSnowVehicleMotorCyclistInjured: new Coding({
     code: "214769007",
     display: "Nontraffic accident involving being run over or dragged by off-road motor vehicle, except snow vehicle, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByOffRoadMotorVehicleExceptSnowVehiclePassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByOffRoadMotorVehicleExceptSnowVehiclePassengerOnMotorCycleInjured: new Coding({
     code: "214770008",
     display: "Nontraffic accident involving being run over or dragged by off-road motor vehicle, except snow vehicle, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByOffRoadMotorVehicleExceptSnowVehicleOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByOffRoadMotorVehicleExceptSnowVehicleOccupantOfTramInjured: new Coding({
     code: "214771007",
     display: "Nontraffic accident involving being run over or dragged by off-road motor vehicle, except snow vehicle, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByOffRoadMotorVehicleExceptSnowVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByOffRoadMotorVehicleExceptSnowVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214772000",
     display: "Nontraffic accident involving being run over or dragged by off-road motor vehicle, except snow vehicle, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByOffRoadMotorVehicleExceptSnowVehiclePedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByOffRoadMotorVehicleExceptSnowVehiclePedalCyclistInjured: new Coding({
     code: "214773005",
     display: "Nontraffic accident involving being run over or dragged by off-road motor vehicle, except snow vehicle, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByOffRoadMotorVehicleExceptSnowVehiclePedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingRunOverOrDraggedByOffRoadMotorVehicleExceptSnowVehiclePedestrianInjured: new Coding({
     code: "214774004",
     display: "Nontraffic accident involving being run over or dragged by off-road motor vehicle, except snow vehicle, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingThrownAgainstSomePartOfOrObjectInOffRoadMotorVehicleExceptSnowVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingThrownAgainstSomePartOfOrObjectInOffRoadMotorVehicleExceptSnowVehicle: new Coding({
     code: "214777006",
     display: "Nontraffic accident involving being thrown against some part of or object in, off-road motor vehicle, except snow vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingThrownAgainstSomePartOfOrObjectInOffRoadMotorVehicleExceptSnowVehicleOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingThrownAgainstSomePartOfOrObjectInOffRoadMotorVehicleExceptSnowVehicleOfMotorVehicleInjured: new Coding({
     code: "214778001",
     display: "Nontraffic accident involving being thrown against some part of or object in, off-road motor vehicle, except snow vehicle, of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingThrownAgainstSomePartOfOrObjectInOffRoadMotorVehicleExceptSnowVehiclePassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingThrownAgainstSomePartOfOrObjectInOffRoadMotorVehicleExceptSnowVehiclePassengerOfMotorVehicleInjured: new Coding({
     code: "214779009",
     display: "Nontraffic accident involving being thrown against some part of or object in, off-road motor vehicle, except snow vehicle, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingThrownAgainstSomePartOfOrObjectInOffRoadMotorVehicleExceptSnowVehicleMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingThrownAgainstSomePartOfOrObjectInOffRoadMotorVehicleExceptSnowVehicleMotorCyclistInjured: new Coding({
     code: "214780007",
     display: "Nontraffic accident involving being thrown against some part of or object in, off-road motor vehicle, except snow vehicle, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingThrownAgainstSomePartOfOrObjectInOffRoadMotorVehicleExceptSnowVehiclePassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingThrownAgainstSomePartOfOrObjectInOffRoadMotorVehicleExceptSnowVehiclePassengerOnMotorCycleInjured: new Coding({
     code: "214781006",
     display: "Nontraffic accident involving being thrown against some part of or object in, off-road motor vehicle, except snow vehicle, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingThrownAgainstSomePartOfOrObjectInOffRoadMotorVehicleExceptSnowVehicleOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingThrownAgainstSomePartOfOrObjectInOffRoadMotorVehicleExceptSnowVehicleOccupantOfTramInjured: new Coding({
     code: "214782004",
     display: "Nontraffic accident involving being thrown against some part of or object in, off-road motor vehicle, except snow vehicle, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingThrownAgainstSomePartOfOrObjectInOffRoadMotorVehicleExceptSnowVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingThrownAgainstSomePartOfOrObjectInOffRoadMotorVehicleExceptSnowVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214783009",
     display: "Nontraffic accident involving being thrown against some part of or object in, off-road motor vehicle, except snow vehicle, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingThrownAgainstSomePartOfOrObjectInOffRoadMotorVehicleExceptSnowVehiclePedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingThrownAgainstSomePartOfOrObjectInOffRoadMotorVehicleExceptSnowVehiclePedalCyclistInjured: new Coding({
     code: "214784003",
     display: "Nontraffic accident involving being thrown against some part of or object in, off-road motor vehicle, except snow vehicle, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionBetweenOffRoadMotorVehicleExceptSnowVehicleAndAnimalBeingRiddenOrAnimalDrawnVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionBetweenOffRoadMotorVehicleExceptSnowVehicleAndAnimalBeingRiddenOrAnimalDrawnVehicle: new Coding({
     code: "214788000",
     display: "Nontraffic accident involving collision between off-road motor vehicle, except snow vehicle, and animal being ridden or animal-drawn vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionBetweenOffRoadMotorVehicleExceptSnowVehicleAndAnimalBeingRiddenOrAnimalDrawnVehiclePassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionBetweenOffRoadMotorVehicleExceptSnowVehicleAndAnimalBeingRiddenOrAnimalDrawnVehiclePassengerOfMotorVehicleInjured: new Coding({
     code: "214790004",
     display: "Nontraffic accident involving collision between off-road motor vehicle, except snow vehicle, and animal being ridden or animal-drawn vehicle, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionBetweenOffRoadMotorVehicleExceptSnowVehicleAndAnimalBeingRiddenOrAnimalDrawnVehicleMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionBetweenOffRoadMotorVehicleExceptSnowVehicleAndAnimalBeingRiddenOrAnimalDrawnVehicleMotorCyclistInjured: new Coding({
     code: "214791000",
     display: "Nontraffic accident involving collision between off-road motor vehicle, except snow vehicle, and animal being ridden or animal-drawn vehicle, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionBetweenOffRoadMotorVehicleExceptSnowVehicleAndAnimalBeingRiddenOrAnimalDrawnVehiclePassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionBetweenOffRoadMotorVehicleExceptSnowVehicleAndAnimalBeingRiddenOrAnimalDrawnVehiclePassengerOnMotorCycleInjured: new Coding({
     code: "214792007",
     display: "Nontraffic accident involving collision between off-road motor vehicle, except snow vehicle, and animal being ridden or animal-drawn vehicle, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionBetweenOffRoadMotorVehicleExceptSnowVehicleAndAnimalBeingRiddenOrAnimalDrawnVehicleOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionBetweenOffRoadMotorVehicleExceptSnowVehicleAndAnimalBeingRiddenOrAnimalDrawnVehicleOccupantOfTramInjured: new Coding({
     code: "214793002",
     display: "Nontraffic accident involving collision between off-road motor vehicle, except snow vehicle, and animal being ridden or animal-drawn vehicle, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionBetweenOffRoadMotorVehicleExceptSnowVehicleAndAnimalBeingRiddenOrAnimalDrawnVehicleRiderOfAnimalOrAnimalDrawnVehicleOccupantInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionBetweenOffRoadMotorVehicleExceptSnowVehicleAndAnimalBeingRiddenOrAnimalDrawnVehicleRiderOfAnimalOrAnimalDrawnVehicleOccupantInjured: new Coding({
     code: "214794008",
     display: "Nontraffic accident involving collision between off-road motor vehicle, except snow vehicle, and animal being ridden or animal-drawn vehicle, rider of animal or animal-drawn vehicle occupant injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionBetweenOffRoadMotorVehicleExceptSnowVehicleAndAnimalBeingRiddenOrAnimalDrawnVehiclePedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionBetweenOffRoadMotorVehicleExceptSnowVehicleAndAnimalBeingRiddenOrAnimalDrawnVehiclePedalCyclistInjured: new Coding({
     code: "214795009",
     display: "Nontraffic accident involving collision between off-road motor vehicle, except snow vehicle, and animal being ridden or animal-drawn vehicle, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionBetweenOffRoadMotorVehicleExceptSnowVehicleAndAnimalBeingRiddenOrAnimalDrawnVehiclePedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionBetweenOffRoadMotorVehicleExceptSnowVehicleAndAnimalBeingRiddenOrAnimalDrawnVehiclePedestrianInjured: new Coding({
     code: "214796005",
     display: "Nontraffic accident involving collision between off-road motor vehicle, except snow vehicle, and animal being ridden or animal-drawn vehicle, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndAnimal: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndAnimal: new Coding({
     code: "214834003",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and animal",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndAnimalDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndAnimalDriverOfMotorVehicleInjured: new Coding({
     code: "214835002",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and animal, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndAnimalPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndAnimalPassengerOfMotorVehicleInjured: new Coding({
     code: "214836001",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and animal, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndAnimalMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndAnimalMotorCyclistInjured: new Coding({
     code: "214837005",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and animal, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndAnimalPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndAnimalPassengerOnMotorCycleInjured: new Coding({
     code: "214838000",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and animal, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndAnimalOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndAnimalOccupantOfTramInjured: new Coding({
     code: "214839008",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and animal, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndAnimalRiderOfAnimalOrAnimalDrawnVehicleOccupantInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndAnimalRiderOfAnimalOrAnimalDrawnVehicleOccupantInjured: new Coding({
     code: "214840005",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle,and animal,rider of animal or animal-drawn vehicle occupant injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndAnimalPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndAnimalPedalCyclistInjured: new Coding({
     code: "214841009",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and animal, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndAnimalPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndAnimalPedestrianInjured: new Coding({
     code: "214842002",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and animal, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndNonmotorVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndNonmotorVehicle: new Coding({
     code: "214845000",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and nonmotor vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndNonmotorVehicleDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndNonmotorVehicleDriverOfMotorVehicleInjured: new Coding({
     code: "214846004",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and nonmotor vehicle, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndNonmotorVehiclePassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndNonmotorVehiclePassengerOfMotorVehicleInjured: new Coding({
     code: "214847008",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and nonmotor vehicle, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndNonmotorVehicleMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndNonmotorVehicleMotorCyclistInjured: new Coding({
     code: "214848003",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and nonmotor vehicle, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndNonmotorVehiclePassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndNonmotorVehiclePassengerOnMotorCycleInjured: new Coding({
     code: "214849006",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and nonmotor vehicle, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndNonmotorVehicleOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndNonmotorVehicleOccupantOfTramInjured: new Coding({
     code: "214850006",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and nonmotor vehicle, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndNonmotorVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndNonmotorVehicleRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "214851005",
     display: "Nontraffic accident involving collision, not on public highway, between motor vehicle,except off-road motor vehicle, and nonmotor vehicle, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndNonmotorVehiclePedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndNonmotorVehiclePedalCyclistInjured: new Coding({
     code: "214852003",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and nonmotor vehicle, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndNonmotorVehiclePedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndNonmotorVehiclePedestrianInjured: new Coding({
     code: "214853008",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and nonmotor vehicle, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndPedestrian: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndPedestrian: new Coding({
     code: "214867004",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and pedestrian",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndPedestrianDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndPedestrianDriverOfMotorVehicleInjured: new Coding({
     code: "214868009",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and pedestrian, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndPedestrianPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndPedestrianPassengerOfMotorVehicleInjured: new Coding({
     code: "214869001",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and pedestrian, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndPedestrianMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndPedestrianMotorCyclistInjured: new Coding({
     code: "214870000",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and pedestrian, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndPedestrianPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndPedestrianPassengerOnMotorCycleInjured: new Coding({
     code: "214871001",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and pedestrian, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndPedestrianOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndPedestrianOccupantOfTramInjured: new Coding({
     code: "214872008",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and pedestrian, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadVehicleAndPedestrianRiderOfAnimalOrAnimalDrawnVehicleOccupantInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadVehicleAndPedestrianRiderOfAnimalOrAnimalDrawnVehicleOccupantInjured: new Coding({
     code: "214873003",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle,except off-road vehicle,and pedestrian, rider of animal or animal-drawn vehicle occupant injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndPedestrianPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndPedestrianPedalCyclistInjured: new Coding({
     code: "214874009",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and pedestrian, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndPedestrianPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndPedestrianPedestrianInjured: new Coding({
     code: "214875005",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and pedestrian, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndRailwayTrain: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndRailwayTrain: new Coding({
     code: "214878007",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and railway train",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndRailwayTrainDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndRailwayTrainDriverOfMotorVehicleInjured: new Coding({
     code: "214879004",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and railway train, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndRailwayTrainPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndRailwayTrainPassengerOfMotorVehicleInjured: new Coding({
     code: "214880001",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and railway train, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndRailwayTrainMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndRailwayTrainMotorCyclistInjured: new Coding({
     code: "214881002",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and railway train, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndRailwayTrainPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndRailwayTrainPassengerOnMotorCycleInjured: new Coding({
     code: "214882009",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and railway train, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndRailwayTrainOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndRailwayTrainOccupantOfTramInjured: new Coding({
     code: "214883004",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and railway train, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadVehicleAndRailwayTrainRiderOfAnimalOrAnimalDrawnVehicleOccupantInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadVehicleAndRailwayTrainRiderOfAnimalOrAnimalDrawnVehicleOccupantInjured: new Coding({
     code: "214884005",
     display: "Motor vehicle nontraffic accident involving collision,not on public highway, between motor vehicle,except off-road vehicle,and railway train, rider of animal or animal-drawn vehicle occupant injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndRailwayTrainPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndRailwayTrainPedalCyclistInjured: new Coding({
     code: "214885006",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and railway train, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndRailwayTrainPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingCollisionNotOnPublicHighwayBetweenMotorVehicleExceptOffRoadMotorVehicleAndRailwayTrainPedestrianInjured: new Coding({
     code: "214886007",
     display: "Motor vehicle nontraffic accident involving collision, not on public highway, between motor vehicle, except off-road motor vehicle, and railway train, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingFallWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadMotorVehicleNotOnPublicHighway: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingFallWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadMotorVehicleNotOnPublicHighway: new Coding({
     code: "214914000",
     display: "Motor vehicle nontraffic accident involving fall while boarding or alighting from motor vehicle, except off-road motor vehicle, not on public highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingFallWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadMotorVehicleNotOnPublicHighwayDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingFallWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadMotorVehicleNotOnPublicHighwayDriverOfMotorVehicleInjured: new Coding({
     code: "214915004",
     display: "Motor vehicle nontraffic accident involving fall while boarding or alighting from motor vehicle, except off-road motor vehicle, not on public highway, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingFallWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadMotorVehicleNotOnPublicHighwayPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingFallWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadMotorVehicleNotOnPublicHighwayPassengerOfMotorVehicleInjured: new Coding({
     code: "214916003",
     display: "Motor vehicle nontraffic accident involving fall while boarding or alighting from motor vehicle, except off-road motor vehicle, not on public highway, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingFallWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadMotorVehicleNotOnPublicHighwayMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingFallWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadMotorVehicleNotOnPublicHighwayMotorCyclistInjured: new Coding({
     code: "214917007",
     display: "Motor vehicle nontraffic accident involving fall while boarding or alighting from motor vehicle, except off-road motor vehicle, not on public highway, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingFallWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadMotorVehicleNotOnPublicHighwayPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingFallWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadMotorVehicleNotOnPublicHighwayPassengerOnMotorCycleInjured: new Coding({
     code: "214918002",
     display: "Motor vehicle nontraffic accident involving fall while boarding or alighting from motor vehicle, except off-road motor vehicle, not on public highway, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingFallWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadMotorVehicleNotOnPublicHighwayOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingFallWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadMotorVehicleNotOnPublicHighwayOccupantOfTramInjured: new Coding({
     code: "214919005",
     display: "Motor vehicle nontraffic accident involving fall while boarding or alighting from motor vehicle, except off-road motor vehicle, not on public highway, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingFallWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadMotorVehicleNotOnPublicHighwayPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingFallWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadMotorVehicleNotOnPublicHighwayPedalCyclistInjured: new Coding({
     code: "214921000",
     display: "Motor vehicle nontraffic accident involving fall while boarding or alighting from motor vehicle, except off-road motor vehicle, not on public highway, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingFallWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadMotorVehicleNotOnPublicHighwayPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingFallWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadMotorVehicleNotOnPublicHighwayPedestrianInjured: new Coding({
     code: "214922007",
     display: "Motor vehicle nontraffic accident involving fall while boarding or alighting from motor vehicle, except off-road motor vehicle, not on public highway, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadMotorVehicleNotOnPublicHighway: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadMotorVehicleNotOnPublicHighway: new Coding({
     code: "214925009",
     display: "Motor vehicle nontraffic accident involving injury from moving part of motor vehicle while boarding or alighting from motor vehicle, except off-road motor vehicle, not on public highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayDriverOfMotorVehicleInjured: new Coding({
     code: "214926005",
     display: "Nontraffic accident involving injury from moving part of motor vehicle while boarding or alighting from motor vehicle, except off-road vehicle, not on highway, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayPassengerOfMotorVehicleInjured: new Coding({
     code: "214927001",
     display: "Nontraffic accident involving injury from moving part of motor vehicle while boarding or alighting from motor vehicle, except off-road vehicle, not on highway, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayMotorCyclistInjured: new Coding({
     code: "214928006",
     display: "Nontraffic accident involving injury from moving part of motor vehicle while boarding or alighting from motor vehicle, except off-road vehicle, not on highway, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayPassengerOnMotorCycleInjured: new Coding({
     code: "214929003",
     display: "Nontraffic accident involving injury from moving part of motor vehicle while boarding or alighting from motor vehicle, except off-road vehicle, not on highway, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayOccupantOfTramInjured: new Coding({
     code: "214930008",
     display: "Nontraffic accident involving injury from moving part of motor vehicle while boarding or alighting from motor vehicle, except off-road vehicle, not on highway, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentWithInjuryFromMovingPartOfMotorVehicleWhenBoardingOrAlightingFromVehicleNotOffRoadVehicleNotOnHighwayRiderOfAnimalOrAnimalDrawnVehicleOccupantInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentWithInjuryFromMovingPartOfMotorVehicleWhenBoardingOrAlightingFromVehicleNotOffRoadVehicleNotOnHighwayRiderOfAnimalOrAnimalDrawnVehicleOccupantInjured: new Coding({
     code: "214931007",
     display: "Nontraffic accident with injury from moving part of motor vehicle when boarding or alighting from vehicle,not off-road vehicle,not on highway,rider of animal or animal-drawn vehicle occupant injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayPedestrianInjured: new Coding({
     code: "214933005",
     display: "Nontraffic accident involving injury from moving part of motor vehicle while boarding or alighting from motor vehicle, except off-road vehicle, not on highway, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingBeingTrappedByDoorOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadMotorVehicleNotOnPublicHighway: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingBeingTrappedByDoorOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadMotorVehicleNotOnPublicHighway: new Coding({
     code: "214936002",
     display: "Motor vehicle nontraffic accident involving being trapped by door of motor vehicle while boarding or alighting from motor vehicle, except off-road motor vehicle, not on public highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingTrappedByDoorOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingTrappedByDoorOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayDriverOfMotorVehicleInjured: new Coding({
     code: "214937006",
     display: "Nontraffic accident involving being trapped by door of motor vehicle while boarding or alighting from motor vehicle, except off-road vehicle, not on highway, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingTrappedByDoorOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingTrappedByDoorOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayPassengerOfMotorVehicleInjured: new Coding({
     code: "214938001",
     display: "Nontraffic accident involving being trapped by door of motor vehicle while boarding or alighting from motor vehicle, except off-road vehicle, not on highway, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingTrappedByDoorOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingTrappedByDoorOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayMotorCyclistInjured: new Coding({
     code: "214939009",
     display: "Nontraffic accident involving being trapped by door of motor vehicle while boarding or alighting from motor vehicle, except off-road vehicle, not on highway, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingTrappedByDoorOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingTrappedByDoorOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayPassengerOnMotorCycleInjured: new Coding({
     code: "214940006",
     display: "Nontraffic accident involving being trapped by door of motor vehicle while boarding or alighting from motor vehicle, except off-road vehicle, not on highway, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingTrappedByDoorOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingTrappedByDoorOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayOccupantOfTramInjured: new Coding({
     code: "214941005",
     display: "Nontraffic accident involving being trapped by door of motor vehicle while boarding or alighting from motor vehicle, except off-road vehicle, not on highway, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingTrappedByDoorOfMotorVehicleWhenBoardingOrAlightingFromVehicleNotOffRoadVehicleNotOnHighwayRiderOfAnimalOrAnimalDrawnVehicleOccupantInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingTrappedByDoorOfMotorVehicleWhenBoardingOrAlightingFromVehicleNotOffRoadVehicleNotOnHighwayRiderOfAnimalOrAnimalDrawnVehicleOccupantInjured: new Coding({
     code: "214942003",
     display: "Nontraffic accident involving trapped by door of motor vehicle when boarding or alighting from vehicle, not off-road vehicle, not on highway, rider of animal or animal-drawn vehicle occupant injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingTrappedByDoorOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingTrappedByDoorOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayPedalCyclistInjured: new Coding({
     code: "214943008",
     display: "Nontraffic accident involving being trapped by door of motor vehicle while boarding or alighting from motor vehicle, except off-road vehicle, not on highway, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingTrappedByDoorOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingTrappedByDoorOfMotorVehicleWhileBoardingOrAlightingFromMotorVehicleExceptOffRoadVehicleNotOnHighwayPedestrianInjured: new Coding({
     code: "214944002",
     display: "Nontraffic accident involving being trapped by door of motor vehicle while boarding or alighting from motor vehicle, except off-road vehicle, not on highway, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingBreakageOfPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighway: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingBreakageOfPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighway: new Coding({
     code: "214970001",
     display: "Motor vehicle nontraffic accident involving breakage of part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayDriverOfMotorVehicleInjured: new Coding({
     code: "214971002",
     display: "Nontraffic accident involving breakage of part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOfMotorVehicleInjured: new Coding({
     code: "214972009",
     display: "Nontraffic accident involving breakage of part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOnMotorCycleInjured: new Coding({
     code: "214974005",
     display: "Nontraffic accident involving breakage of part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayOccupantOfTramInjured: new Coding({
     code: "214975006",
     display: "Nontraffic accident involving breakage of part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedalCyclistInjured: new Coding({
     code: "214977003",
     display: "Nontraffic accident involving breakage of part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBreakageOfPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedestrianInjured: new Coding({
     code: "214978008",
     display: "Nontraffic accident involving breakage of part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighway: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighway: new Coding({
     code: "214981003",
     display: "Motor vehicle nontraffic accident involving explosion of any part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayDriverOfMotorVehicleInjured: new Coding({
     code: "214982005",
     display: "Nontraffic accident involving explosion of any part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOfMotorVehicleInjured: new Coding({
     code: "214983000",
     display: "Nontraffic accident involving explosion of any part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayMotorCyclistInjured: new Coding({
     code: "214984006",
     display: "Nontraffic accident involving explosion of any part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOnMotorCycleInjured: new Coding({
     code: "214985007",
     display: "Nontraffic accident involving explosion of any part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayRiderOfAnimalOrAnimalDrawnVehicleOccupantInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayRiderOfAnimalOrAnimalDrawnVehicleOccupantInjured: new Coding({
     code: "214987004",
     display: "Nontraffic accident involving explosion of any part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway, rider of animal or animal-drawn vehicle occupant injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingExplosionOfAnyPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedestrianInjured: new Coding({
     code: "214989001",
     display: "Nontraffic accident involving explosion of any part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingFallFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighway: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingFallFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighway: new Coding({
     code: "214992002",
     display: "Motor vehicle nontraffic accident involving fall from motor vehicle, except off-road motor vehicle, while in motion, not on public highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOfMotorVehicleInjured: new Coding({
     code: "214994001",
     display: "Nontraffic accident involving fall from motor vehicle, except off-road motor vehicle, while in motion, not on public highway, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayMotorCyclistInjured: new Coding({
     code: "214995000",
     display: "Nontraffic accident involving fall from motor vehicle, except off-road motor vehicle, while in motion, not on public highway, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOnMotorCycleInjured: new Coding({
     code: "214996004",
     display: "Nontraffic accident involving fall from motor vehicle, except off-road motor vehicle, while in motion, not on public highway, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayOccupantOfTramInjured: new Coding({
     code: "214997008",
     display: "Nontraffic accident involving fall from motor vehicle, except off-road motor vehicle, while in motion, not on public highway, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFallFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedestrianInjured: new Coding({
     code: "215000006",
     display: "Nontraffic accident involving fall from motor vehicle, except off-road motor vehicle, while in motion, not on public highway, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingJumpFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighway: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingJumpFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighway: new Coding({
     code: "215003008",
     display: "Motor vehicle nontraffic accident involving jump from motor vehicle, except off-road motor vehicle, while in motion, not on public highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingJumpFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingJumpFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayDriverOfMotorVehicleInjured: new Coding({
     code: "215004002",
     display: "Nontraffic accident involving jump from motor vehicle, except off-road motor vehicle, while in motion, not on public highway, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingJumpFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingJumpFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOfMotorVehicleInjured: new Coding({
     code: "215005001",
     display: "Nontraffic accident involving jump from motor vehicle, except off-road motor vehicle, while in motion, not on public highway, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingJumpFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingJumpFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayMotorCyclistInjured: new Coding({
     code: "215006000",
     display: "Nontraffic accident involving jump from motor vehicle, except off-road motor vehicle, while in motion, not on public highway, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingJumpFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingJumpFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOnMotorCycleInjured: new Coding({
     code: "215007009",
     display: "Nontraffic accident involving jump from motor vehicle, except off-road motor vehicle, while in motion, not on public highway, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingJumpFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingJumpFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayOccupantOfTramInjured: new Coding({
     code: "215008004",
     display: "Nontraffic accident involving jump from motor vehicle, except off-road motor vehicle, while in motion, not on public highway, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingJumpFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingJumpFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "215009007",
     display: "Nontraffic accident involving jump from motor vehicle, except off-road motor vehicle, while in motion, not on public highway, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingJumpFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingJumpFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedalCyclistInjured: new Coding({
     code: "215010002",
     display: "Nontraffic accident involving jump from motor vehicle, except off-road motor vehicle, while in motion, not on public highway, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingJumpFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingJumpFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedestrianInjured: new Coding({
     code: "215011003",
     display: "Nontraffic accident involving jump from motor vehicle, except off-road motor vehicle, while in motion, not on public highway, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighway: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighway: new Coding({
     code: "215015007",
     display: "Motor vehicle nontraffic accident involving being accidentally pushed from motor vehicle, except off-road motor vehicle, while in motion, not on public highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayDriverOfMotorVehicleInjured: new Coding({
     code: "215016008",
     display: "Nontraffic accident involving being accidentally pushed from motor vehicle, except off-road motor vehicle, while in motion, not on public highway, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOfMotorVehicleInjured: new Coding({
     code: "215017004",
     display: "Nontraffic accident involving being accidentally pushed from motor vehicle, except off-road motor vehicle, while in motion, not on public highway, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayMotorCyclistInjured: new Coding({
     code: "215018009",
     display: "Nontraffic accident involving being accidentally pushed from motor vehicle, except off-road motor vehicle, while in motion, not on public highway, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOnMotorCycleInjured: new Coding({
     code: "215019001",
     display: "Nontraffic accident involving being accidentally pushed from motor vehicle, except off-road motor vehicle, while in motion, not on public highway, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayOccupantOfTramInjured: new Coding({
     code: "215020007",
     display: "Nontraffic accident involving being accidentally pushed from motor vehicle, except off-road motor vehicle, while in motion, not on public highway, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleExceptOffRoadVehicleWhileInMotionNotOnPublicHighwayRiderOfAnimalOrAnimalDrawnVehicleOccupantInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleExceptOffRoadVehicleWhileInMotionNotOnPublicHighwayRiderOfAnimalOrAnimalDrawnVehicleOccupantInjured: new Coding({
     code: "215021006",
     display: "Nontraffic accident involving being accidentally pushed from motor vehicle, except off-road vehicle, while in motion, not on public highway, rider of animal or animal-drawn vehicle occupant injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedalCyclistInjured: new Coding({
     code: "215022004",
     display: "Nontraffic accident involving being accidentally pushed from motor vehicle, except off-road motor vehicle, while in motion, not on public highway, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingAccidentallyPushedFromMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedestrianInjured: new Coding({
     code: "215023009",
     display: "Nontraffic accident involving being accidentally pushed from motor vehicle, except off-road motor vehicle, while in motion, not on public highway, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingFireStartingInMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighway: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingFireStartingInMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighway: new Coding({
     code: "215026001",
     display: "Motor vehicle nontraffic accident involving fire starting in motor vehicle, except off-road motor vehicle, while in motion, not on public highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFireStartingInMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFireStartingInMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayDriverOfMotorVehicleInjured: new Coding({
     code: "215027005",
     display: "Nontraffic accident involving fire starting in motor vehicle, except off-road motor vehicle, while in motion, not on public highway, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFireStartingInMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFireStartingInMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOfMotorVehicleInjured: new Coding({
     code: "215028000",
     display: "Nontraffic accident involving fire starting in motor vehicle, except off-road motor vehicle, while in motion, not on public highway, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFireStartingInMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFireStartingInMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayMotorCyclistInjured: new Coding({
     code: "215029008",
     display: "Nontraffic accident involving fire starting in motor vehicle, except off-road motor vehicle, while in motion, not on public highway, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFireStartingInMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFireStartingInMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOnMotorCycleInjured: new Coding({
     code: "215030003",
     display: "Nontraffic accident involving fire starting in motor vehicle, except off-road motor vehicle, while in motion, not on public highway, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFireStartingInMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFireStartingInMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayOccupantOfTramInjured: new Coding({
     code: "215031004",
     display: "Nontraffic accident involving fire starting in motor vehicle, except off-road motor vehicle, while in motion, not on public highway, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFireStartingInMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFireStartingInMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "215032006",
     display: "Nontraffic accident involving fire starting in motor vehicle, except off-road motor vehicle, while in motion, not on public highway, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFireStartingInMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFireStartingInMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedalCyclistInjured: new Coding({
     code: "215033001",
     display: "Nontraffic accident involving fire starting in motor vehicle, except off-road motor vehicle, while in motion, not on public highway, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingFireStartingInMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingFireStartingInMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedestrianInjured: new Coding({
     code: "215034007",
     display: "Nontraffic accident involving fire starting in motor vehicle, except off-road motor vehicle, while in motion, not on public highway, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingBeingHitByObjectThrownIntoMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighway: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingBeingHitByObjectThrownIntoMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighway: new Coding({
     code: "215037000",
     display: "Motor vehicle nontraffic accident involving being hit by object thrown into motor vehicle, except off-road motor vehicle, while in motion, not on public highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownIntoMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownIntoMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayDriverOfMotorVehicleInjured: new Coding({
     code: "215038005",
     display: "Nontraffic accident involving being hit by object thrown into motor vehicle, except off-road motor vehicle, while in motion, not on public highway, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownIntoMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownIntoMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOfMotorVehicleInjured: new Coding({
     code: "215039002",
     display: "Nontraffic accident involving being hit by object thrown into motor vehicle, except off-road motor vehicle, while in motion, not on public highway, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownIntoMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownIntoMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayMotorCyclistInjured: new Coding({
     code: "215040000",
     display: "Nontraffic accident involving being hit by object thrown into motor vehicle, except off-road motor vehicle, while in motion, not on public highway, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownIntoMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownIntoMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOnMotorCycleInjured: new Coding({
     code: "215041001",
     display: "Nontraffic accident involving being hit by object thrown into motor vehicle, except off-road motor vehicle, while in motion, not on public highway, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownIntoMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownIntoMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayOccupantOfTramInjured: new Coding({
     code: "215042008",
     display: "Nontraffic accident involving being hit by object thrown into motor vehicle, except off-road motor vehicle, while in motion, not on public highway, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingHitByObjectThrownIntoMotorVehicleExceptOffRoadVehicleWhileInMotionNotOnPublicHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingHitByObjectThrownIntoMotorVehicleExceptOffRoadVehicleWhileInMotionNotOnPublicHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "215043003",
     display: "Nontraffic accident involving hit by object thrown into motor vehicle, except off-road vehicle, while in motion, not on public highway, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownIntoMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownIntoMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedalCyclistInjured: new Coding({
     code: "215044009",
     display: "Nontraffic accident involving being hit by object thrown into motor vehicle, except off-road motor vehicle, while in motion, not on public highway, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownIntoMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownIntoMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedestrianInjured: new Coding({
     code: "215045005",
     display: "Nontraffic accident involving being hit by object thrown into motor vehicle, except off-road motor vehicle, while in motion, not on public highway, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingBeingHitByObjectThrownOnMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighway: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingBeingHitByObjectThrownOnMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighway: new Coding({
     code: "215048007",
     display: "Motor vehicle nontraffic accident involving being hit by object thrown on motor vehicle, except off-road motor vehicle, while in motion, not on public highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownOnMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownOnMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayDriverOfMotorVehicleInjured: new Coding({
     code: "215049004",
     display: "Nontraffic accident involving being hit by object thrown on motor vehicle, except off-road motor vehicle, while in motion, not on public highway, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownOnMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownOnMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOfMotorVehicleInjured: new Coding({
     code: "215050004",
     display: "Nontraffic accident involving being hit by object thrown on motor vehicle, except off-road motor vehicle, while in motion, not on public highway, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownOnMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownOnMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayMotorCyclistInjured: new Coding({
     code: "215051000",
     display: "Nontraffic accident involving being hit by object thrown on motor vehicle, except off-road motor vehicle, while in motion, not on public highway, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownOnMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownOnMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayOccupantOfTramInjured: new Coding({
     code: "215053002",
     display: "Nontraffic accident involving being hit by object thrown on motor vehicle, except off-road motor vehicle, while in motion, not on public highway, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingHitByObjectThrownOnMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingHitByObjectThrownOnMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayRiderOfAnimalOrOccupantOfAnimalDrawnVehicleInjured: new Coding({
     code: "215054008",
     display: "Nontraffic accident involving hit by object thrown on motor vehicle,except off-road motor vehicle, while in motion, not on public highway, rider of animal or occupant of animal-drawn vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownOnMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownOnMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedalCyclistInjured: new Coding({
     code: "215055009",
     display: "Nontraffic accident involving being hit by object thrown on motor vehicle, except off-road motor vehicle, while in motion, not on public highway, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownOnMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingBeingHitByObjectThrownOnMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedestrianInjured: new Coding({
     code: "215056005",
     display: "Nontraffic accident involving being hit by object thrown on motor vehicle, except off-road motor vehicle, while in motion, not on public highway, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingInjuryByBeingThrownAgainstSomePartOfOrObjectInMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighway: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingInjuryByBeingThrownAgainstSomePartOfOrObjectInMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighway: new Coding({
     code: "215059003",
     display: "Motor vehicle nontraffic accident involving injury by being thrown against some part of, or object in motor vehicle, except off-road motor vehicle, while in motion, not on public highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryByBeingThrownAgainstPartOfOrObjectInMovingMotorVehicleExceptOffRoadVehicleNotOnHighwayDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryByBeingThrownAgainstPartOfOrObjectInMovingMotorVehicleExceptOffRoadVehicleNotOnHighwayDriverOfMotorVehicleInjured: new Coding({
     code: "215060008",
     display: "Nontraffic accident involving injury by being thrown against part of,or object in, moving motor vehicle, except off-road vehicle, not on highway, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryByBeingThrownAgainstPartOfOrObjectInMovingMotorVehicleExceptOffRoadVehicleNotOnHighwayPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryByBeingThrownAgainstPartOfOrObjectInMovingMotorVehicleExceptOffRoadVehicleNotOnHighwayPassengerOfMotorVehicleInjured: new Coding({
     code: "215061007",
     display: "Nontraffic accident involving injury by being thrown against part of,or object in, moving motor vehicle, except off-road vehicle, not on highway, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryByBeingThrownAgainstPartOfOrObjectInMovingMotorVehicleExceptOffRoadVehicleNotOnHighwayMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryByBeingThrownAgainstPartOfOrObjectInMovingMotorVehicleExceptOffRoadVehicleNotOnHighwayMotorCyclistInjured: new Coding({
     code: "215062000",
     display: "Nontraffic accident involving injury by being thrown against part of,or object in, moving motor vehicle, except off-road vehicle, not on highway, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryByBeingThrownAgainstPartOfOrObjectInMovingMotorVehicleExceptOffRoadVehicleNotOnHighwayPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryByBeingThrownAgainstPartOfOrObjectInMovingMotorVehicleExceptOffRoadVehicleNotOnHighwayPassengerOnMotorCycleInjured: new Coding({
     code: "215063005",
     display: "Nontraffic accident involving injury by being thrown against part of,or object in, moving motor vehicle, except off-road vehicle, not on highway, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryByBeingThrownAgainstPartOfOrObjectInMovingMotorVehicleExceptOffRoadVehicleNotOnHighwayOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryByBeingThrownAgainstPartOfOrObjectInMovingMotorVehicleExceptOffRoadVehicleNotOnHighwayOccupantOfTramInjured: new Coding({
     code: "215064004",
     display: "Nontraffic accident involving injury by being thrown against part of,or object in, moving motor vehicle, except off-road vehicle, not on highway, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryByBeingThrownAgainstPartOfOrObjectInMovingMotorVehicleNotOffRoadVehicleNotOnHighwayRiderOfAnimalOrAnimalDrawnVehicleOccupantInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryByBeingThrownAgainstPartOfOrObjectInMovingMotorVehicleNotOffRoadVehicleNotOnHighwayRiderOfAnimalOrAnimalDrawnVehicleOccupantInjured: new Coding({
     code: "215066002",
     display: "Nontraffic accident involving injury by being thrown against part of,or object in,moving motor vehicle, not off-road vehicle, not on highway, rider of animal or animal-drawn vehicle occupant injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryByBeingThrownAgainstPartOfOrObjectInMovingMotorVehicleExceptOffRoadVehicleNotOnHighwayPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryByBeingThrownAgainstPartOfOrObjectInMovingMotorVehicleExceptOffRoadVehicleNotOnHighwayPedalCyclistInjured: new Coding({
     code: "215067006",
     display: "Nontraffic accident involving injury by being thrown against part of,or object in, moving motor vehicle, except off-road vehicle, not on highway, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryByBeingThrownAgainstPartOfOrObjectInMovingMotorVehicleExceptOffRoadVehicleNotOnHighwayPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryByBeingThrownAgainstPartOfOrObjectInMovingMotorVehicleExceptOffRoadVehicleNotOnHighwayPedestrianInjured: new Coding({
     code: "215068001",
     display: "Nontraffic accident involving injury by being thrown against part of,or object in, moving motor vehicle, except off-road vehicle, not on highway, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighway: Coding.FromStrict({
+  EncounterReasonValueSet_MotorVehicleNontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighway: new Coding({
     code: "215071009",
     display: "Motor vehicle nontraffic accident involving injury from moving part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayDriverOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayDriverOfMotorVehicleInjured: new Coding({
     code: "215072002",
     display: "Nontraffic accident involving injury from moving part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway, driver of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOfMotorVehicleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOfMotorVehicleInjured: new Coding({
     code: "215073007",
     display: "Nontraffic accident involving injury from moving part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway, passenger of motor vehicle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayMotorCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayMotorCyclistInjured: new Coding({
     code: "215074001",
     display: "Nontraffic accident involving injury from moving part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway, motor cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOnMotorCycleInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPassengerOnMotorCycleInjured: new Coding({
     code: "215075000",
     display: "Nontraffic accident involving injury from moving part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway, passenger on motor cycle injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayOccupantOfTramInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayOccupantOfTramInjured: new Coding({
     code: "215076004",
     display: "Nontraffic accident involving injury from moving part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway, occupant of tram injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayRiderOfAnimalOrAnimalDrawnVehicleOccupantInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayRiderOfAnimalOrAnimalDrawnVehicleOccupantInjured: new Coding({
     code: "215077008",
     display: "Nontraffic accident involving injury from moving part of motor vehicle,except off-road motor vehicle, while in motion, not on public highway, rider of animal or animal-drawn vehicle occupant injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedalCyclistInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedalCyclistInjured: new Coding({
     code: "215078003",
     display: "Nontraffic accident involving injury from moving part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway, pedal cyclist injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedestrianInjured: Coding.FromStrict({
+  EncounterReasonValueSet_NontrafficAccidentInvolvingInjuryFromMovingPartOfMotorVehicleExceptOffRoadMotorVehicleWhileInMotionNotOnPublicHighwayPedestrianInjured: new Coding({
     code: "215079006",
     display: "Nontraffic accident involving injury from moving part of motor vehicle, except off-road motor vehicle, while in motion, not on public highway, pedestrian injured",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CardiacCatheterizationEducation: Coding.FromStrict({
+  EncounterReasonValueSet_CardiacCatheterizationEducation: new Coding({
     code: "2153008",
     display: "Cardiac catheterization education",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OperationOnVulva: Coding.FromStrict({
+  EncounterReasonValueSet_OperationOnVulva: new Coding({
     code: "2161003",
     display: "Operation on vulva",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InjectionOfAorta: Coding.FromStrict({
+  EncounterReasonValueSet_InjectionOfAorta: new Coding({
     code: "2164006",
     display: "Injection of aorta",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BicuspidizationOfAorticValve: Coding.FromStrict({
+  EncounterReasonValueSet_BicuspidizationOfAorticValve: new Coding({
     code: "2166008",
     display: "Bicuspidization of aortic valve",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfTonsilTags: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfTonsilTags: new Coding({
     code: "2171001",
     display: "Excision of tonsil tags",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Ureterocentesis: Coding.FromStrict({
+  EncounterReasonValueSet_Ureterocentesis: new Coding({
     code: "2178007",
     display: "Ureterocentesis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OperationForBoneInjuryOfTarsalsAndMetatarsals: Coding.FromStrict({
+  EncounterReasonValueSet_OperationForBoneInjuryOfTarsalsAndMetatarsals: new Coding({
     code: "2181002",
     display: "Operation for bone injury of tarsals and metatarsals",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SutureOfTendonToSkeletalAttachment: Coding.FromStrict({
+  EncounterReasonValueSet_SutureOfTendonToSkeletalAttachment: new Coding({
     code: "2188008",
     display: "Suture of tendon to skeletal attachment",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StruckByFallingRockOrStone: Coding.FromStrict({
+  EncounterReasonValueSet_StruckByFallingRockOrStone: new Coding({
     code: "21902005",
     display: "Struck by falling rock or stone",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfRupturedAneurysmWithGraftOfCeliacArtery: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfRupturedAneurysmWithGraftOfCeliacArtery: new Coding({
     code: "2193006",
     display: "Repair of ruptured aneurysm with graft of celiac artery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_GasLiquidChromatographyElectronCaptureType: Coding.FromStrict({
+  EncounterReasonValueSet_GasLiquidChromatographyElectronCaptureType: new Coding({
     code: "2196003",
     display: "Gas liquid chromatography, electron capture type",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfLesionOfCulDeSac: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfLesionOfCulDeSac: new Coding({
     code: "2199005",
     display: "Excision of lesion of cul-de-sac",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CuretteTestOfSkin: Coding.FromStrict({
+  EncounterReasonValueSet_CuretteTestOfSkin: new Coding({
     code: "2214008",
     display: "Curette test of skin",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ComplementComponentAssay: Coding.FromStrict({
+  EncounterReasonValueSet_ComplementComponentAssay: new Coding({
     code: "2220009",
     display: "Complement component assay",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SensititerSystemTest: Coding.FromStrict({
+  EncounterReasonValueSet_SensititerSystemTest: new Coding({
     code: "2225004",
     display: "Sensititer system test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Proctosigmoidopexy: Coding.FromStrict({
+  EncounterReasonValueSet_Proctosigmoidopexy: new Coding({
     code: "2234009",
     display: "Proctosigmoidopexy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StoneOperationAnoplasty: Coding.FromStrict({
+  EncounterReasonValueSet_StoneOperationAnoplasty: new Coding({
     code: "2238007",
     display: "Stone operation, anoplasty",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReconstructionOfEyelid: Coding.FromStrict({
+  EncounterReasonValueSet_ReconstructionOfEyelid: new Coding({
     code: "2242005",
     display: "Reconstruction of eyelid",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ForcibleIntercourse: Coding.FromStrict({
+  EncounterReasonValueSet_ForcibleIntercourse: new Coding({
     code: "22439003",
     display: "Forcible intercourse",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ArthroscopyOfWristWithInternalFixationForInstability: Coding.FromStrict({
+  EncounterReasonValueSet_ArthroscopyOfWristWithInternalFixationForInstability: new Coding({
     code: "2244006",
     display: "Arthroscopy of wrist with internal fixation for instability",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ResectionOfAscendingAortaWithAnastomosis: Coding.FromStrict({
+  EncounterReasonValueSet_ResectionOfAscendingAortaWithAnastomosis: new Coding({
     code: "2250001",
     display: "Resection of ascending aorta with anastomosis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HospitalAdmissionUrgent48Hours: Coding.FromStrict({
+  EncounterReasonValueSet_HospitalAdmissionUrgent48Hours: new Coding({
     code: "2252009",
     display: "Hospital admission, urgent, 48 hours",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_VenographyOfAdrenalBilateral: Coding.FromStrict({
+  EncounterReasonValueSet_VenographyOfAdrenalBilateral: new Coding({
     code: "2266004",
     display: "Venography of adrenal, bilateral",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReplacementOfTracheostomyTube: Coding.FromStrict({
+  EncounterReasonValueSet_ReplacementOfTracheostomyTube: new Coding({
     code: "2267008",
     display: "Replacement of tracheostomy tube",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CorrectionOfCleftHand: Coding.FromStrict({
+  EncounterReasonValueSet_CorrectionOfCleftHand: new Coding({
     code: "2270007",
     display: "Correction of cleft hand",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExplorationOfPoplitealArtery: Coding.FromStrict({
+  EncounterReasonValueSet_ExplorationOfPoplitealArtery: new Coding({
     code: "2276001",
     display: "Exploration of popliteal artery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UrinalysisAutomated: Coding.FromStrict({
+  EncounterReasonValueSet_UrinalysisAutomated: new Coding({
     code: "2278000",
     display: "Urinalysis, automated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AntibodyDetectionRedBloodCellEnzyme1StageTechniqueIncludingAntiHumanGlobulin: Coding.FromStrict({
+  EncounterReasonValueSet_AntibodyDetectionRedBloodCellEnzyme1StageTechniqueIncludingAntiHumanGlobulin: new Coding({
     code: "2279008",
     display: "Antibody detection, red blood cell, enzyme, 1 stage technique, including anti-human globulin",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MicrobialCultureAnaerobicInitialIsolation: Coding.FromStrict({
+  EncounterReasonValueSet_MicrobialCultureAnaerobicInitialIsolation: new Coding({
     code: "2290003",
     display: "Microbial culture, anaerobic, initial isolation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralSimpleMastectomy: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralSimpleMastectomy: new Coding({
     code: "22964006",
     display: "Unilateral simple mastectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MillerOperationUrethrovesicalSuspension: Coding.FromStrict({
+  EncounterReasonValueSet_MillerOperationUrethrovesicalSuspension: new Coding({
     code: "230009",
     display: "Miller operation, urethrovesical suspension",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralCongenitalDysplasiaOfLungWithVascularAnomalies: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralCongenitalDysplasiaOfLungWithVascularAnomalies: new Coding({
     code: "23125004",
     display: "Unilateral congenital dysplasia of lung with vascular anomalies",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BrainMeningesOperation: Coding.FromStrict({
+  EncounterReasonValueSet_BrainMeningesOperation: new Coding({
     code: "2315006",
     display: "Brain meninges operation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnesthesiaForCastProcedureOnForearmWristOrHand: Coding.FromStrict({
+  EncounterReasonValueSet_AnesthesiaForCastProcedureOnForearmWristOrHand: new Coding({
     code: "2318008",
     display: "Anesthesia for cast procedure on forearm, wrist or hand",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeliveryByRitgenManeuver: Coding.FromStrict({
+  EncounterReasonValueSet_DeliveryByRitgenManeuver: new Coding({
     code: "2321005",
     display: "Delivery by Ritgen maneuver",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SutureOfRecentWoundOfEyelidDirectClosureFullThickness: Coding.FromStrict({
+  EncounterReasonValueSet_SutureOfRecentWoundOfEyelidDirectClosureFullThickness: new Coding({
     code: "2322003",
     display: "Suture of recent wound of eyelid, direct closure, full-thickness",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PreviousKnownSuicideAttempt: Coding.FromStrict({
+  EncounterReasonValueSet_PreviousKnownSuicideAttempt: new Coding({
     code: "23233009",
     display: "Previous known suicide attempt",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StrikingAgainstOrStruckBySportsEquipment: Coding.FromStrict({
+  EncounterReasonValueSet_StrikingAgainstOrStruckBySportsEquipment: new Coding({
     code: "23321002",
     display: "Striking against or struck by sports equipment",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToStingOrBiteByInsect: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToStingOrBiteByInsect: new Coding({
     code: "23361001",
     display: "Exposure to sting or bite by insect",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AdductorTenotomy: Coding.FromStrict({
+  EncounterReasonValueSet_AdductorTenotomy: new Coding({
     code: "2337004",
     display: "Adductor tenotomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ComplicatedCystorrhaphy: Coding.FromStrict({
+  EncounterReasonValueSet_ComplicatedCystorrhaphy: new Coding({
     code: "2344008",
     display: "Complicated cystorrhaphy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiagnosticModelConstruction: Coding.FromStrict({
+  EncounterReasonValueSet_DiagnosticModelConstruction: new Coding({
     code: "2347001",
     display: "Diagnostic model construction",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuicideWhileIncarcerated: Coding.FromStrict({
+  EncounterReasonValueSet_SuicideWhileIncarcerated: new Coding({
     code: "23546003",
     display: "Suicide while incarcerated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RadicalResectionOfTumorOfSoftTissueOfWristArea: Coding.FromStrict({
+  EncounterReasonValueSet_RadicalResectionOfTumorOfSoftTissueOfWristArea: new Coding({
     code: "2364003",
     display: "Radical resection of tumor of soft tissue of wrist area",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TympanoplastyTypeIIWithGraftAgainstIncusOrMalleus: Coding.FromStrict({
+  EncounterReasonValueSet_TympanoplastyTypeIIWithGraftAgainstIncusOrMalleus: new Coding({
     code: "2371008",
     display: "Tympanoplasty type II with graft against incus or malleus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BuffyCoatSmearEvaluation: Coding.FromStrict({
+  EncounterReasonValueSet_BuffyCoatSmearEvaluation: new Coding({
     code: "2373006",
     display: "Buffy coat smear evaluation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncestuousChildConcubinage: Coding.FromStrict({
+  EncounterReasonValueSet_IncestuousChildConcubinage: new Coding({
     code: "23776007",
     display: "Incestuous child concubinage",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_JudicialExecutionByGuillotine: Coding.FromStrict({
+  EncounterReasonValueSet_JudicialExecutionByGuillotine: new Coding({
     code: "23791009",
     display: "Judicial execution by guillotine",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ApplicationOfBreastPump: Coding.FromStrict({
+  EncounterReasonValueSet_ApplicationOfBreastPump: new Coding({
     code: "2382000",
     display: "Application of breast pump",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ClosedReductionOfDislocationOfPatella: Coding.FromStrict({
+  EncounterReasonValueSet_ClosedReductionOfDislocationOfPatella: new Coding({
     code: "2386002",
     display: "Closed reduction of dislocation of patella",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LigationOfVeinOfLowerLimb: Coding.FromStrict({
+  EncounterReasonValueSet_LigationOfVeinOfLowerLimb: new Coding({
     code: "2393003",
     display: "Ligation of vein of lower limb",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ChartPeriodontalPocket: Coding.FromStrict({
+  EncounterReasonValueSet_ChartPeriodontalPocket: new Coding({
     code: "2406000",
     display: "Chart periodontal pocket",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfMediastinalTumor: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfMediastinalTumor: new Coding({
     code: "2407009",
     display: "Excision of mediastinal tumor",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HexosaminidaseAAndTotalHexosaminidaseMeasurementSerum: Coding.FromStrict({
+  EncounterReasonValueSet_HexosaminidaseAAndTotalHexosaminidaseMeasurementSerum: new Coding({
     code: "2408004",
     display: "Hexosaminidase A and total hexosaminidase measurement, serum",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReplantationOfToe: Coding.FromStrict({
+  EncounterReasonValueSet_ReplantationOfToe: new Coding({
     code: "2409007",
     display: "Replantation of toe",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EpsteinBarrVirusSerologicTest: Coding.FromStrict({
+  EncounterReasonValueSet_EpsteinBarrVirusSerologicTest: new Coding({
     code: "2425002",
     display: "Epstein-Barr virus serologic test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReplacementOfCerebralVentricularTube: Coding.FromStrict({
+  EncounterReasonValueSet_ReplacementOfCerebralVentricularTube: new Coding({
     code: "243009",
     display: "Replacement of cerebral ventricular tube",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionOfLacrimalCanaliculus: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionOfLacrimalCanaliculus: new Coding({
     code: "2442008",
     display: "Incision of lacrimal canaliculus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TorrentialRain: Coding.FromStrict({
+  EncounterReasonValueSet_TorrentialRain: new Coding({
     code: "24454008",
     display: "Torrential rain",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CellCountOfSynovialFluidWithDifferentialCount: Coding.FromStrict({
+  EncounterReasonValueSet_CellCountOfSynovialFluidWithDifferentialCount: new Coding({
     code: "2448007",
     display: "Cell count of synovial fluid with differential count",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DivisionOfNerveGanglion: Coding.FromStrict({
+  EncounterReasonValueSet_DivisionOfNerveGanglion: new Coding({
     code: "245002",
     display: "Division of nerve ganglion",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RevisionOfLumbosubarachnoidShunt: Coding.FromStrict({
+  EncounterReasonValueSet_RevisionOfLumbosubarachnoidShunt: new Coding({
     code: "2455009",
     display: "Revision of lumbosubarachnoid shunt",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BlindRehabilitation: Coding.FromStrict({
+  EncounterReasonValueSet_BlindRehabilitation: new Coding({
     code: "2457001",
     display: "Blind rehabilitation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EducationalTherapy: Coding.FromStrict({
+  EncounterReasonValueSet_EducationalTherapy: new Coding({
     code: "2458006",
     display: "Educational therapy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DestructiveProcedureOfArteryOfUpperExtremity: Coding.FromStrict({
+  EncounterReasonValueSet_DestructiveProcedureOfArteryOfUpperExtremity: new Coding({
     code: "2459003",
     display: "Destructive procedure of artery of upper extremity",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralFemoralHerniaWithGangrene: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralFemoralHerniaWithGangrene: new Coding({
     code: "24609004",
     display: "Unilateral femoral hernia with gangrene",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TennisElbowTest: Coding.FromStrict({
+  EncounterReasonValueSet_TennisElbowTest: new Coding({
     code: "2461007",
     display: "Tennis elbow test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfMalunionOfMetatarsalBones: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfMalunionOfMetatarsalBones: new Coding({
     code: "2474001",
     display: "Repair of malunion of metatarsal bones",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TwentyFourHourCollectionOfUrine: Coding.FromStrict({
+  EncounterReasonValueSet_TwentyFourHourCollectionOfUrine: new Coding({
     code: "2475000",
     display: "Twenty-four hour collection of urine",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Sororicide: Coding.FromStrict({
+  EncounterReasonValueSet_Sororicide: new Coding({
     code: "24780005",
     display: "Sororicide",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DebridementOfSkinSubcutaneousTissueMuscleAndBone: Coding.FromStrict({
+  EncounterReasonValueSet_DebridementOfSkinSubcutaneousTissueMuscleAndBone: new Coding({
     code: "2480009",
     display: "Debridement of skin, subcutaneous tissue, muscle and bone",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DestructiveProcedureOfBreast: Coding.FromStrict({
+  EncounterReasonValueSet_DestructiveProcedureOfBreast: new Coding({
     code: "2486003",
     display: "Destructive procedure of breast",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ProvisionOfContactLens: Coding.FromStrict({
+  EncounterReasonValueSet_ProvisionOfContactLens: new Coding({
     code: "2488002",
     display: "Provision of contact lens",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NurseToNurseCommunication: Coding.FromStrict({
+  EncounterReasonValueSet_NurseToNurseCommunication: new Coding({
     code: "2494005",
     display: "Nurse to nurse communication",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RebaseOfUpperPartialDenture: Coding.FromStrict({
+  EncounterReasonValueSet_RebaseOfUpperPartialDenture: new Coding({
     code: "2498008",
     display: "Rebase of upper partial denture",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralImagingOfExternalCarotidArtery: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralImagingOfExternalCarotidArtery: new Coding({
     code: "25007007",
     display: "Unilateral imaging of external carotid artery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_VAL5QuoteNucleotidaseMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_VAL5QuoteNucleotidaseMeasurement: new Coding({
     code: "2507007",
     display: "5' Nucleotidase measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RetrogradeUrographyWithKidneyUreterBladder: Coding.FromStrict({
+  EncounterReasonValueSet_RetrogradeUrographyWithKidneyUreterBladder: new Coding({
     code: "2508002",
     display: "Retrograde urography with kidney-ureter-bladder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ManualReductionOfClosedSupracondylarFractureOfHumerusWithTraction: Coding.FromStrict({
+  EncounterReasonValueSet_ManualReductionOfClosedSupracondylarFractureOfHumerusWithTraction: new Coding({
     code: "2514009",
     display: "Manual reduction of closed supracondylar fracture of humerus with traction",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StrokeRehabilitation: Coding.FromStrict({
+  EncounterReasonValueSet_StrokeRehabilitation: new Coding({
     code: "2517002",
     display: "Stroke rehabilitation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ChiropracticVisit: Coding.FromStrict({
+  EncounterReasonValueSet_ChiropracticVisit: new Coding({
     code: "2530001",
     display: "Chiropractic visit",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MononuclearCellFunctionAssay: Coding.FromStrict({
+  EncounterReasonValueSet_MononuclearCellFunctionAssay: new Coding({
     code: "2531002",
     display: "Mononuclear cell function assay",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathByStrangulation: Coding.FromStrict({
+  EncounterReasonValueSet_DeathByStrangulation: new Coding({
     code: "25318002",
     display: "Death by strangulation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfPulpComplete: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfPulpComplete: new Coding({
     code: "2535006",
     display: "Removal of pulp - complete",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InjectionOfMedicationInAnteriorChamberOfEye: Coding.FromStrict({
+  EncounterReasonValueSet_InjectionOfMedicationInAnteriorChamberOfEye: new Coding({
     code: "2536007",
     display: "Injection of medication in anterior chamber of eye",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OverlayingAccident: Coding.FromStrict({
+  EncounterReasonValueSet_OverlayingAccident: new Coding({
     code: "25455001",
     display: "Overlaying accident",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfKeloid: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfKeloid: new Coding({
     code: "2547000",
     display: "Excision of keloid",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionOfCerebralSubarachnoidSpace: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionOfCerebralSubarachnoidSpace: new Coding({
     code: "2552005",
     display: "Incision of cerebral subarachnoid space",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CreationOfLumbarShuntIncludingLaminectomy: Coding.FromStrict({
+  EncounterReasonValueSet_CreationOfLumbarShuntIncludingLaminectomy: new Coding({
     code: "2564002",
     display: "Creation of lumbar shunt including laminectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OsteoplastyOfRadius: Coding.FromStrict({
+  EncounterReasonValueSet_OsteoplastyOfRadius: new Coding({
     code: "2566000",
     display: "Osteoplasty of radius",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ResectionOfRibByTransaxillaryApproach: Coding.FromStrict({
+  EncounterReasonValueSet_ResectionOfRibByTransaxillaryApproach: new Coding({
     code: "2567009",
     display: "Resection of rib by transaxillary approach",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MurderOfAcquaintance: Coding.FromStrict({
+  EncounterReasonValueSet_MurderOfAcquaintance: new Coding({
     code: "25692008",
     display: "Murder of acquaintance",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TransplantOfHairFolliclesToScalp: Coding.FromStrict({
+  EncounterReasonValueSet_TransplantOfHairFolliclesToScalp: new Coding({
     code: "2580007",
     display: "Transplant of hair follicles to scalp",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OpenHeartSurgery: Coding.FromStrict({
+  EncounterReasonValueSet_OpenHeartSurgery: new Coding({
     code: "2598006",
     display: "Open heart surgery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfBoneFlapOfSkull: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfBoneFlapOfSkull: new Coding({
     code: "2601001",
     display: "Removal of bone flap of skull",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OperationOfSupportingStructuresOfUterus: Coding.FromStrict({
+  EncounterReasonValueSet_OperationOfSupportingStructuresOfUterus: new Coding({
     code: "2607002",
     display: "Operation of supporting structures of uterus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ImplantationOfJointProsthesisOfHand: Coding.FromStrict({
+  EncounterReasonValueSet_ImplantationOfJointProsthesisOfHand: new Coding({
     code: "2613006",
     display: "Implantation of joint prosthesis of hand",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfLigatureFromFallopianTube: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfLigatureFromFallopianTube: new Coding({
     code: "2614000",
     display: "Removal of ligature from fallopian tube",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfBifidDigitOfHand: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfBifidDigitOfHand: new Coding({
     code: "2616003",
     display: "Repair of bifid digit of hand",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallFromScaffolding: Coding.FromStrict({
+  EncounterReasonValueSet_FallFromScaffolding: new Coding({
     code: "2617007",
     display: "Fall from scaffolding",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PsychiatricInterpretationToFamilyOrParentsOfPatient: Coding.FromStrict({
+  EncounterReasonValueSet_PsychiatricInterpretationToFamilyOrParentsOfPatient: new Coding({
     code: "2619005",
     display: "Psychiatric interpretation to family or parents of patient",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PercutaneousAspirationOfRenalPelvis: Coding.FromStrict({
+  EncounterReasonValueSet_PercutaneousAspirationOfRenalPelvis: new Coding({
     code: "262007",
     display: "Percutaneous aspiration of renal pelvis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IntracranialCerebralPerfusionPressureMonitoring: Coding.FromStrict({
+  EncounterReasonValueSet_IntracranialCerebralPerfusionPressureMonitoring: new Coding({
     code: "2629003",
     display: "Intracranial/cerebral perfusion pressure monitoring",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionAndDrainageOfInfectedBursaOfUpperArm: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionAndDrainageOfInfectedBursaOfUpperArm: new Coding({
     code: "2632000",
     display: "Incision and drainage of infected bursa of upper arm",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralImagingOfAdrenalArtery: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralImagingOfAdrenalArtery: new Coding({
     code: "2636002",
     display: "Unilateral imaging of adrenal artery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PrefabricatedPostAndCoreInAdditionToCrown: Coding.FromStrict({
+  EncounterReasonValueSet_PrefabricatedPostAndCoreInAdditionToCrown: new Coding({
     code: "2642003",
     display: "Prefabricated post and core in addition to crown",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LigationOfVaricoseVeinOfHeadAndNeck: Coding.FromStrict({
+  EncounterReasonValueSet_LigationOfVaricoseVeinOfHeadAndNeck: new Coding({
     code: "2643008",
     display: "Ligation of varicose vein of head and neck",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CauterizationOfLiver: Coding.FromStrict({
+  EncounterReasonValueSet_CauterizationOfLiver: new Coding({
     code: "2644002",
     display: "Cauterization of liver",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IntelligenceTestWB1: Coding.FromStrict({
+  EncounterReasonValueSet_IntelligenceTestWB1: new Coding({
     code: "2645001",
     display: "Intelligence test/WB1",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionAndExplorationOfVasDeferens: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionAndExplorationOfVasDeferens: new Coding({
     code: "2646000",
     display: "Incision and exploration of vas deferens",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SocialServiceInterviewOfPatient: Coding.FromStrict({
+  EncounterReasonValueSet_SocialServiceInterviewOfPatient: new Coding({
     code: "2658000",
     display: "Social service interview of patient",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SutureOfLigamentOfLowerExtremity: Coding.FromStrict({
+  EncounterReasonValueSet_SutureOfLigamentOfLowerExtremity: new Coding({
     code: "2659008",
     display: "Suture of ligament of lower extremity",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuddenDeath: Coding.FromStrict({
+  EncounterReasonValueSet_SuddenDeath: new Coding({
     code: "26636000",
     display: "Sudden death",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RecementationOfSpaceMaintainer: Coding.FromStrict({
+  EncounterReasonValueSet_RecementationOfSpaceMaintainer: new Coding({
     code: "2668005",
     display: "Recementation of space maintainer",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralRepairOfDirectInguinalHernia: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralRepairOfDirectInguinalHernia: new Coding({
     code: "26684009",
     display: "Unilateral repair of direct inguinal hernia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiagnosticProcedureOnCornea: Coding.FromStrict({
+  EncounterReasonValueSet_DiagnosticProcedureOnCornea: new Coding({
     code: "2670001",
     display: "Diagnostic procedure on cornea",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnalFistulectomyMultiple: Coding.FromStrict({
+  EncounterReasonValueSet_AnalFistulectomyMultiple: new Coding({
     code: "267001",
     display: "Anal fistulectomy, multiple",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionAndDrainageOfMasticatorSpaceByExtraoralApproach: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionAndDrainageOfMasticatorSpaceByExtraoralApproach: new Coding({
     code: "2673004",
     display: "Incision and drainage of masticator space by extraoral approach",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Stripping: Coding.FromStrict({
+  EncounterReasonValueSet_Stripping: new Coding({
     code: "2677003",
     display: "Stripping",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathDueToTrampling: Coding.FromStrict({
+  EncounterReasonValueSet_DeathDueToTrampling: new Coding({
     code: "26878008",
     display: "Death due to trampling",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MRIOfPelvis: Coding.FromStrict({
+  EncounterReasonValueSet_MRIOfPelvis: new Coding({
     code: "2690005",
     display: "MRI of pelvis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StoolFatQuantitativeMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_StoolFatQuantitativeMeasurement: new Coding({
     code: "2693007",
     display: "Stool fat, quantitative measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HepaticVenographyWithHemodynamicEvaluation: Coding.FromStrict({
+  EncounterReasonValueSet_HepaticVenographyWithHemodynamicEvaluation: new Coding({
     code: "2696004",
     display: "Hepatic venography with hemodynamic evaluation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StrippingAndLigationOfGreatSaphenousVein: Coding.FromStrict({
+  EncounterReasonValueSet_StrippingAndLigationOfGreatSaphenousVein: new Coding({
     code: "2697008",
     display: "Stripping and ligation of great saphenous vein",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralRepairOfIndirectInguinalHernia: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralRepairOfIndirectInguinalHernia: new Coding({
     code: "27139003",
     display: "Unilateral repair of indirect inguinal hernia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DermalFatFasciaGraft: Coding.FromStrict({
+  EncounterReasonValueSet_DermalFatFasciaGraft: new Coding({
     code: "2716009",
     display: "Dermal-fat-fascia graft",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Interleukin3Assay: Coding.FromStrict({
+  EncounterReasonValueSet_Interleukin3Assay: new Coding({
     code: "2722000",
     display: "Interleukin-3 assay",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SerologicTestForInfluenzaVirusA: Coding.FromStrict({
+  EncounterReasonValueSet_SerologicTestForInfluenzaVirusA: new Coding({
     code: "2731000",
     display: "Serologic test for influenza virus A",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RecessionOfTendonOfHand: Coding.FromStrict({
+  EncounterReasonValueSet_RecessionOfTendonOfHand: new Coding({
     code: "2732007",
     display: "Recession of tendon of hand",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExploratoryCraniotomyInfratentorial: Coding.FromStrict({
+  EncounterReasonValueSet_ExploratoryCraniotomyInfratentorial: new Coding({
     code: "2737001",
     display: "Exploratory craniotomy, infratentorial",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DestructionOfBartholinQuoteSGland: Coding.FromStrict({
+  EncounterReasonValueSet_DestructionOfBartholinQuoteSGland: new Coding({
     code: "2742009",
     display: "Destruction of Bartholin's gland",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OperativeEndoscopyOfIleum: Coding.FromStrict({
+  EncounterReasonValueSet_OperativeEndoscopyOfIleum: new Coding({
     code: "2743004",
     display: "Operative endoscopy of ileum",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Epiplopexy: Coding.FromStrict({
+  EncounterReasonValueSet_Epiplopexy: new Coding({
     code: "2745006",
     display: "Epiplopexy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Incudopexy: Coding.FromStrict({
+  EncounterReasonValueSet_Incudopexy: new Coding({
     code: "2752008",
     display: "Incudopexy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralCaudalDisplacementOfDiaphragm: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralCaudalDisplacementOfDiaphragm: new Coding({
     code: "2769005",
     display: "Unilateral caudal displacement of diaphragm",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IntrapartumMaternalDeath: Coding.FromStrict({
+  EncounterReasonValueSet_IntrapartumMaternalDeath: new Coding({
     code: "27792001",
     display: "Intrapartum maternal death",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OsteoplastyOfFacialBones: Coding.FromStrict({
+  EncounterReasonValueSet_OsteoplastyOfFacialBones: new Coding({
     code: "2780005",
     display: "Osteoplasty of facial bones",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Homicide: Coding.FromStrict({
+  EncounterReasonValueSet_Homicide: new Coding({
     code: "27935005",
     display: "Homicide",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CauterizationOfNavel: Coding.FromStrict({
+  EncounterReasonValueSet_CauterizationOfNavel: new Coding({
     code: "2794006",
     display: "Cauterization of navel",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ManualDilationAndStretching: Coding.FromStrict({
+  EncounterReasonValueSet_ManualDilationAndStretching: new Coding({
     code: "2802005",
     display: "Manual dilation and stretching",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Fratricide: Coding.FromStrict({
+  EncounterReasonValueSet_Fratricide: new Coding({
     code: "28064001",
     display: "Fratricide",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CineradiographyOfPharynx: Coding.FromStrict({
+  EncounterReasonValueSet_CineradiographyOfPharynx: new Coding({
     code: "2811005",
     display: "Cineradiography of pharynx",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Nephroureterocystectomy: Coding.FromStrict({
+  EncounterReasonValueSet_Nephroureterocystectomy: new Coding({
     code: "2813008",
     display: "Nephroureterocystectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoBacterialAntibodyPresent: Coding.FromStrict({
+  EncounterReasonValueSet_NoBacterialAntibodyPresent: new Coding({
     code: "28281004",
     display: "No bacterial antibody present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TranspositionOfUlnarNerveAtElbow: Coding.FromStrict({
+  EncounterReasonValueSet_TranspositionOfUlnarNerveAtElbow: new Coding({
     code: "2837008",
     display: "Transposition of ulnar nerve at elbow",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_GasChromatographyMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_GasChromatographyMeasurement: new Coding({
     code: "2842000",
     display: "Gas chromatography measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RevisionOfUrinaryConduit: Coding.FromStrict({
+  EncounterReasonValueSet_RevisionOfUrinaryConduit: new Coding({
     code: "2843005",
     display: "Revision of urinary conduit",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CervicalMyelography: Coding.FromStrict({
+  EncounterReasonValueSet_CervicalMyelography: new Coding({
     code: "2847006",
     display: "Cervical myelography",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionAndDrainageOfVulva: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionAndDrainageOfVulva: new Coding({
     code: "285008",
     display: "Incision and drainage of vulva",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ArthrotomyForSynovectomyOfSternoclavicularJoint: Coding.FromStrict({
+  EncounterReasonValueSet_ArthrotomyForSynovectomyOfSternoclavicularJoint: new Coding({
     code: "2851008",
     display: "Arthrotomy for synovectomy of sternoclavicular joint",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BursectomyOfHand: Coding.FromStrict({
+  EncounterReasonValueSet_BursectomyOfHand: new Coding({
     code: "2854000",
     display: "Bursectomy of hand",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Pinealectomy: Coding.FromStrict({
+  EncounterReasonValueSet_Pinealectomy: new Coding({
     code: "2857007",
     display: "Pinealectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Euthanasia: Coding.FromStrict({
+  EncounterReasonValueSet_Euthanasia: new Coding({
     code: "28631002",
     display: "Euthanasia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ObliterationOfLymphaticStructure: Coding.FromStrict({
+  EncounterReasonValueSet_ObliterationOfLymphaticStructure: new Coding({
     code: "2866006",
     display: "Obliteration of lymphatic structure",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ImplantationOfJointProsthesisOfElbow: Coding.FromStrict({
+  EncounterReasonValueSet_ImplantationOfJointProsthesisOfElbow: new Coding({
     code: "2875008",
     display: "Implantation of joint prosthesis of elbow",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HospitalAdmissionTypeUnclassifiedExplainByReport: Coding.FromStrict({
+  EncounterReasonValueSet_HospitalAdmissionTypeUnclassifiedExplainByReport: new Coding({
     code: "2876009",
     display: "Hospital admission, type unclassified, explain by report",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IntradermalAllergenTest: Coding.FromStrict({
+  EncounterReasonValueSet_IntradermalAllergenTest: new Coding({
     code: "2885009",
     display: "Intradermal allergen test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ArthroscopyOfElbowWithPartialSynovectomy: Coding.FromStrict({
+  EncounterReasonValueSet_ArthroscopyOfElbowWithPartialSynovectomy: new Coding({
     code: "2891006",
     display: "Arthroscopy of elbow with partial synovectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeoxyribonucleicAcidAnalysisAntenatalBlood: Coding.FromStrict({
+  EncounterReasonValueSet_DeoxyribonucleicAcidAnalysisAntenatalBlood: new Coding({
     code: "2898000",
     display: "Deoxyribonucleic acid analysis, antenatal, blood",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiagnosticProcedureOnAnteriorChamberOfEye: Coding.FromStrict({
+  EncounterReasonValueSet_DiagnosticProcedureOnAnteriorChamberOfEye: new Coding({
     code: "2903001",
     display: "Diagnostic procedure on anterior chamber of eye",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CryotherapyToHemorrhoid: Coding.FromStrict({
+  EncounterReasonValueSet_CryotherapyToHemorrhoid: new Coding({
     code: "2908005",
     display: "Cryotherapy to hemorrhoid",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnteriorSclerotomy: Coding.FromStrict({
+  EncounterReasonValueSet_AnteriorSclerotomy: new Coding({
     code: "2914003",
     display: "Anterior sclerotomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralExcisionOfHydrocele: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralExcisionOfHydrocele: new Coding({
     code: "29150008",
     display: "Unilateral excision of hydrocele",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SutureOfCapsuleOfAnkle: Coding.FromStrict({
+  EncounterReasonValueSet_SutureOfCapsuleOfAnkle: new Coding({
     code: "2915002",
     display: "Suture of capsule of ankle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Pneumogynecography: Coding.FromStrict({
+  EncounterReasonValueSet_Pneumogynecography: new Coding({
     code: "2933008",
     display: "Pneumogynecography",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionalBiopsyOfJointStructureOfSpine: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionalBiopsyOfJointStructureOfSpine: new Coding({
     code: "294002",
     display: "Excisional biopsy of joint structure of spine",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MurderOfRelative: Coding.FromStrict({
+  EncounterReasonValueSet_MurderOfRelative: new Coding({
     code: "29444006",
     display: "Murder of relative",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralFemoralHerniaWithGangreneANDObstruction: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralFemoralHerniaWithGangreneANDObstruction: new Coding({
     code: "29450001",
     display: "Unilateral femoral hernia with gangrene AND obstruction",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuprapubicDiverticulectomyOfUrinaryBladder: Coding.FromStrict({
+  EncounterReasonValueSet_SuprapubicDiverticulectomyOfUrinaryBladder: new Coding({
     code: "2945004",
     display: "Suprapubic diverticulectomy of urinary bladder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TherapeuticCompoundMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_TherapeuticCompoundMeasurement: new Coding({
     code: "2947007",
     display: "Therapeutic compound measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NonexcisionalDestructionOfCystOfCiliaryBody: Coding.FromStrict({
+  EncounterReasonValueSet_NonexcisionalDestructionOfCystOfCiliaryBody: new Coding({
     code: "295001",
     display: "Nonexcisional destruction of cyst of ciliary body",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ClosureOfFistulaOfUterineCervix: Coding.FromStrict({
+  EncounterReasonValueSet_ClosureOfFistulaOfUterineCervix: new Coding({
     code: "2960001",
     display: "Closure of fistula of uterine cervix",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CraniectomyWithTreatmentOfPenetratingWoundOfBrain: Coding.FromStrict({
+  EncounterReasonValueSet_CraniectomyWithTreatmentOfPenetratingWoundOfBrain: new Coding({
     code: "2968008",
     display: "Craniectomy with treatment of penetrating wound of brain",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MetacarpalLengtheningAndTransferOfLocalFlap: Coding.FromStrict({
+  EncounterReasonValueSet_MetacarpalLengtheningAndTransferOfLocalFlap: new Coding({
     code: "2970004",
     display: "Metacarpal lengthening and transfer of local flap",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ClosureOfAcquiredUrethrovaginalFistula: Coding.FromStrict({
+  EncounterReasonValueSet_ClosureOfAcquiredUrethrovaginalFistula: new Coding({
     code: "2971000",
     display: "Closure of acquired urethrovaginal fistula",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ThrombectomyOfLowerLimbVein: Coding.FromStrict({
+  EncounterReasonValueSet_ThrombectomyOfLowerLimbVein: new Coding({
     code: "2977001",
     display: "Thrombectomy of lower limb vein",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TotalLobectomyWithBronchoplasty: Coding.FromStrict({
+  EncounterReasonValueSet_TotalLobectomyWithBronchoplasty: new Coding({
     code: "3001009",
     display: "Total lobectomy with bronchoplasty",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfSilasticTubesFromEar: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfSilasticTubesFromEar: new Coding({
     code: "3010001",
     display: "Removal of silastic tubes from ear",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfCrutchfieldTongsFromSkull: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfCrutchfieldTongsFromSkull: new Coding({
     code: "3016007",
     display: "Removal of Crutchfield tongs from skull",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CalcitoninMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_CalcitoninMeasurement: new Coding({
     code: "3025001",
     display: "Calcitonin measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TibiotalarArthrodesis: Coding.FromStrict({
+  EncounterReasonValueSet_TibiotalarArthrodesis: new Coding({
     code: "3026000",
     display: "Tibiotalar arthrodesis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PeripheralNervousSystemDiseaseRehabilitation: Coding.FromStrict({
+  EncounterReasonValueSet_PeripheralNervousSystemDiseaseRehabilitation: new Coding({
     code: "3029007",
     display: "Peripheral nervous system disease rehabilitation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfStomach: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfStomach: new Coding({
     code: "3041000",
     display: "Repair of stomach",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralTraumaticAmputationOfLegWithComplication: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralTraumaticAmputationOfLegWithComplication: new Coding({
     code: "30459002",
     display: "Unilateral traumatic amputation of leg with complication",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_KowaFundusPhotography: Coding.FromStrict({
+  EncounterReasonValueSet_KowaFundusPhotography: new Coding({
     code: "3047001",
     display: "Kowa fundus photography",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ForequarterAmputationRight: Coding.FromStrict({
+  EncounterReasonValueSet_ForequarterAmputationRight: new Coding({
     code: "3060007",
     display: "Forequarter amputation, right",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_USKidneys: Coding.FromStrict({
+  EncounterReasonValueSet_USKidneys: new Coding({
     code: "306005",
     display: "US kidneys",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CompleteExcisionOfNailANDNailMatrix: Coding.FromStrict({
+  EncounterReasonValueSet_CompleteExcisionOfNailANDNailMatrix: new Coding({
     code: "3061006",
     display: "Complete excision of nail AND nail matrix",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_GastroscopyThroughArtificialStoma: Coding.FromStrict({
+  EncounterReasonValueSet_GastroscopyThroughArtificialStoma: new Coding({
     code: "3063009",
     display: "Gastroscopy through artificial stoma",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NonoperativeRemovalOfProsthesisOfBileDuct: Coding.FromStrict({
+  EncounterReasonValueSet_NonoperativeRemovalOfProsthesisOfBileDuct: new Coding({
     code: "3075004",
     display: "Nonoperative removal of prosthesis of bile duct",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EmbolectomyWithCatheterOfRenalArteryByAbdominalIncision: Coding.FromStrict({
+  EncounterReasonValueSet_EmbolectomyWithCatheterOfRenalArteryByAbdominalIncision: new Coding({
     code: "3078002",
     display: "Embolectomy with catheter of renal artery by abdominal incision",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfDeviceFromThorax: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfDeviceFromThorax: new Coding({
     code: "3083005",
     display: "Removal of device from thorax",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnesthesiaForEndoscopicProcedureOnUpperExtremity: Coding.FromStrict({
+  EncounterReasonValueSet_AnesthesiaForEndoscopicProcedureOnUpperExtremity: new Coding({
     code: "3088001",
     display: "Anesthesia for endoscopic procedure on upper extremity",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AneurysmectomyWithGraftReplacementOfLowerLimbArtery: Coding.FromStrict({
+  EncounterReasonValueSet_AneurysmectomyWithGraftReplacementOfLowerLimbArtery: new Coding({
     code: "3090000",
     display: "Aneurysmectomy with graft replacement of lower limb artery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RestraintRemoval: Coding.FromStrict({
+  EncounterReasonValueSet_RestraintRemoval: new Coding({
     code: "3112006",
     display: "Restraint removal",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ClottingScreening: Coding.FromStrict({
+  EncounterReasonValueSet_ClottingScreening: new Coding({
     code: "3116009",
     display: "Clotting screening",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MonitoringOfCardiacOutputByElectrocardiogram: Coding.FromStrict({
+  EncounterReasonValueSet_MonitoringOfCardiacOutputByElectrocardiogram: new Coding({
     code: "3130004",
     display: "Monitoring of cardiac output by electrocardiogram",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PatientDischargeDeceasedAutopsy: Coding.FromStrict({
+  EncounterReasonValueSet_PatientDischargeDeceasedAutopsy: new Coding({
     code: "3133002",
     display: "Patient discharge, deceased, autopsy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Replacement: Coding.FromStrict({
+  EncounterReasonValueSet_Replacement: new Coding({
     code: "3137001",
     display: "Replacement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_VisualFieldExaminationAndEvaluationIntermediate: Coding.FromStrict({
+  EncounterReasonValueSet_VisualFieldExaminationAndEvaluationIntermediate: new Coding({
     code: "3143004",
     display: "Visual field examination and evaluation, intermediate",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralInguinalHerniaWithGangrene: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralInguinalHerniaWithGangrene: new Coding({
     code: "31518001",
     display: "Unilateral inguinal hernia with gangrene",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PartialDacryocystectomy: Coding.FromStrict({
+  EncounterReasonValueSet_PartialDacryocystectomy: new Coding({
     code: "316002",
     display: "Partial dacryocystectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_GadoliniumMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_GadoliniumMeasurement: new Coding({
     code: "3162001",
     display: "Gadolinium measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OpenReductionOfClosedMandibularFractureWithInterdentalFixation: Coding.FromStrict({
+  EncounterReasonValueSet_OpenReductionOfClosedMandibularFractureWithInterdentalFixation: new Coding({
     code: "3164000",
     display: "Open reduction of closed mandibular fracture with interdental fixation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IrrigationOfMuscleOfHand: Coding.FromStrict({
+  EncounterReasonValueSet_IrrigationOfMuscleOfHand: new Coding({
     code: "3165004",
     display: "Irrigation of muscle of hand",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ClosureOfFistulaOfSalivaryGland: Coding.FromStrict({
+  EncounterReasonValueSet_ClosureOfFistulaOfSalivaryGland: new Coding({
     code: "3166003",
     display: "Closure of fistula of salivary gland",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InternalObstetricalVersion: Coding.FromStrict({
+  EncounterReasonValueSet_InternalObstetricalVersion: new Coding({
     code: "3177009",
     display: "Internal obstetrical version",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ClosureOfColostomy: Coding.FromStrict({
+  EncounterReasonValueSet_ClosureOfColostomy: new Coding({
     code: "3183007",
     display: "Closure of colostomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfSkeneGland: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfSkeneGland: new Coding({
     code: "3186004",
     display: "Excision of Skene gland",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AntepartumMaternalDeath: Coding.FromStrict({
+  EncounterReasonValueSet_AntepartumMaternalDeath: new Coding({
     code: "31868001",
     display: "Antepartum maternal death",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EpilationByForceps: Coding.FromStrict({
+  EncounterReasonValueSet_EpilationByForceps: new Coding({
     code: "3190002",
     display: "Epilation by forceps",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LaparoscopicUnilateralRepairOfInguinalHerniaWithProsthesisOrGraft: Coding.FromStrict({
+  EncounterReasonValueSet_LaparoscopicUnilateralRepairOfInguinalHerniaWithProsthesisOrGraft: new Coding({
     code: "32001009",
     display: "Laparoscopic unilateral repair of inguinal hernia with prosthesis or graft",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DestructiveProcedureOfNerve: Coding.FromStrict({
+  EncounterReasonValueSet_DestructiveProcedureOfNerve: new Coding({
     code: "3204007",
     display: "Destructive procedure of nerve",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AsphyxiaByPlasticBag: Coding.FromStrict({
+  EncounterReasonValueSet_AsphyxiaByPlasticBag: new Coding({
     code: "32175001",
     display: "Asphyxia by plastic bag",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CorrectionOfChordeeWithMobilizationOfUrethra: Coding.FromStrict({
+  EncounterReasonValueSet_CorrectionOfChordeeWithMobilizationOfUrethra: new Coding({
     code: "3241008",
     display: "Correction of chordee with mobilization of urethra",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SurgicalConstructionOfFiltrationBleb: Coding.FromStrict({
+  EncounterReasonValueSet_SurgicalConstructionOfFiltrationBleb: new Coding({
     code: "3249005",
     display: "Surgical construction of filtration bleb",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MayoOperationHerniorrhaphy: Coding.FromStrict({
+  EncounterReasonValueSet_MayoOperationHerniorrhaphy: new Coding({
     code: "3251009",
     display: "Mayo operation, herniorrhaphy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CervicalLymphangiogram: Coding.FromStrict({
+  EncounterReasonValueSet_CervicalLymphangiogram: new Coding({
     code: "3256004",
     display: "Cervical lymphangiogram",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EmptyAndMeasurePeritonealDialysisFluid: Coding.FromStrict({
+  EncounterReasonValueSet_EmptyAndMeasurePeritonealDialysisFluid: new Coding({
     code: "3257008",
     display: "Empty and measure peritoneal dialysis fluid",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CerebralArteriography: Coding.FromStrict({
+  EncounterReasonValueSet_CerebralArteriography: new Coding({
     code: "3258003",
     display: "Cerebral arteriography",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralIncompleteCleftLip: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralIncompleteCleftLip: new Coding({
     code: "3267003",
     display: "Unilateral incomplete cleft lip",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TransplantationOfTissueOfPelvicRegion: Coding.FromStrict({
+  EncounterReasonValueSet_TransplantationOfTissueOfPelvicRegion: new Coding({
     code: "3268008",
     display: "Transplantation of tissue of pelvic region",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ImplantationOfNeurostimulatorInSpine: Coding.FromStrict({
+  EncounterReasonValueSet_ImplantationOfNeurostimulatorInSpine: new Coding({
     code: "3270004",
     display: "Implantation of neurostimulator in spine",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LysisOfAdhesionsOfBursaOfHand: Coding.FromStrict({
+  EncounterReasonValueSet_LysisOfAdhesionsOfBursaOfHand: new Coding({
     code: "3278006",
     display: "Lysis of adhesions of bursa of hand",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Cholecystogastrostomy: Coding.FromStrict({
+  EncounterReasonValueSet_Cholecystogastrostomy: new Coding({
     code: "3287002",
     display: "Cholecystogastrostomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallOnSameLevel: Coding.FromStrict({
+  EncounterReasonValueSet_FallOnSameLevel: new Coding({
     code: "33036003",
     display: "Fall on same level",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralExcisionOfOvary: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralExcisionOfOvary: new Coding({
     code: "33159007",
     display: "Unilateral excision of ovary",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AbtAutologousBloodTransfusion: Coding.FromStrict({
+  EncounterReasonValueSet_AbtAutologousBloodTransfusion: new Coding({
     code: "3320000",
     display: "Abt - autologous blood transfusion",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LaserBeamPhotocoagulation: Coding.FromStrict({
+  EncounterReasonValueSet_LaserBeamPhotocoagulation: new Coding({
     code: "3324009",
     display: "Laser beam photocoagulation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfExostosisOfHeadOfFifthMetatarsal: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfExostosisOfHeadOfFifthMetatarsal: new Coding({
     code: "3326006",
     display: "Excision of exostosis of head of fifth metatarsal",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionOfVeinOfHeadAndNeck: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionOfVeinOfHeadAndNeck: new Coding({
     code: "3328007",
     display: "Incision of vein of head and neck",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ApplicationOfShortArmSplintForearmToHandStatic: Coding.FromStrict({
+  EncounterReasonValueSet_ApplicationOfShortArmSplintForearmToHandStatic: new Coding({
     code: "3333006",
     display: "Application of short arm splint, forearm to hand, static",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OpenReductionOfOpenRadialShaftFracture: Coding.FromStrict({
+  EncounterReasonValueSet_OpenReductionOfOpenRadialShaftFracture: new Coding({
     code: "3338002",
     display: "Open reduction of open radial shaft fracture",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PanorexExaminationOfMandible: Coding.FromStrict({
+  EncounterReasonValueSet_PanorexExaminationOfMandible: new Coding({
     code: "334003",
     display: "Panorex examination of mandible",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PTHParathyroidHormoneLevel: Coding.FromStrict({
+  EncounterReasonValueSet_PTHParathyroidHormoneLevel: new Coding({
     code: "3352000",
     display: "PTH - Parathyroid hormone level",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralCongenitalDislocationOfHip: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralCongenitalDislocationOfHip: new Coding({
     code: "33543001",
     display: "Unilateral congenital dislocation of hip",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IronKinetics: Coding.FromStrict({
+  EncounterReasonValueSet_IronKinetics: new Coding({
     code: "3357006",
     display: "Iron kinetics",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BiliaryAnastomosis: Coding.FromStrict({
+  EncounterReasonValueSet_BiliaryAnastomosis: new Coding({
     code: "3360004",
     display: "Biliary anastomosis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OnExaminationNoDiseasePresent: Coding.FromStrict({
+  EncounterReasonValueSet_OnExaminationNoDiseasePresent: new Coding({
     code: "33678008",
     display: "On examination - no disease present",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_VerificationProcedure: Coding.FromStrict({
+  EncounterReasonValueSet_VerificationProcedure: new Coding({
     code: "3390006",
     display: "Verification procedure",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReductionOfTorsionOfOmentum: Coding.FromStrict({
+  EncounterReasonValueSet_ReductionOfTorsionOfOmentum: new Coding({
     code: "3399007",
     display: "Reduction of torsion of omentum",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiseaseTypeANDORCategoryNotApplicable: Coding.FromStrict({
+  EncounterReasonValueSet_DiseaseTypeANDORCategoryNotApplicable: new Coding({
     code: "33993005",
     display: "Disease type AND/OR category not applicable",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CreationOfLesionOfSpinalCordByPercutaneousMethod: Coding.FromStrict({
+  EncounterReasonValueSet_CreationOfLesionOfSpinalCordByPercutaneousMethod: new Coding({
     code: "3407002",
     display: "Creation of lesion of spinal cord by percutaneous method",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BloodCellMorphology: Coding.FromStrict({
+  EncounterReasonValueSet_BloodCellMorphology: new Coding({
     code: "3413006",
     display: "Blood cell morphology",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ChondrectomyOfSpine: Coding.FromStrict({
+  EncounterReasonValueSet_ChondrectomyOfSpine: new Coding({
     code: "3418002",
     display: "Chondrectomy of spine",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AbsenceOfAura: Coding.FromStrict({
+  EncounterReasonValueSet_AbsenceOfAura: new Coding({
     code: "34189007",
     display: "Absence of aura",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AmobarbitalInterview: Coding.FromStrict({
+  EncounterReasonValueSet_AmobarbitalInterview: new Coding({
     code: "342002",
     display: "Amobarbital interview",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PreventiveDentalService: Coding.FromStrict({
+  EncounterReasonValueSet_PreventiveDentalService: new Coding({
     code: "3432000",
     display: "Preventive dental service",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PulpCapping: Coding.FromStrict({
+  EncounterReasonValueSet_PulpCapping: new Coding({
     code: "3443008",
     display: "Pulp capping",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuddenDeathOfUnknownCauseDuringThePuerperium: Coding.FromStrict({
+  EncounterReasonValueSet_SuddenDeathOfUnknownCauseDuringThePuerperium: new Coding({
     code: "34468006",
     display: "Sudden death of unknown cause during the puerperium",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FixationOfContralateralTestis: Coding.FromStrict({
+  EncounterReasonValueSet_FixationOfContralateralTestis: new Coding({
     code: "3448004",
     display: "Fixation of contralateral testis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LymphocytesTAndBCellEvaluation: Coding.FromStrict({
+  EncounterReasonValueSet_LymphocytesTAndBCellEvaluation: new Coding({
     code: "3450007",
     display: "Lymphocytes, T & B cell evaluation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReferralProcedure: Coding.FromStrict({
+  EncounterReasonValueSet_ReferralProcedure: new Coding({
     code: "3457005",
     display: "Referral procedure",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PeriodontalScalingAndRootPlaningPerQuadrant: Coding.FromStrict({
+  EncounterReasonValueSet_PeriodontalScalingAndRootPlaningPerQuadrant: new Coding({
     code: "346004",
     display: "Periodontal scaling and root planing, per quadrant",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfHeartAssistSystemWithReplacement: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfHeartAssistSystemWithReplacement: new Coding({
     code: "3479000",
     display: "Removal of heart assist system with replacement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RadionuclideDynamicFunctionStudy: Coding.FromStrict({
+  EncounterReasonValueSet_RadionuclideDynamicFunctionStudy: new Coding({
     code: "348003",
     display: "Radionuclide dynamic function study",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TotalExcisionOfPituitaryGlandByTranssphenoidalApproach: Coding.FromStrict({
+  EncounterReasonValueSet_TotalExcisionOfPituitaryGlandByTranssphenoidalApproach: new Coding({
     code: "3498003",
     display: "Total excision of pituitary gland by transsphenoidal approach",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AspirationOfVitreousWithReplacement: Coding.FromStrict({
+  EncounterReasonValueSet_AspirationOfVitreousWithReplacement: new Coding({
     code: "3499006",
     display: "Aspiration of vitreous with replacement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StreptococcusVaccination: Coding.FromStrict({
+  EncounterReasonValueSet_StreptococcusVaccination: new Coding({
     code: "3509001",
     display: "Streptococcus vaccination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UrinaryUndiversionOfUreteralAnastomosis: Coding.FromStrict({
+  EncounterReasonValueSet_UrinaryUndiversionOfUreteralAnastomosis: new Coding({
     code: "351005",
     display: "Urinary undiversion of ureteral anastomosis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AngiographyOfArteriesOfExtremity: Coding.FromStrict({
+  EncounterReasonValueSet_AngiographyOfArteriesOfExtremity: new Coding({
     code: "3512003",
     display: "Angiography of arteries of extremity",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuffocationByBedclothes: Coding.FromStrict({
+  EncounterReasonValueSet_SuffocationByBedclothes: new Coding({
     code: "35149008",
     display: "Suffocation by bedclothes",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReplacementOfElectronicHeartDevicePulseGenerator: Coding.FromStrict({
+  EncounterReasonValueSet_ReplacementOfElectronicHeartDevicePulseGenerator: new Coding({
     code: "3515001",
     display: "Replacement of electronic heart device, pulse generator",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfForeignBodyOfPelvisFromSubcutaneousTissue: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfForeignBodyOfPelvisFromSubcutaneousTissue: new Coding({
     code: "3517009",
     display: "Removal of foreign body of pelvis from subcutaneous tissue",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AversivePsychotherapy: Coding.FromStrict({
+  EncounterReasonValueSet_AversivePsychotherapy: new Coding({
     code: "3518004",
     display: "Aversive psychotherapy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReagentRBCPreparationAntibodySensitizedPool: Coding.FromStrict({
+  EncounterReasonValueSet_ReagentRBCPreparationAntibodySensitizedPool: new Coding({
     code: "352003",
     display: "Reagent RBC, preparation antibody sensitized pool",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AntibodyMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_AntibodyMeasurement: new Coding({
     code: "3527003",
     display: "Antibody measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IVIrrigationMonitoring: Coding.FromStrict({
+  EncounterReasonValueSet_IVIrrigationMonitoring: new Coding({
     code: "353008",
     display: "IV/irrigation monitoring",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Hurricane: Coding.FromStrict({
+  EncounterReasonValueSet_Hurricane: new Coding({
     code: "35314007",
     display: "Hurricane",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CVGCoronaryVeinGraft: Coding.FromStrict({
+  EncounterReasonValueSet_CVGCoronaryVeinGraft: new Coding({
     code: "3546002",
     display: "CVG - Coronary vein graft",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CaughtCrushedJammedOrPinchedInOrBetweenObjects: Coding.FromStrict({
+  EncounterReasonValueSet_CaughtCrushedJammedOrPinchedInOrBetweenObjects: new Coding({
     code: "35468003",
     display: "Caught, crushed, jammed or pinched in or between objects",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InsertionOfUreteralStentWithUreterotomy: Coding.FromStrict({
+  EncounterReasonValueSet_InsertionOfUreteralStentWithUreterotomy: new Coding({
     code: "3559005",
     display: "Insertion of ureteral stent with ureterotomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RodneySmithOperationRadicalSubtotalPancreatectomy: Coding.FromStrict({
+  EncounterReasonValueSet_RodneySmithOperationRadicalSubtotalPancreatectomy: new Coding({
     code: "3562008",
     display: "Rodney Smith operation, radical subtotal pancreatectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfForeignBodyFromFallopianTube: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfForeignBodyFromFallopianTube: new Coding({
     code: "3564009",
     display: "Removal of foreign body from fallopian tube",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfFasciaWithGraftOfFascia: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfFasciaWithGraftOfFascia: new Coding({
     code: "3575008",
     display: "Repair of fascia with graft of fascia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfCalculusOfPharynx: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfCalculusOfPharynx: new Coding({
     code: "3580004",
     display: "Removal of calculus of pharynx",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReductionOfCiliaryBody: Coding.FromStrict({
+  EncounterReasonValueSet_ReductionOfCiliaryBody: new Coding({
     code: "3605001",
     display: "Reduction of ciliary body",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TransplantationOfMesentericTissue: Coding.FromStrict({
+  EncounterReasonValueSet_TransplantationOfMesentericTissue: new Coding({
     code: "3607009",
     display: "Transplantation of mesenteric tissue",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FirstKnownSuicideAttempt: Coding.FromStrict({
+  EncounterReasonValueSet_FirstKnownSuicideAttempt: new Coding({
     code: "36153001",
     display: "First known suicide attempt",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RedCellSurvivalStudyWithHepaticSequestration: Coding.FromStrict({
+  EncounterReasonValueSet_RedCellSurvivalStudyWithHepaticSequestration: new Coding({
     code: "3620007",
     display: "Red cell survival study with hepatic sequestration",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnesthesiaForBrachialArteriogramsRetrograde: Coding.FromStrict({
+  EncounterReasonValueSet_AnesthesiaForBrachialArteriogramsRetrograde: new Coding({
     code: "3625002",
     display: "Anesthesia for brachial arteriograms, retrograde",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MorphometricAnalysisNerve: Coding.FromStrict({
+  EncounterReasonValueSet_MorphometricAnalysisNerve: new Coding({
     code: "3651000",
     display: "Morphometric analysis, nerve",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfLingula: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfLingula: new Coding({
     code: "3654008",
     display: "Excision of lingula",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionOfInnerEar: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionOfInnerEar: new Coding({
     code: "3659003",
     display: "Incision of inner ear",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ClosureOfScleralFistula: Coding.FromStrict({
+  EncounterReasonValueSet_ClosureOfScleralFistula: new Coding({
     code: "3664004",
     display: "Closure of scleral fistula",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfPeripheralNerveBySuturing: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfPeripheralNerveBySuturing: new Coding({
     code: "3666002",
     display: "Repair of peripheral nerve by suturing",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FittingOfProsthesisOrProstheticDeviceOfUpperArm: Coding.FromStrict({
+  EncounterReasonValueSet_FittingOfProsthesisOrProstheticDeviceOfUpperArm: new Coding({
     code: "3669009",
     display: "Fitting of prosthesis or prosthetic device of upper arm",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LeadbetterUrethralReconstruction: Coding.FromStrict({
+  EncounterReasonValueSet_LeadbetterUrethralReconstruction: new Coding({
     code: "3673007",
     display: "Leadbetter urethral reconstruction",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SeleniumMeasurementUrine: Coding.FromStrict({
+  EncounterReasonValueSet_SeleniumMeasurementUrine: new Coding({
     code: "3683006",
     display: "Selenium measurement, urine",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ZancolliOperationForTendonTransferOfBiceps: Coding.FromStrict({
+  EncounterReasonValueSet_ZancolliOperationForTendonTransferOfBiceps: new Coding({
     code: "3686003",
     display: "Zancolli operation for tendon transfer of biceps",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnesthesiaForLensSurgery: Coding.FromStrict({
+  EncounterReasonValueSet_AnesthesiaForLensSurgery: new Coding({
     code: "3688002",
     display: "Anesthesia for lens surgery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathDueToAssaultANDBattery: Coding.FromStrict({
+  EncounterReasonValueSet_DeathDueToAssaultANDBattery: new Coding({
     code: "36882002",
     display: "Death due to assault AND battery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ShuntOfLeftSubclavianToDescendingAortaByBlalockParkOperation: Coding.FromStrict({
+  EncounterReasonValueSet_ShuntOfLeftSubclavianToDescendingAortaByBlalockParkOperation: new Coding({
     code: "3690001",
     display: "Shunt of left subclavian to descending aorta by Blalock-Park operation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_WedgeOsteotomyOfTarsalsAndMetatarsals: Coding.FromStrict({
+  EncounterReasonValueSet_WedgeOsteotomyOfTarsalsAndMetatarsals: new Coding({
     code: "3691002",
     display: "Wedge osteotomy of tarsals and metatarsals",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TissueProcessingTechniqueRoutineEmbedCutAndStainPerAutopsy: Coding.FromStrict({
+  EncounterReasonValueSet_TissueProcessingTechniqueRoutineEmbedCutAndStainPerAutopsy: new Coding({
     code: "3697003",
     display: "Tissue processing technique, routine, embed, cut and stain, per autopsy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ErysophakeExtractionOfLens: Coding.FromStrict({
+  EncounterReasonValueSet_ErysophakeExtractionOfLens: new Coding({
     code: "3700004",
     display: "Erysophake extraction of lens",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfForeignBodyOfHipFromSubcutaneousTissue: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfForeignBodyOfHipFromSubcutaneousTissue: new Coding({
     code: "3701000",
     display: "Removal of foreign body of hip from subcutaneous tissue",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralIncisionOfFrontalSinusByTransorbitalApproachUnilateral: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralIncisionOfFrontalSinusByTransorbitalApproachUnilateral: new Coding({
     code: "37012003",
     display: "Unilateral incision of frontal sinus by transorbital approach unilateral",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReleaseForDeQuervainTenosynovitisOfHand: Coding.FromStrict({
+  EncounterReasonValueSet_ReleaseForDeQuervainTenosynovitisOfHand: new Coding({
     code: "3713005",
     display: "Release for de Quervain tenosynovitis of hand",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Collision: Coding.FromStrict({
+  EncounterReasonValueSet_Collision: new Coding({
     code: "37169002",
     display: "Collision",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiluteRussellViperVenomTime: Coding.FromStrict({
+  EncounterReasonValueSet_DiluteRussellViperVenomTime: new Coding({
     code: "3717006",
     display: "Dilute Russell viper venom time",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SSGSplitSkinGraft: Coding.FromStrict({
+  EncounterReasonValueSet_SSGSplitSkinGraft: new Coding({
     code: "3734003",
     display: "SSG - Split skin graft",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CoproporphyrinIIIMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_CoproporphyrinIIIMeasurement: new Coding({
     code: "3735002",
     display: "Coproporphyrin III measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToAttackByMammal: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToAttackByMammal: new Coding({
     code: "37383006",
     display: "Exposure to attack by mammal",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfForeignBodyOfCanthusByIncision: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfForeignBodyOfCanthusByIncision: new Coding({
     code: "3740005",
     display: "Removal of foreign body of canthus by incision",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CostosternoplastyForPectusExcavatumRepair: Coding.FromStrict({
+  EncounterReasonValueSet_CostosternoplastyForPectusExcavatumRepair: new Coding({
     code: "374009",
     display: "Costosternoplasty for pectus excavatum repair",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BiopsyOfPerirenalTissue: Coding.FromStrict({
+  EncounterReasonValueSet_BiopsyOfPerirenalTissue: new Coding({
     code: "3748003",
     display: "Biopsy of perirenal tissue",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReductionOfClosedIschialFracture: Coding.FromStrict({
+  EncounterReasonValueSet_ReductionOfClosedIschialFracture: new Coding({
     code: "3749006",
     display: "Reduction of closed ischial fracture",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ThrombectomyWithCatheterOfSubclavianArteryByNeckIncision: Coding.FromStrict({
+  EncounterReasonValueSet_ThrombectomyWithCatheterOfSubclavianArteryByNeckIncision: new Coding({
     code: "3758004",
     display: "Thrombectomy with catheter of subclavian artery by neck incision",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_WardUrineDipStickTesting: Coding.FromStrict({
+  EncounterReasonValueSet_WardUrineDipStickTesting: new Coding({
     code: "3770000",
     display: "Ward urine dip stick testing",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ScrotumManipulation: Coding.FromStrict({
+  EncounterReasonValueSet_ScrotumManipulation: new Coding({
     code: "3778007",
     display: "Scrotum manipulation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RoutinePatientDispositionNoFollowUpPlanned: Coding.FromStrict({
+  EncounterReasonValueSet_RoutinePatientDispositionNoFollowUpPlanned: new Coding({
     code: "3780001",
     display: "Routine patient disposition, no follow-up planned",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuffocationByPressure: Coding.FromStrict({
+  EncounterReasonValueSet_SuffocationByPressure: new Coding({
     code: "37806009",
     display: "Suffocation by pressure",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DelayedHypersensitivitySkinTestForStreptokinaseStreptodornase: Coding.FromStrict({
+  EncounterReasonValueSet_DelayedHypersensitivitySkinTestForStreptokinaseStreptodornase: new Coding({
     code: "3784005",
     display: "Delayed hypersensitivity skin test for streptokinase-streptodornase",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfLesionOfPharynx: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfLesionOfPharynx: new Coding({
     code: "3786007",
     display: "Excision of lesion of pharynx",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UltrasonicGuidanceForNeedleBiopsy: Coding.FromStrict({
+  EncounterReasonValueSet_UltrasonicGuidanceForNeedleBiopsy: new Coding({
     code: "3787003",
     display: "Ultrasonic guidance for needle biopsy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FlashFlood: Coding.FromStrict({
+  EncounterReasonValueSet_FlashFlood: new Coding({
     code: "37933009",
     display: "Flash flood",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PregnanetriolMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_PregnanetriolMeasurement: new Coding({
     code: "3794000",
     display: "Pregnanetriol measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfRedundantMucosaFromJejunostomy: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfRedundantMucosaFromJejunostomy: new Coding({
     code: "3796003",
     display: "Excision of redundant mucosa from jejunostomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RadiographyOfAdenoids: Coding.FromStrict({
+  EncounterReasonValueSet_RadiographyOfAdenoids: new Coding({
     code: "3799005",
     display: "Radiography of adenoids",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TopicalApplicationOfToothMedicamentDesensitizingAgent: Coding.FromStrict({
+  EncounterReasonValueSet_TopicalApplicationOfToothMedicamentDesensitizingAgent: new Coding({
     code: "3802001",
     display: "Topical application of tooth medicament - desensitizing agent",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EmbolizationOfThoracicArtery: Coding.FromStrict({
+  EncounterReasonValueSet_EmbolizationOfThoracicArtery: new Coding({
     code: "3819004",
     display: "Embolization of thoracic artery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BlepharotomyWithDrainageOfAbscessOfEyelid: Coding.FromStrict({
+  EncounterReasonValueSet_BlepharotomyWithDrainageOfAbscessOfEyelid: new Coding({
     code: "3826004",
     display: "Blepharotomy with drainage of abscess of eyelid",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OpenBiopsyOfVertebralBodyOfThoracicRegion: Coding.FromStrict({
+  EncounterReasonValueSet_OpenBiopsyOfVertebralBodyOfThoracicRegion: new Coding({
     code: "3828003",
     display: "Open biopsy of vertebral body of thoracic region",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ChiropracticApplicationOfIce: Coding.FromStrict({
+  EncounterReasonValueSet_ChiropracticApplicationOfIce: new Coding({
     code: "3831002",
     display: "Chiropractic application of ice",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfForeignBodyFromFascia: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfForeignBodyFromFascia: new Coding({
     code: "3843001",
     display: "Removal of foreign body from fascia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EchographyOfThyroidAMode: Coding.FromStrict({
+  EncounterReasonValueSet_EchographyOfThyroidAMode: new Coding({
     code: "3858009",
     display: "Echography of thyroid, A-mode",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NaturalDeath: Coding.FromStrict({
+  EncounterReasonValueSet_NaturalDeath: new Coding({
     code: "38605008",
     display: "Natural death",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AneurysmectomyWithAnastomosisOfLowerLimbArtery: Coding.FromStrict({
+  EncounterReasonValueSet_AneurysmectomyWithAnastomosisOfLowerLimbArtery: new Coding({
     code: "3861005",
     display: "Aneurysmectomy with anastomosis of lower limb artery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TotalVitalCapacityMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_TotalVitalCapacityMeasurement: new Coding({
     code: "3862003",
     display: "Total vital capacity measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionalBiopsyOfScrotum: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionalBiopsyOfScrotum: new Coding({
     code: "3864002",
     display: "Excisional biopsy of scrotum",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfLesionOfFibula: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfLesionOfFibula: new Coding({
     code: "3880007",
     display: "Excision of lesion of fibula",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Blepharorrhaphy: Coding.FromStrict({
+  EncounterReasonValueSet_Blepharorrhaphy: new Coding({
     code: "388008",
     display: "Blepharorrhaphy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionAndDrainageOfSubmentalSpaceByExtraoralApproach: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionAndDrainageOfSubmentalSpaceByExtraoralApproach: new Coding({
     code: "3881006",
     display: "Incision and drainage of submental space by extraoral approach",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_WartLigation: Coding.FromStrict({
+  EncounterReasonValueSet_WartLigation: new Coding({
     code: "3887005",
     display: "Wart ligation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SutureOfLip: Coding.FromStrict({
+  EncounterReasonValueSet_SutureOfLip: new Coding({
     code: "3889008",
     display: "Suture of lip",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralObstructedFemoralHernia: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralObstructedFemoralHernia: new Coding({
     code: "38897008",
     display: "Unilateral obstructed femoral hernia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TobramycinLevel: Coding.FromStrict({
+  EncounterReasonValueSet_TobramycinLevel: new Coding({
     code: "389000",
     display: "Tobramycin level",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ComprehensiveOrthodonticTreatmentPermanentDentitionForClassIMalocclusion: Coding.FromStrict({
+  EncounterReasonValueSet_ComprehensiveOrthodonticTreatmentPermanentDentitionForClassIMalocclusion: new Coding({
     code: "3891000",
     display: "Comprehensive orthodontic treatment, permanent dentition, for class I malocclusion",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Dressing: Coding.FromStrict({
+  EncounterReasonValueSet_Dressing: new Coding({
     code: "3895009",
     display: "Dressing",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionAndDrainageOfRetroperitonealAbscess: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionAndDrainageOfRetroperitonealAbscess: new Coding({
     code: "3907006",
     display: "Incision and drainage of retroperitoneal abscess",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallInvolvingSportsEquipment: Coding.FromStrict({
+  EncounterReasonValueSet_FallInvolvingSportsEquipment: new Coding({
     code: "39109007",
     display: "Fall involving sports equipment",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TransplantationOfMuscle: Coding.FromStrict({
+  EncounterReasonValueSet_TransplantationOfMuscle: new Coding({
     code: "3911000",
     display: "Transplantation of muscle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfArteryOfThoraxAndAbdomen: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfArteryOfThoraxAndAbdomen: new Coding({
     code: "3915009",
     display: "Excision of artery of thorax and abdomen",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionalBiopsyOfPhalangesOfFoot: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionalBiopsyOfPhalangesOfFoot: new Coding({
     code: "3917001",
     display: "Excisional biopsy of phalanges of foot",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PlasticRepairWithLengthening: Coding.FromStrict({
+  EncounterReasonValueSet_PlasticRepairWithLengthening: new Coding({
     code: "3918006",
     display: "Plastic repair with lengthening",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LactateMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_LactateMeasurement: new Coding({
     code: "3926003",
     display: "Lactate measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SecondDegreeMurder: Coding.FromStrict({
+  EncounterReasonValueSet_SecondDegreeMurder: new Coding({
     code: "39262008",
     display: "Second degree murder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PatientTransferInHospitalBedToBed: Coding.FromStrict({
+  EncounterReasonValueSet_PatientTransferInHospitalBedToBed: new Coding({
     code: "3929005",
     display: "Patient transfer, in-hospital, bed-to-bed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MakingFosterBed: Coding.FromStrict({
+  EncounterReasonValueSet_MakingFosterBed: new Coding({
     code: "3936006",
     display: "Making Foster bed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ForcibleSexualAssault: Coding.FromStrict({
+  EncounterReasonValueSet_ForcibleSexualAssault: new Coding({
     code: "39379000",
     display: "Forcible sexual assault",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CerclageForRetinalReattachment: Coding.FromStrict({
+  EncounterReasonValueSet_CerclageForRetinalReattachment: new Coding({
     code: "3938007",
     display: "Cerclage for retinal reattachment",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NaturalDeathWithProbableCauseSuspected: Coding.FromStrict({
+  EncounterReasonValueSet_NaturalDeathWithProbableCauseSuspected: new Coding({
     code: "39399006",
     display: "Natural death with probable cause suspected",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Cystopexy: Coding.FromStrict({
+  EncounterReasonValueSet_Cystopexy: new Coding({
     code: "3942005",
     display: "Cystopexy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AntibodyElutionFromRedBloodCells: Coding.FromStrict({
+  EncounterReasonValueSet_AntibodyElutionFromRedBloodCells: new Coding({
     code: "3955006",
     display: "Antibody elution from red blood cells",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ArteriectomyOfThoracoabdominalAorta: Coding.FromStrict({
+  EncounterReasonValueSet_ArteriectomyOfThoracoabdominalAorta: new Coding({
     code: "3957003",
     display: "Arteriectomy of thoracoabdominal aorta",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OperationOnSubmaxillaryGland: Coding.FromStrict({
+  EncounterReasonValueSet_OperationOnSubmaxillaryGland: new Coding({
     code: "3963007",
     display: "Operation on submaxillary gland",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FluorescencePolarizationImmunoassay: Coding.FromStrict({
+  EncounterReasonValueSet_FluorescencePolarizationImmunoassay: new Coding({
     code: "3967008",
     display: "Fluorescence polarization immunoassay",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfSpinalFacetJoint: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfSpinalFacetJoint: new Coding({
     code: "3968003",
     display: "Excision of spinal facet joint",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfOsteocartilagenousLooseBodyFromJointStructures: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfOsteocartilagenousLooseBodyFromJointStructures: new Coding({
     code: "3969006",
     display: "Removal of osteocartilagenous loose body from joint structures",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DuchenneMuscularDystrophyCarrierDetection: Coding.FromStrict({
+  EncounterReasonValueSet_DuchenneMuscularDystrophyCarrierDetection: new Coding({
     code: "3971006",
     display: "Duchenne muscular dystrophy carrier detection",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ContactWithSharpLeaves: Coding.FromStrict({
+  EncounterReasonValueSet_ContactWithSharpLeaves: new Coding({
     code: "3974003",
     display: "Contact with sharp leaves",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PartialExcisionOfEsophagus: Coding.FromStrict({
+  EncounterReasonValueSet_PartialExcisionOfEsophagus: new Coding({
     code: "3980006",
     display: "Partial excision of esophagus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CarrierDetectionMolecularGenetics: Coding.FromStrict({
+  EncounterReasonValueSet_CarrierDetectionMolecularGenetics: new Coding({
     code: "3981005",
     display: "Carrier detection, molecular genetics",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StruckByExplosion: Coding.FromStrict({
+  EncounterReasonValueSet_StruckByExplosion: new Coding({
     code: "39826003",
     display: "Struck by explosion",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnesthesiaForProcedureOnArteriesOfLowerLegWithBypassGraft: Coding.FromStrict({
+  EncounterReasonValueSet_AnesthesiaForProcedureOnArteriesOfLowerLegWithBypassGraft: new Coding({
     code: "3985001",
     display: "Anesthesia for procedure on arteries of lower leg with bypass graft",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MRIOfPelvisProstateAndBladder: Coding.FromStrict({
+  EncounterReasonValueSet_MRIOfPelvisProstateAndBladder: new Coding({
     code: "3991004",
     display: "MRI of pelvis, prostate and bladder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BoneImagingOfLimitedArea: Coding.FromStrict({
+  EncounterReasonValueSet_BoneImagingOfLimitedArea: new Coding({
     code: "3998005",
     display: "Bone imaging of limited area",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AntiHumanGlobulinTestIndirectTiterNonGamma: Coding.FromStrict({
+  EncounterReasonValueSet_AntiHumanGlobulinTestIndirectTiterNonGamma: new Coding({
     code: "4007002",
     display: "Anti-human globulin test, indirect, titer, non-gamma",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PhlebographyOfNeck: Coding.FromStrict({
+  EncounterReasonValueSet_PhlebographyOfNeck: new Coding({
     code: "4008007",
     display: "Phlebography of neck",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OophorectomyOfRemainingOvaryWithTube: Coding.FromStrict({
+  EncounterReasonValueSet_OophorectomyOfRemainingOvaryWithTube: new Coding({
     code: "4010009",
     display: "Oophorectomy of remaining ovary with tube",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DistalSubtotalPancreatectomy: Coding.FromStrict({
+  EncounterReasonValueSet_DistalSubtotalPancreatectomy: new Coding({
     code: "401004",
     display: "Distal subtotal pancreatectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallInHome: Coding.FromStrict({
+  EncounterReasonValueSet_FallInHome: new Coding({
     code: "40104005",
     display: "Fall in home",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralExcisionOfEpididymis: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralExcisionOfEpididymis: new Coding({
     code: "40220006",
     display: "Unilateral excision of epididymis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ImplantationOfElectronicStimulatorIntoPhrenicNerve: Coding.FromStrict({
+  EncounterReasonValueSet_ImplantationOfElectronicStimulatorIntoPhrenicNerve: new Coding({
     code: "4027001",
     display: "Implantation of electronic stimulator into phrenic nerve",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ClosedReductionOfFacialFractureExceptMandible: Coding.FromStrict({
+  EncounterReasonValueSet_ClosedReductionOfFacialFractureExceptMandible: new Coding({
     code: "4034004",
     display: "Closed reduction of facial fracture, except mandible",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RestorationResinTwoSurfacesPosteriorPermanent: Coding.FromStrict({
+  EncounterReasonValueSet_RestorationResinTwoSurfacesPosteriorPermanent: new Coding({
     code: "4035003",
     display: "Restoration, resin, two surfaces, posterior, permanent",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NonJudicialExecution: Coding.FromStrict({
+  EncounterReasonValueSet_NonJudicialExecution: new Coding({
     code: "40358007",
     display: "Non-judicial execution",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ArthroscopyOfElbowWithExtensiveDebridement: Coding.FromStrict({
+  EncounterReasonValueSet_ArthroscopyOfElbowWithExtensiveDebridement: new Coding({
     code: "4036002",
     display: "Arthroscopy of elbow with extensive debridement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfVascularGraftOrProsthesis: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfVascularGraftOrProsthesis: new Coding({
     code: "4037006",
     display: "Removal of vascular graft or prosthesis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ConstructionOfPermanentColostomy: Coding.FromStrict({
+  EncounterReasonValueSet_ConstructionOfPermanentColostomy: new Coding({
     code: "4044002",
     display: "Construction of permanent colostomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DrainageOfCerebralVentricleByIncision: Coding.FromStrict({
+  EncounterReasonValueSet_DrainageOfCerebralVentricleByIncision: new Coding({
     code: "4045001",
     display: "Drainage of cerebral ventricle by incision",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PlannedTracheostomy: Coding.FromStrict({
+  EncounterReasonValueSet_PlannedTracheostomy: new Coding({
     code: "40462002",
     display: "Planned tracheostomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PercutaneousAspirationOfSpinalCordCyst: Coding.FromStrict({
+  EncounterReasonValueSet_PercutaneousAspirationOfSpinalCordCyst: new Coding({
     code: "4052004",
     display: "Percutaneous aspiration of spinal cord cyst",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ColdExposure: Coding.FromStrict({
+  EncounterReasonValueSet_ColdExposure: new Coding({
     code: "40537000",
     display: "Cold exposure",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FulgurationOfStomachLesion: Coding.FromStrict({
+  EncounterReasonValueSet_FulgurationOfStomachLesion: new Coding({
     code: "406009",
     display: "Fulguration of stomach lesion",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpecimenAliquoting: Coding.FromStrict({
+  EncounterReasonValueSet_SpecimenAliquoting: new Coding({
     code: "4064007",
     display: "Specimen aliquoting",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfVentricularReservoirWithSynchronousReplacement: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfVentricularReservoirWithSynchronousReplacement: new Coding({
     code: "4068005",
     display: "Removal of ventricular reservoir with synchronous replacement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CarCrash: Coding.FromStrict({
+  EncounterReasonValueSet_CarCrash: new Coding({
     code: "40785002",
     display: "Car crash",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FittingOfProsthesisOrProstheticDeviceOfLowerArm: Coding.FromStrict({
+  EncounterReasonValueSet_FittingOfProsthesisOrProstheticDeviceOfLowerArm: new Coding({
     code: "4083000",
     display: "Fitting of prosthesis or prosthetic device of lower arm",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfTendonOfHandByGraftOrImplantOfMuscle: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfTendonOfHandByGraftOrImplantOfMuscle: new Coding({
     code: "4084006",
     display: "Repair of tendon of hand by graft or implant of muscle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PartialUnilateralParesis: Coding.FromStrict({
+  EncounterReasonValueSet_PartialUnilateralParesis: new Coding({
     code: "40893006",
     display: "Partial unilateral paresis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReplacementOfTransvenousAtrialAndVentricularPacemakerElectrodeLeads: Coding.FromStrict({
+  EncounterReasonValueSet_ReplacementOfTransvenousAtrialAndVentricularPacemakerElectrodeLeads: new Coding({
     code: "4090005",
     display: "Replacement of transvenous atrial and ventricular pacemaker electrode leads",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReductionOfRetroversionOfUterusBySuppository: Coding.FromStrict({
+  EncounterReasonValueSet_ReductionOfRetroversionOfUterusBySuppository: new Coding({
     code: "4094001",
     display: "Reduction of retroversion of uterus by suppository",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Drowning: Coding.FromStrict({
+  EncounterReasonValueSet_Drowning: new Coding({
     code: "40947009",
     display: "Drowning",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RevisionOfSpinalPleurothecalShunt: Coding.FromStrict({
+  EncounterReasonValueSet_RevisionOfSpinalPleurothecalShunt: new Coding({
     code: "4101004",
     display: "Revision of spinal pleurothecal shunt",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RootCanalTherapyAnteriorExcludingFinalRestoration: Coding.FromStrict({
+  EncounterReasonValueSet_RootCanalTherapyAnteriorExcludingFinalRestoration: new Coding({
     code: "4102006",
     display: "Root canal therapy, anterior, excluding final restoration",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ParenteralChemotherapyForMalignantNeoplasm: Coding.FromStrict({
+  EncounterReasonValueSet_ParenteralChemotherapyForMalignantNeoplasm: new Coding({
     code: "4114003",
     display: "Parenteral chemotherapy for malignant neoplasm",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ConstructionOfWindow: Coding.FromStrict({
+  EncounterReasonValueSet_ConstructionOfWindow: new Coding({
     code: "4116001",
     display: "Construction of window",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IntracranialPhlebectomyWithAnastomosis: Coding.FromStrict({
+  EncounterReasonValueSet_IntracranialPhlebectomyWithAnastomosis: new Coding({
     code: "4119008",
     display: "Intracranial phlebectomy with anastomosis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralReconstructionOfBreastWithBipedicleTRAMFlapAndOppositeBreastReductionMastopexy: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralReconstructionOfBreastWithBipedicleTRAMFlapAndOppositeBreastReductionMastopexy: new Coding({
     code: "41302009",
     display: "Unilateral reconstruction of breast with bipedicle TRAM flap and opposite breast reduction/mastopexy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ImplantationIntoPelvicRegion: Coding.FromStrict({
+  EncounterReasonValueSet_ImplantationIntoPelvicRegion: new Coding({
     code: "4131005",
     display: "Implantation into pelvic region",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OperativeBlockAnesthesia: Coding.FromStrict({
+  EncounterReasonValueSet_OperativeBlockAnesthesia: new Coding({
     code: "4134002",
     display: "Operative block anesthesia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ChildConcubinage: Coding.FromStrict({
+  EncounterReasonValueSet_ChildConcubinage: new Coding({
     code: "41358001",
     display: "Child concubinage",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PosteriorSpinalCordotomy: Coding.FromStrict({
+  EncounterReasonValueSet_PosteriorSpinalCordotomy: new Coding({
     code: "4139007",
     display: "Posterior spinal cordotomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallInvolvingPlaygroundEquipment: Coding.FromStrict({
+  EncounterReasonValueSet_FallInvolvingPlaygroundEquipment: new Coding({
     code: "41411008",
     display: "Fall involving playground equipment",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InjectionIntoAnteriorChamberOfEye: Coding.FromStrict({
+  EncounterReasonValueSet_InjectionIntoAnteriorChamberOfEye: new Coding({
     code: "4143006",
     display: "Injection into anterior chamber of eye",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BoneHistomorphometryAluminumStain: Coding.FromStrict({
+  EncounterReasonValueSet_BoneHistomorphometryAluminumStain: new Coding({
     code: "4149005",
     display: "Bone histomorphometry, aluminum stain",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralDiagnosticRadiographicImagingWithContrastMedia: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralDiagnosticRadiographicImagingWithContrastMedia: new Coding({
     code: "41518004",
     display: "Unilateral diagnostic radiographic imaging with contrast media",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionAndDrainageOfPenis: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionAndDrainageOfPenis: new Coding({
     code: "4154001",
     display: "Incision and drainage of penis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DelayedHypersensitivitySkinTestForStaphageLysate: Coding.FromStrict({
+  EncounterReasonValueSet_DelayedHypersensitivitySkinTestForStaphageLysate: new Coding({
     code: "4165006",
     display: "Delayed hypersensitivity skin test for staphage lysate",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HospitalReAdmission: Coding.FromStrict({
+  EncounterReasonValueSet_HospitalReAdmission: new Coding({
     code: "417005",
     display: "Hospital re-admission",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FothergillRepair: Coding.FromStrict({
+  EncounterReasonValueSet_FothergillRepair: new Coding({
     code: "4176005",
     display: "Fothergill repair",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiseaseSuspected: Coding.FromStrict({
+  EncounterReasonValueSet_DiseaseSuspected: new Coding({
     code: "41769001",
     display: "Disease suspected",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ToxicologyTestingForOrganophosphateInsecticide: Coding.FromStrict({
+  EncounterReasonValueSet_ToxicologyTestingForOrganophosphateInsecticide: new Coding({
     code: "4192000",
     display: "Toxicology testing for organophosphate insecticide",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ImplantationOfOmmayaReservoir: Coding.FromStrict({
+  EncounterReasonValueSet_ImplantationOfOmmayaReservoir: new Coding({
     code: "4213001",
     display: "Implantation of Ommaya reservoir",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IntracardiacInjectionForCardiacResuscitation: Coding.FromStrict({
+  EncounterReasonValueSet_IntracardiacInjectionForCardiacResuscitation: new Coding({
     code: "4214007",
     display: "Intracardiac injection for cardiac resuscitation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfLesionOfThoracicVein: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfLesionOfThoracicVein: new Coding({
     code: "4226002",
     display: "Excision of lesion of thoracic vein",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_JudicialExecutionByFiringSquad: Coding.FromStrict({
+  EncounterReasonValueSet_JudicialExecutionByFiringSquad: new Coding({
     code: "42310008",
     display: "Judicial execution by firing squad",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AneurysmectomyWithGraftReplacementByInterposition: Coding.FromStrict({
+  EncounterReasonValueSet_AneurysmectomyWithGraftReplacementByInterposition: new Coding({
     code: "4252008",
     display: "Aneurysmectomy with graft replacement by interposition",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BiopsyOfSoftTissueOfElbowAreaSuperficial: Coding.FromStrict({
+  EncounterReasonValueSet_BiopsyOfSoftTissueOfElbowAreaSuperficial: new Coding({
     code: "4263006",
     display: "Biopsy of soft tissue of elbow area, superficial",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PatientReferralForDrugAddictionRehabilitation: Coding.FromStrict({
+  EncounterReasonValueSet_PatientReferralForDrugAddictionRehabilitation: new Coding({
     code: "4266003",
     display: "Patient referral for drug addiction rehabilitation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InsertionOfBoneGrowthStimulatorIntoFemur: Coding.FromStrict({
+  EncounterReasonValueSet_InsertionOfBoneGrowthStimulatorIntoFemur: new Coding({
     code: "4285000",
     display: "Insertion of bone growth stimulator into femur",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReductionOfIntussusceptionByLaparotomy: Coding.FromStrict({
+  EncounterReasonValueSet_ReductionOfIntussusceptionByLaparotomy: new Coding({
     code: "4293000",
     display: "Reduction of intussusception by laparotomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralLossOfLabyrinthineReactivity: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralLossOfLabyrinthineReactivity: new Coding({
     code: "43000004",
     display: "Unilateral loss of labyrinthine reactivity",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfCuspOfTricuspidValve: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfCuspOfTricuspidValve: new Coding({
     code: "4304000",
     display: "Excision of cusp of tricuspid valve",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RebaseOfCompleteLowerDenture: Coding.FromStrict({
+  EncounterReasonValueSet_RebaseOfCompleteLowerDenture: new Coding({
     code: "4319004",
     display: "Rebase of complete lower denture",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BilateralLegArteriogram: Coding.FromStrict({
+  EncounterReasonValueSet_BilateralLegArteriogram: new Coding({
     code: "4321009",
     display: "Bilateral leg arteriogram",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DestructionOfLesionOfSclera: Coding.FromStrict({
+  EncounterReasonValueSet_DestructionOfLesionOfSclera: new Coding({
     code: "4323007",
     display: "Destruction of lesion of sclera",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnesthesiaForHerniaRepairInLowerAbdomen: Coding.FromStrict({
+  EncounterReasonValueSet_AnesthesiaForHerniaRepairInLowerAbdomen: new Coding({
     code: "4331002",
     display: "Anesthesia for hernia repair in lower abdomen",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionAndDrainageOfPerisplenicSpace: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionAndDrainageOfPerisplenicSpace: new Coding({
     code: "4333004",
     display: "Incision and drainage of perisplenic space",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LloydDaviesOperationAbdominoperinealResection: Coding.FromStrict({
+  EncounterReasonValueSet_LloydDaviesOperationAbdominoperinealResection: new Coding({
     code: "4336007",
     display: "Lloyd-Davies operation, abdominoperineal resection",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HomogentisicAcidMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_HomogentisicAcidMeasurement: new Coding({
     code: "4337003",
     display: "Homogentisic acid measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfNasolabialFistula: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfNasolabialFistula: new Coding({
     code: "4339000",
     display: "Repair of nasolabial fistula",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CompleteSubmucousResectionOfTurbinate: Coding.FromStrict({
+  EncounterReasonValueSet_CompleteSubmucousResectionOfTurbinate: new Coding({
     code: "4341004",
     display: "Complete submucous resection of turbinate",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Cryopexy: Coding.FromStrict({
+  EncounterReasonValueSet_Cryopexy: new Coding({
     code: "4344007",
     display: "Cryopexy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MusculoplastyOfHand: Coding.FromStrict({
+  EncounterReasonValueSet_MusculoplastyOfHand: new Coding({
     code: "4348005",
     display: "Musculoplasty of hand",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfImplantOfCornea: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfImplantOfCornea: new Coding({
     code: "4350002",
     display: "Removal of implant of cornea",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PulmonaryInhalationStudy: Coding.FromStrict({
+  EncounterReasonValueSet_PulmonaryInhalationStudy: new Coding({
     code: "435001",
     display: "Pulmonary inhalation study",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EndoscopicBrushBiopsyOfTrachea: Coding.FromStrict({
+  EncounterReasonValueSet_EndoscopicBrushBiopsyOfTrachea: new Coding({
     code: "4363008",
     display: "Endoscopic brush biopsy of trachea",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SurgicalRepair: Coding.FromStrict({
+  EncounterReasonValueSet_SurgicalRepair: new Coding({
     code: "4365001",
     display: "Surgical repair",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_WaterTransportAccident: Coding.FromStrict({
+  EncounterReasonValueSet_WaterTransportAccident: new Coding({
     code: "43682008",
     display: "Water transport accident",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TranspositionOfVulvarTissue: Coding.FromStrict({
+  EncounterReasonValueSet_TranspositionOfVulvarTissue: new Coding({
     code: "4380007",
     display: "Transposition of vulvar tissue",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ValvuloplastyOfPulmonaryValveInTotalRepairOfTetralogyOfFallot: Coding.FromStrict({
+  EncounterReasonValueSet_ValvuloplastyOfPulmonaryValveInTotalRepairOfTetralogyOfFallot: new Coding({
     code: "4387005",
     display: "Valvuloplasty of pulmonary valve in total repair of tetralogy of Fallot",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfSplenocolicFistula: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfSplenocolicFistula: new Coding({
     code: "4388000",
     display: "Repair of splenocolic fistula",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SlittingOfLacrimalCanaliculusForPassageOfTube: Coding.FromStrict({
+  EncounterReasonValueSet_SlittingOfLacrimalCanaliculusForPassageOfTube: new Coding({
     code: "4407008",
     display: "Slitting of lacrimal canaliculus for passage of tube",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfDeviceFromFemaleGenitalTract: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfDeviceFromFemaleGenitalTract: new Coding({
     code: "4411002",
     display: "Removal of device from female genital tract",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FetalDeathFromAsphyxiaANDORAnoxiaBeforeOnsetOfLabor: Coding.FromStrict({
+  EncounterReasonValueSet_FetalDeathFromAsphyxiaANDORAnoxiaBeforeOnsetOfLabor: new Coding({
     code: "44174001",
     display: "Fetal death from asphyxia AND/OR anoxia before onset of labor",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallInShower: Coding.FromStrict({
+  EncounterReasonValueSet_FallInShower: new Coding({
     code: "44188002",
     display: "Fall in shower",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionAndDrainageOfParapharyngealAbscessByExternalApproach: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionAndDrainageOfParapharyngealAbscessByExternalApproach: new Coding({
     code: "4420006",
     display: "Incision and drainage of parapharyngeal abscess by external approach",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MakingOrthopedicBed: Coding.FromStrict({
+  EncounterReasonValueSet_MakingOrthopedicBed: new Coding({
     code: "4424002",
     display: "Making orthopedic bed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Suicide: Coding.FromStrict({
+  EncounterReasonValueSet_Suicide: new Coding({
     code: "44301001",
     display: "Suicide",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MethylatableChemotaxisProteinMCPReceptorMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_MethylatableChemotaxisProteinMCPReceptorMeasurement: new Coding({
     code: "4436008",
     display: "Methylatable chemotaxis protein (MCP) receptor measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_VenographyOfVenaCava: Coding.FromStrict({
+  EncounterReasonValueSet_VenographyOfVenaCava: new Coding({
     code: "4438009",
     display: "Venography of vena cava",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralLymphangiographyOfUpperExtremity: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralLymphangiographyOfUpperExtremity: new Coding({
     code: "44409003",
     display: "Unilateral lymphangiography of upper extremity",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DecorticationOfOvary: Coding.FromStrict({
+  EncounterReasonValueSet_DecorticationOfOvary: new Coding({
     code: "4443002",
     display: "Decortication of ovary",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralIncompleteCleftPalate: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralIncompleteCleftPalate: new Coding({
     code: "44442002",
     display: "Unilateral incomplete cleft palate",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AutopsyGrossAndMicroscopicExaminationStillbornOrNewbornWithoutCentralNervousSystem: Coding.FromStrict({
+  EncounterReasonValueSet_AutopsyGrossAndMicroscopicExaminationStillbornOrNewbornWithoutCentralNervousSystem: new Coding({
     code: "4447001",
     display: "Autopsy, gross and microscopic examination, stillborn or newborn without central nervous system",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralRepairOfFemoralHerniaWithProsthesisOrGraft: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralRepairOfFemoralHerniaWithProsthesisOrGraft: new Coding({
     code: "44473003",
     display: "Unilateral repair of femoral hernia with prosthesis or graft",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ManipulationOfSpinalMeninges: Coding.FromStrict({
+  EncounterReasonValueSet_ManipulationOfSpinalMeninges: new Coding({
     code: "4449003",
     display: "Manipulation of spinal meninges",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ApplicationOfKirschnerWire: Coding.FromStrict({
+  EncounterReasonValueSet_ApplicationOfKirschnerWire: new Coding({
     code: "4450003",
     display: "Application of Kirschner wire",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfMalunionOfTibia: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfMalunionOfTibia: new Coding({
     code: "445004",
     display: "Repair of malunion of tibia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OpenReductionOfOpenElbowDislocation: Coding.FromStrict({
+  EncounterReasonValueSet_OpenReductionOfOpenElbowDislocation: new Coding({
     code: "4455008",
     display: "Open reduction of open elbow dislocation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InsertionOfMoldIntoVagina: Coding.FromStrict({
+  EncounterReasonValueSet_InsertionOfMoldIntoVagina: new Coding({
     code: "4457000",
     display: "Insertion of mold into vagina",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AccidentalDeathInPublicPlace: Coding.FromStrict({
+  EncounterReasonValueSet_AccidentalDeathInPublicPlace: new Coding({
     code: "44633000",
     display: "Accidental death in public place",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExplorationOfUpperLimbArtery: Coding.FromStrict({
+  EncounterReasonValueSet_ExplorationOfUpperLimbArtery: new Coding({
     code: "4466001",
     display: "Exploration of upper limb artery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfTumorOfAnkleAreaDeepIntramuscular: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfTumorOfAnkleAreaDeepIntramuscular: new Coding({
     code: "4467005",
     display: "Excision of tumor of ankle area, deep, intramuscular",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CyanideLevel: Coding.FromStrict({
+  EncounterReasonValueSet_CyanideLevel: new Coding({
     code: "4475004",
     display: "Cyanide level",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NorepinephrineMeasurementSupine: Coding.FromStrict({
+  EncounterReasonValueSet_NorepinephrineMeasurementSupine: new Coding({
     code: "4487006",
     display: "Norepinephrine measurement, supine",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NeurolysisOfTrigeminalNerve: Coding.FromStrict({
+  EncounterReasonValueSet_NeurolysisOfTrigeminalNerve: new Coding({
     code: "4489009",
     display: "Neurolysis of trigeminal nerve",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MouthcareProcedure: Coding.FromStrict({
+  EncounterReasonValueSet_MouthcareProcedure: new Coding({
     code: "4496006",
     display: "Mouthcare procedure",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfForeignBodyOfScleraWithoutUseOfMagnet: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfForeignBodyOfScleraWithoutUseOfMagnet: new Coding({
     code: "4503005",
     display: "Removal of foreign body of sclera without use of magnet",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PotterObstetricalVersionWithExtraction: Coding.FromStrict({
+  EncounterReasonValueSet_PotterObstetricalVersionWithExtraction: new Coding({
     code: "4504004",
     display: "Potter obstetrical version with extraction",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TenolysisOfFlexorTendonOfForearm: Coding.FromStrict({
+  EncounterReasonValueSet_TenolysisOfFlexorTendonOfForearm: new Coding({
     code: "4505003",
     display: "Tenolysis of flexor tendon of forearm",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DecompressionFasciotomyOfWristFlexorAndExtensorCompartment: Coding.FromStrict({
+  EncounterReasonValueSet_DecompressionFasciotomyOfWristFlexorAndExtensorCompartment: new Coding({
     code: "4507006",
     display: "Decompression fasciotomy of wrist, flexor and extensor compartment",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RestorationInlayCompositeResinOneSurfaceLaboratoryProcessed: Coding.FromStrict({
+  EncounterReasonValueSet_RestorationInlayCompositeResinOneSurfaceLaboratoryProcessed: new Coding({
     code: "4511000",
     display: "Restoration, inlay, composite/resin, one surface, laboratory processed",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MacLeodQuoteSUnilateralEmphysema: Coding.FromStrict({
+  EncounterReasonValueSet_MacLeodQuoteSUnilateralEmphysema: new Coding({
     code: "45145000",
     display: "MacLeod's unilateral emphysema",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IridencleisisAndIridotasis: Coding.FromStrict({
+  EncounterReasonValueSet_IridencleisisAndIridotasis: new Coding({
     code: "4516005",
     display: "Iridencleisis and iridotasis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnastomosisOfEsophagusAntesternalOrAntethoracicWithInsertionOfProsthesis: Coding.FromStrict({
+  EncounterReasonValueSet_AnastomosisOfEsophagusAntesternalOrAntethoracicWithInsertionOfProsthesis: new Coding({
     code: "4520009",
     display: "Anastomosis of esophagus, antesternal or antethoracic, with insertion of prosthesis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallFromCliff: Coding.FromStrict({
+  EncounterReasonValueSet_FallFromCliff: new Coding({
     code: "4521008",
     display: "Fall from cliff",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IatrogenicDeath: Coding.FromStrict({
+  EncounterReasonValueSet_IatrogenicDeath: new Coding({
     code: "45216005",
     display: "Iatrogenic death",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StruckByMissile: Coding.FromStrict({
+  EncounterReasonValueSet_StruckByMissile: new Coding({
     code: "45224000",
     display: "Struck by missile",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SeenByCasualtyService: Coding.FromStrict({
+  EncounterReasonValueSet_SeenByCasualtyService: new Coding({
     code: "4525004",
     display: "Seen by casualty - service",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LigationOfArteryOfLowerLimb: Coding.FromStrict({
+  EncounterReasonValueSet_LigationOfArteryOfLowerLimb: new Coding({
     code: "4533003",
     display: "Ligation of artery of lower limb",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionOfPelvirectalTissue: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionOfPelvirectalTissue: new Coding({
     code: "4535005",
     display: "Incision of pelvirectal tissue",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfCystOfBronchus: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfCystOfBronchus: new Coding({
     code: "4539004",
     display: "Excision of cyst of bronchus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ClosedReductionOfFractureOfFoot: Coding.FromStrict({
+  EncounterReasonValueSet_ClosedReductionOfFractureOfFoot: new Coding({
     code: "4542005",
     display: "Closed reduction of fracture of foot",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfSubcutaneousTumorOfExtremities: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfSubcutaneousTumorOfExtremities: new Coding({
     code: "4544006",
     display: "Excision of subcutaneous tumor of extremities",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToVibration: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToVibration: new Coding({
     code: "45477008",
     display: "Exposure to vibration",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnteriorResectionOfRectum: Coding.FromStrict({
+  EncounterReasonValueSet_AnteriorResectionOfRectum: new Coding({
     code: "4558008",
     display: "Anterior resection of rectum",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TotalAbdominalColectomyWithIleostomy: Coding.FromStrict({
+  EncounterReasonValueSet_TotalAbdominalColectomyWithIleostomy: new Coding({
     code: "456004",
     display: "Total abdominal colectomy with ileostomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HospitalAdmissionTransferFromOtherHospitalOrHealthCareFacility: Coding.FromStrict({
+  EncounterReasonValueSet_HospitalAdmissionTransferFromOtherHospitalOrHealthCareFacility: new Coding({
     code: "4563007",
     display: "Hospital admission, transfer from other hospital or health care facility",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Chemopallidectomy: Coding.FromStrict({
+  EncounterReasonValueSet_Chemopallidectomy: new Coding({
     code: "4570007",
     display: "Chemopallidectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralInsertionOfBreastProsthesis: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralInsertionOfBreastProsthesis: new Coding({
     code: "45780005",
     display: "Unilateral insertion of breast prosthesis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CreationOfVentriculoatrialShunt: Coding.FromStrict({
+  EncounterReasonValueSet_CreationOfVentriculoatrialShunt: new Coding({
     code: "4579008",
     display: "Creation of ventriculoatrial shunt",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Coreoplasty: Coding.FromStrict({
+  EncounterReasonValueSet_Coreoplasty: new Coding({
     code: "4581005",
     display: "Coreoplasty",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DecompressionOfTendonOfHand: Coding.FromStrict({
+  EncounterReasonValueSet_DecompressionOfTendonOfHand: new Coding({
     code: "4585001",
     display: "Decompression of tendon of hand",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EpiphysiodesisOfDistalRadius: Coding.FromStrict({
+  EncounterReasonValueSet_EpiphysiodesisOfDistalRadius: new Coding({
     code: "4587009",
     display: "Epiphysiodesis of distal radius",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CareRelatingToReproductionAndPregnancy: Coding.FromStrict({
+  EncounterReasonValueSet_CareRelatingToReproductionAndPregnancy: new Coding({
     code: "4589007",
     display: "Care relating to reproduction and pregnancy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ClosedCondylotomyOfMandible: Coding.FromStrict({
+  EncounterReasonValueSet_ClosedCondylotomyOfMandible: new Coding({
     code: "459006",
     display: "Closed condylotomy of mandible",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CauterizationOfScleraWithIridectomy: Coding.FromStrict({
+  EncounterReasonValueSet_CauterizationOfScleraWithIridectomy: new Coding({
     code: "4593001",
     display: "Cauterization of sclera with iridectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CoproporphyrinIsomersSeriesIAndIIIUrine: Coding.FromStrict({
+  EncounterReasonValueSet_CoproporphyrinIsomersSeriesIAndIIIUrine: new Coding({
     code: "4594007",
     display: "Coproporphyrin isomers, series I & III, urine",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralWedgeResectionOfOvary: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralWedgeResectionOfOvary: new Coding({
     code: "46029008",
     display: "Unilateral wedge resection of ovary",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Radioimmunoassay: Coding.FromStrict({
+  EncounterReasonValueSet_Radioimmunoassay: new Coding({
     code: "4613005",
     display: "Radioimmunoassay",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ApicalPulseTaking: Coding.FromStrict({
+  EncounterReasonValueSet_ApicalPulseTaking: new Coding({
     code: "4625008",
     display: "Apical pulse taking",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TakeDownOfArterialAnastomosis: Coding.FromStrict({
+  EncounterReasonValueSet_TakeDownOfArterialAnastomosis: new Coding({
     code: "4626009",
     display: "Take-down of arterial anastomosis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ClosedReductionOfCoxofemoralJointDislocationWithSplint: Coding.FromStrict({
+  EncounterReasonValueSet_ClosedReductionOfCoxofemoralJointDislocationWithSplint: new Coding({
     code: "463004",
     display: "Closed reduction of coxofemoral joint dislocation with splint",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DenkerOperationForRadicalMaxillaryAntrotomy: Coding.FromStrict({
+  EncounterReasonValueSet_DenkerOperationForRadicalMaxillaryAntrotomy: new Coding({
     code: "4636001",
     display: "Denker operation for radical maxillary antrotomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LigationOfFallopianTubesByAbdominalApproach: Coding.FromStrict({
+  EncounterReasonValueSet_LigationOfFallopianTubesByAbdominalApproach: new Coding({
     code: "4640005",
     display: "Ligation of fallopian tubes by abdominal approach",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfInflatablePenileProsthesisWithPumpReservoirAndCylinders: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfInflatablePenileProsthesisWithPumpReservoirAndCylinders: new Coding({
     code: "4642002",
     display: "Removal of inflatable penile prosthesis, with pump, reservoir and cylinders",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralTraumaticAmputationOfLegAtORAboveKneeWithComplication: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralTraumaticAmputationOfLegAtORAboveKneeWithComplication: new Coding({
     code: "46508005",
     display: "Unilateral traumatic amputation of leg at OR above knee with complication",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiagnosticProcedureOnPhalangesOfFoot: Coding.FromStrict({
+  EncounterReasonValueSet_DiagnosticProcedureOnPhalangesOfFoot: new Coding({
     code: "4660002",
     display: "Diagnostic procedure on phalanges of foot",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CatheterizationOfBronchus: Coding.FromStrict({
+  EncounterReasonValueSet_CatheterizationOfBronchus: new Coding({
     code: "4670000",
     display: "Catheterization of bronchus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfLesionFromSphenoidSinus: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfLesionFromSphenoidSinus: new Coding({
     code: "4671001",
     display: "Excision of lesion from sphenoid sinus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MedicalProcedureOnTheNervousSystem: Coding.FromStrict({
+  EncounterReasonValueSet_MedicalProcedureOnTheNervousSystem: new Coding({
     code: "4672008",
     display: "Medical procedure on the nervous system",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_GlutathioneMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_GlutathioneMeasurement: new Coding({
     code: "468008",
     display: "Glutathione measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ContactWithPlants: Coding.FromStrict({
+  EncounterReasonValueSet_ContactWithPlants: new Coding({
     code: "46851004",
     display: "Contact with plants",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IdentificationOfRotavirusAntigenInFeces: Coding.FromStrict({
+  EncounterReasonValueSet_IdentificationOfRotavirusAntigenInFeces: new Coding({
     code: "4691008",
     display: "Identification of rotavirus antigen in feces",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TransplantationOfArteryOfUpperExtremity: Coding.FromStrict({
+  EncounterReasonValueSet_TransplantationOfArteryOfUpperExtremity: new Coding({
     code: "4692001",
     display: "Transplantation of artery of upper extremity",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PercutaneousBiopsyOfMuscle: Coding.FromStrict({
+  EncounterReasonValueSet_PercutaneousBiopsyOfMuscle: new Coding({
     code: "4694000",
     display: "Percutaneous biopsy of muscle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AlphaNaphthylButyrateStainMethodBloodOrBoneMarrow: Coding.FromStrict({
+  EncounterReasonValueSet_AlphaNaphthylButyrateStainMethodBloodOrBoneMarrow: new Coding({
     code: "4699005",
     display: "Alpha naphthyl butyrate stain method, blood or bone marrow",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ColonyFormingUnitGranulocyteMonocyteErythroidMegakaryocyteAssay: Coding.FromStrict({
+  EncounterReasonValueSet_ColonyFormingUnitGranulocyteMonocyteErythroidMegakaryocyteAssay: new Coding({
     code: "4701005",
     display: "Colony forming unit-granulocyte-monocyte-erythroid-megakaryocyte assay",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Sinking: Coding.FromStrict({
+  EncounterReasonValueSet_Sinking: new Coding({
     code: "47044002",
     display: "Sinking",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PartialExcisionOfCalcaneus: Coding.FromStrict({
+  EncounterReasonValueSet_PartialExcisionOfCalcaneus: new Coding({
     code: "4707009",
     display: "Partial excision of calcaneus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfGardnerWellsTongsFromSkull: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfGardnerWellsTongsFromSkull: new Coding({
     code: "4712005",
     display: "Removal of Gardner Wells tongs from skull",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EndoscopyAndPhotography: Coding.FromStrict({
+  EncounterReasonValueSet_EndoscopyAndPhotography: new Coding({
     code: "4713000",
     display: "Endoscopy and photography",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PsychologicCognitiveTestingAndAssessment: Coding.FromStrict({
+  EncounterReasonValueSet_PsychologicCognitiveTestingAndAssessment: new Coding({
     code: "4719001",
     display: "Psychologic cognitive testing and assessment",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MurderOfStranger: Coding.FromStrict({
+  EncounterReasonValueSet_MurderOfStranger: new Coding({
     code: "47193005",
     display: "Murder of stranger",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ContactWithPowerTool: Coding.FromStrict({
+  EncounterReasonValueSet_ContactWithPowerTool: new Coding({
     code: "47235009",
     display: "Contact with power tool",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LipoproteinElectrophoresis: Coding.FromStrict({
+  EncounterReasonValueSet_LipoproteinElectrophoresis: new Coding({
     code: "4727005",
     display: "Lipoprotein electrophoresis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IrrigationOfWoundCatheterOfIntegument: Coding.FromStrict({
+  EncounterReasonValueSet_IrrigationOfWoundCatheterOfIntegument: new Coding({
     code: "4734007",
     display: "Irrigation of wound catheter of integument",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralDestructionOfFallopianTube: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralDestructionOfFallopianTube: new Coding({
     code: "47354006",
     display: "Unilateral destruction of fallopian tube",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MycobacteriaCulture: Coding.FromStrict({
+  EncounterReasonValueSet_MycobacteriaCulture: new Coding({
     code: "4737000",
     display: "Mycobacteria culture",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EsophagoentericAnastomosisIntrathoracic: Coding.FromStrict({
+  EncounterReasonValueSet_EsophagoentericAnastomosisIntrathoracic: new Coding({
     code: "474008",
     display: "Esophagoenteric anastomosis, intrathoracic",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralExcisionOfOvotestis: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralExcisionOfOvotestis: new Coding({
     code: "47426000",
     display: "Unilateral excision of ovotestis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CryotherapyOfSubcutaneousTissue: Coding.FromStrict({
+  EncounterReasonValueSet_CryotherapyOfSubcutaneousTissue: new Coding({
     code: "4756005",
     display: "Cryotherapy of subcutaneous tissue",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Incudostapediopexy: Coding.FromStrict({
+  EncounterReasonValueSet_Incudostapediopexy: new Coding({
     code: "4758006",
     display: "Incudostapediopexy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_JetVentilationProcedure: Coding.FromStrict({
+  EncounterReasonValueSet_JetVentilationProcedure: new Coding({
     code: "4764004",
     display: "Jet ventilation procedure",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InsertionOfOcularImplantFollowingOrSecondaryToEnucleation: Coding.FromStrict({
+  EncounterReasonValueSet_InsertionOfOcularImplantFollowingOrSecondaryToEnucleation: new Coding({
     code: "4765003",
     display: "Insertion of ocular implant following or secondary to enucleation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ColporrhaphyForRepairOfUrethrocele: Coding.FromStrict({
+  EncounterReasonValueSet_ColporrhaphyForRepairOfUrethrocele: new Coding({
     code: "4770005",
     display: "Colporrhaphy for repair of urethrocele",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReductionOfTorsionOfSpermaticCord: Coding.FromStrict({
+  EncounterReasonValueSet_ReductionOfTorsionOfSpermaticCord: new Coding({
     code: "4772002",
     display: "Reduction of torsion of spermatic cord",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralReconstructionOfBreastWithBipedicleTRAMFlap: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralReconstructionOfBreastWithBipedicleTRAMFlap: new Coding({
     code: "47768001",
     display: "Unilateral reconstruction of breast with bipedicle TRAM flap",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OperationOnSublingualGland: Coding.FromStrict({
+  EncounterReasonValueSet_OperationOnSublingualGland: new Coding({
     code: "4784000",
     display: "Operation on sublingual gland",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallThroughWindow: Coding.FromStrict({
+  EncounterReasonValueSet_FallThroughWindow: new Coding({
     code: "48015001",
     display: "Fall through window",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MicrobialIdentificationTest: Coding.FromStrict({
+  EncounterReasonValueSet_MicrobialIdentificationTest: new Coding({
     code: "4804005",
     display: "Microbial identification test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Cyclone: Coding.FromStrict({
+  EncounterReasonValueSet_Cyclone: new Coding({
     code: "48071004",
     display: "Cyclone",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReconstructionOfDiaphragm: Coding.FromStrict({
+  EncounterReasonValueSet_ReconstructionOfDiaphragm: new Coding({
     code: "4811009",
     display: "Reconstruction of diaphragm",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AntibodyIdentificationRedBloodCellAntibodyPanelEnzyme2StageTechniqueIncludingAntiHumanGlobulin: Coding.FromStrict({
+  EncounterReasonValueSet_AntibodyIdentificationRedBloodCellAntibodyPanelEnzyme2StageTechniqueIncludingAntiHumanGlobulin: new Coding({
     code: "4815000",
     display: "Antibody identification, red blood cell antibody panel, enzyme, 2 stage technique including anti-human globulin",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionOfLabialFrenum: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionOfLabialFrenum: new Coding({
     code: "4820000",
     display: "Incision of labial frenum",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ShowerHydrotherapy: Coding.FromStrict({
+  EncounterReasonValueSet_ShowerHydrotherapy: new Coding({
     code: "4827002",
     display: "Shower hydrotherapy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfSmallIntestineForInterposition: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfSmallIntestineForInterposition: new Coding({
     code: "4829004",
     display: "Excision of small intestine for interposition",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnesthesiaForCesareanSection: Coding.FromStrict({
+  EncounterReasonValueSet_AnesthesiaForCesareanSection: new Coding({
     code: "4847005",
     display: "Anesthesia for cesarean section",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OvarianBiopsy: Coding.FromStrict({
+  EncounterReasonValueSet_OvarianBiopsy: new Coding({
     code: "4849008",
     display: "Ovarian biopsy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralImagingOfBronchusWithPositiveContrastMedia: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralImagingOfBronchusWithPositiveContrastMedia: new Coding({
     code: "48591001",
     display: "Unilateral imaging of bronchus with positive contrast media",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RevisionOfAnastomosisOfLargeIntestine: Coding.FromStrict({
+  EncounterReasonValueSet_RevisionOfAnastomosisOfLargeIntestine: new Coding({
     code: "4862007",
     display: "Revision of anastomosis of large intestine",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExtracapsularExtractionOfLensWithIridectomy: Coding.FromStrict({
+  EncounterReasonValueSet_ExtracapsularExtractionOfLensWithIridectomy: new Coding({
     code: "4877004",
     display: "Extracapsular extraction of lens with iridectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FerritinLevel: Coding.FromStrict({
+  EncounterReasonValueSet_FerritinLevel: new Coding({
     code: "489004",
     display: "Ferritin level",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Proctostomy: Coding.FromStrict({
+  EncounterReasonValueSet_Proctostomy: new Coding({
     code: "4891005",
     display: "Proctostomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ConstructionOfSigmoidBladder: Coding.FromStrict({
+  EncounterReasonValueSet_ConstructionOfSigmoidBladder: new Coding({
     code: "4895001",
     display: "Construction of sigmoid bladder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Parasuicide: Coding.FromStrict({
+  EncounterReasonValueSet_Parasuicide: new Coding({
     code: "48981002",
     display: "Parasuicide",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RenalHomotransplantationWithUnilateralRecipientNephrectomy: Coding.FromStrict({
+  EncounterReasonValueSet_RenalHomotransplantationWithUnilateralRecipientNephrectomy: new Coding({
     code: "48994000",
     display: "Renal homotransplantation with unilateral recipient nephrectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EthchlorvynolMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_EthchlorvynolMeasurement: new Coding({
     code: "4902005",
     display: "Ethchlorvynol measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SerumProteinElectrophoresis: Coding.FromStrict({
+  EncounterReasonValueSet_SerumProteinElectrophoresis: new Coding({
     code: "4903000",
     display: "Serum protein electrophoresis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DilationOfAnalSphincterUnderNonlocalAnesthesia: Coding.FromStrict({
+  EncounterReasonValueSet_DilationOfAnalSphincterUnderNonlocalAnesthesia: new Coding({
     code: "4904006",
     display: "Dilation of anal sphincter under nonlocal anesthesia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Landslide: Coding.FromStrict({
+  EncounterReasonValueSet_Landslide: new Coding({
     code: "49061008",
     display: "Landslide",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Blizzard: Coding.FromStrict({
+  EncounterReasonValueSet_Blizzard: new Coding({
     code: "49113003",
     display: "Blizzard",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TreatmentPlanningForTeletherapy: Coding.FromStrict({
+  EncounterReasonValueSet_TreatmentPlanningForTeletherapy: new Coding({
     code: "4914002",
     display: "Treatment planning for teletherapy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StruckByBuildingCollapse: Coding.FromStrict({
+  EncounterReasonValueSet_StruckByBuildingCollapse: new Coding({
     code: "49215004",
     display: "Struck by building collapse",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Manslaughter: Coding.FromStrict({
+  EncounterReasonValueSet_Manslaughter: new Coding({
     code: "49250007",
     display: "Manslaughter",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LocalPerfusionOfKidney: Coding.FromStrict({
+  EncounterReasonValueSet_LocalPerfusionOfKidney: new Coding({
     code: "4929000",
     display: "Local perfusion of kidney",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfThoracogastricFistula: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfThoracogastricFistula: new Coding({
     code: "4930005",
     display: "Repair of thoracogastric fistula",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UrobilinogenMeasurement48HourFeces: Coding.FromStrict({
+  EncounterReasonValueSet_UrobilinogenMeasurement48HourFeces: new Coding({
     code: "493005",
     display: "Urobilinogen measurement, 48-hour, feces",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Salpingography: Coding.FromStrict({
+  EncounterReasonValueSet_Salpingography: new Coding({
     code: "4934001",
     display: "Salpingography",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnestheticDeath: Coding.FromStrict({
+  EncounterReasonValueSet_AnestheticDeath: new Coding({
     code: "49380000",
     display: "Anesthetic death",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfLesionOfTonsil: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfLesionOfTonsil: new Coding({
     code: "494004",
     display: "Excision of lesion of tonsil",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CervicalSpinalFusionForPseudoarthrosis: Coding.FromStrict({
+  EncounterReasonValueSet_CervicalSpinalFusionForPseudoarthrosis: new Coding({
     code: "4957007",
     display: "Cervical spinal fusion for pseudoarthrosis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExtracorporealPerfusion: Coding.FromStrict({
+  EncounterReasonValueSet_ExtracorporealPerfusion: new Coding({
     code: "4966006",
     display: "Extracorporeal perfusion",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Venography: Coding.FromStrict({
+  EncounterReasonValueSet_Venography: new Coding({
     code: "4970003",
     display: "Venography",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReplacementOfCochlearProsthesisMultipleChannels: Coding.FromStrict({
+  EncounterReasonValueSet_ReplacementOfCochlearProsthesisMultipleChannels: new Coding({
     code: "497006",
     display: "Replacement of cochlear prosthesis, multiple channels",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnexpectedDeath: Coding.FromStrict({
+  EncounterReasonValueSet_UnexpectedDeath: new Coding({
     code: "49713007",
     display: "Unexpected death",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LiverOperation: Coding.FromStrict({
+  EncounterReasonValueSet_LiverOperation: new Coding({
     code: "4974007",
     display: "Liver operation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnesthesiaForEndoscopicProcedureOnLowerExtremity: Coding.FromStrict({
+  EncounterReasonValueSet_AnesthesiaForEndoscopicProcedureOnLowerExtremity: new Coding({
     code: "4976009",
     display: "Anesthesia for endoscopic procedure on lower extremity",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OsteoplastyOfCraniumWithFlapOfBone: Coding.FromStrict({
+  EncounterReasonValueSet_OsteoplastyOfCraniumWithFlapOfBone: new Coding({
     code: "4987001",
     display: "Osteoplasty of cranium with flap of bone",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallDownEmbankment: Coding.FromStrict({
+  EncounterReasonValueSet_FallDownEmbankment: new Coding({
     code: "49905000",
     display: "Fall down embankment",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CardiacCatheterizationLeftHeartRetrogradePercutaneous: Coding.FromStrict({
+  EncounterReasonValueSet_CardiacCatheterizationLeftHeartRetrogradePercutaneous: new Coding({
     code: "4992004",
     display: "Cardiac catheterization, left heart, retrograde, percutaneous",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IschemicLimbExerciseWithElectromyographyAndLacticAcidDetermination: Coding.FromStrict({
+  EncounterReasonValueSet_IschemicLimbExerciseWithElectromyographyAndLacticAcidDetermination: new Coding({
     code: "4993009",
     display: "Ischemic limb exercise with electromyography and lactic acid determination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AirCrash: Coding.FromStrict({
+  EncounterReasonValueSet_AirCrash: new Coding({
     code: "50032005",
     display: "Air crash",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Battery: Coding.FromStrict({
+  EncounterReasonValueSet_Battery: new Coding({
     code: "50084004",
     display: "Battery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UndeterminedMannerOfDeathNaturalCausesSuspected: Coding.FromStrict({
+  EncounterReasonValueSet_UndeterminedMannerOfDeathNaturalCausesSuspected: new Coding({
     code: "50105002",
     display: "Undetermined manner of death, natural causes suspected",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DrowningInFreshWater: Coding.FromStrict({
+  EncounterReasonValueSet_DrowningInFreshWater: new Coding({
     code: "50109008",
     display: "Drowning in fresh water",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PonticResinWithHighNobleMetal: Coding.FromStrict({
+  EncounterReasonValueSet_PonticResinWithHighNobleMetal: new Coding({
     code: "5016005",
     display: "Pontic, resin with high noble metal",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DirectLaryngoscopyWithBiopsy: Coding.FromStrict({
+  EncounterReasonValueSet_DirectLaryngoscopyWithBiopsy: new Coding({
     code: "5019003",
     display: "Direct laryngoscopy with biopsy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AldosteroneMeasurementStandingNormalSaltDiet: Coding.FromStrict({
+  EncounterReasonValueSet_AldosteroneMeasurementStandingNormalSaltDiet: new Coding({
     code: "5021008",
     display: "Aldosterone measurement, standing, normal salt diet",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LysergicAcidDiethylamideMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_LysergicAcidDiethylamideMeasurement: new Coding({
     code: "5022001",
     display: "Lysergic acid diethylamide measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SemenAnalysisPresenceAndMotilityOfSperm: Coding.FromStrict({
+  EncounterReasonValueSet_SemenAnalysisPresenceAndMotilityOfSperm: new Coding({
     code: "5025004",
     display: "Semen analysis, presence and motility of sperm",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CornealGluing: Coding.FromStrict({
+  EncounterReasonValueSet_CornealGluing: new Coding({
     code: "503003",
     display: "Corneal gluing",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LabialVeneerPorcelainLaminateLaboratory: Coding.FromStrict({
+  EncounterReasonValueSet_LabialVeneerPorcelainLaminateLaboratory: new Coding({
     code: "5032008",
     display: "Labial veneer, porcelain laminate, laboratory",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_GraftToHairBearingSkin: Coding.FromStrict({
+  EncounterReasonValueSet_GraftToHairBearingSkin: new Coding({
     code: "5034009",
     display: "Graft to hair-bearing skin",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AsphyxiationByEnvironmentalToxicGas: Coding.FromStrict({
+  EncounterReasonValueSet_AsphyxiationByEnvironmentalToxicGas: new Coding({
     code: "50363002",
     display: "Asphyxiation by environmental toxic gas",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralLymphangiographyOfLowerExtremity: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralLymphangiographyOfLowerExtremity: new Coding({
     code: "50433005",
     display: "Unilateral lymphangiography of lower extremity",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExternalCephalicVersionWithTocolysis: Coding.FromStrict({
+  EncounterReasonValueSet_ExternalCephalicVersionWithTocolysis: new Coding({
     code: "5048009",
     display: "External cephalic version with tocolysis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InstantaneousDeath: Coding.FromStrict({
+  EncounterReasonValueSet_InstantaneousDeath: new Coding({
     code: "50514002",
     display: "Instantaneous death",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnisceptSystemTest: Coding.FromStrict({
+  EncounterReasonValueSet_UnisceptSystemTest: new Coding({
     code: "5055006",
     display: "Uniscept system test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RadicalOrbitomaxillectomy: Coding.FromStrict({
+  EncounterReasonValueSet_RadicalOrbitomaxillectomy: new Coding({
     code: "5057003",
     display: "Radical orbitomaxillectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathByImmolation: Coding.FromStrict({
+  EncounterReasonValueSet_DeathByImmolation: new Coding({
     code: "5062002",
     display: "Death by immolation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReductionOfClosedTraumaticHipDislocationWithAnesthesia: Coding.FromStrict({
+  EncounterReasonValueSet_ReductionOfClosedTraumaticHipDislocationWithAnesthesia: new Coding({
     code: "5065000",
     display: "Reduction of closed traumatic hip dislocation with anesthesia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PeripheralVascularDiseaseStudy: Coding.FromStrict({
+  EncounterReasonValueSet_PeripheralVascularDiseaseStudy: new Coding({
     code: "5091004",
     display: "Peripheral vascular disease study",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EndoscopyOfRenalPelvis: Coding.FromStrict({
+  EncounterReasonValueSet_EndoscopyOfRenalPelvis: new Coding({
     code: "5105000",
     display: "Endoscopy of renal pelvis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UltrasoundPeripheralImagingRealTimeScan: Coding.FromStrict({
+  EncounterReasonValueSet_UltrasoundPeripheralImagingRealTimeScan: new Coding({
     code: "5110001",
     display: "Ultrasound peripheral imaging, real time scan",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FT4FreeThyroxineLevel: Coding.FromStrict({
+  EncounterReasonValueSet_FT4FreeThyroxineLevel: new Coding({
     code: "5113004",
     display: "FT4 - Free thyroxine level",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Epiglottidectomy: Coding.FromStrict({
+  EncounterReasonValueSet_Epiglottidectomy: new Coding({
     code: "5119000",
     display: "Epiglottidectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_WedgeOsteotomyOfPelvicBone: Coding.FromStrict({
+  EncounterReasonValueSet_WedgeOsteotomyOfPelvicBone: new Coding({
     code: "5121005",
     display: "Wedge osteotomy of pelvic bone",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnesthesiaForProcedureOnPericardiumWithPumpOxygenator: Coding.FromStrict({
+  EncounterReasonValueSet_AnesthesiaForProcedureOnPericardiumWithPumpOxygenator: new Coding({
     code: "5123008",
     display: "Anesthesia for procedure on pericardium with pump oxygenator",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NeedlingOfLensForCataract: Coding.FromStrict({
+  EncounterReasonValueSet_NeedlingOfLensForCataract: new Coding({
     code: "5130002",
     display: "Needling of lens for cataract",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RadiographyOfChestWall: Coding.FromStrict({
+  EncounterReasonValueSet_RadiographyOfChestWall: new Coding({
     code: "5131003",
     display: "Radiography of chest wall",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Incest: Coding.FromStrict({
+  EncounterReasonValueSet_Incest: new Coding({
     code: "51347003",
     display: "Incest",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiagnosticProcedureOnScapula: Coding.FromStrict({
+  EncounterReasonValueSet_DiagnosticProcedureOnScapula: new Coding({
     code: "5135007",
     display: "Diagnostic procedure on scapula",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralImagingOfCoronaryArteryBypassGraft: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralImagingOfCoronaryArteryBypassGraft: new Coding({
     code: "51435005",
     display: "Unilateral imaging of coronary artery bypass graft",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralTraumaticAmputationBelowElbowWithoutComplication: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralTraumaticAmputationBelowElbowWithoutComplication: new Coding({
     code: "51436006",
     display: "Unilateral traumatic amputation below elbow without complication",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfLesionOfAnkleJoint: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfLesionOfAnkleJoint: new Coding({
     code: "5147001",
     display: "Excision of lesion of ankle joint",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ManualReductionOfRectalHemorrhoids: Coding.FromStrict({
+  EncounterReasonValueSet_ManualReductionOfRectalHemorrhoids: new Coding({
     code: "5151004",
     display: "Manual reduction of rectal hemorrhoids",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CommunicationEnhancementSpeechDeficit: Coding.FromStrict({
+  EncounterReasonValueSet_CommunicationEnhancementSpeechDeficit: new Coding({
     code: "5154007",
     display: "Communication enhancement: speech deficit",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpecialtyClinicAdmission: Coding.FromStrict({
+  EncounterReasonValueSet_SpecialtyClinicAdmission: new Coding({
     code: "5161006",
     display: "Specialty clinic admission",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfPressureUlcer: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfPressureUlcer: new Coding({
     code: "5162004",
     display: "Excision of pressure ulcer",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DivisionOfThoracicArtery: Coding.FromStrict({
+  EncounterReasonValueSet_DivisionOfThoracicArtery: new Coding({
     code: "5165002",
     display: "Division of thoracic artery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AssistedSuicide: Coding.FromStrict({
+  EncounterReasonValueSet_AssistedSuicide: new Coding({
     code: "51709005",
     display: "Assisted suicide",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralCompleteParalysisOfVocalCords: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralCompleteParalysisOfVocalCords: new Coding({
     code: "51738008",
     display: "Unilateral complete paralysis of vocal cords",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ThromboendarterectomyWithGraftOfRenalArtery: Coding.FromStrict({
+  EncounterReasonValueSet_ThromboendarterectomyWithGraftOfRenalArtery: new Coding({
     code: "5176003",
     display: "Thromboendarterectomy with graft of renal artery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TotalBodyPerfusion: Coding.FromStrict({
+  EncounterReasonValueSet_TotalBodyPerfusion: new Coding({
     code: "5182000",
     display: "Total body perfusion",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OsteotomyOfShaftOfFemurWithFixation: Coding.FromStrict({
+  EncounterReasonValueSet_OsteotomyOfShaftOfFemurWithFixation: new Coding({
     code: "5184004",
     display: "Osteotomy of shaft of femur with fixation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ArthrotomyForSynovectomyOfGlenohumeralJoint: Coding.FromStrict({
+  EncounterReasonValueSet_ArthrotomyForSynovectomyOfGlenohumeralJoint: new Coding({
     code: "5186002",
     display: "Arthrotomy for synovectomy of glenohumeral joint",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CellFusion: Coding.FromStrict({
+  EncounterReasonValueSet_CellFusion: new Coding({
     code: "5190000",
     display: "Cell fusion",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SurgicalTreatmentOfMissedMiscarriageOfSecondTrimester: Coding.FromStrict({
+  EncounterReasonValueSet_SurgicalTreatmentOfMissedMiscarriageOfSecondTrimester: new Coding({
     code: "5191001",
     display: "Surgical treatment of missed miscarriage of second trimester",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Lightning: Coding.FromStrict({
+  EncounterReasonValueSet_Lightning: new Coding({
     code: "5193003",
     display: "Lightning",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralRecurrentInguinalHerniaWithGangreneANDObstruction: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralRecurrentInguinalHerniaWithGangreneANDObstruction: new Coding({
     code: "52018002",
     display: "Unilateral recurrent inguinal hernia with gangrene AND obstruction",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfLesionOfLacrimalGlandByFrontalApproach: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfLesionOfLacrimalGlandByFrontalApproach: new Coding({
     code: "5212002",
     display: "Excision of lesion of lacrimal gland by frontal approach",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IntraoperativeDeath: Coding.FromStrict({
+  EncounterReasonValueSet_IntraoperativeDeath: new Coding({
     code: "52136000",
     display: "Intraoperative death",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ThreeDimensionalUltrasoundImagingOfHeart: Coding.FromStrict({
+  EncounterReasonValueSet_ThreeDimensionalUltrasoundImagingOfHeart: new Coding({
     code: "5216004",
     display: "Three dimensional ultrasound imaging of heart",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralInguinalHernia: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralInguinalHernia: new Coding({
     code: "52278004",
     display: "Unilateral inguinal hernia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LateralFasciotomy: Coding.FromStrict({
+  EncounterReasonValueSet_LateralFasciotomy: new Coding({
     code: "5233006",
     display: "Lateral fasciotomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_JustifiableHomicide: Coding.FromStrict({
+  EncounterReasonValueSet_JustifiableHomicide: new Coding({
     code: "5236003",
     display: "Justifiable homicide",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SutureOfAdenoidFossa: Coding.FromStrict({
+  EncounterReasonValueSet_SutureOfAdenoidFossa: new Coding({
     code: "5243009",
     display: "Suture of adenoid fossa",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TransplantationOfPeripheralVein: Coding.FromStrict({
+  EncounterReasonValueSet_TransplantationOfPeripheralVein: new Coding({
     code: "5245002",
     display: "Transplantation of peripheral vein",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BreakpointClusterRegionAnalysis: Coding.FromStrict({
+  EncounterReasonValueSet_BreakpointClusterRegionAnalysis: new Coding({
     code: "5246001",
     display: "Breakpoint cluster region analysis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TotalBileAcidsMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_TotalBileAcidsMeasurement: new Coding({
     code: "5264008",
     display: "Total bile acids measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AdrenalArteryLigation: Coding.FromStrict({
+  EncounterReasonValueSet_AdrenalArteryLigation: new Coding({
     code: "5267001",
     display: "Adrenal artery ligation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Assault: Coding.FromStrict({
+  EncounterReasonValueSet_Assault: new Coding({
     code: "52684005",
     display: "Assault",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BilateralDestructionOfFallopianTubes: Coding.FromStrict({
+  EncounterReasonValueSet_BilateralDestructionOfFallopianTubes: new Coding({
     code: "5270002",
     display: "Bilateral destruction of fallopian tubes",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ManualReductionOfClosedFractureOfProximalEndOfUlna: Coding.FromStrict({
+  EncounterReasonValueSet_ManualReductionOfClosedFractureOfProximalEndOfUlna: new Coding({
     code: "5273000",
     display: "Manual reduction of closed fracture of proximal end of ulna",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralParalysisOfTongue: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralParalysisOfTongue: new Coding({
     code: "52787007",
     display: "Unilateral paralysis of tongue",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OperationOnOropharynx: Coding.FromStrict({
+  EncounterReasonValueSet_OperationOnOropharynx: new Coding({
     code: "5282006",
     display: "Operation on oropharynx",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionAndDrainageOfLudwigAngina: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionAndDrainageOfLudwigAngina: new Coding({
     code: "5290006",
     display: "Incision and drainage of Ludwig angina",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionAndDrainageOfDeepHematomaOfThighRegion: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionAndDrainageOfDeepHematomaOfThighRegion: new Coding({
     code: "5298004",
     display: "Incision and drainage of deep hematoma of thigh region",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DXTRadiotherapy: Coding.FromStrict({
+  EncounterReasonValueSet_DXTRadiotherapy: new Coding({
     code: "5304008",
     display: "DXT - Radiotherapy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OpenPulmonaryValveCommissurotomyWithInflowOcclusion: Coding.FromStrict({
+  EncounterReasonValueSet_OpenPulmonaryValveCommissurotomyWithInflowOcclusion: new Coding({
     code: "531007",
     display: "Open pulmonary valve commissurotomy with inflow occlusion",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ClosedOsteotomyOfMandibularRamus: Coding.FromStrict({
+  EncounterReasonValueSet_ClosedOsteotomyOfMandibularRamus: new Coding({
     code: "5316002",
     display: "Closed osteotomy of mandibular ramus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RadicalAmputationOfPenisWithBilateralPelvicLymphadenectomy: Coding.FromStrict({
+  EncounterReasonValueSet_RadicalAmputationOfPenisWithBilateralPelvicLymphadenectomy: new Coding({
     code: "5317006",
     display: "Radical amputation of penis with bilateral pelvic lymphadenectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AdministrationOfDermatologicFormulation: Coding.FromStrict({
+  EncounterReasonValueSet_AdministrationOfDermatologicFormulation: new Coding({
     code: "5326009",
     display: "Administration of dermatologic formulation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ShorteningOfAchillesTendon: Coding.FromStrict({
+  EncounterReasonValueSet_ShorteningOfAchillesTendon: new Coding({
     code: "5328005",
     display: "Shortening of Achilles tendon",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfVesicocolicFistula: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfVesicocolicFistula: new Coding({
     code: "533005",
     display: "Repair of vesicocolic fistula",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PostoperativeDeath: Coding.FromStrict({
+  EncounterReasonValueSet_PostoperativeDeath: new Coding({
     code: "5331006",
     display: "Postoperative death",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrocarBiopsy: Coding.FromStrict({
+  EncounterReasonValueSet_TrocarBiopsy: new Coding({
     code: "5337005",
     display: "Trocar biopsy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NicotineMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_NicotineMeasurement: new Coding({
     code: "5338000",
     display: "Nicotine measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ProphylacticTreatmentOfTibiaWithMethylMethacrylate: Coding.FromStrict({
+  EncounterReasonValueSet_ProphylacticTreatmentOfTibiaWithMethylMethacrylate: new Coding({
     code: "5342002",
     display: "Prophylactic treatment of tibia with methyl methacrylate",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfEndocardialCushionDefect: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfEndocardialCushionDefect: new Coding({
     code: "5348003",
     display: "Repair of endocardial cushion defect",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ClosureOfUreterovesicovaginalFistula: Coding.FromStrict({
+  EncounterReasonValueSet_ClosureOfUreterovesicovaginalFistula: new Coding({
     code: "535003",
     display: "Closure of ureterovesicovaginal fistula",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathInLessThan24HoursFromOnsetOfSymptoms: Coding.FromStrict({
+  EncounterReasonValueSet_DeathInLessThan24HoursFromOnsetOfSymptoms: new Coding({
     code: "53559009",
     display: "Death in less than 24 hours from onset of symptoms",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LeukocytePoorBloodPreparation: Coding.FromStrict({
+  EncounterReasonValueSet_LeukocytePoorBloodPreparation: new Coding({
     code: "5357009",
     display: "Leukocyte poor blood preparation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StressBreaker: Coding.FromStrict({
+  EncounterReasonValueSet_StressBreaker: new Coding({
     code: "5373003",
     display: "Stress breaker",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfPartOfFrontalCortex: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfPartOfFrontalCortex: new Coding({
     code: "5384005",
     display: "Excision of part of frontal cortex",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuicideAttemptByAdequateMeans: Coding.FromStrict({
+  EncounterReasonValueSet_SuicideAttemptByAdequateMeans: new Coding({
     code: "53846008",
     display: "Suicide attempt by adequate means",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ArtificialVoiceRehabilitation: Coding.FromStrict({
+  EncounterReasonValueSet_ArtificialVoiceRehabilitation: new Coding({
     code: "5391008",
     display: "Artificial voice rehabilitation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExplorationOfParathyroidWithMediastinalExplorationBySternalSplitApproach: Coding.FromStrict({
+  EncounterReasonValueSet_ExplorationOfParathyroidWithMediastinalExplorationBySternalSplitApproach: new Coding({
     code: "5393006",
     display: "Exploration of parathyroid with mediastinal exploration by sternal split approach",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AntibodyToSingleAndDoubleStrandedDNAMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_AntibodyToSingleAndDoubleStrandedDNAMeasurement: new Coding({
     code: "540006",
     display: "Antibody to single and double stranded DNA measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ManipulationOfThoracicArtery: Coding.FromStrict({
+  EncounterReasonValueSet_ManipulationOfThoracicArtery: new Coding({
     code: "5402006",
     display: "Manipulation of thoracic artery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InjectionOfFallopianTube: Coding.FromStrict({
+  EncounterReasonValueSet_InjectionOfFallopianTube: new Coding({
     code: "5407000",
     display: "Injection of fallopian tube",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DestructionOfLesionOfLiver: Coding.FromStrict({
+  EncounterReasonValueSet_DestructionOfLesionOfLiver: new Coding({
     code: "5415002",
     display: "Destruction of lesion of liver",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LysisOfAdhesionsOfTendonOfHand: Coding.FromStrict({
+  EncounterReasonValueSet_LysisOfAdhesionsOfTendonOfHand: new Coding({
     code: "5419008",
     display: "Lysis of adhesions of tendon of hand",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AmylaseMeasurementPeritonealFluid: Coding.FromStrict({
+  EncounterReasonValueSet_AmylaseMeasurementPeritonealFluid: new Coding({
     code: "5422005",
     display: "Amylase measurement, peritoneal fluid",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralCryptorchiectomy: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralCryptorchiectomy: new Coding({
     code: "54267006",
     display: "Unilateral cryptorchiectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiagnosticProcedureOnNipple: Coding.FromStrict({
+  EncounterReasonValueSet_DiagnosticProcedureOnNipple: new Coding({
     code: "5429001",
     display: "Diagnostic procedure on nipple",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CholedochostomyWithTransduodenalSphincteroplasty: Coding.FromStrict({
+  EncounterReasonValueSet_CholedochostomyWithTransduodenalSphincteroplasty: new Coding({
     code: "543008",
     display: "Choledochostomy with transduodenal sphincteroplasty",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PercutaneousTransluminalAngioplasty: Coding.FromStrict({
+  EncounterReasonValueSet_PercutaneousTransluminalAngioplasty: new Coding({
     code: "5431005",
     display: "Percutaneous transluminal angioplasty",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SkeletalXRayOfLowerLimb: Coding.FromStrict({
+  EncounterReasonValueSet_SkeletalXRayOfLowerLimb: new Coding({
     code: "5433008",
     display: "Skeletal X-ray of lower limb",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfCervicalRibForOutletCompressionSyndromeWithSympathectomy: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfCervicalRibForOutletCompressionSyndromeWithSympathectomy: new Coding({
     code: "5446003",
     display: "Excision of cervical rib for outlet compression syndrome with sympathectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Transfusion: Coding.FromStrict({
+  EncounterReasonValueSet_Transfusion: new Coding({
     code: "5447007",
     display: "Transfusion",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OperativeProcedureOnLowerLeg: Coding.FromStrict({
+  EncounterReasonValueSet_OperativeProcedureOnLowerLeg: new Coding({
     code: "545001",
     display: "Operative procedure on lower leg",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CoreNeedleBiopsyOfThymus: Coding.FromStrict({
+  EncounterReasonValueSet_CoreNeedleBiopsyOfThymus: new Coding({
     code: "5452002",
     display: "Core needle biopsy of thymus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_GraftOfLymphaticStructure: Coding.FromStrict({
+  EncounterReasonValueSet_GraftOfLymphaticStructure: new Coding({
     code: "5456004",
     display: "Graft of lymphatic structure",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SerologicTestForRickettsiaConorii: Coding.FromStrict({
+  EncounterReasonValueSet_SerologicTestForRickettsiaConorii: new Coding({
     code: "5457008",
     display: "Serologic test for Rickettsia conorii",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfProsthesisFromFallopianTube: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfProsthesisFromFallopianTube: new Coding({
     code: "5460001",
     display: "Removal of prosthesis from fallopian tube",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BreastReconstructionUnilateralWithSinglePedicleTRAMFlap: Coding.FromStrict({
+  EncounterReasonValueSet_BreastReconstructionUnilateralWithSinglePedicleTRAMFlap: new Coding({
     code: "5462009",
     display: "Breast reconstruction, unilateral, with single pedicle TRAM flap",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Slipping: Coding.FromStrict({
+  EncounterReasonValueSet_Slipping: new Coding({
     code: "54670004",
     display: "Slipping",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToHumanStampede: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToHumanStampede: new Coding({
     code: "54719000",
     display: "Exposure to human stampede",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SelectPictureAudiometry: Coding.FromStrict({
+  EncounterReasonValueSet_SelectPictureAudiometry: new Coding({
     code: "5479003",
     display: "Select picture audiometry",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SerologicTestForBlastomyces: Coding.FromStrict({
+  EncounterReasonValueSet_SerologicTestForBlastomyces: new Coding({
     code: "5482008",
     display: "Serologic test for Blastomyces",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DelayedSutureOfTendonOfHand: Coding.FromStrict({
+  EncounterReasonValueSet_DelayedSutureOfTendonOfHand: new Coding({
     code: "5486006",
     display: "Delayed suture of tendon of hand",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiagnosticProcedureOnRadius: Coding.FromStrict({
+  EncounterReasonValueSet_DiagnosticProcedureOnRadius: new Coding({
     code: "5489004",
     display: "Diagnostic procedure on radius",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralRepairOfDirectInIndirectInguinalHernia: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralRepairOfDirectInIndirectInguinalHernia: new Coding({
     code: "54897008",
     display: "Unilateral repair of direct in indirect inguinal hernia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionOfIntracranialVein: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionOfIntracranialVein: new Coding({
     code: "549007",
     display: "Incision of intracranial vein",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfLesionOfAdenoids: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfLesionOfAdenoids: new Coding({
     code: "550007",
     display: "Excision of lesion of adenoids",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionAndExplorationOfAbdominalWall: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionAndExplorationOfAbdominalWall: new Coding({
     code: "5506006",
     display: "Incision and exploration of abdominal wall",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RestorationInlayPorcelainCeramicPerToothInAdditionToInlay: Coding.FromStrict({
+  EncounterReasonValueSet_RestorationInlayPorcelainCeramicPerToothInAdditionToInlay: new Coding({
     code: "5517007",
     display: "Restoration, inlay, porcelain/ceramic, per tooth, in addition to inlay",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OpenReductionOfFractureOfPhalangesOfFoot: Coding.FromStrict({
+  EncounterReasonValueSet_OpenReductionOfFractureOfPhalangesOfFoot: new Coding({
     code: "5521000",
     display: "Open reduction of fracture of phalanges of foot",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NeonatalDeathOfFemaleWithin7DaysWorldHealthOrganization: Coding.FromStrict({
+  EncounterReasonValueSet_NeonatalDeathOfFemaleWithin7DaysWorldHealthOrganization: new Coding({
     code: "55225009",
     display: "Neonatal death of female (within 7 days, World Health Organization)",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ArthrodesisOfCarpometacarpalJointOfDigitsOtherThanThumb: Coding.FromStrict({
+  EncounterReasonValueSet_ArthrodesisOfCarpometacarpalJointOfDigitsOtherThanThumb: new Coding({
     code: "5536002",
     display: "Arthrodesis of carpometacarpal joint of digits, other than thumb",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfCarotidBody: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfCarotidBody: new Coding({
     code: "5545001",
     display: "Repair of carotid body",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralImagingOfCervicalCarotidArtery: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralImagingOfCervicalCarotidArtery: new Coding({
     code: "55493009",
     display: "Unilateral imaging of cervical carotid artery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DirectLaryngoscopyWithArytenoidectomyWithOperatingMicroscope: Coding.FromStrict({
+  EncounterReasonValueSet_DirectLaryngoscopyWithArytenoidectomyWithOperatingMicroscope: new Coding({
     code: "5551006",
     display: "Direct laryngoscopy with arytenoidectomy with operating microscope",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Parasuicide_2: Coding.FromStrict({
+  EncounterReasonValueSet_Parasuicide_2: new Coding({
     code: "55554002",
     display: "Parasuicide",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ManuallyAssistedSpontaneousDelivery: Coding.FromStrict({
+  EncounterReasonValueSet_ManuallyAssistedSpontaneousDelivery: new Coding({
     code: "5556001",
     display: "Manually assisted spontaneous delivery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AccidentalPhysicalContact: Coding.FromStrict({
+  EncounterReasonValueSet_AccidentalPhysicalContact: new Coding({
     code: "55566008",
     display: "Accidental physical contact",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralTraumaticAmputationOfLegWithoutComplication: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralTraumaticAmputationOfLegWithoutComplication: new Coding({
     code: "55618006",
     display: "Unilateral traumatic amputation of leg without complication",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ArthrotomyForInfectionWithExplorationAndDrainageOfCarpometacarpalJoint: Coding.FromStrict({
+  EncounterReasonValueSet_ArthrotomyForInfectionWithExplorationAndDrainageOfCarpometacarpalJoint: new Coding({
     code: "5570001",
     display: "Arthrotomy for infection with exploration and drainage of carpometacarpal joint",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfLesionOfAortaWithEndToEndAnastomosis: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfLesionOfAortaWithEndToEndAnastomosis: new Coding({
     code: "5571002",
     display: "Excision of lesion of aorta with end-to-end anastomosis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionOfKidneyPelvis: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionOfKidneyPelvis: new Coding({
     code: "5572009",
     display: "Incision of kidney pelvis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralAgenesisOfKidney: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralAgenesisOfKidney: new Coding({
     code: "55726006",
     display: "Unilateral agenesis of kidney",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AminolevulinicAcidDehydrataseMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_AminolevulinicAcidDehydrataseMeasurement: new Coding({
     code: "5586008",
     display: "Aminolevulinic acid dehydratase measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfVaricoseVein: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfVaricoseVein: new Coding({
     code: "559008",
     display: "Excision of varicose vein",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralObstructedInguinalHernia: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralObstructedInguinalHernia: new Coding({
     code: "55993003",
     display: "Unilateral obstructed inguinal hernia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcretionMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_ExcretionMeasurement: new Coding({
     code: "5608002",
     display: "Excretion measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NeonatalDeathOfFemaleWithin4WeeksUnitedStatesOfAmerica: Coding.FromStrict({
+  EncounterReasonValueSet_NeonatalDeathOfFemaleWithin4WeeksUnitedStatesOfAmerica: new Coding({
     code: "56102008",
     display: "Neonatal death of female (within 4 weeks, United States of America)",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OsteoplastyOfTibia: Coding.FromStrict({
+  EncounterReasonValueSet_OsteoplastyOfTibia: new Coding({
     code: "5616006",
     display: "Osteoplasty of tibia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralEpididymovasostomy: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralEpididymovasostomy: new Coding({
     code: "56199006",
     display: "Unilateral epididymovasostomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfMalignantLesionOfSkinOfExtremities: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfMalignantLesionOfSkinOfExtremities: new Coding({
     code: "5621009",
     display: "Excision of malignant lesion of skin of extremities",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallFromTable: Coding.FromStrict({
+  EncounterReasonValueSet_FallFromTable: new Coding({
     code: "56307009",
     display: "Fall from table",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OpenBiopsyOfBronchus: Coding.FromStrict({
+  EncounterReasonValueSet_OpenBiopsyOfBronchus: new Coding({
     code: "5632009",
     display: "Open biopsy of bronchus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralTraumaticAmputationAtORAboveElbowWithoutComplication: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralTraumaticAmputationAtORAboveElbowWithoutComplication: new Coding({
     code: "56330003",
     display: "Unilateral traumatic amputation at OR above elbow without complication",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FistulectomyOfBone: Coding.FromStrict({
+  EncounterReasonValueSet_FistulectomyOfBone: new Coding({
     code: "5636007",
     display: "Fistulectomy of bone",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CarbohydrateMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_CarbohydrateMeasurement: new Coding({
     code: "5638008",
     display: "Carbohydrate measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SurgicalRepairAndRevisionOfShunt: Coding.FromStrict({
+  EncounterReasonValueSet_SurgicalRepairAndRevisionOfShunt: new Coding({
     code: "5648005",
     display: "Surgical repair and revision of shunt",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ArylsulfataseAMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_ArylsulfataseAMeasurement: new Coding({
     code: "5651003",
     display: "Arylsulfatase A measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PhlebectomyOfVaricoseVeinOfHeadAndNeck: Coding.FromStrict({
+  EncounterReasonValueSet_PhlebectomyOfVaricoseVeinOfHeadAndNeck: new Coding({
     code: "5663008",
     display: "Phlebectomy of varicose vein of head and neck",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PortableElectroencephalogramAwakeAndAsleepWithStimulation: Coding.FromStrict({
+  EncounterReasonValueSet_PortableElectroencephalogramAwakeAndAsleepWithStimulation: new Coding({
     code: "5669007",
     display: "Portable electroencephalogram awake and asleep with stimulation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MagnetExtractionOfForeignBodyFromCiliaryBody: Coding.FromStrict({
+  EncounterReasonValueSet_MagnetExtractionOfForeignBodyFromCiliaryBody: new Coding({
     code: "5671007",
     display: "Magnet extraction of foreign body from ciliary body",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfForeignBodyFromOvary: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfForeignBodyFromOvary: new Coding({
     code: "5687005",
     display: "Removal of foreign body from ovary",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionOfSeminalVesicle: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionOfSeminalVesicle: new Coding({
     code: "5690004",
     display: "Incision of seminal vesicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CrisisInterventionWithFollowUp: Coding.FromStrict({
+  EncounterReasonValueSet_CrisisInterventionWithFollowUp: new Coding({
     code: "5694008",
     display: "Crisis intervention with follow-up",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallOnSnow: Coding.FromStrict({
+  EncounterReasonValueSet_FallOnSnow: new Coding({
     code: "56962005",
     display: "Fall on snow",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_VaccinationForArthropodBorneViralEncephalitis: Coding.FromStrict({
+  EncounterReasonValueSet_VaccinationForArthropodBorneViralEncephalitis: new Coding({
     code: "570001",
     display: "Vaccination for arthropod-borne viral encephalitis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AccidentInvolvingLandTransportVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_AccidentInvolvingLandTransportVehicle: new Coding({
     code: "57135007",
     display: "Accident involving land transport vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FHFamilyHistory: Coding.FromStrict({
+  EncounterReasonValueSet_FHFamilyHistory: new Coding({
     code: "57177007",
     display: "FH - Family history",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfEyebrow: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfEyebrow: new Coding({
     code: "5721002",
     display: "Repair of eyebrow",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SurgicalReanastomosisOfColon: Coding.FromStrict({
+  EncounterReasonValueSet_SurgicalReanastomosisOfColon: new Coding({
     code: "5722009",
     display: "Surgical reanastomosis of colon",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfEpicardialElectrodes: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfEpicardialElectrodes: new Coding({
     code: "5726007",
     display: "Removal of epicardial electrodes",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnoscopyForRemovalOfForeignBody: Coding.FromStrict({
+  EncounterReasonValueSet_AnoscopyForRemovalOfForeignBody: new Coding({
     code: "5728008",
     display: "Anoscopy for removal of foreign body",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HemosiderinQuantitativeMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_HemosiderinQuantitativeMeasurement: new Coding({
     code: "5731009",
     display: "Hemosiderin, quantitative measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FluorescentIdentificationOfAntiNuclearAntibody: Coding.FromStrict({
+  EncounterReasonValueSet_FluorescentIdentificationOfAntiNuclearAntibody: new Coding({
     code: "5733007",
     display: "Fluorescent identification of anti-nuclear antibody",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OilSpill: Coding.FromStrict({
+  EncounterReasonValueSet_OilSpill: new Coding({
     code: "57371001",
     display: "Oil spill",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BiopsyOfCulDeSac: Coding.FromStrict({
+  EncounterReasonValueSet_BiopsyOfCulDeSac: new Coding({
     code: "5738003",
     display: "Biopsy of cul-de-sac",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BenzodiazepineMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_BenzodiazepineMeasurement: new Coding({
     code: "574005",
     display: "Benzodiazepine measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionAmpullaOfVaterWithReimplantationOfCommonDuct: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionAmpullaOfVaterWithReimplantationOfCommonDuct: new Coding({
     code: "5745003",
     display: "Excision ampulla of Vater with reimplantation of common duct",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OsteoplastyOfRadiusAndUlnaShortening: Coding.FromStrict({
+  EncounterReasonValueSet_OsteoplastyOfRadiusAndUlnaShortening: new Coding({
     code: "5760000",
     display: "Osteoplasty of radius and ulna, shortening",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralVasectomyForContraception: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralVasectomyForContraception: new Coding({
     code: "57600009",
     display: "Unilateral vasectomy for contraception",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PrimaryRepairOfCleftLipUnilateralPartial: Coding.FromStrict({
+  EncounterReasonValueSet_PrimaryRepairOfCleftLipUnilateralPartial: new Coding({
     code: "5761001",
     display: "Primary repair of cleft lip, unilateral, partial",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AccidentWhileEngagedInSportsActivity: Coding.FromStrict({
+  EncounterReasonValueSet_AccidentWhileEngagedInSportsActivity: new Coding({
     code: "57701003",
     display: "Accident while engaged in sports activity",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Blepharotomy: Coding.FromStrict({
+  EncounterReasonValueSet_Blepharotomy: new Coding({
     code: "5771004",
     display: "Blepharotomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallFromBridge: Coding.FromStrict({
+  EncounterReasonValueSet_FallFromBridge: new Coding({
     code: "57741007",
     display: "Fall from bridge",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FlexorplastyOfElbow: Coding.FromStrict({
+  EncounterReasonValueSet_FlexorplastyOfElbow: new Coding({
     code: "5777000",
     display: "Flexorplasty of elbow",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OperationOnNasalSeptum: Coding.FromStrict({
+  EncounterReasonValueSet_OperationOnNasalSeptum: new Coding({
     code: "5781000",
     display: "Operation on nasal septum",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ForensicAutopsy: Coding.FromStrict({
+  EncounterReasonValueSet_ForensicAutopsy: new Coding({
     code: "5785009",
     display: "Forensic autopsy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ElevationOfBoneFragmentsOfOrbitOfSkullWithDebridement: Coding.FromStrict({
+  EncounterReasonValueSet_ElevationOfBoneFragmentsOfOrbitOfSkullWithDebridement: new Coding({
     code: "5787001",
     display: "Elevation of bone fragments of orbit of skull with debridement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LysisOfAdhesionsOfIntestines: Coding.FromStrict({
+  EncounterReasonValueSet_LysisOfAdhesionsOfIntestines: new Coding({
     code: "5789003",
     display: "Lysis of adhesions of intestines",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfExternalThromboticHemorrhoid: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfExternalThromboticHemorrhoid: new Coding({
     code: "5796001",
     display: "Excision of external thrombotic hemorrhoid",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RevisionOfTracheostomyScar: Coding.FromStrict({
+  EncounterReasonValueSet_RevisionOfTracheostomyScar: new Coding({
     code: "5806001",
     display: "Revision of tracheostomy scar",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralPosteriorVestibuloplasty: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralPosteriorVestibuloplasty: new Coding({
     code: "58064004",
     display: "Unilateral posterior vestibuloplasty",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FenestrationOfInnerEarInitial: Coding.FromStrict({
+  EncounterReasonValueSet_FenestrationOfInnerEarInitial: new Coding({
     code: "5807005",
     display: "Fenestration of inner ear, initial",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SelectiveVagotomyWithPyloroplastyAndGastrostomy: Coding.FromStrict({
+  EncounterReasonValueSet_SelectiveVagotomyWithPyloroplastyAndGastrostomy: new Coding({
     code: "5809008",
     display: "Selective vagotomy with pyloroplasty and gastrostomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LaboratoryReportingFax: Coding.FromStrict({
+  EncounterReasonValueSet_LaboratoryReportingFax: new Coding({
     code: "5812006",
     display: "Laboratory reporting, fax",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FlocculationTest: Coding.FromStrict({
+  EncounterReasonValueSet_FlocculationTest: new Coding({
     code: "5818005",
     display: "Flocculation test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LigationDivisionAndCompleteStrippingOfLongAndShortSaphenousVeins: Coding.FromStrict({
+  EncounterReasonValueSet_LigationDivisionAndCompleteStrippingOfLongAndShortSaphenousVeins: new Coding({
     code: "5821007",
     display: "Ligation, division and complete stripping of long and short saphenous veins",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiagnosticRadiographyLeft: Coding.FromStrict({
+  EncounterReasonValueSet_DiagnosticRadiographyLeft: new Coding({
     code: "5823005",
     display: "Diagnostic radiography, left",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PartialOstectomyOfThoraxRibsOrSternum: Coding.FromStrict({
+  EncounterReasonValueSet_PartialOstectomyOfThoraxRibsOrSternum: new Coding({
     code: "5832007",
     display: "Partial ostectomy of thorax, ribs or sternum",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EmulsificationProcedure: Coding.FromStrict({
+  EncounterReasonValueSet_EmulsificationProcedure: new Coding({
     code: "5845006",
     display: "Emulsification procedure",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiagnosticRadiographyOfToes: Coding.FromStrict({
+  EncounterReasonValueSet_DiagnosticRadiographyOfToes: new Coding({
     code: "5846007",
     display: "Diagnostic radiography of toes",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StrikingAgainstOrBumpedIntoByAnotherPerson: Coding.FromStrict({
+  EncounterReasonValueSet_StrikingAgainstOrBumpedIntoByAnotherPerson: new Coding({
     code: "58538004",
     display: "Striking against or bumped into by another person",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ComplementMediatedCytotoxicityAssay: Coding.FromStrict({
+  EncounterReasonValueSet_ComplementMediatedCytotoxicityAssay: new Coding({
     code: "5857002",
     display: "Complement mediated cytotoxicity assay",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OpenReductionOfDislocationOfToe: Coding.FromStrict({
+  EncounterReasonValueSet_OpenReductionOfDislocationOfToe: new Coding({
     code: "5865004",
     display: "Open reduction of dislocation of toe",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PostpartumMaternalDeath: Coding.FromStrict({
+  EncounterReasonValueSet_PostpartumMaternalDeath: new Coding({
     code: "5866003",
     display: "Postpartum maternal death",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TertiaryClosureOfAbdominalWall: Coding.FromStrict({
+  EncounterReasonValueSet_TertiaryClosureOfAbdominalWall: new Coding({
     code: "5870006",
     display: "Tertiary closure of abdominal wall",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ClinicalExamination: Coding.FromStrict({
+  EncounterReasonValueSet_ClinicalExamination: new Coding({
     code: "5880005",
     display: "Clinical examination",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToAttackByAmphibian: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToAttackByAmphibian: new Coding({
     code: "58908002",
     display: "Exposure to attack by amphibian",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MastoidAntrotomy: Coding.FromStrict({
+  EncounterReasonValueSet_MastoidAntrotomy: new Coding({
     code: "5892005",
     display: "Mastoid antrotomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MethylRedTest: Coding.FromStrict({
+  EncounterReasonValueSet_MethylRedTest: new Coding({
     code: "5894006",
     display: "Methyl red test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfScribnerShunt: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfScribnerShunt: new Coding({
     code: "5897004",
     display: "Removal of Scribner shunt",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HistoryAndPhysicalExaminationComplete: Coding.FromStrict({
+  EncounterReasonValueSet_HistoryAndPhysicalExaminationComplete: new Coding({
     code: "5902003",
     display: "History and physical examination, complete",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionAndDrainageOfHematomaOfWrist: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionAndDrainageOfHematomaOfWrist: new Coding({
     code: "5925002",
     display: "Incision and drainage of hematoma of wrist",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SnowStorm: Coding.FromStrict({
+  EncounterReasonValueSet_SnowStorm: new Coding({
     code: "59262002",
     display: "Snow storm",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MaternalMortality: Coding.FromStrict({
+  EncounterReasonValueSet_MaternalMortality: new Coding({
     code: "59283008",
     display: "Maternal mortality",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CardiacMonitorRemoval: Coding.FromStrict({
+  EncounterReasonValueSet_CardiacMonitorRemoval: new Coding({
     code: "5930003",
     display: "Cardiac monitor removal",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralPelvicLymphangiography: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralPelvicLymphangiography: new Coding({
     code: "59383005",
     display: "Unilateral pelvic lymphangiography",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_GanglandStyleHomicide: Coding.FromStrict({
+  EncounterReasonValueSet_GanglandStyleHomicide: new Coding({
     code: "5941001",
     display: "Gangland style homicide",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ConsultationForHearingAndOrSpeechProblem: Coding.FromStrict({
+  EncounterReasonValueSet_ConsultationForHearingAndOrSpeechProblem: new Coding({
     code: "5947002",
     display: "Consultation for hearing and/or speech problem",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StruckByCaveIn: Coding.FromStrict({
+  EncounterReasonValueSet_StruckByCaveIn: new Coding({
     code: "59510000",
     display: "Struck by cave-in",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DivisionOfBloodVesselsOfCornea: Coding.FromStrict({
+  EncounterReasonValueSet_DivisionOfBloodVesselsOfCornea: new Coding({
     code: "5961007",
     display: "Division of blood vessels of cornea",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfForeignBodyFromElbowAreaDeep: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfForeignBodyFromElbowAreaDeep: new Coding({
     code: "5966002",
     display: "Removal of foreign body from elbow area, deep",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionAndDrainageOfAxilla: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionAndDrainageOfAxilla: new Coding({
     code: "5971009",
     display: "Incision and drainage of axilla",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralImagingOfPulmonaryArtery: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralImagingOfPulmonaryArtery: new Coding({
     code: "59738006",
     display: "Unilateral imaging of pulmonary artery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfSpermaticCord: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfSpermaticCord: new Coding({
     code: "5983006",
     display: "Repair of spermatic cord",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NonSensitizedSpontaneousSheepErythrocyteBindingERosette: Coding.FromStrict({
+  EncounterReasonValueSet_NonSensitizedSpontaneousSheepErythrocyteBindingERosette: new Coding({
     code: "5986003",
     display: "Non-sensitized spontaneous sheep erythrocyte binding, E-rosette",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MidtarsalArthrodesisMultiple: Coding.FromStrict({
+  EncounterReasonValueSet_MidtarsalArthrodesisMultiple: new Coding({
     code: "5992009",
     display: "Midtarsal arthrodesis, multiple",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_GasLiquidChromatographyFlamePhotometricType: Coding.FromStrict({
+  EncounterReasonValueSet_GasLiquidChromatographyFlamePhotometricType: new Coding({
     code: "5995006",
     display: "Gas liquid chromatography, flame photometric type",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DrainageOfCerebralSubarachnoidSpaceByAspiration: Coding.FromStrict({
+  EncounterReasonValueSet_DrainageOfCerebralSubarachnoidSpaceByAspiration: new Coding({
     code: "5997003",
     display: "Drainage of cerebral subarachnoid space by aspiration",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RadicalDissectionOfGroin: Coding.FromStrict({
+  EncounterReasonValueSet_RadicalDissectionOfGroin: new Coding({
     code: "5998008",
     display: "Radical dissection of groin",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralSimpleFemoralHernia: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralSimpleFemoralHernia: new Coding({
     code: "60016005",
     display: "Unilateral simple femoral hernia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TransplantationOfVitreousByAnteriorApproach: Coding.FromStrict({
+  EncounterReasonValueSet_TransplantationOfVitreousByAnteriorApproach: new Coding({
     code: "6005008",
     display: "Transplantation of vitreous by anterior approach",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MagneticResonanceImagingOfChest: Coding.FromStrict({
+  EncounterReasonValueSet_MagneticResonanceImagingOfChest: new Coding({
     code: "6007000",
     display: "Magnetic resonance imaging of chest",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EndoscopyOfLargeIntestine: Coding.FromStrict({
+  EncounterReasonValueSet_EndoscopyOfLargeIntestine: new Coding({
     code: "6019008",
     display: "Endoscopy of large intestine",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LaparoscopicAppendectomy: Coding.FromStrict({
+  EncounterReasonValueSet_LaparoscopicAppendectomy: new Coding({
     code: "6025007",
     display: "Laparoscopic appendectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NeonatalDeathOfMaleWithin7DaysWHO: Coding.FromStrict({
+  EncounterReasonValueSet_NeonatalDeathOfMaleWithin7DaysWHO: new Coding({
     code: "60257006",
     display: "Neonatal death of male (within 7 days, WHO)",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfCoronaryArteryObstructionByPercutaneousTransluminalBalloonWithThrombolyticAgent: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfCoronaryArteryObstructionByPercutaneousTransluminalBalloonWithThrombolyticAgent: new Coding({
     code: "6026008",
     display: "Removal of coronary artery obstruction by percutaneous transluminal balloon with thrombolytic agent",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AugmentationOfOutflowTractOfPulmonaryValve: Coding.FromStrict({
+  EncounterReasonValueSet_AugmentationOfOutflowTractOfPulmonaryValve: new Coding({
     code: "6029001",
     display: "Augmentation of outflow tract of pulmonary valve",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Synchondrotomy: Coding.FromStrict({
+  EncounterReasonValueSet_Synchondrotomy: new Coding({
     code: "603006",
     display: "Synchondrotomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ChartAbstracting: Coding.FromStrict({
+  EncounterReasonValueSet_ChartAbstracting: new Coding({
     code: "6035001",
     display: "Chart abstracting",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_VenographyOfAdrenalUnilateral: Coding.FromStrict({
+  EncounterReasonValueSet_VenographyOfAdrenalUnilateral: new Coding({
     code: "60521000",
     display: "Venography of adrenal, unilateral",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallWhileBeingCarried: Coding.FromStrict({
+  EncounterReasonValueSet_FallWhileBeingCarried: new Coding({
     code: "60594001",
     display: "Fall while being carried",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_KanamycinMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_KanamycinMeasurement: new Coding({
     code: "6063004",
     display: "Kanamycin measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Panniculotomy: Coding.FromStrict({
+  EncounterReasonValueSet_Panniculotomy: new Coding({
     code: "6069000",
     display: "Panniculotomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AngiographyOfUpperExtremityArteriesUnilateral: Coding.FromStrict({
+  EncounterReasonValueSet_AngiographyOfUpperExtremityArteriesUnilateral: new Coding({
     code: "60801006",
     display: "Angiography of upper extremity arteries, unilateral",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PerforationOfFootplate: Coding.FromStrict({
+  EncounterReasonValueSet_PerforationOfFootplate: new Coding({
     code: "6082008",
     display: "Perforation of footplate",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AspirationOfNasalSinusByPuncture: Coding.FromStrict({
+  EncounterReasonValueSet_AspirationOfNasalSinusByPuncture: new Coding({
     code: "6092000",
     display: "Aspiration of nasal sinus by puncture",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FenestrationOfStapesFootplateWithVeinGraft: Coding.FromStrict({
+  EncounterReasonValueSet_FenestrationOfStapesFootplateWithVeinGraft: new Coding({
     code: "6100001",
     display: "Fenestration of stapes footplate with vein graft",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SubduralTapThroughFontanelInfantInitial: Coding.FromStrict({
+  EncounterReasonValueSet_SubduralTapThroughFontanelInfantInitial: new Coding({
     code: "6108008",
     display: "Subdural tap through fontanel, infant, initial",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LocalDestructionOfLesionOfBonyPalate: Coding.FromStrict({
+  EncounterReasonValueSet_LocalDestructionOfLesionOfBonyPalate: new Coding({
     code: "6119006",
     display: "Local destruction of lesion of bony palate",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AortocoronaryArteryBypassGraftRepeated: Coding.FromStrict({
+  EncounterReasonValueSet_AortocoronaryArteryBypassGraftRepeated: new Coding({
     code: "61236006",
     display: "Aortocoronary artery bypass graft, repeated",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ChangeOfGastrostomyTube: Coding.FromStrict({
+  EncounterReasonValueSet_ChangeOfGastrostomyTube: new Coding({
     code: "6125005",
     display: "Change of gastrostomy tube",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FitzgeraldFactorAssay: Coding.FromStrict({
+  EncounterReasonValueSet_FitzgeraldFactorAssay: new Coding({
     code: "6126006",
     display: "Fitzgerald factor assay",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ElectromyographyCranialNerveSuppliedMusclesUnilateral: Coding.FromStrict({
+  EncounterReasonValueSet_ElectromyographyCranialNerveSuppliedMusclesUnilateral: new Coding({
     code: "61269006",
     display: "Electromyography, cranial nerve supplied muscles, unilateral",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiagnosticRadiographyOfAbdomenObliqueStandard: Coding.FromStrict({
+  EncounterReasonValueSet_DiagnosticRadiographyOfAbdomenObliqueStandard: new Coding({
     code: "6127002",
     display: "Diagnostic radiography of abdomen, oblique standard",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SurgicalExposureOfImpactedOrUneruptedToothToAidEruption: Coding.FromStrict({
+  EncounterReasonValueSet_SurgicalExposureOfImpactedOrUneruptedToothToAidEruption: new Coding({
     code: "6130009",
     display: "Surgical exposure of impacted or unerupted tooth to aid eruption",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LymphokineAssay: Coding.FromStrict({
+  EncounterReasonValueSet_LymphokineAssay: new Coding({
     code: "6133006",
     display: "Lymphokine assay",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiabeticEducation: Coding.FromStrict({
+  EncounterReasonValueSet_DiabeticEducation: new Coding({
     code: "6143009",
     display: "Diabetic education",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfHeartSeptumWithProsthesis: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfHeartSeptumWithProsthesis: new Coding({
     code: "6146001",
     display: "Repair of heart septum with prosthesis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ChondrectomyOfSemilunarCartilageOfKnee: Coding.FromStrict({
+  EncounterReasonValueSet_ChondrectomyOfSemilunarCartilageOfKnee: new Coding({
     code: "6148000",
     display: "Chondrectomy of semilunar cartilage of knee",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EndoscopicRetrogradeCholangiopancreatographyWithBiopsy: Coding.FromStrict({
+  EncounterReasonValueSet_EndoscopicRetrogradeCholangiopancreatographyWithBiopsy: new Coding({
     code: "6157006",
     display: "Endoscopic retrograde cholangiopancreatography with biopsy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_GalactoseMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_GalactoseMeasurement: new Coding({
     code: "6159009",
     display: "Galactose measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfLesionOfCapsuleOfToes: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfLesionOfCapsuleOfToes: new Coding({
     code: "6161000",
     display: "Excision of lesion of capsule of toes",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OsteoclasisOfClavicle: Coding.FromStrict({
+  EncounterReasonValueSet_OsteoclasisOfClavicle: new Coding({
     code: "6164008",
     display: "Osteoclasis of clavicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Nephropyeloureterostomy: Coding.FromStrict({
+  EncounterReasonValueSet_Nephropyeloureterostomy: new Coding({
     code: "6166005",
     display: "Nephropyeloureterostomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BoneGraftOfMandible: Coding.FromStrict({
+  EncounterReasonValueSet_BoneGraftOfMandible: new Coding({
     code: "617002",
     display: "Bone graft of mandible",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SouthernBlotAssay: Coding.FromStrict({
+  EncounterReasonValueSet_SouthernBlotAssay: new Coding({
     code: "6177004",
     display: "Southern blot assay",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FrontalSinusectomy: Coding.FromStrict({
+  EncounterReasonValueSet_FrontalSinusectomy: new Coding({
     code: "618007",
     display: "Frontal sinusectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfAneurysmWithGraftOfCommonFemoralArtery: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfAneurysmWithGraftOfCommonFemoralArtery: new Coding({
     code: "6187000",
     display: "Repair of aneurysm with graft of common femoral artery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ArthrotomyOfKnee: Coding.FromStrict({
+  EncounterReasonValueSet_ArthrotomyOfKnee: new Coding({
     code: "6188005",
     display: "Arthrotomy of knee",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfAberrantTissueOfBreast: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfAberrantTissueOfBreast: new Coding({
     code: "6189002",
     display: "Excision of aberrant tissue of breast",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Colopexy: Coding.FromStrict({
+  EncounterReasonValueSet_Colopexy: new Coding({
     code: "6190006",
     display: "Colopexy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralMammography: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralMammography: new Coding({
     code: "6192003",
     display: "Unilateral mammography",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TransurethralDrainageOfProstaticAbscess: Coding.FromStrict({
+  EncounterReasonValueSet_TransurethralDrainageOfProstaticAbscess: new Coding({
     code: "6195001",
     display: "Transurethral drainage of prostatic abscess",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairOfFractureWithSofieldTypeProcedure: Coding.FromStrict({
+  EncounterReasonValueSet_RepairOfFractureWithSofieldTypeProcedure: new Coding({
     code: "6198004",
     display: "Repair of fracture with Sofield type procedure",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfLesionOfFemalePerineum: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfLesionOfFemalePerineum: new Coding({
     code: "6200005",
     display: "Excision of lesion of female perineum",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FluorescentAntigenTiter: Coding.FromStrict({
+  EncounterReasonValueSet_FluorescentAntigenTiter: new Coding({
     code: "6205000",
     display: "Fluorescent antigen, titer",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralRecurrentInguinalHernia: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralRecurrentInguinalHernia: new Coding({
     code: "62120000",
     display: "Unilateral recurrent inguinal hernia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PrescribingCorneoscleralContactLens: Coding.FromStrict({
+  EncounterReasonValueSet_PrescribingCorneoscleralContactLens: new Coding({
     code: "6213004",
     display: "Prescribing corneoscleral contact lens",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SutureOfColon: Coding.FromStrict({
+  EncounterReasonValueSet_SutureOfColon: new Coding({
     code: "6221005",
     display: "Suture of colon",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralRecurrentFemoralHerniaWithGangrene: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralRecurrentFemoralHerniaWithGangrene: new Coding({
     code: "62232005",
     display: "Unilateral recurrent femoral hernia with gangrene",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AntibodyDetectionRBCEnzyme2StageTechniqueIncludingAntiHumanGlobulin: Coding.FromStrict({
+  EncounterReasonValueSet_AntibodyDetectionRBCEnzyme2StageTechniqueIncludingAntiHumanGlobulin: new Coding({
     code: "6225001",
     display: "Antibody detection, RBC, enzyme, 2 stage technique, including anti-human globulin",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_VisualRehabilitationEyeMotionDefect: Coding.FromStrict({
+  EncounterReasonValueSet_VisualRehabilitationEyeMotionDefect: new Coding({
     code: "6226000",
     display: "Visual rehabilitation, eye motion defect",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RelationshipPsychotherapy: Coding.FromStrict({
+  EncounterReasonValueSet_RelationshipPsychotherapy: new Coding({
     code: "6227009",
     display: "Relationship psychotherapy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_GraftOfPalate: Coding.FromStrict({
+  EncounterReasonValueSet_GraftOfPalate: new Coding({
     code: "6231003",
     display: "Graft of palate",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiagnosticRadiographyOfSacroiliacJoints: Coding.FromStrict({
+  EncounterReasonValueSet_DiagnosticRadiographyOfSacroiliacJoints: new Coding({
     code: "6238009",
     display: "Diagnostic radiography of sacroiliac joints",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OperativeProcedureOnKnee: Coding.FromStrict({
+  EncounterReasonValueSet_OperativeProcedureOnKnee: new Coding({
     code: "6240004",
     display: "Operative procedure on knee",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UndeterminedMannerOfDeathAccidentalMeansSuspected: Coding.FromStrict({
+  EncounterReasonValueSet_UndeterminedMannerOfDeathAccidentalMeansSuspected: new Coding({
     code: "62475002",
     display: "Undetermined manner of death, accidental means suspected",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfSupernumeraryDigit: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfSupernumeraryDigit: new Coding({
     code: "625000",
     display: "Removal of supernumerary digit",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ResectionOfAbdominalArteryWithReplacement: Coding.FromStrict({
+  EncounterReasonValueSet_ResectionOfAbdominalArteryWithReplacement: new Coding({
     code: "6255008",
     display: "Resection of abdominal artery with replacement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CompleteUnilateralCleftLip: Coding.FromStrict({
+  EncounterReasonValueSet_CompleteUnilateralCleftLip: new Coding({
     code: "62696001",
     display: "Complete unilateral cleft lip",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EchographyImmersionBScan: Coding.FromStrict({
+  EncounterReasonValueSet_EchographyImmersionBScan: new Coding({
     code: "6271008",
     display: "Echography, immersion B-scan",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfAuralGlomusTumorExtendedExtratemporal: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfAuralGlomusTumorExtendedExtratemporal: new Coding({
     code: "6274000",
     display: "Excision of aural glomus tumor, extended, extratemporal",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SteinmanTest: Coding.FromStrict({
+  EncounterReasonValueSet_SteinmanTest: new Coding({
     code: "628003",
     display: "Steinman test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DestructiveProcedureOnOvariesAndFallopianTubes: Coding.FromStrict({
+  EncounterReasonValueSet_DestructiveProcedureOnOvariesAndFallopianTubes: new Coding({
     code: "6286002",
     display: "Destructive procedure on ovaries and fallopian tubes",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_WhiteBloodCellHistogramEvaluation: Coding.FromStrict({
+  EncounterReasonValueSet_WhiteBloodCellHistogramEvaluation: new Coding({
     code: "6289009",
     display: "White blood cell histogram evaluation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LysisOfAdhesionsOfUrethra: Coding.FromStrict({
+  EncounterReasonValueSet_LysisOfAdhesionsOfUrethra: new Coding({
     code: "629006",
     display: "Lysis of adhesions of urethra",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SequestrectomyOfPelvicBone: Coding.FromStrict({
+  EncounterReasonValueSet_SequestrectomyOfPelvicBone: new Coding({
     code: "6295005",
     display: "Sequestrectomy of pelvic bone",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_VenographyOfLowerExtremityUnilateral: Coding.FromStrict({
+  EncounterReasonValueSet_VenographyOfLowerExtremityUnilateral: new Coding({
     code: "62965008",
     display: "Venography of lower extremity, unilateral",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposedToNoise: Coding.FromStrict({
+  EncounterReasonValueSet_ExposedToNoise: new Coding({
     code: "6300007",
     display: "Exposed to noise",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Keratophakia: Coding.FromStrict({
+  EncounterReasonValueSet_Keratophakia: new Coding({
     code: "6307005",
     display: "Keratophakia",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FecalFatDifferentialQuantitative: Coding.FromStrict({
+  EncounterReasonValueSet_FecalFatDifferentialQuantitative: new Coding({
     code: "6309008",
     display: "Fecal fat differential, quantitative",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Murder: Coding.FromStrict({
+  EncounterReasonValueSet_Murder: new Coding({
     code: "63148005",
     display: "Murder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BetaLactamaseChromogenicCephalosporinSusceptibilityTest: Coding.FromStrict({
+  EncounterReasonValueSet_BetaLactamaseChromogenicCephalosporinSusceptibilityTest: new Coding({
     code: "6319002",
     display: "Beta lactamase, chromogenic cephalosporin susceptibility test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiagnosticRadiographyWithContrastMediaByInjectionPositiveContrastUnilateral: Coding.FromStrict({
+  EncounterReasonValueSet_DiagnosticRadiographyWithContrastMediaByInjectionPositiveContrastUnilateral: new Coding({
     code: "63196005",
     display: "Diagnostic radiography with contrast media by injection, positive contrast, unilateral",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ChartReviewByPhysician: Coding.FromStrict({
+  EncounterReasonValueSet_ChartReviewByPhysician: new Coding({
     code: "633004",
     display: "Chart review by physician",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LigationOfAorticArch: Coding.FromStrict({
+  EncounterReasonValueSet_LigationOfAorticArch: new Coding({
     code: "6337001",
     display: "Ligation of aortic arch",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ConditioningPlayAudiometry: Coding.FromStrict({
+  EncounterReasonValueSet_ConditioningPlayAudiometry: new Coding({
     code: "6339003",
     display: "Conditioning play audiometry",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StruckByFirearmDischarge: Coding.FromStrict({
+  EncounterReasonValueSet_StruckByFirearmDischarge: new Coding({
     code: "63409001",
     display: "Struck by firearm discharge",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ForensicBiteMarkComparisonTechnique: Coding.FromStrict({
+  EncounterReasonValueSet_ForensicBiteMarkComparisonTechnique: new Coding({
     code: "6343004",
     display: "Forensic bite mark comparison technique",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MitsudaReactionToLepromin: Coding.FromStrict({
+  EncounterReasonValueSet_MitsudaReactionToLepromin: new Coding({
     code: "6353003",
     display: "Mitsuda reaction to lepromin",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SedimentationRateWestergren: Coding.FromStrict({
+  EncounterReasonValueSet_SedimentationRateWestergren: new Coding({
     code: "6354009",
     display: "Sedimentation rate, Westergren",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfInternalFixationDeviceOfRadius: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfInternalFixationDeviceOfRadius: new Coding({
     code: "6355005",
     display: "Removal of internal fixation device of radius",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CapsulorrhaphyOfJoint: Coding.FromStrict({
+  EncounterReasonValueSet_CapsulorrhaphyOfJoint: new Coding({
     code: "6358007",
     display: "Capsulorrhaphy of joint",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnesthesiaForPoplitealThromboendarterectomy: Coding.FromStrict({
+  EncounterReasonValueSet_AnesthesiaForPoplitealThromboendarterectomy: new Coding({
     code: "6361008",
     display: "Anesthesia for popliteal thromboendarterectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DilationOfLacrimalPunctumWithIrrigation: Coding.FromStrict({
+  EncounterReasonValueSet_DilationOfLacrimalPunctumWithIrrigation: new Coding({
     code: "6363006",
     display: "Dilation of lacrimal punctum with irrigation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ChemosurgeryOfStomachLesion: Coding.FromStrict({
+  EncounterReasonValueSet_ChemosurgeryOfStomachLesion: new Coding({
     code: "6370006",
     display: "Chemosurgery of stomach lesion",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LysisOfAdhesionsOfNose: Coding.FromStrict({
+  EncounterReasonValueSet_LysisOfAdhesionsOfNose: new Coding({
     code: "637003",
     display: "Lysis of adhesions of nose",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfDeviceFromDigestiveSystem: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfDeviceFromDigestiveSystem: new Coding({
     code: "6384001",
     display: "Removal of device from digestive system",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExplorationOfDiscSpace: Coding.FromStrict({
+  EncounterReasonValueSet_ExplorationOfDiscSpace: new Coding({
     code: "6385000",
     display: "Exploration of disc space",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TdTStain: Coding.FromStrict({
+  EncounterReasonValueSet_TdTStain: new Coding({
     code: "6388003",
     display: "TdT stain",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_GalactokinaseMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_GalactokinaseMeasurement: new Coding({
     code: "6396008",
     display: "Galactokinase measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MuscularStrengthDevelopmentExercise: Coding.FromStrict({
+  EncounterReasonValueSet_MuscularStrengthDevelopmentExercise: new Coding({
     code: "6397004",
     display: "Muscular strength development exercise",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DivisionOfArteriovenousFistulaWithLigation: Coding.FromStrict({
+  EncounterReasonValueSet_DivisionOfArteriovenousFistulaWithLigation: new Coding({
     code: "6399001",
     display: "Division of arteriovenous fistula with ligation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfCommonBileDuct: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfCommonBileDuct: new Coding({
     code: "6402000",
     display: "Excision of common bile duct",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LengtheningOfMuscleOfHand: Coding.FromStrict({
+  EncounterReasonValueSet_LengtheningOfMuscleOfHand: new Coding({
     code: "6403005",
     display: "Lengthening of muscle of hand",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfTumorFromElbowAreaDeepSubfascial: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfTumorFromElbowAreaDeepSubfascial: new Coding({
     code: "6419003",
     display: "Excision of tumor from elbow area, deep, subfascial",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CerebralThermography: Coding.FromStrict({
+  EncounterReasonValueSet_CerebralThermography: new Coding({
     code: "642006",
     display: "Cerebral thermography",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HeteroautogenousTransplantation: Coding.FromStrict({
+  EncounterReasonValueSet_HeteroautogenousTransplantation: new Coding({
     code: "6429005",
     display: "Heteroautogenous transplantation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ClosedHeartValvotomyOfMitralValve: Coding.FromStrict({
+  EncounterReasonValueSet_ClosedHeartValvotomyOfMitralValve: new Coding({
     code: "6433003",
     display: "Closed heart valvotomy of mitral valve",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SeminalFluidDetection: Coding.FromStrict({
+  EncounterReasonValueSet_SeminalFluidDetection: new Coding({
     code: "6434009",
     display: "Seminal fluid detection",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExplorationOfCiliaryBody: Coding.FromStrict({
+  EncounterReasonValueSet_ExplorationOfCiliaryBody: new Coding({
     code: "6438007",
     display: "Exploration of ciliary body",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DestructionOfLesionOfPeripheralNerve: Coding.FromStrict({
+  EncounterReasonValueSet_DestructionOfLesionOfPeripheralNerve: new Coding({
     code: "6439004",
     display: "Destruction of lesion of peripheral nerve",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PonticPorcelainFusedToPredominantlyBaseMetal: Coding.FromStrict({
+  EncounterReasonValueSet_PonticPorcelainFusedToPredominantlyBaseMetal: new Coding({
     code: "6443000",
     display: "Pontic, porcelain fused to predominantly base metal",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EnlargementOfEyeSocket: Coding.FromStrict({
+  EncounterReasonValueSet_EnlargementOfEyeSocket: new Coding({
     code: "6444006",
     display: "Enlargement of eye socket",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiagnosticProcedureOnVitreous: Coding.FromStrict({
+  EncounterReasonValueSet_DiagnosticProcedureOnVitreous: new Coding({
     code: "645008",
     display: "Diagnostic procedure on vitreous",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ArthrotomyOfGlenohumeralJointForInfectionWithDrainage: Coding.FromStrict({
+  EncounterReasonValueSet_ArthrotomyOfGlenohumeralJointForInfectionWithDrainage: new Coding({
     code: "6465000",
     display: "Arthrotomy of glenohumeral joint for infection with drainage",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AdministrationOfRhImmuneGlobulin: Coding.FromStrict({
+  EncounterReasonValueSet_AdministrationOfRhImmuneGlobulin: new Coding({
     code: "6466004",
     display: "Administration of Rh immune globulin",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfCervixByElectroconization: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfCervixByElectroconization: new Coding({
     code: "647000",
     display: "Excision of cervix by electroconization",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Laparoamnioscopy: Coding.FromStrict({
+  EncounterReasonValueSet_Laparoamnioscopy: new Coding({
     code: "6470007",
     display: "Laparoamnioscopy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SutureOfOldObstetricalLacerationOfUterus: Coding.FromStrict({
+  EncounterReasonValueSet_SutureOfOldObstetricalLacerationOfUterus: new Coding({
     code: "6473009",
     display: "Suture of old obstetrical laceration of uterus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathByElectrocution: Coding.FromStrict({
+  EncounterReasonValueSet_DeathByElectrocution: new Coding({
     code: "6476001",
     display: "Death by electrocution",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UrinaryBladderResidualUrineStudy: Coding.FromStrict({
+  EncounterReasonValueSet_UrinaryBladderResidualUrineStudy: new Coding({
     code: "6480006",
     display: "Urinary bladder residual urine study",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CurettageOfSclera: Coding.FromStrict({
+  EncounterReasonValueSet_CurettageOfSclera: new Coding({
     code: "6486000",
     display: "Curettage of sclera",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HandTendonPulleyReconstructionWithTendonProsthesis: Coding.FromStrict({
+  EncounterReasonValueSet_HandTendonPulleyReconstructionWithTendonProsthesis: new Coding({
     code: "6487009",
     display: "Hand tendon pulley reconstruction with tendon prosthesis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ProteinSFreeAssay: Coding.FromStrict({
+  EncounterReasonValueSet_ProteinSFreeAssay: new Coding({
     code: "6491004",
     display: "Protein S, free assay",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TsugeOperationOnFingerForMacrodactylyRepair: Coding.FromStrict({
+  EncounterReasonValueSet_TsugeOperationOnFingerForMacrodactylyRepair: new Coding({
     code: "6499002",
     display: "Tsuge operation on finger for macrodactyly repair",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CompleteLowerDenture: Coding.FromStrict({
+  EncounterReasonValueSet_CompleteLowerDenture: new Coding({
     code: "6502003",
     display: "Complete lower denture",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UndeterminedMannerOfDeath: Coding.FromStrict({
+  EncounterReasonValueSet_UndeterminedMannerOfDeath: new Coding({
     code: "65037004",
     display: "Undetermined manner of death",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PlacingAPatientOnABedpan: Coding.FromStrict({
+  EncounterReasonValueSet_PlacingAPatientOnABedpan: new Coding({
     code: "6506000",
     display: "Placing a patient on a bedpan",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OperationOnMultipleExtraocularMusclesWithTemporaryDetachmentFromGlobe: Coding.FromStrict({
+  EncounterReasonValueSet_OperationOnMultipleExtraocularMusclesWithTemporaryDetachmentFromGlobe: new Coding({
     code: "6519001",
     display: "Operation on multiple extraocular muscles with temporary detachment from globe",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Polytomography: Coding.FromStrict({
+  EncounterReasonValueSet_Polytomography: new Coding({
     code: "6521006",
     display: "Polytomography",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UchidaFimbriectomyWithTubalLigationByEndoscopy: Coding.FromStrict({
+  EncounterReasonValueSet_UchidaFimbriectomyWithTubalLigationByEndoscopy: new Coding({
     code: "6527005",
     display: "Uchida fimbriectomy with tubal ligation by endoscopy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_LhermitteQuoteSPhenomenon: Coding.FromStrict({
+  EncounterReasonValueSet_LhermitteQuoteSPhenomenon: new Coding({
     code: "65329004",
     display: "Lhermitte's phenomenon",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfCystOfHand: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfCystOfHand: new Coding({
     code: "6535008",
     display: "Excision of cyst of hand",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ImplantationOfTricuspidValveWithTissueGraft: Coding.FromStrict({
+  EncounterReasonValueSet_ImplantationOfTricuspidValveWithTissueGraft: new Coding({
     code: "6536009",
     display: "Implantation of tricuspid valve with tissue graft",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ComplicatedCatheterizationOfBladder: Coding.FromStrict({
+  EncounterReasonValueSet_ComplicatedCatheterizationOfBladder: new Coding({
     code: "6543003",
     display: "Complicated catheterization of bladder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RepairWithClosureOfNonSurgicalWound: Coding.FromStrict({
+  EncounterReasonValueSet_RepairWithClosureOfNonSurgicalWound: new Coding({
     code: "6547002",
     display: "Repair with closure of non-surgical wound",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_InsertionOfInfusionPumpBeneathSkin: Coding.FromStrict({
+  EncounterReasonValueSet_InsertionOfInfusionPumpBeneathSkin: new Coding({
     code: "6555009",
     display: "Insertion of infusion pump beneath skin",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReticulinAntibodyMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_ReticulinAntibodyMeasurement: new Coding({
     code: "6556005",
     display: "Reticulin antibody measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DestructionOfLesionOfTongue: Coding.FromStrict({
+  EncounterReasonValueSet_DestructionOfLesionOfTongue: new Coding({
     code: "6562000",
     display: "Destruction of lesion of tongue",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TranspositionOfMuscleOfHand: Coding.FromStrict({
+  EncounterReasonValueSet_TranspositionOfMuscleOfHand: new Coding({
     code: "6563005",
     display: "Transposition of muscle of hand",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PulmonaryValveCommissurotomyByTransvenousBalloonMethod: Coding.FromStrict({
+  EncounterReasonValueSet_PulmonaryValveCommissurotomyByTransvenousBalloonMethod: new Coding({
     code: "6567006",
     display: "Pulmonary valve commissurotomy by transvenous balloon method",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiagnosticProcedureOnEyelid: Coding.FromStrict({
+  EncounterReasonValueSet_DiagnosticProcedureOnEyelid: new Coding({
     code: "6568001",
     display: "Diagnostic procedure on eyelid",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OperationOnBursa: Coding.FromStrict({
+  EncounterReasonValueSet_OperationOnBursa: new Coding({
     code: "657004",
     display: "Operation on bursa",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AccidentalDeathInHome: Coding.FromStrict({
+  EncounterReasonValueSet_AccidentalDeathInHome: new Coding({
     code: "65819004",
     display: "Accidental death in home",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ClosedReductionOfFractureOfTarsalOrMetatarsal: Coding.FromStrict({
+  EncounterReasonValueSet_ClosedReductionOfFractureOfTarsalOrMetatarsal: new Coding({
     code: "6585004",
     display: "Closed reduction of fracture of tarsal or metatarsal",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AntibodyTitrationHighProtein: Coding.FromStrict({
+  EncounterReasonValueSet_AntibodyTitrationHighProtein: new Coding({
     code: "6589005",
     display: "Antibody titration, high protein",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfForeignBodyFromSkinOfAxilla: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfForeignBodyFromSkinOfAxilla: new Coding({
     code: "6601003",
     display: "Removal of foreign body from skin of axilla",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AntibodyToSingleStrandedDNAMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_AntibodyToSingleStrandedDNAMeasurement: new Coding({
     code: "6614002",
     display: "Antibody to single stranded DNA measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ElectroretinographyWithMedicalEvaluation: Coding.FromStrict({
+  EncounterReasonValueSet_ElectroretinographyWithMedicalEvaluation: new Coding({
     code: "6615001",
     display: "Electroretinography with medical evaluation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AddClaspToExistingPartialDenture: Coding.FromStrict({
+  EncounterReasonValueSet_AddClaspToExistingPartialDenture: new Coding({
     code: "6622009",
     display: "Add clasp to existing partial denture",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PartialUnilateralVulvectomy: Coding.FromStrict({
+  EncounterReasonValueSet_PartialUnilateralVulvectomy: new Coding({
     code: "66325000",
     display: "Partial unilateral vulvectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DestructionOfHemorrhoidsInternal: Coding.FromStrict({
+  EncounterReasonValueSet_DestructionOfHemorrhoidsInternal: new Coding({
     code: "6634001",
     display: "Destruction of hemorrhoids, internal",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NaturalDeathWithProvedCause: Coding.FromStrict({
+  EncounterReasonValueSet_NaturalDeathWithProvedCause: new Coding({
     code: "66360006",
     display: "Natural death with proved cause",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ReplacementOfObstructedValveInShuntSystem: Coding.FromStrict({
+  EncounterReasonValueSet_ReplacementOfObstructedValveInShuntSystem: new Coding({
     code: "6639006",
     display: "Replacement of obstructed valve in shunt system",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UndeterminedMannerOfDeathHomicideSuspected: Coding.FromStrict({
+  EncounterReasonValueSet_UndeterminedMannerOfDeathHomicideSuspected: new Coding({
     code: "66411002",
     display: "Undetermined manner of death, homicide suspected",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Asphyxiation: Coding.FromStrict({
+  EncounterReasonValueSet_Asphyxiation: new Coding({
     code: "66466001",
     display: "Asphyxiation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RadionuclideLacrimalFlowStudy: Coding.FromStrict({
+  EncounterReasonValueSet_RadionuclideLacrimalFlowStudy: new Coding({
     code: "6650009",
     display: "Radionuclide lacrimal flow study",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PartialMeniscectomyOfTemporomandibularJoint: Coding.FromStrict({
+  EncounterReasonValueSet_PartialMeniscectomyOfTemporomandibularJoint: new Coding({
     code: "665001",
     display: "Partial meniscectomy of temporomandibular joint",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AcousticStimulationTest: Coding.FromStrict({
+  EncounterReasonValueSet_AcousticStimulationTest: new Coding({
     code: "6656003",
     display: "Acoustic stimulation test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MaintenanceDrugTherapyForMentalDisorder: Coding.FromStrict({
+  EncounterReasonValueSet_MaintenanceDrugTherapyForMentalDisorder: new Coding({
     code: "6657007",
     display: "Maintenance drug therapy for mental disorder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfForeignBodyFromAlveolus: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfForeignBodyFromAlveolus: new Coding({
     code: "6658002",
     display: "Removal of foreign body from alveolus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_KingSteelquistHindquarterOperation: Coding.FromStrict({
+  EncounterReasonValueSet_KingSteelquistHindquarterOperation: new Coding({
     code: "6661001",
     display: "King-Steelquist hindquarter operation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RestorationCrownPorcelainFusedToNobleMetal: Coding.FromStrict({
+  EncounterReasonValueSet_RestorationCrownPorcelainFusedToNobleMetal: new Coding({
     code: "6665005",
     display: "Restoration, crown, porcelain fused to noble metal",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiseaseTypeANDORCategoryNotAssigned: Coding.FromStrict({
+  EncounterReasonValueSet_DiseaseTypeANDORCategoryNotAssigned: new Coding({
     code: "66678007",
     display: "Disease type AND/OR category not assigned",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FibrinogenAssayQuantitative: Coding.FromStrict({
+  EncounterReasonValueSet_FibrinogenAssayQuantitative: new Coding({
     code: "6668007",
     display: "Fibrinogen assay, quantitative",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ClosureOfExternalFistulaOfTrachea: Coding.FromStrict({
+  EncounterReasonValueSet_ClosureOfExternalFistulaOfTrachea: new Coding({
     code: "6670003",
     display: "Closure of external fistula of trachea",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ElectrosurgicalEpilationOfEyebrow: Coding.FromStrict({
+  EncounterReasonValueSet_ElectrosurgicalEpilationOfEyebrow: new Coding({
     code: "670008",
     display: "Electrosurgical epilation of eyebrow",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TransplantationOfTestis: Coding.FromStrict({
+  EncounterReasonValueSet_TransplantationOfTestis: new Coding({
     code: "671007",
     display: "Transplantation of testis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallOnEscalator: Coding.FromStrict({
+  EncounterReasonValueSet_FallOnEscalator: new Coding({
     code: "67223001",
     display: "Fall on escalator",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuffocationByCaveIn: Coding.FromStrict({
+  EncounterReasonValueSet_SuffocationByCaveIn: new Coding({
     code: "67292001",
     display: "Suffocation by cave-in",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IndirectExaminationOfLarynx: Coding.FromStrict({
+  EncounterReasonValueSet_IndirectExaminationOfLarynx: new Coding({
     code: "673005",
     display: "Indirect examination of larynx",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FetalDeathDueToTerminationOfPregnancy: Coding.FromStrict({
+  EncounterReasonValueSet_FetalDeathDueToTerminationOfPregnancy: new Coding({
     code: "67313008",
     display: "Fetal death due to termination of pregnancy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AbductionTest: Coding.FromStrict({
+  EncounterReasonValueSet_AbductionTest: new Coding({
     code: "674004",
     display: "Abduction test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PeritonealDialysisIncludingCannulation: Coding.FromStrict({
+  EncounterReasonValueSet_PeritonealDialysisIncludingCannulation: new Coding({
     code: "676002",
     display: "Peritoneal dialysis including cannulation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AsphyxiationByInjuryToAirPassages: Coding.FromStrict({
+  EncounterReasonValueSet_AsphyxiationByInjuryToAirPassages: new Coding({
     code: "67622000",
     display: "Asphyxiation by injury to air passages",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathByFire: Coding.FromStrict({
+  EncounterReasonValueSet_DeathByFire: new Coding({
     code: "67786008",
     display: "Death by fire",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UndeterminedMannerOfDeathAccidentalCauseSuspected: Coding.FromStrict({
+  EncounterReasonValueSet_UndeterminedMannerOfDeathAccidentalCauseSuspected: new Coding({
     code: "67916006",
     display: "Undetermined manner of death, accidental cause suspected",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RadiationPhysicsConsultation: Coding.FromStrict({
+  EncounterReasonValueSet_RadiationPhysicsConsultation: new Coding({
     code: "680007",
     display: "Radiation physics consultation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UndeterminedMannerOfDeathSuicideSuspected: Coding.FromStrict({
+  EncounterReasonValueSet_UndeterminedMannerOfDeathSuicideSuspected: new Coding({
     code: "68023007",
     display: "Undetermined manner of death, suicide suspected",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralThyroidLobectomy: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralThyroidLobectomy: new Coding({
     code: "68034005",
     display: "Unilateral thyroid lobectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallAtConstructionSite: Coding.FromStrict({
+  EncounterReasonValueSet_FallAtConstructionSite: new Coding({
     code: "68062003",
     display: "Fall at construction site",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallIntoHole: Coding.FromStrict({
+  EncounterReasonValueSet_FallIntoHole: new Coding({
     code: "68274007",
     display: "Fall into hole",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AlbuminGlobulinRatio: Coding.FromStrict({
+  EncounterReasonValueSet_AlbuminGlobulinRatio: new Coding({
     code: "687005",
     display: "Albumin/Globulin ratio",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StruckBySharpObject: Coding.FromStrict({
+  EncounterReasonValueSet_StruckBySharpObject: new Coding({
     code: "69129000",
     display: "Struck by sharp object",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StruckByFallingEarth: Coding.FromStrict({
+  EncounterReasonValueSet_StruckByFallingEarth: new Coding({
     code: "69165005",
     display: "Struck by falling earth",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DestructiveProcedureOfLesionOnSkinOfTrunk: Coding.FromStrict({
+  EncounterReasonValueSet_DestructiveProcedureOfLesionOnSkinOfTrunk: new Coding({
     code: "695009",
     display: "Destructive procedure of lesion on skin of trunk",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HepatitisAVirusAntibodyMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_HepatitisAVirusAntibodyMeasurement: new Coding({
     code: "697001",
     display: "Hepatitis A virus antibody measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnexpectedSuddenDeathOfAdult: Coding.FromStrict({
+  EncounterReasonValueSet_UnexpectedSuddenDeathOfAdult: new Coding({
     code: "70055007",
     display: "Unexpected sudden death of adult",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NonIncestuousChildConcubinage: Coding.FromStrict({
+  EncounterReasonValueSet_NonIncestuousChildConcubinage: new Coding({
     code: "70167006",
     display: "Non-incestuous child concubinage",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AngiographyOfRenalArteryUnilateral: Coding.FromStrict({
+  EncounterReasonValueSet_AngiographyOfRenalArteryUnilateral: new Coding({
     code: "702005",
     display: "Angiography of renal artery, unilateral",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HomicideAttempt: Coding.FromStrict({
+  EncounterReasonValueSet_HomicideAttempt: new Coding({
     code: "70579001",
     display: "Homicide attempt",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AbsenceOfNauseaAndVomiting: Coding.FromStrict({
+  EncounterReasonValueSet_AbsenceOfNauseaAndVomiting: new Coding({
     code: "70790008",
     display: "Absence of nausea and vomiting",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ThromboendarterectomyWithGraftOfMesentericArtery: Coding.FromStrict({
+  EncounterReasonValueSet_ThromboendarterectomyWithGraftOfMesentericArtery: new Coding({
     code: "710006",
     display: "Thromboendarterectomy with graft of mesenteric artery",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralModifiedRadicalNeckDissection: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralModifiedRadicalNeckDissection: new Coding({
     code: "71101001",
     display: "Unilateral modified radical neck dissection",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ClosedChestSuction: Coding.FromStrict({
+  EncounterReasonValueSet_ClosedChestSuction: new Coding({
     code: "712003",
     display: "Closed chest suction",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PartialUnilateralParalysis: Coding.FromStrict({
+  EncounterReasonValueSet_PartialUnilateralParalysis: new Coding({
     code: "71738007",
     display: "Partial unilateral paralysis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralSmallKidney: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralSmallKidney: new Coding({
     code: "7185004",
     display: "Unilateral small kidney",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StruckByFallingObject: Coding.FromStrict({
+  EncounterReasonValueSet_StruckByFallingObject: new Coding({
     code: "71893005",
     display: "Struck by falling object",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MedicalProcedureOnPeriurethralTissue: Coding.FromStrict({
+  EncounterReasonValueSet_MedicalProcedureOnPeriurethralTissue: new Coding({
     code: "721002",
     display: "Medical procedure on periurethral tissue",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FineNeedleBiopsyOfThymus: Coding.FromStrict({
+  EncounterReasonValueSet_FineNeedleBiopsyOfThymus: new Coding({
     code: "722009",
     display: "Fine needle biopsy of thymus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ModifiedRadicalMastectomyUnilateral: Coding.FromStrict({
+  EncounterReasonValueSet_ModifiedRadicalMastectomyUnilateral: new Coding({
     code: "72269009",
     display: "Modified radical mastectomy, unilateral",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralTraumaticAmputationOfLegBelowKneeWithComplication: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralTraumaticAmputationOfLegBelowKneeWithComplication: new Coding({
     code: "72375002",
     display: "Unilateral traumatic amputation of leg below knee with complication",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PathologyConsultationComprehensiveRecordsAndSpecimenWithReport: Coding.FromStrict({
+  EncounterReasonValueSet_PathologyConsultationComprehensiveRecordsAndSpecimenWithReport: new Coding({
     code: "726007",
     display: "Pathology consultation, comprehensive, records and specimen with report",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralRadicalNeckDissection: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralRadicalNeckDissection: new Coding({
     code: "72604007",
     display: "Unilateral radical neck dissection",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallFromCarousel: Coding.FromStrict({
+  EncounterReasonValueSet_FallFromCarousel: new Coding({
     code: "72738009",
     display: "Fall from carousel",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionOfSubcutaneousTissue: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionOfSubcutaneousTissue: new Coding({
     code: "730005",
     display: "Incision of subcutaneous tissue",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AngiographyOfCervicalVertebralArteryUnilateral: Coding.FromStrict({
+  EncounterReasonValueSet_AngiographyOfCervicalVertebralArteryUnilateral: new Coding({
     code: "7335003",
     display: "Angiography of cervical vertebral artery, unilateral",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralMastectomy: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralMastectomy: new Coding({
     code: "73359007",
     display: "Unilateral mastectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralNephrotomography: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralNephrotomography: new Coding({
     code: "73487002",
     display: "Unilateral nephrotomography",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OperationOnProstate: Coding.FromStrict({
+  EncounterReasonValueSet_OperationOnProstate: new Coding({
     code: "741007",
     display: "Operation on prostate",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MurderByHiredKiller: Coding.FromStrict({
+  EncounterReasonValueSet_MurderByHiredKiller: new Coding({
     code: "74105006",
     display: "Murder by hired killer",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathUnattendedByPhysician: Coding.FromStrict({
+  EncounterReasonValueSet_DeathUnattendedByPhysician: new Coding({
     code: "74148000",
     display: "Death unattended by physician",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DrowningInBrackishWater: Coding.FromStrict({
+  EncounterReasonValueSet_DrowningInBrackishWater: new Coding({
     code: "7420003",
     display: "Drowning in brackish water",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathByAsphyxiation: Coding.FromStrict({
+  EncounterReasonValueSet_DeathByAsphyxiation: new Coding({
     code: "74332007",
     display: "Death by asphyxiation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DrowningInSaltWater: Coding.FromStrict({
+  EncounterReasonValueSet_DrowningInSaltWater: new Coding({
     code: "74376000",
     display: "Drowning in salt water",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathByCremation: Coding.FromStrict({
+  EncounterReasonValueSet_DeathByCremation: new Coding({
     code: "74509007",
     display: "Death by cremation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallFromBench: Coding.FromStrict({
+  EncounterReasonValueSet_FallFromBench: new Coding({
     code: "74541001",
     display: "Fall from bench",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ChiropracticAdjustmentOfCoccyxSubluxation: Coding.FromStrict({
+  EncounterReasonValueSet_ChiropracticAdjustmentOfCoccyxSubluxation: new Coding({
     code: "746002",
     display: "Chiropractic adjustment of coccyx subluxation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StruckByInstrumentOfAggression: Coding.FromStrict({
+  EncounterReasonValueSet_StruckByInstrumentOfAggression: new Coding({
     code: "74601003",
     display: "Struck by instrument of aggression",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AccidentalDeathInIndustrialPlace: Coding.FromStrict({
+  EncounterReasonValueSet_AccidentalDeathInIndustrialPlace: new Coding({
     code: "74660000",
     display: "Accidental death in industrial place",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StruckByFallingMachineEquipment: Coding.FromStrict({
+  EncounterReasonValueSet_StruckByFallingMachineEquipment: new Coding({
     code: "74683002",
     display: "Struck by falling machine equipment",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralVulvectomy: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralVulvectomy: new Coding({
     code: "75151002",
     display: "Unilateral vulvectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ManipulationOfAnkleANDFoot: Coding.FromStrict({
+  EncounterReasonValueSet_ManipulationOfAnkleANDFoot: new Coding({
     code: "753006",
     display: "Manipulation of ankle AND foot",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallOnIce: Coding.FromStrict({
+  EncounterReasonValueSet_FallOnIce: new Coding({
     code: "75354000",
     display: "Fall on ice",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TotalUrethrectomy: Coding.FromStrict({
+  EncounterReasonValueSet_TotalUrethrectomy: new Coding({
     code: "754000",
     display: "Total urethrectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AngiographyOfInternalCarotidArteryUnilateral: Coding.FromStrict({
+  EncounterReasonValueSet_AngiographyOfInternalCarotidArteryUnilateral: new Coding({
     code: "75538004",
     display: "Angiography of internal carotid artery, unilateral",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralRecurrentInguinalHerniaWithGangrene: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralRecurrentInguinalHerniaWithGangrene: new Coding({
     code: "75584009",
     display: "Unilateral recurrent inguinal hernia with gangrene",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiagnosticRadiographyWithContrastMediaByInjectionPositiveAndNegativeContrastUnilateral: Coding.FromStrict({
+  EncounterReasonValueSet_DiagnosticRadiographyWithContrastMediaByInjectionPositiveAndNegativeContrastUnilateral: new Coding({
     code: "75844008",
     display: "Diagnostic radiography with contrast media by injection, positive and negative contrast, unilateral",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IntracerebralElectroencephalogram: Coding.FromStrict({
+  EncounterReasonValueSet_IntracerebralElectroencephalogram: new Coding({
     code: "759005",
     display: "Intracerebral electroencephalogram",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Tripping: Coding.FromStrict({
+  EncounterReasonValueSet_Tripping: new Coding({
     code: "75941004",
     display: "Tripping",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PelvicAndAbdominalLymphangiographyUnilateral: Coding.FromStrict({
+  EncounterReasonValueSet_PelvicAndAbdominalLymphangiographyUnilateral: new Coding({
     code: "76063002",
     display: "Pelvic and abdominal lymphangiography, unilateral",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ComputerizedAxialTomographyOfCervicalSpineWithContrast: Coding.FromStrict({
+  EncounterReasonValueSet_ComputerizedAxialTomographyOfCervicalSpineWithContrast: new Coding({
     code: "762008",
     display: "Computerized axial tomography of cervical spine with contrast",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ArthrodesisOfInterphalangealJointOfGreatToe: Coding.FromStrict({
+  EncounterReasonValueSet_ArthrodesisOfInterphalangealJointOfGreatToe: new Coding({
     code: "764009",
     display: "Arthrodesis of interphalangeal joint of great toe",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_WhiteBloodCellCountObservation: Coding.FromStrict({
+  EncounterReasonValueSet_WhiteBloodCellCountObservation: new Coding({
     code: "767002",
     display: "White blood cell count - observation",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Garrotment: Coding.FromStrict({
+  EncounterReasonValueSet_Garrotment: new Coding({
     code: "77105004",
     display: "Garrotment",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralTraumaticAmputationOfArmWithComplication: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralTraumaticAmputationOfArmWithComplication: new Coding({
     code: "7729001",
     display: "Unilateral traumatic amputation of arm with complication",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CompleteUnilateralParesis: Coding.FromStrict({
+  EncounterReasonValueSet_CompleteUnilateralParesis: new Coding({
     code: "77291009",
     display: "Complete unilateral paresis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToAnimateMechanicalForce: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToAnimateMechanicalForce: new Coding({
     code: "77588008",
     display: "Exposure to animate mechanical force",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RadicalUnilateralOrchiectomy: Coding.FromStrict({
+  EncounterReasonValueSet_RadicalUnilateralOrchiectomy: new Coding({
     code: "77670007",
     display: "Radical unilateral orchiectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralOrchidectomy: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralOrchidectomy: new Coding({
     code: "77739005",
     display: "Unilateral orchidectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StruckByFallingTool: Coding.FromStrict({
+  EncounterReasonValueSet_StruckByFallingTool: new Coding({
     code: "77740007",
     display: "Struck by falling tool",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToAttackByOtherPerson: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToAttackByOtherPerson: new Coding({
     code: "77993003",
     display: "Exposure to attack by other person",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuicideByMultipleMeans: Coding.FromStrict({
+  EncounterReasonValueSet_SuicideByMultipleMeans: new Coding({
     code: "78070009",
     display: "Suicide by multiple means",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StruckByFallingLiquidMatter: Coding.FromStrict({
+  EncounterReasonValueSet_StruckByFallingLiquidMatter: new Coding({
     code: "78078002",
     display: "Struck by falling liquid matter",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallFromGymnasticBars: Coding.FromStrict({
+  EncounterReasonValueSet_FallFromGymnasticBars: new Coding({
     code: "78331008",
     display: "Fall from gymnastic bars",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EngagedInFalling: Coding.FromStrict({
+  EncounterReasonValueSet_EngagedInFalling: new Coding({
     code: "78361000",
     display: "Engaged in falling",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AsphyxiationBySustainedCompressionOfChest: Coding.FromStrict({
+  EncounterReasonValueSet_AsphyxiationBySustainedCompressionOfChest: new Coding({
     code: "78387000",
     display: "Asphyxiation by sustained compression of chest",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_OccupationalNoiseExposure: Coding.FromStrict({
+  EncounterReasonValueSet_OccupationalNoiseExposure: new Coding({
     code: "78427001",
     display: "Occupational noise exposure",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Infanticide: Coding.FromStrict({
+  EncounterReasonValueSet_Infanticide: new Coding({
     code: "78583002",
     display: "Infanticide",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_JudicialExecutionByGasChamber: Coding.FromStrict({
+  EncounterReasonValueSet_JudicialExecutionByGasChamber: new Coding({
     code: "78672002",
     display: "Judicial execution by gas chamber",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_USOUnilateralSalpingoOophorectomy: Coding.FromStrict({
+  EncounterReasonValueSet_USOUnilateralSalpingoOophorectomy: new Coding({
     code: "78698008",
     display: "USO - Unilateral salpingo-oophorectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AccidentalDeath: Coding.FromStrict({
+  EncounterReasonValueSet_AccidentalDeath: new Coding({
     code: "7878000",
     display: "Accidental death",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NaturalDeathWithProvedCauseWithoutAutopsy: Coding.FromStrict({
+  EncounterReasonValueSet_NaturalDeathWithProvedCauseWithoutAutopsy: new Coding({
     code: "78857004",
     display: "Natural death with proved cause without autopsy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CranialDecompressionSubtemporalSupratentorial: Coding.FromStrict({
+  EncounterReasonValueSet_CranialDecompressionSubtemporalSupratentorial: new Coding({
     code: "789003",
     display: "Cranial decompression, subtemporal, supratentorial",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DressingAndFixationProcedure: Coding.FromStrict({
+  EncounterReasonValueSet_DressingAndFixationProcedure: new Coding({
     code: "791006",
     display: "Dressing and fixation procedure",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AccidentWhileEngagedInHouseholdActivity: Coding.FromStrict({
+  EncounterReasonValueSet_AccidentWhileEngagedInHouseholdActivity: new Coding({
     code: "79573009",
     display: "Accident while engaged in household activity",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralRepairOfInguinalHerniaWithProsthesisOrGraft: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralRepairOfInguinalHerniaWithProsthesisOrGraft: new Coding({
     code: "79622006",
     display: "Unilateral repair of inguinal hernia with prosthesis or graft",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_JudicialExecutionByElectricChair: Coding.FromStrict({
+  EncounterReasonValueSet_JudicialExecutionByElectricChair: new Coding({
     code: "79835004",
     display: "Judicial execution by electric chair",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrafficVehicularAccidentalDeath: Coding.FromStrict({
+  EncounterReasonValueSet_TrafficVehicularAccidentalDeath: new Coding({
     code: "79867001",
     display: "Traffic vehicular accidental death",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_JudicialExecution: Coding.FromStrict({
+  EncounterReasonValueSet_JudicialExecution: new Coding({
     code: "80295006",
     display: "Judicial execution",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToAttackByMarineAnimal: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToAttackByMarineAnimal: new Coding({
     code: "80580005",
     display: "Exposure to attack by marine animal",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfBrain: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfBrain: new Coding({
     code: "807005",
     display: "Excision of brain",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralRadicalMastectomy: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralRadicalMastectomy: new Coding({
     code: "8115005",
     display: "Unilateral radical mastectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ElectrophoresisMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_ElectrophoresisMeasurement: new Coding({
     code: "814007",
     display: "Electrophoresis measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralHypoactiveLabyrinth: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralHypoactiveLabyrinth: new Coding({
     code: "81585005",
     display: "Unilateral hypoactive labyrinth",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfCystOfSpleen: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfCystOfSpleen: new Coding({
     code: "817000",
     display: "Excision of cyst of spleen",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NoPain: Coding.FromStrict({
+  EncounterReasonValueSet_NoPain: new Coding({
     code: "81765008",
     display: "No pain",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NaturalDeathReportableToMedicolegalAuthority: Coding.FromStrict({
+  EncounterReasonValueSet_NaturalDeathReportableToMedicolegalAuthority: new Coding({
     code: "81840004",
     display: "Natural death reportable to medicolegal authority",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralCondylarHyperplasiaOfMandible: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralCondylarHyperplasiaOfMandible: new Coding({
     code: "81993002",
     display: "Unilateral condylar hyperplasia of mandible",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_BacterialGrowthAbsent: Coding.FromStrict({
+  EncounterReasonValueSet_BacterialGrowthAbsent: new Coding({
     code: "82120007",
     display: "Bacterial growth absent",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Avalanche: Coding.FromStrict({
+  EncounterReasonValueSet_Avalanche: new Coding({
     code: "82145005",
     display: "Avalanche",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuicideAttempt: Coding.FromStrict({
+  EncounterReasonValueSet_SuicideAttempt: new Coding({
     code: "82313006",
     display: "Suicide attempt",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Stumbling: Coding.FromStrict({
+  EncounterReasonValueSet_Stumbling: new Coding({
     code: "82612009",
     display: "Stumbling",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NaturalDeathWithProvedCauseByAutopsy: Coding.FromStrict({
+  EncounterReasonValueSet_NaturalDeathWithProvedCauseByAutopsy: new Coding({
     code: "82621005",
     display: "Natural death with proved cause by autopsy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralBisectionOfOvary: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralBisectionOfOvary: new Coding({
     code: "82630002",
     display: "Unilateral bisection of ovary",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallFromTree: Coding.FromStrict({
+  EncounterReasonValueSet_FallFromTree: new Coding({
     code: "82947003",
     display: "Fall from tree",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DrawerTest: Coding.FromStrict({
+  EncounterReasonValueSet_DrawerTest: new Coding({
     code: "831000",
     display: "Drawer test",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToMechanicalForce: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToMechanicalForce: new Coding({
     code: "83208000",
     display: "Exposure to mechanical force",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallFromChair: Coding.FromStrict({
+  EncounterReasonValueSet_FallFromChair: new Coding({
     code: "83468000",
     display: "Fall from chair",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralExplorationOfAdrenal: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralExplorationOfAdrenal: new Coding({
     code: "837001",
     display: "Unilateral exploration of adrenal",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallFromMovingVehicle: Coding.FromStrict({
+  EncounterReasonValueSet_FallFromMovingVehicle: new Coding({
     code: "84026000",
     display: "Fall from moving vehicle",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TrainDerailment: Coding.FromStrict({
+  EncounterReasonValueSet_TrainDerailment: new Coding({
     code: "84768009",
     display: "Train derailment",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_StruckByProjectile: Coding.FromStrict({
+  EncounterReasonValueSet_StruckByProjectile: new Coding({
     code: "84829006",
     display: "Struck by projectile",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RootCanalTherapyMolarExcludingFinalRestoration: Coding.FromStrict({
+  EncounterReasonValueSet_RootCanalTherapyMolarExcludingFinalRestoration: new Coding({
     code: "851001",
     display: "Root canal therapy, molar, excluding final restoration",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralRetrogradePyelography: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralRetrogradePyelography: new Coding({
     code: "85125009",
     display: "Unilateral retrograde pyelography",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ContactWithPlantThorns: Coding.FromStrict({
+  EncounterReasonValueSet_ContactWithPlantThorns: new Coding({
     code: "85261005",
     display: "Contact with plant thorns",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FecalFatMeasurement72HourCollection: Coding.FromStrict({
+  EncounterReasonValueSet_FecalFatMeasurement72HourCollection: new Coding({
     code: "853003",
     display: "Fecal fat measurement, 72-hour collection",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallFromLadder: Coding.FromStrict({
+  EncounterReasonValueSet_FallFromLadder: new Coding({
     code: "86591008",
     display: "Fall from ladder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Afebrile: Coding.FromStrict({
+  EncounterReasonValueSet_Afebrile: new Coding({
     code: "86699002",
     display: "Afebrile",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HypoglossofacialAnastomosis: Coding.FromStrict({
+  EncounterReasonValueSet_HypoglossofacialAnastomosis: new Coding({
     code: "867007",
     display: "Hypoglossofacial anastomosis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralSalpingectomy: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralSalpingectomy: new Coding({
     code: "86894005",
     display: "Unilateral salpingectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralTraumaticAmputationOfFootWithoutComplication: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralTraumaticAmputationOfFootWithoutComplication: new Coding({
     code: "86914005",
     display: "Unilateral traumatic amputation of foot without complication",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CarbamazepineMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_CarbamazepineMeasurement: new Coding({
     code: "870006",
     display: "Carbamazepine measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralAdrenalectomy: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralAdrenalectomy: new Coding({
     code: "87246008",
     display: "Unilateral adrenalectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathFromOverwork: Coding.FromStrict({
+  EncounterReasonValueSet_DeathFromOverwork: new Coding({
     code: "87281005",
     display: "Death from overwork",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DeathCauseUnknown: Coding.FromStrict({
+  EncounterReasonValueSet_DeathCauseUnknown: new Coding({
     code: "87309006",
     display: "Death - cause unknown",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AngiographyOfLowerExtremityArteriesUnilateral: Coding.FromStrict({
+  EncounterReasonValueSet_AngiographyOfLowerExtremityArteriesUnilateral: new Coding({
     code: "87351004",
     display: "Angiography of lower extremity arteries, unilateral",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Earthquake: Coding.FromStrict({
+  EncounterReasonValueSet_Earthquake: new Coding({
     code: "8766005",
     display: "Earthquake",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SpecialBloodCoagulationTestExplainByReport: Coding.FromStrict({
+  EncounterReasonValueSet_SpecialBloodCoagulationTestExplainByReport: new Coding({
     code: "879007",
     display: "Special blood coagulation test, explain by report",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ContactWithPlantSpines: Coding.FromStrict({
+  EncounterReasonValueSet_ContactWithPlantSpines: new Coding({
     code: "88051009",
     display: "Contact with plant spines",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SeparationOfCiliaryBody: Coding.FromStrict({
+  EncounterReasonValueSet_SeparationOfCiliaryBody: new Coding({
     code: "881009",
     display: "Separation of ciliary body",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralTraumaticAmputationOfLegAtORAboveKneeWithoutComplication: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralTraumaticAmputationOfLegAtORAboveKneeWithoutComplication: new Coding({
     code: "88500006",
     display: "Unilateral traumatic amputation of leg at OR above knee without complication",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Tornado: Coding.FromStrict({
+  EncounterReasonValueSet_Tornado: new Coding({
     code: "88644004",
     display: "Tornado",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_CompleteUnilateralParalysis: Coding.FromStrict({
+  EncounterReasonValueSet_CompleteUnilateralParalysis: new Coding({
     code: "88715005",
     display: "Complete unilateral paralysis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralMastectomyExtendedSimple: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralMastectomyExtendedSimple: new Coding({
     code: "88764002",
     display: "Unilateral mastectomy extended simple",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToInanimateMechanicalForce: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToInanimateMechanicalForce: new Coding({
     code: "88817006",
     display: "Exposure to inanimate mechanical force",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralNephrectomy: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralNephrectomy: new Coding({
     code: "88994001",
     display: "Unilateral nephrectomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_SuicideBySelfAdministeredDrug: Coding.FromStrict({
+  EncounterReasonValueSet_SuicideBySelfAdministeredDrug: new Coding({
     code: "891003",
     display: "Suicide by self-administered drug",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TumorAntigenMeasurement: Coding.FromStrict({
+  EncounterReasonValueSet_TumorAntigenMeasurement: new Coding({
     code: "893000",
     display: "Tumor antigen measurement",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RadicalMaxillaryAntrotomy: Coding.FromStrict({
+  EncounterReasonValueSet_RadicalMaxillaryAntrotomy: new Coding({
     code: "897004",
     display: "Radical maxillary antrotomy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_TendernessAbsent: Coding.FromStrict({
+  EncounterReasonValueSet_TendernessAbsent: new Coding({
     code: "89777000",
     display: "Tenderness absent",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnexplainedSuddenDeath: Coding.FromStrict({
+  EncounterReasonValueSet_UnexplainedSuddenDeath: new Coding({
     code: "90049009",
     display: "Unexplained sudden death",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralRecurrentFemoralHerniaWithObstructionButNoGangrene: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralRecurrentFemoralHerniaWithObstructionButNoGangrene: new Coding({
     code: "90075008",
     display: "Unilateral recurrent femoral hernia with obstruction but no gangrene",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FirstDegreeMurder: Coding.FromStrict({
+  EncounterReasonValueSet_FirstDegreeMurder: new Coding({
     code: "90097005",
     display: "First degree murder",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralRecurrentFemoralHerniaWithGangreneANDObstruction: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralRecurrentFemoralHerniaWithGangreneANDObstruction: new Coding({
     code: "90232009",
     display: "Unilateral recurrent femoral hernia with gangrene AND obstruction",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Wind: Coding.FromStrict({
+  EncounterReasonValueSet_Wind: new Coding({
     code: "90569008",
     display: "Wind",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallInBathtub: Coding.FromStrict({
+  EncounterReasonValueSet_FallInBathtub: new Coding({
     code: "90619006",
     display: "Fall in bathtub",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_FallFromWindow: Coding.FromStrict({
+  EncounterReasonValueSet_FallFromWindow: new Coding({
     code: "90639005",
     display: "Fall from window",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_Patricide: Coding.FromStrict({
+  EncounterReasonValueSet_Patricide: new Coding({
     code: "90757003",
     display: "Patricide",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AbdominalLymphangiographyUnilateral: Coding.FromStrict({
+  EncounterReasonValueSet_AbdominalLymphangiographyUnilateral: new Coding({
     code: "90881001",
     display: "Abdominal lymphangiography, unilateral",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_VolcanicEruption: Coding.FromStrict({
+  EncounterReasonValueSet_VolcanicEruption: new Coding({
     code: "90978007",
     display: "Volcanic eruption",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_MHPGMeasurementUrine: Coding.FromStrict({
+  EncounterReasonValueSet_MHPGMeasurementUrine: new Coding({
     code: "910002",
     display: "MHPG measurement, urine",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_RemovalOfSubarachnoidUreteralShunt: Coding.FromStrict({
+  EncounterReasonValueSet_RemovalOfSubarachnoidUreteralShunt: new Coding({
     code: "911003",
     display: "Removal of subarachnoid-ureteral shunt",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ChiropracticPatientEducation: Coding.FromStrict({
+  EncounterReasonValueSet_ChiropracticPatientEducation: new Coding({
     code: "913000",
     display: "Chiropractic patient education",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DiagnosticRadiographyWithContrastMediaByInjectionUnilateral: Coding.FromStrict({
+  EncounterReasonValueSet_DiagnosticRadiographyWithContrastMediaByInjectionUnilateral: new Coding({
     code: "91436001",
     display: "Diagnostic radiography with contrast media by injection, unilateral",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NeonatalDeathOfMaleWithin4WeeksUSA: Coding.FromStrict({
+  EncounterReasonValueSet_NeonatalDeathOfMaleWithin4WeeksUSA: new Coding({
     code: "91519006",
     display: "Neonatal death of male (within 4 weeks, USA)",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralTraumaticAmputationOfLegBelowKneeWithoutComplication: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralTraumaticAmputationOfLegBelowKneeWithoutComplication: new Coding({
     code: "91559009",
     display: "Unilateral traumatic amputation of leg below knee without complication",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EmbolectomyWithCatheterOfRadialArteryByArmIncision: Coding.FromStrict({
+  EncounterReasonValueSet_EmbolectomyWithCatheterOfRadialArteryByArmIncision: new Coding({
     code: "926001",
     display: "Embolectomy with catheter of radial artery by arm incision",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfBulbourethralGland: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfBulbourethralGland: new Coding({
     code: "935008",
     display: "Excision of bulbourethral gland",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_EndoscopyOfPituitaryGland: Coding.FromStrict({
+  EncounterReasonValueSet_EndoscopyOfPituitaryGland: new Coding({
     code: "941001",
     display: "Endoscopy of pituitary gland",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExcisionOfTibiaAndFibulaForGraft: Coding.FromStrict({
+  EncounterReasonValueSet_ExcisionOfTibiaAndFibulaForGraft: new Coding({
     code: "945005",
     display: "Excision of tibia and fibula for graft",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_PhlebectomyOfIntracranialVaricoseVein: Coding.FromStrict({
+  EncounterReasonValueSet_PhlebectomyOfIntracranialVaricoseVein: new Coding({
     code: "948007",
     display: "Phlebectomy of intracranial varicose vein",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UltrasonicGuidanceForEndomyocardialBiopsy: Coding.FromStrict({
+  EncounterReasonValueSet_UltrasonicGuidanceForEndomyocardialBiopsy: new Coding({
     code: "951000",
     display: "Ultrasonic guidance for endomyocardial biopsy",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralCartilaginousCentrumOfCervicalVertebra: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralCartilaginousCentrumOfCervicalVertebra: new Coding({
     code: "95311001",
     display: "Unilateral cartilaginous centrum of cervical vertebra",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralCartilaginousCentrumOfLumbarVertebra: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralCartilaginousCentrumOfLumbarVertebra: new Coding({
     code: "95312008",
     display: "Unilateral cartilaginous centrum of lumbar vertebra",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralCartilaginousCentrumOfSacralVertebra: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralCartilaginousCentrumOfSacralVertebra: new Coding({
     code: "95313003",
     display: "Unilateral cartilaginous centrum of sacral vertebra",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralCartilaginousCentrumOfThoracicVertebra: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralCartilaginousCentrumOfThoracicVertebra: new Coding({
     code: "95314009",
     display: "Unilateral cartilaginous centrum of thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AnesthesiaForProcedureOnThoracicEsophagus: Coding.FromStrict({
+  EncounterReasonValueSet_AnesthesiaForProcedureOnThoracicEsophagus: new Coding({
     code: "956005",
     display: "Anesthesia for procedure on thoracic esophagus",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralFacialParesis: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralFacialParesis: new Coding({
     code: "95667004",
     display: "Unilateral facial paresis",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralSensoryLossOfFaceAndTrunkOppositeSides: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralSensoryLossOfFaceAndTrunkOppositeSides: new Coding({
     code: "95672008",
     display: "Unilateral sensory loss of face and trunk, opposite sides",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralCataract: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralCataract: new Coding({
     code: "95721006",
     display: "Unilateral cataract",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_UnilateralHearingLoss: Coding.FromStrict({
+  EncounterReasonValueSet_UnilateralHearingLoss: new Coding({
     code: "95819006",
     display: "Unilateral hearing loss",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToExtremeTemperatureNonOccupational: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToExtremeTemperatureNonOccupational: new Coding({
     code: "95866005",
     display: "Exposure to extreme temperature, non-occupational",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToMercury: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToMercury: new Coding({
     code: "95871003",
     display: "Exposure to mercury",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ExposureToCarbonMonoxide: Coding.FromStrict({
+  EncounterReasonValueSet_ExposureToCarbonMonoxide: new Coding({
     code: "95875007",
     display: "Exposure to carbon monoxide",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_HomicideByOverkill: Coding.FromStrict({
+  EncounterReasonValueSet_HomicideByOverkill: new Coding({
     code: "95920001",
     display: "Homicide by overkill",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_AbuseOfElderlyPerson: Coding.FromStrict({
+  EncounterReasonValueSet_AbuseOfElderlyPerson: new Coding({
     code: "95921002",
     display: "Abuse of elderly person",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ChildSexAbuse: Coding.FromStrict({
+  EncounterReasonValueSet_ChildSexAbuse: new Coding({
     code: "95922009",
     display: "Child sex abuse",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_DrugTreatmentEducation: Coding.FromStrict({
+  EncounterReasonValueSet_DrugTreatmentEducation: new Coding({
     code: "967006",
     display: "Drug treatment education",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_IncisionAndExplorationOfLarynx: Coding.FromStrict({
+  EncounterReasonValueSet_IncisionAndExplorationOfLarynx: new Coding({
     code: "969009",
     display: "Incision and exploration of larynx",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_ProstheticConstructionAndFitting: Coding.FromStrict({
+  EncounterReasonValueSet_ProstheticConstructionAndFitting: new Coding({
     code: "971009",
     display: "Prosthetic construction and fitting",
     system: "http://snomed.info/sct"
   }),
-  EncounterReasonValueSet_NaturalDeathWithUnknownCause: Coding.FromStrict({
+  EncounterReasonValueSet_NaturalDeathWithUnknownCause: new Coding({
     code: "9855000",
     display: "Natural death with unknown cause",
     system: "http://snomed.info/sct"

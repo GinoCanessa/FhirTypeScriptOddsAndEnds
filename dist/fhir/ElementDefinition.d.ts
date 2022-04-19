@@ -1360,11 +1360,11 @@ export declare class ElementDefinitionSlicingDiscriminator extends fhir.FhirElem
     /**
      * Check if the current ElementDefinitionSlicingDiscriminator contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ElementDefinitionSlicingDiscriminator from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IElementDefinitionSlicingDiscriminator): ElementDefinitionSlicingDiscriminator;
+    static fromStrict(source: fhir.IElementDefinitionSlicingDiscriminator): ElementDefinitionSlicingDiscriminator;
 }
 /**
  * The first element in the sequence, the one that carries the slicing, is the definition that applies to all the slices. This is based on the unconstrained element, but can apply any constraints as appropriate. This may include the common constraints on the children of the element.
@@ -1396,11 +1396,11 @@ export declare class ElementDefinitionSlicing extends fhir.FhirElement implement
     /**
      * Check if the current ElementDefinitionSlicing contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ElementDefinitionSlicing from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IElementDefinitionSlicing): ElementDefinitionSlicing;
+    static fromStrict(source: fhir.IElementDefinitionSlicing): ElementDefinitionSlicing;
 }
 /**
  * The base information does not carry any information that could not be determined from the path and related profiles, but making this determination requires both that the related profiles are available, and that the algorithm to determine them be available. For tooling simplicity, the base information must always be populated in element definitions in snap shots, even if it is the same.
@@ -1428,11 +1428,11 @@ export declare class ElementDefinitionBase extends fhir.FhirElement implements f
     /**
      * Check if the current ElementDefinitionBase contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ElementDefinitionBase from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IElementDefinitionBase): ElementDefinitionBase;
+    static fromStrict(source: fhir.IElementDefinitionBase): ElementDefinitionBase;
 }
 /**
  * The Type of the element can be left blank in a differential constraint, in which case the type is inherited from the resource. Abstract types are not permitted to appear as a type when multiple types are listed.  (I.e. Abstract types cannot be part of a choice).
@@ -1470,11 +1470,11 @@ export declare class ElementDefinitionType extends fhir.FhirElement implements f
     /**
      * Check if the current ElementDefinitionType contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ElementDefinitionType from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IElementDefinitionType): ElementDefinitionType;
+    static fromStrict(source: fhir.IElementDefinitionType): ElementDefinitionType;
 }
 /**
  * Examples will most commonly be present for data where it's not implicitly obvious from either the data type or value set what the values might be.  (I.e. Example values for dates or quantities would generally be unnecessary.)  If the example value is fully populated, the publication tool can generate an instance automatically.
@@ -1711,11 +1711,11 @@ export declare class ElementDefinitionExample extends fhir.FhirElement implement
     /**
      * Check if the current ElementDefinitionExample contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ElementDefinitionExample from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IElementDefinitionExample): ElementDefinitionExample;
+    static fromStrict(source: fhir.IElementDefinitionExample): ElementDefinitionExample;
 }
 /**
  * Constraints should be declared on the "context" element - the lowest element in the hierarchy that is common to all nodes referenced by the constraint.
@@ -1763,11 +1763,11 @@ export declare class ElementDefinitionConstraint extends fhir.FhirElement implem
     /**
      * Check if the current ElementDefinitionConstraint contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ElementDefinitionConstraint from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IElementDefinitionConstraint): ElementDefinitionConstraint;
+    static fromStrict(source: fhir.IElementDefinitionConstraint): ElementDefinitionConstraint;
 }
 /**
  * For a CodeableConcept, when no codes are allowed - only text, use a binding of strength "required" with a description explaining that no coded values are allowed and what sort of information to put in the "text" element.
@@ -1795,11 +1795,11 @@ export declare class ElementDefinitionBinding extends fhir.FhirElement implement
     /**
      * Check if the current ElementDefinitionBinding contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ElementDefinitionBinding from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IElementDefinitionBinding): ElementDefinitionBinding;
+    static fromStrict(source: fhir.IElementDefinitionBinding): ElementDefinitionBinding;
 }
 /**
  * Mappings are not necessarily specific enough for safe translation.
@@ -1832,11 +1832,11 @@ export declare class ElementDefinitionMapping extends fhir.FhirElement implement
     /**
      * Check if the current ElementDefinitionMapping contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ElementDefinitionMapping from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IElementDefinitionMapping): ElementDefinitionMapping;
+    static fromStrict(source: fhir.IElementDefinitionMapping): ElementDefinitionMapping;
 }
 /**
  * Captures constraints on each element within the resource, profile, or extension.
@@ -2781,11 +2781,11 @@ export declare class ElementDefinition extends fhir.BackboneElement implements f
     /**
      * Check if the current ElementDefinition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ElementDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IElementDefinition): ElementDefinition;
+    static fromStrict(source: fhir.IElementDefinition): ElementDefinition;
 }
 /**
  * Code Values for the ElementDefinition.slicing.discriminator.type field

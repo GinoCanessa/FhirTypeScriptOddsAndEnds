@@ -13,7 +13,7 @@ export const ContractAssetcontextValueSet = {
     /**
      * To be completed
      */
-    contract_assetcontext_Custodian: Coding.FromStrict({
+    contract_assetcontext_Custodian: new Coding({
         code: "custodian",
         display: "Custodian",
         system: "http://hl7.org/fhir/contract-asset-context"

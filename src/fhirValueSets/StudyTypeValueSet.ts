@@ -13,7 +13,7 @@ export const StudyTypeValueSet = {
   /**
    * case-control study.
    */
-  study_type_CaseControlStudy: Coding.FromStrict({
+  study_type_CaseControlStudy: new Coding({
     code: "case-control",
     display: "case-control study",
     system: "http://terminology.hl7.org/CodeSystem/study-type"
@@ -21,7 +21,7 @@ export const StudyTypeValueSet = {
   /**
    * a single case report.
    */
-  study_type_CaseReport: Coding.FromStrict({
+  study_type_CaseReport: new Coding({
     code: "case-report",
     display: "case report",
     system: "http://terminology.hl7.org/CodeSystem/study-type"
@@ -29,7 +29,7 @@ export const StudyTypeValueSet = {
   /**
    * controlled (but not randomized) trial.
    */
-  study_type_ControlledTrialNonRandomized: Coding.FromStrict({
+  study_type_ControlledTrialNonRandomized: new Coding({
     code: "CCT",
     display: "controlled trial (non-randomized)",
     system: "http://terminology.hl7.org/CodeSystem/study-type"
@@ -37,7 +37,7 @@ export const StudyTypeValueSet = {
   /**
    * observational study comparing cohorts.
    */
-  study_type_ComparativeCohortStudy: Coding.FromStrict({
+  study_type_ComparativeCohortStudy: new Coding({
     code: "cohort",
     display: "comparative cohort study",
     system: "http://terminology.hl7.org/CodeSystem/study-type"
@@ -45,7 +45,7 @@ export const StudyTypeValueSet = {
   /**
    * a combination of 1 or more types of studies.
    */
-  study_type_MixedMethods: Coding.FromStrict({
+  study_type_MixedMethods: new Coding({
     code: "mixed",
     display: "mixed methods",
     system: "http://terminology.hl7.org/CodeSystem/study-type"
@@ -53,7 +53,7 @@ export const StudyTypeValueSet = {
   /**
    * randomized controlled trial.
    */
-  study_type_RandomizedTrial: Coding.FromStrict({
+  study_type_RandomizedTrial: new Coding({
     code: "RCT",
     display: "randomized trial",
     system: "http://terminology.hl7.org/CodeSystem/study-type"
@@ -61,7 +61,7 @@ export const StudyTypeValueSet = {
   /**
    * uncontrolled cohort or case series.
    */
-  study_type_UncontrolledCohortOrCaseSeries: Coding.FromStrict({
+  study_type_UncontrolledCohortOrCaseSeries: new Coding({
     code: "series",
     display: "uncontrolled cohort or case series",
     system: "http://terminology.hl7.org/CodeSystem/study-type"

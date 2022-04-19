@@ -215,18 +215,18 @@ export class ChargeItemDefinitionApplicability extends fhir.BackboneElement impl
   /**
    * Check if the current ChargeItemDefinitionApplicability contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ChargeItemDefinitionApplicability from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IChargeItemDefinitionApplicability):ChargeItemDefinitionApplicability {
+  static override fromStrict(source:fhir.IChargeItemDefinitionApplicability):ChargeItemDefinitionApplicability {
     var dest:ChargeItemDefinitionApplicability = new ChargeItemDefinitionApplicability(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ChargeItemDefinitionApplicability is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -270,19 +270,19 @@ export class ChargeItemDefinitionPropertyGroupPriceComponent extends fhir.Backbo
   /**
    * Check if the current ChargeItemDefinitionPropertyGroupPriceComponent contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ChargeItemDefinitionPropertyGroupPriceComponent from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IChargeItemDefinitionPropertyGroupPriceComponent):ChargeItemDefinitionPropertyGroupPriceComponent {
+  static override fromStrict(source:fhir.IChargeItemDefinitionPropertyGroupPriceComponent):ChargeItemDefinitionPropertyGroupPriceComponent {
     var dest:ChargeItemDefinitionPropertyGroupPriceComponent = new ChargeItemDefinitionPropertyGroupPriceComponent(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ChargeItemDefinitionPropertyGroupPriceComponent is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -310,18 +310,18 @@ export class ChargeItemDefinitionPropertyGroup extends fhir.BackboneElement impl
   /**
    * Check if the current ChargeItemDefinitionPropertyGroup contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ChargeItemDefinitionPropertyGroup from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IChargeItemDefinitionPropertyGroup):ChargeItemDefinitionPropertyGroup {
+  static override fromStrict(source:fhir.IChargeItemDefinitionPropertyGroup):ChargeItemDefinitionPropertyGroup {
     var dest:ChargeItemDefinitionPropertyGroup = new ChargeItemDefinitionPropertyGroup(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ChargeItemDefinitionPropertyGroup is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -493,20 +493,20 @@ export class ChargeItemDefinition extends fhir.DomainResource implements fhir.IC
   /**
    * Check if the current ChargeItemDefinition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["url"] === undefined) { missingElements.push("url"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ChargeItemDefinition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IChargeItemDefinition):ChargeItemDefinition {
+  static override fromStrict(source:fhir.IChargeItemDefinition):ChargeItemDefinition {
     var dest:ChargeItemDefinition = new ChargeItemDefinition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ChargeItemDefinition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

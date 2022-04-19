@@ -85,11 +85,11 @@ export declare class ParameterDefinition extends fhir.FhirElement implements fhi
     /**
      * Check if the current ParameterDefinition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ParameterDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IParameterDefinition): ParameterDefinition;
+    static fromStrict(source: fhir.IParameterDefinition): ParameterDefinition;
 }
 /**
  * Code Values for the ParameterDefinition.use field

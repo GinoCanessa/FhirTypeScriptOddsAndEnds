@@ -330,11 +330,11 @@ export declare class ExampleScenarioActor extends fhir.BackboneElement implement
     /**
      * Check if the current ExampleScenarioActor contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExampleScenarioActor from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExampleScenarioActor): ExampleScenarioActor;
+    static fromStrict(source: fhir.IExampleScenarioActor): ExampleScenarioActor;
 }
 /**
  * A specific version of the resource.
@@ -357,11 +357,11 @@ export declare class ExampleScenarioInstanceVersion extends fhir.BackboneElement
     /**
      * Check if the current ExampleScenarioInstanceVersion contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExampleScenarioInstanceVersion from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExampleScenarioInstanceVersion): ExampleScenarioInstanceVersion;
+    static fromStrict(source: fhir.IExampleScenarioInstanceVersion): ExampleScenarioInstanceVersion;
 }
 /**
  * Resources contained in the instance (e.g. the observations contained in a bundle).
@@ -384,11 +384,11 @@ export declare class ExampleScenarioInstanceContainedInstance extends fhir.Backb
     /**
      * Check if the current ExampleScenarioInstanceContainedInstance contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExampleScenarioInstanceContainedInstance from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExampleScenarioInstanceContainedInstance): ExampleScenarioInstanceContainedInstance;
+    static fromStrict(source: fhir.IExampleScenarioInstanceContainedInstance): ExampleScenarioInstanceContainedInstance;
 }
 /**
  * Each resource and each version that is present in the workflow.
@@ -429,11 +429,11 @@ export declare class ExampleScenarioInstance extends fhir.BackboneElement implem
     /**
      * Check if the current ExampleScenarioInstance contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExampleScenarioInstance from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExampleScenarioInstance): ExampleScenarioInstance;
+    static fromStrict(source: fhir.IExampleScenarioInstance): ExampleScenarioInstance;
 }
 /**
  * Each interaction or action.
@@ -494,11 +494,11 @@ export declare class ExampleScenarioProcessStepOperation extends fhir.BackboneEl
     /**
      * Check if the current ExampleScenarioProcessStepOperation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExampleScenarioProcessStepOperation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExampleScenarioProcessStepOperation): ExampleScenarioProcessStepOperation;
+    static fromStrict(source: fhir.IExampleScenarioProcessStepOperation): ExampleScenarioProcessStepOperation;
 }
 /**
  * Indicates an alternative step that can be taken instead of the operations on the base step in exceptional/atypical circumstances.
@@ -525,11 +525,11 @@ export declare class ExampleScenarioProcessStepAlternative extends fhir.Backbone
     /**
      * Check if the current ExampleScenarioProcessStepAlternative contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExampleScenarioProcessStepAlternative from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExampleScenarioProcessStepAlternative): ExampleScenarioProcessStepAlternative;
+    static fromStrict(source: fhir.IExampleScenarioProcessStepAlternative): ExampleScenarioProcessStepAlternative;
 }
 /**
  * Each step of the process.
@@ -559,11 +559,11 @@ export declare class ExampleScenarioProcessStep extends fhir.BackboneElement imp
     /**
      * Check if the current ExampleScenarioProcessStep contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExampleScenarioProcessStep from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExampleScenarioProcessStep): ExampleScenarioProcessStep;
+    static fromStrict(source: fhir.IExampleScenarioProcessStep): ExampleScenarioProcessStep;
 }
 /**
  * Each major process - a group of operations.
@@ -600,11 +600,11 @@ export declare class ExampleScenarioProcess extends fhir.BackboneElement impleme
     /**
      * Check if the current ExampleScenarioProcess contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExampleScenarioProcess from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExampleScenarioProcess): ExampleScenarioProcess;
+    static fromStrict(source: fhir.IExampleScenarioProcess): ExampleScenarioProcess;
 }
 /**
  * Example of workflow instance.
@@ -701,11 +701,11 @@ export declare class ExampleScenario extends fhir.DomainResource implements fhir
     /**
      * Check if the current ExampleScenario contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExampleScenario from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExampleScenario): ExampleScenario;
+    static fromStrict(source: fhir.IExampleScenario): ExampleScenario;
 }
 /**
  * Code Values for the ExampleScenario.actor.type field

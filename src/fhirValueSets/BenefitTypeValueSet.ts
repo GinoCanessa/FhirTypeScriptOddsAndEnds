@@ -13,7 +13,7 @@ export const BenefitTypeValueSet = {
   /**
    * Maximum benefit allowable.
    */
-  benefit_type_Benefit: Coding.FromStrict({
+  benefit_type_Benefit: new Coding({
     code: "benefit",
     display: "Benefit",
     system: "http://terminology.hl7.org/CodeSystem/benefit-type"
@@ -21,7 +21,7 @@ export const BenefitTypeValueSet = {
   /**
    * Copayment per service
    */
-  benefit_type_CopaymentPerService: Coding.FromStrict({
+  benefit_type_CopaymentPerService: new Coding({
     code: "copay",
     display: "Copayment per service",
     system: "http://terminology.hl7.org/CodeSystem/benefit-type"
@@ -29,7 +29,7 @@ export const BenefitTypeValueSet = {
   /**
    * Copayment maximum per service
    */
-  benefit_type_CopaymentMaximumPerService: Coding.FromStrict({
+  benefit_type_CopaymentMaximumPerService: new Coding({
     code: "copay-maximum",
     display: "Copayment maximum per service",
     system: "http://terminology.hl7.org/CodeSystem/benefit-type"
@@ -37,7 +37,7 @@ export const BenefitTypeValueSet = {
   /**
    * Copayment percentage per service
    */
-  benefit_type_CopaymentPercentPerService: Coding.FromStrict({
+  benefit_type_CopaymentPercentPerService: new Coding({
     code: "copay-percent",
     display: "Copayment Percent per service",
     system: "http://terminology.hl7.org/CodeSystem/benefit-type"
@@ -45,7 +45,7 @@ export const BenefitTypeValueSet = {
   /**
    * Cost to be incurred before benefits are applied
    */
-  benefit_type_Deductible: Coding.FromStrict({
+  benefit_type_Deductible: new Coding({
     code: "deductible",
     display: "Deductible",
     system: "http://terminology.hl7.org/CodeSystem/benefit-type"
@@ -53,7 +53,7 @@ export const BenefitTypeValueSet = {
   /**
    * Medical Primary Health Coverage
    */
-  benefit_type_MedicalPrimaryHealthCoverage: Coding.FromStrict({
+  benefit_type_MedicalPrimaryHealthCoverage: new Coding({
     code: "medical-primarycare",
     display: "Medical Primary Health Coverage",
     system: "http://terminology.hl7.org/CodeSystem/benefit-type"
@@ -61,7 +61,7 @@ export const BenefitTypeValueSet = {
   /**
    * Pharmacy Dispense Coverage
    */
-  benefit_type_PharmacyDispenseCoverage: Coding.FromStrict({
+  benefit_type_PharmacyDispenseCoverage: new Coding({
     code: "pharmacy-dispense",
     display: "Pharmacy Dispense Coverage",
     system: "http://terminology.hl7.org/CodeSystem/benefit-type"
@@ -69,7 +69,7 @@ export const BenefitTypeValueSet = {
   /**
    * Type of room
    */
-  benefit_type_Room: Coding.FromStrict({
+  benefit_type_Room: new Coding({
     code: "room",
     display: "Room",
     system: "http://terminology.hl7.org/CodeSystem/benefit-type"
@@ -77,7 +77,7 @@ export const BenefitTypeValueSet = {
   /**
    * Contact Lenses
    */
-  benefit_type_VisionContactsCoverage: Coding.FromStrict({
+  benefit_type_VisionContactsCoverage: new Coding({
     code: "vision-contacts",
     display: "Vision Contacts Coverage",
     system: "http://terminology.hl7.org/CodeSystem/benefit-type"
@@ -85,7 +85,7 @@ export const BenefitTypeValueSet = {
   /**
    * Vision Exam
    */
-  benefit_type_VisionExam: Coding.FromStrict({
+  benefit_type_VisionExam: new Coding({
     code: "vision-exam",
     display: "Vision Exam",
     system: "http://terminology.hl7.org/CodeSystem/benefit-type"
@@ -93,7 +93,7 @@ export const BenefitTypeValueSet = {
   /**
    * Frames and lenses
    */
-  benefit_type_VisionGlasses: Coding.FromStrict({
+  benefit_type_VisionGlasses: new Coding({
     code: "vision-glasses",
     display: "Vision Glasses",
     system: "http://terminology.hl7.org/CodeSystem/benefit-type"
@@ -101,7 +101,7 @@ export const BenefitTypeValueSet = {
   /**
    * Service visit
    */
-  benefit_type_Visit: Coding.FromStrict({
+  benefit_type_Visit: new Coding({
     code: "visit",
     display: "Visit",
     system: "http://terminology.hl7.org/CodeSystem/benefit-type"

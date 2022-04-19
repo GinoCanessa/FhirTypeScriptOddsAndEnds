@@ -13,7 +13,7 @@ export const GuidanceResponseStatusValueSet = {
   /**
    * The request was processed successfully, but more data may result in a more complete evaluation.
    */
-  guidance_response_status_DataRequested: Coding.FromStrict({
+  guidance_response_status_DataRequested: new Coding({
     code: "data-requested",
     display: "Data Requested",
     system: "http://hl7.org/fhir/guidance-response-status"
@@ -21,7 +21,7 @@ export const GuidanceResponseStatusValueSet = {
   /**
    * The request was processed, but more data is required to complete the evaluation.
    */
-  guidance_response_status_DataRequired: Coding.FromStrict({
+  guidance_response_status_DataRequired: new Coding({
     code: "data-required",
     display: "Data Required",
     system: "http://hl7.org/fhir/guidance-response-status"
@@ -29,7 +29,7 @@ export const GuidanceResponseStatusValueSet = {
   /**
    * The response was entered in error.
    */
-  guidance_response_status_EnteredInError: Coding.FromStrict({
+  guidance_response_status_EnteredInError: new Coding({
     code: "entered-in-error",
     display: "Entered In Error",
     system: "http://hl7.org/fhir/guidance-response-status"
@@ -37,7 +37,7 @@ export const GuidanceResponseStatusValueSet = {
   /**
    * The request was not processed successfully.
    */
-  guidance_response_status_Failure: Coding.FromStrict({
+  guidance_response_status_Failure: new Coding({
     code: "failure",
     display: "Failure",
     system: "http://hl7.org/fhir/guidance-response-status"
@@ -45,7 +45,7 @@ export const GuidanceResponseStatusValueSet = {
   /**
    * The request is currently being processed.
    */
-  guidance_response_status_InProgress: Coding.FromStrict({
+  guidance_response_status_InProgress: new Coding({
     code: "in-progress",
     display: "In Progress",
     system: "http://hl7.org/fhir/guidance-response-status"
@@ -53,7 +53,7 @@ export const GuidanceResponseStatusValueSet = {
   /**
    * The request was processed successfully.
    */
-  guidance_response_status_Success: Coding.FromStrict({
+  guidance_response_status_Success: new Coding({
     code: "success",
     display: "Success",
     system: "http://hl7.org/fhir/guidance-response-status"

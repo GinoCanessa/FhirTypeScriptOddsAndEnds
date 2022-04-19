@@ -176,11 +176,11 @@ export declare class AllergyIntoleranceReaction extends fhir.BackboneElement imp
     /**
      * Check if the current AllergyIntoleranceReaction contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a AllergyIntoleranceReaction from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IAllergyIntoleranceReaction): AllergyIntoleranceReaction;
+    static fromStrict(source: fhir.IAllergyIntoleranceReaction): AllergyIntoleranceReaction;
 }
 /**
  * Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.
@@ -287,11 +287,11 @@ export declare class AllergyIntolerance extends fhir.DomainResource implements f
     /**
      * Check if the current AllergyIntolerance contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a AllergyIntolerance from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IAllergyIntolerance): AllergyIntolerance;
+    static fromStrict(source: fhir.IAllergyIntolerance): AllergyIntolerance;
 }
 /**
  * Code Values for the AllergyIntolerance.reaction.severity field

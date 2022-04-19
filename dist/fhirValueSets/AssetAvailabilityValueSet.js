@@ -13,7 +13,7 @@ export const AssetAvailabilityValueSet = {
     /**
      * To be completed
      */
-    asset_availability_Lease: Coding.FromStrict({
+    asset_availability_Lease: new Coding({
         code: "lease",
         display: "Lease",
         system: "http://hl7.org/fhir/asset-availability"

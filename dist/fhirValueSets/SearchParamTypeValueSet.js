@@ -13,7 +13,7 @@ export const SearchParamTypeValueSet = {
     /**
      * A composite search parameter that combines a search on two values together.
      */
-    search_param_type_Composite: Coding.FromStrict({
+    search_param_type_Composite: new Coding({
         code: "composite",
         display: "Composite",
         system: "http://hl7.org/fhir/search-param-type"
@@ -21,7 +21,7 @@ export const SearchParamTypeValueSet = {
     /**
      * Search parameter is on a date/time. The date format is the standard XML format, though other formats may be supported.
      */
-    search_param_type_DateDateTime: Coding.FromStrict({
+    search_param_type_DateDateTime: new Coding({
         code: "date",
         display: "Date/DateTime",
         system: "http://hl7.org/fhir/search-param-type"
@@ -29,7 +29,7 @@ export const SearchParamTypeValueSet = {
     /**
      * Search parameter SHALL be a number (a whole number, or a decimal).
      */
-    search_param_type_Number: Coding.FromStrict({
+    search_param_type_Number: new Coding({
         code: "number",
         display: "Number",
         system: "http://hl7.org/fhir/search-param-type"
@@ -37,7 +37,7 @@ export const SearchParamTypeValueSet = {
     /**
      * A search parameter that searches on a quantity.
      */
-    search_param_type_Quantity: Coding.FromStrict({
+    search_param_type_Quantity: new Coding({
         code: "quantity",
         display: "Quantity",
         system: "http://hl7.org/fhir/search-param-type"
@@ -45,7 +45,7 @@ export const SearchParamTypeValueSet = {
     /**
      * A reference to another resource (Reference or canonical).
      */
-    search_param_type_Reference: Coding.FromStrict({
+    search_param_type_Reference: new Coding({
         code: "reference",
         display: "Reference",
         system: "http://hl7.org/fhir/search-param-type"
@@ -53,7 +53,7 @@ export const SearchParamTypeValueSet = {
     /**
      * Special logic applies to this parameter per the description of the search parameter.
      */
-    search_param_type_Special: Coding.FromStrict({
+    search_param_type_Special: new Coding({
         code: "special",
         display: "Special",
         system: "http://hl7.org/fhir/search-param-type"
@@ -61,7 +61,7 @@ export const SearchParamTypeValueSet = {
     /**
      * Search parameter is a simple string, like a name part. Search is case-insensitive and accent-insensitive. May match just the start of a string. String parameters may contain spaces.
      */
-    search_param_type_String: Coding.FromStrict({
+    search_param_type_String: new Coding({
         code: "string",
         display: "String",
         system: "http://hl7.org/fhir/search-param-type"
@@ -69,7 +69,7 @@ export const SearchParamTypeValueSet = {
     /**
      * Search parameter on a coded element or identifier. May be used to search through the text, display, code and code/codesystem (for codes) and label, system and key (for identifier). Its value is either a string or a pair of namespace and value, separated by a "|", depending on the modifier used.
      */
-    search_param_type_Token: Coding.FromStrict({
+    search_param_type_Token: new Coding({
         code: "token",
         display: "Token",
         system: "http://hl7.org/fhir/search-param-type"
@@ -77,7 +77,7 @@ export const SearchParamTypeValueSet = {
     /**
      * A search parameter that searches on a URI (RFC 3986).
      */
-    search_param_type_URI: Coding.FromStrict({
+    search_param_type_URI: new Coding({
         code: "uri",
         display: "URI",
         system: "http://hl7.org/fhir/search-param-type"

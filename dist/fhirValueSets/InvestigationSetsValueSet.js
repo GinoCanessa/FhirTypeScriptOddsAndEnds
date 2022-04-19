@@ -10,12 +10,12 @@ import { Coding } from '../fhir';
  * Example value set for investigation type.
  */
 export const InvestigationSetsValueSet = {
-    InvestigationSetsValueSet_HistorySymptoms: Coding.FromStrict({
+    InvestigationSetsValueSet_HistorySymptoms: new Coding({
         code: "160237006",
         display: "History/symptoms",
         system: "http://snomed.info/sct"
     }),
-    InvestigationSetsValueSet_ExaminationSigns: Coding.FromStrict({
+    InvestigationSetsValueSet_ExaminationSigns: new Coding({
         code: "271336007",
         display: "Examination / signs",
         system: "http://snomed.info/sct"

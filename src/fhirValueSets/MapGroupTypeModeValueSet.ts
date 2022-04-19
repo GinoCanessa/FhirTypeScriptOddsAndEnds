@@ -13,7 +13,7 @@ export const MapGroupTypeModeValueSet = {
   /**
    * This group is not a default group for the types.
    */
-  map_group_type_mode_NotADefault: Coding.FromStrict({
+  map_group_type_mode_NotADefault: new Coding({
     code: "none",
     display: "Not a Default",
     system: "http://hl7.org/fhir/map-group-type-mode"
@@ -21,7 +21,7 @@ export const MapGroupTypeModeValueSet = {
   /**
    * This group is a default mapping group for the specified types.
    */
-  map_group_type_mode_DefaultForTypePlusCombination: Coding.FromStrict({
+  map_group_type_mode_DefaultForTypePlusCombination: new Coding({
     code: "type-and-types",
     display: "Default for type + combination",
     system: "http://hl7.org/fhir/map-group-type-mode"
@@ -29,7 +29,7 @@ export const MapGroupTypeModeValueSet = {
   /**
    * This group is a default mapping group for the specified types and for the primary source type.
    */
-  map_group_type_mode_DefaultForTypeCombination: Coding.FromStrict({
+  map_group_type_mode_DefaultForTypeCombination: new Coding({
     code: "types",
     display: "Default for Type Combination",
     system: "http://hl7.org/fhir/map-group-type-mode"

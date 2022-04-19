@@ -65,11 +65,11 @@ export declare class Expression extends fhir.FhirElement implements fhir.IExpres
     /**
      * Check if the current Expression contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Expression from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExpression): Expression;
+    static fromStrict(source: fhir.IExpression): Expression;
 }
 /**
  * Code Values for the Expression.language field

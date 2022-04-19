@@ -107,19 +107,19 @@ export class RelatedPersonCommunication extends fhir.BackboneElement implements 
   /**
    * Check if the current RelatedPersonCommunication contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["language"] === undefined) { missingElements.push("language"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a RelatedPersonCommunication from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IRelatedPersonCommunication):RelatedPersonCommunication {
+  static override fromStrict(source:fhir.IRelatedPersonCommunication):RelatedPersonCommunication {
     var dest:RelatedPersonCommunication = new RelatedPersonCommunication(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `RelatedPersonCommunication is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -210,19 +210,19 @@ export class RelatedPerson extends fhir.DomainResource implements fhir.IRelatedP
   /**
    * Check if the current RelatedPerson contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["patient"] === undefined) { missingElements.push("patient"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a RelatedPerson from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IRelatedPerson):RelatedPerson {
+  static override fromStrict(source:fhir.IRelatedPerson):RelatedPerson {
     var dest:RelatedPerson = new RelatedPerson(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `RelatedPerson is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

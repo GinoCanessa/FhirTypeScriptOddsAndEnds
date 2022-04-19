@@ -351,11 +351,11 @@ export declare class ServiceRequest extends fhir.DomainResource implements fhir.
     /**
      * Check if the current ServiceRequest contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ServiceRequest from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IServiceRequest): ServiceRequest;
+    static fromStrict(source: fhir.IServiceRequest): ServiceRequest;
 }
 /**
  * Code Values for the ServiceRequest.intent field

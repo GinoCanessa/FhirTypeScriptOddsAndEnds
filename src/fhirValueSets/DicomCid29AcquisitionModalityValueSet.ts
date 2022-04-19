@@ -13,7 +13,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Autorefraction device
    */
-  dicom_dcim_Autorefraction: Coding.FromStrict({
+  dicom_dcim_Autorefraction: new Coding({
     code: "AR",
     display: "Autorefraction",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -21,7 +21,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Ultrasound Bone Densitometry (modality)
    */
-  dicom_dcim_UltrasoundBoneDensitometry: Coding.FromStrict({
+  dicom_dcim_UltrasoundBoneDensitometry: new Coding({
     code: "BDUS",
     display: "Ultrasound Bone Densitometry",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -29,7 +29,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Bone Mineral Densitometry by X-Ray (modality), including dual-energy X-Ray absorptiometry (DXA) and morphometric X-Ray absorptiometry (MXA)
    */
-  dicom_dcim_BoneMineralDensitometry: Coding.FromStrict({
+  dicom_dcim_BoneMineralDensitometry: new Coding({
     code: "BMD",
     display: "Bone Mineral Densitometry",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -37,7 +37,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Computed Radiography device
    */
-  dicom_dcim_ComputedRadiography: Coding.FromStrict({
+  dicom_dcim_ComputedRadiography: new Coding({
     code: "CR",
     display: "Computed Radiography",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -45,7 +45,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Computed Tomography device
    */
-  dicom_dcim_ComputedTomography: Coding.FromStrict({
+  dicom_dcim_ComputedTomography: new Coding({
     code: "CT",
     display: "Computed Tomography",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -53,7 +53,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Digital Radiography device
    */
-  dicom_dcim_DigitalRadiography: Coding.FromStrict({
+  dicom_dcim_DigitalRadiography: new Coding({
     code: "DX",
     display: "Digital Radiography",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -61,7 +61,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Electrocardiography device
    */
-  dicom_dcim_Electrocardiography: Coding.FromStrict({
+  dicom_dcim_Electrocardiography: new Coding({
     code: "ECG",
     display: "Electrocardiography",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -69,7 +69,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Cardiac Electrophysiology device
    */
-  dicom_dcim_CardiacElectrophysiology: Coding.FromStrict({
+  dicom_dcim_CardiacElectrophysiology: new Coding({
     code: "EPS",
     display: "Cardiac Electrophysiology",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -77,7 +77,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Endoscopy device
    */
-  dicom_dcim_Endoscopy: Coding.FromStrict({
+  dicom_dcim_Endoscopy: new Coding({
     code: "ES",
     display: "Endoscopy",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -85,7 +85,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * General Microscopy device
    */
-  dicom_dcim_GeneralMicroscopy: Coding.FromStrict({
+  dicom_dcim_GeneralMicroscopy: new Coding({
     code: "GM",
     display: "General Microscopy",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -93,7 +93,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Hemodynamic Waveform acquisition device
    */
-  dicom_dcim_HemodynamicWaveform: Coding.FromStrict({
+  dicom_dcim_HemodynamicWaveform: new Coding({
     code: "HD",
     display: "Hemodynamic Waveform",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -101,7 +101,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Intra-oral Radiography device
    */
-  dicom_dcim_IntraOralRadiography: Coding.FromStrict({
+  dicom_dcim_IntraOralRadiography: new Coding({
     code: "IO",
     display: "Intra-oral Radiography",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -109,7 +109,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * An acquisition device, process or method that performs intravascular optical coherence tomography
    */
-  dicom_dcim_IntravascularOpticalCoherenceTomography: Coding.FromStrict({
+  dicom_dcim_IntravascularOpticalCoherenceTomography: new Coding({
     code: "IVOCT",
     display: "Intravascular Optical Coherence Tomography",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -117,7 +117,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Intravascular Ultrasound device
    */
-  dicom_dcim_IntravascularUltrasound: Coding.FromStrict({
+  dicom_dcim_IntravascularUltrasound: new Coding({
     code: "IVUS",
     display: "Intravascular Ultrasound",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -125,7 +125,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Keratometry device
    */
-  dicom_dcim_Keratometry: Coding.FromStrict({
+  dicom_dcim_Keratometry: new Coding({
     code: "KER",
     display: "Keratometry",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -133,7 +133,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Lensometry device
    */
-  dicom_dcim_Lensometry: Coding.FromStrict({
+  dicom_dcim_Lensometry: new Coding({
     code: "LEN",
     display: "Lensometry",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -141,7 +141,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Mammography device
    */
-  dicom_dcim_Mammography: Coding.FromStrict({
+  dicom_dcim_Mammography: new Coding({
     code: "MG",
     display: "Mammography",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -149,7 +149,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Magnetic Resonance device
    */
-  dicom_dcim_MagneticResonance: Coding.FromStrict({
+  dicom_dcim_MagneticResonance: new Coding({
     code: "MR",
     display: "Magnetic Resonance",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -157,7 +157,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Nuclear Medicine device
    */
-  dicom_dcim_NuclearMedicine: Coding.FromStrict({
+  dicom_dcim_NuclearMedicine: new Coding({
     code: "NM",
     display: "Nuclear Medicine",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -165,7 +165,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Measurements of the axial length of the eye, which are done by various devices
    */
-  dicom_dcim_OphthalmicAxialMeasurements: Coding.FromStrict({
+  dicom_dcim_OphthalmicAxialMeasurements: new Coding({
     code: "OAM",
     display: "Ophthalmic Axial Measurements",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -173,7 +173,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Modality device that uses an interferometric, non-invasive optical tomographic technique to image 2D slices and 3D volumes of tissue using visible and near visible frequencies
    */
-  dicom_dcim_OpticalCoherenceTomography: Coding.FromStrict({
+  dicom_dcim_OpticalCoherenceTomography: new Coding({
     code: "OCT",
     display: "Optical Coherence Tomography",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -181,7 +181,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Ophthalmic photography modality
    */
-  dicom_dcim_OphthalmicPhotography: Coding.FromStrict({
+  dicom_dcim_OphthalmicPhotography: new Coding({
     code: "OP",
     display: "Ophthalmic photography",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -189,7 +189,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Modality device that measures corneal topography, corneal or retinal thickness, and other similar parameters that are typically displayed as maps
    */
-  dicom_dcim_OphthalmicMapping: Coding.FromStrict({
+  dicom_dcim_OphthalmicMapping: new Coding({
     code: "OPM",
     display: "Ophthalmic Mapping",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -197,7 +197,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Modality device that measures the refractive characteristics of the eye
    */
-  dicom_dcim_OphthalmicRefraction: Coding.FromStrict({
+  dicom_dcim_OphthalmicRefraction: new Coding({
     code: "OPR",
     display: "Ophthalmic Refraction",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -205,7 +205,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Tomography of the eye acquired by a modality that is based on light and optical principles. Tomography based on other principles, such as ultrasound, is excluded
    */
-  dicom_dcim_OphthalmicTomography: Coding.FromStrict({
+  dicom_dcim_OphthalmicTomography: new Coding({
     code: "OPT",
     display: "Ophthalmic Tomography",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -213,7 +213,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Modality device that measures visual fields and perform visual perimetry
    */
-  dicom_dcim_OphthalmicVisualField: Coding.FromStrict({
+  dicom_dcim_OphthalmicVisualField: new Coding({
     code: "OPV",
     display: "Ophthalmic Visual Field",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -221,7 +221,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * An acquisition device, process or method that performs optical surface scanning
    */
-  dicom_dcim_OpticalSurvaceScanner: Coding.FromStrict({
+  dicom_dcim_OpticalSurvaceScanner: new Coding({
     code: "OSS",
     display: "Optical Survace Scanner",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -229,7 +229,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Positron emission tomography (PET) device
    */
-  dicom_dcim_PositronEmissionTomography: Coding.FromStrict({
+  dicom_dcim_PositronEmissionTomography: new Coding({
     code: "PT",
     display: "Positron emission tomography",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -237,7 +237,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Panoramic X-Ray device
    */
-  dicom_dcim_PanoramicXRay: Coding.FromStrict({
+  dicom_dcim_PanoramicXRay: new Coding({
     code: "PX",
     display: "Panoramic X-Ray",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -245,7 +245,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Radiofluoroscopy device
    */
-  dicom_dcim_Radiofluoroscopy: Coding.FromStrict({
+  dicom_dcim_Radiofluoroscopy: new Coding({
     code: "RF",
     display: "Radiofluoroscopy",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -253,7 +253,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Radiographic imaging (conventional film/screen)
    */
-  dicom_dcim_RadiographicImaging: Coding.FromStrict({
+  dicom_dcim_RadiographicImaging: new Coding({
     code: "RG",
     display: "Radiographic imaging",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -261,7 +261,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Slide Microscopy
    */
-  dicom_dcim_SlideMicroscopy: Coding.FromStrict({
+  dicom_dcim_SlideMicroscopy: new Coding({
     code: "SM",
     display: "Slide Microscopy",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -269,7 +269,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Subjective Refraction device
    */
-  dicom_dcim_SubjectiveRefraction: Coding.FromStrict({
+  dicom_dcim_SubjectiveRefraction: new Coding({
     code: "SRF",
     display: "Subjective Refraction",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -277,7 +277,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Ultrasound device
    */
-  dicom_dcim_Ultrasound: Coding.FromStrict({
+  dicom_dcim_Ultrasound: new Coding({
     code: "US",
     display: "Ultrasound",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -285,7 +285,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * Visual Acuity device
    */
-  dicom_dcim_VisualAcuity: Coding.FromStrict({
+  dicom_dcim_VisualAcuity: new Coding({
     code: "VA",
     display: "Visual Acuity",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -293,7 +293,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * X-Ray Angiography device
    */
-  dicom_dcim_XRayAngiography: Coding.FromStrict({
+  dicom_dcim_XRayAngiography: new Coding({
     code: "XA",
     display: "X-Ray Angiography",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -301,7 +301,7 @@ export const DicomCid29AcquisitionModalityValueSet = {
   /**
    * External-camera Photography device
    */
-  dicom_dcim_ExternalCameraPhotography: Coding.FromStrict({
+  dicom_dcim_ExternalCameraPhotography: new Coding({
     code: "XC",
     display: "External-camera Photography",
     system: "http://dicom.nema.org/resources/ontology/DCM"

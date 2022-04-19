@@ -63,11 +63,11 @@ export declare class ContactPoint extends fhir.FhirElement implements fhir.ICont
     /**
      * Check if the current ContactPoint contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ContactPoint from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IContactPoint): ContactPoint;
+    static fromStrict(source: fhir.IContactPoint): ContactPoint;
 }
 /**
  * Code Values for the ContactPoint.system field

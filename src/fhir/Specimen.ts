@@ -232,18 +232,18 @@ export class SpecimenCollection extends fhir.BackboneElement implements fhir.ISp
   /**
    * Check if the current SpecimenCollection contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SpecimenCollection from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISpecimenCollection):SpecimenCollection {
+  static override fromStrict(source:fhir.ISpecimenCollection):SpecimenCollection {
     var dest:SpecimenCollection = new SpecimenCollection(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SpecimenCollection is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -290,18 +290,18 @@ export class SpecimenProcessing extends fhir.BackboneElement implements fhir.ISp
   /**
    * Check if the current SpecimenProcessing contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SpecimenProcessing from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISpecimenProcessing):SpecimenProcessing {
+  static override fromStrict(source:fhir.ISpecimenProcessing):SpecimenProcessing {
     var dest:SpecimenProcessing = new SpecimenProcessing(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SpecimenProcessing is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -356,18 +356,18 @@ export class SpecimenContainer extends fhir.BackboneElement implements fhir.ISpe
   /**
    * Check if the current SpecimenContainer contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SpecimenContainer from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISpecimenContainer):SpecimenContainer {
+  static override fromStrict(source:fhir.ISpecimenContainer):SpecimenContainer {
     var dest:SpecimenContainer = new SpecimenContainer(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SpecimenContainer is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -459,18 +459,18 @@ export class Specimen extends fhir.DomainResource implements fhir.ISpecimen {
   /**
    * Check if the current Specimen contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Specimen from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISpecimen):Specimen {
+  static override fromStrict(source:fhir.ISpecimen):Specimen {
     var dest:Specimen = new Specimen(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Specimen is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

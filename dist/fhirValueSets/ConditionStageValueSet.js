@@ -10,4982 +10,4982 @@ import { Coding } from '../fhir';
  * Example value set for stages of cancer and other conditions.
  */
 export const ConditionStageValueSet = {
-    ConditionStageValueSet_ClinicalStageIID: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageIID: new Coding({
         code: "112240001",
         display: "Clinical stage II D",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_LymphomaStageIII1: Coding.FromStrict({
+    ConditionStageValueSet_LymphomaStageIII1: new Coding({
         code: "112241002",
         display: "Lymphoma stage III 1",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStageI: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageI: new Coding({
         code: "13104003",
         display: "Clinical stage I",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT3: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT3: new Coding({
         code: "14410001",
         display: "Tumor stage T3",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1DistantMetastasis: Coding.FromStrict({
+    ConditionStageValueSet_PM1DistantMetastasis: new Coding({
         code: "14926007",
         display: "pM1: Distant metastasis",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_FIGOVCStageII: Coding.FromStrict({
+    ConditionStageValueSet_FIGOVCStageII: new Coding({
         code: "14927003",
         display: "FIGO VC stage II",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2Category: Coding.FromStrict({
+    ConditionStageValueSet_PN2Category: new Coding({
         code: "15076001",
         display: "pN2 category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsCervicalCancerFIGOCCStageI: Coding.FromStrict({
+    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsCervicalCancerFIGOCCStageI: new Coding({
         code: "15540006",
         display: "International Federation of Gynecology and Obstetrics cervical cancer (FIGO CC) stage I",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStageIC: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageIC: new Coding({
         code: "15542003",
         display: "Clinical stage I C",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PMXDistantMetastasisCannotBeAssessed: Coding.FromStrict({
+    ConditionStageValueSet_PMXDistantMetastasisCannotBeAssessed: new Coding({
         code: "17076002",
         display: "pMX: Distant metastasis cannot be assessed",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStageIS: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageIS: new Coding({
         code: "17691001",
         display: "Clinical stage I S",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStageIIB: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageIIB: new Coding({
         code: "17816005",
         display: "Clinical stage II B",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM0NoDistantMetastasis: Coding.FromStrict({
+    ConditionStageValueSet_PM0NoDistantMetastasis: new Coding({
         code: "19408000",
         display: "pM0: No distant metastasis",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN0Category: Coding.FromStrict({
+    ConditionStageValueSet_PN0Category: new Coding({
         code: "21917009",
         display: "pN0 category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N4Category: Coding.FromStrict({
+    ConditionStageValueSet_N4Category: new Coding({
         code: "22079002",
         display: "N4 category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsVulvarCarcinomaFIGOVCStageIII: Coding.FromStrict({
+    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsVulvarCarcinomaFIGOVCStageIII: new Coding({
         code: "22364004",
         display: "International Federation of Gynecology and Obstetrics vulvar carcinoma (FIGO VC) stage III",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT1: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT1: new Coding({
         code: "23351008",
         display: "Tumor stage T1",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsCervicalCancerFIGOCCStageIb: Coding.FromStrict({
+    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsCervicalCancerFIGOCCStageIb: new Coding({
         code: "25654007",
         display: "International Federation of Gynecology and Obstetrics cervical cancer (FIGO CC) stage Ib",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_MetastasisStageM2: Coding.FromStrict({
+    ConditionStageValueSet_MetastasisStageM2: new Coding({
         code: "258297005",
         display: "Metastasis stage M2",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_MetastasisStageM3: Coding.FromStrict({
+    ConditionStageValueSet_MetastasisStageM3: new Coding({
         code: "258298000",
         display: "Metastasis stage M3",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_MetastasisStageM4: Coding.FromStrict({
+    ConditionStageValueSet_MetastasisStageM4: new Coding({
         code: "258299008",
         display: "Metastasis stage M4",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT1a: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT1a: new Coding({
         code: "261646003",
         display: "Tumor stage T1a",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT1a1: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT1a1: new Coding({
         code: "261647007",
         display: "Tumor stage T1a1",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT1a2: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT1a2: new Coding({
         code: "261648002",
         display: "Tumor stage T1a2",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT1b: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT1b: new Coding({
         code: "261649005",
         display: "Tumor stage T1b",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT1c: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT1c: new Coding({
         code: "261650005",
         display: "Tumor stage T1c",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT2a: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT2a: new Coding({
         code: "261651009",
         display: "Tumor stage T2a",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT2b: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT2b: new Coding({
         code: "261652002",
         display: "Tumor stage T2b",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT2c: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT2c: new Coding({
         code: "261653007",
         display: "Tumor stage T2c",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT3a: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT3a: new Coding({
         code: "261654001",
         display: "Tumor stage T3a",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT3b: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT3b: new Coding({
         code: "261655000",
         display: "Tumor stage T3b",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT3bi: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT3bi: new Coding({
         code: "261656004",
         display: "Tumor stage T3bi",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT3bii: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT3bii: new Coding({
         code: "261657008",
         display: "Tumor stage T3bii",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT3c: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT3c: new Coding({
         code: "261658003",
         display: "Tumor stage T3c",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT4a: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT4a: new Coding({
         code: "261659006",
         display: "Tumor stage T4a",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT4b: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT4b: new Coding({
         code: "261660001",
         display: "Tumor stage T4b",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT4c: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT4c: new Coding({
         code: "261661002",
         display: "Tumor stage T4c",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT4d: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT4d: new Coding({
         code: "261662009",
         display: "Tumor stage T4d",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_MetastasisStageM1a: Coding.FromStrict({
+    ConditionStageValueSet_MetastasisStageM1a: new Coding({
         code: "261927002",
         display: "Metastasis stage M1a",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_MetastasisStageM1b: Coding.FromStrict({
+    ConditionStageValueSet_MetastasisStageM1b: new Coding({
         code: "261928007",
         display: "Metastasis stage M1b",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_MetastasisStageM1c: Coding.FromStrict({
+    ConditionStageValueSet_MetastasisStageM1c: new Coding({
         code: "261929004",
         display: "Metastasis stage M1c",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_NodeStageN2a: Coding.FromStrict({
+    ConditionStageValueSet_NodeStageN2a: new Coding({
         code: "261967001",
         display: "Node stage N2a",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_NodeStageN2b: Coding.FromStrict({
+    ConditionStageValueSet_NodeStageN2b: new Coding({
         code: "261968006",
         display: "Node stage N2b",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_NodeStageN2c: Coding.FromStrict({
+    ConditionStageValueSet_NodeStageN2c: new Coding({
         code: "261969003",
         display: "Node stage N2c",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_MetastasisStageMX: Coding.FromStrict({
+    ConditionStageValueSet_MetastasisStageMX: new Coding({
         code: "27167007",
         display: "Metastasis stage MX",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_NodeStageN1a: Coding.FromStrict({
+    ConditionStageValueSet_NodeStageN1a: new Coding({
         code: "277672002",
         display: "Node stage N1a",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_NodeStageN1b: Coding.FromStrict({
+    ConditionStageValueSet_NodeStageN1b: new Coding({
         code: "277674001",
         display: "Node stage N1b",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_MetastasisStagePM1: Coding.FromStrict({
+    ConditionStageValueSet_MetastasisStagePM1: new Coding({
         code: "277744001",
         display: "Metastasis stage pM1",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_NodeStageN1bi: Coding.FromStrict({
+    ConditionStageValueSet_NodeStageN1bi: new Coding({
         code: "277772008",
         display: "Node stage N1bi",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_NodeStageN1bii: Coding.FromStrict({
+    ConditionStageValueSet_NodeStageN1bii: new Coding({
         code: "277776006",
         display: "Node stage N1bii",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_NodeStageN1biii: Coding.FromStrict({
+    ConditionStageValueSet_NodeStageN1biii: new Coding({
         code: "277777002",
         display: "Node stage N1biii",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_NodeStageN1biv: Coding.FromStrict({
+    ConditionStageValueSet_NodeStageN1biv: new Coding({
         code: "277778007",
         display: "Node stage N1biv",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsEndometrialCancerFIGOECStageII: Coding.FromStrict({
+    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsEndometrialCancerFIGOECStageII: new Coding({
         code: "30382004",
         display: "International Federation of Gynecology and Obstetrics endometrial cancer (FIGO EC) stage II",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_LymphomaStageI: Coding.FromStrict({
+    ConditionStageValueSet_LymphomaStageI: new Coding({
         code: "30440004",
         display: "Lymphoma stage I",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_MetastasisStageM0: Coding.FromStrict({
+    ConditionStageValueSet_MetastasisStageM0: new Coding({
         code: "30893008",
         display: "Metastasis stage M0",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT1mic: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT1mic: new Coding({
         code: "313108002",
         display: "Tumor stage T1mic",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT1b1: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT1b1: new Coding({
         code: "313110000",
         display: "Tumor stage T1b1",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT1b2: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT1b2: new Coding({
         code: "313111001",
         display: "Tumor stage T1b2",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageTisPu: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageTisPu: new Coding({
         code: "313145008",
         display: "Tumor stage Tis pu",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageTisPd: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageTisPd: new Coding({
         code: "313146009",
         display: "Tumor stage Tis pd",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ModifiedDukesStageB1: Coding.FromStrict({
+    ConditionStageValueSet_ModifiedDukesStageB1: new Coding({
         code: "31747005",
         display: "Modified Dukes stage B1",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStageIVC: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageIVC: new Coding({
         code: "33177002",
         display: "Clinical stage IV C",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStageIIIE: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageIIIE: new Coding({
         code: "33907000",
         display: "Clinical stage III E",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsEndometrialCancerFIGOECStageIV: Coding.FromStrict({
+    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsEndometrialCancerFIGOECStageIV: new Coding({
         code: "34537009",
         display: "International Federation of Gynecology and Obstetrics endometrial cancer (FIGO EC) stage IV",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStageID: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageID: new Coding({
         code: "35440002",
         display: "Clinical stage I D",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_EpithelialOvarianTumorInternationalFederationOfGynecologyAndObstetricsStageIA: Coding.FromStrict({
+    ConditionStageValueSet_EpithelialOvarianTumorInternationalFederationOfGynecologyAndObstetricsStageIA: new Coding({
         code: "36018006",
         display: "Epithelial ovarian tumor, International Federation of Gynecology and Obstetrics stage IA",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TisCarcinomaInSituEndometriumUterineCervix: Coding.FromStrict({
+    ConditionStageValueSet_TisCarcinomaInSituEndometriumUterineCervix: new Coding({
         code: "369793000",
         display: "Tis (--): Carcinoma in situ (endometrium / uterine cervix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1ICervicalCarcinomaConfinedToUterus: Coding.FromStrict({
+    ConditionStageValueSet_T1ICervicalCarcinomaConfinedToUterus: new Coding({
         code: "369794006",
         display: "T1 (I): Cervical carcinoma confined to uterus",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1aIAInvasiveCarcinomaOfUterineCervixDiagnosedByMicroscopyOnly: Coding.FromStrict({
+    ConditionStageValueSet_T1aIAInvasiveCarcinomaOfUterineCervixDiagnosedByMicroscopyOnly: new Coding({
         code: "369795007",
         display: "T1a (IA): Invasive carcinoma of uterine cervix diagnosed by microscopy only",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1a1IA1TumorOfUterineCervixWithStromalInvasionLessThan30MmInDepthAndHorizontalSpreadLessThan70Mm: Coding.FromStrict({
+    ConditionStageValueSet_T1a1IA1TumorOfUterineCervixWithStromalInvasionLessThan30MmInDepthAndHorizontalSpreadLessThan70Mm: new Coding({
         code: "369796008",
         display: "T1a1 (IA1): Tumor of uterine cervix with stromal invasion < 3.0 mm in depth and horizontal spread < 7.0 mm",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1a2IA2TumorOfUterineCervixWithStromalInvasionGreaterThan30MmButLessThan50MmInDepthAndHorizontalSpreadLessThan70Mm: Coding.FromStrict({
+    ConditionStageValueSet_T1a2IA2TumorOfUterineCervixWithStromalInvasionGreaterThan30MmButLessThan50MmInDepthAndHorizontalSpreadLessThan70Mm: new Coding({
         code: "369797004",
         display: "T1a2 (IA2): Tumor of uterine cervix with stromal invasion > 3.0 mm but < 5.0 mm in depth and horizontal spread < 7.0 mm",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1bIBTumorOfUterineCervixWithClinicallyVisibleLesionConfinedToTheCervixOrMicroscopicLesionGreaterThanT1a2IA2: Coding.FromStrict({
+    ConditionStageValueSet_T1bIBTumorOfUterineCervixWithClinicallyVisibleLesionConfinedToTheCervixOrMicroscopicLesionGreaterThanT1a2IA2: new Coding({
         code: "369798009",
         display: "T1b (IB): Tumor of uterine cervix with clinically visible lesion confined to the cervix or microscopic lesion greater than T1a2/IA2",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1b1IB1TumorOfUterineCervixClinicallyVisibleLesionLessThan40MmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_T1b1IB1TumorOfUterineCervixClinicallyVisibleLesionLessThan40MmInGreatestDimension: new Coding({
         code: "369799001",
         display: "T1b1 (IB1): Tumor of uterine cervix, clinically visible lesion < 4.0 mm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1b2IB2TumorOfUterineCervixClinicallyVisibleLesionGreaterThan40MmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_T1b2IB2TumorOfUterineCervixClinicallyVisibleLesionGreaterThan40MmInGreatestDimension: new Coding({
         code: "369800002",
         display: "T1b2 (IB2): Tumor of uterine cervix, clinically visible lesion > 4.0 mm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2IITumorOfUterineCervixInvadesBeyondTheUterusButNotToPelvicWallOrToLowerThirdOfVagina: Coding.FromStrict({
+    ConditionStageValueSet_T2IITumorOfUterineCervixInvadesBeyondTheUterusButNotToPelvicWallOrToLowerThirdOfVagina: new Coding({
         code: "369801003",
         display: "T2 (II): Tumor of uterine cervix invades beyond the uterus but not to pelvic wall or to lower third of vagina",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2aIIATumorOfUterineCervixT2WithoutParametrialInvasion: Coding.FromStrict({
+    ConditionStageValueSet_T2aIIATumorOfUterineCervixT2WithoutParametrialInvasion: new Coding({
         code: "369802005",
         display: "T2a (IIA): Tumor of uterine cervix, T2 without parametrial invasion",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2bIIBTumorOfUterineCervixT2WithParametrialInvasion: Coding.FromStrict({
+    ConditionStageValueSet_T2bIIBTumorOfUterineCervixT2WithParametrialInvasion: new Coding({
         code: "369803000",
         display: "T2b (IIB): Tumor of uterine cervix, T2 with parametrial invasion",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3IIITumorOfUterineCervixExtendsToThePelvicWallAndOrInvolvesTheLowerThirdOfTheVaginaAndOrCausesHydronephrosisOrNonfunctioningKidney: Coding.FromStrict({
+    ConditionStageValueSet_T3IIITumorOfUterineCervixExtendsToThePelvicWallAndOrInvolvesTheLowerThirdOfTheVaginaAndOrCausesHydronephrosisOrNonfunctioningKidney: new Coding({
         code: "369804006",
         display: "T3 (III): Tumor of uterine cervix extends to the pelvic wall and/or involves the lower third of the vagina and/or causes hydronephrosis or nonfunctioning kidney",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3aIIIATumorOfUterineCervixInvolvesLowerThirdOfVaginaButNotPelvicWall: Coding.FromStrict({
+    ConditionStageValueSet_T3aIIIATumorOfUterineCervixInvolvesLowerThirdOfVaginaButNotPelvicWall: new Coding({
         code: "369805007",
         display: "T3a (IIIA): Tumor of uterine cervix involves lower third of vagina, but not pelvic wall",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4IVATumorOfUterineCervixVaginaInvadesMucosaOfBladderOrRectumAndOrExtendsBeyondTruePelvis: Coding.FromStrict({
+    ConditionStageValueSet_T4IVATumorOfUterineCervixVaginaInvadesMucosaOfBladderOrRectumAndOrExtendsBeyondTruePelvis: new Coding({
         code: "369806008",
         display: "T4 (IVA): Tumor of uterine cervix/vagina invades mucosa of bladder or rectum and/or extends beyond true pelvis",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1IEndometrialTumorConfinedToCorpusUteri: Coding.FromStrict({
+    ConditionStageValueSet_T1IEndometrialTumorConfinedToCorpusUteri: new Coding({
         code: "369807004",
         display: "T1 (I): Endometrial tumor confined to corpus uteri",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1aIATumorLimitedToEndometrium: Coding.FromStrict({
+    ConditionStageValueSet_T1aIATumorLimitedToEndometrium: new Coding({
         code: "369808009",
         display: "T1a (IA): Tumor limited to endometrium",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1bIBEndometrialTumorInvadesUpToOrLessThanOneHalfOfTheEndometrium: Coding.FromStrict({
+    ConditionStageValueSet_T1bIBEndometrialTumorInvadesUpToOrLessThanOneHalfOfTheEndometrium: new Coding({
         code: "369809001",
         display: "T1b (IB): Endometrial tumor invades up to or less than one half of the endometrium",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1cICEndometrialTumorInvadesToMoreThanOneHalfOfTheEndometrium: Coding.FromStrict({
+    ConditionStageValueSet_T1cICEndometrialTumorInvadesToMoreThanOneHalfOfTheEndometrium: new Coding({
         code: "369810006",
         display: "T1c (IC): Endometrial tumor invades to more than one half of the endometrium",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2IIEndometrialTumorInvadesCervixButDoesNotExtendBeyondUterus: Coding.FromStrict({
+    ConditionStageValueSet_T2IIEndometrialTumorInvadesCervixButDoesNotExtendBeyondUterus: new Coding({
         code: "369811005",
         display: "T2 (II): Endometrial tumor invades cervix, but does not extend beyond uterus",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2aIIAEndometrialTumorWithEndocervicalGlandularInvolvement: Coding.FromStrict({
+    ConditionStageValueSet_T2aIIAEndometrialTumorWithEndocervicalGlandularInvolvement: new Coding({
         code: "369812003",
         display: "T2a (IIA): Endometrial tumor with endocervical glandular involvement",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2bIIBEndometrialTumorWithCervicalStromalInvasion: Coding.FromStrict({
+    ConditionStageValueSet_T2bIIBEndometrialTumorWithCervicalStromalInvasion: new Coding({
         code: "369813008",
         display: "T2b (IIB): Endometrial tumor with cervical stromal invasion",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3IIIEndometrialTumorWithLocalAndOrRegionalSpreadAsSpecifiedInT3aBN1AndFIGOIIIABAndCBelowOrAdnexaDirectExtensionOrMetastasisAndOrCancerCellsInAscitesOrPeritonealWashings: Coding.FromStrict({
+    ConditionStageValueSet_T3IIIEndometrialTumorWithLocalAndOrRegionalSpreadAsSpecifiedInT3aBN1AndFIGOIIIABAndCBelowOrAdnexaDirectExtensionOrMetastasisAndOrCancerCellsInAscitesOrPeritonealWashings: new Coding({
         code: "369814002",
         display: "T3 (III): Endometrial tumor with local and/or regional spread as specified in T3a, b, N1 and FIGO IIIA, B, and C below or adnexa (direct extension or metastasis) and/or cancer cells in ascites or peritoneal washings",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3bIIIBEndometrialTumorWithVaginalInvolvementDirectExtensionOrMetastasis: Coding.FromStrict({
+    ConditionStageValueSet_T3bIIIBEndometrialTumorWithVaginalInvolvementDirectExtensionOrMetastasis: new Coding({
         code: "369815001",
         display: "T3b (IIIB): Endometrial tumor with vaginal involvement (direct extension or metastasis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4IVAEndometrialTumorInvadesBladderMucosaAndOrBowelMucosa: Coding.FromStrict({
+    ConditionStageValueSet_T4IVAEndometrialTumorInvadesBladderMucosaAndOrBowelMucosa: new Coding({
         code: "369816000",
         display: "T4 (IVA): Endometrial tumor invades bladder mucosa and/or bowel mucosa",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1ITumorConfinedToVagina: Coding.FromStrict({
+    ConditionStageValueSet_T1ITumorConfinedToVagina: new Coding({
         code: "369817009",
         display: "T1 (I): Tumor confined to vagina",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2IIVaginalTumorInvadesParavaginalTissuesButNotToPelvicWall: Coding.FromStrict({
+    ConditionStageValueSet_T2IIVaginalTumorInvadesParavaginalTissuesButNotToPelvicWall: new Coding({
         code: "369818004",
         display: "T2 (II): Vaginal tumor invades paravaginal tissues but not to pelvic wall",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3IIIVaginalTumorExtendsToPelvicWall: Coding.FromStrict({
+    ConditionStageValueSet_T3IIIVaginalTumorExtendsToPelvicWall: new Coding({
         code: "369819007",
         display: "T3 (III): Vaginal tumor extends to pelvic wall",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1ITumorLimitedToFallopianTubeS: Coding.FromStrict({
+    ConditionStageValueSet_T1ITumorLimitedToFallopianTubeS: new Coding({
         code: "369820001",
         display: "T1 (I): Tumor limited to fallopian tube(s)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1aIATumorLimitedToOneFallopianTubeWithoutPenetratingTheSerosalSurfaceNoAscites: Coding.FromStrict({
+    ConditionStageValueSet_T1aIATumorLimitedToOneFallopianTubeWithoutPenetratingTheSerosalSurfaceNoAscites: new Coding({
         code: "369821002",
         display: "T1a (IA): Tumor limited to one fallopian tube without penetrating the serosal surface, no ascites",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1bIBTumorLimitedToBothTubesWithoutPenetratingTheSerosalSurfaceNoAscites: Coding.FromStrict({
+    ConditionStageValueSet_T1bIBTumorLimitedToBothTubesWithoutPenetratingTheSerosalSurfaceNoAscites: new Coding({
         code: "369822009",
         display: "T1b (IB): Tumor limited to both tubes without penetrating the serosal surface: no ascites",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1cICTumorLimitedToOneOrBothTubeSWithExtensionIntoOrThroughTheTubalSerosaOrWithMalignantCellsInAscitesOrPeritonealWashingsFALLOPIANTUBESalpingectomy: Coding.FromStrict({
+    ConditionStageValueSet_T1cICTumorLimitedToOneOrBothTubeSWithExtensionIntoOrThroughTheTubalSerosaOrWithMalignantCellsInAscitesOrPeritonealWashingsFALLOPIANTUBESalpingectomy: new Coding({
         code: "369823004",
         display: "T1c (IC): Tumor limited to one or both tube(s) with extension into or through the tubal serosa; or with malignant cells in ascites or peritoneal washings: FALLOPIAN TUBE: Salpingectomy",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2IIFallopianTubeTumorInvolvesOneOrBothTubeSWithPelvicExtension: Coding.FromStrict({
+    ConditionStageValueSet_T2IIFallopianTubeTumorInvolvesOneOrBothTubeSWithPelvicExtension: new Coding({
         code: "369824005",
         display: "T2 (II): Fallopian tube tumor involves one or both tube(s) with pelvic extension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2aIIAFallopianTubeTumorWithExtensionAndOrMetastasisToTheUterusAndOrOvaries: Coding.FromStrict({
+    ConditionStageValueSet_T2aIIAFallopianTubeTumorWithExtensionAndOrMetastasisToTheUterusAndOrOvaries: new Coding({
         code: "369825006",
         display: "T2a (IIA): Fallopian tube tumor with extension and/or metastasis to the uterus and/or ovaries",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2bIIBFallopianTubeOvarianTumorWithExtensionToOtherPelvicStructures: Coding.FromStrict({
+    ConditionStageValueSet_T2bIIBFallopianTubeOvarianTumorWithExtensionToOtherPelvicStructures: new Coding({
         code: "369826007",
         display: "T2b (IIB): Fallopian tube/ovarian tumor with extension to other pelvic structures",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2cIICFallopianTubeOvarianTumorWithPelvicExtensionT2aOrBWithMalignantCellsInAscitesOrPeritonealWashings: Coding.FromStrict({
+    ConditionStageValueSet_T2cIICFallopianTubeOvarianTumorWithPelvicExtensionT2aOrBWithMalignantCellsInAscitesOrPeritonealWashings: new Coding({
         code: "369827003",
         display: "T2c (IIC): Fallopian tube/ovarian tumor with pelvic extension (T2a or b) with malignant cells in ascites or peritoneal washings",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3AndOrN1IIIFallopianTubeTumorInvolvesOneOrBothTubeSWithPeritonealImplantsOutsideThePelvisAndOrRegionalLymphNodeMetastasis: Coding.FromStrict({
+    ConditionStageValueSet_T3AndOrN1IIIFallopianTubeTumorInvolvesOneOrBothTubeSWithPeritonealImplantsOutsideThePelvisAndOrRegionalLymphNodeMetastasis: new Coding({
         code: "369828008",
         display: "T3 and/or N1 (III): Fallopian tube tumor involves one or both tube(s) with peritoneal implants outside the pelvis and/or regional lymph node metastasis",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3aIIIAFallopianTubeOvarianTumorWithMicroscopicPeritonealMetastasisBeyondPelvis: Coding.FromStrict({
+    ConditionStageValueSet_T3aIIIAFallopianTubeOvarianTumorWithMicroscopicPeritonealMetastasisBeyondPelvis: new Coding({
         code: "369829000",
         display: "T3a (IIIA): Fallopian tube/ovarian tumor with microscopic peritoneal metastasis beyond pelvis",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3bIIIBFallopianTubeOvarianTumorWithMacroscopicPeritonealMetastasisBeyondPelvisLessThan2CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_T3bIIIBFallopianTubeOvarianTumorWithMacroscopicPeritonealMetastasisBeyondPelvisLessThan2CmInGreatestDimension: new Coding({
         code: "369830005",
         display: "T3b (IIIB): Fallopian tube/ovarian tumor with macroscopic peritoneal metastasis beyond pelvis < 2 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3cIIICFallopianTubeOvarianTumorWithPeritonealMetastasisBeyondPelvisGreaterThan2CmInGreatestDimensionAndOrRegionalLymphNodeMetastasis: Coding.FromStrict({
+    ConditionStageValueSet_T3cIIICFallopianTubeOvarianTumorWithPeritonealMetastasisBeyondPelvisGreaterThan2CmInGreatestDimensionAndOrRegionalLymphNodeMetastasis: new Coding({
         code: "369831009",
         display: "T3c (IIIC): Fallopian tube/ovarian tumor with peritoneal metastasis beyond pelvis > 2 cm in greatest dimension and/or regional lymph node metastasis",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1ClinicallyInapparentProstateTumorNotPalpableOrVisibleByImaging: Coding.FromStrict({
+    ConditionStageValueSet_T1ClinicallyInapparentProstateTumorNotPalpableOrVisibleByImaging: new Coding({
         code: "369832002",
         display: "T1: Clinically inapparent prostate tumor not palpable or visible by imaging",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1aProstateTumorIncidentalHistologicFindingIn5PercentOrLessOfTissueResected: Coding.FromStrict({
+    ConditionStageValueSet_T1aProstateTumorIncidentalHistologicFindingIn5PercentOrLessOfTissueResected: new Coding({
         code: "369833007",
         display: "T1a: Prostate tumor incidental histologic finding in 5% or less of tissue resected",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1bProstateTumorIncidentalHistologicFindingInGreaterThan5PercentOfTissueResected: Coding.FromStrict({
+    ConditionStageValueSet_T1bProstateTumorIncidentalHistologicFindingInGreaterThan5PercentOfTissueResected: new Coding({
         code: "369834001",
         display: "T1b: Prostate tumor incidental histologic finding in > 5% of tissue resected",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1cTumorIdentifiedByNeedleBiopsyBecauseOfElevatedProstateSpecificAntigenPROSTATEBiopsyTransurethralResectionPROSTATEResection: Coding.FromStrict({
+    ConditionStageValueSet_T1cTumorIdentifiedByNeedleBiopsyBecauseOfElevatedProstateSpecificAntigenPROSTATEBiopsyTransurethralResectionPROSTATEResection: new Coding({
         code: "369835000",
         display: "T1c: Tumor identified by needle biopsy because of elevated prostate specific antigen: PROSTATE: Biopsy/transurethral resection: PROSTATE: Resection",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2aProstateTumorInvolvesOneLobe: Coding.FromStrict({
+    ConditionStageValueSet_T2aProstateTumorInvolvesOneLobe: new Coding({
         code: "369836004",
         display: "T2a: Prostate tumor involves one lobe",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3ProstateTumorExtendsThroughTheProstaticCapsule: Coding.FromStrict({
+    ConditionStageValueSet_T3ProstateTumorExtendsThroughTheProstaticCapsule: new Coding({
         code: "369837008",
         display: "T3: Prostate tumor extends through the prostatic capsule",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3aProstateTumorWithExtracapsularExtensionUnilateralOrBilateral: Coding.FromStrict({
+    ConditionStageValueSet_T3aProstateTumorWithExtracapsularExtensionUnilateralOrBilateral: new Coding({
         code: "369838003",
         display: "T3a: Prostate tumor with extracapsular extension (unilateral or bilateral)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3bProstateTumorInvadesTheSeminalVesicleS: Coding.FromStrict({
+    ConditionStageValueSet_T3bProstateTumorInvadesTheSeminalVesicleS: new Coding({
         code: "369839006",
         display: "T3b: Prostate tumor invades the seminal vesicle(s)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2AerodigestiveTractTumorCausingBoneErosionOrDestructionExceptForThePosteriorAntralWallIncludingExtensionIntoHardPalateAndOrMiddleNasalMeatus: Coding.FromStrict({
+    ConditionStageValueSet_T2AerodigestiveTractTumorCausingBoneErosionOrDestructionExceptForThePosteriorAntralWallIncludingExtensionIntoHardPalateAndOrMiddleNasalMeatus: new Coding({
         code: "369840008",
         display: "T2: Aerodigestive tract tumor causing bone erosion or destruction, except for the posterior antral wall, including extension into hard palate and/or middle nasal meatus",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1AerodigestiveTractTumorLessThan2CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_T1AerodigestiveTractTumorLessThan2CmInGreatestDimension: new Coding({
         code: "369841007",
         display: "T1: Aerodigestive tract tumor < 2 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1AerodigestiveTractTumorConfinedToEthmoidWithOrWithoutBoneErosion: Coding.FromStrict({
+    ConditionStageValueSet_T1AerodigestiveTractTumorConfinedToEthmoidWithOrWithoutBoneErosion: new Coding({
         code: "369842000",
         display: "T1: Aerodigestive tract tumor confined to ethmoid with or without bone erosion",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1AerodigestiveTractTumorConfinedToNasopharynx: Coding.FromStrict({
+    ConditionStageValueSet_T1AerodigestiveTractTumorConfinedToNasopharynx: new Coding({
         code: "369843005",
         display: "T1: Aerodigestive tract tumor confined to nasopharynx",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1TumorLimitedToOneSubsiteOfHypoPharynxAndLessThan2CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_T1TumorLimitedToOneSubsiteOfHypoPharynxAndLessThan2CmInGreatestDimension: new Coding({
         code: "369844004",
         display: "T1: Tumor limited to one subsite of hypo-pharynx and < 2 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1TumorLimitedToOneSubsiteOfSupraglottisWithNormalVocalCordMobility: Coding.FromStrict({
+    ConditionStageValueSet_T1TumorLimitedToOneSubsiteOfSupraglottisWithNormalVocalCordMobility: new Coding({
         code: "369845003",
         display: "T1: Tumor limited to one subsite of supraglottis with normal vocal cord mobility",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1TumorLimitedToSubglottis: Coding.FromStrict({
+    ConditionStageValueSet_T1TumorLimitedToSubglottis: new Coding({
         code: "369846002",
         display: "T1: Tumor limited to subglottis",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1TumorLimitedToTheAntralMucosaWithNoErosionOrDestructionOfBone: Coding.FromStrict({
+    ConditionStageValueSet_T1TumorLimitedToTheAntralMucosaWithNoErosionOrDestructionOfBone: new Coding({
         code: "369847006",
         display: "T1: Tumor limited to the antral mucosa with no erosion or destruction of bone",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1TumorLimitedToVocalCordSMayInvolveAnteriorOrPosteriorCommissureWithNormalMobility: Coding.FromStrict({
+    ConditionStageValueSet_T1TumorLimitedToVocalCordSMayInvolveAnteriorOrPosteriorCommissureWithNormalMobility: new Coding({
         code: "369848001",
         display: "T1: Tumor limited to vocal cord(s) (may involve anterior or posterior commissure) with normal mobility",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1aTumorLimitedToOneVocalCord: Coding.FromStrict({
+    ConditionStageValueSet_T1aTumorLimitedToOneVocalCord: new Coding({
         code: "369849009",
         display: "T1a: Tumor limited to one vocal cord",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1bTumorInvolvesBothVocalCords: Coding.FromStrict({
+    ConditionStageValueSet_T1bTumorInvolvesBothVocalCords: new Coding({
         code: "369850009",
         display: "T1b: Tumor involves both vocal cords",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2AerodigestiveTractTumorGreaterThan2CmButLessThan4CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_T2AerodigestiveTractTumorGreaterThan2CmButLessThan4CmInGreatestDimension: new Coding({
         code: "369851008",
         display: "T2: Aerodigestive tract tumor > 2 cm but < 4 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2AerodigestiveTractTumorGreaterThan2CmButLessThan4CmInGreatestDimensionWithoutExtraparenchymalExtension: Coding.FromStrict({
+    ConditionStageValueSet_T2AerodigestiveTractTumorGreaterThan2CmButLessThan4CmInGreatestDimensionWithoutExtraparenchymalExtension: new Coding({
         code: "369852001",
         display: "T2: Aerodigestive tract tumor > 2 cm but < 4 cm in greatest dimension without extraparenchymal extension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2AerodigestiveTractTumorExtendsIntoNasalCavity: Coding.FromStrict({
+    ConditionStageValueSet_T2AerodigestiveTractTumorExtendsIntoNasalCavity: new Coding({
         code: "369853006",
         display: "T2: Aerodigestive tract tumor extends into nasal cavity",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2AerodigestiveTractTumorExtendsToSoftTissueOfOropharynxAndOrNasalFossa: Coding.FromStrict({
+    ConditionStageValueSet_T2AerodigestiveTractTumorExtendsToSoftTissueOfOropharynxAndOrNasalFossa: new Coding({
         code: "369854000",
         display: "T2: Aerodigestive tract tumor extends to soft tissue of oropharynx and/or nasal fossa",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2AerodigestiveTractTumorExtendsToSupraglottisAndOrSubglottisAndOrWithImpairedVocalCordMobility: Coding.FromStrict({
+    ConditionStageValueSet_T2AerodigestiveTractTumorExtendsToSupraglottisAndOrSubglottisAndOrWithImpairedVocalCordMobility: new Coding({
         code: "369855004",
         display: "T2: Aerodigestive tract tumor extends to supraglottis and/or subglottis, and/or with impaired vocal cord mobility",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2AerodigestiveTractTumorExtendsToVocalCordSWithNormalOrImpairedMobility: Coding.FromStrict({
+    ConditionStageValueSet_T2AerodigestiveTractTumorExtendsToVocalCordSWithNormalOrImpairedMobility: new Coding({
         code: "369856003",
         display: "T2: Aerodigestive tract tumor extends to vocal cord(s) with normal or impaired mobility",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2AerodigestiveTractTumorInvadesMoreThanOneSubsiteOfHypopharynxOrAnAdjacentSiteOrMeasuresGreaterThan2CmButLessThan4CmInGreatestDimensionWithoutFixationOfHemilarynx: Coding.FromStrict({
+    ConditionStageValueSet_T2AerodigestiveTractTumorInvadesMoreThanOneSubsiteOfHypopharynxOrAnAdjacentSiteOrMeasuresGreaterThan2CmButLessThan4CmInGreatestDimensionWithoutFixationOfHemilarynx: new Coding({
         code: "369857007",
         display: "T2: Aerodigestive tract tumor invades more than one subsite of hypopharynx or an adjacent site, or measures > 2 cm but < 4 cm in greatest dimension, without fixation of hemilarynx",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2AerodigestiveTractTumorInvadesMucosaOfGreaterThan1AdjacentSubsiteOfSupraglottisGlottisRegionOutsideSupraglottisMucosaOfBaseOfTongueValleculaMedialWallOfPiriformSinusWithoutFixationOfLarynx: Coding.FromStrict({
+    ConditionStageValueSet_T2AerodigestiveTractTumorInvadesMucosaOfGreaterThan1AdjacentSubsiteOfSupraglottisGlottisRegionOutsideSupraglottisMucosaOfBaseOfTongueValleculaMedialWallOfPiriformSinusWithoutFixationOfLarynx: new Coding({
         code: "369858002",
         display: "T2: Aerodigestive tract tumor invades mucosa of >1 adjacent subsite of supraglottis/glottis/region outside supraglottis, (mucosa of base of tongue/vallecula/medial wall of piriform sinus) without fixation of larynx",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2aAerodigestiveTractTumorWithoutParapharyngealExtension: Coding.FromStrict({
+    ConditionStageValueSet_T2aAerodigestiveTractTumorWithoutParapharyngealExtension: new Coding({
         code: "369859005",
         display: "T2a: Aerodigestive tract tumor without parapharyngeal extension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2bAerodigestiveTractTumorWithParapharyngealExtension: Coding.FromStrict({
+    ConditionStageValueSet_T2bAerodigestiveTractTumorWithParapharyngealExtension: new Coding({
         code: "369860000",
         display: "T2b: Aerodigestive tract tumor with parapharyngeal extension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3AerodigestiveTractTumorGreaterThan4CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_T3AerodigestiveTractTumorGreaterThan4CmInGreatestDimension: new Coding({
         code: "369861001",
         display: "T3: Aerodigestive tract tumor > 4 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3AerodigestiveTractTumorExtendsToAnteriorOrbitAndOrMaxillarySinus: Coding.FromStrict({
+    ConditionStageValueSet_T3AerodigestiveTractTumorExtendsToAnteriorOrbitAndOrMaxillarySinus: new Coding({
         code: "369862008",
         display: "T3: Aerodigestive tract tumor extends to anterior orbit and/or maxillary sinus",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3AerodigestiveTractTumorHavingExtraparenchymalExtensionWithoutSeventhNerveInvolvementAndOrGreaterThan4CmButLessThan6CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_T3AerodigestiveTractTumorHavingExtraparenchymalExtensionWithoutSeventhNerveInvolvementAndOrGreaterThan4CmButLessThan6CmInGreatestDimension: new Coding({
         code: "369863003",
         display: "T3: Aerodigestive tract tumor having extraparenchymal extension without seventh nerve involvement, and/or > 4 cm but < 6 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3AerodigestiveTractTumorInvadesAnyOfTheFollowingBoneOfPosteriorWallOfMaxillarySinusSubcutaneousTissuesSkinOfCheekFloorOrMedialWallOfOrbitInfratemporalFossaPterygoidPlatesEthmoidSinuses: Coding.FromStrict({
+    ConditionStageValueSet_T3AerodigestiveTractTumorInvadesAnyOfTheFollowingBoneOfPosteriorWallOfMaxillarySinusSubcutaneousTissuesSkinOfCheekFloorOrMedialWallOfOrbitInfratemporalFossaPterygoidPlatesEthmoidSinuses: new Coding({
         code: "369864009",
         display: "T3: Aerodigestive tract tumor invades any of the following: bone of posterior wall of maxillary sinus, subcutaneous tissues, skin of cheek, floor or medial wall of orbit, infratemporal fossa, pterygoid plates, ethmoid sinuses",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3AerodigestiveTumorInvadesBonyStructuresAndOrParanasalSinuses: Coding.FromStrict({
+    ConditionStageValueSet_T3AerodigestiveTumorInvadesBonyStructuresAndOrParanasalSinuses: new Coding({
         code: "369865005",
         display: "T3: Aerodigestive tumor invades bony structures and/or paranasal sinuses",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3AerodigestiveTractTumorLimitedToLarynxWithVocalCordFixation: Coding.FromStrict({
+    ConditionStageValueSet_T3AerodigestiveTractTumorLimitedToLarynxWithVocalCordFixation: new Coding({
         code: "369866006",
         display: "T3: Aerodigestive tract tumor limited to larynx with vocal cord fixation",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3AerodigestiveTractTumorLimitedToLarynxWithVocalCordFixationAndOrInvadesAnyOfTheFollowingPostcricoidAreaPreEpiglotticTissuesDeepBaseOfTongue: Coding.FromStrict({
+    ConditionStageValueSet_T3AerodigestiveTractTumorLimitedToLarynxWithVocalCordFixationAndOrInvadesAnyOfTheFollowingPostcricoidAreaPreEpiglotticTissuesDeepBaseOfTongue: new Coding({
         code: "369867002",
         display: "T3: Aerodigestive tract tumor limited to larynx with vocal cord fixation and/or invades any of the following: postcricoid area, pre-epiglottic tissues, deep base of tongue",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3AerodigestiveTractTumorMeasuresGreaterThan4CmInGreatestDimensionOrWithFixationOfHemilarynx: Coding.FromStrict({
+    ConditionStageValueSet_T3AerodigestiveTractTumorMeasuresGreaterThan4CmInGreatestDimensionOrWithFixationOfHemilarynx: new Coding({
         code: "369868007",
         display: "T3: Aerodigestive tract tumor measures > 4 cm in greatest dimension, or with fixation of hemilarynx",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4LipTumorInvadesAdjacentStructuresCorticalBoneInferiorAlveolarNerveFloorOfMouthSkinOfFace: Coding.FromStrict({
+    ConditionStageValueSet_T4LipTumorInvadesAdjacentStructuresCorticalBoneInferiorAlveolarNerveFloorOfMouthSkinOfFace: new Coding({
         code: "369869004",
         display: "T4: Lip: Tumor invades adjacent structures (cortical bone, inferior alveolar nerve, floor of mouth, skin of face)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4OralCavityTumorInvadesAdjacentStructuresCorticalBoneDeepExtrinsicMuscleOfTongueMaxillarySinusSkin: Coding.FromStrict({
+    ConditionStageValueSet_T4OralCavityTumorInvadesAdjacentStructuresCorticalBoneDeepExtrinsicMuscleOfTongueMaxillarySinusSkin: new Coding({
         code: "369870003",
         display: "T4: Oral Cavity: Tumor invades adjacent structures (cortical bone, deep (extrinsic) muscle of tongue, maxillary sinus, skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4AerodigestiveTractTumorInvadesAdjacentStructuresPterygoidMusclesMandibleHardPalateDeepMuscleOfTongueLarynx: Coding.FromStrict({
+    ConditionStageValueSet_T4AerodigestiveTractTumorInvadesAdjacentStructuresPterygoidMusclesMandibleHardPalateDeepMuscleOfTongueLarynx: new Coding({
         code: "369871004",
         display: "T4: Aerodigestive tract tumor invades adjacent structures (pterygoid muscles, mandible, hard palate, deep muscle of tongue, larynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4AerodigestiveTractTumorInvadesAdjacentStructuresThyroidCricoidCartilageCarotidArterySoftTissuesOfNeckPrevertebralFasciaMusclesThyroidAndOrEsophagus: Coding.FromStrict({
+    ConditionStageValueSet_T4AerodigestiveTractTumorInvadesAdjacentStructuresThyroidCricoidCartilageCarotidArterySoftTissuesOfNeckPrevertebralFasciaMusclesThyroidAndOrEsophagus: new Coding({
         code: "369872006",
         display: "T4: Aerodigestive tract tumor invades adjacent structures (thyroid/cricoid cartilage, carotid artery, soft tissues of neck, prevertebral fascia/muscles, thyroid and/or esophagus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4AerodigestiveTumorInvadesBaseOfSkullSeventhNerveAndOrExceeds6CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_T4AerodigestiveTumorInvadesBaseOfSkullSeventhNerveAndOrExceeds6CmInGreatestDimension: new Coding({
         code: "369873001",
         display: "T4: Aerodigestive tumor invades base of skull, seventh nerve, and/or exceeds 6 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4AerodigestiveTractTumorInvadesOrbitalContentsBeyondTheFloorOrMedialWallIncludingApexAndOrAnyOfTheFollowingCribriformPlateBaseOfSkullNasopharynxSphenoidSinusFrontalSinus: Coding.FromStrict({
+    ConditionStageValueSet_T4AerodigestiveTractTumorInvadesOrbitalContentsBeyondTheFloorOrMedialWallIncludingApexAndOrAnyOfTheFollowingCribriformPlateBaseOfSkullNasopharynxSphenoidSinusFrontalSinus: new Coding({
         code: "369874007",
         display: "T4: Aerodigestive tract tumor invades orbital contents beyond the floor or medial wall including apex and/or any of the following: cribriform plate, base of skull, nasopharynx, sphenoid sinus, frontal sinus",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4TumorInvadesThroughCricoidOrThyroidCartilageAndOrExtendsIntoOtherTissuesBeyondTheLarynxTracheaSoftTissuesOfNeckThyroidEsophagus: Coding.FromStrict({
+    ConditionStageValueSet_T4TumorInvadesThroughCricoidOrThyroidCartilageAndOrExtendsIntoOtherTissuesBeyondTheLarynxTracheaSoftTissuesOfNeckThyroidEsophagus: new Coding({
         code: "369875008",
         display: "T4: Tumor invades through cricoid or thyroid cartilage and/or extends into other tissues beyond the larynx (trachea, soft tissues of neck, thyroid, esophagus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4TumorInvadesThroughThyroidCartilageAndOrExtendsToOtherTissuesBeyondTheLarynxTracheaSoftTissuesOfNeckPharynx: Coding.FromStrict({
+    ConditionStageValueSet_T4TumorInvadesThroughThyroidCartilageAndOrExtendsToOtherTissuesBeyondTheLarynxTracheaSoftTissuesOfNeckPharynx: new Coding({
         code: "369876009",
         display: "T4: Tumor invades through thyroid cartilage and/or extends to other tissues beyond the larynx (trachea, soft tissues of neck, pharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4TumorInvadesThroughThyroidCartilageAndOrExtendsIntoSoftTissuesOfTheNeckThyroidAndOrEsophagus: Coding.FromStrict({
+    ConditionStageValueSet_T4TumorInvadesThroughThyroidCartilageAndOrExtendsIntoSoftTissuesOfTheNeckThyroidAndOrEsophagus: new Coding({
         code: "369877000",
         display: "T4: Tumor invades through thyroid cartilage, and/or extends into soft tissues of the neck, thyroid, and/or esophagus",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4AerodigestiveTractTumorWithIntracranialExtensionAndOrInvolvementOfCranialNervesInfratemporalFossaHypopharynxOrOrbit: Coding.FromStrict({
+    ConditionStageValueSet_T4AerodigestiveTractTumorWithIntracranialExtensionAndOrInvolvementOfCranialNervesInfratemporalFossaHypopharynxOrOrbit: new Coding({
         code: "369878005",
         display: "T4: Aerodigestive tract tumor with intracranial extension and/or involvement of cranial nerves, infratemporal fossa, hypopharynx or orbit",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4AerodigestiveTractTumorWithIntracranialExtensionOrbitalExtensionIncludingApexInvolvingSphenoidAndOrFrontalSinusAndOrSkinOfNose: Coding.FromStrict({
+    ConditionStageValueSet_T4AerodigestiveTractTumorWithIntracranialExtensionOrbitalExtensionIncludingApexInvolvingSphenoidAndOrFrontalSinusAndOrSkinOfNose: new Coding({
         code: "369879002",
         display: "T4: Aerodigestive tract tumor with intracranial extension, orbital extension including apex, involving sphenoid and/or frontal sinus and/or skin of nose",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1LungTumor3CmOrLessInGreatestDimensionSurroundedByLungOrVisceralPleuraWithoutBronchoscopicEvidenceOfInvasionMoreProximalThanTheLobarBronchus: Coding.FromStrict({
+    ConditionStageValueSet_T1LungTumor3CmOrLessInGreatestDimensionSurroundedByLungOrVisceralPleuraWithoutBronchoscopicEvidenceOfInvasionMoreProximalThanTheLobarBronchus: new Coding({
         code: "369880004",
         display: "T1: Lung tumor 3 cm or less in greatest dimension, surrounded by lung or visceral pleura, without bronchoscopic evidence of invasion more proximal than the lobar bronchus",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2LungTumorWithAnyOfTheseFeaturesGreaterThan3cmInGreatestDimensionInvolvesMainBronchusGreaterThan2cmDistalToCarinaInvadesVisceralPleuraAssocWithAtelectasisObstructivePneumonitisExtendsToHilarRegionDoesNotInvolveEntireLung: Coding.FromStrict({
+    ConditionStageValueSet_T2LungTumorWithAnyOfTheseFeaturesGreaterThan3cmInGreatestDimensionInvolvesMainBronchusGreaterThan2cmDistalToCarinaInvadesVisceralPleuraAssocWithAtelectasisObstructivePneumonitisExtendsToHilarRegionDoesNotInvolveEntireLung: new Coding({
         code: "369881000",
         display: "T2:Lung tumor with any of these features:>3cm in greatest dimension, involves main bronchus >2cm distal to carina; invades visceral pleura; assoc with atelectasis/obstructive pneumonitis extends to hilar region, does not involve entire lung",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3LungTumorOfAnySizeAssociatedAtelectasisOrObstructivePneumonitisOfTheEntireLung: Coding.FromStrict({
+    ConditionStageValueSet_T3LungTumorOfAnySizeAssociatedAtelectasisOrObstructivePneumonitisOfTheEntireLung: new Coding({
         code: "369882007",
         display: "T3: Lung tumor of any size associated atelectasis or obstructive pneumonitis of the entire lung",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3LungTumorOfAnySizeInTheMainBronchusLessThan2CmDistalToTheCarinaButWithoutInvolvementOfTheCarina: Coding.FromStrict({
+    ConditionStageValueSet_T3LungTumorOfAnySizeInTheMainBronchusLessThan2CmDistalToTheCarinaButWithoutInvolvementOfTheCarina: new Coding({
         code: "369883002",
         display: "T3: Lung tumor of any size in the main bronchus < 2 cm distal to the carina but without involvement of the carina",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3LungTumorOfAnySizeThatDirectlyInvadesAnyOfTheFollowingChestWallIncludingSuperiorSulcusTumorsDiaphragmMediastinalPleuraParietalPericardium: Coding.FromStrict({
+    ConditionStageValueSet_T3LungTumorOfAnySizeThatDirectlyInvadesAnyOfTheFollowingChestWallIncludingSuperiorSulcusTumorsDiaphragmMediastinalPleuraParietalPericardium: new Coding({
         code: "369884008",
         display: "T3: Lung tumor of any size that directly invades any of the following: chest wall (including superior sulcus tumors); diaphragm; mediastinal pleura; parietal pericardium",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4LungTumorOfAnySizeThatInvadesAnyOfTheFollowingMediastinumHeartGreatVesselsTracheaEsophagusVertebralBodyCarina: Coding.FromStrict({
+    ConditionStageValueSet_T4LungTumorOfAnySizeThatInvadesAnyOfTheFollowingMediastinumHeartGreatVesselsTracheaEsophagusVertebralBodyCarina: new Coding({
         code: "369885009",
         display: "T4: Lung tumor of any size that invades any of the following: mediastinum; heart; great vessels; trachea; esophagus; vertebral body; carina",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4LungTumorOfAnySizeWithAMalignantPleuralEffusion: Coding.FromStrict({
+    ConditionStageValueSet_T4LungTumorOfAnySizeWithAMalignantPleuralEffusion: new Coding({
         code: "369886005",
         display: "T4: Lung tumor of any size with a malignant pleural effusion",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4LungTumorOfAnySizeWithSeparateTumorNoduleSInSameLobe: Coding.FromStrict({
+    ConditionStageValueSet_T4LungTumorOfAnySizeWithSeparateTumorNoduleSInSameLobe: new Coding({
         code: "369887001",
         display: "T4: Lung tumor of any size with separate tumor nodule(s) in same lobe",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1KidneyTumorLessThan70CmInGreatestDimensionLimitedToTheKidney: Coding.FromStrict({
+    ConditionStageValueSet_T1KidneyTumorLessThan70CmInGreatestDimensionLimitedToTheKidney: new Coding({
         code: "369888006",
         display: "T1: Kidney tumor < 7.0 cm in greatest dimension limited to the kidney",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2RenalTumorGreaterThan70CmInGreatestDimensionLimitedToTheKidney: Coding.FromStrict({
+    ConditionStageValueSet_T2RenalTumorGreaterThan70CmInGreatestDimensionLimitedToTheKidney: new Coding({
         code: "369889003",
         display: "T2: Renal tumor > 7.0 cm in greatest dimension limited to the kidney",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3RenalTumorExtendsIntoMajorVeinsOrInvadesTheAdrenalGlandOrPerinephricTissuesButNotBeyondGerotaFascia: Coding.FromStrict({
+    ConditionStageValueSet_T3RenalTumorExtendsIntoMajorVeinsOrInvadesTheAdrenalGlandOrPerinephricTissuesButNotBeyondGerotaFascia: new Coding({
         code: "369890007",
         display: "T3: Renal tumor extends into major veins or invades the adrenal gland or perinephric tissues but not beyond Gerota fascia",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3aRenalTumorInvadesTheAdrenalGlandOrPerinephricTissuesButNotBeyondGerotaFascia: Coding.FromStrict({
+    ConditionStageValueSet_T3aRenalTumorInvadesTheAdrenalGlandOrPerinephricTissuesButNotBeyondGerotaFascia: new Coding({
         code: "369891006",
         display: "T3a: Renal tumor invades the adrenal gland or perinephric tissues but not beyond Gerota fascia",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3bRenalTumorGrosslyExtendsIntoTheRenalVeinSOrVenaCavaBelowTheDiaphragm: Coding.FromStrict({
+    ConditionStageValueSet_T3bRenalTumorGrosslyExtendsIntoTheRenalVeinSOrVenaCavaBelowTheDiaphragm: new Coding({
         code: "369892004",
         display: "T3b: Renal tumor grossly extends into the renal vein(s) or vena cava below the diaphragm",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3cRenalTumorGrosslyExtendsIntoTheVenaCavaAboveTheDiaphragm: Coding.FromStrict({
+    ConditionStageValueSet_T3cRenalTumorGrosslyExtendsIntoTheVenaCavaAboveTheDiaphragm: new Coding({
         code: "369893009",
         display: "T3c: Renal tumor grossly extends into the vena cava above the diaphragm",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4RenalTumorInvadesBeyondGerotaFascia: Coding.FromStrict({
+    ConditionStageValueSet_T4RenalTumorInvadesBeyondGerotaFascia: new Coding({
         code: "369894003",
         display: "T4: Renal tumor invades beyond Gerota fascia",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1BreastTumorLessThanOrEquals2CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_T1BreastTumorLessThanOrEquals2CmInGreatestDimension: new Coding({
         code: "369895002",
         display: "T1: Breast tumor <= 2 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1micMicroinvasionLessThanOrEquals01CmInGreatestDimensionBREASTCompleteExcisionLessThanTotalMastectomyTotalMastectomyModifiedRadicalMastectomyRadicalMastectomy: Coding.FromStrict({
+    ConditionStageValueSet_T1micMicroinvasionLessThanOrEquals01CmInGreatestDimensionBREASTCompleteExcisionLessThanTotalMastectomyTotalMastectomyModifiedRadicalMastectomyRadicalMastectomy: new Coding({
         code: "369896001",
         display: "T1mic: Microinvasion <= 0.1 cm in greatest dimension: BREAST: Complete excision less than total mastectomy, total mastectomy, modified radical mastectomy, radical mastectomy",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1aBreastTumorGreaterThan01CmButLessThanOrEquals05CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_T1aBreastTumorGreaterThan01CmButLessThanOrEquals05CmInGreatestDimension: new Coding({
         code: "369897005",
         display: "T1a: Breast tumor >0.1 cm but <= 0.5 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1bBreastTumorGreaterThan05CmButLessThanOrEquals1CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_T1bBreastTumorGreaterThan05CmButLessThanOrEquals1CmInGreatestDimension: new Coding({
         code: "369898000",
         display: "T1b: Breast tumor >0.5 cm but <= 1 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1cGreaterThan1CmButLessThanOrEquals2CmInGreatestDimensionBREASTCompleteExcisionLessThanTotalMastectomyTotalMastectomyModifiedRadicalMastectomyRadicalMastectomy: Coding.FromStrict({
+    ConditionStageValueSet_T1cGreaterThan1CmButLessThanOrEquals2CmInGreatestDimensionBREASTCompleteExcisionLessThanTotalMastectomyTotalMastectomyModifiedRadicalMastectomyRadicalMastectomy: new Coding({
         code: "369899008",
         display: "T1c: >1 cm but <= 2 cm in greatest dimension: BREAST: Complete excision less than total mastectomy, total mastectomy, modified radical mastectomy, radical mastectomy",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2BreastTumorGreaterThan2CmButLessThanOrEquals5CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_T2BreastTumorGreaterThan2CmButLessThanOrEquals5CmInGreatestDimension: new Coding({
         code: "369900003",
         display: "T2: Breast tumor > 2 cm but <= 5 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3BreastTumorGreaterThan5CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_T3BreastTumorGreaterThan5CmInGreatestDimension: new Coding({
         code: "369901004",
         display: "T3: Breast tumor >5 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4BreastTumorOfAnySizeWithDirectExtensionToChestWallOrSkin: Coding.FromStrict({
+    ConditionStageValueSet_T4BreastTumorOfAnySizeWithDirectExtensionToChestWallOrSkin: new Coding({
         code: "369902006",
         display: "T4: Breast tumor of any size with direct extension to chest wall or skin",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4aBreastTumorWithExtensionToChestWall: Coding.FromStrict({
+    ConditionStageValueSet_T4aBreastTumorWithExtensionToChestWall: new Coding({
         code: "369903001",
         display: "T4a: Breast tumor with extension to chest wall",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4bEdemaIncludingPeauDQuoteOrangeOrUlcerationOfTheSkinOfTheBreastOrSatelliteSkinNodulesConfinedToTheSameBreast: Coding.FromStrict({
+    ConditionStageValueSet_T4bEdemaIncludingPeauDQuoteOrangeOrUlcerationOfTheSkinOfTheBreastOrSatelliteSkinNodulesConfinedToTheSameBreast: new Coding({
         code: "369904007",
         display: "T4b: Edema (including peau d'orange) or ulceration of the skin of the breast or satellite skin nodules confined to the same breast",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4cBreastTumorBothT4aAndT4b: Coding.FromStrict({
+    ConditionStageValueSet_T4cBreastTumorBothT4aAndT4b: new Coding({
         code: "369905008",
         display: "T4c: Breast tumor, both T4a and T4b",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4dInflammatoryCarcinomaBreast: Coding.FromStrict({
+    ConditionStageValueSet_T4dInflammatoryCarcinomaBreast: new Coding({
         code: "369906009",
         display: "T4d: Inflammatory carcinoma (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TisCarcinomaInSituBreastIntraductalCarcinomaLobularCarcinomaInSituOrPagetDiseaseOfTheNippleWithNoTumor: Coding.FromStrict({
+    ConditionStageValueSet_TisCarcinomaInSituBreastIntraductalCarcinomaLobularCarcinomaInSituOrPagetDiseaseOfTheNippleWithNoTumor: new Coding({
         code: "369907000",
         display: "Tis: Carcinoma in situ, breast: Intraductal carcinoma, lobular carcinoma in situ, or Paget disease of the nipple with no tumor",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1TumorInvadesLaminaPropriaOrSubmucosa: Coding.FromStrict({
+    ConditionStageValueSet_T1TumorInvadesLaminaPropriaOrSubmucosa: new Coding({
         code: "369909002",
         display: "T1: Tumor invades lamina propria or submucosa",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1aEsophagusStomachTumorInvadesLaminaPropria: Coding.FromStrict({
+    ConditionStageValueSet_T1aEsophagusStomachTumorInvadesLaminaPropria: new Coding({
         code: "369910007",
         display: "T1a: Esophagus/stomach tumor invades lamina propria",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1bEsophagusStomachTumorInvadesSubmucosa: Coding.FromStrict({
+    ConditionStageValueSet_T1bEsophagusStomachTumorInvadesSubmucosa: new Coding({
         code: "369911006",
         display: "T1b: Esophagus/stomach tumor invades submucosa",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2TumorInvadesMuscularisPropria: Coding.FromStrict({
+    ConditionStageValueSet_T2TumorInvadesMuscularisPropria: new Coding({
         code: "369912004",
         display: "T2: Tumor invades muscularis propria",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3EsophagealTumorInvadesAdventitia: Coding.FromStrict({
+    ConditionStageValueSet_T3EsophagealTumorInvadesAdventitia: new Coding({
         code: "369913009",
         display: "T3: Esophageal tumor invades adventitia",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4TumorDirectlyInvadesAdjacentStructures: Coding.FromStrict({
+    ConditionStageValueSet_T4TumorDirectlyInvadesAdjacentStructures: new Coding({
         code: "369914003",
         display: "T4: Tumor directly invades adjacent structures",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2StomachTumorInvadesMuscularisPropriaOrSubserosa: Coding.FromStrict({
+    ConditionStageValueSet_T2StomachTumorInvadesMuscularisPropriaOrSubserosa: new Coding({
         code: "369915002",
         display: "T2: Stomach tumor invades muscularis propria or subserosa",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2aStomachTumorInvadesMuscularisPropria: Coding.FromStrict({
+    ConditionStageValueSet_T2aStomachTumorInvadesMuscularisPropria: new Coding({
         code: "369916001",
         display: "T2a: Stomach tumor invades muscularis propria",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2bStomachTumorInvadesSubserosa: Coding.FromStrict({
+    ConditionStageValueSet_T2bStomachTumorInvadesSubserosa: new Coding({
         code: "369917005",
         display: "T2b: Stomach tumor invades subserosa",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3StomachTumorPenetratesSerosaWithoutInvasionOfAdjacentStructures: Coding.FromStrict({
+    ConditionStageValueSet_T3StomachTumorPenetratesSerosaWithoutInvasionOfAdjacentStructures: new Coding({
         code: "369918000",
         display: "T3: Stomach tumor penetrates serosa without invasion of adjacent structures",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4aColonRectumTumorDirectlyInvadesOtherOrgansOrStructures: Coding.FromStrict({
+    ConditionStageValueSet_T4aColonRectumTumorDirectlyInvadesOtherOrgansOrStructures: new Coding({
         code: "369919008",
         display: "T4a: Colon/rectum tumor directly invades other organs or structures",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1TumorInvadesSubmucosaColonRectum: Coding.FromStrict({
+    ConditionStageValueSet_T1TumorInvadesSubmucosaColonRectum: new Coding({
         code: "369920002",
         display: "T1: Tumor invades submucosa (colon/rectum)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3ColonRectumTumorInvadesThroughTheMuscularisPropriaIntoTheSubserosaOrTheNonperitonealizedPericolicOrPerirectalSoftTissues: Coding.FromStrict({
+    ConditionStageValueSet_T3ColonRectumTumorInvadesThroughTheMuscularisPropriaIntoTheSubserosaOrTheNonperitonealizedPericolicOrPerirectalSoftTissues: new Coding({
         code: "369921003",
         display: "T3: Colon/rectum tumor invades through the muscularis propria into the subserosa or the nonperitonealized pericolic or perirectal soft tissues",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4bColonRectumTumorPenetratesTheVisceralPeritoneum: Coding.FromStrict({
+    ConditionStageValueSet_T4bColonRectumTumorPenetratesTheVisceralPeritoneum: new Coding({
         code: "369922005",
         display: "T4b: Colon/rectum tumor penetrates the visceral peritoneum",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_Tis0CarcinomaInSituVagina: Coding.FromStrict({
+    ConditionStageValueSet_Tis0CarcinomaInSituVagina: new Coding({
         code: "369923000",
         display: "Tis (0): Carcinoma in situ (vagina)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_Tis0CarcinomaInSituLimitedToFallopianTubeMucosa: Coding.FromStrict({
+    ConditionStageValueSet_Tis0CarcinomaInSituLimitedToFallopianTubeMucosa: new Coding({
         code: "369924006",
         display: "Tis (0): Carcinoma in situ (limited to fallopian tube mucosa)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TisEpitheliumOnlyCarcinomaInSituNoInvasion: Coding.FromStrict({
+    ConditionStageValueSet_TisEpitheliumOnlyCarcinomaInSituNoInvasion: new Coding({
         code: "369925007",
         display: "Tis: Epithelium only (carcinoma in situ, no invasion)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1TumorLimitedToAmpullaOfVaterOrSphincterOfOddi: Coding.FromStrict({
+    ConditionStageValueSet_T1TumorLimitedToAmpullaOfVaterOrSphincterOfOddi: new Coding({
         code: "369926008",
         display: "T1: Tumor limited to ampulla of Vater or sphincter of Oddi",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2AmpullaTumorInvadesDuodenalWall: Coding.FromStrict({
+    ConditionStageValueSet_T2AmpullaTumorInvadesDuodenalWall: new Coding({
         code: "369927004",
         display: "T2: Ampulla tumor invades duodenal wall",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3AmpullaTumorInvades2CmOrLessIntoPancreas: Coding.FromStrict({
+    ConditionStageValueSet_T3AmpullaTumorInvades2CmOrLessIntoPancreas: new Coding({
         code: "369928009",
         display: "T3: Ampulla tumor invades 2 cm or less into pancreas",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4AmpullaTumorInvadesGreaterThan2CmIntoPancreasAndOrIntoOtherAdjacentOrgans: Coding.FromStrict({
+    ConditionStageValueSet_T4AmpullaTumorInvadesGreaterThan2CmIntoPancreasAndOrIntoOtherAdjacentOrgans: new Coding({
         code: "369929001",
         display: "T4: Ampulla tumor invades >2 cm into pancreas and/or into other adjacent organs",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1TumorLimitedToPancreasAndLessThan2CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_T1TumorLimitedToPancreasAndLessThan2CmInGreatestDimension: new Coding({
         code: "369930006",
         display: "T1: Tumor limited to pancreas and < 2 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2TumorLimitedToPancreasAndGreaterThan2CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_T2TumorLimitedToPancreasAndGreaterThan2CmInGreatestDimension: new Coding({
         code: "369931005",
         display: "T2: Tumor limited to pancreas and > 2 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3PancreaticTumorExtendsDirectlyToAnyOfTheFollowingDuodenumBileDuctPeripancreaticTissues: Coding.FromStrict({
+    ConditionStageValueSet_T3PancreaticTumorExtendsDirectlyToAnyOfTheFollowingDuodenumBileDuctPeripancreaticTissues: new Coding({
         code: "369932003",
         display: "T3: Pancreatic tumor extends directly to any of the following: duodenum; bile duct; peripancreatic tissues",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4PancreasTumorExtendsDirectlyToAnyOfTheFollowingStomachSpleenColonAdjacentLargeVessels: Coding.FromStrict({
+    ConditionStageValueSet_T4PancreasTumorExtendsDirectlyToAnyOfTheFollowingStomachSpleenColonAdjacentLargeVessels: new Coding({
         code: "369933008",
         display: "T4: Pancreas tumor extends directly to any of the following: stomach; spleen; colon; adjacent large vessels",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TisCarcinomaInSituQuotationFlatTumorQuotationOfUrinaryBladder: Coding.FromStrict({
+    ConditionStageValueSet_TisCarcinomaInSituQuotationFlatTumorQuotationOfUrinaryBladder: new Coding({
         code: "369934002",
         display: "Tis: Carcinoma in situ (\"flat tumor\" of urinary bladder)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1UrinaryTractTumorInvadesSubepithelialConnectiveTissue: Coding.FromStrict({
+    ConditionStageValueSet_T1UrinaryTractTumorInvadesSubepithelialConnectiveTissue: new Coding({
         code: "369935001",
         display: "T1: Urinary tract tumor invades subepithelial connective tissue",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2UrinaryBladderTumorInvadesMuscle: Coding.FromStrict({
+    ConditionStageValueSet_T2UrinaryBladderTumorInvadesMuscle: new Coding({
         code: "369936000",
         display: "T2: Urinary bladder tumor invades muscle",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2RenalPelvisUreterTumorInvadesTheMuscularis: Coding.FromStrict({
+    ConditionStageValueSet_T2RenalPelvisUreterTumorInvadesTheMuscularis: new Coding({
         code: "369937009",
         display: "T2: Renal pelvis/ureter tumor invades the muscularis",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2aUrinaryBladderTumorInvadesSuperficialMuscleInnerHalf: Coding.FromStrict({
+    ConditionStageValueSet_T2aUrinaryBladderTumorInvadesSuperficialMuscleInnerHalf: new Coding({
         code: "369938004",
         display: "T2a: Urinary bladder tumor invades superficial muscle (inner half)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2bUrinaryBladderTumorInvadesDeepMuscleOuterHalf: Coding.FromStrict({
+    ConditionStageValueSet_T2bUrinaryBladderTumorInvadesDeepMuscleOuterHalf: new Coding({
         code: "369939007",
         display: "T2b: Urinary bladder tumor invades deep muscle (outer half)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3UreteralTumorInvadesBeyondMuscularisIntoPeriuretericFat: Coding.FromStrict({
+    ConditionStageValueSet_T3UreteralTumorInvadesBeyondMuscularisIntoPeriuretericFat: new Coding({
         code: "369940009",
         display: "T3: Ureteral tumor invades beyond muscularis into periureteric fat",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3RenalPelvisTumorInvadesBeyondMuscularisPeripelvicFatOrTheRenalParenchyma: Coding.FromStrict({
+    ConditionStageValueSet_T3RenalPelvisTumorInvadesBeyondMuscularisPeripelvicFatOrTheRenalParenchyma: new Coding({
         code: "369941008",
         display: "T3: Renal pelvis tumor invades beyond muscularis peripelvic fat or the renal parenchyma",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3UrinaryBladderTumorInvadesPerivesicalTissue: Coding.FromStrict({
+    ConditionStageValueSet_T3UrinaryBladderTumorInvadesPerivesicalTissue: new Coding({
         code: "369942001",
         display: "T3: Urinary bladder tumor invades perivesical tissue",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3aBladderTumorInvadesPerivesicalTissueMicroscopically: Coding.FromStrict({
+    ConditionStageValueSet_T3aBladderTumorInvadesPerivesicalTissueMicroscopically: new Coding({
         code: "369943006",
         display: "T3a: Bladder tumor invades perivesical tissue microscopically",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3bBladderTumorInvadesPerivesicalTissueMacroscopicallyExtravesicularMass: Coding.FromStrict({
+    ConditionStageValueSet_T3bBladderTumorInvadesPerivesicalTissueMacroscopicallyExtravesicularMass: new Coding({
         code: "369944000",
         display: "T3b: Bladder tumor invades perivesical tissue macroscopically (extravesicular mass)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4UrinaryBladderTumorInvadesAnyOfTheFollowingProstateUterusVaginaPelvicWallAbdominalWall: Coding.FromStrict({
+    ConditionStageValueSet_T4UrinaryBladderTumorInvadesAnyOfTheFollowingProstateUterusVaginaPelvicWallAbdominalWall: new Coding({
         code: "369945004",
         display: "T4: Urinary bladder tumor invades any of the following: prostate, uterus, vagina, pelvic wall abdominal wall",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4RenalPelvisUreterTumorInvadesAdjacentOrgansOrThroughTheKidneyIntoThePerinephricFat: Coding.FromStrict({
+    ConditionStageValueSet_T4RenalPelvisUreterTumorInvadesAdjacentOrgansOrThroughTheKidneyIntoThePerinephricFat: new Coding({
         code: "369946003",
         display: "T4: Renal pelvis/ureter tumor invades adjacent organs, or through the kidney into the perinephric fat",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4aBladderTumorInvadesProstateOrUterusOrVagina: Coding.FromStrict({
+    ConditionStageValueSet_T4aBladderTumorInvadesProstateOrUterusOrVagina: new Coding({
         code: "369947007",
         display: "T4a: Bladder tumor invades prostate or uterus or vagina",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4bBladderTumorInvadesPelvicWallOrAbdominalWall: Coding.FromStrict({
+    ConditionStageValueSet_T4bBladderTumorInvadesPelvicWallOrAbdominalWall: new Coding({
         code: "369948002",
         display: "T4b: Bladder tumor invades pelvic wall or abdominal wall",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TaNoninvasivePapillaryCarcinomaUrinaryTract: Coding.FromStrict({
+    ConditionStageValueSet_TaNoninvasivePapillaryCarcinomaUrinaryTract: new Coding({
         code: "369949005",
         display: "Ta: Noninvasive papillary carcinoma (urinary tract)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TisIntratubularGermCellNeoplasiaCarcinomaInSituTestis: Coding.FromStrict({
+    ConditionStageValueSet_TisIntratubularGermCellNeoplasiaCarcinomaInSituTestis: new Coding({
         code: "369950005",
         display: "Tis: Intratubular germ cell neoplasia (carcinoma in situ, testis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1TesticularTumorLimitedToTheTestisAndEpididymisWithoutVascularLymphaticInvasionTumorMayInvadeTunicaAlbugineaButNotTunicaVaginalis: Coding.FromStrict({
+    ConditionStageValueSet_T1TesticularTumorLimitedToTheTestisAndEpididymisWithoutVascularLymphaticInvasionTumorMayInvadeTunicaAlbugineaButNotTunicaVaginalis: new Coding({
         code: "369951009",
         display: "T1: Testicular tumor limited to the testis and epididymis without vascular/lymphatic invasion (tumor may invade tunica albuginea but not tunica vaginalis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2TesticularTumorLimitedToTheTestisAndEpididymisWithVascularLymphaticInvasionOrTumorExtendingThroughTunicaAlbugineaWithInvolvementOfTunicaVaginalis: Coding.FromStrict({
+    ConditionStageValueSet_T2TesticularTumorLimitedToTheTestisAndEpididymisWithVascularLymphaticInvasionOrTumorExtendingThroughTunicaAlbugineaWithInvolvementOfTunicaVaginalis: new Coding({
         code: "369952002",
         display: "T2: Testicular tumor limited to the testis and epididymis with vascular/lymphatic invasion or tumor extending through tunica albuginea with involvement of tunica vaginalis",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3TesticularTumorInvadesSpermaticCordWithOrWithoutVascularLymphaticInvasion: Coding.FromStrict({
+    ConditionStageValueSet_T3TesticularTumorInvadesSpermaticCordWithOrWithoutVascularLymphaticInvasion: new Coding({
         code: "369953007",
         display: "T3: Testicular tumor invades spermatic cord with or without vascular/lymphatic invasion",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4TesticularTumorInvadesScrotumWithOrWithoutVascularLymphaticInvasion: Coding.FromStrict({
+    ConditionStageValueSet_T4TesticularTumorInvadesScrotumWithOrWithoutVascularLymphaticInvasion: new Coding({
         code: "369954001",
         display: "T4: Testicular tumor invades scrotum with or without vascular/lymphatic invasion",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1ITrophoblasticDiseaseConfinedToUterus: Coding.FromStrict({
+    ConditionStageValueSet_T1ITrophoblasticDiseaseConfinedToUterus: new Coding({
         code: "369955000",
         display: "T1 (I): Trophoblastic disease confined to uterus",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1IATrophoblasticDiseaseConfinedToUterusWithNoRiskFactors: Coding.FromStrict({
+    ConditionStageValueSet_T1IATrophoblasticDiseaseConfinedToUterusWithNoRiskFactors: new Coding({
         code: "369956004",
         display: "T1 (IA): Trophoblastic disease confined to uterus with no risk factors",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1IBTrophoblasticDiseaseConfinedToUterusWithOneRiskFactor: Coding.FromStrict({
+    ConditionStageValueSet_T1IBTrophoblasticDiseaseConfinedToUterusWithOneRiskFactor: new Coding({
         code: "369957008",
         display: "T1 (IB): Trophoblastic disease confined to uterus with one risk factor",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1ICTrophoblasticDiseaseConfinedToUterusWithTwoRiskFactors: Coding.FromStrict({
+    ConditionStageValueSet_T1ICTrophoblasticDiseaseConfinedToUterusWithTwoRiskFactors: new Coding({
         code: "369958003",
         display: "T1 (IC): Trophoblastic disease confined to uterus with two risk factors",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2IITrophoblastGestationalTrophoblasticTumorExtendsOutsideOfTheUterusButIsLimitedToTheGenitalStructuresAdnexaVaginaBroadLigament: Coding.FromStrict({
+    ConditionStageValueSet_T2IITrophoblastGestationalTrophoblasticTumorExtendsOutsideOfTheUterusButIsLimitedToTheGenitalStructuresAdnexaVaginaBroadLigament: new Coding({
         code: "369959006",
         display: "T2 (II): Trophoblast: gestational trophoblastic tumor extends outside of the uterus but is limited to the genital structures (adnexa, vagina, broad ligament)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2IIATrophoblastGTTInvolvingGenitalStructureWithoutRiskFactors: Coding.FromStrict({
+    ConditionStageValueSet_T2IIATrophoblastGTTInvolvingGenitalStructureWithoutRiskFactors: new Coding({
         code: "369960001",
         display: "T2 (IIA): Trophoblast: GTT involving genital structure without risk factors",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2IIBTrophoblastGestationalTrophoblasticTumorExtendsOutsideOfTheUterusButLimitedToGenitalStructuresWithOneRiskFactor: Coding.FromStrict({
+    ConditionStageValueSet_T2IIBTrophoblastGestationalTrophoblasticTumorExtendsOutsideOfTheUterusButLimitedToGenitalStructuresWithOneRiskFactor: new Coding({
         code: "369961002",
         display: "T2 (IIB): Trophoblast: gestational trophoblastic tumor extends outside of the uterus but limited to genital structures with one risk factor",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2IICTrophoblastGestationalTrophoblasticTumorExtendsOutsideOfTheUterusButLimitedToGenitalStructuresWithTwoRiskFactors: Coding.FromStrict({
+    ConditionStageValueSet_T2IICTrophoblastGestationalTrophoblasticTumorExtendsOutsideOfTheUterusButLimitedToGenitalStructuresWithTwoRiskFactors: new Coding({
         code: "369962009",
         display: "T2 (IIC): Trophoblast: gestational trophoblastic tumor extends outside of the uterus but limited to genital structures with two risk factors",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1TumorLimitedToIpsilateralParietalAndOrVisceralPleura: Coding.FromStrict({
+    ConditionStageValueSet_T1TumorLimitedToIpsilateralParietalAndOrVisceralPleura: new Coding({
         code: "369963004",
         display: "T1: Tumor limited to ipsilateral parietal and/or visceral pleura",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2PleuralTumorInvadesAnyOfTheFollowingIpsilateralLungEndothoracicFasciaDiaphragmOrPericardium: Coding.FromStrict({
+    ConditionStageValueSet_T2PleuralTumorInvadesAnyOfTheFollowingIpsilateralLungEndothoracicFasciaDiaphragmOrPericardium: new Coding({
         code: "369964005",
         display: "T2: Pleural tumor invades any of the following: ipsilateral lung, endothoracic fascia, diaphragm, or pericardium",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3PleuralTumorInvadesAnyOfTheFollowingIpsilateralChestWallMuscleRibsOrMediaStinalOrgansOrTissues: Coding.FromStrict({
+    ConditionStageValueSet_T3PleuralTumorInvadesAnyOfTheFollowingIpsilateralChestWallMuscleRibsOrMediaStinalOrgansOrTissues: new Coding({
         code: "369965006",
         display: "T3: Pleural tumor invades any of the following: ipsilateral chest wall muscle, ribs, or media-stinal organs or tissues",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4PleuralTumorDirectlyExtendsToAnyOfTheFollowingContralateralPleuraContralateralLungPeritoneumIntraAbdominalOrgansCervicalTissues: Coding.FromStrict({
+    ConditionStageValueSet_T4PleuralTumorDirectlyExtendsToAnyOfTheFollowingContralateralPleuraContralateralLungPeritoneumIntraAbdominalOrgansCervicalTissues: new Coding({
         code: "369966007",
         display: "T4: Pleural tumor directly extends to any of the following: contralateral pleura, contralateral lung, peritoneum, intra-abdominal organs, cervical tissues",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1TumorSizeLessThan1CmLimitedToThyroid: Coding.FromStrict({
+    ConditionStageValueSet_T1TumorSizeLessThan1CmLimitedToThyroid: new Coding({
         code: "369967003",
         display: "T1: Tumor size < 1 cm, limited to thyroid",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2TumorGreaterThan1CmButLessThan4CmLimitedToThyroid: Coding.FromStrict({
+    ConditionStageValueSet_T2TumorGreaterThan1CmButLessThan4CmLimitedToThyroid: new Coding({
         code: "369968008",
         display: "T2: Tumor > 1 cm but < 4 cm, limited to thyroid",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3ThyroidTumorGreaterThan4CmLimitedToThyroid: Coding.FromStrict({
+    ConditionStageValueSet_T3ThyroidTumorGreaterThan4CmLimitedToThyroid: new Coding({
         code: "369969000",
         display: "T3: Thyroid tumor > 4 cm, limited to thyroid",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4ThyroidTumorOfAnySizeExtendingBeyondTheThyroidCapsule: Coding.FromStrict({
+    ConditionStageValueSet_T4ThyroidTumorOfAnySizeExtendingBeyondTheThyroidCapsule: new Coding({
         code: "369970004",
         display: "T4: Thyroid tumor of any size extending beyond the thyroid capsule",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1aIATumorLimitedToOneOvaryCapsuleIntactNoTumorOnOvarianSurface: Coding.FromStrict({
+    ConditionStageValueSet_T1aIATumorLimitedToOneOvaryCapsuleIntactNoTumorOnOvarianSurface: new Coding({
         code: "369971000",
         display: "T1a (IA): Tumor limited to one ovary, capsule intact, no tumor on ovarian surface",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1bIBTumorLimitedToBothOvariesCapsuleIntactNoTumorOnOvarianSurface: Coding.FromStrict({
+    ConditionStageValueSet_T1bIBTumorLimitedToBothOvariesCapsuleIntactNoTumorOnOvarianSurface: new Coding({
         code: "369972007",
         display: "T1b (IB): Tumor limited to both ovaries: capsule intact, no tumor on ovarian surface",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1cICTumorLimitedToOneOrBothOvariesWithAnyOfTheFollowingCapsuleRupturedTumorOnOvarianSurfaceMalignantCellsInAscitesOrPeritonealWashingsOVARYResection: Coding.FromStrict({
+    ConditionStageValueSet_T1cICTumorLimitedToOneOrBothOvariesWithAnyOfTheFollowingCapsuleRupturedTumorOnOvarianSurfaceMalignantCellsInAscitesOrPeritonealWashingsOVARYResection: new Coding({
         code: "369973002",
         display: "T1c (IC): Tumor limited to one or both ovaries with any of the following: capsule ruptured, tumor on ovarian surface, malignant cells in ascites or peritoneal washings: OVARY: Resection",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2OvarianTumorInvolvesOneOrBothOvariesWithPelvicExtension: Coding.FromStrict({
+    ConditionStageValueSet_T2OvarianTumorInvolvesOneOrBothOvariesWithPelvicExtension: new Coding({
         code: "369974008",
         display: "T2: Ovarian tumor involves one or both ovaries with pelvic extension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2aIIAOvarianTumorWithExtensionAndOrImplantsOnUterusAndOrTubeS: Coding.FromStrict({
+    ConditionStageValueSet_T2aIIAOvarianTumorWithExtensionAndOrImplantsOnUterusAndOrTubeS: new Coding({
         code: "369975009",
         display: "T2a (IIA): Ovarian tumor with extension and/or implants on uterus and/or tube(s)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3AndOrN1IIIOvarianTumorInvolvesOneOrBothOvariesWithMicroscopicallyConfirmedPeritonealMetastasisOutsideThePelvisAndOrRegionalLymphNodeMetastasis: Coding.FromStrict({
+    ConditionStageValueSet_T3AndOrN1IIIOvarianTumorInvolvesOneOrBothOvariesWithMicroscopicallyConfirmedPeritonealMetastasisOutsideThePelvisAndOrRegionalLymphNodeMetastasis: new Coding({
         code: "369976005",
         display: "T3 and/or N1 (III): Ovarian tumor involves one or both ovaries with microscopically confirmed peritoneal metastasis outside the pelvis and/or regional lymph node metastasis",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3bIIIBTumorOfUterineCervixExtendsToPelvicWallAndOrCausesHydronephrosisOrNonfunctioningKidney: Coding.FromStrict({
+    ConditionStageValueSet_T3bIIIBTumorOfUterineCervixExtendsToPelvicWallAndOrCausesHydronephrosisOrNonfunctioningKidney: new Coding({
         code: "369977001",
         display: "T3b (IIIB): Tumor of uterine cervix extends to pelvic wall and/or causes hydronephrosis or nonfunctioning kidney",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2TumorConfinedWithinTheProstate: Coding.FromStrict({
+    ConditionStageValueSet_T2TumorConfinedWithinTheProstate: new Coding({
         code: "369978006",
         display: "T2: Tumor confined within the prostate",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1AerodigestiveTractTumorLessThan2CmInGreatestDimensionWithoutExtraparenchymalExtension: Coding.FromStrict({
+    ConditionStageValueSet_T1AerodigestiveTractTumorLessThan2CmInGreatestDimensionWithoutExtraparenchymalExtension: new Coding({
         code: "369979003",
         display: "T1: Aerodigestive tract tumor < 2 cm in greatest dimension without extraparenchymal extension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TisTumorInvadesLaminaPropriaGastrointestinalTumor: Coding.FromStrict({
+    ConditionStageValueSet_TisTumorInvadesLaminaPropriaGastrointestinalTumor: new Coding({
         code: "369980000",
         display: "Tis: Tumor invades lamina propria (gastrointestinal tumor)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TisTumorInvadesMuscularisMucosaeColonRectum: Coding.FromStrict({
+    ConditionStageValueSet_TisTumorInvadesMuscularisMucosaeColonRectum: new Coding({
         code: "369981001",
         display: "Tis: Tumor invades muscularis mucosae (colon/rectum)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T1SolitaryLiverTumorLessThan2CmNoVascularInvasion: Coding.FromStrict({
+    ConditionStageValueSet_T1SolitaryLiverTumorLessThan2CmNoVascularInvasion: new Coding({
         code: "369982008",
         display: "T1: Solitary liver tumor < 2 cm; no vascular invasion",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1MetastasisToMovableIpsilateralAxillaryLymphNodeS: Coding.FromStrict({
+    ConditionStageValueSet_N1MetastasisToMovableIpsilateralAxillaryLymphNodeS: new Coding({
         code: "369983003",
         display: "N1: Metastasis to movable ipsilateral axillary lymph node(s)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1aOnlyMicrometastasisNoneGreaterThan02CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_N1aOnlyMicrometastasisNoneGreaterThan02CmInGreatestDimension: new Coding({
         code: "369984009",
         display: "N1a: Only micrometastasis, none > 0.2 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1bMetastasisToLymphNodeSAnyGreaterThan02CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_N1bMetastasisToLymphNodeSAnyGreaterThan02CmInGreatestDimension: new Coding({
         code: "369985005",
         display: "N1b: Metastasis to lymph node(s), any > 0.2 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1biMetastasisIn1To3LymphNodesAnyGreaterThan02CmAndAllLessThan2CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_N1biMetastasisIn1To3LymphNodesAnyGreaterThan02CmAndAllLessThan2CmInGreatestDimension: new Coding({
         code: "369986006",
         display: "N1bi: Metastasis in 1 to 3 lymph nodes, any > 0.2 cm and all < 2 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1biiMetastasisIn4OrMoreLymphNodesAnyGreaterThan02CmAndAllLessThan2CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_N1biiMetastasisIn4OrMoreLymphNodesAnyGreaterThan02CmAndAllLessThan2CmInGreatestDimension: new Coding({
         code: "369987002",
         display: "N1bii: Metastasis in 4 or more lymph nodes, any > 0.2 cm and all < 2 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1biiiExtensionOfTumorBeyondTheCapsuleOfALymphNodeMetastasisLessThan2CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_N1biiiExtensionOfTumorBeyondTheCapsuleOfALymphNodeMetastasisLessThan2CmInGreatestDimension: new Coding({
         code: "369988007",
         display: "N1biii: Extension of tumor beyond the capsule of a lymph node metastasis, < 2 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1bivMetastasisToALymphNodeGreaterThan2CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_N1bivMetastasisToALymphNodeGreaterThan2CmInGreatestDimension: new Coding({
         code: "369989004",
         display: "N1biv: Metastasis to a lymph node > 2 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalAxillaryLymphNodeMetastasesMatted: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalAxillaryLymphNodeMetastasesMatted: new Coding({
         code: "369990008",
         display: "Clinical axillary lymph node metastases - matted",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N3MetastasisToIpsilateralInternalMammaryLymphNodeS: Coding.FromStrict({
+    ConditionStageValueSet_N3MetastasisToIpsilateralInternalMammaryLymphNodeS: new Coding({
         code: "369991007",
         display: "N3: Metastasis to ipsilateral internal mammary lymph node(s)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1MetastasisIn13LymphNodes: Coding.FromStrict({
+    ConditionStageValueSet_N1MetastasisIn13LymphNodes: new Coding({
         code: "369992000",
         display: "N1: Metastasis in 1-3 lymph nodes",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N2MetastasisIn4OrMoreLymphNodes: Coding.FromStrict({
+    ConditionStageValueSet_N2MetastasisIn4OrMoreLymphNodes: new Coding({
         code: "369993005",
         display: "N2: Metastasis in 4 or more lymph nodes",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1a13NodesInvolved: Coding.FromStrict({
+    ConditionStageValueSet_N1a13NodesInvolved: new Coding({
         code: "369994004",
         display: "N1a: 1-3 nodes involved",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1b47NodesInvolved: Coding.FromStrict({
+    ConditionStageValueSet_N1b47NodesInvolved: new Coding({
         code: "369995003",
         display: "N1b: 4-7 nodes involved",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1cGreaterThan7NodesInvolved: Coding.FromStrict({
+    ConditionStageValueSet_N1cGreaterThan7NodesInvolved: new Coding({
         code: "369996002",
         display: "N1c: >7 nodes involved",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1MetastasisIn16PerigastricLymphNodes: Coding.FromStrict({
+    ConditionStageValueSet_N1MetastasisIn16PerigastricLymphNodes: new Coding({
         code: "369997006",
         display: "N1: Metastasis in 1-6 perigastric lymph nodes",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N2MetastasisIn715PerigastricLymphNodes: Coding.FromStrict({
+    ConditionStageValueSet_N2MetastasisIn715PerigastricLymphNodes: new Coding({
         code: "369998001",
         display: "N2: Metastasis in 7-15 perigastric lymph nodes",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N3MetastasisInGreaterThan15PerigastricLymphNodes: Coding.FromStrict({
+    ConditionStageValueSet_N3MetastasisInGreaterThan15PerigastricLymphNodes: new Coding({
         code: "369999009",
         display: "N3: Metastasis in >15 perigastric lymph nodes",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1MetastasisInASingleLymphNodeLessThan2CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_N1MetastasisInASingleLymphNodeLessThan2CmInGreatestDimension: new Coding({
         code: "370000006",
         display: "N1: Metastasis in a single lymph node, < 2 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1MetastasisInASingleLymphNodeLessThanOrEquals2CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_N1MetastasisInASingleLymphNodeLessThanOrEquals2CmInGreatestDimension: new Coding({
         code: "370001005",
         display: "N1: Metastasis in a single lymph node, <= 2 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N2MetastasisInASingleLymphNodeGreaterThan2CmButLessThanOrEquals5CmInGreatestDimensionOrMultipleLymphNodesNoneGreaterThan5CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_N2MetastasisInASingleLymphNodeGreaterThan2CmButLessThanOrEquals5CmInGreatestDimensionOrMultipleLymphNodesNoneGreaterThan5CmInGreatestDimension: new Coding({
         code: "370002003",
         display: "N2: Metastasis in a single lymph node, > 2 cm but <= 5 cm in greatest dimension, or multiple lymph nodes, none > 5 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N3MetastasisInALymphNodeGreaterThan5CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_N3MetastasisInALymphNodeGreaterThan5CmInGreatestDimension: new Coding({
         code: "370003008",
         display: "N3: Metastasis in a lymph node > 5 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1MetastasisInASingleIpsilateralLymphNodeLessThan3CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_N1MetastasisInASingleIpsilateralLymphNodeLessThan3CmInGreatestDimension: new Coding({
         code: "370004002",
         display: "N1: Metastasis in a single ipsilateral lymph node, < 3 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1UnilateralMetastasisInLymphNodeSGreaterThan6CmInGreatestDimensionAboveSupraclavicularFossa: Coding.FromStrict({
+    ConditionStageValueSet_N1UnilateralMetastasisInLymphNodeSGreaterThan6CmInGreatestDimensionAboveSupraclavicularFossa: new Coding({
         code: "370005001",
         display: "N1: Unilateral metastasis in lymph node(s) > 6 cm in greatest dimension, above supraclavicular fossa",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N2MetastasisInASingleIpsilatLymphNodeGreaterThan3cmButLessThan6cmInGreatestDimensionOrInMultipleIpsilatLymphNodesNoneGreaterThan6cmInGreatestDimensionOrInBilatOrContralatLymphNodesNoneGreaterThan6cmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_N2MetastasisInASingleIpsilatLymphNodeGreaterThan3cmButLessThan6cmInGreatestDimensionOrInMultipleIpsilatLymphNodesNoneGreaterThan6cmInGreatestDimensionOrInBilatOrContralatLymphNodesNoneGreaterThan6cmInGreatestDimension: new Coding({
         code: "370006000",
         display: "N2: Metastasis in a single ipsilat lymph node >3cm but <6cm in greatest dimension; or in multiple ipsilat lymph nodes, none >6cm in greatest dimension; or in bilat or contralat lymph nodes, none >6cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N2BilateralMetastasisInLymphNodeSGreaterThan6CmInGreatestDimensionAboveSupraclavicularFossa: Coding.FromStrict({
+    ConditionStageValueSet_N2BilateralMetastasisInLymphNodeSGreaterThan6CmInGreatestDimensionAboveSupraclavicularFossa: new Coding({
         code: "370007009",
         display: "N2: Bilateral metastasis in lymph node(s) > 6 cm in greatest dimension, above supraclavicular fossa",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N2aMetastasisInASingleIpsilateralLymphNodeGreaterThan3CmButLessThan6CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_N2aMetastasisInASingleIpsilateralLymphNodeGreaterThan3CmButLessThan6CmInGreatestDimension: new Coding({
         code: "370008004",
         display: "N2a: Metastasis in a single ipsilateral lymph node, > 3 cm but < 6 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N2bMetastasisInMultipleIpsilateralLymphNodesNoneGreaterThan6CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_N2bMetastasisInMultipleIpsilateralLymphNodesNoneGreaterThan6CmInGreatestDimension: new Coding({
         code: "370009007",
         display: "N2b: Metastasis in multiple ipsilateral lymph nodes, none > 6 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N2cMetastasisInBilateralOrContralateralLymphNodesNoneGreaterThan6CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_N2cMetastasisInBilateralOrContralateralLymphNodesNoneGreaterThan6CmInGreatestDimension: new Coding({
         code: "370010002",
         display: "N2c: Metastasis in bilateral or contralateral lymph nodes, none > 6 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N3MetastasisInLymphNodeS: Coding.FromStrict({
+    ConditionStageValueSet_N3MetastasisInLymphNodeS: new Coding({
         code: "370011003",
         display: "N3: Metastasis in lymph node(s)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N3aGreaterThan6CmInDimension: Coding.FromStrict({
+    ConditionStageValueSet_N3aGreaterThan6CmInDimension: new Coding({
         code: "370012005",
         display: "N3a: > 6 cm in dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N3bExtensionToSupraclavicularFossa: Coding.FromStrict({
+    ConditionStageValueSet_N3bExtensionToSupraclavicularFossa: new Coding({
         code: "370013000",
         display: "N3b: extension to supraclavicular fossa",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N3MetastasisInALymphNodeGreaterThan6CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_N3MetastasisInALymphNodeGreaterThan6CmInGreatestDimension: new Coding({
         code: "370014006",
         display: "N3: Metastasis in a lymph node > 6 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1MetastasisInIpsilateralPeribronchialAndOrIpsilateralHilarLymphNodesIncludingIntrapulmonaryNodesInvolvedByDirectExtensionOfThePrimaryTumor: Coding.FromStrict({
+    ConditionStageValueSet_N1MetastasisInIpsilateralPeribronchialAndOrIpsilateralHilarLymphNodesIncludingIntrapulmonaryNodesInvolvedByDirectExtensionOfThePrimaryTumor: new Coding({
         code: "370015007",
         display: "N1: Metastasis in ipsilateral peribronchial and/or ipsilateral hilar lymph nodes, including intrapulmonary nodes involved by direct extension of the primary tumor",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N2MetastasisInIpsilateralMediastinalAndOrSubcarinalLymphNodeS: Coding.FromStrict({
+    ConditionStageValueSet_N2MetastasisInIpsilateralMediastinalAndOrSubcarinalLymphNodeS: new Coding({
         code: "370016008",
         display: "N2: Metastasis in ipsilateral mediastinal and/or subcarinal lymph node(s)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N3MetastasisInContralateralMediastinalContralateralHilarIpsilateralOrContralateralScaleneOrSupraclavicularLymphNodeS: Coding.FromStrict({
+    ConditionStageValueSet_N3MetastasisInContralateralMediastinalContralateralHilarIpsilateralOrContralateralScaleneOrSupraclavicularLymphNodeS: new Coding({
         code: "370017004",
         display: "N3: Metastasis in contralateral mediastinal, contralateral hilar, ipsilateral or contralateral scalene or supraclavicular lymph node(s)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1MetastasisInASingleLymphNode: Coding.FromStrict({
+    ConditionStageValueSet_N1MetastasisInASingleLymphNode: new Coding({
         code: "370018009",
         display: "N1: Metastasis in a single lymph node",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N2MetastasisInMoreThanOneRegionalLymphNode: Coding.FromStrict({
+    ConditionStageValueSet_N2MetastasisInMoreThanOneRegionalLymphNode: new Coding({
         code: "370019001",
         display: "N2: Metastasis in more than one regional lymph node",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1MetastasisWithALymphNodeMassLessThan2CmInGreatestDimensionAnd5OrFewerPositiveNodesNoneLargerThan2CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_N1MetastasisWithALymphNodeMassLessThan2CmInGreatestDimensionAnd5OrFewerPositiveNodesNoneLargerThan2CmInGreatestDimension: new Coding({
         code: "370020007",
         display: "N1: Metastasis with a lymph node mass less than 2 cm in greatest dimension and 5 or fewer positive nodes, none larger than 2 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N2MetastasisWithALymphNodeMassGreaterThan2CmButLessThanOrEquals5CmInGreatestDimensionOrMoreThan5NodesPositiveNoneGreaterThan5CmOrEvidenceOfExtranodalExtensionOfTumor: Coding.FromStrict({
+    ConditionStageValueSet_N2MetastasisWithALymphNodeMassGreaterThan2CmButLessThanOrEquals5CmInGreatestDimensionOrMoreThan5NodesPositiveNoneGreaterThan5CmOrEvidenceOfExtranodalExtensionOfTumor: new Coding({
         code: "370021006",
         display: "N2: Metastasis with a lymph node mass >2 cm but <= 5 cm in greatest dimension, or more than 5 nodes positive, none > 5 cm; or evidence of extranodal extension of tumor",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N3MetastasisWithALymphNodeMassGreaterThan5CmInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_N3MetastasisWithALymphNodeMassGreaterThan5CmInGreatestDimension: new Coding({
         code: "370022004",
         display: "N3: Metastasis with a lymph node mass > 5 cm in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1MetastasisInRegionalLymphNodeOrNodes: Coding.FromStrict({
+    ConditionStageValueSet_N1MetastasisInRegionalLymphNodeOrNodes: new Coding({
         code: "370023009",
         display: "N1: Metastasis in regional lymph node or nodes",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1PelvicOrInguinalLymphNodeMetastasis: Coding.FromStrict({
+    ConditionStageValueSet_N1PelvicOrInguinalLymphNodeMetastasis: new Coding({
         code: "370024003",
         display: "N1: Pelvic or inguinal lymph node metastasis",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1aMetastasisInIpsilateralCervicalLymphNodeS: Coding.FromStrict({
+    ConditionStageValueSet_N1aMetastasisInIpsilateralCervicalLymphNodeS: new Coding({
         code: "370025002",
         display: "N1a: Metastasis in ipsilateral cervical lymph node(s)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1bMetastasisInBilateralMidlineOrContralateralCervicalOrMediastinalLymphNodeS: Coding.FromStrict({
+    ConditionStageValueSet_N1bMetastasisInBilateralMidlineOrContralateralCervicalOrMediastinalLymphNodeS: new Coding({
         code: "370026001",
         display: "N1b: Metastasis in bilateral, midline, or contralateral cervical or mediastinal lymph node(s)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1aMetastasisInSingleRegionalLymphNode: Coding.FromStrict({
+    ConditionStageValueSet_N1aMetastasisInSingleRegionalLymphNode: new Coding({
         code: "370027005",
         display: "N1a: Metastasis in single regional lymph node",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1bMetastasisInMultipleRegionalLymphNodes: Coding.FromStrict({
+    ConditionStageValueSet_N1bMetastasisInMultipleRegionalLymphNodes: new Coding({
         code: "370028000",
         display: "N1b: Metastasis in multiple regional lymph nodes",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_M1IVDistantMetastasis: Coding.FromStrict({
+    ConditionStageValueSet_M1IVDistantMetastasis: new Coding({
         code: "370029008",
         display: "M1 (IV): Distant metastasis",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_M1IVBDistantMetastasis: Coding.FromStrict({
+    ConditionStageValueSet_M1IVBDistantMetastasis: new Coding({
         code: "370030003",
         display: "M1 (IVB): Distant metastasis",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_M1DistantMetastasisIncludesMetastasisToIpsilateralSupraclavicularLymphNodes: Coding.FromStrict({
+    ConditionStageValueSet_M1DistantMetastasisIncludesMetastasisToIpsilateralSupraclavicularLymphNodes: new Coding({
         code: "370031004",
         display: "M1: Distant metastasis [includes metastasis to ipsilateral supraclavicular lymph nodes]",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_M1DistantMetastasisIncludesSeparateTumorNoduleSInADifferentLobeIpsilateralOrContralateral: Coding.FromStrict({
+    ConditionStageValueSet_M1DistantMetastasisIncludesSeparateTumorNoduleSInADifferentLobeIpsilateralOrContralateral: new Coding({
         code: "370032006",
         display: "M1: Distant metastasis, includes separate tumor nodule(s) in a different lobe (ipsilateral or contralateral)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_M1aNonRegionalLymphNodeOrPulmonaryMetastasis: Coding.FromStrict({
+    ConditionStageValueSet_M1aNonRegionalLymphNodeOrPulmonaryMetastasis: new Coding({
         code: "370033001",
         display: "M1a: Non-regional lymph node or pulmonary metastasis",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_M1aNonRegionalLymphNodeMetastasis: Coding.FromStrict({
+    ConditionStageValueSet_M1aNonRegionalLymphNodeMetastasis: new Coding({
         code: "370034007",
         display: "M1a: non-regional lymph node metastasis",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_M1aIIIGestationalTrophoblasticTumorExtendsToTheLungsWithOrWithoutGenitalTractInvolvement: Coding.FromStrict({
+    ConditionStageValueSet_M1aIIIGestationalTrophoblasticTumorExtendsToTheLungsWithOrWithoutGenitalTractInvolvement: new Coding({
         code: "370035008",
         display: "M1a (III): gestational trophoblastic tumor extends to the lungs with or without genital tract involvement",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_M1aIIIAGestationalTrophoblasticTumorExtendsToTheLungsWithOrWithoutGenitalTractInvolvementWithoutRiskFactors: Coding.FromStrict({
+    ConditionStageValueSet_M1aIIIAGestationalTrophoblasticTumorExtendsToTheLungsWithOrWithoutGenitalTractInvolvementWithoutRiskFactors: new Coding({
         code: "370036009",
         display: "M1a (IIIA): gestational trophoblastic tumor extends to the lungs with or without genital tract involvement without risk factors",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_M1aIIIBGestationalTrophoblasticTumorExtendsToTheLungsWithOrWithoutGenitalTractInvolvementWithOneRiskFactor: Coding.FromStrict({
+    ConditionStageValueSet_M1aIIIBGestationalTrophoblasticTumorExtendsToTheLungsWithOrWithoutGenitalTractInvolvementWithOneRiskFactor: new Coding({
         code: "370037000",
         display: "M1a (IIIB): gestational trophoblastic tumor extends to the lungs with or without genital tract involvement with one risk factor",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_M1aIIICGestationalTrophoblasticTumorExtendsToTheLungsWithOrWithoutGenitalTractInvolvementWithTwoRiskFactors: Coding.FromStrict({
+    ConditionStageValueSet_M1aIIICGestationalTrophoblasticTumorExtendsToTheLungsWithOrWithoutGenitalTractInvolvementWithTwoRiskFactors: new Coding({
         code: "370038005",
         display: "M1a (IIIC): gestational trophoblastic tumor extends to the lungs with or without genital tract involvement with two risk factors",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_M1bIVAllOtherMetastaticSites: Coding.FromStrict({
+    ConditionStageValueSet_M1bIVAllOtherMetastaticSites: new Coding({
         code: "370039002",
         display: "M1b (IV): All other metastatic sites",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_M1bIVAAllOtherMetastaticSitesWithoutRiskFactors: Coding.FromStrict({
+    ConditionStageValueSet_M1bIVAAllOtherMetastaticSitesWithoutRiskFactors: new Coding({
         code: "370040000",
         display: "M1b (IVA): All other metastatic sites without risk factors",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_M1bIVBAllOtherMetastaticSitesWithOneRiskFactor: Coding.FromStrict({
+    ConditionStageValueSet_M1bIVBAllOtherMetastaticSitesWithOneRiskFactor: new Coding({
         code: "370041001",
         display: "M1b (IVB): All other metastatic sites with one risk factor",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_M1bIVCAllOtherMetastaticSitesWithTwoRiskFactors: Coding.FromStrict({
+    ConditionStageValueSet_M1bIVCAllOtherMetastaticSitesWithTwoRiskFactors: new Coding({
         code: "370042008",
         display: "M1b (IVC): All other metastatic sites with two risk factors",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_M1bBoneS: Coding.FromStrict({
+    ConditionStageValueSet_M1bBoneS: new Coding({
         code: "370043003",
         display: "M1b: Bone(s)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_M1bDistantMetastasisOtherThanToNonRegionalLymphNodesAndLungs: Coding.FromStrict({
+    ConditionStageValueSet_M1bDistantMetastasisOtherThanToNonRegionalLymphNodesAndLungs: new Coding({
         code: "370044009",
         display: "M1b: Distant metastasis other than to non-regional lymph nodes and lungs",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_M1cOtherSiteS: Coding.FromStrict({
+    ConditionStageValueSet_M1cOtherSiteS: new Coding({
         code: "370045005",
         display: "M1c: Other site(s)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3aBColonRectumTumorInvadesLessThanOrEquals5MmBeyondTheBorderOfTheMuscularisPropria: Coding.FromStrict({
+    ConditionStageValueSet_T3aBColonRectumTumorInvadesLessThanOrEquals5MmBeyondTheBorderOfTheMuscularisPropria: new Coding({
         code: "370046006",
         display: "T3a,b: Colon/rectum tumor invades <=5 mm beyond the border of the muscularis propria",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T3cDColonRectumTumorInvadesGreaterThan5MmBeyondTheBorderOfTheMuscularisPropria: Coding.FromStrict({
+    ConditionStageValueSet_T3cDColonRectumTumorInvadesGreaterThan5MmBeyondTheBorderOfTheMuscularisPropria: new Coding({
         code: "370047002",
         display: "T3c,d: Colon/rectum tumor invades >5 mm beyond the border of the muscularis propria",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_DirectInvasionOfAdrenalT3a: Coding.FromStrict({
+    ConditionStageValueSet_DirectInvasionOfAdrenalT3a: new Coding({
         code: "370072002",
         display: "Direct invasion of adrenal (T3a)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1RegionalLymphNodeMetastasis: Coding.FromStrict({
+    ConditionStageValueSet_N1RegionalLymphNodeMetastasis: new Coding({
         code: "370123006",
         display: "N1: Regional lymph node metastasis",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N1MetastasisInPerirectalLymphNodeOrNodes: Coding.FromStrict({
+    ConditionStageValueSet_N1MetastasisInPerirectalLymphNodeOrNodes: new Coding({
         code: "372436009",
         display: "N1: Metastasis in perirectal lymph node or nodes",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N2MetastasisToUnilateralInternalIliacAndOrInguinalLymphNodeS: Coding.FromStrict({
+    ConditionStageValueSet_N2MetastasisToUnilateralInternalIliacAndOrInguinalLymphNodeS: new Coding({
         code: "372437000",
         display: "N2: Metastasis to unilateral internal iliac and/or inguinal lymph node(s)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PNXRegionalLymphNodesCannotBeAssessedEGPreviouslyRemovedOrNotRemovedForPathologicStudyBreast: Coding.FromStrict({
+    ConditionStageValueSet_PNXRegionalLymphNodesCannotBeAssessedEGPreviouslyRemovedOrNotRemovedForPathologicStudyBreast: new Coding({
         code: "373150000",
         display: "pNX: Regional lymph nodes cannot be assessed (e.g., previously removed, or not removed for pathologic study) (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN0NoRegionalLymphNodeMetastasisHistologicallyIENoneGreaterThan02MmNoAdditionalExaminationForIsolatedTumorCellsBreast: Coding.FromStrict({
+    ConditionStageValueSet_PN0NoRegionalLymphNodeMetastasisHistologicallyIENoneGreaterThan02MmNoAdditionalExaminationForIsolatedTumorCellsBreast: new Coding({
         code: "373151001",
         display: "pN0: No regional lymph node metastasis histologically (i.e., none greater than 0.2 mm), no additional examination for isolated tumor cells (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1MetastasisIn1To3AxillaryLymphNodesAndOrInInternalMammaryNodesWithMicroscopicDiseaseDetectedBySentinelLymphNodeDissectionButNotClinicallyApparentBreast: Coding.FromStrict({
+    ConditionStageValueSet_PN1MetastasisIn1To3AxillaryLymphNodesAndOrInInternalMammaryNodesWithMicroscopicDiseaseDetectedBySentinelLymphNodeDissectionButNotClinicallyApparentBreast: new Coding({
         code: "373156006",
         display: "pN1: Metastasis in 1 to 3 axillary lymph nodes, and/or in internal mammary nodes with microscopic disease detected by sentinel lymph node dissection but not clinically apparent (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1miMicrometastasisGreaterThan02MmNoneGreaterThan20MmBreast: Coding.FromStrict({
+    ConditionStageValueSet_PN1miMicrometastasisGreaterThan02MmNoneGreaterThan20MmBreast: new Coding({
         code: "373157002",
         display: "pN1mi: Micrometastasis (greater than 0.2 mm, none greater than 2.0 mm) (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1miIPlusMicrometastasisDetectedOnlyByIHCBreast: Coding.FromStrict({
+    ConditionStageValueSet_PN1miIPlusMicrometastasisDetectedOnlyByIHCBreast: new Coding({
         code: "373158007",
         display: "pN1mi(i+): Micrometastasis detected only by IHC (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1aMetastasisIn1To3AxillaryLymphNodesBreast: Coding.FromStrict({
+    ConditionStageValueSet_PN1aMetastasisIn1To3AxillaryLymphNodesBreast: new Coding({
         code: "373159004",
         display: "pN1a: Metastasis in 1 to 3 axillary lymph nodes (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1bMetastasisInInternalMammaryLymphNodesWithMicroscopicDiseaseDetectedBySentinelLymphNodeDissectionButNotClinicallyApparentBreast: Coding.FromStrict({
+    ConditionStageValueSet_PN1bMetastasisInInternalMammaryLymphNodesWithMicroscopicDiseaseDetectedBySentinelLymphNodeDissectionButNotClinicallyApparentBreast: new Coding({
         code: "373160009",
         display: "pN1b: Metastasis in internal mammary lymph nodes with microscopic disease detected by sentinel lymph node dissection but not clinically apparent (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1cMetastasisIn1To3AxillaryLymphNodesAndInInternalMammaryLymphNodesWithMicroscopicDiseaseDetectedBySentinelLymphNodeDissectionButNotClinicallyApparentBreast: Coding.FromStrict({
+    ConditionStageValueSet_PN1cMetastasisIn1To3AxillaryLymphNodesAndInInternalMammaryLymphNodesWithMicroscopicDiseaseDetectedBySentinelLymphNodeDissectionButNotClinicallyApparentBreast: new Coding({
         code: "373161008",
         display: "pN1c: Metastasis in 1 to 3 axillary lymph nodes and in internal mammary lymph nodes with microscopic disease detected by sentinel lymph node dissection but not clinically apparent (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2MetastasisIn4To9AxillaryLymphNodesOrInClinicallyApparentInternalMammaryLymphNodesInTheAbsenceOfAxillaryLymphNodeMetastasisBreast: Coding.FromStrict({
+    ConditionStageValueSet_PN2MetastasisIn4To9AxillaryLymphNodesOrInClinicallyApparentInternalMammaryLymphNodesInTheAbsenceOfAxillaryLymphNodeMetastasisBreast: new Coding({
         code: "373162001",
         display: "pN2: Metastasis in 4 to 9 axillary lymph nodes, or in clinically apparent internal mammary lymph nodes in the absence of axillary lymph node metastasis (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2aMetastasisIn4To9AxillaryLymphNodesAtLeastOneTumorDepositGreaterThan20MmBreast: Coding.FromStrict({
+    ConditionStageValueSet_PN2aMetastasisIn4To9AxillaryLymphNodesAtLeastOneTumorDepositGreaterThan20MmBreast: new Coding({
         code: "373163006",
         display: "pN2a: Metastasis in 4 to 9 axillary lymph nodes (at least one tumor deposit greater than 2.0 mm) (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2bMetastasisInClinicallyApparentInternalMammaryLymphNodesInTheAbsenceOfAxillaryLymphNodeMetastasisBreast: Coding.FromStrict({
+    ConditionStageValueSet_PN2bMetastasisInClinicallyApparentInternalMammaryLymphNodesInTheAbsenceOfAxillaryLymphNodeMetastasisBreast: new Coding({
         code: "373164000",
         display: "pN2b: Metastasis in clinically apparent internal mammary lymph nodes in the absence of axillary lymph node metastasis (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN3aMetastasisIn10OrMoreAxillaryLymphNodesAtLeastOneTumorDepositGreaterThan20MmOrMetastasisToInfraclavicularLymphNodesBreast: Coding.FromStrict({
+    ConditionStageValueSet_PN3aMetastasisIn10OrMoreAxillaryLymphNodesAtLeastOneTumorDepositGreaterThan20MmOrMetastasisToInfraclavicularLymphNodesBreast: new Coding({
         code: "373165004",
         display: "pN3a: Metastasis in 10 or more axillary lymph nodes (at least one tumor deposit greater than 2.0 mm), or metastasis to infraclavicular lymph nodes (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN3cMetastasisInIpsilateralSupraclavicularLymphNodesBreast: Coding.FromStrict({
+    ConditionStageValueSet_PN3cMetastasisInIpsilateralSupraclavicularLymphNodesBreast: new Coding({
         code: "373166003",
         display: "pN3c: Metastasis in ipsilateral supraclavicular lymph nodes (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN3bTumorOfBreastWithMetastasisAsPerAJCC6thEditionDefinitionBreast: Coding.FromStrict({
+    ConditionStageValueSet_PN3bTumorOfBreastWithMetastasisAsPerAJCC6thEditionDefinitionBreast: new Coding({
         code: "373167007",
         display: "pN3b: Tumor of breast with metastasis as per AJCC 6th Edition definition (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM0NoDistantMetastasisFromBreastTumor: Coding.FromStrict({
+    ConditionStageValueSet_PM0NoDistantMetastasisFromBreastTumor: new Coding({
         code: "373169005",
         display: "pM0: No distant metastasis from breast tumor",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PMXDistantMetastasisCannotBeAssessedBreast: Coding.FromStrict({
+    ConditionStageValueSet_PMXDistantMetastasisCannotBeAssessedBreast: new Coding({
         code: "373170006",
         display: "pMX: Distant metastasis cannot be assessed (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1DistantMetastasisBreast: Coding.FromStrict({
+    ConditionStageValueSet_PM1DistantMetastasisBreast: new Coding({
         code: "373171005",
         display: "pM1: Distant metastasis (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1Tumor2CmOrLessInGreatestDimensionBreast: Coding.FromStrict({
+    ConditionStageValueSet_PT1Tumor2CmOrLessInGreatestDimensionBreast: new Coding({
         code: "373172003",
         display: "pT1: Tumor 2 cm or less in greatest dimension (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PTXPrimaryTumorCannotBeAssessedBreast: Coding.FromStrict({
+    ConditionStageValueSet_PTXPrimaryTumorCannotBeAssessedBreast: new Coding({
         code: "373173008",
         display: "pTX: Primary tumor cannot be assessed (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT0NoEvidenceOfPrimaryTumorBreast: Coding.FromStrict({
+    ConditionStageValueSet_PT0NoEvidenceOfPrimaryTumorBreast: new Coding({
         code: "373174002",
         display: "pT0: No evidence of primary tumor (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PTisCarcinomaInSituBreast: Coding.FromStrict({
+    ConditionStageValueSet_PTisCarcinomaInSituBreast: new Coding({
         code: "373175001",
         display: "pTis: Carcinoma in situ (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PTisDuctalCarcinomaInSituBreast: Coding.FromStrict({
+    ConditionStageValueSet_PTisDuctalCarcinomaInSituBreast: new Coding({
         code: "373176000",
         display: "pTis: Ductal carcinoma in situ (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PTisLobularCarcinomaInSituBreast: Coding.FromStrict({
+    ConditionStageValueSet_PTisLobularCarcinomaInSituBreast: new Coding({
         code: "373177009",
         display: "pTis: Lobular carcinoma in situ (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PTisPagetQuoteSDiseaseOfTheNippleWithNoTumor: Coding.FromStrict({
+    ConditionStageValueSet_PTisPagetQuoteSDiseaseOfTheNippleWithNoTumor: new Coding({
         code: "373178004",
         display: "pTis: Paget's disease of the nipple with no tumor",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1micMicroinvasionLessThanOrEquals01CmInGreatestDimensionBreast: Coding.FromStrict({
+    ConditionStageValueSet_PT1micMicroinvasionLessThanOrEquals01CmInGreatestDimensionBreast: new Coding({
         code: "373179007",
         display: "pT1mic: Microinvasion <= 0.1 cm in greatest dimension (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1aTumorGreaterThan01CmButLessThanOrEquals05CmInGreatestDimensionBreast: Coding.FromStrict({
+    ConditionStageValueSet_PT1aTumorGreaterThan01CmButLessThanOrEquals05CmInGreatestDimensionBreast: new Coding({
         code: "373180005",
         display: "pT1a: Tumor >0.1 cm but <= 0.5 cm in greatest dimension (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorGreaterThan2CmButLessThanOrEquals5CmInGreatestDimensionBreast: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorGreaterThan2CmButLessThanOrEquals5CmInGreatestDimensionBreast: new Coding({
         code: "373182002",
         display: "pT2: Tumor > 2 cm but <= 5 cm in greatest dimension (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1cTumorMoreThan1CmButNotMoreThan2CmInGreatestDimensionBreast: Coding.FromStrict({
+    ConditionStageValueSet_PT1cTumorMoreThan1CmButNotMoreThan2CmInGreatestDimensionBreast: new Coding({
         code: "373183007",
         display: "pT1c: Tumor more than 1 cm but not more than 2 cm in greatest dimension (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorGreaterThan5CmInGreatestDimensionBreast: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorGreaterThan5CmInGreatestDimensionBreast: new Coding({
         code: "373184001",
         display: "pT3: Tumor >5 cm in greatest dimension (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorOfAnySizeWithDirectExtensionToChestWallOrSkinBreast: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorOfAnySizeWithDirectExtensionToChestWallOrSkinBreast: new Coding({
         code: "373185000",
         display: "pT4: Tumor of any size with direct extension to chest wall or skin (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4aTumorOfAnySizeWithExtensionToChestWallNotIncludingPectoralisMuscleBreast: Coding.FromStrict({
+    ConditionStageValueSet_PT4aTumorOfAnySizeWithExtensionToChestWallNotIncludingPectoralisMuscleBreast: new Coding({
         code: "373186004",
         display: "pT4a: Tumor of any size with extension to chest wall, not including pectoralis muscle (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4bTumorOfAnySizeWithEdemaIncludingPeauDQuoteOrangeOrUlcerationOfTheSkinOfTheBreastOrSatelliteSkinNodulesConfinedToTheSameBreast: Coding.FromStrict({
+    ConditionStageValueSet_PT4bTumorOfAnySizeWithEdemaIncludingPeauDQuoteOrangeOrUlcerationOfTheSkinOfTheBreastOrSatelliteSkinNodulesConfinedToTheSameBreast: new Coding({
         code: "373187008",
         display: "pT4b: Tumor of any size with edema (including peau d'orange) or ulceration of the skin of the breast or satellite skin nodules confined to the same breast",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4cTumorOfAnySizeWithDirectExtensionToChestWallNotIncludingPectoralisMuscleAndEdemaIncludingPeauDQuoteOrangeOrUlcerationOfTheSkinOfTheBreastOrSatelliteSkinNodulesConfinedToTheSameBreast: Coding.FromStrict({
+    ConditionStageValueSet_PT4cTumorOfAnySizeWithDirectExtensionToChestWallNotIncludingPectoralisMuscleAndEdemaIncludingPeauDQuoteOrangeOrUlcerationOfTheSkinOfTheBreastOrSatelliteSkinNodulesConfinedToTheSameBreast: new Coding({
         code: "373189006",
         display: "pT4c: Tumor of any size with direct extension to chest wall (not including pectoralis muscle) and edema (including peau d'orange) or ulceration of the skin of the breast or satellite skin nodules confined to the same breast",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4dInflammatoryCarcinomaBreast: Coding.FromStrict({
+    ConditionStageValueSet_PT4dInflammatoryCarcinomaBreast: new Coding({
         code: "373190002",
         display: "pT4d: Inflammatory carcinoma (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PTisTumorInvadesMuscularisMucosaeColonRectum: Coding.FromStrict({
+    ConditionStageValueSet_PTisTumorInvadesMuscularisMucosaeColonRectum: new Coding({
         code: "373199001",
         display: "pTis: Tumor invades muscularis mucosae (colon/rectum)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1TumorInvadesSubmucosaColonRectum: Coding.FromStrict({
+    ConditionStageValueSet_PT1TumorInvadesSubmucosaColonRectum: new Coding({
         code: "373200003",
         display: "pT1: Tumor invades submucosa (colon/rectum)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PTisTumorInvadesLaminaPropriaColonRectum: Coding.FromStrict({
+    ConditionStageValueSet_PTisTumorInvadesLaminaPropriaColonRectum: new Coding({
         code: "373201004",
         display: "pTis: Tumor invades lamina propria (colon/rectum)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1bTumorGreaterThan05CmButLessThanOrEquals1CmInGreatestDimensionBreast: Coding.FromStrict({
+    ConditionStageValueSet_PT1bTumorGreaterThan05CmButLessThanOrEquals1CmInGreatestDimensionBreast: new Coding({
         code: "373204007",
         display: "pT1b: Tumor >0.5 cm but <= 1 cm in greatest dimension (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_EpithelialOvarianTumorInternationalFederationOfGynecologyAndObstetricsStageIC: Coding.FromStrict({
+    ConditionStageValueSet_EpithelialOvarianTumorInternationalFederationOfGynecologyAndObstetricsStageIC: new Coding({
         code: "37415008",
         display: "Epithelial ovarian tumor, International Federation of Gynecology and Obstetrics stage IC",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4aTumorDirectlyInvadesOtherOrgansOrStructuresColonRectum: Coding.FromStrict({
+    ConditionStageValueSet_PT4aTumorDirectlyInvadesOtherOrgansOrStructuresColonRectum: new Coding({
         code: "384612007",
         display: "pT4a: Tumor directly invades other organs or structures (colon/rectum)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4bTumorPenetratesVisceralPeritoneumColonRectum: Coding.FromStrict({
+    ConditionStageValueSet_PT4bTumorPenetratesVisceralPeritoneumColonRectum: new Coding({
         code: "384613002",
         display: "pT4b: Tumor penetrates visceral peritoneum (colon/rectum)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1DistantMetastasisIncludesSeparateTumorNoduleSInADifferentLobeIpsilateralOrContralateralLung: Coding.FromStrict({
+    ConditionStageValueSet_PM1DistantMetastasisIncludesSeparateTumorNoduleSInADifferentLobeIpsilateralOrContralateralLung: new Coding({
         code: "384748000",
         display: "pM1: Distant metastasis, includes separate tumor nodule(s) in a different lobe (ipsilateral or contralateral) (lung)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1MetastasisInIpsilateralPeribronchialAndOrIpsilateralHilarLymphNodesIncludingIntrapulmonaryNodesInvolvedByDirectExtensionOfThePrimaryTumorLung: Coding.FromStrict({
+    ConditionStageValueSet_PN1MetastasisInIpsilateralPeribronchialAndOrIpsilateralHilarLymphNodesIncludingIntrapulmonaryNodesInvolvedByDirectExtensionOfThePrimaryTumorLung: new Coding({
         code: "384749008",
         display: "pN1: Metastasis in ipsilateral peribronchial and/or ipsilateral hilar lymph nodes, including intrapulmonary nodes involved by direct extension of the primary tumor (lung)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2MetastasisToIpsilateralMediastinalAndOrSubcarinalLymphNodesSLung: Coding.FromStrict({
+    ConditionStageValueSet_PN2MetastasisToIpsilateralMediastinalAndOrSubcarinalLymphNodesSLung: new Coding({
         code: "384750008",
         display: "pN2: Metastasis to ipsilateral mediastinal and/or subcarinal lymph nodes(s) (lung)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN3MetastasisToContralateralMediastinalContralateralHilarIpsilateralOrContralateralScaleneOrSupraclavicularLymphNodesSLung: Coding.FromStrict({
+    ConditionStageValueSet_PN3MetastasisToContralateralMediastinalContralateralHilarIpsilateralOrContralateralScaleneOrSupraclavicularLymphNodesSLung: new Coding({
         code: "384751007",
         display: "pN3: Metastasis to contralateral mediastinal, contralateral hilar, ipsilateral or contralateral scalene, or supraclavicular lymph nodes(s) (lung)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1Tumor3CmOrLessInGreatestDimensionSurroundedByLungOrVisceralPleuraWithoutBronchoscopicEvidenceOfInvasionMoreProximalThanTheLobarBronchusIENotInTheMainBronchusLung: Coding.FromStrict({
+    ConditionStageValueSet_PT1Tumor3CmOrLessInGreatestDimensionSurroundedByLungOrVisceralPleuraWithoutBronchoscopicEvidenceOfInvasionMoreProximalThanTheLobarBronchusIENotInTheMainBronchusLung: new Coding({
         code: "384753005",
         display: "pT1: Tumor 3 cm or less in greatest dimension, surrounded by lung or visceral pleura, without bronchoscopic evidence of invasion more proximal than the lobar bronchus (i.e., not in the main bronchus) (lung)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorOfLungAsPerAJCC6thEditionDefinitionLung: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorOfLungAsPerAJCC6thEditionDefinitionLung: new Coding({
         code: "384754004",
         display: "pT2: Tumor of lung as per AJCC 6th Edition definition (lung)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorDirectlyInvadesAnyOfFollowingChestWallDiaphragmMediastinalPleuraParietalPericardiumOrTumorInMainBronchusLessThan2CmDistalToCarinaNotInvolvingItOrAssocAtelectasisOrObstructivePneumonitisOfWholeLung: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorDirectlyInvadesAnyOfFollowingChestWallDiaphragmMediastinalPleuraParietalPericardiumOrTumorInMainBronchusLessThan2CmDistalToCarinaNotInvolvingItOrAssocAtelectasisOrObstructivePneumonitisOfWholeLung: new Coding({
         code: "384755003",
         display: "pT3:Tumor directly invades any of following:chest wall,diaphragm,mediastinal pleura,parietal pericardium;or tumor in main bronchus<2 cm distal to carina(not involving it);or assoc atelectasis or obstructive pneumonitis of whole lung",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorOfLungAsPerAJCC6thEditionDefinitionLung: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorOfLungAsPerAJCC6thEditionDefinitionLung: new Coding({
         code: "384756002",
         display: "pT4: Tumor of lung as per AJCC 6th Edition definition (lung)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PTXPrimaryTumorCannotBeAssessedOrTumorProvenByThePresenceOfMalignantCellsInSputumOrBronchialWashingsButNotVisualizedByImagingOrBronchoscopyLung: Coding.FromStrict({
+    ConditionStageValueSet_PTXPrimaryTumorCannotBeAssessedOrTumorProvenByThePresenceOfMalignantCellsInSputumOrBronchialWashingsButNotVisualizedByImagingOrBronchoscopyLung: new Coding({
         code: "384757006",
         display: "pTX: Primary tumor cannot be assessed, or tumor proven by the presence of malignant cells in sputum or bronchial washings but not visualized by imaging or bronchoscopy (lung)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2OrganConfinedProstate: Coding.FromStrict({
+    ConditionStageValueSet_PT2OrganConfinedProstate: new Coding({
         code: "384983005",
         display: "pT2: Organ confined (prostate)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2aUnilateralOneHalfOfOneLobeOrLessProstate: Coding.FromStrict({
+    ConditionStageValueSet_PT2aUnilateralOneHalfOfOneLobeOrLessProstate: new Coding({
         code: "384984004",
         display: "pT2a: Unilateral, one-half of one lobe or less (prostate)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2bUnilateralInvolvingMoreThanOneHalfOfLobeButNotBothLobesProstate: Coding.FromStrict({
+    ConditionStageValueSet_PT2bUnilateralInvolvingMoreThanOneHalfOfLobeButNotBothLobesProstate: new Coding({
         code: "384985003",
         display: "pT2b: Unilateral, involving more than one-half of lobe but not both lobes (prostate)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2cBilateralDiseaseProstate: Coding.FromStrict({
+    ConditionStageValueSet_PT2cBilateralDiseaseProstate: new Coding({
         code: "384986002",
         display: "pT2c: Bilateral disease (prostate)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3ExtraprostaticExtensionProstate: Coding.FromStrict({
+    ConditionStageValueSet_PT3ExtraprostaticExtensionProstate: new Coding({
         code: "384987006",
         display: "pT3: Extraprostatic extension (prostate)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3aExtraprostaticExtensionProstate: Coding.FromStrict({
+    ConditionStageValueSet_PT3aExtraprostaticExtensionProstate: new Coding({
         code: "384988001",
         display: "pT3a: Extraprostatic extension (prostate)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3bSeminalVesicleInvasionProstate: Coding.FromStrict({
+    ConditionStageValueSet_PT3bSeminalVesicleInvasionProstate: new Coding({
         code: "384989009",
         display: "pT3b: Seminal vesicle invasion (prostate)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4InvasionOfBladderANDORRectumProstate: Coding.FromStrict({
+    ConditionStageValueSet_PT4InvasionOfBladderANDORRectumProstate: new Coding({
         code: "384990000",
         display: "pT4: Invasion of bladder AND/OR rectum (prostate)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1Tumor2CmOrLessInGreatestDimensionAnalCanal: Coding.FromStrict({
+    ConditionStageValueSet_PT1Tumor2CmOrLessInGreatestDimensionAnalCanal: new Coding({
         code: "385301007",
         display: "pT1: Tumor 2 cm or less in greatest dimension (anal canal)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorMoreThan2CmButNotMoreThan5CmInGreatestDimensionAnalCanal: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorMoreThan2CmButNotMoreThan5CmInGreatestDimensionAnalCanal: new Coding({
         code: "385302000",
         display: "pT2: Tumor more than 2 cm but not more than 5 cm in greatest dimension (anal canal)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorMoreThan5CmInGreatestDimensionAnalCanal: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorMoreThan5CmInGreatestDimensionAnalCanal: new Coding({
         code: "385303005",
         display: "pT3: Tumor more than 5 cm in greatest dimension (anal canal)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorOfAnySizeInvadesAdjacentOrganSEGVaginaUrethraBladderAnalCanal: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorOfAnySizeInvadesAdjacentOrganSEGVaginaUrethraBladderAnalCanal: new Coding({
         code: "385304004",
         display: "pT4: Tumor of any size invades adjacent organ(s), e.g., vagina, urethra, bladder (anal canal)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1MetastasisInPerirectalLymphNodeSAnalCanal: Coding.FromStrict({
+    ConditionStageValueSet_PN1MetastasisInPerirectalLymphNodeSAnalCanal: new Coding({
         code: "385306002",
         display: "pN1: Metastasis in perirectal lymph node(s) (anal canal)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2MetastasisInUnilateralInternalIliacANDORInguinalLymphNodeSAnalCanal: Coding.FromStrict({
+    ConditionStageValueSet_PN2MetastasisInUnilateralInternalIliacANDORInguinalLymphNodeSAnalCanal: new Coding({
         code: "385307006",
         display: "pN2: Metastasis in unilateral internal iliac AND/OR inguinal lymph node(s) (anal canal)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN3MetastasisInPerirectalAndInguinalLymphNodesANDORBilateralInternalIliacANDORInguinalLymphNodesAnalCanal: Coding.FromStrict({
+    ConditionStageValueSet_PN3MetastasisInPerirectalAndInguinalLymphNodesANDORBilateralInternalIliacANDORInguinalLymphNodesAnalCanal: new Coding({
         code: "385308001",
         display: "pN3: Metastasis in perirectal and inguinal lymph nodes AND/OR bilateral internal iliac AND/OR inguinal lymph nodes (anal canal)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1TumorInvadesLaminaPropriaOrSubmucosaStomach: Coding.FromStrict({
+    ConditionStageValueSet_PT1TumorInvadesLaminaPropriaOrSubmucosaStomach: new Coding({
         code: "385316005",
         display: "pT1: Tumor invades lamina propria or submucosa (stomach)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1aTumorInvadesLaminaPropriaStomach: Coding.FromStrict({
+    ConditionStageValueSet_PT1aTumorInvadesLaminaPropriaStomach: new Coding({
         code: "385317001",
         display: "pT1a: Tumor invades lamina propria (stomach)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1bTumorInvadesSubmucosaStomach: Coding.FromStrict({
+    ConditionStageValueSet_PT1bTumorInvadesSubmucosaStomach: new Coding({
         code: "385318006",
         display: "pT1b: Tumor invades submucosa (stomach)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorInvadesMuscularisPropriaOrSubserosaStomach: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorInvadesMuscularisPropriaOrSubserosaStomach: new Coding({
         code: "385319003",
         display: "pT2: Tumor invades muscularis propria or subserosa (stomach)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2aTumorInvadesMuscularisPropriaStomach: Coding.FromStrict({
+    ConditionStageValueSet_PT2aTumorInvadesMuscularisPropriaStomach: new Coding({
         code: "385320009",
         display: "pT2a: Tumor invades muscularis propria (stomach)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2bTumorInvadesSubserosaStomach: Coding.FromStrict({
+    ConditionStageValueSet_PT2bTumorInvadesSubserosaStomach: new Coding({
         code: "385321008",
         display: "pT2b: Tumor invades subserosa (stomach)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorPenetratesSerosaVisceralPeritoneumWithoutInvasionOfAdjacentStructuresStomach: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorPenetratesSerosaVisceralPeritoneumWithoutInvasionOfAdjacentStructuresStomach: new Coding({
         code: "385322001",
         display: "pT3: Tumor penetrates serosa (visceral peritoneum) without invasion of adjacent structures (stomach)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorInvadesAdjacentStructuresStomach: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorInvadesAdjacentStructuresStomach: new Coding({
         code: "385323006",
         display: "pT4: Tumor invades adjacent structures (stomach)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1MetastasisIn1To6RegionalPerigastricLymphNodesStomach: Coding.FromStrict({
+    ConditionStageValueSet_PN1MetastasisIn1To6RegionalPerigastricLymphNodesStomach: new Coding({
         code: "385324000",
         display: "pN1: Metastasis in 1 to 6 regional (perigastric) lymph nodes (stomach)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2MetastasisIn7To15RegionalPerigastricLymphNodesStomach: Coding.FromStrict({
+    ConditionStageValueSet_PN2MetastasisIn7To15RegionalPerigastricLymphNodesStomach: new Coding({
         code: "385325004",
         display: "pN2: Metastasis in 7 to 15 regional (perigastric) lymph nodes (stomach)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN3MetastasisInMoreThan15RegionalPerigastricLymphNodesStomach: Coding.FromStrict({
+    ConditionStageValueSet_PN3MetastasisInMoreThan15RegionalPerigastricLymphNodesStomach: new Coding({
         code: "385326003",
         display: "pN3: Metastasis in more than 15 regional (perigastric) lymph nodes (stomach)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_DukesStageFinding: Coding.FromStrict({
+    ConditionStageValueSet_DukesStageFinding: new Coding({
         code: "385358008",
         display: "Dukes stage finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ModifiedDukesStageFinding: Coding.FromStrict({
+    ConditionStageValueSet_ModifiedDukesStageFinding: new Coding({
         code: "385360005",
         display: "Modified Dukes stage finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_FIGOStageFindingForGynecologicalMalignancy: Coding.FromStrict({
+    ConditionStageValueSet_FIGOStageFindingForGynecologicalMalignancy: new Coding({
         code: "385362002",
         display: "FIGO stage finding for gynecological malignancy",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_FIGOOvarianTumorStageFinding: Coding.FromStrict({
+    ConditionStageValueSet_FIGOOvarianTumorStageFinding: new Coding({
         code: "385364001",
         display: "FIGO ovarian tumor stage finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_FIGOStageFindingForEpithelialTumorOfOvary: Coding.FromStrict({
+    ConditionStageValueSet_FIGOStageFindingForEpithelialTumorOfOvary: new Coding({
         code: "385366004",
         display: "FIGO stage finding for epithelial tumor of ovary",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_FIGOStageFindingForCervicalCarcinoma: Coding.FromStrict({
+    ConditionStageValueSet_FIGOStageFindingForCervicalCarcinoma: new Coding({
         code: "385368003",
         display: "FIGO stage finding for cervical carcinoma",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_FIGOStageFindingForVulvarCarcinoma: Coding.FromStrict({
+    ConditionStageValueSet_FIGOStageFindingForVulvarCarcinoma: new Coding({
         code: "385370007",
         display: "FIGO stage finding for vulvar carcinoma",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_FIGOStageFindingForVulvarMelanoma: Coding.FromStrict({
+    ConditionStageValueSet_FIGOStageFindingForVulvarMelanoma: new Coding({
         code: "385372004",
         display: "FIGO stage finding for vulvar melanoma",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_FIGOUterineTumorStageFinding: Coding.FromStrict({
+    ConditionStageValueSet_FIGOUterineTumorStageFinding: new Coding({
         code: "385374003",
         display: "FIGO uterine tumor stage finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_FIGOStageFindingForEndometrialCarcinoma: Coding.FromStrict({
+    ConditionStageValueSet_FIGOStageFindingForEndometrialCarcinoma: new Coding({
         code: "385376001",
         display: "FIGO stage finding for endometrial carcinoma",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PMCategoryFinding: Coding.FromStrict({
+    ConditionStageValueSet_PMCategoryFinding: new Coding({
         code: "385378000",
         display: "pM category finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TNMTumorStagingFinding: Coding.FromStrict({
+    ConditionStageValueSet_TNMTumorStagingFinding: new Coding({
         code: "385379008",
         display: "TNM tumor staging finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_MetastasisStageFinding: Coding.FromStrict({
+    ConditionStageValueSet_MetastasisStageFinding: new Coding({
         code: "385380006",
         display: "Metastasis stage finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PNCategoryFinding: Coding.FromStrict({
+    ConditionStageValueSet_PNCategoryFinding: new Coding({
         code: "385381005",
         display: "pN category finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_NodeStageFinding: Coding.FromStrict({
+    ConditionStageValueSet_NodeStageFinding: new Coding({
         code: "385382003",
         display: "Node stage finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PTCategoryFinding: Coding.FromStrict({
+    ConditionStageValueSet_PTCategoryFinding: new Coding({
         code: "385385001",
         display: "pT category finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_LymphomaStageFinding: Coding.FromStrict({
+    ConditionStageValueSet_LymphomaStageFinding: new Coding({
         code: "385389007",
         display: "Lymphoma stage finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ColonRectumTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_ColonRectumTNMFinding: new Coding({
         code: "385392006",
         display: "Colon/rectum TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_AnalCanalTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_AnalCanalTNMFinding: new Coding({
         code: "385415005",
         display: "Anal canal TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ProstateTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_ProstateTNMFinding: new Coding({
         code: "385416006",
         display: "Prostate TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_BreastTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_BreastTNMFinding: new Coding({
         code: "385417002",
         display: "Breast TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_LungTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_LungTNMFinding: new Coding({
         code: "385418007",
         display: "Lung TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_DukesStageA: Coding.FromStrict({
+    ConditionStageValueSet_DukesStageA: new Coding({
         code: "394939004",
         display: "Dukes stage A",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_DukesStageB: Coding.FromStrict({
+    ConditionStageValueSet_DukesStageB: new Coding({
         code: "394940002",
         display: "Dukes stage B",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_DukesStageC1: Coding.FromStrict({
+    ConditionStageValueSet_DukesStageC1: new Coding({
         code: "394941003",
         display: "Dukes stage C1",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_DukesStageC2: Coding.FromStrict({
+    ConditionStageValueSet_DukesStageC2: new Coding({
         code: "394942005",
         display: "Dukes stage C2",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_DukesStageD: Coding.FromStrict({
+    ConditionStageValueSet_DukesStageD: new Coding({
         code: "394943000",
         display: "Dukes stage D",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PTisCarcinomaInSituIntraepithelialColonRectum: Coding.FromStrict({
+    ConditionStageValueSet_PTisCarcinomaInSituIntraepithelialColonRectum: new Coding({
         code: "395705003",
         display: "pTis: Carcinoma in situ, intraepithelial (colon/rectum)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorInvadesMuscularisPropriaColonRectum: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorInvadesMuscularisPropriaColonRectum: new Coding({
         code: "395706002",
         display: "pT2: Tumor invades muscularis propria (colon/rectum)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorInvadesThroughTheMuscularisPropriaIntoTheSubserosaOrIntoNonPeritonealizedPericolicOrPerirectalTissuesColonRectum: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorInvadesThroughTheMuscularisPropriaIntoTheSubserosaOrIntoNonPeritonealizedPericolicOrPerirectalTissuesColonRectum: new Coding({
         code: "395707006",
         display: "pT3: Tumor invades through the muscularis propria into the subserosa or into non-peritonealized pericolic or perirectal tissues (colon/rectum)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3aBTumorInvadesThroughTheMuscularisPropriaIntoTheSubserosaOrIntoNonPeritonealizedPericolicOrPerirectalTissuesInvades5MmOrLessBeyondTheBorderOfTheMuscularisPropriaColonRectum: Coding.FromStrict({
+    ConditionStageValueSet_PT3aBTumorInvadesThroughTheMuscularisPropriaIntoTheSubserosaOrIntoNonPeritonealizedPericolicOrPerirectalTissuesInvades5MmOrLessBeyondTheBorderOfTheMuscularisPropriaColonRectum: new Coding({
         code: "395708001",
         display: "pT3a,b: Tumor invades through the muscularis propria into the subserosa or into non-peritonealized pericolic or perirectal tissues, invades 5 mm or less beyond the border of the muscularis propria (colon/rectum)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3cDTumorInvadesThroughTheMuscularisPropriaIntoTheSubserosaOrIntoNonPeritonealizedPericolicOrPerirectalTissuesInvadesGreaterThan5MmBeyondTheBorderOfTheMuscularisPropriaColonRectum: Coding.FromStrict({
+    ConditionStageValueSet_PT3cDTumorInvadesThroughTheMuscularisPropriaIntoTheSubserosaOrIntoNonPeritonealizedPericolicOrPerirectalTissuesInvadesGreaterThan5MmBeyondTheBorderOfTheMuscularisPropriaColonRectum: new Coding({
         code: "395709009",
         display: "pT3c,d: Tumor invades through the muscularis propria into the subserosa or into non-peritonealized pericolic or perirectal tissues, invades greater than 5 mm beyond the border of the muscularis propria (colon/rectum)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorDirectlyInvadesOtherOrgansOrStructuresAndOrPerforatesVisceralPeritoneumColonRectum: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorDirectlyInvadesOtherOrgansOrStructuresAndOrPerforatesVisceralPeritoneumColonRectum: new Coding({
         code: "395710004",
         display: "pT4: Tumor directly invades other organs or structures and/or perforates visceral peritoneum (colon/rectum)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1MetastasisIn1To3RegionalLymphNodesColonRectum: Coding.FromStrict({
+    ConditionStageValueSet_PN1MetastasisIn1To3RegionalLymphNodesColonRectum: new Coding({
         code: "395711000",
         display: "pN1: Metastasis in 1 to 3 regional lymph nodes (colon/rectum)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2MetastasisIn4OrMoreRegionalLymphNodesColonRectum: Coding.FromStrict({
+    ConditionStageValueSet_PN2MetastasisIn4OrMoreRegionalLymphNodesColonRectum: new Coding({
         code: "395712007",
         display: "pN2: Metastasis in 4 or more regional lymph nodes (colon/rectum)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1Tumor7CmOrLessInGreatestDimensionLimitedToTheKidneyKidney: Coding.FromStrict({
+    ConditionStageValueSet_PT1Tumor7CmOrLessInGreatestDimensionLimitedToTheKidneyKidney: new Coding({
         code: "396082002",
         display: "pT1: Tumor 7 cm or less in greatest dimension, limited to the kidney (kidney)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_KidneyTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_KidneyTNMFinding: new Coding({
         code: "396083007",
         display: "Kidney TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1aTumor4CmOrLessInGreatestDimensionLimitedToTheKidneyKidney: Coding.FromStrict({
+    ConditionStageValueSet_PT1aTumor4CmOrLessInGreatestDimensionLimitedToTheKidneyKidney: new Coding({
         code: "396084001",
         display: "pT1a: Tumor 4 cm or less in greatest dimension, limited to the kidney (kidney)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1bTumorMoreThan4CmButNotMoreThan7CmInGreatestDimensionLimitedToTheKidneyKidney: Coding.FromStrict({
+    ConditionStageValueSet_PT1bTumorMoreThan4CmButNotMoreThan7CmInGreatestDimensionLimitedToTheKidneyKidney: new Coding({
         code: "396085000",
         display: "pT1b: Tumor more than 4 cm but not more than 7 cm in greatest dimension, limited to the kidney (kidney)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorMoreThan7CmInGreatestDimensionLimitedToTheKidneyKidney: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorMoreThan7CmInGreatestDimensionLimitedToTheKidneyKidney: new Coding({
         code: "396086004",
         display: "pT2: Tumor more than 7 cm in greatest dimension, limited to the kidney (kidney)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorExtendsIntoMajorVeinsOrInvadesAdrenalGlandOrPerirenalAndOrRenalSinusFatButNotBeyondGerotaQuoteSFasciaKidney: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorExtendsIntoMajorVeinsOrInvadesAdrenalGlandOrPerirenalAndOrRenalSinusFatButNotBeyondGerotaQuoteSFasciaKidney: new Coding({
         code: "396087008",
         display: "pT3: Tumor extends into major veins or invades adrenal gland or perirenal and/or renal sinus fat but not beyond Gerota's fascia (kidney)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3aTumorDirectlyInvadesAdrenalGlandOrPerirenalAndOrRenalSinusFatButNotBeyondGerotaQuoteSFasciaKidney: Coding.FromStrict({
+    ConditionStageValueSet_PT3aTumorDirectlyInvadesAdrenalGlandOrPerirenalAndOrRenalSinusFatButNotBeyondGerotaQuoteSFasciaKidney: new Coding({
         code: "396088003",
         display: "pT3a: Tumor directly invades adrenal gland or perirenal and/or renal sinus fat but not beyond Gerota's fascia (kidney)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3bTumorGrosslyExtendsIntoTheRenalVeinOrItsSegmentalMuscleContainingBranchesOrVenaCavaBelowTheDiaphragmKidney: Coding.FromStrict({
+    ConditionStageValueSet_PT3bTumorGrosslyExtendsIntoTheRenalVeinOrItsSegmentalMuscleContainingBranchesOrVenaCavaBelowTheDiaphragmKidney: new Coding({
         code: "396089006",
         display: "pT3b: Tumor grossly extends into the renal vein or its segmental (muscle-containing) branches, or vena cava below the diaphragm (kidney)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3cTumorGrosslyExtendsIntoVenaCavaAboveDiaphragmOrInvadesTheWallOfTheVenaCavaKidney: Coding.FromStrict({
+    ConditionStageValueSet_PT3cTumorGrosslyExtendsIntoVenaCavaAboveDiaphragmOrInvadesTheWallOfTheVenaCavaKidney: new Coding({
         code: "396090002",
         display: "pT3c: Tumor grossly extends into vena cava above diaphragm or invades the wall of the vena cava (kidney)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorInvadesBeyondGerotaQuoteSFasciaKidney: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorInvadesBeyondGerotaQuoteSFasciaKidney: new Coding({
         code: "396091003",
         display: "pT4: Tumor invades beyond Gerota's fascia (kidney)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1MetastasisInASingleRegionalLymphNodeKidney: Coding.FromStrict({
+    ConditionStageValueSet_PN1MetastasisInASingleRegionalLymphNodeKidney: new Coding({
         code: "396092005",
         display: "pN1: Metastasis in a single regional lymph node (kidney)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2MetastasisInMoreThanOneRegionalLymphNodeKidney: Coding.FromStrict({
+    ConditionStageValueSet_PN2MetastasisInMoreThanOneRegionalLymphNodeKidney: new Coding({
         code: "396093000",
         display: "pN2: Metastasis in more than one regional lymph node (kidney)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_AmpullaOfVaterTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_AmpullaOfVaterTNMFinding: new Coding({
         code: "396094006",
         display: "Ampulla of Vater TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1TumorLimitedToAmpullaOfVaterOrSphincterOfOddiAmpullaOfVater: Coding.FromStrict({
+    ConditionStageValueSet_PT1TumorLimitedToAmpullaOfVaterOrSphincterOfOddiAmpullaOfVater: new Coding({
         code: "396095007",
         display: "pT1: Tumor limited to ampulla of Vater or sphincter of Oddi (ampulla of Vater)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorInvadesDuodenalWallAmpullaOfVater: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorInvadesDuodenalWallAmpullaOfVater: new Coding({
         code: "396096008",
         display: "pT2: Tumor invades duodenal wall (ampulla of Vater)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorInvadesPancreasAmpullaOfVater: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorInvadesPancreasAmpullaOfVater: new Coding({
         code: "396097004",
         display: "pT3: Tumor invades pancreas (ampulla of Vater)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorInvadesPeripancreaticSoftTissuesOrOtherAdjacentOrgansOrStructuresAmpullaOfVater: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorInvadesPeripancreaticSoftTissuesOrOtherAdjacentOrgansOrStructuresAmpullaOfVater: new Coding({
         code: "396098009",
         display: "pT4: Tumor invades peripancreatic soft tissues or other adjacent organs or structures (ampulla of Vater)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_LiverTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_LiverTNMFinding: new Coding({
         code: "396099001",
         display: "Liver TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1SolitaryTumorWithoutVascularInvasionLiverIncludingIntrahepaticBileDucts: Coding.FromStrict({
+    ConditionStageValueSet_PT1SolitaryTumorWithoutVascularInvasionLiverIncludingIntrahepaticBileDucts: new Coding({
         code: "396100009",
         display: "pT1: Solitary tumor without vascular invasion (liver, including intrahepatic bile ducts)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2SolitaryTumorWithVascularInvasionOrMultipleTumorsNoneMoreThan5CmLiverIncludingIntrahepaticBileDucts: Coding.FromStrict({
+    ConditionStageValueSet_PT2SolitaryTumorWithVascularInvasionOrMultipleTumorsNoneMoreThan5CmLiverIncludingIntrahepaticBileDucts: new Coding({
         code: "396101008",
         display: "pT2: Solitary tumor with vascular invasion or multiple tumors none more than 5 cm (liver, including intrahepatic bile ducts)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3MultipleTumorsMoreThan5CmOrTumorInvolvingAMajorBranchOfThePortalOrHepaticVeinSLiverIncludingIntrahepaticBileDucts: Coding.FromStrict({
+    ConditionStageValueSet_PT3MultipleTumorsMoreThan5CmOrTumorInvolvingAMajorBranchOfThePortalOrHepaticVeinSLiverIncludingIntrahepaticBileDucts: new Coding({
         code: "396102001",
         display: "pT3: Multiple tumors more than 5 cm or tumor involving a major branch of the portal or hepatic vein(s) (liver, including intrahepatic bile ducts)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorSWithDirectInvasionOfAdjacentOrgansOtherThanTheGallbladderOrWithPerforationOfVisceralPeritoneumLiverIncludingIntrahepaticBileDucts: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorSWithDirectInvasionOfAdjacentOrgansOtherThanTheGallbladderOrWithPerforationOfVisceralPeritoneumLiverIncludingIntrahepaticBileDucts: new Coding({
         code: "396103006",
         display: "pT4: Tumor(s) with direct invasion of adjacent organs other than the gallbladder or with perforation of visceral peritoneum (liver, including intrahepatic bile ducts)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStageIIC: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageIIC: new Coding({
         code: "39617003",
         display: "Clinical stage II C",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_UterineCervixTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_UterineCervixTNMFinding: new Coding({
         code: "396282005",
         display: "Uterine cervix TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1ICervicalCarcinomaConfinedToUterusExtensionToCorpusShouldBeDisregardedTNMCategoryAndFIGOStageUterineCervix: Coding.FromStrict({
+    ConditionStageValueSet_PT1ICervicalCarcinomaConfinedToUterusExtensionToCorpusShouldBeDisregardedTNMCategoryAndFIGOStageUterineCervix: new Coding({
         code: "396283000",
         display: "pT1 (I): Cervical carcinoma confined to uterus (extension to corpus should be disregarded) (TNM category and FIGO stage) (uterine cervix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1aIAInvasiveCarcinomaDiagnosedOnlyByMicroscopyAllMacroscopicallyVisibleLesionsEvenWithSuperficialInvasionArePT1bIBTNMCategoryAndFIGOStageUterineCervix: Coding.FromStrict({
+    ConditionStageValueSet_PT1aIAInvasiveCarcinomaDiagnosedOnlyByMicroscopyAllMacroscopicallyVisibleLesionsEvenWithSuperficialInvasionArePT1bIBTNMCategoryAndFIGOStageUterineCervix: new Coding({
         code: "396287004",
         display: "pT1a (IA): Invasive carcinoma diagnosed only by microscopy. All macroscopically visible lesions (even with superficial invasion) are pT1b/IB (TNM category and FIGO stage) (uterine cervix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1a1IA1MeasuredStromalInvasion30MmOrLessInDepthAnd70MmOrLessInHorizontalSpreadTNMCategoryAndFIGOStageUterineCervix: Coding.FromStrict({
+    ConditionStageValueSet_PT1a1IA1MeasuredStromalInvasion30MmOrLessInDepthAnd70MmOrLessInHorizontalSpreadTNMCategoryAndFIGOStageUterineCervix: new Coding({
         code: "396288009",
         display: "pT1a1 (IA1): Measured stromal invasion 3.0 mm or less in depth and 7.0 mm or less in horizontal spread (TNM category and FIGO stage) (uterine cervix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1a2IA2MeasuredStromalInvasionMoreThan30MmAndNotMoreThan50MmInDepthAnd70MmOrLessHorizontalSpreadTNMCategoryAndFIGOStageUterineCervix: Coding.FromStrict({
+    ConditionStageValueSet_PT1a2IA2MeasuredStromalInvasionMoreThan30MmAndNotMoreThan50MmInDepthAnd70MmOrLessHorizontalSpreadTNMCategoryAndFIGOStageUterineCervix: new Coding({
         code: "396289001",
         display: "pT1a2 (IA2): Measured stromal invasion more than 3.0 mm and not more than 5.0 mm in depth and 7.0 mm or less horizontal spread (TNM category and FIGO stage) (uterine cervix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1bIBClinicallyVisibleLesionConfinedToTheCervixOrMicroscopicLesionGreaterThanT1a2IA2TNMCategoryAndFIGOStageUterineCervix: Coding.FromStrict({
+    ConditionStageValueSet_PT1bIBClinicallyVisibleLesionConfinedToTheCervixOrMicroscopicLesionGreaterThanT1a2IA2TNMCategoryAndFIGOStageUterineCervix: new Coding({
         code: "396290005",
         display: "pT1b (IB): Clinically visible lesion confined to the cervix or microscopic lesion greater than T1a2/IA2 (TNM category and FIGO stage) (uterine cervix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1b1IB1ClinicallyVisibleLesion40CmOrLessInGreatestDimensionTNMCategoryAndFIGOStageUterineCervix: Coding.FromStrict({
+    ConditionStageValueSet_PT1b1IB1ClinicallyVisibleLesion40CmOrLessInGreatestDimensionTNMCategoryAndFIGOStageUterineCervix: new Coding({
         code: "396291009",
         display: "pT1b1 (IB1): Clinically visible lesion 4.0 cm or less in greatest dimension (TNM category and FIGO stage) (uterine cervix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1b2IB2ClinicallyVisibleLesionMoreThan40CmInGreatestDimensionTNMCategoryAndFIGOStageUterineCervix: Coding.FromStrict({
+    ConditionStageValueSet_PT1b2IB2ClinicallyVisibleLesionMoreThan40CmInGreatestDimensionTNMCategoryAndFIGOStageUterineCervix: new Coding({
         code: "396292002",
         display: "pT1b2 (IB2): Clinically visible lesion more than 4.0 cm in greatest dimension (TNM category and FIGO stage) (uterine cervix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2IICervicalCarcinomaInvadesBeyondUterusButNotToPelvicWallOrToLowerThirdOfVaginaTNMCategoryAndFIGOStageUterineCervix: Coding.FromStrict({
+    ConditionStageValueSet_PT2IICervicalCarcinomaInvadesBeyondUterusButNotToPelvicWallOrToLowerThirdOfVaginaTNMCategoryAndFIGOStageUterineCervix: new Coding({
         code: "396294001",
         display: "pT2 (II): Cervical carcinoma invades beyond uterus but not to pelvic wall or to lower third of vagina (TNM category and FIGO stage) (uterine cervix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2aIIATumorWithoutParametrialInvasionTNMCategoryAndFIGOStageUterineCervix: Coding.FromStrict({
+    ConditionStageValueSet_PT2aIIATumorWithoutParametrialInvasionTNMCategoryAndFIGOStageUterineCervix: new Coding({
         code: "396297008",
         display: "pT2a (IIA): Tumor without parametrial invasion (TNM category and FIGO stage) (uterine cervix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2bIIBTumorWithParametrialInvasionTNMCategoryAndFIGOStageUterineCervix: Coding.FromStrict({
+    ConditionStageValueSet_PT2bIIBTumorWithParametrialInvasionTNMCategoryAndFIGOStageUterineCervix: new Coding({
         code: "396298003",
         display: "pT2b (IIB): Tumor with parametrial invasion (TNM category and FIGO stage) (uterine cervix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3IIITumorExtendsToPelvicWallAndOrInvolvesLowerThirdOfVaginaAndOrCausesHydronephrosisOrNonFunctioningKidneyTNMCategoryAndFIGOStageUterineCervix: Coding.FromStrict({
+    ConditionStageValueSet_PT3IIITumorExtendsToPelvicWallAndOrInvolvesLowerThirdOfVaginaAndOrCausesHydronephrosisOrNonFunctioningKidneyTNMCategoryAndFIGOStageUterineCervix: new Coding({
         code: "396299006",
         display: "pT3 (III): Tumor extends to pelvic wall and/or involves lower third of vagina and/or causes hydronephrosis or non-functioning kidney (TNM category and FIGO stage) (uterine cervix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3aIIIATumorInvolvesLowerThirdOfVaginaNoExtensionToPelvicWallTNMCategoryAndFIGOStageUterineCervix: Coding.FromStrict({
+    ConditionStageValueSet_PT3aIIIATumorInvolvesLowerThirdOfVaginaNoExtensionToPelvicWallTNMCategoryAndFIGOStageUterineCervix: new Coding({
         code: "396300003",
         display: "pT3a (IIIA): Tumor involves lower third of vagina, no extension to pelvic wall (TNM category and FIGO stage) (uterine cervix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3bIIIBTumorExtendsToPelvicWallAndOrCausesHydronephrosisOrNonFunctioningKidneyTNMCategoryAndFIGOStageUterineCervix: Coding.FromStrict({
+    ConditionStageValueSet_PT3bIIIBTumorExtendsToPelvicWallAndOrCausesHydronephrosisOrNonFunctioningKidneyTNMCategoryAndFIGOStageUterineCervix: new Coding({
         code: "396301004",
         display: "pT3b (IIIB): Tumor extends to pelvic wall and/or causes hydronephrosis or non-functioning kidney (TNM category and FIGO stage) (uterine cervix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4IVATumorInvadesMucosaOfBladderOrRectumAndOrExtendsBeyondTruePelvisBullousEdemaIsNotSufficientEvidenceToClassifyATumorAsPT4TNMCategoryAndFIGOStageUterineCervix: Coding.FromStrict({
+    ConditionStageValueSet_PT4IVATumorInvadesMucosaOfBladderOrRectumAndOrExtendsBeyondTruePelvisBullousEdemaIsNotSufficientEvidenceToClassifyATumorAsPT4TNMCategoryAndFIGOStageUterineCervix: new Coding({
         code: "396302006",
         display: "pT4 (IVA): Tumor invades mucosa of bladder or rectum and/or extends beyond true pelvis (bullous edema is not sufficient evidence to classify a tumor as pT4) (TNM category and FIGO stage) (uterine cervix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1IVBDistantMetastasisTNMCategoryAndFIGOStageCorpusUteri: Coding.FromStrict({
+    ConditionStageValueSet_PM1IVBDistantMetastasisTNMCategoryAndFIGOStageCorpusUteri: new Coding({
         code: "396303001",
         display: "pM1 (IVB): Distant metastasis (TNM category and FIGO stage) (corpus uteri)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_CorpusUteriTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_CorpusUteriTNMFinding: new Coding({
         code: "396311006",
         display: "Corpus uteri TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1ITumorConfinedToCorpusUteriTNMCategoryAndFIGOStageCorpusUteri: Coding.FromStrict({
+    ConditionStageValueSet_PT1ITumorConfinedToCorpusUteriTNMCategoryAndFIGOStageCorpusUteri: new Coding({
         code: "396312004",
         display: "pT1 (I): Tumor confined to corpus uteri (TNM category and FIGO stage) (corpus uteri)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1aIATumorLimitedToEndometriumTNMCategoryAndFIGOStageCorpusUteri: Coding.FromStrict({
+    ConditionStageValueSet_PT1aIATumorLimitedToEndometriumTNMCategoryAndFIGOStageCorpusUteri: new Coding({
         code: "396313009",
         display: "pT1a (IA): Tumor limited to endometrium (TNM category and FIGO stage) (corpus uteri)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1bIBTumorInvadesLessThanOneHalfOfTheMyometriumTNMCategoryAndFIGOStageCorpusUteri: Coding.FromStrict({
+    ConditionStageValueSet_PT1bIBTumorInvadesLessThanOneHalfOfTheMyometriumTNMCategoryAndFIGOStageCorpusUteri: new Coding({
         code: "396314003",
         display: "pT1b (IB): Tumor invades less than one-half of the myometrium (TNM category and FIGO stage) (corpus uteri)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1cICTumorInvadesOneHalfOrMoreOfTheMyometriumTNMCategoryAndFIGOStageCorpusUteri: Coding.FromStrict({
+    ConditionStageValueSet_PT1cICTumorInvadesOneHalfOrMoreOfTheMyometriumTNMCategoryAndFIGOStageCorpusUteri: new Coding({
         code: "396315002",
         display: "pT1c (IC): Tumor invades one-half or more of the myometrium (TNM category and FIGO stage) (corpus uteri)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2IITumorInvadesCervixButDoesNotExtendBeyondUterusTNMCategoryAndFIGOStageCorpusUteri: Coding.FromStrict({
+    ConditionStageValueSet_PT2IITumorInvadesCervixButDoesNotExtendBeyondUterusTNMCategoryAndFIGOStageCorpusUteri: new Coding({
         code: "396316001",
         display: "pT2 (II): Tumor invades cervix but does not extend beyond uterus (TNM category and FIGO stage) (corpus uteri)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2aIIATumorLimitedToTheGlandularEpitheliumOfTheEndocervixThereIsNoEvidenceOfConnectiveTissueStromalInvasionTNMCategoryAndFIGOStageCorpusUteri: Coding.FromStrict({
+    ConditionStageValueSet_PT2aIIATumorLimitedToTheGlandularEpitheliumOfTheEndocervixThereIsNoEvidenceOfConnectiveTissueStromalInvasionTNMCategoryAndFIGOStageCorpusUteri: new Coding({
         code: "396317005",
         display: "pT2a (IIA): Tumor limited to the glandular epithelium of the endocervix. There is no evidence of connective tissue stromal invasion (TNM category and FIGO stage) (corpus uteri)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2bIIBInvasionOfTheStromalConnectiveTissueOfTheCervixTNMCategoryAndFIGOStageCorpusUteri: Coding.FromStrict({
+    ConditionStageValueSet_PT2bIIBInvasionOfTheStromalConnectiveTissueOfTheCervixTNMCategoryAndFIGOStageCorpusUteri: new Coding({
         code: "396318000",
         display: "pT2b (IIB): Invasion of the stromal connective tissue of the cervix (TNM category and FIGO stage) (corpus uteri)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3IIILocalAndOrRegionalSpreadAsSpecifiedInPT3aPT3bPN1AndFIGOIIIAIIIBAndIIICTNMCategoryAndFIGOStageCorpusUteri: Coding.FromStrict({
+    ConditionStageValueSet_PT3IIILocalAndOrRegionalSpreadAsSpecifiedInPT3aPT3bPN1AndFIGOIIIAIIIBAndIIICTNMCategoryAndFIGOStageCorpusUteri: new Coding({
         code: "396319008",
         display: "pT3 (III): Local and/or regional spread as specified in pT3a, pT3b, pN1, and FIGO IIIA, IIIB, and IIIC (TNM category and FIGO stage) (corpus uteri)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3aIIIATumorInvolvesSerosaANDORAdnexaDirectExtensionOrMetastasisANDORCancerCellsInAscitesOrPeritonealWashingsTNMCategoryAndFIGOStageCorpusUteri: Coding.FromStrict({
+    ConditionStageValueSet_PT3aIIIATumorInvolvesSerosaANDORAdnexaDirectExtensionOrMetastasisANDORCancerCellsInAscitesOrPeritonealWashingsTNMCategoryAndFIGOStageCorpusUteri: new Coding({
         code: "396320002",
         display: "pT3a (IIIA): Tumor involves serosa, AND/OR adnexa (direct extension or metastasis) AND/OR cancer cells in ascites or peritoneal washings (TNM category and FIGO stage) (corpus uteri)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3bIIIBInvolvementOfVaginaDirectExtensionOrMetastasisRectalOrBladderWallWithoutMucosalInvolvementOrPelvicWallSFrozenPelvisTNMCategoryAndFIGOStageCorpusUteri: Coding.FromStrict({
+    ConditionStageValueSet_PT3bIIIBInvolvementOfVaginaDirectExtensionOrMetastasisRectalOrBladderWallWithoutMucosalInvolvementOrPelvicWallSFrozenPelvisTNMCategoryAndFIGOStageCorpusUteri: new Coding({
         code: "396321003",
         display: "pT3b (IIIB): Involvement of vagina (direct extension or metastasis), rectal or bladder wall (without mucosal involvement), or pelvic wall(s) (frozen pelvis) (TNM category and FIGO stage) (corpus uteri)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4IVATumorInvadesBladderMucosaAndOrBowelMucosaTNMCategoryAndFIGOStageCorpusUteri: Coding.FromStrict({
+    ConditionStageValueSet_PT4IVATumorInvadesBladderMucosaAndOrBowelMucosaTNMCategoryAndFIGOStageCorpusUteri: new Coding({
         code: "396322005",
         display: "pT4 (IVA): Tumor invades bladder mucosa and/or bowel mucosa (TNM category and FIGO stage) (corpus uteri)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1IIICRegionalLymphNodeMetastasisTNMCategoryAndFIGOStageCorpusUteri: Coding.FromStrict({
+    ConditionStageValueSet_PN1IIICRegionalLymphNodeMetastasisTNMCategoryAndFIGOStageCorpusUteri: new Coding({
         code: "396323000",
         display: "pN1 (IIIC): Regional lymph node metastasis (TNM category and FIGO stage) (corpus uteri)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_SkinMelanomaTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_SkinMelanomaTNMFinding: new Coding({
         code: "396368008",
         display: "Skin melanoma TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PTisMelanomaInSituMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PTisMelanomaInSituMelanomaOfTheSkin: new Coding({
         code: "396369000",
         display: "pTis: Melanoma in situ (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1Melanoma10MmOrLessInThicknessWithOrWithoutUlcerationMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PT1Melanoma10MmOrLessInThicknessWithOrWithoutUlcerationMelanomaOfTheSkin: new Coding({
         code: "396370004",
         display: "pT1: Melanoma 1.0 mm or less in thickness, with or without ulceration (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1aMelanoma10MmOrLessInThicknessAndLevelIIOrIIINoUlcerationMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PT1aMelanoma10MmOrLessInThicknessAndLevelIIOrIIINoUlcerationMelanomaOfTheSkin: new Coding({
         code: "396371000",
         display: "pT1a: Melanoma 1.0 mm or less in thickness and level II or III, no ulceration (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1bMelanoma10MmOrLessInThicknessAndLevelIVOrVOrWithUlcerationMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PT1bMelanoma10MmOrLessInThicknessAndLevelIVOrVOrWithUlcerationMelanomaOfTheSkin: new Coding({
         code: "396372007",
         display: "pT1b: Melanoma 1.0 mm or less in thickness and level IV or V or with ulceration (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2Melanoma101To20MmInThicknessWithOrWithoutUlcerationMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PT2Melanoma101To20MmInThicknessWithOrWithoutUlcerationMelanomaOfTheSkin: new Coding({
         code: "396373002",
         display: "pT2: Melanoma 1.01 to 2.0 mm in thickness, with or without ulceration (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2aMelanoma101To20MmInThicknessNoUlcerationMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PT2aMelanoma101To20MmInThicknessNoUlcerationMelanomaOfTheSkin: new Coding({
         code: "396374008",
         display: "pT2a: Melanoma 1.01 to 2.0 mm in thickness, no ulceration (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2bMelanoma101To20MmInThicknessWithUlcerationMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PT2bMelanoma101To20MmInThicknessWithUlcerationMelanomaOfTheSkin: new Coding({
         code: "396375009",
         display: "pT2b: Melanoma 1.01 to 2.0 mm in thickness, with ulceration (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3Melanoma201To40MmInThicknessWithOrWithoutUlcerationMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PT3Melanoma201To40MmInThicknessWithOrWithoutUlcerationMelanomaOfTheSkin: new Coding({
         code: "396376005",
         display: "pT3: Melanoma 2.01 to 4.0 mm in thickness, with or without ulceration (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3aMelanoma201To40MmInThicknessNoUlcerationMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PT3aMelanoma201To40MmInThicknessNoUlcerationMelanomaOfTheSkin: new Coding({
         code: "396377001",
         display: "pT3a: Melanoma 2.01 to 4.0 mm in thickness, no ulceration (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3bMelanoma201To40MmInThicknessWithUlcerationMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PT3bMelanoma201To40MmInThicknessWithUlcerationMelanomaOfTheSkin: new Coding({
         code: "396378006",
         display: "pT3b: Melanoma 2.01 to 4.0 mm in thickness, with ulceration (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4MelanomaGreaterThan40MmInThicknessWithOrWithoutUlcerationMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PT4MelanomaGreaterThan40MmInThicknessWithOrWithoutUlcerationMelanomaOfTheSkin: new Coding({
         code: "396379003",
         display: "pT4: Melanoma greater than 4.0 mm in thickness, with or without ulceration (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4aMelanomaGreaterThan40MmInThicknessNoUlcerationMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PT4aMelanomaGreaterThan40MmInThicknessNoUlcerationMelanomaOfTheSkin: new Coding({
         code: "396380000",
         display: "pT4a: Melanoma greater than 4.0 mm in thickness, no ulceration (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4bMelanomaGreaterThan40MmInThicknessWithUlcerationMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PT4bMelanomaGreaterThan40MmInThicknessWithUlcerationMelanomaOfTheSkin: new Coding({
         code: "396381001",
         display: "pT4b: Melanoma greater than 4.0 mm in thickness, with ulceration (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1MetastasisInOneRegionalLymphNodeMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PN1MetastasisInOneRegionalLymphNodeMelanomaOfTheSkin: new Coding({
         code: "396382008",
         display: "pN1: Metastasis in one regional lymph node (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1aClinicallyOccultMicroscopicMetastasisMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PN1aClinicallyOccultMicroscopicMetastasisMelanomaOfTheSkin: new Coding({
         code: "396383003",
         display: "pN1a: Clinically occult (microscopic) metastasis (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1bClinicallyApparentMacroscopicMetastasisMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PN1bClinicallyApparentMacroscopicMetastasisMelanomaOfTheSkin: new Coding({
         code: "396384009",
         display: "pN1b: Clinically apparent (macroscopic) metastasis (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2MetastasisIn2To3RegionalNodesOrIntralymphaticRegionalMetastasisWithoutNodalMetastasisMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PN2MetastasisIn2To3RegionalNodesOrIntralymphaticRegionalMetastasisWithoutNodalMetastasisMelanomaOfTheSkin: new Coding({
         code: "396385005",
         display: "pN2: Metastasis in 2 to 3 regional nodes or intralymphatic regional metastasis without nodal metastasis (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2aClinicallyOccultMicroscopicMetastasisMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PN2aClinicallyOccultMicroscopicMetastasisMelanomaOfTheSkin: new Coding({
         code: "396386006",
         display: "pN2a: Clinically occult (microscopic) metastasis (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2bClinicallyApparentMacroscopicMetastasisMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PN2bClinicallyApparentMacroscopicMetastasisMelanomaOfTheSkin: new Coding({
         code: "396387002",
         display: "pN2b: Clinically apparent (macroscopic) metastasis (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2cSatelliteOrInTransitMetastasisWithoutNodalMetastasisMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PN2cSatelliteOrInTransitMetastasisWithoutNodalMetastasisMelanomaOfTheSkin: new Coding({
         code: "396388007",
         display: "pN2c: Satellite or in-transit metastasis without nodal metastasis (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN3MetastasisInFourOrMoreRegionalNodesOrMattedMetastaticNodesOrInTransitMetastasisOrSatelliteSWithMetastasisInRegionalNodeSMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PN3MetastasisInFourOrMoreRegionalNodesOrMattedMetastaticNodesOrInTransitMetastasisOrSatelliteSWithMetastasisInRegionalNodeSMelanomaOfTheSkin: new Coding({
         code: "396389004",
         display: "pN3: Metastasis in four or more regional nodes, or matted metastatic nodes, or in-transit metastasis or satellite(s) with metastasis in regional node(s) (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1aMetastasisToSkinSubcutaneousTissuesOrDistantLymphNodesMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PM1aMetastasisToSkinSubcutaneousTissuesOrDistantLymphNodesMelanomaOfTheSkin: new Coding({
         code: "396390008",
         display: "pM1a: Metastasis to skin, subcutaneous tissues, or distant lymph nodes (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1bMetastasisToLungMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PM1bMetastasisToLungMelanomaOfTheSkin: new Coding({
         code: "396391007",
         display: "pM1b: Metastasis to lung (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1cMetastasisToVisceralSiteOtherThanLungOrDistantMetastasisAtAnySiteAssociatedWithAnElevatedSerumLacticDehydrogenaseLDHMelanomaOfTheSkin: Coding.FromStrict({
+    ConditionStageValueSet_PM1cMetastasisToVisceralSiteOtherThanLungOrDistantMetastasisAtAnySiteAssociatedWithAnElevatedSerumLacticDehydrogenaseLDHMelanomaOfTheSkin: new Coding({
         code: "396392000",
         display: "pM1c: Metastasis to visceral site other than lung or distant metastasis at any site associated with an elevated serum lactic dehydrogenase (LDH) (melanoma of the skin)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_CarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomasTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_CarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomasTNMFinding: new Coding({
         code: "396492004",
         display: "Carcinoma of skin (excluding eyelid, vulva, penis, and melanomas) TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1Tumor2CmOrLessInGreatestDimensionCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: Coding.FromStrict({
+    ConditionStageValueSet_PT1Tumor2CmOrLessInGreatestDimensionCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: new Coding({
         code: "396493009",
         display: "pT1: Tumor 2 cm or less in greatest dimension (carcinoma of skin excluding eyelid, vulva, penis, and melanomas)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1aTumor2CmOrLessInGreatestDimensionLimitedToDermisOr2MmOrLessInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: Coding.FromStrict({
+    ConditionStageValueSet_PT1aTumor2CmOrLessInGreatestDimensionLimitedToDermisOr2MmOrLessInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: new Coding({
         code: "396494003",
         display: "pT1a: Tumor 2 cm or less in greatest dimension, limited to dermis or 2 mm or less in thickness (carcinoma of skin excluding eyelid, vulva, penis, and melanomas)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1bTumor2CmOrLessInGreatestDimensionLimitedToDermisAndGreaterThan2MmInThicknessButNotMoreThan6MmInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: Coding.FromStrict({
+    ConditionStageValueSet_PT1bTumor2CmOrLessInGreatestDimensionLimitedToDermisAndGreaterThan2MmInThicknessButNotMoreThan6MmInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: new Coding({
         code: "396495002",
         display: "pT1b: Tumor 2 cm or less in greatest dimension, limited to dermis and greater than 2 mm in thickness, but not more than 6 mm in thickness (carcinoma of skin excluding eyelid, vulva, penis, and melanomas)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1cTumor2CmOrLessInGreatestDimensionInvadingTheSubcutisAndOrGreaterThan6MmInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: Coding.FromStrict({
+    ConditionStageValueSet_PT1cTumor2CmOrLessInGreatestDimensionInvadingTheSubcutisAndOrGreaterThan6MmInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: new Coding({
         code: "396496001",
         display: "pT1c: Tumor 2 cm or less in greatest dimension, invading the subcutis and/or greater than 6 mm in thickness (carcinoma of skin excluding eyelid, vulva, penis, and melanomas)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorMoreThan2CmButNotMoreThan5CmInGreatestDimensionCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorMoreThan2CmButNotMoreThan5CmInGreatestDimensionCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: new Coding({
         code: "396497005",
         display: "pT2: Tumor more than 2 cm, but not more than 5 cm, in greatest dimension (carcinoma of skin excluding eyelid, vulva, penis, and melanomas)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2aTumorMoreThan2CmButNotMoreThan5CmInGreatestDimensionLimitedToDermisOrGreaterThan2MmInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: Coding.FromStrict({
+    ConditionStageValueSet_PT2aTumorMoreThan2CmButNotMoreThan5CmInGreatestDimensionLimitedToDermisOrGreaterThan2MmInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: new Coding({
         code: "396498000",
         display: "pT2a: Tumor more than 2 cm, but not more than 5 cm, in greatest dimension, limited to dermis or greater than 2 mm in thickness (carcinoma of skin excluding eyelid, vulva, penis, and melanomas)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2bTumorMoreThan2CmButNotMoreThan5CmInGreatestDimensionLimitedToDermisAndGreaterThan2MmInThicknessButNotMoreThan6MmInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: Coding.FromStrict({
+    ConditionStageValueSet_PT2bTumorMoreThan2CmButNotMoreThan5CmInGreatestDimensionLimitedToDermisAndGreaterThan2MmInThicknessButNotMoreThan6MmInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: new Coding({
         code: "396499008",
         display: "pT2b: Tumor more than 2 cm, but not more than 5 cm, in greatest dimension, limited to dermis and greater than 2 mm in thickness, but not more than 6 mm in thickness (carcinoma of skin excluding eyelid, vulva, penis, and melanomas)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2cTumorMoreThan2CmButNotMoreThan5CmInGreatestDimensionInvadingTheSubcutisAndOrGreaterThan6MmInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: Coding.FromStrict({
+    ConditionStageValueSet_PT2cTumorMoreThan2CmButNotMoreThan5CmInGreatestDimensionInvadingTheSubcutisAndOrGreaterThan6MmInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: new Coding({
         code: "396500004",
         display: "pT2c: Tumor more than 2 cm, but not more than 5 cm, in greatest dimension, invading the subcutis and/or greater than 6 mm in thickness (carcinoma of skin excluding eyelid, vulva, penis, and melanomas)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorMoreThan5CmInGreatestDimensionCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorMoreThan5CmInGreatestDimensionCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: new Coding({
         code: "396501000",
         display: "pT3: Tumor more than 5 cm in greatest dimension (carcinoma of skin excluding eyelid, vulva, penis, and melanomas)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3aTumorMoreThan5CmInGreatestDimensionLimitedToDermisOrNotMoreThan2MmInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: Coding.FromStrict({
+    ConditionStageValueSet_PT3aTumorMoreThan5CmInGreatestDimensionLimitedToDermisOrNotMoreThan2MmInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: new Coding({
         code: "396502007",
         display: "pT3a: Tumor more than 5 cm in greatest dimension, limited to dermis or not more than 2 mm in thickness (carcinoma of skin excluding eyelid, vulva, penis, and melanomas)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3bTumorMoreThan5CmInGreatestDimensionLimitedToDermisAndGreaterThan2MmInThicknessButNotMoreThan6MmInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: Coding.FromStrict({
+    ConditionStageValueSet_PT3bTumorMoreThan5CmInGreatestDimensionLimitedToDermisAndGreaterThan2MmInThicknessButNotMoreThan6MmInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: new Coding({
         code: "396503002",
         display: "pT3b: Tumor more than 5 cm in greatest dimension, limited to dermis and greater than 2 mm in thickness, but not more than 6 mm in thickness (carcinoma of skin excluding eyelid, vulva, penis, and melanomas)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3cTumorMoreThan5CmInGreatestDimensionInvadingTheSubcutisAndOrGreaterThan6MmInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: Coding.FromStrict({
+    ConditionStageValueSet_PT3cTumorMoreThan5CmInGreatestDimensionInvadingTheSubcutisAndOrGreaterThan6MmInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: new Coding({
         code: "396504008",
         display: "pT3c: Tumor more than 5 cm in greatest dimension, invading the subcutis and/or greater than 6 mm in thickness (carcinoma of skin excluding eyelid, vulva, penis, and melanomas)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorInvadesDeepExtradermalStructuresIECartilageSkeletalMuscleOrBoneCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorInvadesDeepExtradermalStructuresIECartilageSkeletalMuscleOrBoneCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: new Coding({
         code: "396506005",
         display: "pT4: Tumor invades deep extradermal structures (i.e. cartilage, skeletal muscle, or bone) (carcinoma of skin excluding eyelid, vulva, penis, and melanomas)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4bTumorInvadesDeepExtradermalStructuresIECartilageSkeletalMuscleOrBoneGreaterThan6mmInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: Coding.FromStrict({
+    ConditionStageValueSet_PT4bTumorInvadesDeepExtradermalStructuresIECartilageSkeletalMuscleOrBoneGreaterThan6mmInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: new Coding({
         code: "396507001",
         display: "pT4b: Tumor invades deep extradermal structures (i.e. cartilage, skeletal muscle, or bone) greater than 6mm in thickness (carcinoma of skin excluding eyelid, vulva, penis, and melanomas)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4aTumorInvadesDeepExtradermalStructuresIECartilageSkeletalMuscleOrBoneNotMoreThan6mmInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: Coding.FromStrict({
+    ConditionStageValueSet_PT4aTumorInvadesDeepExtradermalStructuresIECartilageSkeletalMuscleOrBoneNotMoreThan6mmInThicknessCarcinomaOfSkinExcludingEyelidVulvaPenisAndMelanomas: new Coding({
         code: "396508006",
         display: "pT4a: Tumor invades deep extradermal structures (i.e. cartilage, skeletal muscle, or bone) not more than 6mm in thickness (carcinoma of skin excluding eyelid, vulva, penis, and melanomas)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_StageITumorConfinedToGland5CmOrLessAdrenalCorticalCarcinoma: Coding.FromStrict({
+    ConditionStageValueSet_StageITumorConfinedToGland5CmOrLessAdrenalCorticalCarcinoma: new Coding({
         code: "396532004",
         display: "Stage I: Tumor confined to gland, 5 cm or less (adrenal cortical carcinoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_StageIITumorConfinedToGlandGreaterThan5CmAdrenalCorticalCarcinoma: Coding.FromStrict({
+    ConditionStageValueSet_StageIITumorConfinedToGlandGreaterThan5CmAdrenalCorticalCarcinoma: new Coding({
         code: "396533009",
         display: "Stage II: Tumor confined to gland, greater than 5 cm (adrenal cortical carcinoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_StageIIIExtraglandularExtensionOfTumorWithoutOtherOrganInvolvementAdrenalCorticalCarcinoma: Coding.FromStrict({
+    ConditionStageValueSet_StageIIIExtraglandularExtensionOfTumorWithoutOtherOrganInvolvementAdrenalCorticalCarcinoma: new Coding({
         code: "396534003",
         display: "Stage III: Extraglandular extension of tumor without other organ involvement (adrenal cortical carcinoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_StageIVDistantMetastasisOrExtensionIntoOtherOrgansAdrenalCorticalCarcinoma: Coding.FromStrict({
+    ConditionStageValueSet_StageIVDistantMetastasisOrExtensionIntoOtherOrgansAdrenalCorticalCarcinoma: new Coding({
         code: "396535002",
         display: "Stage IV: Distant metastasis or extension into other organs (adrenal cortical carcinoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_OropharynxTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_OropharynxTNMFinding: new Coding({
         code: "396566008",
         display: "Oropharynx TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1Tumor2CmOrLessInGreatestDimensionOropharynx: Coding.FromStrict({
+    ConditionStageValueSet_PT1Tumor2CmOrLessInGreatestDimensionOropharynx: new Coding({
         code: "396567004",
         display: "pT1: Tumor 2 cm or less in greatest dimension (oropharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_UpperAerodigestiveTractTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_UpperAerodigestiveTractTNMFinding: new Coding({
         code: "396568009",
         display: "Upper aerodigestive tract TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorMoreThan2CmButNotMoreThan4CmInGreatestDimensionOropharynx: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorMoreThan2CmButNotMoreThan4CmInGreatestDimensionOropharynx: new Coding({
         code: "396569001",
         display: "pT2: Tumor more than 2 cm but not more than 4 cm in greatest dimension (oropharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorMoreThan4CmInGreatestDimensionOropharynx: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorMoreThan4CmInGreatestDimensionOropharynx: new Coding({
         code: "396570000",
         display: "pT3: Tumor more than 4 cm in greatest dimension (oropharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4aTumorInvadesTheLarynxDeepExtrinsicMuscleOfTongueMedialPterygoidMuscleHardPalateOrMandibleOropharynx: Coding.FromStrict({
+    ConditionStageValueSet_PT4aTumorInvadesTheLarynxDeepExtrinsicMuscleOfTongueMedialPterygoidMuscleHardPalateOrMandibleOropharynx: new Coding({
         code: "396571001",
         display: "pT4a: Tumor invades the larynx, deep/extrinsic muscle of tongue, medial pterygoid muscle, hard palate, or mandible (oropharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4bTumorInvadesLateralPterygoidMusclePterygoidPlatesLateralNasopharynxOrSkullBaseOrEncasesCarotidArteryOropharynx: Coding.FromStrict({
+    ConditionStageValueSet_PT4bTumorInvadesLateralPterygoidMusclePterygoidPlatesLateralNasopharynxOrSkullBaseOrEncasesCarotidArteryOropharynx: new Coding({
         code: "396572008",
         display: "pT4b: Tumor invades lateral pterygoid muscle, pterygoid plates, lateral nasopharynx, or skull base or encases carotid artery (oropharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_LipAndOralCavityTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_LipAndOralCavityTNMFinding: new Coding({
         code: "396573003",
         display: "Lip and oral cavity TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorMoreThan2CmButNotMoreThan4CmInGreatestDimensionLipAndOralCavity: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorMoreThan2CmButNotMoreThan4CmInGreatestDimensionLipAndOralCavity: new Coding({
         code: "396574009",
         display: "pT2: Tumor more than 2 cm but not more than 4 cm in greatest dimension (lip and oral cavity)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1Tumor2CmOrLessInGreatestDimensionLipAndOralCavity: Coding.FromStrict({
+    ConditionStageValueSet_PT1Tumor2CmOrLessInGreatestDimensionLipAndOralCavity: new Coding({
         code: "396575005",
         display: "pT1: Tumor 2 cm or less in greatest dimension (lip and oral cavity)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1Tumor2CmOrLessInGreatestDimension: Coding.FromStrict({
+    ConditionStageValueSet_PT1Tumor2CmOrLessInGreatestDimension: new Coding({
         code: "396576006",
         display: "pT1: Tumor 2 cm or less in greatest dimension",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorMoreThan4CmInGreatestDimensionLipAndOralCavity: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorMoreThan4CmInGreatestDimensionLipAndOralCavity: new Coding({
         code: "396577002",
         display: "pT3: Tumor more than 4 cm in greatest dimension (lip and oral cavity)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4aTumorInvadesThroughCorticalBoneInferiorAlveolarNerveFloorOfMouthOrSkinOfFaceIEChinOrNoseLip: Coding.FromStrict({
+    ConditionStageValueSet_PT4aTumorInvadesThroughCorticalBoneInferiorAlveolarNerveFloorOfMouthOrSkinOfFaceIEChinOrNoseLip: new Coding({
         code: "396578007",
         display: "pT4a: Tumor invades through cortical bone, inferior alveolar nerve, floor of mouth, or skin of face, i.e., chin or nose (lip)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4aTumorInvadesThroughCorticalBoneIntoDeepExtrinsicMuscleOfTongueGenioglossusHyoglossusPalatoglossusAndStyloglossusMaxillarySinusOrSkinOfFaceOralCavity: Coding.FromStrict({
+    ConditionStageValueSet_PT4aTumorInvadesThroughCorticalBoneIntoDeepExtrinsicMuscleOfTongueGenioglossusHyoglossusPalatoglossusAndStyloglossusMaxillarySinusOrSkinOfFaceOralCavity: new Coding({
         code: "396579004",
         display: "pT4a: Tumor invades through cortical bone, into deep (extrinsic) muscle of tongue (genioglossus, hyoglossus, palatoglossus, and styloglossus), maxillary sinus, or skin of face (oral cavity)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4bTumorInvolvesMasticatorSpacePterygoidPlatesOrSkullBaseAndOrEncasesInternalCarotidArteryLipAndOralCavity: Coding.FromStrict({
+    ConditionStageValueSet_PT4bTumorInvolvesMasticatorSpacePterygoidPlatesOrSkullBaseAndOrEncasesInternalCarotidArteryLipAndOralCavity: new Coding({
         code: "396580001",
         display: "pT4b: Tumor involves masticator space, pterygoid plates, or skull base and/or encases internal carotid artery (lip and oral cavity)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_HypopharyngealTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_HypopharyngealTNMFinding: new Coding({
         code: "396581002",
         display: "Hypopharyngeal TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_NasopharynxTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_NasopharynxTNMFinding: new Coding({
         code: "396582009",
         display: "Nasopharynx TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1TumorConfinedToTheNasopharynxNasopharynx: Coding.FromStrict({
+    ConditionStageValueSet_PT1TumorConfinedToTheNasopharynxNasopharynx: new Coding({
         code: "396583004",
         display: "pT1: Tumor confined to the nasopharynx (nasopharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2aTumorExtendsToTheSoftTissuesOfTheOropharnyxAndOrNasalCavityWithoutParapharyngealExtensionNasopharynx: Coding.FromStrict({
+    ConditionStageValueSet_PT2aTumorExtendsToTheSoftTissuesOfTheOropharnyxAndOrNasalCavityWithoutParapharyngealExtensionNasopharynx: new Coding({
         code: "396584005",
         display: "pT2a: Tumor extends to the soft tissues of the oropharnyx and/or nasal cavity without parapharyngeal extension (nasopharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorExtendsToTheSoftTissuesNasopharynx: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorExtendsToTheSoftTissuesNasopharynx: new Coding({
         code: "396585006",
         display: "pT2: Tumor extends to the soft tissues (nasopharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2bTumorExtendsToTheSoftTissuesOfTheOropharnyxAndOrNasalCavityWithParapharyngealExtensionNasopharynx: Coding.FromStrict({
+    ConditionStageValueSet_PT2bTumorExtendsToTheSoftTissuesOfTheOropharnyxAndOrNasalCavityWithParapharyngealExtensionNasopharynx: new Coding({
         code: "396586007",
         display: "pT2b: Tumor extends to the soft tissues of the oropharnyx and/or nasal cavity with parapharyngeal extension (nasopharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorInvolvesBonyStructuresAndOrParanasalSinusesNasopharynx: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorInvolvesBonyStructuresAndOrParanasalSinusesNasopharynx: new Coding({
         code: "396587003",
         display: "pT3: Tumor involves bony structures and/or paranasal sinuses (nasopharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorWithIntracranialExtensionAndOrInvolvementOfCranialNervesInfratemporalFossaHypopharynxOrbitOrMasticatorSpaceNasopharynx: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorWithIntracranialExtensionAndOrInvolvementOfCranialNervesInfratemporalFossaHypopharynxOrbitOrMasticatorSpaceNasopharynx: new Coding({
         code: "396588008",
         display: "pT4: Tumor with intracranial extension, and/or involvement of cranial nerves, infratemporal fossa, hypopharynx, orbit, or masticator space (nasopharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1TumorLimitedToOneSubsiteOfHypopharynxAnd2CmOrLessInGreatestDimensionHypopharynx: Coding.FromStrict({
+    ConditionStageValueSet_PT1TumorLimitedToOneSubsiteOfHypopharynxAnd2CmOrLessInGreatestDimensionHypopharynx: new Coding({
         code: "396589000",
         display: "pT1: Tumor limited to one subsite of hypopharynx and 2 cm or less in greatest dimension (hypopharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorInvadesMoreThanOneSubsiteOfHypopharynxOrAnAdjacentSiteOrMeasuresMoreThan2CmButNotMoreThan4CmInGreatestDiameterWithoutFixationOfHemilarynxHypopharynx: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorInvadesMoreThanOneSubsiteOfHypopharynxOrAnAdjacentSiteOrMeasuresMoreThan2CmButNotMoreThan4CmInGreatestDiameterWithoutFixationOfHemilarynxHypopharynx: new Coding({
         code: "396590009",
         display: "pT2: Tumor invades more than one subsite of hypopharynx or an adjacent site, or measures more than 2 cm but not more than 4 cm in greatest diameter without fixation of hemilarynx (hypopharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorMeasuresMoreThan4CmInGreatestDimensionOrWithFixationOfHemilarynxHypopharynx: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorMeasuresMoreThan4CmInGreatestDimensionOrWithFixationOfHemilarynxHypopharynx: new Coding({
         code: "396591008",
         display: "pT3: Tumor measures more than 4 cm in greatest dimension or with fixation of hemilarynx (hypopharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4aTumorInvadesThyroidCricoidCartilageHyoidBoneThyroidGlandEsophagusOrCentralCompartmentOfSoftTissueHypopharynx: Coding.FromStrict({
+    ConditionStageValueSet_PT4aTumorInvadesThyroidCricoidCartilageHyoidBoneThyroidGlandEsophagusOrCentralCompartmentOfSoftTissueHypopharynx: new Coding({
         code: "396592001",
         display: "pT4a: Tumor invades thyroid/cricoid cartilage, hyoid bone, thyroid gland, esophagus or central compartment of soft tissue (hypopharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4bTumorInvadesPrevertebralFasciaEncasesCarotidArteryOrInvolvesMediastinalStructuresHypopharynx: Coding.FromStrict({
+    ConditionStageValueSet_PT4bTumorInvadesPrevertebralFasciaEncasesCarotidArteryOrInvolvesMediastinalStructuresHypopharynx: new Coding({
         code: "396593006",
         display: "pT4b: Tumor invades prevertebral fascia, encases carotid artery, or involves mediastinal structures (hypopharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_SupraglottisTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_SupraglottisTNMFinding: new Coding({
         code: "396594000",
         display: "Supraglottis TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1TumorLimitedToOneSubsiteOfSupraglottisWithNormalVocalCordMobilityLarynxSupraglottis: Coding.FromStrict({
+    ConditionStageValueSet_PT1TumorLimitedToOneSubsiteOfSupraglottisWithNormalVocalCordMobilityLarynxSupraglottis: new Coding({
         code: "396595004",
         display: "pT1: Tumor limited to one subsite of supraglottis with normal vocal cord mobility (larynx, supraglottis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorInvadesMucosaOfMoreThanOneAdjacentSubsiteOfSupraglottisOrGlottisOrRegionOutsideTheSupraglottisEGMucosaOfBaseOfTongueValleculaMedialWallOfPyriformSinusWithoutFixationOfTheLarynx: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorInvadesMucosaOfMoreThanOneAdjacentSubsiteOfSupraglottisOrGlottisOrRegionOutsideTheSupraglottisEGMucosaOfBaseOfTongueValleculaMedialWallOfPyriformSinusWithoutFixationOfTheLarynx: new Coding({
         code: "396596003",
         display: "pT2: Tumor invades mucosa of more than one adjacent subsite of supraglottis or glottis or region outside the supraglottis (e.g., mucosa of base of tongue, vallecula, medial wall of pyriform sinus) without fixation of the larynx",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorLimitedToTheLarynxWithVocalCordFixationAndOrInvadesAnyOfTheFollowingPostcrocoidAreaPreEpiglotticTissuesParaglotticSpaceAndOrMinorThyroidCartilageErosionEGInnerCortexLarynxSupraglottis: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorLimitedToTheLarynxWithVocalCordFixationAndOrInvadesAnyOfTheFollowingPostcrocoidAreaPreEpiglotticTissuesParaglotticSpaceAndOrMinorThyroidCartilageErosionEGInnerCortexLarynxSupraglottis: new Coding({
         code: "396597007",
         display: "pT3: Tumor limited to the larynx with vocal cord fixation and/or invades any of the following: postcrocoid area, pre-epiglottic tissues, paraglottic space, and/or minor thyroid cartilage erosion (e.g., inner cortex) (larynx, supraglottis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4aTumorInvadesThroughTheThyroidCartilageAndOrInvadesTissuesBeyondTheLarynxEGTracheaSoftTissuesOfTheNeckIncludingDeepExtrinsicMuscleOfTheTongueStrapMusclesThyroidOrEsophagusLarynxSupraglottis: Coding.FromStrict({
+    ConditionStageValueSet_PT4aTumorInvadesThroughTheThyroidCartilageAndOrInvadesTissuesBeyondTheLarynxEGTracheaSoftTissuesOfTheNeckIncludingDeepExtrinsicMuscleOfTheTongueStrapMusclesThyroidOrEsophagusLarynxSupraglottis: new Coding({
         code: "396598002",
         display: "pT4a: Tumor invades through the thyroid cartilage and/or invades tissues beyond the larynx (e.g., trachea, soft tissues of the neck including deep extrinsic muscle of the tongue, strap muscles, thyroid, or esophagus) (larynx, supraglottis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4bTumorInvadesPrevertebralSpaceEncasesCarotidArteryOrInvadesMediastinalStructuresLarynxSupraglottis: Coding.FromStrict({
+    ConditionStageValueSet_PT4bTumorInvadesPrevertebralSpaceEncasesCarotidArteryOrInvadesMediastinalStructuresLarynxSupraglottis: new Coding({
         code: "396599005",
         display: "pT4b: Tumor invades prevertebral space, encases carotid artery, or invades mediastinal structures (larynx, supraglottis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_GlottisTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_GlottisTNMFinding: new Coding({
         code: "396600008",
         display: "Glottis TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1TumorLimitedToTheVocalCordSMayInvolveAnteriorOrPosteriorCommissureWithNormalMobilityLarynxGlottis: Coding.FromStrict({
+    ConditionStageValueSet_PT1TumorLimitedToTheVocalCordSMayInvolveAnteriorOrPosteriorCommissureWithNormalMobilityLarynxGlottis: new Coding({
         code: "396601007",
         display: "pT1: Tumor limited to the vocal cord(s) (may involve anterior or posterior commissure) with normal mobility (larynx, glottis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1aTumorLimitedToOneVocalCordMayInvolveAnteriorOrPosteriorCommissureWithNormalMobilityLarynxGlottis: Coding.FromStrict({
+    ConditionStageValueSet_PT1aTumorLimitedToOneVocalCordMayInvolveAnteriorOrPosteriorCommissureWithNormalMobilityLarynxGlottis: new Coding({
         code: "396602000",
         display: "pT1a: Tumor limited to one vocal cord (may involve anterior or posterior commissure) with normal mobility (larynx, glottis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1bTumorInvolvesBothVocalCordsMayInvolveAnteriorOrPosteriorCommissureWithNormalMobilityLarynxGlottis: Coding.FromStrict({
+    ConditionStageValueSet_PT1bTumorInvolvesBothVocalCordsMayInvolveAnteriorOrPosteriorCommissureWithNormalMobilityLarynxGlottis: new Coding({
         code: "396603005",
         display: "pT1b: Tumor involves both vocal cords (may involve anterior or posterior commissure) with normal mobility (larynx, glottis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorExtendsToTheSupraglottisANDORSubglottisANDORWithImpairedVocalCordMobilityLarynxGlottis: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorExtendsToTheSupraglottisANDORSubglottisANDORWithImpairedVocalCordMobilityLarynxGlottis: new Coding({
         code: "396604004",
         display: "pT2: Tumor extends to the supraglottis AND/OR subglottis, AND/OR with impaired vocal cord mobility (larynx, glottis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorLimitedToTheLarynxWithVocalCordFixationAndOrInvadesTheParaglotticSpaceAndOrMinorThyroidCartilageErosionLarynxGlottis: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorLimitedToTheLarynxWithVocalCordFixationAndOrInvadesTheParaglotticSpaceAndOrMinorThyroidCartilageErosionLarynxGlottis: new Coding({
         code: "396605003",
         display: "pT3: Tumor limited to the larynx with vocal cord fixation, and/or invades the paraglottic space, and/or minor thyroid cartilage erosion (larynx, glottis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4aTumorInvadesThroughThyroidCartilageAndOrInvadesTissuesBeyondTheLarynxEGTracheaSoftTissuesOfTheNeckIncludingDeepIntrinsicMuscleOfTheTongueStrapMusclesThyroidOrEsophagusLarynxGlottis: Coding.FromStrict({
+    ConditionStageValueSet_PT4aTumorInvadesThroughThyroidCartilageAndOrInvadesTissuesBeyondTheLarynxEGTracheaSoftTissuesOfTheNeckIncludingDeepIntrinsicMuscleOfTheTongueStrapMusclesThyroidOrEsophagusLarynxGlottis: new Coding({
         code: "396606002",
         display: "pT4a: Tumor invades through thyroid cartilage and/or invades tissues beyond the larynx (e.g., trachea, soft tissues of the neck including deep intrinsic muscle of the tongue, strap muscles, thyroid, or esophagus) (larynx, glottis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4bTumorInvadesPrevertebralSpaceEncasesCarotidArteryOrInvadesMediastinalStructuresLarynxGlottis: Coding.FromStrict({
+    ConditionStageValueSet_PT4bTumorInvadesPrevertebralSpaceEncasesCarotidArteryOrInvadesMediastinalStructuresLarynxGlottis: new Coding({
         code: "396607006",
         display: "pT4b: Tumor invades prevertebral space, encases carotid artery, or invades mediastinal structures (larynx, glottis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_SubglottisTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_SubglottisTNMFinding: new Coding({
         code: "396608001",
         display: "Subglottis TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1TumorLimitedToTheSubglottisLarynxSubglottis: Coding.FromStrict({
+    ConditionStageValueSet_PT1TumorLimitedToTheSubglottisLarynxSubglottis: new Coding({
         code: "396609009",
         display: "pT1: Tumor limited to the subglottis (larynx, subglottis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorExtendsToVocalCordSWithNormalOrImpairedMobilityLarynxSubglottis: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorExtendsToVocalCordSWithNormalOrImpairedMobilityLarynxSubglottis: new Coding({
         code: "396610004",
         display: "pT2: Tumor extends to vocal cord(s) with normal or impaired mobility (larynx, subglottis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorLimitedToLarynxWithVocalCordFixationLarynxSubglottis: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorLimitedToLarynxWithVocalCordFixationLarynxSubglottis: new Coding({
         code: "396611000",
         display: "pT3: Tumor limited to larynx with vocal cord fixation (larynx, subglottis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4aTumorInvadesCricoidOrThyroidCartilageAndOrInvadesTissuesBeyondTheLarynxEGTracheaSoftTissuesOfTheNeckIncludingDeepExtrinsicMuscleOfTheTongueStrapMusclesThyroidOrEsophagusLarynxSubglottis: Coding.FromStrict({
+    ConditionStageValueSet_PT4aTumorInvadesCricoidOrThyroidCartilageAndOrInvadesTissuesBeyondTheLarynxEGTracheaSoftTissuesOfTheNeckIncludingDeepExtrinsicMuscleOfTheTongueStrapMusclesThyroidOrEsophagusLarynxSubglottis: new Coding({
         code: "396612007",
         display: "pT4a: Tumor invades cricoid or thyroid cartilage and/or invades tissues beyond the larynx (e.g., trachea, soft tissues of the neck including deep extrinsic muscle of the tongue, strap muscles, thyroid, or esophagus) (larynx, subglottis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4bTumorInvadesPrevertebralSpaceEncasesCarotidArteryOrInvadesMediastinalStructuresLarynxSubglottis: Coding.FromStrict({
+    ConditionStageValueSet_PT4bTumorInvadesPrevertebralSpaceEncasesCarotidArteryOrInvadesMediastinalStructuresLarynxSubglottis: new Coding({
         code: "396613002",
         display: "pT4b: Tumor invades prevertebral space, encases carotid artery, or invades mediastinal structures (larynx, subglottis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_MaxillarySinusTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_MaxillarySinusTNMFinding: new Coding({
         code: "396614008",
         display: "Maxillary sinus TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1TumorLimitedToTheMaxillarySinusMucosaWithNoErosionOrDestructionOfBoneMaxillarySinus: Coding.FromStrict({
+    ConditionStageValueSet_PT1TumorLimitedToTheMaxillarySinusMucosaWithNoErosionOrDestructionOfBoneMaxillarySinus: new Coding({
         code: "396615009",
         display: "pT1: Tumor limited to the maxillary sinus mucosa with no erosion or destruction of bone (maxillary sinus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorCausingBoneErosionOrDestructionIncludingExtensionIntoTheHardPalateAndOrMiddleNasalMeatusExceptExtensionToPosteriorWallOfMaxillarySinusAndPterygoidPlatesMaxillarySinus: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorCausingBoneErosionOrDestructionIncludingExtensionIntoTheHardPalateAndOrMiddleNasalMeatusExceptExtensionToPosteriorWallOfMaxillarySinusAndPterygoidPlatesMaxillarySinus: new Coding({
         code: "396616005",
         display: "pT2: Tumor causing bone erosion or destruction including extension into the hard palate and/or middle nasal meatus, except extension to posterior wall of maxillary sinus and pterygoid plates (maxillary sinus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorInvadesAnyOfTheFollowingBoneOfThePosteriorWallOfMaxillarySinusSubcutaneousTissuesFloorOrMedialWallOfOrbitPterygoidFossaEthmoidSinusesMaxillarySinus: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorInvadesAnyOfTheFollowingBoneOfThePosteriorWallOfMaxillarySinusSubcutaneousTissuesFloorOrMedialWallOfOrbitPterygoidFossaEthmoidSinusesMaxillarySinus: new Coding({
         code: "396617001",
         display: "pT3: Tumor invades any of the following: bone of the posterior wall of maxillary sinus, subcutaneous tissues, floor or medial wall of orbit, pterygoid fossa, ethmoid sinuses (maxillary sinus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4aTumorInvadesAnteriorOrbitalContentsSkinOfCheekPterygoidPlatesInfratemporalFossaCribriformPlateSphenoidOrFrontalSinusesMaxillarySinus: Coding.FromStrict({
+    ConditionStageValueSet_PT4aTumorInvadesAnteriorOrbitalContentsSkinOfCheekPterygoidPlatesInfratemporalFossaCribriformPlateSphenoidOrFrontalSinusesMaxillarySinus: new Coding({
         code: "396618006",
         display: "pT4a: Tumor invades anterior orbital contents, skin of cheek, pterygoid plates, infratemporal fossa, cribriform plate, sphenoid or frontal sinuses (maxillary sinus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4bTumorInvadesAnyOfTheFollowingOrbitalApexDuraBrainMiddleCranialFossaCranialNervesOtherThanMaxillaryDivisionOfTrigeminalNerveNasopharynxOrClivusMaxillarySinus: Coding.FromStrict({
+    ConditionStageValueSet_PT4bTumorInvadesAnyOfTheFollowingOrbitalApexDuraBrainMiddleCranialFossaCranialNervesOtherThanMaxillaryDivisionOfTrigeminalNerveNasopharynxOrClivusMaxillarySinus: new Coding({
         code: "396619003",
         display: "pT4b: Tumor invades any of the following: orbital apex, dura, brain, middle cranial fossa, cranial nerves other than maxillary division of trigeminal nerve, nasopharynx, or clivus (maxillary sinus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_NasalCavityAndEthmoidSinusTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_NasalCavityAndEthmoidSinusTNMFinding: new Coding({
         code: "396621008",
         display: "Nasal cavity and ethmoid sinus TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1TumorRestrictedToAnyOneSubsiteWithOrWithoutBonyInvasionNasalCavityAndEthmoidSinus: Coding.FromStrict({
+    ConditionStageValueSet_PT1TumorRestrictedToAnyOneSubsiteWithOrWithoutBonyInvasionNasalCavityAndEthmoidSinus: new Coding({
         code: "396622001",
         display: "pT1: Tumor restricted to any one subsite, with or without bony invasion (nasal cavity and ethmoid sinus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorInvadingTwoSubsitesInASingleRegionOrExtendingToInvolveAnAdjacentRegionWithinTheNasoethmoidalComplexWithOrWithoutBonyInvasionNasalCavityAndEthmoidSinus: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorInvadingTwoSubsitesInASingleRegionOrExtendingToInvolveAnAdjacentRegionWithinTheNasoethmoidalComplexWithOrWithoutBonyInvasionNasalCavityAndEthmoidSinus: new Coding({
         code: "396623006",
         display: "pT2: Tumor invading two subsites in a single region or extending to involve an adjacent region within the nasoethmoidal complex, with or without bony invasion (nasal cavity and ethmoid sinus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorExtendsToInvadeTheMedialWallOrFloorOfTheOrbitMaxillarySinusPalateOrCribriformPlateNasalCavityAndEthmoidSinus: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorExtendsToInvadeTheMedialWallOrFloorOfTheOrbitMaxillarySinusPalateOrCribriformPlateNasalCavityAndEthmoidSinus: new Coding({
         code: "396624000",
         display: "pT3: Tumor extends to invade the medial wall or floor of the orbit, maxillary sinus, palate, or cribriform plate (nasal cavity and ethmoid sinus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4aTumorInvadesAnyOfTheFollowingAnteriorOrbitalContentsSkinOfNoseOrCheekMinimalExtensionToAnteriorCranialFossaPterygoidPlatesSphenoidOrFrontalSinusesNasalCavityAndEthmoidSinus: Coding.FromStrict({
+    ConditionStageValueSet_PT4aTumorInvadesAnyOfTheFollowingAnteriorOrbitalContentsSkinOfNoseOrCheekMinimalExtensionToAnteriorCranialFossaPterygoidPlatesSphenoidOrFrontalSinusesNasalCavityAndEthmoidSinus: new Coding({
         code: "396625004",
         display: "pT4a: Tumor invades any of the following: anterior orbital contents, skin of nose or cheek, minimal extension to anterior cranial fossa, pterygoid plates, sphenoid or frontal sinuses (nasal cavity and ethmoid sinus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4bTumorInvadesAnyOfTheFollowingOrbitalApexDuraBrainMiddleCranialFossaCranialNervesOtherThanMaxillaryDivisionOfTrigeminalNerveNasopharynxOrClivusNasalCavityAndEthmoidSinus: Coding.FromStrict({
+    ConditionStageValueSet_PT4bTumorInvadesAnyOfTheFollowingOrbitalApexDuraBrainMiddleCranialFossaCranialNervesOtherThanMaxillaryDivisionOfTrigeminalNerveNasopharynxOrClivusNasalCavityAndEthmoidSinus: new Coding({
         code: "396626003",
         display: "pT4b: Tumor invades any of the following: orbital apex, dura, brain, middle cranial fossa, cranial nerves other than maxillary division of trigeminal nerve, nasopharynx, or clivus (nasal cavity and ethmoid sinus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1MetastasisInASingleIpsilateralLymphNode3CmOrLessInGreatestDimensionUpperAerodigestiveTract: Coding.FromStrict({
+    ConditionStageValueSet_PN1MetastasisInASingleIpsilateralLymphNode3CmOrLessInGreatestDimensionUpperAerodigestiveTract: new Coding({
         code: "396632008",
         display: "pN1: Metastasis in a single ipsilateral lymph node, 3 cm or less in greatest dimension (upper aerodigestive tract)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2aMetastasisInASingleIpsilateralLymphNodeMoreThan3CmButNotMoreThan6CmInGreatestDimensionUpperAerodigestiveTract: Coding.FromStrict({
+    ConditionStageValueSet_PN2aMetastasisInASingleIpsilateralLymphNodeMoreThan3CmButNotMoreThan6CmInGreatestDimensionUpperAerodigestiveTract: new Coding({
         code: "396633003",
         display: "pN2a: Metastasis in a single ipsilateral lymph node, more than 3 cm but not more than 6 cm in greatest dimension (upper aerodigestive tract)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2cMetastasisInBilateralOrContralateralLymphNodesNoneMoreThan6CmInGreatestDimensionUpperAerodigestiveTract: Coding.FromStrict({
+    ConditionStageValueSet_PN2cMetastasisInBilateralOrContralateralLymphNodesNoneMoreThan6CmInGreatestDimensionUpperAerodigestiveTract: new Coding({
         code: "396634009",
         display: "pN2c: Metastasis in bilateral or contralateral lymph nodes, none more than 6 cm in greatest dimension (upper aerodigestive tract)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2bMetastasisInMultipleIpsilateralLymphNodesNoneMoreThan6CmInGreatestDimensionUpperAerodigestiveTract: Coding.FromStrict({
+    ConditionStageValueSet_PN2bMetastasisInMultipleIpsilateralLymphNodesNoneMoreThan6CmInGreatestDimensionUpperAerodigestiveTract: new Coding({
         code: "396635005",
         display: "pN2b: Metastasis in multiple ipsilateral lymph nodes, none more than 6 cm in greatest dimension (upper aerodigestive tract)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN3MetastasisInALymphNodeMoreThan6CmInGreatestDimensionUpperAerodigestiveTract: Coding.FromStrict({
+    ConditionStageValueSet_PN3MetastasisInALymphNodeMoreThan6CmInGreatestDimensionUpperAerodigestiveTract: new Coding({
         code: "396636006",
         display: "pN3: Metastasis in a lymph node, more than 6 cm in greatest dimension (upper aerodigestive tract)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1UnilateralMetastasisInLymphNodeS6CmOrLessInGreatestDimensionAboveTheSupraclavicularFossaNasopharynx: Coding.FromStrict({
+    ConditionStageValueSet_PN1UnilateralMetastasisInLymphNodeS6CmOrLessInGreatestDimensionAboveTheSupraclavicularFossaNasopharynx: new Coding({
         code: "396637002",
         display: "pN1: Unilateral metastasis in lymph node(s), 6 cm or less in greatest dimension, above the supraclavicular fossa (nasopharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2BilateralMetastasisInLymphNodeS6CmOrLessInGreatestDimensionAboveTheSupraclavicularFossaNasopharynx: Coding.FromStrict({
+    ConditionStageValueSet_PN2BilateralMetastasisInLymphNodeS6CmOrLessInGreatestDimensionAboveTheSupraclavicularFossaNasopharynx: new Coding({
         code: "396638007",
         display: "pN2: Bilateral metastasis in lymph node(s), 6 cm or less in greatest dimension, above the supraclavicular fossa (nasopharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN3MetastasisInALymphNodeSMoreThan6CmInDimensionAndOrToSupraclavicularFossaNasopharynx: Coding.FromStrict({
+    ConditionStageValueSet_PN3MetastasisInALymphNodeSMoreThan6CmInDimensionAndOrToSupraclavicularFossaNasopharynx: new Coding({
         code: "396639004",
         display: "pN3: Metastasis in a lymph node(s), more than 6 cm in dimension, and/or to supraclavicular fossa (nasopharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN3aMetastasisInALymphNodeSMoreThan6CmInDimensionNasopharynx: Coding.FromStrict({
+    ConditionStageValueSet_PN3aMetastasisInALymphNodeSMoreThan6CmInDimensionNasopharynx: new Coding({
         code: "396640002",
         display: "pN3a: Metastasis in a lymph node(s), more than 6 cm in dimension (nasopharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN3bMetastasisInLymphNodeSResidingWhollyOrInPartInTheSupraclavicularFossaNasopharynx: Coding.FromStrict({
+    ConditionStageValueSet_PN3bMetastasisInLymphNodeSResidingWhollyOrInPartInTheSupraclavicularFossaNasopharynx: new Coding({
         code: "396641003",
         display: "pN3b: Metastasis in lymph node(s) residing wholly or in part in the supraclavicular fossa (nasopharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_MajorSalivaryGlandTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_MajorSalivaryGlandTNMFinding: new Coding({
         code: "396648009",
         display: "Major salivary gland TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1Tumor2CmOrLessInGreatestDimensionWithoutExtraparenchymalExtensionMajorSalivaryGlands: Coding.FromStrict({
+    ConditionStageValueSet_PT1Tumor2CmOrLessInGreatestDimensionWithoutExtraparenchymalExtensionMajorSalivaryGlands: new Coding({
         code: "396650001",
         display: "pT1: Tumor 2 cm or less in greatest dimension without extraparenchymal extension (major salivary glands)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorMoreThan2CmButNotMoreThan4CmInGreatestDimensionWithoutExtraparenchymalExtensionMajorSalivaryGlands: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorMoreThan2CmButNotMoreThan4CmInGreatestDimensionWithoutExtraparenchymalExtensionMajorSalivaryGlands: new Coding({
         code: "396651002",
         display: "pT2: Tumor more than 2 cm but not more than 4 cm in greatest dimension without extraparenchymal extension (major salivary glands)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorMoreThan4CmAndOrTumorHavingExtraparenchymalExtensionMajorSalivaryGlands: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorMoreThan4CmAndOrTumorHavingExtraparenchymalExtensionMajorSalivaryGlands: new Coding({
         code: "396653004",
         display: "pT3: Tumor more than 4 cm and/or tumor having extraparenchymal extension (major salivary glands)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4aTumorInvadesSkinMandibleEarCanalAndOrFacialNerveMajorSalivaryGlands: Coding.FromStrict({
+    ConditionStageValueSet_PT4aTumorInvadesSkinMandibleEarCanalAndOrFacialNerveMajorSalivaryGlands: new Coding({
         code: "396657003",
         display: "pT4a: Tumor invades skin, mandible, ear canal, and/or facial nerve (major salivary glands)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4bTumorInvadesSkullBaseAndOrPterygoidPlatesAndOrEncasesCarotidArteryMajorSalivaryGlands: Coding.FromStrict({
+    ConditionStageValueSet_PT4bTumorInvadesSkullBaseAndOrPterygoidPlatesAndOrEncasesCarotidArteryMajorSalivaryGlands: new Coding({
         code: "396658008",
         display: "pT4b: Tumor invades skull base and/or pterygoid plates and/or encases carotid artery (major salivary glands)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_UrinaryBladderUreterOrRenalPelvisTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_UrinaryBladderUreterOrRenalPelvisTNMFinding: new Coding({
         code: "396666004",
         display: "Urinary bladder, ureter, or renal pelvis TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PTaNonInvasivePapillaryCarcinomaUrinaryBladderUreterRenalPelvis: Coding.FromStrict({
+    ConditionStageValueSet_PTaNonInvasivePapillaryCarcinomaUrinaryBladderUreterRenalPelvis: new Coding({
         code: "396667008",
         display: "pTa: Non-invasive papillary carcinoma (urinary bladder, ureter, renal pelvis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PTisFlatCarcinomaInSituUrinaryBladderUreterRenalPelvis: Coding.FromStrict({
+    ConditionStageValueSet_PTisFlatCarcinomaInSituUrinaryBladderUreterRenalPelvis: new Coding({
         code: "396668003",
         display: "pTis: Flat carcinoma in situ (urinary bladder, ureter, renal pelvis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1TumorInvadesSubepithelialConnectiveTissueUrinaryBladderUreterRenalPelvis: Coding.FromStrict({
+    ConditionStageValueSet_PT1TumorInvadesSubepithelialConnectiveTissueUrinaryBladderUreterRenalPelvis: new Coding({
         code: "396669006",
         display: "pT1: Tumor invades subepithelial connective tissue (urinary bladder, ureter, renal pelvis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorInvadesMuscularisPropriaUrinaryBladderUreterRenalPelvis: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorInvadesMuscularisPropriaUrinaryBladderUreterRenalPelvis: new Coding({
         code: "396670007",
         display: "pT2: Tumor invades muscularis propria (urinary bladder, ureter, renal pelvis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2aTumorInvadesSuperficialMuscleInnerHalfUrinaryBladder: Coding.FromStrict({
+    ConditionStageValueSet_PT2aTumorInvadesSuperficialMuscleInnerHalfUrinaryBladder: new Coding({
         code: "396671006",
         display: "pT2a: Tumor invades superficial muscle (inner half) (urinary bladder)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2bTumorInvadesDeepMuscleOuterHalfUrinaryBladder: Coding.FromStrict({
+    ConditionStageValueSet_PT2bTumorInvadesDeepMuscleOuterHalfUrinaryBladder: new Coding({
         code: "396672004",
         display: "pT2b: Tumor invades deep muscle (outer half) (urinary bladder)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorInvadesPerivesicalTissueUrinaryBladder: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorInvadesPerivesicalTissueUrinaryBladder: new Coding({
         code: "396673009",
         display: "pT3: Tumor invades perivesical tissue (urinary bladder)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3aTumorInvadesPerivesicalTissueMicroscopicallyUrinaryBladder: Coding.FromStrict({
+    ConditionStageValueSet_PT3aTumorInvadesPerivesicalTissueMicroscopicallyUrinaryBladder: new Coding({
         code: "396674003",
         display: "pT3a: Tumor invades perivesical tissue microscopically (urinary bladder)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3bTumorInvadesPerivesicalTissueMacroscopicallyExtravesicalMassUrinaryBladder: Coding.FromStrict({
+    ConditionStageValueSet_PT3bTumorInvadesPerivesicalTissueMacroscopicallyExtravesicalMassUrinaryBladder: new Coding({
         code: "396675002",
         display: "pT3b: Tumor invades perivesical tissue macroscopically (extravesical mass) (urinary bladder)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorInvadesAnyOfTheFollowingProstateUterusVaginaPelvicWallAbdominalWallUrinaryBladder: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorInvadesAnyOfTheFollowingProstateUterusVaginaPelvicWallAbdominalWallUrinaryBladder: new Coding({
         code: "396676001",
         display: "pT4: Tumor invades any of the following: prostate, uterus, vagina, pelvic wall, abdominal wall (urinary bladder)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4aTumorInvadesProstateOrUterusOrVaginaUrinaryBladder: Coding.FromStrict({
+    ConditionStageValueSet_PT4aTumorInvadesProstateOrUterusOrVaginaUrinaryBladder: new Coding({
         code: "396677005",
         display: "pT4a: Tumor invades prostate or uterus or vagina (urinary bladder)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4bTumorInvadesPelvicWallOrAbdominalWallUrinaryBladder: Coding.FromStrict({
+    ConditionStageValueSet_PT4bTumorInvadesPelvicWallOrAbdominalWallUrinaryBladder: new Coding({
         code: "396678000",
         display: "pT4b: Tumor invades pelvic wall or abdominal wall (urinary bladder)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1MetastasisInASingleLymphNode2CmOrLessInGreatestDimensionUrinaryBladderUreterRenalPelvis: Coding.FromStrict({
+    ConditionStageValueSet_PN1MetastasisInASingleLymphNode2CmOrLessInGreatestDimensionUrinaryBladderUreterRenalPelvis: new Coding({
         code: "396679008",
         display: "pN1: Metastasis in a single lymph node, 2 cm or less in greatest dimension (urinary bladder, ureter, renal pelvis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2MetastasisInASingleLymphNodeMoreThan2CmButNotMoreThan5CmInGreatestDimensionOrMultipleLymphNodesNoneMoreThan5CmInGreatestDimensionUrinaryBladderUreterRenalPelvis: Coding.FromStrict({
+    ConditionStageValueSet_PN2MetastasisInASingleLymphNodeMoreThan2CmButNotMoreThan5CmInGreatestDimensionOrMultipleLymphNodesNoneMoreThan5CmInGreatestDimensionUrinaryBladderUreterRenalPelvis: new Coding({
         code: "396680006",
         display: "pN2: Metastasis in a single lymph node, more than 2 cm but not more than 5 cm in greatest dimension; or multiple lymph nodes, none more than 5 cm in greatest dimension (urinary bladder, ureter, renal pelvis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorInvadesBeyondMuscularisIntoPeriuretericFatOrRenalParenchymaRenalPelvis: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorInvadesBeyondMuscularisIntoPeriuretericFatOrRenalParenchymaRenalPelvis: new Coding({
         code: "396681005",
         display: "pT3: Tumor invades beyond muscularis into periureteric fat or renal parenchyma (renal pelvis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorInvadesAdjacentOrgansOrThroughTheKidneyIntoThePerinephricFatRenalPelvisAndUreter: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorInvadesAdjacentOrgansOrThroughTheKidneyIntoThePerinephricFatRenalPelvisAndUreter: new Coding({
         code: "396682003",
         display: "pT4: Tumor invades adjacent organs, or through the kidney into the perinephric fat (renal pelvis and ureter)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorInvadesBeyondMuscularisIntoPeriuretericFatUreter: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorInvadesBeyondMuscularisIntoPeriuretericFatUreter: new Coding({
         code: "396683008",
         display: "pT3: Tumor invades beyond muscularis into periureteric fat (ureter)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorInvadesMuscularisRenalPelvisAndUreter: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorInvadesMuscularisRenalPelvisAndUreter: new Coding({
         code: "396684002",
         display: "pT2: Tumor invades muscularis (renal pelvis and ureter)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TestisTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_TestisTNMFinding: new Coding({
         code: "396726006",
         display: "Testis TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PTisIntratubularGermCellNeoplasiaCarcinomaInSituTestis: Coding.FromStrict({
+    ConditionStageValueSet_PTisIntratubularGermCellNeoplasiaCarcinomaInSituTestis: new Coding({
         code: "396727002",
         display: "pTis: Intratubular germ cell neoplasia (carcinoma in situ) (testis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1TumorLimitedToTheTestisAndEpididymisWithoutVascularLymphaticInvasionTumorMayInvadeIntoTheTunicaAlbugineaButNotTheTunicaVaginalisTestis: Coding.FromStrict({
+    ConditionStageValueSet_PT1TumorLimitedToTheTestisAndEpididymisWithoutVascularLymphaticInvasionTumorMayInvadeIntoTheTunicaAlbugineaButNotTheTunicaVaginalisTestis: new Coding({
         code: "396728007",
         display: "pT1: Tumor limited to the testis and epididymis without vascular/lymphatic invasion; tumor may invade into the tunica albuginea but not the tunica vaginalis (testis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorLimitedToTheTestisAndEpididymisWithVascularLymphaticInvasionOrTumorExtendingThroughTheTunicaAlbugineaWithInvolvementOfTheTunicaVaginalisTestis: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorLimitedToTheTestisAndEpididymisWithVascularLymphaticInvasionOrTumorExtendingThroughTheTunicaAlbugineaWithInvolvementOfTheTunicaVaginalisTestis: new Coding({
         code: "396729004",
         display: "pT2: Tumor limited to the testis and epididymis with vascular/lymphatic invasion, or tumor extending through the tunica albuginea with involvement of the tunica vaginalis (testis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorInvadesTheSpermaticCordWithOrWithoutVascularLymphaticInvasionTestis: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorInvadesTheSpermaticCordWithOrWithoutVascularLymphaticInvasionTestis: new Coding({
         code: "396730009",
         display: "pT3: Tumor invades the spermatic cord with or without vascular/lymphatic invasion (testis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorInvadesTheScrotumWithOrWithoutVascularLymphaticInvasionTestis: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorInvadesTheScrotumWithOrWithoutVascularLymphaticInvasionTestis: new Coding({
         code: "396731008",
         display: "pT4: Tumor invades the scrotum with or without vascular/lymphatic invasion (testis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1MetastasisWithALymphNodeMass2CmOrLessInGreatestDimensionAndLessThanOrEqualTo5NodesPositiveNoneMoreThan2CmInGreatestDimensionTestis: Coding.FromStrict({
+    ConditionStageValueSet_PN1MetastasisWithALymphNodeMass2CmOrLessInGreatestDimensionAndLessThanOrEqualTo5NodesPositiveNoneMoreThan2CmInGreatestDimensionTestis: new Coding({
         code: "396732001",
         display: "pN1: Metastasis with a lymph node mass 2 cm or less in greatest dimension and less than or equal to 5 nodes positive, none more than 2 cm in greatest dimension (testis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2MetastasisWithALymphNodeMassMoreThan2CmButNotMoreThan5CmInGreatestDimensionOrMoreThan5NodesPositiveNoneMoreThan5CmOrEvidenceOfExtranodalExtensionOfTumorTestis: Coding.FromStrict({
+    ConditionStageValueSet_PN2MetastasisWithALymphNodeMassMoreThan2CmButNotMoreThan5CmInGreatestDimensionOrMoreThan5NodesPositiveNoneMoreThan5CmOrEvidenceOfExtranodalExtensionOfTumorTestis: new Coding({
         code: "396733006",
         display: "pN2: Metastasis with a lymph node mass more than 2 cm but not more than 5 cm in greatest dimension; or more than 5 nodes positive, none more than 5 cm; or evidence of extranodal extension of tumor (testis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN3MetastasisWithALymphNodeMassMoreThan5CmInGreatestDimensionTestis: Coding.FromStrict({
+    ConditionStageValueSet_PN3MetastasisWithALymphNodeMassMoreThan5CmInGreatestDimensionTestis: new Coding({
         code: "396734000",
         display: "pN3: Metastasis with a lymph node mass more than 5 cm in greatest dimension (testis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1aNonRegionalNodalOrPulmonaryMetastasisTestis: Coding.FromStrict({
+    ConditionStageValueSet_PM1aNonRegionalNodalOrPulmonaryMetastasisTestis: new Coding({
         code: "396735004",
         display: "pM1a: Non-regional nodal or pulmonary metastasis (testis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1bDistantMetastasisOtherThanToNonRegionalLymphNodesAndLungsTestis: Coding.FromStrict({
+    ConditionStageValueSet_PM1bDistantMetastasisOtherThanToNonRegionalLymphNodesAndLungsTestis: new Coding({
         code: "396736003",
         display: "pM1b: Distant metastasis other than to non-regional lymph nodes and lungs (testis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ExocrinePancreasTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_ExocrinePancreasTNMFinding: new Coding({
         code: "396797009",
         display: "Exocrine pancreas TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1TumorLimitedToThePancreas2CmOrLessInGreatestDimensionExocrinePancreas: Coding.FromStrict({
+    ConditionStageValueSet_PT1TumorLimitedToThePancreas2CmOrLessInGreatestDimensionExocrinePancreas: new Coding({
         code: "396798004",
         display: "pT1: Tumor limited to the pancreas, 2 cm or less in greatest dimension (exocrine pancreas)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorLimitedToThePancreasMoreThan2CmInGreatestDimensionExocrinePancreas: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorLimitedToThePancreasMoreThan2CmInGreatestDimensionExocrinePancreas: new Coding({
         code: "396799007",
         display: "pT2: Tumor limited to the pancreas, more than 2 cm in greatest dimension (exocrine pancreas)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorExtendsBeyondThePancreasButWithoutInvolvementOfTheCeliacAxisOrTheSuperiorMesentericArteryExocrinePancreas: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorExtendsBeyondThePancreasButWithoutInvolvementOfTheCeliacAxisOrTheSuperiorMesentericArteryExocrinePancreas: new Coding({
         code: "396800006",
         display: "pT3: Tumor extends beyond the pancreas but without involvement of the celiac axis or the superior mesenteric artery (exocrine pancreas)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1aMetastasisInSingleRegionalLymphNodeExocrinePancreas: Coding.FromStrict({
+    ConditionStageValueSet_PN1aMetastasisInSingleRegionalLymphNodeExocrinePancreas: new Coding({
         code: "396801005",
         display: "pN1a: Metastasis in single regional lymph node (exocrine pancreas)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1bMetastasisInMultipleRegionalLymphNodeSExocrinePancreas: Coding.FromStrict({
+    ConditionStageValueSet_PN1bMetastasisInMultipleRegionalLymphNodeSExocrinePancreas: new Coding({
         code: "396802003",
         display: "pN1b: Metastasis in multiple regional lymph node(s) (exocrine pancreas)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorInvolvesTheCeliacAxisOrTheSuperiorMesentericArteryExocrinePancreas: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorInvolvesTheCeliacAxisOrTheSuperiorMesentericArteryExocrinePancreas: new Coding({
         code: "396803008",
         display: "pT4: Tumor involves the celiac axis or the superior mesenteric artery (exocrine pancreas)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ThymicEpithelialNeoplasmStageFinding: Coding.FromStrict({
+    ConditionStageValueSet_ThymicEpithelialNeoplasmStageFinding: new Coding({
         code: "396907008",
         display: "Thymic epithelial neoplasm stage finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_StageIGrosslyAndMicroscopicallyEncapsulatedThymusGland: Coding.FromStrict({
+    ConditionStageValueSet_StageIGrosslyAndMicroscopicallyEncapsulatedThymusGland: new Coding({
         code: "396908003",
         display: "Stage I: Grossly and microscopically encapsulated (thymus gland)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_StageIIaMicroscopicTranscapsularInvasionThymusGland: Coding.FromStrict({
+    ConditionStageValueSet_StageIIaMicroscopicTranscapsularInvasionThymusGland: new Coding({
         code: "396909006",
         display: "Stage IIa: Microscopic transcapsular invasion (thymus gland)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_StageIIbMacroscopicCapsularInvasionIntoThymicOrSurroundingFatOrGrosslyAdherentToButNotBreakingThroughMediastinalPleuraOrPericardiumThymusGland: Coding.FromStrict({
+    ConditionStageValueSet_StageIIbMacroscopicCapsularInvasionIntoThymicOrSurroundingFatOrGrosslyAdherentToButNotBreakingThroughMediastinalPleuraOrPericardiumThymusGland: new Coding({
         code: "396910001",
         display: "Stage IIb: Macroscopic capsular invasion into thymic or surrounding fat, or grossly adherent to, but not breaking through, mediastinal pleura or pericardium (thymus gland)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_StageIIIMacroscopicInvasionOfNeighboringOrgansThymusGland: Coding.FromStrict({
+    ConditionStageValueSet_StageIIIMacroscopicInvasionOfNeighboringOrgansThymusGland: new Coding({
         code: "396911002",
         display: "Stage III: Macroscopic invasion of neighboring organs (thymus gland)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_StageIVaPleuralOrPericardialDisseminationThymusGland: Coding.FromStrict({
+    ConditionStageValueSet_StageIVaPleuralOrPericardialDisseminationThymusGland: new Coding({
         code: "396912009",
         display: "Stage IVa: Pleural or pericardial dissemination (thymus gland)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_StageIVbHematogenousOrLymphaticDisseminationThymusGland: Coding.FromStrict({
+    ConditionStageValueSet_StageIVbHematogenousOrLymphaticDisseminationThymusGland: new Coding({
         code: "396913004",
         display: "Stage IVb: Hematogenous or lymphatic dissemination (thymus gland)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_RetinoblastomaTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_RetinoblastomaTNMFinding: new Coding({
         code: "396960007",
         display: "Retinoblastoma TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1TumorConfinedToTheRetinaVitreousOrSubretinalSpaceNoOpticNerveOrChoroidalInvasionRetinoblastoma: Coding.FromStrict({
+    ConditionStageValueSet_PT1TumorConfinedToTheRetinaVitreousOrSubretinalSpaceNoOpticNerveOrChoroidalInvasionRetinoblastoma: new Coding({
         code: "396961006",
         display: "pT1: Tumor confined to the retina, vitreous, or subretinal space. No optic nerve or choroidal invasion (retinoblastoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2MinimalInvasionOfTheOpticNerveAndOrOpticCoatsRetinoblastoma: Coding.FromStrict({
+    ConditionStageValueSet_PT2MinimalInvasionOfTheOpticNerveAndOrOpticCoatsRetinoblastoma: new Coding({
         code: "396962004",
         display: "pT2: Minimal invasion of the optic nerve and/or optic coats (retinoblastoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2aTumorInvadesOpticNerveUpToButNotThroughTheLevelOfTheLaminaCribrosaRetinoblastoma: Coding.FromStrict({
+    ConditionStageValueSet_PT2aTumorInvadesOpticNerveUpToButNotThroughTheLevelOfTheLaminaCribrosaRetinoblastoma: new Coding({
         code: "396963009",
         display: "pT2a: Tumor invades optic nerve up to, but not through, the level of the lamina cribrosa (retinoblastoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2bTumorInvadesChoroidFocallyRetinoblastoma: Coding.FromStrict({
+    ConditionStageValueSet_PT2bTumorInvadesChoroidFocallyRetinoblastoma: new Coding({
         code: "396964003",
         display: "pT2b: Tumor invades choroid focally (retinoblastoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2cTumorInvadesOpticNerveUpToButNotThroughTheLevelOfTheLaminaCribrosaAndInvadesTheChoroidFocallyRetinoblastoma: Coding.FromStrict({
+    ConditionStageValueSet_PT2cTumorInvadesOpticNerveUpToButNotThroughTheLevelOfTheLaminaCribrosaAndInvadesTheChoroidFocallyRetinoblastoma: new Coding({
         code: "396965002",
         display: "pT2c: Tumor invades optic nerve up to, but not through, the level of the lamina cribrosa and invades the choroid focally (retinoblastoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3SignificantInvasionOfTheOpticNerveAndOrOpticCoatsRetinoblastoma: Coding.FromStrict({
+    ConditionStageValueSet_PT3SignificantInvasionOfTheOpticNerveAndOrOpticCoatsRetinoblastoma: new Coding({
         code: "396966001",
         display: "pT3: Significant invasion of the optic nerve and/or optic coats (retinoblastoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3aTumorInvadesOpticNerveThroughTheLevelOfTheLaminaCribrosaButNotToTheLineOfResectionRetinoblastoma: Coding.FromStrict({
+    ConditionStageValueSet_PT3aTumorInvadesOpticNerveThroughTheLevelOfTheLaminaCribrosaButNotToTheLineOfResectionRetinoblastoma: new Coding({
         code: "396967005",
         display: "pT3a: Tumor invades optic nerve through the level of the lamina cribrosa but not to the line of resection (retinoblastoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3bTumorMassivelyInvadesTheChoroidRetinoblastoma: Coding.FromStrict({
+    ConditionStageValueSet_PT3bTumorMassivelyInvadesTheChoroidRetinoblastoma: new Coding({
         code: "396968000",
         display: "pT3b: Tumor massively invades the choroid (retinoblastoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3cTumorInvadesTheOpticNerveThroughTheLevelOfTheLaminaCribrosaButNotToTheLineOfResectionAndMassivelyInvadesTheChoroidRetinoblastoma: Coding.FromStrict({
+    ConditionStageValueSet_PT3cTumorInvadesTheOpticNerveThroughTheLevelOfTheLaminaCribrosaButNotToTheLineOfResectionAndMassivelyInvadesTheChoroidRetinoblastoma: new Coding({
         code: "396969008",
         display: "pT3c: Tumor invades the optic nerve through the level of the lamina cribrosa but not to the line of resection and massively invades the choroid (retinoblastoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4ExtraocularTumorExtensionWhichIncludesSitesAsPerAJCC6thEditionDefinitionRetinoblastoma: Coding.FromStrict({
+    ConditionStageValueSet_PT4ExtraocularTumorExtensionWhichIncludesSitesAsPerAJCC6thEditionDefinitionRetinoblastoma: new Coding({
         code: "396970009",
         display: "pT4: Extraocular tumor extension which includes sites as per AJCC 6th Edition definition (retinoblastoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1aDistantMetastasisToBoneMarrowRetinoblastoma: Coding.FromStrict({
+    ConditionStageValueSet_PM1aDistantMetastasisToBoneMarrowRetinoblastoma: new Coding({
         code: "396971008",
         display: "pM1a: Distant metastasis to bone marrow (retinoblastoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1bDistantMetastasisToSitesOtherThanBoneMarrowRetinoblastoma: Coding.FromStrict({
+    ConditionStageValueSet_PM1bDistantMetastasisToSitesOtherThanBoneMarrowRetinoblastoma: new Coding({
         code: "396972001",
         display: "pM1b: Distant metastasis to sites other than bone marrow (retinoblastoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_StomachTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_StomachTNMFinding: new Coding({
         code: "397025005",
         display: "Stomach TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1TumorInvadesLaminaPropriaOrSubmucosaEsophagus: Coding.FromStrict({
+    ConditionStageValueSet_PT1TumorInvadesLaminaPropriaOrSubmucosaEsophagus: new Coding({
         code: "397026006",
         display: "pT1: Tumor invades lamina propria or submucosa (esophagus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_EsophagusTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_EsophagusTNMFinding: new Coding({
         code: "397027002",
         display: "Esophagus TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1aTumorInvadesLaminaPropriaEsophagus: Coding.FromStrict({
+    ConditionStageValueSet_PT1aTumorInvadesLaminaPropriaEsophagus: new Coding({
         code: "397029004",
         display: "pT1a: Tumor invades lamina propria (esophagus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1bTumorInvadesSubmucosaEsophagus: Coding.FromStrict({
+    ConditionStageValueSet_PT1bTumorInvadesSubmucosaEsophagus: new Coding({
         code: "397030009",
         display: "pT1b: Tumor invades submucosa (esophagus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorInvadesMuscularisPropriaEsophagus: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorInvadesMuscularisPropriaEsophagus: new Coding({
         code: "397031008",
         display: "pT2: Tumor invades muscularis propria (esophagus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorInvadesAdventitiaEsophagus: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorInvadesAdventitiaEsophagus: new Coding({
         code: "397032001",
         display: "pT3: Tumor invades adventitia (esophagus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorInvadesAdjacentStructuresEsophagus: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorInvadesAdjacentStructuresEsophagus: new Coding({
         code: "397033006",
         display: "pT4: Tumor invades adjacent structures (esophagus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1aMetastasisIn1To3RegionalLymphNodesEsophagus: Coding.FromStrict({
+    ConditionStageValueSet_PN1aMetastasisIn1To3RegionalLymphNodesEsophagus: new Coding({
         code: "397036003",
         display: "pN1a: Metastasis in 1 to 3 regional lymph nodes (esophagus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1bMetastasisIn4To7RegionalLymphNodesEsophagus: Coding.FromStrict({
+    ConditionStageValueSet_PN1bMetastasisIn4To7RegionalLymphNodesEsophagus: new Coding({
         code: "397037007",
         display: "pN1b: Metastasis in 4 to 7 regional lymph nodes (esophagus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1cMetastasisInMoreThan7RegionalLymphNodesEsophagus: Coding.FromStrict({
+    ConditionStageValueSet_PN1cMetastasisInMoreThan7RegionalLymphNodesEsophagus: new Coding({
         code: "397038002",
         display: "pN1c: Metastasis in more than 7 regional lymph nodes (esophagus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1aMetastasisInCeliacLymphNodesLowerThoracicEsophagus: Coding.FromStrict({
+    ConditionStageValueSet_PM1aMetastasisInCeliacLymphNodesLowerThoracicEsophagus: new Coding({
         code: "397039005",
         display: "pM1a: Metastasis in celiac lymph nodes (lower thoracic esophagus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1aDistantMetastasisNotApplicableMidthoracicEsophagus: Coding.FromStrict({
+    ConditionStageValueSet_PM1aDistantMetastasisNotApplicableMidthoracicEsophagus: new Coding({
         code: "397040007",
         display: "pM1a: Distant metastasis not applicable (midthoracic esophagus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1aMetastasisInCervicalNodesUpperThoracicEsophagus: Coding.FromStrict({
+    ConditionStageValueSet_PM1aMetastasisInCervicalNodesUpperThoracicEsophagus: new Coding({
         code: "397041006",
         display: "pM1a: Metastasis in cervical nodes (upper thoracic esophagus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1bDistantMetastasisToSiteOtherThanCeliacLymphNodesLowerThoracicEsophagus: Coding.FromStrict({
+    ConditionStageValueSet_PM1bDistantMetastasisToSiteOtherThanCeliacLymphNodesLowerThoracicEsophagus: new Coding({
         code: "397042004",
         display: "pM1b: Distant metastasis to site other than celiac lymph nodes (lower thoracic esophagus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1bNonregionalLymphNodesANDOROtherDistantMetastasisMidthoracicEsophagus: Coding.FromStrict({
+    ConditionStageValueSet_PM1bNonregionalLymphNodesANDOROtherDistantMetastasisMidthoracicEsophagus: new Coding({
         code: "397043009",
         display: "pM1b: Nonregional lymph nodes AND/OR other distant metastasis (midthoracic esophagus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1bDistantMetastasisToSiteOtherThanCervicalNodesUpperThoracicEsophagus: Coding.FromStrict({
+    ConditionStageValueSet_PM1bDistantMetastasisToSiteOtherThanCervicalNodesUpperThoracicEsophagus: new Coding({
         code: "397044003",
         display: "pM1b: Distant metastasis to site other than cervical nodes (upper thoracic esophagus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_SmallIntestineTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_SmallIntestineTNMFinding: new Coding({
         code: "397058001",
         display: "Small intestine TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1TumorInvadesLaminaPropriaOrSubmucosaSmallIntestine: Coding.FromStrict({
+    ConditionStageValueSet_PT1TumorInvadesLaminaPropriaOrSubmucosaSmallIntestine: new Coding({
         code: "397059009",
         display: "pT1: Tumor invades lamina propria or submucosa (small intestine)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorInvadesMuscularisPropriaSmallIntestine: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorInvadesMuscularisPropriaSmallIntestine: new Coding({
         code: "397088005",
         display: "pT2: Tumor invades muscularis propria (small intestine)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorInvadesThroughTheMuscularisPropriaIntoTheSubserosaOrIntoTheNonperitonealizedPerimuscularTissueMesenteryOrRetroperitoneumWithExtension2CmOrLessSmallIntestine: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorInvadesThroughTheMuscularisPropriaIntoTheSubserosaOrIntoTheNonperitonealizedPerimuscularTissueMesenteryOrRetroperitoneumWithExtension2CmOrLessSmallIntestine: new Coding({
         code: "397089002",
         display: "pT3: Tumor invades through the muscularis propria into the subserosa or into the nonperitonealized perimuscular tissue (mesentery or retroperitoneum) with extension 2 cm or less (small intestine)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorPerforatesTheVisceralPeritoneumOrDirectlyInvadesOtherOrgansOrStructuresSmallIntestine: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorPerforatesTheVisceralPeritoneumOrDirectlyInvadesOtherOrgansOrStructuresSmallIntestine: new Coding({
         code: "397090006",
         display: "pT4: Tumor perforates the visceral peritoneum or directly invades other organs or structures (small intestine)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_GallbladderTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_GallbladderTNMFinding: new Coding({
         code: "397092003",
         display: "Gallbladder TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1TumorInvadesLaminaPropriaOrMuscleLayerGallbladder: Coding.FromStrict({
+    ConditionStageValueSet_PT1TumorInvadesLaminaPropriaOrMuscleLayerGallbladder: new Coding({
         code: "397093008",
         display: "pT1: Tumor invades lamina propria or muscle layer (gallbladder)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1aTumorInvadesLaminaPropriaGallbladder: Coding.FromStrict({
+    ConditionStageValueSet_PT1aTumorInvadesLaminaPropriaGallbladder: new Coding({
         code: "397094002",
         display: "pT1a: Tumor invades lamina propria (gallbladder)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1bTumorInvadesMuscleLayerGallbladder: Coding.FromStrict({
+    ConditionStageValueSet_PT1bTumorInvadesMuscleLayerGallbladder: new Coding({
         code: "397095001",
         display: "pT1b: Tumor invades muscle layer (gallbladder)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorInvadesPerimuscularConnectiveTissueNoExtensionBeyondSerosaOrIntoLiverGallbladder: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorInvadesPerimuscularConnectiveTissueNoExtensionBeyondSerosaOrIntoLiverGallbladder: new Coding({
         code: "397096000",
         display: "pT2: Tumor invades perimuscular connective tissue; no extension beyond serosa or into liver (gallbladder)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorPerforatesTheSerosaVisceralPeritoneumAndOrDirectlyInvadesTheLiverAndOrOneOtherAdjacentOrganOrStructureSuchAsTheStomachDuodenumColonPancreasOmentumOrExtrahepaticBileDuctsGallbladder: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorPerforatesTheSerosaVisceralPeritoneumAndOrDirectlyInvadesTheLiverAndOrOneOtherAdjacentOrganOrStructureSuchAsTheStomachDuodenumColonPancreasOmentumOrExtrahepaticBileDuctsGallbladder: new Coding({
         code: "397097009",
         display: "pT3: Tumor perforates the serosa (visceral peritoneum) and/or directly invades the liver and/or one other adjacent organ or structure, such as the stomach, duodenum, colon, pancreas, omentum, or extrahepatic bile ducts (gallbladder)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorInvadesMainPortalVeinOrHepaticArteryOrInvadesTwoOrMoreExtrahepaticOrgansOrStructuresGallbladder: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorInvadesMainPortalVeinOrHepaticArteryOrInvadesTwoOrMoreExtrahepaticOrgansOrStructuresGallbladder: new Coding({
         code: "397098004",
         display: "pT4: Tumor invades main portal vein or hepatic artery or invades two or more extrahepatic organs or structures (gallbladder)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_VaginaTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_VaginaTNMFinding: new Coding({
         code: "397101000",
         display: "Vagina TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1ITumorConfinedToVaginaTNMCategoryAndFIGOStageVagina: Coding.FromStrict({
+    ConditionStageValueSet_PT1ITumorConfinedToVaginaTNMCategoryAndFIGOStageVagina: new Coding({
         code: "397102007",
         display: "pT1 (I): Tumor confined to vagina (TNM category and FIGO stage) (vagina)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2IITumorInvadesParavaginalTissuesButNotToPelvicWallTNMCategoryAndFIGOStageVagina: Coding.FromStrict({
+    ConditionStageValueSet_PT2IITumorInvadesParavaginalTissuesButNotToPelvicWallTNMCategoryAndFIGOStageVagina: new Coding({
         code: "397103002",
         display: "pT2 (II): Tumor invades paravaginal tissues but not to pelvic wall (TNM category and FIGO stage) (vagina)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3IIITumorExtendsToPelvicWallTNMCategoryAndFIGOStageVagina: Coding.FromStrict({
+    ConditionStageValueSet_PT3IIITumorExtendsToPelvicWallTNMCategoryAndFIGOStageVagina: new Coding({
         code: "397104008",
         display: "pT3 (III): Tumor extends to pelvic wall (TNM category and FIGO stage) (vagina)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4IVATumorInvadesMucosaOfTheBladderOrRectumAndOrExtendsBeyondTheTruePelvisBullousEdemaIsNotSufficientEvidenceToClassifyATumorAsT4TNMCategoryAndFIGOStageVagina: Coding.FromStrict({
+    ConditionStageValueSet_PT4IVATumorInvadesMucosaOfTheBladderOrRectumAndOrExtendsBeyondTheTruePelvisBullousEdemaIsNotSufficientEvidenceToClassifyATumorAsT4TNMCategoryAndFIGOStageVagina: new Coding({
         code: "397105009",
         display: "pT4 (IVA): Tumor invades mucosa of the bladder or rectum and/or extends beyond the true pelvis (bullous edema is not sufficient evidence to classify a tumor as T4) (TNM category and FIGO stage) (vagina)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1IVBDistantMetastasisTNMCategoryAndFIGOStageVagina: Coding.FromStrict({
+    ConditionStageValueSet_PM1IVBDistantMetastasisTNMCategoryAndFIGOStageVagina: new Coding({
         code: "397106005",
         display: "pM1 (IVB): Distant metastasis (TNM category and FIGO stage) (vagina)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1PelvicOrInguinalLymphNodeMetastasisVagina: Coding.FromStrict({
+    ConditionStageValueSet_PN1PelvicOrInguinalLymphNodeMetastasisVagina: new Coding({
         code: "397107001",
         display: "pN1: Pelvic or inguinal lymph node metastasis (vagina)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_VulvaTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_VulvaTNMFinding: new Coding({
         code: "397119009",
         display: "Vulva TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1ITumorConfinedToTheVulvaOrVulvaAndPerineum2CmOrLessInGreatestDimensionTNMCategoryAndFIGOStageVulva: Coding.FromStrict({
+    ConditionStageValueSet_PT1ITumorConfinedToTheVulvaOrVulvaAndPerineum2CmOrLessInGreatestDimensionTNMCategoryAndFIGOStageVulva: new Coding({
         code: "397120003",
         display: "pT1 (I): Tumor confined to the vulva or vulva and perineum, 2 cm or less in greatest dimension (TNM category and FIGO stage) (vulva)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1aIATumorConfinedToTheVulvaOrVulvaAndPerineum2CmOrLessInGreatestDimensionAndWithStromalInvasionNoGreaterThan1MmTNMCategoryAndFIGOStageVulva: Coding.FromStrict({
+    ConditionStageValueSet_PT1aIATumorConfinedToTheVulvaOrVulvaAndPerineum2CmOrLessInGreatestDimensionAndWithStromalInvasionNoGreaterThan1MmTNMCategoryAndFIGOStageVulva: new Coding({
         code: "397121004",
         display: "pT1a (IA): Tumor confined to the vulva or vulva and perineum, 2 cm or less in greatest dimension, and with stromal invasion no greater than 1 mm (TNM category and FIGO stage) (vulva)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1bIBTumorConfinedToTheVulvaOrVulvaAndPerineum2CmOrLessInGreatestDimensionAndWithStromalInvasionGreaterThan1MmTNMCategoryAndFIGOStageVulva: Coding.FromStrict({
+    ConditionStageValueSet_PT1bIBTumorConfinedToTheVulvaOrVulvaAndPerineum2CmOrLessInGreatestDimensionAndWithStromalInvasionGreaterThan1MmTNMCategoryAndFIGOStageVulva: new Coding({
         code: "397122006",
         display: "pT1b (IB): Tumor confined to the vulva or vulva and perineum, 2 cm or less in greatest dimension, and with stromal invasion greater than 1 mm (TNM category and FIGO stage) (vulva)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2IITumorConfinedToTheVulvaOrVulvaAndPerineumMoreThan2CmInGreatestDimensionTNMCategoryAndFIGOStageVulva: Coding.FromStrict({
+    ConditionStageValueSet_PT2IITumorConfinedToTheVulvaOrVulvaAndPerineumMoreThan2CmInGreatestDimensionTNMCategoryAndFIGOStageVulva: new Coding({
         code: "397123001",
         display: "pT2 (II): Tumor confined to the vulva or vulva and perineum, more than 2 cm in greatest dimension (TNM category and FIGO stage) (vulva)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3IIITumorOfAnySizeWithContiguousSpreadToTheLowerUrethraAndOrVaginaOrAnusTNMCategoryAndFIGOStageVulva: Coding.FromStrict({
+    ConditionStageValueSet_PT3IIITumorOfAnySizeWithContiguousSpreadToTheLowerUrethraAndOrVaginaOrAnusTNMCategoryAndFIGOStageVulva: new Coding({
         code: "397124007",
         display: "pT3 (III): Tumor of any size with contiguous spread to the lower urethra and/or vagina or anus (TNM category and FIGO stage) (vulva)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4IVATumorInvadesAnyOfTheFollowingUpperUrethraBladderMucosaRectalMucosaOrIsFixedToThePubicBoneTNMCategoryAndFIGOStageVulva: Coding.FromStrict({
+    ConditionStageValueSet_PT4IVATumorInvadesAnyOfTheFollowingUpperUrethraBladderMucosaRectalMucosaOrIsFixedToThePubicBoneTNMCategoryAndFIGOStageVulva: new Coding({
         code: "397125008",
         display: "pT4 (IVA): Tumor invades any of the following: upper urethra, bladder mucosa, rectal mucosa, or is fixed to the pubic bone (TNM category and FIGO stage) (vulva)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1UnilateralRegionalLymphNodeMetastasisVulva: Coding.FromStrict({
+    ConditionStageValueSet_PN1UnilateralRegionalLymphNodeMetastasisVulva: new Coding({
         code: "397126009",
         display: "pN1: Unilateral regional lymph node metastasis (vulva)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2BilateralRegionalLymphNodeMetastasisVulva: Coding.FromStrict({
+    ConditionStageValueSet_PN2BilateralRegionalLymphNodeMetastasisVulva: new Coding({
         code: "397127000",
         display: "pN2: Bilateral regional lymph node metastasis (vulva)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ExtrahepaticBileDuctsTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_ExtrahepaticBileDuctsTNMFinding: new Coding({
         code: "397146004",
         display: "Extrahepatic bile ducts TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1TumorConfinedToTheBileDuctHistologicallyExtrahepaticBileDucts: Coding.FromStrict({
+    ConditionStageValueSet_PT1TumorConfinedToTheBileDuctHistologicallyExtrahepaticBileDucts: new Coding({
         code: "397147008",
         display: "pT1: Tumor confined to the bile duct histologically (extrahepatic bile ducts)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorInvadesBeyondTheWallOfBileDuctExtrahepaticBileDucts: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorInvadesBeyondTheWallOfBileDuctExtrahepaticBileDucts: new Coding({
         code: "397148003",
         display: "pT2: Tumor invades beyond the wall of bile duct (extrahepatic bile ducts)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorInvadesTheLiverGallbladderPancreasAndOrIpsilateralBranchesOfThePortalVeinRightOrLeftOrHepaticArteryRightOrLeftExtrahepaticBileDucts: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorInvadesTheLiverGallbladderPancreasAndOrIpsilateralBranchesOfThePortalVeinRightOrLeftOrHepaticArteryRightOrLeftExtrahepaticBileDucts: new Coding({
         code: "397149006",
         display: "pT3: Tumor invades the liver, gallbladder, pancreas, and/or ipsilateral branches of the portal vein (right or left) or hepatic artery (right or left) (extrahepatic bile ducts)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorInvadesAnyOfTheFollowingMainPortalVeinOrItsBranchesBilaterallyCommonHepaticArteryOrOtherAdjacentStructuresSuchAsTheColonStomachDuodenumOrAbdominalWallExtrahepaticBileDucts: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorInvadesAnyOfTheFollowingMainPortalVeinOrItsBranchesBilaterallyCommonHepaticArteryOrOtherAdjacentStructuresSuchAsTheColonStomachDuodenumOrAbdominalWallExtrahepaticBileDucts: new Coding({
         code: "397150006",
         display: "pT4: Tumor invades any of the following: main portal vein or its branches bilaterally, common hepatic artery, or other adjacent structures, such as the colon, stomach, duodenum, or abdominal wall (extrahepatic bile ducts)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1aDistantMetastasisToNonRegionalLymphNodeSProstate: Coding.FromStrict({
+    ConditionStageValueSet_PM1aDistantMetastasisToNonRegionalLymphNodeSProstate: new Coding({
         code: "397213002",
         display: "pM1a: Distant metastasis to non-regional lymph node(s) (prostate)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1bDistantMetastasisToBoneSProstate: Coding.FromStrict({
+    ConditionStageValueSet_PM1bDistantMetastasisToBoneSProstate: new Coding({
         code: "397214008",
         display: "pM1b: Distant metastasis to bone(s) (prostate)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1cDistantMetastasisSiteOtherThanBoneOrNonRegionalLymphNodeSProstate: Coding.FromStrict({
+    ConditionStageValueSet_PM1cDistantMetastasisSiteOtherThanBoneOrNonRegionalLymphNodeSProstate: new Coding({
         code: "397215009",
         display: "pM1c: Distant metastasis site other than bone or non-regional lymph node(s) (prostate)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_OvaryTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_OvaryTNMFinding: new Coding({
         code: "397316007",
         display: "Ovary TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1IVDistantMetastasisTNMCategoryAndFIGOStageOvary: Coding.FromStrict({
+    ConditionStageValueSet_PM1IVDistantMetastasisTNMCategoryAndFIGOStageOvary: new Coding({
         code: "397317003",
         display: "pM1 (IV): Distant metastasis (TNM category and FIGO stage) (ovary)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3aIIIATumorInvolvesSerosaANDORAdnexaDirectExtensionOrMetastasisTNMCategoryAndFIGOStageCorpusUteri: Coding.FromStrict({
+    ConditionStageValueSet_PT3aIIIATumorInvolvesSerosaANDORAdnexaDirectExtensionOrMetastasisTNMCategoryAndFIGOStageCorpusUteri: new Coding({
         code: "397360007",
         display: "pT3a (IIIA): Tumor involves serosa, AND/OR adnexa (direct extension or metastasis) (TNM category and FIGO stage) (corpus uteri)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1IIIPelvicOrInguinalLymphNodeMetastasisPT1PT3TNMCategoryAndFIGOStageVagina: Coding.FromStrict({
+    ConditionStageValueSet_PN1IIIPelvicOrInguinalLymphNodeMetastasisPT1PT3TNMCategoryAndFIGOStageVagina: new Coding({
         code: "397367005",
         display: "pN1 (III): Pelvic or inguinal lymph node metastasis (pT1-pT3) (TNM category and FIGO stage) (vagina)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1IVAPelvicOrInguinalLymphNodeMetastasisPT4TNMCategoryAndFIGOStageVagina: Coding.FromStrict({
+    ConditionStageValueSet_PN1IVAPelvicOrInguinalLymphNodeMetastasisPT4TNMCategoryAndFIGOStageVagina: new Coding({
         code: "397368000",
         display: "pN1 (IVA): Pelvic or inguinal lymph node metastasis (pT4) (TNM category and FIGO stage) (vagina)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1IVBPelvicOrInguinalLymphNodeMetastasisPT1PT4PM1TNMCategoryAndFIGOStageVagina: Coding.FromStrict({
+    ConditionStageValueSet_PN1IVBPelvicOrInguinalLymphNodeMetastasisPT1PT4PM1TNMCategoryAndFIGOStageVagina: new Coding({
         code: "397369008",
         display: "pN1 (IVB): Pelvic or inguinal lymph node metastasis (pT1-pT4, pM1) (TNM category and FIGO stage) (vagina)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1IIIUnilateralRegionalLymphNodeMetastasisPT1PT3TNMCategoryAndFIGOStageVulva: Coding.FromStrict({
+    ConditionStageValueSet_PN1IIIUnilateralRegionalLymphNodeMetastasisPT1PT3TNMCategoryAndFIGOStageVulva: new Coding({
         code: "397370009",
         display: "pN1 (III): Unilateral regional lymph node metastasis (pT1-pT3) (TNM category and FIGO stage) (vulva)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1IVAUnilateralRegionalLymphNodeMetastasisPT4TNMCategoryAndFIGOStageVulva: Coding.FromStrict({
+    ConditionStageValueSet_PN1IVAUnilateralRegionalLymphNodeMetastasisPT4TNMCategoryAndFIGOStageVulva: new Coding({
         code: "397371008",
         display: "pN1 (IVA): Unilateral regional lymph node metastasis (pT4) (TNM category and FIGO stage) (vulva)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1IVBUnilateralRegionalLymphNodeMetastasisPT1PT4PM1TNMCategoryAndFIGOStageVulva: Coding.FromStrict({
+    ConditionStageValueSet_PN1IVBUnilateralRegionalLymphNodeMetastasisPT1PT4PM1TNMCategoryAndFIGOStageVulva: new Coding({
         code: "397372001",
         display: "pN1 (IVB): Unilateral regional lymph node metastasis (pT1-pT4, pM1) (TNM category and FIGO stage) (vulva)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2IVABilateralRegionalLymphNodeMetastasisPT1PT4TNMCategoryAndFIGOStageVulva: Coding.FromStrict({
+    ConditionStageValueSet_PN2IVABilateralRegionalLymphNodeMetastasisPT1PT4TNMCategoryAndFIGOStageVulva: new Coding({
         code: "397373006",
         display: "pN2 (IVA): Bilateral regional lymph node metastasis (pT1-pT4) (TNM category and FIGO stage) (vulva)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2IVBBilateralRegionalLymphNodeMetastasisPT1PT4PM1TNMCategoryAndFIGOStageVulva: Coding.FromStrict({
+    ConditionStageValueSet_PN2IVBBilateralRegionalLymphNodeMetastasisPT1PT4PM1TNMCategoryAndFIGOStageVulva: new Coding({
         code: "397374000",
         display: "pN2 (IVB): Bilateral regional lymph node metastasis (pT1-pT4, pM1) (TNM category and FIGO stage) (vulva)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1IVBDistantMetastasisIncludingPelvicLymphNodeMetastasisTNMCategoryAndFIGOStageVulva: Coding.FromStrict({
+    ConditionStageValueSet_PM1IVBDistantMetastasisIncludingPelvicLymphNodeMetastasisTNMCategoryAndFIGOStageVulva: new Coding({
         code: "397375004",
         display: "pM1 (IVB): Distant metastasis (including pelvic lymph node metastasis) (TNM category and FIGO stage) (vulva)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ThoracicMesotheliomaTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_ThoracicMesotheliomaTNMFinding: new Coding({
         code: "397385003",
         display: "Thoracic mesothelioma TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1TumorInvolvesIpsilateralParietalPleuraWithOrWithoutFocalInvolvementOfVisceralPleuraThoracicMesothelioma: Coding.FromStrict({
+    ConditionStageValueSet_PT1TumorInvolvesIpsilateralParietalPleuraWithOrWithoutFocalInvolvementOfVisceralPleuraThoracicMesothelioma: new Coding({
         code: "397386002",
         display: "pT1: Tumor involves ipsilateral parietal pleura, with or without focal involvement of visceral pleura (thoracic mesothelioma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1aTumorInvolvesIpsilateralParietalMediastinalDiaphragmaticPleuraNoInvolvementOfTheVisceralPleuraThoracicMesothelioma: Coding.FromStrict({
+    ConditionStageValueSet_PT1aTumorInvolvesIpsilateralParietalMediastinalDiaphragmaticPleuraNoInvolvementOfTheVisceralPleuraThoracicMesothelioma: new Coding({
         code: "397387006",
         display: "pT1a: Tumor involves ipsilateral parietal (mediastinal, diaphragmatic) pleura. No involvement of the visceral pleura (thoracic mesothelioma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1bTumorInvolvesIpsilateralParietalMediastinalDiaphragmaticPleuraWithFocalInvolvementOfTheVisceralPleuraThoracicMesothelioma: Coding.FromStrict({
+    ConditionStageValueSet_PT1bTumorInvolvesIpsilateralParietalMediastinalDiaphragmaticPleuraWithFocalInvolvementOfTheVisceralPleuraThoracicMesothelioma: new Coding({
         code: "397388001",
         display: "pT1b: Tumor involves ipsilateral parietal (mediastinal, diaphragmatic) pleura, with focal involvement of the visceral pleura (thoracic mesothelioma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorInvolvesAnyOfTheIpsilateralPleuralSurfacesWithAtLeastOneOfTheFollowingConfluentVisceralPleuralTumorIncludingFissureInvasionOfDiaphragmaticMuscleInvasionOfLungParenchymaThoracicMesothelioma: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorInvolvesAnyOfTheIpsilateralPleuralSurfacesWithAtLeastOneOfTheFollowingConfluentVisceralPleuralTumorIncludingFissureInvasionOfDiaphragmaticMuscleInvasionOfLungParenchymaThoracicMesothelioma: new Coding({
         code: "397389009",
         display: "pT2: Tumor involves any of the ipsilateral pleural surfaces with at least one of the following: confluent visceral pleural tumor (including fissure), invasion of diaphragmatic muscle, invasion of lung parenchyma (thoracic mesothelioma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1MetastasisInTheIpsilateralBronchopulmonaryAndOrHilarLymphNodeSThoracicMesothelioma: Coding.FromStrict({
+    ConditionStageValueSet_PN1MetastasisInTheIpsilateralBronchopulmonaryAndOrHilarLymphNodeSThoracicMesothelioma: new Coding({
         code: "397390000",
         display: "pN1: Metastasis in the ipsilateral bronchopulmonary and/or hilar lymph node(s) (thoracic mesothelioma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2MetastasisInTheSubcarinalLymphNodeSAndOrTheIpsilateralInternalMammaryOrMediastinalLymphNodeSThoracicMesothelioma: Coding.FromStrict({
+    ConditionStageValueSet_PN2MetastasisInTheSubcarinalLymphNodeSAndOrTheIpsilateralInternalMammaryOrMediastinalLymphNodeSThoracicMesothelioma: new Coding({
         code: "397391001",
         display: "pN2: Metastasis in the subcarinal lymph node(s) and/or the ipsilateral internal mammary or mediastinal lymph node(s) (thoracic mesothelioma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN3MetastasisInTheContralateralMediastinalInternalMammaryOrHilarLymphNodeSAndOrTheIpsilateralOrContralateralSupraclavicularOrScaleneLymphNodeSThoracicMesothelioma: Coding.FromStrict({
+    ConditionStageValueSet_PN3MetastasisInTheContralateralMediastinalInternalMammaryOrHilarLymphNodeSAndOrTheIpsilateralOrContralateralSupraclavicularOrScaleneLymphNodeSThoracicMesothelioma: new Coding({
         code: "397392008",
         display: "pN3: Metastasis in the contralateral mediastinal, internal mammary, or hilar lymph node(s), and/or the ipsilateral or contralateral supraclavicular or scalene lymph node(s) (thoracic mesothelioma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorInvolvesAnyOfTheIpsilateralPleuralSurfacesPlusAdditionalSitesAsByAJCC6thEditionDefinitionThoracicMesothelioma: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorInvolvesAnyOfTheIpsilateralPleuralSurfacesPlusAdditionalSitesAsByAJCC6thEditionDefinitionThoracicMesothelioma: new Coding({
         code: "397393003",
         display: "pT3: Tumor involves any of the ipsilateral pleural surfaces plus additional sites as by AJCC 6th Edition definition (thoracic mesothelioma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorInvolvesAnyOfTheIpsilateralPleuralSurfacesPlusAdditionalSitesAsByAJCC6thEditionDefinitionThoracicMesothelioma: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorInvolvesAnyOfTheIpsilateralPleuralSurfacesPlusAdditionalSitesAsByAJCC6thEditionDefinitionThoracicMesothelioma: new Coding({
         code: "397465003",
         display: "pT4: Tumor involves any of the ipsilateral pleural surfaces plus additional sites as by AJCC 6th Edition definition (thoracic mesothelioma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_GestationalTrophoblastTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_GestationalTrophoblastTNMFinding: new Coding({
         code: "397470005",
         display: "Gestational trophoblast TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1ITumorConfinedToUterusTNMCategoryAndFIGOStageGestationalTrophoblast: Coding.FromStrict({
+    ConditionStageValueSet_PT1ITumorConfinedToUterusTNMCategoryAndFIGOStageGestationalTrophoblast: new Coding({
         code: "397471009",
         display: "pT1 (I): Tumor confined to uterus (TNM category and FIGO stage) (gestational trophoblast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2IITumorExtendsOutsideOfUterusButLimitedToGenitalStructuresOvaryTubeVaginaBroadLigamentsTNMCategoryAndFIGOStageGestationalTrophoblast: Coding.FromStrict({
+    ConditionStageValueSet_PT2IITumorExtendsOutsideOfUterusButLimitedToGenitalStructuresOvaryTubeVaginaBroadLigamentsTNMCategoryAndFIGOStageGestationalTrophoblast: new Coding({
         code: "397472002",
         display: "pT2 (II): Tumor extends outside of uterus but limited to genital structures (ovary, tube, vagina, broad ligaments) (TNM category and FIGO stage) (gestational trophoblast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1aIIITumorExtendsToTheLungsWithOrWithoutGenitalTractInvolvementTNMCategoryAndFIGOStageGestationalTrophoblast: Coding.FromStrict({
+    ConditionStageValueSet_PM1aIIITumorExtendsToTheLungsWithOrWithoutGenitalTractInvolvementTNMCategoryAndFIGOStageGestationalTrophoblast: new Coding({
         code: "397473007",
         display: "pM1a (III): Tumor extends to the lungs with or without genital tract involvement (TNM category and FIGO stage) (gestational trophoblast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1bIVDistantMetastasisOtherThanLungTNMCategoryAndFIGOStageGestationalTrophoblast: Coding.FromStrict({
+    ConditionStageValueSet_PM1bIVDistantMetastasisOtherThanLungTNMCategoryAndFIGOStageGestationalTrophoblast: new Coding({
         code: "397474001",
         display: "pM1b (IV): Distant metastasis other than lung (TNM category and FIGO stage) (gestational trophoblast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1ITumorLimitedToOvariesOneOrBothTNMCategoryAndFIGOStageOvary: Coding.FromStrict({
+    ConditionStageValueSet_PT1ITumorLimitedToOvariesOneOrBothTNMCategoryAndFIGOStageOvary: new Coding({
         code: "397489005",
         display: "pT1 (I): Tumor limited to ovaries (one or both) (TNM category and FIGO stage) (ovary)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1aIATumorLimitedToOneOvaryCapsuleIntactNoTumorOnOvarianSurfaceNoMalignantCellsInAscitesOrPeritonealWashingsTNMCategoryAndFIGOStageOvary: Coding.FromStrict({
+    ConditionStageValueSet_PT1aIATumorLimitedToOneOvaryCapsuleIntactNoTumorOnOvarianSurfaceNoMalignantCellsInAscitesOrPeritonealWashingsTNMCategoryAndFIGOStageOvary: new Coding({
         code: "397490001",
         display: "pT1a (IA): Tumor limited to one ovary; capsule intact, no tumor on ovarian surface. No malignant cells in ascites or peritoneal washings (TNM category and FIGO stage) (ovary)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1bIBTumorLimitedToBothOvariesCapsuleIntactNoTumorOnOvarianSurfaceNoMalignantCellsInAscitesOrPeritonealWashingsTNMCategoryAndFIGOStageOvary: Coding.FromStrict({
+    ConditionStageValueSet_PT1bIBTumorLimitedToBothOvariesCapsuleIntactNoTumorOnOvarianSurfaceNoMalignantCellsInAscitesOrPeritonealWashingsTNMCategoryAndFIGOStageOvary: new Coding({
         code: "397491002",
         display: "pT1b (IB): Tumor limited to both ovaries; capsule intact, no tumor on ovarian surface. No malignant cells in ascites or peritoneal washings (TNM category and FIGO stage) (ovary)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1cICTumorLimitedToOneOrBothOvariesWithAnyOfTheFollowingCapsuleRupturedTumorOnOvarianSurfaceMalignantCellsInAscitesOrPeritonealWashingsTNMCategoryAndFIGOStageOvary: Coding.FromStrict({
+    ConditionStageValueSet_PT1cICTumorLimitedToOneOrBothOvariesWithAnyOfTheFollowingCapsuleRupturedTumorOnOvarianSurfaceMalignantCellsInAscitesOrPeritonealWashingsTNMCategoryAndFIGOStageOvary: new Coding({
         code: "397492009",
         display: "pT1c (IC): Tumor limited to one or both ovaries with any of the following: capsule ruptured, tumor on ovarian surface, malignant cells in ascites or peritoneal washings (TNM category and FIGO stage) (ovary)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2IITumorInvolvesOneOrBothOvariesWithPelvicExtensionANDORImplantsTNMCategoryAndFIGOStageOvary: Coding.FromStrict({
+    ConditionStageValueSet_PT2IITumorInvolvesOneOrBothOvariesWithPelvicExtensionANDORImplantsTNMCategoryAndFIGOStageOvary: new Coding({
         code: "397493004",
         display: "pT2 (II): Tumor involves one or both ovaries with pelvic extension AND/OR implants (TNM category and FIGO stage) (ovary)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2aIIAExtensionToANDORImplantsOnUterusANDORTubeSNoMalignantCellsInAscitesOrPeritonealWashingsTNMCategoryAndFIGOStageOvary: Coding.FromStrict({
+    ConditionStageValueSet_PT2aIIAExtensionToANDORImplantsOnUterusANDORTubeSNoMalignantCellsInAscitesOrPeritonealWashingsTNMCategoryAndFIGOStageOvary: new Coding({
         code: "397494005",
         display: "pT2a (IIA): Extension to AND/OR implants on uterus AND/OR tube(s). No malignant cells in ascites or peritoneal washings (TNM category and FIGO stage) (ovary)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2bIIBExtensionToANDORImplantsOnOtherPelvicTissuesNoMalignantCellsInAscitesOrPeritonealWashingsTNMCategoryAndFIGOStageOvary: Coding.FromStrict({
+    ConditionStageValueSet_PT2bIIBExtensionToANDORImplantsOnOtherPelvicTissuesNoMalignantCellsInAscitesOrPeritonealWashingsTNMCategoryAndFIGOStageOvary: new Coding({
         code: "397495006",
         display: "pT2b (IIB): Extension to AND/OR implants on other pelvic tissues. No malignant cells in ascites or peritoneal washings (TNM category and FIGO stage) (ovary)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2cIICPelvicExtensionANDORImplantsT2aOrT2bIIAOrIIBWithMalignantCellsInAscitesOrPeritonealWashingsTNMCategoryAndFIGOStageOvary: Coding.FromStrict({
+    ConditionStageValueSet_PT2cIICPelvicExtensionANDORImplantsT2aOrT2bIIAOrIIBWithMalignantCellsInAscitesOrPeritonealWashingsTNMCategoryAndFIGOStageOvary: new Coding({
         code: "397496007",
         display: "pT2c (IIC): Pelvic extension AND/OR implants (T2a or T2b/IIA or IIB) with malignant cells in ascites or peritoneal washings (TNM category and FIGO stage) (ovary)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3AndOrN1IIITumorInvolvesOneOrBothOvariesWithMicroscopicallyConfirmedPeritonealMetastasisOutsideThePelvisIncludingLiverCapsuleMetastasisAndOrRegionalLymphNodeMetastasisTNMCategoryAndFIGOStageOvary: Coding.FromStrict({
+    ConditionStageValueSet_PT3AndOrN1IIITumorInvolvesOneOrBothOvariesWithMicroscopicallyConfirmedPeritonealMetastasisOutsideThePelvisIncludingLiverCapsuleMetastasisAndOrRegionalLymphNodeMetastasisTNMCategoryAndFIGOStageOvary: new Coding({
         code: "397497003",
         display: "pT3 and/or N1 (III): Tumor involves one or both ovaries with microscopically confirmed peritoneal metastasis outside the pelvis (including liver capsule metastasis) and/or regional lymph node metastasis (TNM category and FIGO stage) (ovary)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3aIIIAMicroscopicPeritonealMetastasisBeyondPelvisNoMacroscopicTumorTNMCategoryAndFIGOStageOvary: Coding.FromStrict({
+    ConditionStageValueSet_PT3aIIIAMicroscopicPeritonealMetastasisBeyondPelvisNoMacroscopicTumorTNMCategoryAndFIGOStageOvary: new Coding({
         code: "397498008",
         display: "pT3a (IIIA): Microscopic peritoneal metastasis beyond pelvis (no macroscopic tumor) (TNM category and FIGO stage) (ovary)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3bIIIBMacroscopicPeritonealMetastasisBeyondPelvis2CmOrLessInGreatestDimensionTNMCategoryAndFIGOStageOvary: Coding.FromStrict({
+    ConditionStageValueSet_PT3bIIIBMacroscopicPeritonealMetastasisBeyondPelvis2CmOrLessInGreatestDimensionTNMCategoryAndFIGOStageOvary: new Coding({
         code: "397499000",
         display: "pT3b (IIIB): Macroscopic peritoneal metastasis beyond pelvis 2 cm or less in greatest dimension (TNM category and FIGO stage) (ovary)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3cANDORN1IIICPeritonealMetastasisBeyondPelvisMoreThan2CmInGreatestDimensionANDORRegionalLymphNodeMetastasisTNMCategoryAndFIGOStageOvary: Coding.FromStrict({
+    ConditionStageValueSet_PT3cANDORN1IIICPeritonealMetastasisBeyondPelvisMoreThan2CmInGreatestDimensionANDORRegionalLymphNodeMetastasisTNMCategoryAndFIGOStageOvary: new Coding({
         code: "397500009",
         display: "pT3c AND/OR N1 (IIIC): Peritoneal metastasis beyond pelvis more than 2 cm in greatest dimension AND/OR regional lymph node metastasis (TNM category and FIGO stage) (ovary)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_AnyTAnyNAndM1IVGrowthInvolvingOneOrBothOvariesWithDistantMetastasisTNMCategoryAndFIGOStageOvary: Coding.FromStrict({
+    ConditionStageValueSet_AnyTAnyNAndM1IVGrowthInvolvingOneOrBothOvariesWithDistantMetastasisTNMCategoryAndFIGOStageOvary: new Coding({
         code: "397501008",
         display: "Any T/any N and M1 (IV): Growth involving one or both ovaries with distant metastasis. (TNM category and FIGO stage) (ovary)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT0Category: Coding.FromStrict({
+    ConditionStageValueSet_PT0Category: new Coding({
         code: "39880006",
         display: "pT0 category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2aIIATumorInvolvesOneOrBothFallopianTubesWithExtensionAndOrMetastasisToTheUterusAndOrOvariesTNMCategoryAndFIGOStageFallopianTube: Coding.FromStrict({
+    ConditionStageValueSet_PT2aIIATumorInvolvesOneOrBothFallopianTubesWithExtensionAndOrMetastasisToTheUterusAndOrOvariesTNMCategoryAndFIGOStageFallopianTube: new Coding({
         code: "399378007",
         display: "pT2a (IIA): Tumor involves one or both fallopian tubes with extension and/or metastasis to the uterus and/or ovaries (TNM category and FIGO stage) (fallopian tube)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorMoreThan4CmInGreatestDimensionLimitedToTheThyroidOrAnyTumorWithMinimalExtrathyroidExtensionEGExtensionToSternothyroidMuscleOrPerithyroidSoftTissuesThyroid: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorMoreThan4CmInGreatestDimensionLimitedToTheThyroidOrAnyTumorWithMinimalExtrathyroidExtensionEGExtensionToSternothyroidMuscleOrPerithyroidSoftTissuesThyroid: new Coding({
         code: "399393006",
         display: "pT3: Tumor more than 4 cm in greatest dimension limited to the thyroid or any tumor with minimal extrathyroid extension (e.g., extension to sternothyroid muscle or perithyroid soft tissues) (thyroid)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorGreaterThan10MmButNotMoreThan16MmInGreatestBasalDiameterAndBetween25And10MmInMaximumHeightThicknessCiliaryBodyAndChoroidUvealMelanoma: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorGreaterThan10MmButNotMoreThan16MmInGreatestBasalDiameterAndBetween25And10MmInMaximumHeightThicknessCiliaryBodyAndChoroidUvealMelanoma: new Coding({
         code: "399397007",
         display: "pT2: Tumor greater than 10 mm but not more than 16 mm in greatest basal diameter and between 2.5 and 10 mm in maximum height (thickness) (ciliary body and choroid) (uveal melanoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorHavingExtraparenchymalExtensionAndOrMoreThan4CmButNotMoreThan6CmInGreatestDimensionWithoutSeventhNerveInvolvementMajorSalivaryGlands: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorHavingExtraparenchymalExtensionAndOrMoreThan4CmButNotMoreThan6CmInGreatestDimensionWithoutSeventhNerveInvolvementMajorSalivaryGlands: new Coding({
         code: "399400003",
         display: "pT3: Tumor having extraparenchymal extension, and/or more than 4 cm but not more than 6 cm in greatest dimension, without seventh nerve involvement (major salivary glands)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InsufficientTissueToAssessHighestPTCategory: Coding.FromStrict({
+    ConditionStageValueSet_InsufficientTissueToAssessHighestPTCategory: new Coding({
         code: "399401004",
         display: "Insufficient tissue to assess highest pT category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3bIIIBTumorInvolvesOneOrBothFallopianTubesWithMacroscopicPeritonealMetastasisOutsideThePelvis2CmOrLessInGreatestDimensionTNMCategoryAndFIGOStageFallopianTube: Coding.FromStrict({
+    ConditionStageValueSet_PT3bIIIBTumorInvolvesOneOrBothFallopianTubesWithMacroscopicPeritonealMetastasisOutsideThePelvis2CmOrLessInGreatestDimensionTNMCategoryAndFIGOStageFallopianTube: new Coding({
         code: "399404007",
         display: "pT3b (IIIB): Tumor involves one or both fallopian tubes, with macroscopic peritoneal metastasis outside the pelvis 2 cm or less in greatest dimension (TNM category and FIGO stage) (fallopian tube)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3cIIICTumorInvolvesOneOrBothFallopianTubesWithPeritonealMetastasisOutsideThePelvisMoreThan2CmInDiameterTNMCategoryAndFIGOStageFallopianTube: Coding.FromStrict({
+    ConditionStageValueSet_PT3cIIICTumorInvolvesOneOrBothFallopianTubesWithPeritonealMetastasisOutsideThePelvisMoreThan2CmInDiameterTNMCategoryAndFIGOStageFallopianTube: new Coding({
         code: "399410007",
         display: "pT3c (IIIC): Tumor involves one or both fallopian tubes, with peritoneal metastasis outside the pelvis more than 2 cm in diameter (TNM category and FIGO stage) (fallopian tube)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ThyroidTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_ThyroidTNMFinding: new Coding({
         code: "399413009",
         display: "Thyroid TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1aIATumorLimitedToOneFallopianTubeWithoutPenetratingTheSerosalSurfaceNoAscitesTNMCategoryAndFIGOStageFallopianTube: Coding.FromStrict({
+    ConditionStageValueSet_PT1aIATumorLimitedToOneFallopianTubeWithoutPenetratingTheSerosalSurfaceNoAscitesTNMCategoryAndFIGOStageFallopianTube: new Coding({
         code: "399425007",
         display: "pT1a (IA): Tumor limited to one fallopian tube, without penetrating the serosal surface; no ascites (TNM category and FIGO stage) (fallopian tube)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1Tumor2CmOrLessInGreatestDimensionLimitedToTheThyroidThyroid: Coding.FromStrict({
+    ConditionStageValueSet_PT1Tumor2CmOrLessInGreatestDimensionLimitedToTheThyroidThyroid: new Coding({
         code: "399439007",
         display: "pT1: Tumor 2 cm or less in greatest dimension limited to the thyroid (thyroid)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4bTumorInvadesPrevertebralFasciaOrEncasesCarotidArteryOrMediastinalVesselsThyroid: Coding.FromStrict({
+    ConditionStageValueSet_PT4bTumorInvadesPrevertebralFasciaOrEncasesCarotidArteryOrMediastinalVesselsThyroid: new Coding({
         code: "399446003",
         display: "pT4b: Tumor invades prevertebral fascia or encases carotid artery or mediastinal vessels (thyroid)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1Tumor10MmOrLessInGreatestDiameterAnd25MmOrLessInGreatestHeightThicknessCiliaryBodyAndChoroidUvealMelanoma: Coding.FromStrict({
+    ConditionStageValueSet_PT1Tumor10MmOrLessInGreatestDiameterAnd25MmOrLessInGreatestHeightThicknessCiliaryBodyAndChoroidUvealMelanoma: new Coding({
         code: "399448002",
         display: "pT1: Tumor 10 mm or less in greatest diameter and 2.5 mm or less in greatest height (thickness) (ciliary body and choroid) (uveal melanoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1bDistantMetastasisEsophagus: Coding.FromStrict({
+    ConditionStageValueSet_PM1bDistantMetastasisEsophagus: new Coding({
         code: "399452002",
         display: "pM1b: Distant metastasis (esophagus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_NoPT1CategoryInsufficientTissueProstate: Coding.FromStrict({
+    ConditionStageValueSet_NoPT1CategoryInsufficientTissueProstate: new Coding({
         code: "399453007",
         display: "No pT1 category, insufficient tissue (prostate)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1cICTumorLimitedToOneOrBothTubesWithExtensionOntoOrThroughTheTubalSerosaOrWithMalignantCellsInAscitesOrPeritonealWashingsTNMCategoryAndFIGOStageFallopianTube: Coding.FromStrict({
+    ConditionStageValueSet_PT1cICTumorLimitedToOneOrBothTubesWithExtensionOntoOrThroughTheTubalSerosaOrWithMalignantCellsInAscitesOrPeritonealWashingsTNMCategoryAndFIGOStageFallopianTube: new Coding({
         code: "399454001",
         display: "pT1c (IC): Tumor limited to one or both tubes with extension onto or through the tubal serosa, or with malignant cells in ascites or peritoneal washings (TNM category and FIGO stage) (fallopian tube)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1bTumor10MmOrLessInGreatestDiameterAnd25MmOrLessInGreatestHeightThicknessWithMicroscopicExtraocularExtensionCiliaryBodyAndChoroidUvealMelanoma: Coding.FromStrict({
+    ConditionStageValueSet_PT1bTumor10MmOrLessInGreatestDiameterAnd25MmOrLessInGreatestHeightThicknessWithMicroscopicExtraocularExtensionCiliaryBodyAndChoroidUvealMelanoma: new Coding({
         code: "399461002",
         display: "pT1b: Tumor 10 mm or less in greatest diameter and 2.5 mm or less in greatest height (thickness) with microscopic extraocular extension (ciliary body and choroid) (uveal melanoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2aTumorConfluentWithOrExtendingIntoTheCiliaryBodyAndOrChoroidWithMelanomalyticGlaucomaIrisUvealMelanoma: Coding.FromStrict({
+    ConditionStageValueSet_PT2aTumorConfluentWithOrExtendingIntoTheCiliaryBodyAndOrChoroidWithMelanomalyticGlaucomaIrisUvealMelanoma: new Coding({
         code: "399474008",
         display: "pT2a: Tumor confluent with or extending into the ciliary body and/or choroid with melanomalytic glaucoma (iris) (uveal melanoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1ITumorLimitedToTheFallopianTubeSTNMCategoryAndFIGOStageFallopianTube: Coding.FromStrict({
+    ConditionStageValueSet_PT1ITumorLimitedToTheFallopianTubeSTNMCategoryAndFIGOStageFallopianTube: new Coding({
         code: "399478006",
         display: "pT1 (I): Tumor limited to the fallopian tube(s) (TNM category and FIGO stage) (fallopian tube)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1aMetastasisToLevelVIPretrachealParatrachealAndPrelaryngealDelphianLymphNodesThyroid: Coding.FromStrict({
+    ConditionStageValueSet_PN1aMetastasisToLevelVIPretrachealParatrachealAndPrelaryngealDelphianLymphNodesThyroid: new Coding({
         code: "399481001",
         display: "pN1a: Metastasis to level VI (pretracheal, paratracheal, and prelaryngeal/Delphian lymph nodes) (thyroid)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1cTumor10MmOrLessInGreatestDiameterAnd25MmOrLessInGreatestHeightThicknessWithMacroscopicExtraocularExtensionCiliaryBodyAndChoroidUvealMelanoma: Coding.FromStrict({
+    ConditionStageValueSet_PT1cTumor10MmOrLessInGreatestDiameterAnd25MmOrLessInGreatestHeightThicknessWithMacroscopicExtraocularExtensionCiliaryBodyAndChoroidUvealMelanoma: new Coding({
         code: "399493005",
         display: "pT1c: Tumor 10 mm or less in greatest diameter and 2.5 mm or less in greatest height (thickness) with macroscopic extraocular extension (ciliary body and choroid) (uveal melanoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1TumorLimitedToTheIrisIrisUvealMelanoma: Coding.FromStrict({
+    ConditionStageValueSet_PT1TumorLimitedToTheIrisIrisUvealMelanoma: new Coding({
         code: "399501001",
         display: "pT1: Tumor limited to the iris (iris) (uveal melanoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4bExtrathyroidalAnaplasticCarcinomaSurgicallyUnresectableAnaplasticCarcinomaThyroid: Coding.FromStrict({
+    ConditionStageValueSet_PT4bExtrathyroidalAnaplasticCarcinomaSurgicallyUnresectableAnaplasticCarcinomaThyroid: new Coding({
         code: "399508007",
         display: "pT4b: Extrathyroidal anaplastic carcinoma - surgically unresectable (anaplastic carcinoma) (thyroid)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1bTumorLimitedToTheIrisMoreThan3ClockHoursInSizeIrisUvealMelanoma: Coding.FromStrict({
+    ConditionStageValueSet_PT1bTumorLimitedToTheIrisMoreThan3ClockHoursInSizeIrisUvealMelanoma: new Coding({
         code: "399511008",
         display: "pT1b: Tumor limited to the iris (more than 3 clock hours in size) (iris) (uveal melanoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1aTumor10MmOrLessInGreatestDiameterAnd25MmOrLessInGreatestHeightThicknessWithoutMicroscopicExtraocularExtensionCiliaryBodyAndChoroidUvealMelanoma: Coding.FromStrict({
+    ConditionStageValueSet_PT1aTumor10MmOrLessInGreatestDiameterAnd25MmOrLessInGreatestHeightThicknessWithoutMicroscopicExtraocularExtensionCiliaryBodyAndChoroidUvealMelanoma: new Coding({
         code: "399516003",
         display: "pT1a: Tumor 10 mm or less in greatest diameter and 2.5 mm or less in greatest height (thickness) without microscopic extraocular extension (ciliary body and choroid) (uveal melanoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageCannotBeDetermined: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageCannotBeDetermined: new Coding({
         code: "399517007",
         display: "Tumor stage cannot be determined",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorMoreThan2CmButNotMoreThan4CmInGreatestDimensionLimitedToTheThyroidThyroid: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorMoreThan2CmButNotMoreThan4CmInGreatestDimensionLimitedToTheThyroidThyroid: new Coding({
         code: "399518002",
         display: "pT2: Tumor more than 2 cm but not more than 4 cm in greatest dimension limited to the thyroid (thyroid)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2aTumor10MmTo16MmInGreatestBasalDiameterAndBetween25And10MmInMaximumHeightThicknessWithoutMicroscopicExtraocularExtensionCiliaryBodyAndChoroidUvealMelanoma: Coding.FromStrict({
+    ConditionStageValueSet_PT2aTumor10MmTo16MmInGreatestBasalDiameterAndBetween25And10MmInMaximumHeightThicknessWithoutMicroscopicExtraocularExtensionCiliaryBodyAndChoroidUvealMelanoma: new Coding({
         code: "399519005",
         display: "pT2a: Tumor 10 mm to 16 mm in greatest basal diameter and between 2.5 and 10 mm in maximum height (thickness) without microscopic extraocular extension (ciliary body and choroid) (uveal melanoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2cTumor10MmTo16MmInGreatestBasalDiameterAndBetween25And10MmInMaximumHeightThicknessWithMacroscopicExtraocularExtensionCiliaryBodyAndChoroidUvealMelanoma: Coding.FromStrict({
+    ConditionStageValueSet_PT2cTumor10MmTo16MmInGreatestBasalDiameterAndBetween25And10MmInMaximumHeightThicknessWithMacroscopicExtraocularExtensionCiliaryBodyAndChoroidUvealMelanoma: new Coding({
         code: "399543008",
         display: "pT2c: Tumor 10 mm to 16 mm in greatest basal diameter and between 2.5 and 10 mm in maximum height (thickness) with macroscopic extraocular extension (ciliary body and choroid) (uveal melanoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN3MetastasisInALymphNodeMoreThan5CmInGreatestDimensionUrinaryBladderUreterRenalPelvis: Coding.FromStrict({
+    ConditionStageValueSet_PN3MetastasisInALymphNodeMoreThan5CmInGreatestDimensionUrinaryBladderUreterRenalPelvis: new Coding({
         code: "399553009",
         display: "pN3: Metastasis in a lymph node, more than 5 cm in greatest dimension (urinary bladder, ureter, renal pelvis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorConfluentWithOrExtendingIntoTheCiliaryBodyAndOrChoroidWithScleralExtensionIrisUvealMelanoma: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorConfluentWithOrExtendingIntoTheCiliaryBodyAndOrChoroidWithScleralExtensionIrisUvealMelanoma: new Coding({
         code: "399557005",
         display: "pT3: Tumor confluent with or extending into the ciliary body and/or choroid with scleral extension (iris) (uveal melanoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4aIntrathyroidalAnaplasticCarcinomaSurgicallyResectableAnaplasticCarcinomaThyroid: Coding.FromStrict({
+    ConditionStageValueSet_PT4aIntrathyroidalAnaplasticCarcinomaSurgicallyResectableAnaplasticCarcinomaThyroid: new Coding({
         code: "399575006",
         display: "pT4a: Intrathyroidal anaplastic carcinoma - surgically resectable (anaplastic carcinoma) (thyroid)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1aDistantMetastasisEsophagus: Coding.FromStrict({
+    ConditionStageValueSet_PM1aDistantMetastasisEsophagus: new Coding({
         code: "399594001",
         display: "pM1a: Distant metastasis (esophagus)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1aTumorLimitedToTheIrisNotMoreThan3ClockHoursInSizeIrisUvealMelanoma: Coding.FromStrict({
+    ConditionStageValueSet_PT1aTumorLimitedToTheIrisNotMoreThan3ClockHoursInSizeIrisUvealMelanoma: new Coding({
         code: "399597008",
         display: "pT1a: Tumor limited to the iris (not more than 3 clock hours in size) (iris) (uveal melanoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1cTumorLimitedToTheIrisWithMelanomalyticGlaucomaIrisUvealMelanoma: Coding.FromStrict({
+    ConditionStageValueSet_PT1cTumorLimitedToTheIrisWithMelanomalyticGlaucomaIrisUvealMelanoma: new Coding({
         code: "399602001",
         display: "pT1c: Tumor limited to the iris with melanomalytic glaucoma (iris) (uveal melanoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_FIGOStageFindingForFallopianTubeTumor: Coding.FromStrict({
+    ConditionStageValueSet_FIGOStageFindingForFallopianTubeTumor: new Coding({
         code: "399605004",
         display: "FIGO stage finding for fallopian tube tumor",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorMoreThan16MmInGreatestDiameterAndOrGreaterThan10MmInMaximumHeightThicknessWithoutExtraocularExtensionCiliaryBodyAndChoroidUvealMelanoma: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorMoreThan16MmInGreatestDiameterAndOrGreaterThan10MmInMaximumHeightThicknessWithoutExtraocularExtensionCiliaryBodyAndChoroidUvealMelanoma: new Coding({
         code: "399610000",
         display: "pT3: Tumor more than 16 mm in greatest diameter and/or greater than 10 mm in maximum height (thickness) without extraocular extension (ciliary body and choroid) (uveal melanoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorConfluentWithOrExtendingIntoTheCiliaryBodyAndOrChoroidIrisUvealMelanoma: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorConfluentWithOrExtendingIntoTheCiliaryBodyAndOrChoroidIrisUvealMelanoma: new Coding({
         code: "399615005",
         display: "pT2: Tumor confluent with or extending into the ciliary body and/or choroid (iris) (uveal melanoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2bTumor10MmTo16MmInGreatestBasalDiameterAndBetween25And10MmInMaximumHeightThicknessWithMicroscopicExtraocularExtensionCiliaryBodyAndChoroidUvealMelanoma: Coding.FromStrict({
+    ConditionStageValueSet_PT2bTumor10MmTo16MmInGreatestBasalDiameterAndBetween25And10MmInMaximumHeightThicknessWithMicroscopicExtraocularExtensionCiliaryBodyAndChoroidUvealMelanoma: new Coding({
         code: "399616006",
         display: "pT2b: Tumor 10 mm to 16 mm in greatest basal diameter and between 2.5 and 10 mm in maximum height (thickness) with microscopic extraocular extension (ciliary body and choroid) (uveal melanoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3aIIIATumorInvolvesOneOrBothFallopianTubesWithMicroscopicPeritonealMetastasisOutsideThePelvisTNMCategoryAndFIGOStageFallopianTube: Coding.FromStrict({
+    ConditionStageValueSet_PT3aIIIATumorInvolvesOneOrBothFallopianTubesWithMicroscopicPeritonealMetastasisOutsideThePelvisTNMCategoryAndFIGOStageFallopianTube: new Coding({
         code: "399621009",
         display: "pT3a (IIIA): Tumor involves one or both fallopian tubes, with microscopic peritoneal metastasis outside the pelvis (TNM category and FIGO stage) (fallopian tube)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4aTumorOfAnySizeExtendingBeyondTheThyroidCapsuleToInvadeSubcutaneousSoftTissuesLarynxTracheaEsophagusOrRecurrentLaryngealNerveThyroid: Coding.FromStrict({
+    ConditionStageValueSet_PT4aTumorOfAnySizeExtendingBeyondTheThyroidCapsuleToInvadeSubcutaneousSoftTissuesLarynxTracheaEsophagusOrRecurrentLaryngealNerveThyroid: new Coding({
         code: "399623007",
         display: "pT4a: Tumor of any size extending beyond the thyroid capsule to invade subcutaneous soft tissues, larynx, trachea, esophagus, or recurrent laryngeal nerve (thyroid)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PTCategoryNotIdentified: Coding.FromStrict({
+    ConditionStageValueSet_PTCategoryNotIdentified: new Coding({
         code: "399630001",
         display: "pT category not identified",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3cAndOrN1IIICTumorInvolvesOneOrBothFallopianTubesWithPeritonealMetastasisOutsideThePelvisMoreThan2CmInDiameterANDORRegionalLymphNodeMetastasisTNMCategoryAndFIGOStageFallopianTube: Coding.FromStrict({
+    ConditionStageValueSet_PT3cAndOrN1IIICTumorInvolvesOneOrBothFallopianTubesWithPeritonealMetastasisOutsideThePelvisMoreThan2CmInDiameterANDORRegionalLymphNodeMetastasisTNMCategoryAndFIGOStageFallopianTube: new Coding({
         code: "399636007",
         display: "pT3c and/or N1 (IIIC): Tumor involves one or both fallopian tubes, with peritoneal metastasis outside the pelvis more than 2 cm in diameter AND/OR regional lymph node metastasis (TNM category and FIGO stage) (fallopian tube)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2IITumorInvolvesOneOrBothFallopianTubesWithPelvicExtensionTNMCategoryAndFIGOStageFallopianTube: Coding.FromStrict({
+    ConditionStageValueSet_PT2IITumorInvolvesOneOrBothFallopianTubesWithPelvicExtensionTNMCategoryAndFIGOStageFallopianTube: new Coding({
         code: "399641004",
         display: "pT2 (II): Tumor involves one or both fallopian tubes with pelvic extension (TNM category and FIGO stage) (fallopian tube)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3aTumorConfluentWithOrExtendingIntoTheCiliaryBodyAndOrChoroidWithScleralExtensionAndMelanomalyticGlaucomaIrisUvealMelanoma: Coding.FromStrict({
+    ConditionStageValueSet_PT3aTumorConfluentWithOrExtendingIntoTheCiliaryBodyAndOrChoroidWithScleralExtensionAndMelanomalyticGlaucomaIrisUvealMelanoma: new Coding({
         code: "399674004",
         display: "pT3a: Tumor confluent with or extending into the ciliary body and/or choroid with scleral extension and melanomalytic glaucoma (iris) (uveal melanoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3IIITumorInvolvesOneOrBothFallopianTubesWithPeritonealImplantsOutsideThePelvisTNMCategoryAndFIGOStageFallopianTube: Coding.FromStrict({
+    ConditionStageValueSet_PT3IIITumorInvolvesOneOrBothFallopianTubesWithPeritonealImplantsOutsideThePelvisTNMCategoryAndFIGOStageFallopianTube: new Coding({
         code: "399678001",
         display: "pT3 (III): Tumor involves one or both fallopian tubes, with peritoneal implants outside the pelvis (TNM category and FIGO stage) (fallopian tube)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorWithExtraocularExtensionIrisUvealMelanoma: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorWithExtraocularExtensionIrisUvealMelanoma: new Coding({
         code: "399679009",
         display: "pT4: Tumor with extraocular extension (iris) (uveal melanoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_FallopianTubeTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_FallopianTubeTNMFinding: new Coding({
         code: "399688000",
         display: "Fallopian tube TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2bIIBTumorInvolvesOneOrBothFallopianTubesWithExtensionToOtherPelvicStructuresTNMCategoryAndFIGOStageFallopianTube: Coding.FromStrict({
+    ConditionStageValueSet_PT2bIIBTumorInvolvesOneOrBothFallopianTubesWithExtensionToOtherPelvicStructuresTNMCategoryAndFIGOStageFallopianTube: new Coding({
         code: "399690004",
         display: "pT2b (IIB): Tumor involves one or both fallopian tubes with extension to other pelvic structures (TNM category and FIGO stage) (fallopian tube)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3AndOrN1IIITumorInvolvesOneOrBothFallopianTubesWithPeritonealImplantsOutsideThePelvisANDORRegionalLymphNodeMetastasisTNMCategoryAndFIGOStageFallopianTube: Coding.FromStrict({
+    ConditionStageValueSet_PT3AndOrN1IIITumorInvolvesOneOrBothFallopianTubesWithPeritonealImplantsOutsideThePelvisANDORRegionalLymphNodeMetastasisTNMCategoryAndFIGOStageFallopianTube: new Coding({
         code: "399696005",
         display: "pT3 and/or N1 (III): Tumor involves one or both fallopian tubes, with peritoneal implants outside the pelvis AND/OR regional lymph node metastasis (TNM category and FIGO stage) (fallopian tube)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2cIICTumorInvolvesOneOrBothFallopianTubesWithPelvicExtensionWithMalignantCellsInAscitesOrPeritonealWashingsTNMCategoryAndFIGOStageFallopianTube: Coding.FromStrict({
+    ConditionStageValueSet_PT2cIICTumorInvolvesOneOrBothFallopianTubesWithPelvicExtensionWithMalignantCellsInAscitesOrPeritonealWashingsTNMCategoryAndFIGOStageFallopianTube: new Coding({
         code: "399697001",
         display: "pT2c (IIC): Tumor involves one or both fallopian tubes with pelvic extension with malignant cells in ascites or peritoneal washings (TNM category and FIGO stage) (fallopian tube)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1bMetastasisToUnilateralBilateralOrContralateralCervicalOrSuperiorMediastinalLymphNodesThyroid: Coding.FromStrict({
+    ConditionStageValueSet_PN1bMetastasisToUnilateralBilateralOrContralateralCervicalOrSuperiorMediastinalLymphNodesThyroid: new Coding({
         code: "399704006",
         display: "pN1b: Metastasis to unilateral, bilateral, or contralateral cervical or superior mediastinal lymph nodes (thyroid)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_UvealMelanomaTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_UvealMelanomaTNMFinding: new Coding({
         code: "399705007",
         display: "Uveal melanoma TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorMoreThan16MmInGreatestDiameterAndOrGreaterThan10MmInMaximumHeightThicknessWithExtraocularExtensionCiliaryBodyAndChoroidUvealMelanoma: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorMoreThan16MmInGreatestDiameterAndOrGreaterThan10MmInMaximumHeightThicknessWithExtraocularExtensionCiliaryBodyAndChoroidUvealMelanoma: new Coding({
         code: "399729000",
         display: "pT4: Tumor more than 16 mm in greatest diameter and/or greater than 10 mm in maximum height (thickness) with extraocular extension (ciliary body and choroid) (uveal melanoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1bIBTumorLimitedToBothTubesWithoutPenetratingTheSerosalSurfaceNoAscitesTNMCategoryAndFIGOStageFallopianTube: Coding.FromStrict({
+    ConditionStageValueSet_PT1bIBTumorLimitedToBothTubesWithoutPenetratingTheSerosalSurfaceNoAscitesTNMCategoryAndFIGOStageFallopianTube: new Coding({
         code: "399736004",
         display: "pT1b (IB): Tumor limited to both tubes, without penetrating the serosal surface; no ascites (TNM category and FIGO stage) (fallopian tube)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_AnyTAnyNAndM1IVDistantMetastasisIncludingPresenceOfMalignantCellsInPleuralFluidOrParenchymalHepaticMetastasisTNMCategoryAndFIGOStageFallopianTube: Coding.FromStrict({
+    ConditionStageValueSet_AnyTAnyNAndM1IVDistantMetastasisIncludingPresenceOfMalignantCellsInPleuralFluidOrParenchymalHepaticMetastasisTNMCategoryAndFIGOStageFallopianTube: new Coding({
         code: "399749009",
         display: "Any T/Any N and M1 (IV): Distant metastasis including presence of malignant cells in pleural fluid or parenchymal hepatic metastasis (TNM category and FIGO stage) (fallopian tube)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorInvadesBeyondMuscularisIntoPeripelvicFatOrRenalParenchymaRenalPelvis: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorInvadesBeyondMuscularisIntoPeripelvicFatOrRenalParenchymaRenalPelvis: new Coding({
         code: "404180008",
         display: "pT3: Tumor invades beyond muscularis into peripelvic fat or renal parenchyma (renal pelvis)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1IVDistantMetastasisTNMCategoryAndFIGOStageFallopianTube: Coding.FromStrict({
+    ConditionStageValueSet_PM1IVDistantMetastasisTNMCategoryAndFIGOStageFallopianTube: new Coding({
         code: "404181007",
         display: "pM1 (IV): Distant metastasis (TNM category and FIGO stage) (fallopian tube)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1IVBDistantMetastasisTNMCategoryAndFIGOStageUterineCervix: Coding.FromStrict({
+    ConditionStageValueSet_PM1IVBDistantMetastasisTNMCategoryAndFIGOStageUterineCervix: new Coding({
         code: "404182000",
         display: "pM1 (IVB): Distant metastasis (TNM category and FIGO stage) (uterine cervix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupFinding: Coding.FromStrict({
+    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupFinding: new Coding({
         code: "405917009",
         display: "Intergroup rhabdomyosarcoma study post-surgical clinical group finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupNotApplicable: Coding.FromStrict({
+    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupNotApplicable: new Coding({
         code: "405918004",
         display: "Intergroup rhabdomyosarcoma study post-surgical clinical group not applicable",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupCannotBeAssessed: Coding.FromStrict({
+    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupCannotBeAssessed: new Coding({
         code: "405919007",
         display: "Intergroup rhabdomyosarcoma study post-surgical clinical group cannot be assessed",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupIALocalizedTumorConfinedToSiteOfOriginCompletelyResected: Coding.FromStrict({
+    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupIALocalizedTumorConfinedToSiteOfOriginCompletelyResected: new Coding({
         code: "405957007",
         display: "Intergroup rhabdomyosarcoma study post-surgical clinical group IA: localized tumor, confined to site of origin, completely resected",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupIBLocalizedTumorInfiltratingBeyondSiteOfOriginCompletelyResected: Coding.FromStrict({
+    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupIBLocalizedTumorInfiltratingBeyondSiteOfOriginCompletelyResected: new Coding({
         code: "405958002",
         display: "Intergroup rhabdomyosarcoma study post-surgical clinical group IB: localized tumor, infiltrating beyond site of origin, completely resected",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupIIALocalizedTumorGrossTotalResectionButWithMicroscopicResidualDisease: Coding.FromStrict({
+    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupIIALocalizedTumorGrossTotalResectionButWithMicroscopicResidualDisease: new Coding({
         code: "405959005",
         display: "Intergroup rhabdomyosarcoma study post-surgical clinical group IIA: localized tumor, gross total resection, but with microscopic residual disease",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupIIBLocallyExtensiveTumorSpreadToRegionalLymphNodesCompletelyResected: Coding.FromStrict({
+    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupIIBLocallyExtensiveTumorSpreadToRegionalLymphNodesCompletelyResected: new Coding({
         code: "405960000",
         display: "Intergroup rhabdomyosarcoma study post-surgical clinical group IIB: Locally extensive tumor (spread to regional lymph nodes), completely resected",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupIICLocallyExtensiveTumorSpreadToRegionalLymphNodesGrossTotalResectionButMicroscopicResidualDisease: Coding.FromStrict({
+    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupIICLocallyExtensiveTumorSpreadToRegionalLymphNodesGrossTotalResectionButMicroscopicResidualDisease: new Coding({
         code: "405961001",
         display: "Intergroup rhabdomyosarcoma study post-surgical clinical group IIC: Locally extensive tumor (spread to regional lymph nodes), gross total resection, but microscopic residual disease",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupIIIALocalizedOrLocallyExtensiveTumorGrossResidualDiseaseAfterBiopsyOnly: Coding.FromStrict({
+    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupIIIALocalizedOrLocallyExtensiveTumorGrossResidualDiseaseAfterBiopsyOnly: new Coding({
         code: "405962008",
         display: "Intergroup rhabdomyosarcoma study post-surgical clinical group IIIA: Localized or locally extensive tumor, gross residual disease after biopsy only",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupIIIBLocalizedOrLocallyExtensiveTumorGrossResidualDiseaseAfterMajorResectionGreaterThan50PercentDebulking: Coding.FromStrict({
+    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupIIIBLocalizedOrLocallyExtensiveTumorGrossResidualDiseaseAfterMajorResectionGreaterThan50PercentDebulking: new Coding({
         code: "405963003",
         display: "Intergroup rhabdomyosarcoma study post-surgical clinical group IIIB: Localized or locally extensive tumor, gross residual disease after major resection (greater than 50% debulking)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupIVAnySizePrimaryTumorWithOrWithoutRegionalLymphNodeInvolvementWithDistantMetastasesWithoutRespectToSurgicalApproachToPrimaryTumor: Coding.FromStrict({
+    ConditionStageValueSet_IntergroupRhabdomyosarcomaStudyPostSurgicalClinicalGroupIVAnySizePrimaryTumorWithOrWithoutRegionalLymphNodeInvolvementWithDistantMetastasesWithoutRespectToSurgicalApproachToPrimaryTumor: new Coding({
         code: "405964009",
         display: "Intergroup rhabdomyosarcoma study post-surgical clinical group IV: Any size primary tumor, with or without regional lymph node involvement, with distant metastases, without respect to surgical approach to primary tumor",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1IIICRegionalLymphNodeMetastasisTNMCategoryAndFIGOStageOvary: Coding.FromStrict({
+    ConditionStageValueSet_PN1IIICRegionalLymphNodeMetastasisTNMCategoryAndFIGOStageOvary: new Coding({
         code: "405992004",
         display: "pN1 (IIIC): Regional lymph node metastasis (TNM category and FIGO stage) (ovary)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4bTumorInvadesLateralPterygoidMusclePterygoidPlatesLateralNasopharynxOrSkullBaseOrEncasesInternalCarotidArteryOropharynx: Coding.FromStrict({
+    ConditionStageValueSet_PT4bTumorInvadesLateralPterygoidMusclePterygoidPlatesLateralNasopharynxOrSkullBaseOrEncasesInternalCarotidArteryOropharynx: new Coding({
         code: "406001009",
         display: "pT4b: Tumor invades lateral pterygoid muscle, pterygoid plates, lateral nasopharynx, or skull base or encases internal carotid artery (oropharynx)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN0INoRegionalLymphNodeMetastasisHistologicallyNegativeMorphologicFindingsForIsolatedTumorCellsBreast: Coding.FromStrict({
+    ConditionStageValueSet_PN0INoRegionalLymphNodeMetastasisHistologicallyNegativeMorphologicFindingsForIsolatedTumorCellsBreast: new Coding({
         code: "406088001",
         display: "pN0(i-): No regional lymph node metastasis histologically, negative morphologic findings for isolated tumor cells (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN0IPlusNoRegionalLymphNodeMetastasisHistologicallyPositiveMorphologicFindingsForIsolatedTumorCellsNoClusterGreaterThan02MmBreast: Coding.FromStrict({
+    ConditionStageValueSet_PN0IPlusNoRegionalLymphNodeMetastasisHistologicallyPositiveMorphologicFindingsForIsolatedTumorCellsNoClusterGreaterThan02MmBreast: new Coding({
         code: "406089009",
         display: "pN0(i+): No regional lymph node metastasis histologically, positive morphologic findings for isolated tumor cells, no cluster greater than 0.2 mm (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN0MolNoRegionalLymphNodeMetastasisHistologicallyNegativeNonmorphologicMolecularFindingsForIsolatedTumorCellsBreast: Coding.FromStrict({
+    ConditionStageValueSet_PN0MolNoRegionalLymphNodeMetastasisHistologicallyNegativeNonmorphologicMolecularFindingsForIsolatedTumorCellsBreast: new Coding({
         code: "406090000",
         display: "pN0(mol-): No regional lymph node metastasis histologically, negative nonmorphologic (molecular) findings for isolated tumor cells (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN0MolPlusNoRegionalLymphNodeMetastasisHistologicallyPositiveNonmorphologicMolecularFindingsForIsolatedTumorCellsBreast: Coding.FromStrict({
+    ConditionStageValueSet_PN0MolPlusNoRegionalLymphNodeMetastasisHistologicallyPositiveNonmorphologicMolecularFindingsForIsolatedTumorCellsBreast: new Coding({
         code: "406091001",
         display: "pN0(mol+): No regional lymph node metastasis histologically, positive nonmorphologic (molecular) findings for isolated tumor cells (breast)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1IIICRegionalLymphNodeMetastasisTNMCategoryAndFIGOStageFallopianTube: Coding.FromStrict({
+    ConditionStageValueSet_PN1IIICRegionalLymphNodeMetastasisTNMCategoryAndFIGOStageFallopianTube: new Coding({
         code: "406092008",
         display: "pN1 (IIIC): Regional lymph node metastasis (TNM category and FIGO stage) (fallopian tube)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InternationalNeuroblastomaStagingSystemStageFinding: Coding.FromStrict({
+    ConditionStageValueSet_InternationalNeuroblastomaStagingSystemStageFinding: new Coding({
         code: "409721000",
         display: "International neuroblastoma staging system stage finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InternationalNeuroblastomaStagingSystemStage1: Coding.FromStrict({
+    ConditionStageValueSet_InternationalNeuroblastomaStagingSystemStage1: new Coding({
         code: "409722007",
         display: "International neuroblastoma staging system stage 1",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InternationalNeuroblastomaStagingSystemStage2A: Coding.FromStrict({
+    ConditionStageValueSet_InternationalNeuroblastomaStagingSystemStage2A: new Coding({
         code: "409723002",
         display: "International neuroblastoma staging system stage 2A",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InternationalNeuroblastomaStagingSystemStage2B: Coding.FromStrict({
+    ConditionStageValueSet_InternationalNeuroblastomaStagingSystemStage2B: new Coding({
         code: "409724008",
         display: "International neuroblastoma staging system stage 2B",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InternationalNeuroblastomaStagingSystemStage3: Coding.FromStrict({
+    ConditionStageValueSet_InternationalNeuroblastomaStagingSystemStage3: new Coding({
         code: "409725009",
         display: "International neuroblastoma staging system stage 3",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InternationalNeuroblastomaStagingSystemStage4: Coding.FromStrict({
+    ConditionStageValueSet_InternationalNeuroblastomaStagingSystemStage4: new Coding({
         code: "409726005",
         display: "International neuroblastoma staging system stage 4",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InternationalNeuroblastomaStagingSystemStage4S: Coding.FromStrict({
+    ConditionStageValueSet_InternationalNeuroblastomaStagingSystemStage4S: new Coding({
         code: "409727001",
         display: "International neuroblastoma staging system stage 4S",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1aTumor5CmOrLessInGreatestDimensionSuperficialTumorExtraosseousPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: Coding.FromStrict({
+    ConditionStageValueSet_PT1aTumor5CmOrLessInGreatestDimensionSuperficialTumorExtraosseousPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: new Coding({
         code: "409747009",
         display: "pT1a: Tumor 5 cm or less in greatest dimension, superficial tumor (extraosseous primitive neuroectodermal tumor/Ewing's sarcoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1Tumor5CmOrLessInGreatestDimensionExtraosseousPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: Coding.FromStrict({
+    ConditionStageValueSet_PT1Tumor5CmOrLessInGreatestDimensionExtraosseousPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: new Coding({
         code: "409748004",
         display: "pT1: Tumor 5 cm or less in greatest dimension (extraosseous primitive neuroectodermal tumor/Ewing's sarcoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1bTumor5CmOrLessInGreatestDimensionDeepTumorExtraosseousPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: Coding.FromStrict({
+    ConditionStageValueSet_PT1bTumor5CmOrLessInGreatestDimensionDeepTumorExtraosseousPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: new Coding({
         code: "409749007",
         display: "pT1b: Tumor 5 cm or less in greatest dimension, deep tumor (extraosseous primitive neuroectodermal tumor/Ewing's sarcoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorMoreThan5CmInGreatestDimensionExtraosseousPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorMoreThan5CmInGreatestDimensionExtraosseousPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: new Coding({
         code: "409750007",
         display: "pT2: Tumor more than 5 cm in greatest dimension (extraosseous primitive neuroectodermal tumor/Ewing's sarcoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2aTumorMoreThan5CmInGreatestDimensionSuperficialTumorExtraosseousPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: Coding.FromStrict({
+    ConditionStageValueSet_PT2aTumorMoreThan5CmInGreatestDimensionSuperficialTumorExtraosseousPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: new Coding({
         code: "409751006",
         display: "pT2a: Tumor more than 5 cm in greatest dimension, superficial tumor (extraosseous primitive neuroectodermal tumor/Ewing's sarcoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2bTumorMoreThan5CmInGreatestDimensionDeepTumorExtraosseousPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: Coding.FromStrict({
+    ConditionStageValueSet_PT2bTumorMoreThan5CmInGreatestDimensionDeepTumorExtraosseousPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: new Coding({
         code: "409752004",
         display: "pT2b: Tumor more than 5 cm in greatest dimension, deep tumor (extraosseous primitive neuroectodermal tumor/Ewing's sarcoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1Tumor8CmOrLessInGreatestDimensionOsseousPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: Coding.FromStrict({
+    ConditionStageValueSet_PT1Tumor8CmOrLessInGreatestDimensionOsseousPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: new Coding({
         code: "409753009",
         display: "pT1: Tumor 8 cm or less in greatest dimension (osseous primitive neuroectodermal tumor/Ewing's sarcoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorMoreThan8CmInGreatestDimensionOsseousPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorMoreThan8CmInGreatestDimensionOsseousPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: new Coding({
         code: "409754003",
         display: "pT2: Tumor more than 8 cm in greatest dimension (osseous primitive neuroectodermal tumor/Ewing's sarcoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3DiscontinuousTumorsInThePrimaryBoneSiteOsseousPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: Coding.FromStrict({
+    ConditionStageValueSet_PT3DiscontinuousTumorsInThePrimaryBoneSiteOsseousPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: new Coding({
         code: "409755002",
         display: "pT3: Discontinuous tumors in the primary bone site (osseous primitive neuroectodermal tumor/Ewing's sarcoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PrimitiveNeuroectodermalTumorEwingQuoteSSarcomaTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_PrimitiveNeuroectodermalTumorEwingQuoteSSarcomaTNMFinding: new Coding({
         code: "409756001",
         display: "Primitive neuroectodermal tumor/Ewing's sarcoma TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1aDistantMetastasisToLungPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: Coding.FromStrict({
+    ConditionStageValueSet_PM1aDistantMetastasisToLungPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: new Coding({
         code: "409758000",
         display: "pM1a: Distant metastasis to lung (primitive neuroectodermal tumor/Ewing's sarcoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1bDistantMetastasisToSiteOtherThanLungPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: Coding.FromStrict({
+    ConditionStageValueSet_PM1bDistantMetastasisToSiteOtherThanLungPrimitiveNeuroectodermalTumorEwingQuoteSSarcoma: new Coding({
         code: "409759008",
         display: "pM1b: Distant metastasis to site other than lung (primitive neuroectodermal tumor/Ewing's sarcoma)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_CarcinomaOfColonStageIII: Coding.FromStrict({
+    ConditionStageValueSet_CarcinomaOfColonStageIII: new Coding({
         code: "422375001",
         display: "Carcinoma of colon, stage III",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InfiltratingDuctalCarcinomaOfBreastStage1: Coding.FromStrict({
+    ConditionStageValueSet_InfiltratingDuctalCarcinomaOfBreastStage1: new Coding({
         code: "422399001",
         display: "Infiltrating ductal carcinoma of breast, stage 1",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InfiltratingDuctalCarcinomaOfBreastStage2: Coding.FromStrict({
+    ConditionStageValueSet_InfiltratingDuctalCarcinomaOfBreastStage2: new Coding({
         code: "422479008",
         display: "Infiltrating ductal carcinoma of breast, stage 2",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_CarcinomaOfColonStageII: Coding.FromStrict({
+    ConditionStageValueSet_CarcinomaOfColonStageII: new Coding({
         code: "422581008",
         display: "Carcinoma of colon, stage II",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_SeminomaOfTestisStage3: Coding.FromStrict({
+    ConditionStageValueSet_SeminomaOfTestisStage3: new Coding({
         code: "422679002",
         display: "Seminoma of testis, stage 3",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4TumorDirectlyInvadesOtherOrgansOrStructuresAndOrPerforatesVisceralPeritoneumAppendix: Coding.FromStrict({
+    ConditionStageValueSet_PT4TumorDirectlyInvadesOtherOrgansOrStructuresAndOrPerforatesVisceralPeritoneumAppendix: new Coding({
         code: "422807001",
         display: "pT4: Tumor directly invades other organs or structures and/or perforates visceral peritoneum (appendix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PTisCarcinomaInSituIntraepithelialAppendix: Coding.FromStrict({
+    ConditionStageValueSet_PTisCarcinomaInSituIntraepithelialAppendix: new Coding({
         code: "422901001",
         display: "pTis: Carcinoma in situ, intraepithelial (appendix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_CarcinomaOfColonStageIV: Coding.FromStrict({
+    ConditionStageValueSet_CarcinomaOfColonStageIV: new Coding({
         code: "422985007",
         display: "Carcinoma of colon, stage IV",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3TumorInvadesThroughTheMuscularisPropriaIntoTheSubserosaOrIntoMesoappendixAppendix: Coding.FromStrict({
+    ConditionStageValueSet_PT3TumorInvadesThroughTheMuscularisPropriaIntoTheSubserosaOrIntoMesoappendixAppendix: new Coding({
         code: "423003009",
         display: "pT3: Tumor invades through the muscularis propria into the subserosa or into mesoappendix (appendix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PTisCarcinomaInSituInvasionOfLaminaPropriaAppendix: Coding.FromStrict({
+    ConditionStageValueSet_PTisCarcinomaInSituInvasionOfLaminaPropriaAppendix: new Coding({
         code: "423055005",
         display: "pTis: Carcinoma in situ, invasion of lamina propria (appendix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InfiltratingDuctalCarcinomaOfBreastStage3: Coding.FromStrict({
+    ConditionStageValueSet_InfiltratingDuctalCarcinomaOfBreastStage3: new Coding({
         code: "423114009",
         display: "Infiltrating ductal carcinoma of breast, stage 3",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_CarcinomaOfOvaryStage4: Coding.FromStrict({
+    ConditionStageValueSet_CarcinomaOfOvaryStage4: new Coding({
         code: "423274005",
         display: "Carcinoma of ovary, stage 4",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_CarcinomaOfOvaryStage3: Coding.FromStrict({
+    ConditionStageValueSet_CarcinomaOfOvaryStage3: new Coding({
         code: "423480004",
         display: "Carcinoma of ovary, stage 3",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_SeminomaOfTestisStage2: Coding.FromStrict({
+    ConditionStageValueSet_SeminomaOfTestisStage2: new Coding({
         code: "423645007",
         display: "Seminoma of testis, stage 2",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_SeminomaOfTestisStage4: Coding.FromStrict({
+    ConditionStageValueSet_SeminomaOfTestisStage4: new Coding({
         code: "423697000",
         display: "Seminoma of testis, stage 4",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_SeminomaOfTestisStage1: Coding.FromStrict({
+    ConditionStageValueSet_SeminomaOfTestisStage1: new Coding({
         code: "423816008",
         display: "Seminoma of testis, stage 1",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_AdenocarcinomaOfLungStageI: Coding.FromStrict({
+    ConditionStageValueSet_AdenocarcinomaOfLungStageI: new Coding({
         code: "424078005",
         display: "Adenocarcinoma of lung, stage I",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InfiltratingDuctalCarcinomaOfBreastStage4: Coding.FromStrict({
+    ConditionStageValueSet_InfiltratingDuctalCarcinomaOfBreastStage4: new Coding({
         code: "424229006",
         display: "Infiltrating ductal carcinoma of breast, stage 4",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_AdenocarcinomaOfLungStageIII: Coding.FromStrict({
+    ConditionStageValueSet_AdenocarcinomaOfLungStageIII: new Coding({
         code: "424454009",
         display: "Adenocarcinoma of lung, stage III",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_CarcinomaOfOvaryStage2: Coding.FromStrict({
+    ConditionStageValueSet_CarcinomaOfOvaryStage2: new Coding({
         code: "424486004",
         display: "Carcinoma of ovary, stage 2",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_CarcinomaOfOvaryStage1: Coding.FromStrict({
+    ConditionStageValueSet_CarcinomaOfOvaryStage1: new Coding({
         code: "424600001",
         display: "Carcinoma of ovary, stage 1",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_AdenocarcinomaOfLungStageII: Coding.FromStrict({
+    ConditionStageValueSet_AdenocarcinomaOfLungStageII: new Coding({
         code: "424632001",
         display: "Adenocarcinoma of lung, stage II",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1TumorInvadesSubmucosaAppendix: Coding.FromStrict({
+    ConditionStageValueSet_PT1TumorInvadesSubmucosaAppendix: new Coding({
         code: "424842001",
         display: "pT1: Tumor invades submucosa (appendix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_AdenocarcinomaOfLungStageIV: Coding.FromStrict({
+    ConditionStageValueSet_AdenocarcinomaOfLungStageIV: new Coding({
         code: "424993006",
         display: "Adenocarcinoma of lung, stage IV",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorInvadesMuscularisPropriaAppendix: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorInvadesMuscularisPropriaAppendix: new Coding({
         code: "425008003",
         display: "pT2: Tumor invades muscularis propria (appendix)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_LowGradeLymphomaStage1: Coding.FromStrict({
+    ConditionStageValueSet_LowGradeLymphomaStage1: new Coding({
         code: "425037004",
         display: "Low grade lymphoma, stage 1",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_CarcinomaOfColonStageI: Coding.FromStrict({
+    ConditionStageValueSet_CarcinomaOfColonStageI: new Coding({
         code: "425213009",
         display: "Carcinoma of colon, stage I",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1bTumor5CmOrLessInGreatestDimensionDeepTumorSoftTissue: Coding.FromStrict({
+    ConditionStageValueSet_PT1bTumor5CmOrLessInGreatestDimensionDeepTumorSoftTissue: new Coding({
         code: "425566006",
         display: "pT1b: Tumor 5 cm or less in greatest dimension, deep tumor (soft tissue)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1bDistantMetastasisToSiteOtherThanLungBone: Coding.FromStrict({
+    ConditionStageValueSet_PM1bDistantMetastasisToSiteOtherThanLungBone: new Coding({
         code: "426288003",
         display: "pM1b: Distant metastasis to site other than lung (bone)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2bTumorMoreThan5CmInGreatestDimensionDeepTumorSoftTissue: Coding.FromStrict({
+    ConditionStageValueSet_PT2bTumorMoreThan5CmInGreatestDimensionDeepTumorSoftTissue: new Coding({
         code: "426554005",
         display: "pT2b: Tumor more than 5 cm in greatest dimension, deep tumor (soft tissue)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_BoneTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_BoneTNMFinding: new Coding({
         code: "426561009",
         display: "Bone TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2aTumorMoreThan5CmInGreatestDimensionSuperficialTumorSoftTissue: Coding.FromStrict({
+    ConditionStageValueSet_PT2aTumorMoreThan5CmInGreatestDimensionSuperficialTumorSoftTissue: new Coding({
         code: "426613005",
         display: "pT2a: Tumor more than 5 cm in greatest dimension, superficial tumor (soft tissue)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2TumorMoreThan8CmInGreatestDimensionBone: Coding.FromStrict({
+    ConditionStageValueSet_PT2TumorMoreThan8CmInGreatestDimensionBone: new Coding({
         code: "426616002",
         display: "pT2: Tumor more than 8 cm in greatest dimension (bone)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1Tumor8CmOrLessInGreatestDimensionBone: Coding.FromStrict({
+    ConditionStageValueSet_PT1Tumor8CmOrLessInGreatestDimensionBone: new Coding({
         code: "426897009",
         display: "pT1: Tumor 8 cm or less in greatest dimension (bone)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1aDistantMetastasisToLungBone: Coding.FromStrict({
+    ConditionStageValueSet_PM1aDistantMetastasisToLungBone: new Coding({
         code: "426917009",
         display: "pM1a: Distant metastasis to lung (bone)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3DiscontinuousTumorsInThePrimaryBoneSiteBone: Coding.FromStrict({
+    ConditionStageValueSet_PT3DiscontinuousTumorsInThePrimaryBoneSiteBone: new Coding({
         code: "427209003",
         display: "pT3: Discontinuous tumors in the primary bone site (bone)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1aTumor5CmOrLessInGreatestDimensionSuperficialTumorSoftTissue: Coding.FromStrict({
+    ConditionStageValueSet_PT1aTumor5CmOrLessInGreatestDimensionSuperficialTumorSoftTissue: new Coding({
         code: "427495001",
         display: "pT1a: Tumor 5 cm or less in greatest dimension, superficial tumor (soft tissue)",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_SoftTissueTNMFinding: Coding.FromStrict({
+    ConditionStageValueSet_SoftTissueTNMFinding: new Coding({
         code: "427535001",
         display: "Soft tissue TNM finding",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PTXCategory: Coding.FromStrict({
+    ConditionStageValueSet_PTXCategory: new Coding({
         code: "43189003",
         display: "pTX category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_LymphomaStageIIIe: Coding.FromStrict({
+    ConditionStageValueSet_LymphomaStageIIIe: new Coding({
         code: "44255004",
         display: "Lymphoma stage IIIe",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN0ICategory: Coding.FromStrict({
+    ConditionStageValueSet_PN0ICategory: new Coding({
         code: "443335006",
         display: "pN0(i-) category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1aCategory: Coding.FromStrict({
+    ConditionStageValueSet_PT1aCategory: new Coding({
         code: "443357004",
         display: "pT1a category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2bCategory: Coding.FromStrict({
+    ConditionStageValueSet_PN2bCategory: new Coding({
         code: "443452006",
         display: "pN2b category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3dCategory: Coding.FromStrict({
+    ConditionStageValueSet_PT3dCategory: new Coding({
         code: "443479005",
         display: "pT3d category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN0IPlusCategory: Coding.FromStrict({
+    ConditionStageValueSet_PN0IPlusCategory: new Coding({
         code: "443486002",
         display: "pN0(i+) category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4dCategory: Coding.FromStrict({
+    ConditionStageValueSet_PT4dCategory: new Coding({
         code: "443505003",
         display: "pT4d category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1bCategory: Coding.FromStrict({
+    ConditionStageValueSet_PT1bCategory: new Coding({
         code: "443506002",
         display: "pT1b category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1bCategory: Coding.FromStrict({
+    ConditionStageValueSet_PN1bCategory: new Coding({
         code: "443599002",
         display: "pN1b category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1micCategory: Coding.FromStrict({
+    ConditionStageValueSet_PT1micCategory: new Coding({
         code: "443600004",
         display: "pT1mic category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4aCategory: Coding.FromStrict({
+    ConditionStageValueSet_PT4aCategory: new Coding({
         code: "443604008",
         display: "pT4a category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3aCategory: Coding.FromStrict({
+    ConditionStageValueSet_PT3aCategory: new Coding({
         code: "443606005",
         display: "pT3a category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1cCategory: Coding.FromStrict({
+    ConditionStageValueSet_PT1cCategory: new Coding({
         code: "443642002",
         display: "pT1c category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3cCategory: Coding.FromStrict({
+    ConditionStageValueSet_PT3cCategory: new Coding({
         code: "443674009",
         display: "pT3c category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1aCategory: Coding.FromStrict({
+    ConditionStageValueSet_PN1aCategory: new Coding({
         code: "443716008",
         display: "pN1a category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4cCategory: Coding.FromStrict({
+    ConditionStageValueSet_PT4cCategory: new Coding({
         code: "443721006",
         display: "pT4c category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4bCategory: Coding.FromStrict({
+    ConditionStageValueSet_PT4bCategory: new Coding({
         code: "443736009",
         display: "pT4b category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1cCategory: Coding.FromStrict({
+    ConditionStageValueSet_PN1cCategory: new Coding({
         code: "443743003",
         display: "pN1c category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3cDCategory: Coding.FromStrict({
+    ConditionStageValueSet_PT3cDCategory: new Coding({
         code: "443784000",
         display: "pT3c,d category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2aCategory: Coding.FromStrict({
+    ConditionStageValueSet_PT2aCategory: new Coding({
         code: "443812002",
         display: "pT2a category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3aBCategory: Coding.FromStrict({
+    ConditionStageValueSet_PT3aBCategory: new Coding({
         code: "443815000",
         display: "pT3a,b category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3bCategory: Coding.FromStrict({
+    ConditionStageValueSet_PT3bCategory: new Coding({
         code: "443817008",
         display: "pT3b category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN3cCategory: Coding.FromStrict({
+    ConditionStageValueSet_PN3cCategory: new Coding({
         code: "443823003",
         display: "pN3c category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1miCategory: Coding.FromStrict({
+    ConditionStageValueSet_PN1miCategory: new Coding({
         code: "443824009",
         display: "pN1mi category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1cCategory: Coding.FromStrict({
+    ConditionStageValueSet_PM1cCategory: new Coding({
         code: "443839005",
         display: "pM1c category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1bCategory: Coding.FromStrict({
+    ConditionStageValueSet_PM1bCategory: new Coding({
         code: "443840007",
         display: "pM1b category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PM1aCategory: Coding.FromStrict({
+    ConditionStageValueSet_PM1aCategory: new Coding({
         code: "443841006",
         display: "pM1a category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN3aCategory: Coding.FromStrict({
+    ConditionStageValueSet_PN3aCategory: new Coding({
         code: "443866005",
         display: "pN3a category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2aCategory: Coding.FromStrict({
+    ConditionStageValueSet_PN2aCategory: new Coding({
         code: "443867001",
         display: "pN2a category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN0MolPlusCategory: Coding.FromStrict({
+    ConditionStageValueSet_PN0MolPlusCategory: new Coding({
         code: "443875007",
         display: "pN0(mol+) category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN2cCategory: Coding.FromStrict({
+    ConditionStageValueSet_PN2cCategory: new Coding({
         code: "443893008",
         display: "pN2c category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageTis: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageTis: new Coding({
         code: "44401000",
         display: "Tumor stage Tis",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN1Category: Coding.FromStrict({
+    ConditionStageValueSet_PN1Category: new Coding({
         code: "45552005",
         display: "pN1 category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_NodeStageN2: Coding.FromStrict({
+    ConditionStageValueSet_NodeStageN2: new Coding({
         code: "46059003",
         display: "Node stage N2",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStage1A: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStage1A: new Coding({
         code: "46333007",
         display: "Clinical stage 1 A",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsEndometrialCancerFIGOECStageIA: Coding.FromStrict({
+    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsEndometrialCancerFIGOECStageIA: new Coding({
         code: "46756001",
         display: "International Federation of Gynecology and Obstetrics endometrial cancer (FIGO EC) stage I A",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStage3C: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStage3C: new Coding({
         code: "48105005",
         display: "Clinical stage 3 C",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN3Category: Coding.FromStrict({
+    ConditionStageValueSet_PN3Category: new Coding({
         code: "49182004",
         display: "pN3 category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsCervicalCancerFIGOCCStageIa: Coding.FromStrict({
+    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsCervicalCancerFIGOCCStageIa: new Coding({
         code: "49219005",
         display: "International Federation of Gynecology and Obstetrics cervical cancer (FIGO CC) stage Ia",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsEndometrialCancerFIGOECStageI: Coding.FromStrict({
+    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsEndometrialCancerFIGOECStageI: new Coding({
         code: "50237009",
         display: "International Federation of Gynecology and Obstetrics endometrial cancer (FIGO EC) stage I",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStageIII: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageIII: new Coding({
         code: "50283003",
         display: "Clinical stage III",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsCervicalCancerFIGOCCStageIII: Coding.FromStrict({
+    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsCervicalCancerFIGOCCStageIII: new Coding({
         code: "52708004",
         display: "International Federation of Gynecology and Obstetrics cervical cancer (FIGO CC) stage III",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStage2A: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStage2A: new Coding({
         code: "52774001",
         display: "Clinical stage 2 A",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStageIVD: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageIVD: new Coding({
         code: "52865009",
         display: "Clinical stage IV D",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ModifiedDukesStageB2: Coding.FromStrict({
+    ConditionStageValueSet_ModifiedDukesStageB2: new Coding({
         code: "53173007",
         display: "Modified Dukes stage B2",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_NodeStageN1: Coding.FromStrict({
+    ConditionStageValueSet_NodeStageN1: new Coding({
         code: "53623008",
         display: "Node stage N1",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT1Category: Coding.FromStrict({
+    ConditionStageValueSet_PT1Category: new Coding({
         code: "53786006",
         display: "pT1 category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PNXCategory: Coding.FromStrict({
+    ConditionStageValueSet_PNXCategory: new Coding({
         code: "54452005",
         display: "pNX category",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ModifiedDukesStageC1: Coding.FromStrict({
+    ConditionStageValueSet_ModifiedDukesStageC1: new Coding({
         code: "54498006",
         display: "Modified Dukes stage C1",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStageIIID: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageIIID: new Coding({
         code: "55336000",
         display: "Clinical stage III D",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_MetastasisStageM1: Coding.FromStrict({
+    ConditionStageValueSet_MetastasisStageM1: new Coding({
         code: "55440008",
         display: "Metastasis stage M1",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStageIE: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageIE: new Coding({
         code: "56380009",
         display: "Clinical stage I E",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsVulvarCarcinomaFIGOVCStageI: Coding.FromStrict({
+    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsVulvarCarcinomaFIGOVCStageI: new Coding({
         code: "56587006",
         display: "International Federation of Gynecology and Obstetrics vulvar carcinoma (FIGO VC) stage I",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ModifiedDukesStageA: Coding.FromStrict({
+    ConditionStageValueSet_ModifiedDukesStageA: new Coding({
         code: "56769006",
         display: "Modified Dukes stage A",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_LymphomaStageIII: Coding.FromStrict({
+    ConditionStageValueSet_LymphomaStageIII: new Coding({
         code: "56944001",
         display: "Lymphoma stage III",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_LymphomaStageIIe: Coding.FromStrict({
+    ConditionStageValueSet_LymphomaStageIIe: new Coding({
         code: "5701003",
         display: "Lymphoma stage IIe",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ModifiedDukesStageC2: Coding.FromStrict({
+    ConditionStageValueSet_ModifiedDukesStageC2: new Coding({
         code: "57306005",
         display: "Modified Dukes stage C2",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ModifiedDukesStageD: Coding.FromStrict({
+    ConditionStageValueSet_ModifiedDukesStageD: new Coding({
         code: "57605004",
         display: "Modified Dukes stage D",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N3Stage: Coding.FromStrict({
+    ConditionStageValueSet_N3Stage: new Coding({
         code: "5856006",
         display: "N3 stage",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TumorStageT0: Coding.FromStrict({
+    ConditionStageValueSet_TumorStageT0: new Coding({
         code: "58790005",
         display: "Tumor stage T0",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_FIGOECStageIB: Coding.FromStrict({
+    ConditionStageValueSet_FIGOECStageIB: new Coding({
         code: "60275007",
         display: "FIGO EC stage I B",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStageII: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageII: new Coding({
         code: "60333009",
         display: "Clinical stage II",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT4Stage: Coding.FromStrict({
+    ConditionStageValueSet_PT4Stage: new Coding({
         code: "6123003",
         display: "pT4 stage",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_N0Stage: Coding.FromStrict({
+    ConditionStageValueSet_N0Stage: new Coding({
         code: "62455006",
         display: "N0 stage",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStageIIIB: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageIIIB: new Coding({
         code: "64062008",
         display: "Clinical stage III B",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStageIVE: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageIVE: new Coding({
         code: "64202001",
         display: "Clinical stage IV E",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_EpithelialOvarianTumorFIGOStageIIB: Coding.FromStrict({
+    ConditionStageValueSet_EpithelialOvarianTumorFIGOStageIIB: new Coding({
         code: "64574000",
         display: "Epithelial ovarian tumor, FIGO stage IIB",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_EpithelialOvarianTumorFIGOStageIB: Coding.FromStrict({
+    ConditionStageValueSet_EpithelialOvarianTumorFIGOStageIB: new Coding({
         code: "64737002",
         display: "Epithelial ovarian tumor, FIGO stage IB",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStageIIIS: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageIIIS: new Coding({
         code: "64877001",
         display: "Clinical stage III S",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_EpithelialOvarianTumorFIGOStageI: Coding.FromStrict({
+    ConditionStageValueSet_EpithelialOvarianTumorFIGOStageI: new Coding({
         code: "65235001",
         display: "Epithelial ovarian tumor, FIGO stage I",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_FIGOVMStageII: Coding.FromStrict({
+    ConditionStageValueSet_FIGOVMStageII: new Coding({
         code: "65306007",
         display: "FIGO VM stage II",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_EpithelialOvarianTumorFIGOStageIIA: Coding.FromStrict({
+    ConditionStageValueSet_EpithelialOvarianTumorFIGOStageIIA: new Coding({
         code: "6534007",
         display: "Epithelial ovarian tumor, FIGO stage IIA",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_FIGOVMStageIII: Coding.FromStrict({
+    ConditionStageValueSet_FIGOVMStageIII: new Coding({
         code: "65536004",
         display: "FIGO VM stage III",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T4Stage: Coding.FromStrict({
+    ConditionStageValueSet_T4Stage: new Coding({
         code: "65565005",
         display: "T4 stage",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_LymphomaStageIV: Coding.FromStrict({
+    ConditionStageValueSet_LymphomaStageIV: new Coding({
         code: "66445009",
         display: "Lymphoma stage IV",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_TXStage: Coding.FromStrict({
+    ConditionStageValueSet_TXStage: new Coding({
         code: "67101007",
         display: "TX stage",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_T2Stage: Coding.FromStrict({
+    ConditionStageValueSet_T2Stage: new Coding({
         code: "67673008",
         display: "T2 stage",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_FIGOCCStageII: Coding.FromStrict({
+    ConditionStageValueSet_FIGOCCStageII: new Coding({
         code: "68240008",
         display: "FIGO CC stage II",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStageIIE: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageIIE: new Coding({
         code: "69605008",
         display: "Clinical stage II E",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_FIGOVMStageI: Coding.FromStrict({
+    ConditionStageValueSet_FIGOVMStageI: new Coding({
         code: "70046009",
         display: "FIGO VM stage I",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStageIVS: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageIVS: new Coding({
         code: "70664003",
         display: "Clinical stage IV S",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStageIVA: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageIVA: new Coding({
         code: "71725004",
         display: "Clinical stage IV A",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_FIGOVCStageIV: Coding.FromStrict({
+    ConditionStageValueSet_FIGOVCStageIV: new Coding({
         code: "72780008",
         display: "FIGO VC stage IV",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_FIGOVMStageV: Coding.FromStrict({
+    ConditionStageValueSet_FIGOVMStageV: new Coding({
         code: "73055006",
         display: "FIGO VM stage V",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStageIIIA: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageIIIA: new Coding({
         code: "73082003",
         display: "Clinical stage III A",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_EpithelialOvarianTumorFIGOStageIV: Coding.FromStrict({
+    ConditionStageValueSet_EpithelialOvarianTumorFIGOStageIV: new Coding({
         code: "73511008",
         display: "Epithelial ovarian tumor, FIGO stage IV",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_LymphomaStageIIIs: Coding.FromStrict({
+    ConditionStageValueSet_LymphomaStageIIIs: new Coding({
         code: "74053007",
         display: "Lymphoma stage IIIs",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_LymphomaStageIII2: Coding.FromStrict({
+    ConditionStageValueSet_LymphomaStageIII2: new Coding({
         code: "75339006",
         display: "Lymphoma stage III 2",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_LymphomaStageII: Coding.FromStrict({
+    ConditionStageValueSet_LymphomaStageII: new Coding({
         code: "76422004",
         display: "Lymphoma stage II",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_EpithelialOvarianTumorFIGOStageIIC: Coding.FromStrict({
+    ConditionStageValueSet_EpithelialOvarianTumorFIGOStageIIC: new Coding({
         code: "78199001",
         display: "Epithelial ovarian tumor, FIGO stage IIC",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_EpithelialOvarianTumorFIGOStageII: Coding.FromStrict({
+    ConditionStageValueSet_EpithelialOvarianTumorFIGOStageII: new Coding({
         code: "78607009",
         display: "Epithelial ovarian tumor, FIGO stage II",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_NodeStageNX: Coding.FromStrict({
+    ConditionStageValueSet_NodeStageNX: new Coding({
         code: "79420006",
         display: "Node stage NX",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_FIGOVMStageIV: Coding.FromStrict({
+    ConditionStageValueSet_FIGOVMStageIV: new Coding({
         code: "80588003",
         display: "FIGO VM stage IV",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PN4Stage: Coding.FromStrict({
+    ConditionStageValueSet_PN4Stage: new Coding({
         code: "80663004",
         display: "pN4 stage",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT2Stage: Coding.FromStrict({
+    ConditionStageValueSet_PT2Stage: new Coding({
         code: "80898003",
         display: "pT2 stage",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_FIGOECStageIII: Coding.FromStrict({
+    ConditionStageValueSet_FIGOECStageIII: new Coding({
         code: "80975007",
         display: "FIGO EC stage III",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_FIGOCCStageIV: Coding.FromStrict({
+    ConditionStageValueSet_FIGOCCStageIV: new Coding({
         code: "81822003",
         display: "FIGO CC stage IV",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_LymphomaStageIIIse: Coding.FromStrict({
+    ConditionStageValueSet_LymphomaStageIIIse: new Coding({
         code: "84633001",
         display: "Lymphoma stage IIIse",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PTisStage: Coding.FromStrict({
+    ConditionStageValueSet_PTisStage: new Coding({
         code: "84921008",
         display: "pTis stage",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsCervicalCancerStageIbOcc: Coding.FromStrict({
+    ConditionStageValueSet_InternationalFederationOfGynecologyAndObstetricsCervicalCancerStageIbOcc: new Coding({
         code: "87977001",
         display: "International Federation of Gynecology and Obstetrics cervical cancer stage Ib occ",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_LymphomaStageIe: Coding.FromStrict({
+    ConditionStageValueSet_LymphomaStageIe: new Coding({
         code: "89487002",
         display: "Lymphoma stage Ie",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_ClinicalStageIIS: Coding.FromStrict({
+    ConditionStageValueSet_ClinicalStageIIS: new Coding({
         code: "90321006",
         display: "Clinical stage II S",
         system: "http://snomed.info/sct"
     }),
-    ConditionStageValueSet_PT3Stage: Coding.FromStrict({
+    ConditionStageValueSet_PT3Stage: new Coding({
         code: "90402004",
         display: "pT3 stage",
         system: "http://snomed.info/sct"

@@ -13,7 +13,7 @@ export const DocumentReferenceStatusValueSet = {
     /**
      * This is the current reference for this document.
      */
-    document_reference_status_Current: Coding.FromStrict({
+    document_reference_status_Current: new Coding({
         code: "current",
         display: "Current",
         system: "http://hl7.org/fhir/document-reference-status"
@@ -21,7 +21,7 @@ export const DocumentReferenceStatusValueSet = {
     /**
      * This reference was created in error.
      */
-    document_reference_status_EnteredInError: Coding.FromStrict({
+    document_reference_status_EnteredInError: new Coding({
         code: "entered-in-error",
         display: "Entered in Error",
         system: "http://hl7.org/fhir/document-reference-status"
@@ -29,7 +29,7 @@ export const DocumentReferenceStatusValueSet = {
     /**
      * This reference has been superseded by another reference.
      */
-    document_reference_status_Superseded: Coding.FromStrict({
+    document_reference_status_Superseded: new Coding({
         code: "superseded",
         display: "Superseded",
         system: "http://hl7.org/fhir/document-reference-status"

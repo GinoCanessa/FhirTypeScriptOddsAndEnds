@@ -13,7 +13,7 @@ export const AllergyintoleranceClinicalValueSet = {
     /**
      * The subject is currently experiencing, or is at risk of, a reaction to the identified substance.
      */
-    allergyintolerance_clinical_Active: Coding.FromStrict({
+    allergyintolerance_clinical_Active: new Coding({
         code: "active",
         display: "Active",
         system: "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
@@ -21,7 +21,7 @@ export const AllergyintoleranceClinicalValueSet = {
     /**
      * The subject is no longer at risk of a reaction to the identified substance.
      */
-    allergyintolerance_clinical_Inactive: Coding.FromStrict({
+    allergyintolerance_clinical_Inactive: new Coding({
         code: "inactive",
         display: "Inactive",
         system: "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
@@ -29,7 +29,7 @@ export const AllergyintoleranceClinicalValueSet = {
     /**
      * A reaction to the identified substance has been clinically reassessed by testing or re-exposure and is considered no longer to be present. Re-exposure could be accidental, unplanned, or outside of any clinical setting.
      */
-    allergyintolerance_clinical_Resolved: Coding.FromStrict({
+    allergyintolerance_clinical_Resolved: new Coding({
         code: "resolved",
         display: "Resolved",
         system: "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"

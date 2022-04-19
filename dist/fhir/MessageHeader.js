@@ -41,21 +41,21 @@ export class MessageHeaderDestination extends fhir.BackboneElement {
     /**
      * Check if the current MessageHeaderDestination contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["endpoint"] === undefined) {
             missingElements.push("endpoint");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MessageHeaderDestination from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MessageHeaderDestination(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MessageHeaderDestination is missing elements: ${missingElements.join(", ")}`;
         }
@@ -106,21 +106,21 @@ export class MessageHeaderSource extends fhir.BackboneElement {
     /**
      * Check if the current MessageHeaderSource contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["endpoint"] === undefined) {
             missingElements.push("endpoint");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MessageHeaderSource from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MessageHeaderSource(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MessageHeaderSource is missing elements: ${missingElements.join(", ")}`;
         }
@@ -163,7 +163,7 @@ export class MessageHeaderResponse extends fhir.BackboneElement {
     /**
      * Check if the current MessageHeaderResponse contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["code"] === undefined) {
             missingElements.push("code");
@@ -171,16 +171,16 @@ export class MessageHeaderResponse extends fhir.BackboneElement {
         if (this["identifier"] === undefined) {
             missingElements.push("identifier");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MessageHeaderResponse from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MessageHeaderResponse(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MessageHeaderResponse is missing elements: ${missingElements.join(", ")}`;
         }
@@ -247,21 +247,21 @@ export class MessageHeader extends fhir.DomainResource {
     /**
      * Check if the current MessageHeader contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["source"] === undefined) {
             missingElements.push("source");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MessageHeader from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MessageHeader(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MessageHeader is missing elements: ${missingElements.join(", ")}`;
         }

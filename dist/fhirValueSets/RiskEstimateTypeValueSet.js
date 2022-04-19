@@ -13,7 +13,7 @@ export const RiskEstimateTypeValueSet = {
     /**
      * descriptive measure reported as total number of items.
      */
-    risk_estimate_type_Count: Coding.FromStrict({
+    risk_estimate_type_Count: new Coding({
         code: "count",
         display: "count",
         system: "http://terminology.hl7.org/CodeSystem/risk-estimate-type"
@@ -21,7 +21,7 @@ export const RiskEstimateTypeValueSet = {
     /**
      * A special use case where the proportion is derived from a formula rather than derived from summary evidence.
      */
-    risk_estimate_type_DerivedProportion: Coding.FromStrict({
+    risk_estimate_type_DerivedProportion: new Coding({
         code: "derivedProportion",
         display: "derivedProportion",
         system: "http://terminology.hl7.org/CodeSystem/risk-estimate-type"
@@ -29,7 +29,7 @@ export const RiskEstimateTypeValueSet = {
     /**
      * descriptive measure reported as narrative.
      */
-    risk_estimate_type_Descriptive: Coding.FromStrict({
+    risk_estimate_type_Descriptive: new Coding({
         code: "descriptive",
         display: "descriptive",
         system: "http://terminology.hl7.org/CodeSystem/risk-estimate-type"
@@ -37,7 +37,7 @@ export const RiskEstimateTypeValueSet = {
     /**
      * continuous numerical measure reported as an average.
      */
-    risk_estimate_type_Mean: Coding.FromStrict({
+    risk_estimate_type_Mean: new Coding({
         code: "mean",
         display: "mean",
         system: "http://terminology.hl7.org/CodeSystem/risk-estimate-type"
@@ -45,7 +45,7 @@ export const RiskEstimateTypeValueSet = {
     /**
      * continuous numerical measure reported as the middle of the range.
      */
-    risk_estimate_type_Median: Coding.FromStrict({
+    risk_estimate_type_Median: new Coding({
         code: "median",
         display: "median",
         system: "http://terminology.hl7.org/CodeSystem/risk-estimate-type"
@@ -53,7 +53,7 @@ export const RiskEstimateTypeValueSet = {
     /**
      * dichotomous measure (present or absent) reported as a ratio compared to the denominator of 1 (A percentage is a proportion with denominator of 100).
      */
-    risk_estimate_type_Proportion: Coding.FromStrict({
+    risk_estimate_type_Proportion: new Coding({
         code: "proportion",
         display: "proportion",
         system: "http://terminology.hl7.org/CodeSystem/risk-estimate-type"

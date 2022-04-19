@@ -13,7 +13,7 @@ export const ActionSelectionBehaviorValueSet = {
   /**
    * All the actions in the group must be selected as a single unit.
    */
-  action_selection_behavior_All: Coding.FromStrict({
+  action_selection_behavior_All: new Coding({
     code: "all",
     display: "All",
     system: "http://hl7.org/fhir/action-selection-behavior"
@@ -21,7 +21,7 @@ export const ActionSelectionBehaviorValueSet = {
   /**
    * All the actions in the group are meant to be chosen as a single unit: either all must be selected by the end user, or none may be selected.
    */
-  action_selection_behavior_AllOrNone: Coding.FromStrict({
+  action_selection_behavior_AllOrNone: new Coding({
     code: "all-or-none",
     display: "All Or None",
     system: "http://hl7.org/fhir/action-selection-behavior"
@@ -29,7 +29,7 @@ export const ActionSelectionBehaviorValueSet = {
   /**
    * Any number of the actions in the group may be chosen, from zero to all.
    */
-  action_selection_behavior_Any: Coding.FromStrict({
+  action_selection_behavior_Any: new Coding({
     code: "any",
     display: "Any",
     system: "http://hl7.org/fhir/action-selection-behavior"
@@ -37,7 +37,7 @@ export const ActionSelectionBehaviorValueSet = {
   /**
    * The end user may choose zero or at most one of the actions in the group.
    */
-  action_selection_behavior_AtMostOne: Coding.FromStrict({
+  action_selection_behavior_AtMostOne: new Coding({
     code: "at-most-one",
     display: "At Most One",
     system: "http://hl7.org/fhir/action-selection-behavior"
@@ -45,7 +45,7 @@ export const ActionSelectionBehaviorValueSet = {
   /**
    * The end user must choose one and only one of the selectable actions in the group. The user SHALL NOT choose none of the actions in the group.
    */
-  action_selection_behavior_ExactlyOne: Coding.FromStrict({
+  action_selection_behavior_ExactlyOne: new Coding({
     code: "exactly-one",
     display: "Exactly One",
     system: "http://hl7.org/fhir/action-selection-behavior"
@@ -53,7 +53,7 @@ export const ActionSelectionBehaviorValueSet = {
   /**
    * The end user must choose a minimum of one, and as many additional as desired.
    */
-  action_selection_behavior_OneOrMore: Coding.FromStrict({
+  action_selection_behavior_OneOrMore: new Coding({
     code: "one-or-more",
     display: "One Or More",
     system: "http://hl7.org/fhir/action-selection-behavior"

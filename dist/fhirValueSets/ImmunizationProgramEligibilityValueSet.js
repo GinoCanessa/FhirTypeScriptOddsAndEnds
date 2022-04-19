@@ -13,7 +13,7 @@ export const ImmunizationProgramEligibilityValueSet = {
     /**
      * The patient is not eligible for the funding program.
      */
-    immunization_program_eligibility_NotEligible: Coding.FromStrict({
+    immunization_program_eligibility_NotEligible: new Coding({
         code: "ineligible",
         display: "Not Eligible",
         system: "http://terminology.hl7.org/CodeSystem/immunization-program-eligibility"
@@ -21,7 +21,7 @@ export const ImmunizationProgramEligibilityValueSet = {
     /**
      * The patient is eligible for the funding program because they are uninsured.
      */
-    immunization_program_eligibility_Uninsured: Coding.FromStrict({
+    immunization_program_eligibility_Uninsured: new Coding({
         code: "uninsured",
         display: "Uninsured",
         system: "http://terminology.hl7.org/CodeSystem/immunization-program-eligibility"

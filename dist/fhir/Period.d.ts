@@ -35,10 +35,10 @@ export declare class Period extends fhir.FhirElement implements fhir.IPeriod {
     /**
      * Check if the current Period contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Period from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPeriod): Period;
+    static fromStrict(source: fhir.IPeriod): Period;
 }
 //# sourceMappingURL=Period.d.ts.map

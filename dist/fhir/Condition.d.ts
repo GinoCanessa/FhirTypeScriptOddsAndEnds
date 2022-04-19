@@ -167,11 +167,11 @@ export declare class ConditionStage extends fhir.BackboneElement implements fhir
     /**
      * Check if the current ConditionStage contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ConditionStage from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IConditionStage): ConditionStage;
+    static fromStrict(source: fhir.IConditionStage): ConditionStage;
 }
 /**
  * The evidence may be a simple list of coded symptoms/manifestations, or references to observations or formal assessments, or both.
@@ -192,11 +192,11 @@ export declare class ConditionEvidence extends fhir.BackboneElement implements f
     /**
      * Check if the current ConditionEvidence contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ConditionEvidence from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IConditionEvidence): ConditionEvidence;
+    static fromStrict(source: fhir.IConditionEvidence): ConditionEvidence;
 }
 /**
  * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
@@ -319,10 +319,10 @@ export declare class Condition extends fhir.DomainResource implements fhir.ICond
     /**
      * Check if the current Condition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Condition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICondition): Condition;
+    static fromStrict(source: fhir.ICondition): Condition;
 }
 //# sourceMappingURL=Condition.d.ts.map

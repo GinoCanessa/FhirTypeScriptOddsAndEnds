@@ -13,7 +13,7 @@ export const KnowledgeResourceTypesValueSet = {
     /**
      * The definition of a specific activity to be taken, independent of any particular patient or context.
      */
-    knowledge_resource_types_ActivityDefinition: Coding.FromStrict({
+    knowledge_resource_types_ActivityDefinition: new Coding({
         code: "ActivityDefinition",
         display: "ActivityDefinition",
         system: "http://hl7.org/fhir/knowledge-resource-types"
@@ -21,7 +21,7 @@ export const KnowledgeResourceTypesValueSet = {
     /**
      * A set of codes drawn from one or more code systems.
      */
-    knowledge_resource_types_CodeSystem: Coding.FromStrict({
+    knowledge_resource_types_CodeSystem: new Coding({
         code: "CodeSystem",
         display: "CodeSystem",
         system: "http://hl7.org/fhir/knowledge-resource-types"
@@ -29,7 +29,7 @@ export const KnowledgeResourceTypesValueSet = {
     /**
      * A map from one set of concepts to one or more other concepts.
      */
-    knowledge_resource_types_ConceptMap: Coding.FromStrict({
+    knowledge_resource_types_ConceptMap: new Coding({
         code: "ConceptMap",
         display: "ConceptMap",
         system: "http://hl7.org/fhir/knowledge-resource-types"
@@ -37,7 +37,7 @@ export const KnowledgeResourceTypesValueSet = {
     /**
      * Represents a library of quality improvement components.
      */
-    knowledge_resource_types_Library: Coding.FromStrict({
+    knowledge_resource_types_Library: new Coding({
         code: "Library",
         display: "Library",
         system: "http://hl7.org/fhir/knowledge-resource-types"
@@ -45,7 +45,7 @@ export const KnowledgeResourceTypesValueSet = {
     /**
      * A quality measure definition.
      */
-    knowledge_resource_types_Measure: Coding.FromStrict({
+    knowledge_resource_types_Measure: new Coding({
         code: "Measure",
         display: "Measure",
         system: "http://hl7.org/fhir/knowledge-resource-types"
@@ -53,7 +53,7 @@ export const KnowledgeResourceTypesValueSet = {
     /**
      * The definition of a plan for a series of actions, independent of any specific patient or context.
      */
-    knowledge_resource_types_PlanDefinition: Coding.FromStrict({
+    knowledge_resource_types_PlanDefinition: new Coding({
         code: "PlanDefinition",
         display: "PlanDefinition",
         system: "http://hl7.org/fhir/knowledge-resource-types"
@@ -61,7 +61,7 @@ export const KnowledgeResourceTypesValueSet = {
     /**
      * Structural Definition.
      */
-    knowledge_resource_types_StructureDefinition: Coding.FromStrict({
+    knowledge_resource_types_StructureDefinition: new Coding({
         code: "StructureDefinition",
         display: "StructureDefinition",
         system: "http://hl7.org/fhir/knowledge-resource-types"
@@ -69,7 +69,7 @@ export const KnowledgeResourceTypesValueSet = {
     /**
      * A Map of relationships between 2 structures that can be used to transform data.
      */
-    knowledge_resource_types_StructureMap: Coding.FromStrict({
+    knowledge_resource_types_StructureMap: new Coding({
         code: "StructureMap",
         display: "StructureMap",
         system: "http://hl7.org/fhir/knowledge-resource-types"
@@ -77,7 +77,7 @@ export const KnowledgeResourceTypesValueSet = {
     /**
      * A set of codes drawn from one or more code systems.
      */
-    knowledge_resource_types_ValueSet: Coding.FromStrict({
+    knowledge_resource_types_ValueSet: new Coding({
         code: "ValueSet",
         display: "ValueSet",
         system: "http://hl7.org/fhir/knowledge-resource-types"

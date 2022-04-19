@@ -10,6142 +10,6142 @@ import { Coding } from '../fhir';
  * Observation Method codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 272394005 (Technique (qualifier value)) or is-a 129264002 (Action (qualifier value)) or is-a 386053000 (Evaluation procedure(procedure))
  */
 export const ObservationMethodsValueSet = {
-    ObservationMethodsValueSet_AntiStreptokinaseAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_AntiStreptokinaseAssay: new Coding({
         code: "10071009",
         display: "Anti-streptokinase assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FluorescentAntibodyMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_FluorescentAntibodyMeasurement: new Coding({
         code: "10072002",
         display: "Fluorescent antibody measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FlowCytometricCrossmatchTwoColors: Coding.FromStrict({
+    ObservationMethodsValueSet_FlowCytometricCrossmatchTwoColors: new Coding({
         code: "10104004",
         display: "Flow cytometric crossmatch, two colors",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PlateletAdhesivenessTest: Coding.FromStrict({
+    ObservationMethodsValueSet_PlateletAdhesivenessTest: new Coding({
         code: "10110004",
         display: "Platelet adhesiveness test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_OpiatesQualitative: Coding.FromStrict({
+    ObservationMethodsValueSet_OpiatesQualitative: new Coding({
         code: "10140002",
         display: "Opiates, qualitative",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DiagnosticRadiographyOfSacrococcygealJoint: Coding.FromStrict({
+    ObservationMethodsValueSet_DiagnosticRadiographyOfSacrococcygealJoint: new Coding({
         code: "10181005",
         display: "Diagnostic radiography of sacrococcygeal joint",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_KetoneBodiesMeasurementQualitative: Coding.FromStrict({
+    ObservationMethodsValueSet_KetoneBodiesMeasurementQualitative: new Coding({
         code: "10187009",
         display: "Ketone bodies measurement, qualitative",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PhonocardiogramWithECGLead: Coding.FromStrict({
+    ObservationMethodsValueSet_PhonocardiogramWithECGLead: new Coding({
         code: "10199002",
         display: "Phonocardiogram with ECG lead",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FatStainUrine: Coding.FromStrict({
+    ObservationMethodsValueSet_FatStainUrine: new Coding({
         code: "10223001",
         display: "Fat stain, urine",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RheumatoidFactorQuantitative: Coding.FromStrict({
+    ObservationMethodsValueSet_RheumatoidFactorQuantitative: new Coding({
         code: "10239008",
         display: "Rheumatoid factor, quantitative",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ImmunochemiluminescentAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_ImmunochemiluminescentAssay: new Coding({
         code: "10268009",
         display: "Immunochemiluminescent assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EchographyContactBScan: Coding.FromStrict({
+    ObservationMethodsValueSet_EchographyContactBScan: new Coding({
         code: "10374007",
         display: "Echography, contact B-scan",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiologicGuidanceForDilationOfUreters: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiologicGuidanceForDilationOfUreters: new Coding({
         code: "10428007",
         display: "Radiologic guidance for dilation of ureters",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MaprotilineMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_MaprotilineMeasurement: new Coding({
         code: "10447005",
         display: "Maprotiline measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_NasalEndoscopyWithNasalPolypectomy: Coding.FromStrict({
+    ObservationMethodsValueSet_NasalEndoscopyWithNasalPolypectomy: new Coding({
         code: "10489002",
         display: "Nasal endoscopy with nasal polypectomy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SleepDisorderFunctionTest: Coding.FromStrict({
+    ObservationMethodsValueSet_SleepDisorderFunctionTest: new Coding({
         code: "10563004",
         display: "Sleep disorder function test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ExplorationForRemovalOfDeepForeignBodyOfForearm: Coding.FromStrict({
+    ObservationMethodsValueSet_ExplorationForRemovalOfDeepForeignBodyOfForearm: new Coding({
         code: "10666003",
         display: "Exploration for removal of deep foreign body of forearm",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_OxazepamMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_OxazepamMeasurement: new Coding({
         code: "10670006",
         display: "Oxazepam measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MinimumBactericidalConcentrationTestMacrodilutionMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_MinimumBactericidalConcentrationTestMacrodilutionMethod: new Coding({
         code: "10672003",
         display: "Minimum bactericidal concentration test, macrodilution method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AnodicStrippingVoltammetryMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_AnodicStrippingVoltammetryMeasurement: new Coding({
         code: "10688003",
         display: "Anodic stripping voltammetry measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ExplorationOfNerve: Coding.FromStrict({
+    ObservationMethodsValueSet_ExplorationOfNerve: new Coding({
         code: "10689006",
         display: "Exploration of nerve",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BloodGasesCapillaryMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_BloodGasesCapillaryMeasurement: new Coding({
         code: "10812009",
         display: "Blood gases, capillary measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BetaLactamaseActivity: Coding.FromStrict({
+    ObservationMethodsValueSet_BetaLactamaseActivity: new Coding({
         code: "10820006",
         display: "Beta-lactamase activity",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GastricFluidAnalysisFoodForensic: Coding.FromStrict({
+    ObservationMethodsValueSet_GastricFluidAnalysisFoodForensic: new Coding({
         code: "10821005",
         display: "Gastric fluid analysis, food, forensic",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FecalTrypsinQualitative24HourSpecimen: Coding.FromStrict({
+    ObservationMethodsValueSet_FecalTrypsinQualitative24HourSpecimen: new Coding({
         code: "10822003",
         display: "Fecal trypsin, qualitative 24-hour specimen",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TestOfEsophagealSensationUsingAcidPerfusion: Coding.FromStrict({
+    ObservationMethodsValueSet_TestOfEsophagealSensationUsingAcidPerfusion: new Coding({
         code: "10829007",
         display: "Test of esophageal sensation using acid perfusion",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Bronchoscopy: Coding.FromStrict({
+    ObservationMethodsValueSet_Bronchoscopy: new Coding({
         code: "10847001",
         display: "Bronchoscopy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AudiometricGroupTesting: Coding.FromStrict({
+    ObservationMethodsValueSet_AudiometricGroupTesting: new Coding({
         code: "10909005",
         display: "Audiometric group testing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CrossedImmunoelectrophoresisMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_CrossedImmunoelectrophoresisMeasurement: new Coding({
         code: "10910000",
         display: "Crossed immunoelectrophoresis measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AtomicAbsorptionFlameType: Coding.FromStrict({
+    ObservationMethodsValueSet_AtomicAbsorptionFlameType: new Coding({
         code: "10919004",
         display: "Atomic absorption, flame type",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IronUptakeTest: Coding.FromStrict({
+    ObservationMethodsValueSet_IronUptakeTest: new Coding({
         code: "10939000",
         display: "Iron uptake test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FajersztajnTest: Coding.FromStrict({
+    ObservationMethodsValueSet_FajersztajnTest: new Coding({
         code: "10946009",
         display: "Fajersztajn test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ClotRetractionInhibitionByDrug: Coding.FromStrict({
+    ObservationMethodsValueSet_ClotRetractionInhibitionByDrug: new Coding({
         code: "10956008",
         display: "Clot retraction, inhibition by drug",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EosinophilCountNasal: Coding.FromStrict({
+    ObservationMethodsValueSet_EosinophilCountNasal: new Coding({
         code: "10967009",
         display: "Eosinophil count, nasal",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ThromboxaneB2Assay: Coding.FromStrict({
+    ObservationMethodsValueSet_ThromboxaneB2Assay: new Coding({
         code: "11017006",
         display: "Thromboxane B2 assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FletcherFactorAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_FletcherFactorAssay: new Coding({
         code: "11078007",
         display: "Fletcher factor assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AcidMucopolysaccharidesMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_AcidMucopolysaccharidesMeasurement: new Coding({
         code: "11138003",
         display: "Acid mucopolysaccharides measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IntracardiacElectrophysiologicProcedureWithECG: Coding.FromStrict({
+    ObservationMethodsValueSet_IntracardiacElectrophysiologicProcedureWithECG: new Coding({
         code: "11148001",
         display: "Intracardiac electrophysiologic procedure with ECG",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_InsectIdentificationProcedure: Coding.FromStrict({
+    ObservationMethodsValueSet_InsectIdentificationProcedure: new Coding({
         code: "11175008",
         display: "Insect identification procedure",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UrinalysisBloodQualitative: Coding.FromStrict({
+    ObservationMethodsValueSet_UrinalysisBloodQualitative: new Coding({
         code: "11184008",
         display: "Urinalysis, blood, qualitative",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CarnitineMeasurementTissue: Coding.FromStrict({
+    ObservationMethodsValueSet_CarnitineMeasurementTissue: new Coding({
         code: "11198000",
         display: "Carnitine measurement, tissue",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IsotopeStudyForPlasmaVolume: Coding.FromStrict({
+    ObservationMethodsValueSet_IsotopeStudyForPlasmaVolume: new Coding({
         code: "11269009",
         display: "Isotope study for plasma volume",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LactateDehydrogenaseLevel: Coding.FromStrict({
+    ObservationMethodsValueSet_LactateDehydrogenaseLevel: new Coding({
         code: "11274001",
         display: "Lactate dehydrogenase level",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_KidneyImagingWithVascularFlowAndFunctionStudy: Coding.FromStrict({
+    ObservationMethodsValueSet_KidneyImagingWithVascularFlowAndFunctionStudy: new Coding({
         code: "11278003",
         display: "Kidney imaging with vascular flow and function study",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BrachialArteriography: Coding.FromStrict({
+    ObservationMethodsValueSet_BrachialArteriography: new Coding({
         code: "11295006",
         display: "Brachial arteriography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DiphtheriaSkinTest: Coding.FromStrict({
+    ObservationMethodsValueSet_DiphtheriaSkinTest: new Coding({
         code: "11304004",
         display: "Diphtheria skin test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AnoscopyWithBiopsy: Coding.FromStrict({
+    ObservationMethodsValueSet_AnoscopyWithBiopsy: new Coding({
         code: "11343000",
         display: "Anoscopy with biopsy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EpsteinBarrMAAntibodyMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_EpsteinBarrMAAntibodyMeasurement: new Coding({
         code: "11362002",
         display: "Epstein-Barr MA antibody measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DirectLaryngoscopyWithExcisionOfTumor: Coding.FromStrict({
+    ObservationMethodsValueSet_DirectLaryngoscopyWithExcisionOfTumor: new Coding({
         code: "11377005",
         display: "Direct laryngoscopy with excision of tumor",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_USRetroperitoneumLimited: Coding.FromStrict({
+    ObservationMethodsValueSet_USRetroperitoneumLimited: new Coding({
         code: "11390003",
         display: "US Retroperitoneum, limited",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GelatinLiquefactionTest: Coding.FromStrict({
+    ObservationMethodsValueSet_GelatinLiquefactionTest: new Coding({
         code: "11405004",
         display: "Gelatin liquefaction test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AntibodyIdentificationRBCAntibodyPanelStandardTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AntibodyIdentificationRBCAntibodyPanelStandardTechnique: new Coding({
         code: "11415005",
         display: "Antibody identification, RBC antibody panel, standard technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ElectronMicroscopyForViralIdentificationRapid: Coding.FromStrict({
+    ObservationMethodsValueSet_ElectronMicroscopyForViralIdentificationRapid: new Coding({
         code: "11485002",
         display: "Electron microscopy for viral identification rapid",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TotalMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_TotalMeasurement: new Coding({
         code: "115341008",
         display: "Total measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EndoscopyOfAdenoid: Coding.FromStrict({
+    ObservationMethodsValueSet_EndoscopyOfAdenoid: new Coding({
         code: "11560009",
         display: "Endoscopy of adenoid",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_C1qReceptorMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_C1qReceptorMeasurement: new Coding({
         code: "11561008",
         display: "C1q receptor measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IntraoperativeEchography: Coding.FromStrict({
+    ObservationMethodsValueSet_IntraoperativeEchography: new Coding({
         code: "11582002",
         display: "Intraoperative echography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ArylsulfataseAMeasurementFibroblasts: Coding.FromStrict({
+    ObservationMethodsValueSet_ArylsulfataseAMeasurementFibroblasts: new Coding({
         code: "11610007",
         display: "Arylsulfatase A measurement, fibroblasts",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DiagnosticRadiographySupineAndErectStudies: Coding.FromStrict({
+    ObservationMethodsValueSet_DiagnosticRadiographySupineAndErectStudies: new Coding({
         code: "11634002",
         display: "Diagnostic radiography, supine and erect studies",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SimpleCystometrogram: Coding.FromStrict({
+    ObservationMethodsValueSet_SimpleCystometrogram: new Coding({
         code: "11732005",
         display: "Simple cystometrogram",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SemenAnalysisPostVasectomy: Coding.FromStrict({
+    ObservationMethodsValueSet_SemenAnalysisPostVasectomy: new Coding({
         code: "11743002",
         display: "Semen analysis, post vasectomy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FactorHReceptorMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_FactorHReceptorMeasurement: new Coding({
         code: "11756009",
         display: "Factor H receptor measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_QuantitativePhotoplethysmographyVenous: Coding.FromStrict({
+    ObservationMethodsValueSet_QuantitativePhotoplethysmographyVenous: new Coding({
         code: "11758005",
         display: "Quantitative photoplethysmography, venous",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FluoroscopyDuringOperation: Coding.FromStrict({
+    ObservationMethodsValueSet_FluoroscopyDuringOperation: new Coding({
         code: "11760007",
         display: "Fluoroscopy during operation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_OcularThermography: Coding.FromStrict({
+    ObservationMethodsValueSet_OcularThermography: new Coding({
         code: "11819005",
         display: "Ocular thermography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PharmacometricStudy: Coding.FromStrict({
+    ObservationMethodsValueSet_PharmacometricStudy: new Coding({
         code: "11821000",
         display: "Pharmacometric study",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VitaminB6Measurement: Coding.FromStrict({
+    ObservationMethodsValueSet_VitaminB6Measurement: new Coding({
         code: "11829003",
         display: "Vitamin B6 measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AnilineMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_AnilineMeasurement: new Coding({
         code: "11846000",
         display: "Aniline measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ComputerizedTomographySagittal: Coding.FromStrict({
+    ObservationMethodsValueSet_ComputerizedTomographySagittal: new Coding({
         code: "11892002",
         display: "Computerized tomography, sagittal",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TracerStudyOfEye: Coding.FromStrict({
+    ObservationMethodsValueSet_TracerStudyOfEye: new Coding({
         code: "11895000",
         display: "Tracer study of eye",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SeminalExamination: Coding.FromStrict({
+    ObservationMethodsValueSet_SeminalExamination: new Coding({
         code: "11900001",
         display: "Seminal examination",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PascoSystemTest: Coding.FromStrict({
+    ObservationMethodsValueSet_PascoSystemTest: new Coding({
         code: "11905006",
         display: "Pasco system test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ImmunoprecipitinTestQuantitative: Coding.FromStrict({
+    ObservationMethodsValueSet_ImmunoprecipitinTestQuantitative: new Coding({
         code: "11909000",
         display: "Immunoprecipitin test, quantitative",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MephenytoinMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_MephenytoinMeasurement: new Coding({
         code: "11913007",
         display: "Mephenytoin measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HeinzBodyDeterminationInduced: Coding.FromStrict({
+    ObservationMethodsValueSet_HeinzBodyDeterminationInduced: new Coding({
         code: "11921001",
         display: "Heinz body determination, induced",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PulmonaryVentilationPerfusionStudyByRadioactiveKrypton: Coding.FromStrict({
+    ObservationMethodsValueSet_PulmonaryVentilationPerfusionStudyByRadioactiveKrypton: new Coding({
         code: "11971003",
         display: "Pulmonary ventilation-perfusion study by radioactive krypton",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MonitoringOfCoronaryBloodFlow: Coding.FromStrict({
+    ObservationMethodsValueSet_MonitoringOfCoronaryBloodFlow: new Coding({
         code: "12065009",
         display: "Monitoring of coronary blood flow",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PhlebographyOfPortalSystem: Coding.FromStrict({
+    ObservationMethodsValueSet_PhlebographyOfPortalSystem: new Coding({
         code: "12118001",
         display: "Phlebography of portal system",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadioisotopeScanOfPancreas: Coding.FromStrict({
+    ObservationMethodsValueSet_RadioisotopeScanOfPancreas: new Coding({
         code: "12124007",
         display: "Radioisotope scan of pancreas",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VitaminD25HydroxyMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_VitaminD25HydroxyMeasurement: new Coding({
         code: "12199005",
         display: "Vitamin D, 25-hydroxy measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ParathyroidRelatedProteinMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_ParathyroidRelatedProteinMeasurement: new Coding({
         code: "12224000",
         display: "Parathyroid related protein measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RBCAntibodyDetectionWarmWithTitration: Coding.FromStrict({
+    ObservationMethodsValueSet_RBCAntibodyDetectionWarmWithTitration: new Coding({
         code: "12234009",
         display: "RBC antibody detection, warm with titration",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ExplorationOfFemoralArtery: Coding.FromStrict({
+    ObservationMethodsValueSet_ExplorationOfFemoralArtery: new Coding({
         code: "12243000",
         display: "Exploration of femoral artery",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ComplementFixationTestForSyphilis: Coding.FromStrict({
+    ObservationMethodsValueSet_ComplementFixationTestForSyphilis: new Coding({
         code: "12271006",
         display: "Complement fixation test for syphilis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DentalPulpVitalityTest: Coding.FromStrict({
+    ObservationMethodsValueSet_DentalPulpVitalityTest: new Coding({
         code: "12282003",
         display: "Dental pulp vitality test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MicrobialIdentificationQuadFERMAndMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_MicrobialIdentificationQuadFERMAndMethod: new Coding({
         code: "12305000",
         display: "Microbial identification, quadFERM and method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MexiletineMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_MexiletineMeasurement: new Coding({
         code: "12319000",
         display: "Mexiletine measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ExploratoryLaparotomyWithBiopsy: Coding.FromStrict({
+    ObservationMethodsValueSet_ExploratoryLaparotomyWithBiopsy: new Coding({
         code: "12324002",
         display: "Exploratory laparotomy with biopsy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IsotopeStudyForGlomerularFiltrationRate: Coding.FromStrict({
+    ObservationMethodsValueSet_IsotopeStudyForGlomerularFiltrationRate: new Coding({
         code: "12341000",
         display: "Isotope study for glomerular filtration rate",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ColonoscopyWithRigidSigmoidoscopeThroughColotomy: Coding.FromStrict({
+    ObservationMethodsValueSet_ColonoscopyWithRigidSigmoidoscopeThroughColotomy: new Coding({
         code: "12350003",
         display: "Colonoscopy with rigid sigmoidoscope through colotomy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DiagnosticRadiographyStereotacticLocalizationInHead: Coding.FromStrict({
+    ObservationMethodsValueSet_DiagnosticRadiographyStereotacticLocalizationInHead: new Coding({
         code: "12356009",
         display: "Diagnostic radiography, stereotactic localization in head",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiologicExaminationOfRenalCystTranslumbarApproach: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiologicExaminationOfRenalCystTranslumbarApproach: new Coding({
         code: "12357000",
         display: "Radiologic examination of renal cyst, translumbar approach",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MicrobialIdentificationNeisseriaHemophilusIdentificationCardMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_MicrobialIdentificationNeisseriaHemophilusIdentificationCardMethod: new Coding({
         code: "12359002",
         display: "Microbial identification, Neisseria hemophilus identification card method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PatientStatusDetermination: Coding.FromStrict({
+    ObservationMethodsValueSet_PatientStatusDetermination: new Coding({
         code: "12386002",
         display: "Patient status determination",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MicrobialSubculture: Coding.FromStrict({
+    ObservationMethodsValueSet_MicrobialSubculture: new Coding({
         code: "12387006",
         display: "Microbial subculture",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Xeromammography: Coding.FromStrict({
+    ObservationMethodsValueSet_Xeromammography: new Coding({
         code: "12389009",
         display: "Xeromammography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GranulocyteMigrationInhibitorFactorAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_GranulocyteMigrationInhibitorFactorAssay: new Coding({
         code: "12429008",
         display: "Granulocyte migration inhibitor factor assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CalciumMeasurement24HStool: Coding.FromStrict({
+    ObservationMethodsValueSet_CalciumMeasurement24HStool: new Coding({
         code: "12455009",
         display: "Calcium measurement, 24H stool",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DiagnosticRadiographyOfHipBilateral: Coding.FromStrict({
+    ObservationMethodsValueSet_DiagnosticRadiographyOfHipBilateral: new Coding({
         code: "12513003",
         display: "Diagnostic radiography of hip, bilateral",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PhysicianDirectionOfEmergencyMedicalSystems: Coding.FromStrict({
+    ObservationMethodsValueSet_PhysicianDirectionOfEmergencyMedicalSystems: new Coding({
         code: "12586001",
         display: "Physician direction of emergency medical systems",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UrineZincLevel: Coding.FromStrict({
+    ObservationMethodsValueSet_UrineZincLevel: new Coding({
         code: "12652004",
         display: "Urine zinc level",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MeatInspectionForToxicology: Coding.FromStrict({
+    ObservationMethodsValueSet_MeatInspectionForToxicology: new Coding({
         code: "12700007",
         display: "Meat inspection for toxicology",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AntimonyMeasurementUrine: Coding.FromStrict({
+    ObservationMethodsValueSet_AntimonyMeasurementUrine: new Coding({
         code: "12712006",
         display: "Antimony measurement, urine",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CultureForViruses: Coding.FromStrict({
+    ObservationMethodsValueSet_CultureForViruses: new Coding({
         code: "12717000",
         display: "Culture for viruses",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BetaLactamaseAcidimetricSusceptibilityTest: Coding.FromStrict({
+    ObservationMethodsValueSet_BetaLactamaseAcidimetricSusceptibilityTest: new Coding({
         code: "12736005",
         display: "Beta lactamase, acidimetric susceptibility test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PerinealUrethroscopy: Coding.FromStrict({
+    ObservationMethodsValueSet_PerinealUrethroscopy: new Coding({
         code: "12744005",
         display: "Perineal urethroscopy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiologicGuidanceForPercutaneousPlacementOfEnteroclysisTube: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiologicGuidanceForPercutaneousPlacementOfEnteroclysisTube: new Coding({
         code: "12749000",
         display: "Radiologic guidance for percutaneous placement of enteroclysis tube",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IndirectLaryngoscopyWithRemovalOfLesion: Coding.FromStrict({
+    ObservationMethodsValueSet_IndirectLaryngoscopyWithRemovalOfLesion: new Coding({
         code: "12780005",
         display: "Indirect laryngoscopy with removal of lesion",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DXyloseBlood: Coding.FromStrict({
+    ObservationMethodsValueSet_DXyloseBlood: new Coding({
         code: "12787008",
         display: "D-xylose, blood",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CellMediatedLympholysisAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_CellMediatedLympholysisAssay: new Coding({
         code: "12810006",
         display: "Cell mediated lympholysis assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AutobacSeriesIISystemTest: Coding.FromStrict({
+    ObservationMethodsValueSet_AutobacSeriesIISystemTest: new Coding({
         code: "12836004",
         display: "Autobac series II system test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IncisionAndExplorationOfNeck: Coding.FromStrict({
+    ObservationMethodsValueSet_IncisionAndExplorationOfNeck: new Coding({
         code: "12838003",
         display: "Incision and exploration of neck",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SubsequentHospitalVisitByPhysician: Coding.FromStrict({
+    ObservationMethodsValueSet_SubsequentHospitalVisitByPhysician: new Coding({
         code: "12843005",
         display: "Subsequent hospital visit by physician",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MalariaSmear: Coding.FromStrict({
+    ObservationMethodsValueSet_MalariaSmear: new Coding({
         code: "12845003",
         display: "Malaria smear",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MicrobialCultureComplex: Coding.FromStrict({
+    ObservationMethodsValueSet_MicrobialCultureComplex: new Coding({
         code: "12889003",
         display: "Microbial culture, complex",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FunctionalAssessment: Coding.FromStrict({
+    ObservationMethodsValueSet_FunctionalAssessment: new Coding({
         code: "12894003",
         display: "Functional assessment",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RigidProctosigmoidoscopy: Coding.FromStrict({
+    ObservationMethodsValueSet_RigidProctosigmoidoscopy: new Coding({
         code: "13004001",
         display: "Rigid proctosigmoidoscopy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ElectronMicroscopyStudyExaminationAndReport: Coding.FromStrict({
+    ObservationMethodsValueSet_ElectronMicroscopyStudyExaminationAndReport: new Coding({
         code: "13021005",
         display: "Electron microscopy study, examination and report",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ElbowFlexionTest: Coding.FromStrict({
+    ObservationMethodsValueSet_ElbowFlexionTest: new Coding({
         code: "13042007",
         display: "Elbow flexion test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CholylglycineMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_CholylglycineMeasurement: new Coding({
         code: "13046005",
         display: "Cholylglycine measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CholesterylEstersMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_CholesterylEstersMeasurement: new Coding({
         code: "13067005",
         display: "Cholesteryl esters measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HepatitisAVirusAntibodyIgGType: Coding.FromStrict({
+    ObservationMethodsValueSet_HepatitisAVirusAntibodyIgGType: new Coding({
         code: "13070009",
         display: "Hepatitis A virus antibody, IgG type",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AntibodyIdentificationRBCAlbumin: Coding.FromStrict({
+    ObservationMethodsValueSet_AntibodyIdentificationRBCAlbumin: new Coding({
         code: "13072001",
         display: "Antibody identification, RBC, albumin",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CorporaCavernosography: Coding.FromStrict({
+    ObservationMethodsValueSet_CorporaCavernosography: new Coding({
         code: "13088001",
         display: "Corpora cavernosography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DirectLaryngoscopyWithInsertionOfObturator: Coding.FromStrict({
+    ObservationMethodsValueSet_DirectLaryngoscopyWithInsertionOfObturator: new Coding({
         code: "13142009",
         display: "Direct laryngoscopy with insertion of obturator",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CirculationTimeOneTest: Coding.FromStrict({
+    ObservationMethodsValueSet_CirculationTimeOneTest: new Coding({
         code: "13153003",
         display: "Circulation time, one test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MeasurementOfGlucose3HoursAfterGlucoseChallengeForGlucoseToleranceTest: Coding.FromStrict({
+    ObservationMethodsValueSet_MeasurementOfGlucose3HoursAfterGlucoseChallengeForGlucoseToleranceTest: new Coding({
         code: "13165004",
         display: "Measurement of glucose 3 hours after glucose challenge for glucose tolerance test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AngiocardiographyByCineradiography: Coding.FromStrict({
+    ObservationMethodsValueSet_AngiocardiographyByCineradiography: new Coding({
         code: "13167007",
         display: "Angiocardiography by cineradiography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TransvaginalUltrasoundScan: Coding.FromStrict({
+    ObservationMethodsValueSet_TransvaginalUltrasoundScan: new Coding({
         code: "13205008",
         display: "Transvaginal ultrasound scan",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AcetaldehydeMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_AcetaldehydeMeasurement: new Coding({
         code: "13227004",
         display: "Acetaldehyde measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DynamicFunctionStudyBloodClearance: Coding.FromStrict({
+    ObservationMethodsValueSet_DynamicFunctionStudyBloodClearance: new Coding({
         code: "13256004",
         display: "Dynamic function study, blood clearance",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GasLiquidChromatographyHallConductivityType: Coding.FromStrict({
+    ObservationMethodsValueSet_GasLiquidChromatographyHallConductivityType: new Coding({
         code: "13362007",
         display: "Gas liquid chromatography, Hall conductivity type",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HemolysinDetectionColdQuantitative: Coding.FromStrict({
+    ObservationMethodsValueSet_HemolysinDetectionColdQuantitative: new Coding({
         code: "13374006",
         display: "Hemolysin detection, cold, quantitative",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ThyroidUptakeWithDischarge: Coding.FromStrict({
+    ObservationMethodsValueSet_ThyroidUptakeWithDischarge: new Coding({
         code: "13378009",
         display: "Thyroid uptake with discharge",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MediateAuscultation: Coding.FromStrict({
+    ObservationMethodsValueSet_MediateAuscultation: new Coding({
         code: "13385008",
         display: "Mediate auscultation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PlasmaClotLysisTime: Coding.FromStrict({
+    ObservationMethodsValueSet_PlasmaClotLysisTime: new Coding({
         code: "13405005",
         display: "Plasma clot lysis time",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_OberQuoteSTest: Coding.FromStrict({
+    ObservationMethodsValueSet_OberQuoteSTest: new Coding({
         code: "13416003",
         display: "Ober's test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AlphaGlobulinGeneAnalysisBlood: Coding.FromStrict({
+    ObservationMethodsValueSet_AlphaGlobulinGeneAnalysisBlood: new Coding({
         code: "13437006",
         display: "Alpha globulin gene analysis, blood",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MammaryDuctogramOfMultipleDucts: Coding.FromStrict({
+    ObservationMethodsValueSet_MammaryDuctogramOfMultipleDucts: new Coding({
         code: "13450007",
         display: "Mammary ductogram of multiple ducts",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ElectrocardiogramIntracardiacHisBundleRecording: Coding.FromStrict({
+    ObservationMethodsValueSet_ElectrocardiogramIntracardiacHisBundleRecording: new Coding({
         code: "13478008",
         display: "Electrocardiogram, intracardiac, His bundle recording",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ComputerizedTomographyWithoutIVContrastFollowedByIVContrastAndMoreSections: Coding.FromStrict({
+    ObservationMethodsValueSet_ComputerizedTomographyWithoutIVContrastFollowedByIVContrastAndMoreSections: new Coding({
         code: "13518004",
         display: "Computerized tomography without IV contrast followed by IV contrast and more sections",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DiagnosticRadiographyCombinedAPAndLateral: Coding.FromStrict({
+    ObservationMethodsValueSet_DiagnosticRadiographyCombinedAPAndLateral: new Coding({
         code: "13578005",
         display: "Diagnostic radiography, combined AP and lateral",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GasLiquidChromatographyMassAnalyzerType: Coding.FromStrict({
+    ObservationMethodsValueSet_GasLiquidChromatographyMassAnalyzerType: new Coding({
         code: "13587001",
         display: "Gas liquid chromatography, mass analyzer type",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ManualExaminationOfBreast: Coding.FromStrict({
+    ObservationMethodsValueSet_ManualExaminationOfBreast: new Coding({
         code: "13607009",
         display: "Manual examination of breast",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LidocaineMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_LidocaineMeasurement: new Coding({
         code: "13661007",
         display: "Lidocaine measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ArthroscopicProcedure: Coding.FromStrict({
+    ObservationMethodsValueSet_ArthroscopicProcedure: new Coding({
         code: "13714004",
         display: "Arthroscopic procedure",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GastricAnalysis: Coding.FromStrict({
+    ObservationMethodsValueSet_GastricAnalysis: new Coding({
         code: "13728005",
         display: "Gastric analysis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DermographiaTest: Coding.FromStrict({
+    ObservationMethodsValueSet_DermographiaTest: new Coding({
         code: "13745000",
         display: "Dermographia test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PunctureTest: Coding.FromStrict({
+    ObservationMethodsValueSet_PunctureTest: new Coding({
         code: "13801008",
         display: "Puncture test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_InbornErrorsOfMetabolismScreen: Coding.FromStrict({
+    ObservationMethodsValueSet_InbornErrorsOfMetabolismScreen: new Coding({
         code: "13837003",
         display: "Inborn errors of metabolism screen",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GastrointestinalAspirateForLocalizationOfBloodLoss: Coding.FromStrict({
+    ObservationMethodsValueSet_GastrointestinalAspirateForLocalizationOfBloodLoss: new Coding({
         code: "13845008",
         display: "Gastrointestinal aspirate for localization of blood loss",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TransabdominalGastroscopy: Coding.FromStrict({
+    ObservationMethodsValueSet_TransabdominalGastroscopy: new Coding({
         code: "13852005",
         display: "Transabdominal gastroscopy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ProgesteroneReceptorAssayMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_ProgesteroneReceptorAssayMeasurement: new Coding({
         code: "13892007",
         display: "Progesterone receptor assay measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FluorescentTreponemalAbsorptionTestDoubleStainingTest: Coding.FromStrict({
+    ObservationMethodsValueSet_FluorescentTreponemalAbsorptionTestDoubleStainingTest: new Coding({
         code: "13949001",
         display: "Fluorescent treponemal absorption test, double staining test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UrineConcentrationTest: Coding.FromStrict({
+    ObservationMethodsValueSet_UrineConcentrationTest: new Coding({
         code: "13956007",
         display: "Urine concentration test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IncisionAndExplorationOfNipple: Coding.FromStrict({
+    ObservationMethodsValueSet_IncisionAndExplorationOfNipple: new Coding({
         code: "13966004",
         display: "Incision and exploration of nipple",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RedBloodCellCount: Coding.FromStrict({
+    ObservationMethodsValueSet_RedBloodCellCount: new Coding({
         code: "14089001",
         display: "Red blood cell count",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HistoryAndPhysicalExaminationFollowUpForEmotionalOrMentalDisease: Coding.FromStrict({
+    ObservationMethodsValueSet_HistoryAndPhysicalExaminationFollowUpForEmotionalOrMentalDisease: new Coding({
         code: "14129001",
         display: "History and physical examination, follow-up for emotional or mental disease",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CTGuidanceForNeedleBiopsy: Coding.FromStrict({
+    ObservationMethodsValueSet_CTGuidanceForNeedleBiopsy: new Coding({
         code: "14211004",
         display: "CT guidance for needle biopsy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SickleCellIdentification: Coding.FromStrict({
+    ObservationMethodsValueSet_SickleCellIdentification: new Coding({
         code: "14227006",
         display: "Sickle cell identification",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_QuantitativeMicrobialCulturePadCultureMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_QuantitativeMicrobialCulturePadCultureMethod: new Coding({
         code: "14233002",
         display: "Quantitative microbial culture, pad culture method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BoronateAffinityChromatographyMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_BoronateAffinityChromatographyMeasurement: new Coding({
         code: "14275001",
         display: "Boronate affinity chromatography measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Vasography: Coding.FromStrict({
+    ObservationMethodsValueSet_Vasography: new Coding({
         code: "14305004",
         display: "Vasography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MembraneStabilityTest: Coding.FromStrict({
+    ObservationMethodsValueSet_MembraneStabilityTest: new Coding({
         code: "14348005",
         display: "Membrane stability test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WedgePressureDetermination: Coding.FromStrict({
+    ObservationMethodsValueSet_WedgePressureDetermination: new Coding({
         code: "14393002",
         display: "Wedge pressure determination",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EndoscopicDestructionOfLesionOfPeritoneum: Coding.FromStrict({
+    ObservationMethodsValueSet_EndoscopicDestructionOfLesionOfPeritoneum: new Coding({
         code: "14412009",
         display: "Endoscopic destruction of lesion of peritoneum",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SerologicTestForHerpesVirus: Coding.FromStrict({
+    ObservationMethodsValueSet_SerologicTestForHerpesVirus: new Coding({
         code: "14421005",
         display: "Serologic test for herpes virus",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ElectrocardiogramSingleLead: Coding.FromStrict({
+    ObservationMethodsValueSet_ElectrocardiogramSingleLead: new Coding({
         code: "14431003",
         display: "Electrocardiogram, single lead",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HeadDistractionTest: Coding.FromStrict({
+    ObservationMethodsValueSet_HeadDistractionTest: new Coding({
         code: "14452006",
         display: "Head distraction test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MeasuringHeightOfPatient: Coding.FromStrict({
+    ObservationMethodsValueSet_MeasuringHeightOfPatient: new Coding({
         code: "14456009",
         display: "Measuring height of patient",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SerologicTestForFungus: Coding.FromStrict({
+    ObservationMethodsValueSet_SerologicTestForFungus: new Coding({
         code: "14471008",
         display: "Serologic test for Fungus",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ArthroscopyOfAnkleWithRemovalOfForeignBody: Coding.FromStrict({
+    ObservationMethodsValueSet_ArthroscopyOfAnkleWithRemovalOfForeignBody: new Coding({
         code: "14513002",
         display: "Arthroscopy of ankle with removal of foreign body",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EndoscopyOfPelvicCavity: Coding.FromStrict({
+    ObservationMethodsValueSet_EndoscopyOfPelvicCavity: new Coding({
         code: "14563007",
         display: "Endoscopy of pelvic cavity",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EndoscopyOfEpididymis: Coding.FromStrict({
+    ObservationMethodsValueSet_EndoscopyOfEpididymis: new Coding({
         code: "14573009",
         display: "Endoscopy of epididymis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HexosaminidaseAAndTotalHexosaminidaseMeasurementAmnioticFluidCells: Coding.FromStrict({
+    ObservationMethodsValueSet_HexosaminidaseAAndTotalHexosaminidaseMeasurementAmnioticFluidCells: new Coding({
         code: "14577005",
         display: "Hexosaminidase A and total hexosaminidase measurement, amniotic fluid cells",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VitaminB12Measurement: Coding.FromStrict({
+    ObservationMethodsValueSet_VitaminB12Measurement: new Coding({
         code: "14598005",
         display: "Vitamin B12 measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ApneaMonitorSurveillance: Coding.FromStrict({
+    ObservationMethodsValueSet_ApneaMonitorSurveillance: new Coding({
         code: "14603002",
         display: "Apnea monitor surveillance",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ImmunoassayForDetectionOfAntibodyToInfectiousAgentPairedSample: Coding.FromStrict({
+    ObservationMethodsValueSet_ImmunoassayForDetectionOfAntibodyToInfectiousAgentPairedSample: new Coding({
         code: "14612000",
         display: "Immunoassay for detection of antibody to infectious agent, paired sample",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ChlorideMeasurementUrine: Coding.FromStrict({
+    ObservationMethodsValueSet_ChlorideMeasurementUrine: new Coding({
         code: "14663000",
         display: "Chloride measurement, urine",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Thoracoscopy: Coding.FromStrict({
+    ObservationMethodsValueSet_Thoracoscopy: new Coding({
         code: "14671001",
         display: "Thoracoscopy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PatientEvaluationAndManagement: Coding.FromStrict({
+    ObservationMethodsValueSet_PatientEvaluationAndManagement: new Coding({
         code: "14736009",
         display: "Patient evaluation and management",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TriglyceridesMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_TriglyceridesMeasurement: new Coding({
         code: "14740000",
         display: "Triglycerides measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PeripheralBloodSmearInterpretation: Coding.FromStrict({
+    ObservationMethodsValueSet_PeripheralBloodSmearInterpretation: new Coding({
         code: "14768001",
         display: "Peripheral blood smear interpretation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TiltTableTest: Coding.FromStrict({
+    ObservationMethodsValueSet_TiltTableTest: new Coding({
         code: "14769009",
         display: "Tilt table test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AntimicrobialSusceptibilityTest: Coding.FromStrict({
+    ObservationMethodsValueSet_AntimicrobialSusceptibilityTest: new Coding({
         code: "14788002",
         display: "Antimicrobial susceptibility test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CystourethroscopyWithInsertionOfRadioactiveSubstance: Coding.FromStrict({
+    ObservationMethodsValueSet_CystourethroscopyWithInsertionOfRadioactiveSubstance: new Coding({
         code: "14826006",
         display: "Cystourethroscopy with insertion of radioactive substance",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ElectrolytesMeasurementUrine: Coding.FromStrict({
+    ObservationMethodsValueSet_ElectrolytesMeasurementUrine: new Coding({
         code: "14830009",
         display: "Electrolytes measurement, urine",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EndoscopyOfThyroid: Coding.FromStrict({
+    ObservationMethodsValueSet_EndoscopyOfThyroid: new Coding({
         code: "14864008",
         display: "Endoscopy of thyroid",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ProvocativeIntraocularPressureTest: Coding.FromStrict({
+    ObservationMethodsValueSet_ProvocativeIntraocularPressureTest: new Coding({
         code: "14881004",
         display: "Provocative intraocular pressure test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AutoagglutinationTest: Coding.FromStrict({
+    ObservationMethodsValueSet_AutoagglutinationTest: new Coding({
         code: "14902005",
         display: "Autoagglutination test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UrineBenceJonesQuoteProteinLevel: Coding.FromStrict({
+    ObservationMethodsValueSet_UrineBenceJonesQuoteProteinLevel: new Coding({
         code: "14932002",
         display: "Urine: Bence Jones' protein level",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MaximumBreathingCapacityMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_MaximumBreathingCapacityMeasurement: new Coding({
         code: "15022001",
         display: "Maximum breathing capacity measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RangeOfMotionMeasurementsAndReportForHand: Coding.FromStrict({
+    ObservationMethodsValueSet_RangeOfMotionMeasurementsAndReportForHand: new Coding({
         code: "15057003",
         display: "Range of motion measurements and report for hand",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HIV1DotBlotImmunobindingAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_HIV1DotBlotImmunobindingAssay: new Coding({
         code: "15175004",
         display: "HIV-1 dot blot immunobinding assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LaboratoryTest: Coding.FromStrict({
+    ObservationMethodsValueSet_LaboratoryTest: new Coding({
         code: "15220000",
         display: "Laboratory test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FetalEchocardiographyRealTimeWithImageDocumentation2DWithMModeRecording: Coding.FromStrict({
+    ObservationMethodsValueSet_FetalEchocardiographyRealTimeWithImageDocumentation2DWithMModeRecording: new Coding({
         code: "15282006",
         display: "Fetal echocardiography, real time with image documentation (2D) with M-mode recording",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LeftVentricularRecording: Coding.FromStrict({
+    ObservationMethodsValueSet_LeftVentricularRecording: new Coding({
         code: "15291005",
         display: "Left ventricular recording",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiocalciumAbsorptionStudy: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiocalciumAbsorptionStudy: new Coding({
         code: "15351005",
         display: "Radiocalcium absorption study",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FactorVIIIRRCoAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_FactorVIIIRRCoAssay: new Coding({
         code: "15356000",
         display: "Factor VIII R: R Co assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ScanningOrImagingPerfusionStudyParticulate: Coding.FromStrict({
+    ObservationMethodsValueSet_ScanningOrImagingPerfusionStudyParticulate: new Coding({
         code: "15364006",
         display: "Scanning or imaging, perfusion study, particulate",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_InfantDevelopmentScreening: Coding.FromStrict({
+    ObservationMethodsValueSet_InfantDevelopmentScreening: new Coding({
         code: "15376006",
         display: "Infant development screening",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GranulocyteMigrationFactorAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_GranulocyteMigrationFactorAssay: new Coding({
         code: "15380001",
         display: "Granulocyte migration factor assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_NAcetylglucosaminidaseAAndBMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_NAcetylglucosaminidaseAAndBMeasurement: new Coding({
         code: "15403001",
         display: "N-acetylglucosaminidase A & B measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_InhalationBronchialChallengeTesting: Coding.FromStrict({
+    ObservationMethodsValueSet_InhalationBronchialChallengeTesting: new Coding({
         code: "15435001",
         display: "Inhalation bronchial challenge testing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ParaldehydeMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_ParaldehydeMeasurement: new Coding({
         code: "15460001",
         display: "Paraldehyde measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IschemicForearmExerciseTest: Coding.FromStrict({
+    ObservationMethodsValueSet_IschemicForearmExerciseTest: new Coding({
         code: "15613003",
         display: "Ischemic forearm exercise test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_StimulationTest: Coding.FromStrict({
+    ObservationMethodsValueSet_StimulationTest: new Coding({
         code: "15695009",
         display: "Stimulation test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FineNeedleAspirateWithRoutineInterpretationAndReport: Coding.FromStrict({
+    ObservationMethodsValueSet_FineNeedleAspirateWithRoutineInterpretationAndReport: new Coding({
         code: "15719007",
         display: "Fine needle aspirate with routine interpretation and report",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CerebralVentriculographyAirContrast: Coding.FromStrict({
+    ObservationMethodsValueSet_CerebralVentriculographyAirContrast: new Coding({
         code: "15749009",
         display: "Cerebral ventriculography, air contrast",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SerialographySinglePlane: Coding.FromStrict({
+    ObservationMethodsValueSet_SerialographySinglePlane: new Coding({
         code: "15757007",
         display: "Serialography, single plane",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MaxillarySinusEndoscopyWithRemovalOfMucousMembraneAndPolyps: Coding.FromStrict({
+    ObservationMethodsValueSet_MaxillarySinusEndoscopyWithRemovalOfMucousMembraneAndPolyps: new Coding({
         code: "15774007",
         display: "Maxillary sinus endoscopy with removal of mucous membrane and polyps",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_NeoplasmScreening: Coding.FromStrict({
+    ObservationMethodsValueSet_NeoplasmScreening: new Coding({
         code: "15886004",
         display: "Neoplasm screening",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PassiveAgglutinationTest: Coding.FromStrict({
+    ObservationMethodsValueSet_PassiveAgglutinationTest: new Coding({
         code: "15921006",
         display: "Passive agglutination test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EndoscopyOfHeart: Coding.FromStrict({
+    ObservationMethodsValueSet_EndoscopyOfHeart: new Coding({
         code: "15979006",
         display: "Endoscopy of heart",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LaryngealFunctionStudies: Coding.FromStrict({
+    ObservationMethodsValueSet_LaryngealFunctionStudies: new Coding({
         code: "16020002",
         display: "Laryngeal function studies",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EsophagoscopyThroughArtificialStoma: Coding.FromStrict({
+    ObservationMethodsValueSet_EsophagoscopyThroughArtificialStoma: new Coding({
         code: "16029001",
         display: "Esophagoscopy through artificial stoma",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_NorthernBlotAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_NorthernBlotAssay: new Coding({
         code: "16099009",
         display: "Northern blot assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BleedingTimeIvy: Coding.FromStrict({
+    ObservationMethodsValueSet_BleedingTimeIvy: new Coding({
         code: "16132001",
         display: "Bleeding time, Ivy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MicrobialIdentificationAndSusceptibilityTest: Coding.FromStrict({
+    ObservationMethodsValueSet_MicrobialIdentificationAndSusceptibilityTest: new Coding({
         code: "16151007",
         display: "Microbial identification and susceptibility test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_NorepinephrineMeasurementStanding: Coding.FromStrict({
+    ObservationMethodsValueSet_NorepinephrineMeasurementStanding: new Coding({
         code: "16152000",
         display: "Norepinephrine measurement, standing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AngiographyOfRenalArteriesBilateral: Coding.FromStrict({
+    ObservationMethodsValueSet_AngiographyOfRenalArteriesBilateral: new Coding({
         code: "16245009",
         display: "Angiography of renal arteries, bilateral",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LipidPanel: Coding.FromStrict({
+    ObservationMethodsValueSet_LipidPanel: new Coding({
         code: "16254007",
         display: "Lipid panel",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiologicSupervisionAndInterpretationOfProcedure: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiologicSupervisionAndInterpretationOfProcedure: new Coding({
         code: "16278002",
         display: "Radiologic supervision and interpretation of procedure",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RateMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_RateMeasurement: new Coding({
         code: "16298007",
         display: "Rate measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_OcularPhotographyForMedicalEvaluationAndDocumentationSlitLampPhotography: Coding.FromStrict({
+    ObservationMethodsValueSet_OcularPhotographyForMedicalEvaluationAndDocumentationSlitLampPhotography: new Coding({
         code: "16306001",
         display: "Ocular photography for medical evaluation and documentation, slit lamp photography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BetaGalactosidaseMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_BetaGalactosidaseMeasurement: new Coding({
         code: "16308000",
         display: "Beta-galactosidase measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Ultrasonography: Coding.FromStrict({
+    ObservationMethodsValueSet_Ultrasonography: new Coding({
         code: "16310003",
         display: "Ultrasonography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MicrobialSmearExamination: Coding.FromStrict({
+    ObservationMethodsValueSet_MicrobialSmearExamination: new Coding({
         code: "16314007",
         display: "Microbial smear examination",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AutopsyGrossAndMicroscopicExaminationStillbornOrNewborn: Coding.FromStrict({
+    ObservationMethodsValueSet_AutopsyGrossAndMicroscopicExaminationStillbornOrNewborn: new Coding({
         code: "16361008",
         display: "Autopsy, gross and microscopic examination, stillborn or newborn",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CystineMeasurementQuantitative: Coding.FromStrict({
+    ObservationMethodsValueSet_CystineMeasurementQuantitative: new Coding({
         code: "16391003",
         display: "Cystine measurement, quantitative",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HeterophileAntibodyMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_HeterophileAntibodyMeasurement: new Coding({
         code: "16400008",
         display: "Heterophile antibody measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_C1qPrecipitationTest: Coding.FromStrict({
+    ObservationMethodsValueSet_C1qPrecipitationTest: new Coding({
         code: "16413002",
         display: "C1q precipitation test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LeukocyteMigrationInhibitorFactorAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_LeukocyteMigrationInhibitorFactorAssay: new Coding({
         code: "16450001",
         display: "Leukocyte migration inhibitor factor assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PlateletAggregationWithADPTest: Coding.FromStrict({
+    ObservationMethodsValueSet_PlateletAggregationWithADPTest: new Coding({
         code: "16493001",
         display: "Platelet aggregation with ADP test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SilicaMeasurementTissue: Coding.FromStrict({
+    ObservationMethodsValueSet_SilicaMeasurementTissue: new Coding({
         code: "16533001",
         display: "Silica measurement, tissue",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ButalbitalMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_ButalbitalMeasurement: new Coding({
         code: "16572002",
         display: "Butalbital measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EndoscopyOfLung: Coding.FromStrict({
+    ObservationMethodsValueSet_EndoscopyOfLung: new Coding({
         code: "16608009",
         display: "Endoscopy of lung",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CreatineKinaseIsoenzymeLevel: Coding.FromStrict({
+    ObservationMethodsValueSet_CreatineKinaseIsoenzymeLevel: new Coding({
         code: "16614002",
         display: "Creatine kinase isoenzyme level",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_KidneyStoneAnalysis: Coding.FromStrict({
+    ObservationMethodsValueSet_KidneyStoneAnalysis: new Coding({
         code: "16620001",
         display: "Kidney stone analysis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HexosaminidaseAAndTotalHexosaminidaseMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_HexosaminidaseAAndTotalHexosaminidaseMeasurement: new Coding({
         code: "16669004",
         display: "Hexosaminidase A and total hexosaminidase measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ProthrombinConsumptionTime: Coding.FromStrict({
+    ObservationMethodsValueSet_ProthrombinConsumptionTime: new Coding({
         code: "16690007",
         display: "Prothrombin consumption time",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CGreaterThan1LessThanComplementAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_CGreaterThan1LessThanComplementAssay: new Coding({
         code: "16692004",
         display: "C>1< complement assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IndirectAntiglobulinTest: Coding.FromStrict({
+    ObservationMethodsValueSet_IndirectAntiglobulinTest: new Coding({
         code: "16742006",
         display: "Indirect antiglobulin test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PercutaneousTranshepaticCholangiogram: Coding.FromStrict({
+    ObservationMethodsValueSet_PercutaneousTranshepaticCholangiogram: new Coding({
         code: "16747000",
         display: "Percutaneous transhepatic cholangiogram",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SkinTestAnergyTesting: Coding.FromStrict({
+    ObservationMethodsValueSet_SkinTestAnergyTesting: new Coding({
         code: "16771007",
         display: "Skin test, anergy testing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EikonometricExaminationIncludingPrescribingLenses: Coding.FromStrict({
+    ObservationMethodsValueSet_EikonometricExaminationIncludingPrescribingLenses: new Coding({
         code: "16775003",
         display: "Eikonometric examination including prescribing lenses",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VisualAcuityTesting: Coding.FromStrict({
+    ObservationMethodsValueSet_VisualAcuityTesting: new Coding({
         code: "16830007",
         display: "Visual acuity testing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VestibularFunctionTestWithObservationAndEvaluationByPhysician: Coding.FromStrict({
+    ObservationMethodsValueSet_VestibularFunctionTestWithObservationAndEvaluationByPhysician: new Coding({
         code: "16860002",
         display: "Vestibular function test with observation and evaluation by physician",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_InsulinLevel: Coding.FromStrict({
+    ObservationMethodsValueSet_InsulinLevel: new Coding({
         code: "16890009",
         display: "Insulin level",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LinoleateMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_LinoleateMeasurement: new Coding({
         code: "16908007",
         display: "Linoleate measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_OralContrastCholecystography: Coding.FromStrict({
+    ObservationMethodsValueSet_OralContrastCholecystography: new Coding({
         code: "16910009",
         display: "Oral contrast cholecystography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CompatibilityTestCrossmatchScreeningForCompatibleUnitSalineAndOrHighProtein: Coding.FromStrict({
+    ObservationMethodsValueSet_CompatibilityTestCrossmatchScreeningForCompatibleUnitSalineAndOrHighProtein: new Coding({
         code: "16939009",
         display: "Compatibility test, crossmatch, screening for compatible unit, saline and/or high protein",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ProbingOfLacrimalCanaliculiWithIrrigation: Coding.FromStrict({
+    ObservationMethodsValueSet_ProbingOfLacrimalCanaliculiWithIrrigation: new Coding({
         code: "16942003",
         display: "Probing of lacrimal canaliculi with irrigation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ImmunoglobulinGSubclassG4Measurement: Coding.FromStrict({
+    ObservationMethodsValueSet_ImmunoglobulinGSubclassG4Measurement: new Coding({
         code: "16948004",
         display: "Immunoglobulin G subclass, G4 measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AminoAcidScreen: Coding.FromStrict({
+    ObservationMethodsValueSet_AminoAcidScreen: new Coding({
         code: "16960003",
         display: "Amino acid screen",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadionuclideTissueClearanceStudy: Coding.FromStrict({
+    ObservationMethodsValueSet_RadionuclideTissueClearanceStudy: new Coding({
         code: "17026004",
         display: "Radionuclide tissue clearance study",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HepatitisEAntibodyMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_HepatitisEAntibodyMeasurement: new Coding({
         code: "17092007",
         display: "Hepatitis E antibody measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SkeletalMuscleFunctionStudy: Coding.FromStrict({
+    ObservationMethodsValueSet_SkeletalMuscleFunctionStudy: new Coding({
         code: "17103008",
         display: "Skeletal muscle function study",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_T3TriiodothyronineUptake: Coding.FromStrict({
+    ObservationMethodsValueSet_T3TriiodothyronineUptake: new Coding({
         code: "17130003",
         display: "T3 - Triiodothyronine uptake",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_NIBPNonInvasiveBloodPressureMonitoring: Coding.FromStrict({
+    ObservationMethodsValueSet_NIBPNonInvasiveBloodPressureMonitoring: new Coding({
         code: "17146006",
         display: "NIBP - Non-invasive blood pressure monitoring",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ThyroglobulinAntibodyMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_ThyroglobulinAntibodyMeasurement: new Coding({
         code: "17164004",
         display: "Thyroglobulin antibody measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CarnitineMeasurementSerum: Coding.FromStrict({
+    ObservationMethodsValueSet_CarnitineMeasurementSerum: new Coding({
         code: "17188002",
         display: "Carnitine measurement, serum",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_OcularMotilityStudy: Coding.FromStrict({
+    ObservationMethodsValueSet_OcularMotilityStudy: new Coding({
         code: "17259005",
         display: "Ocular motility study",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MercuryLevel: Coding.FromStrict({
+    ObservationMethodsValueSet_MercuryLevel: new Coding({
         code: "17297005",
         display: "Mercury level",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MicrobialGrowthRateSlow: Coding.FromStrict({
+    ObservationMethodsValueSet_MicrobialGrowthRateSlow: new Coding({
         code: "17353009",
         display: "Microbial growth rate, slow",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_QueckenstedtTest: Coding.FromStrict({
+    ObservationMethodsValueSet_QueckenstedtTest: new Coding({
         code: "17374005",
         display: "Queckenstedt test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UltrasonicGuidanceForRenalPelvisAspiration: Coding.FromStrict({
+    ObservationMethodsValueSet_UltrasonicGuidanceForRenalPelvisAspiration: new Coding({
         code: "17375006",
         display: "Ultrasonic guidance for renal pelvis aspiration",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IntracarotidAmobarbitalTest: Coding.FromStrict({
+    ObservationMethodsValueSet_IntracarotidAmobarbitalTest: new Coding({
         code: "17424007",
         display: "Intracarotid amobarbital test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ParaaminohippurateMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_ParaaminohippurateMeasurement: new Coding({
         code: "17508008",
         display: "Paraaminohippurate measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadioimmunoprecipitationAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_RadioimmunoprecipitationAssay: new Coding({
         code: "17515000",
         display: "Radioimmunoprecipitation assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HistoryAndPhysicalExaminationKnownOrSuspectedCarrier: Coding.FromStrict({
+    ObservationMethodsValueSet_HistoryAndPhysicalExaminationKnownOrSuspectedCarrier: new Coding({
         code: "17612009",
         display: "History and physical examination, known or suspected carrier",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SplenoportographyPositiveContrast: Coding.FromStrict({
+    ObservationMethodsValueSet_SplenoportographyPositiveContrast: new Coding({
         code: "17624002",
         display: "Splenoportography, positive contrast",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SerologicTestForRickettsiaRickettsii: Coding.FromStrict({
+    ObservationMethodsValueSet_SerologicTestForRickettsiaRickettsii: new Coding({
         code: "17652006",
         display: "Serologic test for Rickettsia rickettsii",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LymphocyteTransformationPhytohemagglutination: Coding.FromStrict({
+    ObservationMethodsValueSet_LymphocyteTransformationPhytohemagglutination: new Coding({
         code: "17705008",
         display: "Lymphocyte transformation, phytohemagglutination",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DiagnosticRadiographyCombinedPosteroanteriorAndLateral: Coding.FromStrict({
+    ObservationMethodsValueSet_DiagnosticRadiographyCombinedPosteroanteriorAndLateral: new Coding({
         code: "17711006",
         display: "Diagnostic radiography, combined posteroanterior and lateral",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ContinuousWaveDopplerAnalogWaveFormAnalysisOfUpperExtremityArteries: Coding.FromStrict({
+    ObservationMethodsValueSet_ContinuousWaveDopplerAnalogWaveFormAnalysisOfUpperExtremityArteries: new Coding({
         code: "17724006",
         display: "Continuous wave Doppler analog wave form analysis of upper extremity arteries",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiographyOfMaleGenitalOrgans: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiographyOfMaleGenitalOrgans: new Coding({
         code: "17745004",
         display: "Radiography of male genital organs",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ArthrographyOfElbow: Coding.FromStrict({
+    ObservationMethodsValueSet_ArthrographyOfElbow: new Coding({
         code: "17776005",
         display: "Arthrography of elbow",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DifferentialSolubilityMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_DifferentialSolubilityMeasurement: new Coding({
         code: "17814008",
         display: "Differential solubility measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BoricAcidMeasurementBlood: Coding.FromStrict({
+    ObservationMethodsValueSet_BoricAcidMeasurementBlood: new Coding({
         code: "17823006",
         display: "Boric acid measurement, blood",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FreeFattyAcidsMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_FreeFattyAcidsMeasurement: new Coding({
         code: "17831001",
         display: "Free fatty acids measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DirectLaryngoscopyWithArytenoidectomy: Coding.FromStrict({
+    ObservationMethodsValueSet_DirectLaryngoscopyWithArytenoidectomy: new Coding({
         code: "17882003",
         display: "Direct laryngoscopy with arytenoidectomy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HDLMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_HDLMeasurement: new Coding({
         code: "17888004",
         display: "HDL measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IncisionAndExplorationOfUrethra: Coding.FromStrict({
+    ObservationMethodsValueSet_IncisionAndExplorationOfUrethra: new Coding({
         code: "17923005",
         display: "Incision and exploration of urethra",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TCellAntigenDetection: Coding.FromStrict({
+    ObservationMethodsValueSet_TCellAntigenDetection: new Coding({
         code: "17969005",
         display: "T-cell antigen detection",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AcuteGastrointestinalBloodLossImaging: Coding.FromStrict({
+    ObservationMethodsValueSet_AcuteGastrointestinalBloodLossImaging: new Coding({
         code: "17984001",
         display: "Acute gastrointestinal blood loss imaging",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MuscleTestingWithTorqueCurvesDuringIsometricAndIsokineticExercise: Coding.FromStrict({
+    ObservationMethodsValueSet_MuscleTestingWithTorqueCurvesDuringIsometricAndIsokineticExercise: new Coding({
         code: "18000007",
         display: "Muscle-testing with torque curves during isometric and isokinetic exercise",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IntrinsicPlusTest: Coding.FromStrict({
+    ObservationMethodsValueSet_IntrinsicPlusTest: new Coding({
         code: "18005002",
         display: "Intrinsic-plus test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HeavyMetalScreenOnBlood: Coding.FromStrict({
+    ObservationMethodsValueSet_HeavyMetalScreenOnBlood: new Coding({
         code: "18019002",
         display: "Heavy metal screen on blood",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EndoscopyOfTrachea: Coding.FromStrict({
+    ObservationMethodsValueSet_EndoscopyOfTrachea: new Coding({
         code: "18044005",
         display: "Endoscopy of trachea",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BronchoscopyWithDestructionOfTumorByLaserSurgery: Coding.FromStrict({
+    ObservationMethodsValueSet_BronchoscopyWithDestructionOfTumorByLaserSurgery: new Coding({
         code: "18049000",
         display: "Bronchoscopy with destruction of tumor by laser surgery",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ElectronystagmographyWithVerticalElectrodes: Coding.FromStrict({
+    ObservationMethodsValueSet_ElectronystagmographyWithVerticalElectrodes: new Coding({
         code: "18091003",
         display: "Electronystagmography with vertical electrodes",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MammaryDuctogram: Coding.FromStrict({
+    ObservationMethodsValueSet_MammaryDuctogram: new Coding({
         code: "18102001",
         display: "Mammary ductogram",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PrenatalExaminationAndCareOfMother: Coding.FromStrict({
+    ObservationMethodsValueSet_PrenatalExaminationAndCareOfMother: new Coding({
         code: "18114009",
         display: "Prenatal examination and care of mother",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LatexAgglutinationInhibitionAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_LatexAgglutinationInhibitionAssay: new Coding({
         code: "18123007",
         display: "Latex agglutination inhibition assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EvaluationForHearingAidAndTesting: Coding.FromStrict({
+    ObservationMethodsValueSet_EvaluationForHearingAidAndTesting: new Coding({
         code: "18178001",
         display: "Evaluation for hearing aid and testing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_OphthalmoscopyUnderGeneralAnesthesia: Coding.FromStrict({
+    ObservationMethodsValueSet_OphthalmoscopyUnderGeneralAnesthesia: new Coding({
         code: "18188000",
         display: "Ophthalmoscopy under general anesthesia",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UreaNitrogenCreatinineRatioSerum: Coding.FromStrict({
+    ObservationMethodsValueSet_UreaNitrogenCreatinineRatioSerum: new Coding({
         code: "18207002",
         display: "Urea nitrogen/creatinine ratio, serum",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PhospholipidMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_PhospholipidMeasurement: new Coding({
         code: "18284006",
         display: "Phospholipid measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_YeastIdentificationGermTubeTest: Coding.FromStrict({
+    ObservationMethodsValueSet_YeastIdentificationGermTubeTest: new Coding({
         code: "18304007",
         display: "Yeast identification, germ tube test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RedBloodCellAntibodyDetectionColdWithTitration: Coding.FromStrict({
+    ObservationMethodsValueSet_RedBloodCellAntibodyDetectionColdWithTitration: new Coding({
         code: "18360001",
         display: "Red blood cell antibody detection, cold with titration",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiologicExaminationOfUpperGastrointestinalTractWithKidneyUreterBladder: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiologicExaminationOfUpperGastrointestinalTractWithKidneyUreterBladder: new Coding({
         code: "18370004",
         display: "Radiologic examination of upper gastrointestinal tract with kidney-ureter-bladder",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CultureOfSemenForBrucella: Coding.FromStrict({
+    ObservationMethodsValueSet_CultureOfSemenForBrucella: new Coding({
         code: "18408009",
         display: "Culture of semen for Brucella",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HepatitisCVirusRecombinantImmunoblotMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_HepatitisCVirusRecombinantImmunoblotMeasurement: new Coding({
         code: "18418004",
         display: "Hepatitis C virus recombinant immunoblot measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TesticularImagingWithVascularFlow: Coding.FromStrict({
+    ObservationMethodsValueSet_TesticularImagingWithVascularFlow: new Coding({
         code: "18479002",
         display: "Testicular imaging with vascular flow",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ElectronMicroscopyTechniqueStainingThinSection: Coding.FromStrict({
+    ObservationMethodsValueSet_ElectronMicroscopyTechniqueStainingThinSection: new Coding({
         code: "18481000",
         display: "Electron microscopy technique, staining, thin section",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadionuclideStudyProteinKinetics: Coding.FromStrict({
+    ObservationMethodsValueSet_RadionuclideStudyProteinKinetics: new Coding({
         code: "18499008",
         display: "Radionuclide study, protein kinetics",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DiagnosticRadiographyOfPelvisStereoViews: Coding.FromStrict({
+    ObservationMethodsValueSet_DiagnosticRadiographyOfPelvisStereoViews: new Coding({
         code: "18529002",
         display: "Diagnostic radiography of pelvis, stereo views",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TimeKillAssayTest: Coding.FromStrict({
+    ObservationMethodsValueSet_TimeKillAssayTest: new Coding({
         code: "18603005",
         display: "Time kill assay test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EchographyMMode: Coding.FromStrict({
+    ObservationMethodsValueSet_EchographyMMode: new Coding({
         code: "18640002",
         display: "Echography, M-mode",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SleepEEG: Coding.FromStrict({
+    ObservationMethodsValueSet_SleepEEG: new Coding({
         code: "18648009",
         display: "Sleep EEG",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RectalTemperatureTaking: Coding.FromStrict({
+    ObservationMethodsValueSet_RectalTemperatureTaking: new Coding({
         code: "18649001",
         display: "Rectal temperature taking",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AlphaSubunitOfPituitaryGlycoproteinHormoneMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_AlphaSubunitOfPituitaryGlycoproteinHormoneMeasurement: new Coding({
         code: "18691004",
         display: "Alpha-subunit of pituitary glycoprotein hormone measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ComplementSixthComponent: Coding.FromStrict({
+    ObservationMethodsValueSet_ComplementSixthComponent: new Coding({
         code: "18706007",
         display: "Complement sixth component",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CosyntropinTest: Coding.FromStrict({
+    ObservationMethodsValueSet_CosyntropinTest: new Coding({
         code: "18721001",
         display: "Cosyntropin test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MiddleEarExplorationThroughEarCanalIncision: Coding.FromStrict({
+    ObservationMethodsValueSet_MiddleEarExplorationThroughEarCanalIncision: new Coding({
         code: "18736003",
         display: "Middle ear exploration through ear canal incision",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiologicExaminationOfElbowAnteroposteriorAndLateralViews: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiologicExaminationOfElbowAnteroposteriorAndLateralViews: new Coding({
         code: "18747005",
         display: "Radiologic examination of elbow, anteroposterior and lateral views",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ExplorationOfVeinOfLowerLimb: Coding.FromStrict({
+    ObservationMethodsValueSet_ExplorationOfVeinOfLowerLimb: new Coding({
         code: "18762007",
         display: "Exploration of vein of lower limb",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MicrobialDrySmear: Coding.FromStrict({
+    ObservationMethodsValueSet_MicrobialDrySmear: new Coding({
         code: "18785008",
         display: "Microbial dry smear",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VirusIdentificationByTissueCultureInoculationAndObservation: Coding.FromStrict({
+    ObservationMethodsValueSet_VirusIdentificationByTissueCultureInoculationAndObservation: new Coding({
         code: "18840000",
         display: "Virus identification by tissue culture inoculation and observation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MassSpectrometryChemicalIonizationType: Coding.FromStrict({
+    ObservationMethodsValueSet_MassSpectrometryChemicalIonizationType: new Coding({
         code: "18843003",
         display: "Mass spectrometry, chemical ionization type",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EchographyOfChestBScanWithImageDocumentation: Coding.FromStrict({
+    ObservationMethodsValueSet_EchographyOfChestBScanWithImageDocumentation: new Coding({
         code: "18848007",
         display: "Echography of chest, B-scan with image documentation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ArthroscopyOfShoulderWithExtensiveDebridement: Coding.FromStrict({
+    ObservationMethodsValueSet_ArthroscopyOfShoulderWithExtensiveDebridement: new Coding({
         code: "18856005",
         display: "Arthroscopy of shoulder with extensive debridement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiographyOfSoftTissueOfElbow: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiographyOfSoftTissueOfElbow: new Coding({
         code: "18912009",
         display: "Radiography of soft tissue of elbow",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ThomasTest: Coding.FromStrict({
+    ObservationMethodsValueSet_ThomasTest: new Coding({
         code: "18922003",
         display: "Thomas test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RedBloodCellAntibodyDetectionWithSaline: Coding.FromStrict({
+    ObservationMethodsValueSet_RedBloodCellAntibodyDetectionWithSaline: new Coding({
         code: "18980008",
         display: "Red blood cell antibody detection with saline",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadioisotopeStudyOfRespiratorySystem: Coding.FromStrict({
+    ObservationMethodsValueSet_RadioisotopeStudyOfRespiratorySystem: new Coding({
         code: "19086005",
         display: "Radioisotope study of respiratory system",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CytochromeB5ReductaseMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_CytochromeB5ReductaseMeasurement: new Coding({
         code: "19116003",
         display: "Cytochrome b5 reductase measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MeasurementOfLimbLength: Coding.FromStrict({
+    ObservationMethodsValueSet_MeasurementOfLimbLength: new Coding({
         code: "19165008",
         display: "Measurement of limb length",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IncisionAndExplorationOfGallbladder: Coding.FromStrict({
+    ObservationMethodsValueSet_IncisionAndExplorationOfGallbladder: new Coding({
         code: "19218007",
         display: "Incision and exploration of gallbladder",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PesticidesScreen: Coding.FromStrict({
+    ObservationMethodsValueSet_PesticidesScreen: new Coding({
         code: "19229006",
         display: "Pesticides screen",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EndoscopyOfTonsil: Coding.FromStrict({
+    ObservationMethodsValueSet_EndoscopyOfTonsil: new Coding({
         code: "19247000",
         display: "Endoscopy of tonsil",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IsotopeStudyForGastrointestinalBloodLoss: Coding.FromStrict({
+    ObservationMethodsValueSet_IsotopeStudyForGastrointestinalBloodLoss: new Coding({
         code: "19252005",
         display: "Isotope study for gastrointestinal blood loss",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FibrinSplitProductsEthanolGelAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_FibrinSplitProductsEthanolGelAssay: new Coding({
         code: "19271007",
         display: "Fibrin split products, ethanol gel assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EndomysiumAntibodyLevel: Coding.FromStrict({
+    ObservationMethodsValueSet_EndomysiumAntibodyLevel: new Coding({
         code: "19294008",
         display: "Endomysium antibody level",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_OxytocinaseMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_OxytocinaseMeasurement: new Coding({
         code: "19401006",
         display: "Oxytocinase measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ExplorationOfAbdominalArtery: Coding.FromStrict({
+    ObservationMethodsValueSet_ExplorationOfAbdominalArtery: new Coding({
         code: "19426002",
         display: "Exploration of abdominal artery",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DirectLaryngoscopyWithForeignBodyRemoval: Coding.FromStrict({
+    ObservationMethodsValueSet_DirectLaryngoscopyWithForeignBodyRemoval: new Coding({
         code: "19433002",
         display: "Direct laryngoscopy with foreign body removal",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiographyOfAnkle: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiographyOfAnkle: new Coding({
         code: "19490002",
         display: "Radiography of ankle",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ImmunoglobulinTypingImmunoglobulinM: Coding.FromStrict({
+    ObservationMethodsValueSet_ImmunoglobulinTypingImmunoglobulinM: new Coding({
         code: "19505000",
         display: "Immunoglobulin typing, immunoglobulin M",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MeasurementOfDeoxyribonucleaseCAntibody: Coding.FromStrict({
+    ObservationMethodsValueSet_MeasurementOfDeoxyribonucleaseCAntibody: new Coding({
         code: "19507008",
         display: "Measurement of deoxyribonuclease C antibody",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ProteinMeasurementUrineQuantitative24Hour: Coding.FromStrict({
+    ObservationMethodsValueSet_ProteinMeasurementUrineQuantitative24Hour: new Coding({
         code: "19518008",
         display: "Protein measurement, urine, quantitative 24 hour",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ArthroscopyOfKneeWithLysisOfAdhesionsWithManipulation: Coding.FromStrict({
+    ObservationMethodsValueSet_ArthroscopyOfKneeWithLysisOfAdhesionsWithManipulation: new Coding({
         code: "19540004",
         display: "Arthroscopy of knee with lysis of adhesions with manipulation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SpermEvaluationByCervicalMucusPenetrationTest: Coding.FromStrict({
+    ObservationMethodsValueSet_SpermEvaluationByCervicalMucusPenetrationTest: new Coding({
         code: "19566001",
         display: "Sperm evaluation by cervical mucus penetration test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiographyOfMandible: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiographyOfMandible: new Coding({
         code: "19589009",
         display: "Radiography of mandible",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BoneThermography: Coding.FromStrict({
+    ObservationMethodsValueSet_BoneThermography: new Coding({
         code: "19671003",
         display: "Bone thermography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_NursingEvaluationOfPatientAndReport: Coding.FromStrict({
+    ObservationMethodsValueSet_NursingEvaluationOfPatientAndReport: new Coding({
         code: "19681004",
         display: "Nursing evaluation of patient and report",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ElectronMicroscopyForViralIdentificationSmearTransmission: Coding.FromStrict({
+    ObservationMethodsValueSet_ElectronMicroscopyForViralIdentificationSmearTransmission: new Coding({
         code: "19720009",
         display: "Electron microscopy for viral identification, smear, transmission",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UltrasoundStudyOfEye: Coding.FromStrict({
+    ObservationMethodsValueSet_UltrasoundStudyOfEye: new Coding({
         code: "19731001",
         display: "Ultrasound study of eye",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PlateletAggregationAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_PlateletAggregationAssay: new Coding({
         code: "19739004",
         display: "Platelet aggregation assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CyanideMeasurementTissue: Coding.FromStrict({
+    ObservationMethodsValueSet_CyanideMeasurementTissue: new Coding({
         code: "19748009",
         display: "Cyanide measurement, tissue",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DirectLaryngoscopyDiagnosticWithOperatingMicroscope: Coding.FromStrict({
+    ObservationMethodsValueSet_DirectLaryngoscopyDiagnosticWithOperatingMicroscope: new Coding({
         code: "19806009",
         display: "Direct laryngoscopy, diagnostic, with operating microscope",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ToluidineRedUnheatedSerumTest: Coding.FromStrict({
+    ObservationMethodsValueSet_ToluidineRedUnheatedSerumTest: new Coding({
         code: "19815002",
         display: "Toluidine red unheated serum test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CarboxyhemoglobinMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_CarboxyhemoglobinMeasurement: new Coding({
         code: "19821003",
         display: "Carboxyhemoglobin measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_InVitroImmunologicTest: Coding.FromStrict({
+    ObservationMethodsValueSet_InVitroImmunologicTest: new Coding({
         code: "19838004",
         display: "In-vitro immunologic test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MicrobiologyTest: Coding.FromStrict({
+    ObservationMethodsValueSet_MicrobiologyTest: new Coding({
         code: "19851009",
         display: "Microbiology test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RapidPlasmaReaginTest: Coding.FromStrict({
+    ObservationMethodsValueSet_RapidPlasmaReaginTest: new Coding({
         code: "19869000",
         display: "Rapid plasma reagin test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AnkleDorsiflexionTest: Coding.FromStrict({
+    ObservationMethodsValueSet_AnkleDorsiflexionTest: new Coding({
         code: "19876005",
         display: "Ankle dorsiflexion test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WhiteBloodCellWBCEnzymeDetermination: Coding.FromStrict({
+    ObservationMethodsValueSet_WhiteBloodCellWBCEnzymeDetermination: new Coding({
         code: "19957009",
         display: "White blood cell (WBC) enzyme determination",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CephalometricAnalysis: Coding.FromStrict({
+    ObservationMethodsValueSet_CephalometricAnalysis: new Coding({
         code: "19961003",
         display: "Cephalometric analysis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BACTECSusceptibilityTestByDirectMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_BACTECSusceptibilityTestByDirectMethod: new Coding({
         code: "20003009",
         display: "BACTEC susceptibility test by direct method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PassiveHemagglutinationAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_PassiveHemagglutinationAssay: new Coding({
         code: "20006001",
         display: "Passive hemagglutination assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RetinalPhotography: Coding.FromStrict({
+    ObservationMethodsValueSet_RetinalPhotography: new Coding({
         code: "20067007",
         display: "Retinal photography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BloodTypingABORhoDAndRedBloodCellAntibodyScreening: Coding.FromStrict({
+    ObservationMethodsValueSet_BloodTypingABORhoDAndRedBloodCellAntibodyScreening: new Coding({
         code: "20099001",
         display: "Blood typing, ABO, Rho(D) and red blood cell antibody screening",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ElectrolytesMeasurementSerum: Coding.FromStrict({
+    ObservationMethodsValueSet_ElectrolytesMeasurementSerum: new Coding({
         code: "20109005",
         display: "Electrolytes measurement, serum",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EndoscopyOfSkinOfTrunk: Coding.FromStrict({
+    ObservationMethodsValueSet_EndoscopyOfSkinOfTrunk: new Coding({
         code: "20130001",
         display: "Endoscopy of skin of trunk",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HealthScreening: Coding.FromStrict({
+    ObservationMethodsValueSet_HealthScreening: new Coding({
         code: "20135006",
         display: "Health screening",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RickettsialSerologicStudyPairedSamples: Coding.FromStrict({
+    ObservationMethodsValueSet_RickettsialSerologicStudyPairedSamples: new Coding({
         code: "20174004",
         display: "Rickettsial serologic study, paired samples",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadialImmunodiffusionMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_RadialImmunodiffusionMeasurement: new Coding({
         code: "20191000",
         display: "Radial immunodiffusion measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SceptorSystemTest: Coding.FromStrict({
+    ObservationMethodsValueSet_SceptorSystemTest: new Coding({
         code: "20284006",
         display: "Sceptor system test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CGreaterThan1LessThanRComplementAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_CGreaterThan1LessThanRComplementAssay: new Coding({
         code: "20308005",
         display: "C>1<r complement assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GibberelicAcidMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_GibberelicAcidMeasurement: new Coding({
         code: "20312004",
         display: "Gibberelic acid measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Amniography: Coding.FromStrict({
+    ObservationMethodsValueSet_Amniography: new Coding({
         code: "20350005",
         display: "Amniography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MicrobialIdentificationKeyRapidTest: Coding.FromStrict({
+    ObservationMethodsValueSet_MicrobialIdentificationKeyRapidTest: new Coding({
         code: "20370004",
         display: "Microbial identification, Key rapid test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadioisotopeScanOfPituitary: Coding.FromStrict({
+    ObservationMethodsValueSet_RadioisotopeScanOfPituitary: new Coding({
         code: "20384009",
         display: "Radioisotope scan of pituitary",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TestosteroneMeasurementUnbound: Coding.FromStrict({
+    ObservationMethodsValueSet_TestosteroneMeasurementUnbound: new Coding({
         code: "20436004",
         display: "Testosterone measurement, unbound",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ProteinSLevel: Coding.FromStrict({
+    ObservationMethodsValueSet_ProteinSLevel: new Coding({
         code: "20469004",
         display: "Protein S level",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ArthrotomyOfMediocarpalJointForInfectionWithExplorationAndDrainage: Coding.FromStrict({
+    ObservationMethodsValueSet_ArthrotomyOfMediocarpalJointForInfectionWithExplorationAndDrainage: new Coding({
         code: "20480004",
         display: "Arthrotomy of mediocarpal joint for infection with exploration and drainage",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DeterminationOfPrognosis: Coding.FromStrict({
+    ObservationMethodsValueSet_DeterminationOfPrognosis: new Coding({
         code: "20481000",
         display: "Determination of prognosis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UrineSpecificGravityLevel: Coding.FromStrict({
+    ObservationMethodsValueSet_UrineSpecificGravityLevel: new Coding({
         code: "20501000",
         display: "Urine specific gravity level",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EsculinHydrolysisTest: Coding.FromStrict({
+    ObservationMethodsValueSet_EsculinHydrolysisTest: new Coding({
         code: "20508006",
         display: "Esculin hydrolysis test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BasicPureToneAudiometryAirAndBone: Coding.FromStrict({
+    ObservationMethodsValueSet_BasicPureToneAudiometryAirAndBone: new Coding({
         code: "20521004",
         display: "Basic pure tone audiometry, air and bone",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DirectImmunobeadAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_DirectImmunobeadAssay: new Coding({
         code: "20536001",
         display: "Direct immunobead assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Plethysmography: Coding.FromStrict({
+    ObservationMethodsValueSet_Plethysmography: new Coding({
         code: "20552003",
         display: "Plethysmography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EstriolMeasurementSerum: Coding.FromStrict({
+    ObservationMethodsValueSet_EstriolMeasurementSerum: new Coding({
         code: "20563000",
         display: "Estriol measurement, serum",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EosinophilCountStool: Coding.FromStrict({
+    ObservationMethodsValueSet_EosinophilCountStool: new Coding({
         code: "20592001",
         display: "Eosinophil count, stool",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SpecialEchographyProcedure: Coding.FromStrict({
+    ObservationMethodsValueSet_SpecialEchographyProcedure: new Coding({
         code: "20603005",
         display: "Special echography procedure",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LaparoscopicCholecystectomyWithCholangiography: Coding.FromStrict({
+    ObservationMethodsValueSet_LaparoscopicCholecystectomyWithCholangiography: new Coding({
         code: "20630000",
         display: "Laparoscopic cholecystectomy with cholangiography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RespirationsCountingAndEvaluation: Coding.FromStrict({
+    ObservationMethodsValueSet_RespirationsCountingAndEvaluation: new Coding({
         code: "20661009",
         display: "Respirations counting and evaluation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AntibodyDetectionRedBloodCellSalineHighProteinAndAntiHumanGlobulinTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AntibodyDetectionRedBloodCellSalineHighProteinAndAntiHumanGlobulinTechnique: new Coding({
         code: "20688004",
         display: "Antibody detection, red blood cell, saline, high protein and anti-human globulin technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PressureMeasurementOfSphincterOfOddi: Coding.FromStrict({
+    ObservationMethodsValueSet_PressureMeasurementOfSphincterOfOddi: new Coding({
         code: "20726006",
         display: "Pressure measurement of sphincter of Oddi",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PelvicEchographyBScanComplete: Coding.FromStrict({
+    ObservationMethodsValueSet_PelvicEchographyBScanComplete: new Coding({
         code: "20740007",
         display: "Pelvic echography, B-scan, complete",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiologicExaminationOfFootAnteroposteriorAndLateralViews: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiologicExaminationOfFootAnteroposteriorAndLateralViews: new Coding({
         code: "20798004",
         display: "Radiologic examination of foot, anteroposterior and lateral views",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_QuantitativePhotoplethysmographyVascular: Coding.FromStrict({
+    ObservationMethodsValueSet_QuantitativePhotoplethysmographyVascular: new Coding({
         code: "20811003",
         display: "Quantitative photoplethysmography, vascular",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_OMEsophagealManometry: Coding.FromStrict({
+    ObservationMethodsValueSet_OMEsophagealManometry: new Coding({
         code: "20816008",
         display: "OM - Esophageal manometry",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WedgePressureDeterminationOfHepaticVein: Coding.FromStrict({
+    ObservationMethodsValueSet_WedgePressureDeterminationOfHepaticVein: new Coding({
         code: "20817004",
         display: "Wedge pressure determination of hepatic vein",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CTOfPosteriorFossaWithContrast: Coding.FromStrict({
+    ObservationMethodsValueSet_CTOfPosteriorFossaWithContrast: new Coding({
         code: "20836009",
         display: "CT of posterior fossa with contrast",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PhencyclidineMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_PhencyclidineMeasurement: new Coding({
         code: "20857001",
         display: "Phencyclidine measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DuchenneMuscularDystrophyCarrierDetectionBlood: Coding.FromStrict({
+    ObservationMethodsValueSet_DuchenneMuscularDystrophyCarrierDetectionBlood: new Coding({
         code: "20868001",
         display: "Duchenne muscular dystrophy carrier detection, blood",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_NMethylimidazoleaceticAcidMeasurementUrine: Coding.FromStrict({
+    ObservationMethodsValueSet_NMethylimidazoleaceticAcidMeasurementUrine: new Coding({
         code: "20883006",
         display: "N-methylimidazoleacetic acid measurement, urine",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EndoscopyOfLiver: Coding.FromStrict({
+    ObservationMethodsValueSet_EndoscopyOfLiver: new Coding({
         code: "20933000",
         display: "Endoscopy of liver",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_QuinineMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_QuinineMeasurement: new Coding({
         code: "20939001",
         display: "Quinine measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CardiacMapping: Coding.FromStrict({
+    ObservationMethodsValueSet_CardiacMapping: new Coding({
         code: "21032000",
         display: "Cardiac mapping",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PhenylpropanolamineMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_PhenylpropanolamineMeasurement: new Coding({
         code: "21062006",
         display: "Phenylpropanolamine measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HepatobiliaryDuctalSystemImagingIncludingGallbladder: Coding.FromStrict({
+    ObservationMethodsValueSet_HepatobiliaryDuctalSystemImagingIncludingGallbladder: new Coding({
         code: "21126008",
         display: "Hepatobiliary ductal system imaging including gallbladder",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IntracranialPressureMonitorMaintenance: Coding.FromStrict({
+    ObservationMethodsValueSet_IntracranialPressureMonitorMaintenance: new Coding({
         code: "21151009",
         display: "Intracranial pressure monitor maintenance",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BBloodGroupTyping: Coding.FromStrict({
+    ObservationMethodsValueSet_BBloodGroupTyping: new Coding({
         code: "21221007",
         display: "B blood group typing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ArthrotomyOfKneeWithJointExplorationAndBiopsy: Coding.FromStrict({
+    ObservationMethodsValueSet_ArthrotomyOfKneeWithJointExplorationAndBiopsy: new Coding({
         code: "21331002",
         display: "Arthrotomy of knee with joint exploration and biopsy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiographyOfIntestine: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiographyOfIntestine: new Coding({
         code: "21339000",
         display: "Radiography of intestine",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LeukocyteHistamineReleaseTest: Coding.FromStrict({
+    ObservationMethodsValueSet_LeukocyteHistamineReleaseTest: new Coding({
         code: "21354006",
         display: "Leukocyte histamine release test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LymphocyteTransformationAntigenInduced: Coding.FromStrict({
+    ObservationMethodsValueSet_LymphocyteTransformationAntigenInduced: new Coding({
         code: "21393002",
         display: "Lymphocyte transformation, antigen induced",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_YeastIdentificationDirectMount: Coding.FromStrict({
+    ObservationMethodsValueSet_YeastIdentificationDirectMount: new Coding({
         code: "21403007",
         display: "Yeast identification, direct mount",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SigmoidoscopyThroughArtificialStoma: Coding.FromStrict({
+    ObservationMethodsValueSet_SigmoidoscopyThroughArtificialStoma: new Coding({
         code: "21423008",
         display: "Sigmoidoscopy through artificial stoma",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PhosphatidylinositolMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_PhosphatidylinositolMeasurement: new Coding({
         code: "21424002",
         display: "Phosphatidylinositol measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SulfadiazineMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_SulfadiazineMeasurement: new Coding({
         code: "21487006",
         display: "Sulfadiazine measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ParathyroidectomyWithMediastinalExplorationBySternalSplitApproach: Coding.FromStrict({
+    ObservationMethodsValueSet_ParathyroidectomyWithMediastinalExplorationBySternalSplitApproach: new Coding({
         code: "21537002",
         display: "Parathyroidectomy with mediastinal exploration by sternal split approach",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TheophyllineMeasurementSaliva: Coding.FromStrict({
+    ObservationMethodsValueSet_TheophyllineMeasurementSaliva: new Coding({
         code: "21562002",
         display: "Theophylline measurement, saliva",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Ophthalmodynamography: Coding.FromStrict({
+    ObservationMethodsValueSet_Ophthalmodynamography: new Coding({
         code: "21593001",
         display: "Ophthalmodynamography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiologicExaminationOfCervicalSpineAnteroposteriorAndLateral: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiologicExaminationOfCervicalSpineAnteroposteriorAndLateral: new Coding({
         code: "21613005",
         display: "Radiologic examination of cervical spine, anteroposterior and lateral",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BiophysicalProfileOfFetus: Coding.FromStrict({
+    ObservationMethodsValueSet_BiophysicalProfileOfFetus: new Coding({
         code: "21623001",
         display: "Biophysical profile of fetus",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_OcularPhotographyForMedicalEvaluationAndDocumentationStereophotography: Coding.FromStrict({
+    ObservationMethodsValueSet_OcularPhotographyForMedicalEvaluationAndDocumentationStereophotography: new Coding({
         code: "21685006",
         display: "Ocular photography for medical evaluation and documentation, stereophotography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EndoscopyOfAdrenalGland: Coding.FromStrict({
+    ObservationMethodsValueSet_EndoscopyOfAdrenalGland: new Coding({
         code: "21689000",
         display: "Endoscopy of adrenal gland",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AudiometricTest: Coding.FromStrict({
+    ObservationMethodsValueSet_AudiometricTest: new Coding({
         code: "21727005",
         display: "Audiometric test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DirectLaryngoscopyWithDilation: Coding.FromStrict({
+    ObservationMethodsValueSet_DirectLaryngoscopyWithDilation: new Coding({
         code: "21796007",
         display: "Direct laryngoscopy with dilation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EnvironmentalCulture: Coding.FromStrict({
+    ObservationMethodsValueSet_EnvironmentalCulture: new Coding({
         code: "21808008",
         display: "Environmental culture",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IncisionAndExplorationOfBronchus: Coding.FromStrict({
+    ObservationMethodsValueSet_IncisionAndExplorationOfBronchus: new Coding({
         code: "21831008",
         display: "Incision and exploration of bronchus",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VisualFieldExaminationAndEvaluationLimited: Coding.FromStrict({
+    ObservationMethodsValueSet_VisualFieldExaminationAndEvaluationLimited: new Coding({
         code: "21862007",
         display: "Visual field examination and evaluation, limited",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiographyOfRibs: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiographyOfRibs: new Coding({
         code: "21970003",
         display: "Radiography of ribs",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UrinePorphyrinLevels: Coding.FromStrict({
+    ObservationMethodsValueSet_UrinePorphyrinLevels: new Coding({
         code: "22031009",
         display: "Urine porphyrin levels",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EchographyOfProstateTransrectalApproach: Coding.FromStrict({
+    ObservationMethodsValueSet_EchographyOfProstateTransrectalApproach: new Coding({
         code: "22034001",
         display: "Echography of prostate, transrectal approach",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ComputerizedTomographyBoneDensityStudy: Coding.FromStrict({
+    ObservationMethodsValueSet_ComputerizedTomographyBoneDensityStudy: new Coding({
         code: "22059005",
         display: "Computerized tomography, bone density study",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PulmonaryVentilationPerfusionStudyByRadioactiveOxygen: Coding.FromStrict({
+    ObservationMethodsValueSet_PulmonaryVentilationPerfusionStudyByRadioactiveOxygen: new Coding({
         code: "22089003",
         display: "Pulmonary ventilation-perfusion study by radioactive oxygen",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MethotrexateLevel: Coding.FromStrict({
+    ObservationMethodsValueSet_MethotrexateLevel: new Coding({
         code: "22189001",
         display: "Methotrexate level",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PulmonaryStressTesting: Coding.FromStrict({
+    ObservationMethodsValueSet_PulmonaryStressTesting: new Coding({
         code: "22238008",
         display: "Pulmonary stress testing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_C1qSolidPhaseAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_C1qSolidPhaseAssay: new Coding({
         code: "22260006",
         display: "C1q solid phase assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiographyOfSymphysisMenti: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiographyOfSymphysisMenti: new Coding({
         code: "22289008",
         display: "Radiography of symphysis menti",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PlatinumMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_PlatinumMeasurement: new Coding({
         code: "22369009",
         display: "Platinum measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ThreeDimensionalReconstruction: Coding.FromStrict({
+    ObservationMethodsValueSet_ThreeDimensionalReconstruction: new Coding({
         code: "22400007",
         display: "Three-dimensional reconstruction",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DiagnosticRadiographyOfChestMinifilm: Coding.FromStrict({
+    ObservationMethodsValueSet_DiagnosticRadiographyOfChestMinifilm: new Coding({
         code: "22446007",
         display: "Diagnostic radiography of chest, minifilm",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EpiduralVenography: Coding.FromStrict({
+    ObservationMethodsValueSet_EpiduralVenography: new Coding({
         code: "22458007",
         display: "Epidural venography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ImmediatePercussion: Coding.FromStrict({
+    ObservationMethodsValueSet_ImmediatePercussion: new Coding({
         code: "22494006",
         display: "Immediate percussion",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ArthrographyOfHipWithPositiveContrast: Coding.FromStrict({
+    ObservationMethodsValueSet_ArthrographyOfHipWithPositiveContrast: new Coding({
         code: "22530002",
         display: "Arthrography of hip with positive contrast",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EsophagogastroscopyThroughStoma: Coding.FromStrict({
+    ObservationMethodsValueSet_EsophagogastroscopyThroughStoma: new Coding({
         code: "22546005",
         display: "Esophagogastroscopy through stoma",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GlucoseMeasurementSerum: Coding.FromStrict({
+    ObservationMethodsValueSet_GlucoseMeasurementSerum: new Coding({
         code: "22569008",
         display: "Glucose measurement, serum",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BacterialBacteriophageTyping: Coding.FromStrict({
+    ObservationMethodsValueSet_BacterialBacteriophageTyping: new Coding({
         code: "22642004",
         display: "Bacterial bacteriophage typing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LowDensityLipoproteinMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_LowDensityLipoproteinMeasurement: new Coding({
         code: "22644003",
         display: "Low density lipoprotein measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AutopsyGrossExaminationTeachingLimited: Coding.FromStrict({
+    ObservationMethodsValueSet_AutopsyGrossExaminationTeachingLimited: new Coding({
         code: "22677004",
         display: "Autopsy, gross examination, teaching, limited",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_NasalEndoscopyWithRemovalOfForeignBody: Coding.FromStrict({
+    ObservationMethodsValueSet_NasalEndoscopyWithRemovalOfForeignBody: new Coding({
         code: "22705003",
         display: "Nasal endoscopy with removal of foreign body",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AntigenCaptureAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_AntigenCaptureAssay: new Coding({
         code: "22714008",
         display: "Antigen capture assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Xeroradiography: Coding.FromStrict({
+    ObservationMethodsValueSet_Xeroradiography: new Coding({
         code: "22760005",
         display: "Xeroradiography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Perineogram: Coding.FromStrict({
+    ObservationMethodsValueSet_Perineogram: new Coding({
         code: "22761009",
         display: "Perineogram",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Interleukin6Assay: Coding.FromStrict({
+    ObservationMethodsValueSet_Interleukin6Assay: new Coding({
         code: "22766004",
         display: "Interleukin-6 assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_XRayOfLumbosacralSpine: Coding.FromStrict({
+    ObservationMethodsValueSet_XRayOfLumbosacralSpine: new Coding({
         code: "22791004",
         display: "X-ray of lumbosacral spine",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UrineFreeCortisolLevel: Coding.FromStrict({
+    ObservationMethodsValueSet_UrineFreeCortisolLevel: new Coding({
         code: "22820002",
         display: "Urine free cortisol level",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_StimulationOfCarotidSinusWithSimultaneousElectrocardiographicMonitoring: Coding.FromStrict({
+    ObservationMethodsValueSet_StimulationOfCarotidSinusWithSimultaneousElectrocardiographicMonitoring: new Coding({
         code: "22872007",
         display: "Stimulation of carotid sinus with simultaneous electrocardiographic monitoring",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PulmonaryPhlebography: Coding.FromStrict({
+    ObservationMethodsValueSet_PulmonaryPhlebography: new Coding({
         code: "22873002",
         display: "Pulmonary phlebography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TrifluoperazineMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_TrifluoperazineMeasurement: new Coding({
         code: "22874008",
         display: "Trifluoperazine measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiographyOfTeeth: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiographyOfTeeth: new Coding({
         code: "22891007",
         display: "Radiography of teeth",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DiagnosticRadiographySurvey: Coding.FromStrict({
+    ObservationMethodsValueSet_DiagnosticRadiographySurvey: new Coding({
         code: "22901000",
         display: "Diagnostic radiography, survey",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FactorDComplementAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_FactorDComplementAssay: new Coding({
         code: "22923001",
         display: "Factor D complement assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiologicExaminationOfWristAnteroposteriorAndLateralViews: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiologicExaminationOfWristAnteroposteriorAndLateralViews: new Coding({
         code: "22948003",
         display: "Radiologic examination of wrist, anteroposterior and lateral views",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_OrtolaniTest: Coding.FromStrict({
+    ObservationMethodsValueSet_OrtolaniTest: new Coding({
         code: "22981002",
         display: "Ortolani test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DigitalExaminationOfColostomyStoma: Coding.FromStrict({
+    ObservationMethodsValueSet_DigitalExaminationOfColostomyStoma: new Coding({
         code: "22998002",
         display: "Digital examination of colostomy stoma",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GastricTransitStudy: Coding.FromStrict({
+    ObservationMethodsValueSet_GastricTransitStudy: new Coding({
         code: "23025002",
         display: "Gastric transit study",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MaxillarySinusEndoscopyWithRemovalOfForeignBody: Coding.FromStrict({
+    ObservationMethodsValueSet_MaxillarySinusEndoscopyWithRemovalOfForeignBody: new Coding({
         code: "23054008",
         display: "Maxillary sinus endoscopy with removal of foreign body",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MicrobialIdentificationMinitekBiochemicalDifferentiationDiskMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_MicrobialIdentificationMinitekBiochemicalDifferentiationDiskMethod: new Coding({
         code: "23093004",
         display: "Microbial identification, Minitek biochemical differentiation disk method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ElectroencephalogramAwakeAndAsleepWithStimulation: Coding.FromStrict({
+    ObservationMethodsValueSet_ElectroencephalogramAwakeAndAsleepWithStimulation: new Coding({
         code: "23162002",
         display: "Electroencephalogram awake and asleep with stimulation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PhosphofructokinaseMeasurementErythrocytes: Coding.FromStrict({
+    ObservationMethodsValueSet_PhosphofructokinaseMeasurementErythrocytes: new Coding({
         code: "23170007",
         display: "Phosphofructokinase measurement, erythrocytes",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AirCultureForFungus: Coding.FromStrict({
+    ObservationMethodsValueSet_AirCultureForFungus: new Coding({
         code: "23197000",
         display: "Air culture for fungus",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GastrointestinalProteinLossStudy: Coding.FromStrict({
+    ObservationMethodsValueSet_GastrointestinalProteinLossStudy: new Coding({
         code: "23225008",
         display: "Gastrointestinal protein loss study",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HemoglobinFLevel: Coding.FromStrict({
+    ObservationMethodsValueSet_HemoglobinFLevel: new Coding({
         code: "23244001",
         display: "Hemoglobin F level",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CatalaseTest: Coding.FromStrict({
+    ObservationMethodsValueSet_CatalaseTest: new Coding({
         code: "23297007",
         display: "Catalase test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiographyOfSternum: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiographyOfSternum: new Coding({
         code: "23394003",
         display: "Radiography of sternum",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SchamrothTest: Coding.FromStrict({
+    ObservationMethodsValueSet_SchamrothTest: new Coding({
         code: "23405006",
         display: "Schamroth test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LungFunctionTests: Coding.FromStrict({
+    ObservationMethodsValueSet_LungFunctionTests: new Coding({
         code: "23426006",
         display: "Lung function tests",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DiagnosticRadiographyPosteroanterior: Coding.FromStrict({
+    ObservationMethodsValueSet_DiagnosticRadiographyPosteroanterior: new Coding({
         code: "23461000",
         display: "Diagnostic radiography, posteroanterior",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GentamicinLevel: Coding.FromStrict({
+    ObservationMethodsValueSet_GentamicinLevel: new Coding({
         code: "23463002",
         display: "Gentamicin level",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HighPerformanceLiquidChromatographyUltraVioletType: Coding.FromStrict({
+    ObservationMethodsValueSet_HighPerformanceLiquidChromatographyUltraVioletType: new Coding({
         code: "23479001",
         display: "High performance liquid chromatography, ultra-violet type",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GasLiquidChromatographyMicrowavePlasmaType: Coding.FromStrict({
+    ObservationMethodsValueSet_GasLiquidChromatographyMicrowavePlasmaType: new Coding({
         code: "23481004",
         display: "Gas liquid chromatography, microwave plasma type",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AlphaNAcetylglucosaminidaseMeasurementFibroblasts: Coding.FromStrict({
+    ObservationMethodsValueSet_AlphaNAcetylglucosaminidaseMeasurementFibroblasts: new Coding({
         code: "23516001",
         display: "Alpha-n-acetylglucosaminidase measurement, fibroblasts",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MercuryMeasurementBlood: Coding.FromStrict({
+    ObservationMethodsValueSet_MercuryMeasurementBlood: new Coding({
         code: "23529001",
         display: "Mercury measurement, blood",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BiotinidaseMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_BiotinidaseMeasurement: new Coding({
         code: "23567003",
         display: "Biotinidase measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TransmissionBoneDensityStudy: Coding.FromStrict({
+    ObservationMethodsValueSet_TransmissionBoneDensityStudy: new Coding({
         code: "23572007",
         display: "Transmission bone density study",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PlantIdentificationProcedure: Coding.FromStrict({
+    ObservationMethodsValueSet_PlantIdentificationProcedure: new Coding({
         code: "23576005",
         display: "Plant identification procedure",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ElectrocardiogramWithMaximalExerciseTest: Coding.FromStrict({
+    ObservationMethodsValueSet_ElectrocardiogramWithMaximalExerciseTest: new Coding({
         code: "23638006",
         display: "Electrocardiogram with maximal exercise test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_USScanOfDigestiveSystem: Coding.FromStrict({
+    ObservationMethodsValueSet_USScanOfDigestiveSystem: new Coding({
         code: "23738001",
         display: "US scan of digestive system",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CrystalIdentificationUrine: Coding.FromStrict({
+    ObservationMethodsValueSet_CrystalIdentificationUrine: new Coding({
         code: "23779000",
         display: "Crystal identification, urine",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IL7Assay: Coding.FromStrict({
+    ObservationMethodsValueSet_IL7Assay: new Coding({
         code: "23796004",
         display: "IL-7 assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ScanningOrImagingPerfusionStudyGaseous: Coding.FromStrict({
+    ObservationMethodsValueSet_ScanningOrImagingPerfusionStudyGaseous: new Coding({
         code: "23818008",
         display: "Scanning or imaging, perfusion study, gaseous",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ImmunodiffusionQualitativeByOuchterlonyTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ImmunodiffusionQualitativeByOuchterlonyTechnique: new Coding({
         code: "23828004",
         display: "Immunodiffusion, qualitative by Ouchterlony technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiographyOfSoftTissueOfThigh: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiographyOfSoftTissueOfThigh: new Coding({
         code: "23846005",
         display: "Radiography of soft tissue of thigh",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CardiacMonitoring: Coding.FromStrict({
+    ObservationMethodsValueSet_CardiacMonitoring: new Coding({
         code: "23852006",
         display: "Cardiac monitoring",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UltrasonographyOfHeadAndNeck: Coding.FromStrict({
+    ObservationMethodsValueSet_UltrasonographyOfHeadAndNeck: new Coding({
         code: "23931002",
         display: "Ultrasonography of head and neck",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EthyleneGlycolMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_EthyleneGlycolMeasurement: new Coding({
         code: "24046001",
         display: "Ethylene glycol measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HeterophileAntibodyScreen: Coding.FromStrict({
+    ObservationMethodsValueSet_HeterophileAntibodyScreen: new Coding({
         code: "24053005",
         display: "Heterophile antibody screen",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EchocardiographyForDeterminingPosteriorLeftVentricularWallThickness: Coding.FromStrict({
+    ObservationMethodsValueSet_EchocardiographyForDeterminingPosteriorLeftVentricularWallThickness: new Coding({
         code: "24058001",
         display: "Echocardiography for determining posterior left ventricular wall thickness",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EndoscopyOfSkinOfHead: Coding.FromStrict({
+    ObservationMethodsValueSet_EndoscopyOfSkinOfHead: new Coding({
         code: "24103002",
         display: "Endoscopy of skin of head",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UltrasonographyOfTotalBody: Coding.FromStrict({
+    ObservationMethodsValueSet_UltrasonographyOfTotalBody: new Coding({
         code: "24135002",
         display: "Ultrasonography of total body",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EndoscopicExaminationOfBladder: Coding.FromStrict({
+    ObservationMethodsValueSet_EndoscopicExaminationOfBladder: new Coding({
         code: "24139008",
         display: "Endoscopic examination of bladder",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CalculusAnalysisQuantitativeXRayDiffraction: Coding.FromStrict({
+    ObservationMethodsValueSet_CalculusAnalysisQuantitativeXRayDiffraction: new Coding({
         code: "24200008",
         display: "Calculus analysis, quantitative, X-ray diffraction",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UricAcidMeasurementUrine: Coding.FromStrict({
+    ObservationMethodsValueSet_UricAcidMeasurementUrine: new Coding({
         code: "24205003",
         display: "Uric acid measurement, urine",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EsophagoscopyForRemovalOfPolypoidLesion: Coding.FromStrict({
+    ObservationMethodsValueSet_EsophagoscopyForRemovalOfPolypoidLesion: new Coding({
         code: "24229005",
         display: "Esophagoscopy for removal of polypoid lesion",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EuglobulinLysisTime: Coding.FromStrict({
+    ObservationMethodsValueSet_EuglobulinLysisTime: new Coding({
         code: "24247004",
         display: "Euglobulin lysis time",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PorphyrinMeasurementTotalPlasma: Coding.FromStrict({
+    ObservationMethodsValueSet_PorphyrinMeasurementTotalPlasma: new Coding({
         code: "24252009",
         display: "Porphyrin measurement, total, plasma",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SoftTissueXRayOfShoulderAndUpperLimb: Coding.FromStrict({
+    ObservationMethodsValueSet_SoftTissueXRayOfShoulderAndUpperLimb: new Coding({
         code: "24267008",
         display: "Soft tissue X-ray of shoulder and upper limb",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SIGySigmoidoscopy: Coding.FromStrict({
+    ObservationMethodsValueSet_SIGySigmoidoscopy: new Coding({
         code: "24420007",
         display: "SIGy - Sigmoidoscopy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ArsenicMeasurementGastric: Coding.FromStrict({
+    ObservationMethodsValueSet_ArsenicMeasurementGastric: new Coding({
         code: "24426001",
         display: "Arsenic measurement, gastric",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UreaNitrogenMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_UreaNitrogenMeasurement: new Coding({
         code: "24509005",
         display: "Urea nitrogen measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SpecialChemicalTestExplainByReport: Coding.FromStrict({
+    ObservationMethodsValueSet_SpecialChemicalTestExplainByReport: new Coding({
         code: "24512008",
         display: "Special chemical test, explain by report",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FreeRadicalAssayTechniqueMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_FreeRadicalAssayTechniqueMeasurement: new Coding({
         code: "24519004",
         display: "Free radical assay technique measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RajiAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_RajiAssay: new Coding({
         code: "24580007",
         display: "Raji assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SerologicTestForEhrlichiaSennetsu: Coding.FromStrict({
+    ObservationMethodsValueSet_SerologicTestForEhrlichiaSennetsu: new Coding({
         code: "24592007",
         display: "Serologic test for Ehrlichia sennetsu",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FibrinolyticSystemTest: Coding.FromStrict({
+    ObservationMethodsValueSet_FibrinolyticSystemTest: new Coding({
         code: "24593002",
         display: "Fibrinolytic system test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PulmonaryArteryPressureMonitoring: Coding.FromStrict({
+    ObservationMethodsValueSet_PulmonaryArteryPressureMonitoring: new Coding({
         code: "24599003",
         display: "Pulmonary artery pressure monitoring",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ScreeningMammography: Coding.FromStrict({
+    ObservationMethodsValueSet_ScreeningMammography: new Coding({
         code: "24623002",
         display: "Screening mammography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ElyTest: Coding.FromStrict({
+    ObservationMethodsValueSet_ElyTest: new Coding({
         code: "24625009",
         display: "Ely test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AcquisitionTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AcquisitionTechnique: new Coding({
         code: "246363001",
         display: "Acquisition technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CirculatingInhibitorAssayFactorIX: Coding.FromStrict({
+    ObservationMethodsValueSet_CirculatingInhibitorAssayFactorIX: new Coding({
         code: "24643008",
         display: "Circulating inhibitor assay, factor IX",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LeukocyteMigrationFactorAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_LeukocyteMigrationFactorAssay: new Coding({
         code: "24644002",
         display: "Leukocyte migration factor assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AbdominalAortographyTranslumbarWithSerialography: Coding.FromStrict({
+    ObservationMethodsValueSet_AbdominalAortographyTranslumbarWithSerialography: new Coding({
         code: "24646000",
         display: "Abdominal aortography, translumbar with serialography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BladderFillingTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_BladderFillingTechnique: new Coding({
         code: "246502009",
         display: "Bladder filling technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CatheterMovementTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_CatheterMovementTechnique: new Coding({
         code: "246503004",
         display: "Catheter movement technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_NearReadingTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_NearReadingTechnique: new Coding({
         code: "246504005",
         display: "Near reading technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PhotonDetectionTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_PhotonDetectionTechnique: new Coding({
         code: "246505006",
         display: "Photon detection technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ProvocationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ProvocationTechnique: new Coding({
         code: "246506007",
         display: "Provocation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_StimulationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_StimulationTechnique: new Coding({
         code: "246507003",
         display: "Stimulation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UptakeMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_UptakeMeasurement: new Coding({
         code: "24683000",
         display: "Uptake measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ComputedTomographyGuidanceForTreatmentPlanningTeletherapy: Coding.FromStrict({
+    ObservationMethodsValueSet_ComputedTomographyGuidanceForTreatmentPlanningTeletherapy: new Coding({
         code: "24689001",
         display: "Computed tomography guidance for treatment planning, teletherapy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MicrobialGrowthRateRapid: Coding.FromStrict({
+    ObservationMethodsValueSet_MicrobialGrowthRateRapid: new Coding({
         code: "24714007",
         display: "Microbial growth rate, rapid",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SplenoportogramBySplenicArteriography: Coding.FromStrict({
+    ObservationMethodsValueSet_SplenoportogramBySplenicArteriography: new Coding({
         code: "24715008",
         display: "Splenoportogram by splenic arteriography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TemperatureGradientStudies: Coding.FromStrict({
+    ObservationMethodsValueSet_TemperatureGradientStudies: new Coding({
         code: "24727006",
         display: "Temperature gradient studies",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EchographyOfScrotumAndContents: Coding.FromStrict({
+    ObservationMethodsValueSet_EchographyOfScrotumAndContents: new Coding({
         code: "24737001",
         display: "Echography of scrotum and contents",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SexHormoneBindingGlobulinLevel: Coding.FromStrict({
+    ObservationMethodsValueSet_SexHormoneBindingGlobulinLevel: new Coding({
         code: "24753003",
         display: "Sex hormone binding globulin level",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BicarbonateLoadingTest: Coding.FromStrict({
+    ObservationMethodsValueSet_BicarbonateLoadingTest: new Coding({
         code: "24799001",
         display: "Bicarbonate loading test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IronChelationStudy: Coding.FromStrict({
+    ObservationMethodsValueSet_IronChelationStudy: new Coding({
         code: "24808009",
         display: "Iron chelation study",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IntestinalAlkalinePhosphataseMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_IntestinalAlkalinePhosphataseMeasurement: new Coding({
         code: "24831009",
         display: "Intestinal alkaline phosphatase measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UltrasonographyOfPelvis: Coding.FromStrict({
+    ObservationMethodsValueSet_UltrasonographyOfPelvis: new Coding({
         code: "24848001",
         display: "Ultrasonography of pelvis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DiagnosticRadiographyOfCoccyx: Coding.FromStrict({
+    ObservationMethodsValueSet_DiagnosticRadiographyOfCoccyx: new Coding({
         code: "24856003",
         display: "Diagnostic radiography of coccyx",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AntineuronalNuclearAntibodyTypeIMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_AntineuronalNuclearAntibodyTypeIMeasurement: new Coding({
         code: "24892004",
         display: "Antineuronal nuclear antibody-type I measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_InfectionControlCultureOvernight: Coding.FromStrict({
+    ObservationMethodsValueSet_InfectionControlCultureOvernight: new Coding({
         code: "24899008",
         display: "Infection control culture overnight",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EndoscopyOfSkinOfExtremities: Coding.FromStrict({
+    ObservationMethodsValueSet_EndoscopyOfSkinOfExtremities: new Coding({
         code: "24968008",
         display: "Endoscopy of skin of extremities",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VisualFieldExaminationAndEvaluationExtended: Coding.FromStrict({
+    ObservationMethodsValueSet_VisualFieldExaminationAndEvaluationExtended: new Coding({
         code: "24985005",
         display: "Visual field examination and evaluation, extended",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PhosphatidylglycerolMeasurementSemiQuantitativeAmnioticFluid: Coding.FromStrict({
+    ObservationMethodsValueSet_PhosphatidylglycerolMeasurementSemiQuantitativeAmnioticFluid: new Coding({
         code: "25096005",
         display: "Phosphatidylglycerol measurement, semi-quantitative, amniotic fluid",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HaloperidolMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_HaloperidolMeasurement: new Coding({
         code: "25104002",
         display: "Haloperidol measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IncisionAndExplorationOfAdrenal: Coding.FromStrict({
+    ObservationMethodsValueSet_IncisionAndExplorationOfAdrenal: new Coding({
         code: "25117004",
         display: "Incision and exploration of adrenal",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_KetoneBodiesMeasurementQuantitative: Coding.FromStrict({
+    ObservationMethodsValueSet_KetoneBodiesMeasurementQuantitative: new Coding({
         code: "25164004",
         display: "Ketone bodies measurement, quantitative",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SodiumMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_SodiumMeasurement: new Coding({
         code: "25197003",
         display: "Sodium measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AntibodyToNuclearMatrixMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_AntibodyToNuclearMatrixMeasurement: new Coding({
         code: "25219007",
         display: "Antibody to nuclear matrix measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CarbonDioxideMeasurementPartialPressure: Coding.FromStrict({
+    ObservationMethodsValueSet_CarbonDioxideMeasurementPartialPressure: new Coding({
         code: "25284008",
         display: "Carbon dioxide measurement, partial pressure",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ThermographyDeepVeins: Coding.FromStrict({
+    ObservationMethodsValueSet_ThermographyDeepVeins: new Coding({
         code: "25306006",
         display: "Thermography - deep veins",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_NeutrophilBandCount: Coding.FromStrict({
+    ObservationMethodsValueSet_NeutrophilBandCount: new Coding({
         code: "25340006",
         display: "Neutrophil band count",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VenographyOfLowerExtremityBilateral: Coding.FromStrict({
+    ObservationMethodsValueSet_VenographyOfLowerExtremityBilateral: new Coding({
         code: "25347009",
         display: "Venography of lower extremity, bilateral",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Interleukin1AlphaAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_Interleukin1AlphaAssay: new Coding({
         code: "25383000",
         display: "Interleukin-1 alpha assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Hysterography: Coding.FromStrict({
+    ObservationMethodsValueSet_Hysterography: new Coding({
         code: "25411007",
         display: "Hysterography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LimitedEyeExamination: Coding.FromStrict({
+    ObservationMethodsValueSet_LimitedEyeExamination: new Coding({
         code: "25434003",
         display: "Limited eye examination",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CoatedParticleAgglutinationInhibitionAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_CoatedParticleAgglutinationInhibitionAssay: new Coding({
         code: "25459007",
         display: "Coated particle agglutination inhibition assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ThromboplastinGenerationTestHicksPitneyModification: Coding.FromStrict({
+    ObservationMethodsValueSet_ThromboplastinGenerationTestHicksPitneyModification: new Coding({
         code: "25464006",
         display: "Thromboplastin generation test, Hicks-Pitney modification",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AnionGapMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_AnionGapMeasurement: new Coding({
         code: "25469001",
         display: "Anion gap measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ExplorationOfLowerLimbArtery: Coding.FromStrict({
+    ObservationMethodsValueSet_ExplorationOfLowerLimbArtery: new Coding({
         code: "25485006",
         display: "Exploration of lower limb artery",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DigoxinMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_DigoxinMeasurement: new Coding({
         code: "25514001",
         display: "Digoxin measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MicrobialIdentificationKitEnterotubeIIMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_MicrobialIdentificationKitEnterotubeIIMethod: new Coding({
         code: "25528007",
         display: "Microbial identification kit, Enterotube II method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Flash: Coding.FromStrict({
+    ObservationMethodsValueSet_Flash: new Coding({
         code: "255459008",
         display: "Flash",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SingleTetanyTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_SingleTetanyTechnique: new Coding({
         code: "255463001",
         display: "Single tetany technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RetrudedJawRelationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_RetrudedJawRelationTechnique: new Coding({
         code: "255583002",
         display: "Retruded jaw relation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EndoscopyOfNose: Coding.FromStrict({
+    ObservationMethodsValueSet_EndoscopyOfNose: new Coding({
         code: "25570002",
         display: "Endoscopy of nose",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HumanImmunodeficiencyVirusHIV1PassiveHemagglutinationAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_HumanImmunodeficiencyVirusHIV1PassiveHemagglutinationAssay: new Coding({
         code: "25578009",
         display: "Human immunodeficiency virus HIV-1 passive hemagglutination assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_OxygenMeasurementPartialPressureArterial: Coding.FromStrict({
+    ObservationMethodsValueSet_OxygenMeasurementPartialPressureArterial: new Coding({
         code: "25579001",
         display: "Oxygen measurement, partial pressure, arterial",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RectallyInfusedSalineSolution: Coding.FromStrict({
+    ObservationMethodsValueSet_RectallyInfusedSalineSolution: new Coding({
         code: "256233002",
         display: "Rectally infused saline solution",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TesticularImaging: Coding.FromStrict({
+    ObservationMethodsValueSet_TesticularImaging: new Coding({
         code: "25630002",
         display: "Testicular imaging",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CryoglobulinMeasurementTypeI: Coding.FromStrict({
+    ObservationMethodsValueSet_CryoglobulinMeasurementTypeI: new Coding({
         code: "25643002",
         display: "Cryoglobulin measurement, type I",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EndoscopyOfPerineum: Coding.FromStrict({
+    ObservationMethodsValueSet_EndoscopyOfPerineum: new Coding({
         code: "25645009",
         display: "Endoscopy of perineum",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AlphaLIduronidaseMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_AlphaLIduronidaseMeasurement: new Coding({
         code: "25652006",
         display: "alpha-L-iduronidase measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PhysicalExaminationComplete: Coding.FromStrict({
+    ObservationMethodsValueSet_PhysicalExaminationComplete: new Coding({
         code: "25656009",
         display: "Physical examination, complete",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VenerealDiseaseResearchLaboratoryVDRLQualitative: Coding.FromStrict({
+    ObservationMethodsValueSet_VenerealDiseaseResearchLaboratoryVDRLQualitative: new Coding({
         code: "25696006",
         display: "Venereal Disease Research Laboratory (VDRL), qualitative",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ReninLowSaltIntakeMeasurementUpright4Hours: Coding.FromStrict({
+    ObservationMethodsValueSet_ReninLowSaltIntakeMeasurementUpright4Hours: new Coding({
         code: "25697002",
         display: "Renin, low salt intake measurement, upright, 4 hours",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AntigenCaptureEnzymeImmunoassayTest: Coding.FromStrict({
+    ObservationMethodsValueSet_AntigenCaptureEnzymeImmunoassayTest: new Coding({
         code: "25704007",
         display: "Antigen capture enzyme immunoassay test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FiberopticColonoscopyWithBiopsy: Coding.FromStrict({
+    ObservationMethodsValueSet_FiberopticColonoscopyWithBiopsy: new Coding({
         code: "25732003",
         display: "Fiberoptic colonoscopy with biopsy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SpecialAudiometricFunctionTest: Coding.FromStrict({
+    ObservationMethodsValueSet_SpecialAudiometricFunctionTest: new Coding({
         code: "25741008",
         display: "Special audiometric function test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AdultNTypes: Coding.FromStrict({
+    ObservationMethodsValueSet_AdultNTypes: new Coding({
         code: "257414001",
         display: "Adult N types",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BrightFieldMicroscopyTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_BrightFieldMicroscopyTechnique: new Coding({
         code: "257425005",
         display: "Bright field microscopy technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DentSleeveTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_DentSleeveTechnique: new Coding({
         code: "257428007",
         display: "Dent sleeve technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SbisaBar: Coding.FromStrict({
+    ObservationMethodsValueSet_SbisaBar: new Coding({
         code: "257452000",
         display: "Sbisa bar",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SolidSphereTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_SolidSphereTechnique: new Coding({
         code: "257456002",
         display: "Solid sphere technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SweptSpatialFrequencyBars: Coding.FromStrict({
+    ObservationMethodsValueSet_SweptSpatialFrequencyBars: new Coding({
         code: "257460004",
         display: "Swept spatial frequency bars",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WaxWaferTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_WaxWaferTechnique: new Coding({
         code: "257465009",
         display: "Wax wafer technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadionuclideScanningForHotSpot: Coding.FromStrict({
+    ObservationMethodsValueSet_RadionuclideScanningForHotSpot: new Coding({
         code: "25759006",
         display: "Radionuclide scanning for hot spot",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AngiographyOfCervicocerebralArteries: Coding.FromStrict({
+    ObservationMethodsValueSet_AngiographyOfCervicocerebralArteries: new Coding({
         code: "25760001",
         display: "Angiography of cervicocerebral arteries",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VYAdvancementTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_VYAdvancementTechnique: new Coding({
         code: "257740006",
         display: "V-Y advancement technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GastricFluidAnalysisFreeAndTotalAcidMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_GastricFluidAnalysisFreeAndTotalAcidMeasurement: new Coding({
         code: "25775009",
         display: "Gastric fluid analysis, free and total acid measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Cementing: Coding.FromStrict({
+    ObservationMethodsValueSet_Cementing: new Coding({
         code: "257771002",
         display: "Cementing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CementingWithNormalViscosityCement: Coding.FromStrict({
+    ObservationMethodsValueSet_CementingWithNormalViscosityCement: new Coding({
         code: "257772009",
         display: "Cementing with normal viscosity cement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CementingWithLowViscosityCement: Coding.FromStrict({
+    ObservationMethodsValueSet_CementingWithLowViscosityCement: new Coding({
         code: "257774005",
         display: "Cementing with low viscosity cement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CementingWithNormalViscosityCementContainingAntibiotic: Coding.FromStrict({
+    ObservationMethodsValueSet_CementingWithNormalViscosityCementContainingAntibiotic: new Coding({
         code: "257775006",
         display: "Cementing with normal viscosity cement containing antibiotic",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CementingWithLowViscosityCementContainingAntibiotic: Coding.FromStrict({
+    ObservationMethodsValueSet_CementingWithLowViscosityCementContainingAntibiotic: new Coding({
         code: "257776007",
         display: "Cementing with low viscosity cement containing antibiotic",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PressFitComponentFixation: Coding.FromStrict({
+    ObservationMethodsValueSet_PressFitComponentFixation: new Coding({
         code: "257827009",
         display: "Press-fit component fixation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DirectSuturingTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_DirectSuturingTechnique: new Coding({
         code: "257932009",
         display: "Direct suturing technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AccelerometryTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AccelerometryTechnique: new Coding({
         code: "258005004",
         display: "Accelerometry technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AcidometricMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_AcidometricMethod: new Coding({
         code: "258006003",
         display: "Acidometric method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BoydenChamberTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_BoydenChamberTechnique: new Coding({
         code: "258009005",
         display: "Boyden chamber technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CatheterTipManometryTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_CatheterTipManometryTechnique: new Coding({
         code: "258010000",
         display: "Catheter tip manometry technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ChessboardMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_ChessboardMethod: new Coding({
         code: "258011001",
         display: "Chessboard method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ConfocalLaserScanningFluorescenceTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ConfocalLaserScanningFluorescenceTechnique: new Coding({
         code: "258012008",
         display: "Confocal laser scanning fluorescence technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ConventionalManometryTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ConventionalManometryTechnique: new Coding({
         code: "258013003",
         display: "Conventional manometry technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DilutionAndColorimetryTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_DilutionAndColorimetryTechnique: new Coding({
         code: "258014009",
         display: "Dilution and colorimetry technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DoubleSamplingDyeDilutionTest: Coding.FromStrict({
+    ObservationMethodsValueSet_DoubleSamplingDyeDilutionTest: new Coding({
         code: "258017002",
         display: "Double sampling dye-dilution test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DrainageBottleMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_DrainageBottleMeasurement: new Coding({
         code: "258018007",
         display: "Drainage bottle measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DrainageMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_DrainageMeasurement: new Coding({
         code: "258019004",
         display: "Drainage measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DyeDilutionTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_DyeDilutionTechnique: new Coding({
         code: "258020005",
         display: "Dye dilution technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DyeTest: Coding.FromStrict({
+    ObservationMethodsValueSet_DyeTest: new Coding({
         code: "258021009",
         display: "Dye test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ETest: Coding.FromStrict({
+    ObservationMethodsValueSet_ETest: new Coding({
         code: "258022002",
         display: "E test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EnzymeMediatedImmunotransferaseAssayTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_EnzymeMediatedImmunotransferaseAssayTechnique: new Coding({
         code: "258025000",
         display: "Enzyme mediated immunotransferase assay technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EnzymeMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_EnzymeMethod: new Coding({
         code: "258026004",
         display: "Enzyme method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EquilibrationMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_EquilibrationMethod: new Coding({
         code: "258027008",
         display: "Equilibration method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GradientMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_GradientMethod: new Coding({
         code: "258030001",
         display: "Gradient method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HeliumSingleBreathTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_HeliumSingleBreathTechnique: new Coding({
         code: "258031002",
         display: "Helium single breath technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HeliumSteadyStateTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_HeliumSteadyStateTechnique: new Coding({
         code: "258033004",
         display: "Helium steady state technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HeliumDilution: Coding.FromStrict({
+    ObservationMethodsValueSet_HeliumDilution: new Coding({
         code: "258034005",
         display: "Helium dilution",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HighPressureLiquidChromatography: Coding.FromStrict({
+    ObservationMethodsValueSet_HighPressureLiquidChromatography: new Coding({
         code: "258035006",
         display: "High pressure liquid chromatography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Immunoblotting: Coding.FromStrict({
+    ObservationMethodsValueSet_Immunoblotting: new Coding({
         code: "258036007",
         display: "Immunoblotting",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Immunoradiometry: Coding.FromStrict({
+    ObservationMethodsValueSet_Immunoradiometry: new Coding({
         code: "258037003",
         display: "Immunoradiometry",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IndicatorDilutionTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_IndicatorDilutionTechnique: new Coding({
         code: "258038008",
         display: "Indicator dilution technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IodometricMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_IodometricMethod: new Coding({
         code: "258039000",
         display: "Iodometric method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IsoenzymeTyping: Coding.FromStrict({
+    ObservationMethodsValueSet_IsoenzymeTyping: new Coding({
         code: "258041004",
         display: "Isoenzyme typing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LectinTyping: Coding.FromStrict({
+    ObservationMethodsValueSet_LectinTyping: new Coding({
         code: "258044007",
         display: "Lectin typing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LipopolysaccharideTyping: Coding.FromStrict({
+    ObservationMethodsValueSet_LipopolysaccharideTyping: new Coding({
         code: "258045008",
         display: "Lipopolysaccharide typing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MetabolicInhibitionTest: Coding.FromStrict({
+    ObservationMethodsValueSet_MetabolicInhibitionTest: new Coding({
         code: "258047000",
         display: "Metabolic inhibition test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MicrobiologicalMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_MicrobiologicalMethod: new Coding({
         code: "258048005",
         display: "Microbiological method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MoorfieldsReadingBookTest: Coding.FromStrict({
+    ObservationMethodsValueSet_MoorfieldsReadingBookTest: new Coding({
         code: "258053000",
         display: "Moorfields reading book test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_NaturalFilling: Coding.FromStrict({
+    ObservationMethodsValueSet_NaturalFilling: new Coding({
         code: "258054006",
         display: "Natural filling",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_NitrocefinMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_NitrocefinMethod: new Coding({
         code: "258055007",
         display: "Nitrocefin method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_NitrogenWashout: Coding.FromStrict({
+    ObservationMethodsValueSet_NitrogenWashout: new Coding({
         code: "258056008",
         display: "Nitrogen washout",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PharmacologicalStimulation: Coding.FromStrict({
+    ObservationMethodsValueSet_PharmacologicalStimulation: new Coding({
         code: "258059001",
         display: "Pharmacological stimulation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Phenotyping: Coding.FromStrict({
+    ObservationMethodsValueSet_Phenotyping: new Coding({
         code: "258060006",
         display: "Phenotyping",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PneumaticOtoscopy: Coding.FromStrict({
+    ObservationMethodsValueSet_PneumaticOtoscopy: new Coding({
         code: "258063008",
         display: "Pneumatic otoscopy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PolyethyleneGlycolPrecipitation: Coding.FromStrict({
+    ObservationMethodsValueSet_PolyethyleneGlycolPrecipitation: new Coding({
         code: "258065001",
         display: "Polyethylene glycol precipitation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PolymeraseChainReaction: Coding.FromStrict({
+    ObservationMethodsValueSet_PolymeraseChainReaction: new Coding({
         code: "258066000",
         display: "Polymerase chain reaction",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PostTetanicCountStimulation: Coding.FromStrict({
+    ObservationMethodsValueSet_PostTetanicCountStimulation: new Coding({
         code: "258067009",
         display: "Post-tetanic count stimulation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ProteinProfiling: Coding.FromStrict({
+    ObservationMethodsValueSet_ProteinProfiling: new Coding({
         code: "258068004",
         display: "Protein profiling",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PyrolysisMassSpectrometry: Coding.FromStrict({
+    ObservationMethodsValueSet_PyrolysisMassSpectrometry: new Coding({
         code: "258069007",
         display: "Pyrolysis mass spectrometry",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RapidPullThrough: Coding.FromStrict({
+    ObservationMethodsValueSet_RapidPullThrough: new Coding({
         code: "258070008",
         display: "Rapid-pull through",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RebreathingMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_RebreathingMethod: new Coding({
         code: "258071007",
         display: "Rebreathing method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Serotyping: Coding.FromStrict({
+    ObservationMethodsValueSet_Serotyping: new Coding({
         code: "258075003",
         display: "Serotyping",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ShamFeedTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ShamFeedTechnique: new Coding({
         code: "258076002",
         display: "Sham feed technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SheridanGardinerTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_SheridanGardinerTechnique: new Coding({
         code: "258077006",
         display: "Sheridan Gardiner technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_StationPullThrough: Coding.FromStrict({
+    ObservationMethodsValueSet_StationPullThrough: new Coding({
         code: "258078001",
         display: "Station pull-through",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ThermodilutionTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ThermodilutionTechnique: new Coding({
         code: "258080007",
         display: "Thermodilution technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UltravioletAbsorption: Coding.FromStrict({
+    ObservationMethodsValueSet_UltravioletAbsorption: new Coding({
         code: "258081006",
         display: "Ultraviolet absorption",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VectorVolumeAnalysis: Coding.FromStrict({
+    ObservationMethodsValueSet_VectorVolumeAnalysis: new Coding({
         code: "258082004",
         display: "Vector volume analysis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VisualEstimation: Coding.FromStrict({
+    ObservationMethodsValueSet_VisualEstimation: new Coding({
         code: "258083009",
         display: "Visual estimation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WeighingOfSwabs: Coding.FromStrict({
+    ObservationMethodsValueSet_WeighingOfSwabs: new Coding({
         code: "258084003",
         display: "Weighing of swabs",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ZymodemeTyping: Coding.FromStrict({
+    ObservationMethodsValueSet_ZymodemeTyping: new Coding({
         code: "258086001",
         display: "Zymodeme typing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AgarDilution: Coding.FromStrict({
+    ObservationMethodsValueSet_AgarDilution: new Coding({
         code: "258087005",
         display: "Agar dilution",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DarkGroundMicroscopyTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_DarkGroundMicroscopyTechnique: new Coding({
         code: "258094008",
         display: "Dark ground microscopy technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FluorescenceMicroscopyTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_FluorescenceMicroscopyTechnique: new Coding({
         code: "258099003",
         display: "Fluorescence microscopy technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HeterophoriaMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_HeterophoriaMethod: new Coding({
         code: "258100006",
         display: "Heterophoria method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IntermittentWithdrawalTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_IntermittentWithdrawalTechnique: new Coding({
         code: "258102003",
         display: "Intermittent withdrawal technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RestrictionFragmentLengthPolymorphismTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_RestrictionFragmentLengthPolymorphismTechnique: new Coding({
         code: "258109007",
         display: "Restriction fragment length polymorphism technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SalineMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_SalineMethod: new Coding({
         code: "258110002",
         display: "Saline method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SequenceSpecificOligonucleotideProbe: Coding.FromStrict({
+    ObservationMethodsValueSet_SequenceSpecificOligonucleotideProbe: new Coding({
         code: "258112005",
         display: "Sequence specific oligonucleotide probe",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SequenceSpecificPrimersPolymeraseChainReaction: Coding.FromStrict({
+    ObservationMethodsValueSet_SequenceSpecificPrimersPolymeraseChainReaction: new Coding({
         code: "258113000",
         display: "Sequence specific primers-polymerase chain reaction",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SRHSingleRadialHemolysis: Coding.FromStrict({
+    ObservationMethodsValueSet_SRHSingleRadialHemolysis: new Coding({
         code: "258114006",
         display: "SRH - Single radial hemolysis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SuctionDrainageMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_SuctionDrainageMeasurement: new Coding({
         code: "258118009",
         display: "Suction drainage measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ThermalTest: Coding.FromStrict({
+    ObservationMethodsValueSet_ThermalTest: new Coding({
         code: "258119001",
         display: "Thermal test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VaporPressureDepression: Coding.FromStrict({
+    ObservationMethodsValueSet_VaporPressureDepression: new Coding({
         code: "258120007",
         display: "Vapor pressure depression",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UngatedEquilibrium: Coding.FromStrict({
+    ObservationMethodsValueSet_UngatedEquilibrium: new Coding({
         code: "258121006",
         display: "Ungated equilibrium",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WholeCellLongChainFattyAcidMethylEsterAnalysis: Coding.FromStrict({
+    ObservationMethodsValueSet_WholeCellLongChainFattyAcidMethylEsterAnalysis: new Coding({
         code: "258122004",
         display: "Whole cell long chain fatty acid methyl ester analysis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ElectrocardiogramGatedTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ElectrocardiogramGatedTechnique: new Coding({
         code: "258123009",
         display: "Electrocardiogram gated technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GatedEquilibrium: Coding.FromStrict({
+    ObservationMethodsValueSet_GatedEquilibrium: new Coding({
         code: "258124003",
         display: "Gated equilibrium",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FreezingPointDepression: Coding.FromStrict({
+    ObservationMethodsValueSet_FreezingPointDepression: new Coding({
         code: "258125002",
         display: "Freezing point depression",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PhaseContrastMicroscopyTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_PhaseContrastMicroscopyTechnique: new Coding({
         code: "258126001",
         display: "Phase contrast microscopy technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SjogrenHandTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_SjogrenHandTechnique: new Coding({
         code: "258128000",
         display: "Sjögren hand technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SnellenTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_SnellenTechnique: new Coding({
         code: "258129008",
         display: "Snellen technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SucroseDensityGradientSeparation: Coding.FromStrict({
+    ObservationMethodsValueSet_SucroseDensityGradientSeparation: new Coding({
         code: "258131004",
         display: "Sucrose density gradient separation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PlateAssayTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_PlateAssayTechnique: new Coding({
         code: "258133001",
         display: "Plate assay technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PositionChange: Coding.FromStrict({
+    ObservationMethodsValueSet_PositionChange: new Coding({
         code: "258144009",
         display: "Position change",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Transmission: Coding.FromStrict({
+    ObservationMethodsValueSet_Transmission: new Coding({
         code: "258150004",
         display: "Transmission",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SlimeProductionTyping: Coding.FromStrict({
+    ObservationMethodsValueSet_SlimeProductionTyping: new Coding({
         code: "258159003",
         display: "Slime production typing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SeldingerTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_SeldingerTechnique: new Coding({
         code: "258164004",
         display: "Seldinger technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RemodeledPouchMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_RemodeledPouchMethod: new Coding({
         code: "258169009",
         display: "Remodeled pouch method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BlindTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_BlindTechnique: new Coding({
         code: "258171009",
         display: "Blind technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DirectVisionTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_DirectVisionTechnique: new Coding({
         code: "258173007",
         display: "Direct vision technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BloodAspirationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_BloodAspirationTechnique: new Coding({
         code: "258178003",
         display: "Blood aspiration technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BloodFlashbackTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_BloodFlashbackTechnique: new Coding({
         code: "258179006",
         display: "Blood flashback technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PressureWaveformAnalysis: Coding.FromStrict({
+    ObservationMethodsValueSet_PressureWaveformAnalysis: new Coding({
         code: "258180009",
         display: "Pressure waveform analysis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ElectrocardiogramAnalysis: Coding.FromStrict({
+    ObservationMethodsValueSet_ElectrocardiogramAnalysis: new Coding({
         code: "258181008",
         display: "Electrocardiogram analysis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ColdLightTransillumination: Coding.FromStrict({
+    ObservationMethodsValueSet_ColdLightTransillumination: new Coding({
         code: "258182001",
         display: "Cold light transillumination",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GasInjectionAndAuscultation: Coding.FromStrict({
+    ObservationMethodsValueSet_GasInjectionAndAuscultation: new Coding({
         code: "258183006",
         display: "Gas injection and auscultation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CystourethroscopyWithInternalMaleUrethrotomy: Coding.FromStrict({
+    ObservationMethodsValueSet_CystourethroscopyWithInternalMaleUrethrotomy: new Coding({
         code: "25846008",
         display: "Cystourethroscopy with internal male urethrotomy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_USScanOfChest: Coding.FromStrict({
+    ObservationMethodsValueSet_USScanOfChest: new Coding({
         code: "25850001",
         display: "US scan of chest",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Immunoelectrophoresis: Coding.FromStrict({
+    ObservationMethodsValueSet_Immunoelectrophoresis: new Coding({
         code: "25884002",
         display: "Immunoelectrophoresis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CystourethroscopyWithBiopsyOfBladder: Coding.FromStrict({
+    ObservationMethodsValueSet_CystourethroscopyWithBiopsyOfBladder: new Coding({
         code: "25918005",
         display: "Cystourethroscopy with biopsy of bladder",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ConcentrationForOvaAndCysts: Coding.FromStrict({
+    ObservationMethodsValueSet_ConcentrationForOvaAndCysts: new Coding({
         code: "25925003",
         display: "Concentration for ova and cysts",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MaximumIntercuspationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_MaximumIntercuspationTechnique: new Coding({
         code: "260223001",
         display: "Maximum intercuspation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SolidPhaseImmuneTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_SolidPhaseImmuneTechnique: new Coding({
         code: "260227000",
         display: "Solid phase immune technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VanSlykeTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_VanSlykeTechnique: new Coding({
         code: "260231006",
         display: "Van Slyke technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CardiovascularStressTestUsingBicycleErgometer: Coding.FromStrict({
+    ObservationMethodsValueSet_CardiovascularStressTestUsingBicycleErgometer: new Coding({
         code: "26046004",
         display: "Cardiovascular stress test using bicycle ergometer",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AspirinToleranceTest: Coding.FromStrict({
+    ObservationMethodsValueSet_AspirinToleranceTest: new Coding({
         code: "26047008",
         display: "Aspirin tolerance test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ManganeseMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_ManganeseMeasurement: new Coding({
         code: "26052003",
         display: "Manganese measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EvokedStimulusResponseTesting: Coding.FromStrict({
+    ObservationMethodsValueSet_EvokedStimulusResponseTesting: new Coding({
         code: "26055001",
         display: "Evoked stimulus response testing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ThoracoscopyAndBiopsy: Coding.FromStrict({
+    ObservationMethodsValueSet_ThoracoscopyAndBiopsy: new Coding({
         code: "26058004",
         display: "Thoracoscopy and biopsy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ObturationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ObturationTechnique: new Coding({
         code: "260710009",
         display: "Obturation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BoneMarrowLaboratoryProcedure: Coding.FromStrict({
+    ObservationMethodsValueSet_BoneMarrowLaboratoryProcedure: new Coding({
         code: "26086007",
         display: "Bone marrow laboratory procedure",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PostProcessing: Coding.FromStrict({
+    ObservationMethodsValueSet_PostProcessing: new Coding({
         code: "260931002",
         display: "Post-processing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AnticurvatureTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AnticurvatureTechnique: new Coding({
         code: "260982004",
         display: "Anticurvature technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DigitalXRay: Coding.FromStrict({
+    ObservationMethodsValueSet_DigitalXRay: new Coding({
         code: "261006005",
         display: "Digital X-ray",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DualCureMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_DualCureMethod: new Coding({
         code: "261009003",
         display: "Dual cure method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Mechanical: Coding.FromStrict({
+    ObservationMethodsValueSet_Mechanical: new Coding({
         code: "261018001",
         display: "Mechanical",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Turnover: Coding.FromStrict({
+    ObservationMethodsValueSet_Turnover: new Coding({
         code: "261032004",
         display: "Turnover",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UltrasonicEndodonticTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_UltrasonicEndodonticTechnique: new Coding({
         code: "261033009",
         display: "Ultrasonic endodontic technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ValsalvaManeuver: Coding.FromStrict({
+    ObservationMethodsValueSet_ValsalvaManeuver: new Coding({
         code: "261039008",
         display: "Valsalva maneuver",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DoubleContrastTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_DoubleContrastTechnique: new Coding({
         code: "261069001",
         display: "Double contrast technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DoubleFlareTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_DoubleFlareTechnique: new Coding({
         code: "261070000",
         display: "Double flare technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DautreyMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_DautreyMethod: new Coding({
         code: "261190007",
         display: "Dautrey method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BalancedForceTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_BalancedForceTechnique: new Coding({
         code: "261192004",
         display: "Balanced force technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CineStudy: Coding.FromStrict({
+    ObservationMethodsValueSet_CineStudy: new Coding({
         code: "261194003",
         display: "Cine study",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DirectApplicationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_DirectApplicationTechnique: new Coding({
         code: "261196001",
         display: "Direct application technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IntermittentAdministration: Coding.FromStrict({
+    ObservationMethodsValueSet_IntermittentAdministration: new Coding({
         code: "261208004",
         display: "Intermittent administration",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_NippleSharingTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_NippleSharingTechnique: new Coding({
         code: "261209007",
         display: "Nipple sharing technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PercutaneousWithAutomatedInstrumentation: Coding.FromStrict({
+    ObservationMethodsValueSet_PercutaneousWithAutomatedInstrumentation: new Coding({
         code: "261212005",
         display: "Percutaneous with automated instrumentation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PercutaneousWithEndoscopicInstrumentation: Coding.FromStrict({
+    ObservationMethodsValueSet_PercutaneousWithEndoscopicInstrumentation: new Coding({
         code: "261213000",
         display: "Percutaneous with endoscopic instrumentation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PercutaneousWithLaserInstrumentation: Coding.FromStrict({
+    ObservationMethodsValueSet_PercutaneousWithLaserInstrumentation: new Coding({
         code: "261214006",
         display: "Percutaneous with laser instrumentation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PercutaneousWithManualInstrumentation: Coding.FromStrict({
+    ObservationMethodsValueSet_PercutaneousWithManualInstrumentation: new Coding({
         code: "261215007",
         display: "Percutaneous with manual instrumentation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadionuclidePlethysmography: Coding.FromStrict({
+    ObservationMethodsValueSet_RadionuclidePlethysmography: new Coding({
         code: "261216008",
         display: "Radionuclide plethysmography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ThermalPlasticTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ThermalPlasticTechnique: new Coding({
         code: "261271009",
         display: "Thermal plastic technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ThermalSolidTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ThermalSolidTechnique: new Coding({
         code: "261272002",
         display: "Thermal solid technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AdhesiveWithSupplementarySutureTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AdhesiveWithSupplementarySutureTechnique: new Coding({
         code: "261338007",
         display: "Adhesive with supplementary suture technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ImplantTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ImplantTechnique: new Coding({
         code: "261373009",
         display: "Implant technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CloseRectalDissectionTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_CloseRectalDissectionTechnique: new Coding({
         code: "261504003",
         display: "Close rectal dissection technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ConventionalAngiography: Coding.FromStrict({
+    ObservationMethodsValueSet_ConventionalAngiography: new Coding({
         code: "261510003",
         display: "Conventional angiography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BaseDeficitMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_BaseDeficitMeasurement: new Coding({
         code: "26154000",
         display: "Base deficit measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PeriarticularOsteotomy: Coding.FromStrict({
+    ObservationMethodsValueSet_PeriarticularOsteotomy: new Coding({
         code: "261548008",
         display: "Periarticular osteotomy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ShelfTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ShelfTechnique: new Coding({
         code: "261561008",
         display: "Shelf technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ThermalInjectionTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ThermalInjectionTechnique: new Coding({
         code: "261567007",
         display: "Thermal injection technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ThyrotrophinReleasingHormoneStimulation: Coding.FromStrict({
+    ObservationMethodsValueSet_ThyrotrophinReleasingHormoneStimulation: new Coding({
         code: "261573008",
         display: "Thyrotrophin releasing hormone stimulation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AirContrastTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AirContrastTechnique: new Coding({
         code: "261671000",
         display: "Air contrast technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BeforeTheFilter: Coding.FromStrict({
+    ObservationMethodsValueSet_BeforeTheFilter: new Coding({
         code: "261699009",
         display: "Before the filter",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BenchekrounTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_BenchekrounTechnique: new Coding({
         code: "261700005",
         display: "Benchekroun technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BiochemicalBondComponentFixation: Coding.FromStrict({
+    ObservationMethodsValueSet_BiochemicalBondComponentFixation: new Coding({
         code: "261708003",
         display: "Biochemical bond component fixation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BisectingAngleTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_BisectingAngleTechnique: new Coding({
         code: "261710001",
         display: "Bisecting angle technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BoneIngrowthSystem: Coding.FromStrict({
+    ObservationMethodsValueSet_BoneIngrowthSystem: new Coding({
         code: "261714005",
         display: "Bone ingrowth system",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CorticotrophinReleasingHormoneStimulation: Coding.FromStrict({
+    ObservationMethodsValueSet_CorticotrophinReleasingHormoneStimulation: new Coding({
         code: "261732005",
         display: "Corticotrophin releasing hormone stimulation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ContinuousInfusion: Coding.FromStrict({
+    ObservationMethodsValueSet_ContinuousInfusion: new Coding({
         code: "261754007",
         display: "Continuous infusion",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ExplantTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ExplantTechnique: new Coding({
         code: "261787006",
         display: "Explant technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ExtraHighResolutionTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ExtraHighResolutionTechnique: new Coding({
         code: "261790000",
         display: "Extra-high resolution technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FlowDirectedTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_FlowDirectedTechnique: new Coding({
         code: "261793003",
         display: "Flow-directed technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IsaacsTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_IsaacsTechnique: new Coding({
         code: "261856001",
         display: "Isaacs technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LightCureMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_LightCureMethod: new Coding({
         code: "261909000",
         display: "Light cure method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MechanicalGrabMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_MechanicalGrabMethod: new Coding({
         code: "261940007",
         display: "Mechanical grab method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MitrofanoffTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_MitrofanoffTechnique: new Coding({
         code: "261943009",
         display: "Mitrofanoff technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ModifiedDoubleFlareTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ModifiedDoubleFlareTechnique: new Coding({
         code: "261947005",
         display: "Modified double flare technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MultiplanarReconstruction: Coding.FromStrict({
+    ObservationMethodsValueSet_MultiplanarReconstruction: new Coding({
         code: "261958001",
         display: "Multiplanar reconstruction",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_NeutralZone: Coding.FromStrict({
+    ObservationMethodsValueSet_NeutralZone: new Coding({
         code: "261981004",
         display: "Neutral zone",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ParallelingTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ParallelingTechnique: new Coding({
         code: "262041006",
         display: "Paralleling technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PatientCycledMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_PatientCycledMethod: new Coding({
         code: "262048000",
         display: "Patient cycled method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PowerOutput: Coding.FromStrict({
+    ObservationMethodsValueSet_PowerOutput: new Coding({
         code: "262062007",
         display: "Power output",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PoweredMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_PoweredMethod: new Coding({
         code: "262063002",
         display: "Powered method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PoweredFlexibleMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_PoweredFlexibleMethod: new Coding({
         code: "262064008",
         display: "Powered flexible method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PoweredRigidMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_PoweredRigidMethod: new Coding({
         code: "262065009",
         display: "Powered rigid method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PressureControlledMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_PressureControlledMethod: new Coding({
         code: "262069003",
         display: "Pressure controlled method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ReciprocalMechanicalTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ReciprocalMechanicalTechnique: new Coding({
         code: "262092003",
         display: "Reciprocal mechanical technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RemainingConnected: Coding.FromStrict({
+    ObservationMethodsValueSet_RemainingConnected: new Coding({
         code: "262095001",
         display: "Remaining connected",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RotaryMechanicalEndodonticTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_RotaryMechanicalEndodonticTechnique: new Coding({
         code: "262110008",
         display: "Rotary mechanical endodontic technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SelfCureMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_SelfCureMethod: new Coding({
         code: "262136001",
         display: "Self-cure method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SingleContrastTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_SingleContrastTechnique: new Coding({
         code: "262148003",
         display: "Single contrast technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SonicEndodonticTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_SonicEndodonticTechnique: new Coding({
         code: "262162005",
         display: "Sonic endodontic technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_StandardizedTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_StandardizedTechnique: new Coding({
         code: "262174009",
         display: "Standardized technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_StepbackTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_StepbackTechnique: new Coding({
         code: "262180001",
         display: "Stepback technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_StepdownTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_StepdownTechnique: new Coding({
         code: "262181002",
         display: "Stepdown technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ThalliumUptakeMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_ThalliumUptakeMethod: new Coding({
         code: "262201007",
         display: "Thallium uptake method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TimeCycledMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_TimeCycledMethod: new Coding({
         code: "262207006",
         display: "Time cycled method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VolumeControlledMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_VolumeControlledMethod: new Coding({
         code: "262265000",
         display: "Volume controlled method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WarmingIntravenousFluidTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_WarmingIntravenousFluidTechnique: new Coding({
         code: "262278000",
         display: "Warming intravenous fluid technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WireGuidedTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_WireGuidedTechnique: new Coding({
         code: "262293001",
         display: "Wire guided technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WithClearanceMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_WithClearanceMeasurement: new Coding({
         code: "262295008",
         display: "With clearance measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CrossCompressionTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_CrossCompressionTechnique: new Coding({
         code: "262296009",
         display: "Cross-compression technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WithGlomerularFiltrationRate: Coding.FromStrict({
+    ObservationMethodsValueSet_WithGlomerularFiltrationRate: new Coding({
         code: "262300005",
         display: "With glomerular filtration rate",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WithSeparation: Coding.FromStrict({
+    ObservationMethodsValueSet_WithSeparation: new Coding({
         code: "262305000",
         display: "With separation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WithUretericPeristalsisAnalysis: Coding.FromStrict({
+    ObservationMethodsValueSet_WithUretericPeristalsisAnalysis: new Coding({
         code: "262310001",
         display: "With ureteric peristalsis analysis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WithoutRemount: Coding.FromStrict({
+    ObservationMethodsValueSet_WithoutRemount: new Coding({
         code: "262313004",
         display: "Without remount",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_XenonClearanceMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_XenonClearanceMethod: new Coding({
         code: "262320006",
         display: "Xenon clearance method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AfterTheFilter: Coding.FromStrict({
+    ObservationMethodsValueSet_AfterTheFilter: new Coding({
         code: "262323008",
         display: "After the filter",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PlateletAggregationWithCollagenTest: Coding.FromStrict({
+    ObservationMethodsValueSet_PlateletAggregationWithCollagenTest: new Coding({
         code: "26234007",
         display: "Platelet aggregation with collagen test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PhlebographyOfHead: Coding.FromStrict({
+    ObservationMethodsValueSet_PhlebographyOfHead: new Coding({
         code: "26262000",
         display: "Phlebography of head",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ProteinCFunctionalAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_ProteinCFunctionalAssay: new Coding({
         code: "26300008",
         display: "Protein C, functional assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DeepFineNeedleAspirationBiopsyUnderRadiologicGuidance: Coding.FromStrict({
+    ObservationMethodsValueSet_DeepFineNeedleAspirationBiopsyUnderRadiologicGuidance: new Coding({
         code: "26308001",
         display: "Deep fine needle aspiration biopsy under radiologic guidance",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ExploratoryThoracotomy: Coding.FromStrict({
+    ObservationMethodsValueSet_ExploratoryThoracotomy: new Coding({
         code: "26337002",
         display: "Exploratory thoracotomy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SleepElectroencephalogramAllNight: Coding.FromStrict({
+    ObservationMethodsValueSet_SleepElectroencephalogramAllNight: new Coding({
         code: "26354005",
         display: "Sleep electroencephalogram, all night",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AlteredCastTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AlteredCastTechnique: new Coding({
         code: "263664004",
         display: "Altered cast technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BrothDilution: Coding.FromStrict({
+    ObservationMethodsValueSet_BrothDilution: new Coding({
         code: "263696007",
         display: "Broth dilution",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ConstantAccelerationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ConstantAccelerationTechnique: new Coding({
         code: "263725008",
         display: "Constant acceleration technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ElectrosensitivityTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ElectrosensitivityTechnique: new Coding({
         code: "263746004",
         display: "Electrosensitivity technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Impulse: Coding.FromStrict({
+    ObservationMethodsValueSet_Impulse: new Coding({
         code: "263781002",
         display: "Impulse",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Microvascular: Coding.FromStrict({
+    ObservationMethodsValueSet_Microvascular: new Coding({
         code: "263809005",
         display: "Microvascular",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TranscutaneousMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_TranscutaneousMethod: new Coding({
         code: "263902000",
         display: "Transcutaneous method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SuperiorPedicleTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_SuperiorPedicleTechnique: new Coding({
         code: "264220008",
         display: "Superior pedicle technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AgaroseTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AgaroseTechnique: new Coding({
         code: "264268002",
         display: "Agarose technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AminoAcidSignaturePatternAnalysis: Coding.FromStrict({
+    ObservationMethodsValueSet_AminoAcidSignaturePatternAnalysis: new Coding({
         code: "264269005",
         display: "Amino acid signature pattern analysis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CentralPedicleTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_CentralPedicleTechnique: new Coding({
         code: "264270006",
         display: "Central pedicle technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ComplementComponent1qBindingAssayTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ComplementComponent1qBindingAssayTechnique: new Coding({
         code: "264271005",
         display: "Complement component 1q binding assay technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ConductivityTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ConductivityTechnique: new Coding({
         code: "264272003",
         display: "Conductivity technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ContinuousWithdrawalTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ContinuousWithdrawalTechnique: new Coding({
         code: "264273008",
         display: "Continuous withdrawal technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FluorescencePolarizationImmunoassayTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_FluorescencePolarizationImmunoassayTechnique: new Coding({
         code: "264275001",
         display: "Fluorescence polarization immunoassay technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HalfChessboardMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_HalfChessboardMethod: new Coding({
         code: "264276000",
         display: "Half chessboard method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HeelBounce: Coding.FromStrict({
+    ObservationMethodsValueSet_HeelBounce: new Coding({
         code: "264277009",
         display: "Heel bounce",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HydroxylamineMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_HydroxylamineMethod: new Coding({
         code: "264279007",
         display: "Hydroxylamine method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_InferiorPedicleTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_InferiorPedicleTechnique: new Coding({
         code: "264280005",
         display: "Inferior pedicle technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DufourmentalTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_DufourmentalTechnique: new Coding({
         code: "264281009",
         display: "Dufourmental technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MaclureNTest: Coding.FromStrict({
+    ObservationMethodsValueSet_MaclureNTest: new Coding({
         code: "264282002",
         display: "Maclure N test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MultipleBreathTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_MultipleBreathTechnique: new Coding({
         code: "264283007",
         display: "Multiple-breath technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SingleBreathTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_SingleBreathTechnique: new Coding({
         code: "264284001",
         display: "Single-breath technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FfooksTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_FfooksTechnique: new Coding({
         code: "264355007",
         display: "Ffooks technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MalonateTest: Coding.FromStrict({
+    ObservationMethodsValueSet_MalonateTest: new Coding({
         code: "26448005",
         display: "Malonate test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AntibiogramTyping: Coding.FromStrict({
+    ObservationMethodsValueSet_AntibiogramTyping: new Coding({
         code: "264582003",
         display: "Antibiogram typing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Auxotyping: Coding.FromStrict({
+    ObservationMethodsValueSet_Auxotyping: new Coding({
         code: "264583008",
         display: "Auxotyping",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BacteriocinTyping: Coding.FromStrict({
+    ObservationMethodsValueSet_BacteriocinTyping: new Coding({
         code: "264584002",
         display: "Bacteriocin typing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HypothalamicStimulation: Coding.FromStrict({
+    ObservationMethodsValueSet_HypothalamicStimulation: new Coding({
         code: "264590003",
         display: "Hypothalamic stimulation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VAL100HueTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_VAL100HueTechnique: new Coding({
         code: "264619009",
         display: "100 hue technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DienesTyping: Coding.FromStrict({
+    ObservationMethodsValueSet_DienesTyping: new Coding({
         code: "264773007",
         display: "Dienes typing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AMBER: Coding.FromStrict({
+    ObservationMethodsValueSet_AMBER: new Coding({
         code: "264782001",
         display: "AMBER",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Biotyping: Coding.FromStrict({
+    ObservationMethodsValueSet_Biotyping: new Coding({
         code: "264788002",
         display: "Biotyping",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ChildrenQuoteSNTests: Coding.FromStrict({
+    ObservationMethodsValueSet_ChildrenQuoteSNTests: new Coding({
         code: "264826006",
         display: "Children's N tests",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CityUniversityTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_CityUniversityTechnique: new Coding({
         code: "264828007",
         display: "City University technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MaclureTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_MaclureTechnique: new Coding({
         code: "264859009",
         display: "Maclure technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Morphotyping: Coding.FromStrict({
+    ObservationMethodsValueSet_Morphotyping: new Coding({
         code: "264863002",
         display: "Morphotyping",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PlasminogenAssayAntigenic: Coding.FromStrict({
+    ObservationMethodsValueSet_PlasminogenAssayAntigenic: new Coding({
         code: "26488000",
         display: "Plasminogen assay, antigenic",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_NucleicAcidAnalysis: Coding.FromStrict({
+    ObservationMethodsValueSet_NucleicAcidAnalysis: new Coding({
         code: "264896000",
         display: "Nucleic acid analysis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PatternOnsetOffsetStimulationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_PatternOnsetOffsetStimulationTechnique: new Coding({
         code: "264903000",
         display: "Pattern onset/offset stimulation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SpecialPotencyDiskIdentificationTest: Coding.FromStrict({
+    ObservationMethodsValueSet_SpecialPotencyDiskIdentificationTest: new Coding({
         code: "26491000",
         display: "Special potency disk identification test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ThomasTankEngineTest: Coding.FromStrict({
+    ObservationMethodsValueSet_ThomasTankEngineTest: new Coding({
         code: "264933007",
         display: "Thomas tank engine test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ToxinTyping: Coding.FromStrict({
+    ObservationMethodsValueSet_ToxinTyping: new Coding({
         code: "264934001",
         display: "Toxin typing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TransluminalProstheticMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_TransluminalProstheticMethod: new Coding({
         code: "264935000",
         display: "Transluminal prosthetic method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WhiteNoiseMaskingOfOppositeEar: Coding.FromStrict({
+    ObservationMethodsValueSet_WhiteNoiseMaskingOfOppositeEar: new Coding({
         code: "264946002",
         display: "White noise masking of opposite ear",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ArthrotomyOfKneeWithJointExploration: Coding.FromStrict({
+    ObservationMethodsValueSet_ArthrotomyOfKneeWithJointExploration: new Coding({
         code: "26504003",
         display: "Arthrotomy of knee with joint exploration",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DiagnosticRadiographyOfLumbarSpineCombinedAnteroposteriorAndLateral: Coding.FromStrict({
+    ObservationMethodsValueSet_DiagnosticRadiographyOfLumbarSpineCombinedAnteroposteriorAndLateral: new Coding({
         code: "26537001",
         display: "Diagnostic radiography of lumbar spine, combined anteroposterior and lateral",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WardUrineDipStickTestingForSugar: Coding.FromStrict({
+    ObservationMethodsValueSet_WardUrineDipStickTestingForSugar: new Coding({
         code: "26542009",
         display: "Ward urine dip stick testing for sugar",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PhenothiazineMeasurementQuantitative: Coding.FromStrict({
+    ObservationMethodsValueSet_PhenothiazineMeasurementQuantitative: new Coding({
         code: "26562001",
         display: "Phenothiazine measurement, quantitative",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AntibodyIdentificationLeukocyteAntibody: Coding.FromStrict({
+    ObservationMethodsValueSet_AntibodyIdentificationLeukocyteAntibody: new Coding({
         code: "26589006",
         display: "Antibody identification, leukocyte antibody",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FBCFullBloodCount: Coding.FromStrict({
+    ObservationMethodsValueSet_FBCFullBloodCount: new Coding({
         code: "26604007",
         display: "FBC - Full blood count",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SilicaMeasurementUrine: Coding.FromStrict({
+    ObservationMethodsValueSet_SilicaMeasurementUrine: new Coding({
         code: "26631005",
         display: "Silica measurement, urine",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DiagnosticRadiographySpecialViews: Coding.FromStrict({
+    ObservationMethodsValueSet_DiagnosticRadiographySpecialViews: new Coding({
         code: "26648002",
         display: "Diagnostic radiography, special views",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ProbingOfLacrimalCanaliculi: Coding.FromStrict({
+    ObservationMethodsValueSet_ProbingOfLacrimalCanaliculi: new Coding({
         code: "26661002",
         display: "Probing of lacrimal canaliculi",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AlbuminMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_AlbuminMeasurement: new Coding({
         code: "26758005",
         display: "Albumin measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AutopsyGrossExaminationTeachingComplete: Coding.FromStrict({
+    ObservationMethodsValueSet_AutopsyGrossExaminationTeachingComplete: new Coding({
         code: "26762004",
         display: "Autopsy, gross examination, teaching, complete",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BleedingTimeDuke: Coding.FromStrict({
+    ObservationMethodsValueSet_BleedingTimeDuke: new Coding({
         code: "26769008",
         display: "Bleeding time, Duke",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AlphaGalactosidaseMeasurementFibroblasts: Coding.FromStrict({
+    ObservationMethodsValueSet_AlphaGalactosidaseMeasurementFibroblasts: new Coding({
         code: "26832000",
         display: "Alpha-galactosidase measurement, fibroblasts",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TributyrinTest: Coding.FromStrict({
+    ObservationMethodsValueSet_TributyrinTest: new Coding({
         code: "26914001",
         display: "Tributyrin test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CTOfUpperExtremityWithContrast: Coding.FromStrict({
+    ObservationMethodsValueSet_CTOfUpperExtremityWithContrast: new Coding({
         code: "26946001",
         display: "CT of upper extremity with contrast",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LFTLiverFunctionTest: Coding.FromStrict({
+    ObservationMethodsValueSet_LFTLiverFunctionTest: new Coding({
         code: "26958001",
         display: "LFT - Liver function test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UreaseTestWayneMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_UreaseTestWayneMethod: new Coding({
         code: "26962007",
         display: "Urease test, Wayne method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HexosaminidaseAAndTotalHexosaminidaseMeasurementSerumAndLeukocytes: Coding.FromStrict({
+    ObservationMethodsValueSet_HexosaminidaseAAndTotalHexosaminidaseMeasurementSerumAndLeukocytes: new Coding({
         code: "26970002",
         display: "Hexosaminidase A and total hexosaminidase measurement, serum and leukocytes",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ONitrophenylBetaOGalactopyranosideTest: Coding.FromStrict({
+    ObservationMethodsValueSet_ONitrophenylBetaOGalactopyranosideTest: new Coding({
         code: "26981004",
         display: "O-nitrophenyl-beta-o-galactopyranoside test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_NoseAndThroatExamination: Coding.FromStrict({
+    ObservationMethodsValueSet_NoseAndThroatExamination: new Coding({
         code: "27032005",
         display: "Nose and throat examination",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BloodArterialPHLevel: Coding.FromStrict({
+    ObservationMethodsValueSet_BloodArterialPHLevel: new Coding({
         code: "27051004",
         display: "Blood arterial pH level",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ImmunoglobulinGSubclassMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_ImmunoglobulinGSubclassMeasurement: new Coding({
         code: "27083005",
         display: "Immunoglobulin G subclass measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_OsmoticFragilityImmediate: Coding.FromStrict({
+    ObservationMethodsValueSet_OsmoticFragilityImmediate: new Coding({
         code: "27107005",
         display: "Osmotic fragility, immediate",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MicrosomalThyroidAntibodyMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_MicrosomalThyroidAntibodyMeasurement: new Coding({
         code: "27115008",
         display: "Microsomal thyroid antibody measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Urinalysis: Coding.FromStrict({
+    ObservationMethodsValueSet_Urinalysis: new Coding({
         code: "27171005",
         display: "Urinalysis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RhSystemGenotype: Coding.FromStrict({
+    ObservationMethodsValueSet_RhSystemGenotype: new Coding({
         code: "27198009",
         display: "Rh system genotype",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Alpha1FetoproteinMeasurementAmnioticFluid: Coding.FromStrict({
+    ObservationMethodsValueSet_Alpha1FetoproteinMeasurementAmnioticFluid: new Coding({
         code: "27220002",
         display: "Alpha-1-Fetoprotein measurement, amniotic fluid",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Analysis: Coding.FromStrict({
+    ObservationMethodsValueSet_Analysis: new Coding({
         code: "272389005",
         display: "Analysis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Dilution: Coding.FromStrict({
+    ObservationMethodsValueSet_Dilution: new Coding({
         code: "272390001",
         display: "Dilution",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MeasurementTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_MeasurementTechnique: new Coding({
         code: "272391002",
         display: "Measurement technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AssayTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AssayTechnique: new Coding({
         code: "272392009",
         display: "Assay technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Tests: Coding.FromStrict({
+    ObservationMethodsValueSet_Tests: new Coding({
         code: "272393004",
         display: "Tests",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Typings: Coding.FromStrict({
+    ObservationMethodsValueSet_Typings: new Coding({
         code: "272395006",
         display: "Typings",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UrinalysisRoutineAndMicroscopic: Coding.FromStrict({
+    ObservationMethodsValueSet_UrinalysisRoutineAndMicroscopic: new Coding({
         code: "27260001",
         display: "Urinalysis, routine and microscopic",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Molegraphy: Coding.FromStrict({
+    ObservationMethodsValueSet_Molegraphy: new Coding({
         code: "27300001",
         display: "Molegraphy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GoldMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_GoldMeasurement: new Coding({
         code: "27310005",
         display: "Gold measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EthyleneGlycolOpacityTest: Coding.FromStrict({
+    ObservationMethodsValueSet_EthyleneGlycolOpacityTest: new Coding({
         code: "27311009",
         display: "Ethylene glycol opacity test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VAL17KetogenicSteroidsMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_VAL17KetogenicSteroidsMeasurement: new Coding({
         code: "27322008",
         display: "17-Ketogenic steroids measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SecretoryImmunoglobulinAMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_SecretoryImmunoglobulinAMeasurement: new Coding({
         code: "27323003",
         display: "Secretory immunoglobulin A measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GallstoneAnalysis: Coding.FromStrict({
+    ObservationMethodsValueSet_GallstoneAnalysis: new Coding({
         code: "27375007",
         display: "Gallstone analysis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AminoAcidsMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_AminoAcidsMeasurement: new Coding({
         code: "27419005",
         display: "Amino acids measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PercutaneousTranshepaticPortographyWithHemodynamicEvaluation: Coding.FromStrict({
+    ObservationMethodsValueSet_PercutaneousTranshepaticPortographyWithHemodynamicEvaluation: new Coding({
         code: "27469002",
         display: "Percutaneous transhepatic portography with hemodynamic evaluation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DiagnosticRadiographyWithContrastMedia: Coding.FromStrict({
+    ObservationMethodsValueSet_DiagnosticRadiographyWithContrastMedia: new Coding({
         code: "27483000",
         display: "Diagnostic radiography with contrast media",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HumanImmunodeficiencyVirusHIV2AntibodyAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_HumanImmunodeficiencyVirusHIV2AntibodyAssay: new Coding({
         code: "27494001",
         display: "Human immunodeficiency virus HIV-2 antibody assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DelayedHypersensitivitySkinTest: Coding.FromStrict({
+    ObservationMethodsValueSet_DelayedHypersensitivitySkinTest: new Coding({
         code: "27496004",
         display: "Delayed hypersensitivity skin test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PositiveContrastBronchographyBilateral: Coding.FromStrict({
+    ObservationMethodsValueSet_PositiveContrastBronchographyBilateral: new Coding({
         code: "27498003",
         display: "Positive contrast bronchography, bilateral",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EndoscopyAndRemovalOfForeignMaterial: Coding.FromStrict({
+    ObservationMethodsValueSet_EndoscopyAndRemovalOfForeignMaterial: new Coding({
         code: "27532002",
         display: "Endoscopy and removal of foreign material",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CongoRedTest: Coding.FromStrict({
+    ObservationMethodsValueSet_CongoRedTest: new Coding({
         code: "27563003",
         display: "Congo red test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MicrocytotoxicityCrossmatchNIHType: Coding.FromStrict({
+    ObservationMethodsValueSet_MicrocytotoxicityCrossmatchNIHType: new Coding({
         code: "27567002",
         display: "Microcytotoxicity crossmatch, NIH type",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BacterialBiotyping: Coding.FromStrict({
+    ObservationMethodsValueSet_BacterialBiotyping: new Coding({
         code: "27593009",
         display: "Bacterial biotyping",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AcetylsalicylicAcidMeasurementQualitative: Coding.FromStrict({
+    ObservationMethodsValueSet_AcetylsalicylicAcidMeasurementQualitative: new Coding({
         code: "27621006",
         display: "Acetylsalicylic acid measurement, qualitative",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CalibrationOfUrethra: Coding.FromStrict({
+    ObservationMethodsValueSet_CalibrationOfUrethra: new Coding({
         code: "27662000",
         display: "Calibration of urethra",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TransthoracicImpedance: Coding.FromStrict({
+    ObservationMethodsValueSet_TransthoracicImpedance: new Coding({
         code: "276857005",
         display: "Transthoracic impedance",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AscorbicAcidMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_AscorbicAcidMeasurement: new Coding({
         code: "27709003",
         display: "Ascorbic acid measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SurfacePalpationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_SurfacePalpationTechnique: new Coding({
         code: "277337007",
         display: "Surface palpation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SuturingTechniques: Coding.FromStrict({
+    ObservationMethodsValueSet_SuturingTechniques: new Coding({
         code: "277581000",
         display: "Suturing techniques",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AmphotericinMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_AmphotericinMeasurement: new Coding({
         code: "27761003",
         display: "Amphotericin measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DentalTechniques: Coding.FromStrict({
+    ObservationMethodsValueSet_DentalTechniques: new Coding({
         code: "277620007",
         display: "Dental techniques",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AutomatedEndodonticTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AutomatedEndodonticTechnique: new Coding({
         code: "277768009",
         display: "Automated endodontic technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HandTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_HandTechnique: new Coding({
         code: "277769001",
         display: "Hand technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FlapValveTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_FlapValveTechnique: new Coding({
         code: "277835006",
         display: "Flap valve technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SubmucosalTunnelTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_SubmucosalTunnelTechnique: new Coding({
         code: "277853000",
         display: "Submucosal tunnel technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WashingOfSwabs: Coding.FromStrict({
+    ObservationMethodsValueSet_WashingOfSwabs: new Coding({
         code: "277913002",
         display: "Washing of swabs",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VideoAndRadioTelemeteredElectroencephalographicMonitoring: Coding.FromStrict({
+    ObservationMethodsValueSet_VideoAndRadioTelemeteredElectroencephalographicMonitoring: new Coding({
         code: "27808002",
         display: "Video and radio-telemetered electroencephalographic monitoring",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VenographyOfJugularVein: Coding.FromStrict({
+    ObservationMethodsValueSet_VenographyOfJugularVein: new Coding({
         code: "27821009",
         display: "Venography of jugular vein",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PercutaneousTechniques: Coding.FromStrict({
+    ObservationMethodsValueSet_PercutaneousTechniques: new Coding({
         code: "278283001",
         display: "Percutaneous techniques",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MicroscopyTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_MicroscopyTechnique: new Coding({
         code: "278289002",
         display: "Microscopy technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PullThroughTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_PullThroughTechnique: new Coding({
         code: "278300004",
         display: "Pull-through technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FluidReplacementTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_FluidReplacementTechnique: new Coding({
         code: "278394000",
         display: "Fluid replacement technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ImagingTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ImagingTechnique: new Coding({
         code: "278395004",
         display: "Imaging technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CopyDentureTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_CopyDentureTechnique: new Coding({
         code: "278440009",
         display: "Copy denture technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MyelographyOfEntireSpinalCanal: Coding.FromStrict({
+    ObservationMethodsValueSet_MyelographyOfEntireSpinalCanal: new Coding({
         code: "27851003",
         display: "Myelography of entire spinal canal",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UrineMetanephrine: Coding.FromStrict({
+    ObservationMethodsValueSet_UrineMetanephrine: new Coding({
         code: "27854006",
         display: "Urine metanephrine",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AntibodyToSSBMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_AntibodyToSSBMeasurement: new Coding({
         code: "27904004",
         display: "Antibody to SS-B measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MethamphetamineMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_MethamphetamineMeasurement: new Coding({
         code: "27965000",
         display: "Methamphetamine measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TheophyllineMeasurementBlood: Coding.FromStrict({
+    ObservationMethodsValueSet_TheophyllineMeasurementBlood: new Coding({
         code: "27994007",
         display: "Theophylline measurement, blood",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FluoroscopicLocalizationForNeedleBiopsyInChest: Coding.FromStrict({
+    ObservationMethodsValueSet_FluoroscopicLocalizationForNeedleBiopsyInChest: new Coding({
         code: "28033003",
         display: "Fluoroscopic localization for needle biopsy in chest",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FollowUpExaminationOfNoseAndThroat: Coding.FromStrict({
+    ObservationMethodsValueSet_FollowUpExaminationOfNoseAndThroat: new Coding({
         code: "28034009",
         display: "Follow-up examination of nose and throat",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HighDensityLipoproteinCholesterolLevel: Coding.FromStrict({
+    ObservationMethodsValueSet_HighDensityLipoproteinCholesterolLevel: new Coding({
         code: "28036006",
         display: "High density lipoprotein cholesterol level",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GeneralHealthPanel: Coding.FromStrict({
+    ObservationMethodsValueSet_GeneralHealthPanel: new Coding({
         code: "28040002",
         display: "General health panel",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TotalVitalCapacityWithTimedForcedExpiratoryVolumeAndPeakFlowRateMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_TotalVitalCapacityWithTimedForcedExpiratoryVolumeAndPeakFlowRateMeasurement: new Coding({
         code: "28101009",
         display: "Total vital capacity with timed forced expiratory volume and peak flow rate measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FlowTriggering: Coding.FromStrict({
+    ObservationMethodsValueSet_FlowTriggering: new Coding({
         code: "281408006",
         display: "Flow triggering",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PressureTriggering: Coding.FromStrict({
+    ObservationMethodsValueSet_PressureTriggering: new Coding({
         code: "281409003",
         display: "Pressure triggering",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DifferentialLungVentilation: Coding.FromStrict({
+    ObservationMethodsValueSet_DifferentialLungVentilation: new Coding({
         code: "281410008",
         display: "Differential lung ventilation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_OneLungVentilation: Coding.FromStrict({
+    ObservationMethodsValueSet_OneLungVentilation: new Coding({
         code: "281417006",
         display: "One lung ventilation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LeftLungVentilation: Coding.FromStrict({
+    ObservationMethodsValueSet_LeftLungVentilation: new Coding({
         code: "281418001",
         display: "Left lung ventilation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RightLungVentilation: Coding.FromStrict({
+    ObservationMethodsValueSet_RightLungVentilation: new Coding({
         code: "281419009",
         display: "Right lung ventilation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BilateralLungVentilation: Coding.FromStrict({
+    ObservationMethodsValueSet_BilateralLungVentilation: new Coding({
         code: "281420003",
         display: "Bilateral lung ventilation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ReExplorationOfParathyroidGland: Coding.FromStrict({
+    ObservationMethodsValueSet_ReExplorationOfParathyroidGland: new Coding({
         code: "28148006",
         display: "Re-exploration of parathyroid gland",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PelvicLymphangiographyBilateral: Coding.FromStrict({
+    ObservationMethodsValueSet_PelvicLymphangiographyBilateral: new Coding({
         code: "28160007",
         display: "Pelvic lymphangiography, bilateral",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SkinTestForTuberculosisTineTest: Coding.FromStrict({
+    ObservationMethodsValueSet_SkinTestForTuberculosisTineTest: new Coding({
         code: "28163009",
         display: "Skin test for tuberculosis, Tine test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BetaGlucosidaseMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_BetaGlucosidaseMeasurement: new Coding({
         code: "28261000",
         display: "Beta-glucosidase measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BodyPlethysmography: Coding.FromStrict({
+    ObservationMethodsValueSet_BodyPlethysmography: new Coding({
         code: "28275007",
         display: "Body plethysmography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GalactosylceramideBetaGalactosidaseMeasurementFibroblasts: Coding.FromStrict({
+    ObservationMethodsValueSet_GalactosylceramideBetaGalactosidaseMeasurementFibroblasts: new Coding({
         code: "28297009",
         display: "Galactosylceramide beta-galactosidase measurement, fibroblasts",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AngerManagementTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AngerManagementTechnique: new Coding({
         code: "284466007",
         display: "Anger management technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RelaxationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_RelaxationTechnique: new Coding({
         code: "284467003",
         display: "Relaxation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PressureLimitedCyclingMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_PressureLimitedCyclingMethod: new Coding({
         code: "286811001",
         display: "Pressure limited cycling method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ContrastImagingTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ContrastImagingTechnique: new Coding({
         code: "302554003",
         display: "Contrast imaging technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SpecificStimulationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_SpecificStimulationTechnique: new Coding({
         code: "304033004",
         display: "Specific stimulation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FixationOfProstheticJointComponent: Coding.FromStrict({
+    ObservationMethodsValueSet_FixationOfProstheticJointComponent: new Coding({
         code: "304364007",
         display: "Fixation of prosthetic joint component",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UncementedComponentFixation: Coding.FromStrict({
+    ObservationMethodsValueSet_UncementedComponentFixation: new Coding({
         code: "304367000",
         display: "Uncemented component fixation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LossOfResistanceTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_LossOfResistanceTechnique: new Coding({
         code: "309796000",
         display: "Loss of resistance technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LossOfResistanceToAir: Coding.FromStrict({
+    ObservationMethodsValueSet_LossOfResistanceToAir: new Coding({
         code: "309797009",
         display: "Loss of resistance to air",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LossOfResistanceToSaline: Coding.FromStrict({
+    ObservationMethodsValueSet_LossOfResistanceToSaline: new Coding({
         code: "309798004",
         display: "Loss of resistance to saline",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AngiographyTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AngiographyTechnique: new Coding({
         code: "312245009",
         display: "Angiography technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DigitalSubtractionAngiography: Coding.FromStrict({
+    ObservationMethodsValueSet_DigitalSubtractionAngiography: new Coding({
         code: "312246005",
         display: "Digital subtraction angiography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ImagePostProcessing: Coding.FromStrict({
+    ObservationMethodsValueSet_ImagePostProcessing: new Coding({
         code: "312348008",
         display: "Image post-processing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FlapTransferTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_FlapTransferTechnique: new Coding({
         code: "313115005",
         display: "Flap transfer technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AdvancementTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AdvancementTechnique: new Coding({
         code: "313116006",
         display: "Advancement technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SimpleSutureTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_SimpleSutureTechnique: new Coding({
         code: "313201001",
         display: "Simple suture technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ZPlastyTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ZPlastyTechnique: new Coding({
         code: "313202008",
         display: "Z-plasty technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ForwardSliding: Coding.FromStrict({
+    ObservationMethodsValueSet_ForwardSliding: new Coding({
         code: "313281003",
         display: "Forward sliding",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ManualMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_ManualMethod: new Coding({
         code: "362943005",
         display: "Manual method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SingleBeatsNumericEstimationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_SingleBeatsNumericEstimationTechnique: new Coding({
         code: "371871002",
         display: "Single beats - numeric estimation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BestValue: Coding.FromStrict({
+    ObservationMethodsValueSet_BestValue: new Coding({
         code: "371912002",
         display: "Best value",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PointSourceNumericEstimationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_PointSourceNumericEstimationTechnique: new Coding({
         code: "371913007",
         display: "Point source - numeric estimation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PeakToPeakNumericEstimationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_PeakToPeakNumericEstimationTechnique: new Coding({
         code: "371914001",
         display: "Peak to peak - numeric estimation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RepresentativeNumericEstimationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_RepresentativeNumericEstimationTechnique: new Coding({
         code: "371916004",
         display: "Representative - numeric estimation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AveragedNumericEstimationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AveragedNumericEstimationTechnique: new Coding({
         code: "371921001",
         display: "Averaged - numeric estimation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MeanNumericEstimationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_MeanNumericEstimationTechnique: new Coding({
         code: "373098007",
         display: "Mean - numeric estimation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MedianNumericEstimationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_MedianNumericEstimationTechnique: new Coding({
         code: "373099004",
         display: "Median - numeric estimation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ModeNumericEstimationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ModeNumericEstimationTechnique: new Coding({
         code: "373100007",
         display: "Mode - numeric estimation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RoutineNumericEstimationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_RoutineNumericEstimationTechnique: new Coding({
         code: "373115008",
         display: "Routine - numeric estimation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SingleBolus: Coding.FromStrict({
+    ObservationMethodsValueSet_SingleBolus: new Coding({
         code: "397801003",
         display: "Single bolus",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IntravascularConfirmationMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_IntravascularConfirmationMethod: new Coding({
         code: "397850009",
         display: "Intravascular confirmation method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IntermittentBolus: Coding.FromStrict({
+    ObservationMethodsValueSet_IntermittentBolus: new Coding({
         code: "397884008",
         display: "Intermittent bolus",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LossOfResistanceTechniqueOtherFluid: Coding.FromStrict({
+    ObservationMethodsValueSet_LossOfResistanceTechniqueOtherFluid: new Coding({
         code: "397916001",
         display: "Loss of resistance technique - other fluid",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VesselLocationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_VesselLocationTechnique: new Coding({
         code: "398037009",
         display: "Vessel location technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LossOfResistanceTechniqueBothSalineAndAir: Coding.FromStrict({
+    ObservationMethodsValueSet_LossOfResistanceTechniqueBothSalineAndAir: new Coding({
         code: "398129004",
         display: "Loss of resistance technique - both saline and air",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FinderNeedleTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_FinderNeedleTechnique: new Coding({
         code: "398317000",
         display: "Finder needle technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Autofluorescence: Coding.FromStrict({
+    ObservationMethodsValueSet_Autofluorescence: new Coding({
         code: "404655007",
         display: "Autofluorescence",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HangingDropTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_HangingDropTechnique: new Coding({
         code: "414378002",
         display: "Hanging drop technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ImagingGuidanceTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ImagingGuidanceTechnique: new Coding({
         code: "414456005",
         display: "Imaging guidance technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LinePlacementTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_LinePlacementTechnique: new Coding({
         code: "414611008",
         display: "Line placement technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ParesthesiaTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ParesthesiaTechnique: new Coding({
         code: "415037003",
         display: "Paresthesia technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TransarterialTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_TransarterialTechnique: new Coding({
         code: "415741008",
         display: "Transarterial technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IntubationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_IntubationTechnique: new Coding({
         code: "416238005",
         display: "Intubation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TrachealIntubationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_TrachealIntubationTechnique: new Coding({
         code: "416423007",
         display: "Tracheal intubation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BronchialIntubationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_BronchialIntubationTechnique: new Coding({
         code: "417453009",
         display: "Bronchial intubation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Gently: Coding.FromStrict({
+    ObservationMethodsValueSet_Gently: new Coding({
         code: "418449005",
         display: "Gently",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Rapidly: Coding.FromStrict({
+    ObservationMethodsValueSet_Rapidly: new Coding({
         code: "418694008",
         display: "Rapidly",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Liberally: Coding.FromStrict({
+    ObservationMethodsValueSet_Liberally: new Coding({
         code: "419125005",
         display: "Liberally",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Slowly: Coding.FromStrict({
+    ObservationMethodsValueSet_Slowly: new Coding({
         code: "419443000",
         display: "Slowly",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Vigorously: Coding.FromStrict({
+    ObservationMethodsValueSet_Vigorously: new Coding({
         code: "419913006",
         display: "Vigorously",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SwallowedWhole: Coding.FromStrict({
+    ObservationMethodsValueSet_SwallowedWhole: new Coding({
         code: "420004004",
         display: "Swallowed whole",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IntrathecalConfirmationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_IntrathecalConfirmationTechnique: new Coding({
         code: "424457002",
         display: "Intrathecal confirmation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ExtracorporealTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ExtracorporealTechnique: new Coding({
         code: "445911007",
         display: "Extracorporeal technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HemodialysisTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_HemodialysisTechnique: new Coding({
         code: "446402005",
         display: "Hemodialysis technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_InhalationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_InhalationTechnique: new Coding({
         code: "446406008",
         display: "Inhalation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ElectroosmosisTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ElectroosmosisTechnique: new Coding({
         code: "446947001",
         display: "Electroosmosis technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IrrigationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_IrrigationTechnique: new Coding({
         code: "447027002",
         display: "Irrigation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_OcclusiveDressingTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_OcclusiveDressingTechnique: new Coding({
         code: "447056002",
         display: "Occlusive dressing technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_InjectionTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_InjectionTechnique: new Coding({
         code: "447120003",
         display: "Injection technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PercutaneousGastrostomyButtonTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_PercutaneousGastrostomyButtonTechnique: new Coding({
         code: "447692002",
         display: "Percutaneous gastrostomy (button) technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PeritonealDialysisTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_PeritonealDialysisTechnique: new Coding({
         code: "447693007",
         display: "Peritoneal dialysis technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_InfusionTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_InfusionTechnique: new Coding({
         code: "447826007",
         display: "Infusion technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IntravenousPushTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_IntravenousPushTechnique: new Coding({
         code: "447963004",
         display: "Intravenous push technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IontophoresisTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_IontophoresisTechnique: new Coding({
         code: "448076005",
         display: "Iontophoresis technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IntravenousPiggybackTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_IntravenousPiggybackTechnique: new Coding({
         code: "449137004",
         display: "Intravenous piggyback technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HemodiafiltrationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_HemodiafiltrationTechnique: new Coding({
         code: "449225005",
         display: "Hemodiafiltration technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CompetitiveProteinBindingAssayTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_CompetitiveProteinBindingAssayTechnique: new Coding({
         code: "58207001",
         display: "Competitive protein binding assay technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ImmunodiffusionQualitative: Coding.FromStrict({
+    ObservationMethodsValueSet_ImmunodiffusionQualitative: new Coding({
         code: "6689003",
         display: "Immunodiffusion, qualitative",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SulfonamideMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_SulfonamideMeasurement: new Coding({
         code: "6690007",
         display: "Sulfonamide measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiologicExaminationOfCompleteSpineAnteroposteriorAndLateral: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiologicExaminationOfCompleteSpineAnteroposteriorAndLateral: new Coding({
         code: "6728003",
         display: "Radiologic examination of complete spine, anteroposterior and lateral",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IndirectLaryngoscopyWithRemovalOfForeignBody: Coding.FromStrict({
+    ObservationMethodsValueSet_IndirectLaryngoscopyWithRemovalOfForeignBody: new Coding({
         code: "6745008",
         display: "Indirect laryngoscopy with removal of foreign body",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ElectronMicroscopyTechniqueGlassKnifeMaking: Coding.FromStrict({
+    ObservationMethodsValueSet_ElectronMicroscopyTechniqueGlassKnifeMaking: new Coding({
         code: "6748005",
         display: "Electron microscopy technique, glass knife making",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MethyleneBluePlatingTest: Coding.FromStrict({
+    ObservationMethodsValueSet_MethyleneBluePlatingTest: new Coding({
         code: "6782004",
         display: "Methylene blue plating test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_C3eReceptorMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_C3eReceptorMeasurement: new Coding({
         code: "6880001",
         display: "C3e receptor measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AldosteroneMeasurementNormalSaltDietUrine: Coding.FromStrict({
+    ObservationMethodsValueSet_AldosteroneMeasurementNormalSaltDietUrine: new Coding({
         code: "6943008",
         display: "Aldosterone measurement, normal salt diet, urine",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PrecipitinTestForBloodGroupSpeciesIdentification: Coding.FromStrict({
+    ObservationMethodsValueSet_PrecipitinTestForBloodGroupSpeciesIdentification: new Coding({
         code: "6986008",
         display: "Precipitin test for blood group, species identification",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MicrobialCulture: Coding.FromStrict({
+    ObservationMethodsValueSet_MicrobialCulture: new Coding({
         code: "702658000",
         display: "Microbial culture",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AutomatedCount: Coding.FromStrict({
+    ObservationMethodsValueSet_AutomatedCount: new Coding({
         code: "702659008",
         display: "Automated count",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TestStrip: Coding.FromStrict({
+    ObservationMethodsValueSet_TestStrip: new Coding({
         code: "702660003",
         display: "Test strip",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LightMicroscopy: Coding.FromStrict({
+    ObservationMethodsValueSet_LightMicroscopy: new Coding({
         code: "702661004",
         display: "Light microscopy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HighPowerFieldLightMicroscopy: Coding.FromStrict({
+    ObservationMethodsValueSet_HighPowerFieldLightMicroscopy: new Coding({
         code: "702662006",
         display: "High power field light microscopy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ManualCount: Coding.FromStrict({
+    ObservationMethodsValueSet_ManualCount: new Coding({
         code: "702663001",
         display: "Manual count",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ImmunologicalMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_ImmunologicalMethod: new Coding({
         code: "702664007",
         display: "Immunological method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CytologyStain: Coding.FromStrict({
+    ObservationMethodsValueSet_CytologyStain: new Coding({
         code: "702665008",
         display: "Cytology stain",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Cytology: Coding.FromStrict({
+    ObservationMethodsValueSet_Cytology: new Coding({
         code: "702666009",
         display: "Cytology",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ClearanceCalculationFormula: Coding.FromStrict({
+    ObservationMethodsValueSet_ClearanceCalculationFormula: new Coding({
         code: "702667000",
         display: "Clearance calculation formula",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ModificationOfDietInRenalDiseaseFormula: Coding.FromStrict({
+    ObservationMethodsValueSet_ModificationOfDietInRenalDiseaseFormula: new Coding({
         code: "702668005",
         display: "Modification of diet in renal disease formula",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DirectAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_DirectAssay: new Coding({
         code: "702669002",
         display: "Direct assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DeoxyribonucleicAcidProbe: Coding.FromStrict({
+    ObservationMethodsValueSet_DeoxyribonucleicAcidProbe: new Coding({
         code: "702673004",
         display: "Deoxyribonucleic acid probe",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_NucleicAcidHybridizationProbe: Coding.FromStrict({
+    ObservationMethodsValueSet_NucleicAcidHybridizationProbe: new Coding({
         code: "702674005",
         display: "Nucleic acid hybridization probe",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ProbeWithTargetAmplification: Coding.FromStrict({
+    ObservationMethodsValueSet_ProbeWithTargetAmplification: new Coding({
         code: "702675006",
         display: "Probe with target amplification",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DetectionLimitEqualToOrLessThan20MgL: Coding.FromStrict({
+    ObservationMethodsValueSet_DetectionLimitEqualToOrLessThan20MgL: new Coding({
         code: "702872006",
         display: "Detection limit equal to or less than 20 mg/L",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CalculationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_CalculationTechnique: new Coding({
         code: "702873001",
         display: "Calculation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Filtration: Coding.FromStrict({
+    ObservationMethodsValueSet_Filtration: new Coding({
         code: "702940009",
         display: "Filtration",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ParaffinEmbedding: Coding.FromStrict({
+    ObservationMethodsValueSet_ParaffinEmbedding: new Coding({
         code: "702941008",
         display: "Paraffin embedding",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Concentration: Coding.FromStrict({
+    ObservationMethodsValueSet_Concentration: new Coding({
         code: "702942001",
         display: "Concentration",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DNAExtraction: Coding.FromStrict({
+    ObservationMethodsValueSet_DNAExtraction: new Coding({
         code: "702943006",
         display: "DNA extraction",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RNAExtraction: Coding.FromStrict({
+    ObservationMethodsValueSet_RNAExtraction: new Coding({
         code: "702944000",
         display: "RNA extraction",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EstimatedFromGlycatedHemoglobin: Coding.FromStrict({
+    ObservationMethodsValueSet_EstimatedFromGlycatedHemoglobin: new Coding({
         code: "702945004",
         display: "Estimated from glycated hemoglobin",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CoagulationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_CoagulationTechnique: new Coding({
         code: "702946003",
         display: "Coagulation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CorrectedForNucleatedErythrocytes: Coding.FromStrict({
+    ObservationMethodsValueSet_CorrectedForNucleatedErythrocytes: new Coding({
         code: "702947007",
         display: "Corrected for nucleated erythrocytes",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DetectionLimitEqualToOrLessThan0005MIUL: Coding.FromStrict({
+    ObservationMethodsValueSet_DetectionLimitEqualToOrLessThan0005MIUL: new Coding({
         code: "703436002",
         display: "Detection limit equal to or less than 0.005 mIU/L",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DetectionLimitEqualToOrLessThan001NgML: Coding.FromStrict({
+    ObservationMethodsValueSet_DetectionLimitEqualToOrLessThan001NgML: new Coding({
         code: "703437006",
         display: "Detection limit equal to or less than 0.01 ng/mL",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DetectionLimitEqualToOrLessThan005MIUL: Coding.FromStrict({
+    ObservationMethodsValueSet_DetectionLimitEqualToOrLessThan005MIUL: new Coding({
         code: "703438001",
         display: "Detection limit equal to or less than 0.05 mIU/L",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DetectionLimitEqualToOrLessThan10NgDL: Coding.FromStrict({
+    ObservationMethodsValueSet_DetectionLimitEqualToOrLessThan10NgDL: new Coding({
         code: "703439009",
         display: "Detection limit equal to or less than 1.0 ng/dL",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DetectionLimitEqualToOrLessThan347PmolL: Coding.FromStrict({
+    ObservationMethodsValueSet_DetectionLimitEqualToOrLessThan347PmolL: new Coding({
         code: "703440006",
         display: "Detection limit equal to or less than 3.47 pmol/L",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WrightStainMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_WrightStainMethod: new Coding({
         code: "703441005",
         display: "Wright stain method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GradientStripSusceptibilityTest: Coding.FromStrict({
+    ObservationMethodsValueSet_GradientStripSusceptibilityTest: new Coding({
         code: "703442003",
         display: "Gradient strip susceptibility test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FungusStainMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_FungusStainMethod: new Coding({
         code: "703443008",
         display: "Fungus stain method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FluorescentImmunoassay: Coding.FromStrict({
+    ObservationMethodsValueSet_FluorescentImmunoassay: new Coding({
         code: "703444002",
         display: "Fluorescent immunoassay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IonSelectiveElectrodeMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_IonSelectiveElectrodeMeasurement: new Coding({
         code: "703445001",
         display: "Ion selective electrode measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ImmunoblotAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_ImmunoblotAssay: new Coding({
         code: "703446000",
         display: "Immunoblot assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EIATechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_EIATechnique: new Coding({
         code: "703447009",
         display: "EIA technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LatexAgglutinationTest: Coding.FromStrict({
+    ObservationMethodsValueSet_LatexAgglutinationTest: new Coding({
         code: "703448004",
         display: "Latex agglutination test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Radioimmunoassay: Coding.FromStrict({
+    ObservationMethodsValueSet_Radioimmunoassay: new Coding({
         code: "703449007",
         display: "Radioimmunoassay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Electrophoresis: Coding.FromStrict({
+    ObservationMethodsValueSet_Electrophoresis: new Coding({
         code: "703450007",
         display: "Electrophoresis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LowPowerFieldLightMicroscopy: Coding.FromStrict({
+    ObservationMethodsValueSet_LowPowerFieldLightMicroscopy: new Coding({
         code: "703451006",
         display: "Low power field light microscopy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ElectricalImpedanceTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ElectricalImpedanceTechnique: new Coding({
         code: "703452004",
         display: "Electrical impedance technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CentrifugationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_CentrifugationTechnique: new Coding({
         code: "703454003",
         display: "Centrifugation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RapidPlasmaReaginTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_RapidPlasmaReaginTechnique: new Coding({
         code: "703455002",
         display: "Rapid Plasma Reagin technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VenerealDiseaseResearchLaboratoryTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_VenerealDiseaseResearchLaboratoryTechnique: new Coding({
         code: "703456001",
         display: "Venereal Disease Research Laboratory technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WetPreparationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_WetPreparationTechnique: new Coding({
         code: "703457005",
         display: "Wet preparation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_NeutralizationMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_NeutralizationMethod: new Coding({
         code: "703458000",
         display: "Neutralization method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WestergrenTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_WestergrenTechnique: new Coding({
         code: "703459008",
         display: "Westergren technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WintrobeTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_WintrobeTechnique: new Coding({
         code: "703460003",
         display: "Wintrobe technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ConcentrationOfParasitesMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_ConcentrationOfParasitesMethod: new Coding({
         code: "703461004",
         display: "Concentration of parasites method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CockcroftGaultFormula: Coding.FromStrict({
+    ObservationMethodsValueSet_CockcroftGaultFormula: new Coding({
         code: "703462006",
         display: "Cockcroft-Gault formula",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CalculatedFromOxygenPartialPressure: Coding.FromStrict({
+    ObservationMethodsValueSet_CalculatedFromOxygenPartialPressure: new Coding({
         code: "703463001",
         display: "Calculated from oxygen partial pressure",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Coagulation11SalineMixtureTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_Coagulation11SalineMixtureTechnique: new Coding({
         code: "703488009",
         display: "Coagulation 1:1 saline mixture technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TranscutaneousCO2Monitor: Coding.FromStrict({
+    ObservationMethodsValueSet_TranscutaneousCO2Monitor: new Coding({
         code: "703490005",
         display: "Transcutaneous CO2 monitor",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TranscutaneousO2Monitor: Coding.FromStrict({
+    ObservationMethodsValueSet_TranscutaneousO2Monitor: new Coding({
         code: "703492002",
         display: "Transcutaneous O2 monitor",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CalculatedFromSignalToCutoffRatio: Coding.FromStrict({
+    ObservationMethodsValueSet_CalculatedFromSignalToCutoffRatio: new Coding({
         code: "703497008",
         display: "Calculated from signal to cutoff ratio",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ToxicologyScreeningTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ToxicologyScreeningTechnique: new Coding({
         code: "703501003",
         display: "Toxicology screening technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ClearanceCalculationRelativeTo173SquareMetersBodySurfaceArea: Coding.FromStrict({
+    ObservationMethodsValueSet_ClearanceCalculationRelativeTo173SquareMetersBodySurfaceArea: new Coding({
         code: "703505007",
         display: "Clearance calculation relative to 1.73 square meters body surface area",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ClearanceCalculationRelativeTo173SquareMetersBodySurfaceAreaAndAdjustedForAfricanRace: Coding.FromStrict({
+    ObservationMethodsValueSet_ClearanceCalculationRelativeTo173SquareMetersBodySurfaceAreaAndAdjustedForAfricanRace: new Coding({
         code: "703506008",
         display: "Clearance calculation relative to 1.73 square meters body surface area and adjusted for African race",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ClearanceCalculationRelativeTo173SquareMetersBodySurfaceAreaAndAdjustedForNonAfricanRace: Coding.FromStrict({
+    ObservationMethodsValueSet_ClearanceCalculationRelativeTo173SquareMetersBodySurfaceAreaAndAdjustedForNonAfricanRace: new Coding({
         code: "703507004",
         display: "Clearance calculation relative to 1.73 square meters body surface area and adjusted for non-African race",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HighSensitivityMethodForCReactiveProtein: Coding.FromStrict({
+    ObservationMethodsValueSet_HighSensitivityMethodForCReactiveProtein: new Coding({
         code: "703689005",
         display: "High sensitivity method for C-reactive protein",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ConfirmatoryTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ConfirmatoryTechnique: new Coding({
         code: "703690001",
         display: "Confirmatory technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HighSensitivityMethodForEstradiol: Coding.FromStrict({
+    ObservationMethodsValueSet_HighSensitivityMethodForEstradiol: new Coding({
         code: "703724007",
         display: "High sensitivity method for estradiol",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Culture: Coding.FromStrict({
+    ObservationMethodsValueSet_Culture: new Coding({
         code: "703725008",
         display: "Culture",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AerobicCulture: Coding.FromStrict({
+    ObservationMethodsValueSet_AerobicCulture: new Coding({
         code: "703750006",
         display: "Aerobic culture",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AnaerobicCulture: Coding.FromStrict({
+    ObservationMethodsValueSet_AnaerobicCulture: new Coding({
         code: "703751005",
         display: "Anaerobic culture",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_OrganismSpecificCulture: Coding.FromStrict({
+    ObservationMethodsValueSet_OrganismSpecificCulture: new Coding({
         code: "703752003",
         display: "Organism specific culture",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DetectingWithoutClassifying: Coding.FromStrict({
+    ObservationMethodsValueSet_DetectingWithoutClassifying: new Coding({
         code: "703753008",
         display: "Detecting without classifying",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DetectingByLightMicroscopyWithoutClassifying: Coding.FromStrict({
+    ObservationMethodsValueSet_DetectingByLightMicroscopyWithoutClassifying: new Coding({
         code: "703754002",
         display: "Detecting by light microscopy without classifying",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_OrganismStainingTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_OrganismStainingTechnique: new Coding({
         code: "703856008",
         display: "Organism staining technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_StainingTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_StainingTechnique: new Coding({
         code: "703857004",
         display: "Staining technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_NumericEstimationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_NumericEstimationTechnique: new Coding({
         code: "703858009",
         display: "Numeric estimation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HighSensitivityMethodForBioavailableTestosterone: Coding.FromStrict({
+    ObservationMethodsValueSet_HighSensitivityMethodForBioavailableTestosterone: new Coding({
         code: "703950001",
         display: "High sensitivity method for bioavailable testosterone",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AdjustedMeasurementTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AdjustedMeasurementTechnique: new Coding({
         code: "707682000",
         display: "Adjusted measurement technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AdjustedForDiabetesTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AdjustedForDiabetesTechnique: new Coding({
         code: "707683005",
         display: "Adjusted for diabetes technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AdjustedForMultipleGestationsTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AdjustedForMultipleGestationsTechnique: new Coding({
         code: "707684004",
         display: "Adjusted for multiple gestations technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AdjustedForSexHormoneBindingGlobulinTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AdjustedForSexHormoneBindingGlobulinTechnique: new Coding({
         code: "707685003",
         display: "Adjusted for sex hormone binding globulin technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AdjustedForWeightTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AdjustedForWeightTechnique: new Coding({
         code: "707687006",
         display: "Adjusted for weight technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AdjustedToPatientsActualTemperatureTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AdjustedToPatientsActualTemperatureTechnique: new Coding({
         code: "707688001",
         display: "Adjusted to patients actual temperature technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AdjustedToPH74Technique: Coding.FromStrict({
+    ObservationMethodsValueSet_AdjustedToPH74Technique: new Coding({
         code: "707689009",
         display: "Adjusted to pH 7.4 technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CorrectedForAlbuminTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_CorrectedForAlbuminTechnique: new Coding({
         code: "707690000",
         display: "Corrected for albumin technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CorrectedForBackgroundTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_CorrectedForBackgroundTechnique: new Coding({
         code: "707691001",
         display: "Corrected for background technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CorrectedForGlucoseTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_CorrectedForGlucoseTechnique: new Coding({
         code: "707692008",
         display: "Corrected for glucose technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CorrectedForTotalProteinTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_CorrectedForTotalProteinTechnique: new Coding({
         code: "707693003",
         display: "Corrected for total protein technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SaturationAdjustedTo05Technique: Coding.FromStrict({
+    ObservationMethodsValueSet_SaturationAdjustedTo05Technique: new Coding({
         code: "707694009",
         display: "Saturation adjusted to 0.5 technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_StandardBaseExcessTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_StandardBaseExcessTechnique: new Coding({
         code: "707695005",
         display: "Standard base excess technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_StandardBaseExcessAdjustedForOxygenSaturationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_StandardBaseExcessAdjustedForOxygenSaturationTechnique: new Coding({
         code: "707696006",
         display: "Standard base excess adjusted for oxygen saturation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IonSelectiveMembraneElectrodeOutputAdjustedToPH74: Coding.FromStrict({
+    ObservationMethodsValueSet_IonSelectiveMembraneElectrodeOutputAdjustedToPH74: new Coding({
         code: "707698007",
         display: "Ion selective membrane electrode output adjusted to pH 7.4",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HeliumSingleBreathOutputAdjustedForHemoglobin: Coding.FromStrict({
+    ObservationMethodsValueSet_HeliumSingleBreathOutputAdjustedForHemoglobin: new Coding({
         code: "707699004",
         display: "Helium single breath output adjusted for hemoglobin",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AutomatedCountOutputCorrectedForNucleatedErythrocytes: Coding.FromStrict({
+    ObservationMethodsValueSet_AutomatedCountOutputCorrectedForNucleatedErythrocytes: new Coding({
         code: "707700003",
         display: "Automated count output corrected for nucleated erythrocytes",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CalculatedAndAdjustedForBodyWeight: Coding.FromStrict({
+    ObservationMethodsValueSet_CalculatedAndAdjustedForBodyWeight: new Coding({
         code: "707701004",
         display: "Calculated and adjusted for body weight",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CalculatedOutputAdjustedToStandard: Coding.FromStrict({
+    ObservationMethodsValueSet_CalculatedOutputAdjustedToStandard: new Coding({
         code: "707702006",
         display: "Calculated output adjusted to standard",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AcidFastStain: Coding.FromStrict({
+    ObservationMethodsValueSet_AcidFastStain: new Coding({
         code: "708056006",
         display: "Acid fast stain",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FlowCytometry: Coding.FromStrict({
+    ObservationMethodsValueSet_FlowCytometry: new Coding({
         code: "708058007",
         display: "Flow cytometry",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GenotypeDetermination: Coding.FromStrict({
+    ObservationMethodsValueSet_GenotypeDetermination: new Coding({
         code: "708060009",
         display: "Genotype determination",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GramStain: Coding.FromStrict({
+    ObservationMethodsValueSet_GramStain: new Coding({
         code: "708061008",
         display: "Gram stain",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Immunodiffusion: Coding.FromStrict({
+    ObservationMethodsValueSet_Immunodiffusion: new Coding({
         code: "708062001",
         display: "Immunodiffusion",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Immunoelectrophoresis_2: Coding.FromStrict({
+    ObservationMethodsValueSet_Immunoelectrophoresis_2: new Coding({
         code: "708063006",
         display: "Immunoelectrophoresis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Immunofixation: Coding.FromStrict({
+    ObservationMethodsValueSet_Immunofixation: new Coding({
         code: "708064000",
         display: "Immunofixation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PulseOximetry: Coding.FromStrict({
+    ObservationMethodsValueSet_PulseOximetry: new Coding({
         code: "708065004",
         display: "Pulse oximetry",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TrichromeStain: Coding.FromStrict({
+    ObservationMethodsValueSet_TrichromeStain: new Coding({
         code: "708066003",
         display: "Trichrome stain",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WrightGiemsaStain: Coding.FromStrict({
+    ObservationMethodsValueSet_WrightGiemsaStain: new Coding({
         code: "708067007",
         display: "Wright-Giemsa stain",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MolecularGenetics: Coding.FromStrict({
+    ObservationMethodsValueSet_MolecularGenetics: new Coding({
         code: "708068002",
         display: "Molecular genetics",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ChromogenicTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_ChromogenicTechnique: new Coding({
         code: "708069005",
         display: "Chromogenic technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SolubilityTest: Coding.FromStrict({
+    ObservationMethodsValueSet_SolubilityTest: new Coding({
         code: "708070006",
         display: "Solubility test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SmearingTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_SmearingTechnique: new Coding({
         code: "708071005",
         display: "Smearing technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MultipleAllergenBearingDisc: Coding.FromStrict({
+    ObservationMethodsValueSet_MultipleAllergenBearingDisc: new Coding({
         code: "708072003",
         display: "Multiple allergen-bearing disc",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MinimumInhibitoryConcentrationSusceptibilityTest: Coding.FromStrict({
+    ObservationMethodsValueSet_MinimumInhibitoryConcentrationSusceptibilityTest: new Coding({
         code: "708073008",
         display: "Minimum inhibitory concentration susceptibility test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LISS: Coding.FromStrict({
+    ObservationMethodsValueSet_LISS: new Coding({
         code: "708074002",
         display: "LISS",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_KOHPreparation: Coding.FromStrict({
+    ObservationMethodsValueSet_KOHPreparation: new Coding({
         code: "708075001",
         display: "KOH preparation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_KleihauerBetkeTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_KleihauerBetkeTechnique: new Coding({
         code: "708076000",
         display: "Kleihauer-Betke technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_InfraredSpectroscopy: Coding.FromStrict({
+    ObservationMethodsValueSet_InfraredSpectroscopy: new Coding({
         code: "708077009",
         display: "Infrared spectroscopy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IndiaInkStainingTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_IndiaInkStainingTechnique: new Coding({
         code: "708078004",
         display: "India ink staining technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Immunohistochemistry: Coding.FromStrict({
+    ObservationMethodsValueSet_Immunohistochemistry: new Coding({
         code: "708097004",
         display: "Immunohistochemistry",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RapidImmunoassay: Coding.FromStrict({
+    ObservationMethodsValueSet_RapidImmunoassay: new Coding({
         code: "708099001",
         display: "Rapid immunoassay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AgglutinationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_AgglutinationTechnique: new Coding({
         code: "708104000",
         display: "Agglutination technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ColdIncubation24Hours: Coding.FromStrict({
+    ObservationMethodsValueSet_ColdIncubation24Hours: new Coding({
         code: "708125000",
         display: "Cold incubation, 24 hours",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AcidFastKinyounQuoteSColdCarbolfuchsinStain: Coding.FromStrict({
+    ObservationMethodsValueSet_AcidFastKinyounQuoteSColdCarbolfuchsinStain: new Coding({
         code: "708128003",
         display: "Acid fast Kinyoun's cold carbolfuchsin stain",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CoombsTest: Coding.FromStrict({
+    ObservationMethodsValueSet_CoombsTest: new Coding({
         code: "708130001",
         display: "Coombs test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AntiHumanGlobulinTestDirect: Coding.FromStrict({
+    ObservationMethodsValueSet_AntiHumanGlobulinTestDirect: new Coding({
         code: "708131002",
         display: "Anti human globulin test, direct",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AntiHumanGlobulinTestIndirect: Coding.FromStrict({
+    ObservationMethodsValueSet_AntiHumanGlobulinTestIndirect: new Coding({
         code: "708132009",
         display: "Anti human globulin test, indirect",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ComplementFixation: Coding.FromStrict({
+    ObservationMethodsValueSet_ComplementFixation: new Coding({
         code: "708133004",
         display: "Complement fixation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PlateletAggregationTechnique: Coding.FromStrict({
+    ObservationMethodsValueSet_PlateletAggregationTechnique: new Coding({
         code: "708532004",
         display: "Platelet aggregation technique",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TrypsinDuodenalFluid: Coding.FromStrict({
+    ObservationMethodsValueSet_TrypsinDuodenalFluid: new Coding({
         code: "7103008",
         display: "Trypsin, duodenal fluid",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ToxoplasmosisDyeTest: Coding.FromStrict({
+    ObservationMethodsValueSet_ToxoplasmosisDyeTest: new Coding({
         code: "7164004",
         display: "Toxoplasmosis dye test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UltrasoundPeripheralImagingBScan: Coding.FromStrict({
+    ObservationMethodsValueSet_UltrasoundPeripheralImagingBScan: new Coding({
         code: "7174001",
         display: "Ultrasound peripheral imaging, B-scan",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BacterialBacteriophageTyping_2: Coding.FromStrict({
+    ObservationMethodsValueSet_BacterialBacteriophageTyping_2: new Coding({
         code: "718496006",
         display: "Bacterial bacteriophage typing",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ProctosigmoidoscopyForDilation: Coding.FromStrict({
+    ObservationMethodsValueSet_ProctosigmoidoscopyForDilation: new Coding({
         code: "7239006",
         display: "Proctosigmoidoscopy for dilation",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CounterCurrentImmunoelectrophoresis: Coding.FromStrict({
+    ObservationMethodsValueSet_CounterCurrentImmunoelectrophoresis: new Coding({
         code: "7256003",
         display: "Counter-current immunoelectrophoresis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FebrileAgglutininsQualitative: Coding.FromStrict({
+    ObservationMethodsValueSet_FebrileAgglutininsQualitative: new Coding({
         code: "7288006",
         display: "Febrile agglutinins, qualitative",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HaptoglobinMeasurementChemical: Coding.FromStrict({
+    ObservationMethodsValueSet_HaptoglobinMeasurementChemical: new Coding({
         code: "7301001",
         display: "Haptoglobin measurement, chemical",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DiagnosticRadiographySerialFilms: Coding.FromStrict({
+    ObservationMethodsValueSet_DiagnosticRadiographySerialFilms: new Coding({
         code: "7370001",
         display: "Diagnostic radiography, serial films",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BronchoscopyThroughTracheostomyWithBiopsyOfBronchus: Coding.FromStrict({
+    ObservationMethodsValueSet_BronchoscopyThroughTracheostomyWithBiopsyOfBronchus: new Coding({
         code: "7375006",
         display: "Bronchoscopy through tracheostomy with biopsy of bronchus",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BoneMarrowImagingLimitedArea: Coding.FromStrict({
+    ObservationMethodsValueSet_BoneMarrowImagingLimitedArea: new Coding({
         code: "7421004",
         display: "Bone marrow imaging, limited area",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ColorVisionExamination: Coding.FromStrict({
+    ObservationMethodsValueSet_ColorVisionExamination: new Coding({
         code: "7510005",
         display: "Color vision examination",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ExplorationOfTestis: Coding.FromStrict({
+    ObservationMethodsValueSet_ExplorationOfTestis: new Coding({
         code: "7541006",
         display: "Exploration of testis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HistoryAndPhysicalExaminationFollowUpForNeoplasticDisease: Coding.FromStrict({
+    ObservationMethodsValueSet_HistoryAndPhysicalExaminationFollowUpForNeoplasticDisease: new Coding({
         code: "7546001",
         display: "History and physical examination, follow-up for neoplastic disease",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VitaminEMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_VitaminEMeasurement: new Coding({
         code: "7557006",
         display: "Vitamin E measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadioisotopeStudyOfEndocrineSystem: Coding.FromStrict({
+    ObservationMethodsValueSet_RadioisotopeStudyOfEndocrineSystem: new Coding({
         code: "7562007",
         display: "Radioisotope study of endocrine system",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SpinalAngiographySelective: Coding.FromStrict({
+    ObservationMethodsValueSet_SpinalAngiographySelective: new Coding({
         code: "7576008",
         display: "Spinal angiography, selective",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MethemoglobinMeasurementQualitative: Coding.FromStrict({
+    ObservationMethodsValueSet_MethemoglobinMeasurementQualitative: new Coding({
         code: "7606004",
         display: "Methemoglobin measurement, qualitative",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IsotopeStudyForRenalPlasmaFlow: Coding.FromStrict({
+    ObservationMethodsValueSet_IsotopeStudyForRenalPlasmaFlow: new Coding({
         code: "7656009",
         display: "Isotope study for renal plasma flow",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ConsonantDifferentialPressureTest: Coding.FromStrict({
+    ObservationMethodsValueSet_ConsonantDifferentialPressureTest: new Coding({
         code: "7677007",
         display: "Consonant differential pressure test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FructosamineMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_FructosamineMeasurement: new Coding({
         code: "7740009",
         display: "Fructosamine measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FlexibleFiberopticLaryngoscopyWithBiopsy: Coding.FromStrict({
+    ObservationMethodsValueSet_FlexibleFiberopticLaryngoscopyWithBiopsy: new Coding({
         code: "7750005",
         display: "Flexible fiberoptic laryngoscopy with biopsy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VDRLVenerealDiseasesResearchLaboratoryTest: Coding.FromStrict({
+    ObservationMethodsValueSet_VDRLVenerealDiseasesResearchLaboratoryTest: new Coding({
         code: "7786006",
         display: "VDRL - Venereal diseases research laboratory test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiologicExaminationOfThoracolumbarSpineAnteroposteriorAndLateral: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiologicExaminationOfThoracolumbarSpineAnteroposteriorAndLateral: new Coding({
         code: "7812007",
         display: "Radiologic examination of thoracolumbar spine, anteroposterior and lateral",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MercuryMeasurementHair: Coding.FromStrict({
+    ObservationMethodsValueSet_MercuryMeasurementHair: new Coding({
         code: "7837002",
         display: "Mercury measurement, hair",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IncisionAndExplorationOfMalePerineum: Coding.FromStrict({
+    ObservationMethodsValueSet_IncisionAndExplorationOfMalePerineum: new Coding({
         code: "7839004",
         display: "Incision and exploration of male perineum",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PalmitateMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_PalmitateMeasurement: new Coding({
         code: "7887009",
         display: "Palmitate measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WardGlucometerTest: Coding.FromStrict({
+    ObservationMethodsValueSet_WardGlucometerTest: new Coding({
         code: "7918005",
         display: "Ward glucometer test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ClonazepamMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_ClonazepamMeasurement: new Coding({
         code: "7932007",
         display: "Clonazepam measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EthosuximideMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_EthosuximideMeasurement: new Coding({
         code: "7962001",
         display: "Ethosuximide measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DNABindingAutoantibodyLevel: Coding.FromStrict({
+    ObservationMethodsValueSet_DNABindingAutoantibodyLevel: new Coding({
         code: "7992005",
         display: "DNA binding autoantibody level",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BoneMarrowImagingWholeBody: Coding.FromStrict({
+    ObservationMethodsValueSet_BoneMarrowImagingWholeBody: new Coding({
         code: "7993000",
         display: "Bone marrow imaging, whole body",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AngiographyOfLowerExtremityArteriesWithSerialography: Coding.FromStrict({
+    ObservationMethodsValueSet_AngiographyOfLowerExtremityArteriesWithSerialography: new Coding({
         code: "7995007",
         display: "Angiography of lower extremity arteries with serialography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Vaginogram: Coding.FromStrict({
+    ObservationMethodsValueSet_Vaginogram: new Coding({
         code: "8031000",
         display: "Vaginogram",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UltrasonicGuidanceForAspirationOfOva: Coding.FromStrict({
+    ObservationMethodsValueSet_UltrasonicGuidanceForAspirationOfOva: new Coding({
         code: "8073008",
         display: "Ultrasonic guidance for aspiration of ova",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AntithrombinIIIAssayFunctional: Coding.FromStrict({
+    ObservationMethodsValueSet_AntithrombinIIIAssayFunctional: new Coding({
         code: "8138008",
         display: "Antithrombin III assay, functional",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EchocardiographyForDetectingCardiacOutput: Coding.FromStrict({
+    ObservationMethodsValueSet_EchocardiographyForDetectingCardiacOutput: new Coding({
         code: "8151003",
         display: "Echocardiography for detecting cardiac output",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FiberopticColonoscopyThroughColostomy: Coding.FromStrict({
+    ObservationMethodsValueSet_FiberopticColonoscopyThroughColostomy: new Coding({
         code: "8180007",
         display: "Fiberoptic colonoscopy through colostomy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ClottingFactorVIIAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_ClottingFactorVIIAssay: new Coding({
         code: "8196005",
         display: "Clotting factor VII assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MeasurementOfInterstitialFluidPressure: Coding.FromStrict({
+    ObservationMethodsValueSet_MeasurementOfInterstitialFluidPressure: new Coding({
         code: "8243008",
         display: "Measurement of interstitial fluid pressure",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AlkalinePhosphataseIsoenzymesMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_AlkalinePhosphataseIsoenzymesMeasurement: new Coding({
         code: "8244002",
         display: "Alkaline phosphatase isoenzymes measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ElectroencephalogramDuringCarotidSurgery: Coding.FromStrict({
+    ObservationMethodsValueSet_ElectroencephalogramDuringCarotidSurgery: new Coding({
         code: "8246000",
         display: "Electroencephalogram during carotid surgery",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RhogamCrossmatch: Coding.FromStrict({
+    ObservationMethodsValueSet_RhogamCrossmatch: new Coding({
         code: "8294001",
         display: "Rhogam crossmatch",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UltrasonicDoppler: Coding.FromStrict({
+    ObservationMethodsValueSet_UltrasonicDoppler: new Coding({
         code: "8306009",
         display: "Ultrasonic Doppler",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ErichsenQuoteSTest: Coding.FromStrict({
+    ObservationMethodsValueSet_ErichsenQuoteSTest: new Coding({
         code: "8321003",
         display: "Erichsen's test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DiagnosticRadiographyBilateral: Coding.FromStrict({
+    ObservationMethodsValueSet_DiagnosticRadiographyBilateral: new Coding({
         code: "8358003",
         display: "Diagnostic radiography, bilateral",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PhosphorusMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_PhosphorusMeasurement: new Coding({
         code: "8364005",
         display: "Phosphorus measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ChemotaxisAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_ChemotaxisAssay: new Coding({
         code: "8404006",
         display: "Chemotaxis assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AlphaFucosidaseMeasurementLeukocytes: Coding.FromStrict({
+    ObservationMethodsValueSet_AlphaFucosidaseMeasurementLeukocytes: new Coding({
         code: "8424005",
         display: "Alpha-fucosidase measurement, leukocytes",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_QuantitativeImmunologicIdentificationOfAntigenOrAntibody: Coding.FromStrict({
+    ObservationMethodsValueSet_QuantitativeImmunologicIdentificationOfAntigenOrAntibody: new Coding({
         code: "8446002",
         display: "Quantitative immunologic identification of antigen or antibody",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadiographyOfSacrococcygealSpine: Coding.FromStrict({
+    ObservationMethodsValueSet_RadiographyOfSacrococcygealSpine: new Coding({
         code: "8449009",
         display: "Radiography of sacrococcygeal spine",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MicrobialIdentificationKitAPI20AMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_MicrobialIdentificationKitAPI20AMethod: new Coding({
         code: "8463003",
         display: "Microbial identification kit, API 20A method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GastricFluidAnalysisPHTitration: Coding.FromStrict({
+    ObservationMethodsValueSet_GastricFluidAnalysisPHTitration: new Coding({
         code: "8478005",
         display: "Gastric fluid analysis, pH titration",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DiagnosticRadiographyWithContrastMediaBilateral: Coding.FromStrict({
+    ObservationMethodsValueSet_DiagnosticRadiographyWithContrastMediaBilateral: new Coding({
         code: "8503002",
         display: "Diagnostic radiography with contrast media, bilateral",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GermaniumMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_GermaniumMeasurement: new Coding({
         code: "8541009",
         display: "Germanium measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PlateletEstimate: Coding.FromStrict({
+    ObservationMethodsValueSet_PlateletEstimate: new Coding({
         code: "8574009",
         display: "Platelet estimate",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TransilluminationOfNasalSinuses: Coding.FromStrict({
+    ObservationMethodsValueSet_TransilluminationOfNasalSinuses: new Coding({
         code: "8606002",
         display: "Transillumination of nasal sinuses",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_VAL23DiphosphoglycerateMeasurementErythrocytes: Coding.FromStrict({
+    ObservationMethodsValueSet_VAL23DiphosphoglycerateMeasurementErythrocytes: new Coding({
         code: "8611000",
         display: "2,3-diphosphoglycerate measurement, erythrocytes",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BerylliumMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_BerylliumMeasurement: new Coding({
         code: "8642005",
         display: "Beryllium measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LeadMeasurementQuantitativeBlood: Coding.FromStrict({
+    ObservationMethodsValueSet_LeadMeasurementQuantitativeBlood: new Coding({
         code: "8655006",
         display: "Lead measurement, quantitative, blood",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadionuclideIdentificationOfEyeTumor: Coding.FromStrict({
+    ObservationMethodsValueSet_RadionuclideIdentificationOfEyeTumor: new Coding({
         code: "8693001",
         display: "Radionuclide identification of eye tumor",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ParathyroidHormonePTHImmunochemiluminescentMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_ParathyroidHormonePTHImmunochemiluminescentMeasurement: new Coding({
         code: "8698005",
         display: "Parathyroid hormone (PTH) immunochemiluminescent measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ArginineToleranceTest: Coding.FromStrict({
+    ObservationMethodsValueSet_ArginineToleranceTest: new Coding({
         code: "8706007",
         display: "Arginine tolerance test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IncisionAndExplorationOfLargeIntestine: Coding.FromStrict({
+    ObservationMethodsValueSet_IncisionAndExplorationOfLargeIntestine: new Coding({
         code: "8777004",
         display: "Incision and exploration of large intestine",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CystourethroscopyWithUreteralCatheterizationAndBrushBiopsy: Coding.FromStrict({
+    ObservationMethodsValueSet_CystourethroscopyWithUreteralCatheterizationAndBrushBiopsy: new Coding({
         code: "8848007",
         display: "Cystourethroscopy with ureteral catheterization and brush biopsy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ArthroscopyOfKneeWithMedialAndLateralMeniscectomy: Coding.FromStrict({
+    ObservationMethodsValueSet_ArthroscopyOfKneeWithMedialAndLateralMeniscectomy: new Coding({
         code: "8874001",
         display: "Arthroscopy of knee with medial and lateral meniscectomy",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CreatinineMeasurement24HourUrine: Coding.FromStrict({
+    ObservationMethodsValueSet_CreatinineMeasurement24HourUrine: new Coding({
         code: "8879006",
         display: "Creatinine measurement, 24 hour urine",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HeavyMetalScreenOnUrine: Coding.FromStrict({
+    ObservationMethodsValueSet_HeavyMetalScreenOnUrine: new Coding({
         code: "8890001",
         display: "Heavy metal screen on urine",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MassSpectrometryMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_MassSpectrometryMeasurement: new Coding({
         code: "8959002",
         display: "Mass spectrometry measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BacterialSerologicStudy: Coding.FromStrict({
+    ObservationMethodsValueSet_BacterialSerologicStudy: new Coding({
         code: "8992008",
         display: "Bacterial serologic study",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_RadioironOralAbsorptionStudy: Coding.FromStrict({
+    ObservationMethodsValueSet_RadioironOralAbsorptionStudy: new Coding({
         code: "8994009",
         display: "Radioiron oral absorption study",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ManualTestingOfMuscleFunction: Coding.FromStrict({
+    ObservationMethodsValueSet_ManualTestingOfMuscleFunction: new Coding({
         code: "9002005",
         display: "Manual testing of muscle function",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HaptoglobinMeasurementElectrophoresis: Coding.FromStrict({
+    ObservationMethodsValueSet_HaptoglobinMeasurementElectrophoresis: new Coding({
         code: "9011005",
         display: "Haptoglobin measurement, electrophoresis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ExplorationOfCranialNerve: Coding.FromStrict({
+    ObservationMethodsValueSet_ExplorationOfCranialNerve: new Coding({
         code: "9087001",
         display: "Exploration of cranial nerve",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ExplorationOfSoftTissue: Coding.FromStrict({
+    ObservationMethodsValueSet_ExplorationOfSoftTissue: new Coding({
         code: "9104009",
         display: "Exploration of soft tissue",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_IntraoperativeCardiacPacingAndMapping: Coding.FromStrict({
+    ObservationMethodsValueSet_IntraoperativeCardiacPacingAndMapping: new Coding({
         code: "9106006",
         display: "Intraoperative cardiac pacing and mapping",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_Ballistocardiography: Coding.FromStrict({
+    ObservationMethodsValueSet_Ballistocardiography: new Coding({
         code: "9134004",
         display: "Ballistocardiography",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_HeavyMetalScreenOnGastricFluid: Coding.FromStrict({
+    ObservationMethodsValueSet_HeavyMetalScreenOnGastricFluid: new Coding({
         code: "9173004",
         display: "Heavy metal screen on gastric fluid",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GastricFluidAnalysisFreeAcidMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_GastricFluidAnalysisFreeAcidMeasurement: new Coding({
         code: "9213003",
         display: "Gastric fluid analysis, free acid measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FTAAbsFluorescentTreponemalAntibodyTest: Coding.FromStrict({
+    ObservationMethodsValueSet_FTAAbsFluorescentTreponemalAntibodyTest: new Coding({
         code: "9232009",
         display: "FTA(Abs) - Fluorescent treponemal antibody test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PenicillinMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_PenicillinMeasurement: new Coding({
         code: "9330003",
         display: "Penicillin measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ChemicalTestQualitativeAndQuantitative: Coding.FromStrict({
+    ObservationMethodsValueSet_ChemicalTestQualitativeAndQuantitative: new Coding({
         code: "9336009",
         display: "Chemical test, qualitative and quantitative",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_AntibodyIdentificationRBCSalineAndAHG: Coding.FromStrict({
+    ObservationMethodsValueSet_AntibodyIdentificationRBCSalineAndAHG: new Coding({
         code: "9381008",
         display: "Antibody identification, RBC, saline and AHG",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_DiagnosticRadiographyMinifilm: Coding.FromStrict({
+    ObservationMethodsValueSet_DiagnosticRadiographyMinifilm: new Coding({
         code: "9403009",
         display: "Diagnostic radiography, minifilm",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_BloodVenousPHLevel: Coding.FromStrict({
+    ObservationMethodsValueSet_BloodVenousPHLevel: new Coding({
         code: "9456006",
         display: "Blood venous pH level",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_EndoscopyAndCalibration: Coding.FromStrict({
+    ObservationMethodsValueSet_EndoscopyAndCalibration: new Coding({
         code: "9474002",
         display: "Endoscopy and calibration",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_QuantitativeMicrobialCultureFilterPaperMethod: Coding.FromStrict({
+    ObservationMethodsValueSet_QuantitativeMicrobialCultureFilterPaperMethod: new Coding({
         code: "9486004",
         display: "Quantitative microbial culture, filter paper method",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_MirrorExamination: Coding.FromStrict({
+    ObservationMethodsValueSet_MirrorExamination: new Coding({
         code: "9517003",
         display: "Mirror examination",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_FistulogramOfAbdominalWall: Coding.FromStrict({
+    ObservationMethodsValueSet_FistulogramOfAbdominalWall: new Coding({
         code: "9518008",
         display: "Fistulogram of abdominal wall",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ShoulderDepressionTest: Coding.FromStrict({
+    ObservationMethodsValueSet_ShoulderDepressionTest: new Coding({
         code: "9525001",
         display: "Shoulder depression test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_CompleteBloodCountWithWhiteCellDifferentialAutomated: Coding.FromStrict({
+    ObservationMethodsValueSet_CompleteBloodCountWithWhiteCellDifferentialAutomated: new Coding({
         code: "9564003",
         display: "Complete blood count with white cell differential, automated",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_GrowthOnMacConkeyAgarWithoutCrystalVioletTest: Coding.FromStrict({
+    ObservationMethodsValueSet_GrowthOnMacConkeyAgarWithoutCrystalVioletTest: new Coding({
         code: "9606007",
         display: "Growth on MacConkey agar without crystal violet test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TetracaineMeasurement: Coding.FromStrict({
+    ObservationMethodsValueSet_TetracaineMeasurement: new Coding({
         code: "9616004",
         display: "Tetracaine measurement",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_TransferOfCultureToHoldingMedia: Coding.FromStrict({
+    ObservationMethodsValueSet_TransferOfCultureToHoldingMedia: new Coding({
         code: "9698004",
         display: "Transfer of culture to holding media",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ComputerizedTomographyLimitedStudies: Coding.FromStrict({
+    ObservationMethodsValueSet_ComputerizedTomographyLimitedStudies: new Coding({
         code: "9704004",
         display: "Computerized tomography, limited studies",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_PolymeraseChainReactionAnalysis: Coding.FromStrict({
+    ObservationMethodsValueSet_PolymeraseChainReactionAnalysis: new Coding({
         code: "9718006",
         display: "Polymerase chain reaction analysis",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_LysozymeResistanceTest: Coding.FromStrict({
+    ObservationMethodsValueSet_LysozymeResistanceTest: new Coding({
         code: "9759000",
         display: "Lysozyme resistance test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_UrineBilePigmentLevel: Coding.FromStrict({
+    ObservationMethodsValueSet_UrineBilePigmentLevel: new Coding({
         code: "9777005",
         display: "Urine bile pigment level",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_WardSpecificGravityTest: Coding.FromStrict({
+    ObservationMethodsValueSet_WardSpecificGravityTest: new Coding({
         code: "9833008",
         display: "Ward specific gravity test",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ReceptorBindingSiteActivity: Coding.FromStrict({
+    ObservationMethodsValueSet_ReceptorBindingSiteActivity: new Coding({
         code: "9897006",
         display: "Receptor binding site activity",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ClottingFactorXAssay: Coding.FromStrict({
+    ObservationMethodsValueSet_ClottingFactorXAssay: new Coding({
         code: "9915003",
         display: "Clotting factor X assay",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_SerologicTestForRubella: Coding.FromStrict({
+    ObservationMethodsValueSet_SerologicTestForRubella: new Coding({
         code: "9954002",
         display: "Serologic test for rubella",
         system: "http://snomed.info/sct"
     }),
-    ObservationMethodsValueSet_ComputerizedTomographyOblique: Coding.FromStrict({
+    ObservationMethodsValueSet_ComputerizedTomographyOblique: new Coding({
         code: "9988008",
         display: "Computerized tomography, oblique",
         system: "http://snomed.info/sct"

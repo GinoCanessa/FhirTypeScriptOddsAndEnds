@@ -10,912 +10,912 @@ import { Coding } from '../fhir'
  * Currency codes from ISO 4217 (see https://www.iso.org/iso-4217-currency-codes.html)
  */
 export const CurrenciesValueSet = {
-  CurrenciesValueSet_UnitedArabEmiratesDirham: Coding.FromStrict({
+  CurrenciesValueSet_UnitedArabEmiratesDirham: new Coding({
     code: "AED",
     display: "United Arab Emirates dirham",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_AfghanAfghani: Coding.FromStrict({
+  CurrenciesValueSet_AfghanAfghani: new Coding({
     code: "AFN",
     display: "Afghan afghani",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_AlbanianLek: Coding.FromStrict({
+  CurrenciesValueSet_AlbanianLek: new Coding({
     code: "ALL",
     display: "Albanian lek",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_ArmenianDram: Coding.FromStrict({
+  CurrenciesValueSet_ArmenianDram: new Coding({
     code: "AMD",
     display: "Armenian dram",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_NetherlandsAntilleanGuilder: Coding.FromStrict({
+  CurrenciesValueSet_NetherlandsAntilleanGuilder: new Coding({
     code: "ANG",
     display: "Netherlands Antillean guilder",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_AngolanKwanza: Coding.FromStrict({
+  CurrenciesValueSet_AngolanKwanza: new Coding({
     code: "AOA",
     display: "Angolan kwanza",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_ArgentinePeso: Coding.FromStrict({
+  CurrenciesValueSet_ArgentinePeso: new Coding({
     code: "ARS",
     display: "Argentine peso",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_AustralianDollar: Coding.FromStrict({
+  CurrenciesValueSet_AustralianDollar: new Coding({
     code: "AUD",
     display: "Australian dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_ArubanFlorin: Coding.FromStrict({
+  CurrenciesValueSet_ArubanFlorin: new Coding({
     code: "AWG",
     display: "Aruban florin",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_AzerbaijaniManat: Coding.FromStrict({
+  CurrenciesValueSet_AzerbaijaniManat: new Coding({
     code: "AZN",
     display: "Azerbaijani manat",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_BosniaAndHerzegovinaConvertibleMark: Coding.FromStrict({
+  CurrenciesValueSet_BosniaAndHerzegovinaConvertibleMark: new Coding({
     code: "BAM",
     display: "Bosnia and Herzegovina convertible mark",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_BarbadosDollar: Coding.FromStrict({
+  CurrenciesValueSet_BarbadosDollar: new Coding({
     code: "BBD",
     display: "Barbados dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_BangladeshiTaka: Coding.FromStrict({
+  CurrenciesValueSet_BangladeshiTaka: new Coding({
     code: "BDT",
     display: "Bangladeshi taka",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_BulgarianLev: Coding.FromStrict({
+  CurrenciesValueSet_BulgarianLev: new Coding({
     code: "BGN",
     display: "Bulgarian lev",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_BahrainiDinar: Coding.FromStrict({
+  CurrenciesValueSet_BahrainiDinar: new Coding({
     code: "BHD",
     display: "Bahraini dinar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_BurundianFranc: Coding.FromStrict({
+  CurrenciesValueSet_BurundianFranc: new Coding({
     code: "BIF",
     display: "Burundian franc",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_BermudianDollar: Coding.FromStrict({
+  CurrenciesValueSet_BermudianDollar: new Coding({
     code: "BMD",
     display: "Bermudian dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_BruneiDollar: Coding.FromStrict({
+  CurrenciesValueSet_BruneiDollar: new Coding({
     code: "BND",
     display: "Brunei dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_Boliviano: Coding.FromStrict({
+  CurrenciesValueSet_Boliviano: new Coding({
     code: "BOB",
     display: "Boliviano",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_BolivianMvdolFundsCode: Coding.FromStrict({
+  CurrenciesValueSet_BolivianMvdolFundsCode: new Coding({
     code: "BOV",
     display: "Bolivian Mvdol (funds code)",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_BrazilianReal: Coding.FromStrict({
+  CurrenciesValueSet_BrazilianReal: new Coding({
     code: "BRL",
     display: "Brazilian real",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_BahamianDollar: Coding.FromStrict({
+  CurrenciesValueSet_BahamianDollar: new Coding({
     code: "BSD",
     display: "Bahamian dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_BhutaneseNgultrum: Coding.FromStrict({
+  CurrenciesValueSet_BhutaneseNgultrum: new Coding({
     code: "BTN",
     display: "Bhutanese ngultrum",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_BotswanaPula: Coding.FromStrict({
+  CurrenciesValueSet_BotswanaPula: new Coding({
     code: "BWP",
     display: "Botswana pula",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_BelarusianRuble: Coding.FromStrict({
+  CurrenciesValueSet_BelarusianRuble: new Coding({
     code: "BYN",
     display: "Belarusian ruble",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_BelizeDollar: Coding.FromStrict({
+  CurrenciesValueSet_BelizeDollar: new Coding({
     code: "BZD",
     display: "Belize dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_CanadianDollar: Coding.FromStrict({
+  CurrenciesValueSet_CanadianDollar: new Coding({
     code: "CAD",
     display: "Canadian dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_CongoleseFranc: Coding.FromStrict({
+  CurrenciesValueSet_CongoleseFranc: new Coding({
     code: "CDF",
     display: "Congolese franc",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_WIREuroComplementaryCurrency: Coding.FromStrict({
+  CurrenciesValueSet_WIREuroComplementaryCurrency: new Coding({
     code: "CHE",
     display: "WIR Euro (complementary currency)",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SwissFranc: Coding.FromStrict({
+  CurrenciesValueSet_SwissFranc: new Coding({
     code: "CHF",
     display: "Swiss franc",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_WIRFrancComplementaryCurrency: Coding.FromStrict({
+  CurrenciesValueSet_WIRFrancComplementaryCurrency: new Coding({
     code: "CHW",
     display: "WIR Franc (complementary currency)",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_UnidadDeFomentoFundsCode: Coding.FromStrict({
+  CurrenciesValueSet_UnidadDeFomentoFundsCode: new Coding({
     code: "CLF",
     display: "Unidad de Fomento (funds code)",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_ChileanPeso: Coding.FromStrict({
+  CurrenciesValueSet_ChileanPeso: new Coding({
     code: "CLP",
     display: "Chilean peso",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_RenminbiChineseYuan8: Coding.FromStrict({
+  CurrenciesValueSet_RenminbiChineseYuan8: new Coding({
     code: "CNY",
     display: "Renminbi (Chinese) yuan[8]",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_ColombianPeso: Coding.FromStrict({
+  CurrenciesValueSet_ColombianPeso: new Coding({
     code: "COP",
     display: "Colombian peso",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_UnidadDeValorRealUVRFundsCode9: Coding.FromStrict({
+  CurrenciesValueSet_UnidadDeValorRealUVRFundsCode9: new Coding({
     code: "COU",
     display: "Unidad de Valor Real (UVR) (funds code)[9]",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_CostaRicanColon: Coding.FromStrict({
+  CurrenciesValueSet_CostaRicanColon: new Coding({
     code: "CRC",
     display: "Costa Rican colon",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_CubanConvertiblePeso: Coding.FromStrict({
+  CurrenciesValueSet_CubanConvertiblePeso: new Coding({
     code: "CUC",
     display: "Cuban convertible peso",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_CubanPeso: Coding.FromStrict({
+  CurrenciesValueSet_CubanPeso: new Coding({
     code: "CUP",
     display: "Cuban peso",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_CapeVerdeEscudo: Coding.FromStrict({
+  CurrenciesValueSet_CapeVerdeEscudo: new Coding({
     code: "CVE",
     display: "Cape Verde escudo",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_CzechKoruna: Coding.FromStrict({
+  CurrenciesValueSet_CzechKoruna: new Coding({
     code: "CZK",
     display: "Czech koruna",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_DjiboutianFranc: Coding.FromStrict({
+  CurrenciesValueSet_DjiboutianFranc: new Coding({
     code: "DJF",
     display: "Djiboutian franc",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_DanishKrone: Coding.FromStrict({
+  CurrenciesValueSet_DanishKrone: new Coding({
     code: "DKK",
     display: "Danish krone",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_DominicanPeso: Coding.FromStrict({
+  CurrenciesValueSet_DominicanPeso: new Coding({
     code: "DOP",
     display: "Dominican peso",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_AlgerianDinar: Coding.FromStrict({
+  CurrenciesValueSet_AlgerianDinar: new Coding({
     code: "DZD",
     display: "Algerian dinar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_EgyptianPound: Coding.FromStrict({
+  CurrenciesValueSet_EgyptianPound: new Coding({
     code: "EGP",
     display: "Egyptian pound",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_EritreanNakfa: Coding.FromStrict({
+  CurrenciesValueSet_EritreanNakfa: new Coding({
     code: "ERN",
     display: "Eritrean nakfa",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_EthiopianBirr: Coding.FromStrict({
+  CurrenciesValueSet_EthiopianBirr: new Coding({
     code: "ETB",
     display: "Ethiopian birr",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_Euro: Coding.FromStrict({
+  CurrenciesValueSet_Euro: new Coding({
     code: "EUR",
     display: "Euro",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_FijiDollar: Coding.FromStrict({
+  CurrenciesValueSet_FijiDollar: new Coding({
     code: "FJD",
     display: "Fiji dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_FalklandIslandsPound: Coding.FromStrict({
+  CurrenciesValueSet_FalklandIslandsPound: new Coding({
     code: "FKP",
     display: "Falkland Islands pound",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_PoundSterling: Coding.FromStrict({
+  CurrenciesValueSet_PoundSterling: new Coding({
     code: "GBP",
     display: "Pound sterling",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_GeorgianLari: Coding.FromStrict({
+  CurrenciesValueSet_GeorgianLari: new Coding({
     code: "GEL",
     display: "Georgian lari",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_GuernseyPound: Coding.FromStrict({
+  CurrenciesValueSet_GuernseyPound: new Coding({
     code: "GGP",
     display: "Guernsey Pound",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_GhanaianCedi: Coding.FromStrict({
+  CurrenciesValueSet_GhanaianCedi: new Coding({
     code: "GHS",
     display: "Ghanaian cedi",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_GibraltarPound: Coding.FromStrict({
+  CurrenciesValueSet_GibraltarPound: new Coding({
     code: "GIP",
     display: "Gibraltar pound",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_GambianDalasi: Coding.FromStrict({
+  CurrenciesValueSet_GambianDalasi: new Coding({
     code: "GMD",
     display: "Gambian dalasi",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_GuineanFranc: Coding.FromStrict({
+  CurrenciesValueSet_GuineanFranc: new Coding({
     code: "GNF",
     display: "Guinean franc",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_GuatemalanQuetzal: Coding.FromStrict({
+  CurrenciesValueSet_GuatemalanQuetzal: new Coding({
     code: "GTQ",
     display: "Guatemalan quetzal",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_GuyaneseDollar: Coding.FromStrict({
+  CurrenciesValueSet_GuyaneseDollar: new Coding({
     code: "GYD",
     display: "Guyanese dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_HongKongDollar: Coding.FromStrict({
+  CurrenciesValueSet_HongKongDollar: new Coding({
     code: "HKD",
     display: "Hong Kong dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_HonduranLempira: Coding.FromStrict({
+  CurrenciesValueSet_HonduranLempira: new Coding({
     code: "HNL",
     display: "Honduran lempira",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_CroatianKuna: Coding.FromStrict({
+  CurrenciesValueSet_CroatianKuna: new Coding({
     code: "HRK",
     display: "Croatian kuna",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_HaitianGourde: Coding.FromStrict({
+  CurrenciesValueSet_HaitianGourde: new Coding({
     code: "HTG",
     display: "Haitian gourde",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_HungarianForint: Coding.FromStrict({
+  CurrenciesValueSet_HungarianForint: new Coding({
     code: "HUF",
     display: "Hungarian forint",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_IndonesianRupiah: Coding.FromStrict({
+  CurrenciesValueSet_IndonesianRupiah: new Coding({
     code: "IDR",
     display: "Indonesian rupiah",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_IsraeliNewShekel: Coding.FromStrict({
+  CurrenciesValueSet_IsraeliNewShekel: new Coding({
     code: "ILS",
     display: "Israeli new shekel",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_IsleOfManPound: Coding.FromStrict({
+  CurrenciesValueSet_IsleOfManPound: new Coding({
     code: "IMP",
     display: "Isle of Man Pound",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_IndianRupee: Coding.FromStrict({
+  CurrenciesValueSet_IndianRupee: new Coding({
     code: "INR",
     display: "Indian rupee",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_IraqiDinar: Coding.FromStrict({
+  CurrenciesValueSet_IraqiDinar: new Coding({
     code: "IQD",
     display: "Iraqi dinar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_IranianRial: Coding.FromStrict({
+  CurrenciesValueSet_IranianRial: new Coding({
     code: "IRR",
     display: "Iranian rial",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_IcelandicKrona: Coding.FromStrict({
+  CurrenciesValueSet_IcelandicKrona: new Coding({
     code: "ISK",
     display: "Icelandic króna",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_JerseyPound: Coding.FromStrict({
+  CurrenciesValueSet_JerseyPound: new Coding({
     code: "JEP",
     display: "Jersey Pound",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_JamaicanDollar: Coding.FromStrict({
+  CurrenciesValueSet_JamaicanDollar: new Coding({
     code: "JMD",
     display: "Jamaican dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_JordanianDinar: Coding.FromStrict({
+  CurrenciesValueSet_JordanianDinar: new Coding({
     code: "JOD",
     display: "Jordanian dinar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_JapaneseYen: Coding.FromStrict({
+  CurrenciesValueSet_JapaneseYen: new Coding({
     code: "JPY",
     display: "Japanese yen",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_KenyanShilling: Coding.FromStrict({
+  CurrenciesValueSet_KenyanShilling: new Coding({
     code: "KES",
     display: "Kenyan shilling",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_KyrgyzstaniSom: Coding.FromStrict({
+  CurrenciesValueSet_KyrgyzstaniSom: new Coding({
     code: "KGS",
     display: "Kyrgyzstani som",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_CambodianRiel: Coding.FromStrict({
+  CurrenciesValueSet_CambodianRiel: new Coding({
     code: "KHR",
     display: "Cambodian riel",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_ComoroFranc: Coding.FromStrict({
+  CurrenciesValueSet_ComoroFranc: new Coding({
     code: "KMF",
     display: "Comoro franc",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_NorthKoreanWon: Coding.FromStrict({
+  CurrenciesValueSet_NorthKoreanWon: new Coding({
     code: "KPW",
     display: "North Korean won",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SouthKoreanWon: Coding.FromStrict({
+  CurrenciesValueSet_SouthKoreanWon: new Coding({
     code: "KRW",
     display: "South Korean won",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_KuwaitiDinar: Coding.FromStrict({
+  CurrenciesValueSet_KuwaitiDinar: new Coding({
     code: "KWD",
     display: "Kuwaiti dinar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_CaymanIslandsDollar: Coding.FromStrict({
+  CurrenciesValueSet_CaymanIslandsDollar: new Coding({
     code: "KYD",
     display: "Cayman Islands dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_KazakhstaniTenge: Coding.FromStrict({
+  CurrenciesValueSet_KazakhstaniTenge: new Coding({
     code: "KZT",
     display: "Kazakhstani tenge",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_LaoKip: Coding.FromStrict({
+  CurrenciesValueSet_LaoKip: new Coding({
     code: "LAK",
     display: "Lao kip",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_LebanesePound: Coding.FromStrict({
+  CurrenciesValueSet_LebanesePound: new Coding({
     code: "LBP",
     display: "Lebanese pound",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SriLankanRupee: Coding.FromStrict({
+  CurrenciesValueSet_SriLankanRupee: new Coding({
     code: "LKR",
     display: "Sri Lankan rupee",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_LiberianDollar: Coding.FromStrict({
+  CurrenciesValueSet_LiberianDollar: new Coding({
     code: "LRD",
     display: "Liberian dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_LesothoLoti: Coding.FromStrict({
+  CurrenciesValueSet_LesothoLoti: new Coding({
     code: "LSL",
     display: "Lesotho loti",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_LibyanDinar: Coding.FromStrict({
+  CurrenciesValueSet_LibyanDinar: new Coding({
     code: "LYD",
     display: "Libyan dinar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_MoroccanDirham: Coding.FromStrict({
+  CurrenciesValueSet_MoroccanDirham: new Coding({
     code: "MAD",
     display: "Moroccan dirham",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_MoldovanLeu: Coding.FromStrict({
+  CurrenciesValueSet_MoldovanLeu: new Coding({
     code: "MDL",
     display: "Moldovan leu",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_MalagasyAriary: Coding.FromStrict({
+  CurrenciesValueSet_MalagasyAriary: new Coding({
     code: "MGA",
     display: "Malagasy ariary",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_MacedonianDenar: Coding.FromStrict({
+  CurrenciesValueSet_MacedonianDenar: new Coding({
     code: "MKD",
     display: "Macedonian denar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_MyanmarKyat: Coding.FromStrict({
+  CurrenciesValueSet_MyanmarKyat: new Coding({
     code: "MMK",
     display: "Myanmar kyat",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_MongolianTogrog: Coding.FromStrict({
+  CurrenciesValueSet_MongolianTogrog: new Coding({
     code: "MNT",
     display: "Mongolian tögrög",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_MacanesePataca: Coding.FromStrict({
+  CurrenciesValueSet_MacanesePataca: new Coding({
     code: "MOP",
     display: "Macanese pataca",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_MauritanianOuguiya: Coding.FromStrict({
+  CurrenciesValueSet_MauritanianOuguiya: new Coding({
     code: "MRU",
     display: "Mauritanian ouguiya",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_MauritianRupee: Coding.FromStrict({
+  CurrenciesValueSet_MauritianRupee: new Coding({
     code: "MUR",
     display: "Mauritian rupee",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_MaldivianRufiyaa: Coding.FromStrict({
+  CurrenciesValueSet_MaldivianRufiyaa: new Coding({
     code: "MVR",
     display: "Maldivian rufiyaa",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_MalawianKwacha: Coding.FromStrict({
+  CurrenciesValueSet_MalawianKwacha: new Coding({
     code: "MWK",
     display: "Malawian kwacha",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_MexicanPeso: Coding.FromStrict({
+  CurrenciesValueSet_MexicanPeso: new Coding({
     code: "MXN",
     display: "Mexican peso",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_MexicanUnidadDeInversionUDIFundsCode: Coding.FromStrict({
+  CurrenciesValueSet_MexicanUnidadDeInversionUDIFundsCode: new Coding({
     code: "MXV",
     display: "Mexican Unidad de Inversion (UDI) (funds code)",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_MalaysianRinggit: Coding.FromStrict({
+  CurrenciesValueSet_MalaysianRinggit: new Coding({
     code: "MYR",
     display: "Malaysian ringgit",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_MozambicanMetical: Coding.FromStrict({
+  CurrenciesValueSet_MozambicanMetical: new Coding({
     code: "MZN",
     display: "Mozambican metical",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_NamibianDollar: Coding.FromStrict({
+  CurrenciesValueSet_NamibianDollar: new Coding({
     code: "NAD",
     display: "Namibian dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_NigerianNaira: Coding.FromStrict({
+  CurrenciesValueSet_NigerianNaira: new Coding({
     code: "NGN",
     display: "Nigerian naira",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_NicaraguanCordoba: Coding.FromStrict({
+  CurrenciesValueSet_NicaraguanCordoba: new Coding({
     code: "NIO",
     display: "Nicaraguan córdoba",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_NorwegianKrone: Coding.FromStrict({
+  CurrenciesValueSet_NorwegianKrone: new Coding({
     code: "NOK",
     display: "Norwegian krone",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_NepaleseRupee: Coding.FromStrict({
+  CurrenciesValueSet_NepaleseRupee: new Coding({
     code: "NPR",
     display: "Nepalese rupee",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_NewZealandDollar: Coding.FromStrict({
+  CurrenciesValueSet_NewZealandDollar: new Coding({
     code: "NZD",
     display: "New Zealand dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_OmaniRial: Coding.FromStrict({
+  CurrenciesValueSet_OmaniRial: new Coding({
     code: "OMR",
     display: "Omani rial",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_PanamanianBalboa: Coding.FromStrict({
+  CurrenciesValueSet_PanamanianBalboa: new Coding({
     code: "PAB",
     display: "Panamanian balboa",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_PeruvianSol: Coding.FromStrict({
+  CurrenciesValueSet_PeruvianSol: new Coding({
     code: "PEN",
     display: "Peruvian Sol",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_PapuaNewGuineanKina: Coding.FromStrict({
+  CurrenciesValueSet_PapuaNewGuineanKina: new Coding({
     code: "PGK",
     display: "Papua New Guinean kina",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_PhilippinePiso13: Coding.FromStrict({
+  CurrenciesValueSet_PhilippinePiso13: new Coding({
     code: "PHP",
     display: "Philippine piso[13]",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_PakistaniRupee: Coding.FromStrict({
+  CurrenciesValueSet_PakistaniRupee: new Coding({
     code: "PKR",
     display: "Pakistani rupee",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_PolishZłoty: Coding.FromStrict({
+  CurrenciesValueSet_PolishZłoty: new Coding({
     code: "PLN",
     display: "Polish złoty",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_ParaguayanGuarani: Coding.FromStrict({
+  CurrenciesValueSet_ParaguayanGuarani: new Coding({
     code: "PYG",
     display: "Paraguayan guaraní",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_QatariRiyal: Coding.FromStrict({
+  CurrenciesValueSet_QatariRiyal: new Coding({
     code: "QAR",
     display: "Qatari riyal",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_RomanianLeu: Coding.FromStrict({
+  CurrenciesValueSet_RomanianLeu: new Coding({
     code: "RON",
     display: "Romanian leu",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SerbianDinar: Coding.FromStrict({
+  CurrenciesValueSet_SerbianDinar: new Coding({
     code: "RSD",
     display: "Serbian dinar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_RussianRuble: Coding.FromStrict({
+  CurrenciesValueSet_RussianRuble: new Coding({
     code: "RUB",
     display: "Russian ruble",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_RwandanFranc: Coding.FromStrict({
+  CurrenciesValueSet_RwandanFranc: new Coding({
     code: "RWF",
     display: "Rwandan franc",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SaudiRiyal: Coding.FromStrict({
+  CurrenciesValueSet_SaudiRiyal: new Coding({
     code: "SAR",
     display: "Saudi riyal",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SolomonIslandsDollar: Coding.FromStrict({
+  CurrenciesValueSet_SolomonIslandsDollar: new Coding({
     code: "SBD",
     display: "Solomon Islands dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SeychellesRupee: Coding.FromStrict({
+  CurrenciesValueSet_SeychellesRupee: new Coding({
     code: "SCR",
     display: "Seychelles rupee",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SudanesePound: Coding.FromStrict({
+  CurrenciesValueSet_SudanesePound: new Coding({
     code: "SDG",
     display: "Sudanese pound",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SwedishKronaKronor: Coding.FromStrict({
+  CurrenciesValueSet_SwedishKronaKronor: new Coding({
     code: "SEK",
     display: "Swedish krona/kronor",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SingaporeDollar: Coding.FromStrict({
+  CurrenciesValueSet_SingaporeDollar: new Coding({
     code: "SGD",
     display: "Singapore dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SaintHelenaPound: Coding.FromStrict({
+  CurrenciesValueSet_SaintHelenaPound: new Coding({
     code: "SHP",
     display: "Saint Helena pound",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SierraLeoneanLeone: Coding.FromStrict({
+  CurrenciesValueSet_SierraLeoneanLeone: new Coding({
     code: "SLL",
     display: "Sierra Leonean leone",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SomaliShilling: Coding.FromStrict({
+  CurrenciesValueSet_SomaliShilling: new Coding({
     code: "SOS",
     display: "Somali shilling",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SurinameseDollar: Coding.FromStrict({
+  CurrenciesValueSet_SurinameseDollar: new Coding({
     code: "SRD",
     display: "Surinamese dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SouthSudanesePound: Coding.FromStrict({
+  CurrenciesValueSet_SouthSudanesePound: new Coding({
     code: "SSP",
     display: "South Sudanese pound",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SaoTomeAndPrincipeDobra: Coding.FromStrict({
+  CurrenciesValueSet_SaoTomeAndPrincipeDobra: new Coding({
     code: "STN",
     display: "São Tomé and Príncipe dobra",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SalvadoranColon: Coding.FromStrict({
+  CurrenciesValueSet_SalvadoranColon: new Coding({
     code: "SVC",
     display: "Salvadoran colón",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SyrianPound: Coding.FromStrict({
+  CurrenciesValueSet_SyrianPound: new Coding({
     code: "SYP",
     display: "Syrian pound",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SwaziLilangeni: Coding.FromStrict({
+  CurrenciesValueSet_SwaziLilangeni: new Coding({
     code: "SZL",
     display: "Swazi lilangeni",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_ThaiBaht: Coding.FromStrict({
+  CurrenciesValueSet_ThaiBaht: new Coding({
     code: "THB",
     display: "Thai baht",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_TajikistaniSomoni: Coding.FromStrict({
+  CurrenciesValueSet_TajikistaniSomoni: new Coding({
     code: "TJS",
     display: "Tajikistani somoni",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_TurkmenistanManat: Coding.FromStrict({
+  CurrenciesValueSet_TurkmenistanManat: new Coding({
     code: "TMT",
     display: "Turkmenistan manat",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_TunisianDinar: Coding.FromStrict({
+  CurrenciesValueSet_TunisianDinar: new Coding({
     code: "TND",
     display: "Tunisian dinar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_TonganPaanga: Coding.FromStrict({
+  CurrenciesValueSet_TonganPaanga: new Coding({
     code: "TOP",
     display: "Tongan paʻanga",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_TurkishLira: Coding.FromStrict({
+  CurrenciesValueSet_TurkishLira: new Coding({
     code: "TRY",
     display: "Turkish lira",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_TrinidadAndTobagoDollar: Coding.FromStrict({
+  CurrenciesValueSet_TrinidadAndTobagoDollar: new Coding({
     code: "TTD",
     display: "Trinidad and Tobago dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_TuvaluDollar: Coding.FromStrict({
+  CurrenciesValueSet_TuvaluDollar: new Coding({
     code: "TVD",
     display: "Tuvalu Dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_NewTaiwanDollar: Coding.FromStrict({
+  CurrenciesValueSet_NewTaiwanDollar: new Coding({
     code: "TWD",
     display: "New Taiwan dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_TanzanianShilling: Coding.FromStrict({
+  CurrenciesValueSet_TanzanianShilling: new Coding({
     code: "TZS",
     display: "Tanzanian shilling",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_UkrainianHryvnia: Coding.FromStrict({
+  CurrenciesValueSet_UkrainianHryvnia: new Coding({
     code: "UAH",
     display: "Ukrainian hryvnia",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_UgandanShilling: Coding.FromStrict({
+  CurrenciesValueSet_UgandanShilling: new Coding({
     code: "UGX",
     display: "Ugandan shilling",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_UnitedStatesDollar: Coding.FromStrict({
+  CurrenciesValueSet_UnitedStatesDollar: new Coding({
     code: "USD",
     display: "United States dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_UnitedStatesDollarNextDayFundsCode: Coding.FromStrict({
+  CurrenciesValueSet_UnitedStatesDollarNextDayFundsCode: new Coding({
     code: "USN",
     display: "United States dollar (next day) (funds code)",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_UruguayPesoEnUnidadesIndexadasURUIURUIFundsCode: Coding.FromStrict({
+  CurrenciesValueSet_UruguayPesoEnUnidadesIndexadasURUIURUIFundsCode: new Coding({
     code: "UYI",
     display: "Uruguay Peso en Unidades Indexadas (URUIURUI) (funds code)",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_UruguayanPeso: Coding.FromStrict({
+  CurrenciesValueSet_UruguayanPeso: new Coding({
     code: "UYU",
     display: "Uruguayan peso",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_UzbekistanSom: Coding.FromStrict({
+  CurrenciesValueSet_UzbekistanSom: new Coding({
     code: "UZS",
     display: "Uzbekistan som",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_VenezuelanBolivar: Coding.FromStrict({
+  CurrenciesValueSet_VenezuelanBolivar: new Coding({
     code: "VEF",
     display: "Venezuelan bolívar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_VietnameseĐong: Coding.FromStrict({
+  CurrenciesValueSet_VietnameseĐong: new Coding({
     code: "VND",
     display: "Vietnamese đồng",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_VanuatuVatu: Coding.FromStrict({
+  CurrenciesValueSet_VanuatuVatu: new Coding({
     code: "VUV",
     display: "Vanuatu vatu",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SamoanTala: Coding.FromStrict({
+  CurrenciesValueSet_SamoanTala: new Coding({
     code: "WST",
     display: "Samoan tala",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_CFAFrancBEAC: Coding.FromStrict({
+  CurrenciesValueSet_CFAFrancBEAC: new Coding({
     code: "XAF",
     display: "CFA franc BEAC",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SilverOneTroyOunce: Coding.FromStrict({
+  CurrenciesValueSet_SilverOneTroyOunce: new Coding({
     code: "XAG",
     display: "Silver (one troy ounce)",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_GoldOneTroyOunce: Coding.FromStrict({
+  CurrenciesValueSet_GoldOneTroyOunce: new Coding({
     code: "XAU",
     display: "Gold (one troy ounce)",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_EuropeanCompositeUnitEURCOBondMarketUnit: Coding.FromStrict({
+  CurrenciesValueSet_EuropeanCompositeUnitEURCOBondMarketUnit: new Coding({
     code: "XBA",
     display: "European Composite Unit (EURCO) (bond market unit)",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_EuropeanMonetaryUnitEMU6BondMarketUnit: Coding.FromStrict({
+  CurrenciesValueSet_EuropeanMonetaryUnitEMU6BondMarketUnit: new Coding({
     code: "XBB",
     display: "European Monetary Unit (E.M.U.-6) (bond market unit)",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_EuropeanUnitOfAccount9EUA9BondMarketUnit: Coding.FromStrict({
+  CurrenciesValueSet_EuropeanUnitOfAccount9EUA9BondMarketUnit: new Coding({
     code: "XBC",
     display: "European Unit of Account 9 (E.U.A.-9) (bond market unit)",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_EuropeanUnitOfAccount17EUA17BondMarketUnit: Coding.FromStrict({
+  CurrenciesValueSet_EuropeanUnitOfAccount17EUA17BondMarketUnit: new Coding({
     code: "XBD",
     display: "European Unit of Account 17 (E.U.A.-17) (bond market unit)",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_EastCaribbeanDollar: Coding.FromStrict({
+  CurrenciesValueSet_EastCaribbeanDollar: new Coding({
     code: "XCD",
     display: "East Caribbean dollar",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SpecialDrawingRights: Coding.FromStrict({
+  CurrenciesValueSet_SpecialDrawingRights: new Coding({
     code: "XDR",
     display: "Special drawing rights",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_CFAFrancBCEAO: Coding.FromStrict({
+  CurrenciesValueSet_CFAFrancBCEAO: new Coding({
     code: "XOF",
     display: "CFA franc BCEAO",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_PalladiumOneTroyOunce: Coding.FromStrict({
+  CurrenciesValueSet_PalladiumOneTroyOunce: new Coding({
     code: "XPD",
     display: "Palladium (one troy ounce)",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_CFPFrancFrancPacifique: Coding.FromStrict({
+  CurrenciesValueSet_CFPFrancFrancPacifique: new Coding({
     code: "XPF",
     display: "CFP franc (franc Pacifique)",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_PlatinumOneTroyOunce: Coding.FromStrict({
+  CurrenciesValueSet_PlatinumOneTroyOunce: new Coding({
     code: "XPT",
     display: "Platinum (one troy ounce)",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SUCRE: Coding.FromStrict({
+  CurrenciesValueSet_SUCRE: new Coding({
     code: "XSU",
     display: "SUCRE",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_CodeReservedForTestingPurposes: Coding.FromStrict({
+  CurrenciesValueSet_CodeReservedForTestingPurposes: new Coding({
     code: "XTS",
     display: "Code reserved for testing purposes",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_ADBUnitOfAccount: Coding.FromStrict({
+  CurrenciesValueSet_ADBUnitOfAccount: new Coding({
     code: "XUA",
     display: "ADB Unit of Account",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_NoCurrency: Coding.FromStrict({
+  CurrenciesValueSet_NoCurrency: new Coding({
     code: "XXX",
     display: "No currency",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_YemeniRial: Coding.FromStrict({
+  CurrenciesValueSet_YemeniRial: new Coding({
     code: "YER",
     display: "Yemeni rial",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_SouthAfricanRand: Coding.FromStrict({
+  CurrenciesValueSet_SouthAfricanRand: new Coding({
     code: "ZAR",
     display: "South African rand",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_ZambianKwacha: Coding.FromStrict({
+  CurrenciesValueSet_ZambianKwacha: new Coding({
     code: "ZMW",
     display: "Zambian kwacha",
     system: "urn:iso:std:iso:4217"
   }),
-  CurrenciesValueSet_ZimbabweanDollarA10: Coding.FromStrict({
+  CurrenciesValueSet_ZimbabweanDollarA10: new Coding({
     code: "ZWL",
     display: "Zimbabwean dollar A/10",
     system: "urn:iso:std:iso:4217"

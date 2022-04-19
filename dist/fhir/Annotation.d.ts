@@ -53,10 +53,10 @@ export declare class Annotation extends fhir.FhirElement implements fhir.IAnnota
     /**
      * Check if the current Annotation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Annotation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IAnnotation): Annotation;
+    static fromStrict(source: fhir.IAnnotation): Annotation;
 }
 //# sourceMappingURL=Annotation.d.ts.map

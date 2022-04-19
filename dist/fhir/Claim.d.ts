@@ -586,11 +586,11 @@ export declare class ClaimRelated extends fhir.BackboneElement implements fhir.I
     /**
      * Check if the current ClaimRelated contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimRelated from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimRelated): ClaimRelated;
+    static fromStrict(source: fhir.IClaimRelated): ClaimRelated;
 }
 /**
  * Often providers agree to receive the benefits payable to reduce the near-term costs to the patient. The insurer may decline to pay the provider and choose to pay the subscriber instead.
@@ -611,11 +611,11 @@ export declare class ClaimPayee extends fhir.BackboneElement implements fhir.ICl
     /**
      * Check if the current ClaimPayee contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimPayee from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimPayee): ClaimPayee;
+    static fromStrict(source: fhir.IClaimPayee): ClaimPayee;
 }
 /**
  * The members of the team who provided the products and services.
@@ -650,11 +650,11 @@ export declare class ClaimCareTeam extends fhir.BackboneElement implements fhir.
     /**
      * Check if the current ClaimCareTeam contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimCareTeam from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimCareTeam): ClaimCareTeam;
+    static fromStrict(source: fhir.IClaimCareTeam): ClaimCareTeam;
 }
 /**
  * Often there are multiple jurisdiction specific valuesets which are required.
@@ -715,11 +715,11 @@ export declare class ClaimSupportingInfo extends fhir.BackboneElement implements
     /**
      * Check if the current ClaimSupportingInfo contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimSupportingInfo from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimSupportingInfo): ClaimSupportingInfo;
+    static fromStrict(source: fhir.IClaimSupportingInfo): ClaimSupportingInfo;
 }
 /**
  * Information about diagnoses relevant to the claim items.
@@ -757,11 +757,11 @@ export declare class ClaimDiagnosis extends fhir.BackboneElement implements fhir
     /**
      * Check if the current ClaimDiagnosis contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimDiagnosis from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimDiagnosis): ClaimDiagnosis;
+    static fromStrict(source: fhir.IClaimDiagnosis): ClaimDiagnosis;
 }
 /**
  * Procedures performed on the patient relevant to the billing items with the claim.
@@ -800,11 +800,11 @@ export declare class ClaimProcedure extends fhir.BackboneElement implements fhir
     /**
      * Check if the current ClaimProcedure contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimProcedure from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimProcedure): ClaimProcedure;
+    static fromStrict(source: fhir.IClaimProcedure): ClaimProcedure;
 }
 /**
  * All insurance coverages for the patient which may be applicable for reimbursement, of the products and services listed in the claim, are typically provided in the claim to allow insurers to confirm the ordering of the insurance coverages relative to local 'coordination of benefit' rules. One coverage (and only one) with 'focal=true' is to be used in the adjudication of this claim. Coverages appearing before the focal Coverage in the list, and where 'Coverage.subrogation=false', should provide a reference to the ClaimResponse containing the adjudication results of the prior claim.
@@ -849,11 +849,11 @@ export declare class ClaimInsurance extends fhir.BackboneElement implements fhir
     /**
      * Check if the current ClaimInsurance contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimInsurance from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimInsurance): ClaimInsurance;
+    static fromStrict(source: fhir.IClaimInsurance): ClaimInsurance;
 }
 /**
  * Details of an accident which resulted in injuries which required the products and services listed in the claim.
@@ -883,11 +883,11 @@ export declare class ClaimAccident extends fhir.BackboneElement implements fhir.
     /**
      * Check if the current ClaimAccident contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimAccident from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimAccident): ClaimAccident;
+    static fromStrict(source: fhir.IClaimAccident): ClaimAccident;
 }
 /**
  * A claim detail line. Either a simple (a product or service) or a 'group' of sub-details which are simple items.
@@ -946,11 +946,11 @@ export declare class ClaimItemDetailSubDetail extends fhir.BackboneElement imple
     /**
      * Check if the current ClaimItemDetailSubDetail contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimItemDetailSubDetail from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimItemDetailSubDetail): ClaimItemDetailSubDetail;
+    static fromStrict(source: fhir.IClaimItemDetailSubDetail): ClaimItemDetailSubDetail;
 }
 /**
  * A claim detail line. Either a simple (a product or service) or a 'group' of sub-details which are simple items.
@@ -1013,11 +1013,11 @@ export declare class ClaimItemDetail extends fhir.BackboneElement implements fhi
     /**
      * Check if the current ClaimItemDetail contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimItemDetail from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimItemDetail): ClaimItemDetail;
+    static fromStrict(source: fhir.IClaimItemDetail): ClaimItemDetail;
 }
 /**
  * A claim line. Either a simple  product or service or a 'group' of details which can each be a simple items or groups of sub-details.
@@ -1133,11 +1133,11 @@ export declare class ClaimItem extends fhir.BackboneElement implements fhir.ICla
     /**
      * Check if the current ClaimItem contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimItem from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimItem): ClaimItem;
+    static fromStrict(source: fhir.IClaimItem): ClaimItem;
 }
 /**
  * A provider issued list of professional services and products which have been provided, or are to be provided, to a patient which is sent to an insurer for reimbursement.
@@ -1265,11 +1265,11 @@ export declare class Claim extends fhir.DomainResource implements fhir.IClaim {
     /**
      * Check if the current Claim contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Claim from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaim): Claim;
+    static fromStrict(source: fhir.IClaim): Claim;
 }
 /**
  * Code Values for the Claim.status field

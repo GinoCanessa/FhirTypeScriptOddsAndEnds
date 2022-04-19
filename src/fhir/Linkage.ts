@@ -71,20 +71,20 @@ export class LinkageItem extends fhir.BackboneElement implements fhir.ILinkageIt
   /**
    * Check if the current LinkageItem contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["resource"] === undefined) { missingElements.push("resource"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a LinkageItem from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ILinkageItem):LinkageItem {
+  static override fromStrict(source:fhir.ILinkageItem):LinkageItem {
     var dest:LinkageItem = new LinkageItem(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `LinkageItem is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -126,19 +126,19 @@ export class Linkage extends fhir.DomainResource implements fhir.ILinkage {
   /**
    * Check if the current Linkage contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["item"]) || (this["item"].length === 0)) { missingElements.push("item"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Linkage from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ILinkage):Linkage {
+  static override fromStrict(source:fhir.ILinkage):Linkage {
     var dest:Linkage = new Linkage(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Linkage is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

@@ -36,7 +36,7 @@ export class CatalogEntryRelatedEntry extends fhir.BackboneElement {
     /**
      * Check if the current CatalogEntryRelatedEntry contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["item"] === undefined) {
             missingElements.push("item");
@@ -44,16 +44,16 @@ export class CatalogEntryRelatedEntry extends fhir.BackboneElement {
         if (this["relationtype"] === undefined) {
             missingElements.push("relationtype");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a CatalogEntryRelatedEntry from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new CatalogEntryRelatedEntry(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `CatalogEntryRelatedEntry is missing elements: ${missingElements.join(", ")}`;
         }
@@ -133,7 +133,7 @@ export class CatalogEntry extends fhir.DomainResource {
     /**
      * Check if the current CatalogEntry contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["orderable"] === undefined) {
             missingElements.push("orderable");
@@ -141,16 +141,16 @@ export class CatalogEntry extends fhir.DomainResource {
         if (this["referencedItem"] === undefined) {
             missingElements.push("referencedItem");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a CatalogEntry from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new CatalogEntry(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `CatalogEntry is missing elements: ${missingElements.join(", ")}`;
         }

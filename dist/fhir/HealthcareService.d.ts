@@ -183,11 +183,11 @@ export declare class HealthcareServiceEligibility extends fhir.BackboneElement i
     /**
      * Check if the current HealthcareServiceEligibility contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a HealthcareServiceEligibility from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IHealthcareServiceEligibility): HealthcareServiceEligibility;
+    static fromStrict(source: fhir.IHealthcareServiceEligibility): HealthcareServiceEligibility;
 }
 /**
  * More detailed availability information may be provided in associated Schedule/Slot resources.
@@ -220,11 +220,11 @@ export declare class HealthcareServiceAvailableTime extends fhir.BackboneElement
     /**
      * Check if the current HealthcareServiceAvailableTime contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a HealthcareServiceAvailableTime from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IHealthcareServiceAvailableTime): HealthcareServiceAvailableTime;
+    static fromStrict(source: fhir.IHealthcareServiceAvailableTime): HealthcareServiceAvailableTime;
 }
 /**
  * The HealthcareService is not available during this period of time due to the provided reason.
@@ -246,11 +246,11 @@ export declare class HealthcareServiceNotAvailable extends fhir.BackboneElement 
     /**
      * Check if the current HealthcareServiceNotAvailable contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a HealthcareServiceNotAvailable from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IHealthcareServiceNotAvailable): HealthcareServiceNotAvailable;
+    static fromStrict(source: fhir.IHealthcareServiceNotAvailable): HealthcareServiceNotAvailable;
 }
 /**
  * The details of a healthcare service available at a location.
@@ -369,11 +369,11 @@ export declare class HealthcareService extends fhir.DomainResource implements fh
     /**
      * Check if the current HealthcareService contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a HealthcareService from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IHealthcareService): HealthcareService;
+    static fromStrict(source: fhir.IHealthcareService): HealthcareService;
 }
 /**
  * Code Values for the HealthcareService.availableTime.daysOfWeek field

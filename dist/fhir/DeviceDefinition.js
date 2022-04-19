@@ -49,7 +49,7 @@ export class DeviceDefinitionUdiDeviceIdentifier extends fhir.BackboneElement {
     /**
      * Check if the current DeviceDefinitionUdiDeviceIdentifier contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["deviceIdentifier"] === undefined) {
             missingElements.push("deviceIdentifier");
@@ -60,16 +60,16 @@ export class DeviceDefinitionUdiDeviceIdentifier extends fhir.BackboneElement {
         if (this["jurisdiction"] === undefined) {
             missingElements.push("jurisdiction");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a DeviceDefinitionUdiDeviceIdentifier from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new DeviceDefinitionUdiDeviceIdentifier(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `DeviceDefinitionUdiDeviceIdentifier is missing elements: ${missingElements.join(", ")}`;
         }
@@ -109,7 +109,7 @@ export class DeviceDefinitionDeviceName extends fhir.BackboneElement {
     /**
      * Check if the current DeviceDefinitionDeviceName contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["name"] === undefined) {
             missingElements.push("name");
@@ -117,16 +117,16 @@ export class DeviceDefinitionDeviceName extends fhir.BackboneElement {
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a DeviceDefinitionDeviceName from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new DeviceDefinitionDeviceName(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `DeviceDefinitionDeviceName is missing elements: ${missingElements.join(", ")}`;
         }
@@ -162,21 +162,21 @@ export class DeviceDefinitionSpecialization extends fhir.BackboneElement {
     /**
      * Check if the current DeviceDefinitionSpecialization contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["systemType"] === undefined) {
             missingElements.push("systemType");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a DeviceDefinitionSpecialization from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new DeviceDefinitionSpecialization(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `DeviceDefinitionSpecialization is missing elements: ${missingElements.join(", ")}`;
         }
@@ -206,21 +206,21 @@ export class DeviceDefinitionCapability extends fhir.BackboneElement {
     /**
      * Check if the current DeviceDefinitionCapability contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a DeviceDefinitionCapability from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new DeviceDefinitionCapability(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `DeviceDefinitionCapability is missing elements: ${missingElements.join(", ")}`;
         }
@@ -253,21 +253,21 @@ export class DeviceDefinitionProperty extends fhir.BackboneElement {
     /**
      * Check if the current DeviceDefinitionProperty contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a DeviceDefinitionProperty from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new DeviceDefinitionProperty(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `DeviceDefinitionProperty is missing elements: ${missingElements.join(", ")}`;
         }
@@ -306,21 +306,21 @@ export class DeviceDefinitionMaterial extends fhir.BackboneElement {
     /**
      * Check if the current DeviceDefinitionMaterial contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["substance"] === undefined) {
             missingElements.push("substance");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a DeviceDefinitionMaterial from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new DeviceDefinitionMaterial(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `DeviceDefinitionMaterial is missing elements: ${missingElements.join(", ")}`;
         }
@@ -425,18 +425,18 @@ export class DeviceDefinition extends fhir.DomainResource {
     /**
      * Check if the current DeviceDefinition contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a DeviceDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new DeviceDefinition(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `DeviceDefinition is missing elements: ${missingElements.join(", ")}`;
         }

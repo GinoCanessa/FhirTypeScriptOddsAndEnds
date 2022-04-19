@@ -13,7 +13,7 @@ export const ClaimTypeValueSet = {
   /**
    * Hospital, clinic and typically inpatient claims.
    */
-  claim_type_Institutional: Coding.FromStrict({
+  claim_type_Institutional: new Coding({
     code: "institutional",
     display: "Institutional",
     system: "http://terminology.hl7.org/CodeSystem/claim-type"
@@ -21,7 +21,7 @@ export const ClaimTypeValueSet = {
   /**
    * Dental, Denture and Hygiene claims.
    */
-  claim_type_Oral: Coding.FromStrict({
+  claim_type_Oral: new Coding({
     code: "oral",
     display: "Oral",
     system: "http://terminology.hl7.org/CodeSystem/claim-type"
@@ -29,7 +29,7 @@ export const ClaimTypeValueSet = {
   /**
    * Pharmacy claims for goods and services.
    */
-  claim_type_Pharmacy: Coding.FromStrict({
+  claim_type_Pharmacy: new Coding({
     code: "pharmacy",
     display: "Pharmacy",
     system: "http://terminology.hl7.org/CodeSystem/claim-type"
@@ -37,7 +37,7 @@ export const ClaimTypeValueSet = {
   /**
    * Typically, outpatient claims from Physician, Psychological, Chiropractor, Physiotherapy, Speech Pathology, rehabilitative, consulting.
    */
-  claim_type_Professional: Coding.FromStrict({
+  claim_type_Professional: new Coding({
     code: "professional",
     display: "Professional",
     system: "http://terminology.hl7.org/CodeSystem/claim-type"
@@ -45,7 +45,7 @@ export const ClaimTypeValueSet = {
   /**
    * Vision claims for professional services and products such as glasses and contact lenses.
    */
-  claim_type_Vision: Coding.FromStrict({
+  claim_type_Vision: new Coding({
     code: "vision",
     display: "Vision",
     system: "http://terminology.hl7.org/CodeSystem/claim-type"

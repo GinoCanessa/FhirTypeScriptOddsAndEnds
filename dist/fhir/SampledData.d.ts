@@ -83,10 +83,10 @@ export declare class SampledData extends fhir.FhirElement implements fhir.ISampl
     /**
      * Check if the current SampledData contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SampledData from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISampledData): SampledData;
+    static fromStrict(source: fhir.ISampledData): SampledData;
 }
 //# sourceMappingURL=SampledData.d.ts.map

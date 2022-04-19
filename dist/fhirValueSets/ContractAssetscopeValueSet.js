@@ -13,7 +13,7 @@ export const ContractAssetscopeValueSet = {
     /**
      * To be completed
      */
-    contract_assetscope_Thing: Coding.FromStrict({
+    contract_assetscope_Thing: new Coding({
         code: "thing",
         display: "Thing",
         system: "http://hl7.org/fhir/contract-asset-scope"

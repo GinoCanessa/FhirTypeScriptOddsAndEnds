@@ -13,7 +13,7 @@ export const PaymentAdjustmentReasonValueSet = {
   /**
    * Prior Payment Reversal
    */
-  payment_adjustment_reason_PriorPaymentReversal: Coding.FromStrict({
+  payment_adjustment_reason_PriorPaymentReversal: new Coding({
     code: "a001",
     display: "Prior Payment Reversal",
     system: "http://terminology.hl7.org/CodeSystem/payment-adjustment-reason"
@@ -21,7 +21,7 @@ export const PaymentAdjustmentReasonValueSet = {
   /**
    * Prior Overpayment
    */
-  payment_adjustment_reason_PriorOverpayment: Coding.FromStrict({
+  payment_adjustment_reason_PriorOverpayment: new Coding({
     code: "a002",
     display: "Prior Overpayment",
     system: "http://terminology.hl7.org/CodeSystem/payment-adjustment-reason"

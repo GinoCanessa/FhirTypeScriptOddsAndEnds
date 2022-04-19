@@ -13,7 +13,7 @@ export const ProductStorageScaleValueSet = {
     /**
      * Celsius or centigrade temperature scale.
      */
-    product_storage_scale_Celsius: Coding.FromStrict({
+    product_storage_scale_Celsius: new Coding({
         code: "celsius",
         display: "Celsius",
         system: "http://hl7.org/fhir/product-storage-scale"
@@ -21,7 +21,7 @@ export const ProductStorageScaleValueSet = {
     /**
      * Fahrenheit temperature scale.
      */
-    product_storage_scale_Fahrenheit: Coding.FromStrict({
+    product_storage_scale_Fahrenheit: new Coding({
         code: "farenheit",
         display: "Fahrenheit",
         system: "http://hl7.org/fhir/product-storage-scale"
@@ -29,7 +29,7 @@ export const ProductStorageScaleValueSet = {
     /**
      * Kelvin absolute thermodynamic temperature scale.
      */
-    product_storage_scale_Kelvin: Coding.FromStrict({
+    product_storage_scale_Kelvin: new Coding({
         code: "kelvin",
         display: "Kelvin",
         system: "http://hl7.org/fhir/product-storage-scale"

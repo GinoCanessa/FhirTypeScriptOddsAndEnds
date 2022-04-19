@@ -115,18 +115,18 @@ export class OrganizationContact extends fhir.BackboneElement implements fhir.IO
   /**
    * Check if the current OrganizationContact contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a OrganizationContact from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IOrganizationContact):OrganizationContact {
+  static override fromStrict(source:fhir.IOrganizationContact):OrganizationContact {
     var dest:OrganizationContact = new OrganizationContact(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `OrganizationContact is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -208,18 +208,18 @@ export class Organization extends fhir.DomainResource implements fhir.IOrganizat
   /**
    * Check if the current Organization contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Organization from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IOrganization):Organization {
+  static override fromStrict(source:fhir.IOrganization):Organization {
     var dest:Organization = new Organization(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Organization is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

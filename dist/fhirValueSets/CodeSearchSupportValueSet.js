@@ -13,7 +13,7 @@ export const CodeSearchSupportValueSet = {
     /**
      * The search for code on ValueSet only includes all codes based on the expansion of the value set.
      */
-    code_search_support_ImplicitCodes: Coding.FromStrict({
+    code_search_support_ImplicitCodes: new Coding({
         code: "all",
         display: "Implicit Codes",
         system: "http://hl7.org/fhir/code-search-support"
@@ -21,7 +21,7 @@ export const CodeSearchSupportValueSet = {
     /**
      * The search for code on ValueSet only includes codes explicitly detailed on includes or expansions.
      */
-    code_search_support_ExplicitCodes: Coding.FromStrict({
+    code_search_support_ExplicitCodes: new Coding({
         code: "explicit",
         display: "Explicit Codes",
         system: "http://hl7.org/fhir/code-search-support"

@@ -40,18 +40,18 @@ export class SubstanceNucleicAcidSubunitLinkage extends fhir.BackboneElement {
     /**
      * Check if the current SubstanceNucleicAcidSubunitLinkage contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SubstanceNucleicAcidSubunitLinkage from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SubstanceNucleicAcidSubunitLinkage(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SubstanceNucleicAcidSubunitLinkage is missing elements: ${missingElements.join(", ")}`;
         }
@@ -86,18 +86,18 @@ export class SubstanceNucleicAcidSubunitSugar extends fhir.BackboneElement {
     /**
      * Check if the current SubstanceNucleicAcidSubunitSugar contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SubstanceNucleicAcidSubunitSugar from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SubstanceNucleicAcidSubunitSugar(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SubstanceNucleicAcidSubunitSugar is missing elements: ${missingElements.join(", ")}`;
         }
@@ -150,18 +150,18 @@ export class SubstanceNucleicAcidSubunit extends fhir.BackboneElement {
     /**
      * Check if the current SubstanceNucleicAcidSubunit contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SubstanceNucleicAcidSubunit from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SubstanceNucleicAcidSubunit(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SubstanceNucleicAcidSubunit is missing elements: ${missingElements.join(", ")}`;
         }
@@ -203,18 +203,18 @@ export class SubstanceNucleicAcid extends fhir.DomainResource {
     /**
      * Check if the current SubstanceNucleicAcid contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SubstanceNucleicAcid from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SubstanceNucleicAcid(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SubstanceNucleicAcid is missing elements: ${missingElements.join(", ")}`;
         }

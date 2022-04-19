@@ -13,7 +13,7 @@ export const CoverageeligibilityresponseExAuthSupportValueSet = {
   /**
    * A formal accident report as would be filed with police or a simlar official body.
    */
-  coverageeligibilityresponse_ex_auth_support_AccidentReport: Coding.FromStrict({
+  coverageeligibilityresponse_ex_auth_support_AccidentReport: new Coding({
     code: "accidentreport",
     display: "Accident Report",
     system: "http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support"
@@ -21,7 +21,7 @@ export const CoverageeligibilityresponseExAuthSupportValueSet = {
   /**
    * A request or authorization for diagnostic imaging.
    */
-  coverageeligibilityresponse_ex_auth_support_DiagnosticImageOrder: Coding.FromStrict({
+  coverageeligibilityresponse_ex_auth_support_DiagnosticImageOrder: new Coding({
     code: "diagnosticimageorder",
     display: "Diagnostic Image Order",
     system: "http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support"
@@ -29,7 +29,7 @@ export const CoverageeligibilityresponseExAuthSupportValueSet = {
   /**
    * A report on diagnostic image(s).
    */
-  coverageeligibilityresponse_ex_auth_support_DiagnosticImageReport: Coding.FromStrict({
+  coverageeligibilityresponse_ex_auth_support_DiagnosticImageReport: new Coding({
     code: "diagnosticimagereport",
     display: "Diagnostic Image Report",
     system: "http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support"
@@ -37,7 +37,7 @@ export const CoverageeligibilityresponseExAuthSupportValueSet = {
   /**
    * A request or authorization for laboratory diagnostic tests.
    */
-  coverageeligibilityresponse_ex_auth_support_LabOrder: Coding.FromStrict({
+  coverageeligibilityresponse_ex_auth_support_LabOrder: new Coding({
     code: "laborder",
     display: "Lab Order",
     system: "http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support"
@@ -45,7 +45,7 @@ export const CoverageeligibilityresponseExAuthSupportValueSet = {
   /**
    * A report on laboratory diagnostic test(s).
    */
-  coverageeligibilityresponse_ex_auth_support_LabReport: Coding.FromStrict({
+  coverageeligibilityresponse_ex_auth_support_LabReport: new Coding({
     code: "labreport",
     display: "Lab Report",
     system: "http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support"
@@ -53,7 +53,7 @@ export const CoverageeligibilityresponseExAuthSupportValueSet = {
   /**
    * A physical model of the affected area.
    */
-  coverageeligibilityresponse_ex_auth_support_Model: Coding.FromStrict({
+  coverageeligibilityresponse_ex_auth_support_Model: new Coding({
     code: "model",
     display: "Model",
     system: "http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support"
@@ -61,7 +61,7 @@ export const CoverageeligibilityresponseExAuthSupportValueSet = {
   /**
    * A photograph of the affected area.
    */
-  coverageeligibilityresponse_ex_auth_support_Picture: Coding.FromStrict({
+  coverageeligibilityresponse_ex_auth_support_Picture: new Coding({
     code: "picture",
     display: "Picture",
     system: "http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support"
@@ -69,7 +69,7 @@ export const CoverageeligibilityresponseExAuthSupportValueSet = {
   /**
    * A report from a licensed professional regarding the siutation, condition or proposed treatment.
    */
-  coverageeligibilityresponse_ex_auth_support_ProfessionalReport: Coding.FromStrict({
+  coverageeligibilityresponse_ex_auth_support_ProfessionalReport: new Coding({
     code: "professionalreport",
     display: "Professional Report",
     system: "http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support"

@@ -13,7 +13,7 @@ export const DocumentModeValueSet = {
     /**
      * The application consumes documents of the specified type.
      */
-    document_mode_Consumer: Coding.FromStrict({
+    document_mode_Consumer: new Coding({
         code: "consumer",
         display: "Consumer",
         system: "http://hl7.org/fhir/document-mode"
@@ -21,7 +21,7 @@ export const DocumentModeValueSet = {
     /**
      * The application produces documents of the specified type.
      */
-    document_mode_Producer: Coding.FromStrict({
+    document_mode_Producer: new Coding({
         code: "producer",
         display: "Producer",
         system: "http://hl7.org/fhir/document-mode"

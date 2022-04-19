@@ -138,18 +138,18 @@ export class SubstanceProteinSubunit extends fhir.BackboneElement implements fhi
   /**
    * Check if the current SubstanceProteinSubunit contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceProteinSubunit from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceProteinSubunit):SubstanceProteinSubunit {
+  static override fromStrict(source:fhir.ISubstanceProteinSubunit):SubstanceProteinSubunit {
     var dest:SubstanceProteinSubunit = new SubstanceProteinSubunit(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceProteinSubunit is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -196,18 +196,18 @@ export class SubstanceProtein extends fhir.DomainResource implements fhir.ISubst
   /**
    * Check if the current SubstanceProtein contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceProtein from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceProtein):SubstanceProtein {
+  static override fromStrict(source:fhir.ISubstanceProtein):SubstanceProtein {
     var dest:SubstanceProtein = new SubstanceProtein(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceProtein is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

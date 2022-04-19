@@ -13,7 +13,7 @@ export const MedicationrequestCourseOfTherapyValueSet = {
     /**
      * A medication which the patient is only expected to consume for the duration of the current order and which is not expected to be renewed.
      */
-    medicationrequest_course_of_therapy_ShortCourseAcuteTherapy: Coding.FromStrict({
+    medicationrequest_course_of_therapy_ShortCourseAcuteTherapy: new Coding({
         code: "acute",
         display: "Short course (acute) therapy",
         system: "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy"
@@ -21,7 +21,7 @@ export const MedicationrequestCourseOfTherapyValueSet = {
     /**
      * A medication which is expected to be continued beyond the present order and which the patient should be assumed to be taking unless explicitly stopped.
      */
-    medicationrequest_course_of_therapy_ContinuousLongTermTherapy: Coding.FromStrict({
+    medicationrequest_course_of_therapy_ContinuousLongTermTherapy: new Coding({
         code: "continuous",
         display: "Continuous long term therapy",
         system: "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy"
@@ -29,7 +29,7 @@ export const MedicationrequestCourseOfTherapyValueSet = {
     /**
      * A medication which is expected to be used on a part time basis at certain times of the year
      */
-    medicationrequest_course_of_therapy_Seasonal: Coding.FromStrict({
+    medicationrequest_course_of_therapy_Seasonal: new Coding({
         code: "seasonal",
         display: "Seasonal",
         system: "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy"

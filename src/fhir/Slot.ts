@@ -155,22 +155,22 @@ export class Slot extends fhir.DomainResource implements fhir.ISlot {
   /**
    * Check if the current Slot contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["end"] === undefined) { missingElements.push("end"); }
     if (this["schedule"] === undefined) { missingElements.push("schedule"); }
     if (this["start"] === undefined) { missingElements.push("start"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Slot from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISlot):Slot {
+  static override fromStrict(source:fhir.ISlot):Slot {
     var dest:Slot = new Slot(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Slot is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

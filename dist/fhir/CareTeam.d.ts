@@ -112,11 +112,11 @@ export declare class CareTeamParticipant extends fhir.BackboneElement implements
     /**
      * Check if the current CareTeamParticipant contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CareTeamParticipant from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICareTeamParticipant): CareTeamParticipant;
+    static fromStrict(source: fhir.ICareTeamParticipant): CareTeamParticipant;
 }
 /**
  * The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care for a patient.
@@ -187,11 +187,11 @@ export declare class CareTeam extends fhir.DomainResource implements fhir.ICareT
     /**
      * Check if the current CareTeam contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CareTeam from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICareTeam): CareTeam;
+    static fromStrict(source: fhir.ICareTeam): CareTeam;
 }
 /**
  * Code Values for the CareTeam.status field

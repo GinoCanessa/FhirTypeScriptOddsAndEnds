@@ -13,7 +13,7 @@ export const DiagnosticReportStatusValueSet = {
   /**
    * Subsequent to being final, the report has been modified.  This includes any change in the results, diagnosis, narrative text, or other content of a report that has been issued.
    */
-  diagnostic_report_status_Amended: Coding.FromStrict({
+  diagnostic_report_status_Amended: new Coding({
     code: "amended",
     display: "Amended",
     system: "http://hl7.org/fhir/diagnostic-report-status"
@@ -21,7 +21,7 @@ export const DiagnosticReportStatusValueSet = {
   /**
    * Subsequent to being final, the report has been modified by adding new content. The existing content is unchanged.
    */
-  diagnostic_report_status_Appended: Coding.FromStrict({
+  diagnostic_report_status_Appended: new Coding({
     code: "appended",
     display: "Appended",
     system: "http://hl7.org/fhir/diagnostic-report-status"
@@ -29,7 +29,7 @@ export const DiagnosticReportStatusValueSet = {
   /**
    * The report is unavailable because the measurement was not started or not completed (also sometimes called "aborted").
    */
-  diagnostic_report_status_Cancelled: Coding.FromStrict({
+  diagnostic_report_status_Cancelled: new Coding({
     code: "cancelled",
     display: "Cancelled",
     system: "http://hl7.org/fhir/diagnostic-report-status"
@@ -37,7 +37,7 @@ export const DiagnosticReportStatusValueSet = {
   /**
    * Subsequent to being final, the report has been modified  to correct an error in the report or referenced results.
    */
-  diagnostic_report_status_Corrected: Coding.FromStrict({
+  diagnostic_report_status_Corrected: new Coding({
     code: "corrected",
     display: "Corrected",
     system: "http://hl7.org/fhir/diagnostic-report-status"
@@ -45,7 +45,7 @@ export const DiagnosticReportStatusValueSet = {
   /**
    * The report has been withdrawn following a previous final release.  This electronic record should never have existed, though it is possible that real-world decisions were based on it. (If real-world activity has occurred, the status should be "cancelled" rather than "entered-in-error".).
    */
-  diagnostic_report_status_EnteredInError: Coding.FromStrict({
+  diagnostic_report_status_EnteredInError: new Coding({
     code: "entered-in-error",
     display: "Entered in Error",
     system: "http://hl7.org/fhir/diagnostic-report-status"
@@ -53,7 +53,7 @@ export const DiagnosticReportStatusValueSet = {
   /**
    * The report is complete and verified by an authorized person.
    */
-  diagnostic_report_status_Final: Coding.FromStrict({
+  diagnostic_report_status_Final: new Coding({
     code: "final",
     display: "Final",
     system: "http://hl7.org/fhir/diagnostic-report-status"
@@ -61,7 +61,7 @@ export const DiagnosticReportStatusValueSet = {
   /**
    * This is a partial (e.g. initial, interim or preliminary) report: data in the report may be incomplete or unverified.
    */
-  diagnostic_report_status_Partial: Coding.FromStrict({
+  diagnostic_report_status_Partial: new Coding({
     code: "partial",
     display: "Partial",
     system: "http://hl7.org/fhir/diagnostic-report-status"
@@ -69,7 +69,7 @@ export const DiagnosticReportStatusValueSet = {
   /**
    * Verified early results are available, but not all  results are final.
    */
-  diagnostic_report_status_Preliminary: Coding.FromStrict({
+  diagnostic_report_status_Preliminary: new Coding({
     code: "preliminary",
     display: "Preliminary",
     system: "http://hl7.org/fhir/diagnostic-report-status"
@@ -77,7 +77,7 @@ export const DiagnosticReportStatusValueSet = {
   /**
    * The existence of the report is registered, but there is nothing yet available.
    */
-  diagnostic_report_status_Registered: Coding.FromStrict({
+  diagnostic_report_status_Registered: new Coding({
     code: "registered",
     display: "Registered",
     system: "http://hl7.org/fhir/diagnostic-report-status"
@@ -85,7 +85,7 @@ export const DiagnosticReportStatusValueSet = {
   /**
    * The authoring/source system does not know which of the status values currently applies for this observation. Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, but the authoring/source system does not know which.
    */
-  diagnostic_report_status_Unknown: Coding.FromStrict({
+  diagnostic_report_status_Unknown: new Coding({
     code: "unknown",
     display: "Unknown",
     system: "http://hl7.org/fhir/diagnostic-report-status"

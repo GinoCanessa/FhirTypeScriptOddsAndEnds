@@ -47,21 +47,21 @@ export class StructureDefinitionMapping extends fhir.BackboneElement {
     /**
      * Check if the current StructureDefinitionMapping contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["identity"] === undefined) {
             missingElements.push("identity");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a StructureDefinitionMapping from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new StructureDefinitionMapping(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `StructureDefinitionMapping is missing elements: ${missingElements.join(", ")}`;
         }
@@ -101,7 +101,7 @@ export class StructureDefinitionContext extends fhir.BackboneElement {
     /**
      * Check if the current StructureDefinitionContext contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["expression"] === undefined) {
             missingElements.push("expression");
@@ -109,16 +109,16 @@ export class StructureDefinitionContext extends fhir.BackboneElement {
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a StructureDefinitionContext from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new StructureDefinitionContext(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `StructureDefinitionContext is missing elements: ${missingElements.join(", ")}`;
         }
@@ -145,21 +145,21 @@ export class StructureDefinitionSnapshot extends fhir.BackboneElement {
     /**
      * Check if the current StructureDefinitionSnapshot contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if ((!this["element"]) || (this["element"].length === 0)) {
             missingElements.push("element");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a StructureDefinitionSnapshot from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new StructureDefinitionSnapshot(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `StructureDefinitionSnapshot is missing elements: ${missingElements.join(", ")}`;
         }
@@ -186,21 +186,21 @@ export class StructureDefinitionDifferential extends fhir.BackboneElement {
     /**
      * Check if the current StructureDefinitionDifferential contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if ((!this["element"]) || (this["element"].length === 0)) {
             missingElements.push("element");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a StructureDefinitionDifferential from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new StructureDefinitionDifferential(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `StructureDefinitionDifferential is missing elements: ${missingElements.join(", ")}`;
         }
@@ -380,7 +380,7 @@ export class StructureDefinition extends fhir.DomainResource {
     /**
      * Check if the current StructureDefinition contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["abstract"] === undefined) {
             missingElements.push("abstract");
@@ -400,16 +400,16 @@ export class StructureDefinition extends fhir.DomainResource {
         if (this["url"] === undefined) {
             missingElements.push("url");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a StructureDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new StructureDefinition(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `StructureDefinition is missing elements: ${missingElements.join(", ")}`;
         }

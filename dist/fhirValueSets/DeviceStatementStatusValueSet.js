@@ -13,7 +13,7 @@ export const DeviceStatementStatusValueSet = {
     /**
      * The device is still being used.
      */
-    device_statement_status_Active: Coding.FromStrict({
+    device_statement_status_Active: new Coding({
         code: "active",
         display: "Active",
         system: "http://hl7.org/fhir/device-statement-status"
@@ -21,7 +21,7 @@ export const DeviceStatementStatusValueSet = {
     /**
      * The device is no longer being used.
      */
-    device_statement_status_Completed: Coding.FromStrict({
+    device_statement_status_Completed: new Coding({
         code: "completed",
         display: "Completed",
         system: "http://hl7.org/fhir/device-statement-status"
@@ -29,7 +29,7 @@ export const DeviceStatementStatusValueSet = {
     /**
      * The statement was recorded incorrectly.
      */
-    device_statement_status_EnteredInError: Coding.FromStrict({
+    device_statement_status_EnteredInError: new Coding({
         code: "entered-in-error",
         display: "Entered in Error",
         system: "http://hl7.org/fhir/device-statement-status"
@@ -37,7 +37,7 @@ export const DeviceStatementStatusValueSet = {
     /**
      * The device may be used at some time in the future.
      */
-    device_statement_status_Intended: Coding.FromStrict({
+    device_statement_status_Intended: new Coding({
         code: "intended",
         display: "Intended",
         system: "http://hl7.org/fhir/device-statement-status"
@@ -45,7 +45,7 @@ export const DeviceStatementStatusValueSet = {
     /**
      * Actions implied by the statement have been temporarily halted, but are expected to continue later. May also be called "suspended".
      */
-    device_statement_status_OnHold: Coding.FromStrict({
+    device_statement_status_OnHold: new Coding({
         code: "on-hold",
         display: "On Hold",
         system: "http://hl7.org/fhir/device-statement-status"
@@ -53,7 +53,7 @@ export const DeviceStatementStatusValueSet = {
     /**
      * Actions implied by the statement have been permanently halted, before all of them occurred.
      */
-    device_statement_status_Stopped: Coding.FromStrict({
+    device_statement_status_Stopped: new Coding({
         code: "stopped",
         display: "Stopped",
         system: "http://hl7.org/fhir/device-statement-status"

@@ -79,10 +79,10 @@ export declare class MedicinalProductManufactured extends fhir.DomainResource im
     /**
      * Check if the current MedicinalProductManufactured contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductManufactured from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductManufactured): MedicinalProductManufactured;
+    static fromStrict(source: fhir.IMedicinalProductManufactured): MedicinalProductManufactured;
 }
 //# sourceMappingURL=MedicinalProductManufactured.d.ts.map

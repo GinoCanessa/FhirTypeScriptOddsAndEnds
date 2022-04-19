@@ -13,7 +13,7 @@ export const MessageheaderResponseRequestValueSet = {
   /**
    * initiator expects a response for this message.
    */
-  messageheader_response_request_Always: Coding.FromStrict({
+  messageheader_response_request_Always: new Coding({
     code: "always",
     display: "Always",
     system: "http://hl7.org/fhir/messageheader-response-request"
@@ -21,7 +21,7 @@ export const MessageheaderResponseRequestValueSet = {
   /**
    * initiator does not expect a response.
    */
-  messageheader_response_request_Never: Coding.FromStrict({
+  messageheader_response_request_Never: new Coding({
     code: "never",
     display: "Never",
     system: "http://hl7.org/fhir/messageheader-response-request"
@@ -29,7 +29,7 @@ export const MessageheaderResponseRequestValueSet = {
   /**
    * initiator expects a response only if in error.
    */
-  messageheader_response_request_ErrorRejectConditionsOnly: Coding.FromStrict({
+  messageheader_response_request_ErrorRejectConditionsOnly: new Coding({
     code: "on-error",
     display: "Error/reject conditions only",
     system: "http://hl7.org/fhir/messageheader-response-request"
@@ -37,7 +37,7 @@ export const MessageheaderResponseRequestValueSet = {
   /**
    * initiator expects a response only if successful.
    */
-  messageheader_response_request_SuccessfulCompletionOnly: Coding.FromStrict({
+  messageheader_response_request_SuccessfulCompletionOnly: new Coding({
     code: "on-success",
     display: "Successful completion only",
     system: "http://hl7.org/fhir/messageheader-response-request"

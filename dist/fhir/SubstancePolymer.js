@@ -34,18 +34,18 @@ export class SubstancePolymerMonomerSetStartingMaterial extends fhir.BackboneEle
     /**
      * Check if the current SubstancePolymerMonomerSetStartingMaterial contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SubstancePolymerMonomerSetStartingMaterial from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SubstancePolymerMonomerSetStartingMaterial(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SubstancePolymerMonomerSetStartingMaterial is missing elements: ${missingElements.join(", ")}`;
         }
@@ -71,18 +71,18 @@ export class SubstancePolymerMonomerSet extends fhir.BackboneElement {
     /**
      * Check if the current SubstancePolymerMonomerSet contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SubstancePolymerMonomerSet from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SubstancePolymerMonomerSet(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SubstancePolymerMonomerSet is missing elements: ${missingElements.join(", ")}`;
         }
@@ -108,18 +108,18 @@ export class SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation extends fhir
     /**
      * Check if the current SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation is missing elements: ${missingElements.join(", ")}`;
         }
@@ -151,18 +151,18 @@ export class SubstancePolymerRepeatRepeatUnitStructuralRepresentation extends fh
     /**
      * Check if the current SubstancePolymerRepeatRepeatUnitStructuralRepresentation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SubstancePolymerRepeatRepeatUnitStructuralRepresentation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SubstancePolymerRepeatRepeatUnitStructuralRepresentation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SubstancePolymerRepeatRepeatUnitStructuralRepresentation is missing elements: ${missingElements.join(", ")}`;
         }
@@ -200,18 +200,18 @@ export class SubstancePolymerRepeatRepeatUnit extends fhir.BackboneElement {
     /**
      * Check if the current SubstancePolymerRepeatRepeatUnit contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SubstancePolymerRepeatRepeatUnit from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SubstancePolymerRepeatRepeatUnit(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SubstancePolymerRepeatRepeatUnit is missing elements: ${missingElements.join(", ")}`;
         }
@@ -249,18 +249,18 @@ export class SubstancePolymerRepeat extends fhir.BackboneElement {
     /**
      * Check if the current SubstancePolymerRepeat contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SubstancePolymerRepeat from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SubstancePolymerRepeat(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SubstancePolymerRepeat is missing elements: ${missingElements.join(", ")}`;
         }
@@ -302,18 +302,18 @@ export class SubstancePolymer extends fhir.DomainResource {
     /**
      * Check if the current SubstancePolymer contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SubstancePolymer from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SubstancePolymer(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SubstancePolymer is missing elements: ${missingElements.join(", ")}`;
         }

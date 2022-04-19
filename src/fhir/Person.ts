@@ -99,19 +99,19 @@ export class PersonLink extends fhir.BackboneElement implements fhir.IPersonLink
   /**
    * Check if the current PersonLink contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["target"] === undefined) { missingElements.push("target"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PersonLink from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPersonLink):PersonLink {
+  static override fromStrict(source:fhir.IPersonLink):PersonLink {
     var dest:PersonLink = new PersonLink(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `PersonLink is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -190,18 +190,18 @@ export class Person extends fhir.DomainResource implements fhir.IPerson {
   /**
    * Check if the current Person contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Person from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPerson):Person {
+  static override fromStrict(source:fhir.IPerson):Person {
     var dest:Person = new Person(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Person is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

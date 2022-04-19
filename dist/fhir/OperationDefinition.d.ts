@@ -260,11 +260,11 @@ export declare class OperationDefinitionParameterBinding extends fhir.BackboneEl
     /**
      * Check if the current OperationDefinitionParameterBinding contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a OperationDefinitionParameterBinding from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IOperationDefinitionParameterBinding): OperationDefinitionParameterBinding;
+    static fromStrict(source: fhir.IOperationDefinitionParameterBinding): OperationDefinitionParameterBinding;
 }
 /**
  * Resolution applies if the referenced parameter exists.
@@ -287,11 +287,11 @@ export declare class OperationDefinitionParameterReferencedFrom extends fhir.Bac
     /**
      * Check if the current OperationDefinitionParameterReferencedFrom contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a OperationDefinitionParameterReferencedFrom from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IOperationDefinitionParameterReferencedFrom): OperationDefinitionParameterReferencedFrom;
+    static fromStrict(source: fhir.IOperationDefinitionParameterReferencedFrom): OperationDefinitionParameterReferencedFrom;
 }
 /**
  * Query Definitions only have one output parameter, named "result". This might not be described, but can be to allow a profile to be defined.
@@ -356,11 +356,11 @@ export declare class OperationDefinitionParameter extends fhir.BackboneElement i
     /**
      * Check if the current OperationDefinitionParameter contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a OperationDefinitionParameter from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IOperationDefinitionParameter): OperationDefinitionParameter;
+    static fromStrict(source: fhir.IOperationDefinitionParameter): OperationDefinitionParameter;
 }
 /**
  * The combinations are suggestions as to which sets of parameters to use together, but the combinations are not intended to be authoritative.
@@ -383,11 +383,11 @@ export declare class OperationDefinitionOverload extends fhir.BackboneElement im
     /**
      * Check if the current OperationDefinitionOverload contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a OperationDefinitionOverload from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IOperationDefinitionOverload): OperationDefinitionOverload;
+    static fromStrict(source: fhir.IOperationDefinitionOverload): OperationDefinitionOverload;
 }
 /**
  * A formal computable definition of an operation (on the RESTful interface) or a named query (using the search interaction).
@@ -533,11 +533,11 @@ export declare class OperationDefinition extends fhir.DomainResource implements 
     /**
      * Check if the current OperationDefinition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a OperationDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IOperationDefinition): OperationDefinition;
+    static fromStrict(source: fhir.IOperationDefinition): OperationDefinition;
 }
 /**
  * Code Values for the OperationDefinition.parameter.binding.strength field

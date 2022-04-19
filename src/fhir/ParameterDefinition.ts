@@ -112,20 +112,20 @@ export class ParameterDefinition extends fhir.FhirElement implements fhir.IParam
   /**
    * Check if the current ParameterDefinition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
     if (this["use"] === undefined) { missingElements.push("use"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ParameterDefinition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IParameterDefinition):ParameterDefinition {
+  static override fromStrict(source:fhir.IParameterDefinition):ParameterDefinition {
     var dest:ParameterDefinition = new ParameterDefinition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ParameterDefinition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

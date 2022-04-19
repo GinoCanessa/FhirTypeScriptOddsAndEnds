@@ -167,11 +167,11 @@ export declare class GuidanceResponse extends fhir.DomainResource implements fhi
     /**
      * Check if the current GuidanceResponse contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a GuidanceResponse from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IGuidanceResponse): GuidanceResponse;
+    static fromStrict(source: fhir.IGuidanceResponse): GuidanceResponse;
 }
 /**
  * Code Values for the GuidanceResponse.status field

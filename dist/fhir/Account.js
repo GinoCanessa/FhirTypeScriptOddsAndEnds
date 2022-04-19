@@ -34,21 +34,21 @@ export class AccountCoverage extends fhir.BackboneElement {
     /**
      * Check if the current AccountCoverage contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["coverage"] === undefined) {
             missingElements.push("coverage");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a AccountCoverage from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new AccountCoverage(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `AccountCoverage is missing elements: ${missingElements.join(", ")}`;
         }
@@ -84,21 +84,21 @@ export class AccountGuarantor extends fhir.BackboneElement {
     /**
      * Check if the current AccountGuarantor contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["party"] === undefined) {
             missingElements.push("party");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a AccountGuarantor from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new AccountGuarantor(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `AccountGuarantor is missing elements: ${missingElements.join(", ")}`;
         }
@@ -165,21 +165,21 @@ export class Account extends fhir.DomainResource {
     /**
      * Check if the current Account contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a Account from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new Account(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `Account is missing elements: ${missingElements.join(", ")}`;
         }

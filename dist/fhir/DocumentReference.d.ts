@@ -158,11 +158,11 @@ export declare class DocumentReferenceRelatesTo extends fhir.BackboneElement imp
     /**
      * Check if the current DocumentReferenceRelatesTo contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DocumentReferenceRelatesTo from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDocumentReferenceRelatesTo): DocumentReferenceRelatesTo;
+    static fromStrict(source: fhir.IDocumentReferenceRelatesTo): DocumentReferenceRelatesTo;
 }
 /**
  * The document and format referenced. There may be multiple content element repetitions, each with a different format.
@@ -183,11 +183,11 @@ export declare class DocumentReferenceContent extends fhir.BackboneElement imple
     /**
      * Check if the current DocumentReferenceContent contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DocumentReferenceContent from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDocumentReferenceContent): DocumentReferenceContent;
+    static fromStrict(source: fhir.IDocumentReferenceContent): DocumentReferenceContent;
 }
 /**
  * These values are primarily added to help with searching for interesting/relevant documents.
@@ -228,11 +228,11 @@ export declare class DocumentReferenceContext extends fhir.BackboneElement imple
     /**
      * Check if the current DocumentReferenceContext contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DocumentReferenceContext from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDocumentReferenceContext): DocumentReferenceContext;
+    static fromStrict(source: fhir.IDocumentReferenceContext): DocumentReferenceContext;
 }
 /**
  * A reference to a document of any kind for any purpose. Provides metadata about the document so that the document can be discovered and managed. The scope of a document is any seralized object with a mime-type, so includes formal patient centric documents (CDA), cliical notes, scanned paper, and non-patient specific documents like policy text.
@@ -319,11 +319,11 @@ export declare class DocumentReference extends fhir.DomainResource implements fh
     /**
      * Check if the current DocumentReference contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DocumentReference from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDocumentReference): DocumentReference;
+    static fromStrict(source: fhir.IDocumentReference): DocumentReference;
 }
 /**
  * Code Values for the DocumentReference.relatesTo.code field

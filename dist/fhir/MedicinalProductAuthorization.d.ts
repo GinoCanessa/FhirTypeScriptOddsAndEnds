@@ -158,11 +158,11 @@ export declare class MedicinalProductAuthorizationJurisdictionalAuthorization ex
     /**
      * Check if the current MedicinalProductAuthorizationJurisdictionalAuthorization contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductAuthorizationJurisdictionalAuthorization from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductAuthorizationJurisdictionalAuthorization): MedicinalProductAuthorizationJurisdictionalAuthorization;
+    static fromStrict(source: fhir.IMedicinalProductAuthorizationJurisdictionalAuthorization): MedicinalProductAuthorizationJurisdictionalAuthorization;
 }
 /**
  * The regulatory procedure for granting or amending a marketing authorization.
@@ -196,11 +196,11 @@ export declare class MedicinalProductAuthorizationProcedure extends fhir.Backbon
     /**
      * Check if the current MedicinalProductAuthorizationProcedure contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductAuthorizationProcedure from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductAuthorizationProcedure): MedicinalProductAuthorizationProcedure;
+    static fromStrict(source: fhir.IMedicinalProductAuthorizationProcedure): MedicinalProductAuthorizationProcedure;
 }
 /**
  * The regulatory authorization of a medicinal product.
@@ -285,10 +285,10 @@ export declare class MedicinalProductAuthorization extends fhir.DomainResource i
     /**
      * Check if the current MedicinalProductAuthorization contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductAuthorization from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductAuthorization): MedicinalProductAuthorization;
+    static fromStrict(source: fhir.IMedicinalProductAuthorization): MedicinalProductAuthorization;
 }
 //# sourceMappingURL=MedicinalProductAuthorization.d.ts.map

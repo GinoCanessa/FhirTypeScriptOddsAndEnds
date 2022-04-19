@@ -13,7 +13,7 @@ export const TypeDerivationRuleValueSet = {
   /**
    * This definition adds additional rules to an existing concrete type.
    */
-  type_derivation_rule_Constraint: Coding.FromStrict({
+  type_derivation_rule_Constraint: new Coding({
     code: "constraint",
     display: "Constraint",
     system: "http://hl7.org/fhir/type-derivation-rule"
@@ -21,7 +21,7 @@ export const TypeDerivationRuleValueSet = {
   /**
    * This definition defines a new type that adds additional elements to the base type.
    */
-  type_derivation_rule_Specialization: Coding.FromStrict({
+  type_derivation_rule_Specialization: new Coding({
     code: "specialization",
     display: "Specialization",
     system: "http://hl7.org/fhir/type-derivation-rule"

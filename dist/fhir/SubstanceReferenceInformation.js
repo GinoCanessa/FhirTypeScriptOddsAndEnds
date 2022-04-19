@@ -28,18 +28,18 @@ export class SubstanceReferenceInformationGene extends fhir.BackboneElement {
     /**
      * Check if the current SubstanceReferenceInformationGene contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SubstanceReferenceInformationGene from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SubstanceReferenceInformationGene(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SubstanceReferenceInformationGene is missing elements: ${missingElements.join(", ")}`;
         }
@@ -68,18 +68,18 @@ export class SubstanceReferenceInformationGeneElement extends fhir.BackboneEleme
     /**
      * Check if the current SubstanceReferenceInformationGeneElement contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SubstanceReferenceInformationGeneElement from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SubstanceReferenceInformationGeneElement(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SubstanceReferenceInformationGeneElement is missing elements: ${missingElements.join(", ")}`;
         }
@@ -111,18 +111,18 @@ export class SubstanceReferenceInformationClassification extends fhir.BackboneEl
     /**
      * Check if the current SubstanceReferenceInformationClassification contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SubstanceReferenceInformationClassification from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SubstanceReferenceInformationClassification(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SubstanceReferenceInformationClassification is missing elements: ${missingElements.join(", ")}`;
         }
@@ -175,18 +175,18 @@ export class SubstanceReferenceInformationTarget extends fhir.BackboneElement {
     /**
      * Check if the current SubstanceReferenceInformationTarget contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SubstanceReferenceInformationTarget from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SubstanceReferenceInformationTarget(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SubstanceReferenceInformationTarget is missing elements: ${missingElements.join(", ")}`;
         }
@@ -225,18 +225,18 @@ export class SubstanceReferenceInformation extends fhir.DomainResource {
     /**
      * Check if the current SubstanceReferenceInformation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SubstanceReferenceInformation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SubstanceReferenceInformation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SubstanceReferenceInformation is missing elements: ${missingElements.join(", ")}`;
         }

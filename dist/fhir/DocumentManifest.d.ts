@@ -92,11 +92,11 @@ export declare class DocumentManifestRelated extends fhir.BackboneElement implem
     /**
      * Check if the current DocumentManifestRelated contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DocumentManifestRelated from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDocumentManifestRelated): DocumentManifestRelated;
+    static fromStrict(source: fhir.IDocumentManifestRelated): DocumentManifestRelated;
 }
 /**
  * A collection of documents compiled for a purpose together with metadata that applies to the collection.
@@ -165,11 +165,11 @@ export declare class DocumentManifest extends fhir.DomainResource implements fhi
     /**
      * Check if the current DocumentManifest contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DocumentManifest from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDocumentManifest): DocumentManifest;
+    static fromStrict(source: fhir.IDocumentManifest): DocumentManifest;
 }
 /**
  * Code Values for the DocumentManifest.status field

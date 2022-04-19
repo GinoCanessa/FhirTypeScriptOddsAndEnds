@@ -10,17 +10,17 @@ import { Coding } from '../fhir';
  * The severity of the adverse event itself, in direct relation to the subject.
  */
 export const AdverseEventSeverityValueSet = {
-    adverse_event_severity_Mild: Coding.FromStrict({
+    adverse_event_severity_Mild: new Coding({
         code: "mild",
         display: "Mild",
         system: "http://terminology.hl7.org/CodeSystem/adverse-event-severity"
     }),
-    adverse_event_severity_Moderate: Coding.FromStrict({
+    adverse_event_severity_Moderate: new Coding({
         code: "moderate",
         display: "Moderate",
         system: "http://terminology.hl7.org/CodeSystem/adverse-event-severity"
     }),
-    adverse_event_severity_Severe: Coding.FromStrict({
+    adverse_event_severity_Severe: new Coding({
         code: "severe",
         display: "Severe",
         system: "http://terminology.hl7.org/CodeSystem/adverse-event-severity"

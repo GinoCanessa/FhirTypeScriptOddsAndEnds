@@ -78,21 +78,21 @@ export class MarketingStatus extends fhir.BackboneElement implements fhir.IMarke
   /**
    * Check if the current MarketingStatus contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["country"] === undefined) { missingElements.push("country"); }
     if (this["dateRange"] === undefined) { missingElements.push("dateRange"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MarketingStatus from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMarketingStatus):MarketingStatus {
+  static override fromStrict(source:fhir.IMarketingStatus):MarketingStatus {
     var dest:MarketingStatus = new MarketingStatus(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MarketingStatus is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

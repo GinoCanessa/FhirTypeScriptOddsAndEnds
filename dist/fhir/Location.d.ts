@@ -155,11 +155,11 @@ export declare class LocationPosition extends fhir.BackboneElement implements fh
     /**
      * Check if the current LocationPosition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a LocationPosition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ILocationPosition): LocationPosition;
+    static fromStrict(source: fhir.ILocationPosition): LocationPosition;
 }
 /**
  * This type of information is commonly found published in directories and on websites informing customers when the facility is available.
@@ -193,11 +193,11 @@ export declare class LocationHoursOfOperation extends fhir.BackboneElement imple
     /**
      * Check if the current LocationHoursOfOperation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a LocationHoursOfOperation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ILocationHoursOfOperation): LocationHoursOfOperation;
+    static fromStrict(source: fhir.ILocationHoursOfOperation): LocationHoursOfOperation;
 }
 /**
  * Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated.
@@ -289,11 +289,11 @@ export declare class Location extends fhir.DomainResource implements fhir.ILocat
     /**
      * Check if the current Location contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Location from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ILocation): Location;
+    static fromStrict(source: fhir.ILocation): Location;
 }
 /**
  * Code Values for the Location.hoursOfOperation.daysOfWeek field

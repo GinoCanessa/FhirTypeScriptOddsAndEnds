@@ -13,7 +13,7 @@ export const ListExampleCodesValueSet = {
   /**
    * A list of part adverse reactions.
    */
-  list_example_codes_AdverseReactions: Coding.FromStrict({
+  list_example_codes_AdverseReactions: new Coding({
     code: "adverserxns",
     display: "Adverse Reactions",
     system: "http://terminology.hl7.org/CodeSystem/list-example-use-codes"
@@ -21,7 +21,7 @@ export const ListExampleCodesValueSet = {
   /**
    * A list of alerts for the patient.
    */
-  list_example_codes_Alerts: Coding.FromStrict({
+  list_example_codes_Alerts: new Coding({
     code: "alerts",
     display: "Alerts",
     system: "http://terminology.hl7.org/CodeSystem/list-example-use-codes"
@@ -29,7 +29,7 @@ export const ListExampleCodesValueSet = {
   /**
    * A list of Allergies for the patient.
    */
-  list_example_codes_Allergies: Coding.FromStrict({
+  list_example_codes_Allergies: new Coding({
     code: "allergies",
     display: "Allergies",
     system: "http://terminology.hl7.org/CodeSystem/list-example-use-codes"
@@ -37,7 +37,7 @@ export const ListExampleCodesValueSet = {
   /**
    * A list of medication statements for the patient.
    */
-  list_example_codes_MedicationList: Coding.FromStrict({
+  list_example_codes_MedicationList: new Coding({
     code: "medications",
     display: "Medication List",
     system: "http://terminology.hl7.org/CodeSystem/list-example-use-codes"
@@ -45,7 +45,7 @@ export const ListExampleCodesValueSet = {
   /**
    * A set of care plans that apply in a particular context of care.
    */
-  list_example_codes_CarePlans: Coding.FromStrict({
+  list_example_codes_CarePlans: new Coding({
     code: "plans",
     display: "Care Plans",
     system: "http://terminology.hl7.org/CodeSystem/list-example-use-codes"
@@ -53,7 +53,7 @@ export const ListExampleCodesValueSet = {
   /**
    * A list of problems that the patient is known of have (or have had in the past).
    */
-  list_example_codes_ProblemList: Coding.FromStrict({
+  list_example_codes_ProblemList: new Coding({
     code: "problems",
     display: "Problem List",
     system: "http://terminology.hl7.org/CodeSystem/list-example-use-codes"
@@ -61,7 +61,7 @@ export const ListExampleCodesValueSet = {
   /**
    * A set of protocols to be followed.
    */
-  list_example_codes_Protocols: Coding.FromStrict({
+  list_example_codes_Protocols: new Coding({
     code: "protocols",
     display: "Protocols",
     system: "http://terminology.hl7.org/CodeSystem/list-example-use-codes"
@@ -69,7 +69,7 @@ export const ListExampleCodesValueSet = {
   /**
    * A list of items waiting for an event (perhaps a surgical patient waiting list).
    */
-  list_example_codes_WaitingList: Coding.FromStrict({
+  list_example_codes_WaitingList: new Coding({
     code: "waiting",
     display: "Waiting List",
     system: "http://terminology.hl7.org/CodeSystem/list-example-use-codes"
@@ -77,7 +77,7 @@ export const ListExampleCodesValueSet = {
   /**
    * A list of items that constitute a set of work to be performed (typically this code would be specialized for more specific uses, such as a ward round list).
    */
-  list_example_codes_Worklist: Coding.FromStrict({
+  list_example_codes_Worklist: new Coding({
     code: "worklist",
     display: "Worklist",
     system: "http://terminology.hl7.org/CodeSystem/list-example-use-codes"

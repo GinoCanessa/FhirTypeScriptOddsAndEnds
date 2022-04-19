@@ -13,7 +13,7 @@ export const ProcessPriorityValueSet = {
   /**
    * Later, when possible.
    */
-  process_priority_Deferred: Coding.FromStrict({
+  process_priority_Deferred: new Coding({
     code: "deferred",
     display: "Deferred",
     system: "http://terminology.hl7.org/CodeSystem/processpriority"
@@ -21,7 +21,7 @@ export const ProcessPriorityValueSet = {
   /**
    * With best effort.
    */
-  process_priority_Normal: Coding.FromStrict({
+  process_priority_Normal: new Coding({
     code: "normal",
     display: "Normal",
     system: "http://terminology.hl7.org/CodeSystem/processpriority"
@@ -29,7 +29,7 @@ export const ProcessPriorityValueSet = {
   /**
    * Immediately in real time.
    */
-  process_priority_Immediate: Coding.FromStrict({
+  process_priority_Immediate: new Coding({
     code: "stat",
     display: "Immediate",
     system: "http://terminology.hl7.org/CodeSystem/processpriority"

@@ -83,11 +83,11 @@ export declare class RelatedArtifact extends fhir.FhirElement implements fhir.IR
     /**
      * Check if the current RelatedArtifact contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a RelatedArtifact from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IRelatedArtifact): RelatedArtifact;
+    static fromStrict(source: fhir.IRelatedArtifact): RelatedArtifact;
 }
 /**
  * Code Values for the RelatedArtifact.type field

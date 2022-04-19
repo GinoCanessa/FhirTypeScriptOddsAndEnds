@@ -415,21 +415,21 @@ export class ServiceRequest extends fhir.DomainResource implements fhir.IService
   /**
    * Check if the current ServiceRequest contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["intent"] === undefined) { missingElements.push("intent"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["subject"] === undefined) { missingElements.push("subject"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ServiceRequest from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IServiceRequest):ServiceRequest {
+  static override fromStrict(source:fhir.IServiceRequest):ServiceRequest {
     var dest:ServiceRequest = new ServiceRequest(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ServiceRequest is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

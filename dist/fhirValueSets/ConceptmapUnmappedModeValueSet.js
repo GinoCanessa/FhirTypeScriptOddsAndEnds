@@ -13,7 +13,7 @@ export const ConceptmapUnmappedModeValueSet = {
     /**
      * Use the code explicitly provided in the group.unmapped.
      */
-    conceptmap_unmapped_mode_FixedCode: Coding.FromStrict({
+    conceptmap_unmapped_mode_FixedCode: new Coding({
         code: "fixed",
         display: "Fixed Code",
         system: "http://hl7.org/fhir/conceptmap-unmapped-mode"
@@ -21,7 +21,7 @@ export const ConceptmapUnmappedModeValueSet = {
     /**
      * Use the map identified by the canonical URL in the url element.
      */
-    conceptmap_unmapped_mode_OtherMap: Coding.FromStrict({
+    conceptmap_unmapped_mode_OtherMap: new Coding({
         code: "other-map",
         display: "Other Map",
         system: "http://hl7.org/fhir/conceptmap-unmapped-mode"
@@ -29,7 +29,7 @@ export const ConceptmapUnmappedModeValueSet = {
     /**
      * Use the code as provided in the $translate request.
      */
-    conceptmap_unmapped_mode_ProvidedCode: Coding.FromStrict({
+    conceptmap_unmapped_mode_ProvidedCode: new Coding({
         code: "provided",
         display: "Provided Code",
         system: "http://hl7.org/fhir/conceptmap-unmapped-mode"

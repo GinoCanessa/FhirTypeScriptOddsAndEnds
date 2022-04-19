@@ -13,7 +13,7 @@ export const RequestResourceTypesValueSet = {
     /**
      * A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).
      */
-    request_resource_types_Appointment: Coding.FromStrict({
+    request_resource_types_Appointment: new Coding({
         code: "Appointment",
         display: "Appointment",
         system: "http://hl7.org/fhir/request-resource-types"
@@ -21,7 +21,7 @@ export const RequestResourceTypesValueSet = {
     /**
      * A reply to an appointment request for a patient and/or practitioner(s), such as a confirmation or rejection.
      */
-    request_resource_types_AppointmentResponse: Coding.FromStrict({
+    request_resource_types_AppointmentResponse: new Coding({
         code: "AppointmentResponse",
         display: "AppointmentResponse",
         system: "http://hl7.org/fhir/request-resource-types"
@@ -29,7 +29,7 @@ export const RequestResourceTypesValueSet = {
     /**
      * Healthcare plan for patient or group.
      */
-    request_resource_types_CarePlan: Coding.FromStrict({
+    request_resource_types_CarePlan: new Coding({
         code: "CarePlan",
         display: "CarePlan",
         system: "http://hl7.org/fhir/request-resource-types"
@@ -37,7 +37,7 @@ export const RequestResourceTypesValueSet = {
     /**
      * Claim, Pre-determination or Pre-authorization.
      */
-    request_resource_types_Claim: Coding.FromStrict({
+    request_resource_types_Claim: new Coding({
         code: "Claim",
         display: "Claim",
         system: "http://hl7.org/fhir/request-resource-types"
@@ -45,7 +45,7 @@ export const RequestResourceTypesValueSet = {
     /**
      * A request for information to be sent to a receiver.
      */
-    request_resource_types_CommunicationRequest: Coding.FromStrict({
+    request_resource_types_CommunicationRequest: new Coding({
         code: "CommunicationRequest",
         display: "CommunicationRequest",
         system: "http://hl7.org/fhir/request-resource-types"
@@ -53,7 +53,7 @@ export const RequestResourceTypesValueSet = {
     /**
      * Legal Agreement.
      */
-    request_resource_types_Contract: Coding.FromStrict({
+    request_resource_types_Contract: new Coding({
         code: "Contract",
         display: "Contract",
         system: "http://hl7.org/fhir/request-resource-types"
@@ -61,7 +61,7 @@ export const RequestResourceTypesValueSet = {
     /**
      * Medical device request.
      */
-    request_resource_types_DeviceRequest: Coding.FromStrict({
+    request_resource_types_DeviceRequest: new Coding({
         code: "DeviceRequest",
         display: "DeviceRequest",
         system: "http://hl7.org/fhir/request-resource-types"
@@ -69,7 +69,7 @@ export const RequestResourceTypesValueSet = {
     /**
      * Enrollment request.
      */
-    request_resource_types_EnrollmentRequest: Coding.FromStrict({
+    request_resource_types_EnrollmentRequest: new Coding({
         code: "EnrollmentRequest",
         display: "EnrollmentRequest",
         system: "http://hl7.org/fhir/request-resource-types"
@@ -77,7 +77,7 @@ export const RequestResourceTypesValueSet = {
     /**
      * Guidance or advice relating to an immunization.
      */
-    request_resource_types_ImmunizationRecommendation: Coding.FromStrict({
+    request_resource_types_ImmunizationRecommendation: new Coding({
         code: "ImmunizationRecommendation",
         display: "ImmunizationRecommendation",
         system: "http://hl7.org/fhir/request-resource-types"
@@ -85,7 +85,7 @@ export const RequestResourceTypesValueSet = {
     /**
      * Ordering of medication for patient or group.
      */
-    request_resource_types_MedicationRequest: Coding.FromStrict({
+    request_resource_types_MedicationRequest: new Coding({
         code: "MedicationRequest",
         display: "MedicationRequest",
         system: "http://hl7.org/fhir/request-resource-types"
@@ -93,7 +93,7 @@ export const RequestResourceTypesValueSet = {
     /**
      * Diet, formula or nutritional supplement request.
      */
-    request_resource_types_NutritionOrder: Coding.FromStrict({
+    request_resource_types_NutritionOrder: new Coding({
         code: "NutritionOrder",
         display: "NutritionOrder",
         system: "http://hl7.org/fhir/request-resource-types"
@@ -101,7 +101,7 @@ export const RequestResourceTypesValueSet = {
     /**
      * A record of a request for service such as diagnostic investigations, treatments, or operations to be performed.
      */
-    request_resource_types_ServiceRequest: Coding.FromStrict({
+    request_resource_types_ServiceRequest: new Coding({
         code: "ServiceRequest",
         display: "ServiceRequest",
         system: "http://hl7.org/fhir/request-resource-types"
@@ -109,7 +109,7 @@ export const RequestResourceTypesValueSet = {
     /**
      * Request for a medication, substance or device.
      */
-    request_resource_types_SupplyRequest: Coding.FromStrict({
+    request_resource_types_SupplyRequest: new Coding({
         code: "SupplyRequest",
         display: "SupplyRequest",
         system: "http://hl7.org/fhir/request-resource-types"
@@ -117,7 +117,7 @@ export const RequestResourceTypesValueSet = {
     /**
      * A task to be performed.
      */
-    request_resource_types_Task: Coding.FromStrict({
+    request_resource_types_Task: new Coding({
         code: "Task",
         display: "Task",
         system: "http://hl7.org/fhir/request-resource-types"
@@ -125,7 +125,7 @@ export const RequestResourceTypesValueSet = {
     /**
      * Prescription for vision correction products for a patient.
      */
-    request_resource_types_VisionPrescription: Coding.FromStrict({
+    request_resource_types_VisionPrescription: new Coding({
         code: "VisionPrescription",
         display: "VisionPrescription",
         system: "http://hl7.org/fhir/request-resource-types"

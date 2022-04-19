@@ -13,7 +13,7 @@ export const OrganizationRoleValueSet = {
     /**
      * An organization such as a public health agency, community/social services provider, etc.
      */
-    organization_role_Agency: Coding.FromStrict({
+    organization_role_Agency: new Coding({
         code: "agency",
         display: "Agency",
         system: "http://hl7.org/fhir/organization-role"
@@ -21,7 +21,7 @@ export const OrganizationRoleValueSet = {
     /**
      * An organization providing diagnostic testing/laboratory services
      */
-    organization_role_Diagnostics: Coding.FromStrict({
+    organization_role_Diagnostics: new Coding({
         code: "diagnostics",
         display: "Diagnostics",
         system: "http://hl7.org/fhir/organization-role"
@@ -29,7 +29,7 @@ export const OrganizationRoleValueSet = {
     /**
      * An organization that facilitates electronic clinical data exchange between entities
      */
-    organization_role_HIEHIO: Coding.FromStrict({
+    organization_role_HIEHIO: new Coding({
         code: "HIE/HIO",
         display: "HIE/HIO",
         system: "http://hl7.org/fhir/organization-role"
@@ -37,7 +37,7 @@ export const OrganizationRoleValueSet = {
     /**
      * A type of non-ownership relationship between entities (encompasses partnerships, collaboration, joint ventures, etc.)
      */
-    organization_role_Member: Coding.FromStrict({
+    organization_role_Member: new Coding({
         code: "member",
         display: "Member",
         system: "http://hl7.org/fhir/organization-role"
@@ -45,12 +45,12 @@ export const OrganizationRoleValueSet = {
     /**
      * An organization providing reimbursement, payment, or related services
      */
-    organization_role_Payer: Coding.FromStrict({
+    organization_role_Payer: new Coding({
         code: "payer",
         display: "Payer",
         system: "http://hl7.org/fhir/organization-role"
     }),
-    organization_role_Provider: Coding.FromStrict({
+    organization_role_Provider: new Coding({
         code: "provider",
         display: "Provider",
         system: "http://hl7.org/fhir/organization-role"
@@ -58,7 +58,7 @@ export const OrganizationRoleValueSet = {
     /**
      * An organization providing research-related services such as conducting research, recruiting research participants, analyzing data, etc.
      */
-    organization_role_Research: Coding.FromStrict({
+    organization_role_Research: new Coding({
         code: "research",
         display: "Research",
         system: "http://hl7.org/fhir/organization-role"
@@ -66,7 +66,7 @@ export const OrganizationRoleValueSet = {
     /**
      * An organization that provides medical supplies (e.g. medical devices, equipment, pharmaceutical products, etc.)
      */
-    organization_role_Supplier: Coding.FromStrict({
+    organization_role_Supplier: new Coding({
         code: "supplier",
         display: "Supplier",
         system: "http://hl7.org/fhir/organization-role"

@@ -10,15 +10,15 @@ import { Coding } from '../fhir';
  * Procedure Outcome code: A selection of relevant SNOMED CT codes.
  */
 export const ProcedureOutcomeValueSet = {
-    ProcedureOutcomeValueSet_VAL385669000: Coding.FromStrict({
+    ProcedureOutcomeValueSet_VAL385669000: new Coding({
         code: "385669000",
         system: "http://snomed.info/sct"
     }),
-    ProcedureOutcomeValueSet_VAL385670004: Coding.FromStrict({
+    ProcedureOutcomeValueSet_VAL385670004: new Coding({
         code: "385670004",
         system: "http://snomed.info/sct"
     }),
-    ProcedureOutcomeValueSet_VAL385671000: Coding.FromStrict({
+    ProcedureOutcomeValueSet_VAL385671000: new Coding({
         code: "385671000",
         system: "http://snomed.info/sct"
     }),

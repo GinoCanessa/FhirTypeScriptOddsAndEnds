@@ -13,7 +13,7 @@ export const ImmunizationSiteValueSet = {
     /**
      * left arm
      */
-    v3_ActSite_LeftArm: Coding.FromStrict({
+    v3_ActSite_LeftArm: new Coding({
         code: "LA",
         display: "left arm",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActSite"
@@ -21,7 +21,7 @@ export const ImmunizationSiteValueSet = {
     /**
      * right arm
      */
-    v3_ActSite_RightArm: Coding.FromStrict({
+    v3_ActSite_RightArm: new Coding({
         code: "RA",
         display: "right arm",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActSite"

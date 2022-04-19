@@ -13,7 +13,7 @@ export const CommunicationCategoryValueSet = {
   /**
    * The communication conveys an alert.
    */
-  communication_category_Alert: Coding.FromStrict({
+  communication_category_Alert: new Coding({
     code: "alert",
     display: "Alert",
     system: "http://terminology.hl7.org/CodeSystem/communication-category"
@@ -21,7 +21,7 @@ export const CommunicationCategoryValueSet = {
   /**
    * The communication conveys an instruction.
    */
-  communication_category_Instruction: Coding.FromStrict({
+  communication_category_Instruction: new Coding({
     code: "instruction",
     display: "Instruction",
     system: "http://terminology.hl7.org/CodeSystem/communication-category"
@@ -29,7 +29,7 @@ export const CommunicationCategoryValueSet = {
   /**
    * The communication conveys a notification.
    */
-  communication_category_Notification: Coding.FromStrict({
+  communication_category_Notification: new Coding({
     code: "notification",
     display: "Notification",
     system: "http://terminology.hl7.org/CodeSystem/communication-category"
@@ -37,7 +37,7 @@ export const CommunicationCategoryValueSet = {
   /**
    * The communication conveys a reminder.
    */
-  communication_category_Reminder: Coding.FromStrict({
+  communication_category_Reminder: new Coding({
     code: "reminder",
     display: "Reminder",
     system: "http://terminology.hl7.org/CodeSystem/communication-category"

@@ -13,7 +13,7 @@ export const HttpVerbValueSet = {
     /**
      * HTTP DELETE Command.
      */
-    http_verb_DELETE: Coding.FromStrict({
+    http_verb_DELETE: new Coding({
         code: "DELETE",
         display: "DELETE",
         system: "http://hl7.org/fhir/http-verb"
@@ -21,7 +21,7 @@ export const HttpVerbValueSet = {
     /**
      * HTTP GET Command.
      */
-    http_verb_GET: Coding.FromStrict({
+    http_verb_GET: new Coding({
         code: "GET",
         display: "GET",
         system: "http://hl7.org/fhir/http-verb"
@@ -29,7 +29,7 @@ export const HttpVerbValueSet = {
     /**
      * HTTP HEAD Command.
      */
-    http_verb_HEAD: Coding.FromStrict({
+    http_verb_HEAD: new Coding({
         code: "HEAD",
         display: "HEAD",
         system: "http://hl7.org/fhir/http-verb"
@@ -37,7 +37,7 @@ export const HttpVerbValueSet = {
     /**
      * HTTP PATCH Command.
      */
-    http_verb_PATCH: Coding.FromStrict({
+    http_verb_PATCH: new Coding({
         code: "PATCH",
         display: "PATCH",
         system: "http://hl7.org/fhir/http-verb"
@@ -45,7 +45,7 @@ export const HttpVerbValueSet = {
     /**
      * HTTP POST Command.
      */
-    http_verb_POST: Coding.FromStrict({
+    http_verb_POST: new Coding({
         code: "POST",
         display: "POST",
         system: "http://hl7.org/fhir/http-verb"
@@ -53,7 +53,7 @@ export const HttpVerbValueSet = {
     /**
      * HTTP PUT Command.
      */
-    http_verb_PUT: Coding.FromStrict({
+    http_verb_PUT: new Coding({
         code: "PUT",
         display: "PUT",
         system: "http://hl7.org/fhir/http-verb"

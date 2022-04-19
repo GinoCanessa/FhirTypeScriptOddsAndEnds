@@ -374,20 +374,20 @@ export class Library extends fhir.DomainResource implements fhir.ILibrary {
   /**
    * Check if the current Library contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Library from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ILibrary):Library {
+  static override fromStrict(source:fhir.ILibrary):Library {
     var dest:Library = new Library(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Library is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

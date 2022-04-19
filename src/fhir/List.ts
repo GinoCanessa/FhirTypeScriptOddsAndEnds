@@ -133,19 +133,19 @@ export class ListEntry extends fhir.BackboneElement implements fhir.IListEntry {
   /**
    * Check if the current ListEntry contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["item"] === undefined) { missingElements.push("item"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ListEntry from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IListEntry):ListEntry {
+  static override fromStrict(source:fhir.IListEntry):ListEntry {
     var dest:ListEntry = new ListEntry(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ListEntry is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -245,20 +245,20 @@ export class List extends fhir.DomainResource implements fhir.IList {
   /**
    * Check if the current List contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["mode"] === undefined) { missingElements.push("mode"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a List from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IList):List {
+  static override fromStrict(source:fhir.IList):List {
     var dest:List = new List(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `List is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

@@ -307,19 +307,19 @@ export class ActivityDefinitionParticipant extends fhir.BackboneElement implemen
   /**
    * Check if the current ActivityDefinitionParticipant contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ActivityDefinitionParticipant from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IActivityDefinitionParticipant):ActivityDefinitionParticipant {
+  static override fromStrict(source:fhir.IActivityDefinitionParticipant):ActivityDefinitionParticipant {
     var dest:ActivityDefinitionParticipant = new ActivityDefinitionParticipant(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ActivityDefinitionParticipant is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -353,20 +353,20 @@ export class ActivityDefinitionDynamicValue extends fhir.BackboneElement impleme
   /**
    * Check if the current ActivityDefinitionDynamicValue contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["expression"] === undefined) { missingElements.push("expression"); }
     if (this["path"] === undefined) { missingElements.push("path"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ActivityDefinitionDynamicValue from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IActivityDefinitionDynamicValue):ActivityDefinitionDynamicValue {
+  static override fromStrict(source:fhir.IActivityDefinitionDynamicValue):ActivityDefinitionDynamicValue {
     var dest:ActivityDefinitionDynamicValue = new ActivityDefinitionDynamicValue(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ActivityDefinitionDynamicValue is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -704,19 +704,19 @@ export class ActivityDefinition extends fhir.DomainResource implements fhir.IAct
   /**
    * Check if the current ActivityDefinition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ActivityDefinition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IActivityDefinition):ActivityDefinition {
+  static override fromStrict(source:fhir.IActivityDefinition):ActivityDefinition {
     var dest:ActivityDefinition = new ActivityDefinition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ActivityDefinition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

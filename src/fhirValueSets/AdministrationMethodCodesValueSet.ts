@@ -10,292 +10,292 @@ import { Coding } from '../fhir'
  * This value set includes some method codes from SNOMED CT - provided as an exemplar
  */
 export const AdministrationMethodCodesValueSet = {
-  AdministrationMethodCodesValueSet_Apply: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Apply: new Coding({
     code: "417924000",
     display: "Apply",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Administer: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Administer: new Coding({
     code: "418283001",
     display: "Administer",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Use: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Use: new Coding({
     code: "419385000",
     display: "Use",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Give: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Give: new Coding({
     code: "419582001",
     display: "Give",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Take: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Take: new Coding({
     code: "419652001",
     display: "Take",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Chew: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Chew: new Coding({
     code: "419747000",
     display: "Chew",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Suck: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Suck: new Coding({
     code: "420045007",
     display: "Suck",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_At: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_At: new Coding({
     code: "420246001",
     display: "At",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_DosingInstructionImperative: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_DosingInstructionImperative: new Coding({
     code: "420247005",
     display: "Dosing instruction imperative",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Only: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Only: new Coding({
     code: "420295001",
     display: "Only",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Constant: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Constant: new Coding({
     code: "420341009",
     display: "Constant",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Sniff: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Sniff: new Coding({
     code: "420360002",
     display: "Sniff",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_SubtractDosingInstructionFragment: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_SubtractDosingInstructionFragment: new Coding({
     code: "420484009",
     display: "Subtract - dosing instruction fragment",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_As: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_As: new Coding({
     code: "420503003",
     display: "As",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Or: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Or: new Coding({
     code: "420561004",
     display: "Or",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Finish: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Finish: new Coding({
     code: "420604000",
     display: "Finish",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Shampoo: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Shampoo: new Coding({
     code: "420606003",
     display: "Shampoo",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Push: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Push: new Coding({
     code: "420620005",
     display: "Push",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_UntilGone: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_UntilGone: new Coding({
     code: "420652005",
     display: "Until gone",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Upon: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Upon: new Coding({
     code: "420771004",
     display: "Upon",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Per: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Per: new Coding({
     code: "420806001",
     display: "Per",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Sparingly: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Sparingly: new Coding({
     code: "420883007",
     display: "Sparingly",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Call: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Call: new Coding({
     code: "420942008",
     display: "Call",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_When: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_When: new Coding({
     code: "420974001",
     display: "When",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_To: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_To: new Coding({
     code: "421035004",
     display: "To",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Place: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Place: new Coding({
     code: "421066005",
     display: "Place",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Then: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Then: new Coding({
     code: "421067001",
     display: "Then",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Inhale: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Inhale: new Coding({
     code: "421134003",
     display: "Inhale",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Hold: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Hold: new Coding({
     code: "421139008",
     display: "Hold",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Multiply: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Multiply: new Coding({
     code: "421206002",
     display: "Multiply",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Insert: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Insert: new Coding({
     code: "421257003",
     display: "Insert",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Discontinue: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Discontinue: new Coding({
     code: "421286000",
     display: "Discontinue",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_SwishAndSwallow: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_SwishAndSwallow: new Coding({
     code: "421298005",
     display: "Swish and swallow",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Dilute: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Dilute: new Coding({
     code: "421399004",
     display: "Dilute",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_With: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_With: new Coding({
     code: "421463005",
     display: "With",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_ThenDiscontinue: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_ThenDiscontinue: new Coding({
     code: "421484000",
     display: "Then discontinue",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Swallow: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Swallow: new Coding({
     code: "421521009",
     display: "Swallow",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Instill: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Instill: new Coding({
     code: "421538008",
     display: "Instill",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Until: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Until: new Coding({
     code: "421548005",
     display: "Until",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Every: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Every: new Coding({
     code: "421612001",
     display: "Every",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Dissolve: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Dissolve: new Coding({
     code: "421682005",
     display: "Dissolve",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Before: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Before: new Coding({
     code: "421718005",
     display: "Before",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Now: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Now: new Coding({
     code: "421723005",
     display: "Now",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_FollowDirections: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_FollowDirections: new Coding({
     code: "421769005",
     display: "Follow directions",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_If: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_If: new Coding({
     code: "421803000",
     display: "If",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Swish: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Swish: new Coding({
     code: "421805007",
     display: "Swish",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_And: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_And: new Coding({
     code: "421829000",
     display: "And",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Twice: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Twice: new Coding({
     code: "421832002",
     display: "Twice",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Follow: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Follow: new Coding({
     code: "421939007",
     display: "Follow",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_UntilFinished: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_UntilFinished: new Coding({
     code: "421984009",
     display: "Until finished",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_During: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_During: new Coding({
     code: "421994004",
     display: "During",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Divide: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Divide: new Coding({
     code: "422033008",
     display: "Divide",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Add: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Add: new Coding({
     code: "422106007",
     display: "Add",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Once: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Once: new Coding({
     code: "422114001",
     display: "Once",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Inject: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Inject: new Coding({
     code: "422145002",
     display: "Inject",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Wash: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Wash: new Coding({
     code: "422152000",
     display: "Wash",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_Sprinkle: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_Sprinkle: new Coding({
     code: "422219000",
     display: "Sprinkle",
     system: "http://snomed.info/sct"
   }),
-  AdministrationMethodCodesValueSet_ThenStop: Coding.FromStrict({
+  AdministrationMethodCodesValueSet_ThenStop: new Coding({
     code: "422327006",
     display: "Then stop",
     system: "http://snomed.info/sct"

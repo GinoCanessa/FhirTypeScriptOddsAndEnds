@@ -144,18 +144,18 @@ export class OrganizationAffiliation extends fhir.DomainResource implements fhir
   /**
    * Check if the current OrganizationAffiliation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a OrganizationAffiliation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IOrganizationAffiliation):OrganizationAffiliation {
+  static override fromStrict(source:fhir.IOrganizationAffiliation):OrganizationAffiliation {
     var dest:OrganizationAffiliation = new OrganizationAffiliation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `OrganizationAffiliation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

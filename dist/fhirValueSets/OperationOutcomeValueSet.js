@@ -10,252 +10,252 @@ import { Coding } from '../fhir';
  * Operation Outcome codes used by FHIR test servers (see Implementation file translations.xml)
  */
 export const OperationOutcomeValueSet = {
-    operation_outcome_DELETEMULTIPLEMATCHES: Coding.FromStrict({
+    operation_outcome_DELETEMULTIPLEMATCHES: new Coding({
         code: "DELETE_MULTIPLE_MATCHES",
         display: "Error: Multiple matches exist for the conditional delete",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGAUTHREQUIRED: Coding.FromStrict({
+    operation_outcome_MSGAUTHREQUIRED: new Coding({
         code: "MSG_AUTH_REQUIRED",
         display: "You must authenticate before you can use this service",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGBADFORMAT: Coding.FromStrict({
+    operation_outcome_MSGBADFORMAT: new Coding({
         code: "MSG_BAD_FORMAT",
         display: "Bad Syntax: \"%s\" must be a %s'",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGBADSYNTAX: Coding.FromStrict({
+    operation_outcome_MSGBADSYNTAX: new Coding({
         code: "MSG_BAD_SYNTAX",
         display: "Bad Syntax in %s",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGCANTPARSECONTENT: Coding.FromStrict({
+    operation_outcome_MSGCANTPARSECONTENT: new Coding({
         code: "MSG_CANT_PARSE_CONTENT",
         display: "Unable to parse feed (entry content type = \"%s\")",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGCANTPARSEROOT: Coding.FromStrict({
+    operation_outcome_MSGCANTPARSEROOT: new Coding({
         code: "MSG_CANT_PARSE_ROOT",
         display: "Unable to parse feed (root element name = \"%s\")",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGCREATED: Coding.FromStrict({
+    operation_outcome_MSGCREATED: new Coding({
         code: "MSG_CREATED",
         display: "New resource created",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGDATEFORMAT: Coding.FromStrict({
+    operation_outcome_MSGDATEFORMAT: new Coding({
         code: "MSG_DATE_FORMAT",
         display: "The Date value %s is not in the correct format (Xml Date Format required)",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGDELETED: Coding.FromStrict({
+    operation_outcome_MSGDELETED: new Coding({
         code: "MSG_DELETED",
         display: "This resource has been deleted",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGDELETEDDONE: Coding.FromStrict({
+    operation_outcome_MSGDELETEDDONE: new Coding({
         code: "MSG_DELETED_DONE",
         display: "Resource deleted",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGDELETEDID: Coding.FromStrict({
+    operation_outcome_MSGDELETEDID: new Coding({
         code: "MSG_DELETED_ID",
         display: "The resource \"%s\" has been deleted",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGDUPLICATEID: Coding.FromStrict({
+    operation_outcome_MSGDUPLICATEID: new Coding({
         code: "MSG_DUPLICATE_ID",
         display: "Duplicate Id %s for resource type %s",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGERRORPARSING: Coding.FromStrict({
+    operation_outcome_MSGERRORPARSING: new Coding({
         code: "MSG_ERROR_PARSING",
         display: "Error parsing resource Xml (%s)",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGIDINVALID: Coding.FromStrict({
+    operation_outcome_MSGIDINVALID: new Coding({
         code: "MSG_ID_INVALID",
         display: "Id \"%s\" has an invalid character \"%s\"",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGIDTOOLONG: Coding.FromStrict({
+    operation_outcome_MSGIDTOOLONG: new Coding({
         code: "MSG_ID_TOO_LONG",
         display: "Id \"%s\" too long (length limit 36)",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGINVALIDID: Coding.FromStrict({
+    operation_outcome_MSGINVALIDID: new Coding({
         code: "MSG_INVALID_ID",
         display: "Id not accepted",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGJSONOBJECT: Coding.FromStrict({
+    operation_outcome_MSGJSONOBJECT: new Coding({
         code: "MSG_JSON_OBJECT",
         display: "Json Source for a resource should start with an object",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGLOCALFAIL: Coding.FromStrict({
+    operation_outcome_MSGLOCALFAIL: new Coding({
         code: "MSG_LOCAL_FAIL",
         display: "Unable to resolve local reference to resource %s",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGNOEXIST: Coding.FromStrict({
+    operation_outcome_MSGNOEXIST: new Coding({
         code: "MSG_NO_EXIST",
         display: "Resource Id \"%s\" does not exist",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGNOMATCH: Coding.FromStrict({
+    operation_outcome_MSGNOMATCH: new Coding({
         code: "MSG_NO_MATCH",
         display: "No Resource found matching the query \"%s\"",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGNOMODULE: Coding.FromStrict({
+    operation_outcome_MSGNOMODULE: new Coding({
         code: "MSG_NO_MODULE",
         display: "No module could be found to handle the request \"%s\"",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGNOSUMMARY: Coding.FromStrict({
+    operation_outcome_MSGNOSUMMARY: new Coding({
         code: "MSG_NO_SUMMARY",
         display: "No Summary for this resource",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGOPNOTALLOWED: Coding.FromStrict({
+    operation_outcome_MSGOPNOTALLOWED: new Coding({
         code: "MSG_OP_NOT_ALLOWED",
         display: "Operation %s not allowed for resource %s (due to local configuration)",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGPARAMCHAINED: Coding.FromStrict({
+    operation_outcome_MSGPARAMCHAINED: new Coding({
         code: "MSG_PARAM_CHAINED",
         display: "Unknown chained parameter name \"%s\"",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGPARAMINVALID: Coding.FromStrict({
+    operation_outcome_MSGPARAMINVALID: new Coding({
         code: "MSG_PARAM_INVALID",
         display: "Parameter \"%s\" content is invalid",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGPARAMMODIFIERINVALID: Coding.FromStrict({
+    operation_outcome_MSGPARAMMODIFIERINVALID: new Coding({
         code: "MSG_PARAM_MODIFIER_INVALID",
         display: "Parameter \"%s\" modifier is invalid",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGPARAMNOREPEAT: Coding.FromStrict({
+    operation_outcome_MSGPARAMNOREPEAT: new Coding({
         code: "MSG_PARAM_NO_REPEAT",
         display: "Parameter \"%s\" is not allowed to repeat",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGPARAMUNKNOWN: Coding.FromStrict({
+    operation_outcome_MSGPARAMUNKNOWN: new Coding({
         code: "MSG_PARAM_UNKNOWN",
         display: "Parameter \"%s\" not understood",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGRESOURCEEXAMPLEPROTECTED: Coding.FromStrict({
+    operation_outcome_MSGRESOURCEEXAMPLEPROTECTED: new Coding({
         code: "MSG_RESOURCE_EXAMPLE_PROTECTED",
         display: "Resources with identity \"example\" cannot be deleted (for testing/training purposes)",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGRESOURCEIDFAIL: Coding.FromStrict({
+    operation_outcome_MSGRESOURCEIDFAIL: new Coding({
         code: "MSG_RESOURCE_ID_FAIL",
         display: "unable to allocate resource id",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGRESOURCEIDMISMATCH: Coding.FromStrict({
+    operation_outcome_MSGRESOURCEIDMISMATCH: new Coding({
         code: "MSG_RESOURCE_ID_MISMATCH",
         display: "Resource Id Mismatch",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGRESOURCEIDMISSING: Coding.FromStrict({
+    operation_outcome_MSGRESOURCEIDMISSING: new Coding({
         code: "MSG_RESOURCE_ID_MISSING",
         display: "Resource Id Missing",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGRESOURCENOTALLOWED: Coding.FromStrict({
+    operation_outcome_MSGRESOURCENOTALLOWED: new Coding({
         code: "MSG_RESOURCE_NOT_ALLOWED",
         display: "Not allowed to submit a resource for this operation",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGRESOURCEREQUIRED: Coding.FromStrict({
+    operation_outcome_MSGRESOURCEREQUIRED: new Coding({
         code: "MSG_RESOURCE_REQUIRED",
         display: "A resource is required",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGRESOURCETYPEMISMATCH: Coding.FromStrict({
+    operation_outcome_MSGRESOURCETYPEMISMATCH: new Coding({
         code: "MSG_RESOURCE_TYPE_MISMATCH",
         display: "Resource Type Mismatch",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGSORTUNKNOWN: Coding.FromStrict({
+    operation_outcome_MSGSORTUNKNOWN: new Coding({
         code: "MSG_SORT_UNKNOWN",
         display: "Unknown sort parameter name \"%s\"",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGTRANSACTIONDUPLICATEID: Coding.FromStrict({
+    operation_outcome_MSGTRANSACTIONDUPLICATEID: new Coding({
         code: "MSG_TRANSACTION_DUPLICATE_ID",
         display: "Duplicate Identifier in transaction: %s",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGTRANSACTIONMISSINGID: Coding.FromStrict({
+    operation_outcome_MSGTRANSACTIONMISSINGID: new Coding({
         code: "MSG_TRANSACTION_MISSING_ID",
         display: "Missing Identifier in transaction - an entry.id must be provided",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGUNHANDLEDNODETYPE: Coding.FromStrict({
+    operation_outcome_MSGUNHANDLEDNODETYPE: new Coding({
         code: "MSG_UNHANDLED_NODE_TYPE",
         display: "Unhandled xml node type \"%s\"",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGUNKNOWNCONTENT: Coding.FromStrict({
+    operation_outcome_MSGUNKNOWNCONTENT: new Coding({
         code: "MSG_UNKNOWN_CONTENT",
         display: "Unknown Content (%s) at %s",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGUNKNOWNOPERATION: Coding.FromStrict({
+    operation_outcome_MSGUNKNOWNOPERATION: new Coding({
         code: "MSG_UNKNOWN_OPERATION",
         display: "unknown FHIR http operation",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGUNKNOWNTYPE: Coding.FromStrict({
+    operation_outcome_MSGUNKNOWNTYPE: new Coding({
         code: "MSG_UNKNOWN_TYPE",
         display: "Resource Type \"%s\" not recognised",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGUPDATED: Coding.FromStrict({
+    operation_outcome_MSGUPDATED: new Coding({
         code: "MSG_UPDATED",
         display: "existing resource updated",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGVERSIONAWARE: Coding.FromStrict({
+    operation_outcome_MSGVERSIONAWARE: new Coding({
         code: "MSG_VERSION_AWARE",
         display: "Version aware updates are required for this resource",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGVERSIONAWARECONFLICT: Coding.FromStrict({
+    operation_outcome_MSGVERSIONAWARECONFLICT: new Coding({
         code: "MSG_VERSION_AWARE_CONFLICT",
         display: "Update Conflict (server current version = \"%s\", client version referenced = \"%s\")",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGVERSIONAWAREURL: Coding.FromStrict({
+    operation_outcome_MSGVERSIONAWAREURL: new Coding({
         code: "MSG_VERSION_AWARE_URL",
         display: "Version specific URL not recognised",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_MSGWRONGNS: Coding.FromStrict({
+    operation_outcome_MSGWRONGNS: new Coding({
         code: "MSG_WRONG_NS",
         display: "This does not appear to be a FHIR element or resource (wrong namespace \"%s\")",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_SEARCHMULTIPLE: Coding.FromStrict({
+    operation_outcome_SEARCHMULTIPLE: new Coding({
         code: "SEARCH_MULTIPLE",
         display: "Error: Multiple matches exist for %s search parameters \"%s\"",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_SEARCHNONE: Coding.FromStrict({
+    operation_outcome_SEARCHNONE: new Coding({
         code: "SEARCH_NONE",
         display: "Error: no processable search found for %s search parameters \"%s\"",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
     }),
-    operation_outcome_UPDATEMULTIPLEMATCHES: Coding.FromStrict({
+    operation_outcome_UPDATEMULTIPLEMATCHES: new Coding({
         code: "UPDATE_MULTIPLE_MATCHES",
         display: "Error: Multiple matches exist for the conditional update",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"

@@ -13,7 +13,7 @@ export const MessageReasonEncounterValueSet = {
     /**
      * The patient has temporarily left the institution.
      */
-    message_reason_encounter_Absent: Coding.FromStrict({
+    message_reason_encounter_Absent: new Coding({
         code: "absent",
         display: "Absent",
         system: "http://terminology.hl7.org/CodeSystem/message-reasons-encounter"
@@ -21,7 +21,7 @@ export const MessageReasonEncounterValueSet = {
     /**
      * The patient has been admitted.
      */
-    message_reason_encounter_Admit: Coding.FromStrict({
+    message_reason_encounter_Admit: new Coding({
         code: "admit",
         display: "Admit",
         system: "http://terminology.hl7.org/CodeSystem/message-reasons-encounter"
@@ -29,7 +29,7 @@ export const MessageReasonEncounterValueSet = {
     /**
      * The patient has been discharged.
      */
-    message_reason_encounter_Discharge: Coding.FromStrict({
+    message_reason_encounter_Discharge: new Coding({
         code: "discharge",
         display: "Discharge",
         system: "http://terminology.hl7.org/CodeSystem/message-reasons-encounter"
@@ -37,7 +37,7 @@ export const MessageReasonEncounterValueSet = {
     /**
      * Encounter details have been updated (e.g. to correct a coding error).
      */
-    message_reason_encounter_Edit: Coding.FromStrict({
+    message_reason_encounter_Edit: new Coding({
         code: "edit",
         display: "Edit",
         system: "http://terminology.hl7.org/CodeSystem/message-reasons-encounter"
@@ -45,7 +45,7 @@ export const MessageReasonEncounterValueSet = {
     /**
      * The patient has been moved to a new location.
      */
-    message_reason_encounter_Moved: Coding.FromStrict({
+    message_reason_encounter_Moved: new Coding({
         code: "moved",
         display: "Moved",
         system: "http://terminology.hl7.org/CodeSystem/message-reasons-encounter"
@@ -53,7 +53,7 @@ export const MessageReasonEncounterValueSet = {
     /**
      * The patient has returned from a temporary absence.
      */
-    message_reason_encounter_Returned: Coding.FromStrict({
+    message_reason_encounter_Returned: new Coding({
         code: "return",
         display: "Returned",
         system: "http://terminology.hl7.org/CodeSystem/message-reasons-encounter"

@@ -13,7 +13,7 @@ export const MedicationdispensePerformerFunctionValueSet = {
   /**
    * Performed initial quality assurance on the prepared medication
    */
-  medicationdispense_performer_function_Checker: Coding.FromStrict({
+  medicationdispense_performer_function_Checker: new Coding({
     code: "checker",
     display: "Checker",
     system: "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function"
@@ -21,7 +21,7 @@ export const MedicationdispensePerformerFunctionValueSet = {
   /**
    * Recorded the details of the request
    */
-  medicationdispense_performer_function_DataEnterer: Coding.FromStrict({
+  medicationdispense_performer_function_DataEnterer: new Coding({
     code: "dataenterer",
     display: "Data Enterer",
     system: "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function"
@@ -29,7 +29,7 @@ export const MedicationdispensePerformerFunctionValueSet = {
   /**
    * Performed the final quality assurance on the prepared medication against the request. Typically, this is a pharmacist function.
    */
-  medicationdispense_performer_function_FinalChecker: Coding.FromStrict({
+  medicationdispense_performer_function_FinalChecker: new Coding({
     code: "finalchecker",
     display: "Final Checker",
     system: "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function"
@@ -37,7 +37,7 @@ export const MedicationdispensePerformerFunctionValueSet = {
   /**
    * Prepared the medication.
    */
-  medicationdispense_performer_function_Packager: Coding.FromStrict({
+  medicationdispense_performer_function_Packager: new Coding({
     code: "packager",
     display: "Packager",
     system: "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function"

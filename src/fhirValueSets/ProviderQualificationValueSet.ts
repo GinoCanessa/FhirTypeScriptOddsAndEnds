@@ -13,7 +13,7 @@ export const ProviderQualificationValueSet = {
   /**
    * Dentist General Practitioner (DDS, DDM).
    */
-  provider_qualification_Dentist: Coding.FromStrict({
+  provider_qualification_Dentist: new Coding({
     code: "311405",
     display: "Dentist",
     system: "http://terminology.hl7.org/CodeSystem/ex-providerqualification"
@@ -21,7 +21,7 @@ export const ProviderQualificationValueSet = {
   /**
    * Optometrist.
    */
-  provider_qualification_Optometrist: Coding.FromStrict({
+  provider_qualification_Optometrist: new Coding({
     code: "604210",
     display: "Optometrist",
     system: "http://terminology.hl7.org/CodeSystem/ex-providerqualification"
@@ -29,7 +29,7 @@ export const ProviderQualificationValueSet = {
   /**
    * Ophthalmologist.
    */
-  provider_qualification_Ophthalmologist: Coding.FromStrict({
+  provider_qualification_Ophthalmologist: new Coding({
     code: "604215",
     display: "Ophthalmologist",
     system: "http://terminology.hl7.org/CodeSystem/ex-providerqualification"

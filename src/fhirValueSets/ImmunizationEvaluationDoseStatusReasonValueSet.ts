@@ -13,7 +13,7 @@ export const ImmunizationEvaluationDoseStatusReasonValueSet = {
   /**
    * The product was stored in a manner inconsistent with manufacturer guidelines potentially reducing the effectiveness of the product.
    */
-  immunization_evaluation_dose_status_reason_AdverseStorageCondition: Coding.FromStrict({
+  immunization_evaluation_dose_status_reason_AdverseStorageCondition: new Coding({
     code: "advstorage",
     display: "Adverse storage condition",
     system: "http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason"
@@ -21,7 +21,7 @@ export const ImmunizationEvaluationDoseStatusReasonValueSet = {
   /**
    * The product was stored at a temperature inconsistent with manufacturer guidelines potentially reducing the effectiveness of the product.
    */
-  immunization_evaluation_dose_status_reason_ColdChainBreak: Coding.FromStrict({
+  immunization_evaluation_dose_status_reason_ColdChainBreak: new Coding({
     code: "coldchbrk",
     display: "Cold chain break",
     system: "http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason"
@@ -29,7 +29,7 @@ export const ImmunizationEvaluationDoseStatusReasonValueSet = {
   /**
    * The product was administered after the expiration date associated with lot of vaccine.
    */
-  immunization_evaluation_dose_status_reason_ExpiredLot: Coding.FromStrict({
+  immunization_evaluation_dose_status_reason_ExpiredLot: new Coding({
     code: "explot",
     display: "Expired lot",
     system: "http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason"
@@ -37,7 +37,7 @@ export const ImmunizationEvaluationDoseStatusReasonValueSet = {
   /**
    * The product was administered at a time inconsistent with the documented schedule.
    */
-  immunization_evaluation_dose_status_reason_AdministeredOutsideRecommendedSchedule: Coding.FromStrict({
+  immunization_evaluation_dose_status_reason_AdministeredOutsideRecommendedSchedule: new Coding({
     code: "outsidesched",
     display: "Administered outside recommended schedule",
     system: "http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason"
@@ -45,7 +45,7 @@ export const ImmunizationEvaluationDoseStatusReasonValueSet = {
   /**
    * The product administered has been recalled by the manufacturer.
    */
-  immunization_evaluation_dose_status_reason_ProductRecall: Coding.FromStrict({
+  immunization_evaluation_dose_status_reason_ProductRecall: new Coding({
     code: "prodrecall",
     display: "Product recall",
     system: "http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason"

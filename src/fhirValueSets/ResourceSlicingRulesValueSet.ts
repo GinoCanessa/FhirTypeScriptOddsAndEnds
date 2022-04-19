@@ -13,7 +13,7 @@ export const ResourceSlicingRulesValueSet = {
   /**
    * No additional content is allowed other than that described by the slices in this profile.
    */
-  resource_slicing_rules_Closed: Coding.FromStrict({
+  resource_slicing_rules_Closed: new Coding({
     code: "closed",
     display: "Closed",
     system: "http://hl7.org/fhir/resource-slicing-rules"
@@ -21,7 +21,7 @@ export const ResourceSlicingRulesValueSet = {
   /**
    * Additional content is allowed anywhere in the list.
    */
-  resource_slicing_rules_Open: Coding.FromStrict({
+  resource_slicing_rules_Open: new Coding({
     code: "open",
     display: "Open",
     system: "http://hl7.org/fhir/resource-slicing-rules"
@@ -29,7 +29,7 @@ export const ResourceSlicingRulesValueSet = {
   /**
    * Additional content is allowed, but only at the end of the list. Note that using this requires that the slices be ordered, which makes it hard to share uses. This should only be done where absolutely required.
    */
-  resource_slicing_rules_OpenAtEnd: Coding.FromStrict({
+  resource_slicing_rules_OpenAtEnd: new Coding({
     code: "openAtEnd",
     display: "Open at End",
     system: "http://hl7.org/fhir/resource-slicing-rules"

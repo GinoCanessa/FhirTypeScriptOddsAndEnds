@@ -13,7 +13,7 @@ export const ImmunizationSubpotentReasonValueSet = {
   /**
    * The vaccine experienced a cold chain break.
    */
-  immunization_subpotent_reason_ColdChainBreak: Coding.FromStrict({
+  immunization_subpotent_reason_ColdChainBreak: new Coding({
     code: "coldchainbreak",
     display: "Cold Chain Break",
     system: "http://terminology.hl7.org/CodeSystem/immunization-subpotent-reason"
@@ -21,7 +21,7 @@ export const ImmunizationSubpotentReasonValueSet = {
   /**
    * The full volume of the dose was not administered to the patient.
    */
-  immunization_subpotent_reason_PartialDose: Coding.FromStrict({
+  immunization_subpotent_reason_PartialDose: new Coding({
     code: "partial",
     display: "Partial Dose",
     system: "http://terminology.hl7.org/CodeSystem/immunization-subpotent-reason"
@@ -29,7 +29,7 @@ export const ImmunizationSubpotentReasonValueSet = {
   /**
    * The vaccine was recalled by the manufacturer.
    */
-  immunization_subpotent_reason_ManufacturerRecall: Coding.FromStrict({
+  immunization_subpotent_reason_ManufacturerRecall: new Coding({
     code: "recall",
     display: "Manufacturer Recall",
     system: "http://terminology.hl7.org/CodeSystem/immunization-subpotent-reason"

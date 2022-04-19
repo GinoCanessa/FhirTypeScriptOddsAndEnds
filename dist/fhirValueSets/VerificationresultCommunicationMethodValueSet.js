@@ -13,7 +13,7 @@ export const VerificationresultCommunicationMethodValueSet = {
     /**
      * The information is submitted/retrieved manually (e.g. by phone, fax, paper-based)
      */
-    verificationresult_communication_method_Manual: Coding.FromStrict({
+    verificationresult_communication_method_Manual: new Coding({
         code: "manual",
         display: "Manual",
         system: "http://terminology.hl7.org/CodeSystem/verificationresult-communication-method"
@@ -21,7 +21,7 @@ export const VerificationresultCommunicationMethodValueSet = {
     /**
      * The information is submitted/retrieved via a portal
      */
-    verificationresult_communication_method_Portal: Coding.FromStrict({
+    verificationresult_communication_method_Portal: new Coding({
         code: "portal",
         display: "Portal",
         system: "http://terminology.hl7.org/CodeSystem/verificationresult-communication-method"
@@ -29,7 +29,7 @@ export const VerificationresultCommunicationMethodValueSet = {
     /**
      * The information is retrieved (i.e. pulled) from a source (e.g. over an API)
      */
-    verificationresult_communication_method_Pull: Coding.FromStrict({
+    verificationresult_communication_method_Pull: new Coding({
         code: "pull",
         display: "Pull",
         system: "http://terminology.hl7.org/CodeSystem/verificationresult-communication-method"
@@ -37,7 +37,7 @@ export const VerificationresultCommunicationMethodValueSet = {
     /**
      * The information is sent (i.e. pushed) from a source (e.g. over an API, asynchronously, secure messaging)
      */
-    verificationresult_communication_method_Push: Coding.FromStrict({
+    verificationresult_communication_method_Push: new Coding({
         code: "push",
         display: "Push",
         system: "http://terminology.hl7.org/CodeSystem/verificationresult-communication-method"

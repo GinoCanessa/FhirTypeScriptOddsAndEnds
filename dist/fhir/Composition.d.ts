@@ -200,11 +200,11 @@ export declare class CompositionAttester extends fhir.BackboneElement implements
     /**
      * Check if the current CompositionAttester contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CompositionAttester from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICompositionAttester): CompositionAttester;
+    static fromStrict(source: fhir.ICompositionAttester): CompositionAttester;
 }
 /**
  * A document is a version specific composition.
@@ -230,11 +230,11 @@ export declare class CompositionRelatesTo extends fhir.BackboneElement implement
     /**
      * Check if the current CompositionRelatesTo contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CompositionRelatesTo from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICompositionRelatesTo): CompositionRelatesTo;
+    static fromStrict(source: fhir.ICompositionRelatesTo): CompositionRelatesTo;
 }
 /**
  * The event needs to be consistent with the type element, though can provide further information if desired.
@@ -259,11 +259,11 @@ export declare class CompositionEvent extends fhir.BackboneElement implements fh
     /**
      * Check if the current CompositionEvent contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CompositionEvent from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICompositionEvent): CompositionEvent;
+    static fromStrict(source: fhir.ICompositionEvent): CompositionEvent;
 }
 /**
  * The root of the sections that make up the composition.
@@ -319,11 +319,11 @@ export declare class CompositionSection extends fhir.BackboneElement implements 
     /**
      * Check if the current CompositionSection contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CompositionSection from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICompositionSection): CompositionSection;
+    static fromStrict(source: fhir.ICompositionSection): CompositionSection;
 }
 /**
  * A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type=document, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.).
@@ -405,11 +405,11 @@ export declare class Composition extends fhir.DomainResource implements fhir.ICo
     /**
      * Check if the current Composition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Composition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IComposition): Composition;
+    static fromStrict(source: fhir.IComposition): Composition;
 }
 /**
  * Code Values for the Composition.attester.mode field

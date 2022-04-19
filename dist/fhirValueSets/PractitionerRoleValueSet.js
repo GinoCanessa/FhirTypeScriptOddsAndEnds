@@ -13,7 +13,7 @@ export const PractitionerRoleValueSet = {
     /**
      * A qualified/registered medical practitioner
      */
-    practitioner_role_Doctor: Coding.FromStrict({
+    practitioner_role_Doctor: new Coding({
         code: "doctor",
         display: "Doctor",
         system: "http://terminology.hl7.org/CodeSystem/practitioner-role"
@@ -21,7 +21,7 @@ export const PractitionerRoleValueSet = {
     /**
      * Someone who is qualified in Information and Communication Technologies
      */
-    practitioner_role_ICTProfessional: Coding.FromStrict({
+    practitioner_role_ICTProfessional: new Coding({
         code: "ict",
         display: "ICT professional",
         system: "http://terminology.hl7.org/CodeSystem/practitioner-role"
@@ -29,7 +29,7 @@ export const PractitionerRoleValueSet = {
     /**
      * A practitioner with nursing experience that may be qualified/registered
      */
-    practitioner_role_Nurse: Coding.FromStrict({
+    practitioner_role_Nurse: new Coding({
         code: "nurse",
         display: "Nurse",
         system: "http://terminology.hl7.org/CodeSystem/practitioner-role"
@@ -37,7 +37,7 @@ export const PractitionerRoleValueSet = {
     /**
      * A qualified/registered/licensed pharmacist
      */
-    practitioner_role_Pharmacist: Coding.FromStrict({
+    practitioner_role_Pharmacist: new Coding({
         code: "pharmacist",
         display: "Pharmacist",
         system: "http://terminology.hl7.org/CodeSystem/practitioner-role"
@@ -45,7 +45,7 @@ export const PractitionerRoleValueSet = {
     /**
      * A practitioner that may perform research
      */
-    practitioner_role_Researcher: Coding.FromStrict({
+    practitioner_role_Researcher: new Coding({
         code: "researcher",
         display: "Researcher",
         system: "http://terminology.hl7.org/CodeSystem/practitioner-role"
@@ -53,7 +53,7 @@ export const PractitionerRoleValueSet = {
     /**
      * Someone who is able to provide educational services
      */
-    practitioner_role_TeacherEducator: Coding.FromStrict({
+    practitioner_role_TeacherEducator: new Coding({
         code: "teacher",
         display: "Teacher/educator",
         system: "http://terminology.hl7.org/CodeSystem/practitioner-role"

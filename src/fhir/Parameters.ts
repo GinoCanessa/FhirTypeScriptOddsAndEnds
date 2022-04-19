@@ -502,7 +502,7 @@ export class ParametersParameter extends fhir.BackboneElement implements fhir.IP
     if (this.name === undefined) { this.name = null }
     if (source["_name"]) { this._name = new fhir.FhirElement(source._name!); }
     if (source["part"]) { this.part = source.part.map((x:Partial<fhir.IParametersParameter>) => new fhir.ParametersParameter(x)); }
-    if (source["resource"]) { this.resource = (fhir.FhirResourceFactory(source.resource) ?? undefined); }
+    if (source["resource"]) { this.resource = (fhir.fhirResourceFactory(source.resource) ?? undefined); }
     if (source["valueBase64Binary"]) { this.valueBase64Binary = source.valueBase64Binary; }
     if (source["_valueBase64Binary"]) { this._valueBase64Binary = new fhir.FhirElement(source._valueBase64Binary!); }
     if (source["valueBoolean"]) { this.valueBoolean = source.valueBoolean; }
@@ -576,19 +576,19 @@ export class ParametersParameter extends fhir.BackboneElement implements fhir.IP
   /**
    * Check if the current ParametersParameter contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["name"] === undefined) { missingElements.push("name"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ParametersParameter from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IParametersParameter):ParametersParameter {
+  static override fromStrict(source:fhir.IParametersParameter):ParametersParameter {
     var dest:ParametersParameter = new ParametersParameter(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ParametersParameter is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -616,18 +616,18 @@ export class Parameters extends fhir.Resource implements fhir.IParameters {
   /**
    * Check if the current Parameters contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Parameters from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IParameters):Parameters {
+  static override fromStrict(source:fhir.IParameters):Parameters {
     var dest:Parameters = new Parameters(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Parameters is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

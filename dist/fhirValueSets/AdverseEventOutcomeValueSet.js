@@ -10,32 +10,32 @@ import { Coding } from '../fhir';
  * TODO (and should this be required?).
  */
 export const AdverseEventOutcomeValueSet = {
-    adverse_event_outcome_Fatal: Coding.FromStrict({
+    adverse_event_outcome_Fatal: new Coding({
         code: "fatal",
         display: "Fatal",
         system: "http://terminology.hl7.org/CodeSystem/adverse-event-outcome"
     }),
-    adverse_event_outcome_Ongoing: Coding.FromStrict({
+    adverse_event_outcome_Ongoing: new Coding({
         code: "ongoing",
         display: "Ongoing",
         system: "http://terminology.hl7.org/CodeSystem/adverse-event-outcome"
     }),
-    adverse_event_outcome_Recovering: Coding.FromStrict({
+    adverse_event_outcome_Recovering: new Coding({
         code: "recovering",
         display: "Recovering",
         system: "http://terminology.hl7.org/CodeSystem/adverse-event-outcome"
     }),
-    adverse_event_outcome_Resolved: Coding.FromStrict({
+    adverse_event_outcome_Resolved: new Coding({
         code: "resolved",
         display: "Resolved",
         system: "http://terminology.hl7.org/CodeSystem/adverse-event-outcome"
     }),
-    adverse_event_outcome_ResolvedWithSequelae: Coding.FromStrict({
+    adverse_event_outcome_ResolvedWithSequelae: new Coding({
         code: "resolvedWithSequelae",
         display: "Resolved with Sequelae",
         system: "http://terminology.hl7.org/CodeSystem/adverse-event-outcome"
     }),
-    adverse_event_outcome_Unknown: Coding.FromStrict({
+    adverse_event_outcome_Unknown: new Coding({
         code: "unknown",
         display: "Unknown",
         system: "http://terminology.hl7.org/CodeSystem/adverse-event-outcome"

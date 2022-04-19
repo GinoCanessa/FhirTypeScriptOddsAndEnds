@@ -286,11 +286,11 @@ export declare class RiskEvidenceSynthesisSampleSize extends fhir.BackboneElemen
     /**
      * Check if the current RiskEvidenceSynthesisSampleSize contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a RiskEvidenceSynthesisSampleSize from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IRiskEvidenceSynthesisSampleSize): RiskEvidenceSynthesisSampleSize;
+    static fromStrict(source: fhir.IRiskEvidenceSynthesisSampleSize): RiskEvidenceSynthesisSampleSize;
 }
 /**
  * A description of the precision of the estimate for the effect.
@@ -322,11 +322,11 @@ export declare class RiskEvidenceSynthesisRiskEstimatePrecisionEstimate extends 
     /**
      * Check if the current RiskEvidenceSynthesisRiskEstimatePrecisionEstimate contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a RiskEvidenceSynthesisRiskEstimatePrecisionEstimate from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IRiskEvidenceSynthesisRiskEstimatePrecisionEstimate): RiskEvidenceSynthesisRiskEstimatePrecisionEstimate;
+    static fromStrict(source: fhir.IRiskEvidenceSynthesisRiskEstimatePrecisionEstimate): RiskEvidenceSynthesisRiskEstimatePrecisionEstimate;
 }
 /**
  * The estimated risk of the outcome.
@@ -371,11 +371,11 @@ export declare class RiskEvidenceSynthesisRiskEstimate extends fhir.BackboneElem
     /**
      * Check if the current RiskEvidenceSynthesisRiskEstimate contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a RiskEvidenceSynthesisRiskEstimate from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IRiskEvidenceSynthesisRiskEstimate): RiskEvidenceSynthesisRiskEstimate;
+    static fromStrict(source: fhir.IRiskEvidenceSynthesisRiskEstimate): RiskEvidenceSynthesisRiskEstimate;
 }
 /**
  * A description of a component of the overall certainty.
@@ -400,11 +400,11 @@ export declare class RiskEvidenceSynthesisCertaintyCertaintySubcomponent extends
     /**
      * Check if the current RiskEvidenceSynthesisCertaintyCertaintySubcomponent contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a RiskEvidenceSynthesisCertaintyCertaintySubcomponent from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IRiskEvidenceSynthesisCertaintyCertaintySubcomponent): RiskEvidenceSynthesisCertaintyCertaintySubcomponent;
+    static fromStrict(source: fhir.IRiskEvidenceSynthesisCertaintyCertaintySubcomponent): RiskEvidenceSynthesisCertaintyCertaintySubcomponent;
 }
 /**
  * A description of the certainty of the risk estimate.
@@ -429,11 +429,11 @@ export declare class RiskEvidenceSynthesisCertainty extends fhir.BackboneElement
     /**
      * Check if the current RiskEvidenceSynthesisCertainty contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a RiskEvidenceSynthesisCertainty from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IRiskEvidenceSynthesisCertainty): RiskEvidenceSynthesisCertainty;
+    static fromStrict(source: fhir.IRiskEvidenceSynthesisCertainty): RiskEvidenceSynthesisCertainty;
 }
 /**
  * The RiskEvidenceSynthesis resource describes the likelihood of an outcome in a population plus exposure state where the risk estimate is derived from a combination of research studies.
@@ -587,11 +587,11 @@ export declare class RiskEvidenceSynthesis extends fhir.DomainResource implement
     /**
      * Check if the current RiskEvidenceSynthesis contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a RiskEvidenceSynthesis from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IRiskEvidenceSynthesis): RiskEvidenceSynthesis;
+    static fromStrict(source: fhir.IRiskEvidenceSynthesis): RiskEvidenceSynthesis;
 }
 /**
  * Code Values for the RiskEvidenceSynthesis.status field

@@ -13,7 +13,7 @@ export const MedicationAdminCategoryValueSet = {
   /**
    * Includes administrations by the patient in their home (this would include long term care or nursing homes, hospices, etc.)
    */
-  medication_admin_category_Community: Coding.FromStrict({
+  medication_admin_category_Community: new Coding({
     code: "community",
     display: "Community",
     system: "http://terminology.hl7.org/CodeSystem/medication-admin-category"
@@ -21,7 +21,7 @@ export const MedicationAdminCategoryValueSet = {
   /**
    * Includes administrations in an inpatient or acute care setting
    */
-  medication_admin_category_Inpatient: Coding.FromStrict({
+  medication_admin_category_Inpatient: new Coding({
     code: "inpatient",
     display: "Inpatient",
     system: "http://terminology.hl7.org/CodeSystem/medication-admin-category"
@@ -29,7 +29,7 @@ export const MedicationAdminCategoryValueSet = {
   /**
    * Includes administrations in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
    */
-  medication_admin_category_Outpatient: Coding.FromStrict({
+  medication_admin_category_Outpatient: new Coding({
     code: "outpatient",
     display: "Outpatient",
     system: "http://terminology.hl7.org/CodeSystem/medication-admin-category"

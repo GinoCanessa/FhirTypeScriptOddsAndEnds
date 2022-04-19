@@ -169,11 +169,11 @@ export declare class RiskAssessmentPrediction extends fhir.BackboneElement imple
     /**
      * Check if the current RiskAssessmentPrediction contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a RiskAssessmentPrediction from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IRiskAssessmentPrediction): RiskAssessmentPrediction;
+    static fromStrict(source: fhir.IRiskAssessmentPrediction): RiskAssessmentPrediction;
 }
 /**
  * An assessment of the likely outcome(s) for a patient or other subject as well as the likelihood of each outcome.
@@ -265,11 +265,11 @@ export declare class RiskAssessment extends fhir.DomainResource implements fhir.
     /**
      * Check if the current RiskAssessment contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a RiskAssessment from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IRiskAssessment): RiskAssessment;
+    static fromStrict(source: fhir.IRiskAssessment): RiskAssessment;
 }
 /**
  * Code Values for the RiskAssessment.status field

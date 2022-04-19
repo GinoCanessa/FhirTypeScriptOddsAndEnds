@@ -13,7 +13,7 @@ export const ClaimCareteamroleValueSet = {
     /**
      * Assisting care provider.
      */
-    claim_careteamrole_AssistingProvider: Coding.FromStrict({
+    claim_careteamrole_AssistingProvider: new Coding({
         code: "assist",
         display: "Assisting Provider",
         system: "http://terminology.hl7.org/CodeSystem/claimcareteamrole"
@@ -21,7 +21,7 @@ export const ClaimCareteamroleValueSet = {
     /**
      * Other role on the care team.
      */
-    claim_careteamrole_Other: Coding.FromStrict({
+    claim_careteamrole_Other: new Coding({
         code: "other",
         display: "Other",
         system: "http://terminology.hl7.org/CodeSystem/claimcareteamrole"
@@ -29,7 +29,7 @@ export const ClaimCareteamroleValueSet = {
     /**
      * The primary care provider.
      */
-    claim_careteamrole_PrimaryProvider: Coding.FromStrict({
+    claim_careteamrole_PrimaryProvider: new Coding({
         code: "primary",
         display: "Primary provider",
         system: "http://terminology.hl7.org/CodeSystem/claimcareteamrole"
@@ -37,7 +37,7 @@ export const ClaimCareteamroleValueSet = {
     /**
      * Supervising care provider.
      */
-    claim_careteamrole_SupervisingProvider: Coding.FromStrict({
+    claim_careteamrole_SupervisingProvider: new Coding({
         code: "supervisor",
         display: "Supervising Provider",
         system: "http://terminology.hl7.org/CodeSystem/claimcareteamrole"

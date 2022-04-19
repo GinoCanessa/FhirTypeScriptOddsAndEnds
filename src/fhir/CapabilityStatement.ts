@@ -511,19 +511,19 @@ export class CapabilityStatementSoftware extends fhir.BackboneElement implements
   /**
    * Check if the current CapabilityStatementSoftware contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["name"] === undefined) { missingElements.push("name"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CapabilityStatementSoftware from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICapabilityStatementSoftware):CapabilityStatementSoftware {
+  static override fromStrict(source:fhir.ICapabilityStatementSoftware):CapabilityStatementSoftware {
     var dest:CapabilityStatementSoftware = new CapabilityStatementSoftware(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CapabilityStatementSoftware is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -562,19 +562,19 @@ export class CapabilityStatementImplementation extends fhir.BackboneElement impl
   /**
    * Check if the current CapabilityStatementImplementation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["description"] === undefined) { missingElements.push("description"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CapabilityStatementImplementation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICapabilityStatementImplementation):CapabilityStatementImplementation {
+  static override fromStrict(source:fhir.ICapabilityStatementImplementation):CapabilityStatementImplementation {
     var dest:CapabilityStatementImplementation = new CapabilityStatementImplementation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CapabilityStatementImplementation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -611,18 +611,18 @@ export class CapabilityStatementRestSecurity extends fhir.BackboneElement implem
   /**
    * Check if the current CapabilityStatementRestSecurity contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CapabilityStatementRestSecurity from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICapabilityStatementRestSecurity):CapabilityStatementRestSecurity {
+  static override fromStrict(source:fhir.ICapabilityStatementRestSecurity):CapabilityStatementRestSecurity {
     var dest:CapabilityStatementRestSecurity = new CapabilityStatementRestSecurity(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CapabilityStatementRestSecurity is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -656,19 +656,19 @@ export class CapabilityStatementRestResourceInteraction extends fhir.BackboneEle
   /**
    * Check if the current CapabilityStatementRestResourceInteraction contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CapabilityStatementRestResourceInteraction from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICapabilityStatementRestResourceInteraction):CapabilityStatementRestResourceInteraction {
+  static override fromStrict(source:fhir.ICapabilityStatementRestResourceInteraction):CapabilityStatementRestResourceInteraction {
     var dest:CapabilityStatementRestResourceInteraction = new CapabilityStatementRestResourceInteraction(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CapabilityStatementRestResourceInteraction is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -718,20 +718,20 @@ export class CapabilityStatementRestResourceSearchParam extends fhir.BackboneEle
   /**
    * Check if the current CapabilityStatementRestResourceSearchParam contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["name"] === undefined) { missingElements.push("name"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CapabilityStatementRestResourceSearchParam from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICapabilityStatementRestResourceSearchParam):CapabilityStatementRestResourceSearchParam {
+  static override fromStrict(source:fhir.ICapabilityStatementRestResourceSearchParam):CapabilityStatementRestResourceSearchParam {
     var dest:CapabilityStatementRestResourceSearchParam = new CapabilityStatementRestResourceSearchParam(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CapabilityStatementRestResourceSearchParam is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -775,20 +775,20 @@ export class CapabilityStatementRestResourceOperation extends fhir.BackboneEleme
   /**
    * Check if the current CapabilityStatementRestResourceOperation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["definition"] === undefined) { missingElements.push("definition"); }
     if (this["name"] === undefined) { missingElements.push("name"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CapabilityStatementRestResourceOperation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICapabilityStatementRestResourceOperation):CapabilityStatementRestResourceOperation {
+  static override fromStrict(source:fhir.ICapabilityStatementRestResourceOperation):CapabilityStatementRestResourceOperation {
     var dest:CapabilityStatementRestResourceOperation = new CapabilityStatementRestResourceOperation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CapabilityStatementRestResourceOperation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -922,19 +922,19 @@ export class CapabilityStatementRestResource extends fhir.BackboneElement implem
   /**
    * Check if the current CapabilityStatementRestResource contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CapabilityStatementRestResource from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICapabilityStatementRestResource):CapabilityStatementRestResource {
+  static override fromStrict(source:fhir.ICapabilityStatementRestResource):CapabilityStatementRestResource {
     var dest:CapabilityStatementRestResource = new CapabilityStatementRestResource(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CapabilityStatementRestResource is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -968,19 +968,19 @@ export class CapabilityStatementRestInteraction extends fhir.BackboneElement imp
   /**
    * Check if the current CapabilityStatementRestInteraction contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CapabilityStatementRestInteraction from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICapabilityStatementRestInteraction):CapabilityStatementRestInteraction {
+  static override fromStrict(source:fhir.ICapabilityStatementRestInteraction):CapabilityStatementRestInteraction {
     var dest:CapabilityStatementRestInteraction = new CapabilityStatementRestInteraction(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CapabilityStatementRestInteraction is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1046,19 +1046,19 @@ export class CapabilityStatementRest extends fhir.BackboneElement implements fhi
   /**
    * Check if the current CapabilityStatementRest contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["mode"] === undefined) { missingElements.push("mode"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CapabilityStatementRest from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICapabilityStatementRest):CapabilityStatementRest {
+  static override fromStrict(source:fhir.ICapabilityStatementRest):CapabilityStatementRest {
     var dest:CapabilityStatementRest = new CapabilityStatementRest(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CapabilityStatementRest is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1092,20 +1092,20 @@ export class CapabilityStatementMessagingEndpoint extends fhir.BackboneElement i
   /**
    * Check if the current CapabilityStatementMessagingEndpoint contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["address"] === undefined) { missingElements.push("address"); }
     if (this["protocol"] === undefined) { missingElements.push("protocol"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CapabilityStatementMessagingEndpoint from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICapabilityStatementMessagingEndpoint):CapabilityStatementMessagingEndpoint {
+  static override fromStrict(source:fhir.ICapabilityStatementMessagingEndpoint):CapabilityStatementMessagingEndpoint {
     var dest:CapabilityStatementMessagingEndpoint = new CapabilityStatementMessagingEndpoint(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CapabilityStatementMessagingEndpoint is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1141,20 +1141,20 @@ export class CapabilityStatementMessagingSupportedMessage extends fhir.BackboneE
   /**
    * Check if the current CapabilityStatementMessagingSupportedMessage contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["definition"] === undefined) { missingElements.push("definition"); }
     if (this["mode"] === undefined) { missingElements.push("mode"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CapabilityStatementMessagingSupportedMessage from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICapabilityStatementMessagingSupportedMessage):CapabilityStatementMessagingSupportedMessage {
+  static override fromStrict(source:fhir.ICapabilityStatementMessagingSupportedMessage):CapabilityStatementMessagingSupportedMessage {
     var dest:CapabilityStatementMessagingSupportedMessage = new CapabilityStatementMessagingSupportedMessage(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CapabilityStatementMessagingSupportedMessage is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1196,18 +1196,18 @@ export class CapabilityStatementMessaging extends fhir.BackboneElement implement
   /**
    * Check if the current CapabilityStatementMessaging contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CapabilityStatementMessaging from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICapabilityStatementMessaging):CapabilityStatementMessaging {
+  static override fromStrict(source:fhir.ICapabilityStatementMessaging):CapabilityStatementMessaging {
     var dest:CapabilityStatementMessaging = new CapabilityStatementMessaging(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CapabilityStatementMessaging is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1250,20 +1250,20 @@ export class CapabilityStatementDocument extends fhir.BackboneElement implements
   /**
    * Check if the current CapabilityStatementDocument contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["mode"] === undefined) { missingElements.push("mode"); }
     if (this["profile"] === undefined) { missingElements.push("profile"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CapabilityStatementDocument from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICapabilityStatementDocument):CapabilityStatementDocument {
+  static override fromStrict(source:fhir.ICapabilityStatementDocument):CapabilityStatementDocument {
     var dest:CapabilityStatementDocument = new CapabilityStatementDocument(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CapabilityStatementDocument is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1466,23 +1466,23 @@ export class CapabilityStatement extends fhir.DomainResource implements fhir.ICa
   /**
    * Check if the current CapabilityStatement contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["date"] === undefined) { missingElements.push("date"); }
     if (this["fhirVersion"] === undefined) { missingElements.push("fhirVersion"); }
     if ((!this["format"]) || (this["format"].length === 0)) { missingElements.push("format"); }
     if (this["kind"] === undefined) { missingElements.push("kind"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CapabilityStatement from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICapabilityStatement):CapabilityStatement {
+  static override fromStrict(source:fhir.ICapabilityStatement):CapabilityStatement {
     var dest:CapabilityStatement = new CapabilityStatement(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CapabilityStatement is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

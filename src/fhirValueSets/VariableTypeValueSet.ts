@@ -13,7 +13,7 @@ export const VariableTypeValueSet = {
   /**
    * The variable is a continuous result such as a quantity.
    */
-  variable_type_Continuous: Coding.FromStrict({
+  variable_type_Continuous: new Coding({
     code: "continuous",
     display: "Continuous",
     system: "http://hl7.org/fhir/variable-type"
@@ -21,7 +21,7 @@ export const VariableTypeValueSet = {
   /**
    * The variable is described narratively rather than quantitatively.
    */
-  variable_type_Descriptive: Coding.FromStrict({
+  variable_type_Descriptive: new Coding({
     code: "descriptive",
     display: "Descriptive",
     system: "http://hl7.org/fhir/variable-type"
@@ -29,7 +29,7 @@ export const VariableTypeValueSet = {
   /**
    * The variable is dichotomous, such as present or absent.
    */
-  variable_type_Dichotomous: Coding.FromStrict({
+  variable_type_Dichotomous: new Coding({
     code: "dichotomous",
     display: "Dichotomous",
     system: "http://hl7.org/fhir/variable-type"

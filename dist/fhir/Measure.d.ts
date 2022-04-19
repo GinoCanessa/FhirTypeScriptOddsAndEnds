@@ -327,11 +327,11 @@ export declare class MeasureGroupPopulation extends fhir.BackboneElement impleme
     /**
      * Check if the current MeasureGroupPopulation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MeasureGroupPopulation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMeasureGroupPopulation): MeasureGroupPopulation;
+    static fromStrict(source: fhir.IMeasureGroupPopulation): MeasureGroupPopulation;
 }
 /**
  * Stratifiers are defined either as a single criteria, or as a set of component criteria.
@@ -357,11 +357,11 @@ export declare class MeasureGroupStratifierComponent extends fhir.BackboneElemen
     /**
      * Check if the current MeasureGroupStratifierComponent contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MeasureGroupStratifierComponent from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMeasureGroupStratifierComponent): MeasureGroupStratifierComponent;
+    static fromStrict(source: fhir.IMeasureGroupStratifierComponent): MeasureGroupStratifierComponent;
 }
 /**
  * The stratifier criteria for the measure report, specified as either the name of a valid CQL expression defined within a referenced library or a valid FHIR Resource Path.
@@ -391,11 +391,11 @@ export declare class MeasureGroupStratifier extends fhir.BackboneElement impleme
     /**
      * Check if the current MeasureGroupStratifier contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MeasureGroupStratifier from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMeasureGroupStratifier): MeasureGroupStratifier;
+    static fromStrict(source: fhir.IMeasureGroupStratifier): MeasureGroupStratifier;
 }
 /**
  * A group of population criteria for the measure.
@@ -425,11 +425,11 @@ export declare class MeasureGroup extends fhir.BackboneElement implements fhir.I
     /**
      * Check if the current MeasureGroup contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MeasureGroup from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMeasureGroup): MeasureGroup;
+    static fromStrict(source: fhir.IMeasureGroup): MeasureGroup;
 }
 /**
  * Note that supplemental data are reported as observations for each patient and included in the evaluatedResources bundle. See the MeasureReport resource or the Quality Reporting topic for more information.
@@ -459,11 +459,11 @@ export declare class MeasureSupplementalData extends fhir.BackboneElement implem
     /**
      * Check if the current MeasureSupplementalData contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MeasureSupplementalData from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMeasureSupplementalData): MeasureSupplementalData;
+    static fromStrict(source: fhir.IMeasureSupplementalData): MeasureSupplementalData;
 }
 /**
  * The Measure resource provides the definition of a quality measure.
@@ -673,11 +673,11 @@ export declare class Measure extends fhir.DomainResource implements fhir.IMeasur
     /**
      * Check if the current Measure contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Measure from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMeasure): Measure;
+    static fromStrict(source: fhir.IMeasure): Measure;
 }
 /**
  * Code Values for the Measure.status field

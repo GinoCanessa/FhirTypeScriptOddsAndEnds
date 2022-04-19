@@ -10,17 +10,17 @@ import { Coding } from '../fhir';
  * What the target is validated against
  */
 export const VerificationresultValidationTypeValueSet = {
-    verificationresult_validation_type_MultipleSources: Coding.FromStrict({
+    verificationresult_validation_type_MultipleSources: new Coding({
         code: "multiple",
         display: "Multiple Sources",
         system: "http://terminology.hl7.org/CodeSystem/validation-type"
     }),
-    verificationresult_validation_type_Nothing: Coding.FromStrict({
+    verificationresult_validation_type_Nothing: new Coding({
         code: "nothing",
         display: "Nothing",
         system: "http://terminology.hl7.org/CodeSystem/validation-type"
     }),
-    verificationresult_validation_type_PrimarySource: Coding.FromStrict({
+    verificationresult_validation_type_PrimarySource: new Coding({
         code: "primary",
         display: "Primary Source",
         system: "http://terminology.hl7.org/CodeSystem/validation-type"

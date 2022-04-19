@@ -29,21 +29,21 @@ export class MedicinalProductPharmaceuticalCharacteristics extends fhir.Backbone
     /**
      * Check if the current MedicinalProductPharmaceuticalCharacteristics contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["code"] === undefined) {
             missingElements.push("code");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductPharmaceuticalCharacteristics from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductPharmaceuticalCharacteristics(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductPharmaceuticalCharacteristics is missing elements: ${missingElements.join(", ")}`;
         }
@@ -83,7 +83,7 @@ export class MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWit
     /**
      * Check if the current MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["tissue"] === undefined) {
             missingElements.push("tissue");
@@ -91,16 +91,16 @@ export class MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWit
         if (this["value"] === undefined) {
             missingElements.push("value");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod is missing elements: ${missingElements.join(", ")}`;
         }
@@ -130,21 +130,21 @@ export class MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies ex
     /**
      * Check if the current MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["code"] === undefined) {
             missingElements.push("code");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies is missing elements: ${missingElements.join(", ")}`;
         }
@@ -189,21 +189,21 @@ export class MedicinalProductPharmaceuticalRouteOfAdministration extends fhir.Ba
     /**
      * Check if the current MedicinalProductPharmaceuticalRouteOfAdministration contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["code"] === undefined) {
             missingElements.push("code");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductPharmaceuticalRouteOfAdministration from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductPharmaceuticalRouteOfAdministration(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductPharmaceuticalRouteOfAdministration is missing elements: ${missingElements.join(", ")}`;
         }
@@ -253,7 +253,7 @@ export class MedicinalProductPharmaceutical extends fhir.DomainResource {
     /**
      * Check if the current MedicinalProductPharmaceutical contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["administrableDoseForm"] === undefined) {
             missingElements.push("administrableDoseForm");
@@ -261,16 +261,16 @@ export class MedicinalProductPharmaceutical extends fhir.DomainResource {
         if ((!this["routeOfAdministration"]) || (this["routeOfAdministration"].length === 0)) {
             missingElements.push("routeOfAdministration");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductPharmaceutical from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductPharmaceutical(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductPharmaceutical is missing elements: ${missingElements.join(", ")}`;
         }

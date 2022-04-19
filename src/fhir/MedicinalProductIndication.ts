@@ -98,19 +98,19 @@ export class MedicinalProductIndicationOtherTherapy extends fhir.BackboneElement
   /**
    * Check if the current MedicinalProductIndicationOtherTherapy contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["therapyRelationshipType"] === undefined) { missingElements.push("therapyRelationshipType"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicinalProductIndicationOtherTherapy from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicinalProductIndicationOtherTherapy):MedicinalProductIndicationOtherTherapy {
+  static override fromStrict(source:fhir.IMedicinalProductIndicationOtherTherapy):MedicinalProductIndicationOtherTherapy {
     var dest:MedicinalProductIndicationOtherTherapy = new MedicinalProductIndicationOtherTherapy(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicinalProductIndicationOtherTherapy is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -178,18 +178,18 @@ export class MedicinalProductIndication extends fhir.DomainResource implements f
   /**
    * Check if the current MedicinalProductIndication contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicinalProductIndication from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicinalProductIndication):MedicinalProductIndication {
+  static override fromStrict(source:fhir.IMedicinalProductIndication):MedicinalProductIndication {
     var dest:MedicinalProductIndication = new MedicinalProductIndication(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicinalProductIndication is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

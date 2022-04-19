@@ -1377,20 +1377,20 @@ export class ElementDefinitionSlicingDiscriminator extends fhir.FhirElement impl
   /**
    * Check if the current ElementDefinitionSlicingDiscriminator contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["path"] === undefined) { missingElements.push("path"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ElementDefinitionSlicingDiscriminator from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IElementDefinitionSlicingDiscriminator):ElementDefinitionSlicingDiscriminator {
+  static override fromStrict(source:fhir.IElementDefinitionSlicingDiscriminator):ElementDefinitionSlicingDiscriminator {
     var dest:ElementDefinitionSlicingDiscriminator = new ElementDefinitionSlicingDiscriminator(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ElementDefinitionSlicingDiscriminator is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1436,19 +1436,19 @@ export class ElementDefinitionSlicing extends fhir.FhirElement implements fhir.I
   /**
    * Check if the current ElementDefinitionSlicing contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["rules"] === undefined) { missingElements.push("rules"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ElementDefinitionSlicing from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IElementDefinitionSlicing):ElementDefinitionSlicing {
+  static override fromStrict(source:fhir.IElementDefinitionSlicing):ElementDefinitionSlicing {
     var dest:ElementDefinitionSlicing = new ElementDefinitionSlicing(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ElementDefinitionSlicing is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1493,21 +1493,21 @@ export class ElementDefinitionBase extends fhir.FhirElement implements fhir.IEle
   /**
    * Check if the current ElementDefinitionBase contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["max"] === undefined) { missingElements.push("max"); }
     if (this["min"] === undefined) { missingElements.push("min"); }
     if (this["path"] === undefined) { missingElements.push("path"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ElementDefinitionBase from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IElementDefinitionBase):ElementDefinitionBase {
+  static override fromStrict(source:fhir.IElementDefinitionBase):ElementDefinitionBase {
     var dest:ElementDefinitionBase = new ElementDefinitionBase(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ElementDefinitionBase is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1562,19 +1562,19 @@ export class ElementDefinitionType extends fhir.FhirElement implements fhir.IEle
   /**
    * Check if the current ElementDefinitionType contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ElementDefinitionType from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IElementDefinitionType):ElementDefinitionType {
+  static override fromStrict(source:fhir.IElementDefinitionType):ElementDefinitionType {
     var dest:ElementDefinitionType = new ElementDefinitionType(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ElementDefinitionType is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1889,19 +1889,19 @@ export class ElementDefinitionExample extends fhir.FhirElement implements fhir.I
   /**
    * Check if the current ElementDefinitionExample contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["label"] === undefined) { missingElements.push("label"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ElementDefinitionExample from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IElementDefinitionExample):ElementDefinitionExample {
+  static override fromStrict(source:fhir.IElementDefinitionExample):ElementDefinitionExample {
     var dest:ElementDefinitionExample = new ElementDefinitionExample(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ElementDefinitionExample is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1974,21 +1974,21 @@ export class ElementDefinitionConstraint extends fhir.FhirElement implements fhi
   /**
    * Check if the current ElementDefinitionConstraint contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["human"] === undefined) { missingElements.push("human"); }
     if (this["key"] === undefined) { missingElements.push("key"); }
     if (this["severity"] === undefined) { missingElements.push("severity"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ElementDefinitionConstraint from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IElementDefinitionConstraint):ElementDefinitionConstraint {
+  static override fromStrict(source:fhir.IElementDefinitionConstraint):ElementDefinitionConstraint {
     var dest:ElementDefinitionConstraint = new ElementDefinitionConstraint(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ElementDefinitionConstraint is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -2029,19 +2029,19 @@ export class ElementDefinitionBinding extends fhir.FhirElement implements fhir.I
   /**
    * Check if the current ElementDefinitionBinding contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["strength"] === undefined) { missingElements.push("strength"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ElementDefinitionBinding from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IElementDefinitionBinding):ElementDefinitionBinding {
+  static override fromStrict(source:fhir.IElementDefinitionBinding):ElementDefinitionBinding {
     var dest:ElementDefinitionBinding = new ElementDefinitionBinding(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ElementDefinitionBinding is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -2091,20 +2091,20 @@ export class ElementDefinitionMapping extends fhir.FhirElement implements fhir.I
   /**
    * Check if the current ElementDefinitionMapping contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["identity"] === undefined) { missingElements.push("identity"); }
     if (this["map"] === undefined) { missingElements.push("map"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ElementDefinitionMapping from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IElementDefinitionMapping):ElementDefinitionMapping {
+  static override fromStrict(source:fhir.IElementDefinitionMapping):ElementDefinitionMapping {
     var dest:ElementDefinitionMapping = new ElementDefinitionMapping(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ElementDefinitionMapping is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -3347,19 +3347,19 @@ export class ElementDefinition extends fhir.BackboneElement implements fhir.IEle
   /**
    * Check if the current ElementDefinition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["path"] === undefined) { missingElements.push("path"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ElementDefinition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IElementDefinition):ElementDefinition {
+  static override fromStrict(source:fhir.IElementDefinition):ElementDefinition {
     var dest:ElementDefinition = new ElementDefinition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ElementDefinition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

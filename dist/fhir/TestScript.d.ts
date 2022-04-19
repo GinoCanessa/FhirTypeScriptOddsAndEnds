@@ -593,11 +593,11 @@ export declare class TestScriptOrigin extends fhir.BackboneElement implements fh
     /**
      * Check if the current TestScriptOrigin contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestScriptOrigin from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestScriptOrigin): TestScriptOrigin;
+    static fromStrict(source: fhir.ITestScriptOrigin): TestScriptOrigin;
 }
 /**
  * The purpose of this element is to define the profile of a destination element used elsewhere in the script.  Test engines could then use the destination-profile mapping to offer a filtered list of test systems that can serve as the receiver for the interaction.
@@ -621,11 +621,11 @@ export declare class TestScriptDestination extends fhir.BackboneElement implemen
     /**
      * Check if the current TestScriptDestination contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestScriptDestination from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestScriptDestination): TestScriptDestination;
+    static fromStrict(source: fhir.ITestScriptDestination): TestScriptDestination;
 }
 /**
  * A link to the FHIR specification that this test is covering.
@@ -648,11 +648,11 @@ export declare class TestScriptMetadataLink extends fhir.BackboneElement impleme
     /**
      * Check if the current TestScriptMetadataLink contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestScriptMetadataLink from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestScriptMetadataLink): TestScriptMetadataLink;
+    static fromStrict(source: fhir.ITestScriptMetadataLink): TestScriptMetadataLink;
 }
 /**
  * When the metadata capabilities section is defined at TestScript.metadata or at TestScript.setup.metadata, and the server's conformance statement does not contain the elements defined in the minimal conformance statement, then all the tests in the TestScript are skipped.  When the metadata capabilities section is defined at TestScript.test.metadata and the server's conformance statement does not contain the elements defined in the minimal conformance statement, then only that test is skipped.  The "metadata.capabilities.required" and "metadata.capabilities.validated" elements only indicate whether the capabilities are the primary focus of the test script or not.  They do not impact the skipping logic.  Capabilities whose "metadata.capabilities.validated" flag is true are the primary focus of the test script.
@@ -700,11 +700,11 @@ export declare class TestScriptMetadataCapability extends fhir.BackboneElement i
     /**
      * Check if the current TestScriptMetadataCapability contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestScriptMetadataCapability from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestScriptMetadataCapability): TestScriptMetadataCapability;
+    static fromStrict(source: fhir.ITestScriptMetadataCapability): TestScriptMetadataCapability;
 }
 /**
  * The required capability must exist and are assumed to function correctly on the FHIR server being tested.
@@ -725,11 +725,11 @@ export declare class TestScriptMetadata extends fhir.BackboneElement implements 
     /**
      * Check if the current TestScriptMetadata contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestScriptMetadata from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestScriptMetadata): TestScriptMetadata;
+    static fromStrict(source: fhir.ITestScriptMetadata): TestScriptMetadata;
 }
 /**
  * Fixture in the test script - by reference (uri). All fixtures are required for the test script to execute.
@@ -756,11 +756,11 @@ export declare class TestScriptFixture extends fhir.BackboneElement implements f
     /**
      * Check if the current TestScriptFixture contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestScriptFixture from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestScriptFixture): TestScriptFixture;
+    static fromStrict(source: fhir.ITestScriptFixture): TestScriptFixture;
 }
 /**
  * Variables would be set based either on XPath/JSONPath expressions against fixtures (static and response), or headerField evaluations against response headers. If variable evaluates to nodelist or anything other than a primitive value, then test engine would report an error.  Variables would be used to perform clean replacements in "operation.params", "operation.requestHeader.value", and "operation.url" element values during operation calls and in "assert.value" during assertion evaluations. This limits the places that test engines would need to look for placeholders "${}".  Variables are scoped to the whole script. They are NOT evaluated at declaration. They are evaluated by test engine when used for substitutions in "operation.params", "operation.requestHeader.value", and "operation.url" element values during operation calls and in "assert.value" during assertion evaluations.  See example testscript-search.xml.
@@ -813,11 +813,11 @@ export declare class TestScriptVariable extends fhir.BackboneElement implements 
     /**
      * Check if the current TestScriptVariable contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestScriptVariable from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestScriptVariable): TestScriptVariable;
+    static fromStrict(source: fhir.ITestScriptVariable): TestScriptVariable;
 }
 /**
  * This gives control to test-script writers to set headers explicitly based on test requirements.  It will allow for testing using:  - "If-Modified-Since" and "If-None-Match" headers.  See http://build.fhir.org/http.html#2.1.0.5.1 - "If-Match" header.  See http://build.fhir.org/http.html#2.1.0.11 - Conditional Create using "If-None-Exist".  See http://build.fhir.org/http.html#2.1.0.13.1 - Invalid "Content-Type" header for negative testing. - etc.
@@ -840,11 +840,11 @@ export declare class TestScriptSetupActionOperationRequestHeader extends fhir.Ba
     /**
      * Check if the current TestScriptSetupActionOperationRequestHeader contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestScriptSetupActionOperationRequestHeader from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestScriptSetupActionOperationRequestHeader): TestScriptSetupActionOperationRequestHeader;
+    static fromStrict(source: fhir.ITestScriptSetupActionOperationRequestHeader): TestScriptSetupActionOperationRequestHeader;
 }
 /**
  * The operation to perform.
@@ -940,11 +940,11 @@ export declare class TestScriptSetupActionOperation extends fhir.BackboneElement
     /**
      * Check if the current TestScriptSetupActionOperation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestScriptSetupActionOperation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestScriptSetupActionOperation): TestScriptSetupActionOperation;
+    static fromStrict(source: fhir.ITestScriptSetupActionOperation): TestScriptSetupActionOperation;
 }
 /**
  * In order to evaluate an assertion, the request, response, and results of the most recently executed operation must always be maintained by the test engine.
@@ -1067,11 +1067,11 @@ export declare class TestScriptSetupActionAssert extends fhir.BackboneElement im
     /**
      * Check if the current TestScriptSetupActionAssert contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestScriptSetupActionAssert from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestScriptSetupActionAssert): TestScriptSetupActionAssert;
+    static fromStrict(source: fhir.ITestScriptSetupActionAssert): TestScriptSetupActionAssert;
 }
 /**
  * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
@@ -1092,11 +1092,11 @@ export declare class TestScriptSetupAction extends fhir.BackboneElement implemen
     /**
      * Check if the current TestScriptSetupAction contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestScriptSetupAction from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestScriptSetupAction): TestScriptSetupAction;
+    static fromStrict(source: fhir.ITestScriptSetupAction): TestScriptSetupAction;
 }
 /**
  * A series of required setup operations before tests are executed.
@@ -1113,11 +1113,11 @@ export declare class TestScriptSetup extends fhir.BackboneElement implements fhi
     /**
      * Check if the current TestScriptSetup contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestScriptSetup from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestScriptSetup): TestScriptSetup;
+    static fromStrict(source: fhir.ITestScriptSetup): TestScriptSetup;
 }
 /**
  * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
@@ -1138,11 +1138,11 @@ export declare class TestScriptTestAction extends fhir.BackboneElement implement
     /**
      * Check if the current TestScriptTestAction contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestScriptTestAction from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestScriptTestAction): TestScriptTestAction;
+    static fromStrict(source: fhir.ITestScriptTestAction): TestScriptTestAction;
 }
 /**
  * A test in this script.
@@ -1169,11 +1169,11 @@ export declare class TestScriptTest extends fhir.BackboneElement implements fhir
     /**
      * Check if the current TestScriptTest contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestScriptTest from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestScriptTest): TestScriptTest;
+    static fromStrict(source: fhir.ITestScriptTest): TestScriptTest;
 }
 /**
  * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
@@ -1190,11 +1190,11 @@ export declare class TestScriptTeardownAction extends fhir.BackboneElement imple
     /**
      * Check if the current TestScriptTeardownAction contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestScriptTeardownAction from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestScriptTeardownAction): TestScriptTeardownAction;
+    static fromStrict(source: fhir.ITestScriptTeardownAction): TestScriptTeardownAction;
 }
 /**
  * A series of operations required to clean up after all the tests are executed (successfully or otherwise).
@@ -1211,11 +1211,11 @@ export declare class TestScriptTeardown extends fhir.BackboneElement implements 
     /**
      * Check if the current TestScriptTeardown contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestScriptTeardown from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestScriptTeardown): TestScriptTeardown;
+    static fromStrict(source: fhir.ITestScriptTeardown): TestScriptTeardown;
 }
 /**
  * A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
@@ -1341,11 +1341,11 @@ export declare class TestScript extends fhir.DomainResource implements fhir.ITes
     /**
      * Check if the current TestScript contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestScript from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestScript): TestScript;
+    static fromStrict(source: fhir.ITestScript): TestScript;
 }
 /**
  * Code Values for the TestScript.setup.action.operation.method field

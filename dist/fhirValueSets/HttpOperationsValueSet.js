@@ -13,7 +13,7 @@ export const HttpOperationsValueSet = {
     /**
      * HTTP DELETE operation.
      */
-    http_operations_DELETE: Coding.FromStrict({
+    http_operations_DELETE: new Coding({
         code: "delete",
         display: "DELETE",
         system: "http://hl7.org/fhir/http-operations"
@@ -21,7 +21,7 @@ export const HttpOperationsValueSet = {
     /**
      * HTTP GET operation.
      */
-    http_operations_GET: Coding.FromStrict({
+    http_operations_GET: new Coding({
         code: "get",
         display: "GET",
         system: "http://hl7.org/fhir/http-operations"
@@ -29,7 +29,7 @@ export const HttpOperationsValueSet = {
     /**
      * HTTP HEAD operation.
      */
-    http_operations_HEAD: Coding.FromStrict({
+    http_operations_HEAD: new Coding({
         code: "head",
         display: "HEAD",
         system: "http://hl7.org/fhir/http-operations"
@@ -37,7 +37,7 @@ export const HttpOperationsValueSet = {
     /**
      * HTTP OPTIONS operation.
      */
-    http_operations_OPTIONS: Coding.FromStrict({
+    http_operations_OPTIONS: new Coding({
         code: "options",
         display: "OPTIONS",
         system: "http://hl7.org/fhir/http-operations"
@@ -45,7 +45,7 @@ export const HttpOperationsValueSet = {
     /**
      * HTTP PATCH operation.
      */
-    http_operations_PATCH: Coding.FromStrict({
+    http_operations_PATCH: new Coding({
         code: "patch",
         display: "PATCH",
         system: "http://hl7.org/fhir/http-operations"
@@ -53,7 +53,7 @@ export const HttpOperationsValueSet = {
     /**
      * HTTP POST operation.
      */
-    http_operations_POST: Coding.FromStrict({
+    http_operations_POST: new Coding({
         code: "post",
         display: "POST",
         system: "http://hl7.org/fhir/http-operations"
@@ -61,7 +61,7 @@ export const HttpOperationsValueSet = {
     /**
      * HTTP PUT operation.
      */
-    http_operations_PUT: Coding.FromStrict({
+    http_operations_PUT: new Coding({
         code: "put",
         display: "PUT",
         system: "http://hl7.org/fhir/http-operations"

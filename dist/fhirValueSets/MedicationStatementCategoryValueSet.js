@@ -13,7 +13,7 @@ export const MedicationStatementCategoryValueSet = {
     /**
      * Includes orders for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.).
      */
-    medication_statement_category_Community: Coding.FromStrict({
+    medication_statement_category_Community: new Coding({
         code: "community",
         display: "Community",
         system: "http://terminology.hl7.org/CodeSystem/medication-statement-category"
@@ -21,7 +21,7 @@ export const MedicationStatementCategoryValueSet = {
     /**
      * Includes orders for medications to be administered or consumed in an inpatient or acute care setting
      */
-    medication_statement_category_Inpatient: Coding.FromStrict({
+    medication_statement_category_Inpatient: new Coding({
         code: "inpatient",
         display: "Inpatient",
         system: "http://terminology.hl7.org/CodeSystem/medication-statement-category"
@@ -29,7 +29,7 @@ export const MedicationStatementCategoryValueSet = {
     /**
      * Includes orders for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office)
      */
-    medication_statement_category_Outpatient: Coding.FromStrict({
+    medication_statement_category_Outpatient: new Coding({
         code: "outpatient",
         display: "Outpatient",
         system: "http://terminology.hl7.org/CodeSystem/medication-statement-category"
@@ -37,7 +37,7 @@ export const MedicationStatementCategoryValueSet = {
     /**
      * Includes statements about medication use, including over the counter medication, provided by the patient, agent or another provider
      */
-    medication_statement_category_PatientSpecified: Coding.FromStrict({
+    medication_statement_category_PatientSpecified: new Coding({
         code: "patientspecified",
         display: "Patient Specified",
         system: "http://terminology.hl7.org/CodeSystem/medication-statement-category"

@@ -242,20 +242,20 @@ export class MedicinalProductNameNamePart extends fhir.BackboneElement implement
   /**
    * Check if the current MedicinalProductNameNamePart contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["part"] === undefined) { missingElements.push("part"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicinalProductNameNamePart from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicinalProductNameNamePart):MedicinalProductNameNamePart {
+  static override fromStrict(source:fhir.IMedicinalProductNameNamePart):MedicinalProductNameNamePart {
     var dest:MedicinalProductNameNamePart = new MedicinalProductNameNamePart(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicinalProductNameNamePart is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -292,20 +292,20 @@ export class MedicinalProductNameCountryLanguage extends fhir.BackboneElement im
   /**
    * Check if the current MedicinalProductNameCountryLanguage contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["country"] === undefined) { missingElements.push("country"); }
     if (this["language"] === undefined) { missingElements.push("language"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicinalProductNameCountryLanguage from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicinalProductNameCountryLanguage):MedicinalProductNameCountryLanguage {
+  static override fromStrict(source:fhir.IMedicinalProductNameCountryLanguage):MedicinalProductNameCountryLanguage {
     var dest:MedicinalProductNameCountryLanguage = new MedicinalProductNameCountryLanguage(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicinalProductNameCountryLanguage is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -342,19 +342,19 @@ export class MedicinalProductName extends fhir.BackboneElement implements fhir.I
   /**
    * Check if the current MedicinalProductName contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["productName"] === undefined) { missingElements.push("productName"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicinalProductName from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicinalProductName):MedicinalProductName {
+  static override fromStrict(source:fhir.IMedicinalProductName):MedicinalProductName {
     var dest:MedicinalProductName = new MedicinalProductName(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicinalProductName is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -404,18 +404,18 @@ export class MedicinalProductManufacturingBusinessOperation extends fhir.Backbon
   /**
    * Check if the current MedicinalProductManufacturingBusinessOperation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicinalProductManufacturingBusinessOperation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicinalProductManufacturingBusinessOperation):MedicinalProductManufacturingBusinessOperation {
+  static override fromStrict(source:fhir.IMedicinalProductManufacturingBusinessOperation):MedicinalProductManufacturingBusinessOperation {
     var dest:MedicinalProductManufacturingBusinessOperation = new MedicinalProductManufacturingBusinessOperation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicinalProductManufacturingBusinessOperation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -475,18 +475,18 @@ export class MedicinalProductSpecialDesignation extends fhir.BackboneElement imp
   /**
    * Check if the current MedicinalProductSpecialDesignation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicinalProductSpecialDesignation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicinalProductSpecialDesignation):MedicinalProductSpecialDesignation {
+  static override fromStrict(source:fhir.IMedicinalProductSpecialDesignation):MedicinalProductSpecialDesignation {
     var dest:MedicinalProductSpecialDesignation = new MedicinalProductSpecialDesignation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicinalProductSpecialDesignation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -613,19 +613,19 @@ export class MedicinalProduct extends fhir.DomainResource implements fhir.IMedic
   /**
    * Check if the current MedicinalProduct contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["name"]) || (this["name"].length === 0)) { missingElements.push("name"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicinalProduct from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicinalProduct):MedicinalProduct {
+  static override fromStrict(source:fhir.IMedicinalProduct):MedicinalProduct {
     var dest:MedicinalProduct = new MedicinalProduct(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicinalProduct is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

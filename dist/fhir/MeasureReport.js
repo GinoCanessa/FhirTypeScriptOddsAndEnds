@@ -31,18 +31,18 @@ export class MeasureReportGroupPopulation extends fhir.BackboneElement {
     /**
      * Check if the current MeasureReportGroupPopulation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MeasureReportGroupPopulation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MeasureReportGroupPopulation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MeasureReportGroupPopulation is missing elements: ${missingElements.join(", ")}`;
         }
@@ -76,7 +76,7 @@ export class MeasureReportGroupStratifierStratumComponent extends fhir.BackboneE
     /**
      * Check if the current MeasureReportGroupStratifierStratumComponent contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["code"] === undefined) {
             missingElements.push("code");
@@ -84,16 +84,16 @@ export class MeasureReportGroupStratifierStratumComponent extends fhir.BackboneE
         if (this["value"] === undefined) {
             missingElements.push("value");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MeasureReportGroupStratifierStratumComponent from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MeasureReportGroupStratifierStratumComponent(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MeasureReportGroupStratifierStratumComponent is missing elements: ${missingElements.join(", ")}`;
         }
@@ -125,18 +125,18 @@ export class MeasureReportGroupStratifierStratumPopulation extends fhir.Backbone
     /**
      * Check if the current MeasureReportGroupStratifierStratumPopulation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MeasureReportGroupStratifierStratumPopulation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MeasureReportGroupStratifierStratumPopulation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MeasureReportGroupStratifierStratumPopulation is missing elements: ${missingElements.join(", ")}`;
         }
@@ -168,18 +168,18 @@ export class MeasureReportGroupStratifierStratum extends fhir.BackboneElement {
     /**
      * Check if the current MeasureReportGroupStratifierStratum contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MeasureReportGroupStratifierStratum from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MeasureReportGroupStratifierStratum(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MeasureReportGroupStratifierStratum is missing elements: ${missingElements.join(", ")}`;
         }
@@ -205,18 +205,18 @@ export class MeasureReportGroupStratifier extends fhir.BackboneElement {
     /**
      * Check if the current MeasureReportGroupStratifier contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MeasureReportGroupStratifier from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MeasureReportGroupStratifier(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MeasureReportGroupStratifier is missing elements: ${missingElements.join(", ")}`;
         }
@@ -248,18 +248,18 @@ export class MeasureReportGroup extends fhir.BackboneElement {
     /**
      * Check if the current MeasureReportGroup contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MeasureReportGroup from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MeasureReportGroup(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MeasureReportGroup is missing elements: ${missingElements.join(", ")}`;
         }
@@ -341,7 +341,7 @@ export class MeasureReport extends fhir.DomainResource {
     /**
      * Check if the current MeasureReport contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["measure"] === undefined) {
             missingElements.push("measure");
@@ -355,16 +355,16 @@ export class MeasureReport extends fhir.DomainResource {
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MeasureReport from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MeasureReport(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MeasureReport is missing elements: ${missingElements.join(", ")}`;
         }

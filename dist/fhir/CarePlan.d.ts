@@ -326,11 +326,11 @@ export declare class CarePlanActivityDetail extends fhir.BackboneElement impleme
     /**
      * Check if the current CarePlanActivityDetail contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CarePlanActivityDetail from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICarePlanActivityDetail): CarePlanActivityDetail;
+    static fromStrict(source: fhir.ICarePlanActivityDetail): CarePlanActivityDetail;
 }
 /**
  * Identifies a planned action to occur as part of the plan.  For example, a medication to be used, lab tests to perform, self-monitoring, education, etc.
@@ -364,11 +364,11 @@ export declare class CarePlanActivity extends fhir.BackboneElement implements fh
     /**
      * Check if the current CarePlanActivity contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CarePlanActivity from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICarePlanActivity): CarePlanActivity;
+    static fromStrict(source: fhir.ICarePlanActivity): CarePlanActivity;
 }
 /**
  * Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions.
@@ -485,11 +485,11 @@ export declare class CarePlan extends fhir.DomainResource implements fhir.ICareP
     /**
      * Check if the current CarePlan contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CarePlan from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICarePlan): CarePlan;
+    static fromStrict(source: fhir.ICarePlan): CarePlan;
 }
 /**
  * Code Values for the CarePlan.activity.detail.kind field

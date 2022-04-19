@@ -13,7 +13,7 @@ export const AdverseEventSeriousnessValueSet = {
   /**
    * Non-serious.
    */
-  adverse_event_seriousness_NonSerious: Coding.FromStrict({
+  adverse_event_seriousness_NonSerious: new Coding({
     code: "Non-serious",
     display: "Non-serious",
     system: "http://terminology.hl7.org/CodeSystem/adverse-event-seriousness"
@@ -21,7 +21,7 @@ export const AdverseEventSeriousnessValueSet = {
   /**
    * Serious.
    */
-  adverse_event_seriousness_Serious: Coding.FromStrict({
+  adverse_event_seriousness_Serious: new Coding({
     code: "Serious",
     display: "Serious",
     system: "http://terminology.hl7.org/CodeSystem/adverse-event-seriousness"
@@ -29,7 +29,7 @@ export const AdverseEventSeriousnessValueSet = {
   /**
    * Is a congenital anomaly/birth defect.
    */
-  adverse_event_seriousness_IsACongenitalAnomalyBirthDefect: Coding.FromStrict({
+  adverse_event_seriousness_IsACongenitalAnomalyBirthDefect: new Coding({
     code: "SeriousIsBirthDefect",
     display: "Is a congenital anomaly/birth defect",
     system: "http://terminology.hl7.org/CodeSystem/adverse-event-seriousness"
@@ -37,7 +37,7 @@ export const AdverseEventSeriousnessValueSet = {
   /**
    * Is Life-threatening.
    */
-  adverse_event_seriousness_IsLifeThreatening: Coding.FromStrict({
+  adverse_event_seriousness_IsLifeThreatening: new Coding({
     code: "SeriousIsLifeThreatening",
     display: "Is Life-threatening",
     system: "http://terminology.hl7.org/CodeSystem/adverse-event-seriousness"
@@ -45,7 +45,7 @@ export const AdverseEventSeriousnessValueSet = {
   /**
    * Requires intervention to prevent permanent impairment or damage (i.e., an important medical event that requires medical judgement).
    */
-  adverse_event_seriousness_RequiresInterventionToPreventPermanentImpairment: Coding.FromStrict({
+  adverse_event_seriousness_RequiresInterventionToPreventPermanentImpairment: new Coding({
     code: "SeriousRequiresPreventImpairment",
     display: "Requires intervention to prevent permanent impairment",
     system: "http://terminology.hl7.org/CodeSystem/adverse-event-seriousness"
@@ -53,7 +53,7 @@ export const AdverseEventSeriousnessValueSet = {
   /**
    * Results in death.
    */
-  adverse_event_seriousness_ResultsInDeath: Coding.FromStrict({
+  adverse_event_seriousness_ResultsInDeath: new Coding({
     code: "SeriousResultsInDeath",
     display: "Results in death",
     system: "http://terminology.hl7.org/CodeSystem/adverse-event-seriousness"
@@ -61,7 +61,7 @@ export const AdverseEventSeriousnessValueSet = {
   /**
    * Results in persistent or significant disability/incapacity.
    */
-  adverse_event_seriousness_ResultsInPersistentOrSignificantDisabilityIncapacity: Coding.FromStrict({
+  adverse_event_seriousness_ResultsInPersistentOrSignificantDisabilityIncapacity: new Coding({
     code: "SeriousResultsInDisability",
     display: "Results in persistent or significant disability/incapacity",
     system: "http://terminology.hl7.org/CodeSystem/adverse-event-seriousness"
@@ -69,7 +69,7 @@ export const AdverseEventSeriousnessValueSet = {
   /**
    * Requires inpatient hospitalization or causes prolongation of existing hospitalization.
    */
-  adverse_event_seriousness_RequiresOrProlongsInpatientHospitalization: Coding.FromStrict({
+  adverse_event_seriousness_RequiresOrProlongsInpatientHospitalization: new Coding({
     code: "SeriousResultsInHospitalization",
     display: "Requires or prolongs inpatient hospitalization",
     system: "http://terminology.hl7.org/CodeSystem/adverse-event-seriousness"

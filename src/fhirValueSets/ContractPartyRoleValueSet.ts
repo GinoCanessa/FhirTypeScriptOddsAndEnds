@@ -13,7 +13,7 @@ export const ContractPartyRoleValueSet = {
   /**
    * To be completed
    */
-  contract_party_role_FLunky: Coding.FromStrict({
+  contract_party_role_FLunky: new Coding({
     code: "flunky",
     display: "FLunky",
     system: "http://hl7.org/fhir/contract-party-role"

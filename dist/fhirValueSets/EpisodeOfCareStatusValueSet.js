@@ -13,7 +13,7 @@ export const EpisodeOfCareStatusValueSet = {
     /**
      * This episode of care is current.
      */
-    episode_of_care_status_Active: Coding.FromStrict({
+    episode_of_care_status_Active: new Coding({
         code: "active",
         display: "Active",
         system: "http://hl7.org/fhir/episode-of-care-status"
@@ -21,7 +21,7 @@ export const EpisodeOfCareStatusValueSet = {
     /**
      * The episode of care was cancelled, or withdrawn from service, often selected during the planned stage as the patient may have gone elsewhere, or the circumstances have changed and the organization is unable to provide the care. It indicates that services terminated outside the planned/expected workflow.
      */
-    episode_of_care_status_Cancelled: Coding.FromStrict({
+    episode_of_care_status_Cancelled: new Coding({
         code: "cancelled",
         display: "Cancelled",
         system: "http://hl7.org/fhir/episode-of-care-status"
@@ -29,7 +29,7 @@ export const EpisodeOfCareStatusValueSet = {
     /**
      * This instance should not have been part of this patient's medical record.
      */
-    episode_of_care_status_EnteredInError: Coding.FromStrict({
+    episode_of_care_status_EnteredInError: new Coding({
         code: "entered-in-error",
         display: "Entered in Error",
         system: "http://hl7.org/fhir/episode-of-care-status"
@@ -37,7 +37,7 @@ export const EpisodeOfCareStatusValueSet = {
     /**
      * This episode of care is finished and the organization is not expecting to be providing further care to the patient. Can also be known as "closed", "completed" or other similar terms.
      */
-    episode_of_care_status_Finished: Coding.FromStrict({
+    episode_of_care_status_Finished: new Coding({
         code: "finished",
         display: "Finished",
         system: "http://hl7.org/fhir/episode-of-care-status"
@@ -45,7 +45,7 @@ export const EpisodeOfCareStatusValueSet = {
     /**
      * This episode of care is on hold; the organization has limited responsibility for the patient (such as while on respite).
      */
-    episode_of_care_status_OnHold: Coding.FromStrict({
+    episode_of_care_status_OnHold: new Coding({
         code: "onhold",
         display: "On Hold",
         system: "http://hl7.org/fhir/episode-of-care-status"
@@ -53,7 +53,7 @@ export const EpisodeOfCareStatusValueSet = {
     /**
      * This episode of care is planned to start at the date specified in the period.start. During this status, an organization may perform assessments to determine if the patient is eligible to receive services, or be organizing to make resources available to provide care services.
      */
-    episode_of_care_status_Planned: Coding.FromStrict({
+    episode_of_care_status_Planned: new Coding({
         code: "planned",
         display: "Planned",
         system: "http://hl7.org/fhir/episode-of-care-status"
@@ -61,7 +61,7 @@ export const EpisodeOfCareStatusValueSet = {
     /**
      * This episode has been placed on a waitlist, pending the episode being made active (or cancelled).
      */
-    episode_of_care_status_Waitlist: Coding.FromStrict({
+    episode_of_care_status_Waitlist: new Coding({
         code: "waitlist",
         display: "Waitlist",
         system: "http://hl7.org/fhir/episode-of-care-status"

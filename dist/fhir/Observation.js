@@ -40,18 +40,18 @@ export class ObservationReferenceRange extends fhir.BackboneElement {
     /**
      * Check if the current ObservationReferenceRange contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ObservationReferenceRange from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ObservationReferenceRange(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ObservationReferenceRange is missing elements: ${missingElements.join(", ")}`;
         }
@@ -135,21 +135,21 @@ export class ObservationComponent extends fhir.BackboneElement {
     /**
      * Check if the current ObservationComponent contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["code"] === undefined) {
             missingElements.push("code");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ObservationComponent from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ObservationComponent(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ObservationComponent is missing elements: ${missingElements.join(", ")}`;
         }
@@ -316,7 +316,7 @@ export class Observation extends fhir.DomainResource {
     /**
      * Check if the current Observation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["code"] === undefined) {
             missingElements.push("code");
@@ -324,16 +324,16 @@ export class Observation extends fhir.DomainResource {
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a Observation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new Observation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `Observation is missing elements: ${missingElements.join(", ")}`;
         }

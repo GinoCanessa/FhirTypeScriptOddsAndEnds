@@ -277,20 +277,20 @@ export class OperationDefinitionParameterBinding extends fhir.BackboneElement im
   /**
    * Check if the current OperationDefinitionParameterBinding contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["strength"] === undefined) { missingElements.push("strength"); }
     if (this["valueSet"] === undefined) { missingElements.push("valueSet"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a OperationDefinitionParameterBinding from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IOperationDefinitionParameterBinding):OperationDefinitionParameterBinding {
+  static override fromStrict(source:fhir.IOperationDefinitionParameterBinding):OperationDefinitionParameterBinding {
     var dest:OperationDefinitionParameterBinding = new OperationDefinitionParameterBinding(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `OperationDefinitionParameterBinding is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -324,19 +324,19 @@ export class OperationDefinitionParameterReferencedFrom extends fhir.BackboneEle
   /**
    * Check if the current OperationDefinitionParameterReferencedFrom contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["source"] === undefined) { missingElements.push("source"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a OperationDefinitionParameterReferencedFrom from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IOperationDefinitionParameterReferencedFrom):OperationDefinitionParameterReferencedFrom {
+  static override fromStrict(source:fhir.IOperationDefinitionParameterReferencedFrom):OperationDefinitionParameterReferencedFrom {
     var dest:OperationDefinitionParameterReferencedFrom = new OperationDefinitionParameterReferencedFrom(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `OperationDefinitionParameterReferencedFrom is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -433,22 +433,22 @@ export class OperationDefinitionParameter extends fhir.BackboneElement implement
   /**
    * Check if the current OperationDefinitionParameter contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["max"] === undefined) { missingElements.push("max"); }
     if (this["min"] === undefined) { missingElements.push("min"); }
     if (this["name"] === undefined) { missingElements.push("name"); }
     if (this["use"] === undefined) { missingElements.push("use"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a OperationDefinitionParameter from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IOperationDefinitionParameter):OperationDefinitionParameter {
+  static override fromStrict(source:fhir.IOperationDefinitionParameter):OperationDefinitionParameter {
     var dest:OperationDefinitionParameter = new OperationDefinitionParameter(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `OperationDefinitionParameter is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -480,18 +480,18 @@ export class OperationDefinitionOverload extends fhir.BackboneElement implements
   /**
    * Check if the current OperationDefinitionOverload contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a OperationDefinitionOverload from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IOperationDefinitionOverload):OperationDefinitionOverload {
+  static override fromStrict(source:fhir.IOperationDefinitionOverload):OperationDefinitionOverload {
     var dest:OperationDefinitionOverload = new OperationDefinitionOverload(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `OperationDefinitionOverload is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -704,7 +704,7 @@ export class OperationDefinition extends fhir.DomainResource implements fhir.IOp
   /**
    * Check if the current OperationDefinition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
     if (this["instance"] === undefined) { missingElements.push("instance"); }
@@ -713,16 +713,16 @@ export class OperationDefinition extends fhir.DomainResource implements fhir.IOp
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["system"] === undefined) { missingElements.push("system"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a OperationDefinition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IOperationDefinition):OperationDefinition {
+  static override fromStrict(source:fhir.IOperationDefinition):OperationDefinition {
     var dest:OperationDefinition = new OperationDefinition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `OperationDefinition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

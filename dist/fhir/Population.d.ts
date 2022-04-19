@@ -55,10 +55,10 @@ export declare class Population extends fhir.BackboneElement implements fhir.IPo
     /**
      * Check if the current Population contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Population from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPopulation): Population;
+    static fromStrict(source: fhir.IPopulation): Population;
 }
 //# sourceMappingURL=Population.d.ts.map

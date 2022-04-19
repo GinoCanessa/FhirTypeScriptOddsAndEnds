@@ -13,7 +13,7 @@ export const ServiceReferralMethodValueSet = {
     /**
      * Referrals may be accepted via a secure messaging system. To determine the types of secure messaging systems supported, refer to the identifiers collection. Callers will need to understand the specific identifier system used to know that they are able to transmit messages.
      */
-    service_referral_method_SecureMessaging: Coding.FromStrict({
+    service_referral_method_SecureMessaging: new Coding({
         code: "elec",
         display: "Secure Messaging",
         system: "http://terminology.hl7.org/CodeSystem/service-referral-method"
@@ -21,7 +21,7 @@ export const ServiceReferralMethodValueSet = {
     /**
      * Referrals may be accepted by fax.
      */
-    service_referral_method_Fax: Coding.FromStrict({
+    service_referral_method_Fax: new Coding({
         code: "fax",
         display: "Fax",
         system: "http://terminology.hl7.org/CodeSystem/service-referral-method"
@@ -29,7 +29,7 @@ export const ServiceReferralMethodValueSet = {
     /**
      * Referrals may be accepted via regular postage (or hand delivered).
      */
-    service_referral_method_Mail: Coding.FromStrict({
+    service_referral_method_Mail: new Coding({
         code: "mail",
         display: "Mail",
         system: "http://terminology.hl7.org/CodeSystem/service-referral-method"
@@ -37,7 +37,7 @@ export const ServiceReferralMethodValueSet = {
     /**
      * Referrals may be accepted over the phone from a practitioner.
      */
-    service_referral_method_Phone: Coding.FromStrict({
+    service_referral_method_Phone: new Coding({
         code: "phone",
         display: "Phone",
         system: "http://terminology.hl7.org/CodeSystem/service-referral-method"
@@ -45,7 +45,7 @@ export const ServiceReferralMethodValueSet = {
     /**
      * Referrals may be accepted via a secure email. To send please encrypt with the services public key.
      */
-    service_referral_method_SecureEmail: Coding.FromStrict({
+    service_referral_method_SecureEmail: new Coding({
         code: "semail",
         display: "Secure Email",
         system: "http://terminology.hl7.org/CodeSystem/service-referral-method"

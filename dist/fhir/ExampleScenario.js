@@ -51,7 +51,7 @@ export class ExampleScenarioActor extends fhir.BackboneElement {
     /**
      * Check if the current ExampleScenarioActor contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["actorId"] === undefined) {
             missingElements.push("actorId");
@@ -59,16 +59,16 @@ export class ExampleScenarioActor extends fhir.BackboneElement {
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ExampleScenarioActor from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ExampleScenarioActor(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ExampleScenarioActor is missing elements: ${missingElements.join(", ")}`;
         }
@@ -108,7 +108,7 @@ export class ExampleScenarioInstanceVersion extends fhir.BackboneElement {
     /**
      * Check if the current ExampleScenarioInstanceVersion contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["description"] === undefined) {
             missingElements.push("description");
@@ -116,16 +116,16 @@ export class ExampleScenarioInstanceVersion extends fhir.BackboneElement {
         if (this["versionId"] === undefined) {
             missingElements.push("versionId");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ExampleScenarioInstanceVersion from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ExampleScenarioInstanceVersion(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ExampleScenarioInstanceVersion is missing elements: ${missingElements.join(", ")}`;
         }
@@ -161,21 +161,21 @@ export class ExampleScenarioInstanceContainedInstance extends fhir.BackboneEleme
     /**
      * Check if the current ExampleScenarioInstanceContainedInstance contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["resourceId"] === undefined) {
             missingElements.push("resourceId");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ExampleScenarioInstanceContainedInstance from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ExampleScenarioInstanceContainedInstance(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ExampleScenarioInstanceContainedInstance is missing elements: ${missingElements.join(", ")}`;
         }
@@ -233,7 +233,7 @@ export class ExampleScenarioInstance extends fhir.BackboneElement {
     /**
      * Check if the current ExampleScenarioInstance contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["resourceId"] === undefined) {
             missingElements.push("resourceId");
@@ -241,16 +241,16 @@ export class ExampleScenarioInstance extends fhir.BackboneElement {
         if (this["resourceType"] === undefined) {
             missingElements.push("resourceType");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ExampleScenarioInstance from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ExampleScenarioInstance(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ExampleScenarioInstance is missing elements: ${missingElements.join(", ")}`;
         }
@@ -328,21 +328,21 @@ export class ExampleScenarioProcessStepOperation extends fhir.BackboneElement {
     /**
      * Check if the current ExampleScenarioProcessStepOperation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["number"] === undefined) {
             missingElements.push("number");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ExampleScenarioProcessStepOperation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ExampleScenarioProcessStepOperation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ExampleScenarioProcessStepOperation is missing elements: ${missingElements.join(", ")}`;
         }
@@ -381,21 +381,21 @@ export class ExampleScenarioProcessStepAlternative extends fhir.BackboneElement 
     /**
      * Check if the current ExampleScenarioProcessStepAlternative contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["title"] === undefined) {
             missingElements.push("title");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ExampleScenarioProcessStepAlternative from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ExampleScenarioProcessStepAlternative(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ExampleScenarioProcessStepAlternative is missing elements: ${missingElements.join(", ")}`;
         }
@@ -430,18 +430,18 @@ export class ExampleScenarioProcessStep extends fhir.BackboneElement {
     /**
      * Check if the current ExampleScenarioProcessStep contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ExampleScenarioProcessStep from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ExampleScenarioProcessStep(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ExampleScenarioProcessStep is missing elements: ${missingElements.join(", ")}`;
         }
@@ -492,21 +492,21 @@ export class ExampleScenarioProcess extends fhir.BackboneElement {
     /**
      * Check if the current ExampleScenarioProcess contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["title"] === undefined) {
             missingElements.push("title");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ExampleScenarioProcess from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ExampleScenarioProcess(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ExampleScenarioProcess is missing elements: ${missingElements.join(", ")}`;
         }
@@ -612,21 +612,21 @@ export class ExampleScenario extends fhir.DomainResource {
     /**
      * Check if the current ExampleScenario contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ExampleScenario from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ExampleScenario(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ExampleScenario is missing elements: ${missingElements.join(", ")}`;
         }

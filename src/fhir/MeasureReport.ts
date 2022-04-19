@@ -197,18 +197,18 @@ export class MeasureReportGroupPopulation extends fhir.BackboneElement implement
   /**
    * Check if the current MeasureReportGroupPopulation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MeasureReportGroupPopulation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMeasureReportGroupPopulation):MeasureReportGroupPopulation {
+  static override fromStrict(source:fhir.IMeasureReportGroupPopulation):MeasureReportGroupPopulation {
     var dest:MeasureReportGroupPopulation = new MeasureReportGroupPopulation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MeasureReportGroupPopulation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -240,20 +240,20 @@ export class MeasureReportGroupStratifierStratumComponent extends fhir.BackboneE
   /**
    * Check if the current MeasureReportGroupStratifierStratumComponent contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
     if (this["value"] === undefined) { missingElements.push("value"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MeasureReportGroupStratifierStratumComponent from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMeasureReportGroupStratifierStratumComponent):MeasureReportGroupStratifierStratumComponent {
+  static override fromStrict(source:fhir.IMeasureReportGroupStratifierStratumComponent):MeasureReportGroupStratifierStratumComponent {
     var dest:MeasureReportGroupStratifierStratumComponent = new MeasureReportGroupStratifierStratumComponent(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MeasureReportGroupStratifierStratumComponent is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -288,18 +288,18 @@ export class MeasureReportGroupStratifierStratumPopulation extends fhir.Backbone
   /**
    * Check if the current MeasureReportGroupStratifierStratumPopulation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MeasureReportGroupStratifierStratumPopulation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMeasureReportGroupStratifierStratumPopulation):MeasureReportGroupStratifierStratumPopulation {
+  static override fromStrict(source:fhir.IMeasureReportGroupStratifierStratumPopulation):MeasureReportGroupStratifierStratumPopulation {
     var dest:MeasureReportGroupStratifierStratumPopulation = new MeasureReportGroupStratifierStratumPopulation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MeasureReportGroupStratifierStratumPopulation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -337,18 +337,18 @@ export class MeasureReportGroupStratifierStratum extends fhir.BackboneElement im
   /**
    * Check if the current MeasureReportGroupStratifierStratum contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MeasureReportGroupStratifierStratum from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMeasureReportGroupStratifierStratum):MeasureReportGroupStratifierStratum {
+  static override fromStrict(source:fhir.IMeasureReportGroupStratifierStratum):MeasureReportGroupStratifierStratum {
     var dest:MeasureReportGroupStratifierStratum = new MeasureReportGroupStratifierStratum(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MeasureReportGroupStratifierStratum is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -376,18 +376,18 @@ export class MeasureReportGroupStratifier extends fhir.BackboneElement implement
   /**
    * Check if the current MeasureReportGroupStratifier contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MeasureReportGroupStratifier from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMeasureReportGroupStratifier):MeasureReportGroupStratifier {
+  static override fromStrict(source:fhir.IMeasureReportGroupStratifier):MeasureReportGroupStratifier {
     var dest:MeasureReportGroupStratifier = new MeasureReportGroupStratifier(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MeasureReportGroupStratifier is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -425,18 +425,18 @@ export class MeasureReportGroup extends fhir.BackboneElement implements fhir.IMe
   /**
    * Check if the current MeasureReportGroup contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MeasureReportGroup from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMeasureReportGroup):MeasureReportGroup {
+  static override fromStrict(source:fhir.IMeasureReportGroup):MeasureReportGroup {
     var dest:MeasureReportGroup = new MeasureReportGroup(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MeasureReportGroup is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -530,22 +530,22 @@ export class MeasureReport extends fhir.DomainResource implements fhir.IMeasureR
   /**
    * Check if the current MeasureReport contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["measure"] === undefined) { missingElements.push("measure"); }
     if (this["period"] === undefined) { missingElements.push("period"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MeasureReport from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMeasureReport):MeasureReport {
+  static override fromStrict(source:fhir.IMeasureReport):MeasureReport {
     var dest:MeasureReport = new MeasureReport(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MeasureReport is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

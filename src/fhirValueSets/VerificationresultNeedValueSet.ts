@@ -13,7 +13,7 @@ export const VerificationresultNeedValueSet = {
   /**
    * ***TODO***
    */
-  verificationresult_need_Initial: Coding.FromStrict({
+  verificationresult_need_Initial: new Coding({
     code: "initial",
     display: "Initial",
     system: "http://terminology.hl7.org/CodeSystem/need"
@@ -21,7 +21,7 @@ export const VerificationresultNeedValueSet = {
   /**
    * ***TODO***
    */
-  verificationresult_need_None: Coding.FromStrict({
+  verificationresult_need_None: new Coding({
     code: "none",
     display: "None",
     system: "http://terminology.hl7.org/CodeSystem/need"
@@ -29,7 +29,7 @@ export const VerificationresultNeedValueSet = {
   /**
    * ***TODO***
    */
-  verificationresult_need_Periodic: Coding.FromStrict({
+  verificationresult_need_Periodic: new Coding({
     code: "periodic",
     display: "Periodic",
     system: "http://terminology.hl7.org/CodeSystem/need"

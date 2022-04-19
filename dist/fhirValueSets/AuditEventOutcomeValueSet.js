@@ -13,7 +13,7 @@ export const AuditEventOutcomeValueSet = {
     /**
      * The operation completed successfully (whether with warnings or not).
      */
-    audit_event_outcome_Success: Coding.FromStrict({
+    audit_event_outcome_Success: new Coding({
         code: "0",
         display: "Success",
         system: "http://hl7.org/fhir/audit-event-outcome"
@@ -21,7 +21,7 @@ export const AuditEventOutcomeValueSet = {
     /**
      * An error of such magnitude occurred that the system is no longer available for use (i.e. the system died).
      */
-    audit_event_outcome_MajorFailure: Coding.FromStrict({
+    audit_event_outcome_MajorFailure: new Coding({
         code: "12",
         display: "Major failure",
         system: "http://hl7.org/fhir/audit-event-outcome"
@@ -29,7 +29,7 @@ export const AuditEventOutcomeValueSet = {
     /**
      * The action was not successful due to some kind of minor failure (often equivalent to an HTTP 400 response).
      */
-    audit_event_outcome_MinorFailure: Coding.FromStrict({
+    audit_event_outcome_MinorFailure: new Coding({
         code: "4",
         display: "Minor failure",
         system: "http://hl7.org/fhir/audit-event-outcome"
@@ -37,7 +37,7 @@ export const AuditEventOutcomeValueSet = {
     /**
      * The action was not successful due to some kind of unexpected error (often equivalent to an HTTP 500 response).
      */
-    audit_event_outcome_SeriousFailure: Coding.FromStrict({
+    audit_event_outcome_SeriousFailure: new Coding({
         code: "8",
         display: "Serious failure",
         system: "http://hl7.org/fhir/audit-event-outcome"

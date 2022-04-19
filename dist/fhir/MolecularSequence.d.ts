@@ -418,11 +418,11 @@ export declare class MolecularSequenceReferenceSeq extends fhir.BackboneElement 
     /**
      * Check if the current MolecularSequenceReferenceSeq contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MolecularSequenceReferenceSeq from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMolecularSequenceReferenceSeq): MolecularSequenceReferenceSeq;
+    static fromStrict(source: fhir.IMolecularSequenceReferenceSeq): MolecularSequenceReferenceSeq;
 }
 /**
  * The definition of variant here originates from Sequence ontology ([variant_of](http://www.sequenceontology.org/browser/current_svn/term/variant_of)). This element can represent amino acid or nucleic sequence change(including insertion,deletion,SNP,etc.)  It can represent some complex mutation or segment variation with the assist of CIGAR string.
@@ -464,11 +464,11 @@ export declare class MolecularSequenceVariant extends fhir.BackboneElement imple
     /**
      * Check if the current MolecularSequenceVariant contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MolecularSequenceVariant from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMolecularSequenceVariant): MolecularSequenceVariant;
+    static fromStrict(source: fhir.IMolecularSequenceVariant): MolecularSequenceVariant;
 }
 /**
  * Receiver Operator Characteristic (ROC) Curve  to give sensitivity/specificity tradeoff.
@@ -516,11 +516,11 @@ export declare class MolecularSequenceQualityRoc extends fhir.BackboneElement im
     /**
      * Check if the current MolecularSequenceQualityRoc contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MolecularSequenceQualityRoc from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMolecularSequenceQualityRoc): MolecularSequenceQualityRoc;
+    static fromStrict(source: fhir.IMolecularSequenceQualityRoc): MolecularSequenceQualityRoc;
 }
 /**
  * An experimental feature attribute that defines the quality of the feature in a quantitative way, such as a phred quality score ([SO:0001686](http://www.sequenceontology.org/browser/current_svn/term/SO:0001686)).
@@ -604,11 +604,11 @@ export declare class MolecularSequenceQuality extends fhir.BackboneElement imple
     /**
      * Check if the current MolecularSequenceQuality contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MolecularSequenceQuality from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMolecularSequenceQuality): MolecularSequenceQuality;
+    static fromStrict(source: fhir.IMolecularSequenceQuality): MolecularSequenceQuality;
 }
 /**
  * Configurations of the external repository. The repository shall store target's observedSeq or records related with target's observedSeq.
@@ -651,11 +651,11 @@ export declare class MolecularSequenceRepository extends fhir.BackboneElement im
     /**
      * Check if the current MolecularSequenceRepository contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MolecularSequenceRepository from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMolecularSequenceRepository): MolecularSequenceRepository;
+    static fromStrict(source: fhir.IMolecularSequenceRepository): MolecularSequenceRepository;
 }
 /**
  * Structural variant outer.
@@ -678,11 +678,11 @@ export declare class MolecularSequenceStructureVariantOuter extends fhir.Backbon
     /**
      * Check if the current MolecularSequenceStructureVariantOuter contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MolecularSequenceStructureVariantOuter from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMolecularSequenceStructureVariantOuter): MolecularSequenceStructureVariantOuter;
+    static fromStrict(source: fhir.IMolecularSequenceStructureVariantOuter): MolecularSequenceStructureVariantOuter;
 }
 /**
  * Structural variant inner.
@@ -705,11 +705,11 @@ export declare class MolecularSequenceStructureVariantInner extends fhir.Backbon
     /**
      * Check if the current MolecularSequenceStructureVariantInner contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MolecularSequenceStructureVariantInner from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMolecularSequenceStructureVariantInner): MolecularSequenceStructureVariantInner;
+    static fromStrict(source: fhir.IMolecularSequenceStructureVariantInner): MolecularSequenceStructureVariantInner;
 }
 /**
  * Information about chromosome structure variation.
@@ -744,11 +744,11 @@ export declare class MolecularSequenceStructureVariant extends fhir.BackboneElem
     /**
      * Check if the current MolecularSequenceStructureVariant contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MolecularSequenceStructureVariant from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMolecularSequenceStructureVariant): MolecularSequenceStructureVariant;
+    static fromStrict(source: fhir.IMolecularSequenceStructureVariant): MolecularSequenceStructureVariant;
 }
 /**
  * Raw data describing a biological sequence.
@@ -833,11 +833,11 @@ export declare class MolecularSequence extends fhir.DomainResource implements fh
     /**
      * Check if the current MolecularSequence contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MolecularSequence from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMolecularSequence): MolecularSequence;
+    static fromStrict(source: fhir.IMolecularSequence): MolecularSequence;
 }
 /**
  * Code Values for the MolecularSequence.referenceSeq.orientation field

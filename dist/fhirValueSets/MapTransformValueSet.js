@@ -13,7 +13,7 @@ export const MapTransformValueSet = {
     /**
      * append(source...) - source is element or string.
      */
-    map_transform_Append: Coding.FromStrict({
+    map_transform_Append: new Coding({
         code: "append",
         display: "append",
         system: "http://hl7.org/fhir/map-transform"
@@ -21,7 +21,7 @@ export const MapTransformValueSet = {
     /**
      * Create a Coding. Parameters = (system. Code[, display]).
      */
-    map_transform_C: Coding.FromStrict({
+    map_transform_C: new Coding({
         code: "c",
         display: "c",
         system: "http://hl7.org/fhir/map-transform"
@@ -29,7 +29,7 @@ export const MapTransformValueSet = {
     /**
      * cast(source, type?) - case source from one type to another. target type can be left as implicit if there is one and only one target type known.
      */
-    map_transform_Cast: Coding.FromStrict({
+    map_transform_Cast: new Coding({
         code: "cast",
         display: "cast",
         system: "http://hl7.org/fhir/map-transform"
@@ -37,7 +37,7 @@ export const MapTransformValueSet = {
     /**
      * Create a CodeableConcept. Parameters = (text) or (system. Code[, display]).
      */
-    map_transform_Cc: Coding.FromStrict({
+    map_transform_Cc: new Coding({
         code: "cc",
         display: "cc",
         system: "http://hl7.org/fhir/map-transform"
@@ -45,7 +45,7 @@ export const MapTransformValueSet = {
     /**
      * copy(source).
      */
-    map_transform_Copy: Coding.FromStrict({
+    map_transform_Copy: new Coding({
         code: "copy",
         display: "copy",
         system: "http://hl7.org/fhir/map-transform"
@@ -53,7 +53,7 @@ export const MapTransformValueSet = {
     /**
      * Create a contact details. Parameters = (value) or (system, value). If no system is provided, the system should be inferred from the content of the value.
      */
-    map_transform_Cp: Coding.FromStrict({
+    map_transform_Cp: new Coding({
         code: "cp",
         display: "cp",
         system: "http://hl7.org/fhir/map-transform"
@@ -61,7 +61,7 @@ export const MapTransformValueSet = {
     /**
      * create(type : string) - type is passed through to the application on the standard API, and must be known by it.
      */
-    map_transform_Create: Coding.FromStrict({
+    map_transform_Create: new Coding({
         code: "create",
         display: "create",
         system: "http://hl7.org/fhir/map-transform"
@@ -69,7 +69,7 @@ export const MapTransformValueSet = {
     /**
      * Perform a date operation. *Parameters to be documented*.
      */
-    map_transform_DateOp: Coding.FromStrict({
+    map_transform_DateOp: new Coding({
         code: "dateOp",
         display: "dateOp",
         system: "http://hl7.org/fhir/map-transform"
@@ -77,7 +77,7 @@ export const MapTransformValueSet = {
     /**
      * escape(source, fmt1, fmt2) - change source from one kind of escaping to another (plain, java, xml, json). note that this is for when the string itself is escaped.
      */
-    map_transform_Escape: Coding.FromStrict({
+    map_transform_Escape: new Coding({
         code: "escape",
         display: "escape",
         system: "http://hl7.org/fhir/map-transform"
@@ -85,7 +85,7 @@ export const MapTransformValueSet = {
     /**
      * Execute the supplied FHIRPath expression and use the value returned by that.
      */
-    map_transform_Evaluate: Coding.FromStrict({
+    map_transform_Evaluate: new Coding({
         code: "evaluate",
         display: "evaluate",
         system: "http://hl7.org/fhir/map-transform"
@@ -93,7 +93,7 @@ export const MapTransformValueSet = {
     /**
      * Create an identifier. Parameters = (system, value[, type]) where type is a code from the identifier type value set.
      */
-    map_transform_Id: Coding.FromStrict({
+    map_transform_Id: new Coding({
         code: "id",
         display: "id",
         system: "http://hl7.org/fhir/map-transform"
@@ -101,7 +101,7 @@ export const MapTransformValueSet = {
     /**
      * Return the appropriate string to put in a reference that refers to the resource provided as a parameter.
      */
-    map_transform_Pointer: Coding.FromStrict({
+    map_transform_Pointer: new Coding({
         code: "pointer",
         display: "pointer",
         system: "http://hl7.org/fhir/map-transform"
@@ -109,7 +109,7 @@ export const MapTransformValueSet = {
     /**
      * Create a quantity. Parameters = (text) or (value, unit, [system, code]) where text is the natural representation e.g. [comparator]value[space]unit.
      */
-    map_transform_Qty: Coding.FromStrict({
+    map_transform_Qty: new Coding({
         code: "qty",
         display: "qty",
         system: "http://hl7.org/fhir/map-transform"
@@ -117,7 +117,7 @@ export const MapTransformValueSet = {
     /**
      * reference(source : object) - return a string that references the provided tree properly.
      */
-    map_transform_Reference: Coding.FromStrict({
+    map_transform_Reference: new Coding({
         code: "reference",
         display: "reference",
         system: "http://hl7.org/fhir/map-transform"
@@ -125,7 +125,7 @@ export const MapTransformValueSet = {
     /**
      * translate(source, uri_of_map) - use the translate operation.
      */
-    map_transform_Translate: Coding.FromStrict({
+    map_transform_Translate: new Coding({
         code: "translate",
         display: "translate",
         system: "http://hl7.org/fhir/map-transform"
@@ -133,7 +133,7 @@ export const MapTransformValueSet = {
     /**
      * truncate(source, length) - source must be stringy type.
      */
-    map_transform_Truncate: Coding.FromStrict({
+    map_transform_Truncate: new Coding({
         code: "truncate",
         display: "truncate",
         system: "http://hl7.org/fhir/map-transform"
@@ -141,7 +141,7 @@ export const MapTransformValueSet = {
     /**
      * Generate a random UUID (in lowercase). No Parameters.
      */
-    map_transform_Uuid: Coding.FromStrict({
+    map_transform_Uuid: new Coding({
         code: "uuid",
         display: "uuid",
         system: "http://hl7.org/fhir/map-transform"

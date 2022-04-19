@@ -176,11 +176,11 @@ export declare class SubstancePolymerMonomerSetStartingMaterial extends fhir.Bac
     /**
      * Check if the current SubstancePolymerMonomerSetStartingMaterial contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstancePolymerMonomerSetStartingMaterial from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstancePolymerMonomerSetStartingMaterial): SubstancePolymerMonomerSetStartingMaterial;
+    static fromStrict(source: fhir.ISubstancePolymerMonomerSetStartingMaterial): SubstancePolymerMonomerSetStartingMaterial;
 }
 /**
  * Todo.
@@ -201,11 +201,11 @@ export declare class SubstancePolymerMonomerSet extends fhir.BackboneElement imp
     /**
      * Check if the current SubstancePolymerMonomerSet contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstancePolymerMonomerSet from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstancePolymerMonomerSet): SubstancePolymerMonomerSet;
+    static fromStrict(source: fhir.ISubstancePolymerMonomerSet): SubstancePolymerMonomerSet;
 }
 /**
  * Todo.
@@ -226,11 +226,11 @@ export declare class SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation exte
     /**
      * Check if the current SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation): SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation;
+    static fromStrict(source: fhir.ISubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation): SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation;
 }
 /**
  * Todo.
@@ -256,11 +256,11 @@ export declare class SubstancePolymerRepeatRepeatUnitStructuralRepresentation ex
     /**
      * Check if the current SubstancePolymerRepeatRepeatUnitStructuralRepresentation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstancePolymerRepeatRepeatUnitStructuralRepresentation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstancePolymerRepeatRepeatUnitStructuralRepresentation): SubstancePolymerRepeatRepeatUnitStructuralRepresentation;
+    static fromStrict(source: fhir.ISubstancePolymerRepeatRepeatUnitStructuralRepresentation): SubstancePolymerRepeatRepeatUnitStructuralRepresentation;
 }
 /**
  * Todo.
@@ -294,11 +294,11 @@ export declare class SubstancePolymerRepeatRepeatUnit extends fhir.BackboneEleme
     /**
      * Check if the current SubstancePolymerRepeatRepeatUnit contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstancePolymerRepeatRepeatUnit from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstancePolymerRepeatRepeatUnit): SubstancePolymerRepeatRepeatUnit;
+    static fromStrict(source: fhir.ISubstancePolymerRepeatRepeatUnit): SubstancePolymerRepeatRepeatUnit;
 }
 /**
  * Todo.
@@ -329,11 +329,11 @@ export declare class SubstancePolymerRepeat extends fhir.BackboneElement impleme
     /**
      * Check if the current SubstancePolymerRepeat contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstancePolymerRepeat from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstancePolymerRepeat): SubstancePolymerRepeat;
+    static fromStrict(source: fhir.ISubstancePolymerRepeat): SubstancePolymerRepeat;
 }
 /**
  * Todo.
@@ -375,10 +375,10 @@ export declare class SubstancePolymer extends fhir.DomainResource implements fhi
     /**
      * Check if the current SubstancePolymer contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstancePolymer from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstancePolymer): SubstancePolymer;
+    static fromStrict(source: fhir.ISubstancePolymer): SubstancePolymer;
 }
 //# sourceMappingURL=SubstancePolymer.d.ts.map

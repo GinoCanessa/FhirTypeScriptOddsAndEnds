@@ -28,18 +28,18 @@ export class HealthcareServiceEligibility extends fhir.BackboneElement {
     /**
      * Check if the current HealthcareServiceEligibility contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a HealthcareServiceEligibility from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new HealthcareServiceEligibility(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `HealthcareServiceEligibility is missing elements: ${missingElements.join(", ")}`;
         }
@@ -83,18 +83,18 @@ export class HealthcareServiceAvailableTime extends fhir.BackboneElement {
     /**
      * Check if the current HealthcareServiceAvailableTime contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a HealthcareServiceAvailableTime from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new HealthcareServiceAvailableTime(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `HealthcareServiceAvailableTime is missing elements: ${missingElements.join(", ")}`;
         }
@@ -127,21 +127,21 @@ export class HealthcareServiceNotAvailable extends fhir.BackboneElement {
     /**
      * Check if the current HealthcareServiceNotAvailable contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["description"] === undefined) {
             missingElements.push("description");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a HealthcareServiceNotAvailable from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new HealthcareServiceNotAvailable(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `HealthcareServiceNotAvailable is missing elements: ${missingElements.join(", ")}`;
         }
@@ -252,18 +252,18 @@ export class HealthcareService extends fhir.DomainResource {
     /**
      * Check if the current HealthcareService contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a HealthcareService from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new HealthcareService(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `HealthcareService is missing elements: ${missingElements.join(", ")}`;
         }

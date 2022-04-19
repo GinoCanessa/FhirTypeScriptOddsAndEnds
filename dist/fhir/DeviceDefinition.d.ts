@@ -231,11 +231,11 @@ export declare class DeviceDefinitionUdiDeviceIdentifier extends fhir.BackboneEl
     /**
      * Check if the current DeviceDefinitionUdiDeviceIdentifier contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DeviceDefinitionUdiDeviceIdentifier from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDeviceDefinitionUdiDeviceIdentifier): DeviceDefinitionUdiDeviceIdentifier;
+    static fromStrict(source: fhir.IDeviceDefinitionUdiDeviceIdentifier): DeviceDefinitionUdiDeviceIdentifier;
 }
 /**
  * A name given to the device to identify it.
@@ -259,11 +259,11 @@ export declare class DeviceDefinitionDeviceName extends fhir.BackboneElement imp
     /**
      * Check if the current DeviceDefinitionDeviceName contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DeviceDefinitionDeviceName from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDeviceDefinitionDeviceName): DeviceDefinitionDeviceName;
+    static fromStrict(source: fhir.IDeviceDefinitionDeviceName): DeviceDefinitionDeviceName;
 }
 /**
  * The capabilities supported on a  device, the standards to which the device conforms for a particular purpose, and used for the communication.
@@ -286,11 +286,11 @@ export declare class DeviceDefinitionSpecialization extends fhir.BackboneElement
     /**
      * Check if the current DeviceDefinitionSpecialization contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DeviceDefinitionSpecialization from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDeviceDefinitionSpecialization): DeviceDefinitionSpecialization;
+    static fromStrict(source: fhir.IDeviceDefinitionSpecialization): DeviceDefinitionSpecialization;
 }
 /**
  * Device capabilities.
@@ -311,11 +311,11 @@ export declare class DeviceDefinitionCapability extends fhir.BackboneElement imp
     /**
      * Check if the current DeviceDefinitionCapability contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DeviceDefinitionCapability from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDeviceDefinitionCapability): DeviceDefinitionCapability;
+    static fromStrict(source: fhir.IDeviceDefinitionCapability): DeviceDefinitionCapability;
 }
 /**
  * The actual configuration settings of a device as it actually operates, e.g., regulation status, time properties.
@@ -340,11 +340,11 @@ export declare class DeviceDefinitionProperty extends fhir.BackboneElement imple
     /**
      * Check if the current DeviceDefinitionProperty contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DeviceDefinitionProperty from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDeviceDefinitionProperty): DeviceDefinitionProperty;
+    static fromStrict(source: fhir.IDeviceDefinitionProperty): DeviceDefinitionProperty;
 }
 /**
  * A substance used to create the material(s) of which the device is made.
@@ -371,11 +371,11 @@ export declare class DeviceDefinitionMaterial extends fhir.BackboneElement imple
     /**
      * Check if the current DeviceDefinitionMaterial contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DeviceDefinitionMaterial from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDeviceDefinitionMaterial): DeviceDefinitionMaterial;
+    static fromStrict(source: fhir.IDeviceDefinitionMaterial): DeviceDefinitionMaterial;
 }
 /**
  * The characteristics, operational status and capabilities of a medical-related component of a medical device.
@@ -489,11 +489,11 @@ export declare class DeviceDefinition extends fhir.DomainResource implements fhi
     /**
      * Check if the current DeviceDefinition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DeviceDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDeviceDefinition): DeviceDefinition;
+    static fromStrict(source: fhir.IDeviceDefinition): DeviceDefinition;
 }
 /**
  * Code Values for the DeviceDefinition.deviceName.type field

@@ -13,7 +13,7 @@ export const ObservationRangeCategoryValueSet = {
     /**
      * Absolute Range for Ordinal and Continuous Observations. Results outside this range are not possible.
      */
-    observation_range_category_AbsoluteRange: Coding.FromStrict({
+    observation_range_category_AbsoluteRange: new Coding({
         code: "absolute",
         display: "absolute range",
         system: "http://hl7.org/fhir/observation-range-category"
@@ -21,7 +21,7 @@ export const ObservationRangeCategoryValueSet = {
     /**
      * Critical Range for Ordinal and Continuous Observations.
      */
-    observation_range_category_CriticalRange: Coding.FromStrict({
+    observation_range_category_CriticalRange: new Coding({
         code: "critical",
         display: "critical range",
         system: "http://hl7.org/fhir/observation-range-category"
@@ -29,7 +29,7 @@ export const ObservationRangeCategoryValueSet = {
     /**
      * Reference (Normal) Range for Ordinal and Continuous Observations.
      */
-    observation_range_category_ReferenceRange: Coding.FromStrict({
+    observation_range_category_ReferenceRange: new Coding({
         code: "reference",
         display: "reference range",
         system: "http://hl7.org/fhir/observation-range-category"

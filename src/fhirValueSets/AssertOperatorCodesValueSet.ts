@@ -13,7 +13,7 @@ export const AssertOperatorCodesValueSet = {
   /**
    * Compare value string contains a known value.
    */
-  assert_operator_codes_Contains: Coding.FromStrict({
+  assert_operator_codes_Contains: new Coding({
     code: "contains",
     display: "contains",
     system: "http://hl7.org/fhir/assert-operator-codes"
@@ -21,7 +21,7 @@ export const AssertOperatorCodesValueSet = {
   /**
    * Compare value is empty.
    */
-  assert_operator_codes_Empty: Coding.FromStrict({
+  assert_operator_codes_Empty: new Coding({
     code: "empty",
     display: "empty",
     system: "http://hl7.org/fhir/assert-operator-codes"
@@ -29,7 +29,7 @@ export const AssertOperatorCodesValueSet = {
   /**
    * Default value. Equals comparison.
    */
-  assert_operator_codes_Equals: Coding.FromStrict({
+  assert_operator_codes_Equals: new Coding({
     code: "equals",
     display: "equals",
     system: "http://hl7.org/fhir/assert-operator-codes"
@@ -37,7 +37,7 @@ export const AssertOperatorCodesValueSet = {
   /**
    * Evaluate the FHIRPath expression as a boolean condition.
    */
-  assert_operator_codes_Evaluate: Coding.FromStrict({
+  assert_operator_codes_Evaluate: new Coding({
     code: "eval",
     display: "evaluate",
     system: "http://hl7.org/fhir/assert-operator-codes"
@@ -45,7 +45,7 @@ export const AssertOperatorCodesValueSet = {
   /**
    * Compare value to be greater than a known value.
    */
-  assert_operator_codes_GreaterThan: Coding.FromStrict({
+  assert_operator_codes_GreaterThan: new Coding({
     code: "greaterThan",
     display: "greaterThan",
     system: "http://hl7.org/fhir/assert-operator-codes"
@@ -53,7 +53,7 @@ export const AssertOperatorCodesValueSet = {
   /**
    * Compare value within a known set of values.
    */
-  assert_operator_codes_In: Coding.FromStrict({
+  assert_operator_codes_In: new Coding({
     code: "in",
     display: "in",
     system: "http://hl7.org/fhir/assert-operator-codes"
@@ -61,7 +61,7 @@ export const AssertOperatorCodesValueSet = {
   /**
    * Compare value to be less than a known value.
    */
-  assert_operator_codes_LessThan: Coding.FromStrict({
+  assert_operator_codes_LessThan: new Coding({
     code: "lessThan",
     display: "lessThan",
     system: "http://hl7.org/fhir/assert-operator-codes"
@@ -69,7 +69,7 @@ export const AssertOperatorCodesValueSet = {
   /**
    * Compare value string does not contain a known value.
    */
-  assert_operator_codes_NotContains: Coding.FromStrict({
+  assert_operator_codes_NotContains: new Coding({
     code: "notContains",
     display: "notContains",
     system: "http://hl7.org/fhir/assert-operator-codes"
@@ -77,7 +77,7 @@ export const AssertOperatorCodesValueSet = {
   /**
    * Compare value is not empty.
    */
-  assert_operator_codes_NotEmpty: Coding.FromStrict({
+  assert_operator_codes_NotEmpty: new Coding({
     code: "notEmpty",
     display: "notEmpty",
     system: "http://hl7.org/fhir/assert-operator-codes"
@@ -85,7 +85,7 @@ export const AssertOperatorCodesValueSet = {
   /**
    * Not equals comparison.
    */
-  assert_operator_codes_NotEquals: Coding.FromStrict({
+  assert_operator_codes_NotEquals: new Coding({
     code: "notEquals",
     display: "notEquals",
     system: "http://hl7.org/fhir/assert-operator-codes"
@@ -93,7 +93,7 @@ export const AssertOperatorCodesValueSet = {
   /**
    * Compare value not within a known set of values.
    */
-  assert_operator_codes_NotIn: Coding.FromStrict({
+  assert_operator_codes_NotIn: new Coding({
     code: "notIn",
     display: "notIn",
     system: "http://hl7.org/fhir/assert-operator-codes"

@@ -142,11 +142,11 @@ export declare class SupplyRequestParameter extends fhir.BackboneElement impleme
     /**
      * Check if the current SupplyRequestParameter contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SupplyRequestParameter from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISupplyRequestParameter): SupplyRequestParameter;
+    static fromStrict(source: fhir.ISupplyRequestParameter): SupplyRequestParameter;
 }
 /**
  * A record of a request for a medication, substance or device used in the healthcare setting.
@@ -239,11 +239,11 @@ export declare class SupplyRequest extends fhir.DomainResource implements fhir.I
     /**
      * Check if the current SupplyRequest contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SupplyRequest from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISupplyRequest): SupplyRequest;
+    static fromStrict(source: fhir.ISupplyRequest): SupplyRequest;
 }
 /**
  * Code Values for the SupplyRequest.priority field

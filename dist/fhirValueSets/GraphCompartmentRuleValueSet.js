@@ -13,7 +13,7 @@ export const GraphCompartmentRuleValueSet = {
     /**
      * The compartment rule is defined in the accompanying FHIRPath expression.
      */
-    graph_compartment_rule_Custom: Coding.FromStrict({
+    graph_compartment_rule_Custom: new Coding({
         code: "custom",
         display: "Custom",
         system: "http://hl7.org/fhir/graph-compartment-rule"
@@ -21,7 +21,7 @@ export const GraphCompartmentRuleValueSet = {
     /**
      * The compartment must be different.
      */
-    graph_compartment_rule_Different: Coding.FromStrict({
+    graph_compartment_rule_Different: new Coding({
         code: "different",
         display: "Different",
         system: "http://hl7.org/fhir/graph-compartment-rule"
@@ -29,7 +29,7 @@ export const GraphCompartmentRuleValueSet = {
     /**
      * The compartment must be identical (the same literal reference).
      */
-    graph_compartment_rule_Identical: Coding.FromStrict({
+    graph_compartment_rule_Identical: new Coding({
         code: "identical",
         display: "Identical",
         system: "http://hl7.org/fhir/graph-compartment-rule"
@@ -37,7 +37,7 @@ export const GraphCompartmentRuleValueSet = {
     /**
      * The compartment must be the same - the record must be about the same patient, but the reference may be different.
      */
-    graph_compartment_rule_Matching: Coding.FromStrict({
+    graph_compartment_rule_Matching: new Coding({
         code: "matching",
         display: "Matching",
         system: "http://hl7.org/fhir/graph-compartment-rule"

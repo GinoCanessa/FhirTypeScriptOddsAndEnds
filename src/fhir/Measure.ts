@@ -342,19 +342,19 @@ export class MeasureGroupPopulation extends fhir.BackboneElement implements fhir
   /**
    * Check if the current MeasureGroupPopulation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["criteria"] === undefined) { missingElements.push("criteria"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MeasureGroupPopulation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMeasureGroupPopulation):MeasureGroupPopulation {
+  static override fromStrict(source:fhir.IMeasureGroupPopulation):MeasureGroupPopulation {
     var dest:MeasureGroupPopulation = new MeasureGroupPopulation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MeasureGroupPopulation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -391,19 +391,19 @@ export class MeasureGroupStratifierComponent extends fhir.BackboneElement implem
   /**
    * Check if the current MeasureGroupStratifierComponent contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["criteria"] === undefined) { missingElements.push("criteria"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MeasureGroupStratifierComponent from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMeasureGroupStratifierComponent):MeasureGroupStratifierComponent {
+  static override fromStrict(source:fhir.IMeasureGroupStratifierComponent):MeasureGroupStratifierComponent {
     var dest:MeasureGroupStratifierComponent = new MeasureGroupStratifierComponent(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MeasureGroupStratifierComponent is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -443,18 +443,18 @@ export class MeasureGroupStratifier extends fhir.BackboneElement implements fhir
   /**
    * Check if the current MeasureGroupStratifier contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MeasureGroupStratifier from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMeasureGroupStratifier):MeasureGroupStratifier {
+  static override fromStrict(source:fhir.IMeasureGroupStratifier):MeasureGroupStratifier {
     var dest:MeasureGroupStratifier = new MeasureGroupStratifier(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MeasureGroupStratifier is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -494,18 +494,18 @@ export class MeasureGroup extends fhir.BackboneElement implements fhir.IMeasureG
   /**
    * Check if the current MeasureGroup contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MeasureGroup from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMeasureGroup):MeasureGroup {
+  static override fromStrict(source:fhir.IMeasureGroup):MeasureGroup {
     var dest:MeasureGroup = new MeasureGroup(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MeasureGroup is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -547,19 +547,19 @@ export class MeasureSupplementalData extends fhir.BackboneElement implements fhi
   /**
    * Check if the current MeasureSupplementalData contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["criteria"] === undefined) { missingElements.push("criteria"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MeasureSupplementalData from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMeasureSupplementalData):MeasureSupplementalData {
+  static override fromStrict(source:fhir.IMeasureSupplementalData):MeasureSupplementalData {
     var dest:MeasureSupplementalData = new MeasureSupplementalData(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MeasureSupplementalData is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -842,19 +842,19 @@ export class Measure extends fhir.DomainResource implements fhir.IMeasure {
   /**
    * Check if the current Measure contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Measure from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMeasure):Measure {
+  static override fromStrict(source:fhir.IMeasure):Measure {
     var dest:Measure = new Measure(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Measure is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

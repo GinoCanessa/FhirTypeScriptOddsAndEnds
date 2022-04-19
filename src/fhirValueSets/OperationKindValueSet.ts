@@ -13,7 +13,7 @@ export const OperationKindValueSet = {
   /**
    * This operation is invoked as an operation.
    */
-  operation_kind_Operation: Coding.FromStrict({
+  operation_kind_Operation: new Coding({
     code: "operation",
     display: "Operation",
     system: "http://hl7.org/fhir/operation-kind"
@@ -21,7 +21,7 @@ export const OperationKindValueSet = {
   /**
    * This operation is a named query, invoked using the search mechanism.
    */
-  operation_kind_Query: Coding.FromStrict({
+  operation_kind_Query: new Coding({
     code: "query",
     display: "Query",
     system: "http://hl7.org/fhir/operation-kind"

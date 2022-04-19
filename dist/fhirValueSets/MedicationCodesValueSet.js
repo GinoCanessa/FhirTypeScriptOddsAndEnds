@@ -10,8232 +10,8232 @@ import { Coding } from '../fhir';
  * This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from SNOMED CT - provided as an exemplar value set.
  */
 export const MedicationCodesValueSet = {
-    MedicationCodesValueSet_Bithionol: Coding.FromStrict({
+    MedicationCodesValueSet_Bithionol: new Coding({
         code: "10016008",
         display: "Bithionol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BiperidenHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_BiperidenHydrochloride: new Coding({
         code: "10020007",
         display: "Biperiden hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ActiveC3bBbC3b: Coding.FromStrict({
+    MedicationCodesValueSet_ActiveC3bBbC3b: new Coding({
         code: "10105003",
         display: "Active C3bBbC3b",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenLondonIII: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenLondonIII: new Coding({
         code: "10109009",
         display: "Fibrinogen London III",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CyclizineLactate: Coding.FromStrict({
+    MedicationCodesValueSet_CyclizineLactate: new Coding({
         code: "10133003",
         display: "Cyclizine lactate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenK13: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenK13: new Coding({
         code: "10158008",
         display: "Blood group antigen K13",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ProcarbazineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_ProcarbazineHydrochloride: new Coding({
         code: "10174003",
         display: "Procarbazine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Conglutinin: Coding.FromStrict({
+    MedicationCodesValueSet_Conglutinin: new Coding({
         code: "10189007",
         display: "Conglutinin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ProstaglandinFGreaterThan2LessThan: Coding.FromStrict({
+    MedicationCodesValueSet_ProstaglandinFGreaterThan2LessThan: new Coding({
         code: "10192006",
         display: "Prostaglandin F>2<",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ProstaglandinE3: Coding.FromStrict({
+    MedicationCodesValueSet_ProstaglandinE3: new Coding({
         code: "10202007",
         display: "Prostaglandin E3",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMil: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMil: new Coding({
         code: "10228005",
         display: "Blood group antibody Mil",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Lethanes: Coding.FromStrict({
+    MedicationCodesValueSet_Lethanes: new Coding({
         code: "10240005",
         display: "Lethanes",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyJobbins: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyJobbins: new Coding({
         code: "10265007",
         display: "Blood group antibody Jobbins",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ErythromycinEstolate: Coding.FromStrict({
+    MedicationCodesValueSet_ErythromycinEstolate: new Coding({
         code: "10270000",
         display: "Erythromycin estolate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Betahistidine: Coding.FromStrict({
+    MedicationCodesValueSet_Betahistidine: new Coding({
         code: "10282009",
         display: "Betahistidine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DemeclocyclineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_DemeclocyclineHydrochloride: new Coding({
         code: "10324005",
         display: "Demeclocycline hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ZincInsulin: Coding.FromStrict({
+    MedicationCodesValueSet_ZincInsulin: new Coding({
         code: "10329000",
         display: "Zinc insulin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Clobenoside: Coding.FromStrict({
+    MedicationCodesValueSet_Clobenoside: new Coding({
         code: "10333007",
         display: "Clobenoside",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HeparinCofactorII: Coding.FromStrict({
+    MedicationCodesValueSet_HeparinCofactorII: new Coding({
         code: "10342000",
         display: "Heparin cofactor II",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Somantin: Coding.FromStrict({
+    MedicationCodesValueSet_Somantin: new Coding({
         code: "10354000",
         display: "Somantin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SodiumNitrite: Coding.FromStrict({
+    MedicationCodesValueSet_SodiumNitrite: new Coding({
         code: "10377000",
         display: "Sodium nitrite",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAHumanLeukocyteAntigenDw20: Coding.FromStrict({
+    MedicationCodesValueSet_HLAHumanLeukocyteAntigenDw20: new Coding({
         code: "10393009",
         display: "HLA - Human leukocyte antigen Dw20",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyIH: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyIH: new Coding({
         code: "10398000",
         display: "Blood group antibody iH",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MaprotilineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_MaprotilineHydrochloride: new Coding({
         code: "10424009",
         display: "Maprotiline hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyAd: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyAd: new Coding({
         code: "10436003",
         display: "Blood group antibody Ad",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAClassIIAntigen: Coding.FromStrict({
+    MedicationCodesValueSet_HLAClassIIAntigen: new Coding({
         code: "10440007",
         display: "HLA class II antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PhosphideCompound: Coding.FromStrict({
+    MedicationCodesValueSet_PhosphideCompound: new Coding({
         code: "10466005",
         display: "Phosphide compound",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenVienna: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenVienna: new Coding({
         code: "10471003",
         display: "Fibrinogen Vienna",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_C3ComplementComponent3: Coding.FromStrict({
+    MedicationCodesValueSet_C3ComplementComponent3: new Coding({
         code: "10473000",
         display: "C3 - Complement component 3",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Xanthinol: Coding.FromStrict({
+    MedicationCodesValueSet_Xanthinol: new Coding({
         code: "10500003",
         display: "Xanthinol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TRHThyrotrophinReleasingHormone: Coding.FromStrict({
+    MedicationCodesValueSet_TRHThyrotrophinReleasingHormone: new Coding({
         code: "10534002",
         display: "TRH - Thyrotrophin releasing hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyBy: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyBy: new Coding({
         code: "10560001",
         display: "Blood group antibody By",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenSfPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenSfPowerAPower: new Coding({
         code: "10570004",
         display: "Blood group antigen Sf^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PseudoephedrineSulfate: Coding.FromStrict({
+    MedicationCodesValueSet_PseudoephedrineSulfate: new Coding({
         code: "10595003",
         display: "Pseudoephedrine sulfate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyGilbraith: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyGilbraith: new Coding({
         code: "10622000",
         display: "Blood group antibody Gilbraith",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BlackPhosphorus: Coding.FromStrict({
+    MedicationCodesValueSet_BlackPhosphorus: new Coding({
         code: "10644005",
         display: "Black phosphorus",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Luteoskyrin: Coding.FromStrict({
+    MedicationCodesValueSet_Luteoskyrin: new Coding({
         code: "10660009",
         display: "Luteoskyrin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenGrandRapids: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenGrandRapids: new Coding({
         code: "10682002",
         display: "Fibrinogen Grand Rapids",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AzlocillinSodium: Coding.FromStrict({
+    MedicationCodesValueSet_AzlocillinSodium: new Coding({
         code: "10730008",
         display: "Azlocillin sodium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_NeurotoxicMycotoxin: Coding.FromStrict({
+    MedicationCodesValueSet_NeurotoxicMycotoxin: new Coding({
         code: "10750007",
         display: "Neurotoxic mycotoxin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_NetilmicinSulfate: Coding.FromStrict({
+    MedicationCodesValueSet_NetilmicinSulfate: new Coding({
         code: "10751006",
         display: "Netilmicin sulfate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CalciumPhosphateDibasic: Coding.FromStrict({
+    MedicationCodesValueSet_CalciumPhosphateDibasic: new Coding({
         code: "10767000",
         display: "Calcium phosphate dibasic",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PGPentagastrin: Coding.FromStrict({
+    MedicationCodesValueSet_PGPentagastrin: new Coding({
         code: "10782005",
         display: "PG - Pentagastrin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power53PowerManganese: Coding.FromStrict({
+    MedicationCodesValueSet_Power53PowerManganese: new Coding({
         code: "10790005",
         display: "^53^Manganese",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AnteriorPituitaryHormone: Coding.FromStrict({
+    MedicationCodesValueSet_AnteriorPituitaryHormone: new Coding({
         code: "10843002",
         display: "Anterior pituitary hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenCr3: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenCr3: new Coding({
         code: "10889009",
         display: "Blood group antigen Cr3",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenLePowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenLePowerAPower: new Coding({
         code: "10912008",
         display: "Blood group antigen Le^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntiFactorX: Coding.FromStrict({
+    MedicationCodesValueSet_AntiFactorX: new Coding({
         code: "10955007",
         display: "Anti-factor X",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PlateletDerivedGrowthFactor: Coding.FromStrict({
+    MedicationCodesValueSet_PlateletDerivedGrowthFactor: new Coding({
         code: "10987005",
         display: "Platelet-derived growth factor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenGe3: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenGe3: new Coding({
         code: "11004008",
         display: "Blood group antigen Ge3",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyCr2: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyCr2: new Coding({
         code: "11022006",
         display: "Blood group antibody Cr2",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Alum: Coding.FromStrict({
+    MedicationCodesValueSet_Alum: new Coding({
         code: "11036001",
         display: "Alum",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DipenteneLimonene: Coding.FromStrict({
+    MedicationCodesValueSet_DipenteneLimonene: new Coding({
         code: "11038000",
         display: "Dipentene (limonene)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyDrPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyDrPowerAPower: new Coding({
         code: "11041009",
         display: "Blood group antibody Dr^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenLuPowerBPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenLuPowerBPower: new Coding({
         code: "11064006",
         display: "Blood group antigen Lu^b^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMadden: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMadden: new Coding({
         code: "11091008",
         display: "Blood group antibody Madden",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ThromboxaneA2: Coding.FromStrict({
+    MedicationCodesValueSet_ThromboxaneA2: new Coding({
         code: "11115001",
         display: "Thromboxane A2",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power135PowerIodine: Coding.FromStrict({
+    MedicationCodesValueSet_Power135PowerIodine: new Coding({
         code: "11121002",
         display: "^135^Iodine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenSimpson: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenSimpson: new Coding({
         code: "11123004",
         display: "Blood group antigen Simpson",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Chymotrypsin: Coding.FromStrict({
+    MedicationCodesValueSet_Chymotrypsin: new Coding({
         code: "11137008",
         display: "Chymotrypsin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Vanillin: Coding.FromStrict({
+    MedicationCodesValueSet_Vanillin: new Coding({
         code: "11170003",
         display: "Vanillin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ManganeseSalt: Coding.FromStrict({
+    MedicationCodesValueSet_ManganeseSalt: new Coding({
         code: "11202003",
         display: "Manganese salt",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenGe1: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenGe1: new Coding({
         code: "11222004",
         display: "Blood group antigen Ge1",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PublicBloodGroupAntigen: Coding.FromStrict({
+    MedicationCodesValueSet_PublicBloodGroupAntigen: new Coding({
         code: "11233001",
         display: "Public blood group antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenSa: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenSa: new Coding({
         code: "11252007",
         display: "Blood group antigen Sa",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Interleukin10: Coding.FromStrict({
+    MedicationCodesValueSet_Interleukin10: new Coding({
         code: "11267006",
         display: "Interleukin-10",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PlateletAntibodyHPA4b: Coding.FromStrict({
+    MedicationCodesValueSet_PlateletAntibodyHPA4b: new Coding({
         code: "11330000",
         display: "Platelet antibody HPA-4b",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power56PowerCobalt: Coding.FromStrict({
+    MedicationCodesValueSet_Power56PowerCobalt: new Coding({
         code: "11331001",
         display: "^56^Cobalt",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Tribromsalan: Coding.FromStrict({
+    MedicationCodesValueSet_Tribromsalan: new Coding({
         code: "11345007",
         display: "Tribromsalan",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntiGlomerularBasementMembraneAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_AntiGlomerularBasementMembraneAntibody: new Coding({
         code: "11353004",
         display: "Anti-glomerular basement membrane antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RhubarbAgent: Coding.FromStrict({
+    MedicationCodesValueSet_RhubarbAgent: new Coding({
         code: "11420005",
         display: "Rhubarb agent",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntibodyToHepatitisBCoreAntigenIgMType: Coding.FromStrict({
+    MedicationCodesValueSet_AntibodyToHepatitisBCoreAntigenIgMType: new Coding({
         code: "11447000",
         display: "Antibody to hepatitis B core antigen, IgM type",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Trichlormethiazide: Coding.FromStrict({
+    MedicationCodesValueSet_Trichlormethiazide: new Coding({
         code: "11473005",
         display: "Trichlormethiazide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyFrench: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyFrench: new Coding({
         code: "11474004",
         display: "Blood group antibody French",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyOkPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyOkPowerAPower: new Coding({
         code: "11479009",
         display: "Blood group antibody Ok^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenNickolai: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenNickolai: new Coding({
         code: "11489008",
         display: "Blood group antigen Nickolai",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MercuricChloride: Coding.FromStrict({
+    MedicationCodesValueSet_MercuricChloride: new Coding({
         code: "11496005",
         display: "Mercuric chloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_EdrophoniumChloride: Coding.FromStrict({
+    MedicationCodesValueSet_EdrophoniumChloride: new Coding({
         code: "11504003",
         display: "Edrophonium chloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyBraden: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyBraden: new Coding({
         code: "11566003",
         display: "Blood group antibody Braden",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RH19ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_RH19ISBTSymbol: new Coding({
         code: "11594006",
         display: "RH19 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyTerrell: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyTerrell: new Coding({
         code: "11600003",
         display: "Blood group antibody Terrell",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FlurbiprofenSodium: Coding.FromStrict({
+    MedicationCodesValueSet_FlurbiprofenSodium: new Coding({
         code: "11633008",
         display: "Flurbiprofen sodium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PiperacillinSodium: Coding.FromStrict({
+    MedicationCodesValueSet_PiperacillinSodium: new Coding({
         code: "11644000",
         display: "Piperacillin sodium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VIPVasoactiveIntestinalPolypeptide: Coding.FromStrict({
+    MedicationCodesValueSet_VIPVasoactiveIntestinalPolypeptide: new Coding({
         code: "11652002",
         display: "VIP - Vasoactive intestinal polypeptide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenKennedy: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenKennedy: new Coding({
         code: "11684009",
         display: "Blood group antigen Kennedy",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_StrongSilverProtein: Coding.FromStrict({
+    MedicationCodesValueSet_StrongSilverProtein: new Coding({
         code: "11714005",
         display: "Strong silver protein",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenGould: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenGould: new Coding({
         code: "11725001",
         display: "Blood group antigen Gould",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenKnudsen: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenKnudsen: new Coding({
         code: "11744008",
         display: "Blood group antigen Knudsen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FY1ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_FY1ISBTSymbol: new Coding({
         code: "11770009",
         display: "FY1 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyDonaldson: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyDonaldson: new Coding({
         code: "11799004",
         display: "Blood group antibody Donaldson",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntiEndomysialAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_AntiEndomysialAntibody: new Coding({
         code: "11825009",
         display: "Anti endomysial antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_GE6ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_GE6ISBTSymbol: new Coding({
         code: "11863001",
         display: "GE6 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLADRw10Antigen: Coding.FromStrict({
+    MedicationCodesValueSet_HLADRw10Antigen: new Coding({
         code: "11877003",
         display: "HLA-DRw10 antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMckeever: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMckeever: new Coding({
         code: "11886008",
         display: "Blood group antibody Mckeever",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Hydroxydione: Coding.FromStrict({
+    MedicationCodesValueSet_Hydroxydione: new Coding({
         code: "11943009",
         display: "Hydroxydione",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VAL1HydroxyCholecalciferol: Coding.FromStrict({
+    MedicationCodesValueSet_VAL1HydroxyCholecalciferol: new Coding({
         code: "11984007",
         display: "1, Hydroxy cholecalciferol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PenicillinGPotassium: Coding.FromStrict({
+    MedicationCodesValueSet_PenicillinGPotassium: new Coding({
         code: "11986009",
         display: "Penicillin G potassium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorIXChapelHillVariant: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorIXChapelHillVariant: new Coding({
         code: "12009000",
         display: "Coagulation factor IX Chapel Hill variant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TrichophytonExtractSkinTest: Coding.FromStrict({
+    MedicationCodesValueSet_TrichophytonExtractSkinTest: new Coding({
         code: "12018003",
         display: "Trichophyton extract skin test",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorIISalatkaVariant: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorIISalatkaVariant: new Coding({
         code: "12034000",
         display: "Coagulation factor II Salatka variant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAB45Antigen: Coding.FromStrict({
+    MedicationCodesValueSet_HLAB45Antigen: new Coding({
         code: "12103002",
         display: "HLA-B45 antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PseudoephedrineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_PseudoephedrineHydrochloride: new Coding({
         code: "12177002",
         display: "Pseudoephedrine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyLazicki: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyLazicki: new Coding({
         code: "12190009",
         display: "Blood group antibody Lazicki",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Leukotriene: Coding.FromStrict({
+    MedicationCodesValueSet_Leukotriene: new Coding({
         code: "12194000",
         display: "Leukotriene",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Syrosingopine: Coding.FromStrict({
+    MedicationCodesValueSet_Syrosingopine: new Coding({
         code: "12208001",
         display: "Syrosingopine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DiltiazemHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_DiltiazemHydrochloride: new Coding({
         code: "12218006",
         display: "Diltiazem hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_EmetineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_EmetineHydrochloride: new Coding({
         code: "12290003",
         display: "Emetine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Halazone: Coding.FromStrict({
+    MedicationCodesValueSet_Halazone: new Coding({
         code: "12315006",
         display: "Halazone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyDoPowerBPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyDoPowerBPower: new Coding({
         code: "12379005",
         display: "Blood group antibody Do^b^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Dextran70: Coding.FromStrict({
+    MedicationCodesValueSet_Dextran70: new Coding({
         code: "12391001",
         display: "Dextran 70",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyKnPowerBPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyKnPowerBPower: new Coding({
         code: "12498008",
         display: "Blood group antibody Kn^b^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Tybamate: Coding.FromStrict({
+    MedicationCodesValueSet_Tybamate: new Coding({
         code: "12525000",
         display: "Tybamate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAClassIIIAntigen: Coding.FromStrict({
+    MedicationCodesValueSet_HLAClassIIIAntigen: new Coding({
         code: "12564002",
         display: "HLA class III antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Belladonnine: Coding.FromStrict({
+    MedicationCodesValueSet_Belladonnine: new Coding({
         code: "12568004",
         display: "Belladonnine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyChPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyChPowerAPower: new Coding({
         code: "12577006",
         display: "Blood group antibody Ch^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ErythromycinEthylsuccinate: Coding.FromStrict({
+    MedicationCodesValueSet_ErythromycinEthylsuccinate: new Coding({
         code: "12578001",
         display: "Erythromycin ethylsuccinate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SnTin: Coding.FromStrict({
+    MedicationCodesValueSet_SnTin: new Coding({
         code: "12597001",
         display: "Sn - Tin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MacrophageChemotacticFactor: Coding.FromStrict({
+    MedicationCodesValueSet_MacrophageChemotacticFactor: new Coding({
         code: "12627001",
         display: "Macrophage chemotactic factor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ArtificialAntigen: Coding.FromStrict({
+    MedicationCodesValueSet_ArtificialAntigen: new Coding({
         code: "12642003",
         display: "Artificial antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenWiley: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenWiley: new Coding({
         code: "12685007",
         display: "Blood group antigen Wiley",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MagnesiumRadioisotope: Coding.FromStrict({
+    MedicationCodesValueSet_MagnesiumRadioisotope: new Coding({
         code: "12689001",
         display: "Magnesium radioisotope",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AluminumCarbonate: Coding.FromStrict({
+    MedicationCodesValueSet_AluminumCarbonate: new Coding({
         code: "12716009",
         display: "Aluminum carbonate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyHLAA7: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyHLAA7: new Coding({
         code: "12752008",
         display: "Blood group antibody HLA-A7",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyFrPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyFrPowerAPower: new Coding({
         code: "12753003",
         display: "Blood group antibody Fr^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_IodamideMeglumine: Coding.FromStrict({
+    MedicationCodesValueSet_IodamideMeglumine: new Coding({
         code: "12801003",
         display: "Iodamide meglumine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Clemizole: Coding.FromStrict({
+    MedicationCodesValueSet_Clemizole: new Coding({
         code: "12821002",
         display: "Clemizole",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorIXDurhamVariant: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorIXDurhamVariant: new Coding({
         code: "12870003",
         display: "Coagulation factor IX Durham variant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntiLua: Coding.FromStrict({
+    MedicationCodesValueSet_AntiLua: new Coding({
         code: "12899008",
         display: "Anti Lua",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CalciumPhosphateDibasicDihydrate: Coding.FromStrict({
+    MedicationCodesValueSet_CalciumPhosphateDibasicDihydrate: new Coding({
         code: "12930006",
         display: "Calcium phosphate dibasic dihydrate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenCw7: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenCw7: new Coding({
         code: "12934002",
         display: "Human leukocyte antigen Cw7",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_InositolHexanitrate: Coding.FromStrict({
+    MedicationCodesValueSet_InositolHexanitrate: new Coding({
         code: "12970004",
         display: "Inositol hexanitrate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMineo: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMineo: new Coding({
         code: "12998001",
         display: "Blood group antibody Mineo",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenLiPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenLiPowerAPower: new Coding({
         code: "13016007",
         display: "Blood group antigen Li^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Piperocaine: Coding.FromStrict({
+    MedicationCodesValueSet_Piperocaine: new Coding({
         code: "13030002",
         display: "Piperocaine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_EosinophilicChemotacticFactor: Coding.FromStrict({
+    MedicationCodesValueSet_EosinophilicChemotacticFactor: new Coding({
         code: "13083005",
         display: "Eosinophilic chemotactic factor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HbsAgAyr: Coding.FromStrict({
+    MedicationCodesValueSet_HbsAgAyr: new Coding({
         code: "13105002",
         display: "Hbs Ag/ayr",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AnimalFat: Coding.FromStrict({
+    MedicationCodesValueSet_AnimalFat: new Coding({
         code: "13150000",
         display: "Animal fat",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TobramycinSulfate: Coding.FromStrict({
+    MedicationCodesValueSet_TobramycinSulfate: new Coding({
         code: "13188003",
         display: "Tobramycin sulfate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VitaminB2: Coding.FromStrict({
+    MedicationCodesValueSet_VitaminB2: new Coding({
         code: "13235001",
         display: "Vitamin B2",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Diethyl2ChlorovinylPhosphate: Coding.FromStrict({
+    MedicationCodesValueSet_Diethyl2ChlorovinylPhosphate: new Coding({
         code: "13342004",
         display: "Diethyl 2-chlorovinyl phosphate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MNS9ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_MNS9ISBTSymbol: new Coding({
         code: "13377004",
         display: "MNS9 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLABw65Antigen: Coding.FromStrict({
+    MedicationCodesValueSet_HLABw65Antigen: new Coding({
         code: "13400000",
         display: "HLA-Bw65 antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyCostStirling: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyCostStirling: new Coding({
         code: "13435003",
         display: "Blood group antibody Cost-Stirling",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyNOR: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyNOR: new Coding({
         code: "13484006",
         display: "Blood group antibody NOR",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyDiPowerBPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyDiPowerBPower: new Coding({
         code: "13492002",
         display: "Blood group antibody Di^b^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HydroxychloroquineSulfate: Coding.FromStrict({
+    MedicationCodesValueSet_HydroxychloroquineSulfate: new Coding({
         code: "13502005",
         display: "Hydroxychloroquine sulfate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodySharp: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodySharp: new Coding({
         code: "13539006",
         display: "Blood group antibody Sharp",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyStevenson: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyStevenson: new Coding({
         code: "13571004",
         display: "Blood group antibody Stevenson",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Cefotetan: Coding.FromStrict({
+    MedicationCodesValueSet_Cefotetan: new Coding({
         code: "13585009",
         display: "Cefotetan",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyKosis: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyKosis: new Coding({
         code: "13590007",
         display: "Blood group antibody Kosis",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAHumanLeukocyteAntigenA249: Coding.FromStrict({
+    MedicationCodesValueSet_HLAHumanLeukocyteAntigenA249: new Coding({
         code: "13625002",
         display: "HLA - Human leukocyte antigen A24(9)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PropyleneGlycol: Coding.FromStrict({
+    MedicationCodesValueSet_PropyleneGlycol: new Coding({
         code: "13668001",
         display: "Propylene glycol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenEAmos: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenEAmos: new Coding({
         code: "13701000",
         display: "Blood group antigen E. Amos",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RectifiedPineTarOil: Coding.FromStrict({
+    MedicationCodesValueSet_RectifiedPineTarOil: new Coding({
         code: "13708006",
         display: "Rectified pine tar oil",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMcCall: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMcCall: new Coding({
         code: "13717006",
         display: "Blood group antibody McCall",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenMan: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenMan: new Coding({
         code: "13723001",
         display: "Blood group antigen Man",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMiddel: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMiddel: new Coding({
         code: "13772008",
         display: "Blood group antibody Middel",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ProteinSecretoryTrypsinInhibitor: Coding.FromStrict({
+    MedicationCodesValueSet_ProteinSecretoryTrypsinInhibitor: new Coding({
         code: "13787003",
         display: "Protein secretory trypsin inhibitor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoalTarCreosote: Coding.FromStrict({
+    MedicationCodesValueSet_CoalTarCreosote: new Coding({
         code: "13789000",
         display: "Coal tar creosote",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LeukotrieneC: Coding.FromStrict({
+    MedicationCodesValueSet_LeukotrieneC: new Coding({
         code: "13841004",
         display: "Leukotriene C",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyFuller: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyFuller: new Coding({
         code: "13872000",
         display: "Blood group antibody Fuller",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_GuanadrelSulfate: Coding.FromStrict({
+    MedicationCodesValueSet_GuanadrelSulfate: new Coding({
         code: "14013006",
         display: "Guanadrel sulfate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power90PowerStrontium: Coding.FromStrict({
+    MedicationCodesValueSet_Power90PowerStrontium: new Coding({
         code: "14071002",
         display: "^90^Strontium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MNS2ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_MNS2ISBTSymbol: new Coding({
         code: "14090005",
         display: "MNS2 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenOQuoteConnor: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenOQuoteConnor: new Coding({
         code: "14104007",
         display: "Blood group antigen O'Connor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PotassiumIsotope: Coding.FromStrict({
+    MedicationCodesValueSet_PotassiumIsotope: new Coding({
         code: "14146003",
         display: "Potassium isotope",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_IntrinsicFactorConcentrateAgent: Coding.FromStrict({
+    MedicationCodesValueSet_IntrinsicFactorConcentrateAgent: new Coding({
         code: "14172007",
         display: "Intrinsic factor concentrate agent",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyT: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyT: new Coding({
         code: "14190008",
         display: "Blood group antibody T",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Sulfobromophthalein: Coding.FromStrict({
+    MedicationCodesValueSet_Sulfobromophthalein: new Coding({
         code: "14193005",
         display: "Sulfobromophthalein",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenFriedberg: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenFriedberg: new Coding({
         code: "14226002",
         display: "Blood group antigen Friedberg",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenGon: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenGon: new Coding({
         code: "14271005",
         display: "Blood group antigen Gon",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyEpi: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyEpi: new Coding({
         code: "14279007",
         display: "Blood group antibody Epi",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorXIVariantTypeIII: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorXIVariantTypeIII: new Coding({
         code: "14285000",
         display: "Coagulation factor XI variant type III",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VitaminLGreaterThan2LessThan: Coding.FromStrict({
+    MedicationCodesValueSet_VitaminLGreaterThan2LessThan: new Coding({
         code: "14312008",
         display: "Vitamin L>2<",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Difolatan: Coding.FromStrict({
+    MedicationCodesValueSet_Difolatan: new Coding({
         code: "14321009",
         display: "Difolatan",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VerapamilHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_VerapamilHydrochloride: new Coding({
         code: "14340003",
         display: "Verapamil hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenSeattleII: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenSeattleII: new Coding({
         code: "14349002",
         display: "Fibrinogen Seattle II",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyLsPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyLsPowerAPower: new Coding({
         code: "14396005",
         display: "Blood group antibody Ls^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_IodineRadioisotope: Coding.FromStrict({
+    MedicationCodesValueSet_IodineRadioisotope: new Coding({
         code: "14399003",
         display: "Iodine radioisotope",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Neocinchophen: Coding.FromStrict({
+    MedicationCodesValueSet_Neocinchophen: new Coding({
         code: "14409006",
         display: "Neocinchophen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CarbenicillinDisodium: Coding.FromStrict({
+    MedicationCodesValueSet_CarbenicillinDisodium: new Coding({
         code: "14438009",
         display: "Carbenicillin disodium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AminoglycosideClassOfAntibiotic: Coding.FromStrict({
+    MedicationCodesValueSet_AminoglycosideClassOfAntibiotic: new Coding({
         code: "14443002",
         display: "Aminoglycoside -class of antibiotic-",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyTodd: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyTodd: new Coding({
         code: "14444008",
         display: "Blood group antibody Todd",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AluminumPhosphate: Coding.FromStrict({
+    MedicationCodesValueSet_AluminumPhosphate: new Coding({
         code: "14461006",
         display: "Aluminum phosphate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAHumanLeukocyteAntigenCw3: Coding.FromStrict({
+    MedicationCodesValueSet_HLAHumanLeukocyteAntigenCw3: new Coding({
         code: "14464003",
         display: "HLA - Human leukocyte antigen Cw3",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Arsthinol: Coding.FromStrict({
+    MedicationCodesValueSet_Arsthinol: new Coding({
         code: "14507006",
         display: "Arsthinol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyJordan: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyJordan: new Coding({
         code: "14517001",
         display: "Blood group antibody Jordan",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyBovet: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyBovet: new Coding({
         code: "14574003",
         display: "Blood group antibody Bovet",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyHgPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyHgPowerAPower: new Coding({
         code: "14604008",
         display: "Blood group antibody Hg^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyB9724: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyB9724: new Coding({
         code: "14620003",
         display: "Blood group antibody B 9724",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Thiobarbiturate: Coding.FromStrict({
+    MedicationCodesValueSet_Thiobarbiturate: new Coding({
         code: "14638000",
         display: "Thiobarbiturate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ZincPhenolsulfonate: Coding.FromStrict({
+    MedicationCodesValueSet_ZincPhenolsulfonate: new Coding({
         code: "14645000",
         display: "Zinc phenolsulfonate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenParra: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenParra: new Coding({
         code: "14665007",
         display: "Blood group antigen Parra",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AAntigen: Coding.FromStrict({
+    MedicationCodesValueSet_AAntigen: new Coding({
         code: "14711003",
         display: "A antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Dextran75: Coding.FromStrict({
+    MedicationCodesValueSet_Dextran75: new Coding({
         code: "14715007",
         display: "Dextran 75",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntibodyToAntigenInISBTSystem007: Coding.FromStrict({
+    MedicationCodesValueSet_AntibodyToAntigenInISBTSystem007: new Coding({
         code: "14726001",
         display: "Antibody to antigen in ISBT system 007",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Cinchonine: Coding.FromStrict({
+    MedicationCodesValueSet_Cinchonine: new Coding({
         code: "14743003",
         display: "Cinchonine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_A1ATAlpha1Antitrypsin: Coding.FromStrict({
+    MedicationCodesValueSet_A1ATAlpha1Antitrypsin: new Coding({
         code: "14767006",
         display: "A-1AT - Alpha-1-antitrypsin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Amphechloral: Coding.FromStrict({
+    MedicationCodesValueSet_Amphechloral: new Coding({
         code: "14796007",
         display: "Amphechloral",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Aspidium: Coding.FromStrict({
+    MedicationCodesValueSet_Aspidium: new Coding({
         code: "14819006",
         display: "Aspidium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DI1ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_DI1ISBTSymbol: new Coding({
         code: "14827002",
         display: "DI1 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLABw77Antigen: Coding.FromStrict({
+    MedicationCodesValueSet_HLABw77Antigen: new Coding({
         code: "14849008",
         display: "HLA-Bw77 antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntimonySodiumThioglycolate: Coding.FromStrict({
+    MedicationCodesValueSet_AntimonySodiumThioglycolate: new Coding({
         code: "14903000",
         display: "Antimony sodium thioglycolate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PromethazineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_PromethazineHydrochloride: new Coding({
         code: "14905007",
         display: "Promethazine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenWilson: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenWilson: new Coding({
         code: "14986005",
         display: "Blood group antigen Wilson",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Meprylcaine: Coding.FromStrict({
+    MedicationCodesValueSet_Meprylcaine: new Coding({
         code: "15009009",
         display: "Meprylcaine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyTs: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyTs: new Coding({
         code: "15011000",
         display: "Blood group antibody Ts",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Beeswax: Coding.FromStrict({
+    MedicationCodesValueSet_Beeswax: new Coding({
         code: "15017001",
         display: "Beeswax",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Neoantigen: Coding.FromStrict({
+    MedicationCodesValueSet_Neoantigen: new Coding({
         code: "15021008",
         display: "Neoantigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntigenExcessImmuneComplex: Coding.FromStrict({
+    MedicationCodesValueSet_AntigenExcessImmuneComplex: new Coding({
         code: "15073009",
         display: "Antigen excess immune complex",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Alseroxylon: Coding.FromStrict({
+    MedicationCodesValueSet_Alseroxylon: new Coding({
         code: "15098005",
         display: "Alseroxylon",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ZincPropionate: Coding.FromStrict({
+    MedicationCodesValueSet_ZincPropionate: new Coding({
         code: "15129007",
         display: "Zinc propionate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyFR: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyFR: new Coding({
         code: "15275007",
         display: "Blood group antibody FR",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAHumanLeukocyteAntigenCw2: Coding.FromStrict({
+    MedicationCodesValueSet_HLAHumanLeukocyteAntigenCw2: new Coding({
         code: "15286009",
         display: "HLA - Human leukocyte antigen Cw2",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyGf: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyGf: new Coding({
         code: "15313005",
         display: "Blood group antibody Gf",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Benzoquinonium: Coding.FromStrict({
+    MedicationCodesValueSet_Benzoquinonium: new Coding({
         code: "15322006",
         display: "Benzoquinonium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_GlycineAminoAcid: Coding.FromStrict({
+    MedicationCodesValueSet_GlycineAminoAcid: new Coding({
         code: "15331006",
         display: "Glycine - amino acid",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CyproheptadineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_CyproheptadineHydrochloride: new Coding({
         code: "15352003",
         display: "Cyproheptadine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DO5ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_DO5ISBTSymbol: new Coding({
         code: "15392001",
         display: "DO5 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenPruitt: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenPruitt: new Coding({
         code: "15416001",
         display: "Blood group antigen Pruitt",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyP: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyP: new Coding({
         code: "15469000",
         display: "Blood group antibody p",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Preprodynorphin: Coding.FromStrict({
+    MedicationCodesValueSet_Preprodynorphin: new Coding({
         code: "15505005",
         display: "Preprodynorphin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AlternativeComplementPathwayFactor: Coding.FromStrict({
+    MedicationCodesValueSet_AlternativeComplementPathwayFactor: new Coding({
         code: "15551006",
         display: "Alternative complement pathway factor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MezlocillinSodium: Coding.FromStrict({
+    MedicationCodesValueSet_MezlocillinSodium: new Coding({
         code: "15571002",
         display: "Mezlocillin sodium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_KN5ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_KN5ISBTSymbol: new Coding({
         code: "15620005",
         display: "KN5 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ClusterOfDifferentiationAntigen76: Coding.FromStrict({
+    MedicationCodesValueSet_ClusterOfDifferentiationAntigen76: new Coding({
         code: "15653000",
         display: "Cluster of differentiation antigen 76",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BleomycinSulfate: Coding.FromStrict({
+    MedicationCodesValueSet_BleomycinSulfate: new Coding({
         code: "15660006",
         display: "Bleomycin sulfate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenRobert: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenRobert: new Coding({
         code: "15683009",
         display: "Blood group antigen Robert",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LysergicAcidDiethylamide: Coding.FromStrict({
+    MedicationCodesValueSet_LysergicAcidDiethylamide: new Coding({
         code: "15698006",
         display: "Lysergic acid diethylamide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Porphyrin: Coding.FromStrict({
+    MedicationCodesValueSet_Porphyrin: new Coding({
         code: "15730005",
         display: "Porphyrin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Interleukin7: Coding.FromStrict({
+    MedicationCodesValueSet_Interleukin7: new Coding({
         code: "15754000",
         display: "Interleukin-7",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_KEL20ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_KEL20ISBTSymbol: new Coding({
         code: "15781000",
         display: "KEL20 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Phenazopyridine: Coding.FromStrict({
+    MedicationCodesValueSet_Phenazopyridine: new Coding({
         code: "15785009",
         display: "Phenazopyridine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenAOwens: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenAOwens: new Coding({
         code: "15797005",
         display: "Blood group antigen A. Owens",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyBpPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyBpPowerAPower: new Coding({
         code: "15798000",
         display: "Blood group antibody Bp^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Tuaminoheptane: Coding.FromStrict({
+    MedicationCodesValueSet_Tuaminoheptane: new Coding({
         code: "15810003",
         display: "Tuaminoheptane",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenLondonI: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenLondonI: new Coding({
         code: "15895007",
         display: "Fibrinogen London I",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenParisIII: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenParisIII: new Coding({
         code: "15901005",
         display: "Fibrinogen Paris III",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyYkPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyYkPowerAPower: new Coding({
         code: "15909007",
         display: "Blood group antibody Yk^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyLanthois: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyLanthois: new Coding({
         code: "15942008",
         display: "Blood group antibody Lanthois",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyFyPowerXPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyFyPowerXPower: new Coding({
         code: "16019008",
         display: "Blood group antibody Fy^x^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLADQw8Antigen: Coding.FromStrict({
+    MedicationCodesValueSet_HLADQw8Antigen: new Coding({
         code: "16025007",
         display: "HLA-DQw8 antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ImmuneComplexAtEquivalence: Coding.FromStrict({
+    MedicationCodesValueSet_ImmuneComplexAtEquivalence: new Coding({
         code: "16074008",
         display: "Immune complex at equivalence",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Sulfametoxydiazine: Coding.FromStrict({
+    MedicationCodesValueSet_Sulfametoxydiazine: new Coding({
         code: "16106007",
         display: "Sulfametoxydiazine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyHrPowerHPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyHrPowerHPower: new Coding({
         code: "16122008",
         display: "Blood group antibody hr^H^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Styramate: Coding.FromStrict({
+    MedicationCodesValueSet_Styramate: new Coding({
         code: "16125005",
         display: "Styramate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DeoxyribonucleaseIVPhageTGreaterThan4LessThanInduced: Coding.FromStrict({
+    MedicationCodesValueSet_DeoxyribonucleaseIVPhageTGreaterThan4LessThanInduced: new Coding({
         code: "16130009",
         display: "Deoxyribonuclease IV (Phage T>4<-induced)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenKamiya: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenKamiya: new Coding({
         code: "16133006",
         display: "Blood group antigen Kamiya",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenMQuote: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenMQuote: new Coding({
         code: "16138002",
         display: "Blood group antigen M'",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Deslanoside: Coding.FromStrict({
+    MedicationCodesValueSet_Deslanoside: new Coding({
         code: "16214005",
         display: "Deslanoside",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenMadden: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenMadden: new Coding({
         code: "16230002",
         display: "Blood group antigen Madden",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DopamineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_DopamineHydrochloride: new Coding({
         code: "16257000",
         display: "Dopamine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorIXEagleRockVariant: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorIXEagleRockVariant: new Coding({
         code: "16276003",
         display: "Coagulation factor IX Eagle Rock variant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Dibenzothiepin: Coding.FromStrict({
+    MedicationCodesValueSet_Dibenzothiepin: new Coding({
         code: "16318005",
         display: "Dibenzothiepin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TetracyclineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_TetracyclineHydrochloride: new Coding({
         code: "16355005",
         display: "Tetracycline hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Phthalylsulfathiazole: Coding.FromStrict({
+    MedicationCodesValueSet_Phthalylsulfathiazole: new Coding({
         code: "16359004",
         display: "Phthalylsulfathiazole",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Hexylcaine: Coding.FromStrict({
+    MedicationCodesValueSet_Hexylcaine: new Coding({
         code: "16392005",
         display: "Hexylcaine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PituitaryGonadotropin: Coding.FromStrict({
+    MedicationCodesValueSet_PituitaryGonadotropin: new Coding({
         code: "16395007",
         display: "Pituitary gonadotropin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AlphaNeoendorphin: Coding.FromStrict({
+    MedicationCodesValueSet_AlphaNeoendorphin: new Coding({
         code: "16462002",
         display: "Alpha neoendorphin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DiagnosticVaccine: Coding.FromStrict({
+    MedicationCodesValueSet_DiagnosticVaccine: new Coding({
         code: "16477005",
         display: "Diagnostic vaccine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CloxacillinSodium: Coding.FromStrict({
+    MedicationCodesValueSet_CloxacillinSodium: new Coding({
         code: "16492006",
         display: "Cloxacillin sodium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyNyPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyNyPowerAPower: new Coding({
         code: "16519001",
         display: "Blood group antibody Ny^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ProstaglandinD2: Coding.FromStrict({
+    MedicationCodesValueSet_ProstaglandinD2: new Coding({
         code: "16613008",
         display: "Prostaglandin D2",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BromideSalt: Coding.FromStrict({
+    MedicationCodesValueSet_BromideSalt: new Coding({
         code: "16624005",
         display: "Bromide salt",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_GRFGrowthHormoneReleasingFactor: Coding.FromStrict({
+    MedicationCodesValueSet_GRFGrowthHormoneReleasingFactor: new Coding({
         code: "16628008",
         display: "GRF - Growth hormone releasing factor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinopeptideBBeta142: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinopeptideBBeta142: new Coding({
         code: "16670003",
         display: "Fibrinopeptide B-beta 1-42",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Progesterone: Coding.FromStrict({
+    MedicationCodesValueSet_Progesterone: new Coding({
         code: "16683002",
         display: "Progesterone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLABw47Antigen: Coding.FromStrict({
+    MedicationCodesValueSet_HLABw47Antigen: new Coding({
         code: "16705004",
         display: "HLA-Bw47 antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VAL4Pregnen21Ol31120Trione: Coding.FromStrict({
+    MedicationCodesValueSet_VAL4Pregnen21Ol31120Trione: new Coding({
         code: "16717002",
         display: "4-Pregnen-21-ol-3,11,20-trione",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodySGreaterThan2LessThan: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodySGreaterThan2LessThan: new Coding({
         code: "16734005",
         display: "Blood group antibody S>2<",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LactobacillusAcidophilusAgent: Coding.FromStrict({
+    MedicationCodesValueSet_LactobacillusAcidophilusAgent: new Coding({
         code: "16744007",
         display: "Lactobacillus acidophilus agent",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_XenonIsotope: Coding.FromStrict({
+    MedicationCodesValueSet_XenonIsotope: new Coding({
         code: "16745008",
         display: "Xenon isotope",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Zolamine: Coding.FromStrict({
+    MedicationCodesValueSet_Zolamine: new Coding({
         code: "16748005",
         display: "Zolamine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenPearl: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenPearl: new Coding({
         code: "16752005",
         display: "Blood group antigen Pearl",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Trichloroethylene: Coding.FromStrict({
+    MedicationCodesValueSet_Trichloroethylene: new Coding({
         code: "16808006",
         display: "Trichloroethylene",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PentamidineIsethionate: Coding.FromStrict({
+    MedicationCodesValueSet_PentamidineIsethionate: new Coding({
         code: "16826009",
         display: "Pentamidine isethionate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntiE: Coding.FromStrict({
+    MedicationCodesValueSet_AntiE: new Coding({
         code: "16878007",
         display: "Anti E",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Streptozocin: Coding.FromStrict({
+    MedicationCodesValueSet_Streptozocin: new Coding({
         code: "16915004",
         display: "Streptozocin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LupusAnticoagulant: Coding.FromStrict({
+    MedicationCodesValueSet_LupusAnticoagulant: new Coding({
         code: "16923002",
         display: "Lupus anticoagulant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Triacetin: Coding.FromStrict({
+    MedicationCodesValueSet_Triacetin: new Coding({
         code: "16946000",
         display: "Triacetin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntigenInRhBloodGroupSystem: Coding.FromStrict({
+    MedicationCodesValueSet_AntigenInRhBloodGroupSystem: new Coding({
         code: "16951006",
         display: "Antigen in Rh blood group system",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyGd: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyGd: new Coding({
         code: "16996004",
         display: "Blood group antibody Gd",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Levallorphan: Coding.FromStrict({
+    MedicationCodesValueSet_Levallorphan: new Coding({
         code: "17008002",
         display: "Levallorphan",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_NafoxidineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_NafoxidineHydrochloride: new Coding({
         code: "17062003",
         display: "Nafoxidine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CathepsinD: Coding.FromStrict({
+    MedicationCodesValueSet_CathepsinD: new Coding({
         code: "17072000",
         display: "Cathepsin D",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenPelletier: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenPelletier: new Coding({
         code: "17074004",
         display: "Blood group antigen Pelletier",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyEnPowerAPowerTS: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyEnPowerAPowerTS: new Coding({
         code: "17108004",
         display: "Blood group antibody En^a^TS",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Androsterone: Coding.FromStrict({
+    MedicationCodesValueSet_Androsterone: new Coding({
         code: "17117004",
         display: "Androsterone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyYhPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyYhPowerAPower: new Coding({
         code: "17119001",
         display: "Blood group antibody Yh^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CACholicAcid: Coding.FromStrict({
+    MedicationCodesValueSet_CACholicAcid: new Coding({
         code: "17147002",
         display: "CA - Cholic acid",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyIPowerDPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyIPowerDPower: new Coding({
         code: "17152007",
         display: "Blood group antibody I^D^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigen754: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigen754: new Coding({
         code: "17165003",
         display: "Blood group antigen 754",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BismuthSubcarbonate: Coding.FromStrict({
+    MedicationCodesValueSet_BismuthSubcarbonate: new Coding({
         code: "17212003",
         display: "Bismuth subcarbonate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_OilInWaterAgent: Coding.FromStrict({
+    MedicationCodesValueSet_OilInWaterAgent: new Coding({
         code: "17240008",
         display: "Oil in water agent",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Uramustine: Coding.FromStrict({
+    MedicationCodesValueSet_Uramustine: new Coding({
         code: "17243005",
         display: "Uramustine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ApraclonidineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_ApraclonidineHydrochloride: new Coding({
         code: "17244004",
         display: "Apraclonidine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PralidoximeChloride: Coding.FromStrict({
+    MedicationCodesValueSet_PralidoximeChloride: new Coding({
         code: "17356001",
         display: "Pralidoxime chloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenHey: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenHey: new Coding({
         code: "17430007",
         display: "Blood group antigen Hey",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_KEL12ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_KEL12ISBTSymbol: new Coding({
         code: "17462005",
         display: "KEL12 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LymphocyteAntigenCD32: Coding.FromStrict({
+    MedicationCodesValueSet_LymphocyteAntigenCD32: new Coding({
         code: "17595001",
         display: "Lymphocyte antigen CD32",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenBuenosAiresI: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenBuenosAiresI: new Coding({
         code: "17614005",
         display: "Fibrinogen Buenos Aires I",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HepatitisBEAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_HepatitisBEAntibody: new Coding({
         code: "17627009",
         display: "Hepatitis B e antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodySavery: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodySavery: new Coding({
         code: "17640004",
         display: "Blood group antibody Savery",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenRM: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenRM: new Coding({
         code: "17659002",
         display: "Blood group antigen R.M.",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BrucellaProteinNucleate: Coding.FromStrict({
+    MedicationCodesValueSet_BrucellaProteinNucleate: new Coding({
         code: "17701004",
         display: "Brucella protein nucleate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyRitter: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyRitter: new Coding({
         code: "17707000",
         display: "Blood group antibody Ritter",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorIXLondonVariant: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorIXLondonVariant: new Coding({
         code: "17731005",
         display: "Coagulation factor IX London variant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenEpi: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenEpi: new Coding({
         code: "17740009",
         display: "Blood group antigen Epi",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Blastomycin: Coding.FromStrict({
+    MedicationCodesValueSet_Blastomycin: new Coding({
         code: "17777001",
         display: "Blastomycin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorIICardezaVariant: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorIICardezaVariant: new Coding({
         code: "17798001",
         display: "Coagulation factor II Cardeza variant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AromaticAmmoniaSpirit: Coding.FromStrict({
+    MedicationCodesValueSet_AromaticAmmoniaSpirit: new Coding({
         code: "17836006",
         display: "Aromatic ammonia spirit",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntibodyExcessImmuneComplex: Coding.FromStrict({
+    MedicationCodesValueSet_AntibodyExcessImmuneComplex: new Coding({
         code: "17853004",
         display: "Antibody excess immune complex",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PropyleneGlycolDinitrate: Coding.FromStrict({
+    MedicationCodesValueSet_PropyleneGlycolDinitrate: new Coding({
         code: "17916009",
         display: "Propylene glycol dinitrate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenVicenza: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenVicenza: new Coding({
         code: "17932007",
         display: "Fibrinogen Vicenza",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenHouston: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenHouston: new Coding({
         code: "17942009",
         display: "Fibrinogen Houston",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Melarsoprol: Coding.FromStrict({
+    MedicationCodesValueSet_Melarsoprol: new Coding({
         code: "17990002",
         display: "Melarsoprol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenAdelaide: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenAdelaide: new Coding({
         code: "17991003",
         display: "Fibrinogen Adelaide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PhenylglycidylEther: Coding.FromStrict({
+    MedicationCodesValueSet_PhenylglycidylEther: new Coding({
         code: "18017000",
         display: "Phenylglycidyl ether",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyBalkin: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyBalkin: new Coding({
         code: "18030004",
         display: "Blood group antibody Balkin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AlkylMercuricPhosphate: Coding.FromStrict({
+    MedicationCodesValueSet_AlkylMercuricPhosphate: new Coding({
         code: "18039003",
         display: "Alkyl mercuric phosphate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RH10ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_RH10ISBTSymbol: new Coding({
         code: "18082002",
         display: "RH10 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenQuebecII: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenQuebecII: new Coding({
         code: "18143001",
         display: "Fibrinogen Quebec II",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntiAB: Coding.FromStrict({
+    MedicationCodesValueSet_AntiAB: new Coding({
         code: "18150002",
         display: "Anti-A,B",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAHumanLeukocyteAntigenDR9: Coding.FromStrict({
+    MedicationCodesValueSet_HLAHumanLeukocyteAntigenDR9: new Coding({
         code: "18195009",
         display: "HLA - Human leukocyte antigen DR9",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ThyroidHormone: Coding.FromStrict({
+    MedicationCodesValueSet_ThyroidHormone: new Coding({
         code: "18220004",
         display: "Thyroid hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VWFVonWillebrandFactor: Coding.FromStrict({
+    MedicationCodesValueSet_VWFVonWillebrandFactor: new Coding({
         code: "18288009",
         display: "vWF- von Willebrand factor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ThiethylperazineMaleate: Coding.FromStrict({
+    MedicationCodesValueSet_ThiethylperazineMaleate: new Coding({
         code: "18321003",
         display: "Thiethylperazine maleate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyFedor: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyFedor: new Coding({
         code: "18359006",
         display: "Blood group antibody Fedor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyKPowerWPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyKPowerWPower: new Coding({
         code: "18380000",
         display: "Blood group antibody K^w^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CollagenaseAgent: Coding.FromStrict({
+    MedicationCodesValueSet_CollagenaseAgent: new Coding({
         code: "18394004",
         display: "Collagenase agent",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VITDCholecalciferol: Coding.FromStrict({
+    MedicationCodesValueSet_VITDCholecalciferol: new Coding({
         code: "18414002",
         display: "VITD - Cholecalciferol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMZ443: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMZ443: new Coding({
         code: "18426007",
         display: "Blood group antibody MZ 443",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ClusterOfDifferentiationAntigen58: Coding.FromStrict({
+    MedicationCodesValueSet_ClusterOfDifferentiationAntigen58: new Coding({
         code: "18436004",
         display: "Cluster of differentiation antigen 58",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LincomycinHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_LincomycinHydrochloride: new Coding({
         code: "18449009",
         display: "Lincomycin hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Methdilazine: Coding.FromStrict({
+    MedicationCodesValueSet_Methdilazine: new Coding({
         code: "18462008",
         display: "Methdilazine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMPowerGPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMPowerGPower: new Coding({
         code: "18468007",
         display: "Blood group antibody M^g^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LE6ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_LE6ISBTSymbol: new Coding({
         code: "18486005",
         display: "LE6 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeucocyteAntigenB51: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeucocyteAntigenB51: new Coding({
         code: "18501000",
         display: "Human leucocyte antigen B51",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RH34ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_RH34ISBTSymbol: new Coding({
         code: "18533009",
         display: "RH34 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HypothalamicReleasingFactor: Coding.FromStrict({
+    MedicationCodesValueSet_HypothalamicReleasingFactor: new Coding({
         code: "18535002",
         display: "Hypothalamic releasing factor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ThioridazineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_ThioridazineHydrochloride: new Coding({
         code: "18550006",
         display: "Thioridazine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Glucurolactone: Coding.FromStrict({
+    MedicationCodesValueSet_Glucurolactone: new Coding({
         code: "18600008",
         display: "Glucurolactone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RH18ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_RH18ISBTSymbol: new Coding({
         code: "18611000",
         display: "RH18 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LithiumHydride: Coding.FromStrict({
+    MedicationCodesValueSet_LithiumHydride: new Coding({
         code: "18616005",
         display: "Lithium hydride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenIPGreaterThan1LessThan: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenIPGreaterThan1LessThan: new Coding({
         code: "18627007",
         display: "Blood group antigen iP>1<",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FungalAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_FungalAntibody: new Coding({
         code: "18659000",
         display: "Fungal antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Phenacemide: Coding.FromStrict({
+    MedicationCodesValueSet_Phenacemide: new Coding({
         code: "18712002",
         display: "Phenacemide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenRh38: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenRh38: new Coding({
         code: "18737007",
         display: "Blood group antigen Rh38",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Leukocyte23: Coding.FromStrict({
+    MedicationCodesValueSet_Leukocyte23: new Coding({
         code: "18761000",
         display: "Leukocyte 23",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenDropik: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenDropik: new Coding({
         code: "18763002",
         display: "Blood group antigen Dropik",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Diethylphthalate: Coding.FromStrict({
+    MedicationCodesValueSet_Diethylphthalate: new Coding({
         code: "18815007",
         display: "Diethylphthalate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Butylphenamide: Coding.FromStrict({
+    MedicationCodesValueSet_Butylphenamide: new Coding({
         code: "18832006",
         display: "Butylphenamide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenNewYorkIV: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenNewYorkIV: new Coding({
         code: "18852007",
         display: "Fibrinogen New York IV",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CD2ClusterOfDifferentiationAntigen2: Coding.FromStrict({
+    MedicationCodesValueSet_CD2ClusterOfDifferentiationAntigen2: new Coding({
         code: "18853002",
         display: "CD2 - Cluster of differentiation antigen 2",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DibenzazepineDerivative: Coding.FromStrict({
+    MedicationCodesValueSet_DibenzazepineDerivative: new Coding({
         code: "18959002",
         display: "Dibenzazepine derivative",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ProlactinReleasingFactor: Coding.FromStrict({
+    MedicationCodesValueSet_ProlactinReleasingFactor: new Coding({
         code: "18970009",
         display: "Prolactin releasing factor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LymphocyteAntigenCD18: Coding.FromStrict({
+    MedicationCodesValueSet_LymphocyteAntigenCD18: new Coding({
         code: "19009001",
         display: "Lymphocyte antigen CD18",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntiN: Coding.FromStrict({
+    MedicationCodesValueSet_AntiN: new Coding({
         code: "19011005",
         display: "Anti N",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenTokyoI: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenTokyoI: new Coding({
         code: "19012003",
         display: "Fibrinogen Tokyo I",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenJopson: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenJopson: new Coding({
         code: "19022009",
         display: "Blood group antigen Jopson",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyHallJ: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyHallJ: new Coding({
         code: "19035000",
         display: "Blood group antibody Hall J",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TolazolineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_TolazolineHydrochloride: new Coding({
         code: "19041007",
         display: "Tolazoline hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenPamplona: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenPamplona: new Coding({
         code: "19046002",
         display: "Fibrinogen Pamplona",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Leukocyte11: Coding.FromStrict({
+    MedicationCodesValueSet_Leukocyte11: new Coding({
         code: "19089003",
         display: "Leukocyte 11",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MafenideAcetate: Coding.FromStrict({
+    MedicationCodesValueSet_MafenideAcetate: new Coding({
         code: "19114000",
         display: "Mafenide acetate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Merbromin: Coding.FromStrict({
+    MedicationCodesValueSet_Merbromin: new Coding({
         code: "19126005",
         display: "Merbromin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyS1PowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyS1PowerAPower: new Coding({
         code: "19136002",
         display: "Blood group antibody S1^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Prohormone: Coding.FromStrict({
+    MedicationCodesValueSet_Prohormone: new Coding({
         code: "19163001",
         display: "Prohormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyU: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyU: new Coding({
         code: "19178008",
         display: "Blood group antibody U",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CGreaterThan5b67LessThanInhibitor: Coding.FromStrict({
+    MedicationCodesValueSet_CGreaterThan5b67LessThanInhibitor: new Coding({
         code: "19182005",
         display: "C>5b67< inhibitor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Secretin: Coding.FromStrict({
+    MedicationCodesValueSet_Secretin: new Coding({
         code: "19205004",
         display: "Secretin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DI6ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_DI6ISBTSymbol: new Coding({
         code: "19331004",
         display: "DI6 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenPe: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenPe: new Coding({
         code: "19395006",
         display: "Blood group antigen Pe",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyBaumler: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyBaumler: new Coding({
         code: "19400007",
         display: "Blood group antibody Baumler",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ChloroprocaineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_ChloroprocaineHydrochloride: new Coding({
         code: "19421007",
         display: "Chloroprocaine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power59PowerNickel: Coding.FromStrict({
+    MedicationCodesValueSet_Power59PowerNickel: new Coding({
         code: "19427006",
         display: "^59^Nickel",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CarbonDioxideAbsorbent: Coding.FromStrict({
+    MedicationCodesValueSet_CarbonDioxideAbsorbent: new Coding({
         code: "19462001",
         display: "Carbon dioxide absorbent",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CarbinoxamineMaleate: Coding.FromStrict({
+    MedicationCodesValueSet_CarbinoxamineMaleate: new Coding({
         code: "19499001",
         display: "Carbinoxamine maleate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DiphenhydramineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_DiphenhydramineHydrochloride: new Coding({
         code: "19510001",
         display: "Diphenhydramine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Penthienate: Coding.FromStrict({
+    MedicationCodesValueSet_Penthienate: new Coding({
         code: "19524002",
         display: "Penthienate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyISBTP1: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyISBTP1: new Coding({
         code: "19530002",
         display: "Blood group antibody ISBT P1",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyRios: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyRios: new Coding({
         code: "19565002",
         display: "Blood group antibody Rios",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Phenolphthalein: Coding.FromStrict({
+    MedicationCodesValueSet_Phenolphthalein: new Coding({
         code: "19595005",
         display: "Phenolphthalein",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power48PowerChromium: Coding.FromStrict({
+    MedicationCodesValueSet_Power48PowerChromium: new Coding({
         code: "19622008",
         display: "^48^Chromium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LCALeukocyteCommonAntigen: Coding.FromStrict({
+    MedicationCodesValueSet_LCALeukocyteCommonAntigen: new Coding({
         code: "19677004",
         display: "LCA - Leukocyte common antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LymphocyteAntigenCD17: Coding.FromStrict({
+    MedicationCodesValueSet_LymphocyteAntigenCD17: new Coding({
         code: "19728002",
         display: "Lymphocyte antigen CD17",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyShannon: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyShannon: new Coding({
         code: "19755006",
         display: "Blood group antibody Shannon",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyGroslouis: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyGroslouis: new Coding({
         code: "19783008",
         display: "Blood group antibody Groslouis",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibody: new Coding({
         code: "19830006",
         display: "Blood group antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Sorbitol: Coding.FromStrict({
+    MedicationCodesValueSet_Sorbitol: new Coding({
         code: "19839007",
         display: "Sorbitol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LymphocyteAntigenCDw78: Coding.FromStrict({
+    MedicationCodesValueSet_LymphocyteAntigenCDw78: new Coding({
         code: "19868008",
         display: "Lymphocyte antigen CDw78",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PotassiumDichromate: Coding.FromStrict({
+    MedicationCodesValueSet_PotassiumDichromate: new Coding({
         code: "19893005",
         display: "Potassium dichromate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HydroperoxyEicosatetraenoicAcid: Coding.FromStrict({
+    MedicationCodesValueSet_HydroperoxyEicosatetraenoicAcid: new Coding({
         code: "19917006",
         display: "Hydroperoxy eicosatetraenoic acid",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Dihydroergocornine: Coding.FromStrict({
+    MedicationCodesValueSet_Dihydroergocornine: new Coding({
         code: "19918001",
         display: "Dihydroergocornine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MNS1ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_MNS1ISBTSymbol: new Coding({
         code: "19945000",
         display: "MNS1 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Viomycin: Coding.FromStrict({
+    MedicationCodesValueSet_Viomycin: new Coding({
         code: "19967004",
         display: "Viomycin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Hexafluorenium: Coding.FromStrict({
+    MedicationCodesValueSet_Hexafluorenium: new Coding({
         code: "19978007",
         display: "Hexafluorenium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RG1ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_RG1ISBTSymbol: new Coding({
         code: "20009008",
         display: "RG1 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DI2ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_DI2ISBTSymbol: new Coding({
         code: "20040001",
         display: "DI2 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Dibromosalicylaldehyde: Coding.FromStrict({
+    MedicationCodesValueSet_Dibromosalicylaldehyde: new Coding({
         code: "20056006",
         display: "Dibromosalicylaldehyde",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_C6ComplementComponent6: Coding.FromStrict({
+    MedicationCodesValueSet_C6ComplementComponent6: new Coding({
         code: "20057002",
         display: "C6 - Complement component 6",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LungSurfactant: Coding.FromStrict({
+    MedicationCodesValueSet_LungSurfactant: new Coding({
         code: "20170008",
         display: "Lung surfactant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TrimethaphanCamsylate: Coding.FromStrict({
+    MedicationCodesValueSet_TrimethaphanCamsylate: new Coding({
         code: "20217007",
         display: "Trimethaphan camsylate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_KEL5ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_KEL5ISBTSymbol: new Coding({
         code: "20228006",
         display: "KEL5 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Pyrrobutamine: Coding.FromStrict({
+    MedicationCodesValueSet_Pyrrobutamine: new Coding({
         code: "20229003",
         display: "Pyrrobutamine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AminosalicylateSodium: Coding.FromStrict({
+    MedicationCodesValueSet_AminosalicylateSodium: new Coding({
         code: "20231007",
         display: "Aminosalicylate sodium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ChlorinatedLime: Coding.FromStrict({
+    MedicationCodesValueSet_ChlorinatedLime: new Coding({
         code: "20238001",
         display: "Chlorinated lime",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyGloboside: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyGloboside: new Coding({
         code: "20304007",
         display: "Blood group antibody globoside",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SodiumCaprylate: Coding.FromStrict({
+    MedicationCodesValueSet_SodiumCaprylate: new Coding({
         code: "20327004",
         display: "Sodium caprylate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MethysergideMaleate: Coding.FromStrict({
+    MedicationCodesValueSet_MethysergideMaleate: new Coding({
         code: "20340009",
         display: "Methysergide maleate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_GranulocyteAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_GranulocyteAntibody: new Coding({
         code: "20355000",
         display: "Granulocyte antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Diphacinone: Coding.FromStrict({
+    MedicationCodesValueSet_Diphacinone: new Coding({
         code: "20368008",
         display: "Diphacinone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Methyldimethoxyamphetamine: Coding.FromStrict({
+    MedicationCodesValueSet_Methyldimethoxyamphetamine: new Coding({
         code: "20378006",
         display: "Methyldimethoxyamphetamine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_NeomycinC: Coding.FromStrict({
+    MedicationCodesValueSet_NeomycinC: new Coding({
         code: "20379003",
         display: "Neomycin C",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyRh38: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyRh38: new Coding({
         code: "20383003",
         display: "Blood group antibody Rh38",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Levopropoxyphene: Coding.FromStrict({
+    MedicationCodesValueSet_Levopropoxyphene: new Coding({
         code: "20413008",
         display: "Levopropoxyphene",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CiprofloxacinHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_CiprofloxacinHydrochloride: new Coding({
         code: "20450009",
         display: "Ciprofloxacin hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Isopropamide: Coding.FromStrict({
+    MedicationCodesValueSet_Isopropamide: new Coding({
         code: "20468007",
         display: "Isopropamide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAHumanLeukocyteAntigenDw24: Coding.FromStrict({
+    MedicationCodesValueSet_HLAHumanLeukocyteAntigenDw24: new Coding({
         code: "20493009",
         display: "HLA - Human leukocyte antigen Dw24",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenHaifa: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenHaifa: new Coding({
         code: "20495002",
         display: "Fibrinogen Haifa",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenSantano: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenSantano: new Coding({
         code: "20576006",
         display: "Blood group antigen Santano",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyNielsen: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyNielsen: new Coding({
         code: "20591008",
         display: "Blood group antibody Nielsen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenChristchurgII: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenChristchurgII: new Coding({
         code: "20686000",
         display: "Fibrinogen Christchurg II",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenVK: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenVK: new Coding({
         code: "20748000",
         display: "Blood group antigen VK",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ProthrombinAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_ProthrombinAntibody: new Coding({
         code: "20752000",
         display: "Prothrombin antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Leukocyte7: Coding.FromStrict({
+    MedicationCodesValueSet_Leukocyte7: new Coding({
         code: "20764008",
         display: "Leukocyte 7",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CongenitalDysfibrinogen: Coding.FromStrict({
+    MedicationCodesValueSet_CongenitalDysfibrinogen: new Coding({
         code: "20771003",
         display: "Congenital dysfibrinogen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMargaret: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMargaret: new Coding({
         code: "20777004",
         display: "Blood group antibody Margaret",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntiNucleolusAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_AntiNucleolusAntibody: new Coding({
         code: "20807009",
         display: "Anti nucleolus antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ComplementThermolabileSerumProteinComplexWithCytotoxicEffect: Coding.FromStrict({
+    MedicationCodesValueSet_ComplementThermolabileSerumProteinComplexWithCytotoxicEffect: new Coding({
         code: "20823009",
         display: "Complement, thermolabile serum protein complex with cytotoxic effect",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Oxyprocaine: Coding.FromStrict({
+    MedicationCodesValueSet_Oxyprocaine: new Coding({
         code: "20844009",
         display: "Oxyprocaine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_StreptokinaseAgent: Coding.FromStrict({
+    MedicationCodesValueSet_StreptokinaseAgent: new Coding({
         code: "20847002",
         display: "Streptokinase agent",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyHut: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyHut: new Coding({
         code: "20878003",
         display: "Blood group antibody Hut",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Tretamine: Coding.FromStrict({
+    MedicationCodesValueSet_Tretamine: new Coding({
         code: "20887007",
         display: "Tretamine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ExtracellularMatrixReceptorTypeIII: Coding.FromStrict({
+    MedicationCodesValueSet_ExtracellularMatrixReceptorTypeIII: new Coding({
         code: "20898008",
         display: "Extracellular matrix receptor type III",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyCipriano: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyCipriano: new Coding({
         code: "20907008",
         display: "Blood group antibody Cipriano",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RH42ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_RH42ISBTSymbol: new Coding({
         code: "21023002",
         display: "RH42 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenBergamoI: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenBergamoI: new Coding({
         code: "21028006",
         display: "Fibrinogen Bergamo I",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyRm: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyRm: new Coding({
         code: "21064007",
         display: "Blood group antibody Rm",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BuprenorphineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_BuprenorphineHydrochloride: new Coding({
         code: "21066009",
         display: "Buprenorphine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power61PowerCobalt: Coding.FromStrict({
+    MedicationCodesValueSet_Power61PowerCobalt: new Coding({
         code: "21075006",
         display: "^61^Cobalt",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoalTarOintment: Coding.FromStrict({
+    MedicationCodesValueSet_CoalTarOintment: new Coding({
         code: "21094001",
         display: "Coal tar ointment",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenMcCPowerDPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenMcCPowerDPower: new Coding({
         code: "21102006",
         display: "Blood group antigen McC^d^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyHrGreaterThanOLessThan: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyHrGreaterThanOLessThan: new Coding({
         code: "21145004",
         display: "Blood group antibody Hr>o<",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyPrGreaterThan1hLessThan: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyPrGreaterThan1hLessThan: new Coding({
         code: "21149005",
         display: "Blood group antibody Pr>1h<",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_IndependentHighIncidenceBloodGroupAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_IndependentHighIncidenceBloodGroupAntibody: new Coding({
         code: "21158003",
         display: "Independent high incidence blood group antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LymphocyteAntigenCD21: Coding.FromStrict({
+    MedicationCodesValueSet_LymphocyteAntigenCD21: new Coding({
         code: "21166007",
         display: "Lymphocyte antigen CD21",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Acetosulfone: Coding.FromStrict({
+    MedicationCodesValueSet_Acetosulfone: new Coding({
         code: "21168008",
         display: "Acetosulfone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MethantheliniumBromide: Coding.FromStrict({
+    MedicationCodesValueSet_MethantheliniumBromide: new Coding({
         code: "21175009",
         display: "Methanthelinium bromide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Piperoxan: Coding.FromStrict({
+    MedicationCodesValueSet_Piperoxan: new Coding({
         code: "21235009",
         display: "Piperoxan",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenDetroit: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenDetroit: new Coding({
         code: "21246007",
         display: "Fibrinogen Detroit",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenDw23: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenDw23: new Coding({
         code: "21256006",
         display: "Human leukocyte antigen Dw23",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PlateletFactor4: Coding.FromStrict({
+    MedicationCodesValueSet_PlateletFactor4: new Coding({
         code: "21289006",
         display: "Platelet factor 4",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MethoxamineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_MethoxamineHydrochloride: new Coding({
         code: "21303006",
         display: "Methoxamine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MNS15ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_MNS15ISBTSymbol: new Coding({
         code: "21315005",
         display: "MNS15 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SoapEnema: Coding.FromStrict({
+    MedicationCodesValueSet_SoapEnema: new Coding({
         code: "21373005",
         display: "Soap enema",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Adiphenine: Coding.FromStrict({
+    MedicationCodesValueSet_Adiphenine: new Coding({
         code: "21394008",
         display: "Adiphenine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_NaloxoneHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_NaloxoneHydrochloride: new Coding({
         code: "21518006",
         display: "Naloxone hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeucocyteAntigenBw71: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeucocyteAntigenBw71: new Coding({
         code: "21521008",
         display: "Human leucocyte antigen Bw71",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VAL4MethylaminophenolSulfate: Coding.FromStrict({
+    MedicationCodesValueSet_VAL4MethylaminophenolSulfate: new Coding({
         code: "21556007",
         display: "4-Methylaminophenol sulfate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power69mPowerZinc: Coding.FromStrict({
+    MedicationCodesValueSet_Power69mPowerZinc: new Coding({
         code: "21559000",
         display: "^69m^Zinc",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MethyldopateHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_MethyldopateHydrochloride: new Coding({
         code: "21566004",
         display: "Methyldopate hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AdrenalCorticalHormone: Coding.FromStrict({
+    MedicationCodesValueSet_AdrenalCorticalHormone: new Coding({
         code: "21568003",
         display: "Adrenal cortical hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_I123Iodine123: Coding.FromStrict({
+    MedicationCodesValueSet_I123Iodine123: new Coding({
         code: "21572004",
         display: "I123 - Iodine 123",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BoricAcid: Coding.FromStrict({
+    MedicationCodesValueSet_BoricAcid: new Coding({
         code: "21611007",
         display: "Boric acid",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PhenelzineSulfate: Coding.FromStrict({
+    MedicationCodesValueSet_PhenelzineSulfate: new Coding({
         code: "21614004",
         display: "Phenelzine sulfate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RH12ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_RH12ISBTSymbol: new Coding({
         code: "21642002",
         display: "RH12 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TetrahydrofolicAcid: Coding.FromStrict({
+    MedicationCodesValueSet_TetrahydrofolicAcid: new Coding({
         code: "21706000",
         display: "Tetrahydrofolic acid",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ComplementComponentPrecursor: Coding.FromStrict({
+    MedicationCodesValueSet_ComplementComponentPrecursor: new Coding({
         code: "21774001",
         display: "Complement component, precursor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyHEMPAS: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyHEMPAS: new Coding({
         code: "21802009",
         display: "Blood group antibody HEMPAS",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyGriffith: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyGriffith: new Coding({
         code: "21873000",
         display: "Blood group antibody Griffith",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenNOR: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenNOR: new Coding({
         code: "21876008",
         display: "Blood group antigen NOR",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DigestiveEnzyme: Coding.FromStrict({
+    MedicationCodesValueSet_DigestiveEnzyme: new Coding({
         code: "21891005",
         display: "Digestive enzyme",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BismuthViolet: Coding.FromStrict({
+    MedicationCodesValueSet_BismuthViolet: new Coding({
         code: "21903000",
         display: "Bismuth violet",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Opium: Coding.FromStrict({
+    MedicationCodesValueSet_Opium: new Coding({
         code: "21919007",
         display: "Opium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LU14ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_LU14ISBTSymbol: new Coding({
         code: "21920001",
         display: "LU14 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenLePowerXPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenLePowerXPower: new Coding({
         code: "22023004",
         display: "Blood group antigen Le^x^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SeSelenium: Coding.FromStrict({
+    MedicationCodesValueSet_SeSelenium: new Coding({
         code: "22038003",
         display: "Se - Selenium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SodiumAntimonylGluconate: Coding.FromStrict({
+    MedicationCodesValueSet_SodiumAntimonylGluconate: new Coding({
         code: "22086005",
         display: "Sodium antimonyl gluconate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MetamizoleSodium: Coding.FromStrict({
+    MedicationCodesValueSet_MetamizoleSodium: new Coding({
         code: "22165008",
         display: "Metamizole sodium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Acetarsol: Coding.FromStrict({
+    MedicationCodesValueSet_Acetarsol: new Coding({
         code: "22236007",
         display: "Acetarsol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Glutardialdehyde: Coding.FromStrict({
+    MedicationCodesValueSet_Glutardialdehyde: new Coding({
         code: "22242006",
         display: "Glutardialdehyde",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenBirmingham: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenBirmingham: new Coding({
         code: "22250002",
         display: "Fibrinogen Birmingham",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodySa: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodySa: new Coding({
         code: "22269007",
         display: "Blood group antibody Sa",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HepatitisBSurfaceAntigen: Coding.FromStrict({
+    MedicationCodesValueSet_HepatitisBSurfaceAntigen: new Coding({
         code: "22290004",
         display: "Hepatitis B surface antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMcCPowerEPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMcCPowerEPower: new Coding({
         code: "22332006",
         display: "Blood group antibody McC^e^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenDR5: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenDR5: new Coding({
         code: "22348007",
         display: "Human leukocyte antigen DR5",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CalciumHydrogenPhosphateAnhydrous: Coding.FromStrict({
+    MedicationCodesValueSet_CalciumHydrogenPhosphateAnhydrous: new Coding({
         code: "22362000",
         display: "Calcium hydrogen phosphate anhydrous",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Ochratoxin: Coding.FromStrict({
+    MedicationCodesValueSet_Ochratoxin: new Coding({
         code: "22424004",
         display: "Ochratoxin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CathepsinG: Coding.FromStrict({
+    MedicationCodesValueSet_CathepsinG: new Coding({
         code: "22453003",
         display: "Cathepsin G",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenClevelandI: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenClevelandI: new Coding({
         code: "22496008",
         display: "Fibrinogen Cleveland I",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenBw50: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenBw50: new Coding({
         code: "22503007",
         display: "Human leukocyte antigen Bw50",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RH17ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_RH17ISBTSymbol: new Coding({
         code: "22568000",
         display: "RH17 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VitaminKGreaterThan2LessThan: Coding.FromStrict({
+    MedicationCodesValueSet_VitaminKGreaterThan2LessThan: new Coding({
         code: "22606007",
         display: "Vitamin K>2<",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyBarrett: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyBarrett: new Coding({
         code: "22627002",
         display: "Blood group antibody Barrett",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FactorVAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_FactorVAntibody: new Coding({
         code: "22635004",
         display: "Factor V antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PropanthelineBromide: Coding.FromStrict({
+    MedicationCodesValueSet_PropanthelineBromide: new Coding({
         code: "22654004",
         display: "Propantheline bromide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PenthienateBromide: Coding.FromStrict({
+    MedicationCodesValueSet_PenthienateBromide: new Coding({
         code: "22769006",
         display: "Penthienate bromide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorIIHabanaVariant: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorIIHabanaVariant: new Coding({
         code: "22779008",
         display: "Coagulation factor II Habana variant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PhysostigmineSulfate: Coding.FromStrict({
+    MedicationCodesValueSet_PhysostigmineSulfate: new Coding({
         code: "22790003",
         display: "Physostigmine sulfate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TripelennamineCitrate: Coding.FromStrict({
+    MedicationCodesValueSet_TripelennamineCitrate: new Coding({
         code: "22792006",
         display: "Tripelennamine citrate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ProchlorperazineMaleate: Coding.FromStrict({
+    MedicationCodesValueSet_ProchlorperazineMaleate: new Coding({
         code: "22827004",
         display: "Prochlorperazine maleate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyAuPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyAuPowerAPower: new Coding({
         code: "22839007",
         display: "Blood group antibody Au^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TetraethylPyrophosphate: Coding.FromStrict({
+    MedicationCodesValueSet_TetraethylPyrophosphate: new Coding({
         code: "22840009",
         display: "Tetraethyl pyrophosphate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorIIMoliseVariant: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorIIMoliseVariant: new Coding({
         code: "22882008",
         display: "Coagulation factor II Molise variant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMessenger: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMessenger: new Coding({
         code: "22939008",
         display: "Blood group antibody Messenger",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Cortodoxone: Coding.FromStrict({
+    MedicationCodesValueSet_Cortodoxone: new Coding({
         code: "22941009",
         display: "Cortodoxone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ISystemAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_ISystemAntibody: new Coding({
         code: "22971001",
         display: "I system antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AluminumAcetate: Coding.FromStrict({
+    MedicationCodesValueSet_AluminumAcetate: new Coding({
         code: "22976006",
         display: "Aluminum acetate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAHumanLeukocyteAntigenDPw1: Coding.FromStrict({
+    MedicationCodesValueSet_HLAHumanLeukocyteAntigenDPw1: new Coding({
         code: "23016008",
         display: "HLA - Human leukocyte antigen DPw1",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_IophenoicAcid: Coding.FromStrict({
+    MedicationCodesValueSet_IophenoicAcid: new Coding({
         code: "23053002",
         display: "Iophenoic acid",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DI17ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_DI17ISBTSymbol: new Coding({
         code: "23064004",
         display: "DI17 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CaffeineCitrate: Coding.FromStrict({
+    MedicationCodesValueSet_CaffeineCitrate: new Coding({
         code: "23068001",
         display: "Caffeine citrate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BarbituricAcid: Coding.FromStrict({
+    MedicationCodesValueSet_BarbituricAcid: new Coding({
         code: "23077008",
         display: "Barbituric acid",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CROM5ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_CROM5ISBTSymbol: new Coding({
         code: "23101007",
         display: "CROM5 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenNiemetz: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenNiemetz: new Coding({
         code: "23103005",
         display: "Blood group antigen Niemetz",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Sp4040: Coding.FromStrict({
+    MedicationCodesValueSet_Sp4040: new Coding({
         code: "23164001",
         display: "Sp40/40",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenTerrano: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenTerrano: new Coding({
         code: "23165000",
         display: "Blood group antigen Terrano",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BacampicillinHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_BacampicillinHydrochloride: new Coding({
         code: "23176001",
         display: "Bacampicillin hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FY3ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_FY3ISBTSymbol: new Coding({
         code: "23200004",
         display: "FY3 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HomologousRestrictionFactor: Coding.FromStrict({
+    MedicationCodesValueSet_HomologousRestrictionFactor: new Coding({
         code: "23240005",
         display: "Homologous restriction factor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorI: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorI: new Coding({
         code: "23295004",
         display: "Coagulation factor I",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodySchwend: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodySchwend: new Coding({
         code: "23314002",
         display: "Blood group antibody Schwend",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_NeutrophilCytoplasmicAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_NeutrophilCytoplasmicAntibody: new Coding({
         code: "23318004",
         display: "Neutrophil cytoplasmic antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CirculatingImmuneComplex: Coding.FromStrict({
+    MedicationCodesValueSet_CirculatingImmuneComplex: new Coding({
         code: "23369004",
         display: "Circulating immune complex",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PolymyxinESulfate: Coding.FromStrict({
+    MedicationCodesValueSet_PolymyxinESulfate: new Coding({
         code: "23375008",
         display: "Polymyxin E sulfate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_KEL3ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_KEL3ISBTSymbol: new Coding({
         code: "23380004",
         display: "KEL3 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyALePowerBPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyALePowerBPower: new Coding({
         code: "23385009",
         display: "Blood group antibody ALe^b^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyGreen: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyGreen: new Coding({
         code: "23396001",
         display: "Blood group antibody Green",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Calciferol: Coding.FromStrict({
+    MedicationCodesValueSet_Calciferol: new Coding({
         code: "23433006",
         display: "Calciferol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MNS31ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_MNS31ISBTSymbol: new Coding({
         code: "23434000",
         display: "MNS31 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SeleniumRadioisotope: Coding.FromStrict({
+    MedicationCodesValueSet_SeleniumRadioisotope: new Coding({
         code: "23459009",
         display: "Selenium radioisotope",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Dyclonine: Coding.FromStrict({
+    MedicationCodesValueSet_Dyclonine: new Coding({
         code: "23564005",
         display: "Dyclonine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_GE4ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_GE4ISBTSymbol: new Coding({
         code: "23603009",
         display: "GE4 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PlateletAntigenHPA3a: Coding.FromStrict({
+    MedicationCodesValueSet_PlateletAntigenHPA3a: new Coding({
         code: "23689006",
         display: "Platelet antigen HPA-3a",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TribasicCalciumPhosphate: Coding.FromStrict({
+    MedicationCodesValueSet_TribasicCalciumPhosphate: new Coding({
         code: "23692005",
         display: "Tribasic calcium phosphate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Triclocarban: Coding.FromStrict({
+    MedicationCodesValueSet_Triclocarban: new Coding({
         code: "23701001",
         display: "Triclocarban",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyWb: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyWb: new Coding({
         code: "23760003",
         display: "Blood group antibody Wb",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAHumanLeukocyteAntigenDw9: Coding.FromStrict({
+    MedicationCodesValueSet_HLAHumanLeukocyteAntigenDw9: new Coding({
         code: "23774005",
         display: "HLA - Human leukocyte antigen Dw9",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyRh40: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyRh40: new Coding({
         code: "23775006",
         display: "Blood group antibody Rh40",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_GuanethidineMonosulfate: Coding.FromStrict({
+    MedicationCodesValueSet_GuanethidineMonosulfate: new Coding({
         code: "23814005",
         display: "Guanethidine monosulfate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_THFTetrahydrocortisol: Coding.FromStrict({
+    MedicationCodesValueSet_THFTetrahydrocortisol: new Coding({
         code: "23816007",
         display: "THF - Tetrahydrocortisol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Phenolsulfonphthalein: Coding.FromStrict({
+    MedicationCodesValueSet_Phenolsulfonphthalein: new Coding({
         code: "23861006",
         display: "Phenolsulfonphthalein",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenBethesdaIII: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenBethesdaIII: new Coding({
         code: "23862004",
         display: "Fibrinogen Bethesda III",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FluoroaceticAcid: Coding.FromStrict({
+    MedicationCodesValueSet_FluoroaceticAcid: new Coding({
         code: "23866001",
         display: "Fluoroacetic acid",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyWhittle: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyWhittle: new Coding({
         code: "23878002",
         display: "Blood group antibody Whittle",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MethadoneHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_MethadoneHydrochloride: new Coding({
         code: "23883005",
         display: "Methadone hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenLaFave: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenLaFave: new Coding({
         code: "23893003",
         display: "Blood group antigen La Fave",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TGThyroglobulin: Coding.FromStrict({
+    MedicationCodesValueSet_TGThyroglobulin: new Coding({
         code: "23959001",
         display: "TG - Thyroglobulin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Tryparsamide: Coding.FromStrict({
+    MedicationCodesValueSet_Tryparsamide: new Coding({
         code: "23969007",
         display: "Tryparsamide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_KN2ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_KN2ISBTSymbol: new Coding({
         code: "24002009",
         display: "KN2 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyLaine: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyLaine: new Coding({
         code: "24008008",
         display: "Blood group antibody Laine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BupivacaineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_BupivacaineHydrochloride: new Coding({
         code: "24022008",
         display: "Bupivacaine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ProperdinNative: Coding.FromStrict({
+    MedicationCodesValueSet_ProperdinNative: new Coding({
         code: "24023003",
         display: "Properdin native",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PlateletAntibodyHPA2a: Coding.FromStrict({
+    MedicationCodesValueSet_PlateletAntibodyHPA2a: new Coding({
         code: "24143007",
         display: "Platelet antibody HPA-2a",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RanitidineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_RanitidineHydrochloride: new Coding({
         code: "24202000",
         display: "Ranitidine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenTriW: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenTriW: new Coding({
         code: "24207006",
         display: "Blood group antigen Tri W",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ProstaglandinFGreaterThan1LessThan: Coding.FromStrict({
+    MedicationCodesValueSet_ProstaglandinFGreaterThan1LessThan: new Coding({
         code: "24237002",
         display: "Prostaglandin F>1<",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SalineAgglutinin: Coding.FromStrict({
+    MedicationCodesValueSet_SalineAgglutinin: new Coding({
         code: "24248009",
         display: "Saline agglutinin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TrimethobenzamideHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_TrimethobenzamideHydrochloride: new Coding({
         code: "24261009",
         display: "Trimethobenzamide hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyK11: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyK11: new Coding({
         code: "24304001",
         display: "Blood group antibody K11",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AminophyllineAnhydrous: Coding.FromStrict({
+    MedicationCodesValueSet_AminophyllineAnhydrous: new Coding({
         code: "24336008",
         display: "Aminophylline anhydrous",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CSF1: Coding.FromStrict({
+    MedicationCodesValueSet_CSF1: new Coding({
         code: "24357000",
         display: "CSF-1",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PlateletAntigenHPA4a: Coding.FromStrict({
+    MedicationCodesValueSet_PlateletAntigenHPA4a: new Coding({
         code: "24391001",
         display: "Platelet antigen HPA-4a",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ABO3ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_ABO3ISBTSymbol: new Coding({
         code: "24404002",
         display: "ABO3 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SodiumTartrate: Coding.FromStrict({
+    MedicationCodesValueSet_SodiumTartrate: new Coding({
         code: "24434007",
         display: "Sodium tartrate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenVersailles: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenVersailles: new Coding({
         code: "24435008",
         display: "Fibrinogen Versailles",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyKollogo: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyKollogo: new Coding({
         code: "24479006",
         display: "Blood group antibody Kollogo",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HighIncidenceAntigen: Coding.FromStrict({
+    MedicationCodesValueSet_HighIncidenceAntigen: new Coding({
         code: "24487007",
         display: "High incidence antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyVr: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyVr: new Coding({
         code: "24503006",
         display: "Blood group antibody Vr",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyEnPowerAPowerKT: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyEnPowerAPowerKT: new Coding({
         code: "24540003",
         display: "Blood group antibody En^a^KT",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_NButylglycidylether: Coding.FromStrict({
+    MedicationCodesValueSet_NButylglycidylether: new Coding({
         code: "24556008",
         display: "n-Butylglycidylether",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Purgative: Coding.FromStrict({
+    MedicationCodesValueSet_Purgative: new Coding({
         code: "24570008",
         display: "Purgative",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FY2ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_FY2ISBTSymbol: new Coding({
         code: "24574004",
         display: "FY2 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TerbutalineSulfate: Coding.FromStrict({
+    MedicationCodesValueSet_TerbutalineSulfate: new Coding({
         code: "24583009",
         display: "Terbutaline sulfate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DihydroAlphaErgocryptine: Coding.FromStrict({
+    MedicationCodesValueSet_DihydroAlphaErgocryptine: new Coding({
         code: "24650007",
         display: "Dihydro-alpha-ergocryptine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Leukocyte3a: Coding.FromStrict({
+    MedicationCodesValueSet_Leukocyte3a: new Coding({
         code: "24655002",
         display: "Leukocyte 3a",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenDw11: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenDw11: new Coding({
         code: "24673004",
         display: "Human leukocyte antigen Dw11",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Acaricide: Coding.FromStrict({
+    MedicationCodesValueSet_Acaricide: new Coding({
         code: "24686008",
         display: "Acaricide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyPrPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyPrPowerAPower: new Coding({
         code: "24710003",
         display: "Blood group antibody Pr^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Chlorothymol: Coding.FromStrict({
+    MedicationCodesValueSet_Chlorothymol: new Coding({
         code: "24721007",
         display: "Chlorothymol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Oxymorphone: Coding.FromStrict({
+    MedicationCodesValueSet_Oxymorphone: new Coding({
         code: "24751001",
         display: "Oxymorphone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SpectinomycinHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_SpectinomycinHydrochloride: new Coding({
         code: "24809001",
         display: "Spectinomycin hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyTx: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyTx: new Coding({
         code: "24821002",
         display: "Blood group antibody Tx",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Pipobroman: Coding.FromStrict({
+    MedicationCodesValueSet_Pipobroman: new Coding({
         code: "24823004",
         display: "Pipobroman",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_UndecylenicAcidAndZincUndecylenate: Coding.FromStrict({
+    MedicationCodesValueSet_UndecylenicAcidAndZincUndecylenate: new Coding({
         code: "24838003",
         display: "Undecylenic acid and zinc undecylenate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ComplementFixingAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_ComplementFixingAntibody: new Coding({
         code: "24857007",
         display: "Complement fixing antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyDonEW: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyDonEW: new Coding({
         code: "24860000",
         display: "Blood group antibody Don E. W.",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Lampit: Coding.FromStrict({
+    MedicationCodesValueSet_Lampit: new Coding({
         code: "24869004",
         display: "Lampit",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_IndependentLowIncidenceBloodGroupAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_IndependentLowIncidenceBloodGroupAntibody: new Coding({
         code: "24898000",
         display: "Independent low incidence blood group antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LW6ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_LW6ISBTSymbol: new Coding({
         code: "24926008",
         display: "LW6 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenBert: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenBert: new Coding({
         code: "24978006",
         display: "Blood group antigen Bert",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenA28: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenA28: new Coding({
         code: "24995003",
         display: "Human leukocyte antigen A28",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Perazine: Coding.FromStrict({
+    MedicationCodesValueSet_Perazine: new Coding({
         code: "25002001",
         display: "Perazine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PyrantelPamoate: Coding.FromStrict({
+    MedicationCodesValueSet_PyrantelPamoate: new Coding({
         code: "25013003",
         display: "Pyrantel pamoate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_GlycoproteinHormone: Coding.FromStrict({
+    MedicationCodesValueSet_GlycoproteinHormone: new Coding({
         code: "25027008",
         display: "Glycoprotein hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenOlPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenOlPowerAPower: new Coding({
         code: "25095009",
         display: "Blood group antigen Ol^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power72PowerZinc: Coding.FromStrict({
+    MedicationCodesValueSet_Power72PowerZinc: new Coding({
         code: "25128000",
         display: "^72^Zinc",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TubocurarineChloride: Coding.FromStrict({
+    MedicationCodesValueSet_TubocurarineChloride: new Coding({
         code: "25141001",
         display: "Tubocurarine chloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MumpsSkinTestAntigen: Coding.FromStrict({
+    MedicationCodesValueSet_MumpsSkinTestAntigen: new Coding({
         code: "25176004",
         display: "Mumps skin test antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ManganeseChloride: Coding.FromStrict({
+    MedicationCodesValueSet_ManganeseChloride: new Coding({
         code: "25183006",
         display: "Manganese chloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AluminumSolubleSalt: Coding.FromStrict({
+    MedicationCodesValueSet_AluminumSolubleSalt: new Coding({
         code: "25204006",
         display: "Aluminum soluble salt",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FluorineRadioisotope: Coding.FromStrict({
+    MedicationCodesValueSet_FluorineRadioisotope: new Coding({
         code: "25205007",
         display: "Fluorine radioisotope",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BicyclicAntidepressant: Coding.FromStrict({
+    MedicationCodesValueSet_BicyclicAntidepressant: new Coding({
         code: "25213008",
         display: "Bicyclic antidepressant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PituitaryFollicleStimulatingHormone: Coding.FromStrict({
+    MedicationCodesValueSet_PituitaryFollicleStimulatingHormone: new Coding({
         code: "25217009",
         display: "Pituitary follicle stimulating hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ProcainamideHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_ProcainamideHydrochloride: new Coding({
         code: "25254000",
         display: "Procainamide hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenBw55: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenBw55: new Coding({
         code: "25282007",
         display: "Human leukocyte antigen Bw55",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LongActingInsulin: Coding.FromStrict({
+    MedicationCodesValueSet_LongActingInsulin: new Coding({
         code: "25305005",
         display: "Long-acting insulin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Petrolatum: Coding.FromStrict({
+    MedicationCodesValueSet_Petrolatum: new Coding({
         code: "25307002",
         display: "Petrolatum",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAHumanLeukocyteAntigenA3410: Coding.FromStrict({
+    MedicationCodesValueSet_HLAHumanLeukocyteAntigenA3410: new Coding({
         code: "25315004",
         display: "HLA - Human leukocyte antigen A34(10)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyYtPowerBPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyYtPowerBPower: new Coding({
         code: "25400004",
         display: "Blood group antibody Yt^b^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BarbiturateAnalog: Coding.FromStrict({
+    MedicationCodesValueSet_BarbiturateAnalog: new Coding({
         code: "25401000",
         display: "Barbiturate analog",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenBridgewater: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenBridgewater: new Coding({
         code: "25426009",
         display: "Blood group antigen Bridgewater",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntibodyToAntigenInISBTSystemJK: Coding.FromStrict({
+    MedicationCodesValueSet_AntibodyToAntigenInISBTSystemJK: new Coding({
         code: "25453008",
         display: "Antibody to antigen in ISBT system JK",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power40PowerPotassium: Coding.FromStrict({
+    MedicationCodesValueSet_Power40PowerPotassium: new Coding({
         code: "25500001",
         display: "^40^Potassium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenStewart: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenStewart: new Coding({
         code: "25513007",
         display: "Blood group antigen Stewart",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ProteinC: Coding.FromStrict({
+    MedicationCodesValueSet_ProteinC: new Coding({
         code: "25525005",
         display: "Protein C",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TiotixeneHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_TiotixeneHydrochloride: new Coding({
         code: "25538002",
         display: "Tiotixene hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenLanger: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenLanger: new Coding({
         code: "25557006",
         display: "Blood group antigen Langer",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Clodantoin: Coding.FromStrict({
+    MedicationCodesValueSet_Clodantoin: new Coding({
         code: "25571003",
         display: "Clodantoin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DDimer: Coding.FromStrict({
+    MedicationCodesValueSet_DDimer: new Coding({
         code: "25607008",
         display: "DDimer",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BitterOrangeOil: Coding.FromStrict({
+    MedicationCodesValueSet_BitterOrangeOil: new Coding({
         code: "25620006",
         display: "Bitter orange oil",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power113PowerTin: Coding.FromStrict({
+    MedicationCodesValueSet_Power113PowerTin: new Coding({
         code: "25710007",
         display: "^113^Tin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MyeloidMacrophageAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_MyeloidMacrophageAntibody: new Coding({
         code: "25717005",
         display: "Myeloid-macrophage antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power135mPowerXenon: Coding.FromStrict({
+    MedicationCodesValueSet_Power135mPowerXenon: new Coding({
         code: "25747007",
         display: "^135m^Xenon",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenElder: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenElder: new Coding({
         code: "25773002",
         display: "Blood group antigen Elder",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AluminumAspirin: Coding.FromStrict({
+    MedicationCodesValueSet_AluminumAspirin: new Coding({
         code: "25796002",
         display: "Aluminum aspirin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PlateletAntibodyHPA5a: Coding.FromStrict({
+    MedicationCodesValueSet_PlateletAntibodyHPA5a: new Coding({
         code: "25826003",
         display: "Platelet antibody HPA-5a",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LU1ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_LU1ISBTSymbol: new Coding({
         code: "25833003",
         display: "LU1 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenHaven: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenHaven: new Coding({
         code: "25867008",
         display: "Blood group antigen Haven",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenBergamoIII: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenBergamoIII: new Coding({
         code: "25886000",
         display: "Fibrinogen Bergamo III",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ProstaglandinH2: Coding.FromStrict({
+    MedicationCodesValueSet_ProstaglandinH2: new Coding({
         code: "25911004",
         display: "Prostaglandin H2",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_KEL17ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_KEL17ISBTSymbol: new Coding({
         code: "25964000",
         display: "KEL17 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenTajama: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenTajama: new Coding({
         code: "26005009",
         display: "Blood group antigen Tajama",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodySdPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodySdPowerAPower: new Coding({
         code: "26021004",
         display: "Blood group antibody Sd^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MNS5ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_MNS5ISBTSymbol: new Coding({
         code: "26066008",
         display: "MNS5 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PlateletAntigenHPA4b: Coding.FromStrict({
+    MedicationCodesValueSet_PlateletAntigenHPA4b: new Coding({
         code: "26093006",
         display: "Platelet antigen HPA-4b",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DesipramineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_DesipramineHydrochloride: new Coding({
         code: "26120001",
         display: "Desipramine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BromazineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_BromazineHydrochloride: new Coding({
         code: "26191006",
         display: "Bromazine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HydroxyeicosatetraenoicAcid: Coding.FromStrict({
+    MedicationCodesValueSet_HydroxyeicosatetraenoicAcid: new Coding({
         code: "26274001",
         display: "Hydroxyeicosatetraenoic acid",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Dynorphin: Coding.FromStrict({
+    MedicationCodesValueSet_Dynorphin: new Coding({
         code: "26277008",
         display: "Dynorphin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Mitotane: Coding.FromStrict({
+    MedicationCodesValueSet_Mitotane: new Coding({
         code: "26288002",
         display: "Mitotane",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RedPhosphorus: Coding.FromStrict({
+    MedicationCodesValueSet_RedPhosphorus: new Coding({
         code: "26327007",
         display: "Red phosphorus",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_EthambutolHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_EthambutolHydrochloride: new Coding({
         code: "26346008",
         display: "Ethambutol hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Prostaglandin: Coding.FromStrict({
+    MedicationCodesValueSet_Prostaglandin: new Coding({
         code: "26351002",
         display: "Prostaglandin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyCameron: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyCameron: new Coding({
         code: "26355006",
         display: "Blood group antibody Cameron",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Chlorophacinone: Coding.FromStrict({
+    MedicationCodesValueSet_Chlorophacinone: new Coding({
         code: "26371006",
         display: "Chlorophacinone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Quinisocaine: Coding.FromStrict({
+    MedicationCodesValueSet_Quinisocaine: new Coding({
         code: "26379008",
         display: "Quinisocaine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_OilOfMustard: Coding.FromStrict({
+    MedicationCodesValueSet_OilOfMustard: new Coding({
         code: "26437003",
         display: "Oil of mustard",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenBgPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenBgPowerAPower: new Coding({
         code: "26441004",
         display: "Blood group antigen Bg^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PreproOpiomelanocortin: Coding.FromStrict({
+    MedicationCodesValueSet_PreproOpiomelanocortin: new Coding({
         code: "26469007",
         display: "Prepro-opiomelanocortin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorXIa: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorXIa: new Coding({
         code: "26518005",
         display: "Coagulation factor XIa",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyCoates: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyCoates: new Coding({
         code: "26647007",
         display: "Blood group antibody Coates",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenRdPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenRdPowerAPower: new Coding({
         code: "26651009",
         display: "Blood group antigen Rd^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AromaticCastorOil: Coding.FromStrict({
+    MedicationCodesValueSet_AromaticCastorOil: new Coding({
         code: "26656004",
         display: "Aromatic castor oil",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMcCPowerCPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMcCPowerCPower: new Coding({
         code: "26720006",
         display: "Blood group antibody McC^c^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_EosinophilicDerivedInhibitor: Coding.FromStrict({
+    MedicationCodesValueSet_EosinophilicDerivedInhibitor: new Coding({
         code: "26740004",
         display: "Eosinophilic derived inhibitor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyKaj: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyKaj: new Coding({
         code: "26749003",
         display: "Blood group antibody Kaj",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MethylatedNaphthalene: Coding.FromStrict({
+    MedicationCodesValueSet_MethylatedNaphthalene: new Coding({
         code: "26817007",
         display: "Methylated naphthalene",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_KEL14ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_KEL14ISBTSymbol: new Coding({
         code: "26855002",
         display: "KEL14 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MNS20ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_MNS20ISBTSymbol: new Coding({
         code: "26937007",
         display: "MNS20 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PhendimetrazineTartrate: Coding.FromStrict({
+    MedicationCodesValueSet_PhendimetrazineTartrate: new Coding({
         code: "26945002",
         display: "Phendimetrazine tartrate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Chlorisondamine: Coding.FromStrict({
+    MedicationCodesValueSet_Chlorisondamine: new Coding({
         code: "26992003",
         display: "Chlorisondamine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenBy: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenBy: new Coding({
         code: "27024002",
         display: "Blood group antigen By",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyBecker: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyBecker: new Coding({
         code: "27044008",
         display: "Blood group antibody Becker",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenSchwend: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenSchwend: new Coding({
         code: "27047001",
         display: "Blood group antigen Schwend",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenCan: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenCan: new Coding({
         code: "27048006",
         display: "Blood group antigen Can",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power57PowerCobalt: Coding.FromStrict({
+    MedicationCodesValueSet_Power57PowerCobalt: new Coding({
         code: "27054007",
         display: "^57^Cobalt",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyRich: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyRich: new Coding({
         code: "27076003",
         display: "Blood group antibody Rich",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MeclocyclineSulfosalicylate: Coding.FromStrict({
+    MedicationCodesValueSet_MeclocyclineSulfosalicylate: new Coding({
         code: "27079005",
         display: "Meclocycline sulfosalicylate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power127PowerXenon: Coding.FromStrict({
+    MedicationCodesValueSet_Power127PowerXenon: new Coding({
         code: "27081007",
         display: "^127^Xenon",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Sulfapyridine: Coding.FromStrict({
+    MedicationCodesValueSet_Sulfapyridine: new Coding({
         code: "27082000",
         display: "Sulfapyridine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntiCe: Coding.FromStrict({
+    MedicationCodesValueSet_AntiCe: new Coding({
         code: "27089009",
         display: "Anti Ce",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power56PowerNickel: Coding.FromStrict({
+    MedicationCodesValueSet_Power56PowerNickel: new Coding({
         code: "27122000",
         display: "^56^Nickel",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Mac1LeukocyteAdhesiveProtein: Coding.FromStrict({
+    MedicationCodesValueSet_Mac1LeukocyteAdhesiveProtein: new Coding({
         code: "27130004",
         display: "Mac-1 leukocyte adhesive protein",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VAL17AlphaHydroxypregnenolone: Coding.FromStrict({
+    MedicationCodesValueSet_VAL17AlphaHydroxypregnenolone: new Coding({
         code: "27184001",
         display: "17-alpha-Hydroxypregnenolone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AminosalicylicAcid: Coding.FromStrict({
+    MedicationCodesValueSet_AminosalicylicAcid: new Coding({
         code: "27192005",
         display: "Aminosalicylic acid",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenIAB: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenIAB: new Coding({
         code: "27205008",
         display: "Blood group antigen IAB",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LithiumIsotope: Coding.FromStrict({
+    MedicationCodesValueSet_LithiumIsotope: new Coding({
         code: "27244000",
         display: "Lithium isotope",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorXREDVariant: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorXREDVariant: new Coding({
         code: "27248002",
         display: "Coagulation factor X R.E.D. variant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ComplementComponent1s: Coding.FromStrict({
+    MedicationCodesValueSet_ComplementComponent1s: new Coding({
         code: "27273002",
         display: "Complement component 1s",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenA10: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenA10: new Coding({
         code: "27340007",
         display: "Human leukocyte antigen A10",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Hemin: Coding.FromStrict({
+    MedicationCodesValueSet_Hemin: new Coding({
         code: "27345002",
         display: "Hemin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BariumSalt: Coding.FromStrict({
+    MedicationCodesValueSet_BariumSalt: new Coding({
         code: "27361000",
         display: "Barium salt",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_GLOB3ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_GLOB3ISBTSymbol: new Coding({
         code: "27384007",
         display: "GLOB3 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenGeslin: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenGeslin: new Coding({
         code: "27417007",
         display: "Blood group antigen Geslin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PlateletAntigenHPA2a: Coding.FromStrict({
+    MedicationCodesValueSet_PlateletAntigenHPA2a: new Coding({
         code: "27425009",
         display: "Platelet antigen HPA-2a",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenJohnSmith: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenJohnSmith: new Coding({
         code: "27453009",
         display: "Blood group antigen John Smith",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CO2ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_CO2ISBTSymbol: new Coding({
         code: "27459008",
         display: "CO2 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenTalbert: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenTalbert: new Coding({
         code: "27487004",
         display: "Blood group antigen Talbert",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenDon: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenDon: new Coding({
         code: "27489001",
         display: "Blood group antigen Don",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Oxyphencyclimine: Coding.FromStrict({
+    MedicationCodesValueSet_Oxyphencyclimine: new Coding({
         code: "27499006",
         display: "Oxyphencyclimine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_UndecoyliumChlorideIodine: Coding.FromStrict({
+    MedicationCodesValueSet_UndecoyliumChlorideIodine: new Coding({
         code: "27586005",
         display: "Undecoylium chloride iodine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FerricPyrophosphate: Coding.FromStrict({
+    MedicationCodesValueSet_FerricPyrophosphate: new Coding({
         code: "27594003",
         display: "Ferric pyrophosphate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenTs: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenTs: new Coding({
         code: "27607009",
         display: "Blood group antigen Ts",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntiS: Coding.FromStrict({
+    MedicationCodesValueSet_AntiS: new Coding({
         code: "27626001",
         display: "Anti S",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_GitalinAmorphous: Coding.FromStrict({
+    MedicationCodesValueSet_GitalinAmorphous: new Coding({
         code: "27656005",
         display: "Gitalin amorphous",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Merodicein: Coding.FromStrict({
+    MedicationCodesValueSet_Merodicein: new Coding({
         code: "27730007",
         display: "Merodicein",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BacitracinA: Coding.FromStrict({
+    MedicationCodesValueSet_BacitracinA: new Coding({
         code: "27736001",
         display: "Bacitracin A",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Prothipendyl: Coding.FromStrict({
+    MedicationCodesValueSet_Prothipendyl: new Coding({
         code: "27766008",
         display: "Prothipendyl",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyBLePowerDPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyBLePowerDPower: new Coding({
         code: "27800009",
         display: "Blood group antibody BLe^d^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Phenylpropylmethylamine: Coding.FromStrict({
+    MedicationCodesValueSet_Phenylpropylmethylamine: new Coding({
         code: "27822002",
         display: "Phenylpropylmethylamine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BlockingAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_BlockingAntibody: new Coding({
         code: "27862003",
         display: "Blocking antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyOlPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyOlPowerAPower: new Coding({
         code: "27899003",
         display: "Blood group antibody Ol^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FlurazepamHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_FlurazepamHydrochloride: new Coding({
         code: "27928002",
         display: "Flurazepam hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DipeptidylPeptidaseI: Coding.FromStrict({
+    MedicationCodesValueSet_DipeptidylPeptidaseI: new Coding({
         code: "27931001",
         display: "Dipeptidyl peptidase I",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyToms: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyToms: new Coding({
         code: "27963007",
         display: "Blood group antibody Toms",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorIISegoviaVariant: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorIISegoviaVariant: new Coding({
         code: "27989007",
         display: "Coagulation factor II Segovia variant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenHands: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenHands: new Coding({
         code: "27999002",
         display: "Blood group antigen Hands",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_EthylAcrylate: Coding.FromStrict({
+    MedicationCodesValueSet_EthylAcrylate: new Coding({
         code: "28021008",
         display: "Ethyl acrylate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Metescufylline: Coding.FromStrict({
+    MedicationCodesValueSet_Metescufylline: new Coding({
         code: "28029005",
         display: "Metescufylline",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RefrigerantAnesthetic: Coding.FromStrict({
+    MedicationCodesValueSet_RefrigerantAnesthetic: new Coding({
         code: "28069006",
         display: "Refrigerant anesthetic",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Iofendylate: Coding.FromStrict({
+    MedicationCodesValueSet_Iofendylate: new Coding({
         code: "28121005",
         display: "Iofendylate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyCr3: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyCr3: new Coding({
         code: "28145009",
         display: "Blood group antibody Cr3",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Cycloguanil: Coding.FromStrict({
+    MedicationCodesValueSet_Cycloguanil: new Coding({
         code: "28223003",
         display: "Cycloguanil",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyRobert: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyRobert: new Coding({
         code: "28262007",
         display: "Blood group antibody Robert",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Pregnanediol: Coding.FromStrict({
+    MedicationCodesValueSet_Pregnanediol: new Coding({
         code: "28268006",
         display: "Pregnanediol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PanLeukocyteAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_PanLeukocyteAntibody: new Coding({
         code: "28298004",
         display: "Pan-leukocyte antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Mephenytoin: Coding.FromStrict({
+    MedicationCodesValueSet_Mephenytoin: new Coding({
         code: "28344001",
         display: "Mephenytoin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMathison: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMathison: new Coding({
         code: "28361003",
         display: "Blood group antibody Mathison",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LW7ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_LW7ISBTSymbol: new Coding({
         code: "28408005",
         display: "LW7 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Sorbate: Coding.FromStrict({
+    MedicationCodesValueSet_Sorbate: new Coding({
         code: "28421003",
         display: "Sorbate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CD62ClusterOfDifferentiationAntigen62: Coding.FromStrict({
+    MedicationCodesValueSet_CD62ClusterOfDifferentiationAntigen62: new Coding({
         code: "28424006",
         display: "CD62 - Cluster of differentiation antigen 62",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenDQw9: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenDQw9: new Coding({
         code: "28427004",
         display: "Human leukocyte antigen DQw9",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Dioxyline: Coding.FromStrict({
+    MedicationCodesValueSet_Dioxyline: new Coding({
         code: "28464005",
         display: "Dioxyline",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyEl: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyEl: new Coding({
         code: "28495003",
         display: "Blood group antibody El",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorIIDenverVariant: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorIIDenverVariant: new Coding({
         code: "28521000",
         display: "Coagulation factor II Denver variant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyReiter: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyReiter: new Coding({
         code: "28564007",
         display: "Blood group antibody Reiter",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyChrPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyChrPowerAPower: new Coding({
         code: "28577003",
         display: "Blood group antibody Chr^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Diprenorphine: Coding.FromStrict({
+    MedicationCodesValueSet_Diprenorphine: new Coding({
         code: "28580002",
         display: "Diprenorphine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PlateletSpecificAntigen: Coding.FromStrict({
+    MedicationCodesValueSet_PlateletSpecificAntigen: new Coding({
         code: "28585007",
         display: "Platelet-specific antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Cefaloridine: Coding.FromStrict({
+    MedicationCodesValueSet_Cefaloridine: new Coding({
         code: "28588009",
         display: "Cefaloridine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HydralazineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_HydralazineHydrochloride: new Coding({
         code: "28662003",
         display: "Hydralazine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RibosomalAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_RibosomalAntibody: new Coding({
         code: "28673005",
         display: "Ribosomal antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CD28ClusterOfDifferentiationAntigen28: Coding.FromStrict({
+    MedicationCodesValueSet_CD28ClusterOfDifferentiationAntigen28: new Coding({
         code: "28679009",
         display: "CD28 - Cluster of differentiation antigen 28",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Ambutonium: Coding.FromStrict({
+    MedicationCodesValueSet_Ambutonium: new Coding({
         code: "28702005",
         display: "Ambutonium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenBovet: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenBovet: new Coding({
         code: "28708009",
         display: "Blood group antigen Bovet",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ClusterOfDifferentiationAntigenWorkshop65: Coding.FromStrict({
+    MedicationCodesValueSet_ClusterOfDifferentiationAntigenWorkshop65: new Coding({
         code: "28716000",
         display: "Cluster of differentiation antigen (workshop) 65",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMorrison: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMorrison: new Coding({
         code: "28731009",
         display: "Blood group antibody Morrison",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodySavior: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodySavior: new Coding({
         code: "28779002",
         display: "Blood group antibody Savior",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenStevenson: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenStevenson: new Coding({
         code: "28808000",
         display: "Blood group antigen Stevenson",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyK12: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyK12: new Coding({
         code: "28819002",
         display: "Blood group antibody K12",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Sterigmatocystin: Coding.FromStrict({
+    MedicationCodesValueSet_Sterigmatocystin: new Coding({
         code: "28825003",
         display: "Sterigmatocystin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoalTarNaphtha: Coding.FromStrict({
+    MedicationCodesValueSet_CoalTarNaphtha: new Coding({
         code: "28829009",
         display: "Coal tar naphtha",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyB9208: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyB9208: new Coding({
         code: "28881009",
         display: "Blood group antibody B 9208",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DiphenylheptaneDerivative: Coding.FromStrict({
+    MedicationCodesValueSet_DiphenylheptaneDerivative: new Coding({
         code: "28927005",
         display: "Diphenylheptane derivative",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VAL6KetoprostaglandinF1: Coding.FromStrict({
+    MedicationCodesValueSet_VAL6KetoprostaglandinF1: new Coding({
         code: "28983006",
         display: "6-Ketoprostaglandin F1",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Fusarin: Coding.FromStrict({
+    MedicationCodesValueSet_Fusarin: new Coding({
         code: "28999000",
         display: "Fusarin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ManganeseTrioxide: Coding.FromStrict({
+    MedicationCodesValueSet_ManganeseTrioxide: new Coding({
         code: "29011006",
         display: "Manganese trioxide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DiphemanilMetilsulfate: Coding.FromStrict({
+    MedicationCodesValueSet_DiphemanilMetilsulfate: new Coding({
         code: "29184007",
         display: "Diphemanil metilsulfate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FentanylCitrate: Coding.FromStrict({
+    MedicationCodesValueSet_FentanylCitrate: new Coding({
         code: "29190006",
         display: "Fentanyl citrate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyLu4: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyLu4: new Coding({
         code: "29244008",
         display: "Blood group antibody Lu4",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenSadler: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenSadler: new Coding({
         code: "29266001",
         display: "Blood group antigen Sadler",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyTollefsenOyen: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyTollefsenOyen: new Coding({
         code: "29275004",
         display: "Blood group antibody Tollefsen-Oyen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_IsoprenalineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_IsoprenalineHydrochloride: new Coding({
         code: "29301006",
         display: "Isoprenaline hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ChloramphenicolPalmitate: Coding.FromStrict({
+    MedicationCodesValueSet_ChloramphenicolPalmitate: new Coding({
         code: "29327006",
         display: "Chloramphenicol palmitate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AlphaAmylaseAgent: Coding.FromStrict({
+    MedicationCodesValueSet_AlphaAmylaseAgent: new Coding({
         code: "29406002",
         display: "alpha-Amylase agent",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DI8ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_DI8ISBTSymbol: new Coding({
         code: "29468003",
         display: "DI8 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenIBH: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenIBH: new Coding({
         code: "29502003",
         display: "Blood group antigen IBH",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ToluidineBlueStain: Coding.FromStrict({
+    MedicationCodesValueSet_ToluidineBlueStain: new Coding({
         code: "29522004",
         display: "Toluidine blue stain",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BenzatropineMesylate: Coding.FromStrict({
+    MedicationCodesValueSet_BenzatropineMesylate: new Coding({
         code: "29527005",
         display: "Benzatropine mesylate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_NickelRadioisotope: Coding.FromStrict({
+    MedicationCodesValueSet_NickelRadioisotope: new Coding({
         code: "29531004",
         display: "Nickel radioisotope",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenWade: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenWade: new Coding({
         code: "29573007",
         display: "Blood group antigen Wade",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DiagnosticAntigen: Coding.FromStrict({
+    MedicationCodesValueSet_DiagnosticAntigen: new Coding({
         code: "29584000",
         display: "Diagnostic antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BrompheniramineMaleate: Coding.FromStrict({
+    MedicationCodesValueSet_BrompheniramineMaleate: new Coding({
         code: "29588002",
         display: "Brompheniramine maleate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyNoble: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyNoble: new Coding({
         code: "29652001",
         display: "Blood group antibody Noble",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_NortriptylineHydrochlorideEnuresisNoAgentsHere: Coding.FromStrict({
+    MedicationCodesValueSet_NortriptylineHydrochlorideEnuresisNoAgentsHere: new Coding({
         code: "29666006",
         display: "Nortriptyline hydrochloride [enuresis - no agents here]",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LithiumBromide: Coding.FromStrict({
+    MedicationCodesValueSet_LithiumBromide: new Coding({
         code: "29671004",
         display: "Lithium bromide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyDav: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyDav: new Coding({
         code: "29719004",
         display: "Blood group antibody Dav",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HeparinCalcium: Coding.FromStrict({
+    MedicationCodesValueSet_HeparinCalcium: new Coding({
         code: "29725000",
         display: "Heparin calcium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ClusterOfDifferentiationAntigen33: Coding.FromStrict({
+    MedicationCodesValueSet_ClusterOfDifferentiationAntigen33: new Coding({
         code: "29735006",
         display: "Cluster of differentiation antigen 33",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Fumagillin: Coding.FromStrict({
+    MedicationCodesValueSet_Fumagillin: new Coding({
         code: "29765001",
         display: "Fumagillin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ComplementComponent7: Coding.FromStrict({
+    MedicationCodesValueSet_ComplementComponent7: new Coding({
         code: "29776002",
         display: "Complement component 7",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Chromocarb: Coding.FromStrict({
+    MedicationCodesValueSet_Chromocarb: new Coding({
         code: "29783009",
         display: "Chromocarb",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenTaylor: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenTaylor: new Coding({
         code: "29831006",
         display: "Blood group antigen Taylor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power129mPowerXenon: Coding.FromStrict({
+    MedicationCodesValueSet_Power129mPowerXenon: new Coding({
         code: "29876006",
         display: "^129m^Xenon",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMcCPowerFPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMcCPowerFPower: new Coding({
         code: "29988009",
         display: "Blood group antibody McC^f^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Interleukin9: Coding.FromStrict({
+    MedicationCodesValueSet_Interleukin9: new Coding({
         code: "30030008",
         display: "Interleukin-9",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Dimethoxanate: Coding.FromStrict({
+    MedicationCodesValueSet_Dimethoxanate: new Coding({
         code: "30034004",
         display: "Dimethoxanate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Brefeldin: Coding.FromStrict({
+    MedicationCodesValueSet_Brefeldin: new Coding({
         code: "30053009",
         display: "Brefeldin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RiboflavinDinucleotide: Coding.FromStrict({
+    MedicationCodesValueSet_RiboflavinDinucleotide: new Coding({
         code: "30094001",
         display: "Riboflavin dinucleotide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RH22ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_RH22ISBTSymbol: new Coding({
         code: "30137009",
         display: "RH22 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ActivinHormone: Coding.FromStrict({
+    MedicationCodesValueSet_ActivinHormone: new Coding({
         code: "30145004",
         display: "Activin hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VitaminD: Coding.FromStrict({
+    MedicationCodesValueSet_VitaminD: new Coding({
         code: "30178006",
         display: "Vitamin D",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CarbonylFluoride: Coding.FromStrict({
+    MedicationCodesValueSet_CarbonylFluoride: new Coding({
         code: "30179003",
         display: "Carbonyl fluoride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ParomomycinSulfate: Coding.FromStrict({
+    MedicationCodesValueSet_ParomomycinSulfate: new Coding({
         code: "30203009",
         display: "Paromomycin sulfate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ThymicTLymphocyteFactor: Coding.FromStrict({
+    MedicationCodesValueSet_ThymicTLymphocyteFactor: new Coding({
         code: "30205002",
         display: "Thymic T lymphocyte factor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyGladding: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyGladding: new Coding({
         code: "30209008",
         display: "Blood group antibody Gladding",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Tilorone: Coding.FromStrict({
+    MedicationCodesValueSet_Tilorone: new Coding({
         code: "30236005",
         display: "Tilorone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyKelly: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyKelly: new Coding({
         code: "30245006",
         display: "Blood group antibody Kelly",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power132PowerIodine: Coding.FromStrict({
+    MedicationCodesValueSet_Power132PowerIodine: new Coding({
         code: "30324001",
         display: "^132^Iodine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Chlorfenvinphos: Coding.FromStrict({
+    MedicationCodesValueSet_Chlorfenvinphos: new Coding({
         code: "30325000",
         display: "Chlorfenvinphos",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AtrialNatriureticHormone: Coding.FromStrict({
+    MedicationCodesValueSet_AtrialNatriureticHormone: new Coding({
         code: "30326004",
         display: "Atrial natriuretic hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Triflupromazine: Coding.FromStrict({
+    MedicationCodesValueSet_Triflupromazine: new Coding({
         code: "30329006",
         display: "Triflupromazine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MercaptomerinSodium: Coding.FromStrict({
+    MedicationCodesValueSet_MercaptomerinSodium: new Coding({
         code: "30333004",
         display: "Mercaptomerin sodium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodySantano: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodySantano: new Coding({
         code: "30357004",
         display: "Blood group antibody Santano",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenCad: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenCad: new Coding({
         code: "30413004",
         display: "Blood group antigen Cad",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ProparacaineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_ProparacaineHydrochloride: new Coding({
         code: "30424002",
         display: "Proparacaine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenEmma: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenEmma: new Coding({
         code: "30498007",
         display: "Blood group antigen Emma",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodySimpson: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodySimpson: new Coding({
         code: "30540002",
         display: "Blood group antibody Simpson",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DibutylPhosphate: Coding.FromStrict({
+    MedicationCodesValueSet_DibutylPhosphate: new Coding({
         code: "30589007",
         display: "Dibutyl phosphate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Leukocyte1: Coding.FromStrict({
+    MedicationCodesValueSet_Leukocyte1: new Coding({
         code: "30594007",
         display: "Leukocyte 1",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PlateletAntigenHPA2b: Coding.FromStrict({
+    MedicationCodesValueSet_PlateletAntigenHPA2b: new Coding({
         code: "30604008",
         display: "Platelet antigen HPA-2b",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LU3ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_LU3ISBTSymbol: new Coding({
         code: "30607001",
         display: "LU3 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyTerrano: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyTerrano: new Coding({
         code: "30609003",
         display: "Blood group antibody Terrano",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AbsAutoantibodies: Coding.FromStrict({
+    MedicationCodesValueSet_AbsAutoantibodies: new Coding({
         code: "30621004",
         display: "Abs - Autoantibodies",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Turacoporphyrin: Coding.FromStrict({
+    MedicationCodesValueSet_Turacoporphyrin: new Coding({
         code: "30658004",
         display: "Turacoporphyrin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Metharbital: Coding.FromStrict({
+    MedicationCodesValueSet_Metharbital: new Coding({
         code: "30676006",
         display: "Metharbital",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyDPowerWPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyDPowerWPower: new Coding({
         code: "30702003",
         display: "Blood group antibody D^w^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenPayer: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenPayer: new Coding({
         code: "30723009",
         display: "Blood group antigen Payer",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LoxapineSuccinate: Coding.FromStrict({
+    MedicationCodesValueSet_LoxapineSuccinate: new Coding({
         code: "30745005",
         display: "Loxapine succinate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CROM4ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_CROM4ISBTSymbol: new Coding({
         code: "30797003",
         display: "CROM4 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FactorVII: Coding.FromStrict({
+    MedicationCodesValueSet_FactorVII: new Coding({
         code: "30804005",
         display: "Factor VII",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Phosphorus: Coding.FromStrict({
+    MedicationCodesValueSet_Phosphorus: new Coding({
         code: "30820000",
         display: "Phosphorus",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Azapetine: Coding.FromStrict({
+    MedicationCodesValueSet_Azapetine: new Coding({
         code: "30827002",
         display: "Azapetine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenOsloIII: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenOsloIII: new Coding({
         code: "30848000",
         display: "Fibrinogen Oslo III",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DesiccatedWholeBile: Coding.FromStrict({
+    MedicationCodesValueSet_DesiccatedWholeBile: new Coding({
         code: "30863002",
         display: "Desiccated whole bile",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenCharles: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenCharles: new Coding({
         code: "30954000",
         display: "Blood group antigen Charles",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Interleukin6: Coding.FromStrict({
+    MedicationCodesValueSet_Interleukin6: new Coding({
         code: "30965005",
         display: "Interleukin-6",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyRh35: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyRh35: new Coding({
         code: "30987001",
         display: "Blood group antibody Rh35",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AbnormalFibrinogen: Coding.FromStrict({
+    MedicationCodesValueSet_AbnormalFibrinogen: new Coding({
         code: "30990007",
         display: "Abnormal fibrinogen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CD68ClusterOfDifferentiationAntigen68: Coding.FromStrict({
+    MedicationCodesValueSet_CD68ClusterOfDifferentiationAntigen68: new Coding({
         code: "31001006",
         display: "CD68 - Cluster of differentiation antigen 68",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyTalbert: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyTalbert: new Coding({
         code: "31008000",
         display: "Blood group antibody Talbert",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VAL4Hydroxycoumarin: Coding.FromStrict({
+    MedicationCodesValueSet_VAL4Hydroxycoumarin: new Coding({
         code: "31011004",
         display: "4-hydroxycoumarin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenGood: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenGood: new Coding({
         code: "31024004",
         display: "Blood group antigen Good",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenPeacock: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenPeacock: new Coding({
         code: "31036005",
         display: "Blood group antigen Peacock",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_GIHGastrointestinalHormone: Coding.FromStrict({
+    MedicationCodesValueSet_GIHGastrointestinalHormone: new Coding({
         code: "31055005",
         display: "GIH - Gastrointestinal hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MetoclopramideHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_MetoclopramideHydrochloride: new Coding({
         code: "31147000",
         display: "Metoclopramide hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BethanecholChloride: Coding.FromStrict({
+    MedicationCodesValueSet_BethanecholChloride: new Coding({
         code: "31178001",
         display: "Bethanechol chloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyOca: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyOca: new Coding({
         code: "31245001",
         display: "Blood group antibody Oca",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RH8ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_RH8ISBTSymbol: new Coding({
         code: "31317005",
         display: "RH8 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodySc3: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodySc3: new Coding({
         code: "31357008",
         display: "Blood group antibody Sc3",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeucocyteAntigenBw63: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeucocyteAntigenBw63: new Coding({
         code: "31400002",
         display: "Human leucocyte antigen Bw63",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_OxBileExtract: Coding.FromStrict({
+    MedicationCodesValueSet_OxBileExtract: new Coding({
         code: "31422009",
         display: "Ox bile extract",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MildSilverProtein: Coding.FromStrict({
+    MedicationCodesValueSet_MildSilverProtein: new Coding({
         code: "31522006",
         display: "Mild silver protein",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HydrophilicPetrolatum: Coding.FromStrict({
+    MedicationCodesValueSet_HydrophilicPetrolatum: new Coding({
         code: "31617001",
         display: "Hydrophilic petrolatum",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power127mPowerXenon: Coding.FromStrict({
+    MedicationCodesValueSet_Power127mPowerXenon: new Coding({
         code: "31622001",
         display: "^127m^Xenon",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_OrangeFlowerOil: Coding.FromStrict({
+    MedicationCodesValueSet_OrangeFlowerOil: new Coding({
         code: "31662002",
         display: "Orange flower oil",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_KetamineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_KetamineHydrochloride: new Coding({
         code: "31706007",
         display: "Ketamine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ZincBacitracin: Coding.FromStrict({
+    MedicationCodesValueSet_ZincBacitracin: new Coding({
         code: "31707003",
         display: "Zinc bacitracin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MagnesiumPhosphate: Coding.FromStrict({
+    MedicationCodesValueSet_MagnesiumPhosphate: new Coding({
         code: "31731008",
         display: "Magnesium phosphate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Preproenkephalin: Coding.FromStrict({
+    MedicationCodesValueSet_Preproenkephalin: new Coding({
         code: "31780003",
         display: "Preproenkephalin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorIXAlabamaVariant: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorIXAlabamaVariant: new Coding({
         code: "31787000",
         display: "Coagulation factor IX Alabama variant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MephentermineSulfate: Coding.FromStrict({
+    MedicationCodesValueSet_MephentermineSulfate: new Coding({
         code: "31799007",
         display: "Mephentermine sulfate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Benzonatate: Coding.FromStrict({
+    MedicationCodesValueSet_Benzonatate: new Coding({
         code: "31801005",
         display: "Benzonatate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_OxybutyninHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_OxybutyninHydrochloride: new Coding({
         code: "31815007",
         display: "Oxybutynin hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DeoxyribonucleasePyrimidineDimer: Coding.FromStrict({
+    MedicationCodesValueSet_DeoxyribonucleasePyrimidineDimer: new Coding({
         code: "31818009",
         display: "Deoxyribonuclease (pyrimidine dimer)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Ristocetin: Coding.FromStrict({
+    MedicationCodesValueSet_Ristocetin: new Coding({
         code: "31827005",
         display: "Ristocetin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyTerschurr: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyTerschurr: new Coding({
         code: "31854008",
         display: "Blood group antibody Terschurr",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Gonadotrophin: Coding.FromStrict({
+    MedicationCodesValueSet_Gonadotrophin: new Coding({
         code: "31895006",
         display: "Gonadotrophin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MNS26ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_MNS26ISBTSymbol: new Coding({
         code: "31897003",
         display: "MNS26 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SodiumIsotope: Coding.FromStrict({
+    MedicationCodesValueSet_SodiumIsotope: new Coding({
         code: "31936008",
         display: "Sodium isotope",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LaAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_LaAntibody: new Coding({
         code: "31960007",
         display: "La antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenClevelandII: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenClevelandII: new Coding({
         code: "31990000",
         display: "Fibrinogen Cleveland II",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PineOil: Coding.FromStrict({
+    MedicationCodesValueSet_PineOil: new Coding({
         code: "32050003",
         display: "Pine oil",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenBw60: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenBw60: new Coding({
         code: "32073006",
         display: "Human leukocyte antigen Bw60",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenRamskin: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenRamskin: new Coding({
         code: "32079005",
         display: "Blood group antigen Ramskin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Oxanamide: Coding.FromStrict({
+    MedicationCodesValueSet_Oxanamide: new Coding({
         code: "32083005",
         display: "Oxanamide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyVS: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyVS: new Coding({
         code: "32089009",
         display: "Blood group antibody VS",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CamphoratedOil: Coding.FromStrict({
+    MedicationCodesValueSet_CamphoratedOil: new Coding({
         code: "32120008",
         display: "Camphorated oil",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MicroarazideNitrate: Coding.FromStrict({
+    MedicationCodesValueSet_MicroarazideNitrate: new Coding({
         code: "32133002",
         display: "Microarazide nitrate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenSuhany: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenSuhany: new Coding({
         code: "32147003",
         display: "Blood group antigen Suhany",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Inulin: Coding.FromStrict({
+    MedicationCodesValueSet_Inulin: new Coding({
         code: "32154009",
         display: "Inulin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CathepsinB: Coding.FromStrict({
+    MedicationCodesValueSet_CathepsinB: new Coding({
         code: "32157002",
         display: "Cathepsin B",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyNickolai: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyNickolai: new Coding({
         code: "32167007",
         display: "Blood group antibody Nickolai",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyKasamatsuo: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyKasamatsuo: new Coding({
         code: "32233008",
         display: "Blood group antibody Kasamatsuo",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyA8306: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyA8306: new Coding({
         code: "32235001",
         display: "Blood group antibody A 8306",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyIBH: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyIBH: new Coding({
         code: "32237009",
         display: "Blood group antibody IBH",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DI4ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_DI4ISBTSymbol: new Coding({
         code: "32241008",
         display: "DI4 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyLu6: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyLu6: new Coding({
         code: "32261002",
         display: "Blood group antibody Lu6",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SolubleImmuneComplex: Coding.FromStrict({
+    MedicationCodesValueSet_SolubleImmuneComplex: new Coding({
         code: "32277001",
         display: "Soluble immune complex",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenOsloIV: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenOsloIV: new Coding({
         code: "32281001",
         display: "Fibrinogen Oslo IV",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyRdPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyRdPowerAPower: new Coding({
         code: "32305006",
         display: "Blood group antibody Rd^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMarriott: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMarriott: new Coding({
         code: "32314001",
         display: "Blood group antibody Marriott",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyBR726750: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyBR726750: new Coding({
         code: "32324009",
         display: "Blood group antibody BR 726750",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenIFetal: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenIFetal: new Coding({
         code: "32329004",
         display: "Blood group antigen I fetal",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ThymusDependentAntigen: Coding.FromStrict({
+    MedicationCodesValueSet_ThymusDependentAntigen: new Coding({
         code: "32351007",
         display: "Thymus-dependent antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenTm: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenTm: new Coding({
         code: "32364008",
         display: "Blood group antigen Tm",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Diprophylline: Coding.FromStrict({
+    MedicationCodesValueSet_Diprophylline: new Coding({
         code: "32370002",
         display: "Diprophylline",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyLu5: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyLu5: new Coding({
         code: "32396000",
         display: "Blood group antibody Lu5",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyPrGreaterThanALessThan: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyPrGreaterThanALessThan: new Coding({
         code: "32403003",
         display: "Blood group antibody Pr>a<",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PhentolamineMesilate: Coding.FromStrict({
+    MedicationCodesValueSet_PhentolamineMesilate: new Coding({
         code: "32436002",
         display: "Phentolamine mesilate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TriphenylPhosphate: Coding.FromStrict({
+    MedicationCodesValueSet_TriphenylPhosphate: new Coding({
         code: "32437006",
         display: "Triphenyl phosphate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMackin: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMackin: new Coding({
         code: "32481003",
         display: "Blood group antibody Mackin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Cortisone: Coding.FromStrict({
+    MedicationCodesValueSet_Cortisone: new Coding({
         code: "32498003",
         display: "Cortisone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Phosphorus32: Coding.FromStrict({
+    MedicationCodesValueSet_Phosphorus32: new Coding({
         code: "32505007",
         display: "Phosphorus 32",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CharcoalMedicinalVegetable: Coding.FromStrict({
+    MedicationCodesValueSet_CharcoalMedicinalVegetable: new Coding({
         code: "32519007",
         display: "Charcoal medicinal vegetable",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HepatitisAAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_HepatitisAAntibody: new Coding({
         code: "32609007",
         display: "Hepatitis A antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyZim: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyZim: new Coding({
         code: "32616008",
         display: "Blood group antibody Zim",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenRGreaterThan2LessThanRGreaterThan2LessThan202: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenRGreaterThan2LessThanRGreaterThan2LessThan202: new Coding({
         code: "32699000",
         display: "Blood group antigen R>2<R>2<-202",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DeoxyribonucleaseI: Coding.FromStrict({
+    MedicationCodesValueSet_DeoxyribonucleaseI: new Coding({
         code: "32707001",
         display: "Deoxyribonuclease I",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MagnesiumDust: Coding.FromStrict({
+    MedicationCodesValueSet_MagnesiumDust: new Coding({
         code: "32714004",
         display: "Magnesium dust",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Dibenzepin: Coding.FromStrict({
+    MedicationCodesValueSet_Dibenzepin: new Coding({
         code: "32757009",
         display: "Dibenzepin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Ferritin: Coding.FromStrict({
+    MedicationCodesValueSet_Ferritin: new Coding({
         code: "32789000",
         display: "Ferritin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Ethionamide: Coding.FromStrict({
+    MedicationCodesValueSet_Ethionamide: new Coding({
         code: "32800009",
         display: "Ethionamide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ErgotAlkaloid: Coding.FromStrict({
+    MedicationCodesValueSet_ErgotAlkaloid: new Coding({
         code: "32824001",
         display: "Ergot alkaloid",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SodiumAcetrizoate: Coding.FromStrict({
+    MedicationCodesValueSet_SodiumAcetrizoate: new Coding({
         code: "32836007",
         display: "Sodium acetrizoate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyRh42: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyRh42: new Coding({
         code: "32842006",
         display: "Blood group antibody Rh42",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MSHBetaMelanocyteStimulatingHormone: Coding.FromStrict({
+    MedicationCodesValueSet_MSHBetaMelanocyteStimulatingHormone: new Coding({
         code: "32852005",
         display: "MSH - Beta melanocyte stimulating hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAHumanLeukocyteAntigenA9: Coding.FromStrict({
+    MedicationCodesValueSet_HLAHumanLeukocyteAntigenA9: new Coding({
         code: "32860006",
         display: "HLA - Human leukocyte antigen A9",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenSanFrancisco: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenSanFrancisco: new Coding({
         code: "32898006",
         display: "Fibrinogen San Francisco",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ProstaglandinA2: Coding.FromStrict({
+    MedicationCodesValueSet_ProstaglandinA2: new Coding({
         code: "32901007",
         display: "Prostaglandin A2",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ClusterOfDifferentiationAntigen24: Coding.FromStrict({
+    MedicationCodesValueSet_ClusterOfDifferentiationAntigen24: new Coding({
         code: "32943000",
         display: "Cluster of differentiation antigen 24",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenBanks: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenBanks: new Coding({
         code: "32974003",
         display: "Blood group antigen Banks",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HFFactorH: Coding.FromStrict({
+    MedicationCodesValueSet_HFFactorH: new Coding({
         code: "32990003",
         display: "HF - Factor H",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyBowyer: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyBowyer: new Coding({
         code: "33029004",
         display: "Blood group antibody Bowyer",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenAustin: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenAustin: new Coding({
         code: "33037007",
         display: "Blood group antigen Austin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenBruno: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenBruno: new Coding({
         code: "33053005",
         display: "Blood group antigen Bruno",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MacrophageAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_MacrophageAntibody: new Coding({
         code: "33057006",
         display: "Macrophage antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LU13ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_LU13ISBTSymbol: new Coding({
         code: "33063002",
         display: "LU13 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenChristiansen: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenChristiansen: new Coding({
         code: "33188008",
         display: "Blood group antigen Christiansen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyTrihexosylceramide: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyTrihexosylceramide: new Coding({
         code: "33210004",
         display: "Blood group antibody trihexosylceramide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MedicinalZincPeroxide: Coding.FromStrict({
+    MedicationCodesValueSet_MedicinalZincPeroxide: new Coding({
         code: "33280006",
         display: "Medicinal zinc peroxide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SodiumMeralein: Coding.FromStrict({
+    MedicationCodesValueSet_SodiumMeralein: new Coding({
         code: "33307008",
         display: "Sodium meralein",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenDQw5: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenDQw5: new Coding({
         code: "33309006",
         display: "Human leukocyte antigen DQw5",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyBanks: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyBanks: new Coding({
         code: "33355008",
         display: "Blood group antibody Banks",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_NiNickel: Coding.FromStrict({
+    MedicationCodesValueSet_NiNickel: new Coding({
         code: "33396006",
         display: "Ni - Nickel",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CapillaryActiveAgent: Coding.FromStrict({
+    MedicationCodesValueSet_CapillaryActiveAgent: new Coding({
         code: "33435008",
         display: "Capillary active agent",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CeftriaxoneSodium: Coding.FromStrict({
+    MedicationCodesValueSet_CeftriaxoneSodium: new Coding({
         code: "33440000",
         display: "Ceftriaxone sodium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BepheniumHydroxynaphthoate: Coding.FromStrict({
+    MedicationCodesValueSet_BepheniumHydroxynaphthoate: new Coding({
         code: "33447002",
         display: "Bephenium hydroxynaphthoate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMur: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMur: new Coding({
         code: "33509005",
         display: "Blood group antibody Mur",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RenalHormone: Coding.FromStrict({
+    MedicationCodesValueSet_RenalHormone: new Coding({
         code: "33535006",
         display: "Renal hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenKirkpatrick: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenKirkpatrick: new Coding({
         code: "33550002",
         display: "Blood group antigen Kirkpatrick",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenFinlay: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenFinlay: new Coding({
         code: "33604009",
         display: "Blood group antigen Finlay",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PlasminogenActivator: Coding.FromStrict({
+    MedicationCodesValueSet_PlasminogenActivator: new Coding({
         code: "33619005",
         display: "Plasminogen activator",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VAL5Hydroxytryptamine: Coding.FromStrict({
+    MedicationCodesValueSet_VAL5Hydroxytryptamine: new Coding({
         code: "33635003",
         display: "5-Hydroxytryptamine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenSydneyI: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenSydneyI: new Coding({
         code: "33642003",
         display: "Fibrinogen Sydney I",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Mercumatilin: Coding.FromStrict({
+    MedicationCodesValueSet_Mercumatilin: new Coding({
         code: "33667000",
         display: "Mercumatilin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAHumanLeukocyteAntigenB12: Coding.FromStrict({
+    MedicationCodesValueSet_HLAHumanLeukocyteAntigenB12: new Coding({
         code: "33680002",
         display: "HLA - Human leukocyte antigen B12",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyCoPowerBPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyCoPowerBPower: new Coding({
         code: "33691009",
         display: "Blood group antibody Co^b^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Motilin: Coding.FromStrict({
+    MedicationCodesValueSet_Motilin: new Coding({
         code: "33752008",
         display: "Motilin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_JK2ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_JK2ISBTSymbol: new Coding({
         code: "33825006",
         display: "JK2 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AluminumGlycinate: Coding.FromStrict({
+    MedicationCodesValueSet_AluminumGlycinate: new Coding({
         code: "33837008",
         display: "Aluminum glycinate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyBaltzer: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyBaltzer: new Coding({
         code: "33865005",
         display: "Blood group antibody Baltzer",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VitaminL: Coding.FromStrict({
+    MedicationCodesValueSet_VitaminL: new Coding({
         code: "33922005",
         display: "Vitamin L",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Angiotensin3: Coding.FromStrict({
+    MedicationCodesValueSet_Angiotensin3: new Coding({
         code: "33963004",
         display: "Angiotensin 3",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PublicBloodGroupAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_PublicBloodGroupAntibody: new Coding({
         code: "33987002",
         display: "Public blood group antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CholelitholyticAgent: Coding.FromStrict({
+    MedicationCodesValueSet_CholelitholyticAgent: new Coding({
         code: "34007009",
         display: "Cholelitholytic agent",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyLu9: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyLu9: new Coding({
         code: "34049004",
         display: "Blood group antibody Lu9",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenNagoya: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenNagoya: new Coding({
         code: "34070005",
         display: "Fibrinogen Nagoya",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BorateSalt: Coding.FromStrict({
+    MedicationCodesValueSet_BorateSalt: new Coding({
         code: "34074001",
         display: "Borate salt",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HeparinCofactorI: Coding.FromStrict({
+    MedicationCodesValueSet_HeparinCofactorI: new Coding({
         code: "34086003",
         display: "Heparin cofactor I",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Acrisorcin: Coding.FromStrict({
+    MedicationCodesValueSet_Acrisorcin: new Coding({
         code: "34113002",
         display: "Acrisorcin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenAmsterdam: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenAmsterdam: new Coding({
         code: "34120009",
         display: "Fibrinogen Amsterdam",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyKu: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyKu: new Coding({
         code: "34161009",
         display: "Blood group antibody Ku",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMin: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMin: new Coding({
         code: "34180006",
         display: "Blood group antibody Min",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Folescutol: Coding.FromStrict({
+    MedicationCodesValueSet_Folescutol: new Coding({
         code: "34198005",
         display: "Folescutol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyWarren: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyWarren: new Coding({
         code: "34204008",
         display: "Blood group antibody Warren",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power83PowerStrontium: Coding.FromStrict({
+    MedicationCodesValueSet_Power83PowerStrontium: new Coding({
         code: "34211007",
         display: "^83^Strontium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CastorOil: Coding.FromStrict({
+    MedicationCodesValueSet_CastorOil: new Coding({
         code: "34239008",
         display: "Castor oil",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_IodinePentafluoride: Coding.FromStrict({
+    MedicationCodesValueSet_IodinePentafluoride: new Coding({
         code: "34274009",
         display: "Iodine pentafluoride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyGe1: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyGe1: new Coding({
         code: "34316000",
         display: "Blood group antibody Ge1",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Nitrophenol: Coding.FromStrict({
+    MedicationCodesValueSet_Nitrophenol: new Coding({
         code: "34332002",
         display: "Nitrophenol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_InactivatedComplementEnzyme: Coding.FromStrict({
+    MedicationCodesValueSet_InactivatedComplementEnzyme: new Coding({
         code: "34355004",
         display: "Inactivated complement enzyme",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyFuerhart: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyFuerhart: new Coding({
         code: "34388006",
         display: "Blood group antibody Fuerhart",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyTeremok: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyTeremok: new Coding({
         code: "34400001",
         display: "Blood group antibody Teremok",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Amolanone: Coding.FromStrict({
+    MedicationCodesValueSet_Amolanone: new Coding({
         code: "34425005",
         display: "Amolanone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAHumanLeukocyteAntigenB27: Coding.FromStrict({
+    MedicationCodesValueSet_HLAHumanLeukocyteAntigenB27: new Coding({
         code: "34453005",
         display: "HLA - Human leukocyte antigen B27",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenDQw7: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenDQw7: new Coding({
         code: "34465009",
         display: "Human leukocyte antigen DQw7",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power121PowerIodine: Coding.FromStrict({
+    MedicationCodesValueSet_Power121PowerIodine: new Coding({
         code: "34471003",
         display: "^121^Iodine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ClonalInhibitoryFactor: Coding.FromStrict({
+    MedicationCodesValueSet_ClonalInhibitoryFactor: new Coding({
         code: "34510007",
         display: "Clonal inhibitory factor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyJnPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyJnPowerAPower: new Coding({
         code: "34569000",
         display: "Blood group antibody Jn^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_IodineSolution: Coding.FromStrict({
+    MedicationCodesValueSet_IodineSolution: new Coding({
         code: "34654009",
         display: "Iodine solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_IsopropamideIodide: Coding.FromStrict({
+    MedicationCodesValueSet_IsopropamideIodide: new Coding({
         code: "34657002",
         display: "Isopropamide iodide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MetEnkephalin: Coding.FromStrict({
+    MedicationCodesValueSet_MetEnkephalin: new Coding({
         code: "34658007",
         display: "Met-enkephalin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_C1EsteraseInhibitor: Coding.FromStrict({
+    MedicationCodesValueSet_C1EsteraseInhibitor: new Coding({
         code: "34737006",
         display: "C1-esterase inhibitor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SlowReactingSubstanceAOfAnaphylaxis: Coding.FromStrict({
+    MedicationCodesValueSet_SlowReactingSubstanceAOfAnaphylaxis: new Coding({
         code: "34745001",
         display: "Slow reacting substance-A of anaphylaxis",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenPanzar: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenPanzar: new Coding({
         code: "34750007",
         display: "Blood group antigen Panzar",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ComplementComponent: Coding.FromStrict({
+    MedicationCodesValueSet_ComplementComponent: new Coding({
         code: "34829007",
         display: "Complement component",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyIPowerSPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyIPowerSPower: new Coding({
         code: "34832005",
         display: "Blood group antibody I^s^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenDQ3: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenDQ3: new Coding({
         code: "34868000",
         display: "Human leukocyte antigen DQ3",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ABO2ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_ABO2ISBTSymbol: new Coding({
         code: "34900009",
         display: "ABO2 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyRamskin: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyRamskin: new Coding({
         code: "34912008",
         display: "Blood group antibody Ramskin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PyridostigmineBromide: Coding.FromStrict({
+    MedicationCodesValueSet_PyridostigmineBromide: new Coding({
         code: "34915005",
         display: "Pyridostigmine bromide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PotassiumTartrate: Coding.FromStrict({
+    MedicationCodesValueSet_PotassiumTartrate: new Coding({
         code: "34919004",
         display: "Potassium tartrate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Colocynth: Coding.FromStrict({
+    MedicationCodesValueSet_Colocynth: new Coding({
         code: "34953000",
         display: "Colocynth",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenLee: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenLee: new Coding({
         code: "34968004",
         display: "Blood group antigen Lee",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RH48ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_RH48ISBTSymbol: new Coding({
         code: "34970008",
         display: "RH48 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Epicillin: Coding.FromStrict({
+    MedicationCodesValueSet_Epicillin: new Coding({
         code: "34983009",
         display: "Epicillin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyHLAA9: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyHLAA9: new Coding({
         code: "35012004",
         display: "Blood group antibody HLA-A9",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyRh29: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyRh29: new Coding({
         code: "35040009",
         display: "Blood group antibody Rh29",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TesticularHormone: Coding.FromStrict({
+    MedicationCodesValueSet_TesticularHormone: new Coding({
         code: "35060001",
         display: "Testicular hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntiC: Coding.FromStrict({
+    MedicationCodesValueSet_AntiC: new Coding({
         code: "35068008",
         display: "Anti C",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAHumanLeukocyteAntigenB16: Coding.FromStrict({
+    MedicationCodesValueSet_HLAHumanLeukocyteAntigenB16: new Coding({
         code: "35072007",
         display: "HLA - Human leukocyte antigen B16",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LymphocyteAntigenCD70: Coding.FromStrict({
+    MedicationCodesValueSet_LymphocyteAntigenCD70: new Coding({
         code: "35092000",
         display: "Lymphocyte antigen CD70",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyFy5: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyFy5: new Coding({
         code: "35118003",
         display: "Blood group antibody Fy5",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Aglycone: Coding.FromStrict({
+    MedicationCodesValueSet_Aglycone: new Coding({
         code: "35135004",
         display: "Aglycone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_GlucocorticoidHormone: Coding.FromStrict({
+    MedicationCodesValueSet_GlucocorticoidHormone: new Coding({
         code: "35150008",
         display: "Glucocorticoid hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyWallin: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyWallin: new Coding({
         code: "35213004",
         display: "Blood group antibody Wallin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ScarletFeverStreptococcusToxin: Coding.FromStrict({
+    MedicationCodesValueSet_ScarletFeverStreptococcusToxin: new Coding({
         code: "35215006",
         display: "Scarlet fever streptococcus toxin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Thenyldiamine: Coding.FromStrict({
+    MedicationCodesValueSet_Thenyldiamine: new Coding({
         code: "35236008",
         display: "Thenyldiamine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Entsulfon: Coding.FromStrict({
+    MedicationCodesValueSet_Entsulfon: new Coding({
         code: "35257000",
         display: "Entsulfon",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Acetophenazine: Coding.FromStrict({
+    MedicationCodesValueSet_Acetophenazine: new Coding({
         code: "35281007",
         display: "Acetophenazine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PolyclonalAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_PolyclonalAntibody: new Coding({
         code: "35310003",
         display: "Polyclonal antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_EsmololHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_EsmololHydrochloride: new Coding({
         code: "35318005",
         display: "Esmolol hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FludeoxyglucoseF18: Coding.FromStrict({
+    MedicationCodesValueSet_FludeoxyglucoseF18: new Coding({
         code: "35321007",
         display: "Fludeoxyglucose F 18",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CefonicidSodium: Coding.FromStrict({
+    MedicationCodesValueSet_CefonicidSodium: new Coding({
         code: "35343004",
         display: "Cefonicid sodium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenMcCPowerEPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenMcCPowerEPower: new Coding({
         code: "35367007",
         display: "Blood group antigen McC^e^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyKpPowerCPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyKpPowerCPower: new Coding({
         code: "35410004",
         display: "Blood group antibody Kp^c^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Adenosine: Coding.FromStrict({
+    MedicationCodesValueSet_Adenosine: new Coding({
         code: "35431001",
         display: "Adenosine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Relaxin: Coding.FromStrict({
+    MedicationCodesValueSet_Relaxin: new Coding({
         code: "35466004",
         display: "Relaxin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenStLouis: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenStLouis: new Coding({
         code: "35473009",
         display: "Fibrinogen St. Louis",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SessileAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_SessileAntibody: new Coding({
         code: "35556005",
         display: "Sessile antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_WoolFat: Coding.FromStrict({
+    MedicationCodesValueSet_WoolFat: new Coding({
         code: "35605007",
         display: "Wool fat",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LU17ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_LU17ISBTSymbol: new Coding({
         code: "35614002",
         display: "LU17 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenFrench: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenFrench: new Coding({
         code: "35645003",
         display: "Blood group antigen French",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FatSolubleVitamin: Coding.FromStrict({
+    MedicationCodesValueSet_FatSolubleVitamin: new Coding({
         code: "35733004",
         display: "Fat soluble vitamin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Wine: Coding.FromStrict({
+    MedicationCodesValueSet_Wine: new Coding({
         code: "35748005",
         display: "Wine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MyeloidAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_MyeloidAntibody: new Coding({
         code: "35760006",
         display: "Myeloid antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Sincalide: Coding.FromStrict({
+    MedicationCodesValueSet_Sincalide: new Coding({
         code: "35765001",
         display: "Sincalide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CatScratchDiseaseAntigen: Coding.FromStrict({
+    MedicationCodesValueSet_CatScratchDiseaseAntigen: new Coding({
         code: "35825008",
         display: "Cat scratch disease antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MacrophageMigrationInhibitoryFactor: Coding.FromStrict({
+    MedicationCodesValueSet_MacrophageMigrationInhibitoryFactor: new Coding({
         code: "35841009",
         display: "Macrophage migration inhibitory factor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Parathiazine: Coding.FromStrict({
+    MedicationCodesValueSet_Parathiazine: new Coding({
         code: "35864006",
         display: "Parathiazine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FFluorine: Coding.FromStrict({
+    MedicationCodesValueSet_FFluorine: new Coding({
         code: "35883004",
         display: "F - Fluorine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PotassiumBromide: Coding.FromStrict({
+    MedicationCodesValueSet_PotassiumBromide: new Coding({
         code: "35903003",
         display: "Potassium bromide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMPD: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMPD: new Coding({
         code: "35906006",
         display: "Blood group antibody MPD",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyBlack: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyBlack: new Coding({
         code: "35922007",
         display: "Blood group antibody Black",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Pentolinium: Coding.FromStrict({
+    MedicationCodesValueSet_Pentolinium: new Coding({
         code: "35946000",
         display: "Pentolinium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyBlock: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyBlock: new Coding({
         code: "35952004",
         display: "Blood group antibody Block",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorIIVariant: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorIIVariant: new Coding({
         code: "35954003",
         display: "Coagulation factor II variant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Ouabain: Coding.FromStrict({
+    MedicationCodesValueSet_Ouabain: new Coding({
         code: "35966009",
         display: "Ouabain",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PPPHumanPancreaticPolypeptide: Coding.FromStrict({
+    MedicationCodesValueSet_PPPHumanPancreaticPolypeptide: new Coding({
         code: "35976007",
         display: "PPP - Human pancreatic polypeptide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyTofts: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyTofts: new Coding({
         code: "36005003",
         display: "Blood group antibody Tofts",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyHaase: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyHaase: new Coding({
         code: "36016005",
         display: "Blood group antibody Haase",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FactorIXAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_FactorIXAntibody: new Coding({
         code: "36020009",
         display: "Factor IX antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CefadroxilMonohydrate: Coding.FromStrict({
+    MedicationCodesValueSet_CefadroxilMonohydrate: new Coding({
         code: "36021008",
         display: "Cefadroxil monohydrate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenFreiberg: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenFreiberg: new Coding({
         code: "36022001",
         display: "Fibrinogen Freiberg",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DO2ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_DO2ISBTSymbol: new Coding({
         code: "36100005",
         display: "DO2 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PenitremA: Coding.FromStrict({
+    MedicationCodesValueSet_PenitremA: new Coding({
         code: "36136008",
         display: "Penitrem-A",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenTorino: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenTorino: new Coding({
         code: "36167005",
         display: "Fibrinogen Torino",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TetraiodothyroaceticAcid: Coding.FromStrict({
+    MedicationCodesValueSet_TetraiodothyroaceticAcid: new Coding({
         code: "36173006",
         display: "Tetraiodothyroacetic acid",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Thrombin: Coding.FromStrict({
+    MedicationCodesValueSet_Thrombin: new Coding({
         code: "36176003",
         display: "Thrombin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PineNeedleOil: Coding.FromStrict({
+    MedicationCodesValueSet_PineNeedleOil: new Coding({
         code: "36235004",
         display: "Pine needle oil",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyRaison: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyRaison: new Coding({
         code: "36260004",
         display: "Blood group antibody Raison",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LithiumCompound: Coding.FromStrict({
+    MedicationCodesValueSet_LithiumCompound: new Coding({
         code: "36378007",
         display: "Lithium compound",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_OxyphencyclimineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_OxyphencyclimineHydrochloride: new Coding({
         code: "36380001",
         display: "Oxyphencyclimine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenVanBuggenhout: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenVanBuggenhout: new Coding({
         code: "36396003",
         display: "Blood group antigen Van Buggenhout",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyELO: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyELO: new Coding({
         code: "36403001",
         display: "Blood group antibody ELO",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenMcCPowerBPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenMcCPowerBPower: new Coding({
         code: "36418000",
         display: "Blood group antigen McC^b^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MepyramineMaleate: Coding.FromStrict({
+    MedicationCodesValueSet_MepyramineMaleate: new Coding({
         code: "36516003",
         display: "Mepyramine maleate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MercuricIodide: Coding.FromStrict({
+    MedicationCodesValueSet_MercuricIodide: new Coding({
         code: "36541005",
         display: "Mercuric iodide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Hemolysin: Coding.FromStrict({
+    MedicationCodesValueSet_Hemolysin: new Coding({
         code: "36562006",
         display: "Hemolysin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenPrGreaterThan1hLessThan: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenPrGreaterThan1hLessThan: new Coding({
         code: "36613003",
         display: "Blood group antigen Pr>1h<",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BismuthSalt: Coding.FromStrict({
+    MedicationCodesValueSet_BismuthSalt: new Coding({
         code: "36651003",
         display: "Bismuth salt",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenHGreaterThanTLessThan: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenHGreaterThanTLessThan: new Coding({
         code: "36652005",
         display: "Blood group antigen H>T<",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Tyrothricin: Coding.FromStrict({
+    MedicationCodesValueSet_Tyrothricin: new Coding({
         code: "36661005",
         display: "Tyrothricin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FactorXIIAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_FactorXIIAntibody: new Coding({
         code: "36712003",
         display: "Factor XII antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMcCPowerDPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMcCPowerDPower: new Coding({
         code: "36713008",
         display: "Blood group antibody McC^d^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RH3ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_RH3ISBTSymbol: new Coding({
         code: "36744004",
         display: "RH3 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenRaison: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenRaison: new Coding({
         code: "36757007",
         display: "Blood group antigen Raison",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenBw6: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenBw6: new Coding({
         code: "36759005",
         display: "Human leukocyte antigen Bw6",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenTasich: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenTasich: new Coding({
         code: "36804003",
         display: "Blood group antigen Tasich",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAHumanLeukocyteAntigenDw16: Coding.FromStrict({
+    MedicationCodesValueSet_HLAHumanLeukocyteAntigenDw16: new Coding({
         code: "36842009",
         display: "HLA - Human leukocyte antigen Dw16",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenVienna: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenVienna: new Coding({
         code: "36853003",
         display: "Blood group antigen Vienna",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Tridihexethyl: Coding.FromStrict({
+    MedicationCodesValueSet_Tridihexethyl: new Coding({
         code: "36872003",
         display: "Tridihexethyl",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MineralocorticoidHormone: Coding.FromStrict({
+    MedicationCodesValueSet_MineralocorticoidHormone: new Coding({
         code: "36887008",
         display: "Mineralocorticoid hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyKennedy: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyKennedy: new Coding({
         code: "36907009",
         display: "Blood group antibody Kennedy",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntibodyToAntigenInISBTSystemRH: Coding.FromStrict({
+    MedicationCodesValueSet_AntibodyToAntigenInISBTSystemRH: new Coding({
         code: "36933001",
         display: "Antibody to antigen in ISBT system RH",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenNancy: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenNancy: new Coding({
         code: "36953002",
         display: "Fibrinogen Nancy",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Cyclothiazide: Coding.FromStrict({
+    MedicationCodesValueSet_Cyclothiazide: new Coding({
         code: "37006008",
         display: "Cyclothiazide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DipivefrineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_DipivefrineHydrochloride: new Coding({
         code: "37013008",
         display: "Dipivefrine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyShier: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyShier: new Coding({
         code: "37067002",
         display: "Blood group antibody Shier",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power122PowerXenon: Coding.FromStrict({
+    MedicationCodesValueSet_Power122PowerXenon: new Coding({
         code: "37077000",
         display: "^122^Xenon",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Nitromersol: Coding.FromStrict({
+    MedicationCodesValueSet_Nitromersol: new Coding({
         code: "37078005",
         display: "Nitromersol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenBradford: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenBradford: new Coding({
         code: "37100000",
         display: "Blood group antigen Bradford",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CopperDust: Coding.FromStrict({
+    MedicationCodesValueSet_CopperDust: new Coding({
         code: "37123002",
         display: "Copper dust",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power52PowerManganese: Coding.FromStrict({
+    MedicationCodesValueSet_Power52PowerManganese: new Coding({
         code: "37225000",
         display: "^52^Manganese",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VITETocopherol: Coding.FromStrict({
+    MedicationCodesValueSet_VITETocopherol: new Coding({
         code: "37237003",
         display: "VITE - Tocopherol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PhenylPAminosalicylate: Coding.FromStrict({
+    MedicationCodesValueSet_PhenylPAminosalicylate: new Coding({
         code: "37262003",
         display: "Phenyl p-aminosalicylate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PolypeptideHormone: Coding.FromStrict({
+    MedicationCodesValueSet_PolypeptideHormone: new Coding({
         code: "37276002",
         display: "Polypeptide hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyB7358: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyB7358: new Coding({
         code: "37282004",
         display: "Blood group antibody B 7358",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAHumanLeukocyteAntigenA1: Coding.FromStrict({
+    MedicationCodesValueSet_HLAHumanLeukocyteAntigenA1: new Coding({
         code: "37287005",
         display: "HLA - Human leukocyte antigen A1",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyH: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyH: new Coding({
         code: "37300006",
         display: "Blood group antibody h",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FungusAntigenicAgent: Coding.FromStrict({
+    MedicationCodesValueSet_FungusAntigenicAgent: new Coding({
         code: "37352007",
         display: "Fungus antigenic agent",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenRouen: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenRouen: new Coding({
         code: "37365003",
         display: "Fibrinogen Rouen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TissuePlasminogenActivator: Coding.FromStrict({
+    MedicationCodesValueSet_TissuePlasminogenActivator: new Coding({
         code: "37411004",
         display: "Tissue plasminogen activator",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Polycarbophil: Coding.FromStrict({
+    MedicationCodesValueSet_Polycarbophil: new Coding({
         code: "37433002",
         display: "Polycarbophil",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_OpiumTincture: Coding.FromStrict({
+    MedicationCodesValueSet_OpiumTincture: new Coding({
         code: "37451001",
         display: "Opium tincture",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SufentanilCitrate: Coding.FromStrict({
+    MedicationCodesValueSet_SufentanilCitrate: new Coding({
         code: "37527009",
         display: "Sufentanil citrate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenBuckalew: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenBuckalew: new Coding({
         code: "37583005",
         display: "Blood group antigen Buckalew",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ClindamycinPhosphate: Coding.FromStrict({
+    MedicationCodesValueSet_ClindamycinPhosphate: new Coding({
         code: "37648000",
         display: "Clindamycin phosphate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_KEL19ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_KEL19ISBTSymbol: new Coding({
         code: "37654004",
         display: "KEL19 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Thiamazole: Coding.FromStrict({
+    MedicationCodesValueSet_Thiamazole: new Coding({
         code: "37656002",
         display: "Thiamazole",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Hetacillin: Coding.FromStrict({
+    MedicationCodesValueSet_Hetacillin: new Coding({
         code: "37691005",
         display: "Hetacillin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenDautriche: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenDautriche: new Coding({
         code: "37713002",
         display: "Blood group antigen Dautriche",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_WhiteOintment: Coding.FromStrict({
+    MedicationCodesValueSet_WhiteOintment: new Coding({
         code: "37716005",
         display: "White ointment",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Beta2BlockingAgent: Coding.FromStrict({
+    MedicationCodesValueSet_Beta2BlockingAgent: new Coding({
         code: "37751002",
         display: "Beta 2 blocking agent",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_GIPGastricInhibitoryPolypeptide: Coding.FromStrict({
+    MedicationCodesValueSet_GIPGastricInhibitoryPolypeptide: new Coding({
         code: "37756007",
         display: "GIP - Gastric inhibitory polypeptide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DrugInducedCoagulationInhibitor: Coding.FromStrict({
+    MedicationCodesValueSet_DrugInducedCoagulationInhibitor: new Coding({
         code: "37758008",
         display: "Drug-induced coagulation inhibitor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AmfepramoneHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_AmfepramoneHydrochloride: new Coding({
         code: "37765000",
         display: "Amfepramone hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_KEL7ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_KEL7ISBTSymbol: new Coding({
         code: "37861002",
         display: "KEL7 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenAM: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenAM: new Coding({
         code: "37902007",
         display: "Blood group antigen A.M.",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenParisI: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenParisI: new Coding({
         code: "37951005",
         display: "Fibrinogen Paris I",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Pentoxyverine: Coding.FromStrict({
+    MedicationCodesValueSet_Pentoxyverine: new Coding({
         code: "37957009",
         display: "Pentoxyverine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_NitrofurantoinSodium: Coding.FromStrict({
+    MedicationCodesValueSet_NitrofurantoinSodium: new Coding({
         code: "37978007",
         display: "Nitrofurantoin sodium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyDon: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyDon: new Coding({
         code: "37984005",
         display: "Blood group antibody Don",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Tremorgen: Coding.FromStrict({
+    MedicationCodesValueSet_Tremorgen: new Coding({
         code: "37986007",
         display: "Tremorgen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenHanover: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenHanover: new Coding({
         code: "37994000",
         display: "Fibrinogen Hanover",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Paromomycin: Coding.FromStrict({
+    MedicationCodesValueSet_Paromomycin: new Coding({
         code: "38044001",
         display: "Paromomycin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Anisindione: Coding.FromStrict({
+    MedicationCodesValueSet_Anisindione: new Coding({
         code: "38122009",
         display: "Anisindione",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HyaluronicAcid: Coding.FromStrict({
+    MedicationCodesValueSet_HyaluronicAcid: new Coding({
         code: "38218009",
         display: "Hyaluronic acid",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MNS6ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_MNS6ISBTSymbol: new Coding({
         code: "38227005",
         display: "MNS6 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ThymicHormone: Coding.FromStrict({
+    MedicationCodesValueSet_ThymicHormone: new Coding({
         code: "38245005",
         display: "Thymic hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ActiveC5b678: Coding.FromStrict({
+    MedicationCodesValueSet_ActiveC5b678: new Coding({
         code: "38262000",
         display: "Active C5b678",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CD1cClusterOfDifferentiationAntigen1c: Coding.FromStrict({
+    MedicationCodesValueSet_CD1cClusterOfDifferentiationAntigen1c: new Coding({
         code: "38269009",
         display: "CD1c - Cluster of differentiation antigen 1c",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SodiumIodomethamate: Coding.FromStrict({
+    MedicationCodesValueSet_SodiumIodomethamate: new Coding({
         code: "38344006",
         display: "Sodium iodomethamate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenHoalzel: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenHoalzel: new Coding({
         code: "38367008",
         display: "Blood group antigen Hoalzel",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power135PowerXenon: Coding.FromStrict({
+    MedicationCodesValueSet_Power135PowerXenon: new Coding({
         code: "38399002",
         display: "^135^Xenon",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Paregoric: Coding.FromStrict({
+    MedicationCodesValueSet_Paregoric: new Coding({
         code: "38408002",
         display: "Paregoric",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenRils: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenRils: new Coding({
         code: "38445008",
         display: "Blood group antigen Rils",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Interleukin: Coding.FromStrict({
+    MedicationCodesValueSet_Interleukin: new Coding({
         code: "38476002",
         display: "Interleukin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyNaz: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyNaz: new Coding({
         code: "38499003",
         display: "Blood group antibody Naz",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenDonaldson: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenDonaldson: new Coding({
         code: "38519002",
         display: "Blood group antigen Donaldson",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LissamineGreenBStain: Coding.FromStrict({
+    MedicationCodesValueSet_LissamineGreenBStain: new Coding({
         code: "38543004",
         display: "Lissamine green B stain",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenSchuppenhauer: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenSchuppenhauer: new Coding({
         code: "38553003",
         display: "Blood group antigen Schuppenhauer",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAHumanLeukocyteAntigenB5: Coding.FromStrict({
+    MedicationCodesValueSet_HLAHumanLeukocyteAntigenB5: new Coding({
         code: "38554009",
         display: "HLA - Human leukocyte antigen B5",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyGhawiler: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyGhawiler: new Coding({
         code: "38558007",
         display: "Blood group antibody Ghawiler",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TrimethylPhosphite: Coding.FromStrict({
+    MedicationCodesValueSet_TrimethylPhosphite: new Coding({
         code: "38595007",
         display: "Trimethyl phosphite",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AluminumOxideOre: Coding.FromStrict({
+    MedicationCodesValueSet_AluminumOxideOre: new Coding({
         code: "38622005",
         display: "Aluminum oxide ore",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power69PowerZinc: Coding.FromStrict({
+    MedicationCodesValueSet_Power69PowerZinc: new Coding({
         code: "38623000",
         display: "^69^Zinc",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Mephentermine: Coding.FromStrict({
+    MedicationCodesValueSet_Mephentermine: new Coding({
         code: "38648002",
         display: "Mephentermine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ColistimethateSodium: Coding.FromStrict({
+    MedicationCodesValueSet_ColistimethateSodium: new Coding({
         code: "38686006",
         display: "Colistimethate sodium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_IGF2InsulinLikeGrowthFactor2: Coding.FromStrict({
+    MedicationCodesValueSet_IGF2InsulinLikeGrowthFactor2: new Coding({
         code: "38714005",
         display: "IGF 2 - Insulin-like growth factor 2",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAHumanLeukocyteAntigenDPw6: Coding.FromStrict({
+    MedicationCodesValueSet_HLAHumanLeukocyteAntigenDPw6: new Coding({
         code: "38771008",
         display: "HLA - Human leukocyte antigen DPw6",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyHtPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyHtPowerAPower: new Coding({
         code: "38779005",
         display: "Blood group antibody Ht^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MolybdenumIsotope: Coding.FromStrict({
+    MedicationCodesValueSet_MolybdenumIsotope: new Coding({
         code: "38794009",
         display: "Molybdenum isotope",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenVG: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenVG: new Coding({
         code: "38874005",
         display: "Blood group antigen V.G.",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenJankowski: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenJankowski: new Coding({
         code: "38908008",
         display: "Blood group antigen Jankowski",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_GlutamicAcidHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_GlutamicAcidHydrochloride: new Coding({
         code: "38909000",
         display: "Glutamic acid hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ThymolIodide: Coding.FromStrict({
+    MedicationCodesValueSet_ThymolIodide: new Coding({
         code: "38914001",
         display: "Thymol iodide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_WaterInOilAgent: Coding.FromStrict({
+    MedicationCodesValueSet_WaterInOilAgent: new Coding({
         code: "38937007",
         display: "Water in oil agent",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Thiram: Coding.FromStrict({
+    MedicationCodesValueSet_Thiram: new Coding({
         code: "39012008",
         display: "Thiram",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyYtPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyYtPowerAPower: new Coding({
         code: "39024001",
         display: "Blood group antibody Yt^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AluminumAlkyl: Coding.FromStrict({
+    MedicationCodesValueSet_AluminumAlkyl: new Coding({
         code: "39044007",
         display: "Aluminum alkyl",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FactorD: Coding.FromStrict({
+    MedicationCodesValueSet_FactorD: new Coding({
         code: "39053000",
         display: "Factor D",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HepatitisBCoreAntigen: Coding.FromStrict({
+    MedicationCodesValueSet_HepatitisBCoreAntigen: new Coding({
         code: "39082004",
         display: "Hepatitis B core antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HighIncidenceAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_HighIncidenceAntibody: new Coding({
         code: "39118009",
         display: "High incidence antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Cefaloglycin: Coding.FromStrict({
+    MedicationCodesValueSet_Cefaloglycin: new Coding({
         code: "39123009",
         display: "Cefaloglycin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMilano: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMilano: new Coding({
         code: "39138005",
         display: "Blood group antibody Milano",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ErythromycinStearate: Coding.FromStrict({
+    MedicationCodesValueSet_ErythromycinStearate: new Coding({
         code: "39152007",
         display: "Erythromycin stearate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenDw1: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenDw1: new Coding({
         code: "39241007",
         display: "Human leukocyte antigen Dw1",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Amisometradine: Coding.FromStrict({
+    MedicationCodesValueSet_Amisometradine: new Coding({
         code: "39263003",
         display: "Amisometradine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_IodineTrichloride: Coding.FromStrict({
+    MedicationCodesValueSet_IodineTrichloride: new Coding({
         code: "39292004",
         display: "Iodine trichloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_IronCarbohydrateComplex: Coding.FromStrict({
+    MedicationCodesValueSet_IronCarbohydrateComplex: new Coding({
         code: "39294003",
         display: "Iron carbohydrate complex",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyRh43: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyRh43: new Coding({
         code: "39327001",
         display: "Blood group antibody Rh43",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyEsPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyEsPowerAPower: new Coding({
         code: "39337006",
         display: "Blood group antibody Es^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Deuteroporphyrin: Coding.FromStrict({
+    MedicationCodesValueSet_Deuteroporphyrin: new Coding({
         code: "39428005",
         display: "Deuteroporphyrin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Paratope: Coding.FromStrict({
+    MedicationCodesValueSet_Paratope: new Coding({
         code: "39442002",
         display: "Paratope",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Decamethonium: Coding.FromStrict({
+    MedicationCodesValueSet_Decamethonium: new Coding({
         code: "39514001",
         display: "Decamethonium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenHtPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenHtPowerAPower: new Coding({
         code: "39515000",
         display: "Blood group antigen Ht^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TumorNecrosisFactorAlpha: Coding.FromStrict({
+    MedicationCodesValueSet_TumorNecrosisFactorAlpha: new Coding({
         code: "39525005",
         display: "Tumor necrosis factor alpha",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ManganeseIsotope: Coding.FromStrict({
+    MedicationCodesValueSet_ManganeseIsotope: new Coding({
         code: "39546001",
         display: "Manganese isotope",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Scabicide: Coding.FromStrict({
+    MedicationCodesValueSet_Scabicide: new Coding({
         code: "39552000",
         display: "Scabicide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenHLABw54Antigen: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenHLABw54Antigen: new Coding({
         code: "39650003",
         display: "Human leukocyte antigen HLA-Bw54 antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenPrGreaterThan2LessThan: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenPrGreaterThan2LessThan: new Coding({
         code: "39665002",
         display: "Blood group antigen Pr>2<",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenKominarek: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenKominarek: new Coding({
         code: "39678002",
         display: "Blood group antigen Kominarek",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CinchocaineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_CinchocaineHydrochloride: new Coding({
         code: "39808001",
         display: "Cinchocaine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Clorazepate: Coding.FromStrict({
+    MedicationCodesValueSet_Clorazepate: new Coding({
         code: "39815009",
         display: "Clorazepate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyDiPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyDiPowerAPower: new Coding({
         code: "39840002",
         display: "Blood group antibody Di^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PancreaticHormone: Coding.FromStrict({
+    MedicationCodesValueSet_PancreaticHormone: new Coding({
         code: "39933002",
         display: "Pancreatic hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorIIBarcelonaVariant: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorIIBarcelonaVariant: new Coding({
         code: "39962001",
         display: "Coagulation factor II Barcelona variant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_NaSodium: Coding.FromStrict({
+    MedicationCodesValueSet_NaSodium: new Coding({
         code: "39972003",
         display: "Na - Sodium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CPeptide: Coding.FromStrict({
+    MedicationCodesValueSet_CPeptide: new Coding({
         code: "39973008",
         display: "C peptide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_T2Toxin: Coding.FromStrict({
+    MedicationCodesValueSet_T2Toxin: new Coding({
         code: "39979007",
         display: "T2 toxin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SkinReactiveFactor: Coding.FromStrict({
+    MedicationCodesValueSet_SkinReactiveFactor: new Coding({
         code: "39988003",
         display: "Skin reactive factor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RH21ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_RH21ISBTSymbol: new Coding({
         code: "39999001",
         display: "RH21 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyOliver: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyOliver: new Coding({
         code: "40018000",
         display: "Blood group antibody Oliver",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MNS8ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_MNS8ISBTSymbol: new Coding({
         code: "40030006",
         display: "MNS8 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Sulfadimidine: Coding.FromStrict({
+    MedicationCodesValueSet_Sulfadimidine: new Coding({
         code: "40036000",
         display: "Sulfadimidine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenDRw11: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenDRw11: new Coding({
         code: "40044000",
         display: "Human leukocyte antigen DRw11",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenEnglund: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenEnglund: new Coding({
         code: "40048002",
         display: "Blood group antigen Englund",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeucocyteAntigenBw73: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeucocyteAntigenBw73: new Coding({
         code: "40065006",
         display: "Human leucocyte antigen Bw73",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AluminumHydroxychloride: Coding.FromStrict({
+    MedicationCodesValueSet_AluminumHydroxychloride: new Coding({
         code: "40115000",
         display: "Aluminum hydroxychloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyKirkpatrick: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyKirkpatrick: new Coding({
         code: "40140007",
         display: "Blood group antibody Kirkpatrick",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodySingleton: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodySingleton: new Coding({
         code: "40154004",
         display: "Blood group antibody Singleton",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyTruax: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyTruax: new Coding({
         code: "40270009",
         display: "Blood group antibody Truax",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ThiamylalSodium: Coding.FromStrict({
+    MedicationCodesValueSet_ThiamylalSodium: new Coding({
         code: "40342009",
         display: "Thiamylal sodium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LE5ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_LE5ISBTSymbol: new Coding({
         code: "40364000",
         display: "LE5 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PapaverineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_PapaverineHydrochloride: new Coding({
         code: "40404004",
         display: "Papaverine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntimonySodiumTartrate: Coding.FromStrict({
+    MedicationCodesValueSet_AntimonySodiumTartrate: new Coding({
         code: "40438007",
         display: "Antimony sodium tartrate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyHy: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyHy: new Coding({
         code: "40447004",
         display: "Blood group antibody Hy",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenIB: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenIB: new Coding({
         code: "40456007",
         display: "Blood group antigen IB",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Aflatrem: Coding.FromStrict({
+    MedicationCodesValueSet_Aflatrem: new Coding({
         code: "40534007",
         display: "Aflatrem",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AmphotericinA: Coding.FromStrict({
+    MedicationCodesValueSet_AmphotericinA: new Coding({
         code: "40545005",
         display: "Amphotericin A",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenVA: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenVA: new Coding({
         code: "40558006",
         display: "Blood group antigen VA",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ChlordiazepoxideHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_ChlordiazepoxideHydrochloride: new Coding({
         code: "40601003",
         display: "Chlordiazepoxide hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MNS12ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_MNS12ISBTSymbol: new Coding({
         code: "40621002",
         display: "MNS12 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BariumFluorosilicate: Coding.FromStrict({
+    MedicationCodesValueSet_BariumFluorosilicate: new Coding({
         code: "40699008",
         display: "Barium fluorosilicate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenToms: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenToms: new Coding({
         code: "40706003",
         display: "Blood group antigen Toms",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Diodone: Coding.FromStrict({
+    MedicationCodesValueSet_Diodone: new Coding({
         code: "40710000",
         display: "Diodone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ACTHAdrenocorticotrophicHormone: Coding.FromStrict({
+    MedicationCodesValueSet_ACTHAdrenocorticotrophicHormone: new Coding({
         code: "40789008",
         display: "ACTH - Adrenocorticotrophic hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LeukotrieneA: Coding.FromStrict({
+    MedicationCodesValueSet_LeukotrieneA: new Coding({
         code: "40856000",
         display: "Leukotriene A",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_WaterSolubleVitamin: Coding.FromStrict({
+    MedicationCodesValueSet_WaterSolubleVitamin: new Coding({
         code: "40924008",
         display: "Water soluble vitamin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power124PowerIodine: Coding.FromStrict({
+    MedicationCodesValueSet_Power124PowerIodine: new Coding({
         code: "40937006",
         display: "^124^Iodine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BetaHumanChorionicGonadotrophin: Coding.FromStrict({
+    MedicationCodesValueSet_BetaHumanChorionicGonadotrophin: new Coding({
         code: "40940006",
         display: "Beta human chorionic gonadotrophin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CDClusterOfDifferentiationAntigenMarker: Coding.FromStrict({
+    MedicationCodesValueSet_CDClusterOfDifferentiationAntigenMarker: new Coding({
         code: "40992002",
         display: "CD - Cluster of differentiation antigen marker",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenWoit: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenWoit: new Coding({
         code: "41044008",
         display: "Blood group antigen Woit",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Methoxsalen: Coding.FromStrict({
+    MedicationCodesValueSet_Methoxsalen: new Coding({
         code: "41062004",
         display: "Methoxsalen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_OxiconazoleNitrate: Coding.FromStrict({
+    MedicationCodesValueSet_OxiconazoleNitrate: new Coding({
         code: "41067005",
         display: "Oxiconazole nitrate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Mebutamate: Coding.FromStrict({
+    MedicationCodesValueSet_Mebutamate: new Coding({
         code: "41091001",
         display: "Mebutamate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyEPowerWPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyEPowerWPower: new Coding({
         code: "41093003",
         display: "Blood group antibody E^w^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyYBern: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyYBern: new Coding({
         code: "41096006",
         display: "Blood group antibody Y. Bern",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_UrsodesoxycholicAcid: Coding.FromStrict({
+    MedicationCodesValueSet_UrsodesoxycholicAcid: new Coding({
         code: "41143004",
         display: "Ursodesoxycholic acid",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AmylNitrate: Coding.FromStrict({
+    MedicationCodesValueSet_AmylNitrate: new Coding({
         code: "41153003",
         display: "Amyl nitrate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Melatonin: Coding.FromStrict({
+    MedicationCodesValueSet_Melatonin: new Coding({
         code: "41199001",
         display: "Melatonin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Quinethazone: Coding.FromStrict({
+    MedicationCodesValueSet_Quinethazone: new Coding({
         code: "41261002",
         display: "Quinethazone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenJones: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenJones: new Coding({
         code: "41285005",
         display: "Blood group antigen Jones",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_H2Locus: Coding.FromStrict({
+    MedicationCodesValueSet_H2Locus: new Coding({
         code: "41301002",
         display: "H-2 locus",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyJsPowerBPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyJsPowerBPower: new Coding({
         code: "41318003",
         display: "Blood group antibody Js^b^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Oleandomycin: Coding.FromStrict({
+    MedicationCodesValueSet_Oleandomycin: new Coding({
         code: "41332001",
         display: "Oleandomycin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TamoxifenCitrate: Coding.FromStrict({
+    MedicationCodesValueSet_TamoxifenCitrate: new Coding({
         code: "41395001",
         display: "Tamoxifen citrate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MNS14ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_MNS14ISBTSymbol: new Coding({
         code: "41403003",
         display: "MNS14 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_IFIntrinsicFactor: Coding.FromStrict({
+    MedicationCodesValueSet_IFIntrinsicFactor: new Coding({
         code: "41410009",
         display: "IF - Intrinsic factor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AluminumCompound: Coding.FromStrict({
+    MedicationCodesValueSet_AluminumCompound: new Coding({
         code: "41433005",
         display: "Aluminum compound",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power90PowerMolybdenum: Coding.FromStrict({
+    MedicationCodesValueSet_Power90PowerMolybdenum: new Coding({
         code: "41464007",
         display: "^90^Molybdenum",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LeucEnkephalin: Coding.FromStrict({
+    MedicationCodesValueSet_LeucEnkephalin: new Coding({
         code: "41485007",
         display: "Leuc-enkephalin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Satratoxins: Coding.FromStrict({
+    MedicationCodesValueSet_Satratoxins: new Coding({
         code: "41492002",
         display: "Satratoxins",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ZincCompound: Coding.FromStrict({
+    MedicationCodesValueSet_ZincCompound: new Coding({
         code: "41503000",
         display: "Zinc compound",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PotassiumWarfarin: Coding.FromStrict({
+    MedicationCodesValueSet_PotassiumWarfarin: new Coding({
         code: "41509001",
         display: "Potassium warfarin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyTm: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyTm: new Coding({
         code: "41562008",
         display: "Blood group antibody Tm",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LinseedOil: Coding.FromStrict({
+    MedicationCodesValueSet_LinseedOil: new Coding({
         code: "41573001",
         display: "Linseed oil",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RH26ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_RH26ISBTSymbol: new Coding({
         code: "41576009",
         display: "RH26 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power82PowerStrontium: Coding.FromStrict({
+    MedicationCodesValueSet_Power82PowerStrontium: new Coding({
         code: "41592004",
         display: "^82^Strontium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Estrogen: Coding.FromStrict({
+    MedicationCodesValueSet_Estrogen: new Coding({
         code: "41598000",
         display: "Estrogen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenBaltzer: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenBaltzer: new Coding({
         code: "41644009",
         display: "Blood group antigen Baltzer",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenBegovitch: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenBegovitch: new Coding({
         code: "41667006",
         display: "Blood group antigen Begovitch",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CefotaximeSodium: Coding.FromStrict({
+    MedicationCodesValueSet_CefotaximeSodium: new Coding({
         code: "41722006",
         display: "Cefotaxime sodium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyStewart: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyStewart: new Coding({
         code: "41761003",
         display: "Blood group antibody Stewart",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenGallner: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenGallner: new Coding({
         code: "41771001",
         display: "Blood group antigen Gallner",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CalciumCyanamide: Coding.FromStrict({
+    MedicationCodesValueSet_CalciumCyanamide: new Coding({
         code: "41793006",
         display: "Calcium cyanamide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenWetz: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenWetz: new Coding({
         code: "41858009",
         display: "Blood group antigen Wetz",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenKenneddy: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenKenneddy: new Coding({
         code: "41886001",
         display: "Blood group antigen Kenneddy",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Hexapradol: Coding.FromStrict({
+    MedicationCodesValueSet_Hexapradol: new Coding({
         code: "41903005",
         display: "Hexapradol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenMcDermott: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenMcDermott: new Coding({
         code: "41930000",
         display: "Blood group antigen McDermott",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AlkylpiperidineDerivativeOfPhenothiazine: Coding.FromStrict({
+    MedicationCodesValueSet_AlkylpiperidineDerivativeOfPhenothiazine: new Coding({
         code: "41945007",
         display: "Alkylpiperidine derivative of phenothiazine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyVG: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyVG: new Coding({
         code: "41978000",
         display: "Blood group antibody V.G.",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Lolitrem: Coding.FromStrict({
+    MedicationCodesValueSet_Lolitrem: new Coding({
         code: "41989007",
         display: "Lolitrem",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyJoslin: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyJoslin: new Coding({
         code: "41999002",
         display: "Blood group antibody Joslin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_KarayaGum: Coding.FromStrict({
+    MedicationCodesValueSet_KarayaGum: new Coding({
         code: "42033003",
         display: "Karaya gum",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenBw62: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenBw62: new Coding({
         code: "42038007",
         display: "Human leukocyte antigen Bw62",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyTerry: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyTerry: new Coding({
         code: "42048009",
         display: "Blood group antibody Terry",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PlacentalHormone: Coding.FromStrict({
+    MedicationCodesValueSet_PlacentalHormone: new Coding({
         code: "42056007",
         display: "Placental hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenKursteiner: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenKursteiner: new Coding({
         code: "42078000",
         display: "Blood group antigen Kursteiner",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenAllchurch: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenAllchurch: new Coding({
         code: "42092006",
         display: "Blood group antigen Allchurch",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeucocyteAntigenCw: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeucocyteAntigenCw: new Coding({
         code: "42107008",
         display: "Human leucocyte antigen Cw",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMPowerVPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMPowerVPower: new Coding({
         code: "42122003",
         display: "Blood group antibody M^v^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenCopenhagen: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenCopenhagen: new Coding({
         code: "42145009",
         display: "Fibrinogen Copenhagen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_IIodide: Coding.FromStrict({
+    MedicationCodesValueSet_IIodide: new Coding({
         code: "42146005",
         display: "I - Iodide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MushroomToxin: Coding.FromStrict({
+    MedicationCodesValueSet_MushroomToxin: new Coding({
         code: "42159002",
         display: "Mushroom toxin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MethylphenidateHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_MethylphenidateHydrochloride: new Coding({
         code: "42163009",
         display: "Methylphenidate hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_XK1ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_XK1ISBTSymbol: new Coding({
         code: "42166001",
         display: "XK1 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VitaminDGreaterThan2LessThanPhosphateEster: Coding.FromStrict({
+    MedicationCodesValueSet_VitaminDGreaterThan2LessThanPhosphateEster: new Coding({
         code: "42180008",
         display: "Vitamin D>2<, phosphate ester",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_StannousFluoride: Coding.FromStrict({
+    MedicationCodesValueSet_StannousFluoride: new Coding({
         code: "42193003",
         display: "Stannous fluoride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SodiumPentachlorophenate: Coding.FromStrict({
+    MedicationCodesValueSet_SodiumPentachlorophenate: new Coding({
         code: "42212002",
         display: "Sodium pentachlorophenate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Bentonite: Coding.FromStrict({
+    MedicationCodesValueSet_Bentonite: new Coding({
         code: "42230009",
         display: "Bentonite",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyZaw: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyZaw: new Coding({
         code: "42255003",
         display: "Blood group antibody Zaw",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Lipotropin: Coding.FromStrict({
+    MedicationCodesValueSet_Lipotropin: new Coding({
         code: "42319009",
         display: "Lipotropin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyLWPowerBPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyLWPowerBPower: new Coding({
         code: "42333009",
         display: "Blood group antibody LW^b^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HeterocytotropicAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_HeterocytotropicAntibody: new Coding({
         code: "42371001",
         display: "Heterocytotropic antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VAL4Ipomeanol: Coding.FromStrict({
+    MedicationCodesValueSet_VAL4Ipomeanol: new Coding({
         code: "42382009",
         display: "4-Ipomeanol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VAL14Benzenediamine: Coding.FromStrict({
+    MedicationCodesValueSet_VAL14Benzenediamine: new Coding({
         code: "42464005",
         display: "1,4-Benzenediamine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyCross: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyCross: new Coding({
         code: "42473002",
         display: "Blood group antibody Cross",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyTn: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyTn: new Coding({
         code: "42490008",
         display: "Blood group antibody Tn",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BulrushMilletErgotAlkaloid: Coding.FromStrict({
+    MedicationCodesValueSet_BulrushMilletErgotAlkaloid: new Coding({
         code: "42520004",
         display: "Bulrush millet ergot alkaloid",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_A2MAlpha2Macroglobulin: Coding.FromStrict({
+    MedicationCodesValueSet_A2MAlpha2Macroglobulin: new Coding({
         code: "42549007",
         display: "A-2M - Alpha-2 macroglobulin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Aldosterone: Coding.FromStrict({
+    MedicationCodesValueSet_Aldosterone: new Coding({
         code: "42605004",
         display: "Aldosterone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenDw17: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenDw17: new Coding({
         code: "42664002",
         display: "Human leukocyte antigen Dw17",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RyeErgotAlkaloid: Coding.FromStrict({
+    MedicationCodesValueSet_RyeErgotAlkaloid: new Coding({
         code: "42671007",
         display: "Rye ergot alkaloid",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_NaproxenSodium: Coding.FromStrict({
+    MedicationCodesValueSet_NaproxenSodium: new Coding({
         code: "42692007",
         display: "Naproxen sodium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorXIVariantTypeII: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorXIVariantTypeII: new Coding({
         code: "42710006",
         display: "Coagulation factor XI variant type II",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PeriodateSalt: Coding.FromStrict({
+    MedicationCodesValueSet_PeriodateSalt: new Coding({
         code: "42730005",
         display: "Periodate salt",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Leukocyte6: Coding.FromStrict({
+    MedicationCodesValueSet_Leukocyte6: new Coding({
         code: "42732002",
         display: "Leukocyte 6",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VAL12Benzenediol: Coding.FromStrict({
+    MedicationCodesValueSet_VAL12Benzenediol: new Coding({
         code: "42761001",
         display: "1, 2-Benzenediol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenEnPowerAPowerTrypsinSensitive: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenEnPowerAPowerTrypsinSensitive: new Coding({
         code: "42768007",
         display: "Blood group antigen En^a^ trypsin-sensitive",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyWdPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyWdPowerAPower: new Coding({
         code: "42784008",
         display: "Blood group antibody Wd^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Idiotype: Coding.FromStrict({
+    MedicationCodesValueSet_Idiotype: new Coding({
         code: "42799008",
         display: "Idiotype",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LymphocyteAntigenCD13: Coding.FromStrict({
+    MedicationCodesValueSet_LymphocyteAntigenCD13: new Coding({
         code: "42804003",
         display: "Lymphocyte antigen CD13",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyWilson: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyWilson: new Coding({
         code: "42830004",
         display: "Blood group antibody Wilson",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ZincOxide: Coding.FromStrict({
+    MedicationCodesValueSet_ZincOxide: new Coding({
         code: "42841002",
         display: "Zinc oxide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenMPD: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenMPD: new Coding({
         code: "42848008",
         display: "Blood group antigen MPD",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AnhydrousBorate: Coding.FromStrict({
+    MedicationCodesValueSet_AnhydrousBorate: new Coding({
         code: "42877009",
         display: "Anhydrous borate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenCipriano: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenCipriano: new Coding({
         code: "42888003",
         display: "Blood group antigen Cipriano",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Leukocyte19: Coding.FromStrict({
+    MedicationCodesValueSet_Leukocyte19: new Coding({
         code: "42891003",
         display: "Leukocyte 19",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenDonati: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenDonati: new Coding({
         code: "42897004",
         display: "Blood group antigen Donati",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenSeymour: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenSeymour: new Coding({
         code: "42926001",
         display: "Blood group antigen Seymour",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_GlucagonLikePeptide1: Coding.FromStrict({
+    MedicationCodesValueSet_GlucagonLikePeptide1: new Coding({
         code: "43004008",
         display: "Glucagon-like peptide 1",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Anabasine: Coding.FromStrict({
+    MedicationCodesValueSet_Anabasine: new Coding({
         code: "43032004",
         display: "Anabasine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PlateletAntibodyHPA5b: Coding.FromStrict({
+    MedicationCodesValueSet_PlateletAntibodyHPA5b: new Coding({
         code: "43042002",
         display: "Platelet antibody HPA-5b",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Amfomycin: Coding.FromStrict({
+    MedicationCodesValueSet_Amfomycin: new Coding({
         code: "43048003",
         display: "Amfomycin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyRh37: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyRh37: new Coding({
         code: "43076006",
         display: "Blood group antibody Rh37",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LymphocyteAntigenCD35: Coding.FromStrict({
+    MedicationCodesValueSet_LymphocyteAntigenCD35: new Coding({
         code: "43095004",
         display: "Lymphocyte antigen CD35",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SrStrontium: Coding.FromStrict({
+    MedicationCodesValueSet_SrStrontium: new Coding({
         code: "43136004",
         display: "Sr - Strontium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_OvarianHormone: Coding.FromStrict({
+    MedicationCodesValueSet_OvarianHormone: new Coding({
         code: "43171004",
         display: "Ovarian hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyClPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyClPowerAPower: new Coding({
         code: "43181000",
         display: "Blood group antibody Cl^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power75PowerSelenium: Coding.FromStrict({
+    MedicationCodesValueSet_Power75PowerSelenium: new Coding({
         code: "43239002",
         display: "^75^Selenium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyPelletier: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyPelletier: new Coding({
         code: "43241001",
         display: "Blood group antibody Pelletier",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PlateletActivatingFactor: Coding.FromStrict({
+    MedicationCodesValueSet_PlateletActivatingFactor: new Coding({
         code: "43278003",
         display: "Platelet activating factor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Dihydrofolate: Coding.FromStrict({
+    MedicationCodesValueSet_Dihydrofolate: new Coding({
         code: "43289005",
         display: "Dihydrofolate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorIXLakeElsinorVariant: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorIXLakeElsinorVariant: new Coding({
         code: "43332008",
         display: "Coagulation factor IX Lake Elsinor variant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenAGreaterThan1LessThanLePowerDPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenAGreaterThan1LessThanLePowerDPower: new Coding({
         code: "43347004",
         display: "Blood group antigen A>1< Le^d^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Betaine: Coding.FromStrict({
+    MedicationCodesValueSet_Betaine: new Coding({
         code: "43356007",
         display: "Betaine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Idiotope: Coding.FromStrict({
+    MedicationCodesValueSet_Idiotope: new Coding({
         code: "43397000",
         display: "Idiotope",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyIH_2: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyIH_2: new Coding({
         code: "43417002",
         display: "Blood group antibody IH",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenDahl: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenDahl: new Coding({
         code: "43425000",
         display: "Blood group antigen Dahl",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MelanocyteStimulatingHormoneReleasingFactor: Coding.FromStrict({
+    MedicationCodesValueSet_MelanocyteStimulatingHormoneReleasingFactor: new Coding({
         code: "43440003",
         display: "Melanocyte stimulating hormone releasing factor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ParaAminohippuricAcid: Coding.FromStrict({
+    MedicationCodesValueSet_ParaAminohippuricAcid: new Coding({
         code: "43462003",
         display: "Para-aminohippuric acid",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_NonRadiopaqueMedium: Coding.FromStrict({
+    MedicationCodesValueSet_NonRadiopaqueMedium: new Coding({
         code: "43538006",
         display: "Non radiopaque medium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Pentapiperide: Coding.FromStrict({
+    MedicationCodesValueSet_Pentapiperide: new Coding({
         code: "43541002",
         display: "Pentapiperide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyNPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyNPowerAPower: new Coding({
         code: "43576000",
         display: "Blood group antibody N^A^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SulfonamideDiuretic: Coding.FromStrict({
+    MedicationCodesValueSet_SulfonamideDiuretic: new Coding({
         code: "43585000",
         display: "Sulfonamide diuretic",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Cactinomycin: Coding.FromStrict({
+    MedicationCodesValueSet_Cactinomycin: new Coding({
         code: "43592005",
         display: "Cactinomycin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenBw64: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenBw64: new Coding({
         code: "43596008",
         display: "Human leukocyte antigen Bw64",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Chymodenin: Coding.FromStrict({
+    MedicationCodesValueSet_Chymodenin: new Coding({
         code: "43597004",
         display: "Chymodenin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PhosphorousPentachloride: Coding.FromStrict({
+    MedicationCodesValueSet_PhosphorousPentachloride: new Coding({
         code: "43613009",
         display: "Phosphorous pentachloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorIXOxford2Variant: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorIXOxford2Variant: new Coding({
         code: "43621003",
         display: "Coagulation factor IX Oxford 2 variant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyK14: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyK14: new Coding({
         code: "43632003",
         display: "Blood group antibody K14",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenPrGreaterThan3LessThan: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenPrGreaterThan3LessThan: new Coding({
         code: "43678006",
         display: "Blood group antigen Pr>3<",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Testosterone: Coding.FromStrict({
+    MedicationCodesValueSet_Testosterone: new Coding({
         code: "43688007",
         display: "Testosterone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HydroxystilbamidineIsethionate: Coding.FromStrict({
+    MedicationCodesValueSet_HydroxystilbamidineIsethionate: new Coding({
         code: "43698001",
         display: "Hydroxystilbamidine isethionate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VITCAscorbicAcid: Coding.FromStrict({
+    MedicationCodesValueSet_VITCAscorbicAcid: new Coding({
         code: "43706004",
         display: "VITC - Ascorbic acid",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ThymicLymphopoietinSuppressingFactor: Coding.FromStrict({
+    MedicationCodesValueSet_ThymicLymphopoietinSuppressingFactor: new Coding({
         code: "43784004",
         display: "Thymic lymphopoietin suppressing factor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyDavis: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyDavis: new Coding({
         code: "43788001",
         display: "Blood group antibody Davis",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_IN2ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_IN2ISBTSymbol: new Coding({
         code: "43807002",
         display: "IN2 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenMineo: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenMineo: new Coding({
         code: "43827001",
         display: "Blood group antigen Mineo",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ZincGelatin: Coding.FromStrict({
+    MedicationCodesValueSet_ZincGelatin: new Coding({
         code: "43835003",
         display: "Zinc gelatin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Ancrod: Coding.FromStrict({
+    MedicationCodesValueSet_Ancrod: new Coding({
         code: "43848004",
         display: "Ancrod",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenUll: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenUll: new Coding({
         code: "43864007",
         display: "Blood group antigen Ull",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenDw7: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenDw7: new Coding({
         code: "43871002",
         display: "Human leukocyte antigen Dw7",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Chloroacetamide: Coding.FromStrict({
+    MedicationCodesValueSet_Chloroacetamide: new Coding({
         code: "43880002",
         display: "Chloroacetamide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power56PowerManganese: Coding.FromStrict({
+    MedicationCodesValueSet_Power56PowerManganese: new Coding({
         code: "43897008",
         display: "^56^Manganese",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ThiamineTriphosphate: Coding.FromStrict({
+    MedicationCodesValueSet_ThiamineTriphosphate: new Coding({
         code: "43909000",
         display: "Thiamine triphosphate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VAL34MethylenedioxybenzylMethylKetone: Coding.FromStrict({
+    MedicationCodesValueSet_VAL34MethylenedioxybenzylMethylKetone: new Coding({
         code: "43989002",
         display: "3,4-Methylenedioxybenzyl methyl ketone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeucocyteAntigenBw57: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeucocyteAntigenBw57: new Coding({
         code: "44040003",
         display: "Human leucocyte antigen Bw57",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CalciumPhosphateProduct: Coding.FromStrict({
+    MedicationCodesValueSet_CalciumPhosphateProduct: new Coding({
         code: "44044007",
         display: "Calcium phosphate product",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyTasich: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyTasich: new Coding({
         code: "44045008",
         display: "Blood group antibody Tasich",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyPaular: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyPaular: new Coding({
         code: "44046009",
         display: "Blood group antibody Paular",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenLindsay: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenLindsay: new Coding({
         code: "44049002",
         display: "Blood group antigen Lindsay",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenPtPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenPtPowerAPower: new Coding({
         code: "44063008",
         display: "Blood group antigen Pt^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Doxylamine: Coding.FromStrict({
+    MedicationCodesValueSet_Doxylamine: new Coding({
         code: "44068004",
         display: "Doxylamine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyKL: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyKL: new Coding({
         code: "44093002",
         display: "Blood group antibody KL",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenReynolds: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenReynolds: new Coding({
         code: "44112005",
         display: "Blood group antigen Reynolds",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenDonEW: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenDonEW: new Coding({
         code: "44139002",
         display: "Blood group antigen Don E. W.",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CD64ClusterOfDifferentiationAntigen64: Coding.FromStrict({
+    MedicationCodesValueSet_CD64ClusterOfDifferentiationAntigen64: new Coding({
         code: "44158006",
         display: "CD64 - Cluster of differentiation antigen 64",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CalcinedBaryta: Coding.FromStrict({
+    MedicationCodesValueSet_CalcinedBaryta: new Coding({
         code: "44159003",
         display: "Calcined baryta",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RoAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_RoAntibody: new Coding({
         code: "44212003",
         display: "Ro antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_StrontiumIsotope: Coding.FromStrict({
+    MedicationCodesValueSet_StrontiumIsotope: new Coding({
         code: "44234001",
         display: "Strontium isotope",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PlateletAntibodyHPA1: Coding.FromStrict({
+    MedicationCodesValueSet_PlateletAntibodyHPA1: new Coding({
         code: "44239006",
         display: "Platelet antibody HPA-1",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_OxidizedCellulose: Coding.FromStrict({
+    MedicationCodesValueSet_OxidizedCellulose: new Coding({
         code: "44262008",
         display: "Oxidized cellulose",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PhenoxybenzamineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_PhenoxybenzamineHydrochloride: new Coding({
         code: "44293009",
         display: "Phenoxybenzamine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PyrviniumPamoate: Coding.FromStrict({
+    MedicationCodesValueSet_PyrviniumPamoate: new Coding({
         code: "44330008",
         display: "Pyrvinium pamoate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyInPowerBPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyInPowerBPower: new Coding({
         code: "44331007",
         display: "Blood group antibody In^b^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Lergotrile: Coding.FromStrict({
+    MedicationCodesValueSet_Lergotrile: new Coding({
         code: "44347009",
         display: "Lergotrile",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Chemotaxin: Coding.FromStrict({
+    MedicationCodesValueSet_Chemotaxin: new Coding({
         code: "44369002",
         display: "Chemotaxin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenSmith: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenSmith: new Coding({
         code: "44439008",
         display: "Blood group antigen Smith",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenFleming: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenFleming: new Coding({
         code: "44447008",
         display: "Blood group antigen Fleming",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Interleukin8: Coding.FromStrict({
+    MedicationCodesValueSet_Interleukin8: new Coding({
         code: "44459007",
         display: "Interleukin-8",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenPetoskey: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenPetoskey: new Coding({
         code: "44469001",
         display: "Fibrinogen Petoskey",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyBegovitch: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyBegovitch: new Coding({
         code: "44472008",
         display: "Blood group antibody Begovitch",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Hydromorphone: Coding.FromStrict({
+    MedicationCodesValueSet_Hydromorphone: new Coding({
         code: "44508008",
         display: "Hydromorphone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BuphenineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_BuphenineHydrochloride: new Coding({
         code: "44520000",
         display: "Buphenine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Methylenedioxyamphetamine: Coding.FromStrict({
+    MedicationCodesValueSet_Methylenedioxyamphetamine: new Coding({
         code: "44555003",
         display: "Methylenedioxyamphetamine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Iodine: Coding.FromStrict({
+    MedicationCodesValueSet_Iodine: new Coding({
         code: "44588005",
         display: "Iodine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_IodinatedGlycerol: Coding.FromStrict({
+    MedicationCodesValueSet_IodinatedGlycerol: new Coding({
         code: "44603007",
         display: "Iodinated glycerol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CalcitoninGeneRelatedPeptide: Coding.FromStrict({
+    MedicationCodesValueSet_CalcitoninGeneRelatedPeptide: new Coding({
         code: "44609006",
         display: "Calcitonin gene-related peptide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenNewOrleansI: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenNewOrleansI: new Coding({
         code: "44624002",
         display: "Fibrinogen New Orleans I",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Mycotoxin: Coding.FromStrict({
+    MedicationCodesValueSet_Mycotoxin: new Coding({
         code: "44644008",
         display: "Mycotoxin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyNou: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyNou: new Coding({
         code: "44675004",
         display: "Blood group antibody Nou",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FactorVIIIAntigen: Coding.FromStrict({
+    MedicationCodesValueSet_FactorVIIIAntigen: new Coding({
         code: "44680008",
         display: "Factor VIII antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HypothalamicInhibitingFactor: Coding.FromStrict({
+    MedicationCodesValueSet_HypothalamicInhibitingFactor: new Coding({
         code: "44681007",
         display: "Hypothalamic inhibiting factor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenLud: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenLud: new Coding({
         code: "44686002",
         display: "Blood group antigen Lud",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_T3TCellLineage3: Coding.FromStrict({
+    MedicationCodesValueSet_T3TCellLineage3: new Coding({
         code: "44706009",
         display: "T3 - T-cell lineage 3",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_GastrinII: Coding.FromStrict({
+    MedicationCodesValueSet_GastrinII: new Coding({
         code: "44711006",
         display: "Gastrin II",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MediatorOfImmuneResponse: Coding.FromStrict({
+    MedicationCodesValueSet_MediatorOfImmuneResponse: new Coding({
         code: "44719008",
         display: "Mediator of immune response",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ComplementComponentC1: Coding.FromStrict({
+    MedicationCodesValueSet_ComplementComponentC1: new Coding({
         code: "44728009",
         display: "Complement component C1",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_XenonRadioisotope: Coding.FromStrict({
+    MedicationCodesValueSet_XenonRadioisotope: new Coding({
         code: "44776005",
         display: "Xenon radioisotope",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyPearl: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyPearl: new Coding({
         code: "44824000",
         display: "Blood group antibody Pearl",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Chlorzoxozone: Coding.FromStrict({
+    MedicationCodesValueSet_Chlorzoxozone: new Coding({
         code: "44908000",
         display: "Chlorzoxozone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MNS21ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_MNS21ISBTSymbol: new Coding({
         code: "45026006",
         display: "MNS21 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyLud: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyLud: new Coding({
         code: "45044003",
         display: "Blood group antibody Lud",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Lymphokine: Coding.FromStrict({
+    MedicationCodesValueSet_Lymphokine: new Coding({
         code: "45047005",
         display: "Lymphokine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinDegradationAgentDFragment: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinDegradationAgentDFragment: new Coding({
         code: "45084007",
         display: "Fibrin degradation agent, D fragment",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_KEL18ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_KEL18ISBTSymbol: new Coding({
         code: "45095001",
         display: "KEL18 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_GlycineSaltOfBileAcid: Coding.FromStrict({
+    MedicationCodesValueSet_GlycineSaltOfBileAcid: new Coding({
         code: "45119009",
         display: "Glycine salt of bile acid",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FluorineIsotope: Coding.FromStrict({
+    MedicationCodesValueSet_FluorineIsotope: new Coding({
         code: "45158004",
         display: "Fluorine isotope",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AzatadineMaleate: Coding.FromStrict({
+    MedicationCodesValueSet_AzatadineMaleate: new Coding({
         code: "45159007",
         display: "Azatadine maleate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyHorw: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyHorw: new Coding({
         code: "45193006",
         display: "Blood group antibody Horw",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DexamfetamineSulphate: Coding.FromStrict({
+    MedicationCodesValueSet_DexamfetamineSulphate: new Coding({
         code: "45207006",
         display: "Dexamfetamine sulphate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_C4BPComplementComponent4BindingProtein: Coding.FromStrict({
+    MedicationCodesValueSet_C4BPComplementComponent4BindingProtein: new Coding({
         code: "45246008",
         display: "C4BP - Complement component 4 binding protein",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Alpha2Antiplasmin: Coding.FromStrict({
+    MedicationCodesValueSet_Alpha2Antiplasmin: new Coding({
         code: "45266004",
         display: "Alpha-2-antiplasmin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RH28ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_RH28ISBTSymbol: new Coding({
         code: "45273009",
         display: "RH28 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntiM: Coding.FromStrict({
+    MedicationCodesValueSet_AntiM: new Coding({
         code: "45321005",
         display: "Anti M",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_KN4ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_KN4ISBTSymbol: new Coding({
         code: "45333000",
         display: "KN4 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenLaine: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenLaine: new Coding({
         code: "45388001",
         display: "Blood group antigen Laine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ACLAAntiCardiolipinAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_ACLAAntiCardiolipinAntibody: new Coding({
         code: "45396006",
         display: "ACLA - Anti-cardiolipin antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenGhawiler: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenGhawiler: new Coding({
         code: "45407009",
         display: "Blood group antigen Ghawiler",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyPerry: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyPerry: new Coding({
         code: "45428000",
         display: "Blood group antibody Perry",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenTk: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenTk: new Coding({
         code: "45441001",
         display: "Blood group antigen Tk",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Psilocin: Coding.FromStrict({
+    MedicationCodesValueSet_Psilocin: new Coding({
         code: "45483006",
         display: "Psilocin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyJopson: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyJopson: new Coding({
         code: "45510000",
         display: "Blood group antibody Jopson",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Dextranomer: Coding.FromStrict({
+    MedicationCodesValueSet_Dextranomer: new Coding({
         code: "45524001",
         display: "Dextranomer",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyDugstad: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyDugstad: new Coding({
         code: "45528003",
         display: "Blood group antibody Dugstad",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ANFAntiNuclearFactor: Coding.FromStrict({
+    MedicationCodesValueSet_ANFAntiNuclearFactor: new Coding({
         code: "45530001",
         display: "ANF - Anti-nuclear factor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_NANorepinephrine: Coding.FromStrict({
+    MedicationCodesValueSet_NANorepinephrine: new Coding({
         code: "45555007",
         display: "NA - Norepinephrine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyAM: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyAM: new Coding({
         code: "45601001",
         display: "Blood group antibody A.M.",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Tranquilizer: Coding.FromStrict({
+    MedicationCodesValueSet_Tranquilizer: new Coding({
         code: "45604009",
         display: "Tranquilizer",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyBonde: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyBonde: new Coding({
         code: "45637006",
         display: "Blood group antibody Bonde",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenBw22: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenBw22: new Coding({
         code: "45656001",
         display: "Human leukocyte antigen Bw22",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenBouteille: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenBouteille: new Coding({
         code: "45668005",
         display: "Blood group antigen Bouteille",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyReynolds: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyReynolds: new Coding({
         code: "45672009",
         display: "Blood group antibody Reynolds",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AlphaInterferon: Coding.FromStrict({
+    MedicationCodesValueSet_AlphaInterferon: new Coding({
         code: "45754009",
         display: "Alpha interferon",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorIXVariant: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorIXVariant: new Coding({
         code: "45807004",
         display: "Coagulation factor IX variant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntilysosomalAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_AntilysosomalAntibody: new Coding({
         code: "45857007",
         display: "Antilysosomal antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Jo1Antibody: Coding.FromStrict({
+    MedicationCodesValueSet_Jo1Antibody: new Coding({
         code: "45932003",
         display: "Jo-1 antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MNS38ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_MNS38ISBTSymbol: new Coding({
         code: "45934002",
         display: "MNS38 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_TheophyllineAnhydrous: Coding.FromStrict({
+    MedicationCodesValueSet_TheophyllineAnhydrous: new Coding({
         code: "45940009",
         display: "Theophylline anhydrous",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Proglucagon: Coding.FromStrict({
+    MedicationCodesValueSet_Proglucagon: new Coding({
         code: "45946003",
         display: "Proglucagon",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Naepaine: Coding.FromStrict({
+    MedicationCodesValueSet_Naepaine: new Coding({
         code: "45960001",
         display: "Naepaine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyI: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyI: new Coding({
         code: "45969000",
         display: "Blood group antibody i",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MNS4ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_MNS4ISBTSymbol: new Coding({
         code: "45992000",
         display: "MNS4 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MSHMelanocyteStimulatingHormone: Coding.FromStrict({
+    MedicationCodesValueSet_MSHMelanocyteStimulatingHormone: new Coding({
         code: "46015007",
         display: "MSH - Melanocyte stimulating hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power91PowerStrontium: Coding.FromStrict({
+    MedicationCodesValueSet_Power91PowerStrontium: new Coding({
         code: "46021006",
         display: "^91^Strontium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ProstaglandinG2: Coding.FromStrict({
+    MedicationCodesValueSet_ProstaglandinG2: new Coding({
         code: "46058006",
         display: "Prostaglandin G2",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyKnudsen: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyKnudsen: new Coding({
         code: "46096007",
         display: "Blood group antibody Knudsen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LactatedRingerSolution: Coding.FromStrict({
+    MedicationCodesValueSet_LactatedRingerSolution: new Coding({
         code: "46097003",
         display: "Lactated Ringer solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntitreponemalAgent: Coding.FromStrict({
+    MedicationCodesValueSet_AntitreponemalAgent: new Coding({
         code: "46122001",
         display: "Antitreponemal agent",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ProstaglandinA1: Coding.FromStrict({
+    MedicationCodesValueSet_ProstaglandinA1: new Coding({
         code: "46134009",
         display: "Prostaglandin A1",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CefotetanDisodium: Coding.FromStrict({
+    MedicationCodesValueSet_CefotetanDisodium: new Coding({
         code: "46146008",
         display: "Cefotetan disodium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAHumanLeukocyteAntigenBw4: Coding.FromStrict({
+    MedicationCodesValueSet_HLAHumanLeukocyteAntigenBw4: new Coding({
         code: "46150001",
         display: "HLA - Human leukocyte antigen Bw4",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenDw14: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenDw14: new Coding({
         code: "46158008",
         display: "Human leukocyte antigen Dw14",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Cataglykin: Coding.FromStrict({
+    MedicationCodesValueSet_Cataglykin: new Coding({
         code: "46191004",
         display: "Cataglykin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SmithAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_SmithAntibody: new Coding({
         code: "46195008",
         display: "Smith antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Piperidolate: Coding.FromStrict({
+    MedicationCodesValueSet_Piperidolate: new Coding({
         code: "46201000",
         display: "Piperidolate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CCKPZCholecystokininPancreozymin: Coding.FromStrict({
+    MedicationCodesValueSet_CCKPZCholecystokininPancreozymin: new Coding({
         code: "46225008",
         display: "CCK-PZ - Cholecystokinin-pancreozymin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MNS27ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_MNS27ISBTSymbol: new Coding({
         code: "46234003",
         display: "MNS27 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Slaframine: Coding.FromStrict({
+    MedicationCodesValueSet_Slaframine: new Coding({
         code: "46250006",
         display: "Slaframine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Triiodomethane: Coding.FromStrict({
+    MedicationCodesValueSet_Triiodomethane: new Coding({
         code: "46257009",
         display: "Triiodomethane",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RH9ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_RH9ISBTSymbol: new Coding({
         code: "46261003",
         display: "RH9 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BromocriptineMesylate: Coding.FromStrict({
+    MedicationCodesValueSet_BromocriptineMesylate: new Coding({
         code: "46293006",
         display: "Bromocriptine mesylate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyK13: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyK13: new Coding({
         code: "46331009",
         display: "Blood group antibody K13",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ComplementComponentC2b: Coding.FromStrict({
+    MedicationCodesValueSet_ComplementComponentC2b: new Coding({
         code: "46336004",
         display: "Complement component C2b",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ProperdinConvertaseComplementComponent: Coding.FromStrict({
+    MedicationCodesValueSet_ProperdinConvertaseComplementComponent: new Coding({
         code: "46469003",
         display: "Properdin convertase, complement component",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Nivalenol: Coding.FromStrict({
+    MedicationCodesValueSet_Nivalenol: new Coding({
         code: "46492003",
         display: "Nivalenol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CalciumMandelate: Coding.FromStrict({
+    MedicationCodesValueSet_CalciumMandelate: new Coding({
         code: "46514003",
         display: "Calcium mandelate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyILePowerBHPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyILePowerBHPower: new Coding({
         code: "46519008",
         display: "Blood group antibody ILe^bH^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_C1rComplementComponent1r: Coding.FromStrict({
+    MedicationCodesValueSet_C1rComplementComponent1r: new Coding({
         code: "46539007",
         display: "C1r - Complement component 1r",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LeukotrieneB: Coding.FromStrict({
+    MedicationCodesValueSet_LeukotrieneB: new Coding({
         code: "46548002",
         display: "Leukotriene B",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Imipenem: Coding.FromStrict({
+    MedicationCodesValueSet_Imipenem: new Coding({
         code: "46558003",
         display: "Imipenem",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FactorXI: Coding.FromStrict({
+    MedicationCodesValueSet_FactorXI: new Coding({
         code: "46572007",
         display: "Factor XI",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeucocyteAntigenBw58: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeucocyteAntigenBw58: new Coding({
         code: "46613001",
         display: "Human leucocyte antigen Bw58",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_THETetrahydrocortisone: Coding.FromStrict({
+    MedicationCodesValueSet_THETetrahydrocortisone: new Coding({
         code: "46654009",
         display: "THE - Tetrahydrocortisone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyLee: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyLee: new Coding({
         code: "46663006",
         display: "Blood group antibody Lee",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HomatropineMethylbromide: Coding.FromStrict({
+    MedicationCodesValueSet_HomatropineMethylbromide: new Coding({
         code: "46668002",
         display: "Homatropine methylbromide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DiglycolHydroiodide: Coding.FromStrict({
+    MedicationCodesValueSet_DiglycolHydroiodide: new Coding({
         code: "46711008",
         display: "Diglycol hydroiodide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenBio5: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenBio5: new Coding({
         code: "46730008",
         display: "Blood group antigen Bio-5",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MedicinalIodine: Coding.FromStrict({
+    MedicationCodesValueSet_MedicinalIodine: new Coding({
         code: "46749007",
         display: "Medicinal iodine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenSchor: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenSchor: new Coding({
         code: "46755002",
         display: "Blood group antigen Schor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DI15ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_DI15ISBTSymbol: new Coding({
         code: "46841000",
         display: "DI15 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Deoxynivalenol: Coding.FromStrict({
+    MedicationCodesValueSet_Deoxynivalenol: new Coding({
         code: "46861006",
         display: "Deoxynivalenol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AmbenoniumChloride: Coding.FromStrict({
+    MedicationCodesValueSet_AmbenoniumChloride: new Coding({
         code: "46887006",
         display: "Ambenonium chloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_QuinolineDye: Coding.FromStrict({
+    MedicationCodesValueSet_QuinolineDye: new Coding({
         code: "46921009",
         display: "Quinoline dye",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VAL3Alpha5Beta20S3172021Tetrahydroxypregnan11One: Coding.FromStrict({
+    MedicationCodesValueSet_VAL3Alpha5Beta20S3172021Tetrahydroxypregnan11One: new Coding({
         code: "46943001",
         display: "(3-alpha,5-beta,20S)-3,17,20,21-Tetrahydroxypregnan-11-one",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ProtriptylineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_ProtriptylineHydrochloride: new Coding({
         code: "46950002",
         display: "Protriptyline hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LeuM5Antigen: Coding.FromStrict({
+    MedicationCodesValueSet_LeuM5Antigen: new Coding({
         code: "46959001",
         display: "Leu-M5 antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenHildebrandt: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenHildebrandt: new Coding({
         code: "47019005",
         display: "Blood group antigen Hildebrandt",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CD66ClusterOfDifferentiationAntigen66: Coding.FromStrict({
+    MedicationCodesValueSet_CD66ClusterOfDifferentiationAntigen66: new Coding({
         code: "47023002",
         display: "CD66 - Cluster of differentiation antigen 66",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ThymolOxide: Coding.FromStrict({
+    MedicationCodesValueSet_ThymolOxide: new Coding({
         code: "47026005",
         display: "Thymol oxide",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenHLAAntigen: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenHLAAntigen: new Coding({
         code: "47038001",
         display: "Human leukocyte antigen (HLA) antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyJrPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyJrPowerAPower: new Coding({
         code: "47068005",
         display: "Blood group antibody Jr^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CO3ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_CO3ISBTSymbol: new Coding({
         code: "47104007",
         display: "CO3 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenManley: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenManley: new Coding({
         code: "47136000",
         display: "Blood group antigen Manley",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyWin: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyWin: new Coding({
         code: "47151009",
         display: "Blood group antibody Win",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MethdilazineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_MethdilazineHydrochloride: new Coding({
         code: "47176005",
         display: "Methdilazine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Metisazone: Coding.FromStrict({
+    MedicationCodesValueSet_Metisazone: new Coding({
         code: "47180000",
         display: "Metisazone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MeglumineAmidotrizoate: Coding.FromStrict({
+    MedicationCodesValueSet_MeglumineAmidotrizoate: new Coding({
         code: "47192000",
         display: "Meglumine amidotrizoate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_VAL5Hydroperoxy681114EicosatetraenoicAcid: Coding.FromStrict({
+    MedicationCodesValueSet_VAL5Hydroperoxy681114EicosatetraenoicAcid: new Coding({
         code: "47201006",
         display: "5-Hydroperoxy-6,8,11,14-eicosatetraenoic acid",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SC2ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_SC2ISBTSymbol: new Coding({
         code: "47215008",
         display: "SC2 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenGiessenII: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenGiessenII: new Coding({
         code: "47218005",
         display: "Fibrinogen Giessen II",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenKyoto: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenKyoto: new Coding({
         code: "47247003",
         display: "Fibrinogen Kyoto",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MacrocyclicTrichothecenes: Coding.FromStrict({
+    MedicationCodesValueSet_MacrocyclicTrichothecenes: new Coding({
         code: "47280005",
         display: "Macrocyclic trichothecenes",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenManchester: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenManchester: new Coding({
         code: "47336007",
         display: "Fibrinogen Manchester",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenDriver: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenDriver: new Coding({
         code: "47341004",
         display: "Blood group antigen Driver",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BetaNeoendorphin: Coding.FromStrict({
+    MedicationCodesValueSet_BetaNeoendorphin: new Coding({
         code: "47349002",
         display: "beta Neoendorphin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Pregnenolone: Coding.FromStrict({
+    MedicationCodesValueSet_Pregnenolone: new Coding({
         code: "47350002",
         display: "Pregnenolone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BenzodiazepineNucleus: Coding.FromStrict({
+    MedicationCodesValueSet_BenzodiazepineNucleus: new Coding({
         code: "47355007",
         display: "Benzodiazepine nucleus",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenRyan: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenRyan: new Coding({
         code: "47364002",
         display: "Blood group antigen Ryan",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Cephaelin: Coding.FromStrict({
+    MedicationCodesValueSet_Cephaelin: new Coding({
         code: "47383009",
         display: "Cephaelin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MTBEMethylTertButylEther: Coding.FromStrict({
+    MedicationCodesValueSet_MTBEMethylTertButylEther: new Coding({
         code: "47389008",
         display: "MTBE - Methyl tert-butyl ether",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_NaftifineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_NaftifineHydrochloride: new Coding({
         code: "47408003",
         display: "Naftifine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FatEmulsion: Coding.FromStrict({
+    MedicationCodesValueSet_FatEmulsion: new Coding({
         code: "47413004",
         display: "Fat emulsion",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Trimethidinium: Coding.FromStrict({
+    MedicationCodesValueSet_Trimethidinium: new Coding({
         code: "47414005",
         display: "Trimethidinium",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyWoit: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyWoit: new Coding({
         code: "47464003",
         display: "Blood group antibody Woit",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodySeymour: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodySeymour: new Coding({
         code: "47469008",
         display: "Blood group antibody Seymour",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BoratePentahydrate: Coding.FromStrict({
+    MedicationCodesValueSet_BoratePentahydrate: new Coding({
         code: "47500008",
         display: "Borate pentahydrate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodySul: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodySul: new Coding({
         code: "47553004",
         display: "Blood group antibody Sul",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_IRegionMajorHistocompatibilityComplex: Coding.FromStrict({
+    MedicationCodesValueSet_IRegionMajorHistocompatibilityComplex: new Coding({
         code: "47565000",
         display: "I region, major histocompatibility complex",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Type1ChainPrecursorStructureLactoNTetraosylceramide: Coding.FromStrict({
+    MedicationCodesValueSet_Type1ChainPrecursorStructureLactoNTetraosylceramide: new Coding({
         code: "47581005",
         display: "Type 1 chain precursor structure (lacto-N-tetraosylceramide)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenSavery: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenSavery: new Coding({
         code: "47601000",
         display: "Blood group antigen Savery",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyPillsbury: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyPillsbury: new Coding({
         code: "47603002",
         display: "Blood group antibody Pillsbury",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyKemma: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyKemma: new Coding({
         code: "47626009",
         display: "Blood group antibody Kemma",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenH: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenH: new Coding({
         code: "47662005",
         display: "Blood group antigen h",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ClindamycinPalmitate: Coding.FromStrict({
+    MedicationCodesValueSet_ClindamycinPalmitate: new Coding({
         code: "47663000",
         display: "Clindamycin palmitate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenPrGreaterThan1dLessThan: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenPrGreaterThan1dLessThan: new Coding({
         code: "47674009",
         display: "Blood group antigen Pr>1d<",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenRm: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenRm: new Coding({
         code: "47692001",
         display: "Blood group antigen Rm",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyBradford: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyBradford: new Coding({
         code: "47733001",
         display: "Blood group antibody Bradford",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PlateletAntibodyHPA5: Coding.FromStrict({
+    MedicationCodesValueSet_PlateletAntibodyHPA5: new Coding({
         code: "47769009",
         display: "Platelet antibody HPA-5",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyIP: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyIP: new Coding({
         code: "47784000",
         display: "Blood group antibody IP",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenA6928: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenA6928: new Coding({
         code: "47851007",
         display: "Human leukocyte antigen A69(28)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenA3: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenA3: new Coding({
         code: "47860004",
         display: "Human leukocyte antigen A3",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Lymphotoxin: Coding.FromStrict({
+    MedicationCodesValueSet_Lymphotoxin: new Coding({
         code: "47894002",
         display: "Lymphotoxin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyTgPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyTgPowerAPower: new Coding({
         code: "47974007",
         display: "Blood group antibody Tg^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenRitter: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenRitter: new Coding({
         code: "48060000",
         display: "Blood group antigen Ritter",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_KEL6ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_KEL6ISBTSymbol: new Coding({
         code: "48109004",
         display: "KEL6 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenParis: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenParis: new Coding({
         code: "48116003",
         display: "Blood group antigen Paris",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyNeut: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyNeut: new Coding({
         code: "48131007",
         display: "Blood group antibody Neut",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyWhittaker: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyWhittaker: new Coding({
         code: "48140006",
         display: "Blood group antibody Whittaker",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyZwal: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyZwal: new Coding({
         code: "48154003",
         display: "Blood group antibody Zwal",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HLAHumanLeukocyteAntigenCw1: Coding.FromStrict({
+    MedicationCodesValueSet_HLAHumanLeukocyteAntigenCw1: new Coding({
         code: "48170001",
         display: "HLA - Human leukocyte antigen Cw1",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ComplementRegulator: Coding.FromStrict({
+    MedicationCodesValueSet_ComplementRegulator: new Coding({
         code: "48217002",
         display: "Complement regulator",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LymphocyteAntigenCDw49f: Coding.FromStrict({
+    MedicationCodesValueSet_LymphocyteAntigenCDw49f: new Coding({
         code: "48270008",
         display: "Lymphocyte antigen CDw49f",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_KellSystemAntigen: Coding.FromStrict({
+    MedicationCodesValueSet_KellSystemAntigen: new Coding({
         code: "48284003",
         display: "Kell system antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodySchneider: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodySchneider: new Coding({
         code: "48323009",
         display: "Blood group antibody Schneider",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RH39ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_RH39ISBTSymbol: new Coding({
         code: "48366002",
         display: "RH39 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_I1ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_I1ISBTSymbol: new Coding({
         code: "48401006",
         display: "I1 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenGreen: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenGreen: new Coding({
         code: "48416009",
         display: "Blood group antigen Green",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenDw26: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenDw26: new Coding({
         code: "48417000",
         display: "Human leukocyte antigen Dw26",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FreundAdjuvant: Coding.FromStrict({
+    MedicationCodesValueSet_FreundAdjuvant: new Coding({
         code: "48444005",
         display: "Freund adjuvant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodySwPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodySwPowerAPower: new Coding({
         code: "48464000",
         display: "Blood group antibody Sw^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenCarson: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenCarson: new Coding({
         code: "48699007",
         display: "Blood group antigen Carson",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Interleukin4: Coding.FromStrict({
+    MedicationCodesValueSet_Interleukin4: new Coding({
         code: "48727007",
         display: "Interleukin-4",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyCan: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyCan: new Coding({
         code: "48751002",
         display: "Blood group antibody Can",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyHamet: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyHamet: new Coding({
         code: "48779008",
         display: "Blood group antibody Hamet",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntigenInLutheranLUBloodGroupSystem: Coding.FromStrict({
+    MedicationCodesValueSet_AntigenInLutheranLUBloodGroupSystem: new Coding({
         code: "48798005",
         display: "Antigen in Lutheran (LU) blood group system",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenShannon: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenShannon: new Coding({
         code: "48815002",
         display: "Blood group antigen Shannon",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Leukocyte12: Coding.FromStrict({
+    MedicationCodesValueSet_Leukocyte12: new Coding({
         code: "48821003",
         display: "Leukocyte 12",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenJordan: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenJordan: new Coding({
         code: "48869000",
         display: "Blood group antigen Jordan",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenBlock: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenBlock: new Coding({
         code: "48919009",
         display: "Blood group antigen Block",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyK16: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyK16: new Coding({
         code: "49028001",
         display: "Blood group antibody K16",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenDR1: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenDR1: new Coding({
         code: "49106003",
         display: "Human leukocyte antigen DR1",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenBryant: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenBryant: new Coding({
         code: "49119004",
         display: "Blood group antigen Bryant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenCw11: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenCw11: new Coding({
         code: "49148005",
         display: "Human leukocyte antigen Cw11",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenSdPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenSdPowerAPower: new Coding({
         code: "49163008",
         display: "Blood group antigen Sd^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenD1276: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenD1276: new Coding({
         code: "49212001",
         display: "Blood group antigen D 1276",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Interferon: Coding.FromStrict({
+    MedicationCodesValueSet_Interferon: new Coding({
         code: "49327004",
         display: "Interferon",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyVK: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyVK: new Coding({
         code: "49344000",
         display: "Blood group antibody VK",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MediatorOfInflammation: Coding.FromStrict({
+    MedicationCodesValueSet_MediatorOfInflammation: new Coding({
         code: "49352002",
         display: "Mediator of inflammation",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenDavis: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenDavis: new Coding({
         code: "49377001",
         display: "Blood group antigen Davis",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ActiveC4b: Coding.FromStrict({
+    MedicationCodesValueSet_ActiveC4b: new Coding({
         code: "49419007",
         display: "Active C4b",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyWimberly: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyWimberly: new Coding({
         code: "49449009",
         display: "Blood group antibody Wimberly",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenA: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenA: new Coding({
         code: "49495002",
         display: "Human leukocyte antigen A",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenTerrell: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenTerrell: new Coding({
         code: "49568009",
         display: "Blood group antigen Terrell",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MNS25ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_MNS25ISBTSymbol: new Coding({
         code: "49582009",
         display: "MNS25 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PrivateBloodGroupAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_PrivateBloodGroupAntibody: new Coding({
         code: "49599005",
         display: "Private blood group antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MonoclonalAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_MonoclonalAntibody: new Coding({
         code: "49616005",
         display: "Monoclonal antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenTaur: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenTaur: new Coding({
         code: "49653004",
         display: "Blood group antigen Taur",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenDw22: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenDw22: new Coding({
         code: "49677005",
         display: "Human leukocyte antigen Dw22",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyM1PowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyM1PowerAPower: new Coding({
         code: "49744003",
         display: "Blood group antibody M1^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenSimon: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenSimon: new Coding({
         code: "49772005",
         display: "Blood group antigen Simon",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenHorn: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenHorn: new Coding({
         code: "49837000",
         display: "Blood group antigen Horn",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CDw52ClusterOfDifferentiationAntigenWorkshop52: Coding.FromStrict({
+    MedicationCodesValueSet_CDw52ClusterOfDifferentiationAntigenWorkshop52: new Coding({
         code: "49858006",
         display: "CDw52 - Cluster of differentiation antigen (workshop) 52",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RH23ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_RH23ISBTSymbol: new Coding({
         code: "49912009",
         display: "RH23 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenMeteja: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenMeteja: new Coding({
         code: "49991001",
         display: "Blood group antigen Meteja",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenBw59: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenBw59: new Coding({
         code: "49997002",
         display: "Human leukocyte antigen Bw59",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyBoston: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyBoston: new Coding({
         code: "50028004",
         display: "Blood group antibody Boston",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LE2ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_LE2ISBTSymbol: new Coding({
         code: "50156006",
         display: "LE2 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyHrPowerSPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyHrPowerSPower: new Coding({
         code: "50272007",
         display: "Blood group antibody hr^s^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenBw76: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenBw76: new Coding({
         code: "50383001",
         display: "Human leukocyte antigen Bw76",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MNS16ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_MNS16ISBTSymbol: new Coding({
         code: "50480002",
         display: "MNS16 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodySPowerDPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodySPowerDPower: new Coding({
         code: "50526007",
         display: "Blood group antibody S^D^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenHeibel: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenHeibel: new Coding({
         code: "50700004",
         display: "Blood group antigen Heibel",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyWiley: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyWiley: new Coding({
         code: "50752003",
         display: "Blood group antibody Wiley",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Interleukin1: Coding.FromStrict({
+    MedicationCodesValueSet_Interleukin1: new Coding({
         code: "50762005",
         display: "Interleukin-1",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyCE: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyCE: new Coding({
         code: "50864002",
         display: "Blood group antibody CE",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyJePowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyJePowerAPower: new Coding({
         code: "50899003",
         display: "Blood group antibody Je^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CALLCommonAcuteLymphoblasticLeukemiaAntigen: Coding.FromStrict({
+    MedicationCodesValueSet_CALLCommonAcuteLymphoblasticLeukemiaAntigen: new Coding({
         code: "50988004",
         display: "c-ALL - Common acute lymphoblastic leukemia antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenIPGreaterThan1LessThan_2: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenIPGreaterThan1LessThan_2: new Coding({
         code: "51222003",
         display: "Blood group antigen IP>1<",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LymphocyteAntigenCD2R: Coding.FromStrict({
+    MedicationCodesValueSet_LymphocyteAntigenCD2R: new Coding({
         code: "51238009",
         display: "Lymphocyte antigen CD2R",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_RH45ISBTSymbol: Coding.FromStrict({
+    MedicationCodesValueSet_RH45ISBTSymbol: new Coding({
         code: "51242007",
         display: "RH45 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyDonati: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyDonati: new Coding({
         code: "51262004",
         display: "Blood group antibody Donati",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyBothrops: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyBothrops: new Coding({
         code: "51276003",
         display: "Blood group antibody Bothrops",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenRr35: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenRr35: new Coding({
         code: "51293003",
         display: "Blood group antigen rr-35",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenB9208: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenB9208: new Coding({
         code: "51311004",
         display: "Blood group antigen B 9208",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyAnPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyAnPowerAPower: new Coding({
         code: "51372003",
         display: "Blood group antibody An^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenDR2: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenDR2: new Coding({
         code: "51414008",
         display: "Human leukocyte antigen DR2",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyKnPowerAPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyKnPowerAPower: new Coding({
         code: "51415009",
         display: "Blood group antibody Kn^a^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyKam: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyKam: new Coding({
         code: "51447004",
         display: "Blood group antibody Kam",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyTajama: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyTajama: new Coding({
         code: "51468003",
         display: "Blood group antibody Tajama",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenKosis: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenKosis: new Coding({
         code: "51511003",
         display: "Blood group antigen Kosis",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenDRw: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenDRw: new Coding({
         code: "51515007",
         display: "Human leukocyte antigen DRw",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyGood: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyGood: new Coding({
         code: "51645003",
         display: "Blood group antibody Good",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenBw46: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenBw46: new Coding({
         code: "51718007",
         display: "Human leukocyte antigen Bw46",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyPantaysh: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyPantaysh: new Coding({
         code: "51809003",
         display: "Blood group antibody Pantaysh",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ProliferativeInhibitoryFactor: Coding.FromStrict({
+    MedicationCodesValueSet_ProliferativeInhibitoryFactor: new Coding({
         code: "51810008",
         display: "Proliferative inhibitory factor",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyLagay: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyLagay: new Coding({
         code: "51873003",
         display: "Blood group antibody Lagay",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AntiB: Coding.FromStrict({
+    MedicationCodesValueSet_AntiB: new Coding({
         code: "51941005",
         display: "Anti-B",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MitochondrialAntibody: Coding.FromStrict({
+    MedicationCodesValueSet_MitochondrialAntibody: new Coding({
         code: "51950007",
         display: "Mitochondrial antibody",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Epitope: Coding.FromStrict({
+    MedicationCodesValueSet_Epitope: new Coding({
         code: "52078008",
         display: "Epitope",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenGriffith: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenGriffith: new Coding({
         code: "52081003",
         display: "Blood group antigen Griffith",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ClusterOfDifferentiationAntigen9: Coding.FromStrict({
+    MedicationCodesValueSet_ClusterOfDifferentiationAntigen9: new Coding({
         code: "52160001",
         display: "Cluster of differentiation antigen 9",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PlateletAntibodyHPA2: Coding.FromStrict({
+    MedicationCodesValueSet_PlateletAntibodyHPA2: new Coding({
         code: "52169000",
         display: "Platelet antibody HPA-2",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyLindsay: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyLindsay: new Coding({
         code: "52193005",
         display: "Blood group antibody Lindsay",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyManley: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyManley: new Coding({
         code: "52210003",
         display: "Blood group antibody Manley",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PlateletAntibodyHPA3b: Coding.FromStrict({
+    MedicationCodesValueSet_PlateletAntibodyHPA3b: new Coding({
         code: "52227006",
         display: "Platelet antibody HPA-3b",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyCPowerXPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyCPowerXPower: new Coding({
         code: "52258007",
         display: "Blood group antibody C^x^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyDp: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyDp: new Coding({
         code: "52310000",
         display: "Blood group antibody Dp",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ComplementComponent8: Coding.FromStrict({
+    MedicationCodesValueSet_ComplementComponent8: new Coding({
         code: "52313003",
         display: "Complement component 8",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeukocyteAntigenBw72: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeukocyteAntigenBw72: new Coding({
         code: "52419000",
         display: "Human leukocyte antigen Bw72",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenKrog: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenKrog: new Coding({
         code: "52467005",
         display: "Blood group antigen Krog",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenShier: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenShier: new Coding({
         code: "52555006",
         display: "Blood group antigen Shier",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyPPGreaterThan1LessThanPPowerKPower: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyPPGreaterThan1LessThanPPowerKPower: new Coding({
         code: "52573009",
         display: "Blood group antibody PP>1<P^k^",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HbsAgAdr: Coding.FromStrict({
+    MedicationCodesValueSet_HbsAgAdr: new Coding({
         code: "52680001",
         display: "Hbs Ag/adr",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyCad: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyCad: new Coding({
         code: "52764004",
         display: "Blood group antibody Cad",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyMarks: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyMarks: new Coding({
         code: "52912003",
         display: "Blood group antibody Marks",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HumanLeucocyteAntigenBw42: Coding.FromStrict({
+    MedicationCodesValueSet_HumanLeucocyteAntigenBw42: new Coding({
         code: "52935000",
         display: "Human leucocyte antigen Bw42",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyBryant: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyBryant: new Coding({
         code: "52991006",
         display: "Blood group antibody Bryant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LeukotrieneD: Coding.FromStrict({
+    MedicationCodesValueSet_LeukotrieneD: new Coding({
         code: "53023007",
         display: "Leukotriene D",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_GammaInterferon: Coding.FromStrict({
+    MedicationCodesValueSet_GammaInterferon: new Coding({
         code: "9296005",
         display: "Gamma interferon",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyVennera: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyVennera: new Coding({
         code: "9319001",
         display: "Blood group antibody Vennera",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyPollio: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyPollio: new Coding({
         code: "9392009",
         display: "Blood group antibody Pollio",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Power60PowerIron: Coding.FromStrict({
+    MedicationCodesValueSet_Power60PowerIron: new Coding({
         code: "9396007",
         display: "^60^Iron",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenPillsbury: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenPillsbury: new Coding({
         code: "9398008",
         display: "Blood group antigen Pillsbury",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenAlmeria: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenAlmeria: new Coding({
         code: "9457002",
         display: "Fibrinogen Almeria",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PolypropyleneGlycol: Coding.FromStrict({
+    MedicationCodesValueSet_PolypropyleneGlycol: new Coding({
         code: "9471005",
         display: "Polypropylene glycol",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenSchneider: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenSchneider: new Coding({
         code: "9472003",
         display: "Blood group antigen Schneider",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_HomologousAntigen: Coding.FromStrict({
+    MedicationCodesValueSet_HomologousAntigen: new Coding({
         code: "9493000",
         display: "Homologous antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_AmineHormone: Coding.FromStrict({
+    MedicationCodesValueSet_AmineHormone: new Coding({
         code: "9530002",
         display: "Amine hormone",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CoagulationFactorXIIIa: Coding.FromStrict({
+    MedicationCodesValueSet_CoagulationFactorXIIIa: new Coding({
         code: "9532005",
         display: "Coagulation factor XIIIa",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_ChlorprothixeneLactate: Coding.FromStrict({
+    MedicationCodesValueSet_ChlorprothixeneLactate: new Coding({
         code: "9539001",
         display: "Chlorprothixene lactate",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenNoble: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenNoble: new Coding({
         code: "9608008",
         display: "Blood group antigen Noble",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Chlorphentermine: Coding.FromStrict({
+    MedicationCodesValueSet_Chlorphentermine: new Coding({
         code: "9643009",
         display: "Chlorphentermine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Pecazine: Coding.FromStrict({
+    MedicationCodesValueSet_Pecazine: new Coding({
         code: "9663002",
         display: "Pecazine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_SAntigen: Coding.FromStrict({
+    MedicationCodesValueSet_SAntigen: new Coding({
         code: "9672005",
         display: "S antigen",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_FibrinogenNewYorkIII: Coding.FromStrict({
+    MedicationCodesValueSet_FibrinogenNewYorkIII: new Coding({
         code: "9676008",
         display: "Fibrinogen New York III",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CentralDepressant: Coding.FromStrict({
+    MedicationCodesValueSet_CentralDepressant: new Coding({
         code: "9680003",
         display: "Central depressant",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyPrGreaterThan3LessThan: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyPrGreaterThan3LessThan: new Coding({
         code: "9701007",
         display: "Blood group antibody Pr>3<",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyLuke: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyLuke: new Coding({
         code: "9716005",
         display: "Blood group antibody Luke",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Phencyclidine: Coding.FromStrict({
+    MedicationCodesValueSet_Phencyclidine: new Coding({
         code: "9721008",
         display: "Phencyclidine",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_LithiumSalt: Coding.FromStrict({
+    MedicationCodesValueSet_LithiumSalt: new Coding({
         code: "9765000",
         display: "Lithium salt",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_PhosphorusTrichloride: Coding.FromStrict({
+    MedicationCodesValueSet_PhosphorusTrichloride: new Coding({
         code: "9797000",
         display: "Phosphorus trichloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MycoplasmaPulmonisAntibodyTestKit: Coding.FromStrict({
+    MedicationCodesValueSet_MycoplasmaPulmonisAntibodyTestKit: new Coding({
         code: "9817005",
         display: "Mycoplasma pulmonis antibody test kit",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_OxymetazolineHydrochloride: Coding.FromStrict({
+    MedicationCodesValueSet_OxymetazolineHydrochloride: new Coding({
         code: "9910008",
         display: "Oxymetazoline hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntibodyQuoteNQuote: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntibodyQuoteNQuote: new Coding({
         code: "9921004",
         display: "Blood group antibody 'N'",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_BloodGroupAntigenHartley: Coding.FromStrict({
+    MedicationCodesValueSet_BloodGroupAntigenHartley: new Coding({
         code: "9930007",
         display: "Blood group antigen Hartley",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_Angiotensin: Coding.FromStrict({
+    MedicationCodesValueSet_Angiotensin: new Coding({
         code: "9974009",
         display: "Angiotensin",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_CDw75ClusterOfDifferentiationAntigenWorkshop75: Coding.FromStrict({
+    MedicationCodesValueSet_CDw75ClusterOfDifferentiationAntigenWorkshop75: new Coding({
         code: "9980001",
         display: "CDw75 - Cluster of differentiation antigen (workshop) 75",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_DesarginisatedComplementEnzyme: Coding.FromStrict({
+    MedicationCodesValueSet_DesarginisatedComplementEnzyme: new Coding({
         code: "9985006",
         display: "Desarginisated complement enzyme",
         system: "http://snomed.info/sct"
     }),
-    MedicationCodesValueSet_MolybdenumRadioisotope: Coding.FromStrict({
+    MedicationCodesValueSet_MolybdenumRadioisotope: new Coding({
         code: "9992001",
         display: "Molybdenum radioisotope",
         system: "http://snomed.info/sct"

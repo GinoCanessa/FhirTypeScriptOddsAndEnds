@@ -106,11 +106,11 @@ export declare class MedicationIngredient extends fhir.BackboneElement implement
     /**
      * Check if the current MedicationIngredient contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationIngredient from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationIngredient): MedicationIngredient;
+    static fromStrict(source: fhir.IMedicationIngredient): MedicationIngredient;
 }
 /**
  * Information that only applies to packages (not products).
@@ -133,11 +133,11 @@ export declare class MedicationBatch extends fhir.BackboneElement implements fhi
     /**
      * Check if the current MedicationBatch contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationBatch from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationBatch): MedicationBatch;
+    static fromStrict(source: fhir.IMedicationBatch): MedicationBatch;
 }
 /**
  * This resource is primarily used for the identification and definition of a medication for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use.
@@ -187,11 +187,11 @@ export declare class Medication extends fhir.DomainResource implements fhir.IMed
     /**
      * Check if the current Medication contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Medication from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedication): Medication;
+    static fromStrict(source: fhir.IMedication): Medication;
 }
 /**
  * Code Values for the Medication.status field

@@ -37,18 +37,18 @@ export class SupplyRequestParameter extends fhir.BackboneElement {
     /**
      * Check if the current SupplyRequestParameter contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SupplyRequestParameter from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SupplyRequestParameter(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SupplyRequestParameter is missing elements: ${missingElements.join(", ")}`;
         }
@@ -139,21 +139,21 @@ export class SupplyRequest extends fhir.DomainResource {
     /**
      * Check if the current SupplyRequest contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["quantity"] === undefined) {
             missingElements.push("quantity");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SupplyRequest from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SupplyRequest(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SupplyRequest is missing elements: ${missingElements.join(", ")}`;
         }

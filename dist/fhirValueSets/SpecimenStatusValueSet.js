@@ -13,7 +13,7 @@ export const SpecimenStatusValueSet = {
     /**
      * The physical specimen is present and in good condition.
      */
-    specimen_status_Available: Coding.FromStrict({
+    specimen_status_Available: new Coding({
         code: "available",
         display: "Available",
         system: "http://hl7.org/fhir/specimen-status"
@@ -21,7 +21,7 @@ export const SpecimenStatusValueSet = {
     /**
      * The specimen was entered in error and therefore nullified.
      */
-    specimen_status_EnteredInError: Coding.FromStrict({
+    specimen_status_EnteredInError: new Coding({
         code: "entered-in-error",
         display: "Entered in Error",
         system: "http://hl7.org/fhir/specimen-status"
@@ -29,7 +29,7 @@ export const SpecimenStatusValueSet = {
     /**
      * There is no physical specimen because it is either lost, destroyed or consumed.
      */
-    specimen_status_Unavailable: Coding.FromStrict({
+    specimen_status_Unavailable: new Coding({
         code: "unavailable",
         display: "Unavailable",
         system: "http://hl7.org/fhir/specimen-status"
@@ -37,7 +37,7 @@ export const SpecimenStatusValueSet = {
     /**
      * The specimen cannot be used because of a quality issue such as a broken container, contamination, or too old.
      */
-    specimen_status_Unsatisfactory: Coding.FromStrict({
+    specimen_status_Unsatisfactory: new Coding({
         code: "unsatisfactory",
         display: "Unsatisfactory",
         system: "http://hl7.org/fhir/specimen-status"

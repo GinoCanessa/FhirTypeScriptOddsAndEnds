@@ -13,7 +13,7 @@ export const ExDiagnosisrelatedgroupValueSet = {
   /**
    * Normal Vaginal Delivery.
    */
-  ex_diagnosisrelatedgroup_NormalVaginalDelivery: Coding.FromStrict({
+  ex_diagnosisrelatedgroup_NormalVaginalDelivery: new Coding({
     code: "100",
     display: "Normal Vaginal Delivery",
     system: "http://terminology.hl7.org/CodeSystem/ex-diagnosisrelatedgroup"
@@ -21,7 +21,7 @@ export const ExDiagnosisrelatedgroupValueSet = {
   /**
    * Appendectomy without rupture or other complications.
    */
-  ex_diagnosisrelatedgroup_AppendectomyUncomplicated: Coding.FromStrict({
+  ex_diagnosisrelatedgroup_AppendectomyUncomplicated: new Coding({
     code: "101",
     display: "Appendectomy - uncomplicated",
     system: "http://terminology.hl7.org/CodeSystem/ex-diagnosisrelatedgroup"
@@ -29,7 +29,7 @@ export const ExDiagnosisrelatedgroupValueSet = {
   /**
    * Emergency department treatment of a tooth abscess.
    */
-  ex_diagnosisrelatedgroup_ToothAbscess: Coding.FromStrict({
+  ex_diagnosisrelatedgroup_ToothAbscess: new Coding({
     code: "300",
     display: "Tooth abscess",
     system: "http://terminology.hl7.org/CodeSystem/ex-diagnosisrelatedgroup"
@@ -37,7 +37,7 @@ export const ExDiagnosisrelatedgroupValueSet = {
   /**
    * Head trauma - concussion.
    */
-  ex_diagnosisrelatedgroup_HeadTraumaConcussion: Coding.FromStrict({
+  ex_diagnosisrelatedgroup_HeadTraumaConcussion: new Coding({
     code: "400",
     display: "Head trauma - concussion",
     system: "http://terminology.hl7.org/CodeSystem/ex-diagnosisrelatedgroup"

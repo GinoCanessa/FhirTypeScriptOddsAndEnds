@@ -37,18 +37,18 @@ export class DeviceMetricCalibration extends fhir.BackboneElement {
     /**
      * Check if the current DeviceMetricCalibration contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a DeviceMetricCalibration from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new DeviceMetricCalibration(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `DeviceMetricCalibration is missing elements: ${missingElements.join(", ")}`;
         }
@@ -116,7 +116,7 @@ export class DeviceMetric extends fhir.DomainResource {
     /**
      * Check if the current DeviceMetric contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["category"] === undefined) {
             missingElements.push("category");
@@ -124,16 +124,16 @@ export class DeviceMetric extends fhir.DomainResource {
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a DeviceMetric from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new DeviceMetric(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `DeviceMetric is missing elements: ${missingElements.join(", ")}`;
         }

@@ -153,11 +153,11 @@ export declare class InvoiceParticipant extends fhir.BackboneElement implements 
     /**
      * Check if the current InvoiceParticipant contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a InvoiceParticipant from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IInvoiceParticipant): InvoiceParticipant;
+    static fromStrict(source: fhir.IInvoiceParticipant): InvoiceParticipant;
 }
 /**
  * The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice as to how the prices have been calculated.
@@ -188,11 +188,11 @@ export declare class InvoiceLineItemPriceComponent extends fhir.BackboneElement 
     /**
      * Check if the current InvoiceLineItemPriceComponent contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a InvoiceLineItemPriceComponent from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IInvoiceLineItemPriceComponent): InvoiceLineItemPriceComponent;
+    static fromStrict(source: fhir.IInvoiceLineItemPriceComponent): InvoiceLineItemPriceComponent;
 }
 /**
  * Each line item represents one charge for goods and services rendered. Details such as date, code and amount are found in the referenced ChargeItem resource.
@@ -222,11 +222,11 @@ export declare class InvoiceLineItem extends fhir.BackboneElement implements fhi
     /**
      * Check if the current InvoiceLineItem contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a InvoiceLineItem from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IInvoiceLineItem): InvoiceLineItem;
+    static fromStrict(source: fhir.IInvoiceLineItem): InvoiceLineItem;
 }
 /**
  * Invoice containing collected ChargeItems from an Account with calculated individual and total price for Billing purpose.
@@ -311,11 +311,11 @@ export declare class Invoice extends fhir.DomainResource implements fhir.IInvoic
     /**
      * Check if the current Invoice contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Invoice from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IInvoice): Invoice;
+    static fromStrict(source: fhir.IInvoice): Invoice;
 }
 /**
  * Code Values for the Invoice.lineItem.priceComponent.type field

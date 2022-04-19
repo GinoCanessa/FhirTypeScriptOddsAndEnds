@@ -103,11 +103,11 @@ export declare class SupplyDeliverySuppliedItem extends fhir.BackboneElement imp
     /**
      * Check if the current SupplyDeliverySuppliedItem contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SupplyDeliverySuppliedItem from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISupplyDeliverySuppliedItem): SupplyDeliverySuppliedItem;
+    static fromStrict(source: fhir.ISupplyDeliverySuppliedItem): SupplyDeliverySuppliedItem;
 }
 /**
  * Record of delivery of what is supplied.
@@ -179,11 +179,11 @@ export declare class SupplyDelivery extends fhir.DomainResource implements fhir.
     /**
      * Check if the current SupplyDelivery contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SupplyDelivery from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISupplyDelivery): SupplyDelivery;
+    static fromStrict(source: fhir.ISupplyDelivery): SupplyDelivery;
 }
 /**
  * Code Values for the SupplyDelivery.status field

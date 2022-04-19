@@ -217,20 +217,20 @@ export class BundleLink extends fhir.BackboneElement implements fhir.IBundleLink
   /**
    * Check if the current BundleLink contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["relation"] === undefined) { missingElements.push("relation"); }
     if (this["url"] === undefined) { missingElements.push("url"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a BundleLink from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IBundleLink):BundleLink {
+  static override fromStrict(source:fhir.IBundleLink):BundleLink {
     var dest:BundleLink = new BundleLink(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `BundleLink is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -263,18 +263,18 @@ export class BundleEntrySearch extends fhir.BackboneElement implements fhir.IBun
   /**
    * Check if the current BundleEntrySearch contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a BundleEntrySearch from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IBundleEntrySearch):BundleEntrySearch {
+  static override fromStrict(source:fhir.IBundleEntrySearch):BundleEntrySearch {
     var dest:BundleEntrySearch = new BundleEntrySearch(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `BundleEntrySearch is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -338,20 +338,20 @@ export class BundleEntryRequest extends fhir.BackboneElement implements fhir.IBu
   /**
    * Check if the current BundleEntryRequest contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["method"] === undefined) { missingElements.push("method"); }
     if (this["url"] === undefined) { missingElements.push("url"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a BundleEntryRequest from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IBundleEntryRequest):BundleEntryRequest {
+  static override fromStrict(source:fhir.IBundleEntryRequest):BundleEntryRequest {
     var dest:BundleEntryRequest = new BundleEntryRequest(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `BundleEntryRequest is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -396,7 +396,7 @@ export class BundleEntryResponse extends fhir.BackboneElement implements fhir.IB
     if (source["_lastModified"]) { this._lastModified = new fhir.FhirElement(source._lastModified!); }
     if (source["location"]) { this.location = source.location; }
     if (source["_location"]) { this._location = new fhir.FhirElement(source._location!); }
-    if (source["outcome"]) { this.outcome = (fhir.FhirResourceFactory(source.outcome) ?? undefined); }
+    if (source["outcome"]) { this.outcome = (fhir.fhirResourceFactory(source.outcome) ?? undefined); }
     this.status = null;
     if (source["status"]) { this.status = source.status; }
     if (this.status === undefined) { this.status = null }
@@ -405,19 +405,19 @@ export class BundleEntryResponse extends fhir.BackboneElement implements fhir.IB
   /**
    * Check if the current BundleEntryResponse contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a BundleEntryResponse from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IBundleEntryResponse):BundleEntryResponse {
+  static override fromStrict(source:fhir.IBundleEntryResponse):BundleEntryResponse {
     var dest:BundleEntryResponse = new BundleEntryResponse(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `BundleEntryResponse is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -461,25 +461,25 @@ export class BundleEntry extends fhir.BackboneElement implements fhir.IBundleEnt
     if (source["_fullUrl"]) { this._fullUrl = new fhir.FhirElement(source._fullUrl!); }
     if (source["link"]) { this.link = source.link.map((x:Partial<fhir.IBundleLink>) => new fhir.BundleLink(x)); }
     if (source["request"]) { this.request = new fhir.BundleEntryRequest(source.request!); }
-    if (source["resource"]) { this.resource = (fhir.FhirResourceFactory(source.resource) ?? undefined); }
+    if (source["resource"]) { this.resource = (fhir.fhirResourceFactory(source.resource) ?? undefined); }
     if (source["response"]) { this.response = new fhir.BundleEntryResponse(source.response!); }
     if (source["search"]) { this.search = new fhir.BundleEntrySearch(source.search!); }
   }
   /**
    * Check if the current BundleEntry contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a BundleEntry from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IBundleEntry):BundleEntry {
+  static override fromStrict(source:fhir.IBundleEntry):BundleEntry {
     var dest:BundleEntry = new BundleEntry(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `BundleEntry is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -554,19 +554,19 @@ export class Bundle extends fhir.Resource implements fhir.IBundle {
   /**
    * Check if the current Bundle contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Bundle from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IBundle):Bundle {
+  static override fromStrict(source:fhir.IBundle):Bundle {
     var dest:Bundle = new Bundle(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Bundle is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

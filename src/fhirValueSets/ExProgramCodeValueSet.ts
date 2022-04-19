@@ -13,7 +13,7 @@ export const ExProgramCodeValueSet = {
   /**
    * Child Asthma Program
    */
-  ex_program_code_ChildAsthma: Coding.FromStrict({
+  ex_program_code_ChildAsthma: new Coding({
     code: "as",
     display: "Child Asthma",
     system: "http://terminology.hl7.org/CodeSystem/ex-programcode"
@@ -21,7 +21,7 @@ export const ExProgramCodeValueSet = {
   /**
    * Autism Screening Program.
    */
-  ex_program_code_AutismScreening: Coding.FromStrict({
+  ex_program_code_AutismScreening: new Coding({
     code: "auscr",
     display: "Autism Screening",
     system: "http://terminology.hl7.org/CodeSystem/ex-programcode"
@@ -29,7 +29,7 @@ export const ExProgramCodeValueSet = {
   /**
    * Hemodialysis Program.
    */
-  ex_program_code_Hemodialysis: Coding.FromStrict({
+  ex_program_code_Hemodialysis: new Coding({
     code: "hd",
     display: "Hemodialysis",
     system: "http://terminology.hl7.org/CodeSystem/ex-programcode"
@@ -37,7 +37,7 @@ export const ExProgramCodeValueSet = {
   /**
    * No program code applies.
    */
-  ex_program_code_None: Coding.FromStrict({
+  ex_program_code_None: new Coding({
     code: "none",
     display: "None",
     system: "http://terminology.hl7.org/CodeSystem/ex-programcode"

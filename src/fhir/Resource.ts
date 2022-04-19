@@ -77,16 +77,16 @@ export class Resource implements fhir.IResource {
   /**
    * Check if the current Resource contains all required elements.
    */
-  CheckRequiredElements():string[] {
+  checkRequiredElements():string[] {
     var missingElements:string[] = [];
     return missingElements;
   }
   /**
    * Factory function to create a Resource from an object that MUST contain all required elements.
    */
-  static FromStrict(source:fhir.IResource):Resource {
+  static fromStrict(source:fhir.IResource):Resource {
     var dest:Resource = new Resource(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Resource is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

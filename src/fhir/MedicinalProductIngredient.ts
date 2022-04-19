@@ -176,19 +176,19 @@ export class MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStreng
   /**
    * Check if the current MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["strength"] === undefined) { missingElements.push("strength"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength):MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength {
+  static override fromStrict(source:fhir.IMedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength):MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength {
     var dest:MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength = new MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -245,19 +245,19 @@ export class MedicinalProductIngredientSpecifiedSubstanceStrength extends fhir.B
   /**
    * Check if the current MedicinalProductIngredientSpecifiedSubstanceStrength contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["presentation"] === undefined) { missingElements.push("presentation"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicinalProductIngredientSpecifiedSubstanceStrength from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicinalProductIngredientSpecifiedSubstanceStrength):MedicinalProductIngredientSpecifiedSubstanceStrength {
+  static override fromStrict(source:fhir.IMedicinalProductIngredientSpecifiedSubstanceStrength):MedicinalProductIngredientSpecifiedSubstanceStrength {
     var dest:MedicinalProductIngredientSpecifiedSubstanceStrength = new MedicinalProductIngredientSpecifiedSubstanceStrength(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicinalProductIngredientSpecifiedSubstanceStrength is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -299,20 +299,20 @@ export class MedicinalProductIngredientSpecifiedSubstance extends fhir.BackboneE
   /**
    * Check if the current MedicinalProductIngredientSpecifiedSubstance contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
     if (this["group"] === undefined) { missingElements.push("group"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicinalProductIngredientSpecifiedSubstance from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicinalProductIngredientSpecifiedSubstance):MedicinalProductIngredientSpecifiedSubstance {
+  static override fromStrict(source:fhir.IMedicinalProductIngredientSpecifiedSubstance):MedicinalProductIngredientSpecifiedSubstance {
     var dest:MedicinalProductIngredientSpecifiedSubstance = new MedicinalProductIngredientSpecifiedSubstance(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicinalProductIngredientSpecifiedSubstance is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -342,19 +342,19 @@ export class MedicinalProductIngredientSubstance extends fhir.BackboneElement im
   /**
    * Check if the current MedicinalProductIngredientSubstance contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicinalProductIngredientSubstance from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicinalProductIngredientSubstance):MedicinalProductIngredientSubstance {
+  static override fromStrict(source:fhir.IMedicinalProductIngredientSubstance):MedicinalProductIngredientSubstance {
     var dest:MedicinalProductIngredientSubstance = new MedicinalProductIngredientSubstance(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicinalProductIngredientSubstance is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -411,19 +411,19 @@ export class MedicinalProductIngredient extends fhir.DomainResource implements f
   /**
    * Check if the current MedicinalProductIngredient contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["role"] === undefined) { missingElements.push("role"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicinalProductIngredient from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicinalProductIngredient):MedicinalProductIngredient {
+  static override fromStrict(source:fhir.IMedicinalProductIngredient):MedicinalProductIngredient {
     var dest:MedicinalProductIngredient = new MedicinalProductIngredient(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicinalProductIngredient is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

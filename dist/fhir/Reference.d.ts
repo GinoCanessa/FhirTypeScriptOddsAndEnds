@@ -59,14 +59,14 @@ export declare class Reference extends fhir.FhirElement implements fhir.IReferen
     /**
      * Check if the current Reference contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Reference from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IReference): Reference;
+    static fromStrict(source: fhir.IReference): Reference;
     /**
      * Create a reference from an existing resource
      */
-    static FromResource(source: fhir.IResource, baseUrl?: string): Reference;
+    static fromResource(source: fhir.IResource, baseUrl?: string): Reference;
 }
 //# sourceMappingURL=Reference.d.ts.map

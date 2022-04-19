@@ -255,11 +255,11 @@ export declare class RequestGroupActionCondition extends fhir.BackboneElement im
     /**
      * Check if the current RequestGroupActionCondition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a RequestGroupActionCondition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IRequestGroupActionCondition): RequestGroupActionCondition;
+    static fromStrict(source: fhir.IRequestGroupActionCondition): RequestGroupActionCondition;
 }
 /**
  * A relationship to another action such as "before" or "30-60 minutes after start of".
@@ -290,11 +290,11 @@ export declare class RequestGroupActionRelatedAction extends fhir.BackboneElemen
     /**
      * Check if the current RequestGroupActionRelatedAction contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a RequestGroupActionRelatedAction from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IRequestGroupActionRelatedAction): RequestGroupActionRelatedAction;
+    static fromStrict(source: fhir.IRequestGroupActionRelatedAction): RequestGroupActionRelatedAction;
 }
 /**
  * The actions, if any, produced by the evaluation of the artifact.
@@ -414,11 +414,11 @@ export declare class RequestGroupAction extends fhir.BackboneElement implements 
     /**
      * Check if the current RequestGroupAction contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a RequestGroupAction from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IRequestGroupAction): RequestGroupAction;
+    static fromStrict(source: fhir.IRequestGroupAction): RequestGroupAction;
 }
 /**
  * A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
@@ -513,11 +513,11 @@ export declare class RequestGroup extends fhir.DomainResource implements fhir.IR
     /**
      * Check if the current RequestGroup contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a RequestGroup from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IRequestGroup): RequestGroup;
+    static fromStrict(source: fhir.IRequestGroup): RequestGroup;
 }
 /**
  * Code Values for the RequestGroup.action.condition.kind field

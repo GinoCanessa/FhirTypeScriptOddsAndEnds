@@ -639,11 +639,11 @@ export declare class TaskRestriction extends fhir.BackboneElement implements fhi
     /**
      * Check if the current TaskRestriction contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TaskRestriction from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITaskRestriction): TaskRestriction;
+    static fromStrict(source: fhir.ITaskRestriction): TaskRestriction;
 }
 /**
  * Additional information that may be needed in the execution of the task.
@@ -879,11 +879,11 @@ export declare class TaskInput extends fhir.BackboneElement implements fhir.ITas
     /**
      * Check if the current TaskInput contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TaskInput from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITaskInput): TaskInput;
+    static fromStrict(source: fhir.ITaskInput): TaskInput;
 }
 /**
  * Outputs produced by the Task.
@@ -1119,11 +1119,11 @@ export declare class TaskOutput extends fhir.BackboneElement implements fhir.ITa
     /**
      * Check if the current TaskOutput contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TaskOutput from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITaskOutput): TaskOutput;
+    static fromStrict(source: fhir.ITaskOutput): TaskOutput;
 }
 /**
  * A task to be performed.
@@ -1273,11 +1273,11 @@ export declare class Task extends fhir.DomainResource implements fhir.ITask {
     /**
      * Check if the current Task contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Task from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITask): Task;
+    static fromStrict(source: fhir.ITask): Task;
 }
 /**
  * Code Values for the Task.intent field

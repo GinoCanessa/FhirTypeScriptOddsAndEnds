@@ -13,7 +13,7 @@ export const GroupTypeValueSet = {
     /**
      * Group contains "animal" Patient resources.
      */
-    group_type_Animal: Coding.FromStrict({
+    group_type_Animal: new Coding({
         code: "animal",
         display: "Animal",
         system: "http://hl7.org/fhir/group-type"
@@ -21,7 +21,7 @@ export const GroupTypeValueSet = {
     /**
      * Group contains Device resources.
      */
-    group_type_Device: Coding.FromStrict({
+    group_type_Device: new Coding({
         code: "device",
         display: "Device",
         system: "http://hl7.org/fhir/group-type"
@@ -29,7 +29,7 @@ export const GroupTypeValueSet = {
     /**
      * Group contains Medication resources.
      */
-    group_type_Medication: Coding.FromStrict({
+    group_type_Medication: new Coding({
         code: "medication",
         display: "Medication",
         system: "http://hl7.org/fhir/group-type"
@@ -37,7 +37,7 @@ export const GroupTypeValueSet = {
     /**
      * Group contains "person" Patient resources.
      */
-    group_type_Person: Coding.FromStrict({
+    group_type_Person: new Coding({
         code: "person",
         display: "Person",
         system: "http://hl7.org/fhir/group-type"
@@ -45,7 +45,7 @@ export const GroupTypeValueSet = {
     /**
      * Group contains healthcare practitioner resources (Practitioner or PractitionerRole).
      */
-    group_type_Practitioner: Coding.FromStrict({
+    group_type_Practitioner: new Coding({
         code: "practitioner",
         display: "Practitioner",
         system: "http://hl7.org/fhir/group-type"
@@ -53,7 +53,7 @@ export const GroupTypeValueSet = {
     /**
      * Group contains Substance resources.
      */
-    group_type_Substance: Coding.FromStrict({
+    group_type_Substance: new Coding({
         code: "substance",
         display: "Substance",
         system: "http://hl7.org/fhir/group-type"

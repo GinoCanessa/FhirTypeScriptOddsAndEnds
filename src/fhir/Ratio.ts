@@ -42,18 +42,18 @@ export class Ratio extends fhir.FhirElement implements fhir.IRatio {
   /**
    * Check if the current Ratio contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Ratio from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IRatio):Ratio {
+  static override fromStrict(source:fhir.IRatio):Ratio {
     var dest:Ratio = new Ratio(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Ratio is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

@@ -13,7 +13,7 @@ export const TimingAbbreviationValueSet = {
     /**
      * Every morning at institution specified times.
      */
-    v3_GTSAbbreviation_AM: Coding.FromStrict({
+    v3_GTSAbbreviation_AM: new Coding({
         code: "AM",
         display: "AM",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -21,7 +21,7 @@ export const TimingAbbreviationValueSet = {
     /**
      * At bedtime (institution specified time).
      */
-    v3_GTSAbbreviation_AtBedtime: Coding.FromStrict({
+    v3_GTSAbbreviation_AtBedtime: new Coding({
         code: "BED",
         display: "at bedtime",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -29,7 +29,7 @@ export const TimingAbbreviationValueSet = {
     /**
      * Two times a day at institution specified time
      */
-    v3_GTSAbbreviation_BID: Coding.FromStrict({
+    v3_GTSAbbreviation_BID: new Coding({
         code: "BID",
         display: "BID",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -37,7 +37,7 @@ export const TimingAbbreviationValueSet = {
     /**
      * Monthly at institution specified time.
      */
-    v3_GTSAbbreviation_Monthly: Coding.FromStrict({
+    v3_GTSAbbreviation_Monthly: new Coding({
         code: "MO",
         display: "monthly",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -45,7 +45,7 @@ export const TimingAbbreviationValueSet = {
     /**
      * Every afternoon at institution specified times.
      */
-    v3_GTSAbbreviation_PM: Coding.FromStrict({
+    v3_GTSAbbreviation_PM: new Coding({
         code: "PM",
         display: "PM",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -53,7 +53,7 @@ export const TimingAbbreviationValueSet = {
     /**
      * Every hour at institution specified times.
      */
-    v3_GTSAbbreviation_EveryHour: Coding.FromStrict({
+    v3_GTSAbbreviation_EveryHour: new Coding({
         code: "Q1H",
         display: "every hour",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -61,7 +61,7 @@ export const TimingAbbreviationValueSet = {
     /**
      * Every 2 hours at institution specified times.
      */
-    v3_GTSAbbreviation_Every2Hours: Coding.FromStrict({
+    v3_GTSAbbreviation_Every2Hours: new Coding({
         code: "Q2H",
         display: "every 2 hours",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -69,7 +69,7 @@ export const TimingAbbreviationValueSet = {
     /**
      * Every 3 hours at institution specified times.
      */
-    v3_GTSAbbreviation_Every3Hours: Coding.FromStrict({
+    v3_GTSAbbreviation_Every3Hours: new Coding({
         code: "Q3H",
         display: "every 3 hours",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -77,7 +77,7 @@ export const TimingAbbreviationValueSet = {
     /**
      * Every 4 hours at institution specified time
      */
-    v3_GTSAbbreviation_Q4H: Coding.FromStrict({
+    v3_GTSAbbreviation_Q4H: new Coding({
         code: "Q4H",
         display: "Q4H",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -85,7 +85,7 @@ export const TimingAbbreviationValueSet = {
     /**
      * Every 6 hours at institution specified time
      */
-    v3_GTSAbbreviation_Q6H: Coding.FromStrict({
+    v3_GTSAbbreviation_Q6H: new Coding({
         code: "Q6H",
         display: "Q6H",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -93,7 +93,7 @@ export const TimingAbbreviationValueSet = {
     /**
      * Every 8 hours at institution specified times.
      */
-    v3_GTSAbbreviation_Every8Hours: Coding.FromStrict({
+    v3_GTSAbbreviation_Every8Hours: new Coding({
         code: "Q8H",
         display: "every 8 hours",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -101,7 +101,7 @@ export const TimingAbbreviationValueSet = {
     /**
      * Every day at institution specified times.
      */
-    v3_GTSAbbreviation_QD: Coding.FromStrict({
+    v3_GTSAbbreviation_QD: new Coding({
         code: "QD",
         display: "QD",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -109,7 +109,7 @@ export const TimingAbbreviationValueSet = {
     /**
      * Four times a day at institution specified time
      */
-    v3_GTSAbbreviation_QID: Coding.FromStrict({
+    v3_GTSAbbreviation_QID: new Coding({
         code: "QID",
         display: "QID",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -117,7 +117,7 @@ export const TimingAbbreviationValueSet = {
     /**
      * Every other day at institution specified times.
      */
-    v3_GTSAbbreviation_QOD: Coding.FromStrict({
+    v3_GTSAbbreviation_QOD: new Coding({
         code: "QOD",
         display: "QOD",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -125,7 +125,7 @@ export const TimingAbbreviationValueSet = {
     /**
      * Three times a day at institution specified time
      */
-    v3_GTSAbbreviation_TID: Coding.FromStrict({
+    v3_GTSAbbreviation_TID: new Coding({
         code: "TID",
         display: "TID",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -133,7 +133,7 @@ export const TimingAbbreviationValueSet = {
     /**
      * Weekly at institution specified time.
      */
-    v3_GTSAbbreviation_Weekly: Coding.FromStrict({
+    v3_GTSAbbreviation_Weekly: new Coding({
         code: "WK",
         display: "weekly",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"

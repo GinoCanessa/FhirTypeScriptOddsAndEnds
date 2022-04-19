@@ -76,11 +76,11 @@ export declare class MedicinalProductContraindicationOtherTherapy extends fhir.B
     /**
      * Check if the current MedicinalProductContraindicationOtherTherapy contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductContraindicationOtherTherapy from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductContraindicationOtherTherapy): MedicinalProductContraindicationOtherTherapy;
+    static fromStrict(source: fhir.IMedicinalProductContraindicationOtherTherapy): MedicinalProductContraindicationOtherTherapy;
 }
 /**
  * The clinical particulars - indications, contraindications etc. of a medicinal product, including for regulatory purposes.
@@ -125,10 +125,10 @@ export declare class MedicinalProductContraindication extends fhir.DomainResourc
     /**
      * Check if the current MedicinalProductContraindication contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductContraindication from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductContraindication): MedicinalProductContraindication;
+    static fromStrict(source: fhir.IMedicinalProductContraindication): MedicinalProductContraindication;
 }
 //# sourceMappingURL=MedicinalProductContraindication.d.ts.map

@@ -10,4977 +10,4977 @@ import { Coding } from '../fhir';
  * This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).
  */
 export const BodystructureCodeValueSet = {
-    BodystructureCodeValueSet_EccrinePapillaryAdenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_EccrinePapillaryAdenoma: new Coding({
         code: "10060008",
         display: "Eccrine papillary adenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantGiantCellTumorOfBone: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantGiantCellTumorOfBone: new Coding({
         code: "10069009",
         display: "Malignant giant cell tumor of bone",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalPartialHypoplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalPartialHypoplasia: new Coding({
         code: "10115009",
         display: "Congenital partial hypoplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Accretion: Coding.FromStrict({
+    BodystructureCodeValueSet_Accretion: new Coding({
         code: "10122001",
         display: "Accretion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChiefCellAdenocarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_ChiefCellAdenocarcinoma: new Coding({
         code: "10146008",
         display: "Chief cell adenocarcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Xanthosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Xanthosis: new Coding({
         code: "10219009",
         display: "Xanthosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EpidermoidCarcinomaSpindleCell: Coding.FromStrict({
+    BodystructureCodeValueSet_EpidermoidCarcinomaSpindleCell: new Coding({
         code: "10288008",
         display: "Epidermoid carcinoma - spindle cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalGiantPigmentedNevus: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalGiantPigmentedNevus: new Coding({
         code: "10291008",
         display: "Congenital giant pigmented nevus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PapillaryCarcinomaInSitu: Coding.FromStrict({
+    BodystructureCodeValueSet_PapillaryCarcinomaInSitu: new Coding({
         code: "10376009",
         display: "Papillary carcinoma in situ",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AnteriorOpenDislocation: Coding.FromStrict({
+    BodystructureCodeValueSet_AnteriorOpenDislocation: new Coding({
         code: "1040005",
         display: "Anterior open dislocation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SerousAtrophy: Coding.FromStrict({
+    BodystructureCodeValueSet_SerousAtrophy: new Coding({
         code: "10403004",
         display: "Serous atrophy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GlomusTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_GlomusTumor: new Coding({
         code: "10438002",
         display: "Glomus tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SpontaneousFistula: Coding.FromStrict({
+    BodystructureCodeValueSet_SpontaneousFistula: new Coding({
         code: "10445002",
         display: "Spontaneous fistula",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Retroversion: Coding.FromStrict({
+    BodystructureCodeValueSet_Retroversion: new Coding({
         code: "10505008",
         display: "Retroversion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Stomatocyte: Coding.FromStrict({
+    BodystructureCodeValueSet_Stomatocyte: new Coding({
         code: "10636005",
         display: "Stomatocyte",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BasophilicStainReaction: Coding.FromStrict({
+    BodystructureCodeValueSet_BasophilicStainReaction: new Coding({
         code: "10637001",
         display: "Basophilic stain reaction",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Plasmacytoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Plasmacytoma: new Coding({
         code: "10639003",
         display: "Plasmacytoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AtheromatousEmbolus: Coding.FromStrict({
+    BodystructureCodeValueSet_AtheromatousEmbolus: new Coding({
         code: "10690002",
         display: "Atheromatous embolus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MucinousAdenofibroma: Coding.FromStrict({
+    BodystructureCodeValueSet_MucinousAdenofibroma: new Coding({
         code: "10705005",
         display: "Mucinous adenofibroma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MicronodularRegeneration: Coding.FromStrict({
+    BodystructureCodeValueSet_MicronodularRegeneration: new Coding({
         code: "10873006",
         display: "Micronodular regeneration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AmeloblasticFibroma: Coding.FromStrict({
+    BodystructureCodeValueSet_AmeloblasticFibroma: new Coding({
         code: "11063000",
         display: "Ameloblastic fibroma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_RacemoseHemangioma: Coding.FromStrict({
+    BodystructureCodeValueSet_RacemoseHemangioma: new Coding({
         code: "11071001",
         display: "Racemose hemangioma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MixedLiposarcoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MixedLiposarcoma: new Coding({
         code: "11073003",
         display: "Mixed liposarcoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NeuronalAchromasia: Coding.FromStrict({
+    BodystructureCodeValueSet_NeuronalAchromasia: new Coding({
         code: "11080001",
         display: "Neuronal achromasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EpithelioidCellNevus: Coding.FromStrict({
+    BodystructureCodeValueSet_EpithelioidCellNevus: new Coding({
         code: "11099005",
         display: "Epithelioid cell nevus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Dehiscence: Coding.FromStrict({
+    BodystructureCodeValueSet_Dehiscence: new Coding({
         code: "11108009",
         display: "Dehiscence",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Dyskaryosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Dyskaryosis: new Coding({
         code: "11117009",
         display: "Dyskaryosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AbnormallyShortGrowth: Coding.FromStrict({
+    BodystructureCodeValueSet_AbnormallyShortGrowth: new Coding({
         code: "11182007",
         display: "Abnormally short growth",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_InterstitialEmphysema: Coding.FromStrict({
+    BodystructureCodeValueSet_InterstitialEmphysema: new Coding({
         code: "11211003",
         display: "Interstitial emphysema",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChronicMembranousInflammation: Coding.FromStrict({
+    BodystructureCodeValueSet_ChronicMembranousInflammation: new Coding({
         code: "11224003",
         display: "Chronic membranous inflammation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ClosedDislocationIncomplete: Coding.FromStrict({
+    BodystructureCodeValueSet_ClosedDislocationIncomplete: new Coding({
         code: "11284000",
         display: "Closed dislocation, incomplete",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AcidophilicBody: Coding.FromStrict({
+    BodystructureCodeValueSet_AcidophilicBody: new Coding({
         code: "1129000",
         display: "Acidophilic body",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ModerateSquamousCellAtypia: Coding.FromStrict({
+    BodystructureCodeValueSet_ModerateSquamousCellAtypia: new Coding({
         code: "1138003",
         display: "Moderate squamous cell atypia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CapillaryLymphangioma: Coding.FromStrict({
+    BodystructureCodeValueSet_CapillaryLymphangioma: new Coding({
         code: "11467009",
         display: "Capillary lymphangioma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HilusCellTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_HilusCellTumor: new Coding({
         code: "11506001",
         display: "Hilus cell tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AlgorMortis: Coding.FromStrict({
+    BodystructureCodeValueSet_AlgorMortis: new Coding({
         code: "11514007",
         display: "Algor mortis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Mucinosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Mucinosis: new Coding({
         code: "11528001",
         display: "Mucinosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ArteriovenousAneurysm: Coding.FromStrict({
+    BodystructureCodeValueSet_ArteriovenousAneurysm: new Coding({
         code: "11556006",
         display: "Arteriovenous aneurysm",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Bubo: Coding.FromStrict({
+    BodystructureCodeValueSet_Bubo: new Coding({
         code: "11585000",
         display: "Bubo",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GunpowderBurn: Coding.FromStrict({
+    BodystructureCodeValueSet_GunpowderBurn: new Coding({
         code: "11607000",
         display: "Gunpowder burn",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Puncture: Coding.FromStrict({
+    BodystructureCodeValueSet_Puncture: new Coding({
         code: "11639007",
         display: "Puncture",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GiantHypertrophy: Coding.FromStrict({
+    BodystructureCodeValueSet_GiantHypertrophy: new Coding({
         code: "11650005",
         display: "Giant hypertrophy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AdenoidCysticCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_AdenoidCysticCarcinoma: new Coding({
         code: "11671000",
         display: "Adenoid cystic carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChromosomeMosaicism: Coding.FromStrict({
+    BodystructureCodeValueSet_ChromosomeMosaicism: new Coding({
         code: "11704001",
         display: "Chromosome mosaicism",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MesoblasticNephroma: Coding.FromStrict({
+    BodystructureCodeValueSet_MesoblasticNephroma: new Coding({
         code: "11793003",
         display: "Mesoblastic nephroma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FibrousNodule: Coding.FromStrict({
+    BodystructureCodeValueSet_FibrousNodule: new Coding({
         code: "11854003",
         display: "Fibrous nodule",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SutureLineOfSkin: Coding.FromStrict({
+    BodystructureCodeValueSet_SutureLineOfSkin: new Coding({
         code: "11858000",
         display: "Suture line of skin",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SuperiorOpenDislocation: Coding.FromStrict({
+    BodystructureCodeValueSet_SuperiorOpenDislocation: new Coding({
         code: "1188006",
         display: "Superior open dislocation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalHyperrotation: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalHyperrotation: new Coding({
         code: "11884006",
         display: "Congenital hyperrotation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Abiotrophy: Coding.FromStrict({
+    BodystructureCodeValueSet_Abiotrophy: new Coding({
         code: "11889001",
         display: "Abiotrophy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AcquiredValgusDeformity: Coding.FromStrict({
+    BodystructureCodeValueSet_AcquiredValgusDeformity: new Coding({
         code: "11904005",
         display: "Acquired valgus deformity",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BinucleatedPlasmablast: Coding.FromStrict({
+    BodystructureCodeValueSet_BinucleatedPlasmablast: new Coding({
         code: "11908008",
         display: "Binucleated plasmablast",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Ganglioneuromatosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Ganglioneuromatosis: new Coding({
         code: "12060004",
         display: "Ganglioneuromatosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EmbryonicCyst: Coding.FromStrict({
+    BodystructureCodeValueSet_EmbryonicCyst: new Coding({
         code: "12143007",
         display: "Embryonic cyst",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Lymphocyst: Coding.FromStrict({
+    BodystructureCodeValueSet_Lymphocyst: new Coding({
         code: "12167004",
         display: "Lymphocyst",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GranularCellTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_GranularCellTumor: new Coding({
         code: "12169001",
         display: "Granular cell tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Rosette: Coding.FromStrict({
+    BodystructureCodeValueSet_Rosette: new Coding({
         code: "12170000",
         display: "Rosette",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FractureUnunitedStellate: Coding.FromStrict({
+    BodystructureCodeValueSet_FractureUnunitedStellate: new Coding({
         code: "12191008",
         display: "Fracture, ununited, stellate",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChiefCellAdenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_ChiefCellAdenoma: new Coding({
         code: "12205003",
         display: "Chief cell adenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ErythrocyteAbnormality: Coding.FromStrict({
+    BodystructureCodeValueSet_ErythrocyteAbnormality: new Coding({
         code: "12222001",
         display: "Erythrocyte abnormality",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_RoundCellOsteosarcoma: Coding.FromStrict({
+    BodystructureCodeValueSet_RoundCellOsteosarcoma: new Coding({
         code: "12302002",
         display: "Round cell osteosarcoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantAndroblastoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantAndroblastoma: new Coding({
         code: "12323008",
         display: "Malignant androblastoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_RetinoblastomaUndifferentiated: Coding.FromStrict({
+    BodystructureCodeValueSet_RetinoblastomaUndifferentiated: new Coding({
         code: "12354007",
         display: "Retinoblastoma - undifferentiated",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Purpura: Coding.FromStrict({
+    BodystructureCodeValueSet_Purpura: new Coding({
         code: "12393003",
         display: "Purpura",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PapillaryUrothelialCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_PapillaryUrothelialCarcinoma: new Coding({
         code: "12400006",
         display: "Papillary urothelial carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Scar: Coding.FromStrict({
+    BodystructureCodeValueSet_Scar: new Coding({
         code: "12402003",
         display: "Scar",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_TrophicGangrene: Coding.FromStrict({
+    BodystructureCodeValueSet_TrophicGangrene: new Coding({
         code: "12404002",
         display: "Trophic gangrene",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MicroinvasiveSquamousCellCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MicroinvasiveSquamousCellCarcinoma: new Coding({
         code: "12478003",
         display: "Microinvasive squamous cell carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AcquiredAbsence: Coding.FromStrict({
+    BodystructureCodeValueSet_AcquiredAbsence: new Coding({
         code: "12535006",
         display: "Acquired absence",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MuscleFiberAtrophyTypeII: Coding.FromStrict({
+    BodystructureCodeValueSet_MuscleFiberAtrophyTypeII: new Coding({
         code: "12540003",
         display: "Muscle fiber atrophy, type II",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PrimarySequestrum: Coding.FromStrict({
+    BodystructureCodeValueSet_PrimarySequestrum: new Coding({
         code: "12560006",
         display: "Primary sequestrum",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_InternalFistula: Coding.FromStrict({
+    BodystructureCodeValueSet_InternalFistula: new Coding({
         code: "12582004",
         display: "Internal fistula",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LobularAdenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_LobularAdenoma: new Coding({
         code: "12583009",
         display: "Lobular adenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ClearCellSarcomaExceptOfKidneyM89643: Coding.FromStrict({
+    BodystructureCodeValueSet_ClearCellSarcomaExceptOfKidneyM89643: new Coding({
         code: "12622007",
         display: "Clear cell sarcoma (except of Kidney M-89643)",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FibroblasticOsteosarcoma: Coding.FromStrict({
+    BodystructureCodeValueSet_FibroblasticOsteosarcoma: new Coding({
         code: "12690005",
         display: "Fibroblastic osteosarcoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Microcalcification: Coding.FromStrict({
+    BodystructureCodeValueSet_Microcalcification: new Coding({
         code: "12747003",
         display: "Microcalcification",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NonsuppurativeInflammation: Coding.FromStrict({
+    BodystructureCodeValueSet_NonsuppurativeInflammation: new Coding({
         code: "12794006",
         display: "Nonsuppurative inflammation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MultipleInjuries: Coding.FromStrict({
+    BodystructureCodeValueSet_MultipleInjuries: new Coding({
         code: "12835000",
         display: "Multiple injuries",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Varix: Coding.FromStrict({
+    BodystructureCodeValueSet_Varix: new Coding({
         code: "12856003",
         display: "Varix",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SweatGlandTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_SweatGlandTumor: new Coding({
         code: "12933008",
         display: "Sweat gland tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PrimitivePolarSpongioblastomaObs: Coding.FromStrict({
+    BodystructureCodeValueSet_PrimitivePolarSpongioblastomaObs: new Coding({
         code: "12943006",
         display: "Primitive polar spongioblastoma [obs]",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AcidChemicalBurn: Coding.FromStrict({
+    BodystructureCodeValueSet_AcidChemicalBurn: new Coding({
         code: "12944000",
         display: "Acid chemical burn",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DislocationMultipleOpen: Coding.FromStrict({
+    BodystructureCodeValueSet_DislocationMultipleOpen: new Coding({
         code: "12973002",
         display: "Dislocation, multiple, open",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Neovascularization: Coding.FromStrict({
+    BodystructureCodeValueSet_Neovascularization: new Coding({
         code: "13018008",
         display: "Neovascularization",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PsammomaBodies: Coding.FromStrict({
+    BodystructureCodeValueSet_PsammomaBodies: new Coding({
         code: "13062004",
         display: "Psammoma bodies",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_WolffianDuctTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_WolffianDuctTumor: new Coding({
         code: "13071008",
         display: "Wolffian duct tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FractureOpenIncomplete: Coding.FromStrict({
+    BodystructureCodeValueSet_FractureOpenIncomplete: new Coding({
         code: "13129009",
         display: "Fracture, open, incomplete",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_InjectionSite: Coding.FromStrict({
+    BodystructureCodeValueSet_InjectionSite: new Coding({
         code: "13136005",
         display: "Injection site",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantGranularCellTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantGranularCellTumor: new Coding({
         code: "13238004",
         display: "Malignant granular cell tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Comminuted: Coding.FromStrict({
+    BodystructureCodeValueSet_Comminuted: new Coding({
         code: "13321001",
         display: "Comminuted",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Atrophic: Coding.FromStrict({
+    BodystructureCodeValueSet_Atrophic: new Coding({
         code: "13331008",
         display: "Atrophic",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BCCBasalCellCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_BCCBasalCellCarcinoma: new Coding({
         code: "1338007",
         display: "BCC - Basal cell carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Pseudocyst: Coding.FromStrict({
+    BodystructureCodeValueSet_Pseudocyst: new Coding({
         code: "13467000",
         display: "Pseudocyst",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Pannus: Coding.FromStrict({
+    BodystructureCodeValueSet_Pannus: new Coding({
         code: "13485007",
         display: "Pannus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MastCellSarcoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MastCellSarcoma: new Coding({
         code: "13583002",
         display: "Mast cell sarcoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalDecreaseInCellularity: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalDecreaseInCellularity: new Coding({
         code: "13593009",
         display: "Congenital decrease in cellularity",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GunshotWoundContact: Coding.FromStrict({
+    BodystructureCodeValueSet_GunshotWoundContact: new Coding({
         code: "13599008",
         display: "Gunshot wound, contact",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PartialObstruction: Coding.FromStrict({
+    BodystructureCodeValueSet_PartialObstruction: new Coding({
         code: "13705009",
         display: "Partial obstruction",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Thromboembolus: Coding.FromStrict({
+    BodystructureCodeValueSet_Thromboembolus: new Coding({
         code: "13713005",
         display: "Thromboembolus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalDislocation: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalDislocation: new Coding({
         code: "13810000",
         display: "Congenital dislocation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HypertrophyOfBone: Coding.FromStrict({
+    BodystructureCodeValueSet_HypertrophyOfBone: new Coding({
         code: "13814009",
         display: "Hypertrophy of bone",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Glomangiosarcoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Glomangiosarcoma: new Coding({
         code: "13875003",
         display: "Glomangiosarcoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FatLadenMacrophage: Coding.FromStrict({
+    BodystructureCodeValueSet_FatLadenMacrophage: new Coding({
         code: "13901007",
         display: "Fat-laden macrophage",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalTurningUpward: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalTurningUpward: new Coding({
         code: "13908001",
         display: "Congenital turning upward",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Wound: Coding.FromStrict({
+    BodystructureCodeValueSet_Wound: new Coding({
         code: "13924000",
         display: "Wound",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DecalcifiedStructure: Coding.FromStrict({
+    BodystructureCodeValueSet_DecalcifiedStructure: new Coding({
         code: "14093007",
         display: "Decalcified structure",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_RacemoseAneurysm: Coding.FromStrict({
+    BodystructureCodeValueSet_RacemoseAneurysm: new Coding({
         code: "14156004",
         display: "Racemose aneurysm",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_KoplikSpot: Coding.FromStrict({
+    BodystructureCodeValueSet_KoplikSpot: new Coding({
         code: "14166007",
         display: "Koplik spot",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PseudopalisadeFormation: Coding.FromStrict({
+    BodystructureCodeValueSet_PseudopalisadeFormation: new Coding({
         code: "14212006",
         display: "Pseudopalisade formation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_InternalSpontaneousFistula: Coding.FromStrict({
+    BodystructureCodeValueSet_InternalSpontaneousFistula: new Coding({
         code: "14217000",
         display: "Internal spontaneous fistula",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EmbryonalRhabdomyosarcomaPleomorphic: Coding.FromStrict({
+    BodystructureCodeValueSet_EmbryonalRhabdomyosarcomaPleomorphic: new Coding({
         code: "14269005",
         display: "Embryonal rhabdomyosarcoma, pleomorphic",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_M6B: Coding.FromStrict({
+    BodystructureCodeValueSet_M6B: new Coding({
         code: "14317002",
         display: "M6B",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Angiomatosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Angiomatosis: new Coding({
         code: "14350002",
         display: "Angiomatosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_KoilocytoticAtypia: Coding.FromStrict({
+    BodystructureCodeValueSet_KoilocytoticAtypia: new Coding({
         code: "14391000",
         display: "Koilocytotic atypia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChromophobeCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_ChromophobeCarcinoma: new Coding({
         code: "1443001",
         display: "Chromophobe carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GeneralizedKeratoacanthoma: Coding.FromStrict({
+    BodystructureCodeValueSet_GeneralizedKeratoacanthoma: new Coding({
         code: "14442007",
         display: "Generalized keratoacanthoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MeningealSarcomatosis: Coding.FromStrict({
+    BodystructureCodeValueSet_MeningealSarcomatosis: new Coding({
         code: "14494009",
         display: "Meningeal sarcomatosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ColloidMilium: Coding.FromStrict({
+    BodystructureCodeValueSet_ColloidMilium: new Coding({
         code: "145009",
         display: "Colloid milium",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HodgkinLymphoma: Coding.FromStrict({
+    BodystructureCodeValueSet_HodgkinLymphoma: new Coding({
         code: "14537002",
         display: "Hodgkin lymphoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChronicFibrinousInflammation: Coding.FromStrict({
+    BodystructureCodeValueSet_ChronicFibrinousInflammation: new Coding({
         code: "1454006",
         display: "Chronic fibrinous inflammation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CysticDegeneration: Coding.FromStrict({
+    BodystructureCodeValueSet_CysticDegeneration: new Coding({
         code: "14696003",
         display: "Cystic degeneration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_JetLesion: Coding.FromStrict({
+    BodystructureCodeValueSet_JetLesion: new Coding({
         code: "14737000",
         display: "Jet lesion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FractureDelayedUnionOblique: Coding.FromStrict({
+    BodystructureCodeValueSet_FractureDelayedUnionOblique: new Coding({
         code: "14797003",
         display: "Fracture, delayed union, oblique",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NeoplasmMetastatic: Coding.FromStrict({
+    BodystructureCodeValueSet_NeoplasmMetastatic: new Coding({
         code: "14799000",
         display: "Neoplasm, metastatic",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Triploidy: Coding.FromStrict({
+    BodystructureCodeValueSet_Triploidy: new Coding({
         code: "14847005",
         display: "Triploidy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_RasmussenQuoteSAneurysm: Coding.FromStrict({
+    BodystructureCodeValueSet_RasmussenQuoteSAneurysm: new Coding({
         code: "14889002",
         display: "Rasmussen's aneurysm",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_VesiculobullousRash: Coding.FromStrict({
+    BodystructureCodeValueSet_VesiculobullousRash: new Coding({
         code: "14912003",
         display: "Vesiculobullous rash",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MutilatingWound: Coding.FromStrict({
+    BodystructureCodeValueSet_MutilatingWound: new Coding({
         code: "14962008",
         display: "Mutilating wound",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChondrosarcomaMorphology: Coding.FromStrict({
+    BodystructureCodeValueSet_ChondrosarcomaMorphology: new Coding({
         code: "14990007",
         display: "Chondrosarcoma morphology",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NeurogenicUlcer: Coding.FromStrict({
+    BodystructureCodeValueSet_NeurogenicUlcer: new Coding({
         code: "15074003",
         display: "Neurogenic ulcer",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_InvertedKeratosis: Coding.FromStrict({
+    BodystructureCodeValueSet_InvertedKeratosis: new Coding({
         code: "15112009",
         display: "Inverted keratosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MelanoticNeuroectodermalTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_MelanoticNeuroectodermalTumor: new Coding({
         code: "1513001",
         display: "Melanotic neuroectodermal tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AdenocarcinomaWithSquamousMetaplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_AdenocarcinomaWithSquamousMetaplasia: new Coding({
         code: "15176003",
         display: "Adenocarcinoma with squamous metaplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Plaque: Coding.FromStrict({
+    BodystructureCodeValueSet_Plaque: new Coding({
         code: "1522000",
         display: "Plaque",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FactitialUlcer: Coding.FromStrict({
+    BodystructureCodeValueSet_FactitialUlcer: new Coding({
         code: "15304008",
         display: "Factitial ulcer",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SpontaneousPerforation: Coding.FromStrict({
+    BodystructureCodeValueSet_SpontaneousPerforation: new Coding({
         code: "15418000",
         display: "Spontaneous perforation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Hypoploidy: Coding.FromStrict({
+    BodystructureCodeValueSet_Hypoploidy: new Coding({
         code: "15486006",
         display: "Hypoploidy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SuperficialUlcer: Coding.FromStrict({
+    BodystructureCodeValueSet_SuperficialUlcer: new Coding({
         code: "15498001",
         display: "Superficial ulcer",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MolluscumBodies: Coding.FromStrict({
+    BodystructureCodeValueSet_MolluscumBodies: new Coding({
         code: "15503003",
         display: "Molluscum bodies",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CombinedAbnormalCurvature: Coding.FromStrict({
+    BodystructureCodeValueSet_CombinedAbnormalCurvature: new Coding({
         code: "15519005",
         display: "Combined abnormal curvature",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Obliteration: Coding.FromStrict({
+    BodystructureCodeValueSet_Obliteration: new Coding({
         code: "15524008",
         display: "Obliteration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BallThrombus: Coding.FromStrict({
+    BodystructureCodeValueSet_BallThrombus: new Coding({
         code: "15556001",
         display: "Ball thrombus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Microlithiasis: Coding.FromStrict({
+    BodystructureCodeValueSet_Microlithiasis: new Coding({
         code: "15588009",
         display: "Microlithiasis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SwollenSarcoplasmicReticulum: Coding.FromStrict({
+    BodystructureCodeValueSet_SwollenSarcoplasmicReticulum: new Coding({
         code: "1561008",
         display: "Swollen sarcoplasmic reticulum",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HepatocellularCarcinomaFibrolamellar: Coding.FromStrict({
+    BodystructureCodeValueSet_HepatocellularCarcinomaFibrolamellar: new Coding({
         code: "15619004",
         display: "Hepatocellular carcinoma, fibrolamellar",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PrimarySerousPapillaryCarcinomaOfPeritoneum: Coding.FromStrict({
+    BodystructureCodeValueSet_PrimarySerousPapillaryCarcinomaOfPeritoneum: new Coding({
         code: "15674004",
         display: "Primary serous papillary carcinoma of peritoneum",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Tortuosity: Coding.FromStrict({
+    BodystructureCodeValueSet_Tortuosity: new Coding({
         code: "15690004",
         display: "Tortuosity",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BenignFibrousMesothelioma: Coding.FromStrict({
+    BodystructureCodeValueSet_BenignFibrousMesothelioma: new Coding({
         code: "15702005",
         display: "Benign fibrous mesothelioma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SubependymalGiantCellAstrocytoma: Coding.FromStrict({
+    BodystructureCodeValueSet_SubependymalGiantCellAstrocytoma: new Coding({
         code: "1586004",
         display: "Subependymal giant cell astrocytoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChromosomalTranslocation: Coding.FromStrict({
+    BodystructureCodeValueSet_ChromosomalTranslocation: new Coding({
         code: "15897004",
         display: "Chromosomal translocation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BridgingNecrosis: Coding.FromStrict({
+    BodystructureCodeValueSet_BridgingNecrosis: new Coding({
         code: "15904002",
         display: "Bridging necrosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalVascularProliferation: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalVascularProliferation: new Coding({
         code: "15937000",
         display: "Congenital vascular proliferation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantThymoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantThymoma: new Coding({
         code: "15949004",
         display: "Malignant thymoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GiantCellHistiocytoma: Coding.FromStrict({
+    BodystructureCodeValueSet_GiantCellHistiocytoma: new Coding({
         code: "15960008",
         display: "Giant cell histiocytoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HypersegmentationOfNucleus: Coding.FromStrict({
+    BodystructureCodeValueSet_HypersegmentationOfNucleus: new Coding({
         code: "15967006",
         display: "Hypersegmentation of nucleus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CementalDysplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_CementalDysplasia: new Coding({
         code: "15988002",
         display: "Cemental dysplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FibrinDeposition: Coding.FromStrict({
+    BodystructureCodeValueSet_FibrinDeposition: new Coding({
         code: "16080000",
         display: "Fibrin deposition",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MyxoidLeiomyosarcoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MyxoidLeiomyosarcoma: new Coding({
         code: "16090008",
         display: "Myxoid leiomyosarcoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ThermalInjury: Coding.FromStrict({
+    BodystructureCodeValueSet_ThermalInjury: new Coding({
         code: "161006",
         display: "Thermal injury",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SegmentalGlomerulosclerosis: Coding.FromStrict({
+    BodystructureCodeValueSet_SegmentalGlomerulosclerosis: new Coding({
         code: "16104005",
         display: "Segmental glomerulosclerosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AdultRhabdomyoma: Coding.FromStrict({
+    BodystructureCodeValueSet_AdultRhabdomyoma: new Coding({
         code: "16107003",
         display: "Adult rhabdomyoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_OssifiedNodule: Coding.FromStrict({
+    BodystructureCodeValueSet_OssifiedNodule: new Coding({
         code: "16163002",
         display: "Ossified nodule",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GastrinCellTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_GastrinCellTumor: new Coding({
         code: "16189002",
         display: "Gastrin cell tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HerringQuoteSBodies: Coding.FromStrict({
+    BodystructureCodeValueSet_HerringQuoteSBodies: new Coding({
         code: "16190006",
         display: "Herring's bodies",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GaucherCell: Coding.FromStrict({
+    BodystructureCodeValueSet_GaucherCell: new Coding({
         code: "16216007",
         display: "Gaucher cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MyxopapillaryEpendymoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MyxopapillaryEpendymoma: new Coding({
         code: "1623000",
         display: "Myxopapillary ependymoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Fenestration: Coding.FromStrict({
+    BodystructureCodeValueSet_Fenestration: new Coding({
         code: "16255008",
         display: "Fenestration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Collapse: Coding.FromStrict({
+    BodystructureCodeValueSet_Collapse: new Coding({
         code: "16277007",
         display: "Collapse",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalOpacity: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalOpacity: new Coding({
         code: "16301006",
         display: "Congenital opacity",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_InappropriateLobularActivityOfBreast: Coding.FromStrict({
+    BodystructureCodeValueSet_InappropriateLobularActivityOfBreast: new Coding({
         code: "16479008",
         display: "Inappropriate lobular activity of breast",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_RussellBody: Coding.FromStrict({
+    BodystructureCodeValueSet_RussellBody: new Coding({
         code: "16483008",
         display: "Russell body",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BenignPhyllodesTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_BenignPhyllodesTumor: new Coding({
         code: "16566002",
         display: "Benign phyllodes tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PosteriorOpenDislocation: Coding.FromStrict({
+    BodystructureCodeValueSet_PosteriorOpenDislocation: new Coding({
         code: "16578003",
         display: "Posterior open dislocation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Separation: Coding.FromStrict({
+    BodystructureCodeValueSet_Separation: new Coding({
         code: "16640008",
         display: "Separation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Anasarca: Coding.FromStrict({
+    BodystructureCodeValueSet_Anasarca: new Coding({
         code: "16740003",
         display: "Anasarca",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PleomorphicCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_PleomorphicCarcinoma: new Coding({
         code: "16741004",
         display: "Pleomorphic carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChronicEosinophilicInflammation: Coding.FromStrict({
+    BodystructureCodeValueSet_ChronicEosinophilicInflammation: new Coding({
         code: "16759001",
         display: "Chronic eosinophilic inflammation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantCarotidBodyTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantCarotidBodyTumor: new Coding({
         code: "16822006",
         display: "Malignant carotid body tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ClassicalHodgkinLymphomaLymphocyteDepletionDiffuseFibrosis: Coding.FromStrict({
+    BodystructureCodeValueSet_ClassicalHodgkinLymphomaLymphocyteDepletionDiffuseFibrosis: new Coding({
         code: "16893006",
         display: "Classical Hodgkin lymphoma, lymphocyte depletion, diffuse fibrosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AcralLentiginousMelanomaMalignant: Coding.FromStrict({
+    BodystructureCodeValueSet_AcralLentiginousMelanomaMalignant: new Coding({
         code: "16974005",
         display: "Acral lentiginous melanoma, malignant",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FoamCell: Coding.FromStrict({
+    BodystructureCodeValueSet_FoamCell: new Coding({
         code: "16980002",
         display: "Foam cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LateralOpenDislocation: Coding.FromStrict({
+    BodystructureCodeValueSet_LateralOpenDislocation: new Coding({
         code: "17015005",
         display: "Lateral open dislocation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SpillageOfFeces: Coding.FromStrict({
+    BodystructureCodeValueSet_SpillageOfFeces: new Coding({
         code: "17201003",
         display: "Spillage of feces",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CarcinomaInPleomorphicAdenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_CarcinomaInPleomorphicAdenoma: new Coding({
         code: "17264009",
         display: "Carcinoma in pleomorphic adenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FatEmbolus: Coding.FromStrict({
+    BodystructureCodeValueSet_FatEmbolus: new Coding({
         code: "17289003",
         display: "Fat embolus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CerebellarSarcoma: Coding.FromStrict({
+    BodystructureCodeValueSet_CerebellarSarcoma: new Coding({
         code: "17302008",
         display: "Cerebellar sarcoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Transudate: Coding.FromStrict({
+    BodystructureCodeValueSet_Transudate: new Coding({
         code: "17307002",
         display: "Transudate",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalNonRotation: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalNonRotation: new Coding({
         code: "17351006",
         display: "Congenital non-rotation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Anteversion: Coding.FromStrict({
+    BodystructureCodeValueSet_Anteversion: new Coding({
         code: "1736008",
         display: "Anteversion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CapillaryHemangiomaOfGranulationTissueType: Coding.FromStrict({
+    BodystructureCodeValueSet_CapillaryHemangiomaOfGranulationTissueType: new Coding({
         code: "17372009",
         display: "Capillary hemangioma of granulation tissue type",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AtypicalGlandularHyperplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_AtypicalGlandularHyperplasia: new Coding({
         code: "17474009",
         display: "Atypical glandular hyperplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ClearCellAdenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_ClearCellAdenoma: new Coding({
         code: "1752006",
         display: "Clear cell adenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EmphysematousBleb: Coding.FromStrict({
+    BodystructureCodeValueSet_EmphysematousBleb: new Coding({
         code: "17569003",
         display: "Emphysematous bleb",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Metaplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_Metaplasia: new Coding({
         code: "17665002",
         display: "Metaplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AccumulationOfFluid: Coding.FromStrict({
+    BodystructureCodeValueSet_AccumulationOfFluid: new Coding({
         code: "17672001",
         display: "Accumulation of fluid",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ProteinCast: Coding.FromStrict({
+    BodystructureCodeValueSet_ProteinCast: new Coding({
         code: "17684004",
         display: "Protein cast",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChediakHigashiCell: Coding.FromStrict({
+    BodystructureCodeValueSet_ChediakHigashiCell: new Coding({
         code: "17734002",
         display: "Chédiak-Higashi cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CurvilinearBodies: Coding.FromStrict({
+    BodystructureCodeValueSet_CurvilinearBodies: new Coding({
         code: "17781001",
         display: "Curvilinear bodies",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AcuteNonLymphocyticLeukemia: Coding.FromStrict({
+    BodystructureCodeValueSet_AcuteNonLymphocyticLeukemia: new Coding({
         code: "17788007",
         display: "Acute non-lymphocytic leukemia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SudanophilicStainReaction: Coding.FromStrict({
+    BodystructureCodeValueSet_SudanophilicStainReaction: new Coding({
         code: "17815009",
         display: "Sudanophilic stain reaction",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_RadiationInjuryWithFibrosis: Coding.FromStrict({
+    BodystructureCodeValueSet_RadiationInjuryWithFibrosis: new Coding({
         code: "1791001",
         display: "Radiation injury with fibrosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Neuronevus: Coding.FromStrict({
+    BodystructureCodeValueSet_Neuronevus: new Coding({
         code: "17930004",
         display: "Neuronevus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Arteriolosclerosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Arteriolosclerosis: new Coding({
         code: "17941002",
         display: "Arteriolosclerosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MucinousDegeneration: Coding.FromStrict({
+    BodystructureCodeValueSet_MucinousDegeneration: new Coding({
         code: "17968002",
         display: "Mucinous degeneration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Phlebosclerosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Phlebosclerosis: new Coding({
         code: "18016009",
         display: "Phlebosclerosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChoroidPlexusPapillomaNoICDOSubtype: Coding.FromStrict({
+    BodystructureCodeValueSet_ChoroidPlexusPapillomaNoICDOSubtype: new Coding({
         code: "18021007",
         display: "Choroid plexus papilloma, no ICD-O subtype",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_KeratinizingSquamousCellCarcinomaLargeCell: Coding.FromStrict({
+    BodystructureCodeValueSet_KeratinizingSquamousCellCarcinomaLargeCell: new Coding({
         code: "18048008",
         display: "Keratinizing squamous cell carcinoma - large cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Eruption: Coding.FromStrict({
+    BodystructureCodeValueSet_Eruption: new Coding({
         code: "1806006",
         display: "Eruption",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Achromasia: Coding.FromStrict({
+    BodystructureCodeValueSet_Achromasia: new Coding({
         code: "18064000",
         display: "Achromasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Micronucleus: Coding.FromStrict({
+    BodystructureCodeValueSet_Micronucleus: new Coding({
         code: "18072003",
         display: "Micronucleus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantEndometrioidCystadenofibroma: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantEndometrioidCystadenofibroma: new Coding({
         code: "18105004",
         display: "Malignant endometrioid cystadenofibroma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PathologicallyCalcifiedStructure: Coding.FromStrict({
+    BodystructureCodeValueSet_PathologicallyCalcifiedStructure: new Coding({
         code: "18115005",
         display: "Pathologically calcified structure",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Diverticulitis: Coding.FromStrict({
+    BodystructureCodeValueSet_Diverticulitis: new Coding({
         code: "18126004",
         display: "Diverticulitis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GunshotWoundExit: Coding.FromStrict({
+    BodystructureCodeValueSet_GunshotWoundExit: new Coding({
         code: "18130001",
         display: "Gunshot wound, exit",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BrownEdema: Coding.FromStrict({
+    BodystructureCodeValueSet_BrownEdema: new Coding({
         code: "18174004",
         display: "Brown edema",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GuddenAtrophy: Coding.FromStrict({
+    BodystructureCodeValueSet_GuddenAtrophy: new Coding({
         code: "18189008",
         display: "Gudden atrophy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Canalization: Coding.FromStrict({
+    BodystructureCodeValueSet_Canalization: new Coding({
         code: "182000",
         display: "Canalization",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NonCommunicatingCerebrospinalFluidRetention: Coding.FromStrict({
+    BodystructureCodeValueSet_NonCommunicatingCerebrospinalFluidRetention: new Coding({
         code: "18203003",
         display: "Non-communicating cerebrospinal fluid retention",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DoubleStructure: Coding.FromStrict({
+    BodystructureCodeValueSet_DoubleStructure: new Coding({
         code: "18295000",
         display: "Double structure",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_StellateFracture: Coding.FromStrict({
+    BodystructureCodeValueSet_StellateFracture: new Coding({
         code: "18334002",
         display: "Stellate fracture",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_QueyratErythroplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_QueyratErythroplasia: new Coding({
         code: "18348002",
         display: "Queyrat erythroplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AdrenalCorticalAdenomaMorphology: Coding.FromStrict({
+    BodystructureCodeValueSet_AdrenalCorticalAdenomaMorphology: new Coding({
         code: "18365006",
         display: "Adrenal cortical adenoma morphology",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantMelanomaInMelanosis: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantMelanomaInMelanosis: new Coding({
         code: "18450009",
         display: "Malignant melanoma in melanosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AnomalousOriginOfVein: Coding.FromStrict({
+    BodystructureCodeValueSet_AnomalousOriginOfVein: new Coding({
         code: "18465005",
         display: "Anomalous origin of vein",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AcuteMembranousInflammation: Coding.FromStrict({
+    BodystructureCodeValueSet_AcuteMembranousInflammation: new Coding({
         code: "18498000",
         display: "Acute membranous inflammation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AnastomosisEndToEnd: Coding.FromStrict({
+    BodystructureCodeValueSet_AnastomosisEndToEnd: new Coding({
         code: "18568009",
         display: "Anastomosis, end to end",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SynovialSarcomaBiphasic: Coding.FromStrict({
+    BodystructureCodeValueSet_SynovialSarcomaBiphasic: new Coding({
         code: "18588008",
         display: "Synovial sarcoma - biphasic",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Depigmentation: Coding.FromStrict({
+    BodystructureCodeValueSet_Depigmentation: new Coding({
         code: "18655006",
         display: "Depigmentation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_IntraductalCarcinomaAndLobularCarcinomaInSitu: Coding.FromStrict({
+    BodystructureCodeValueSet_IntraductalCarcinomaAndLobularCarcinomaInSitu: new Coding({
         code: "18680006",
         display: "Intraductal carcinoma and lobular carcinoma in situ",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HyalineBody: Coding.FromStrict({
+    BodystructureCodeValueSet_HyalineBody: new Coding({
         code: "18695008",
         display: "Hyaline body",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CCellTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_CCellTumor: new Coding({
         code: "18727002",
         display: "C cell tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SclerosingLipogranuloma: Coding.FromStrict({
+    BodystructureCodeValueSet_SclerosingLipogranuloma: new Coding({
         code: "18765009",
         display: "Sclerosing lipogranuloma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_InvasiveHydatidiformMole: Coding.FromStrict({
+    BodystructureCodeValueSet_InvasiveHydatidiformMole: new Coding({
         code: "18799007",
         display: "Invasive hydatidiform mole",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ExternalFistula: Coding.FromStrict({
+    BodystructureCodeValueSet_ExternalFistula: new Coding({
         code: "18802003",
         display: "External fistula",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantStrumaOvarii: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantStrumaOvarii: new Coding({
         code: "18854008",
         display: "Malignant struma ovarii",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantGranulosaCellTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantGranulosaCellTumor: new Coding({
         code: "18861007",
         display: "Malignant granulosa cell tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DenseTubules: Coding.FromStrict({
+    BodystructureCodeValueSet_DenseTubules: new Coding({
         code: "18915006",
         display: "Dense tubules",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CouncilmanBody: Coding.FromStrict({
+    BodystructureCodeValueSet_CouncilmanBody: new Coding({
         code: "18958005",
         display: "Councilman body",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AdrenalCorticalAdenomaClearCell: Coding.FromStrict({
+    BodystructureCodeValueSet_AdrenalCorticalAdenomaClearCell: new Coding({
         code: "18977007",
         display: "Adrenal cortical adenoma - clear cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HyalineDegeneration: Coding.FromStrict({
+    BodystructureCodeValueSet_HyalineDegeneration: new Coding({
         code: "19010006",
         display: "Hyaline degeneration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EpithelioidLeiomyoma: Coding.FromStrict({
+    BodystructureCodeValueSet_EpithelioidLeiomyoma: new Coding({
         code: "19071004",
         display: "Epithelioid leiomyoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SpontaneousClosedDislocation: Coding.FromStrict({
+    BodystructureCodeValueSet_SpontaneousClosedDislocation: new Coding({
         code: "19104009",
         display: "Spontaneous closed dislocation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Hyperorthokeratosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Hyperorthokeratosis: new Coding({
         code: "19128006",
         display: "Hyperorthokeratosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_TraumaticAbnormality: Coding.FromStrict({
+    BodystructureCodeValueSet_TraumaticAbnormality: new Coding({
         code: "19130008",
         display: "Traumatic abnormality",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FascialFibrosarcoma: Coding.FromStrict({
+    BodystructureCodeValueSet_FascialFibrosarcoma: new Coding({
         code: "19134004",
         display: "Fascial fibrosarcoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MaranticThrombus: Coding.FromStrict({
+    BodystructureCodeValueSet_MaranticThrombus: new Coding({
         code: "19137006",
         display: "Marantic thrombus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FBForeignBody: Coding.FromStrict({
+    BodystructureCodeValueSet_FBForeignBody: new Coding({
         code: "19227008",
         display: "FB - Foreign body",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BCellLymphomaNoICDOSubtype: Coding.FromStrict({
+    BodystructureCodeValueSet_BCellLymphomaNoICDOSubtype: new Coding({
         code: "1929004",
         display: "B-cell lymphoma, no ICD-O subtype",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CytoidBody: Coding.FromStrict({
+    BodystructureCodeValueSet_CytoidBody: new Coding({
         code: "19316008",
         display: "Cytoid body",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AdrenalCorticalAdenomaGlomerulosaCell: Coding.FromStrict({
+    BodystructureCodeValueSet_AdrenalCorticalAdenomaGlomerulosaCell: new Coding({
         code: "19329008",
         display: "Adrenal cortical adenoma - glomerulosa cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantLymphomaLymphoplasmacytic: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantLymphomaLymphoplasmacytic: new Coding({
         code: "19340000",
         display: "Malignant lymphoma, lymphoplasmacytic",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AcuteEmpyema: Coding.FromStrict({
+    BodystructureCodeValueSet_AcuteEmpyema: new Coding({
         code: "19365003",
         display: "Acute empyema",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SclerosingSegmentalGlomerulosclerosisWithHyalinosis: Coding.FromStrict({
+    BodystructureCodeValueSet_SclerosingSegmentalGlomerulosclerosisWithHyalinosis: new Coding({
         code: "19380009",
         display: "Sclerosing segmental glomerulosclerosis with hyalinosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_StainReaction: Coding.FromStrict({
+    BodystructureCodeValueSet_StainReaction: new Coding({
         code: "19436005",
         display: "Stain reaction",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FeatheryDegeneration: Coding.FromStrict({
+    BodystructureCodeValueSet_FeatheryDegeneration: new Coding({
         code: "19438006",
         display: "Feathery degeneration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MGMMeningioma: Coding.FromStrict({
+    BodystructureCodeValueSet_MGMMeningioma: new Coding({
         code: "19453003",
         display: "MGM - Meningioma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantTeratoblastoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantTeratoblastoma: new Coding({
         code: "19467007",
         display: "Malignant teratoblastoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SerofibrinousEffusion: Coding.FromStrict({
+    BodystructureCodeValueSet_SerofibrinousEffusion: new Coding({
         code: "19504001",
         display: "Serofibrinous effusion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalLevorotation: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalLevorotation: new Coding({
         code: "19561006",
         display: "Congenital levorotation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_OpenWoundsInvolvingMultipleBodyRegions: Coding.FromStrict({
+    BodystructureCodeValueSet_OpenWoundsInvolvingMultipleBodyRegions: new Coding({
         code: "19571008",
         display: "Open wounds involving multiple body regions",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Endoreduplication: Coding.FromStrict({
+    BodystructureCodeValueSet_Endoreduplication: new Coding({
         code: "19607003",
         display: "Endoreduplication",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LightningBurn: Coding.FromStrict({
+    BodystructureCodeValueSet_LightningBurn: new Coding({
         code: "19614001",
         display: "Lightning burn",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MucousCyst: Coding.FromStrict({
+    BodystructureCodeValueSet_MucousCyst: new Coding({
         code: "19633006",
         display: "Mucous cyst",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PyogranulomaGranulomaWithPus: Coding.FromStrict({
+    BodystructureCodeValueSet_PyogranulomaGranulomaWithPus: new Coding({
         code: "19643009",
         display: "Pyogranuloma, granuloma with pus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Micromyeloblast: Coding.FromStrict({
+    BodystructureCodeValueSet_Micromyeloblast: new Coding({
         code: "19651007",
         display: "Micromyeloblast",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_TubularAdenomaNoICDOSubtype: Coding.FromStrict({
+    BodystructureCodeValueSet_TubularAdenomaNoICDOSubtype: new Coding({
         code: "19665009",
         display: "Tubular adenoma, no ICD-O subtype",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PredominanceOfParabasalCells: Coding.FromStrict({
+    BodystructureCodeValueSet_PredominanceOfParabasalCells: new Coding({
         code: "19668006",
         display: "Predominance of parabasal cells",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ErythrocyteAgglutination: Coding.FromStrict({
+    BodystructureCodeValueSet_ErythrocyteAgglutination: new Coding({
         code: "19669003",
         display: "Erythrocyte agglutination",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Condyloma: Coding.FromStrict({
+    BodystructureCodeValueSet_Condyloma: new Coding({
         code: "19672005",
         display: "Condyloma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Stasis: Coding.FromStrict({
+    BodystructureCodeValueSet_Stasis: new Coding({
         code: "19685008",
         display: "Stasis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantGCellTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantGCellTumor: new Coding({
         code: "19756007",
         display: "Malignant G cell tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BrainSandCalcifiedStructure: Coding.FromStrict({
+    BodystructureCodeValueSet_BrainSandCalcifiedStructure: new Coding({
         code: "19795008",
         display: "Brain sand, calcified structure",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DeformingFibrosis: Coding.FromStrict({
+    BodystructureCodeValueSet_DeformingFibrosis: new Coding({
         code: "19836000",
         display: "Deforming fibrosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MPNSTMalignantPeripheralNerveSheathTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_MPNSTMalignantPeripheralNerveSheathTumor: new Coding({
         code: "19897006",
         display: "MPNST - Malignant peripheral nerve sheath tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_RetinoblastomaMorphology: Coding.FromStrict({
+    BodystructureCodeValueSet_RetinoblastomaMorphology: new Coding({
         code: "19906005",
         display: "Retinoblastoma - morphology",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ComplementDeposit: Coding.FromStrict({
+    BodystructureCodeValueSet_ComplementDeposit: new Coding({
         code: "19909003",
         display: "Complement deposit",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CrushingInjuryMorphology: Coding.FromStrict({
+    BodystructureCodeValueSet_CrushingInjuryMorphology: new Coding({
         code: "19921004",
         display: "Crushing injury (morphology)",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Fibromatosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Fibromatosis: new Coding({
         code: "19928005",
         display: "Fibromatosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Angiomyolipoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Angiomyolipoma: new Coding({
         code: "19929002",
         display: "Angiomyolipoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Lichenification: Coding.FromStrict({
+    BodystructureCodeValueSet_Lichenification: new Coding({
         code: "19940005",
         display: "Lichenification",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ElasticVascularSclerosis: Coding.FromStrict({
+    BodystructureCodeValueSet_ElasticVascularSclerosis: new Coding({
         code: "19952003",
         display: "Elastic vascular sclerosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NumericAtrophy: Coding.FromStrict({
+    BodystructureCodeValueSet_NumericAtrophy: new Coding({
         code: "1996000",
         display: "Numeric atrophy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Pseudoainhum: Coding.FromStrict({
+    BodystructureCodeValueSet_Pseudoainhum: new Coding({
         code: "19988008",
         display: "Pseudoainhum",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MajorOpenWound: Coding.FromStrict({
+    BodystructureCodeValueSet_MajorOpenWound: new Coding({
         code: "20012006",
         display: "Major open wound",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalTelangiectasis: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalTelangiectasis: new Coding({
         code: "20092005",
         display: "Congenital telangiectasis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_IntramuralHemorrhage: Coding.FromStrict({
+    BodystructureCodeValueSet_IntramuralHemorrhage: new Coding({
         code: "20108002",
         display: "Intramural hemorrhage",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChronicNecrosis: Coding.FromStrict({
+    BodystructureCodeValueSet_ChronicNecrosis: new Coding({
         code: "20131002",
         display: "Chronic necrosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Microlymphoblast: Coding.FromStrict({
+    BodystructureCodeValueSet_Microlymphoblast: new Coding({
         code: "2014001",
         display: "Microlymphoblast",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PostmortemFracture: Coding.FromStrict({
+    BodystructureCodeValueSet_PostmortemFracture: new Coding({
         code: "20175003",
         display: "Postmortem fracture",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Myocytolysis: Coding.FromStrict({
+    BodystructureCodeValueSet_Myocytolysis: new Coding({
         code: "20182004",
         display: "Myocytolysis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SarcoplasmicBodies: Coding.FromStrict({
+    BodystructureCodeValueSet_SarcoplasmicBodies: new Coding({
         code: "2019006",
         display: "Sarcoplasmic bodies",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HyperplasticDystrophy: Coding.FromStrict({
+    BodystructureCodeValueSet_HyperplasticDystrophy: new Coding({
         code: "20194008",
         display: "Hyperplastic dystrophy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GlandularProliferation: Coding.FromStrict({
+    BodystructureCodeValueSet_GlandularProliferation: new Coding({
         code: "20256001",
         display: "Glandular proliferation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SerousAdenofibroma: Coding.FromStrict({
+    BodystructureCodeValueSet_SerousAdenofibroma: new Coding({
         code: "2026006",
         display: "Serous adenofibroma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AdnexalNevus: Coding.FromStrict({
+    BodystructureCodeValueSet_AdnexalNevus: new Coding({
         code: "20351009",
         display: "Adnexal nevus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_VulvarIntraepithelialNeoplasiaGradeIII: Coding.FromStrict({
+    BodystructureCodeValueSet_VulvarIntraepithelialNeoplasiaGradeIII: new Coding({
         code: "20365006",
         display: "Vulvar intraepithelial neoplasia, grade III",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChronicMucousInflammation: Coding.FromStrict({
+    BodystructureCodeValueSet_ChronicMucousInflammation: new Coding({
         code: "20369000",
         display: "Chronic mucous inflammation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AmeloblasticFibrodentinosarcoma: Coding.FromStrict({
+    BodystructureCodeValueSet_AmeloblasticFibrodentinosarcoma: new Coding({
         code: "20380000",
         display: "Ameloblastic fibrodentinosarcoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LooseBody: Coding.FromStrict({
+    BodystructureCodeValueSet_LooseBody: new Coding({
         code: "20456003",
         display: "Loose body",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Adamantinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Adamantinoma: new Coding({
         code: "20462008",
         display: "Adamantinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PerforatedDiverticulum: Coding.FromStrict({
+    BodystructureCodeValueSet_PerforatedDiverticulum: new Coding({
         code: "20464009",
         display: "Perforated diverticulum",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_StellateLaceration: Coding.FromStrict({
+    BodystructureCodeValueSet_StellateLaceration: new Coding({
         code: "20473001",
         display: "Stellate laceration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AcuteNecrosis: Coding.FromStrict({
+    BodystructureCodeValueSet_AcuteNecrosis: new Coding({
         code: "2052000",
         display: "Acute necrosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PappenheimerBody: Coding.FromStrict({
+    BodystructureCodeValueSet_PappenheimerBody: new Coding({
         code: "20589000",
         display: "Pappenheimer body",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FlatteningDeformity: Coding.FromStrict({
+    BodystructureCodeValueSet_FlatteningDeformity: new Coding({
         code: "20601007",
         display: "Flattening deformity",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Myosarcoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Myosarcoma: new Coding({
         code: "20667008",
         display: "Myosarcoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FractureClosedOblique: Coding.FromStrict({
+    BodystructureCodeValueSet_FractureClosedOblique: new Coding({
         code: "20700001",
         display: "Fracture, closed, oblique",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AtheroscleroticFibrousPlaque: Coding.FromStrict({
+    BodystructureCodeValueSet_AtheroscleroticFibrousPlaque: new Coding({
         code: "20717008",
         display: "Atherosclerotic fibrous plaque",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Hydrops: Coding.FromStrict({
+    BodystructureCodeValueSet_Hydrops: new Coding({
         code: "20741006",
         display: "Hydrops",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ReEpithelialization: Coding.FromStrict({
+    BodystructureCodeValueSet_ReEpithelialization: new Coding({
         code: "20774006",
         display: "Re-epithelialization",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Adenolymphoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Adenolymphoma: new Coding({
         code: "20776008",
         display: "Adenolymphoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Myelolipoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Myelolipoma: new Coding({
         code: "20810002",
         display: "Myelolipoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EndometrioidAdenofibroma: Coding.FromStrict({
+    BodystructureCodeValueSet_EndometrioidAdenofibroma: new Coding({
         code: "20829008",
         display: "Endometrioid adenofibroma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PolypoidHyperplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_PolypoidHyperplasia: new Coding({
         code: "20893004",
         display: "Polypoid hyperplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalloryBodies: Coding.FromStrict({
+    BodystructureCodeValueSet_MalloryBodies: new Coding({
         code: "20894005",
         display: "Mallory bodies",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MMMalignantMelanoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MMMalignantMelanoma: new Coding({
         code: "2092003",
         display: "MM - Malignant melanoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FractureClosed: Coding.FromStrict({
+    BodystructureCodeValueSet_FractureClosed: new Coding({
         code: "20946005",
         display: "Fracture, closed",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantBetaCellTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantBetaCellTumor: new Coding({
         code: "20955008",
         display: "Malignant beta cell tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Dyskeratosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Dyskeratosis: new Coding({
         code: "2097009",
         display: "Dyskeratosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_VerrucousKeratoticHemangioma: Coding.FromStrict({
+    BodystructureCodeValueSet_VerrucousKeratoticHemangioma: new Coding({
         code: "20985003",
         display: "Verrucous keratotic hemangioma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HemangiomaMorphology: Coding.FromStrict({
+    BodystructureCodeValueSet_HemangiomaMorphology: new Coding({
         code: "2099007",
         display: "Hemangioma - morphology",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Cystadenocarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Cystadenocarcinoma: new Coding({
         code: "21008007",
         display: "Cystadenocarcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DalenFuchsNodule: Coding.FromStrict({
+    BodystructureCodeValueSet_DalenFuchsNodule: new Coding({
         code: "21046000",
         display: "Dalen-Fuchs nodule",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AcuteFibrosis: Coding.FromStrict({
+    BodystructureCodeValueSet_AcuteFibrosis: new Coding({
         code: "21103001",
         display: "Acute fibrosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AcidophilAdenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_AcidophilAdenoma: new Coding({
         code: "21109002",
         display: "Acidophil adenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PigmentedNevusNoICDOSubtype: Coding.FromStrict({
+    BodystructureCodeValueSet_PigmentedNevusNoICDOSubtype: new Coding({
         code: "21119008",
         display: "Pigmented nevus, no ICD-O subtype",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MultipleSuperficialInjuries: Coding.FromStrict({
+    BodystructureCodeValueSet_MultipleSuperficialInjuries: new Coding({
         code: "21135001",
         display: "Multiple superficial injuries",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Organization: Coding.FromStrict({
+    BodystructureCodeValueSet_Organization: new Coding({
         code: "21139007",
         display: "Organization",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BenignThymoma: Coding.FromStrict({
+    BodystructureCodeValueSet_BenignThymoma: new Coding({
         code: "21181001",
         display: "Benign thymoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PressureAtrophy: Coding.FromStrict({
+    BodystructureCodeValueSet_PressureAtrophy: new Coding({
         code: "2122006",
         display: "Pressure atrophy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MixedSmallCellCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MixedSmallCellCarcinoma: new Coding({
         code: "21326004",
         display: "Mixed small cell carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ForeignBodyGiantCell: Coding.FromStrict({
+    BodystructureCodeValueSet_ForeignBodyGiantCell: new Coding({
         code: "21386001",
         display: "Foreign body giant cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DevelopmentalAbnormality: Coding.FromStrict({
+    BodystructureCodeValueSet_DevelopmentalAbnormality: new Coding({
         code: "21390004",
         display: "Developmental abnormality",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PleomorphicLipoma: Coding.FromStrict({
+    BodystructureCodeValueSet_PleomorphicLipoma: new Coding({
         code: "21396005",
         display: "Pleomorphic lipoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NMNodularMelanoma: Coding.FromStrict({
+    BodystructureCodeValueSet_NMNodularMelanoma: new Coding({
         code: "2142002",
         display: "NM - Nodular melanoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MicroglialNodules: Coding.FromStrict({
+    BodystructureCodeValueSet_MicroglialNodules: new Coding({
         code: "21444008",
         display: "Microglial nodules",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MassiveNecrosis: Coding.FromStrict({
+    BodystructureCodeValueSet_MassiveNecrosis: new Coding({
         code: "21453001",
         display: "Massive necrosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AbnormallyShortAndBroadGrowth: Coding.FromStrict({
+    BodystructureCodeValueSet_AbnormallyShortAndBroadGrowth: new Coding({
         code: "21465002",
         display: "Abnormally short and broad growth",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EpendymomaAnaplastic: Coding.FromStrict({
+    BodystructureCodeValueSet_EpendymomaAnaplastic: new Coding({
         code: "21589007",
         display: "Ependymoma, anaplastic",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_OsteosarcomaNoICDOSubtype: Coding.FromStrict({
+    BodystructureCodeValueSet_OsteosarcomaNoICDOSubtype: new Coding({
         code: "21708004",
         display: "Osteosarcoma, no ICD-O subtype",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Cast: Coding.FromStrict({
+    BodystructureCodeValueSet_Cast: new Coding({
         code: "21718009",
         display: "Cast",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ElectricalBurn: Coding.FromStrict({
+    BodystructureCodeValueSet_ElectricalBurn: new Coding({
         code: "21720007",
         display: "Electrical burn",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ExternalBlindCongenitalFistula: Coding.FromStrict({
+    BodystructureCodeValueSet_ExternalBlindCongenitalFistula: new Coding({
         code: "21758006",
         display: "External blind congenital fistula",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantTeratomaIntermediate: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantTeratomaIntermediate: new Coding({
         code: "21912003",
         display: "Malignant teratoma - intermediate",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NeuroglialLinedCyst: Coding.FromStrict({
+    BodystructureCodeValueSet_NeuroglialLinedCyst: new Coding({
         code: "21925006",
         display: "Neuroglial-lined cyst",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_TrabecularAdenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_TrabecularAdenoma: new Coding({
         code: "21930005",
         display: "Trabecular adenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CompressionFracture: Coding.FromStrict({
+    BodystructureCodeValueSet_CompressionFracture: new Coding({
         code: "21947006",
         display: "Compression fracture",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MicrogliomaObs: Coding.FromStrict({
+    BodystructureCodeValueSet_MicrogliomaObs: new Coding({
         code: "21964009",
         display: "Microglioma [obs]",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PapillaryAdenocarcinomaFollicularVariant: Coding.FromStrict({
+    BodystructureCodeValueSet_PapillaryAdenocarcinomaFollicularVariant: new Coding({
         code: "21968007",
         display: "Papillary adenocarcinoma - follicular variant",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PlasmaCellGranuloma: Coding.FromStrict({
+    BodystructureCodeValueSet_PlasmaCellGranuloma: new Coding({
         code: "21971004",
         display: "Plasma cell granuloma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PrestenoticDilatation: Coding.FromStrict({
+    BodystructureCodeValueSet_PrestenoticDilatation: new Coding({
         code: "21980004",
         display: "Prestenotic dilatation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MassiveDisruption: Coding.FromStrict({
+    BodystructureCodeValueSet_MassiveDisruption: new Coding({
         code: "21997005",
         display: "Massive disruption",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Lipoadenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Lipoadenoma: new Coding({
         code: "22024005",
         display: "Lipoadenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Pseudoaneurysm: Coding.FromStrict({
+    BodystructureCodeValueSet_Pseudoaneurysm: new Coding({
         code: "22036004",
         display: "Pseudoaneurysm",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_RupturedAneurysm: Coding.FromStrict({
+    BodystructureCodeValueSet_RupturedAneurysm: new Coding({
         code: "22039006",
         display: "Ruptured aneurysm",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PostmortemBloodClot: Coding.FromStrict({
+    BodystructureCodeValueSet_PostmortemBloodClot: new Coding({
         code: "22084008",
         display: "Postmortem blood clot",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PapillarySerousCystadenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_PapillarySerousCystadenoma: new Coding({
         code: "22116003",
         display: "Papillary serous cystadenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EndothelialDegeneration: Coding.FromStrict({
+    BodystructureCodeValueSet_EndothelialDegeneration: new Coding({
         code: "2218006",
         display: "Endothelial degeneration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FABL3Obs: Coding.FromStrict({
+    BodystructureCodeValueSet_FABL3Obs: new Coding({
         code: "22197008",
         display: "FAB L3 [obs]",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantMesonephroma: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantMesonephroma: new Coding({
         code: "2221008",
         display: "Malignant mesonephroma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Oligoastrocytoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Oligoastrocytoma: new Coding({
         code: "22217002",
         display: "Oligoastrocytoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MuscleFiberSmallGroupAtrophy: Coding.FromStrict({
+    BodystructureCodeValueSet_MuscleFiberSmallGroupAtrophy: new Coding({
         code: "22222002",
         display: "Muscle fiber small group atrophy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FibrousHamartoma: Coding.FromStrict({
+    BodystructureCodeValueSet_FibrousHamartoma: new Coding({
         code: "22257004",
         display: "Fibrous hamartoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AdrenalCorticalCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_AdrenalCorticalCarcinoma: new Coding({
         code: "2227007",
         display: "Adrenal cortical carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EosinophilicStainReaction: Coding.FromStrict({
+    BodystructureCodeValueSet_EosinophilicStainReaction: new Coding({
         code: "22287005",
         display: "Eosinophilic stain reaction",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Version: Coding.FromStrict({
+    BodystructureCodeValueSet_Version: new Coding({
         code: "22303008",
         display: "Version",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NormalKaryotype: Coding.FromStrict({
+    BodystructureCodeValueSet_NormalKaryotype: new Coding({
         code: "2232008",
         display: "Normal karyotype",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AcuteMonocyticLeukemiaMorphology: Coding.FromStrict({
+    BodystructureCodeValueSet_AcuteMonocyticLeukemiaMorphology: new Coding({
         code: "22331004",
         display: "Acute monocytic leukemia, morphology",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_UricAcidInfarct: Coding.FromStrict({
+    BodystructureCodeValueSet_UricAcidInfarct: new Coding({
         code: "22333001",
         display: "Uric acid infarct",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ThrombosedVarices: Coding.FromStrict({
+    BodystructureCodeValueSet_ThrombosedVarices: new Coding({
         code: "22341001",
         display: "Thrombosed varices",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ElastoidDegeneration: Coding.FromStrict({
+    BodystructureCodeValueSet_ElastoidDegeneration: new Coding({
         code: "22427006",
         display: "Elastoid degeneration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_RadiationInjuryWithInflammation: Coding.FromStrict({
+    BodystructureCodeValueSet_RadiationInjuryWithInflammation: new Coding({
         code: "22483007",
         display: "Radiation injury with inflammation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SubependymalGliosis: Coding.FromStrict({
+    BodystructureCodeValueSet_SubependymalGliosis: new Coding({
         code: "22517003",
         display: "Subependymal gliosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_WartyDyskeratoma: Coding.FromStrict({
+    BodystructureCodeValueSet_WartyDyskeratoma: new Coding({
         code: "22524002",
         display: "Warty dyskeratoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PathologicFracture: Coding.FromStrict({
+    BodystructureCodeValueSet_PathologicFracture: new Coding({
         code: "22640007",
         display: "Pathologic fracture",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SerousEffusion: Coding.FromStrict({
+    BodystructureCodeValueSet_SerousEffusion: new Coding({
         code: "22641006",
         display: "Serous effusion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LargeCellCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_LargeCellCarcinoma: new Coding({
         code: "22687000",
         display: "Large cell carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AdenocarcinomaWithApocrineMetaplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_AdenocarcinomaWithApocrineMetaplasia: new Coding({
         code: "22694002",
         display: "Adenocarcinoma with apocrine metaplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HSIL: Coding.FromStrict({
+    BodystructureCodeValueSet_HSIL: new Coding({
         code: "22725004",
         display: "HSIL",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ConnectiveTissueNevus: Coding.FromStrict({
+    BodystructureCodeValueSet_ConnectiveTissueNevus: new Coding({
         code: "22858003",
         display: "Connective tissue nevus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DicentricChromosome: Coding.FromStrict({
+    BodystructureCodeValueSet_DicentricChromosome: new Coding({
         code: "2289007",
         display: "Dicentric chromosome",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ModerateColumnarCellAtypia: Coding.FromStrict({
+    BodystructureCodeValueSet_ModerateColumnarCellAtypia: new Coding({
         code: "22984005",
         display: "Moderate columnar cell atypia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FocalNodularHyperplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_FocalNodularHyperplasia: new Coding({
         code: "22995004",
         display: "Focal nodular hyperplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SinusHistiocytosis: Coding.FromStrict({
+    BodystructureCodeValueSet_SinusHistiocytosis: new Coding({
         code: "23041001",
         display: "Sinus histiocytosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MarinescoBody: Coding.FromStrict({
+    BodystructureCodeValueSet_MarinescoBody: new Coding({
         code: "23048007",
         display: "Marinesco body",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MildSquamousCellAtypia: Coding.FromStrict({
+    BodystructureCodeValueSet_MildSquamousCellAtypia: new Coding({
         code: "23108001",
         display: "Mild squamous cell atypia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SarcomatoidCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_SarcomatoidCarcinoma: new Coding({
         code: "23109009",
         display: "Sarcomatoid carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalFold: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalFold: new Coding({
         code: "232001",
         display: "Congenital fold",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BenignCementoblastoma: Coding.FromStrict({
+    BodystructureCodeValueSet_BenignCementoblastoma: new Coding({
         code: "23255001",
         display: "Benign cementoblastoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_IsochromosomeForLongArm: Coding.FromStrict({
+    BodystructureCodeValueSet_IsochromosomeForLongArm: new Coding({
         code: "23280001",
         display: "Isochromosome for long arm",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DelayedUnionOfIncompleteFracture: Coding.FromStrict({
+    BodystructureCodeValueSet_DelayedUnionOfIncompleteFracture: new Coding({
         code: "23286007",
         display: "Delayed union of incomplete fracture",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GlandularHyperplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_GlandularHyperplasia: new Coding({
         code: "23290009",
         display: "Glandular hyperplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MacrocyticHyperchromicErythrocyte: Coding.FromStrict({
+    BodystructureCodeValueSet_MacrocyticHyperchromicErythrocyte: new Coding({
         code: "23305007",
         display: "Macrocytic hyperchromic erythrocyte",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_RingChromosome: Coding.FromStrict({
+    BodystructureCodeValueSet_RingChromosome: new Coding({
         code: "23345003",
         display: "Ring chromosome",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FatigueFracture: Coding.FromStrict({
+    BodystructureCodeValueSet_FatigueFracture: new Coding({
         code: "23382007",
         display: "Fatigue fracture",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MixedAcidophilBasophilCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MixedAcidophilBasophilCarcinoma: new Coding({
         code: "23444003",
         display: "Mixed acidophil-basophil carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AdenomatoidTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_AdenomatoidTumor: new Coding({
         code: "2348006",
         display: "Adenomatoid tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AvulsionFracture: Coding.FromStrict({
+    BodystructureCodeValueSet_AvulsionFracture: new Coding({
         code: "23482006",
         display: "Avulsion fracture",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GlycogenDeposition: Coding.FromStrict({
+    BodystructureCodeValueSet_GlycogenDeposition: new Coding({
         code: "23521003",
         display: "Glycogen deposition",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_OrganizingHematoma: Coding.FromStrict({
+    BodystructureCodeValueSet_OrganizingHematoma: new Coding({
         code: "23539007",
         display: "Organizing hematoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Inflammation: Coding.FromStrict({
+    BodystructureCodeValueSet_Inflammation: new Coding({
         code: "23583003",
         display: "Inflammation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GranulovacuolarDegenerationOfSimchowicz: Coding.FromStrict({
+    BodystructureCodeValueSet_GranulovacuolarDegenerationOfSimchowicz: new Coding({
         code: "23596002",
         display: "Granulovacuolar degeneration of Simchowicz",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CartilaginousHamartoma: Coding.FromStrict({
+    BodystructureCodeValueSet_CartilaginousHamartoma: new Coding({
         code: "23604003",
         display: "Cartilaginous hamartoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Acanthosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Acanthosis: new Coding({
         code: "23620008",
         display: "Acanthosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PapillomaNoICDOSubtypeExceptPapillomaOfBladderM81201: Coding.FromStrict({
+    BodystructureCodeValueSet_PapillomaNoICDOSubtypeExceptPapillomaOfBladderM81201: new Coding({
         code: "23730008",
         display: "Papilloma, no ICD-O subtype (except papilloma of bladder M-81201)",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalGrowthAlteration: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalGrowthAlteration: new Coding({
         code: "23756001",
         display: "Congenital growth alteration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChylousEffusion: Coding.FromStrict({
+    BodystructureCodeValueSet_ChylousEffusion: new Coding({
         code: "23839001",
         display: "Chylous effusion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FibrosideroticNodule: Coding.FromStrict({
+    BodystructureCodeValueSet_FibrosideroticNodule: new Coding({
         code: "23844008",
         display: "Fibrosiderotic nodule",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HypersecretoryGestationalEndometrium: Coding.FromStrict({
+    BodystructureCodeValueSet_HypersecretoryGestationalEndometrium: new Coding({
         code: "23870009",
         display: "Hypersecretory gestational endometrium",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FractureUnunitedComminuted: Coding.FromStrict({
+    BodystructureCodeValueSet_FractureUnunitedComminuted: new Coding({
         code: "23990004",
         display: "Fracture, ununited, comminuted",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ClearCellSarcomaOfKidney: Coding.FromStrict({
+    BodystructureCodeValueSet_ClearCellSarcomaOfKidney: new Coding({
         code: "24007003",
         display: "Clear cell sarcoma of kidney",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CorrectedTransposition: Coding.FromStrict({
+    BodystructureCodeValueSet_CorrectedTransposition: new Coding({
         code: "24016004",
         display: "Corrected transposition",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MeibomianAdenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MeibomianAdenoma: new Coding({
         code: "24017008",
         display: "Meibomian adenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EnterogenousCyst: Coding.FromStrict({
+    BodystructureCodeValueSet_EnterogenousCyst: new Coding({
         code: "24018003",
         display: "Enterogenous cyst",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_IntramuscularLipoma: Coding.FromStrict({
+    BodystructureCodeValueSet_IntramuscularLipoma: new Coding({
         code: "24045002",
         display: "Intramuscular lipoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_StemCellLeukemia: Coding.FromStrict({
+    BodystructureCodeValueSet_StemCellLeukemia: new Coding({
         code: "24072005",
         display: "Stem cell leukemia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Maculopapule: Coding.FromStrict({
+    BodystructureCodeValueSet_Maculopapule: new Coding({
         code: "2412005",
         display: "Maculopapule",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FibrinousPolyp: Coding.FromStrict({
+    BodystructureCodeValueSet_FibrinousPolyp: new Coding({
         code: "24183004",
         display: "Fibrinous polyp",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalAbsence: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalAbsence: new Coding({
         code: "24216005",
         display: "Congenital absence",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantMesenchymalTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantMesenchymalTumor: new Coding({
         code: "2424003",
         display: "Malignant mesenchymal tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BrownAtrophy: Coding.FromStrict({
+    BodystructureCodeValueSet_BrownAtrophy: new Coding({
         code: "24244006",
         display: "Brown atrophy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SquamousIntraepithelialLesion: Coding.FromStrict({
+    BodystructureCodeValueSet_SquamousIntraepithelialLesion: new Coding({
         code: "24253004",
         display: "Squamous intraepithelial lesion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SerosanguineousEffusion: Coding.FromStrict({
+    BodystructureCodeValueSet_SerosanguineousEffusion: new Coding({
         code: "24283008",
         display: "Serosanguineous effusion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_StrumaOvarii: Coding.FromStrict({
+    BodystructureCodeValueSet_StrumaOvarii: new Coding({
         code: "24327009",
         display: "Struma ovarii",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PregnancyAlterationOfVagina: Coding.FromStrict({
+    BodystructureCodeValueSet_PregnancyAlterationOfVagina: new Coding({
         code: "24373006",
         display: "Pregnancy alteration of vagina",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_InjectionSiteGranuloma: Coding.FromStrict({
+    BodystructureCodeValueSet_InjectionSiteGranuloma: new Coding({
         code: "24389009",
         display: "Injection site granuloma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NuclearCytoplasmicRatioDecreased: Coding.FromStrict({
+    BodystructureCodeValueSet_NuclearCytoplasmicRatioDecreased: new Coding({
         code: "24398007",
         display: "Nuclear/cytoplasmic ratio decreased",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SubcapsularHemorrhage: Coding.FromStrict({
+    BodystructureCodeValueSet_SubcapsularHemorrhage: new Coding({
         code: "24421006",
         display: "Subcapsular hemorrhage",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HypersegmentedLeukocyte: Coding.FromStrict({
+    BodystructureCodeValueSet_HypersegmentedLeukocyte: new Coding({
         code: "24481008",
         display: "Hypersegmented leukocyte",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AtypicalAdenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_AtypicalAdenoma: new Coding({
         code: "24482001",
         display: "Atypical adenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AdenocarcinomaDiffuseType: Coding.FromStrict({
+    BodystructureCodeValueSet_AdenocarcinomaDiffuseType: new Coding({
         code: "24505004",
         display: "Adenocarcinoma - diffuse type",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ComplexCaries: Coding.FromStrict({
+    BodystructureCodeValueSet_ComplexCaries: new Coding({
         code: "24531002",
         display: "Complex caries",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ArteriovenousMalformation: Coding.FromStrict({
+    BodystructureCodeValueSet_ArteriovenousMalformation: new Coding({
         code: "24551003",
         display: "Arteriovenous malformation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PseudohypertrophicDystrophy: Coding.FromStrict({
+    BodystructureCodeValueSet_PseudohypertrophicDystrophy: new Coding({
         code: "24582004",
         display: "Pseudohypertrophic dystrophy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Medullomyoblastoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Medullomyoblastoma: new Coding({
         code: "24604009",
         display: "Medullomyoblastoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ModerateCytologicAtypia: Coding.FromStrict({
+    BodystructureCodeValueSet_ModerateCytologicAtypia: new Coding({
         code: "2464004",
         display: "Moderate cytologic atypia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GuarnieriBodies: Coding.FromStrict({
+    BodystructureCodeValueSet_GuarnieriBodies: new Coding({
         code: "24645001",
         display: "Guarnieri bodies",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SpindleCellMelanomaTypeA: Coding.FromStrict({
+    BodystructureCodeValueSet_SpindleCellMelanomaTypeA: new Coding({
         code: "24653009",
         display: "Spindle cell melanoma - type A",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_InternalTraumaticFistula: Coding.FromStrict({
+    BodystructureCodeValueSet_InternalTraumaticFistula: new Coding({
         code: "24726002",
         display: "Internal traumatic fistula",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_InsectBite: Coding.FromStrict({
+    BodystructureCodeValueSet_InsectBite: new Coding({
         code: "24734008",
         display: "Insect bite",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantPilomatrixoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantPilomatrixoma: new Coding({
         code: "24762001",
         display: "Malignant pilomatrixoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_WolffianDuctRest: Coding.FromStrict({
+    BodystructureCodeValueSet_WolffianDuctRest: new Coding({
         code: "24804006",
         display: "Wolffian duct rest",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SerousInflammation: Coding.FromStrict({
+    BodystructureCodeValueSet_SerousInflammation: new Coding({
         code: "24811005",
         display: "Serous inflammation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LipidRichSertoliCellTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_LipidRichSertoliCellTumor: new Coding({
         code: "24815001",
         display: "Lipid-rich Sertoli cell tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AbnormalWhiteBloodCell: Coding.FromStrict({
+    BodystructureCodeValueSet_AbnormalWhiteBloodCell: new Coding({
         code: "24827003",
         display: "Abnormal white blood cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Cavity: Coding.FromStrict({
+    BodystructureCodeValueSet_Cavity: new Coding({
         code: "2483006",
         display: "Cavity",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Maceration: Coding.FromStrict({
+    BodystructureCodeValueSet_Maceration: new Coding({
         code: "24887001",
         display: "Maceration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NavicularCell: Coding.FromStrict({
+    BodystructureCodeValueSet_NavicularCell: new Coding({
         code: "25006003",
         display: "Navicular cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_InvolutionalAtrophy: Coding.FromStrict({
+    BodystructureCodeValueSet_InvolutionalAtrophy: new Coding({
         code: "25063008",
         display: "Involutional atrophy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Nephroblastoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Nephroblastoma: new Coding({
         code: "25081006",
         display: "Nephroblastoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DimpledStructure: Coding.FromStrict({
+    BodystructureCodeValueSet_DimpledStructure: new Coding({
         code: "25088000",
         display: "Dimpled structure",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BlisterDueToDegenerationOfTheBasementZone: Coding.FromStrict({
+    BodystructureCodeValueSet_BlisterDueToDegenerationOfTheBasementZone: new Coding({
         code: "25154008",
         display: "Blister due to degeneration of the basement zone",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NeuromaNoICDOSubtype: Coding.FromStrict({
+    BodystructureCodeValueSet_NeuromaNoICDOSubtype: new Coding({
         code: "25169009",
         display: "Neuroma, no ICD-O subtype",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CarcinomaIntestinalType: Coding.FromStrict({
+    BodystructureCodeValueSet_CarcinomaIntestinalType: new Coding({
         code: "25190001",
         display: "Carcinoma - intestinal type",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EpidermalNevus: Coding.FromStrict({
+    BodystructureCodeValueSet_EpidermalNevus: new Coding({
         code: "25201003",
         display: "Epidermal nevus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Lymphangiomyoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Lymphangiomyoma: new Coding({
         code: "25239006",
         display: "Lymphangiomyoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalDysplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalDysplasia: new Coding({
         code: "25283002",
         display: "Congenital dysplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Phytobezoar: Coding.FromStrict({
+    BodystructureCodeValueSet_Phytobezoar: new Coding({
         code: "25295002",
         display: "Phytobezoar",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Dilatation: Coding.FromStrict({
+    BodystructureCodeValueSet_Dilatation: new Coding({
         code: "25322007",
         display: "Dilatation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Insulinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Insulinoma: new Coding({
         code: "25324008",
         display: "Insulinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HepatocellularCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_HepatocellularCarcinoma: new Coding({
         code: "25370001",
         display: "Hepatocellular carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HighLevelEstrogenEffectPresent: Coding.FromStrict({
+    BodystructureCodeValueSet_HighLevelEstrogenEffectPresent: new Coding({
         code: "25371002",
         display: "High level estrogen effect present",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalDeviation: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalDeviation: new Coding({
         code: "25393007",
         display: "Congenital deviation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SeborrheicKeratosis: Coding.FromStrict({
+    BodystructureCodeValueSet_SeborrheicKeratosis: new Coding({
         code: "25499005",
         display: "Seborrheic keratosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CalcifiedNodule: Coding.FromStrict({
+    BodystructureCodeValueSet_CalcifiedNodule: new Coding({
         code: "255003",
         display: "Calcified nodule",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ClawShapedDeformity: Coding.FromStrict({
+    BodystructureCodeValueSet_ClawShapedDeformity: new Coding({
         code: "2559001",
         display: "Claw-shaped deformity",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_OssifyingFibromaCalcifiedStructure: Coding.FromStrict({
+    BodystructureCodeValueSet_OssifyingFibromaCalcifiedStructure: new Coding({
         code: "25603007",
         display: "Ossifying fibroma, calcified structure",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DysplasticPlatelet: Coding.FromStrict({
+    BodystructureCodeValueSet_DysplasticPlatelet: new Coding({
         code: "25624002",
         display: "Dysplastic platelet",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SpontaneousGangrene: Coding.FromStrict({
+    BodystructureCodeValueSet_SpontaneousGangrene: new Coding({
         code: "25655008",
         display: "Spontaneous gangrene",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NarrowedStructure: Coding.FromStrict({
+    BodystructureCodeValueSet_NarrowedStructure: new Coding({
         code: "25659002",
         display: "Narrowed structure",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BilateralHyperplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_BilateralHyperplasia: new Coding({
         code: "25672001",
         display: "Bilateral hyperplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Papule: Coding.FromStrict({
+    BodystructureCodeValueSet_Papule: new Coding({
         code: "25694009",
         display: "Papule",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_TractionDiverticulum: Coding.FromStrict({
+    BodystructureCodeValueSet_TractionDiverticulum: new Coding({
         code: "2570008",
         display: "Traction diverticulum",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Dysplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_Dysplasia: new Coding({
         code: "25723000",
         display: "Dysplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BurnInjuryWithCharring: Coding.FromStrict({
+    BodystructureCodeValueSet_BurnInjuryWithCharring: new Coding({
         code: "25733008",
         display: "Burn injury with charring",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LossOfFluid: Coding.FromStrict({
+    BodystructureCodeValueSet_LossOfFluid: new Coding({
         code: "25751009",
         display: "Loss of fluid",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AnomalousArterialConnection: Coding.FromStrict({
+    BodystructureCodeValueSet_AnomalousArterialConnection: new Coding({
         code: "25774008",
         display: "Anomalous arterial connection",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DeepCaries: Coding.FromStrict({
+    BodystructureCodeValueSet_DeepCaries: new Coding({
         code: "25840002",
         display: "Deep caries",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HealingUlcer: Coding.FromStrict({
+    BodystructureCodeValueSet_HealingUlcer: new Coding({
         code: "25845007",
         display: "Healing ulcer",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EndometrioidCystadenofibromaBorderlineMalignancy: Coding.FromStrict({
+    BodystructureCodeValueSet_EndometrioidCystadenofibromaBorderlineMalignancy: new Coding({
         code: "25874003",
         display: "Endometrioid cystadenofibroma - borderline malignancy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BenignFibrousHistiocytoma: Coding.FromStrict({
+    BodystructureCodeValueSet_BenignFibrousHistiocytoma: new Coding({
         code: "25889007",
         display: "Benign fibrous histiocytoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FibrousBody: Coding.FromStrict({
+    BodystructureCodeValueSet_FibrousBody: new Coding({
         code: "259009",
         display: "Fibrous body",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PapillaryCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_PapillaryCarcinoma: new Coding({
         code: "25910003",
         display: "Papillary carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AcuteMucousInflammation: Coding.FromStrict({
+    BodystructureCodeValueSet_AcuteMucousInflammation: new Coding({
         code: "25979007",
         display: "Acute mucous inflammation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_RetinoblastomaDifferentiated: Coding.FromStrict({
+    BodystructureCodeValueSet_RetinoblastomaDifferentiated: new Coding({
         code: "26019009",
         display: "Retinoblastoma - differentiated",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Obstruction: Coding.FromStrict({
+    BodystructureCodeValueSet_Obstruction: new Coding({
         code: "26036001",
         display: "Obstruction",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GliomatosisCerebri: Coding.FromStrict({
+    BodystructureCodeValueSet_GliomatosisCerebri: new Coding({
         code: "26138003",
         display: "Gliomatosis cerebri",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GiantComedo: Coding.FromStrict({
+    BodystructureCodeValueSet_GiantComedo: new Coding({
         code: "26209007",
         display: "Giant comedo",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_JuxtacorticalChondrosarcoma: Coding.FromStrict({
+    BodystructureCodeValueSet_JuxtacorticalChondrosarcoma: new Coding({
         code: "26211003",
         display: "Juxtacortical chondrosarcoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PlasmaCellInflammation: Coding.FromStrict({
+    BodystructureCodeValueSet_PlasmaCellInflammation: new Coding({
         code: "26246006",
         display: "Plasma cell inflammation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PoststenoticDilatation: Coding.FromStrict({
+    BodystructureCodeValueSet_PoststenoticDilatation: new Coding({
         code: "26269009",
         display: "Poststenotic dilatation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Fold: Coding.FromStrict({
+    BodystructureCodeValueSet_Fold: new Coding({
         code: "26310004",
         display: "Fold",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AcuteUlcer: Coding.FromStrict({
+    BodystructureCodeValueSet_AcuteUlcer: new Coding({
         code: "26317001",
         display: "Acute ulcer",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Melanocytoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Melanocytoma: new Coding({
         code: "26325004",
         display: "Melanocytoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AnomalousVenousDrainage: Coding.FromStrict({
+    BodystructureCodeValueSet_AnomalousVenousDrainage: new Coding({
         code: "26344006",
         display: "Anomalous venous drainage",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Luteoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Luteoma: new Coding({
         code: "26372004",
         display: "Luteoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DislocationIncomplete: Coding.FromStrict({
+    BodystructureCodeValueSet_DislocationIncomplete: new Coding({
         code: "26396009",
         display: "Dislocation, incomplete",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AtypicalFibrousHistiocytoma: Coding.FromStrict({
+    BodystructureCodeValueSet_AtypicalFibrousHistiocytoma: new Coding({
         code: "26496005",
         display: "Atypical fibrous histiocytoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DrainingWound: Coding.FromStrict({
+    BodystructureCodeValueSet_DrainingWound: new Coding({
         code: "26514007",
         display: "Draining wound",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MacrofollicularAdenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MacrofollicularAdenoma: new Coding({
         code: "26545006",
         display: "Macrofollicular adenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SpontaneousAmputatedStructure: Coding.FromStrict({
+    BodystructureCodeValueSet_SpontaneousAmputatedStructure: new Coding({
         code: "26577009",
         display: "Spontaneous amputated structure",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_WaterClearCellAdenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_WaterClearCellAdenoma: new Coding({
         code: "26638004",
         display: "Water-clear cell adenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChemicalBurn: Coding.FromStrict({
+    BodystructureCodeValueSet_ChemicalBurn: new Coding({
         code: "26696002",
         display: "Chemical burn",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NonOcclusiveThrombus: Coding.FromStrict({
+    BodystructureCodeValueSet_NonOcclusiveThrombus: new Coding({
         code: "26713004",
         display: "Non-occlusive thrombus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MultipleThromboembolism: Coding.FromStrict({
+    BodystructureCodeValueSet_MultipleThromboembolism: new Coding({
         code: "26727009",
         display: "Multiple thromboembolism",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Gynandroblastoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Gynandroblastoma: new Coding({
         code: "26735007",
         display: "Gynandroblastoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_OrganizingInflammation: Coding.FromStrict({
+    BodystructureCodeValueSet_OrganizingInflammation: new Coding({
         code: "26751004",
         display: "Organizing inflammation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EmbryonalRest: Coding.FromStrict({
+    BodystructureCodeValueSet_EmbryonalRest: new Coding({
         code: "26759002",
         display: "Embryonal rest",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Angiokeratoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Angiokeratoma: new Coding({
         code: "26810009",
         display: "Angiokeratoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_TartCell: Coding.FromStrict({
+    BodystructureCodeValueSet_TartCell: new Coding({
         code: "26819005",
         display: "Tart cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DissectingAneurysm: Coding.FromStrict({
+    BodystructureCodeValueSet_DissectingAneurysm: new Coding({
         code: "26845001",
         display: "Dissecting aneurysm",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SecondaryHypertrophy: Coding.FromStrict({
+    BodystructureCodeValueSet_SecondaryHypertrophy: new Coding({
         code: "26860003",
         display: "Secondary hypertrophy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantOdontogenicTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantOdontogenicTumor: new Coding({
         code: "26888009",
         display: "Malignant odontogenic tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MinorDisruption: Coding.FromStrict({
+    BodystructureCodeValueSet_MinorDisruption: new Coding({
         code: "26927002",
         display: "Minor disruption",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Hyperkeratosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Hyperkeratosis: new Coding({
         code: "26996000",
         display: "Hyperkeratosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_VasculiticEruption: Coding.FromStrict({
+    BodystructureCodeValueSet_VasculiticEruption: new Coding({
         code: "27006004",
         display: "Vasculitic eruption",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NecrotizingGranulomatousInflammation: Coding.FromStrict({
+    BodystructureCodeValueSet_NecrotizingGranulomatousInflammation: new Coding({
         code: "27058005",
         display: "Necrotizing granulomatous inflammation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SolidPseudopapillaryTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_SolidPseudopapillaryTumor: new Coding({
         code: "27078002",
         display: "Solid pseudopapillary tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_TCCTransitionalCellCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_TCCTransitionalCellCarcinoma: new Coding({
         code: "27090000",
         display: "TCC - Transitional cell carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AmeloblasticFibrosarcoma: Coding.FromStrict({
+    BodystructureCodeValueSet_AmeloblasticFibrosarcoma: new Coding({
         code: "27092008",
         display: "Ameloblastic fibrosarcoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Fibrolipoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Fibrolipoma: new Coding({
         code: "2710003",
         display: "Fibrolipoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Haploidy: Coding.FromStrict({
+    BodystructureCodeValueSet_Haploidy: new Coding({
         code: "27159004",
         display: "Haploidy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BasalCellAdenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_BasalCellAdenoma: new Coding({
         code: "27230006",
         display: "Basal cell adenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PseudoObstruction: Coding.FromStrict({
+    BodystructureCodeValueSet_PseudoObstruction: new Coding({
         code: "27266007",
         display: "Pseudo-obstruction",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SpindleCellLipoma: Coding.FromStrict({
+    BodystructureCodeValueSet_SpindleCellLipoma: new Coding({
         code: "27313007",
         display: "Spindle cell lipoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CompleteTransposition: Coding.FromStrict({
+    BodystructureCodeValueSet_CompleteTransposition: new Coding({
         code: "27317008",
         display: "Complete transposition",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AtypicalGastricMetaplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_AtypicalGastricMetaplasia: new Coding({
         code: "27325005",
         display: "Atypical gastric metaplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BasophilicDegeneration: Coding.FromStrict({
+    BodystructureCodeValueSet_BasophilicDegeneration: new Coding({
         code: "27329004",
         display: "Basophilic degeneration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MajorInjury: Coding.FromStrict({
+    BodystructureCodeValueSet_MajorInjury: new Coding({
         code: "2734008",
         display: "Major injury",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PapillaryCystadenocarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_PapillaryCystadenocarcinoma: new Coding({
         code: "2735009",
         display: "Papillary cystadenocarcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_WrinkledStructure: Coding.FromStrict({
+    BodystructureCodeValueSet_WrinkledStructure: new Coding({
         code: "27367001",
         display: "Wrinkled structure",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HamartomatousPolyp: Coding.FromStrict({
+    BodystructureCodeValueSet_HamartomatousPolyp: new Coding({
         code: "27391005",
         display: "Hamartomatous polyp",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ImmunoproliferativeSmallIntestinalDisease: Coding.FromStrict({
+    BodystructureCodeValueSet_ImmunoproliferativeSmallIntestinalDisease: new Coding({
         code: "27461004",
         display: "Immunoproliferative small intestinal disease",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FractureOpenStellate: Coding.FromStrict({
+    BodystructureCodeValueSet_FractureOpenStellate: new Coding({
         code: "27510006",
         display: "Fracture, open, stellate",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Avulsion: Coding.FromStrict({
+    BodystructureCodeValueSet_Avulsion: new Coding({
         code: "27515001",
         display: "Avulsion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Stricture: Coding.FromStrict({
+    BodystructureCodeValueSet_Stricture: new Coding({
         code: "27551008",
         display: "Stricture",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AbnormalNuclearCytoplasmicRatio: Coding.FromStrict({
+    BodystructureCodeValueSet_AbnormalNuclearCytoplasmicRatio: new Coding({
         code: "27580004",
         display: "Abnormal nuclear/cytoplasmic ratio",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EndometrialGestationalAlteration: Coding.FromStrict({
+    BodystructureCodeValueSet_EndometrialGestationalAlteration: new Coding({
         code: "27605001",
         display: "Endometrial gestational alteration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Comedo: Coding.FromStrict({
+    BodystructureCodeValueSet_Comedo: new Coding({
         code: "2763006",
         display: "Comedo",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_VonMeyenburgComplex: Coding.FromStrict({
+    BodystructureCodeValueSet_VonMeyenburgComplex: new Coding({
         code: "27721004",
         display: "von Meyenburg complex",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PostinflammatoryHypopigmentation: Coding.FromStrict({
+    BodystructureCodeValueSet_PostinflammatoryHypopigmentation: new Coding({
         code: "27799005",
         display: "Postinflammatory hypopigmentation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ProgressiveObstruction: Coding.FromStrict({
+    BodystructureCodeValueSet_ProgressiveObstruction: new Coding({
         code: "27809005",
         display: "Progressive obstruction",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_TractionInjury: Coding.FromStrict({
+    BodystructureCodeValueSet_TractionInjury: new Coding({
         code: "2784001",
         display: "Traction injury",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MyxoidLiposarcoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MyxoidLiposarcoma: new Coding({
         code: "27849002",
         display: "Myxoid liposarcoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MultipleInfarcts: Coding.FromStrict({
+    BodystructureCodeValueSet_MultipleInfarcts: new Coding({
         code: "27876002",
         display: "Multiple infarcts",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BonyCallus: Coding.FromStrict({
+    BodystructureCodeValueSet_BonyCallus: new Coding({
         code: "27881006",
         display: "Bony callus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CervicalMucousArborization: Coding.FromStrict({
+    BodystructureCodeValueSet_CervicalMucousArborization: new Coding({
         code: "27890004",
         display: "Cervical mucous arborization",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Nodule: Coding.FromStrict({
+    BodystructureCodeValueSet_Nodule: new Coding({
         code: "27925004",
         display: "Nodule",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalMultiseptation: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalMultiseptation: new Coding({
         code: "27952009",
         display: "Congenital multiseptation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EmbryonalCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_EmbryonalCarcinoma: new Coding({
         code: "28047004",
         display: "Embryonal carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CutaneousTCellLymphoma: Coding.FromStrict({
+    BodystructureCodeValueSet_CutaneousTCellLymphoma: new Coding({
         code: "28054005",
         display: "Cutaneous T-cell lymphoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DelayedUnionOfFracture: Coding.FromStrict({
+    BodystructureCodeValueSet_DelayedUnionOfFracture: new Coding({
         code: "28087009",
         display: "Delayed union of fracture",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SevereKoilocytoticAtypia: Coding.FromStrict({
+    BodystructureCodeValueSet_SevereKoilocytoticAtypia: new Coding({
         code: "28126000",
         display: "Severe koilocytotic atypia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LipochromeHistiocytosis: Coding.FromStrict({
+    BodystructureCodeValueSet_LipochromeHistiocytosis: new Coding({
         code: "28146005",
         display: "Lipochrome histiocytosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FollicularAdenocarcinomaWellDifferentiated: Coding.FromStrict({
+    BodystructureCodeValueSet_FollicularAdenocarcinomaWellDifferentiated: new Coding({
         code: "28173006",
         display: "Follicular adenocarcinoma - well differentiated",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EdematousInfarct: Coding.FromStrict({
+    BodystructureCodeValueSet_EdematousInfarct: new Coding({
         code: "28208008",
         display: "Edematous infarct",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SevereColumnarCellAtypia: Coding.FromStrict({
+    BodystructureCodeValueSet_SevereColumnarCellAtypia: new Coding({
         code: "28218003",
         display: "Severe columnar cell atypia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MelanoticNeurofibroma: Coding.FromStrict({
+    BodystructureCodeValueSet_MelanoticNeurofibroma: new Coding({
         code: "28237007",
         display: "Melanotic neurofibroma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Germinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Germinoma: new Coding({
         code: "28307001",
         display: "Germinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EmbryonalCarcinomaPolyembryonalType: Coding.FromStrict({
+    BodystructureCodeValueSet_EmbryonalCarcinomaPolyembryonalType: new Coding({
         code: "28325008",
         display: "Embryonal carcinoma - polyembryonal type",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Myxosarcoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Myxosarcoma: new Coding({
         code: "28351005",
         display: "Myxosarcoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Visceromegaly: Coding.FromStrict({
+    BodystructureCodeValueSet_Visceromegaly: new Coding({
         code: "28543008",
         display: "Visceromegaly",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_VillousAdenocarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_VillousAdenocarcinoma: new Coding({
         code: "28558000",
         display: "Villous adenocarcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MuscleFiberChange: Coding.FromStrict({
+    BodystructureCodeValueSet_MuscleFiberChange: new Coding({
         code: "28569002",
         display: "Muscle fiber change",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LiposarcomaDifferentiated: Coding.FromStrict({
+    BodystructureCodeValueSet_LiposarcomaDifferentiated: new Coding({
         code: "28655007",
         display: "Liposarcoma - differentiated",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_OdontogenicCyst: Coding.FromStrict({
+    BodystructureCodeValueSet_OdontogenicCyst: new Coding({
         code: "28727003",
         display: "Odontogenic cyst",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CompoundOdontoma: Coding.FromStrict({
+    BodystructureCodeValueSet_CompoundOdontoma: new Coding({
         code: "28733007",
         display: "Compound odontoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_InternalHyperostosis: Coding.FromStrict({
+    BodystructureCodeValueSet_InternalHyperostosis: new Coding({
         code: "28781000",
         display: "Internal hyperostosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PancakeCell: Coding.FromStrict({
+    BodystructureCodeValueSet_PancakeCell: new Coding({
         code: "28789003",
         display: "Pancake cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Anisokaryosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Anisokaryosis: new Coding({
         code: "2881000",
         display: "Anisokaryosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GunshotContusionRing: Coding.FromStrict({
+    BodystructureCodeValueSet_GunshotContusionRing: new Coding({
         code: "28831000",
         display: "Gunshot contusion ring",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ImpactedFracture: Coding.FromStrict({
+    BodystructureCodeValueSet_ImpactedFracture: new Coding({
         code: "28836005",
         display: "Impacted fracture",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_InternalBlindCongenitalFistula: Coding.FromStrict({
+    BodystructureCodeValueSet_InternalBlindCongenitalFistula: new Coding({
         code: "28852008",
         display: "Internal blind congenital fistula",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FibrinThrombus: Coding.FromStrict({
+    BodystructureCodeValueSet_FibrinThrombus: new Coding({
         code: "28878004",
         display: "Fibrin thrombus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SCCSquamousCellCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_SCCSquamousCellCarcinoma: new Coding({
         code: "28899001",
         display: "SCC - Squamous cell carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalAdhesion: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalAdhesion: new Coding({
         code: "28941001",
         display: "Congenital adhesion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AcutePromyelocyticLeukemiaT1517Q22Q1112: Coding.FromStrict({
+    BodystructureCodeValueSet_AcutePromyelocyticLeukemiaT1517Q22Q1112: new Coding({
         code: "28950004",
         display: "Acute promyelocytic leukemia, t(15;17)(q22;q11-12)",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Angiomyosarcoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Angiomyosarcoma: new Coding({
         code: "28953002",
         display: "Angiomyosarcoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Arteriosclerosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Arteriosclerosis: new Coding({
         code: "28960008",
         display: "Arteriosclerosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ComplexOdontoma: Coding.FromStrict({
+    BodystructureCodeValueSet_ComplexOdontoma: new Coding({
         code: "29020002",
         display: "Complex odontoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CentralCores: Coding.FromStrict({
+    BodystructureCodeValueSet_CentralCores: new Coding({
         code: "29144003",
         display: "Central cores",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FattyDegeneration: Coding.FromStrict({
+    BodystructureCodeValueSet_FattyDegeneration: new Coding({
         code: "29185008",
         display: "Fatty degeneration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AlzheimerGlialChange: Coding.FromStrict({
+    BodystructureCodeValueSet_AlzheimerGlialChange: new Coding({
         code: "29209006",
         display: "Alzheimer glial change",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantPheochromocytoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantPheochromocytoma: new Coding({
         code: "29370006",
         display: "Malignant pheochromocytoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_KeratinPlug: Coding.FromStrict({
+    BodystructureCodeValueSet_KeratinPlug: new Coding({
         code: "29463007",
         display: "Keratin plug",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CalcifiedAtheroma: Coding.FromStrict({
+    BodystructureCodeValueSet_CalcifiedAtheroma: new Coding({
         code: "29483008",
         display: "Calcified atheroma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ProliferativeInflammation: Coding.FromStrict({
+    BodystructureCodeValueSet_ProliferativeInflammation: new Coding({
         code: "2952002",
         display: "Proliferative inflammation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MicroglandularHyperplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_MicroglandularHyperplasia: new Coding({
         code: "2953007",
         display: "Microglandular hyperplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AdenofibromaNoICDOSubtype: Coding.FromStrict({
+    BodystructureCodeValueSet_AdenofibromaNoICDOSubtype: new Coding({
         code: "2962009",
         display: "Adenofibroma, no ICD-O subtype",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Prolapse: Coding.FromStrict({
+    BodystructureCodeValueSet_Prolapse: new Coding({
         code: "29696001",
         display: "Prolapse",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_WolffianBodyRest: Coding.FromStrict({
+    BodystructureCodeValueSet_WolffianBodyRest: new Coding({
         code: "29771007",
         display: "Wolffian body rest",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_TrabecularAdenocarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_TrabecularAdenocarcinoma: new Coding({
         code: "29792007",
         display: "Trabecular adenocarcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MammaryPagetQuoteSDisease: Coding.FromStrict({
+    BodystructureCodeValueSet_MammaryPagetQuoteSDisease: new Coding({
         code: "2985005",
         display: "Mammary Paget's disease",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChromosomeFragment: Coding.FromStrict({
+    BodystructureCodeValueSet_ChromosomeFragment: new Coding({
         code: "29856000",
         display: "Chromosome fragment",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Tetrasomy: Coding.FromStrict({
+    BodystructureCodeValueSet_Tetrasomy: new Coding({
         code: "29996004",
         display: "Tetrasomy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Hyperemia: Coding.FromStrict({
+    BodystructureCodeValueSet_Hyperemia: new Coding({
         code: "30098003",
         display: "Hyperemia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DuctalCarcinomaCribriformType: Coding.FromStrict({
+    BodystructureCodeValueSet_DuctalCarcinomaCribriformType: new Coding({
         code: "30156004",
         display: "Ductal carcinoma, cribriform type",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LymphaticEdema: Coding.FromStrict({
+    BodystructureCodeValueSet_LymphaticEdema: new Coding({
         code: "30213001",
         display: "Lymphatic edema",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Proliferation: Coding.FromStrict({
+    BodystructureCodeValueSet_Proliferation: new Coding({
         code: "30217000",
         display: "Proliferation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Verruca: Coding.FromStrict({
+    BodystructureCodeValueSet_Verruca: new Coding({
         code: "30285000",
         display: "Verruca",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EndometrioidCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_EndometrioidCarcinoma: new Coding({
         code: "30289006",
         display: "Endometrioid carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FoetalAdenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_FoetalAdenoma: new Coding({
         code: "30301008",
         display: "Foetal adenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Remyelination: Coding.FromStrict({
+    BodystructureCodeValueSet_Remyelination: new Coding({
         code: "30321009",
         display: "Remyelination",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantBiphasicMesothelioma: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantBiphasicMesothelioma: new Coding({
         code: "30383009",
         display: "Malignant biphasic mesothelioma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_RadiationInjuryWithNecrosis: Coding.FromStrict({
+    BodystructureCodeValueSet_RadiationInjuryWithNecrosis: new Coding({
         code: "30386001",
         display: "Radiation injury with necrosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Leukostasis: Coding.FromStrict({
+    BodystructureCodeValueSet_Leukostasis: new Coding({
         code: "30419000",
         display: "Leukostasis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Osteolysis: Coding.FromStrict({
+    BodystructureCodeValueSet_Osteolysis: new Coding({
         code: "30425001",
         display: "Osteolysis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BuhotCell: Coding.FromStrict({
+    BodystructureCodeValueSet_BuhotCell: new Coding({
         code: "30469008",
         display: "Buhot cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_JunctionalMelanocyticNevus: Coding.FromStrict({
+    BodystructureCodeValueSet_JunctionalMelanocyticNevus: new Coding({
         code: "30494009",
         display: "Junctional melanocytic nevus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FractureIncomplete: Coding.FromStrict({
+    BodystructureCodeValueSet_FractureIncomplete: new Coding({
         code: "30543000",
         display: "Fracture, incomplete",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MesonephroidClearCellAdenocarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MesonephroidClearCellAdenocarcinoma: new Coding({
         code: "30546008",
         display: "Mesonephroid clear cell adenocarcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NonInfiltratingIntraductalPapillaryAdenocarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_NonInfiltratingIntraductalPapillaryAdenocarcinoma: new Coding({
         code: "30566004",
         display: "Non-infiltrating intraductal papillary adenocarcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AntemortemInjury: Coding.FromStrict({
+    BodystructureCodeValueSet_AntemortemInjury: new Coding({
         code: "30619009",
         display: "Antemortem injury",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BasalCellTumorUncertainWhetherBenignOrMalignant: Coding.FromStrict({
+    BodystructureCodeValueSet_BasalCellTumorUncertainWhetherBenignOrMalignant: new Coding({
         code: "30649006",
         display: "Basal cell tumor, uncertain whether benign or malignant",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MenstrualAlterationOfVagina: Coding.FromStrict({
+    BodystructureCodeValueSet_MenstrualAlterationOfVagina: new Coding({
         code: "30651005",
         display: "Menstrual alteration of vagina",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AtypicalLymphoidHyperplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_AtypicalLymphoidHyperplasia: new Coding({
         code: "30685006",
         display: "Atypical lymphoid hyperplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AnomalousOriginOfArtery: Coding.FromStrict({
+    BodystructureCodeValueSet_AnomalousOriginOfArtery: new Coding({
         code: "30691008",
         display: "Anomalous origin of artery",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_IncompleteBlindCongenitalFistula: Coding.FromStrict({
+    BodystructureCodeValueSet_IncompleteBlindCongenitalFistula: new Coding({
         code: "30695004",
         display: "Incomplete blind congenital fistula",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CarotidBodyTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_CarotidBodyTumor: new Coding({
         code: "30699005",
         display: "Carotid body tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HypernephroidTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_HypernephroidTumor: new Coding({
         code: "30713000",
         display: "Hypernephroid tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CapillaryTelangiectasia: Coding.FromStrict({
+    BodystructureCodeValueSet_CapillaryTelangiectasia: new Coding({
         code: "30727005",
         display: "Capillary telangiectasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HeavyMetalPigmentation: Coding.FromStrict({
+    BodystructureCodeValueSet_HeavyMetalPigmentation: new Coding({
         code: "30771009",
         display: "Heavy metal pigmentation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_OverridingStructures: Coding.FromStrict({
+    BodystructureCodeValueSet_OverridingStructures: new Coding({
         code: "30812002",
         display: "Overriding structures",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Carnification: Coding.FromStrict({
+    BodystructureCodeValueSet_Carnification: new Coding({
         code: "30867001",
         display: "Carnification",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Mummification: Coding.FromStrict({
+    BodystructureCodeValueSet_Mummification: new Coding({
         code: "30891005",
         display: "Mummification",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FractureOpenImpacted: Coding.FromStrict({
+    BodystructureCodeValueSet_FractureOpenImpacted: new Coding({
         code: "30902005",
         display: "Fracture, open, impacted",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_RhabdomyosarcomaNoSubtype: Coding.FromStrict({
+    BodystructureCodeValueSet_RhabdomyosarcomaNoSubtype: new Coding({
         code: "30924005",
         display: "Rhabdomyosarcoma, no subtype",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LanghansGiantCell: Coding.FromStrict({
+    BodystructureCodeValueSet_LanghansGiantCell: new Coding({
         code: "30938003",
         display: "Langhans giant cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AcuteMyelomonocyticLeukemia: Coding.FromStrict({
+    BodystructureCodeValueSet_AcuteMyelomonocyticLeukemia: new Coding({
         code: "30962008",
         display: "Acute myelomonocytic leukemia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AnaplasticOligodendroglioma: Coding.FromStrict({
+    BodystructureCodeValueSet_AnaplasticOligodendroglioma: new Coding({
         code: "3102004",
         display: "Anaplastic oligodendroglioma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LinearCircularAtrophyOfLowerExtremities: Coding.FromStrict({
+    BodystructureCodeValueSet_LinearCircularAtrophyOfLowerExtremities: new Coding({
         code: "31040001",
         display: "Linear circular atrophy of lower extremities",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FibroepithelialPolyp: Coding.FromStrict({
+    BodystructureCodeValueSet_FibroepithelialPolyp: new Coding({
         code: "31069005",
         display: "Fibroepithelial polyp",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ZahnInfarct: Coding.FromStrict({
+    BodystructureCodeValueSet_ZahnInfarct: new Coding({
         code: "31092005",
         display: "Zahn infarct",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MassiveFibrosis: Coding.FromStrict({
+    BodystructureCodeValueSet_MassiveFibrosis: new Coding({
         code: "31098009",
         display: "Massive fibrosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BenignHemangioendothelioma: Coding.FromStrict({
+    BodystructureCodeValueSet_BenignHemangioendothelioma: new Coding({
         code: "31104000",
         display: "Benign hemangioendothelioma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Diverticulum: Coding.FromStrict({
+    BodystructureCodeValueSet_Diverticulum: new Coding({
         code: "31113003",
         display: "Diverticulum",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_VipomaMalignant: Coding.FromStrict({
+    BodystructureCodeValueSet_VipomaMalignant: new Coding({
         code: "31131002",
         display: "Vipoma, malignant",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Chondroma: Coding.FromStrict({
+    BodystructureCodeValueSet_Chondroma: new Coding({
         code: "31186001",
         display: "Chondroma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DelayedUnionOfStellateFracture: Coding.FromStrict({
+    BodystructureCodeValueSet_DelayedUnionOfStellateFracture: new Coding({
         code: "31279000",
         display: "Delayed union of stellate fracture",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ThecaCellGranulosaCellTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_ThecaCellGranulosaCellTumor: new Coding({
         code: "31296004",
         display: "Theca cell - granulosa cell tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BridgingFibrosis: Coding.FromStrict({
+    BodystructureCodeValueSet_BridgingFibrosis: new Coding({
         code: "31313009",
         display: "Bridging fibrosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EpithelialHyperplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_EpithelialHyperplasia: new Coding({
         code: "31390008",
         display: "Epithelial hyperplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BallooningDegeneration: Coding.FromStrict({
+    BodystructureCodeValueSet_BallooningDegeneration: new Coding({
         code: "3139003",
         display: "Ballooning degeneration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MucocarcinoidTumorMalignant: Coding.FromStrict({
+    BodystructureCodeValueSet_MucocarcinoidTumorMalignant: new Coding({
         code: "31396002",
         display: "Mucocarcinoid tumor, malignant",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Adenosarcoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Adenosarcoma: new Coding({
         code: "31470003",
         display: "Adenosarcoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Rhagades: Coding.FromStrict({
+    BodystructureCodeValueSet_Rhagades: new Coding({
         code: "31478005",
         display: "Rhagades",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FibrousNonunion: Coding.FromStrict({
+    BodystructureCodeValueSet_FibrousNonunion: new Coding({
         code: "31511007",
         display: "Fibrous nonunion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FerrocalcinoticDeposition: Coding.FromStrict({
+    BodystructureCodeValueSet_FerrocalcinoticDeposition: new Coding({
         code: "31590009",
         display: "Ferrocalcinotic deposition",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MinimalLesion: Coding.FromStrict({
+    BodystructureCodeValueSet_MinimalLesion: new Coding({
         code: "31593006",
         display: "Minimal lesion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FibromuscularDysplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_FibromuscularDysplasia: new Coding({
         code: "31653004",
         display: "Fibromuscular dysplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_TransitionalPinealTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_TransitionalPinealTumor: new Coding({
         code: "31671006",
         display: "Transitional pineal tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LymphoepithelioidLymphoma: Coding.FromStrict({
+    BodystructureCodeValueSet_LymphoepithelioidLymphoma: new Coding({
         code: "3172003",
         display: "Lymphoepithelioid lymphoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LateralAbnormalCurvature: Coding.FromStrict({
+    BodystructureCodeValueSet_LateralAbnormalCurvature: new Coding({
         code: "31739005",
         display: "Lateral abnormal curvature",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BilateralCongenitalFailureOfFusion: Coding.FromStrict({
+    BodystructureCodeValueSet_BilateralCongenitalFailureOfFusion: new Coding({
         code: "31765009",
         display: "Bilateral congenital failure of fusion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SympatheticParaganglioma: Coding.FromStrict({
+    BodystructureCodeValueSet_SympatheticParaganglioma: new Coding({
         code: "31794002",
         display: "Sympathetic paraganglioma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PersistentEmbryonicStructure: Coding.FromStrict({
+    BodystructureCodeValueSet_PersistentEmbryonicStructure: new Coding({
         code: "31807009",
         display: "Persistent embryonic structure",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_RupturedEpithelialInclusionCyst: Coding.FromStrict({
+    BodystructureCodeValueSet_RupturedEpithelialInclusionCyst: new Coding({
         code: "31830003",
         display: "Ruptured epithelial inclusion cyst",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FusedStructure: Coding.FromStrict({
+    BodystructureCodeValueSet_FusedStructure: new Coding({
         code: "31883006",
         display: "Fused structure",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NecrotizingInflammation: Coding.FromStrict({
+    BodystructureCodeValueSet_NecrotizingInflammation: new Coding({
         code: "31980008",
         display: "Necrotizing inflammation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AnimalBite: Coding.FromStrict({
+    BodystructureCodeValueSet_AnimalBite: new Coding({
         code: "31986002",
         display: "Animal bite",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MildTransitionalCellAtypia: Coding.FromStrict({
+    BodystructureCodeValueSet_MildTransitionalCellAtypia: new Coding({
         code: "32008003",
         display: "Mild transitional cell atypia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_JugulotympanicParaganglioma: Coding.FromStrict({
+    BodystructureCodeValueSet_JugulotympanicParaganglioma: new Coding({
         code: "32037004",
         display: "Jugulotympanic paraganglioma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AdenomaNoSubtype: Coding.FromStrict({
+    BodystructureCodeValueSet_AdenomaNoSubtype: new Coding({
         code: "32048006",
         display: "Adenoma, no subtype",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_StrumalCarcinoid: Coding.FromStrict({
+    BodystructureCodeValueSet_StrumalCarcinoid: new Coding({
         code: "32071008",
         display: "Strumal carcinoid",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PapillaryCystadenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_PapillaryCystadenoma: new Coding({
         code: "32140001",
         display: "Papillary cystadenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CoagulativeNecrosis: Coding.FromStrict({
+    BodystructureCodeValueSet_CoagulativeNecrosis: new Coding({
         code: "32224006",
         display: "Coagulative necrosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SweatGlandAdenocarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_SweatGlandAdenocarcinoma: new Coding({
         code: "32272007",
         display: "Sweat gland adenocarcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_StellateSpontaneousPseudoscars: Coding.FromStrict({
+    BodystructureCodeValueSet_StellateSpontaneousPseudoscars: new Coding({
         code: "32274008",
         display: "Stellate spontaneous pseudoscars",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SubacuteLymphoidLeukemiaObs: Coding.FromStrict({
+    BodystructureCodeValueSet_SubacuteLymphoidLeukemiaObs: new Coding({
         code: "32280000",
         display: "Subacute lymphoid leukemia [obs]",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SerousCyst: Coding.FromStrict({
+    BodystructureCodeValueSet_SerousCyst: new Coding({
         code: "32288007",
         display: "Serous cyst",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_IntraductalPapillomatosis: Coding.FromStrict({
+    BodystructureCodeValueSet_IntraductalPapillomatosis: new Coding({
         code: "32296002",
         display: "Intraductal papillomatosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SubchondralBoneCyst: Coding.FromStrict({
+    BodystructureCodeValueSet_SubchondralBoneCyst: new Coding({
         code: "32322008",
         display: "Subchondral bone cyst",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PiecemealNecrosis: Coding.FromStrict({
+    BodystructureCodeValueSet_PiecemealNecrosis: new Coding({
         code: "32408007",
         display: "Piecemeal necrosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AtypicalHyperplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_AtypicalHyperplasia: new Coding({
         code: "32416003",
         display: "Atypical hyperplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PulmonaryAdenomatosis: Coding.FromStrict({
+    BodystructureCodeValueSet_PulmonaryAdenomatosis: new Coding({
         code: "32434004",
         display: "Pulmonary adenomatosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DesmoplasticNodularMedulloblastoma: Coding.FromStrict({
+    BodystructureCodeValueSet_DesmoplasticNodularMedulloblastoma: new Coding({
         code: "32456001",
         display: "Desmoplastic nodular medulloblastoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantNonChromaffinParaganglioma: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantNonChromaffinParaganglioma: new Coding({
         code: "32512003",
         display: "Malignant non-chromaffin paraganglioma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FattyNevus: Coding.FromStrict({
+    BodystructureCodeValueSet_FattyNevus: new Coding({
         code: "32525006",
         display: "Fatty nevus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ArteriolosclerosisWithFibrinoidNecrosis: Coding.FromStrict({
+    BodystructureCodeValueSet_ArteriolosclerosisWithFibrinoidNecrosis: new Coding({
         code: "32651000",
         display: "Arteriolosclerosis with fibrinoid necrosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Demyelination: Coding.FromStrict({
+    BodystructureCodeValueSet_Demyelination: new Coding({
         code: "32693004",
         display: "Demyelination",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalVascularAnomaly: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalVascularAnomaly: new Coding({
         code: "32776006",
         display: "Congenital vascular anomaly",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FollicularPapule: Coding.FromStrict({
+    BodystructureCodeValueSet_FollicularPapule: new Coding({
         code: "328005",
         display: "Follicular papule",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Hemangioblastomatosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Hemangioblastomatosis: new Coding({
         code: "32837003",
         display: "Hemangioblastomatosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MixedTeratomaAndSeminoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MixedTeratomaAndSeminoma: new Coding({
         code: "32844007",
         display: "Mixed teratoma and seminoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HematinPigmentation: Coding.FromStrict({
+    BodystructureCodeValueSet_HematinPigmentation: new Coding({
         code: "32884003",
         display: "Hematin pigmentation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MedullaryCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MedullaryCarcinoma: new Coding({
         code: "32913002",
         display: "Medullary carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ReedSternbergCell: Coding.FromStrict({
+    BodystructureCodeValueSet_ReedSternbergCell: new Coding({
         code: "32915009",
         display: "Reed-Sternberg cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_InflammatoryCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_InflammatoryCarcinoma: new Coding({
         code: "32968003",
         display: "Inflammatory carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Trichofolliculoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Trichofolliculoma: new Coding({
         code: "33059009",
         display: "Trichofolliculoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FractureUnunited: Coding.FromStrict({
+    BodystructureCodeValueSet_FractureUnunited: new Coding({
         code: "33080003",
         display: "Fracture, ununited",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HematoidinPigmentation: Coding.FromStrict({
+    BodystructureCodeValueSet_HematoidinPigmentation: new Coding({
         code: "33125008",
         display: "Hematoidin pigmentation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChronicSuperficialUlcer: Coding.FromStrict({
+    BodystructureCodeValueSet_ChronicSuperficialUlcer: new Coding({
         code: "3313007",
         display: "Chronic superficial ulcer",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MucinousAdenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MucinousAdenoma: new Coding({
         code: "33170000",
         display: "Mucinous adenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantHemangioendothelioma: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantHemangioendothelioma: new Coding({
         code: "33176006",
         display: "Malignant hemangioendothelioma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DelayedUnionOfLongitudinalFracture: Coding.FromStrict({
+    BodystructureCodeValueSet_DelayedUnionOfLongitudinalFracture: new Coding({
         code: "33178007",
         display: "Delayed union of longitudinal fracture",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Micromegakaryocyte: Coding.FromStrict({
+    BodystructureCodeValueSet_Micromegakaryocyte: new Coding({
         code: "33196003",
         display: "Micromegakaryocyte",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MildEpithelialDysplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_MildEpithelialDysplasia: new Coding({
         code: "33288004",
         display: "Mild epithelial dysplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Degeneration: Coding.FromStrict({
+    BodystructureCodeValueSet_Degeneration: new Coding({
         code: "33359002",
         display: "Degeneration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CavernousHemangioma: Coding.FromStrict({
+    BodystructureCodeValueSet_CavernousHemangioma: new Coding({
         code: "33377007",
         display: "Cavernous hemangioma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GeneralizedRecession: Coding.FromStrict({
+    BodystructureCodeValueSet_GeneralizedRecession: new Coding({
         code: "33385003",
         display: "Generalized recession",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_IntracysticHyperplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_IntracysticHyperplasia: new Coding({
         code: "33387006",
         display: "Intracystic hyperplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FractureUnunitedSegmental: Coding.FromStrict({
+    BodystructureCodeValueSet_FractureUnunitedSegmental: new Coding({
         code: "33408004",
         display: "Fracture, ununited, segmental",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MenstrualInvolutionOfBreast: Coding.FromStrict({
+    BodystructureCodeValueSet_MenstrualInvolutionOfBreast: new Coding({
         code: "33429008",
         display: "Menstrual involution of breast",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NeuropilThread: Coding.FromStrict({
+    BodystructureCodeValueSet_NeuropilThread: new Coding({
         code: "33475000",
         display: "Neuropil thread",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_VascularWallDegeneration: Coding.FromStrict({
+    BodystructureCodeValueSet_VascularWallDegeneration: new Coding({
         code: "33593002",
         display: "Vascular wall degeneration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_OsteosarcomaInPagetDiseaseOfBone: Coding.FromStrict({
+    BodystructureCodeValueSet_OsteosarcomaInPagetDiseaseOfBone: new Coding({
         code: "33681003",
         display: "Osteosarcoma in Paget disease of bone",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SuperficialInjury: Coding.FromStrict({
+    BodystructureCodeValueSet_SuperficialInjury: new Coding({
         code: "3380003",
         display: "Superficial injury",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SubacuteNecrosis: Coding.FromStrict({
+    BodystructureCodeValueSet_SubacuteNecrosis: new Coding({
         code: "33851008",
         display: "Subacute necrosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SmallNonCleavedCell: Coding.FromStrict({
+    BodystructureCodeValueSet_SmallNonCleavedCell: new Coding({
         code: "33872006",
         display: "Small non-cleaved cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ConvolutedCell: Coding.FromStrict({
+    BodystructureCodeValueSet_ConvolutedCell: new Coding({
         code: "33873001",
         display: "Convoluted cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AtypicalLobularHyperplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_AtypicalLobularHyperplasia: new Coding({
         code: "33889003",
         display: "Atypical lobular hyperplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Blister: Coding.FromStrict({
+    BodystructureCodeValueSet_Blister: new Coding({
         code: "339008",
         display: "Blister",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HistiocytoidHemangioma: Coding.FromStrict({
+    BodystructureCodeValueSet_HistiocytoidHemangioma: new Coding({
         code: "33929001",
         display: "Histiocytoid hemangioma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CaseousNecrosis: Coding.FromStrict({
+    BodystructureCodeValueSet_CaseousNecrosis: new Coding({
         code: "33940009",
         display: "Caseous necrosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Bite: Coding.FromStrict({
+    BodystructureCodeValueSet_Bite: new Coding({
         code: "3404009",
         display: "Bite",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BowingDeformity: Coding.FromStrict({
+    BodystructureCodeValueSet_BowingDeformity: new Coding({
         code: "34058006",
         display: "Bowing deformity",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NuclearDegeneration: Coding.FromStrict({
+    BodystructureCodeValueSet_NuclearDegeneration: new Coding({
         code: "34064004",
         display: "Nuclear degeneration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PostRadiationCytologicChangesWithDysplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_PostRadiationCytologicChangesWithDysplasia: new Coding({
         code: "34081008",
         display: "Post-radiation cytologic changes with dysplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Hemiatrophy: Coding.FromStrict({
+    BodystructureCodeValueSet_Hemiatrophy: new Coding({
         code: "34087007",
         display: "Hemiatrophy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SertoliLeydigCellTumorWellDifferentiated: Coding.FromStrict({
+    BodystructureCodeValueSet_SertoliLeydigCellTumorWellDifferentiated: new Coding({
         code: "34110004",
         display: "Sertoli-Leydig cell tumor, well differentiated",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LengtheningOfShortArm: Coding.FromStrict({
+    BodystructureCodeValueSet_LengtheningOfShortArm: new Coding({
         code: "3416003",
         display: "Lengthening of short arm",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_RheumaticInflammation: Coding.FromStrict({
+    BodystructureCodeValueSet_RheumaticInflammation: new Coding({
         code: "34248003",
         display: "Rheumatic inflammation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_TraumaticDislocationOfMultipleJoints: Coding.FromStrict({
+    BodystructureCodeValueSet_TraumaticDislocationOfMultipleJoints: new Coding({
         code: "34277002",
         display: "Traumatic dislocation of multiple joints",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FractureMultipleClosed: Coding.FromStrict({
+    BodystructureCodeValueSet_FractureMultipleClosed: new Coding({
         code: "34305007",
         display: "Fracture, multiple, closed",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Prolactinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Prolactinoma: new Coding({
         code: "34337008",
         display: "Prolactinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ConcentricHypertrophy: Coding.FromStrict({
+    BodystructureCodeValueSet_ConcentricHypertrophy: new Coding({
         code: "34344004",
         display: "Concentric hypertrophy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantFibrousHistiocytoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantFibrousHistiocytoma: new Coding({
         code: "34360000",
         display: "Malignant fibrous histiocytoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GlandularNecrotizingMetaplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_GlandularNecrotizingMetaplasia: new Coding({
         code: "34418003",
         display: "Glandular necrotizing metaplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DecidualAlteration: Coding.FromStrict({
+    BodystructureCodeValueSet_DecidualAlteration: new Coding({
         code: "34419006",
         display: "Decidual alteration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_OsmiophilicStainReaction: Coding.FromStrict({
+    BodystructureCodeValueSet_OsmiophilicStainReaction: new Coding({
         code: "34493008",
         display: "Osmiophilic stain reaction",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CommunicatingCerebrospinalFluidRetention: Coding.FromStrict({
+    BodystructureCodeValueSet_CommunicatingCerebrospinalFluidRetention: new Coding({
         code: "34494002",
         display: "Communicating cerebrospinal fluid retention",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Glomangiomyoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Glomangiomyoma: new Coding({
         code: "34550005",
         display: "Glomangiomyoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BasalCellAdenocarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_BasalCellAdenocarcinoma: new Coding({
         code: "34603009",
         display: "Basal cell adenocarcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Regeneration: Coding.FromStrict({
+    BodystructureCodeValueSet_Regeneration: new Coding({
         code: "34636005",
         display: "Regeneration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SmudgeCell: Coding.FromStrict({
+    BodystructureCodeValueSet_SmudgeCell: new Coding({
         code: "34717007",
         display: "Smudge cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MenstrualEndometrium: Coding.FromStrict({
+    BodystructureCodeValueSet_MenstrualEndometrium: new Coding({
         code: "34720004",
         display: "Menstrual endometrium",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Lipolysis: Coding.FromStrict({
+    BodystructureCodeValueSet_Lipolysis: new Coding({
         code: "34785007",
         display: "Lipolysis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalIncompleteExpansion: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalIncompleteExpansion: new Coding({
         code: "34807008",
         display: "Congenital incomplete expansion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_TumorNecrosis: Coding.FromStrict({
+    BodystructureCodeValueSet_TumorNecrosis: new Coding({
         code: "34823008",
         display: "Tumor necrosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GiantFibroadenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_GiantFibroadenoma: new Coding({
         code: "34882000",
         display: "Giant fibroadenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_OdontogenicMyxoma: Coding.FromStrict({
+    BodystructureCodeValueSet_OdontogenicMyxoma: new Coding({
         code: "34941004",
         display: "Odontogenic myxoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PurulentDischarge: Coding.FromStrict({
+    BodystructureCodeValueSet_PurulentDischarge: new Coding({
         code: "35013009",
         display: "Purulent discharge",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_InflammatoryPseudotumor: Coding.FromStrict({
+    BodystructureCodeValueSet_InflammatoryPseudotumor: new Coding({
         code: "35073002",
         display: "Inflammatory pseudotumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_InfiltratingLobularCarcinomaAndDuctalCarcinomaInSitu: Coding.FromStrict({
+    BodystructureCodeValueSet_InfiltratingLobularCarcinomaAndDuctalCarcinomaInSitu: new Coding({
         code: "35232005",
         display: "Infiltrating lobular carcinoma and ductal carcinoma in situ",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Gliosarcoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Gliosarcoma: new Coding({
         code: "35262004",
         display: "Gliosarcoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MyeloidSarcomaMorphology: Coding.FromStrict({
+    BodystructureCodeValueSet_MyeloidSarcomaMorphology: new Coding({
         code: "35287006",
         display: "Myeloid sarcoma, morphology",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Intussusception: Coding.FromStrict({
+    BodystructureCodeValueSet_Intussusception: new Coding({
         code: "35327006",
         display: "Intussusception",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GunshotWoundEntranceCloseShot: Coding.FromStrict({
+    BodystructureCodeValueSet_GunshotWoundEntranceCloseShot: new Coding({
         code: "35336005",
         display: "Gunshot wound, entrance, close shot",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_TritonTumorMalignant: Coding.FromStrict({
+    BodystructureCodeValueSet_TritonTumorMalignant: new Coding({
         code: "354002",
         display: "Triton tumor, malignant",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AutophagicBodies: Coding.FromStrict({
+    BodystructureCodeValueSet_AutophagicBodies: new Coding({
         code: "35453004",
         display: "Autophagic bodies",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SweatRetention: Coding.FromStrict({
+    BodystructureCodeValueSet_SweatRetention: new Coding({
         code: "35506000",
         display: "Sweat retention",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_WaldenstromMacroglobulinemia: Coding.FromStrict({
+    BodystructureCodeValueSet_WaldenstromMacroglobulinemia: new Coding({
         code: "35562000",
         display: "Waldenstrom macroglobulinemia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Hematoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Hematoma: new Coding({
         code: "35566002",
         display: "Hematoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MGUS: Coding.FromStrict({
+    BodystructureCodeValueSet_MGUS: new Coding({
         code: "35601003",
         display: "MGUS",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalLymphangiomatosis: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalLymphangiomatosis: new Coding({
         code: "35662008",
         display: "Congenital lymphangiomatosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_RupturedInfarct: Coding.FromStrict({
+    BodystructureCodeValueSet_RupturedInfarct: new Coding({
         code: "35696001",
         display: "Ruptured infarct",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HemangioblasticMeningioma: Coding.FromStrict({
+    BodystructureCodeValueSet_HemangioblasticMeningioma: new Coding({
         code: "35701008",
         display: "Hemangioblastic meningioma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MinorInjury: Coding.FromStrict({
+    BodystructureCodeValueSet_MinorInjury: new Coding({
         code: "35712008",
         display: "Minor injury",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PostmortemChange: Coding.FromStrict({
+    BodystructureCodeValueSet_PostmortemChange: new Coding({
         code: "35714009",
         display: "Postmortem change",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NonKeratinizingSquamousCellCarcinomaSmallCell: Coding.FromStrict({
+    BodystructureCodeValueSet_NonKeratinizingSquamousCellCarcinomaSmallCell: new Coding({
         code: "35718007",
         display: "Non-keratinizing squamous cell carcinoma - small cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PostinflammatoryAtrophy: Coding.FromStrict({
+    BodystructureCodeValueSet_PostinflammatoryAtrophy: new Coding({
         code: "35787005",
         display: "Postinflammatory atrophy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FibrocysticChangeProliferativeTypeWithAtypia: Coding.FromStrict({
+    BodystructureCodeValueSet_FibrocysticChangeProliferativeTypeWithAtypia: new Coding({
         code: "35813005",
         display: "Fibrocystic change, proliferative type with atypia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Malacia: Coding.FromStrict({
+    BodystructureCodeValueSet_Malacia: new Coding({
         code: "35828005",
         display: "Malacia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChronicEmpyema: Coding.FromStrict({
+    BodystructureCodeValueSet_ChronicEmpyema: new Coding({
         code: "35851005",
         display: "Chronic empyema",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SecondaryHyperplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_SecondaryHyperplasia: new Coding({
         code: "35872008",
         display: "Secondary hyperplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AdenocarcinomaNoSubtype: Coding.FromStrict({
+    BodystructureCodeValueSet_AdenocarcinomaNoSubtype: new Coding({
         code: "35917007",
         display: "Adenocarcinoma, no subtype",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_TearWound: Coding.FromStrict({
+    BodystructureCodeValueSet_TearWound: new Coding({
         code: "35933005",
         display: "Tear - wound",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_RadiationUlcer: Coding.FromStrict({
+    BodystructureCodeValueSet_RadiationUlcer: new Coding({
         code: "35944002",
         display: "Radiation ulcer",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PredecidualAlteration: Coding.FromStrict({
+    BodystructureCodeValueSet_PredecidualAlteration: new Coding({
         code: "35992002",
         display: "Predecidual alteration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Gangrenous: Coding.FromStrict({
+    BodystructureCodeValueSet_Gangrenous: new Coding({
         code: "36024000",
         display: "Gangrenous",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HemangiopericyticMeningiomaObs: Coding.FromStrict({
+    BodystructureCodeValueSet_HemangiopericyticMeningiomaObs: new Coding({
         code: "36060005",
         display: "Hemangiopericytic meningioma [obs]",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AdenocarcinomaInVillousAdenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_AdenocarcinomaInVillousAdenoma: new Coding({
         code: "36087009",
         display: "Adenocarcinoma in villous adenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ExternalSpontaneousFistula: Coding.FromStrict({
+    BodystructureCodeValueSet_ExternalSpontaneousFistula: new Coding({
         code: "3612005",
         display: "External spontaneous fistula",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_WallerianDegeneration: Coding.FromStrict({
+    BodystructureCodeValueSet_WallerianDegeneration: new Coding({
         code: "36161006",
         display: "Wallerian degeneration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Perforation: Coding.FromStrict({
+    BodystructureCodeValueSet_Perforation: new Coding({
         code: "36191001",
         display: "Perforation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NodularHyperplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_NodularHyperplasia: new Coding({
         code: "36195005",
         display: "Nodular hyperplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AirEmbolus: Coding.FromStrict({
+    BodystructureCodeValueSet_AirEmbolus: new Coding({
         code: "36207003",
         display: "Air embolus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DelayedUnionOfIntraarticularFracture: Coding.FromStrict({
+    BodystructureCodeValueSet_DelayedUnionOfIntraarticularFracture: new Coding({
         code: "36223003",
         display: "Delayed union of intraarticular fracture",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Lipogranuloma: Coding.FromStrict({
+    BodystructureCodeValueSet_Lipogranuloma: new Coding({
         code: "36279001",
         display: "Lipogranuloma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AlveolarAdenocarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_AlveolarAdenocarcinoma: new Coding({
         code: "36310008",
         display: "Alveolar adenocarcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ApocrineCystadenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_ApocrineCystadenoma: new Coding({
         code: "36318001",
         display: "Apocrine cystadenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MuscleFiberHypertrophyTypeII: Coding.FromStrict({
+    BodystructureCodeValueSet_MuscleFiberHypertrophyTypeII: new Coding({
         code: "36373003",
         display: "Muscle fiber hypertrophy, type II",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChronicSuppurativeInflammation: Coding.FromStrict({
+    BodystructureCodeValueSet_ChronicSuppurativeInflammation: new Coding({
         code: "36390009",
         display: "Chronic suppurative inflammation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PregnancyLuteoma: Coding.FromStrict({
+    BodystructureCodeValueSet_PregnancyLuteoma: new Coding({
         code: "3645005",
         display: "Pregnancy luteoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SurgicallyConstructedOrgan: Coding.FromStrict({
+    BodystructureCodeValueSet_SurgicallyConstructedOrgan: new Coding({
         code: "36468008",
         display: "Surgically constructed organ",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LowOutputExternalFistula: Coding.FromStrict({
+    BodystructureCodeValueSet_LowOutputExternalFistula: new Coding({
         code: "36475009",
         display: "Low-output external fistula",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Ankylosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Ankylosis: new Coding({
         code: "36504009",
         display: "Ankylosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CysticInfarct: Coding.FromStrict({
+    BodystructureCodeValueSet_CysticInfarct: new Coding({
         code: "36560003",
         display: "Cystic infarct",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PsoriasiformEruption: Coding.FromStrict({
+    BodystructureCodeValueSet_PsoriasiformEruption: new Coding({
         code: "36639000",
         display: "Psoriasiform eruption",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Clubbing: Coding.FromStrict({
+    BodystructureCodeValueSet_Clubbing: new Coding({
         code: "367004",
         display: "Clubbing",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PapillaryMucinousCystadenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_PapillaryMucinousCystadenoma: new Coding({
         code: "36721002",
         display: "Papillary mucinous cystadenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Sacculation: Coding.FromStrict({
+    BodystructureCodeValueSet_Sacculation: new Coding({
         code: "36731009",
         display: "Sacculation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SeminomaNoICDOSubtype: Coding.FromStrict({
+    BodystructureCodeValueSet_SeminomaNoICDOSubtype: new Coding({
         code: "36741007",
         display: "Seminoma, no ICD-O subtype",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PolycysticChange: Coding.FromStrict({
+    BodystructureCodeValueSet_PolycysticChange: new Coding({
         code: "3679006",
         display: "Polycystic change",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MajorMultipleInjuries: Coding.FromStrict({
+    BodystructureCodeValueSet_MajorMultipleInjuries: new Coding({
         code: "36818005",
         display: "Major multiple injuries",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DislocationMultipleClosedAndOpen: Coding.FromStrict({
+    BodystructureCodeValueSet_DislocationMultipleClosedAndOpen: new Coding({
         code: "36839003",
         display: "Dislocation, multiple, closed and open",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Retention: Coding.FromStrict({
+    BodystructureCodeValueSet_Retention: new Coding({
         code: "36850000",
         display: "Retention",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FocalEpithelialHyperplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_FocalEpithelialHyperplasia: new Coding({
         code: "36949004",
         display: "Focal epithelial hyperplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChromophobeAdenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_ChromophobeAdenoma: new Coding({
         code: "37039006",
         display: "Chromophobe adenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ForeignBodyGiantCellGranuloma: Coding.FromStrict({
+    BodystructureCodeValueSet_ForeignBodyGiantCellGranuloma: new Coding({
         code: "37058002",
         display: "Foreign body giant cell granuloma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LateralDisplacement: Coding.FromStrict({
+    BodystructureCodeValueSet_LateralDisplacement: new Coding({
         code: "37068007",
         display: "Lateral displacement",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Lipomatosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Lipomatosis: new Coding({
         code: "37095002",
         display: "Lipomatosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EpithelioidCellMelanoma: Coding.FromStrict({
+    BodystructureCodeValueSet_EpithelioidCellMelanoma: new Coding({
         code: "37138001",
         display: "Epithelioid cell melanoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GlandularAndMuscularHyperplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_GlandularAndMuscularHyperplasia: new Coding({
         code: "37159008",
         display: "Glandular and muscular hyperplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SuperficialWound: Coding.FromStrict({
+    BodystructureCodeValueSet_SuperficialWound: new Coding({
         code: "37205004",
         display: "Superficial wound",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SynovialSarcomaSpindleCell: Coding.FromStrict({
+    BodystructureCodeValueSet_SynovialSarcomaSpindleCell: new Coding({
         code: "37206003",
         display: "Synovial sarcoma - spindle cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DecreasedMelaninPigmentation: Coding.FromStrict({
+    BodystructureCodeValueSet_DecreasedMelaninPigmentation: new Coding({
         code: "37257004",
         display: "Decreased melanin pigmentation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Cementoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Cementoma: new Coding({
         code: "37258009",
         display: "Cementoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SecretoryEndometrium: Coding.FromStrict({
+    BodystructureCodeValueSet_SecretoryEndometrium: new Coding({
         code: "37266000",
         display: "Secretory endometrium",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AmyloidTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_AmyloidTumor: new Coding({
         code: "37279009",
         display: "Amyloid tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Eventration: Coding.FromStrict({
+    BodystructureCodeValueSet_Eventration: new Coding({
         code: "37291000",
         display: "Eventration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BluntInjury: Coding.FromStrict({
+    BodystructureCodeValueSet_BluntInjury: new Coding({
         code: "3821009",
         display: "Blunt injury",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_OdontogenicTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_OdontogenicTumor: new Coding({
         code: "3833004",
         display: "Odontogenic tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LipidRichCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_LipidRichCarcinoma: new Coding({
         code: "3839000",
         display: "Lipid-rich carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_UrateTophus: Coding.FromStrict({
+    BodystructureCodeValueSet_UrateTophus: new Coding({
         code: "3875003",
         display: "Urate tophus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BenignTumorMorphology: Coding.FromStrict({
+    BodystructureCodeValueSet_BenignTumorMorphology: new Coding({
         code: "3898006",
         display: "Benign tumor morphology",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AbnormalTrabeculation: Coding.FromStrict({
+    BodystructureCodeValueSet_AbnormalTrabeculation: new Coding({
         code: "394000",
         display: "Abnormal trabeculation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SevereTransitionalCellAtypia: Coding.FromStrict({
+    BodystructureCodeValueSet_SevereTransitionalCellAtypia: new Coding({
         code: "4000000",
         display: "Severe transitional cell atypia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_RecurrentClosedDislocation: Coding.FromStrict({
+    BodystructureCodeValueSet_RecurrentClosedDislocation: new Coding({
         code: "4023002",
         display: "Recurrent closed dislocation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MucoepidermoidCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MucoepidermoidCarcinoma: new Coding({
         code: "4079000",
         display: "Mucoepidermoid carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MultilobularChondromaAndOsteoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MultilobularChondromaAndOsteoma: new Coding({
         code: "4118000",
         display: "Multilobular chondroma and osteoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BursalCyst: Coding.FromStrict({
+    BodystructureCodeValueSet_BursalCyst: new Coding({
         code: "4125007",
         display: "Bursal cyst",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Mass: Coding.FromStrict({
+    BodystructureCodeValueSet_Mass: new Coding({
         code: "4147007",
         display: "Mass",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FunctionalDilatation: Coding.FromStrict({
+    BodystructureCodeValueSet_FunctionalDilatation: new Coding({
         code: "419008",
         display: "Functional dilatation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Eversion: Coding.FromStrict({
+    BodystructureCodeValueSet_Eversion: new Coding({
         code: "4196002",
         display: "Eversion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PacinianNeurofibroma: Coding.FromStrict({
+    BodystructureCodeValueSet_PacinianNeurofibroma: new Coding({
         code: "4230004",
         display: "Pacinian neurofibroma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MetastaticSignetRingCellCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MetastaticSignetRingCellCarcinoma: new Coding({
         code: "4305004",
         display: "Metastatic signet ring cell carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantMixedTumorOsteosarcomatousType: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantMixedTumorOsteosarcomatousType: new Coding({
         code: "4392007",
         display: "Malignant mixed tumor, osteosarcomatous type",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AtypicalGlandularCellsOfUndeterminedSignificance: Coding.FromStrict({
+    BodystructureCodeValueSet_AtypicalGlandularCellsOfUndeterminedSignificance: new Coding({
         code: "4476003",
         display: "Atypical glandular cells of undetermined significance",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChromocenterAlteration: Coding.FromStrict({
+    BodystructureCodeValueSet_ChromocenterAlteration: new Coding({
         code: "4484004",
         display: "Chromocenter alteration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ObstructionByTorsionAndAngulationCombinedMechanism: Coding.FromStrict({
+    BodystructureCodeValueSet_ObstructionByTorsionAndAngulationCombinedMechanism: new Coding({
         code: "4513002",
         display: "Obstruction by torsion and angulation, combined mechanism",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AcuteInflammation: Coding.FromStrict({
+    BodystructureCodeValueSet_AcuteInflammation: new Coding({
         code: "4532008",
         display: "Acute inflammation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PapulovesicularEruption: Coding.FromStrict({
+    BodystructureCodeValueSet_PapulovesicularEruption: new Coding({
         code: "4538007",
         display: "Papulovesicular eruption",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalFailureOfFusion: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalFailureOfFusion: new Coding({
         code: "4541003",
         display: "Congenital failure of fusion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MixedSubependymomaEpendymoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MixedSubependymomaEpendymoma: new Coding({
         code: "4553004",
         display: "Mixed subependymoma-ependymoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ScirrhousAdenocarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_ScirrhousAdenocarcinoma: new Coding({
         code: "4584002",
         display: "Scirrhous adenocarcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MetastaticAdenocarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MetastaticAdenocarcinoma: new Coding({
         code: "4590003",
         display: "Metastatic adenocarcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalDextrorotation: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalDextrorotation: new Coding({
         code: "4618001",
         display: "Congenital dextrorotation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_TubularAdenocarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_TubularAdenocarcinoma: new Coding({
         code: "4631006",
         display: "Tubular adenocarcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MesonephricDuctHyperplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_MesonephricDuctHyperplasia: new Coding({
         code: "4684005",
         display: "Mesonephric duct hyperplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BlisterDueToDegenerationOfBasalCells: Coding.FromStrict({
+    BodystructureCodeValueSet_BlisterDueToDegenerationOfBasalCells: new Coding({
         code: "4686007",
         display: "Blister due to degeneration of basal cells",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Dystrophy: Coding.FromStrict({
+    BodystructureCodeValueSet_Dystrophy: new Coding({
         code: "4720007",
         display: "Dystrophy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PapillaryAdenocarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_PapillaryAdenocarcinoma: new Coding({
         code: "4797003",
         display: "Papillary adenocarcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Hyperpigmentation: Coding.FromStrict({
+    BodystructureCodeValueSet_Hyperpigmentation: new Coding({
         code: "4830009",
         display: "Hyperpigmentation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Sequestrum: Coding.FromStrict({
+    BodystructureCodeValueSet_Sequestrum: new Coding({
         code: "4857006",
         display: "Sequestrum",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CoilWhorledFibers: Coding.FromStrict({
+    BodystructureCodeValueSet_CoilWhorledFibers: new Coding({
         code: "487002",
         display: "Coil/whorled fibers",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AcuteObstruction: Coding.FromStrict({
+    BodystructureCodeValueSet_AcuteObstruction: new Coding({
         code: "4876008",
         display: "Acute obstruction",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Pleomorphism: Coding.FromStrict({
+    BodystructureCodeValueSet_Pleomorphism: new Coding({
         code: "4916000",
         display: "Pleomorphism",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalProtrusion: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalProtrusion: new Coding({
         code: "4919007",
         display: "Congenital protrusion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AdenocarcinomaInSituInVillousAdenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_AdenocarcinomaInSituInVillousAdenoma: new Coding({
         code: "4935000",
         display: "Adenocarcinoma in situ in villous adenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ContractionBands: Coding.FromStrict({
+    BodystructureCodeValueSet_ContractionBands: new Coding({
         code: "4947006",
         display: "Contraction bands",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SezarySyndrome: Coding.FromStrict({
+    BodystructureCodeValueSet_SezarySyndrome: new Coding({
         code: "4950009",
         display: "Sezary syndrome",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EccrineSpiradenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_EccrineSpiradenoma: new Coding({
         code: "4977000",
         display: "Eccrine spiradenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PittingEdema: Coding.FromStrict({
+    BodystructureCodeValueSet_PittingEdema: new Coding({
         code: "5008001",
         display: "Pitting edema",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BenignInterstitialCellTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_BenignInterstitialCellTumor: new Coding({
         code: "5014008",
         display: "Benign interstitial cell tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PrimaryCutaneousNeuroendocrineCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_PrimaryCutaneousNeuroendocrineCarcinoma: new Coding({
         code: "5052009",
         display: "Primary cutaneous neuroendocrine carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FibrousMeningioma: Coding.FromStrict({
+    BodystructureCodeValueSet_FibrousMeningioma: new Coding({
         code: "511008",
         display: "Fibrous meningioma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BenignSynovioma: Coding.FromStrict({
+    BodystructureCodeValueSet_BenignSynovioma: new Coding({
         code: "5178002",
         display: "Benign synovioma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_InferiorClosedDislocation: Coding.FromStrict({
+    BodystructureCodeValueSet_InferiorClosedDislocation: new Coding({
         code: "5183005",
         display: "Inferior closed dislocation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_RoundCalculus: Coding.FromStrict({
+    BodystructureCodeValueSet_RoundCalculus: new Coding({
         code: "5188001",
         display: "Round calculus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PautrierMicroabscess: Coding.FromStrict({
+    BodystructureCodeValueSet_PautrierMicroabscess: new Coding({
         code: "5237007",
         display: "Pautrier microabscess",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Synechia: Coding.FromStrict({
+    BodystructureCodeValueSet_Synechia: new Coding({
         code: "5242004",
         display: "Synechia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_IntraductalPapilloma: Coding.FromStrict({
+    BodystructureCodeValueSet_IntraductalPapilloma: new Coding({
         code: "5244003",
         display: "Intraductal papilloma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FollicularAdenocarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_FollicularAdenocarcinoma: new Coding({
         code: "5257006",
         display: "Follicular adenocarcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AcuteDilatation: Coding.FromStrict({
+    BodystructureCodeValueSet_AcuteDilatation: new Coding({
         code: "5314004",
         display: "Acute dilatation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BowenoidPapulosis: Coding.FromStrict({
+    BodystructureCodeValueSet_BowenoidPapulosis: new Coding({
         code: "5356000",
         display: "Bowenoid papulosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DissectingHemorrhage: Coding.FromStrict({
+    BodystructureCodeValueSet_DissectingHemorrhage: new Coding({
         code: "5399005",
         display: "Dissecting hemorrhage",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_TraumaticEvisceratedStructure: Coding.FromStrict({
+    BodystructureCodeValueSet_TraumaticEvisceratedStructure: new Coding({
         code: "5409002",
         display: "Traumatic eviscerated structure",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FractureMultiple: Coding.FromStrict({
+    BodystructureCodeValueSet_FractureMultiple: new Coding({
         code: "5468008",
         display: "Fracture, multiple",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CanalizedThrombus: Coding.FromStrict({
+    BodystructureCodeValueSet_CanalizedThrombus: new Coding({
         code: "5480000",
         display: "Canalized thrombus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SchneiderianCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_SchneiderianCarcinoma: new Coding({
         code: "5600009",
         display: "Schneiderian carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GranularAtrophy: Coding.FromStrict({
+    BodystructureCodeValueSet_GranularAtrophy: new Coding({
         code: "5640003",
         display: "Granular atrophy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AdenocarcinomaInTubulovillousAdenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_AdenocarcinomaInTubulovillousAdenoma: new Coding({
         code: "5658009",
         display: "Adenocarcinoma in tubulovillous adenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SquamousCellCarcinomaInSituWithQuestionableStromalInvasion: Coding.FromStrict({
+    BodystructureCodeValueSet_SquamousCellCarcinomaInSituWithQuestionableStromalInvasion: new Coding({
         code: "5688000",
         display: "Squamous cell carcinoma in situ with questionable stromal invasion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PressureGroove: Coding.FromStrict({
+    BodystructureCodeValueSet_PressureGroove: new Coding({
         code: "5734001",
         display: "Pressure groove",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Cholesteatoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Cholesteatoma: new Coding({
         code: "575006",
         display: "Cholesteatoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CysticHyperplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_CysticHyperplasia: new Coding({
         code: "5755004",
         display: "Cystic hyperplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DecompressionInjury: Coding.FromStrict({
+    BodystructureCodeValueSet_DecompressionInjury: new Coding({
         code: "5770003",
         display: "Decompression injury",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalGrowthDisproportion: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalGrowthDisproportion: new Coding({
         code: "5804003",
         display: "Congenital growth disproportion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BasaloidCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_BasaloidCarcinoma: new Coding({
         code: "5843004",
         display: "Basaloid carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GlialCellReaction: Coding.FromStrict({
+    BodystructureCodeValueSet_GlialCellReaction: new Coding({
         code: "5849000",
         display: "Glial cell reaction",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MucousMembraneEruption: Coding.FromStrict({
+    BodystructureCodeValueSet_MucousMembraneEruption: new Coding({
         code: "5862001",
         display: "Mucous membrane eruption",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MultipleInternalInjuries: Coding.FromStrict({
+    BodystructureCodeValueSet_MultipleInternalInjuries: new Coding({
         code: "5901005",
         display: "Multiple internal injuries",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GlandularStromalAsynchronyOfEndometrium: Coding.FromStrict({
+    BodystructureCodeValueSet_GlandularStromalAsynchronyOfEndometrium: new Coding({
         code: "5909007",
         display: "Glandular-stromal asynchrony of endometrium",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SmallCellCarcinomaIntermediateCell: Coding.FromStrict({
+    BodystructureCodeValueSet_SmallCellCarcinomaIntermediateCell: new Coding({
         code: "5958006",
         display: "Small cell carcinoma, intermediate cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DepressedStructure: Coding.FromStrict({
+    BodystructureCodeValueSet_DepressedStructure: new Coding({
         code: "5960008",
         display: "Depressed structure",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PressureCone: Coding.FromStrict({
+    BodystructureCodeValueSet_PressureCone: new Coding({
         code: "5974001",
         display: "Pressure cone",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_FractureOpenLongitudinal: Coding.FromStrict({
+    BodystructureCodeValueSet_FractureOpenLongitudinal: new Coding({
         code: "5978003",
         display: "Fracture, open, longitudinal",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SevereInflammatoryAtypia: Coding.FromStrict({
+    BodystructureCodeValueSet_SevereInflammatoryAtypia: new Coding({
         code: "605004",
         display: "Severe inflammatory atypia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MucusRetention: Coding.FromStrict({
+    BodystructureCodeValueSet_MucusRetention: new Coding({
         code: "6078006",
         display: "Mucus retention",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Deformity: Coding.FromStrict({
+    BodystructureCodeValueSet_Deformity: new Coding({
         code: "6081001",
         display: "Deformity",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_OncocyticMetaplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_OncocyticMetaplasia: new Coding({
         code: "6120000",
         display: "Oncocytic metaplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AmphophilicStainReaction: Coding.FromStrict({
+    BodystructureCodeValueSet_AmphophilicStainReaction: new Coding({
         code: "6151007",
         display: "Amphophilic stain reaction",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_NeoplasmMalignantUncertainWhetherPrimaryOrMetastatic: Coding.FromStrict({
+    BodystructureCodeValueSet_NeoplasmMalignantUncertainWhetherPrimaryOrMetastatic: new Coding({
         code: "6219000",
         display: "Neoplasm, malignant, uncertain whether primary or metastatic",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MildKoilocytoticAtypia: Coding.FromStrict({
+    BodystructureCodeValueSet_MildKoilocytoticAtypia: new Coding({
         code: "6223008",
         display: "Mild koilocytotic atypia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Fibromyxosarcoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Fibromyxosarcoma: new Coding({
         code: "6250003",
         display: "Fibromyxosarcoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_GranulomatousInflammation: Coding.FromStrict({
+    BodystructureCodeValueSet_GranulomatousInflammation: new Coding({
         code: "6266001",
         display: "Granulomatous inflammation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Collagenolysis: Coding.FromStrict({
+    BodystructureCodeValueSet_Collagenolysis: new Coding({
         code: "6320008",
         display: "Collagenolysis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MultipleAdenomatousPolyps: Coding.FromStrict({
+    BodystructureCodeValueSet_MultipleAdenomatousPolyps: new Coding({
         code: "6379007",
         display: "Multiple adenomatous polyps",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AlphaHeavyChainDisease: Coding.FromStrict({
+    BodystructureCodeValueSet_AlphaHeavyChainDisease: new Coding({
         code: "6381009",
         display: "Alpha heavy chain disease",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MembranousInflammation: Coding.FromStrict({
+    BodystructureCodeValueSet_MembranousInflammation: new Coding({
         code: "6406002",
         display: "Membranous inflammation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Dentinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Dentinoma: new Coding({
         code: "6437002",
         display: "Dentinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_KlatskinQuoteSTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_KlatskinQuoteSTumor: new Coding({
         code: "6492006",
         display: "Klatskin's tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Necrosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Necrosis: new Coding({
         code: "6574001",
         display: "Necrosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SebumRetention: Coding.FromStrict({
+    BodystructureCodeValueSet_SebumRetention: new Coding({
         code: "6579006",
         display: "Sebum retention",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_IntrinsicObstruction: Coding.FromStrict({
+    BodystructureCodeValueSet_IntrinsicObstruction: new Coding({
         code: "6582001",
         display: "Intrinsic obstruction",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Spongiosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Spongiosis: new Coding({
         code: "6609001",
         display: "Spongiosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MetatypicalCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MetatypicalCarcinoma: new Coding({
         code: "6641007",
         display: "Metatypical carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AtypicalIntraductalHyperplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_AtypicalIntraductalHyperplasia: new Coding({
         code: "6660000",
         display: "Atypical intraductal hyperplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HemoglobinCast: Coding.FromStrict({
+    BodystructureCodeValueSet_HemoglobinCast: new Coding({
         code: "6780007",
         display: "Hemoglobin cast",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DesmoplasticFibroma: Coding.FromStrict({
+    BodystructureCodeValueSet_DesmoplasticFibroma: new Coding({
         code: "6842002",
         display: "Desmoplastic fibroma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Macronucleus: Coding.FromStrict({
+    BodystructureCodeValueSet_Macronucleus: new Coding({
         code: "6855001",
         display: "Macronucleus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Defect: Coding.FromStrict({
+    BodystructureCodeValueSet_Defect: new Coding({
         code: "6920004",
         display: "Defect",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChronicHemorrhage: Coding.FromStrict({
+    BodystructureCodeValueSet_ChronicHemorrhage: new Coding({
         code: "7003006",
         display: "Chronic hemorrhage",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Carcinomatosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Carcinomatosis: new Coding({
         code: "7010000",
         display: "Carcinomatosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LupusErythematosusCell: Coding.FromStrict({
+    BodystructureCodeValueSet_LupusErythematosusCell: new Coding({
         code: "7055007",
         display: "Lupus erythematosus cell",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_HemosiderinPigmentation: Coding.FromStrict({
+    BodystructureCodeValueSet_HemosiderinPigmentation: new Coding({
         code: "7078001",
         display: "Hemosiderin pigmentation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DilatedPoreOfWiner: Coding.FromStrict({
+    BodystructureCodeValueSet_DilatedPoreOfWiner: new Coding({
         code: "7094008",
         display: "Dilated pore of Winer",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DecidualCast: Coding.FromStrict({
+    BodystructureCodeValueSet_DecidualCast: new Coding({
         code: "7244004",
         display: "Decidual cast",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LymphoepithelialCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_LymphoepithelialCarcinoma: new Coding({
         code: "7300000",
         display: "Lymphoepithelial carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_OpenDislocationIncomplete: Coding.FromStrict({
+    BodystructureCodeValueSet_OpenDislocationIncomplete: new Coding({
         code: "7313006",
         display: "Open dislocation, incomplete",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_InflammatoryAtypia: Coding.FromStrict({
+    BodystructureCodeValueSet_InflammatoryAtypia: new Coding({
         code: "7372009",
         display: "Inflammatory atypia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BallValveObstruction: Coding.FromStrict({
+    BodystructureCodeValueSet_BallValveObstruction: new Coding({
         code: "738003",
         display: "Ball valve obstruction",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Glomangioma: Coding.FromStrict({
+    BodystructureCodeValueSet_Glomangioma: new Coding({
         code: "7429002",
         display: "Glomangioma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CalcifiedHematoma: Coding.FromStrict({
+    BodystructureCodeValueSet_CalcifiedHematoma: new Coding({
         code: "7643002",
         display: "Calcified hematoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongestiveHypertrophy: Coding.FromStrict({
+    BodystructureCodeValueSet_CongestiveHypertrophy: new Coding({
         code: "7744000",
         display: "Congestive hypertrophy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LipogenicPigmentation: Coding.FromStrict({
+    BodystructureCodeValueSet_LipogenicPigmentation: new Coding({
         code: "7796002",
         display: "Lipogenic pigmentation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_XanthineCalculus: Coding.FromStrict({
+    BodystructureCodeValueSet_XanthineCalculus: new Coding({
         code: "7828002",
         display: "Xanthine calculus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_KaryotypeMorphology: Coding.FromStrict({
+    BodystructureCodeValueSet_KaryotypeMorphology: new Coding({
         code: "7894007",
         display: "Karyotype morphology",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LinearOblique: Coding.FromStrict({
+    BodystructureCodeValueSet_LinearOblique: new Coding({
         code: "7905002",
         display: "Linear oblique",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_OpenDislocation: Coding.FromStrict({
+    BodystructureCodeValueSet_OpenDislocation: new Coding({
         code: "7906001",
         display: "Open dislocation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LocalizedEdema: Coding.FromStrict({
+    BodystructureCodeValueSet_LocalizedEdema: new Coding({
         code: "7939003",
         display: "Localized edema",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_IncompleteTransposition: Coding.FromStrict({
+    BodystructureCodeValueSet_IncompleteTransposition: new Coding({
         code: "8005002",
         display: "Incomplete transposition",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Paraganglioma: Coding.FromStrict({
+    BodystructureCodeValueSet_Paraganglioma: new Coding({
         code: "803009",
         display: "Paraganglioma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SecretoryAlterationOfVagina: Coding.FromStrict({
+    BodystructureCodeValueSet_SecretoryAlterationOfVagina: new Coding({
         code: "8070006",
         display: "Secretory alteration of vagina",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AlveolarAdenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_AlveolarAdenoma: new Coding({
         code: "8097004",
         display: "Alveolar adenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SpindleCellNevus: Coding.FromStrict({
+    BodystructureCodeValueSet_SpindleCellNevus: new Coding({
         code: "810003",
         display: "Spindle cell nevus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AcentricChromosome: Coding.FromStrict({
+    BodystructureCodeValueSet_AcentricChromosome: new Coding({
         code: "8120005",
         display: "Acentric chromosome",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DepositionOfOxalateCrystals: Coding.FromStrict({
+    BodystructureCodeValueSet_DepositionOfOxalateCrystals: new Coding({
         code: "8129006",
         display: "Deposition of oxalate crystals",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantMixedSalivaryGlandTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantMixedSalivaryGlandTumor: new Coding({
         code: "8145008",
         display: "Malignant mixed salivary gland tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CorporaAmylacea: Coding.FromStrict({
+    BodystructureCodeValueSet_CorporaAmylacea: new Coding({
         code: "8210009",
         display: "Corpora amylacea",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Hemolymphangioma: Coding.FromStrict({
+    BodystructureCodeValueSet_Hemolymphangioma: new Coding({
         code: "8241005",
         display: "Hemolymphangioma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BalloonCellNevus: Coding.FromStrict({
+    BodystructureCodeValueSet_BalloonCellNevus: new Coding({
         code: "8276007",
         display: "Balloon cell nevus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ModerateTransitionalCellAtypia: Coding.FromStrict({
+    BodystructureCodeValueSet_ModerateTransitionalCellAtypia: new Coding({
         code: "8309002",
         display: "Moderate transitional cell atypia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PeripheralTCellLymphomaAILDAngioimmunoblasticLymphadenopathyWithDysproteinemia: Coding.FromStrict({
+    BodystructureCodeValueSet_PeripheralTCellLymphomaAILDAngioimmunoblasticLymphadenopathyWithDysproteinemia: new Coding({
         code: "835009",
         display: "Peripheral T-cell lymphoma, AILD (Angioimmunoblastic Lymphadenopathy with Dysproteinemia)",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MixedSalivaryGlandTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_MixedSalivaryGlandTumor: new Coding({
         code: "8360001",
         display: "Mixed salivary gland tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ActinicKeratosis: Coding.FromStrict({
+    BodystructureCodeValueSet_ActinicKeratosis: new Coding({
         code: "856006",
         display: "Actinic keratosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AutosomalChromosomeMosaicism: Coding.FromStrict({
+    BodystructureCodeValueSet_AutosomalChromosomeMosaicism: new Coding({
         code: "8566008",
         display: "Autosomal chromosome mosaicism",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_AcuteHemorrhage: Coding.FromStrict({
+    BodystructureCodeValueSet_AcuteHemorrhage: new Coding({
         code: "8573003",
         display: "Acute hemorrhage",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Fibromyxoma: Coding.FromStrict({
+    BodystructureCodeValueSet_Fibromyxoma: new Coding({
         code: "8664001",
         display: "Fibromyxoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SegmentalDemyelination: Coding.FromStrict({
+    BodystructureCodeValueSet_SegmentalDemyelination: new Coding({
         code: "8723003",
         display: "Segmental demyelination",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChoriocarcinomaCombinedWithGermCellElements: Coding.FromStrict({
+    BodystructureCodeValueSet_ChoriocarcinomaCombinedWithGermCellElements: new Coding({
         code: "8734000",
         display: "Choriocarcinoma combined with germ cell elements",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PassiveCongestion: Coding.FromStrict({
+    BodystructureCodeValueSet_PassiveCongestion: new Coding({
         code: "8804002",
         display: "Passive congestion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalCysticDilatationWithAccumulationOfFluid: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalCysticDilatationWithAccumulationOfFluid: new Coding({
         code: "8819001",
         display: "Congenital cystic dilatation with accumulation of fluid",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_OpenDislocationComplete: Coding.FromStrict({
+    BodystructureCodeValueSet_OpenDislocationComplete: new Coding({
         code: "8833001",
         display: "Open dislocation, complete",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Mosaicism: Coding.FromStrict({
+    BodystructureCodeValueSet_Mosaicism: new Coding({
         code: "8855009",
         display: "Mosaicism",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PapillarySyringadenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_PapillarySyringadenoma: new Coding({
         code: "8934006",
         display: "Papillary syringadenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ProliferativeCyclicAlterationOfBreast: Coding.FromStrict({
+    BodystructureCodeValueSet_ProliferativeCyclicAlterationOfBreast: new Coding({
         code: "8978002",
         display: "Proliferative cyclic alteration of breast",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MucinProducingAdenocarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MucinProducingAdenocarcinoma: new Coding({
         code: "900006",
         display: "Mucin-producing adenocarcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ChondroblastomaMorphology: Coding.FromStrict({
+    BodystructureCodeValueSet_ChondroblastomaMorphology: new Coding({
         code: "9001003",
         display: "Chondroblastoma morphology",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_LobarAtrophy: Coding.FromStrict({
+    BodystructureCodeValueSet_LobarAtrophy: new Coding({
         code: "9088006",
         display: "Lobar atrophy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MedullaryAdenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MedullaryAdenoma: new Coding({
         code: "9098000",
         display: "Medullary adenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MildColumnarCellAtypia: Coding.FromStrict({
+    BodystructureCodeValueSet_MildColumnarCellAtypia: new Coding({
         code: "9138001",
         display: "Mild columnar cell atypia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantMelanomaInJunctionalNevus: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantMelanomaInJunctionalNevus: new Coding({
         code: "915007",
         display: "Malignant melanoma in junctional nevus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SquamousOdontogenicTumor: Coding.FromStrict({
+    BodystructureCodeValueSet_SquamousOdontogenicTumor: new Coding({
         code: "9155002",
         display: "Squamous odontogenic tumor",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Leukokeratosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Leukokeratosis: new Coding({
         code: "9187004",
         display: "Leukokeratosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_StaghornCalculus: Coding.FromStrict({
+    BodystructureCodeValueSet_StaghornCalculus: new Coding({
         code: "9196004",
         display: "Staghorn calculus",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EccentricHypertrophy: Coding.FromStrict({
+    BodystructureCodeValueSet_EccentricHypertrophy: new Coding({
         code: "9235006",
         display: "Eccentric hypertrophy",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_JuxtacorticalChondroma: Coding.FromStrict({
+    BodystructureCodeValueSet_JuxtacorticalChondroma: new Coding({
         code: "9266000",
         display: "Juxtacortical chondroma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_ColloidCyst: Coding.FromStrict({
+    BodystructureCodeValueSet_ColloidCyst: new Coding({
         code: "9287005",
         display: "Colloid cyst",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SpermatocyticSeminoma: Coding.FromStrict({
+    BodystructureCodeValueSet_SpermatocyticSeminoma: new Coding({
         code: "9294008",
         display: "Spermatocytic seminoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_InactiveEndometrium: Coding.FromStrict({
+    BodystructureCodeValueSet_InactiveEndometrium: new Coding({
         code: "9324003",
         display: "Inactive endometrium",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Sarcomatosis: Coding.FromStrict({
+    BodystructureCodeValueSet_Sarcomatosis: new Coding({
         code: "9395006",
         display: "Sarcomatosis",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SenileHyperplasia: Coding.FromStrict({
+    BodystructureCodeValueSet_SenileHyperplasia: new Coding({
         code: "9435009",
         display: "Senile hyperplasia",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BasophilAdenoma: Coding.FromStrict({
+    BodystructureCodeValueSet_BasophilAdenoma: new Coding({
         code: "9436005",
         display: "Basophil adenoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MultiplePolyps: Coding.FromStrict({
+    BodystructureCodeValueSet_MultiplePolyps: new Coding({
         code: "9499001",
         display: "Multiple polyps",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Shift: Coding.FromStrict({
+    BodystructureCodeValueSet_Shift: new Coding({
         code: "9546005",
         display: "Shift",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BronchogenicCyst: Coding.FromStrict({
+    BodystructureCodeValueSet_BronchogenicCyst: new Coding({
         code: "9550003",
         display: "Bronchogenic cyst",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_EpithelialMyoepithelialCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_EpithelialMyoepithelialCarcinoma: new Coding({
         code: "9618003",
         display: "Epithelial-myoepithelial carcinoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Consolidation: Coding.FromStrict({
+    BodystructureCodeValueSet_Consolidation: new Coding({
         code: "9656002",
         display: "Consolidation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Elastofibroma: Coding.FromStrict({
+    BodystructureCodeValueSet_Elastofibroma: new Coding({
         code: "9671003",
         display: "Elastofibroma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_DepositionOfCarbon: Coding.FromStrict({
+    BodystructureCodeValueSet_DepositionOfCarbon: new Coding({
         code: "9688005",
         display: "Deposition of carbon",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_BlueEdema: Coding.FromStrict({
+    BodystructureCodeValueSet_BlueEdema: new Coding({
         code: "9729005",
         display: "Blue edema",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_WireLoopLesion: Coding.FromStrict({
+    BodystructureCodeValueSet_WireLoopLesion: new Coding({
         code: "9751002",
         display: "Wire loop lesion",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Hyperchromatism: Coding.FromStrict({
+    BodystructureCodeValueSet_Hyperchromatism: new Coding({
         code: "9767008",
         display: "Hyperchromatism",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalLateralDeviation: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalLateralDeviation: new Coding({
         code: "9795008",
         display: "Congenital lateral deviation",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_SpindleCellSarcoma: Coding.FromStrict({
+    BodystructureCodeValueSet_SpindleCellSarcoma: new Coding({
         code: "9801004",
         display: "Spindle cell sarcoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_RiceBody: Coding.FromStrict({
+    BodystructureCodeValueSet_RiceBody: new Coding({
         code: "9805008",
         display: "Rice body",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_Leukedema: Coding.FromStrict({
+    BodystructureCodeValueSet_Leukedema: new Coding({
         code: "9816001",
         display: "Leukedema",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MyxoidDegeneration: Coding.FromStrict({
+    BodystructureCodeValueSet_MyxoidDegeneration: new Coding({
         code: "9831005",
         display: "Myxoid degeneration",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_PsammomatousSchwannoma: Coding.FromStrict({
+    BodystructureCodeValueSet_PsammomatousSchwannoma: new Coding({
         code: "985004",
         display: "Psammomatous schwannoma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_WetGangrene: Coding.FromStrict({
+    BodystructureCodeValueSet_WetGangrene: new Coding({
         code: "988002",
         display: "Wet gangrene",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MalignantParaganglioma: Coding.FromStrict({
+    BodystructureCodeValueSet_MalignantParaganglioma: new Coding({
         code: "9903002",
         display: "Malignant paraganglioma",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_CongenitalAccumulationOfFluid: Coding.FromStrict({
+    BodystructureCodeValueSet_CongenitalAccumulationOfFluid: new Coding({
         code: "9971001",
         display: "Congenital accumulation of fluid",
         system: "http://snomed.info/sct"
     }),
-    BodystructureCodeValueSet_MixedDuctalEndocrineCarcinoma: Coding.FromStrict({
+    BodystructureCodeValueSet_MixedDuctalEndocrineCarcinoma: new Coding({
         code: "999000",
         display: "Mixed ductal-endocrine carcinoma",
         system: "http://snomed.info/sct"

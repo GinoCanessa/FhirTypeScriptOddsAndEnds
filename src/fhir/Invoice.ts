@@ -166,19 +166,19 @@ export class InvoiceParticipant extends fhir.BackboneElement implements fhir.IIn
   /**
    * Check if the current InvoiceParticipant contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["actor"] === undefined) { missingElements.push("actor"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a InvoiceParticipant from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IInvoiceParticipant):InvoiceParticipant {
+  static override fromStrict(source:fhir.IInvoiceParticipant):InvoiceParticipant {
     var dest:InvoiceParticipant = new InvoiceParticipant(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `InvoiceParticipant is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -222,19 +222,19 @@ export class InvoiceLineItemPriceComponent extends fhir.BackboneElement implemen
   /**
    * Check if the current InvoiceLineItemPriceComponent contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a InvoiceLineItemPriceComponent from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IInvoiceLineItemPriceComponent):InvoiceLineItemPriceComponent {
+  static override fromStrict(source:fhir.IInvoiceLineItemPriceComponent):InvoiceLineItemPriceComponent {
     var dest:InvoiceLineItemPriceComponent = new InvoiceLineItemPriceComponent(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `InvoiceLineItemPriceComponent is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -274,18 +274,18 @@ export class InvoiceLineItem extends fhir.BackboneElement implements fhir.IInvoi
   /**
    * Check if the current InvoiceLineItem contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a InvoiceLineItem from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IInvoiceLineItem):InvoiceLineItem {
+  static override fromStrict(source:fhir.IInvoiceLineItem):InvoiceLineItem {
     var dest:InvoiceLineItem = new InvoiceLineItem(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `InvoiceLineItem is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -398,19 +398,19 @@ export class Invoice extends fhir.DomainResource implements fhir.IInvoice {
   /**
    * Check if the current Invoice contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Invoice from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IInvoice):Invoice {
+  static override fromStrict(source:fhir.IInvoice):Invoice {
     var dest:Invoice = new Invoice(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Invoice is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

@@ -194,11 +194,11 @@ export declare class PatientContact extends fhir.BackboneElement implements fhir
     /**
      * Check if the current PatientContact contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a PatientContact from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPatientContact): PatientContact;
+    static fromStrict(source: fhir.IPatientContact): PatientContact;
 }
 /**
  * If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple Patient.Communication associations.   For animals, language is not a relevant field, and should be absent from the instance. If the Patient does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.
@@ -220,11 +220,11 @@ export declare class PatientCommunication extends fhir.BackboneElement implement
     /**
      * Check if the current PatientCommunication contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a PatientCommunication from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPatientCommunication): PatientCommunication;
+    static fromStrict(source: fhir.IPatientCommunication): PatientCommunication;
 }
 /**
  * There is no assumption that linked patient records have mutual links.
@@ -246,11 +246,11 @@ export declare class PatientLink extends fhir.BackboneElement implements fhir.IP
     /**
      * Check if the current PatientLink contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a PatientLink from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPatientLink): PatientLink;
+    static fromStrict(source: fhir.IPatientLink): PatientLink;
 }
 /**
  * Demographics and other administrative information about an individual or animal receiving care or other health-related services.
@@ -351,11 +351,11 @@ export declare class Patient extends fhir.DomainResource implements fhir.IPatien
     /**
      * Check if the current Patient contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Patient from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPatient): Patient;
+    static fromStrict(source: fhir.IPatient): Patient;
 }
 /**
  * Code Values for the Patient.contact.gender field

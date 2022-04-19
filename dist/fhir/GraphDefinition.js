@@ -61,7 +61,7 @@ export class GraphDefinitionLinkTargetCompartment extends fhir.BackboneElement {
     /**
      * Check if the current GraphDefinitionLinkTargetCompartment contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["code"] === undefined) {
             missingElements.push("code");
@@ -72,16 +72,16 @@ export class GraphDefinitionLinkTargetCompartment extends fhir.BackboneElement {
         if (this["use"] === undefined) {
             missingElements.push("use");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a GraphDefinitionLinkTargetCompartment from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new GraphDefinitionLinkTargetCompartment(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `GraphDefinitionLinkTargetCompartment is missing elements: ${missingElements.join(", ")}`;
         }
@@ -129,21 +129,21 @@ export class GraphDefinitionLinkTarget extends fhir.BackboneElement {
     /**
      * Check if the current GraphDefinitionLinkTarget contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a GraphDefinitionLinkTarget from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new GraphDefinitionLinkTarget(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `GraphDefinitionLinkTarget is missing elements: ${missingElements.join(", ")}`;
         }
@@ -196,18 +196,18 @@ export class GraphDefinitionLink extends fhir.BackboneElement {
     /**
      * Check if the current GraphDefinitionLink contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a GraphDefinitionLink from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new GraphDefinitionLink(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `GraphDefinitionLink is missing elements: ${missingElements.join(", ")}`;
         }
@@ -318,7 +318,7 @@ export class GraphDefinition extends fhir.DomainResource {
     /**
      * Check if the current GraphDefinition contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["name"] === undefined) {
             missingElements.push("name");
@@ -329,16 +329,16 @@ export class GraphDefinition extends fhir.DomainResource {
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a GraphDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new GraphDefinition(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `GraphDefinition is missing elements: ${missingElements.join(", ")}`;
         }

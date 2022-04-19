@@ -32,21 +32,21 @@ export class RelatedPersonCommunication extends fhir.BackboneElement {
     /**
      * Check if the current RelatedPersonCommunication contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["language"] === undefined) {
             missingElements.push("language");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a RelatedPersonCommunication from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new RelatedPersonCommunication(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `RelatedPersonCommunication is missing elements: ${missingElements.join(", ")}`;
         }
@@ -116,21 +116,21 @@ export class RelatedPerson extends fhir.DomainResource {
     /**
      * Check if the current RelatedPerson contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["patient"] === undefined) {
             missingElements.push("patient");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a RelatedPerson from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new RelatedPerson(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `RelatedPerson is missing elements: ${missingElements.join(", ")}`;
         }

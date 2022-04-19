@@ -175,19 +175,19 @@ export class MessageHeaderDestination extends fhir.BackboneElement implements fh
   /**
    * Check if the current MessageHeaderDestination contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["endpoint"] === undefined) { missingElements.push("endpoint"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MessageHeaderDestination from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMessageHeaderDestination):MessageHeaderDestination {
+  static override fromStrict(source:fhir.IMessageHeaderDestination):MessageHeaderDestination {
     var dest:MessageHeaderDestination = new MessageHeaderDestination(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MessageHeaderDestination is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -240,19 +240,19 @@ export class MessageHeaderSource extends fhir.BackboneElement implements fhir.IM
   /**
    * Check if the current MessageHeaderSource contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["endpoint"] === undefined) { missingElements.push("endpoint"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MessageHeaderSource from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMessageHeaderSource):MessageHeaderSource {
+  static override fromStrict(source:fhir.IMessageHeaderSource):MessageHeaderSource {
     var dest:MessageHeaderSource = new MessageHeaderSource(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MessageHeaderSource is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -293,20 +293,20 @@ export class MessageHeaderResponse extends fhir.BackboneElement implements fhir.
   /**
    * Check if the current MessageHeaderResponse contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
     if (this["identifier"] === undefined) { missingElements.push("identifier"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MessageHeaderResponse from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMessageHeaderResponse):MessageHeaderResponse {
+  static override fromStrict(source:fhir.IMessageHeaderResponse):MessageHeaderResponse {
     var dest:MessageHeaderResponse = new MessageHeaderResponse(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MessageHeaderResponse is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -395,19 +395,19 @@ export class MessageHeader extends fhir.DomainResource implements fhir.IMessageH
   /**
    * Check if the current MessageHeader contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["source"] === undefined) { missingElements.push("source"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MessageHeader from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMessageHeader):MessageHeader {
+  static override fromStrict(source:fhir.IMessageHeader):MessageHeader {
     var dest:MessageHeader = new MessageHeader(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MessageHeader is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

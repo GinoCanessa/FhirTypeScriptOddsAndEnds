@@ -62,11 +62,11 @@ export declare class SubstanceAmountReferenceRange extends fhir.FhirElement impl
     /**
      * Check if the current SubstanceAmountReferenceRange contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceAmountReferenceRange from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceAmountReferenceRange): SubstanceAmountReferenceRange;
+    static fromStrict(source: fhir.ISubstanceAmountReferenceRange): SubstanceAmountReferenceRange;
 }
 /**
  * Chemical substances are a single substance type whose primary defining element is the molecular structure. Chemical substances shall be defined on the basis of their complete covalent molecular structure; the presence of a salt (counter-ion) and/or solvates (water, alcohols) is also captured. Purity, grade, physical form or particle size are not taken into account in the definition of a chemical substance or in the assignment of a Substance ID.
@@ -105,10 +105,10 @@ export declare class SubstanceAmount extends fhir.BackboneElement implements fhi
     /**
      * Check if the current SubstanceAmount contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceAmount from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceAmount): SubstanceAmount;
+    static fromStrict(source: fhir.ISubstanceAmount): SubstanceAmount;
 }
 //# sourceMappingURL=SubstanceAmount.d.ts.map

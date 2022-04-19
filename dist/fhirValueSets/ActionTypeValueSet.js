@@ -13,7 +13,7 @@ export const ActionTypeValueSet = {
     /**
      * The action is to create a new resource.
      */
-    action_type_Create: Coding.FromStrict({
+    action_type_Create: new Coding({
         code: "create",
         display: "Create",
         system: "http://terminology.hl7.org/CodeSystem/action-type"
@@ -21,7 +21,7 @@ export const ActionTypeValueSet = {
     /**
      * The action is to fire a specific event.
      */
-    action_type_FireEvent: Coding.FromStrict({
+    action_type_FireEvent: new Coding({
         code: "fire-event",
         display: "Fire Event",
         system: "http://terminology.hl7.org/CodeSystem/action-type"
@@ -29,7 +29,7 @@ export const ActionTypeValueSet = {
     /**
      * The action is to remove an existing resource.
      */
-    action_type_Remove: Coding.FromStrict({
+    action_type_Remove: new Coding({
         code: "remove",
         display: "Remove",
         system: "http://terminology.hl7.org/CodeSystem/action-type"
@@ -37,7 +37,7 @@ export const ActionTypeValueSet = {
     /**
      * The action is to update an existing resource.
      */
-    action_type_Update: Coding.FromStrict({
+    action_type_Update: new Coding({
         code: "update",
         display: "Update",
         system: "http://terminology.hl7.org/CodeSystem/action-type"

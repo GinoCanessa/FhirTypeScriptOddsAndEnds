@@ -93,11 +93,11 @@ export declare class RelatedPersonCommunication extends fhir.BackboneElement imp
     /**
      * Check if the current RelatedPersonCommunication contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a RelatedPersonCommunication from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IRelatedPersonCommunication): RelatedPersonCommunication;
+    static fromStrict(source: fhir.IRelatedPersonCommunication): RelatedPersonCommunication;
 }
 /**
  * Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process.
@@ -165,11 +165,11 @@ export declare class RelatedPerson extends fhir.DomainResource implements fhir.I
     /**
      * Check if the current RelatedPerson contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a RelatedPerson from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IRelatedPerson): RelatedPerson;
+    static fromStrict(source: fhir.IRelatedPerson): RelatedPerson;
 }
 /**
  * Code Values for the RelatedPerson.gender field

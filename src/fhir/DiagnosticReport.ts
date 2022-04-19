@@ -136,19 +136,19 @@ export class DiagnosticReportMedia extends fhir.BackboneElement implements fhir.
   /**
    * Check if the current DiagnosticReportMedia contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["link"] === undefined) { missingElements.push("link"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DiagnosticReportMedia from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDiagnosticReportMedia):DiagnosticReportMedia {
+  static override fromStrict(source:fhir.IDiagnosticReportMedia):DiagnosticReportMedia {
     var dest:DiagnosticReportMedia = new DiagnosticReportMedia(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DiagnosticReportMedia is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -278,20 +278,20 @@ export class DiagnosticReport extends fhir.DomainResource implements fhir.IDiagn
   /**
    * Check if the current DiagnosticReport contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DiagnosticReport from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDiagnosticReport):DiagnosticReport {
+  static override fromStrict(source:fhir.IDiagnosticReport):DiagnosticReport {
     var dest:DiagnosticReport = new DiagnosticReport(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DiagnosticReport is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

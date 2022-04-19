@@ -13,7 +13,7 @@ export const RejectionCriteriaValueSet = {
   /**
    * specimen container broken.
    */
-  rejection_criteria_BrokenSpecimenContainer: Coding.FromStrict({
+  rejection_criteria_BrokenSpecimenContainer: new Coding({
     code: "broken",
     display: "broken specimen container",
     system: "http://terminology.hl7.org/CodeSystem/rejection-criteria"
@@ -21,7 +21,7 @@ export const RejectionCriteriaValueSet = {
   /**
    * specimen clotted.
    */
-  rejection_criteria_SpecimenClotted: Coding.FromStrict({
+  rejection_criteria_SpecimenClotted: new Coding({
     code: "clotted",
     display: "specimen clotted",
     system: "http://terminology.hl7.org/CodeSystem/rejection-criteria"
@@ -29,7 +29,7 @@ export const RejectionCriteriaValueSet = {
   /**
    * blood specimen hemolized.
    */
-  rejection_criteria_HemolizedSpecimen: Coding.FromStrict({
+  rejection_criteria_HemolizedSpecimen: new Coding({
     code: "hemolized",
     display: "hemolized specimen",
     system: "http://terminology.hl7.org/CodeSystem/rejection-criteria"
@@ -37,7 +37,7 @@ export const RejectionCriteriaValueSet = {
   /**
    * insufficient quantity of specimen.
    */
-  rejection_criteria_InsufficientSpecimenVolume: Coding.FromStrict({
+  rejection_criteria_InsufficientSpecimenVolume: new Coding({
     code: "insufficient",
     display: "insufficient specimen volume",
     system: "http://terminology.hl7.org/CodeSystem/rejection-criteria"
@@ -45,7 +45,7 @@ export const RejectionCriteriaValueSet = {
   /**
    * specimen temperature inappropriate.
    */
-  rejection_criteria_SpecimenTemperatureInappropriate: Coding.FromStrict({
+  rejection_criteria_SpecimenTemperatureInappropriate: new Coding({
     code: "wrong-temperature",
     display: "specimen temperature inappropriate",
     system: "http://terminology.hl7.org/CodeSystem/rejection-criteria"

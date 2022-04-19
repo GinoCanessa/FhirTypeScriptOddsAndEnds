@@ -13,7 +13,7 @@ export const MedicationdispenseStatusValueSet = {
   /**
    * The dispensed product was not and will never be picked up by the patient.
    */
-  medicationdispense_status_Cancelled: Coding.FromStrict({
+  medicationdispense_status_Cancelled: new Coding({
     code: "cancelled",
     display: "Cancelled",
     system: "http://terminology.hl7.org/CodeSystem/medicationdispense-status"
@@ -21,7 +21,7 @@ export const MedicationdispenseStatusValueSet = {
   /**
    * The dispensed product has been picked up.
    */
-  medicationdispense_status_Completed: Coding.FromStrict({
+  medicationdispense_status_Completed: new Coding({
     code: "completed",
     display: "Completed",
     system: "http://terminology.hl7.org/CodeSystem/medicationdispense-status"
@@ -29,7 +29,7 @@ export const MedicationdispenseStatusValueSet = {
   /**
    * The dispense was declined and not performed.
    */
-  medicationdispense_status_Declined: Coding.FromStrict({
+  medicationdispense_status_Declined: new Coding({
     code: "declined",
     display: "Declined",
     system: "http://terminology.hl7.org/CodeSystem/medicationdispense-status"
@@ -37,7 +37,7 @@ export const MedicationdispenseStatusValueSet = {
   /**
    * The dispense was entered in error and therefore nullified.
    */
-  medicationdispense_status_EnteredInError: Coding.FromStrict({
+  medicationdispense_status_EnteredInError: new Coding({
     code: "entered-in-error",
     display: "Entered in Error",
     system: "http://terminology.hl7.org/CodeSystem/medicationdispense-status"
@@ -45,7 +45,7 @@ export const MedicationdispenseStatusValueSet = {
   /**
    * The dispensed product is ready for pickup.
    */
-  medicationdispense_status_InProgress: Coding.FromStrict({
+  medicationdispense_status_InProgress: new Coding({
     code: "in-progress",
     display: "In Progress",
     system: "http://terminology.hl7.org/CodeSystem/medicationdispense-status"
@@ -53,7 +53,7 @@ export const MedicationdispenseStatusValueSet = {
   /**
    * The dispense process is paused while waiting for an external event to reactivate the dispense.  For example, new stock has arrived or the prescriber has called.
    */
-  medicationdispense_status_OnHold: Coding.FromStrict({
+  medicationdispense_status_OnHold: new Coding({
     code: "on-hold",
     display: "On Hold",
     system: "http://terminology.hl7.org/CodeSystem/medicationdispense-status"
@@ -61,7 +61,7 @@ export const MedicationdispenseStatusValueSet = {
   /**
    * The core event has not started yet, but some staging activities have begun (e.g. initial compounding or packaging of medication). Preparation stages may be tracked for billing purposes.
    */
-  medicationdispense_status_Preparation: Coding.FromStrict({
+  medicationdispense_status_Preparation: new Coding({
     code: "preparation",
     display: "Preparation",
     system: "http://terminology.hl7.org/CodeSystem/medicationdispense-status"
@@ -69,7 +69,7 @@ export const MedicationdispenseStatusValueSet = {
   /**
    * Actions implied by the dispense have been permanently halted, before all of them occurred.
    */
-  medicationdispense_status_Stopped: Coding.FromStrict({
+  medicationdispense_status_Stopped: new Coding({
     code: "stopped",
     display: "Stopped",
     system: "http://terminology.hl7.org/CodeSystem/medicationdispense-status"
@@ -77,7 +77,7 @@ export const MedicationdispenseStatusValueSet = {
   /**
    * The authoring system does not know which of the status values applies for this medication dispense.  Note: this concept is not to be used for other - one of the listed statuses is presumed to apply, it's just now known which one.
    */
-  medicationdispense_status_Unknown: Coding.FromStrict({
+  medicationdispense_status_Unknown: new Coding({
     code: "unknown",
     display: "Unknown",
     system: "http://terminology.hl7.org/CodeSystem/medicationdispense-status"

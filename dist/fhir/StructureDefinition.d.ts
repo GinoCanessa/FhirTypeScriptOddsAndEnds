@@ -230,11 +230,11 @@ export declare class StructureDefinitionMapping extends fhir.BackboneElement imp
     /**
      * Check if the current StructureDefinitionMapping contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a StructureDefinitionMapping from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IStructureDefinitionMapping): StructureDefinitionMapping;
+    static fromStrict(source: fhir.IStructureDefinitionMapping): StructureDefinitionMapping;
 }
 /**
  * Identifies the types of resource or data type elements to which the extension can be applied.
@@ -257,11 +257,11 @@ export declare class StructureDefinitionContext extends fhir.BackboneElement imp
     /**
      * Check if the current StructureDefinitionContext contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a StructureDefinitionContext from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IStructureDefinitionContext): StructureDefinitionContext;
+    static fromStrict(source: fhir.IStructureDefinitionContext): StructureDefinitionContext;
 }
 /**
  * A snapshot view is expressed in a standalone form that can be used and interpreted without considering the base StructureDefinition.
@@ -278,11 +278,11 @@ export declare class StructureDefinitionSnapshot extends fhir.BackboneElement im
     /**
      * Check if the current StructureDefinitionSnapshot contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a StructureDefinitionSnapshot from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IStructureDefinitionSnapshot): StructureDefinitionSnapshot;
+    static fromStrict(source: fhir.IStructureDefinitionSnapshot): StructureDefinitionSnapshot;
 }
 /**
  * A differential view is expressed relative to the base StructureDefinition - a statement of differences that it applies.
@@ -299,11 +299,11 @@ export declare class StructureDefinitionDifferential extends fhir.BackboneElemen
     /**
      * Check if the current StructureDefinitionDifferential contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a StructureDefinitionDifferential from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IStructureDefinitionDifferential): StructureDefinitionDifferential;
+    static fromStrict(source: fhir.IStructureDefinitionDifferential): StructureDefinitionDifferential;
 }
 /**
  * A definition of a FHIR structure. This resource is used to describe the underlying resources, data types defined in FHIR, and also for describing extensions and constraints on resources and data types.
@@ -453,11 +453,11 @@ export declare class StructureDefinition extends fhir.DomainResource implements 
     /**
      * Check if the current StructureDefinition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a StructureDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IStructureDefinition): StructureDefinition;
+    static fromStrict(source: fhir.IStructureDefinition): StructureDefinition;
 }
 /**
  * Code Values for the StructureDefinition.context.type field

@@ -13,7 +13,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Audit event: Application Activity has taken place
    */
-  dicom_dcim_ApplicationActivity: Coding.FromStrict({
+  dicom_dcim_ApplicationActivity: new Coding({
     code: "110100",
     display: "Application Activity",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -21,7 +21,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Audit event: Audit Log has been used
    */
-  dicom_dcim_AuditLogUsed: Coding.FromStrict({
+  dicom_dcim_AuditLogUsed: new Coding({
     code: "110101",
     display: "Audit Log Used",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -29,7 +29,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Audit event: Storage of DICOM Instances has begun
    */
-  dicom_dcim_BeginTransferringDICOMInstances: Coding.FromStrict({
+  dicom_dcim_BeginTransferringDICOMInstances: new Coding({
     code: "110102",
     display: "Begin Transferring DICOM Instances",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -37,7 +37,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Audit event: DICOM Instances have been created, read, updated, or deleted
    */
-  dicom_dcim_DICOMInstancesAccessed: Coding.FromStrict({
+  dicom_dcim_DICOMInstancesAccessed: new Coding({
     code: "110103",
     display: "DICOM Instances Accessed",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -45,7 +45,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Audit event: Storage of DICOM Instances has been completed
    */
-  dicom_dcim_DICOMInstancesTransferred: Coding.FromStrict({
+  dicom_dcim_DICOMInstancesTransferred: new Coding({
     code: "110104",
     display: "DICOM Instances Transferred",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -53,7 +53,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Audit event: Entire Study has been deleted
    */
-  dicom_dcim_DICOMStudyDeleted: Coding.FromStrict({
+  dicom_dcim_DICOMStudyDeleted: new Coding({
     code: "110105",
     display: "DICOM Study Deleted",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -61,7 +61,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Audit event: Data has been exported out of the system
    */
-  dicom_dcim_Export: Coding.FromStrict({
+  dicom_dcim_Export: new Coding({
     code: "110106",
     display: "Export",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -69,7 +69,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Audit event: Data has been imported into the system
    */
-  dicom_dcim_Import: Coding.FromStrict({
+  dicom_dcim_Import: new Coding({
     code: "110107",
     display: "Import",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -77,7 +77,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Audit event: System has joined or left network
    */
-  dicom_dcim_NetworkEntry: Coding.FromStrict({
+  dicom_dcim_NetworkEntry: new Coding({
     code: "110108",
     display: "Network Entry",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -85,7 +85,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Audit event: Order has been created, read, updated or deleted
    */
-  dicom_dcim_OrderRecord: Coding.FromStrict({
+  dicom_dcim_OrderRecord: new Coding({
     code: "110109",
     display: "Order Record",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -93,7 +93,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Audit event: Patient Record has been created, read, updated, or deleted
    */
-  dicom_dcim_PatientRecord: Coding.FromStrict({
+  dicom_dcim_PatientRecord: new Coding({
     code: "110110",
     display: "Patient Record",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -101,7 +101,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Audit event: Procedure Record has been created, read, updated, or deleted
    */
-  dicom_dcim_ProcedureRecord: Coding.FromStrict({
+  dicom_dcim_ProcedureRecord: new Coding({
     code: "110111",
     display: "Procedure Record",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -109,7 +109,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Audit event: Query has been made
    */
-  dicom_dcim_Query: Coding.FromStrict({
+  dicom_dcim_Query: new Coding({
     code: "110112",
     display: "Query",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -117,7 +117,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Audit event: Security Alert has been raised
    */
-  dicom_dcim_SecurityAlert: Coding.FromStrict({
+  dicom_dcim_SecurityAlert: new Coding({
     code: "110113",
     display: "Security Alert",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -125,7 +125,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Audit event: User Authentication has been attempted
    */
-  dicom_dcim_UserAuthentication: Coding.FromStrict({
+  dicom_dcim_UserAuthentication: new Coding({
     code: "110114",
     display: "User Authentication",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -133,7 +133,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to obtain and open a record entry for inspection or review.
    */
-  iso_21089_lifecycle_AccessViewRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_AccessViewRecordLifecycleEvent: new Coding({
     code: "access",
     display: "Access/View Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -141,7 +141,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent makes any change to record entry content currently residing in storage considered permanent (persistent).
    */
-  iso_21089_lifecycle_AmendUpdateRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_AmendUpdateRecordLifecycleEvent: new Coding({
     code: "amend",
     display: "Amend (Update) Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -149,7 +149,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to create and move archive artifacts containing record entry content, typically to long-term offline storage.
    */
-  iso_21089_lifecycle_ArchiveRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_ArchiveRecordLifecycleEvent: new Coding({
     code: "archive",
     display: "Archive Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -157,7 +157,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to capture the agent’s digital signature (or equivalent indication) during formal validation of record entry content.
    */
-  iso_21089_lifecycle_AttestRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_AttestRecordLifecycleEvent: new Coding({
     code: "attest",
     display: "Attest Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -165,7 +165,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to decode record entry content from a cipher.
    */
-  iso_21089_lifecycle_DecryptRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_DecryptRecordLifecycleEvent: new Coding({
     code: "decrypt",
     display: "Decrypt Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -173,7 +173,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to scrub record entry content to reduce the association between a set of identifying data and the data subject in a way that might or might not be reversible.
    */
-  iso_21089_lifecycle_DeIdentifyAnononymizeRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_DeIdentifyAnononymizeRecordLifecycleEvent: new Coding({
     code: "deidentify",
     display: "De-Identify (Anononymize) Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -181,7 +181,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to tag record entry(ies) as obsolete, erroneous or untrustworthy, to warn against its future use.
    */
-  iso_21089_lifecycle_DeprecateRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_DeprecateRecordLifecycleEvent: new Coding({
     code: "deprecate",
     display: "Deprecate Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -189,7 +189,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to permanently erase record entry content from the system.
    */
-  iso_21089_lifecycle_DestroyDeleteRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_DestroyDeleteRecordLifecycleEvent: new Coding({
     code: "destroy",
     display: "Destroy/Delete Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -197,7 +197,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to release, transfer, provision access to, or otherwise divulge record entry content.
    */
-  iso_21089_lifecycle_DiscloseRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_DiscloseRecordLifecycleEvent: new Coding({
     code: "disclose",
     display: "Disclose Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -205,7 +205,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to encode record entry content in a cipher.
    */
-  iso_21089_lifecycle_EncryptRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_EncryptRecordLifecycleEvent: new Coding({
     code: "encrypt",
     display: "Encrypt Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -213,7 +213,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to selectively pull out a subset of record entry content, based on explicit criteria.
    */
-  iso_21089_lifecycle_ExtractRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_ExtractRecordLifecycleEvent: new Coding({
     code: "extract",
     display: "Extract Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -221,7 +221,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to tag or otherwise indicate special access management and suspension of record entry deletion/destruction, if deemed relevant to a lawsuit or which are reasonably anticipated to be relevant or to fulfill organizational policy under the legal doctrine of “duty to preserve”.
    */
-  iso_21089_lifecycle_AddLegalHoldRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_AddLegalHoldRecordLifecycleEvent: new Coding({
     code: "hold",
     display: "Add Legal Hold Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -229,7 +229,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to connect related record entries.
    */
-  iso_21089_lifecycle_LinkRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_LinkRecordLifecycleEvent: new Coding({
     code: "link",
     display: "Link Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -237,7 +237,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to combine or join content from two or more record entries, resulting in a single logical record entry.
    */
-  iso_21089_lifecycle_MergeRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_MergeRecordLifecycleEvent: new Coding({
     code: "merge",
     display: "Merge Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -245,7 +245,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to: a) initiate capture of potential record content, and b) incorporate that content into the storage considered a permanent part of the health record.
    */
-  iso_21089_lifecycle_OriginateRetainRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_OriginateRetainRecordLifecycleEvent: new Coding({
     code: "originate",
     display: "Originate/Retain Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -253,7 +253,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to remove record entry content to reduce the association between a set of identifying data and the data subject in a way that may be reversible.
    */
-  iso_21089_lifecycle_PseudonymizeRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_PseudonymizeRecordLifecycleEvent: new Coding({
     code: "pseudonymize",
     display: "Pseudonymize Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -261,7 +261,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to recreate or restore full status to record entries previously deleted or deprecated.
    */
-  iso_21089_lifecycle_ReActivateRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_ReActivateRecordLifecycleEvent: new Coding({
     code: "reactivate",
     display: "Re-activate Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -269,7 +269,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to a) initiate capture of data content from elsewhere, and b) incorporate that content into the storage considered a permanent part of the health record.
    */
-  iso_21089_lifecycle_ReceiveRetainRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_ReceiveRetainRecordLifecycleEvent: new Coding({
     code: "receive",
     display: "Receive/Retain Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -277,7 +277,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to restore information to data that allows identification of information source and/or information subject.
    */
-  iso_21089_lifecycle_ReIdentifyRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_ReIdentifyRecordLifecycleEvent: new Coding({
     code: "reidentify",
     display: "Re-identify Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -285,7 +285,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to produce and deliver record entry content in a particular form and manner.
    */
-  iso_21089_lifecycle_ReportOutputRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_ReportOutputRecordLifecycleEvent: new Coding({
     code: "report",
     display: "Report (Output) Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -293,7 +293,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Audit Event: Execution of a RESTful operation as defined by FHIR.
    */
-  audit_event_type_RESTfulOperation: Coding.FromStrict({
+  audit_event_type_RESTfulOperation: new Coding({
     code: "rest",
     display: "RESTful Operation",
     system: "http://terminology.hl7.org/CodeSystem/audit-event-type"
@@ -301,7 +301,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to recreate record entries and their content from a previous created archive artefact.
    */
-  iso_21089_lifecycle_RestoreRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_RestoreRecordLifecycleEvent: new Coding({
     code: "restore",
     display: "Restore Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -309,7 +309,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to change the form, language or code system used to represent record entry content.
    */
-  iso_21089_lifecycle_TransformTranslateRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_TransformTranslateRecordLifecycleEvent: new Coding({
     code: "transform",
     display: "Transform/Translate Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -317,7 +317,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to send record entry content from one (EHR/PHR/other) system to another.
    */
-  iso_21089_lifecycle_TransmitRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_TransmitRecordLifecycleEvent: new Coding({
     code: "transmit",
     display: "Transmit Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -325,7 +325,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to remove a tag or other cues for special access management had required to fulfill organizational policy under the legal doctrine of “duty to preserve”.
    */
-  iso_21089_lifecycle_RemoveLegalHoldRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_RemoveLegalHoldRecordLifecycleEvent: new Coding({
     code: "unhold",
     display: "Remove Legal Hold Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -333,7 +333,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to disconnect two or more record entries previously connected, rendering them separate (disconnected) again.
    */
-  iso_21089_lifecycle_UnlinkRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_UnlinkRecordLifecycleEvent: new Coding({
     code: "unlink",
     display: "Unlink Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -341,7 +341,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to reverse a previous record entry merge operation, rendering them separate again.
    */
-  iso_21089_lifecycle_UnmergeRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_UnmergeRecordLifecycleEvent: new Coding({
     code: "unmerge",
     display: "Unmerge Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
@@ -349,7 +349,7 @@ export const AuditEventTypeValueSet = {
   /**
    * Occurs when an agent causes the system to confirm compliance of data or data objects with regulations, requirements, specifications, or other imposed conditions based on organizational policy.
    */
-  iso_21089_lifecycle_VerifyRecordLifecycleEvent: Coding.FromStrict({
+  iso_21089_lifecycle_VerifyRecordLifecycleEvent: new Coding({
     code: "verify",
     display: "Verify Record Lifecycle Event",
     system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"

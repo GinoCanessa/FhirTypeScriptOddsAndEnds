@@ -13,7 +13,7 @@ export const ContractSubtypeValueSet = {
     /**
      * Canadian health information disclosure policy.
      */
-    contract_subtype_DisclosureCA: Coding.FromStrict({
+    contract_subtype_DisclosureCA: new Coding({
         code: "disclosure-ca",
         display: "Disclosure-CA",
         system: "http://terminology.hl7.org/CodeSystem/contractsubtypecodes"
@@ -21,7 +21,7 @@ export const ContractSubtypeValueSet = {
     /**
      * United States health information disclosure policy.
      */
-    contract_subtype_DisclosureUS: Coding.FromStrict({
+    contract_subtype_DisclosureUS: new Coding({
         code: "disclosure-us",
         display: "Disclosure-US",
         system: "http://terminology.hl7.org/CodeSystem/contractsubtypecodes"

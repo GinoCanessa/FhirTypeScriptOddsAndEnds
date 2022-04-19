@@ -13,7 +13,7 @@ export const EvidenceQualityValueSet = {
     /**
      * High quality evidence.
      */
-    evidence_quality_HighQuality: Coding.FromStrict({
+    evidence_quality_HighQuality: new Coding({
         code: "high",
         display: "High quality",
         system: "http://terminology.hl7.org/CodeSystem/evidence-quality"
@@ -21,7 +21,7 @@ export const EvidenceQualityValueSet = {
     /**
      * Low quality evidence.
      */
-    evidence_quality_LowQuality: Coding.FromStrict({
+    evidence_quality_LowQuality: new Coding({
         code: "low",
         display: "Low quality",
         system: "http://terminology.hl7.org/CodeSystem/evidence-quality"
@@ -29,7 +29,7 @@ export const EvidenceQualityValueSet = {
     /**
      * Moderate quality evidence.
      */
-    evidence_quality_ModerateQuality: Coding.FromStrict({
+    evidence_quality_ModerateQuality: new Coding({
         code: "moderate",
         display: "Moderate quality",
         system: "http://terminology.hl7.org/CodeSystem/evidence-quality"
@@ -37,7 +37,7 @@ export const EvidenceQualityValueSet = {
     /**
      * Very low quality evidence.
      */
-    evidence_quality_VeryLowQuality: Coding.FromStrict({
+    evidence_quality_VeryLowQuality: new Coding({
         code: "very-low",
         display: "Very low quality",
         system: "http://terminology.hl7.org/CodeSystem/evidence-quality"

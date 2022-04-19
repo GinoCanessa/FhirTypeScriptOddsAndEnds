@@ -52,20 +52,20 @@ export class Narrative extends fhir.FhirElement implements fhir.INarrative {
   /**
    * Check if the current Narrative contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["div"] === undefined) { missingElements.push("div"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Narrative from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.INarrative):Narrative {
+  static override fromStrict(source:fhir.INarrative):Narrative {
     var dest:Narrative = new Narrative(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Narrative is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

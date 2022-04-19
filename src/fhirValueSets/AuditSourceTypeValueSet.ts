@@ -13,7 +13,7 @@ export const AuditSourceTypeValueSet = {
   /**
    * End-user display device, diagnostic device.
    */
-  audit_source_type_UserDevice: Coding.FromStrict({
+  audit_source_type_UserDevice: new Coding({
     code: "1",
     display: "User Device",
     system: "http://terminology.hl7.org/CodeSystem/security-source-type"
@@ -21,7 +21,7 @@ export const AuditSourceTypeValueSet = {
   /**
    * Data acquisition device or instrument.
    */
-  audit_source_type_DataInterface: Coding.FromStrict({
+  audit_source_type_DataInterface: new Coding({
     code: "2",
     display: "Data Interface",
     system: "http://terminology.hl7.org/CodeSystem/security-source-type"
@@ -29,7 +29,7 @@ export const AuditSourceTypeValueSet = {
   /**
    * Web Server process or thread.
    */
-  audit_source_type_WebServer: Coding.FromStrict({
+  audit_source_type_WebServer: new Coding({
     code: "3",
     display: "Web Server",
     system: "http://terminology.hl7.org/CodeSystem/security-source-type"
@@ -37,7 +37,7 @@ export const AuditSourceTypeValueSet = {
   /**
    * Application Server process or thread.
    */
-  audit_source_type_ApplicationServer: Coding.FromStrict({
+  audit_source_type_ApplicationServer: new Coding({
     code: "4",
     display: "Application Server",
     system: "http://terminology.hl7.org/CodeSystem/security-source-type"
@@ -45,7 +45,7 @@ export const AuditSourceTypeValueSet = {
   /**
    * Database Server process or thread.
    */
-  audit_source_type_DatabaseServer: Coding.FromStrict({
+  audit_source_type_DatabaseServer: new Coding({
     code: "5",
     display: "Database Server",
     system: "http://terminology.hl7.org/CodeSystem/security-source-type"
@@ -53,7 +53,7 @@ export const AuditSourceTypeValueSet = {
   /**
    * Security server, e.g. a domain controller.
    */
-  audit_source_type_SecurityServer: Coding.FromStrict({
+  audit_source_type_SecurityServer: new Coding({
     code: "6",
     display: "Security Server",
     system: "http://terminology.hl7.org/CodeSystem/security-source-type"
@@ -61,7 +61,7 @@ export const AuditSourceTypeValueSet = {
   /**
    * ISO level 1-3 network component.
    */
-  audit_source_type_NetworkDevice: Coding.FromStrict({
+  audit_source_type_NetworkDevice: new Coding({
     code: "7",
     display: "Network Device",
     system: "http://terminology.hl7.org/CodeSystem/security-source-type"
@@ -69,7 +69,7 @@ export const AuditSourceTypeValueSet = {
   /**
    * ISO level 4-6 operating software.
    */
-  audit_source_type_NetworkRouter: Coding.FromStrict({
+  audit_source_type_NetworkRouter: new Coding({
     code: "8",
     display: "Network Router",
     system: "http://terminology.hl7.org/CodeSystem/security-source-type"
@@ -77,7 +77,7 @@ export const AuditSourceTypeValueSet = {
   /**
    * Other kind of device (defined by DICOM, but some other code/system can be used).
    */
-  audit_source_type_Other: Coding.FromStrict({
+  audit_source_type_Other: new Coding({
     code: "9",
     display: "Other",
     system: "http://terminology.hl7.org/CodeSystem/security-source-type"

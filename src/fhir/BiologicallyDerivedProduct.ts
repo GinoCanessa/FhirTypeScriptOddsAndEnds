@@ -190,18 +190,18 @@ export class BiologicallyDerivedProductCollection extends fhir.BackboneElement i
   /**
    * Check if the current BiologicallyDerivedProductCollection contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a BiologicallyDerivedProductCollection from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IBiologicallyDerivedProductCollection):BiologicallyDerivedProductCollection {
+  static override fromStrict(source:fhir.IBiologicallyDerivedProductCollection):BiologicallyDerivedProductCollection {
     var dest:BiologicallyDerivedProductCollection = new BiologicallyDerivedProductCollection(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `BiologicallyDerivedProductCollection is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -248,18 +248,18 @@ export class BiologicallyDerivedProductProcessing extends fhir.BackboneElement i
   /**
    * Check if the current BiologicallyDerivedProductProcessing contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a BiologicallyDerivedProductProcessing from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IBiologicallyDerivedProductProcessing):BiologicallyDerivedProductProcessing {
+  static override fromStrict(source:fhir.IBiologicallyDerivedProductProcessing):BiologicallyDerivedProductProcessing {
     var dest:BiologicallyDerivedProductProcessing = new BiologicallyDerivedProductProcessing(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `BiologicallyDerivedProductProcessing is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -296,18 +296,18 @@ export class BiologicallyDerivedProductManipulation extends fhir.BackboneElement
   /**
    * Check if the current BiologicallyDerivedProductManipulation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a BiologicallyDerivedProductManipulation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IBiologicallyDerivedProductManipulation):BiologicallyDerivedProductManipulation {
+  static override fromStrict(source:fhir.IBiologicallyDerivedProductManipulation):BiologicallyDerivedProductManipulation {
     var dest:BiologicallyDerivedProductManipulation = new BiologicallyDerivedProductManipulation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `BiologicallyDerivedProductManipulation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -351,18 +351,18 @@ export class BiologicallyDerivedProductStorage extends fhir.BackboneElement impl
   /**
    * Check if the current BiologicallyDerivedProductStorage contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a BiologicallyDerivedProductStorage from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IBiologicallyDerivedProductStorage):BiologicallyDerivedProductStorage {
+  static override fromStrict(source:fhir.IBiologicallyDerivedProductStorage):BiologicallyDerivedProductStorage {
     var dest:BiologicallyDerivedProductStorage = new BiologicallyDerivedProductStorage(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `BiologicallyDerivedProductStorage is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -447,18 +447,18 @@ export class BiologicallyDerivedProduct extends fhir.DomainResource implements f
   /**
    * Check if the current BiologicallyDerivedProduct contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a BiologicallyDerivedProduct from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IBiologicallyDerivedProduct):BiologicallyDerivedProduct {
+  static override fromStrict(source:fhir.IBiologicallyDerivedProduct):BiologicallyDerivedProduct {
     var dest:BiologicallyDerivedProduct = new BiologicallyDerivedProduct(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `BiologicallyDerivedProduct is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

@@ -40,18 +40,18 @@ export class DataRequirementCodeFilter extends fhir.FhirElement {
     /**
      * Check if the current DataRequirementCodeFilter contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a DataRequirementCodeFilter from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new DataRequirementCodeFilter(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `DataRequirementCodeFilter is missing elements: ${missingElements.join(", ")}`;
         }
@@ -95,18 +95,18 @@ export class DataRequirementDateFilter extends fhir.FhirElement {
     /**
      * Check if the current DataRequirementDateFilter contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a DataRequirementDateFilter from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new DataRequirementDateFilter(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `DataRequirementDateFilter is missing elements: ${missingElements.join(", ")}`;
         }
@@ -146,7 +146,7 @@ export class DataRequirementSort extends fhir.FhirElement {
     /**
      * Check if the current DataRequirementSort contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["direction"] === undefined) {
             missingElements.push("direction");
@@ -154,16 +154,16 @@ export class DataRequirementSort extends fhir.FhirElement {
         if (this["path"] === undefined) {
             missingElements.push("path");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a DataRequirementSort from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new DataRequirementSort(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `DataRequirementSort is missing elements: ${missingElements.join(", ")}`;
         }
@@ -226,21 +226,21 @@ export class DataRequirement extends fhir.FhirElement {
     /**
      * Check if the current DataRequirement contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a DataRequirement from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new DataRequirement(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `DataRequirement is missing elements: ${missingElements.join(", ")}`;
         }

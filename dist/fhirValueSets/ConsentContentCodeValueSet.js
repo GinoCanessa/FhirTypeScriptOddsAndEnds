@@ -10,5002 +10,5002 @@ import { Coding } from '../fhir';
  * This example value set contains all LOINC code
  */
 export const ConsentContentCodeValueSet = {
-    ConsentContentCodeValueSet_AcyclovirSusceptibility: Coding.FromStrict({
+    ConsentContentCodeValueSet_AcyclovirSusceptibility: new Coding({
         code: "1-8",
         display: "Acyclovir [Susceptibility]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AmdinocillinSusceptibilityBySerumBactericidalTiter: Coding.FromStrict({
+    ConsentContentCodeValueSet_AmdinocillinSusceptibilityBySerumBactericidalTiter: new Coding({
         code: "10-9",
         display: "Amdinocillin [Susceptibility] by Serum bactericidal titer",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CefoperazoneSusceptibilityByMinimumInhibitoryConcentrationMIC: Coding.FromStrict({
+    ConsentContentCodeValueSet_CefoperazoneSusceptibilityByMinimumInhibitoryConcentrationMIC: new Coding({
         code: "100-8",
         display: "Cefoperazone [Susceptibility] by Minimum inhibitory concentration (MIC)",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DBGAbPresenceInSerumOrPlasmaFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_DBGAbPresenceInSerumOrPlasmaFromBloodProductUnit: new Coding({
         code: "1000-9",
         display: "DBG Ab [Presence] in Serum or Plasma from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RWaveDurationInLeadAVR: Coding.FromStrict({
+    ConsentContentCodeValueSet_RWaveDurationInLeadAVR: new Coding({
         code: "10000-8",
         display: "R wave duration in lead AVR",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RWaveDurationInLeadI: Coding.FromStrict({
+    ConsentContentCodeValueSet_RWaveDurationInLeadI: new Coding({
         code: "10001-6",
         display: "R wave duration in lead I",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RWaveDurationInLeadII: Coding.FromStrict({
+    ConsentContentCodeValueSet_RWaveDurationInLeadII: new Coding({
         code: "10002-4",
         display: "R wave duration in lead II",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RWaveDurationInLeadIII: Coding.FromStrict({
+    ConsentContentCodeValueSet_RWaveDurationInLeadIII: new Coding({
         code: "10003-2",
         display: "R wave duration in lead III",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RWaveDurationInLeadV1: Coding.FromStrict({
+    ConsentContentCodeValueSet_RWaveDurationInLeadV1: new Coding({
         code: "10004-0",
         display: "R wave duration in lead V1",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RWaveDurationInLeadV2: Coding.FromStrict({
+    ConsentContentCodeValueSet_RWaveDurationInLeadV2: new Coding({
         code: "10005-7",
         display: "R wave duration in lead V2",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RWaveDurationInLeadV3: Coding.FromStrict({
+    ConsentContentCodeValueSet_RWaveDurationInLeadV3: new Coding({
         code: "10006-5",
         display: "R wave duration in lead V3",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RWaveDurationInLeadV4: Coding.FromStrict({
+    ConsentContentCodeValueSet_RWaveDurationInLeadV4: new Coding({
         code: "10007-3",
         display: "R wave duration in lead V4",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RWaveDurationInLeadV5: Coding.FromStrict({
+    ConsentContentCodeValueSet_RWaveDurationInLeadV5: new Coding({
         code: "10008-1",
         display: "R wave duration in lead V5",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RWaveDurationInLeadV6: Coding.FromStrict({
+    ConsentContentCodeValueSet_RWaveDurationInLeadV6: new Coding({
         code: "10009-9",
         display: "R wave duration in lead V6",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DBGAbPresenceInSerumOrPlasmaFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_DBGAbPresenceInSerumOrPlasmaFromDonor: new Coding({
         code: "1001-7",
         display: "DBG Ab [Presence] in Serum or Plasma from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadAVF: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadAVF: new Coding({
         code: "10010-7",
         display: "R' wave amplitude in lead AVF",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadAVL: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadAVL: new Coding({
         code: "10011-5",
         display: "R' wave amplitude in lead AVL",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadAVR: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadAVR: new Coding({
         code: "10012-3",
         display: "R' wave amplitude in lead AVR",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadI: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadI: new Coding({
         code: "10013-1",
         display: "R' wave amplitude in lead I",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadII: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadII: new Coding({
         code: "10014-9",
         display: "R' wave amplitude in lead II",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadIII: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadIII: new Coding({
         code: "10015-6",
         display: "R' wave amplitude in lead III",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadV1: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadV1: new Coding({
         code: "10016-4",
         display: "R' wave amplitude in lead V1",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadV2: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadV2: new Coding({
         code: "10017-2",
         display: "R' wave amplitude in lead V2",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadV3: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadV3: new Coding({
         code: "10018-0",
         display: "R' wave amplitude in lead V3",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadV4: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadV4: new Coding({
         code: "10019-8",
         display: "R' wave amplitude in lead V4",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DBGAbPresenceInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_DBGAbPresenceInSerumOrPlasma: new Coding({
         code: "1002-5",
         display: "DBG Ab [Presence] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadV5: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadV5: new Coding({
         code: "10020-6",
         display: "R' wave amplitude in lead V5",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadV6: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveAmplitudeInLeadV6: new Coding({
         code: "10021-4",
         display: "R' wave amplitude in lead V6",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadAVF: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadAVF: new Coding({
         code: "10022-2",
         display: "R' wave duration in lead AVF",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadAVL: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadAVL: new Coding({
         code: "10023-0",
         display: "R' wave duration in lead AVL",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadAVR: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadAVR: new Coding({
         code: "10024-8",
         display: "R' wave duration in lead AVR",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadI: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadI: new Coding({
         code: "10025-5",
         display: "R' wave duration in lead I",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadII: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadII: new Coding({
         code: "10026-3",
         display: "R' wave duration in lead II",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadIII: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadIII: new Coding({
         code: "10027-1",
         display: "R' wave duration in lead III",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadV1: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadV1: new Coding({
         code: "10028-9",
         display: "R' wave duration in lead V1",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadV2: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadV2: new Coding({
         code: "10029-7",
         display: "R' wave duration in lead V2",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IndirectAntiglobulinTestComplementSpecificReagentPresenceInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_IndirectAntiglobulinTestComplementSpecificReagentPresenceInSerumOrPlasma: new Coding({
         code: "1003-3",
         display: "Indirect antiglobulin test.complement specific reagent [Presence] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadV3: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadV3: new Coding({
         code: "10030-5",
         display: "R' wave duration in lead V3",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadV4: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadV4: new Coding({
         code: "10031-3",
         display: "R' wave duration in lead V4",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadV5: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadV5: new Coding({
         code: "10032-1",
         display: "R' wave duration in lead V5",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadV6: Coding.FromStrict({
+    ConsentContentCodeValueSet_RQuoteWaveDurationInLeadV6: new Coding({
         code: "10033-9",
         display: "R' wave duration in lead V6",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveAmplitudeInLeadAVF: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveAmplitudeInLeadAVF: new Coding({
         code: "10034-7",
         display: "S wave amplitude in lead AVF",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveAmplitudeInLeadAVL: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveAmplitudeInLeadAVL: new Coding({
         code: "10035-4",
         display: "S wave amplitude in lead AVL",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveAmplitudeInLeadAVR: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveAmplitudeInLeadAVR: new Coding({
         code: "10036-2",
         display: "S wave amplitude in lead AVR",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveAmplitudeInLeadI: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveAmplitudeInLeadI: new Coding({
         code: "10037-0",
         display: "S wave amplitude in lead I",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveAmplitudeInLeadII: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveAmplitudeInLeadII: new Coding({
         code: "10038-8",
         display: "S wave amplitude in lead II",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveAmplitudeInLeadIII: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveAmplitudeInLeadIII: new Coding({
         code: "10039-6",
         display: "S wave amplitude in lead III",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DirectAntiglobulinTestComplementSpecificReagentPresenceOnRedBloodCells: Coding.FromStrict({
+    ConsentContentCodeValueSet_DirectAntiglobulinTestComplementSpecificReagentPresenceOnRedBloodCells: new Coding({
         code: "1004-1",
         display: "Direct antiglobulin test.complement specific reagent [Presence] on Red Blood Cells",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveAmplitudeInLeadV1: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveAmplitudeInLeadV1: new Coding({
         code: "10040-4",
         display: "S wave amplitude in lead V1",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveAmplitudeInLeadV2: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveAmplitudeInLeadV2: new Coding({
         code: "10041-2",
         display: "S wave amplitude in lead V2",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveAmplitudeInLeadV3: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveAmplitudeInLeadV3: new Coding({
         code: "10042-0",
         display: "S wave amplitude in lead V3",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveAmplitudeInLeadV4: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveAmplitudeInLeadV4: new Coding({
         code: "10043-8",
         display: "S wave amplitude in lead V4",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveAmplitudeInLeadV5: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveAmplitudeInLeadV5: new Coding({
         code: "10044-6",
         display: "S wave amplitude in lead V5",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveAmplitudeInLeadV6: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveAmplitudeInLeadV6: new Coding({
         code: "10045-3",
         display: "S wave amplitude in lead V6",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveDurationInLeadAVF: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveDurationInLeadAVF: new Coding({
         code: "10046-1",
         display: "S wave duration in lead AVF",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveDurationInLeadAVL: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveDurationInLeadAVL: new Coding({
         code: "10047-9",
         display: "S wave duration in lead AVL",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveDurationInLeadAVR: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveDurationInLeadAVR: new Coding({
         code: "10048-7",
         display: "S wave duration in lead AVR",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveDurationInLeadI: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveDurationInLeadI: new Coding({
         code: "10049-5",
         display: "S wave duration in lead I",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IndirectAntiglobulinTestIgGSpecificReagentPresenceInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_IndirectAntiglobulinTestIgGSpecificReagentPresenceInSerumOrPlasma: new Coding({
         code: "1005-8",
         display: "Indirect antiglobulin test.IgG specific reagent [Presence] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveDurationInLeadII: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveDurationInLeadII: new Coding({
         code: "10050-3",
         display: "S wave duration in lead II",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveDurationInLeadIII: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveDurationInLeadIII: new Coding({
         code: "10051-1",
         display: "S wave duration in lead III",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveDurationInLeadV1: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveDurationInLeadV1: new Coding({
         code: "10052-9",
         display: "S wave duration in lead V1",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveDurationInLeadV2: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveDurationInLeadV2: new Coding({
         code: "10053-7",
         display: "S wave duration in lead V2",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveDurationInLeadV3: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveDurationInLeadV3: new Coding({
         code: "10054-5",
         display: "S wave duration in lead V3",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveDurationInLeadV4: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveDurationInLeadV4: new Coding({
         code: "10055-2",
         display: "S wave duration in lead V4",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveDurationInLeadV5: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveDurationInLeadV5: new Coding({
         code: "10056-0",
         display: "S wave duration in lead V5",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SWaveDurationInLeadV6: Coding.FromStrict({
+    ConsentContentCodeValueSet_SWaveDurationInLeadV6: new Coding({
         code: "10057-8",
         display: "S wave duration in lead V6",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadAVF: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadAVF: new Coding({
         code: "10058-6",
         display: "S' wave amplitude in lead AVF",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadAVL: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadAVL: new Coding({
         code: "10059-4",
         display: "S' wave amplitude in lead AVL",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DirectAntiglobulinTestIgGSpecificReagentInterpretationOnRedBloodCells: Coding.FromStrict({
+    ConsentContentCodeValueSet_DirectAntiglobulinTestIgGSpecificReagentInterpretationOnRedBloodCells: new Coding({
         code: "1006-6",
         display: "Direct antiglobulin test.IgG specific reagent [Interpretation] on Red Blood Cells",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadAVR: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadAVR: new Coding({
         code: "10060-2",
         display: "S' wave amplitude in lead AVR",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadI: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadI: new Coding({
         code: "10061-0",
         display: "S' wave amplitude in lead I",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadII: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadII: new Coding({
         code: "10062-8",
         display: "S' wave amplitude in lead II",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadIII: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadIII: new Coding({
         code: "10063-6",
         display: "S' wave amplitude in lead III",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadV1: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadV1: new Coding({
         code: "10064-4",
         display: "S' wave amplitude in lead V1",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadV2: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadV2: new Coding({
         code: "10065-1",
         display: "S' wave amplitude in lead V2",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadV3: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadV3: new Coding({
         code: "10066-9",
         display: "S' wave amplitude in lead V3",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadV4: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadV4: new Coding({
         code: "10067-7",
         display: "S' wave amplitude in lead V4",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadV5: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadV5: new Coding({
         code: "10068-5",
         display: "S' wave amplitude in lead V5",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadV6: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveAmplitudeInLeadV6: new Coding({
         code: "10069-3",
         display: "S' wave amplitude in lead V6",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DirectAntiglobulinTestPolySpecificReagentPresenceOnRedBloodCells: Coding.FromStrict({
+    ConsentContentCodeValueSet_DirectAntiglobulinTestPolySpecificReagentPresenceOnRedBloodCells: new Coding({
         code: "1007-4",
         display: "Direct antiglobulin test.poly specific reagent [Presence] on Red Blood Cells",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadAVF: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadAVF: new Coding({
         code: "10070-1",
         display: "S' wave duration in lead AVF",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadAVL: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadAVL: new Coding({
         code: "10071-9",
         display: "S' wave duration in lead AVL",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadAVR: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadAVR: new Coding({
         code: "10072-7",
         display: "S' wave duration in lead AVR",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadI: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadI: new Coding({
         code: "10073-5",
         display: "S' wave duration in lead I",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadII: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadII: new Coding({
         code: "10074-3",
         display: "S' wave duration in lead II",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadIII: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadIII: new Coding({
         code: "10075-0",
         display: "S' wave duration in lead III",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadV1: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadV1: new Coding({
         code: "10076-8",
         display: "S' wave duration in lead V1",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadV2: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadV2: new Coding({
         code: "10077-6",
         display: "S' wave duration in lead V2",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadV3: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadV3: new Coding({
         code: "10078-4",
         display: "S' wave duration in lead V3",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadV4: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadV4: new Coding({
         code: "10079-2",
         display: "S' wave duration in lead V4",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IndirectAntiglobulinTestPolySpecificReagentPresenceInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_IndirectAntiglobulinTestPolySpecificReagentPresenceInSerumOrPlasma: new Coding({
         code: "1008-2",
         display: "Indirect antiglobulin test.poly specific reagent [Presence] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadV5: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadV5: new Coding({
         code: "10080-0",
         display: "S' wave duration in lead V5",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadV6: Coding.FromStrict({
+    ConsentContentCodeValueSet_SQuoteWaveDurationInLeadV6: new Coding({
         code: "10081-8",
         display: "S' wave duration in lead V6",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadAVF: Coding.FromStrict({
+    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadAVF: new Coding({
         code: "10082-6",
         display: "ST initial amplitude 6 ms in lead AVF",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadAVL: Coding.FromStrict({
+    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadAVL: new Coding({
         code: "10083-4",
         display: "ST initial amplitude 6 ms in lead AVL",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadAVR: Coding.FromStrict({
+    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadAVR: new Coding({
         code: "10084-2",
         display: "ST initial amplitude 6 ms in lead AVR",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadI: Coding.FromStrict({
+    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadI: new Coding({
         code: "10085-9",
         display: "ST initial amplitude 6 ms in lead I",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadII: Coding.FromStrict({
+    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadII: new Coding({
         code: "10086-7",
         display: "ST initial amplitude 6 ms in lead II",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadIII: Coding.FromStrict({
+    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadIII: new Coding({
         code: "10087-5",
         display: "ST initial amplitude 6 ms in lead III",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadV1: Coding.FromStrict({
+    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadV1: new Coding({
         code: "10088-3",
         display: "ST initial amplitude 6 ms in lead V1",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadV2: Coding.FromStrict({
+    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadV2: new Coding({
         code: "10089-1",
         display: "ST initial amplitude 6 ms in lead V2",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedDirectAntiglobulinTestPolySpecificReagentPresenceOnRedBloodCells: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedDirectAntiglobulinTestPolySpecificReagentPresenceOnRedBloodCells: new Coding({
         code: "1009-0",
         display: "Deprecated Direct antiglobulin test.poly specific reagent [Presence] on Red Blood Cells",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadV3: Coding.FromStrict({
+    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadV3: new Coding({
         code: "10090-9",
         display: "ST initial amplitude 6 ms in lead V3",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadV4: Coding.FromStrict({
+    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadV4: new Coding({
         code: "10091-7",
         display: "ST initial amplitude 6 ms in lead V4",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadV5: Coding.FromStrict({
+    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadV5: new Coding({
         code: "10092-5",
         display: "ST initial amplitude 6 ms in lead V5",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadV6: Coding.FromStrict({
+    ConsentContentCodeValueSet_STInitialAmplitude6MsInLeadV6: new Coding({
         code: "10093-3",
         display: "ST initial amplitude 6 ms in lead V6",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STSlopeInLeadAVF: Coding.FromStrict({
+    ConsentContentCodeValueSet_STSlopeInLeadAVF: new Coding({
         code: "10094-1",
         display: "ST slope in lead AVF",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STSlopeInLeadAVL: Coding.FromStrict({
+    ConsentContentCodeValueSet_STSlopeInLeadAVL: new Coding({
         code: "10095-8",
         display: "ST slope in lead AVL",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STSlopeInLeadAVR: Coding.FromStrict({
+    ConsentContentCodeValueSet_STSlopeInLeadAVR: new Coding({
         code: "10096-6",
         display: "ST slope in lead AVR",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STSlopeInLeadI: Coding.FromStrict({
+    ConsentContentCodeValueSet_STSlopeInLeadI: new Coding({
         code: "10097-4",
         display: "ST slope in lead I",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STSlopeInLeadII: Coding.FromStrict({
+    ConsentContentCodeValueSet_STSlopeInLeadII: new Coding({
         code: "10098-2",
         display: "ST slope in lead II",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STSlopeInLeadIII: Coding.FromStrict({
+    ConsentContentCodeValueSet_STSlopeInLeadIII: new Coding({
         code: "10099-0",
         display: "ST slope in lead III",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CefoperazoneSusceptibilityByDiskDiffusionKB: Coding.FromStrict({
+    ConsentContentCodeValueSet_CefoperazoneSusceptibilityByDiskDiffusionKB: new Coding({
         code: "101-6",
         display: "Cefoperazone [Susceptibility] by Disk diffusion (KB)",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ESupWAbPresenceInSerumOrPlasmaFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_ESupWAbPresenceInSerumOrPlasmaFromBloodProductUnit: new Coding({
         code: "1010-8",
         display: "E sup(w) Ab [Presence] in Serum or Plasma from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STSlopeInLeadV1: Coding.FromStrict({
+    ConsentContentCodeValueSet_STSlopeInLeadV1: new Coding({
         code: "10100-6",
         display: "ST slope in lead V1",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STSlopeInLeadV2: Coding.FromStrict({
+    ConsentContentCodeValueSet_STSlopeInLeadV2: new Coding({
         code: "10101-4",
         display: "ST slope in lead V2",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STSlopeInLeadV3: Coding.FromStrict({
+    ConsentContentCodeValueSet_STSlopeInLeadV3: new Coding({
         code: "10102-2",
         display: "ST slope in lead V3",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STSlopeInLeadV4: Coding.FromStrict({
+    ConsentContentCodeValueSet_STSlopeInLeadV4: new Coding({
         code: "10103-0",
         display: "ST slope in lead V4",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STSlopeInLeadV5: Coding.FromStrict({
+    ConsentContentCodeValueSet_STSlopeInLeadV5: new Coding({
         code: "10104-8",
         display: "ST slope in lead V5",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STSlopeInLeadV6: Coding.FromStrict({
+    ConsentContentCodeValueSet_STSlopeInLeadV6: new Coding({
         code: "10105-5",
         display: "ST slope in lead V6",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadAVF: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadAVF: new Coding({
         code: "10106-3",
         display: "ST wave end displacement in lead AVF",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadAVL: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadAVL: new Coding({
         code: "10107-1",
         display: "ST wave end displacement in lead AVL",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadAVR: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadAVR: new Coding({
         code: "10108-9",
         display: "ST wave end displacement in lead AVR",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadI: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadI: new Coding({
         code: "10109-7",
         display: "ST wave end displacement in lead I",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ESupWAbPresenceInSerumOrPlasmaFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_ESupWAbPresenceInSerumOrPlasmaFromDonor: new Coding({
         code: "1011-6",
         display: "E sup(w) Ab [Presence] in Serum or Plasma from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadII: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadII: new Coding({
         code: "10110-5",
         display: "ST wave end displacement in lead II",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadIII: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadIII: new Coding({
         code: "10111-3",
         display: "ST wave end displacement in lead III",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadV1: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadV1: new Coding({
         code: "10112-1",
         display: "ST wave end displacement in lead V1",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadV2: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadV2: new Coding({
         code: "10113-9",
         display: "ST wave end displacement in lead V2",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadV3: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadV3: new Coding({
         code: "10114-7",
         display: "ST wave end displacement in lead V3",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadV4: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadV4: new Coding({
         code: "10115-4",
         display: "ST wave end displacement in lead V4",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadV5: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadV5: new Coding({
         code: "10116-2",
         display: "ST wave end displacement in lead V5",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadV6: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveEndDisplacementInLeadV6: new Coding({
         code: "10117-0",
         display: "ST wave end displacement in lead V6",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadAVF: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadAVF: new Coding({
         code: "10118-8",
         display: "ST wave mid displacement in lead AVF",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadAVL: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadAVL: new Coding({
         code: "10119-6",
         display: "ST wave mid displacement in lead AVL",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ESupWAbPresenceInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_ESupWAbPresenceInSerumOrPlasma: new Coding({
         code: "1012-4",
         display: "E sup(w) Ab [Presence] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadAVR: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadAVR: new Coding({
         code: "10120-4",
         display: "ST wave mid displacement in lead AVR",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadI: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadI: new Coding({
         code: "10121-2",
         display: "ST wave mid displacement in lead I",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadII: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadII: new Coding({
         code: "10122-0",
         display: "ST wave mid displacement in lead II",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadIII: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadIII: new Coding({
         code: "10123-8",
         display: "ST wave mid displacement in lead III",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadV1: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadV1: new Coding({
         code: "10124-6",
         display: "ST wave mid displacement in lead V1",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadV2: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadV2: new Coding({
         code: "10125-3",
         display: "ST wave mid displacement in lead V2",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadV3: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadV3: new Coding({
         code: "10126-1",
         display: "ST wave mid displacement in lead V3",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadV4: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadV4: new Coding({
         code: "10127-9",
         display: "ST wave mid displacement in lead V4",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadV5: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadV5: new Coding({
         code: "10128-7",
         display: "ST wave mid displacement in lead V5",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadV6: Coding.FromStrict({
+    ConsentContentCodeValueSet_STWaveMidDisplacementInLeadV6: new Coding({
         code: "10129-5",
         display: "ST wave mid displacement in lead V6",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ESupWAgPresenceOnRedBloodCellsFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_ESupWAgPresenceOnRedBloodCellsFromBloodProductUnit: new Coding({
         code: "1013-2",
         display: "E sup(w) Ag [Presence] on Red Blood Cells from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadAVF: Coding.FromStrict({
+    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadAVF: new Coding({
         code: "10130-3",
         display: "T' wave amplitude in lead AVF",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadAVL: Coding.FromStrict({
+    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadAVL: new Coding({
         code: "10131-1",
         display: "T' wave amplitude in lead AVL",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadAVR: Coding.FromStrict({
+    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadAVR: new Coding({
         code: "10132-9",
         display: "T' wave amplitude in lead AVR",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadI: Coding.FromStrict({
+    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadI: new Coding({
         code: "10133-7",
         display: "T' wave amplitude in lead I",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadII: Coding.FromStrict({
+    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadII: new Coding({
         code: "10134-5",
         display: "T' wave amplitude in lead II",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadIII: Coding.FromStrict({
+    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadIII: new Coding({
         code: "10135-2",
         display: "T' wave amplitude in lead III",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadV1: Coding.FromStrict({
+    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadV1: new Coding({
         code: "10136-0",
         display: "T' wave amplitude in lead V1",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadV2: Coding.FromStrict({
+    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadV2: new Coding({
         code: "10137-8",
         display: "T' wave amplitude in lead V2",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadV3: Coding.FromStrict({
+    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadV3: new Coding({
         code: "10138-6",
         display: "T' wave amplitude in lead V3",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadV4: Coding.FromStrict({
+    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadV4: new Coding({
         code: "10139-4",
         display: "T' wave amplitude in lead V4",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ESupWAgPresenceOnRedBloodCellsFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_ESupWAgPresenceOnRedBloodCellsFromDonor: new Coding({
         code: "1014-0",
         display: "E sup(w) Ag [Presence] on Red Blood Cells from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadV5: Coding.FromStrict({
+    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadV5: new Coding({
         code: "10140-2",
         display: "T' wave amplitude in lead V5",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadV6: Coding.FromStrict({
+    ConsentContentCodeValueSet_TQuoteWaveAmplitudeInLeadV6: new Coding({
         code: "10141-0",
         display: "T' wave amplitude in lead V6",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TWaveAmplitudeInLeadAVF: Coding.FromStrict({
+    ConsentContentCodeValueSet_TWaveAmplitudeInLeadAVF: new Coding({
         code: "10142-8",
         display: "T wave amplitude in lead AVF",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TWaveAmplitudeInLeadAVL: Coding.FromStrict({
+    ConsentContentCodeValueSet_TWaveAmplitudeInLeadAVL: new Coding({
         code: "10143-6",
         display: "T wave amplitude in lead AVL",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TWaveAmplitudeInLeadAVR: Coding.FromStrict({
+    ConsentContentCodeValueSet_TWaveAmplitudeInLeadAVR: new Coding({
         code: "10144-4",
         display: "T wave amplitude in lead AVR",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TWaveAmplitudeInLeadI: Coding.FromStrict({
+    ConsentContentCodeValueSet_TWaveAmplitudeInLeadI: new Coding({
         code: "10145-1",
         display: "T wave amplitude in lead I",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TWaveAmplitudeInLeadII: Coding.FromStrict({
+    ConsentContentCodeValueSet_TWaveAmplitudeInLeadII: new Coding({
         code: "10146-9",
         display: "T wave amplitude in lead II",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TWaveAmplitudeInLeadIII: Coding.FromStrict({
+    ConsentContentCodeValueSet_TWaveAmplitudeInLeadIII: new Coding({
         code: "10147-7",
         display: "T wave amplitude in lead III",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TWaveAmplitudeInLeadV1: Coding.FromStrict({
+    ConsentContentCodeValueSet_TWaveAmplitudeInLeadV1: new Coding({
         code: "10148-5",
         display: "T wave amplitude in lead V1",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TWaveAmplitudeInLeadV2: Coding.FromStrict({
+    ConsentContentCodeValueSet_TWaveAmplitudeInLeadV2: new Coding({
         code: "10149-3",
         display: "T wave amplitude in lead V2",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ESupWAgPresenceOnRedBloodCells: Coding.FromStrict({
+    ConsentContentCodeValueSet_ESupWAgPresenceOnRedBloodCells: new Coding({
         code: "1015-7",
         display: "E sup(w) Ag [Presence] on Red Blood Cells",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TWaveAmplitudeInLeadV3: Coding.FromStrict({
+    ConsentContentCodeValueSet_TWaveAmplitudeInLeadV3: new Coding({
         code: "10150-1",
         display: "T wave amplitude in lead V3",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TWaveAmplitudeInLeadV4: Coding.FromStrict({
+    ConsentContentCodeValueSet_TWaveAmplitudeInLeadV4: new Coding({
         code: "10151-9",
         display: "T wave amplitude in lead V4",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TWaveAmplitudeInLeadV5: Coding.FromStrict({
+    ConsentContentCodeValueSet_TWaveAmplitudeInLeadV5: new Coding({
         code: "10152-7",
         display: "T wave amplitude in lead V5",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TWaveAmplitudeInLeadV6: Coding.FromStrict({
+    ConsentContentCodeValueSet_TWaveAmplitudeInLeadV6: new Coding({
         code: "10153-5",
         display: "T wave amplitude in lead V6",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ChiefComplaintNarrativeReported: Coding.FromStrict({
+    ConsentContentCodeValueSet_ChiefComplaintNarrativeReported: new Coding({
         code: "10154-3",
         display: "Chief complaint Narrative - Reported",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfAllergiesReported: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfAllergiesReported: new Coding({
         code: "10155-0",
         display: "History of allergies, reported",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfChildhoodDiseasesNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfChildhoodDiseasesNarrative: new Coding({
         code: "10156-8",
         display: "History of Childhood diseases Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfFamilyMemberDiseasesNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfFamilyMemberDiseasesNarrative: new Coding({
         code: "10157-6",
         display: "History of family member diseases Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfFunctionalStatusNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfFunctionalStatusNarrative: new Coding({
         code: "10158-4",
         display: "History of Functional status Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfIndustrialExposureNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfIndustrialExposureNarrative: new Coding({
         code: "10159-2",
         display: "History of Industrial exposure Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EAbPresenceInSerumOrPlasmaFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_EAbPresenceInSerumOrPlasmaFromBloodProductUnit: new Coding({
         code: "1016-5",
         display: "E Ab [Presence] in Serum or Plasma from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfMedicationUseNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfMedicationUseNarrative: new Coding({
         code: "10160-0",
         display: "History of Medication use Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfOccupationalExposureNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfOccupationalExposureNarrative: new Coding({
         code: "10161-8",
         display: "History of Occupational exposure Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfPregnanciesNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfPregnanciesNarrative: new Coding({
         code: "10162-6",
         display: "History of pregnancies Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfPregnancies: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfPregnancies: new Coding({
         code: "10163-4",
         display: "History of pregnancies",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfPresentIllnessNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfPresentIllnessNarrative: new Coding({
         code: "10164-2",
         display: "History of Present illness Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedHistoryOfPsychiatricSymptomsAndDiseasesNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedHistoryOfPsychiatricSymptomsAndDiseasesNarrative: new Coding({
         code: "10165-9",
         display: "Deprecated History of psychiatric symptoms and diseases Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfSocialFunctionNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfSocialFunctionNarrative: new Coding({
         code: "10166-7",
         display: "History of Social function Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfSurgicalProceduresNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfSurgicalProceduresNarrative: new Coding({
         code: "10167-5",
         display: "History of Surgical procedures Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfCardiovascularSystemDisordersNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfCardiovascularSystemDisordersNarrative: new Coding({
         code: "10168-3",
         display: "History of Cardiovascular system disorders Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfEarDisordersNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfEarDisordersNarrative: new Coding({
         code: "10169-1",
         display: "History of Ear disorders Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EAbPresenceInSerumOrPlasmaFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_EAbPresenceInSerumOrPlasmaFromDonor: new Coding({
         code: "1017-3",
         display: "E Ab [Presence] in Serum or Plasma from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfEndocrineSystemDisordersNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfEndocrineSystemDisordersNarrative: new Coding({
         code: "10170-9",
         display: "History of Endocrine system disorders Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfEyesDisordersNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfEyesDisordersNarrative: new Coding({
         code: "10171-7",
         display: "History of Eyes disorders Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfHematologicSystemDisordersNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfHematologicSystemDisordersNarrative: new Coding({
         code: "10172-5",
         display: "History of Hematologic system disorders Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfMusculoskeletalSystemDisordersNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfMusculoskeletalSystemDisordersNarrative: new Coding({
         code: "10173-3",
         display: "History of Musculoskeletal system disorders Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfNoseDisordersNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfNoseDisordersNarrative: new Coding({
         code: "10174-1",
         display: "History of Nose disorders Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfOralCavityDisordersNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfOralCavityDisordersNarrative: new Coding({
         code: "10175-8",
         display: "History of Oral cavity disorders Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfReproductiveSystemDisordersNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfReproductiveSystemDisordersNarrative: new Coding({
         code: "10176-6",
         display: "History of Reproductive system disorders Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfRespiratorySystemDisordersNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfRespiratorySystemDisordersNarrative: new Coding({
         code: "10177-4",
         display: "History of Respiratory system disorders Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfSkinDisordersNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfSkinDisordersNarrative: new Coding({
         code: "10178-2",
         display: "History of Skin disorders Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfThroatAndNeckDisordersNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfThroatAndNeckDisordersNarrative: new Coding({
         code: "10179-0",
         display: "History of Throat and Neck disorders Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EAbPresenceInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_EAbPresenceInSerumOrPlasma: new Coding({
         code: "1018-1",
         display: "E Ab [Presence] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfThroatAndNeckDisorders: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfThroatAndNeckDisorders: new Coding({
         code: "10180-8",
         display: "History of Throat and Neck disorders",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfUrinaryTractDisordersNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfUrinaryTractDisordersNarrative: new Coding({
         code: "10181-6",
         display: "History of Urinary tract disorders Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HistoryOfTravelNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HistoryOfTravelNarrative: new Coding({
         code: "10182-4",
         display: "History of Travel Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HospitalDischargeMedicationsNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HospitalDischargeMedicationsNarrative: new Coding({
         code: "10183-2",
         display: "Hospital discharge medications Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HospitalDischargePhysicalFindingsNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HospitalDischargePhysicalFindingsNarrative: new Coding({
         code: "10184-0",
         display: "Hospital discharge physical findings Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HospitalDischargeProceduresNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_HospitalDischargeProceduresNarrative: new Coding({
         code: "10185-7",
         display: "Hospital discharge procedures Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IdentifyingInformationNarrativeObserved: Coding.FromStrict({
+    ConsentContentCodeValueSet_IdentifyingInformationNarrativeObserved: new Coding({
         code: "10186-5",
         display: "Identifying information Narrative Observed",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ReviewOfSystemsNarrativeReported: Coding.FromStrict({
+    ConsentContentCodeValueSet_ReviewOfSystemsNarrativeReported: new Coding({
         code: "10187-3",
         display: "Review of systems Narrative - Reported",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ReviewOfSystemsOverviewNarrativeReported: Coding.FromStrict({
+    ConsentContentCodeValueSet_ReviewOfSystemsOverviewNarrativeReported: new Coding({
         code: "10188-1",
         display: "Review of systems overview Narrative - Reported",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ReviewOfSystemsOverviewReported: Coding.FromStrict({
+    ConsentContentCodeValueSet_ReviewOfSystemsOverviewReported: new Coding({
         code: "10189-9",
         display: "Review of systems overview - Reported",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EAgPresenceOnRedBloodCellsFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_EAgPresenceOnRedBloodCellsFromBloodProductUnit: new Coding({
         code: "1019-9",
         display: "E Ag [Presence] on Red Blood Cells from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MentalStatusNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_MentalStatusNarrative: new Coding({
         code: "10190-7",
         display: "Mental status Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfAbdomenNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfAbdomenNarrative: new Coding({
         code: "10191-5",
         display: "Physical findings of Abdomen Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfBackNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfBackNarrative: new Coding({
         code: "10192-3",
         display: "Physical findings of Back Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfBreastsNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfBreastsNarrative: new Coding({
         code: "10193-1",
         display: "Physical findings of Breasts Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfNeurologicDeepTendonReflexesNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfNeurologicDeepTendonReflexesNarrative: new Coding({
         code: "10194-9",
         display: "Physical findings of Neurologic deep tendon reflexes Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfEarNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfEarNarrative: new Coding({
         code: "10195-6",
         display: "Physical findings of Ear Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfExtremitiesNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfExtremitiesNarrative: new Coding({
         code: "10196-4",
         display: "Physical findings of Extremities Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfEyeNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfEyeNarrative: new Coding({
         code: "10197-2",
         display: "Physical findings of Eye Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfGenitourinaryTractNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfGenitourinaryTractNarrative: new Coding({
         code: "10198-0",
         display: "Physical findings of Genitourinary tract Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfHeadNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfHeadNarrative: new Coding({
         code: "10199-8",
         display: "Physical findings of Head Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CefoperazoneSusceptibilityBySerumBactericidalTiter: Coding.FromStrict({
+    ConsentContentCodeValueSet_CefoperazoneSusceptibilityBySerumBactericidalTiter: new Coding({
         code: "102-4",
         display: "Cefoperazone [Susceptibility] by Serum bactericidal titer",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EAgPresenceOnRedBloodCellsFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_EAgPresenceOnRedBloodCellsFromDonor: new Coding({
         code: "1020-7",
         display: "E Ag [Presence] on Red Blood Cells from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfHeartNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfHeartNarrative: new Coding({
         code: "10200-4",
         display: "Physical findings of Heart Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfMouthAndThroatAndTeethNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfMouthAndThroatAndTeethNarrative: new Coding({
         code: "10201-2",
         display: "Physical findings of Mouth and Throat and Teeth Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfNervousSystemNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfNervousSystemNarrative: new Coding({
         code: "10202-0",
         display: "Physical findings of Nervous system Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfNoseNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfNoseNarrative: new Coding({
         code: "10203-8",
         display: "Physical findings of Nose Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfPelvisNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfPelvisNarrative: new Coding({
         code: "10204-6",
         display: "Physical findings of Pelvis Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfRectumNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfRectumNarrative: new Coding({
         code: "10205-3",
         display: "Physical findings of Rectum Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfSkinNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfSkinNarrative: new Coding({
         code: "10206-1",
         display: "Physical findings of Skin Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfThoraxAndLungsNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfThoraxAndLungsNarrative: new Coding({
         code: "10207-9",
         display: "Physical findings of Thorax and Lungs Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfVesselsNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfVesselsNarrative: new Coding({
         code: "10208-7",
         display: "Physical findings of Vessels Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfNeurologicBalanceAndCoordinationNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfNeurologicBalanceAndCoordinationNarrative: new Coding({
         code: "10209-5",
         display: "Physical findings of Neurologic balance and Coordination Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EAgPresenceOnRedBloodCells: Coding.FromStrict({
+    ConsentContentCodeValueSet_EAgPresenceOnRedBloodCells: new Coding({
         code: "1021-5",
         display: "E Ag [Presence] on Red Blood Cells",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfGeneralStatusNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfGeneralStatusNarrative: new Coding({
         code: "10210-3",
         display: "Physical findings of General status Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfSenseOfTouchNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfSenseOfTouchNarrative: new Coding({
         code: "10211-1",
         display: "Physical findings of Sense of touch Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhysicalFindingsOfStrengthNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhysicalFindingsOfStrengthNarrative: new Coding({
         code: "10212-9",
         display: "Physical findings of Strength Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SurgicalOperationNoteAnesthesiaNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_SurgicalOperationNoteAnesthesiaNarrative: new Coding({
         code: "10213-7",
         display: "Surgical operation note anesthesia Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SurgicalOperationNoteAnesthesiaDuration: Coding.FromStrict({
+    ConsentContentCodeValueSet_SurgicalOperationNoteAnesthesiaDuration: new Coding({
         code: "10214-5",
         display: "Surgical operation note anesthesia duration",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SurgicalOperationNoteFindingsNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_SurgicalOperationNoteFindingsNarrative: new Coding({
         code: "10215-2",
         display: "Surgical operation note findings Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SurgicalOperationNoteFluidsNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_SurgicalOperationNoteFluidsNarrative: new Coding({
         code: "10216-0",
         display: "Surgical operation note fluids Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SurgicalOperationNoteIndicationsInterpretationNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_SurgicalOperationNoteIndicationsInterpretationNarrative: new Coding({
         code: "10217-8",
         display: "Surgical operation note indications [Interpretation] Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SurgicalOperationNotePostoperativeDiagnosisNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_SurgicalOperationNotePostoperativeDiagnosisNarrative: new Coding({
         code: "10218-6",
         display: "Surgical operation note postoperative diagnosis Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SurgicalOperationNotePreoperativeDiagnosisNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_SurgicalOperationNotePreoperativeDiagnosisNarrative: new Coding({
         code: "10219-4",
         display: "Surgical operation note preoperative diagnosis Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FySupAAbPresenceInSerumOrPlasmaFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_FySupAAbPresenceInSerumOrPlasmaFromBloodProductUnit: new Coding({
         code: "1022-3",
         display: "Fy sup(a) Ab [Presence] in Serum or Plasma from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SurgicalOperationNotePrepTimeDuration: Coding.FromStrict({
+    ConsentContentCodeValueSet_SurgicalOperationNotePrepTimeDuration: new Coding({
         code: "10220-2",
         display: "Surgical operation note prep time duration",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SurgicalOperationNoteSpecimensTakenNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_SurgicalOperationNoteSpecimensTakenNarrative: new Coding({
         code: "10221-0",
         display: "Surgical operation note specimens taken Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SurgicalOperationNoteSurgicalComplicationsInterpretationNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_SurgicalOperationNoteSurgicalComplicationsInterpretationNarrative: new Coding({
         code: "10222-8",
         display: "Surgical operation note surgical complications [Interpretation] Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SurgicalOperationNoteSurgicalProcedureNarrative: Coding.FromStrict({
+    ConsentContentCodeValueSet_SurgicalOperationNoteSurgicalProcedureNarrative: new Coding({
         code: "10223-6",
         display: "Surgical operation note surgical procedure Narrative",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HemodynamicMethodSpecialCircumstances: Coding.FromStrict({
+    ConsentContentCodeValueSet_HemodynamicMethodSpecialCircumstances: new Coding({
         code: "10224-4",
         display: "Hemodynamic method special circumstances",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CardiacMeasurementDeviceInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_CardiacMeasurementDeviceInstitutionInventoryNumber: new Coding({
         code: "10225-1",
         display: "Cardiac measurement device Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OxygenContentInIntravascularSpace: Coding.FromStrict({
+    ConsentContentCodeValueSet_OxygenContentInIntravascularSpace: new Coding({
         code: "10226-9",
         display: "Oxygen content in Intravascular space",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CardiacMeasurementDeviceVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_CardiacMeasurementDeviceVendorModelNumber: new Coding({
         code: "10227-7",
         display: "Cardiac measurement device Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CardiacMeasurementDeviceVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_CardiacMeasurementDeviceVendorSerialNumber: new Coding({
         code: "10228-5",
         display: "Cardiac measurement device Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HemodynamicMethodTypeOf: Coding.FromStrict({
+    ConsentContentCodeValueSet_HemodynamicMethodTypeOf: new Coding({
         code: "10229-3",
         display: "Hemodynamic method Type of",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FySupAAbPresenceInSerumOrPlasmaFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_FySupAAbPresenceInSerumOrPlasmaFromDonor: new Coding({
         code: "1023-1",
         display: "Fy sup(a) Ab [Presence] in Serum or Plasma from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_LeftVentricularEjectionFraction: Coding.FromStrict({
+    ConsentContentCodeValueSet_LeftVentricularEjectionFraction: new Coding({
         code: "10230-1",
         display: "Left ventricular Ejection fraction",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RightVentricularEjectionFraction: Coding.FromStrict({
+    ConsentContentCodeValueSet_RightVentricularEjectionFraction: new Coding({
         code: "10231-9",
         display: "Right ventricular Ejection fraction",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OxygenContentInAortaRoot: Coding.FromStrict({
+    ConsentContentCodeValueSet_OxygenContentInAortaRoot: new Coding({
         code: "10232-7",
         display: "Oxygen content in Aorta root",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OxygenContentInLeftAtrium: Coding.FromStrict({
+    ConsentContentCodeValueSet_OxygenContentInLeftAtrium: new Coding({
         code: "10233-5",
         display: "Oxygen content in Left atrium",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OxygenContentInRightAtrium: Coding.FromStrict({
+    ConsentContentCodeValueSet_OxygenContentInRightAtrium: new Coding({
         code: "10234-3",
         display: "Oxygen content in Right atrium",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OxygenContentInHighRightAtrium: Coding.FromStrict({
+    ConsentContentCodeValueSet_OxygenContentInHighRightAtrium: new Coding({
         code: "10235-0",
         display: "Oxygen content in High right atrium",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OxygenContentInLowRightAtrium: Coding.FromStrict({
+    ConsentContentCodeValueSet_OxygenContentInLowRightAtrium: new Coding({
         code: "10236-8",
         display: "Oxygen content in Low right atrium",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OxygenContentInMidRightAtrium: Coding.FromStrict({
+    ConsentContentCodeValueSet_OxygenContentInMidRightAtrium: new Coding({
         code: "10237-6",
         display: "Oxygen content in Mid right atrium",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OxygenContentInLeftVentricle: Coding.FromStrict({
+    ConsentContentCodeValueSet_OxygenContentInLeftVentricle: new Coding({
         code: "10238-4",
         display: "Oxygen content in Left ventricle",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OxygenContentInRightVentricularOutflowTract: Coding.FromStrict({
+    ConsentContentCodeValueSet_OxygenContentInRightVentricularOutflowTract: new Coding({
         code: "10239-2",
         display: "Oxygen content in Right ventricular outflow tract",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FySupAAbPresenceInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_FySupAAbPresenceInSerumOrPlasma: new Coding({
         code: "1024-9",
         display: "Fy sup(a) Ab [Presence] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OxygenContentInRightVentricle: Coding.FromStrict({
+    ConsentContentCodeValueSet_OxygenContentInRightVentricle: new Coding({
         code: "10240-0",
         display: "Oxygen content in Right ventricle",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OxygenContentInCoronarySinus: Coding.FromStrict({
+    ConsentContentCodeValueSet_OxygenContentInCoronarySinus: new Coding({
         code: "10241-8",
         display: "Oxygen content in Coronary sinus",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OxygenContentInDuctusArteriosus: Coding.FromStrict({
+    ConsentContentCodeValueSet_OxygenContentInDuctusArteriosus: new Coding({
         code: "10242-6",
         display: "Oxygen content in Ductus arteriosus",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OxygenContentInInferiorVenaCava: Coding.FromStrict({
+    ConsentContentCodeValueSet_OxygenContentInInferiorVenaCava: new Coding({
         code: "10243-4",
         display: "Oxygen content in Inferior vena cava",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OxygenContentInLeftPulmonaryArtery: Coding.FromStrict({
+    ConsentContentCodeValueSet_OxygenContentInLeftPulmonaryArtery: new Coding({
         code: "10244-2",
         display: "Oxygen content in Left pulmonary artery",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OxygenContentInMainPulmonaryArtery: Coding.FromStrict({
+    ConsentContentCodeValueSet_OxygenContentInMainPulmonaryArtery: new Coding({
         code: "10245-9",
         display: "Oxygen content in Main pulmonary artery",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OxygenContentInRightPulmonaryArtery: Coding.FromStrict({
+    ConsentContentCodeValueSet_OxygenContentInRightPulmonaryArtery: new Coding({
         code: "10246-7",
         display: "Oxygen content in Right pulmonary artery",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OxygenContentInPulmonaryWedge: Coding.FromStrict({
+    ConsentContentCodeValueSet_OxygenContentInPulmonaryWedge: new Coding({
         code: "10247-5",
         display: "Oxygen content in Pulmonary wedge",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OxygenContentInSuperiorVenaCava: Coding.FromStrict({
+    ConsentContentCodeValueSet_OxygenContentInSuperiorVenaCava: new Coding({
         code: "10248-3",
         display: "Oxygen content in Superior vena cava",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HeartRateDeviceInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_HeartRateDeviceInstitutionInventoryNumber: new Coding({
         code: "10249-1",
         display: "Heart rate device Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FySupAAgPresenceOnRedBloodCellsFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_FySupAAgPresenceOnRedBloodCellsFromBloodProductUnit: new Coding({
         code: "1025-6",
         display: "Fy sup(a) Ag [Presence] on Red Blood Cells from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HeartRateDeviceVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_HeartRateDeviceVendorModelNumber: new Coding({
         code: "10250-9",
         display: "Heart rate device Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HeartRateDeviceVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_HeartRateDeviceVendorSerialNumber: new Coding({
         code: "10251-7",
         display: "Heart rate device Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BiliaryDrainSite: Coding.FromStrict({
+    ConsentContentCodeValueSet_BiliaryDrainSite: new Coding({
         code: "10252-5",
         display: "Biliary drain site",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TypeOfBiliaryDrain: Coding.FromStrict({
+    ConsentContentCodeValueSet_TypeOfBiliaryDrain: new Coding({
         code: "10253-3",
         display: "Type of Biliary drain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TypeOfPeritonealDrain: Coding.FromStrict({
+    ConsentContentCodeValueSet_TypeOfPeritonealDrain: new Coding({
         code: "10254-1",
         display: "Type of Peritoneal drain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TypeOfSubarachnoidDrain: Coding.FromStrict({
+    ConsentContentCodeValueSet_TypeOfSubarachnoidDrain: new Coding({
         code: "10255-8",
         display: "Type of Subarachnoid drain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BiliaryDrainInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_BiliaryDrainInstitutionInventoryNumber: new Coding({
         code: "10256-6",
         display: "Biliary drain Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ChestTubeInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_ChestTubeInstitutionInventoryNumber: new Coding({
         code: "10257-4",
         display: "Chest tube Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EnteralTubeInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_EnteralTubeInstitutionInventoryNumber: new Coding({
         code: "10258-2",
         display: "Enteral tube Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GastrostomyTubeInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_GastrostomyTubeInstitutionInventoryNumber: new Coding({
         code: "10259-0",
         display: "Gastrostomy tube Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FySupAAgPresenceOnRedBloodCellsFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_FySupAAgPresenceOnRedBloodCellsFromDonor: new Coding({
         code: "1026-4",
         display: "Fy sup(a) Ag [Presence] on Red Blood Cells from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GITubeInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_GITubeInstitutionInventoryNumber: new Coding({
         code: "10260-8",
         display: "GI tube Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IntravascularTubeInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_IntravascularTubeInstitutionInventoryNumber: new Coding({
         code: "10261-6",
         display: "Intravascular tube Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IOTubeInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_IOTubeInstitutionInventoryNumber: new Coding({
         code: "10262-4",
         display: "IO tube Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_NasogastricTubeInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_NasogastricTubeInstitutionInventoryNumber: new Coding({
         code: "10263-2",
         display: "Nasogastric tube Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OralTubeInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_OralTubeInstitutionInventoryNumber: new Coding({
         code: "10264-0",
         display: "Oral tube Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PeritonealDrainInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_PeritonealDrainInstitutionInventoryNumber: new Coding({
         code: "10265-7",
         display: "Peritoneal drain Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PeritonealTubeInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_PeritonealTubeInstitutionInventoryNumber: new Coding({
         code: "10266-5",
         display: "Peritoneal tube Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RateControlDeviceInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_RateControlDeviceInstitutionInventoryNumber: new Coding({
         code: "10267-3",
         display: "Rate control device Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_StoolCollectionDeviceInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_StoolCollectionDeviceInstitutionInventoryNumber: new Coding({
         code: "10268-1",
         display: "Stool collection device Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SubarachnoidDrainInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_SubarachnoidDrainInstitutionInventoryNumber: new Coding({
         code: "10269-9",
         display: "Subarachnoid drain Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FySupAAgPresenceOnRedBloodCells: Coding.FromStrict({
+    ConsentContentCodeValueSet_FySupAAgPresenceOnRedBloodCells: new Coding({
         code: "1027-2",
         display: "Fy sup(a) Ag [Presence] on Red Blood Cells",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SynovialDrainInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_SynovialDrainInstitutionInventoryNumber: new Coding({
         code: "10270-7",
         display: "Synovial drain Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TubeOrDrainInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_TubeOrDrainInstitutionInventoryNumber: new Coding({
         code: "10271-5",
         display: "Tube or drain Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_UpperGITubeInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_UpperGITubeInstitutionInventoryNumber: new Coding({
         code: "10272-3",
         display: "Upper GI tube Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BladderIrrigationTubeInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_BladderIrrigationTubeInstitutionInventoryNumber: new Coding({
         code: "10273-1",
         display: "Bladder irrigation tube Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_UrineTubeInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_UrineTubeInstitutionInventoryNumber: new Coding({
         code: "10274-9",
         display: "Urine tube Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_WoundDrainDeviceInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_WoundDrainDeviceInstitutionInventoryNumber: new Coding({
         code: "10275-6",
         display: "Wound drain device Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PeritonealDrainSite: Coding.FromStrict({
+    ConsentContentCodeValueSet_PeritonealDrainSite: new Coding({
         code: "10276-4",
         display: "Peritoneal drain site",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_StoolCollectionSite: Coding.FromStrict({
+    ConsentContentCodeValueSet_StoolCollectionSite: new Coding({
         code: "10277-2",
         display: "Stool collection site",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SubarachnoidDrainSite: Coding.FromStrict({
+    ConsentContentCodeValueSet_SubarachnoidDrainSite: new Coding({
         code: "10278-0",
         display: "Subarachnoid drain site",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BiliaryDrainVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_BiliaryDrainVendorModelNumber: new Coding({
         code: "10279-8",
         display: "Biliary drain Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FySupBAbPresenceInSerumOrPlasmaFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_FySupBAbPresenceInSerumOrPlasmaFromBloodProductUnit: new Coding({
         code: "1028-0",
         display: "Fy sup(b) Ab [Presence] in Serum or Plasma from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ChestTubeVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_ChestTubeVendorModelNumber: new Coding({
         code: "10280-6",
         display: "Chest tube Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EnteralTubeVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_EnteralTubeVendorModelNumber: new Coding({
         code: "10281-4",
         display: "Enteral tube Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GastrostomyTubeVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_GastrostomyTubeVendorModelNumber: new Coding({
         code: "10282-2",
         display: "Gastrostomy tube Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GITubeVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_GITubeVendorModelNumber: new Coding({
         code: "10283-0",
         display: "GI tube Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IntravascularTubeVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_IntravascularTubeVendorModelNumber: new Coding({
         code: "10284-8",
         display: "Intravascular tube Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IOTubeVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_IOTubeVendorModelNumber: new Coding({
         code: "10285-5",
         display: "IO tube Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_NasogastricTubeVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_NasogastricTubeVendorModelNumber: new Coding({
         code: "10286-3",
         display: "Nasogastric tube Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OralTubeVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_OralTubeVendorModelNumber: new Coding({
         code: "10287-1",
         display: "Oral tube Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PeritonealDrainVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_PeritonealDrainVendorModelNumber: new Coding({
         code: "10288-9",
         display: "Peritoneal drain Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PeritonealTubeVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_PeritonealTubeVendorModelNumber: new Coding({
         code: "10289-7",
         display: "Peritoneal tube Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FySupBAbPresenceInSerumOrPlasmaFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_FySupBAbPresenceInSerumOrPlasmaFromDonor: new Coding({
         code: "1029-8",
         display: "Fy sup(b) Ab [Presence] in Serum or Plasma from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RateControlDeviceVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_RateControlDeviceVendorModelNumber: new Coding({
         code: "10290-5",
         display: "Rate control device Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_StoolCollectionDeviceVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_StoolCollectionDeviceVendorModelNumber: new Coding({
         code: "10291-3",
         display: "Stool collection device Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SubarachnoidDrainVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_SubarachnoidDrainVendorModelNumber: new Coding({
         code: "10292-1",
         display: "Subarachnoid drain Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SynovialDrainVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_SynovialDrainVendorModelNumber: new Coding({
         code: "10293-9",
         display: "Synovial drain Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TubeOrDrainVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_TubeOrDrainVendorModelNumber: new Coding({
         code: "10294-7",
         display: "Tube or drain Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_UpperGITubeVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_UpperGITubeVendorModelNumber: new Coding({
         code: "10295-4",
         display: "Upper GI tube Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BladderIrrigationTubeVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_BladderIrrigationTubeVendorModelNumber: new Coding({
         code: "10296-2",
         display: "Bladder irrigation tube Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_UrineTubeVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_UrineTubeVendorModelNumber: new Coding({
         code: "10297-0",
         display: "Urine tube Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_WoundDrainDeviceVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_WoundDrainDeviceVendorModelNumber: new Coding({
         code: "10298-8",
         display: "Wound drain device Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BiliaryDrainVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_BiliaryDrainVendorSerialNumber: new Coding({
         code: "10299-6",
         display: "Biliary drain Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CeforanideSusceptibilityByMinimumLethalConcentrationMLC: Coding.FromStrict({
+    ConsentContentCodeValueSet_CeforanideSusceptibilityByMinimumLethalConcentrationMLC: new Coding({
         code: "103-2",
         display: "Ceforanide [Susceptibility] by Minimum lethal concentration (MLC)",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FySupBAbPresenceInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_FySupBAbPresenceInSerumOrPlasma: new Coding({
         code: "1030-6",
         display: "Fy sup(b) Ab [Presence] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ChestTubeVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_ChestTubeVendorSerialNumber: new Coding({
         code: "10300-2",
         display: "Chest tube Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EnteralTubeVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_EnteralTubeVendorSerialNumber: new Coding({
         code: "10301-0",
         display: "Enteral tube Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GastrostomyTubeVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_GastrostomyTubeVendorSerialNumber: new Coding({
         code: "10302-8",
         display: "Gastrostomy tube Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GITubeVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_GITubeVendorSerialNumber: new Coding({
         code: "10303-6",
         display: "GI tube Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IntravascularTubeVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_IntravascularTubeVendorSerialNumber: new Coding({
         code: "10304-4",
         display: "Intravascular tube Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IOTubeVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_IOTubeVendorSerialNumber: new Coding({
         code: "10305-1",
         display: "IO tube Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_NasogastricTubeVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_NasogastricTubeVendorSerialNumber: new Coding({
         code: "10306-9",
         display: "Nasogastric tube Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OralTubeVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_OralTubeVendorSerialNumber: new Coding({
         code: "10307-7",
         display: "Oral tube Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PeritonealDrainVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_PeritonealDrainVendorSerialNumber: new Coding({
         code: "10308-5",
         display: "Peritoneal drain Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PeritonealTubeVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_PeritonealTubeVendorSerialNumber: new Coding({
         code: "10309-3",
         display: "Peritoneal tube Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FySupBAgPresenceOnRedBloodCellsFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_FySupBAgPresenceOnRedBloodCellsFromBloodProductUnit: new Coding({
         code: "1031-4",
         display: "Fy sup(b) Ag [Presence] on Red Blood Cells from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RateControlDeviceVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_RateControlDeviceVendorSerialNumber: new Coding({
         code: "10310-1",
         display: "Rate control device Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_StoolCollectionDeviceVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_StoolCollectionDeviceVendorSerialNumber: new Coding({
         code: "10311-9",
         display: "Stool collection device Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SubarachnoidDrainVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_SubarachnoidDrainVendorSerialNumber: new Coding({
         code: "10312-7",
         display: "Subarachnoid drain Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SynovialDrainVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_SynovialDrainVendorSerialNumber: new Coding({
         code: "10313-5",
         display: "Synovial drain Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TubeOrDrainVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_TubeOrDrainVendorSerialNumber: new Coding({
         code: "10314-3",
         display: "Tube or drain Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_UpperGITubeVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_UpperGITubeVendorSerialNumber: new Coding({
         code: "10315-0",
         display: "Upper GI tube Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BladderIrrigationTubeVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_BladderIrrigationTubeVendorSerialNumber: new Coding({
         code: "10316-8",
         display: "Bladder irrigation tube Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_UrineTubeVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_UrineTubeVendorSerialNumber: new Coding({
         code: "10317-6",
         display: "Urine tube Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_WoundDrainDeviceVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_WoundDrainDeviceVendorSerialNumber: new Coding({
         code: "10318-4",
         display: "Wound drain device Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EnemaDeviceInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_EnemaDeviceInstitutionInventoryNumber: new Coding({
         code: "10319-2",
         display: "Enema device Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FySupBAgPresenceOnRedBloodCellsFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_FySupBAgPresenceOnRedBloodCellsFromDonor: new Coding({
         code: "1032-2",
         display: "Fy sup(b) Ag [Presence] on Red Blood Cells from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EnemaDeviceVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_EnemaDeviceVendorModelNumber: new Coding({
         code: "10320-0",
         display: "Enema device Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EnemaDeviceVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_EnemaDeviceVendorSerialNumber: new Coding({
         code: "10321-8",
         display: "Enema device Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PotassiumIntake24Hour: Coding.FromStrict({
+    ConsentContentCodeValueSet_PotassiumIntake24Hour: new Coding({
         code: "10322-6",
         display: "Potassium intake 24 hour",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_WoundDrainFluidAppearanceLowerGITract: Coding.FromStrict({
+    ConsentContentCodeValueSet_WoundDrainFluidAppearanceLowerGITract: new Coding({
         code: "10323-4",
         display: "Wound drain fluid [Appearance] Lower GI tract",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BreathRateDeviceInstitutionInventoryNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_BreathRateDeviceInstitutionInventoryNumber: new Coding({
         code: "10324-2",
         display: "Breath rate device Institution inventory number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BreathRateDeviceVendorModelNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_BreathRateDeviceVendorModelNumber: new Coding({
         code: "10325-9",
         display: "Breath rate device Vendor model number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BreathRateDeviceVendorSerialNumber: Coding.FromStrict({
+    ConsentContentCodeValueSet_BreathRateDeviceVendorSerialNumber: new Coding({
         code: "10326-7",
         display: "Breath rate device Vendor serial number",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_Eosinophils100LeukocytesInSputumByManualCount: Coding.FromStrict({
+    ConsentContentCodeValueSet_Eosinophils100LeukocytesInSputumByManualCount: new Coding({
         code: "10327-5",
         display: "Eosinophils/100 leukocytes in Sputum by Manual count",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_Lymphocytes100LeukocytesInCerebralSpinalFluidByManualCount: Coding.FromStrict({
+    ConsentContentCodeValueSet_Lymphocytes100LeukocytesInCerebralSpinalFluidByManualCount: new Coding({
         code: "10328-3",
         display: "Lymphocytes/100 leukocytes in Cerebral spinal fluid by Manual count",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_Monocytes100LeukocytesInCerebralSpinalFluidByManualCount: Coding.FromStrict({
+    ConsentContentCodeValueSet_Monocytes100LeukocytesInCerebralSpinalFluidByManualCount: new Coding({
         code: "10329-1",
         display: "Monocytes/100 leukocytes in Cerebral spinal fluid by Manual count",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FySupBAgPresenceOnRedBloodCells: Coding.FromStrict({
+    ConsentContentCodeValueSet_FySupBAgPresenceOnRedBloodCells: new Coding({
         code: "1033-0",
         display: "Fy sup(b) Ag [Presence] on Red Blood Cells",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_Monocytes100LeukocytesInBodyFluidByManualCount: Coding.FromStrict({
+    ConsentContentCodeValueSet_Monocytes100LeukocytesInBodyFluidByManualCount: new Coding({
         code: "10330-9",
         display: "Monocytes/100 leukocytes in Body fluid by Manual count",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RhTypeInBlood: Coding.FromStrict({
+    ConsentContentCodeValueSet_RhTypeInBlood: new Coding({
         code: "10331-7",
         display: "Rh [Type] in Blood",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CortisolMassVolumeInSerumOrPlasmaPre250UgCorticotropinIM: Coding.FromStrict({
+    ConsentContentCodeValueSet_CortisolMassVolumeInSerumOrPlasmaPre250UgCorticotropinIM: new Coding({
         code: "10332-5",
         display: "Cortisol [Mass/volume] in Serum or Plasma --pre 250 ug corticotropin IM",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AppearanceOfCerebralSpinalFluid: Coding.FromStrict({
+    ConsentContentCodeValueSet_AppearanceOfCerebralSpinalFluid: new Coding({
         code: "10333-3",
         display: "Appearance of Cerebral spinal fluid",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CancerAg125UnitsVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_CancerAg125UnitsVolumeInSerumOrPlasma: new Coding({
         code: "10334-1",
         display: "Cancer Ag 125 [Units/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ColorOfCerebralSpinalFluid: Coding.FromStrict({
+    ConsentContentCodeValueSet_ColorOfCerebralSpinalFluid: new Coding({
         code: "10335-8",
         display: "Color of Cerebral spinal fluid",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GonadotropinPeptideMassVolumeInUrine: Coding.FromStrict({
+    ConsentContentCodeValueSet_GonadotropinPeptideMassVolumeInUrine: new Coding({
         code: "10336-6",
         display: "Gonadotropin peptide [Mass/volume] in Urine",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ProcollagenTypeIMassVolumeInSerum: Coding.FromStrict({
+    ConsentContentCodeValueSet_ProcollagenTypeIMassVolumeInSerum: new Coding({
         code: "10337-4",
         display: "Procollagen type I [Mass/volume] in Serum",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BarbituratesMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_BarbituratesMassVolumeInSerumOrPlasma: new Coding({
         code: "10338-2",
         display: "Barbiturates [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FluoxetinePlusNorfluoxetineMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_FluoxetinePlusNorfluoxetineMassVolumeInSerumOrPlasma: new Coding({
         code: "10339-0",
         display: "Fluoxetine+Norfluoxetine [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FetalCellScreenInterpretationInBlood: Coding.FromStrict({
+    ConsentContentCodeValueSet_FetalCellScreenInterpretationInBlood: new Coding({
         code: "1034-8",
         display: "Fetal cell screen [Interpretation] in Blood",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MolindoneMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_MolindoneMassVolumeInSerumOrPlasma: new Coding({
         code: "10340-8",
         display: "Molindone [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_NorpropoxypheneMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_NorpropoxypheneMassVolumeInSerumOrPlasma: new Coding({
         code: "10341-6",
         display: "Norpropoxyphene [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SulfamethoxazoleMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_SulfamethoxazoleMassVolumeInSerumOrPlasma: new Coding({
         code: "10342-4",
         display: "Sulfamethoxazole [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TemazepamMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_TemazepamMassVolumeInSerumOrPlasma: new Coding({
         code: "10343-2",
         display: "Temazepam [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TranylcypromineMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_TranylcypromineMassVolumeInSerumOrPlasma: new Coding({
         code: "10344-0",
         display: "Tranylcypromine [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TrihexyphenidylMassVolumeInUrine: Coding.FromStrict({
+    ConsentContentCodeValueSet_TrihexyphenidylMassVolumeInUrine: new Coding({
         code: "10345-7",
         display: "Trihexyphenidyl [Mass/volume] in Urine",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HemoglobinAUnitsVolumeInBloodByElectrophoresis: Coding.FromStrict({
+    ConsentContentCodeValueSet_HemoglobinAUnitsVolumeInBloodByElectrophoresis: new Coding({
         code: "10346-5",
         display: "Hemoglobin A [Units/volume] in Blood by Electrophoresis",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BabesiaMicrotiIdentifiedInBloodByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_BabesiaMicrotiIdentifiedInBloodByLightMicroscopy: new Coding({
         code: "10347-3",
         display: "Babesia microti identified in Blood by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BordetellaParapertussisAbPresenceInSerum: Coding.FromStrict({
+    ConsentContentCodeValueSet_BordetellaParapertussisAbPresenceInSerum: new Coding({
         code: "10348-1",
         display: "Bordetella parapertussis Ab [Presence] in Serum",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BrucellaSpAbUnitsVolumeInSerum: Coding.FromStrict({
+    ConsentContentCodeValueSet_BrucellaSpAbUnitsVolumeInSerum: new Coding({
         code: "10349-9",
         display: "Brucella sp Ab [Units/volume] in Serum",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FreshFrozenPlasmaGivenVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_FreshFrozenPlasmaGivenVolume: new Coding({
         code: "1035-5",
         display: "Fresh frozen plasma given [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HerpesSimplexVirusIgMAbTiterInSerumByImmunoassay: Coding.FromStrict({
+    ConsentContentCodeValueSet_HerpesSimplexVirusIgMAbTiterInSerumByImmunoassay: new Coding({
         code: "10350-7",
         display: "Herpes simplex virus IgM Ab [Titer] in Serum by Immunoassay",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HIV1RNAUnitsVolumeViralLoadInSerumOrPlasmaByProbeWithAmplification: Coding.FromStrict({
+    ConsentContentCodeValueSet_HIV1RNAUnitsVolumeViralLoadInSerumOrPlasmaByProbeWithAmplification: new Coding({
         code: "10351-5",
         display: "HIV 1 RNA [Units/volume] (viral load) in Serum or Plasma by Probe with amplification",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BacteriaIdentifiedInGenitalSpecimenByAerobeCulture: Coding.FromStrict({
+    ConsentContentCodeValueSet_BacteriaIdentifiedInGenitalSpecimenByAerobeCulture: new Coding({
         code: "10352-3",
         display: "Bacteria identified in Genital specimen by Aerobe culture",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BacteriaIdentifiedInNoseByAerobeCulture: Coding.FromStrict({
+    ConsentContentCodeValueSet_BacteriaIdentifiedInNoseByAerobeCulture: new Coding({
         code: "10353-1",
         display: "Bacteria identified in Nose by Aerobe culture",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BacteriaIdentifiedInUrethraByCulture: Coding.FromStrict({
+    ConsentContentCodeValueSet_BacteriaIdentifiedInUrethraByCulture: new Coding({
         code: "10354-9",
         display: "Bacteria identified in Urethra by Culture",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInBoneMarrowByWrightGiemsaStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInBoneMarrowByWrightGiemsaStain: new Coding({
         code: "10355-6",
         display: "Microscopic observation [Identifier] in Bone marrow by Wright Giemsa stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedMicroscopicObservationIdentifierInStoolByTrichromeStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedMicroscopicObservationIdentifierInStoolByTrichromeStain: new Coding({
         code: "10356-4",
         display: "Deprecated Microscopic observation [Identifier] in Stool by Trichrome stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInWoundByGramStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInWoundByGramStain: new Coding({
         code: "10357-2",
         display: "Microscopic observation [Identifier] in Wound by Gram stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TeichoateAbTiterInSerumByImmuneDiffusionID: Coding.FromStrict({
+    ConsentContentCodeValueSet_TeichoateAbTiterInSerumByImmuneDiffusionID: new Coding({
         code: "10358-0",
         display: "Teichoate Ab [Titer] in Serum by Immune diffusion (ID)",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AsialogangliosideGM1IgMAbTiterInSerum: Coding.FromStrict({
+    ConsentContentCodeValueSet_AsialogangliosideGM1IgMAbTiterInSerum: new Coding({
         code: "10359-8",
         display: "Asialoganglioside GM1 IgM Ab [Titer] in Serum",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GAbPresenceInSerumOrPlasmaFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_GAbPresenceInSerumOrPlasmaFromBloodProductUnit: new Coding({
         code: "1036-3",
         display: "G Ab [Presence] in Serum or Plasma from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DNASingleStrandIgGAbUnitsVolumeInSerum: Coding.FromStrict({
+    ConsentContentCodeValueSet_DNASingleStrandIgGAbUnitsVolumeInSerum: new Coding({
         code: "10360-6",
         display: "DNA single strand IgG Ab [Units/volume] in Serum",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DNASingleStrandIgMAbUnitsVolumeInSerum: Coding.FromStrict({
+    ConsentContentCodeValueSet_DNASingleStrandIgMAbUnitsVolumeInSerum: new Coding({
         code: "10361-4",
         display: "DNA single strand IgM Ab [Units/volume] in Serum",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EndomysiumIgAAbPresenceInSerum: Coding.FromStrict({
+    ConsentContentCodeValueSet_EndomysiumIgAAbPresenceInSerum: new Coding({
         code: "10362-2",
         display: "Endomysium IgA Ab [Presence] in Serum",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BarbituratesPresenceInUnspecifiedSpecimen: Coding.FromStrict({
+    ConsentContentCodeValueSet_BarbituratesPresenceInUnspecifiedSpecimen: new Coding({
         code: "10363-0",
         display: "Barbiturates [Presence] in Unspecified specimen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CotinineMassMassInHair: Coding.FromStrict({
+    ConsentContentCodeValueSet_CotinineMassMassInHair: new Coding({
         code: "10364-8",
         display: "Cotinine [Mass/mass] in Hair",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CotinineMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_CotinineMassVolumeInSerumOrPlasma: new Coding({
         code: "10365-5",
         display: "Cotinine [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CotinineMassVolumeInUrine: Coding.FromStrict({
+    ConsentContentCodeValueSet_CotinineMassVolumeInUrine: new Coding({
         code: "10366-3",
         display: "Cotinine [Mass/volume] in Urine",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EthanolMassVolumeInGastricFluid: Coding.FromStrict({
+    ConsentContentCodeValueSet_EthanolMassVolumeInGastricFluid: new Coding({
         code: "10367-1",
         display: "Ethanol [Mass/volume] in Gastric fluid",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_LeadMassVolumeInCapillaryBlood: Coding.FromStrict({
+    ConsentContentCodeValueSet_LeadMassVolumeInCapillaryBlood: new Coding({
         code: "10368-9",
         display: "Lead [Mass/volume] in Capillary blood",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OpiatesMassMassInHair: Coding.FromStrict({
+    ConsentContentCodeValueSet_OpiatesMassMassInHair: new Coding({
         code: "10369-7",
         display: "Opiates [Mass/mass] in Hair",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GAbPresenceInSerumOrPlasmaFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_GAbPresenceInSerumOrPlasmaFromDonor: new Coding({
         code: "1037-1",
         display: "G Ab [Presence] in Serum or Plasma from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhencyclidineMassMassInHair: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhencyclidineMassMassInHair: new Coding({
         code: "10370-5",
         display: "Phencyclidine [Mass/mass] in Hair",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BiteCellsPresenceInBloodByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_BiteCellsPresenceInBloodByLightMicroscopy: new Coding({
         code: "10371-3",
         display: "Bite cells [Presence] in Blood by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BlisterCellsPresenceInBloodByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_BlisterCellsPresenceInBloodByLightMicroscopy: new Coding({
         code: "10372-1",
         display: "Blister cells [Presence] in Blood by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FragmentsPresenceInBloodByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_FragmentsPresenceInBloodByLightMicroscopy: new Coding({
         code: "10373-9",
         display: "Fragments [Presence] in Blood by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HelmetCellsPresenceInBloodByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_HelmetCellsPresenceInBloodByLightMicroscopy: new Coding({
         code: "10374-7",
         display: "Helmet cells [Presence] in Blood by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IrregularlyContractedCellsPresenceInBloodByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_IrregularlyContractedCellsPresenceInBloodByLightMicroscopy: new Coding({
         code: "10375-4",
         display: "Irregularly contracted cells [Presence] in Blood by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OvalMacrocytesPresenceInBloodByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_OvalMacrocytesPresenceInBloodByLightMicroscopy: new Coding({
         code: "10376-2",
         display: "Oval macrocytes [Presence] in Blood by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PencilCellsPresenceInBloodByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_PencilCellsPresenceInBloodByLightMicroscopy: new Coding({
         code: "10377-0",
         display: "Pencil cells [Presence] in Blood by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PolychromasiaPresenceInBloodByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_PolychromasiaPresenceInBloodByLightMicroscopy: new Coding({
         code: "10378-8",
         display: "Polychromasia [Presence] in Blood by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ErythrocytesDualPopulationPresenceInBloodByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_ErythrocytesDualPopulationPresenceInBloodByLightMicroscopy: new Coding({
         code: "10379-6",
         display: "Erythrocytes.dual population [Presence] in Blood by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GAbPresenceInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_GAbPresenceInSerumOrPlasma: new Coding({
         code: "1038-9",
         display: "G Ab [Presence] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_StomatocytesPresenceInBloodByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_StomatocytesPresenceInBloodByLightMicroscopy: new Coding({
         code: "10380-4",
         display: "Stomatocytes [Presence] in Blood by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TargetCellsPresenceInBloodByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_TargetCellsPresenceInBloodByLightMicroscopy: new Coding({
         code: "10381-2",
         display: "Target cells [Presence] in Blood by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ABVariantNOSAgPresenceOnRedBloodCellsFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_ABVariantNOSAgPresenceOnRedBloodCellsFromBloodProductUnit: new Coding({
         code: "10382-0",
         display: "A,B variant NOS Ag [Presence] on Red Blood Cells from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ABVariantNOSAgPresenceOnRedBloodCellsFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_ABVariantNOSAgPresenceOnRedBloodCellsFromDonor: new Coding({
         code: "10383-8",
         display: "A,B variant NOS Ag [Presence] on Red Blood Cells from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ABVariantNOSAgPresenceOnRedBloodCells: Coding.FromStrict({
+    ConsentContentCodeValueSet_ABVariantNOSAgPresenceOnRedBloodCells: new Coding({
         code: "10384-6",
         display: "A,B variant NOS Ag [Presence] on Red Blood Cells",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AlbuminConcentrationGiven: Coding.FromStrict({
+    ConsentContentCodeValueSet_AlbuminConcentrationGiven: new Coding({
         code: "10385-3",
         display: "Albumin concentration given",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AlbuminGivenVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_AlbuminGivenVolume: new Coding({
         code: "10386-1",
         display: "Albumin given [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AutologousErythrocytesGivenVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_AutologousErythrocytesGivenVolume: new Coding({
         code: "10387-9",
         display: "Autologous erythrocytes given [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AutologousWholeBloodGivenVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_AutologousWholeBloodGivenVolume: new Coding({
         code: "10388-7",
         display: "Autologous whole blood given [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BloodProductOtherType: Coding.FromStrict({
+    ConsentContentCodeValueSet_BloodProductOtherType: new Coding({
         code: "10389-5",
         display: "Blood product.other [Type]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GAgPresenceOnRedBloodCellsFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_GAgPresenceOnRedBloodCellsFromBloodProductUnit: new Coding({
         code: "1039-7",
         display: "G Ag [Presence] on Red Blood Cells from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BloodProductSpecialPreparationType: Coding.FromStrict({
+    ConsentContentCodeValueSet_BloodProductSpecialPreparationType: new Coding({
         code: "10390-3",
         display: "Blood product special preparation [Type]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CytomegalovirusImmuneGlobulinGivenVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_CytomegalovirusImmuneGlobulinGivenVolume: new Coding({
         code: "10391-1",
         display: "Cytomegalovirus immune globulin given [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CryoprecipitateGivenVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_CryoprecipitateGivenVolume: new Coding({
         code: "10392-9",
         display: "Cryoprecipitate given [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FactorIXGivenType: Coding.FromStrict({
+    ConsentContentCodeValueSet_FactorIXGivenType: new Coding({
         code: "10393-7",
         display: "Factor IX given [Type]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FactorIXGivenVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_FactorIXGivenVolume: new Coding({
         code: "10394-5",
         display: "Factor IX given [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FactorVIIIGivenType: Coding.FromStrict({
+    ConsentContentCodeValueSet_FactorVIIIGivenType: new Coding({
         code: "10395-2",
         display: "Factor VIII given [Type]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FactorVIIIGivenVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_FactorVIIIGivenVolume: new Coding({
         code: "10396-0",
         display: "Factor VIII given [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HepatitisBImmuneGlobulinGivenVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_HepatitisBImmuneGlobulinGivenVolume: new Coding({
         code: "10397-8",
         display: "Hepatitis B immune globulin given [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IAgPresenceOnRedBloodCellsFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_IAgPresenceOnRedBloodCellsFromBloodProductUnit: new Coding({
         code: "10398-6",
         display: "I Ag [Presence] on Red Blood Cells from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IAgPresenceOnRedBloodCellsFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_IAgPresenceOnRedBloodCellsFromDonor: new Coding({
         code: "10399-4",
         display: "I Ag [Presence] on Red Blood Cells from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CeforanideSusceptibilityByMinimumInhibitoryConcentrationMIC: Coding.FromStrict({
+    ConsentContentCodeValueSet_CeforanideSusceptibilityByMinimumInhibitoryConcentrationMIC: new Coding({
         code: "104-0",
         display: "Ceforanide [Susceptibility] by Minimum inhibitory concentration (MIC)",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GAgPresenceOnRedBloodCellsFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_GAgPresenceOnRedBloodCellsFromDonor: new Coding({
         code: "1040-5",
         display: "G Ag [Presence] on Red Blood Cells from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IAgPresenceOnRedBloodCells: Coding.FromStrict({
+    ConsentContentCodeValueSet_IAgPresenceOnRedBloodCells: new Coding({
         code: "10400-0",
         display: "I Ag [Presence] on Red Blood Cells",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ImmuneSerumGlobulinGivenType: Coding.FromStrict({
+    ConsentContentCodeValueSet_ImmuneSerumGlobulinGivenType: new Coding({
         code: "10401-8",
         display: "Immune serum globulin given [Type]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ImmuneSerumGlobulinGivenVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_ImmuneSerumGlobulinGivenVolume: new Coding({
         code: "10402-6",
         display: "Immune serum globulin given [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_InjectImmuneSerumGlobulinVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_InjectImmuneSerumGlobulinVolume: new Coding({
         code: "10403-4",
         display: "Inject immune serum globulin [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_InjectRhImmuneGlobulinVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_InjectRhImmuneGlobulinVolume: new Coding({
         code: "10404-2",
         display: "Inject Rh immune globulin [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_InjectVaricellaZosterVirusImmuneGlobulinVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_InjectVaricellaZosterVirusImmuneGlobulinVolume: new Coding({
         code: "10405-9",
         display: "Inject varicella zoster virus immune globulin [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_LittleIAgPresenceOnRedBloodCellsFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_LittleIAgPresenceOnRedBloodCellsFromBloodProductUnit: new Coding({
         code: "10406-7",
         display: "little i Ag [Presence] on Red Blood Cells from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_LittleIAgPresenceOnRedBloodCellsFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_LittleIAgPresenceOnRedBloodCellsFromDonor: new Coding({
         code: "10407-5",
         display: "little i Ag [Presence] on Red Blood Cells from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_LittleIAgPresenceOnRedBloodCells: Coding.FromStrict({
+    ConsentContentCodeValueSet_LittleIAgPresenceOnRedBloodCells: new Coding({
         code: "10408-3",
         display: "little i Ag [Presence] on Red Blood Cells",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PentaspanGivenVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_PentaspanGivenVolume: new Coding({
         code: "10409-1",
         display: "Pentaspan given [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GAgPresenceOnRedBloodCells: Coding.FromStrict({
+    ConsentContentCodeValueSet_GAgPresenceOnRedBloodCells: new Coding({
         code: "1041-3",
         display: "G Ag [Presence] on Red Blood Cells",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PlasmaGivenType: Coding.FromStrict({
+    ConsentContentCodeValueSet_PlasmaGivenType: new Coding({
         code: "10410-9",
         display: "Plasma given [Type]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PlasmaGivenVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_PlasmaGivenVolume: new Coding({
         code: "10411-7",
         display: "Plasma given [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PlateletsGivenType: Coding.FromStrict({
+    ConsentContentCodeValueSet_PlateletsGivenType: new Coding({
         code: "10412-5",
         display: "Platelets given [Type]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RhImmuneGlobulinGivenVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_RhImmuneGlobulinGivenVolume: new Coding({
         code: "10413-3",
         display: "Rh immune globulin given [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TransfuseAlbuminVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_TransfuseAlbuminVolume: new Coding({
         code: "10414-1",
         display: "Transfuse albumin [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TransfuseBloodExchangeTransfusionVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_TransfuseBloodExchangeTransfusionVolume: new Coding({
         code: "10415-8",
         display: "Transfuse blood exchange transfusion [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TransfuseBloodProductOtherVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_TransfuseBloodProductOtherVolume: new Coding({
         code: "10416-6",
         display: "Transfuse blood product other [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TransfuseCryoprecipitateVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_TransfuseCryoprecipitateVolume: new Coding({
         code: "10417-4",
         display: "Transfuse cryoprecipitate [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TransfuseFactorIXVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_TransfuseFactorIXVolume: new Coding({
         code: "10418-2",
         display: "Transfuse factor IX [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TransfuseFactorVIIIVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_TransfuseFactorVIIIVolume: new Coding({
         code: "10419-0",
         display: "Transfuse factor VIII [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HAbPresenceInSerumOrPlasmaFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_HAbPresenceInSerumOrPlasmaFromBloodProductUnit: new Coding({
         code: "1042-1",
         display: "H Ab [Presence] in Serum or Plasma from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TransfuseImmuneSerumGlobulinVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_TransfuseImmuneSerumGlobulinVolume: new Coding({
         code: "10420-8",
         display: "Transfuse immune serum globulin [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TransfusePentaspanVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_TransfusePentaspanVolume: new Coding({
         code: "10421-6",
         display: "Transfuse Pentaspan [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TransfusePlasmaVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_TransfusePlasmaVolume: new Coding({
         code: "10422-4",
         display: "Transfuse plasma [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TransfusePlateletsVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_TransfusePlateletsVolume: new Coding({
         code: "10423-2",
         display: "Transfuse platelets [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TransfuseErythrocytesVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_TransfuseErythrocytesVolume: new Coding({
         code: "10424-0",
         display: "Transfuse erythrocytes [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TransfuseRhImmuneGlobulinVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_TransfuseRhImmuneGlobulinVolume: new Coding({
         code: "10425-7",
         display: "Transfuse Rh immune globulin [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TransfuseWholeBloodVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_TransfuseWholeBloodVolume: new Coding({
         code: "10426-5",
         display: "Transfuse whole blood [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TransfuseWholeBloodAutologousVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_TransfuseWholeBloodAutologousVolume: new Coding({
         code: "10427-3",
         display: "Transfuse whole blood autologous [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_VaricellaZosterVirusImmuneGlobulinGivenVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_VaricellaZosterVirusImmuneGlobulinGivenVolume: new Coding({
         code: "10428-1",
         display: "Varicella zoster virus immune globulin given [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AE1AgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_AE1AgPresenceInTissueByImmuneStain: new Coding({
         code: "10429-9",
         display: "AE 1 Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HAbPresenceInSerumOrPlasmaFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_HAbPresenceInSerumOrPlasmaFromDonor: new Coding({
         code: "1043-9",
         display: "H Ab [Presence] in Serum or Plasma from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AE3AgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_AE3AgPresenceInTissueByImmuneStain: new Coding({
         code: "10430-7",
         display: "AE 3 Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BCellAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_BCellAgPresenceInTissueByImmuneStain: new Coding({
         code: "10431-5",
         display: "B-cell Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CD30AgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CD30AgPresenceInTissueByImmuneStain: new Coding({
         code: "10432-3",
         display: "CD30 Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BR2AgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_BR2AgPresenceInTissueByImmuneStain: new Coding({
         code: "10433-1",
         display: "BR-2 Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ComplementC3AgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_ComplementC3AgPresenceInTissueByImmuneStain: new Coding({
         code: "10434-9",
         display: "Complement C3 Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_C5B9AgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_C5B9AgPresenceInTissueByImmuneStain: new Coding({
         code: "10435-6",
         display: "C5B-9 Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CD15AgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CD15AgPresenceInTissueByImmuneStain: new Coding({
         code: "10436-4",
         display: "CD15 Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CD16AgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CD16AgPresenceInTissueByImmuneStain: new Coding({
         code: "10437-2",
         display: "CD16 Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CD20AgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CD20AgPresenceInTissueByImmuneStain: new Coding({
         code: "10438-0",
         display: "CD20 Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CD3AgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CD3AgPresenceInTissueByImmuneStain: new Coding({
         code: "10439-8",
         display: "CD3 Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HAbPresenceInSerum: Coding.FromStrict({
+    ConsentContentCodeValueSet_HAbPresenceInSerum: new Coding({
         code: "1044-7",
         display: "H Ab [Presence] in Serum",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedCD30AgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedCD30AgPresenceInTissueByImmuneStain: new Coding({
         code: "10440-6",
         display: "Deprecated CD30 Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CD34AgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CD34AgPresenceInTissueByImmuneStain: new Coding({
         code: "10441-4",
         display: "CD34 Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CD56AgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CD56AgPresenceInTissueByImmuneStain: new Coding({
         code: "10442-2",
         display: "CD56 Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CD43TCellMonocytePlusMyeloidCellAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CD43TCellMonocytePlusMyeloidCellAgPresenceInTissueByImmuneStain: new Coding({
         code: "10443-0",
         display: "CD43 T-cell monocyte+myeloid cell Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CD57AgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CD57AgPresenceInTissueByImmuneStain: new Coding({
         code: "10444-8",
         display: "CD57 Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CD11cAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CD11cAgPresenceInTissueByImmuneStain: new Coding({
         code: "10445-5",
         display: "CD11c Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_LeukocyteCommonAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_LeukocyteCommonAgPresenceInTissueByImmuneStain: new Coding({
         code: "10446-3",
         display: "Leukocyte common Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_M5AgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_M5AgPresenceInTissueByImmuneStain: new Coding({
         code: "10447-1",
         display: "M-5 Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TCellAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_TCellAgPresenceInTissueByImmuneStain: new Coding({
         code: "10448-9",
         display: "T-cell Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GlucoseMassVolumeInSerumOrPlasma1HourPostMeal: Coding.FromStrict({
+    ConsentContentCodeValueSet_GlucoseMassVolumeInSerumOrPlasma1HourPostMeal: new Coding({
         code: "10449-7",
         display: "Glucose [Mass/volume] in Serum or Plasma --1 hour post meal",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HNOSAbPresenceInSerumOrPlasmaFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_HNOSAbPresenceInSerumOrPlasmaFromBloodProductUnit: new Coding({
         code: "1045-4",
         display: "H NOS Ab [Presence] in Serum or Plasma from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GlucoseMassVolumeInSerumOrPlasma10HoursFasting: Coding.FromStrict({
+    ConsentContentCodeValueSet_GlucoseMassVolumeInSerumOrPlasma10HoursFasting: new Coding({
         code: "10450-5",
         display: "Glucose [Mass/volume] in Serum or Plasma --10 hours fasting",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ProinsulinMolesVolumeInSerumOrPlasma12HoursFasting: Coding.FromStrict({
+    ConsentContentCodeValueSet_ProinsulinMolesVolumeInSerumOrPlasma12HoursFasting: new Coding({
         code: "10451-3",
         display: "Proinsulin [Moles/volume] in Serum or Plasma --12 hours fasting",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_XyloseMassVolumeInSerumOrPlasma1HourPost25GXylosePO: Coding.FromStrict({
+    ConsentContentCodeValueSet_XyloseMassVolumeInSerumOrPlasma1HourPost25GXylosePO: new Coding({
         code: "10452-1",
         display: "Xylose [Mass/volume] in Serum or Plasma --1 hour post 25 g xylose PO",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_XyloseMassVolumeInSerumOrPlasma1HourPostDoseXylosePO: Coding.FromStrict({
+    ConsentContentCodeValueSet_XyloseMassVolumeInSerumOrPlasma1HourPostDoseXylosePO: new Coding({
         code: "10453-9",
         display: "Xylose [Mass/volume] in Serum or Plasma --1 hour post dose xylose PO",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_XyloseMassVolumeInSerumOrPlasma2HoursPost25GXylosePO: Coding.FromStrict({
+    ConsentContentCodeValueSet_XyloseMassVolumeInSerumOrPlasma2HoursPost25GXylosePO: new Coding({
         code: "10454-7",
         display: "Xylose [Mass/volume] in Serum or Plasma --2 hours post 25 g xylose PO",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_XyloseMassVolumeInSerumOrPlasma30MinutesPost25GXylosePO: Coding.FromStrict({
+    ConsentContentCodeValueSet_XyloseMassVolumeInSerumOrPlasma30MinutesPost25GXylosePO: new Coding({
         code: "10455-4",
         display: "Xylose [Mass/volume] in Serum or Plasma --30 minutes post 25 g xylose PO",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_XyloseMassVolumeInSerumOrPlasma6HoursFasting: Coding.FromStrict({
+    ConsentContentCodeValueSet_XyloseMassVolumeInSerumOrPlasma6HoursFasting: new Coding({
         code: "10456-2",
         display: "Xylose [Mass/volume] in Serum or Plasma --6 hours fasting",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ActinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_ActinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10457-0",
         display: "Actin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AlkalinePhosphatasePlacentalAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_AlkalinePhosphatasePlacentalAgPresenceInTissueByImmuneStain: new Coding({
         code: "10458-8",
         display: "Alkaline phosphatase.placental Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_Alpha1FetoproteinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_Alpha1FetoproteinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10459-6",
         display: "Alpha-1-Fetoprotein Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HNOSAbPresenceInSerumOrPlasmaFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_HNOSAbPresenceInSerumOrPlasmaFromDonor: new Coding({
         code: "1046-2",
         display: "H NOS Ab [Presence] in Serum or Plasma from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_LactalbuminAlphaAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_LactalbuminAlphaAgPresenceInTissueByImmuneStain: new Coding({
         code: "10460-4",
         display: "Lactalbumin alpha Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_Alpha1AntichymotrypsinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_Alpha1AntichymotrypsinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10461-2",
         display: "Alpha-1-Antichymotrypsin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_Alpha1AntitrypsinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_Alpha1AntitrypsinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10462-0",
         display: "Alpha 1 antitrypsin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AmyloidAComponentAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_AmyloidAComponentAgPresenceInTissueByImmuneStain: new Coding({
         code: "10463-8",
         display: "Amyloid A component Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AmyloidPComponentAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_AmyloidPComponentAgPresenceInTissueByImmuneStain: new Coding({
         code: "10464-6",
         display: "Amyloid P component Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AmyloidPrealbuminAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_AmyloidPrealbuminAgPresenceInTissueByImmuneStain: new Coding({
         code: "10465-3",
         display: "Amyloid.prealbumin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AnionGap3InSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_AnionGap3InSerumOrPlasma: new Coding({
         code: "10466-1",
         display: "Anion gap 3 in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_Beta2MicroglobulinAmyloidAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_Beta2MicroglobulinAmyloidAgPresenceInTissueByImmuneStain: new Coding({
         code: "10467-9",
         display: "Beta-2-Microglobulin amyloid Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CalcitoninAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CalcitoninAgPresenceInTissueByImmuneStain: new Coding({
         code: "10468-7",
         display: "Calcitonin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CarcinoembryonicAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CarcinoembryonicAgPresenceInTissueByImmuneStain: new Coding({
         code: "10469-5",
         display: "Carcinoembryonic Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HNOSAbPresenceInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_HNOSAbPresenceInSerumOrPlasma: new Coding({
         code: "1047-0",
         display: "H NOS Ab [Presence] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ChoriogonadotropinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_ChoriogonadotropinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10470-3",
         display: "Choriogonadotropin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ChromograninAAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_ChromograninAAgPresenceInTissueByImmuneStain: new Coding({
         code: "10471-1",
         display: "Chromogranin A Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ChromograninAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_ChromograninAgPresenceInTissueByImmuneStain: new Coding({
         code: "10472-9",
         display: "Chromogranin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ChymotrypsinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_ChymotrypsinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10473-7",
         display: "Chymotrypsin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CollagenType4AgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CollagenType4AgPresenceInTissueByImmuneStain: new Coding({
         code: "10474-5",
         display: "Collagen type 4 Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CorticotropinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CorticotropinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10475-2",
         display: "Corticotropin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DesminAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_DesminAgPresenceInTissueByImmuneStain: new Coding({
         code: "10476-0",
         display: "Desmin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EnolaseNeuronSpecificAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_EnolaseNeuronSpecificAgPresenceInTissueByImmuneStain: new Coding({
         code: "10477-8",
         display: "Enolase.neuron specific Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EosinophilMajorBasicProteinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_EosinophilMajorBasicProteinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10478-6",
         display: "Eosinophil major basic protein Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CD227AgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CD227AgPresenceInTissueByImmuneStain: new Coding({
         code: "10479-4",
         display: "CD227 Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HNOSAgPresenceOnRedBloodCellsFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_HNOSAgPresenceOnRedBloodCellsFromBloodProductUnit: new Coding({
         code: "1048-8",
         display: "H NOS Ag [Presence] on Red Blood Cells from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EstrogenPlusProgesteroneReceptorAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_EstrogenPlusProgesteroneReceptorAgPresenceInTissueByImmuneStain: new Coding({
         code: "10480-2",
         display: "Estrogen+Progesterone receptor Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FollitropinAlphaSubunitAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_FollitropinAlphaSubunitAgPresenceInTissueByImmuneStain: new Coding({
         code: "10481-0",
         display: "Follitropin.alpha subunit Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FollitropinBetaSubunitAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_FollitropinBetaSubunitAgPresenceInTissueByImmuneStain: new Coding({
         code: "10482-8",
         display: "Follitropin.beta subunit Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GastrinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_GastrinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10483-6",
         display: "Gastrin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GlialFibrillaryAcidicProteinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_GlialFibrillaryAcidicProteinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10484-4",
         display: "Glial fibrillary acidic protein Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GlucagonAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_GlucagonAgPresenceInTissueByImmuneStain: new Coding({
         code: "10485-1",
         display: "Glucagon Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HemoglobinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_HemoglobinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10486-9",
         display: "Hemoglobin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HMB45AgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_HMB45AgPresenceInTissueByImmuneStain: new Coding({
         code: "10487-7",
         display: "HMB-45 Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IgAAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_IgAAgPresenceInTissueByImmuneStain: new Coding({
         code: "10488-5",
         display: "IgA Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IgAHeavyChainAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_IgAHeavyChainAgPresenceInTissueByImmuneStain: new Coding({
         code: "10489-3",
         display: "IgA.heavy chain Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HNOSAgPresenceOnRedBloodCellsFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_HNOSAgPresenceOnRedBloodCellsFromDonor: new Coding({
         code: "1049-6",
         display: "H NOS Ag [Presence] on Red Blood Cells from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IgEAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_IgEAgPresenceInTissueByImmuneStain: new Coding({
         code: "10490-1",
         display: "IgE Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IgGAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_IgGAgPresenceInTissueByImmuneStain: new Coding({
         code: "10491-9",
         display: "IgG Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IgGHeavyChainAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_IgGHeavyChainAgPresenceInTissueByImmuneStain: new Coding({
         code: "10492-7",
         display: "IgG.heavy chain Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IgMAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_IgMAgPresenceInTissueByImmuneStain: new Coding({
         code: "10493-5",
         display: "IgM Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IgMHeavyChainAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_IgMHeavyChainAgPresenceInTissueByImmuneStain: new Coding({
         code: "10494-3",
         display: "IgM.heavy chain Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_InsulinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_InsulinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10495-0",
         display: "Insulin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_KappaLightChainsAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_KappaLightChainsAgPresenceInTissueByImmuneStain: new Coding({
         code: "10496-8",
         display: "Kappa light chains Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ImmunoglobulinLightChainsKappaAmyloidAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_ImmunoglobulinLightChainsKappaAmyloidAgPresenceInTissueByImmuneStain: new Coding({
         code: "10497-6",
         display: "Immunoglobulin light chains.kappa amyloid Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_KeratinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_KeratinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10498-4",
         display: "Keratin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_LambdaLightChainsAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_LambdaLightChainsAgPresenceInTissueByImmuneStain: new Coding({
         code: "10499-2",
         display: "Lambda light chains Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CeforanideSusceptibilityByDiskDiffusionKB: Coding.FromStrict({
+    ConsentContentCodeValueSet_CeforanideSusceptibilityByDiskDiffusionKB: new Coding({
         code: "105-7",
         display: "Ceforanide [Susceptibility] by Disk diffusion (KB)",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HNOSAgPresenceOnRedBloodCells: Coding.FromStrict({
+    ConsentContentCodeValueSet_HNOSAgPresenceOnRedBloodCells: new Coding({
         code: "1050-4",
         display: "H NOS Ag [Presence] on Red Blood Cells",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ImmunoglobulinLightChainsLambdaAmyloidAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_ImmunoglobulinLightChainsLambdaAmyloidAgPresenceInTissueByImmuneStain: new Coding({
         code: "10500-7",
         display: "Immunoglobulin light chains.lambda amyloid Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_LutropinUnitsVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_LutropinUnitsVolumeInSerumOrPlasma: new Coding({
         code: "10501-5",
         display: "Lutropin [Units/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_LutropinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_LutropinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10502-3",
         display: "Lutropin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_LysozymeAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_LysozymeAgPresenceInTissueByImmuneStain: new Coding({
         code: "10503-1",
         display: "Lysozyme Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MyelinBasicProteinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MyelinBasicProteinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10504-9",
         display: "Myelin basic protein Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MyoglobinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MyoglobinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10505-6",
         display: "Myoglobin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PeanutAgglutininAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_PeanutAgglutininAgPresenceInTissueByImmuneStain: new Coding({
         code: "10506-4",
         display: "Peanut agglutinin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ProlactinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_ProlactinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10507-2",
         display: "Prolactin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ProstateSpecificAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_ProstateSpecificAgPresenceInTissueByImmuneStain: new Coding({
         code: "10508-0",
         display: "Prostate specific Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ProstaticAcidPhosphataseAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_ProstaticAcidPhosphataseAgPresenceInTissueByImmuneStain: new Coding({
         code: "10509-8",
         display: "Prostatic acid phosphatase Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HemolyticDiseaseOfNewbornScreenInterpretationInBlood: Coding.FromStrict({
+    ConsentContentCodeValueSet_HemolyticDiseaseOfNewbornScreenInterpretationInBlood: new Coding({
         code: "1051-2",
         display: "Hemolytic disease of newborn screen [Interpretation] in Blood",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_S100AgAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_S100AgAgPresenceInTissueByImmuneStain: new Coding({
         code: "10510-6",
         display: "S-100 Ag Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SerotoninAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_SerotoninAgPresenceInTissueByImmuneStain: new Coding({
         code: "10511-4",
         display: "Serotonin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SomatostatinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_SomatostatinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10512-2",
         display: "Somatostatin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SomatotropinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_SomatotropinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10513-0",
         display: "Somatotropin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SynaptophysinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_SynaptophysinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10514-8",
         display: "Synaptophysin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ThyroglobulinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_ThyroglobulinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10515-5",
         display: "Thyroglobulin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ThyrotropinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_ThyrotropinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10516-3",
         display: "Thyrotropin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TrypsinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_TrypsinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10517-1",
         display: "Trypsin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_UlexEuropaeusILectinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_UlexEuropaeusILectinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10518-9",
         display: "Ulex europaeus I lectin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_VimentinAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_VimentinAgPresenceInTissueByImmuneStain: new Coding({
         code: "10519-7",
         display: "Vimentin Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedIIntermediateSubtypePresenceInSerumOrPlasmaFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedIIntermediateSubtypePresenceInSerumOrPlasmaFromBloodProductUnit: new Coding({
         code: "1052-0",
         display: "Deprecated I (intermediate) subtype [Presence] in Serum or Plasma from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CoagulationFactorVIAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CoagulationFactorVIAgPresenceInTissueByImmuneStain: new Coding({
         code: "10520-5",
         display: "Coagulation factor VI Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CoagulationFactorVIIIAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CoagulationFactorVIIIAgPresenceInTissueByImmuneStain: new Coding({
         code: "10521-3",
         display: "Coagulation factor VIII Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CoagulationFactorXIIIAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CoagulationFactorXIIIAgPresenceInTissueByImmuneStain: new Coding({
         code: "10522-1",
         display: "Coagulation factor XIII Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FibrinogenAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_FibrinogenAgPresenceInTissueByImmuneStain: new Coding({
         code: "10523-9",
         display: "Fibrinogen Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInCervixByCytoStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInCervixByCytoStain: new Coding({
         code: "10524-7",
         display: "Microscopic observation [Identifier] in Cervix by Cyto stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInUnspecifiedSpecimenByCytoStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInUnspecifiedSpecimenByCytoStain: new Coding({
         code: "10525-4",
         display: "Microscopic observation [Identifier] in Unspecified specimen by Cyto stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInSputumByCytoStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInSputumByCytoStain: new Coding({
         code: "10526-2",
         display: "Microscopic observation [Identifier] in Sputum by Cyto stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByCytoStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByCytoStain: new Coding({
         code: "10527-0",
         display: "Microscopic observation [Identifier] in Tissue by Cyto stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AcetophenazineMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_AcetophenazineMassVolumeInSerumOrPlasma: new Coding({
         code: "10528-8",
         display: "Acetophenazine [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AmoxapineMetaboliteMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_AmoxapineMetaboliteMassVolumeInSerumOrPlasma: new Coding({
         code: "10529-6",
         display: "Amoxapine metabolite [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedIIntermediateSubtypePresenceInSerumOrPlasmaFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedIIntermediateSubtypePresenceInSerumOrPlasmaFromDonor: new Coding({
         code: "1053-8",
         display: "Deprecated I (intermediate) subtype [Presence] in serum or plasma from donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AprobarbitalMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_AprobarbitalMassVolumeInSerumOrPlasma: new Coding({
         code: "10530-4",
         display: "Aprobarbital [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BretyliumMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_BretyliumMassVolumeInSerumOrPlasma: new Coding({
         code: "10531-2",
         display: "Bretylium [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedDesethylamiodaroneMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedDesethylamiodaroneMassVolumeInSerumOrPlasma: new Coding({
         code: "10532-0",
         display: "Deprecated Desethylamiodarone [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PropoxyphenePlusAcetaminophenMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_PropoxyphenePlusAcetaminophenMassVolumeInSerumOrPlasma: new Coding({
         code: "10533-8",
         display: "Propoxyphene+Acetaminophen [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DiazoxideMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_DiazoxideMassVolumeInSerumOrPlasma: new Coding({
         code: "10534-6",
         display: "Diazoxide [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DigoxinMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_DigoxinMassVolumeInSerumOrPlasma: new Coding({
         code: "10535-3",
         display: "Digoxin [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DipyridamoleMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_DipyridamoleMassVolumeInSerumOrPlasma: new Coding({
         code: "10536-1",
         display: "Dipyridamole [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedDoxepinPlusNordoxepinMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedDoxepinPlusNordoxepinMassVolumeInSerumOrPlasma: new Coding({
         code: "10537-9",
         display: "Deprecated Doxepin+Nordoxepin [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedFluoxetinePlusNorfluoxetineMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedFluoxetinePlusNorfluoxetineMassVolumeInSerumOrPlasma: new Coding({
         code: "10538-7",
         display: "Deprecated Fluoxetine+Norfluoxetine [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GlipizideMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_GlipizideMassVolumeInSerumOrPlasma: new Coding({
         code: "10539-5",
         display: "Glipizide [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedIIntermediateSubtypePresenceInSrum: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedIIntermediateSubtypePresenceInSrum: new Coding({
         code: "1054-6",
         display: "Deprecated I (intermediate) subtype [Presence] in srum",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GlyburideMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_GlyburideMassVolumeInSerumOrPlasma: new Coding({
         code: "10540-3",
         display: "Glyburide [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MepivacaineMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_MepivacaineMassVolumeInSerumOrPlasma: new Coding({
         code: "10541-1",
         display: "Mepivacaine [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MetharbitalMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_MetharbitalMassVolumeInSerumOrPlasma: new Coding({
         code: "10542-9",
         display: "Metharbital [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MethsuximidePlusNormethsuximideMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_MethsuximidePlusNormethsuximideMassVolumeInSerumOrPlasma: new Coding({
         code: "10543-7",
         display: "Methsuximide+Normethsuximide [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_NormeperidinePresenceInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_NormeperidinePresenceInSerumOrPlasma: new Coding({
         code: "10544-5",
         display: "Normeperidine [Presence] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_NormephenytoinMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_NormephenytoinMassVolumeInSerumOrPlasma: new Coding({
         code: "10545-2",
         display: "Normephenytoin [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_NormethsuximideMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_NormethsuximideMassVolumeInSerumOrPlasma: new Coding({
         code: "10546-0",
         display: "Normethsuximide [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PrimidonePlusPhenobarbitalMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_PrimidonePlusPhenobarbitalMassVolumeInSerumOrPlasma: new Coding({
         code: "10547-8",
         display: "Primidone+Phenobarbital [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhenytoinFreePhenytoinTotalInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhenytoinFreePhenytoinTotalInSerumOrPlasma: new Coding({
         code: "10548-6",
         display: "Phenytoin Free/Phenytoin.total in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PirmenolMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_PirmenolMassVolumeInSerumOrPlasma: new Coding({
         code: "10549-4",
         display: "Pirmenol [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedIIntermediateSubtypePresenceOnRedBloodCellsFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedIIntermediateSubtypePresenceOnRedBloodCellsFromBloodProductUnit: new Coding({
         code: "1055-3",
         display: "Deprecated I (intermediate) subtype [Presence] on Red Blood Cells from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedTemazepamMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedTemazepamMassVolumeInSerumOrPlasma: new Coding({
         code: "10550-2",
         display: "Deprecated Temazepam [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TriamtereneMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_TriamtereneMassVolumeInSerumOrPlasma: new Coding({
         code: "10551-0",
         display: "Triamterene [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TricyclicAntidepressantsMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_TricyclicAntidepressantsMassVolumeInSerumOrPlasma: new Coding({
         code: "10552-8",
         display: "Tricyclic antidepressants [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ProstaticAcidPhosphataseEnzymaticActivityVolumeInGenitalFluid: Coding.FromStrict({
+    ConsentContentCodeValueSet_ProstaticAcidPhosphataseEnzymaticActivityVolumeInGenitalFluid: new Coding({
         code: "10553-6",
         display: "Prostatic acid phosphatase [Enzymatic activity/volume] in Genital fluid",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedProstaticAcidPhosphataseEnzymaticActivityVolumeInSeminalPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedProstaticAcidPhosphataseEnzymaticActivityVolumeInSeminalPlasma: new Coding({
         code: "10554-4",
         display: "Deprecated Prostatic acid phosphatase [Enzymatic activity/volume] in Seminal plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AcrosinEntiticCatalyticActivityInSpermatozoa: Coding.FromStrict({
+    ConsentContentCodeValueSet_AcrosinEntiticCatalyticActivityInSpermatozoa: new Coding({
         code: "10555-1",
         display: "Acrosin [Entitic Catalytic Activity] in Spermatozoa",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedAdenosineTriphosphataseEnzymaticActivityVolumeInSeminalPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedAdenosineTriphosphataseEnzymaticActivityVolumeInSeminalPlasma: new Coding({
         code: "10556-9",
         display: "Deprecated Adenosine triphosphatase [Enzymatic activity/volume] in Seminal plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AdenosineTriphosphateMolesVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_AdenosineTriphosphateMolesVolumeInSemen: new Coding({
         code: "10557-7",
         display: "Adenosine triphosphate [Moles/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AlbuminMolesVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_AlbuminMolesVolumeInSemen: new Coding({
         code: "10558-5",
         display: "Albumin [Moles/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedCalciumMoleculesVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedCalciumMoleculesVolumeInSemen: new Coding({
         code: "10559-3",
         display: "Deprecated Calcium [Molecules/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedIIntermediateSubtypePresenceOnRedBloodCellsFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedIIntermediateSubtypePresenceOnRedBloodCellsFromDonor: new Coding({
         code: "1056-1",
         display: "Deprecated I (intermediate) subtype [Presence] on Red Blood Cells from donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CarcinoembryonicAgUnitsVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_CarcinoembryonicAgUnitsVolumeInSemen: new Coding({
         code: "10560-1",
         display: "Carcinoembryonic Ag [Units/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CarnitineMolesVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_CarnitineMolesVolumeInSemen: new Coding({
         code: "10561-9",
         display: "Carnitine [Moles/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CellsNumberVolumeInCervicalMucus: Coding.FromStrict({
+    ConsentContentCodeValueSet_CellsNumberVolumeInCervicalMucus: new Coding({
         code: "10562-7",
         display: "Cells [#/volume] in Cervical mucus",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CellsOtherThanSpermatozoaNumberVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_CellsOtherThanSpermatozoaNumberVolumeInSemen: new Coding({
         code: "10563-5",
         display: "Cells other than spermatozoa [#/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CervicalMucusVolume: Coding.FromStrict({
+    ConsentContentCodeValueSet_CervicalMucusVolume: new Coding({
         code: "10564-3",
         display: "Cervical mucus [Volume]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ChoriogonadotropinUnitsVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_ChoriogonadotropinUnitsVolumeInSemen: new Coding({
         code: "10565-0",
         display: "Choriogonadotropin [Units/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedChoriogonadotropinMoleculesVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedChoriogonadotropinMoleculesVolumeInSemen: new Coding({
         code: "10566-8",
         display: "Deprecated Choriogonadotropin [Molecules/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CitrateMolesVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_CitrateMolesVolumeInSemen: new Coding({
         code: "10567-6",
         display: "Citrate [Moles/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ClarityOfSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_ClarityOfSemen: new Coding({
         code: "10568-4",
         display: "Clarity of Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ColorOfSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_ColorOfSemen: new Coding({
         code: "10569-2",
         display: "Color of Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedIIntermediateSubtypePresenceOnRedBloodCells: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedIIntermediateSubtypePresenceOnRedBloodCells: new Coding({
         code: "1057-9",
         display: "Deprecated I (intermediate) subtype [Presence] on Red Blood Cells",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ConsistencyOfCervicalMucus: Coding.FromStrict({
+    ConsentContentCodeValueSet_ConsistencyOfCervicalMucus: new Coding({
         code: "10570-0",
         display: "Consistency of Cervical mucus",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedConsistencyOfSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedConsistencyOfSemen: new Coding({
         code: "10571-8",
         display: "Deprecated Consistency of Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedDurationPowerPostEjaculation: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedDurationPowerPostEjaculation: new Coding({
         code: "10572-6",
         display: "Deprecated Duration^post ejaculation",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FerningTypeInCervicalMucus: Coding.FromStrict({
+    ConsentContentCodeValueSet_FerningTypeInCervicalMucus: new Coding({
         code: "10573-4",
         display: "Ferning [Type] in Cervical mucus",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FructoseMolesVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_FructoseMolesVolumeInSemen: new Coding({
         code: "10574-2",
         display: "Fructose [Moles/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedGammaGlutamylTransferaseEnzymaticActivityVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedGammaGlutamylTransferaseEnzymaticActivityVolumeInSemen: new Coding({
         code: "10575-9",
         display: "Deprecated Gamma glutamyl transferase [Enzymatic activity/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GermCellsImmatureNumberVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_GermCellsImmatureNumberVolumeInSemen: new Coding({
         code: "10576-7",
         display: "Germ cells.immature [#/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GlucosidaseEnzymaticActivityVolumeInSeminalPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_GlucosidaseEnzymaticActivityVolumeInSeminalPlasma: new Coding({
         code: "10577-5",
         display: "Glucosidase [Enzymatic activity/volume] in Seminal plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GlycerophosphocholineMolesVolumeInSeminalPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_GlycerophosphocholineMolesVolumeInSeminalPlasma: new Coding({
         code: "10578-3",
         display: "Glycerophosphocholine [Moles/volume] in Seminal plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_LeukocytesNumberVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_LeukocytesNumberVolumeInSemen: new Coding({
         code: "10579-1",
         display: "Leukocytes [#/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IAbPresenceInSerumOrPlasmaFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_IAbPresenceInSerumOrPlasmaFromBloodProductUnit: new Coding({
         code: "1058-7",
         display: "I Ab [Presence] in Serum or Plasma from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_LiquefactionTimeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_LiquefactionTimeInSemen: new Coding({
         code: "10580-9",
         display: "Liquefaction [Time] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedNumberOfEntitiesNumberInSpermatozoa: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedNumberOfEntitiesNumberInSpermatozoa: new Coding({
         code: "10581-7",
         display: "Deprecated Number of entities [#] in Spermatozoa",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PHOfCervicalMucus: Coding.FromStrict({
+    ConsentContentCodeValueSet_PHOfCervicalMucus: new Coding({
         code: "10582-5",
         display: "pH of Cervical mucus",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ProstaglandinF1AlphaMolesVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_ProstaglandinF1AlphaMolesVolumeInSemen: new Coding({
         code: "10583-3",
         display: "Prostaglandin F1 alpha [Moles/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedProteinMassVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedProteinMassVolumeInSemen: new Coding({
         code: "10584-1",
         display: "Deprecated Protein [Mass/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_RoundCellsNumberVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_RoundCellsNumberVolumeInSemen: new Coding({
         code: "10585-8",
         display: "Round cells [#/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedVolumeOfSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedVolumeOfSemen: new Coding({
         code: "10586-6",
         display: "Deprecated Volume of Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SexualAbstinenceDuration: Coding.FromStrict({
+    ConsentContentCodeValueSet_SexualAbstinenceDuration: new Coding({
         code: "10587-4",
         display: "Sexual abstinence duration",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatogoniaNumberVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatogoniaNumberVolumeInSemen: new Coding({
         code: "10588-2",
         display: "Spermatogonia [#/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatidsNumberVolumeInSemenByStreptoavidinBiotinMethodSAB: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatidsNumberVolumeInSemenByStreptoavidinBiotinMethodSAB: new Coding({
         code: "10589-0",
         display: "Spermatids [#/volume] in Semen by Streptoavidin-biotin method (SAB)",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IAbPresenceInSerumOrPlasmaFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_IAbPresenceInSerumOrPlasmaFromDonor: new Coding({
         code: "1059-5",
         display: "I Ab [Presence] in Serum or Plasma from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatidsNumberVolumeInSemenBySertoliCellBarrierMethodSCB: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatidsNumberVolumeInSemenBySertoliCellBarrierMethodSCB: new Coding({
         code: "10590-8",
         display: "Spermatids [#/volume] in Semen by Sertoli cell barrier method (SCB)",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PrimarySpermatocytesNumberVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_PrimarySpermatocytesNumberVolumeInSemen: new Coding({
         code: "10591-6",
         display: "Primary Spermatocytes [#/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SecondarySpermatocytesNumberVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SecondarySpermatocytesNumberVolumeInSemen: new Coding({
         code: "10592-4",
         display: "Secondary Spermatocytes [#/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaPyriformHead100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaPyriformHead100SpermatozoaInSemen: new Coding({
         code: "10593-2",
         display: "Spermatozoa Pyriform Head/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaTaperingHead100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaTaperingHead100SpermatozoaInSemen: new Coding({
         code: "10594-0",
         display: "Spermatozoa Tapering Head/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedSpermatozoaNumberVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedSpermatozoaNumberVolumeInSemen: new Coding({
         code: "10595-7",
         display: "Deprecated Spermatozoa [#/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedSpermatozoaAbInCervicalMucosa: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedSpermatozoaAbInCervicalMucosa: new Coding({
         code: "10596-5",
         display: "Deprecated Spermatozoa Ab in cervical mucosa",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedSpermatozoaAbInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedSpermatozoaAbInSemen: new Coding({
         code: "10597-3",
         display: "Deprecated Spermatozoa Ab in semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedSpermatozoaAbInSerum: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedSpermatozoaAbInSerum: new Coding({
         code: "10598-1",
         display: "Deprecated Spermatozoa Ab in serum",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaPenetrationPresenceInSeminalFluidAndCervicalMucosaByKremerTest: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaPenetrationPresenceInSeminalFluidAndCervicalMucosaByKremerTest: new Coding({
         code: "10599-9",
         display: "Spermatozoa penetration [Presence] in Seminal fluid and Cervical mucosa by Kremer test",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CeforanideSusceptibilityBySerumBactericidalTiter: Coding.FromStrict({
+    ConsentContentCodeValueSet_CeforanideSusceptibilityBySerumBactericidalTiter: new Coding({
         code: "106-5",
         display: "Ceforanide [Susceptibility] by Serum bactericidal titer",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IAbPresenceInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_IAbPresenceInSerumOrPlasma: new Coding({
         code: "1060-3",
         display: "I Ab [Presence] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaPenetrationPresenceInSeminalFluidAndCervicalMucosa: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaPenetrationPresenceInSeminalFluidAndCervicalMucosa: new Coding({
         code: "10600-5",
         display: "Spermatozoa penetration [Presence] in Seminal fluid and Cervical mucosa",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaPenetrationPresenceInSeminalFluidAndCervicalMucosaPostCoitus: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaPenetrationPresenceInSeminalFluidAndCervicalMucosaPostCoitus: new Coding({
         code: "10601-3",
         display: "Spermatozoa penetration [Presence] in Seminal fluid and Cervical mucosa --post coitus",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaAbnormalHead100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaAbnormalHead100SpermatozoaInSemen: new Coding({
         code: "10602-1",
         display: "Spermatozoa Abnormal Head/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaAbnormalMidpiece100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaAbnormalMidpiece100SpermatozoaInSemen: new Coding({
         code: "10603-9",
         display: "Spermatozoa Abnormal Midpiece/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaAbnormalTail100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaAbnormalTail100SpermatozoaInSemen: new Coding({
         code: "10604-7",
         display: "Spermatozoa Abnormal Tail/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaAgglutinated100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaAgglutinated100SpermatozoaInSemen: new Coding({
         code: "10605-4",
         display: "Spermatozoa Agglutinated/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaAmorphousHead100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaAmorphousHead100SpermatozoaInSemen: new Coding({
         code: "10606-2",
         display: "Spermatozoa Amorphous Head/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaCoiledTail100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaCoiledTail100SpermatozoaInSemen: new Coding({
         code: "10607-0",
         display: "Spermatozoa Coiled Tail/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaCytoplasmicDroplet100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaCytoplasmicDroplet100SpermatozoaInSemen: new Coding({
         code: "10608-8",
         display: "Spermatozoa Cytoplasmic Droplet/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaDuplicateHead100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaDuplicateHead100SpermatozoaInSemen: new Coding({
         code: "10609-6",
         display: "Spermatozoa Duplicate Head/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_INOSAbPresenceInSerumOrPlasmaFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_INOSAbPresenceInSerumOrPlasmaFromBloodProductUnit: new Coding({
         code: "1061-1",
         display: "I NOS Ab [Presence] in Serum or Plasma from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaDuplicateTail100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaDuplicateTail100SpermatozoaInSemen: new Coding({
         code: "10610-4",
         display: "Spermatozoa Duplicate Tail/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaImmotile100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaImmotile100SpermatozoaInSemen: new Coding({
         code: "10611-2",
         display: "Spermatozoa Immotile/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaLargeOvalHead100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaLargeOvalHead100SpermatozoaInSemen: new Coding({
         code: "10612-0",
         display: "Spermatozoa Large Oval Head/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaViable100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaViable100SpermatozoaInSemen: new Coding({
         code: "10613-8",
         display: "Spermatozoa Viable/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaMotileWIgA100SpermatozoaInSemenByImmunobead: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaMotileWIgA100SpermatozoaInSemenByImmunobead: new Coding({
         code: "10614-6",
         display: "Spermatozoa Motile w IgA/100 spermatozoa in Semen by Immunobead",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaMotileWIgA100SpermatozoaInSemenByMixedAntiglobulinReaction: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaMotileWIgA100SpermatozoaInSemenByMixedAntiglobulinReaction: new Coding({
         code: "10615-3",
         display: "Spermatozoa Motile w IgA/100 spermatozoa in Semen by Mixed antiglobulin reaction",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaMotileWIgG100SpermatozoaInSemenByImmunobead: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaMotileWIgG100SpermatozoaInSemenByImmunobead: new Coding({
         code: "10616-1",
         display: "Spermatozoa Motile w IgG/100 spermatozoa in Semen by Immunobead",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaMotileWIgG100SpermatozoaInSemenByMixedAntiglobulinReaction: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaMotileWIgG100SpermatozoaInSemenByMixedAntiglobulinReaction: new Coding({
         code: "10617-9",
         display: "Spermatozoa Motile w IgG/100 spermatozoa in Semen by Mixed antiglobulin reaction",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaMotileWIgM100SpermatozoaInSemenByImmunobead: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaMotileWIgM100SpermatozoaInSemenByImmunobead: new Coding({
         code: "10618-7",
         display: "Spermatozoa Motile w IgM/100 spermatozoa in Semen by Immunobead",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaMotileWIgM100SpermatozoaInSemenByMixedAntiglobulinReaction: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaMotileWIgM100SpermatozoaInSemenByMixedAntiglobulinReaction: new Coding({
         code: "10619-5",
         display: "Spermatozoa Motile w IgM/100 spermatozoa in Semen by Mixed antiglobulin reaction",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_INOSAbPresenceInSerumOrPlasmaFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_INOSAbPresenceInSerumOrPlasmaFromDonor: new Coding({
         code: "1062-9",
         display: "I NOS Ab [Presence] in Serum or Plasma from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaNonprogressive100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaNonprogressive100SpermatozoaInSemen: new Coding({
         code: "10620-3",
         display: "Spermatozoa Nonprogressive/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaNormalHead100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaNormalHead100SpermatozoaInSemen: new Coding({
         code: "10621-1",
         display: "Spermatozoa Normal Head/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaNormal100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaNormal100SpermatozoaInSemen: new Coding({
         code: "10622-9",
         display: "Spermatozoa Normal/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaPinHead100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaPinHead100SpermatozoaInSemen: new Coding({
         code: "10623-7",
         display: "Spermatozoa Pin Head/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaRapid100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaRapid100SpermatozoaInSemen: new Coding({
         code: "10624-5",
         display: "Spermatozoa Rapid/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaRoundHead100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaRoundHead100SpermatozoaInSemen: new Coding({
         code: "10625-2",
         display: "Spermatozoa Round Head/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaSlow100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaSlow100SpermatozoaInSemen: new Coding({
         code: "10626-0",
         display: "Spermatozoa Slow/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaSmallOvalHead100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaSmallOvalHead100SpermatozoaInSemen: new Coding({
         code: "10627-8",
         display: "Spermatozoa Small Oval Head/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaTailSwelling100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaTailSwelling100SpermatozoaInSemen: new Coding({
         code: "10628-6",
         display: "Spermatozoa Tail Swelling/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpermatozoaVacuolatedHead100SpermatozoaInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpermatozoaVacuolatedHead100SpermatozoaInSemen: new Coding({
         code: "10629-4",
         display: "Spermatozoa Vacuolated Head/100 spermatozoa in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_INOSAbPresenceInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_INOSAbPresenceInSerumOrPlasma: new Coding({
         code: "1063-7",
         display: "I NOS Ab [Presence] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SpinnbarkeitLengthInCervicalMucus: Coding.FromStrict({
+    ConsentContentCodeValueSet_SpinnbarkeitLengthInCervicalMucus: new Coding({
         code: "10630-2",
         display: "Spinnbarkeit [Length] in Cervical mucus",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TestosteroneMolesVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_TestosteroneMolesVolumeInSemen: new Coding({
         code: "10631-0",
         display: "Testosterone [Moles/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TimeUntilNextMenstrualPeriod: Coding.FromStrict({
+    ConsentContentCodeValueSet_TimeUntilNextMenstrualPeriod: new Coding({
         code: "10632-8",
         display: "Time until next menstrual period",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ZincMolesVolumeInSemen: Coding.FromStrict({
+    ConsentContentCodeValueSet_ZincMolesVolumeInSemen: new Coding({
         code: "10633-6",
         display: "Zinc [Moles/volume] in Semen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ComplementC1EsteraseInhibitorFunctionalComplementC1EsteraseInhibitorTotalInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_ComplementC1EsteraseInhibitorFunctionalComplementC1EsteraseInhibitorTotalInSerumOrPlasma: new Coding({
         code: "10634-4",
         display: "Complement C1 esterase inhibitor.functional/Complement C1 esterase inhibitor.total in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AcanthamoebaSpIdentifiedInEyeByOrganismSpecificCulture: Coding.FromStrict({
+    ConsentContentCodeValueSet_AcanthamoebaSpIdentifiedInEyeByOrganismSpecificCulture: new Coding({
         code: "10635-1",
         display: "Acanthamoeba sp identified in Eye by Organism specific culture",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AcanthamoebaSpIdentifiedInEyeByWetPreparation: Coding.FromStrict({
+    ConsentContentCodeValueSet_AcanthamoebaSpIdentifiedInEyeByWetPreparation: new Coding({
         code: "10636-9",
         display: "Acanthamoeba sp identified in Eye by Wet preparation",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByNightBlueStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByNightBlueStain: new Coding({
         code: "10637-7",
         display: "Microscopic observation [Identifier] in Tissue by Night blue stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ThermophilicActinomycetesColonyCountNumberVolumeInUnspecifiedSpecimenByOrganismSpecificCulture: Coding.FromStrict({
+    ConsentContentCodeValueSet_ThermophilicActinomycetesColonyCountNumberVolumeInUnspecifiedSpecimenByOrganismSpecificCulture: new Coding({
         code: "10638-5",
         display: "Thermophilic Actinomycetes colony count [#/volume] in Unspecified specimen by Organism specific culture",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ThermophilicActinomycetesIdentifiedInUnspecifiedSpecimenByOrganismSpecificCulture: Coding.FromStrict({
+    ConsentContentCodeValueSet_ThermophilicActinomycetesIdentifiedInUnspecifiedSpecimenByOrganismSpecificCulture: new Coding({
         code: "10639-3",
         display: "Thermophilic Actinomycetes identified in Unspecified specimen by Organism specific culture",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_INOSAgPresenceOnRedBloodCellsFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_INOSAgPresenceOnRedBloodCellsFromBloodProductUnit: new Coding({
         code: "1064-5",
         display: "I NOS Ag [Presence] on Red Blood Cells from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedAdenovirus40Plus41IdentifierInStoolByElectronMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedAdenovirus40Plus41IdentifierInStoolByElectronMicroscopy: new Coding({
         code: "10640-1",
         display: "Deprecated Adenovirus 40+41 [Identifier] in Stool by Electron microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AmoebaIdentifiedInAspirateByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_AmoebaIdentifiedInAspirateByImmuneStain: new Coding({
         code: "10641-9",
         display: "Amoeba identified in Aspirate by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AmoebaIdentifiedInAspirateByWetPreparation: Coding.FromStrict({
+    ConsentContentCodeValueSet_AmoebaIdentifiedInAspirateByWetPreparation: new Coding({
         code: "10642-7",
         display: "Amoeba identified in Aspirate by Wet preparation",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AmoebaIdentifiedInStoolByOrganismSpecificCulture: Coding.FromStrict({
+    ConsentContentCodeValueSet_AmoebaIdentifiedInStoolByOrganismSpecificCulture: new Coding({
         code: "10643-5",
         display: "Amoeba identified in Stool by Organism specific culture",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ArthropodIdentifiedInUnspecifiedSpecimen: Coding.FromStrict({
+    ConsentContentCodeValueSet_ArthropodIdentifiedInUnspecifiedSpecimen: new Coding({
         code: "10644-3",
         display: "Arthropod identified in Unspecified specimen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AspergillusFumigatusAgPresenceInTissueByImmunofluorescence: Coding.FromStrict({
+    ConsentContentCodeValueSet_AspergillusFumigatusAgPresenceInTissueByImmunofluorescence: new Coding({
         code: "10645-0",
         display: "Aspergillus fumigatus Ag [Presence] in Tissue by Immunofluorescence",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AstrovirusIdentifierInStoolByElectronMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_AstrovirusIdentifierInStoolByElectronMicroscopy: new Coding({
         code: "10646-8",
         display: "Astrovirus [Identifier] in Stool by Electron microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BabesiaSpIdentifiedInBloodByThickFilm: Coding.FromStrict({
+    ConsentContentCodeValueSet_BabesiaSpIdentifiedInBloodByThickFilm: new Coding({
         code: "10647-6",
         display: "Babesia sp identified in Blood by Thick film",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BabesiaSpIdentifiedInBloodByThinFilm: Coding.FromStrict({
+    ConsentContentCodeValueSet_BabesiaSpIdentifiedInBloodByThinFilm: new Coding({
         code: "10648-4",
         display: "Babesia sp identified in Blood by Thin film",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CalicivirusIdentifierInStoolByElectronMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_CalicivirusIdentifierInStoolByElectronMicroscopy: new Coding({
         code: "10649-2",
         display: "Calicivirus [Identifier] in Stool by Electron microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_INOSAgPresenceOnRedBloodCellsFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_INOSAgPresenceOnRedBloodCellsFromDonor: new Coding({
         code: "1065-2",
         display: "I NOS Ag [Presence] on Red Blood Cells from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CandidaSpDNAPresenceInBloodByProbeWithAmplification: Coding.FromStrict({
+    ConsentContentCodeValueSet_CandidaSpDNAPresenceInBloodByProbeWithAmplification: new Coding({
         code: "10650-0",
         display: "Candida sp DNA [Presence] in Blood by Probe with amplification",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ChlamydophilaPneumoniaeAgPresenceInSputumOrBronchial: Coding.FromStrict({
+    ConsentContentCodeValueSet_ChlamydophilaPneumoniaeAgPresenceInSputumOrBronchial: new Coding({
         code: "10651-8",
         display: "Chlamydophila pneumoniae Ag [Presence] in Sputum or Bronchial",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ChlamydophilaPneumoniaeDNAPresenceInSputumOrBronchialByProbeWithAmplification: Coding.FromStrict({
+    ConsentContentCodeValueSet_ChlamydophilaPneumoniaeDNAPresenceInSputumOrBronchialByProbeWithAmplification: new Coding({
         code: "10652-6",
         display: "Chlamydophila pneumoniae DNA [Presence] in Sputum or Bronchial by Probe with amplification",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ClotrimazoleSusceptibilityByMinimumInhibitoryConcentrationMIC: Coding.FromStrict({
+    ConsentContentCodeValueSet_ClotrimazoleSusceptibilityByMinimumInhibitoryConcentrationMIC: new Coding({
         code: "10653-4",
         display: "Clotrimazole [Susceptibility] by Minimum inhibitory concentration (MIC)",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ClotrimazoleSusceptibilityByMinimumLethalConcentrationMLC: Coding.FromStrict({
+    ConsentContentCodeValueSet_ClotrimazoleSusceptibilityByMinimumLethalConcentrationMLC: new Coding({
         code: "10654-2",
         display: "Clotrimazole [Susceptibility] by Minimum lethal concentration (MLC)",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CoccidiaIdentifiedInDuodenalFluidByAcidFastStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CoccidiaIdentifiedInDuodenalFluidByAcidFastStain: new Coding({
         code: "10655-9",
         display: "Coccidia identified in Duodenal fluid by Acid fast stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CoccidiaIdentifiedInStoolByAcidFastStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CoccidiaIdentifiedInStoolByAcidFastStain: new Coding({
         code: "10656-7",
         display: "Coccidia identified in Stool by Acid fast stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedCryptococcusNeoformansAgPresenceInTissueByImmunofluorescence: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedCryptococcusNeoformansAgPresenceInTissueByImmunofluorescence: new Coding({
         code: "10657-5",
         display: "Deprecated Cryptococcus neoformans Ag [Presence] in Tissue by Immunofluorescence",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CyanobacteriumIdentifiedInWaterByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_CyanobacteriumIdentifiedInWaterByLightMicroscopy: new Coding({
         code: "10658-3",
         display: "Cyanobacterium identified in Water by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CyclosporaSpIdentifiedInStoolByAcidFastStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CyclosporaSpIdentifiedInStoolByAcidFastStain: new Coding({
         code: "10659-1",
         display: "Cyclospora sp identified in Stool by Acid fast stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_INOSAgPresenceOnRedBloodCells: Coding.FromStrict({
+    ConsentContentCodeValueSet_INOSAgPresenceOnRedBloodCells: new Coding({
         code: "1066-0",
         display: "I NOS Ag [Presence] on Red Blood Cells",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CytomegalovirusAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CytomegalovirusAgPresenceInTissueByImmuneStain: new Coding({
         code: "10660-9",
         display: "Cytomegalovirus Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DinoflagellateIdentifiedInWaterByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_DinoflagellateIdentifiedInWaterByLightMicroscopy: new Coding({
         code: "10661-7",
         display: "Dinoflagellate identified in Water by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FilariaIdentifiedInBloodByConcentration: Coding.FromStrict({
+    ConsentContentCodeValueSet_FilariaIdentifiedInBloodByConcentration: new Coding({
         code: "10662-5",
         display: "Filaria identified in Blood by Concentration",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FilariaIdentifiedInBloodByThickFilm: Coding.FromStrict({
+    ConsentContentCodeValueSet_FilariaIdentifiedInBloodByThickFilm: new Coding({
         code: "10663-3",
         display: "Filaria identified in Blood by Thick film",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FilariaIdentifiedInBloodByThinFilm: Coding.FromStrict({
+    ConsentContentCodeValueSet_FilariaIdentifiedInBloodByThinFilm: new Coding({
         code: "10664-1",
         display: "Filaria identified in Blood by Thin film",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FungusColonyCountNumberVolumeInUnspecifiedSpecimenByEnvironmentalCulture: Coding.FromStrict({
+    ConsentContentCodeValueSet_FungusColonyCountNumberVolumeInUnspecifiedSpecimenByEnvironmentalCulture: new Coding({
         code: "10665-8",
         display: "Fungus colony count [#/volume] in Unspecified specimen by Environmental culture",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FungusIdentifiedInTissueByFontanaMassonStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_FungusIdentifiedInTissueByFontanaMassonStain: new Coding({
         code: "10666-6",
         display: "Fungus identified in Tissue by Fontana-Masson stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FungusIdentifiedInUnspecifiedSpecimenByAnimalInoculation: Coding.FromStrict({
+    ConsentContentCodeValueSet_FungusIdentifiedInUnspecifiedSpecimenByAnimalInoculation: new Coding({
         code: "10667-4",
         display: "Fungus identified in Unspecified specimen by Animal inoculation",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FungusIdentifiedInUnspecifiedSpecimenByEnvironmentalCulture: Coding.FromStrict({
+    ConsentContentCodeValueSet_FungusIdentifiedInUnspecifiedSpecimenByEnvironmentalCulture: new Coding({
         code: "10668-2",
         display: "Fungus identified in Unspecified specimen by Environmental culture",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FungusIdentifiedInUnspecifiedSpecimenByStickyTapeForEnvironmentalFungus: Coding.FromStrict({
+    ConsentContentCodeValueSet_FungusIdentifiedInUnspecifiedSpecimenByStickyTapeForEnvironmentalFungus: new Coding({
         code: "10669-0",
         display: "Fungus identified in Unspecified specimen by Sticky tape for environmental fungus",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JkSupAAbPresenceInSerumOrPlasmaFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_JkSupAAbPresenceInSerumOrPlasmaFromBloodProductUnit: new Coding({
         code: "1067-8",
         display: "Jk sup(a) Ab [Presence] in Serum or Plasma from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GiardiaLambliaPresenceInStoolByOrganismSpecificCulture: Coding.FromStrict({
+    ConsentContentCodeValueSet_GiardiaLambliaPresenceInStoolByOrganismSpecificCulture: new Coding({
         code: "10670-8",
         display: "Giardia lamblia [Presence] in Stool by Organism specific culture",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HelminthIdentifiedInUnspecifiedSpecimen: Coding.FromStrict({
+    ConsentContentCodeValueSet_HelminthIdentifiedInUnspecifiedSpecimen: new Coding({
         code: "10671-6",
         display: "Helminth identified in Unspecified specimen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HelminthPlusArthropodIdentifiedInUnspecifiedSpecimen: Coding.FromStrict({
+    ConsentContentCodeValueSet_HelminthPlusArthropodIdentifiedInUnspecifiedSpecimen: new Coding({
         code: "10672-4",
         display: "Helminth+Arthropod identified in Unspecified specimen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HepatitisBVirusCoreAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_HepatitisBVirusCoreAgPresenceInTissueByImmuneStain: new Coding({
         code: "10673-2",
         display: "Hepatitis B virus core Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HepatitisBVirusSurfaceAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_HepatitisBVirusSurfaceAgPresenceInTissueByImmuneStain: new Coding({
         code: "10674-0",
         display: "Hepatitis B virus surface Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HepatitisBVirusSurfaceAgPresenceInTissueByOrceinStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_HepatitisBVirusSurfaceAgPresenceInTissueByOrceinStain: new Coding({
         code: "10675-7",
         display: "Hepatitis B virus surface Ag [Presence] in Tissue by Orcein stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HepatitisCVirusRNAUnitsVolumeViralLoadInSerumOrPlasmaByProbeWithAmplification: Coding.FromStrict({
+    ConsentContentCodeValueSet_HepatitisCVirusRNAUnitsVolumeViralLoadInSerumOrPlasmaByProbeWithAmplification: new Coding({
         code: "10676-5",
         display: "Hepatitis C virus RNA [Units/volume] (viral load) in Serum or Plasma by Probe with amplification",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HerpesSimplexVirus1AgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_HerpesSimplexVirus1AgPresenceInTissueByImmuneStain: new Coding({
         code: "10677-3",
         display: "Herpes simplex virus 1 Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HerpesSimplexVirus1Plus2AgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_HerpesSimplexVirus1Plus2AgPresenceInTissueByImmuneStain: new Coding({
         code: "10678-1",
         display: "Herpes simplex virus 1+2 Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HerpesSimplexVirus2AgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_HerpesSimplexVirus2AgPresenceInTissueByImmuneStain: new Coding({
         code: "10679-9",
         display: "Herpes simplex virus 2 Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JkSupAAbPresenceInSerumOrPlasmaFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_JkSupAAbPresenceInSerumOrPlasmaFromDonor: new Coding({
         code: "1068-6",
         display: "Jk sup(a) Ab [Presence] in Serum or Plasma from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HerpesSimplexVirusIdentifiedInCerebralSpinalFluidByElectronMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_HerpesSimplexVirusIdentifiedInCerebralSpinalFluidByElectronMicroscopy: new Coding({
         code: "10680-7",
         display: "Herpes simplex virus identified in Cerebral spinal fluid by Electron microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HerpesSimplexVirusIdentifiedInTissueByElectronMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_HerpesSimplexVirusIdentifiedInTissueByElectronMicroscopy: new Coding({
         code: "10681-5",
         display: "Herpes simplex virus identified in Tissue by Electron microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedHIV1RNAUnitsVolumeInSerumOrPlasmaByProbeWithAmplification: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedHIV1RNAUnitsVolumeInSerumOrPlasmaByProbeWithAmplification: new Coding({
         code: "10682-3",
         display: "Deprecated HIV 1 RNA [Units/volume] in Serum or Plasma by Probe with amplification",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HydatidCystIdentifiedInAspirateByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_HydatidCystIdentifiedInAspirateByImmuneStain: new Coding({
         code: "10683-1",
         display: "Hydatid cyst identified in Aspirate by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HydatidCystIdentifiedInLiverByWetPreparation: Coding.FromStrict({
+    ConsentContentCodeValueSet_HydatidCystIdentifiedInLiverByWetPreparation: new Coding({
         code: "10684-9",
         display: "Hydatid cyst identified in Liver by Wet preparation",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HydatidCystIdentifiedInLungTissueByWetPreparation: Coding.FromStrict({
+    ConsentContentCodeValueSet_HydatidCystIdentifiedInLungTissueByWetPreparation: new Coding({
         code: "10685-6",
         display: "Hydatid cyst identified in Lung tissue by Wet preparation",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_LeishmaniaSpIdentifiedInTissueByGiemsaStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_LeishmaniaSpIdentifiedInTissueByGiemsaStain: new Coding({
         code: "10686-4",
         display: "Leishmania sp identified in Tissue by Giemsa stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_LeishmaniaSpIdentifiedInTissueByOrganismSpecificCulture: Coding.FromStrict({
+    ConsentContentCodeValueSet_LeishmaniaSpIdentifiedInTissueByOrganismSpecificCulture: new Coding({
         code: "10687-2",
         display: "Leishmania sp identified in Tissue by Organism specific culture",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInHairByKOHPreparation: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInHairByKOHPreparation: new Coding({
         code: "10688-0",
         display: "Microscopic observation [Identifier] in Hair by KOH preparation",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInNailByKOHPreparation: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInNailByKOHPreparation: new Coding({
         code: "10689-8",
         display: "Microscopic observation [Identifier] in Nail by KOH preparation",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JkSupAAbPresenceInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_JkSupAAbPresenceInSerumOrPlasma: new Coding({
         code: "1069-4",
         display: "Jk sup(a) Ab [Presence] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicrosporidiaIdentifiedInDuodenalFluidByTrichromeStainModified: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicrosporidiaIdentifiedInDuodenalFluidByTrichromeStainModified: new Coding({
         code: "10690-6",
         display: "Microsporidia identified in Duodenal fluid by Trichrome stain modified",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MushroomToxicIdentifiedByInspection: Coding.FromStrict({
+    ConsentContentCodeValueSet_MushroomToxicIdentifiedByInspection: new Coding({
         code: "10691-4",
         display: "Mushroom.toxic identified by Inspection",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MushroomToxicIdentifiedInFoodByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_MushroomToxicIdentifiedInFoodByLightMicroscopy: new Coding({
         code: "10692-2",
         display: "Mushroom.toxic identified in Food by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MushroomToxicIdentifiedInVomitusByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_MushroomToxicIdentifiedInVomitusByLightMicroscopy: new Coding({
         code: "10693-0",
         display: "Mushroom.toxic identified in Vomitus by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_NaegleriaSpIdentifiedInTissueByOrganismSpecificCulture: Coding.FromStrict({
+    ConsentContentCodeValueSet_NaegleriaSpIdentifiedInTissueByOrganismSpecificCulture: new Coding({
         code: "10694-8",
         display: "Naegleria sp identified in Tissue by Organism specific culture",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_NaegleriaSpIdentifiedInTissueByWetPreparation: Coding.FromStrict({
+    ConsentContentCodeValueSet_NaegleriaSpIdentifiedInTissueByWetPreparation: new Coding({
         code: "10695-5",
         display: "Naegleria sp identified in Tissue by Wet preparation",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_NorovirusIdentifierInStoolByElectronMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_NorovirusIdentifierInStoolByElectronMicroscopy: new Coding({
         code: "10696-3",
         display: "Norovirus [Identifier] in Stool by Electron microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_NystatinSusceptibilityByMinimumInhibitoryConcentrationMIC: Coding.FromStrict({
+    ConsentContentCodeValueSet_NystatinSusceptibilityByMinimumInhibitoryConcentrationMIC: new Coding({
         code: "10697-1",
         display: "Nystatin [Susceptibility] by Minimum inhibitory concentration (MIC)",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_NystatinSusceptibilityByMinimumLethalConcentrationMLC: Coding.FromStrict({
+    ConsentContentCodeValueSet_NystatinSusceptibilityByMinimumLethalConcentrationMLC: new Coding({
         code: "10698-9",
         display: "Nystatin [Susceptibility] by Minimum lethal concentration (MLC)",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OnchocercaSpIdentifiedInTissueByWetPreparation: Coding.FromStrict({
+    ConsentContentCodeValueSet_OnchocercaSpIdentifiedInTissueByWetPreparation: new Coding({
         code: "10699-7",
         display: "Onchocerca sp identified in Tissue by Wet preparation",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CefotaximeSusceptibilityByMinimumLethalConcentrationMLC: Coding.FromStrict({
+    ConsentContentCodeValueSet_CefotaximeSusceptibilityByMinimumLethalConcentrationMLC: new Coding({
         code: "107-3",
         display: "Cefotaxime [Susceptibility] by Minimum lethal concentration (MLC)",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JkSupAAgPresenceOnRedBloodCellsFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_JkSupAAgPresenceOnRedBloodCellsFromBloodProductUnit: new Coding({
         code: "1070-2",
         display: "Jk sup(a) Ag [Presence] on Red Blood Cells from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OrthopoxvirusIdentifierInSkinByElectronMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_OrthopoxvirusIdentifierInSkinByElectronMicroscopy: new Coding({
         code: "10700-3",
         display: "Orthopoxvirus [Identifier] in Skin by Electron microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OvaAndParasitesIdentifiedInStoolByConcentration: Coding.FromStrict({
+    ConsentContentCodeValueSet_OvaAndParasitesIdentifiedInStoolByConcentration: new Coding({
         code: "10701-1",
         display: "Ova and parasites identified in Stool by Concentration",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OvaAndParasitesIdentifiedInStoolByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_OvaAndParasitesIdentifiedInStoolByImmuneStain: new Coding({
         code: "10702-9",
         display: "Ova and parasites identified in Stool by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OvaAndParasitesIdentifiedInStoolByKinyounIronHematoxylinStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_OvaAndParasitesIdentifiedInStoolByKinyounIronHematoxylinStain: new Coding({
         code: "10703-7",
         display: "Ova and parasites identified in Stool by Kinyoun iron hematoxylin stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OvaAndParasitesIdentifiedInStoolByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_OvaAndParasitesIdentifiedInStoolByLightMicroscopy: new Coding({
         code: "10704-5",
         display: "Ova and parasites identified in Stool by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HumanPapillomaVirusAgPresenceInTissueByImmuneStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_HumanPapillomaVirusAgPresenceInTissueByImmuneStain: new Coding({
         code: "10705-2",
         display: "Human papilloma virus Ag [Presence] in Tissue by Immune stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PicornavirusIdentifierInStoolByElectronMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_PicornavirusIdentifierInStoolByElectronMicroscopy: new Coding({
         code: "10706-0",
         display: "Picornavirus [Identifier] in Stool by Electron microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ToxicPlantIdentifiedInPlantSpecimenByInspection: Coding.FromStrict({
+    ConsentContentCodeValueSet_ToxicPlantIdentifiedInPlantSpecimenByInspection: new Coding({
         code: "10707-8",
         display: "Toxic Plant identified in Plant specimen by Inspection",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ToxicPlantIdentifiedInVomitusByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_ToxicPlantIdentifiedInVomitusByLightMicroscopy: new Coding({
         code: "10708-6",
         display: "Toxic Plant identified in Vomitus by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PlasmodiumFalciparumAgUnitsVolumeInBloodByImmunofluorescence: Coding.FromStrict({
+    ConsentContentCodeValueSet_PlasmodiumFalciparumAgUnitsVolumeInBloodByImmunofluorescence: new Coding({
         code: "10709-4",
         display: "Plasmodium falciparum Ag [Units/volume] in Blood by Immunofluorescence",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JkSupAAgPresenceOnRedBloodCellsFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_JkSupAAgPresenceOnRedBloodCellsFromDonor: new Coding({
         code: "1071-0",
         display: "Jk sup(a) Ag [Presence] on Red Blood Cells from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PlasmodiumSpIdentifiedInBloodByThinFilm: Coding.FromStrict({
+    ConsentContentCodeValueSet_PlasmodiumSpIdentifiedInBloodByThinFilm: new Coding({
         code: "10710-2",
         display: "Plasmodium sp identified in Blood by Thin film",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PlasmodiumVivaxAgUnitsVolumeInBloodByImmunofluorescence: Coding.FromStrict({
+    ConsentContentCodeValueSet_PlasmodiumVivaxAgUnitsVolumeInBloodByImmunofluorescence: new Coding({
         code: "10711-0",
         display: "Plasmodium vivax Ag [Units/volume] in Blood by Immunofluorescence",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PneumocystisSpIdentifiedInLungTissue: Coding.FromStrict({
+    ConsentContentCodeValueSet_PneumocystisSpIdentifiedInLungTissue: new Coding({
         code: "10712-8",
         display: "Pneumocystis sp identified in Lung tissue",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ProtothecaIdentifiedInUnspecifiedSpecimenByCulture: Coding.FromStrict({
+    ConsentContentCodeValueSet_ProtothecaIdentifiedInUnspecifiedSpecimenByCulture: new Coding({
         code: "10713-6",
         display: "Prototheca identified in Unspecified specimen by Culture",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedRotavirusIdentifierInStoolByElectronMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedRotavirusIdentifierInStoolByElectronMicroscopy: new Coding({
         code: "10714-4",
         display: "Deprecated Rotavirus [Identifier] in Stool by Electron microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SchistosomaSpIdentifiedInUrineSedimentByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_SchistosomaSpIdentifiedInUrineSedimentByLightMicroscopy: new Coding({
         code: "10715-1",
         display: "Schistosoma sp identified in Urine sediment by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SchistosomaSpIdentifiedInUnspecifiedSpecimenByOrganismSpecificCulture: Coding.FromStrict({
+    ConsentContentCodeValueSet_SchistosomaSpIdentifiedInUnspecifiedSpecimenByOrganismSpecificCulture: new Coding({
         code: "10716-9",
         display: "Schistosoma sp identified in Unspecified specimen by Organism specific culture",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_StreptococcusPneumoniaeAbUnitsVolumeInSerumByLatexAgglutination: Coding.FromStrict({
+    ConsentContentCodeValueSet_StreptococcusPneumoniaeAbUnitsVolumeInSerumByLatexAgglutination: new Coding({
         code: "10717-7",
         display: "Streptococcus pneumoniae Ab [Units/volume] in Serum by Latex agglutination",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_StrongyloidesSpAbUnitsVolumeInSerumByImmunoassay: Coding.FromStrict({
+    ConsentContentCodeValueSet_StrongyloidesSpAbUnitsVolumeInSerumByImmunoassay: new Coding({
         code: "10718-5",
         display: "Strongyloides sp Ab [Units/volume] in Serum by Immunoassay",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TaeniaSoliumAdultAbUnitsVolumeInSerumByImmunoblot: Coding.FromStrict({
+    ConsentContentCodeValueSet_TaeniaSoliumAdultAbUnitsVolumeInSerumByImmunoblot: new Coding({
         code: "10719-3",
         display: "Taenia solium adult Ab [Units/volume] in Serum by Immunoblot",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JkSupAAgPresenceOnRedBloodCells: Coding.FromStrict({
+    ConsentContentCodeValueSet_JkSupAAgPresenceOnRedBloodCells: new Coding({
         code: "1072-8",
         display: "Jk sup(a) Ag [Presence] on Red Blood Cells",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TerbinafineSusceptibilityByMinimumInhibitoryConcentrationMIC: Coding.FromStrict({
+    ConsentContentCodeValueSet_TerbinafineSusceptibilityByMinimumInhibitoryConcentrationMIC: new Coding({
         code: "10720-1",
         display: "Terbinafine [Susceptibility] by Minimum inhibitory concentration (MIC)",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TerbinafineSusceptibilityByMinimumLethalConcentrationMLC: Coding.FromStrict({
+    ConsentContentCodeValueSet_TerbinafineSusceptibilityByMinimumLethalConcentrationMLC: new Coding({
         code: "10721-9",
         display: "Terbinafine [Susceptibility] by Minimum lethal concentration (MLC)",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TorovirusIdentifierInStoolByElectronMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_TorovirusIdentifierInStoolByElectronMicroscopy: new Coding({
         code: "10722-7",
         display: "Torovirus [Identifier] in Stool by Electron microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ToxoplasmaGondiiIgAAbUnitsVolumeInSerumByImmunoassay: Coding.FromStrict({
+    ConsentContentCodeValueSet_ToxoplasmaGondiiIgAAbUnitsVolumeInSerumByImmunoassay: new Coding({
         code: "10723-5",
         display: "Toxoplasma gondii IgA Ab [Units/volume] in Serum by Immunoassay",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ToxoplasmaGondiiIgEAbUnitsVolumeInSerumByImmunoassay: Coding.FromStrict({
+    ConsentContentCodeValueSet_ToxoplasmaGondiiIgEAbUnitsVolumeInSerumByImmunoassay: new Coding({
         code: "10724-3",
         display: "Toxoplasma gondii IgE Ab [Units/volume] in Serum by Immunoassay",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ToxoplasmaGondiiDNAUnitsVolumeInBodyFluidByProbeWithAmplification: Coding.FromStrict({
+    ConsentContentCodeValueSet_ToxoplasmaGondiiDNAUnitsVolumeInBodyFluidByProbeWithAmplification: new Coding({
         code: "10725-0",
         display: "Toxoplasma gondii DNA [Units/volume] in Body fluid by Probe with amplification",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ToxoplasmaGondiiPresenceInTissueByGiemsaStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_ToxoplasmaGondiiPresenceInTissueByGiemsaStain: new Coding({
         code: "10726-8",
         display: "Toxoplasma gondii [Presence] in Tissue by Giemsa stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ToxoplasmaGondiiIdentifiedInTissue: Coding.FromStrict({
+    ConsentContentCodeValueSet_ToxoplasmaGondiiIdentifiedInTissue: new Coding({
         code: "10727-6",
         display: "Toxoplasma gondii identified in Tissue",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TrichomonasSpIdentifiedInGenitalSpecimenByOrganismSpecificCulture: Coding.FromStrict({
+    ConsentContentCodeValueSet_TrichomonasSpIdentifiedInGenitalSpecimenByOrganismSpecificCulture: new Coding({
         code: "10728-4",
         display: "Trichomonas sp identified in Genital specimen by Organism specific culture",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TrypanosomaSpIdentifiedInBloodByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_TrypanosomaSpIdentifiedInBloodByLightMicroscopy: new Coding({
         code: "10729-2",
         display: "Trypanosoma sp identified in Blood by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JkSupBAbPresenceInSerumOrPlasmaFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_JkSupBAbPresenceInSerumOrPlasmaFromBloodProductUnit: new Coding({
         code: "1073-6",
         display: "Jk sup(b) Ab [Presence] in Serum or Plasma from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TrypanosomaSpIdentifiedInBloodByOrganismSpecificCulture: Coding.FromStrict({
+    ConsentContentCodeValueSet_TrypanosomaSpIdentifiedInBloodByOrganismSpecificCulture: new Coding({
         code: "10730-0",
         display: "Trypanosoma sp identified in Blood by Organism specific culture",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TrypanosomaSpIdentifiedInBloodByThickFilm: Coding.FromStrict({
+    ConsentContentCodeValueSet_TrypanosomaSpIdentifiedInBloodByThickFilm: new Coding({
         code: "10731-8",
         display: "Trypanosoma sp identified in Blood by Thick film",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TrypanosomaSpIdentifiedInBloodByThinFilm: Coding.FromStrict({
+    ConsentContentCodeValueSet_TrypanosomaSpIdentifiedInBloodByThinFilm: new Coding({
         code: "10732-6",
         display: "Trypanosoma sp identified in Blood by Thin film",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TrypanosomaSpIdentifiedInBloodByWetPreparation: Coding.FromStrict({
+    ConsentContentCodeValueSet_TrypanosomaSpIdentifiedInBloodByWetPreparation: new Coding({
         code: "10733-4",
         display: "Trypanosoma sp identified in Blood by Wet preparation",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_VaricellaZosterVirusIdentifiedInSkinByElectronMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_VaricellaZosterVirusIdentifiedInSkinByElectronMicroscopy: new Coding({
         code: "10734-2",
         display: "Varicella zoster virus identified in Skin by Electron microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ViralSequencingIdentifierInSerumBySequencing: Coding.FromStrict({
+    ConsentContentCodeValueSet_ViralSequencingIdentifierInSerumBySequencing: new Coding({
         code: "10735-9",
         display: "Viral sequencing [Identifier] in Serum by Sequencing",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_VirusIdentifiedInCerebralSpinalFluidByElectronMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_VirusIdentifiedInCerebralSpinalFluidByElectronMicroscopy: new Coding({
         code: "10736-7",
         display: "Virus identified in Cerebral spinal fluid by Electron microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_VirusIdentifiedInStoolByElectronMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_VirusIdentifiedInStoolByElectronMicroscopy: new Coding({
         code: "10737-5",
         display: "Virus identified in Stool by Electron microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_VirusIdentifiedInTissueByElectronMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_VirusIdentifiedInTissueByElectronMicroscopy: new Coding({
         code: "10738-3",
         display: "Virus identified in Tissue by Electron microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_VirusIdentifiedInUnspecifiedSpecimenByElectronMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_VirusIdentifiedInUnspecifiedSpecimenByElectronMicroscopy: new Coding({
         code: "10739-1",
         display: "Virus identified in Unspecified specimen by Electron microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JkSupBAbPresenceInSerumOrPlasmaFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_JkSupBAbPresenceInSerumOrPlasmaFromDonor: new Coding({
         code: "1074-4",
         display: "Jk sup(b) Ab [Presence] in Serum or Plasma from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AluminumMicroscopicObservationIdentifierInBoneByHistomorphometryStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_AluminumMicroscopicObservationIdentifierInBoneByHistomorphometryStain: new Coding({
         code: "10740-9",
         display: "Aluminum.microscopic observation [Identifier] in Bone by Histomorphometry stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AmyloidMicroscopicObservationIdentifierInBrainByThioflavineSStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_AmyloidMicroscopicObservationIdentifierInBrainByThioflavineSStain: new Coding({
         code: "10741-7",
         display: "Amyloid.microscopic observation [Identifier] in Brain by Thioflavine-S stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AmyloidMicroscopicObservationIdentifierInTissueByBennholdStainPutchlerModified: Coding.FromStrict({
+    ConsentContentCodeValueSet_AmyloidMicroscopicObservationIdentifierInTissueByBennholdStainPutchlerModified: new Coding({
         code: "10742-5",
         display: "Amyloid.microscopic observation [Identifier] in Tissue by Bennhold stain.Putchler modified",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AmyloidMicroscopicObservationIdentifierInTissueByHighmanStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_AmyloidMicroscopicObservationIdentifierInTissueByHighmanStain: new Coding({
         code: "10743-3",
         display: "Amyloid.microscopic observation [Identifier] in Tissue by Highman stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AmyloidMicroscopicObservationIdentifierInTissueByVassarCullingStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_AmyloidMicroscopicObservationIdentifierInTissueByVassarCullingStain: new Coding({
         code: "10744-1",
         display: "Amyloid.microscopic observation [Identifier] in Tissue by Vassar-culling stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BileMicroscopicObservationIdentifierInTissueByFouchetStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_BileMicroscopicObservationIdentifierInTissueByFouchetStain: new Coding({
         code: "10745-8",
         display: "Bile.microscopic observation [Identifier] in Tissue by Fouchet stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CalciumMicroscopicObservationIdentifierInTissueByVonKossaStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CalciumMicroscopicObservationIdentifierInTissueByVonKossaStain: new Coding({
         code: "10746-6",
         display: "Calcium.microscopic observation [Identifier] in Tissue by Von Kossa stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CollagenFibersPlusElasticFibersMicroscopicObservationIdentifierInTissueByLawsonVanGiesonStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CollagenFibersPlusElasticFibersMicroscopicObservationIdentifierInTissueByLawsonVanGiesonStain: new Coding({
         code: "10747-4",
         display: "Collagen fibers+Elastic fibers.microscopic observation [Identifier] in Tissue by Lawson-Van Gieson stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CollagenFibersPlusElasticFibersMicroscopicObservationIdentifierInTissueByVerhoeffVanGiesonStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CollagenFibersPlusElasticFibersMicroscopicObservationIdentifierInTissueByVerhoeffVanGiesonStain: new Coding({
         code: "10748-2",
         display: "Collagen fibers+Elastic fibers.microscopic observation [Identifier] in Tissue by Verhoeff-Van Gieson stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CollagenFibersMicroscopicObservationIdentifierInTissueByVanGiesonStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CollagenFibersMicroscopicObservationIdentifierInTissueByVanGiesonStain: new Coding({
         code: "10749-0",
         display: "Collagen fibers.microscopic observation [Identifier] in Tissue by Van Gieson stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JkSupBAbPresenceInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_JkSupBAbPresenceInSerumOrPlasma: new Coding({
         code: "1075-1",
         display: "Jk sup(b) Ab [Presence] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ConnectiveTissueMicroscopicObservationIdentifierInTissueByTrichromeStainMasson: Coding.FromStrict({
+    ConsentContentCodeValueSet_ConnectiveTissueMicroscopicObservationIdentifierInTissueByTrichromeStainMasson: new Coding({
         code: "10750-8",
         display: "Connective tissue.microscopic observation [Identifier] in Tissue by Trichrome stain.Masson",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CopperMicroscopicObservationIdentifierInTissueByRhodamineStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_CopperMicroscopicObservationIdentifierInTissueByRhodamineStain: new Coding({
         code: "10751-6",
         display: "Copper.microscopic observation [Identifier] in Tissue by Rhodamine stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FatMicroscopicObservationIdentifierInMilkBySudanIVStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_FatMicroscopicObservationIdentifierInMilkBySudanIVStain: new Coding({
         code: "10752-4",
         display: "Fat.microscopic observation [Identifier] in Milk by Sudan IV stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FatMicroscopicObservationIdentifierInStoolBySudanIVStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_FatMicroscopicObservationIdentifierInStoolBySudanIVStain: new Coding({
         code: "10753-2",
         display: "Fat.microscopic observation [Identifier] in Stool by Sudan IV stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FatMicroscopicObservationIdentifierInTissueBySudanIVStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_FatMicroscopicObservationIdentifierInTissueBySudanIVStain: new Coding({
         code: "10754-0",
         display: "Fat.microscopic observation [Identifier] in Tissue by Sudan IV stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_FungusMicroscopicObservationIdentifierInTissueByMethenamineSilverStainGrocott: Coding.FromStrict({
+    ConsentContentCodeValueSet_FungusMicroscopicObservationIdentifierInTissueByMethenamineSilverStainGrocott: new Coding({
         code: "10755-7",
         display: "Fungus.microscopic observation [Identifier] in Tissue by Methenamine silver stain.Grocott",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GlialFibersMicroscopicObservationIdentifierInTissueByHolzerStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_GlialFibersMicroscopicObservationIdentifierInTissueByHolzerStain: new Coding({
         code: "10756-5",
         display: "Glial fibers.microscopic observation [Identifier] in Tissue by Holzer stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_HematologicPlusNuclearElementsMicroscopicObservationIdentifierInTissueByGiemsaStainMayGrunwald: Coding.FromStrict({
+    ConsentContentCodeValueSet_HematologicPlusNuclearElementsMicroscopicObservationIdentifierInTissueByGiemsaStainMayGrunwald: new Coding({
         code: "10757-3",
         display: "Hematologic+Nuclear elements.microscopic observation [Identifier] in Tissue by Giemsa stain.May-Grunwald",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IronMicroscopicObservationIdentifierInBoneByHistomorphometryStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_IronMicroscopicObservationIdentifierInBoneByHistomorphometryStain: new Coding({
         code: "10758-1",
         display: "Iron.microscopic observation [Identifier] in Bone by Histomorphometry stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IronMicroscopicObservationIdentifierInSputumByGomoriStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_IronMicroscopicObservationIdentifierInSputumByGomoriStain: new Coding({
         code: "10759-9",
         display: "Iron.microscopic observation [Identifier] in Sputum by Gomori stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JkSupBAgPresenceOnRedBloodCellsFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_JkSupBAgPresenceOnRedBloodCellsFromBloodProductUnit: new Coding({
         code: "1076-9",
         display: "Jk sup(b) Ag [Presence] on Red Blood Cells from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IronMicroscopicObservationIdentifierInTissueByGomoriStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_IronMicroscopicObservationIdentifierInTissueByGomoriStain: new Coding({
         code: "10760-7",
         display: "Iron.microscopic observation [Identifier] in Tissue by Gomori stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IronMicroscopicObservationIdentifierInTissueByOtherStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_IronMicroscopicObservationIdentifierInTissueByOtherStain: new Coding({
         code: "10761-5",
         display: "Iron.microscopic observation [Identifier] in Tissue by Other stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInBloodByHemosiderinStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInBloodByHemosiderinStain: new Coding({
         code: "10762-3",
         display: "Microscopic observation [Identifier] in Blood by Hemosiderin stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInBodyFluidBySudanBlackStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInBodyFluidBySudanBlackStain: new Coding({
         code: "10763-1",
         display: "Microscopic observation [Identifier] in Body fluid by Sudan black stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInSputumBySilverStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInSputumBySilverStain: new Coding({
         code: "10764-9",
         display: "Microscopic observation [Identifier] in Sputum by Silver stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByAcetateEsteraseStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByAcetateEsteraseStain: new Coding({
         code: "10765-6",
         display: "Microscopic observation [Identifier] in Tissue by Acetate esterase stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByAlcianBlueStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByAlcianBlueStain: new Coding({
         code: "10766-4",
         display: "Microscopic observation [Identifier] in Tissue by Alcian blue stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByAlcianBlueStainSulfated: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByAlcianBlueStainSulfated: new Coding({
         code: "10767-2",
         display: "Microscopic observation [Identifier] in Tissue by Alcian blue stain.sulfated",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByAlcianBlueStainWithPeriodicAcidSchiff: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByAlcianBlueStainWithPeriodicAcidSchiff: new Coding({
         code: "10768-0",
         display: "Microscopic observation [Identifier] in Tissue by Alcian blue stain.with periodic acid-Schiff",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByAlizarinRedSStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByAlizarinRedSStain: new Coding({
         code: "10769-8",
         display: "Microscopic observation [Identifier] in Tissue by Alizarin red S stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JkSupBAgPresenceOnRedBloodCellsFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_JkSupBAgPresenceOnRedBloodCellsFromDonor: new Coding({
         code: "1077-7",
         display: "Jk sup(b) Ag [Presence] on Red Blood Cells from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByArgentaffinStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByArgentaffinStain: new Coding({
         code: "10770-6",
         display: "Microscopic observation [Identifier] in Tissue by Argentaffin stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedMicroscopicObservationIdentifierInTissueByRhodamineAuramineFluorochromeStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedMicroscopicObservationIdentifierInTissueByRhodamineAuramineFluorochromeStain: new Coding({
         code: "10771-4",
         display: "Deprecated Microscopic observation [Identifier] in Tissue by Rhodamine-auramine fluorochrome stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByAzureEosinStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByAzureEosinStain: new Coding({
         code: "10772-2",
         display: "Microscopic observation [Identifier] in Tissue by Azure-eosin stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByBasicFuchsinStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByBasicFuchsinStain: new Coding({
         code: "10773-0",
         display: "Microscopic observation [Identifier] in Tissue by Basic fuchsin stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByBielschowskyStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByBielschowskyStain: new Coding({
         code: "10774-8",
         display: "Microscopic observation [Identifier] in Tissue by Bielschowsky stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByBleachStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByBleachStain: new Coding({
         code: "10775-5",
         display: "Microscopic observation [Identifier] in Tissue by Bleach stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByBodianStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByBodianStain: new Coding({
         code: "10776-3",
         display: "Microscopic observation [Identifier] in Tissue by Bodian stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByBrownAndBrennStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByBrownAndBrennStain: new Coding({
         code: "10777-1",
         display: "Microscopic observation [Identifier] in Tissue by Brown and Brenn stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByButyrateEsteraseStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByButyrateEsteraseStain: new Coding({
         code: "10778-9",
         display: "Microscopic observation [Identifier] in Tissue by Butyrate esterase stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByCarmineStainBest: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByCarmineStainBest: new Coding({
         code: "10779-7",
         display: "Microscopic observation [Identifier] in Tissue by Carmine stain.Best",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JkSupBAgPresenceOnRedBloodCells: Coding.FromStrict({
+    ConsentContentCodeValueSet_JkSupBAgPresenceOnRedBloodCells: new Coding({
         code: "1078-5",
         display: "Jk sup(b) Ag [Presence] on Red Blood Cells",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByChloracetateEsteraseStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByChloracetateEsteraseStain: new Coding({
         code: "10780-5",
         display: "Microscopic observation [Identifier] in Tissue by Chloracetate esterase stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByChurukianSchenkStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByChurukianSchenkStain: new Coding({
         code: "10781-3",
         display: "Microscopic observation [Identifier] in Tissue by Churukian-Schenk stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByCongoRedStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByCongoRedStain: new Coding({
         code: "10782-1",
         display: "Microscopic observation [Identifier] in Tissue by Congo red stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByCrystalVioletStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByCrystalVioletStain: new Coding({
         code: "10783-9",
         display: "Microscopic observation [Identifier] in Tissue by Crystal violet stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByEsteraseStainNonSpecific: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByEsteraseStainNonSpecific: new Coding({
         code: "10784-7",
         display: "Microscopic observation [Identifier] in Tissue by Esterase stain.non-specific",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByFiteFaracoStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByFiteFaracoStain: new Coding({
         code: "10785-4",
         display: "Microscopic observation [Identifier] in Tissue by Fite-Faraco stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedMicroscopicObservationIdentifierInTissueByGiemsaStain3Micron: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedMicroscopicObservationIdentifierInTissueByGiemsaStain3Micron: new Coding({
         code: "10786-2",
         display: "Deprecated Microscopic observation [Identifier] in Tissue by Giemsa stain.3 micron",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByGridleyStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByGridleyStain: new Coding({
         code: "10787-0",
         display: "Microscopic observation [Identifier] in Tissue by Gridley stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByHanselStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByHanselStain: new Coding({
         code: "10788-8",
         display: "Microscopic observation [Identifier] in Tissue by Hansel stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByHematoxylinEosinHarrisRegressiveStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByHematoxylinEosinHarrisRegressiveStain: new Coding({
         code: "10789-6",
         display: "Microscopic observation [Identifier] in Tissue by Hematoxylin-eosin-Harris regressive stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JsSupAAbPresenceInSerumOrPlasmaFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_JsSupAAbPresenceInSerumOrPlasmaFromBloodProductUnit: new Coding({
         code: "1079-3",
         display: "Js sup(a) Ab [Presence] in Serum or Plasma from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByHematoxylinEosinMayersProgressiveStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByHematoxylinEosinMayersProgressiveStain: new Coding({
         code: "10790-4",
         display: "Microscopic observation [Identifier] in Tissue by Hematoxylin-eosin-Mayers progressive stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByMalloryHeidenhainStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByMalloryHeidenhainStain: new Coding({
         code: "10791-2",
         display: "Microscopic observation [Identifier] in Tissue by Mallory-Heidenhain stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByMethenamineSilverStainJones: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByMethenamineSilverStainJones: new Coding({
         code: "10792-0",
         display: "Microscopic observation [Identifier] in Tissue by Methenamine silver stain.Jones",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByMethylGreenStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByMethylGreenStain: new Coding({
         code: "10793-8",
         display: "Microscopic observation [Identifier] in Tissue by Methyl green stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByMethylGreenPyronineYStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByMethylGreenPyronineYStain: new Coding({
         code: "10794-6",
         display: "Microscopic observation [Identifier] in Tissue by Methyl green-pyronine Y stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByMethylVioletStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByMethylVioletStain: new Coding({
         code: "10795-3",
         display: "Microscopic observation [Identifier] in Tissue by Methyl violet stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByMucicarmineStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByMucicarmineStain: new Coding({
         code: "10796-1",
         display: "Microscopic observation [Identifier] in Tissue by Mucicarmine stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByNeutralRedStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByNeutralRedStain: new Coding({
         code: "10797-9",
         display: "Microscopic observation [Identifier] in Tissue by Neutral red stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByOilRedOStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByOilRedOStain: new Coding({
         code: "10798-7",
         display: "Microscopic observation [Identifier] in Tissue by Oil red O stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByPentachromeStainMovat: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByPentachromeStainMovat: new Coding({
         code: "10799-5",
         display: "Microscopic observation [Identifier] in Tissue by Pentachrome stain.Movat",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CefotaximeSusceptibilityByMinimumInhibitoryConcentrationMIC: Coding.FromStrict({
+    ConsentContentCodeValueSet_CefotaximeSusceptibilityByMinimumInhibitoryConcentrationMIC: new Coding({
         code: "108-1",
         display: "Cefotaxime [Susceptibility] by Minimum inhibitory concentration (MIC)",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JsSupAAbPresenceInSerumOrPlasmaFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_JsSupAAbPresenceInSerumOrPlasmaFromDonor: new Coding({
         code: "1080-1",
         display: "Js sup(a) Ab [Presence] in Serum or Plasma from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByPeriodicAcidSchiffStainWithDiataseDigestion: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByPeriodicAcidSchiffStainWithDiataseDigestion: new Coding({
         code: "10800-1",
         display: "Microscopic observation [Identifier] in Tissue by Periodic acid-Schiff stain with diatase digestion",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByPhosphotungsticAcidHematoxylinPTAHStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByPhosphotungsticAcidHematoxylinPTAHStain: new Coding({
         code: "10801-9",
         display: "Microscopic observation [Identifier] in Tissue by Phosphotungstic acid Hematoxylin (PTAH) Stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByPrussianBlueStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByPrussianBlueStain: new Coding({
         code: "10802-7",
         display: "Microscopic observation [Identifier] in Tissue by Prussian blue stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByQuinacrineFluorescentStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByQuinacrineFluorescentStain: new Coding({
         code: "10803-5",
         display: "Microscopic observation [Identifier] in Tissue by Quinacrine fluorescent stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByReticulinStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByReticulinStain: new Coding({
         code: "10804-3",
         display: "Microscopic observation [Identifier] in Tissue by Reticulin stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueBySafraninStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueBySafraninStain: new Coding({
         code: "10805-0",
         display: "Microscopic observation [Identifier] in Tissue by Safranin stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueBySchmorlStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueBySchmorlStain: new Coding({
         code: "10806-8",
         display: "Microscopic observation [Identifier] in Tissue by Schmorl stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueBySevierMungerStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueBySevierMungerStain: new Coding({
         code: "10807-6",
         display: "Microscopic observation [Identifier] in Tissue by Sevier-Munger stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueBySilverImpregnationStainDieterle: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueBySilverImpregnationStainDieterle: new Coding({
         code: "10808-4",
         display: "Microscopic observation [Identifier] in Tissue by Silver impregnation stain.Dieterle",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueBySilverNitrateStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueBySilverNitrateStain: new Coding({
         code: "10809-2",
         display: "Microscopic observation [Identifier] in Tissue by Silver nitrate stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JsSupAAbPresenceInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_JsSupAAbPresenceInSerumOrPlasma: new Coding({
         code: "1081-9",
         display: "Js sup(a) Ab [Presence] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueBySilverStainFontanaMasson: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueBySilverStainFontanaMasson: new Coding({
         code: "10810-0",
         display: "Microscopic observation [Identifier] in Tissue by Silver stain.Fontana-Masson",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueBySilverStainGrimelius: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueBySilverStainGrimelius: new Coding({
         code: "10811-8",
         display: "Microscopic observation [Identifier] in Tissue by Silver stain.Grimelius",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueBySteinerStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueBySteinerStain: new Coding({
         code: "10812-6",
         display: "Microscopic observation [Identifier] in Tissue by Steiner stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueBySudanBlackStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueBySudanBlackStain: new Coding({
         code: "10813-4",
         display: "Microscopic observation [Identifier] in Tissue by Sudan black stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueBySupravitalStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueBySupravitalStain: new Coding({
         code: "10814-2",
         display: "Microscopic observation [Identifier] in Tissue by Supravital stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByTetrachromeStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByTetrachromeStain: new Coding({
         code: "10815-9",
         display: "Microscopic observation [Identifier] in Tissue by Tetrachrome stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedMicroscopicObservationIdentifierInTissueByToluidineBlueOStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedMicroscopicObservationIdentifierInTissueByToluidineBlueOStain: new Coding({
         code: "10816-7",
         display: "Deprecated Microscopic observation [Identifier] in Tissue by Toluidine blue O stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByTrichromeStainGomoriWheatley: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByTrichromeStainGomoriWheatley: new Coding({
         code: "10817-5",
         display: "Microscopic observation [Identifier] in Tissue by Trichrome stain.Gomori-Wheatley",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByTrichromeStainMassonModified: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByTrichromeStainMassonModified: new Coding({
         code: "10818-3",
         display: "Microscopic observation [Identifier] in Tissue by Trichrome stain.Masson modified",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByWadeStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInTissueByWadeStain: new Coding({
         code: "10819-1",
         display: "Microscopic observation [Identifier] in Tissue by Wade stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JsSupAAgPresenceOnRedBloodCellsFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_JsSupAAgPresenceOnRedBloodCellsFromBloodProductUnit: new Coding({
         code: "1082-7",
         display: "Js sup(a) Ag [Presence] on Red Blood Cells from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedMicroscopicObservationIdentifierInTissueByWarthinStarryStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedMicroscopicObservationIdentifierInTissueByWarthinStarryStain: new Coding({
         code: "10820-9",
         display: "Deprecated Microscopic observation [Identifier] in Tissue by Warthin-Starry stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedMicroscopicObservationIdentifierInTissueByWrightGiemsaStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedMicroscopicObservationIdentifierInTissueByWrightGiemsaStain: new Coding({
         code: "10821-7",
         display: "Deprecated Microscopic observation [Identifier] in Tissue by Wright Giemsa stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MucinMicroscopicObservationIdentifierInTissueByMucicarmineStainMayer: Coding.FromStrict({
+    ConsentContentCodeValueSet_MucinMicroscopicObservationIdentifierInTissueByMucicarmineStainMayer: new Coding({
         code: "10822-5",
         display: "Mucin.microscopic observation [Identifier] in Tissue by Mucicarmine stain.Mayer",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MucopolysaccharidesMicroscopicObservationIdentifierInTissueByColloidalFerricOxideStainHale: Coding.FromStrict({
+    ConsentContentCodeValueSet_MucopolysaccharidesMicroscopicObservationIdentifierInTissueByColloidalFerricOxideStainHale: new Coding({
         code: "10823-3",
         display: "Mucopolysaccharides.microscopic observation [Identifier] in Tissue by Colloidal ferric oxide stain.Hale",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MyelinPlusMyelinBreakdownProductsMicroscopicObservationIdentifierInTissueByLuxolFastBluePeriodicAcidSchiffStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MyelinPlusMyelinBreakdownProductsMicroscopicObservationIdentifierInTissueByLuxolFastBluePeriodicAcidSchiffStain: new Coding({
         code: "10824-1",
         display: "Myelin+Myelin breakdown products.microscopic observation [Identifier] in Tissue by Luxol fast blue/Periodic acid-Schiff stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MyelinPlusNerveCellsMicroscopicObservationIdentifierInTissueByLuxolFastBlueCresylVioletStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MyelinPlusNerveCellsMicroscopicObservationIdentifierInTissueByLuxolFastBlueCresylVioletStain: new Coding({
         code: "10825-8",
         display: "Myelin+Nerve cells.microscopic observation [Identifier] in Tissue by Luxol fast blue/Cresyl violet stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_NisselMicroscopicObservationIdentifierInTissueByCresylEchtVioletStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_NisselMicroscopicObservationIdentifierInTissueByCresylEchtVioletStain: new Coding({
         code: "10826-6",
         display: "Nissel.microscopic observation [Identifier] in Tissue by Cresyl echt violet stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ReticulumMicroscopicObservationIdentifierInTissueByGomoriStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_ReticulumMicroscopicObservationIdentifierInTissueByGomoriStain: new Coding({
         code: "10827-4",
         display: "Reticulum.microscopic observation [Identifier] in Tissue by Gomori stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_UrateCrystalsMicroscopicObservationTypeInTissueByDeGalanthaStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_UrateCrystalsMicroscopicObservationTypeInTissueByDeGalanthaStain: new Coding({
         code: "10828-2",
         display: "Urate crystals.microscopic observation [type] in Tissue by De Galantha stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SiliconMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_SiliconMassVolumeInSerumOrPlasma: new Coding({
         code: "10829-0",
         display: "Silicon [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JsSupAAgPresenceOnRedBloodCellsFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_JsSupAAgPresenceOnRedBloodCellsFromDonor: new Coding({
         code: "1083-5",
         display: "Js sup(a) Ag [Presence] on Red Blood Cells from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedSurgicalOperationNoteComplications: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedSurgicalOperationNoteComplications: new Coding({
         code: "10830-8",
         display: "Deprecated Surgical operation note complications",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SurgicalOperationNoteComplicationsInterpretation: Coding.FromStrict({
+    ConsentContentCodeValueSet_SurgicalOperationNoteComplicationsInterpretation: new Coding({
         code: "10831-6",
         display: "Surgical operation note complications [Interpretation]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GlucoseMassVolumeInSerumOrPlasma15MinutesPost50GLactosePO: Coding.FromStrict({
+    ConsentContentCodeValueSet_GlucoseMassVolumeInSerumOrPlasma15MinutesPost50GLactosePO: new Coding({
         code: "10832-4",
         display: "Glucose [Mass/volume] in Serum or Plasma --15 minutes post 50 g lactose PO",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_InsulinMassVolumeInSerumOrPlasma7HoursPost75GGlucosePO: Coding.FromStrict({
+    ConsentContentCodeValueSet_InsulinMassVolumeInSerumOrPlasma7HoursPost75GGlucosePO: new Coding({
         code: "10833-2",
         display: "Insulin [Mass/volume] in Serum or Plasma --7 hours post 75 g glucose PO",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_GlobulinMassVolumeInSerumByCalculation: Coding.FromStrict({
+    ConsentContentCodeValueSet_GlobulinMassVolumeInSerumByCalculation: new Coding({
         code: "10834-0",
         display: "Globulin [Mass/volume] in Serum by calculation",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_LipoproteinAMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_LipoproteinAMassVolumeInSerumOrPlasma: new Coding({
         code: "10835-7",
         display: "Lipoprotein a [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_NiacinMassVolumeInBlood: Coding.FromStrict({
+    ConsentContentCodeValueSet_NiacinMassVolumeInBlood: new Coding({
         code: "10836-5",
         display: "Niacin [Mass/volume] in Blood",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OrganicAcidsPresenceInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_OrganicAcidsPresenceInSerumOrPlasma: new Coding({
         code: "10837-3",
         display: "Organic acids [Presence] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhosphoserineMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhosphoserineMassVolumeInSerumOrPlasma: new Coding({
         code: "10838-1",
         display: "Phosphoserine [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TroponinICardiacMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_TroponinICardiacMassVolumeInSerumOrPlasma: new Coding({
         code: "10839-9",
         display: "Troponin I.cardiac [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JsSupAAgPresenceOnRedBloodCells: Coding.FromStrict({
+    ConsentContentCodeValueSet_JsSupAAgPresenceOnRedBloodCells: new Coding({
         code: "1084-3",
         display: "Js sup(a) Ag [Presence] on Red Blood Cells",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AtropineMassVolumeInUrine: Coding.FromStrict({
+    ConsentContentCodeValueSet_AtropineMassVolumeInUrine: new Coding({
         code: "10840-7",
         display: "Atropine [Mass/volume] in Urine",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MethazolamideMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_MethazolamideMassVolumeInSerumOrPlasma: new Coding({
         code: "10841-5",
         display: "Methazolamide [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedHLADQ1Presence: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedHLADQ1Presence: new Coding({
         code: "10842-3",
         display: "Deprecated HLA-DQ1 [Presence]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedHLADQ2Presence: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedHLADQ2Presence: new Coding({
         code: "10843-1",
         display: "Deprecated HLA-DQ2 [Presence]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedHLADQ3Presence: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedHLADQ3Presence: new Coding({
         code: "10844-9",
         display: "Deprecated HLA-DQ3 [Presence]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedHLADQ4Presence: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedHLADQ4Presence: new Coding({
         code: "10845-6",
         display: "Deprecated HLA-DQ4 [Presence]",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BorreliaBurgdorferiDNAPresenceInBloodByProbeWithAmplification: Coding.FromStrict({
+    ConsentContentCodeValueSet_BorreliaBurgdorferiDNAPresenceInBloodByProbeWithAmplification: new Coding({
         code: "10846-4",
         display: "Borrelia burgdorferi DNA [Presence] in Blood by Probe with amplification",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BorreliaBurgdorferiDNAPresenceInBodyFluidByProbeWithAmplification: Coding.FromStrict({
+    ConsentContentCodeValueSet_BorreliaBurgdorferiDNAPresenceInBodyFluidByProbeWithAmplification: new Coding({
         code: "10847-2",
         display: "Borrelia burgdorferi DNA [Presence] in Body fluid by Probe with amplification",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ChlamydiaSpIgGAbTiterInSerumByImmunofluorescence: Coding.FromStrict({
+    ConsentContentCodeValueSet_ChlamydiaSpIgGAbTiterInSerumByImmunofluorescence: new Coding({
         code: "10848-0",
         display: "Chlamydia sp IgG Ab [Titer] in Serum by Immunofluorescence",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ChlamydiaSpIgMAbTiterInSerumByImmunofluorescence: Coding.FromStrict({
+    ConsentContentCodeValueSet_ChlamydiaSpIgMAbTiterInSerumByImmunofluorescence: new Coding({
         code: "10849-8",
         display: "Chlamydia sp IgM Ab [Titer] in Serum by Immunofluorescence",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JsSupBAbPresenceInSerumOrPlasmaFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_JsSupBAbPresenceInSerumOrPlasmaFromBloodProductUnit: new Coding({
         code: "1085-0",
         display: "Js sup(b) Ab [Presence] in Serum or Plasma from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CyclosporaCayetanensisPresenceInUnspecifiedSpecimen: Coding.FromStrict({
+    ConsentContentCodeValueSet_CyclosporaCayetanensisPresenceInUnspecifiedSpecimen: new Coding({
         code: "10850-6",
         display: "Cyclospora cayetanensis [Presence] in Unspecified specimen",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EscherichiaColiO157H7PresenceInStoolByOrganismSpecificCulture: Coding.FromStrict({
+    ConsentContentCodeValueSet_EscherichiaColiO157H7PresenceInStoolByOrganismSpecificCulture: new Coding({
         code: "10851-4",
         display: "Escherichia coli O157:H7 [Presence] in Stool by Organism specific culture",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedFungusIdentifiedInBloodByCulture: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedFungusIdentifiedInBloodByCulture: new Coding({
         code: "10852-2",
         display: "Deprecated Fungus identified in Blood by Culture",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IsosporaBelliPresenceInUnspecifiedSpecimenByAcidFastStainKinyounModified: Coding.FromStrict({
+    ConsentContentCodeValueSet_IsosporaBelliPresenceInUnspecifiedSpecimenByAcidFastStainKinyounModified: new Coding({
         code: "10853-0",
         display: "Isospora belli [Presence] in Unspecified specimen by Acid fast stain.Kinyoun modified",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedMidrofilariaIdentifiedInBloodByConcentration: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedMidrofilariaIdentifiedInBloodByConcentration: new Coding({
         code: "10854-8",
         display: "Deprecated Midrofilaria identified in Blood by Concentration",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OvaAndParasitesIdentifiedInDuodenalFluidOrGastricFluidByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_OvaAndParasitesIdentifiedInDuodenalFluidOrGastricFluidByLightMicroscopy: new Coding({
         code: "10855-5",
         display: "Ova and parasites identified in Duodenal fluid or Gastric fluid by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInGenitalMucusByGramStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicroscopicObservationIdentifierInGenitalMucusByGramStain: new Coding({
         code: "10856-3",
         display: "Microscopic observation [Identifier] in Genital mucus by Gram stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MicrosporidiaIdentifiedInUnspecifiedSpecimenByLightMicroscopy: Coding.FromStrict({
+    ConsentContentCodeValueSet_MicrosporidiaIdentifiedInUnspecifiedSpecimenByLightMicroscopy: new Coding({
         code: "10857-1",
         display: "Microsporidia identified in Unspecified specimen by Light microscopy",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TeichoateAbPresenceInSerum: Coding.FromStrict({
+    ConsentContentCodeValueSet_TeichoateAbPresenceInSerum: new Coding({
         code: "10858-9",
         display: "Teichoate Ab [Presence] in Serum",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TrypanosomaSpIdentifierInBloodByAcridineOrangePlusGiemsaStain: Coding.FromStrict({
+    ConsentContentCodeValueSet_TrypanosomaSpIdentifierInBloodByAcridineOrangePlusGiemsaStain: new Coding({
         code: "10859-7",
         display: "Trypanosoma sp [Identifier] in Blood by Acridine Orange + Giemsa Stain",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JsSupBAbPresenceInSerumOrPlasmaFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_JsSupBAbPresenceInSerumOrPlasmaFromDonor: new Coding({
         code: "1086-8",
         display: "Js sup(b) Ab [Presence] in Serum or Plasma from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_VaricellaZosterVirusPresenceInUnspecifiedSpecimenByOrganismSpecificCulture: Coding.FromStrict({
+    ConsentContentCodeValueSet_VaricellaZosterVirusPresenceInUnspecifiedSpecimenByOrganismSpecificCulture: new Coding({
         code: "10860-5",
         display: "Varicella zoster virus [Presence] in Unspecified specimen by Organism specific culture",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ProgesteroneReceptorMassMassInTissue: Coding.FromStrict({
+    ConsentContentCodeValueSet_ProgesteroneReceptorMassMassInTissue: new Coding({
         code: "10861-3",
         display: "Progesterone receptor [Mass/mass] in Tissue",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BasementMembraneAbTiterInSerum: Coding.FromStrict({
+    ConsentContentCodeValueSet_BasementMembraneAbTiterInSerum: new Coding({
         code: "10862-1",
         display: "Basement membrane Ab [Titer] in Serum",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EndomysiumIgAAbTiterInSerum: Coding.FromStrict({
+    ConsentContentCodeValueSet_EndomysiumIgAAbTiterInSerum: new Coding({
         code: "10863-9",
         display: "Endomysium IgA Ab [Titer] in Serum",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ImmuneComplexUnitsVolumeInSerumOrPlasmaByRajiCellAssay: Coding.FromStrict({
+    ConsentContentCodeValueSet_ImmuneComplexUnitsVolumeInSerumOrPlasmaByRajiCellAssay: new Coding({
         code: "10864-7",
         display: "Immune complex [Units/volume] in Serum or Plasma by Raji cell assay",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IntercellularSubstanceAbPresenceInSerum: Coding.FromStrict({
+    ConsentContentCodeValueSet_IntercellularSubstanceAbPresenceInSerum: new Coding({
         code: "10865-4",
         display: "Intercellular substance Ab [Presence] in Serum",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SulfatideIgGAbTiterInSerum: Coding.FromStrict({
+    ConsentContentCodeValueSet_SulfatideIgGAbTiterInSerum: new Coding({
         code: "10866-2",
         display: "Sulfatide IgG Ab [Titer] in Serum",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_SulfatideIgMAbTiterInSerum: Coding.FromStrict({
+    ConsentContentCodeValueSet_SulfatideIgMAbTiterInSerum: new Coding({
         code: "10867-0",
         display: "Sulfatide IgM Ab [Titer] in Serum",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BacitracinSusceptibilityByDiskDiffusionKB: Coding.FromStrict({
+    ConsentContentCodeValueSet_BacitracinSusceptibilityByDiskDiffusionKB: new Coding({
         code: "10868-8",
         display: "Bacitracin [Susceptibility] by Disk diffusion (KB)",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_XyloseMassVolumeInBlood3HoursPost25GXylosePO: Coding.FromStrict({
+    ConsentContentCodeValueSet_XyloseMassVolumeInBlood3HoursPost25GXylosePO: new Coding({
         code: "10869-6",
         display: "Xylose [Mass/volume] in Blood --3 hours post 25 g xylose PO",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JsSupBAbPresenceInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_JsSupBAbPresenceInSerumOrPlasma: new Coding({
         code: "1087-6",
         display: "Js sup(b) Ab [Presence] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_XyloseMassVolumeInBlood4HoursPost25GXylosePO: Coding.FromStrict({
+    ConsentContentCodeValueSet_XyloseMassVolumeInBlood4HoursPost25GXylosePO: new Coding({
         code: "10870-4",
         display: "Xylose [Mass/volume] in Blood --4 hours post 25 g xylose PO",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_XyloseMassVolumeInBlood5HoursPost25GXylosePO: Coding.FromStrict({
+    ConsentContentCodeValueSet_XyloseMassVolumeInBlood5HoursPost25GXylosePO: new Coding({
         code: "10871-2",
         display: "Xylose [Mass/volume] in Blood --5 hours post 25 g xylose PO",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_XyloseMassVolumeInBloodBaseline: Coding.FromStrict({
+    ConsentContentCodeValueSet_XyloseMassVolumeInBloodBaseline: new Coding({
         code: "10872-0",
         display: "Xylose [Mass/volume] in Blood --baseline",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_Beta2MicroglobulinMassTimeIn24HourUrine: Coding.FromStrict({
+    ConsentContentCodeValueSet_Beta2MicroglobulinMassTimeIn24HourUrine: new Coding({
         code: "10873-8",
         display: "Beta-2-Microglobulin [Mass/time] in 24 hour Urine",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BombesinMassVolumeInPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_BombesinMassVolumeInPlasma: new Coding({
         code: "10874-6",
         display: "Bombesin [Mass/volume] in Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CarnitineEstersMassVolumeInUrine: Coding.FromStrict({
+    ConsentContentCodeValueSet_CarnitineEstersMassVolumeInUrine: new Coding({
         code: "10875-3",
         display: "Carnitine esters [Mass/volume] in Urine",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CarnitineEstersMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_CarnitineEstersMassVolumeInSerumOrPlasma: new Coding({
         code: "10876-1",
         display: "Carnitine esters [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_CarnitineFreeC0MassVolumeInUrine: Coding.FromStrict({
+    ConsentContentCodeValueSet_CarnitineFreeC0MassVolumeInUrine: new Coding({
         code: "10877-9",
         display: "Carnitine free (C0) [Mass/volume] in Urine",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IodineProteinBoundMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_IodineProteinBoundMassVolumeInSerumOrPlasma: new Coding({
         code: "10878-7",
         display: "Iodine.protein bound [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_IsovalerylglycineMassVolumeInUrine: Coding.FromStrict({
+    ConsentContentCodeValueSet_IsovalerylglycineMassVolumeInUrine: new Coding({
         code: "10879-5",
         display: "Isovalerylglycine [Mass/volume] in Urine",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JsSupBAgPresenceOnRedBloodCellsFromBloodProductUnit: Coding.FromStrict({
+    ConsentContentCodeValueSet_JsSupBAgPresenceOnRedBloodCellsFromBloodProductUnit: new Coding({
         code: "1088-4",
         display: "Js sup(b) Ag [Presence] on Red Blood Cells from Blood product unit",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_MagnesiumMassMassInStool: Coding.FromStrict({
+    ConsentContentCodeValueSet_MagnesiumMassMassInStool: new Coding({
         code: "10880-3",
         display: "Magnesium [Mass/mass] in Stool",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PentacarboxylporphyrinsMassVolumeInRedBloodCells: Coding.FromStrict({
+    ConsentContentCodeValueSet_PentacarboxylporphyrinsMassVolumeInRedBloodCells: new Coding({
         code: "10881-1",
         display: "Pentacarboxylporphyrins [Mass/volume] in Red Blood Cells",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PentacarboxylporphyrinsMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_PentacarboxylporphyrinsMassVolumeInSerumOrPlasma: new Coding({
         code: "10882-9",
         display: "Pentacarboxylporphyrins [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhenolphthaleinMassMassInStool: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhenolphthaleinMassMassInStool: new Coding({
         code: "10883-7",
         display: "Phenolphthalein [Mass/mass] in Stool",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PhosphateMassMassInStool: Coding.FromStrict({
+    ConsentContentCodeValueSet_PhosphateMassMassInStool: new Coding({
         code: "10884-5",
         display: "Phosphate [Mass/mass] in Stool",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PorphyrinsMassTimeIn24HourUrine: Coding.FromStrict({
+    ConsentContentCodeValueSet_PorphyrinsMassTimeIn24HourUrine: new Coding({
         code: "10885-2",
         display: "Porphyrins [Mass/time] in 24 hour Urine",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ProstateSpecificAgFreeMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_ProstateSpecificAgFreeMassVolumeInSerumOrPlasma: new Coding({
         code: "10886-0",
         display: "Prostate Specific Ag Free [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PyridinolineMassTimeIn24HourUrine: Coding.FromStrict({
+    ConsentContentCodeValueSet_PyridinolineMassTimeIn24HourUrine: new Coding({
         code: "10887-8",
         display: "Pyridinoline [Mass/time] in 24 hour Urine",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_LipaseEnzymaticActivityVolumeInUrine: Coding.FromStrict({
+    ConsentContentCodeValueSet_LipaseEnzymaticActivityVolumeInUrine: new Coding({
         code: "10888-6",
         display: "Lipase [Enzymatic activity/volume] in Urine",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_BisacodylMassMassInStool: Coding.FromStrict({
+    ConsentContentCodeValueSet_BisacodylMassMassInStool: new Coding({
         code: "10889-4",
         display: "Bisacodyl [Mass/mass] in Stool",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_JsSupBAgPresenceOnRedBloodCellsFromDonor: Coding.FromStrict({
+    ConsentContentCodeValueSet_JsSupBAgPresenceOnRedBloodCellsFromDonor: new Coding({
         code: "1089-2",
         display: "Js sup(b) Ag [Presence] on Red Blood Cells from Donor",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_DeprecatedNormethsuximideMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_DeprecatedNormethsuximideMassVolumeInSerumOrPlasma: new Coding({
         code: "10890-2",
         display: "Deprecated Normethsuximide [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_OxyphenisatinMassMassInStool: Coding.FromStrict({
+    ConsentContentCodeValueSet_OxyphenisatinMassMassInStool: new Coding({
         code: "10891-0",
         display: "Oxyphenisatin [Mass/mass] in Stool",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_PentoxifyllineMassVolumeInSerumOrPlasma: Coding.FromStrict({
+    ConsentContentCodeValueSet_PentoxifyllineMassVolumeInSerumOrPlasma: new Coding({
         code: "10892-8",
         display: "Pentoxifylline [Mass/volume] in Serum or Plasma",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_TrenboloneMassVolumeInUrine: Coding.FromStrict({
+    ConsentContentCodeValueSet_TrenboloneMassVolumeInUrine: new Coding({
         code: "10893-6",
         display: "Trenbolone [Mass/volume] in Urine",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_AspergillusNigerAbPresenceInSerumByImmuneDiffusionID: Coding.FromStrict({
+    ConsentContentCodeValueSet_AspergillusNigerAbPresenceInSerumByImmuneDiffusionID: new Coding({
         code: "10894-4",
         display: "Aspergillus niger Ab [Presence] in Serum by Immune diffusion (ID)",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_ClostridiumDifficileToxinBPresenceInStool: Coding.FromStrict({
+    ConsentContentCodeValueSet_ClostridiumDifficileToxinBPresenceInStool: new Coding({
         code: "10895-1",
         display: "Clostridium difficile toxin B [Presence] in Stool",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EasternEquineEncephalitisVirusIgGAbTiterInSerumByImmunofluorescence: Coding.FromStrict({
+    ConsentContentCodeValueSet_EasternEquineEncephalitisVirusIgGAbTiterInSerumByImmunofluorescence: new Coding({
         code: "10896-9",
         display: "Eastern equine encephalitis virus IgG Ab [Titer] in Serum by Immunofluorescence",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EasternEquineEncephalitisVirusIgGAbTiterInCerebralSpinalFluidByImmunofluorescence: Coding.FromStrict({
+    ConsentContentCodeValueSet_EasternEquineEncephalitisVirusIgGAbTiterInCerebralSpinalFluidByImmunofluorescence: new Coding({
         code: "10897-7",
         display: "Eastern equine encephalitis virus IgG Ab [Titer] in Cerebral spinal fluid by Immunofluorescence",
         system: "http://loinc.org"
     }),
-    ConsentContentCodeValueSet_EasternEquineEncephalitisVirusIgMAbTiterInSerumByImmunofluorescence: Coding.FromStrict({
+    ConsentContentCodeValueSet_EasternEquineEncephalitisVirusIgMAbTiterInSerumByImmunofluorescence: new Coding({
         code: "10898-5",
         display: "Eastern equine encephalitis virus IgM Ab [Titer] in Serum by Immunofluorescence",
         system: "http://loinc.org"

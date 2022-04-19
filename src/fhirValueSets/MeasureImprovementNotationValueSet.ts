@@ -13,7 +13,7 @@ export const MeasureImprovementNotationValueSet = {
   /**
    * Improvement is indicated as a decrease in the score or measurement (e.g. Lower score indicates better quality).
    */
-  measure_improvement_notation_DecreasedScoreIndicatesImprovement: Coding.FromStrict({
+  measure_improvement_notation_DecreasedScoreIndicatesImprovement: new Coding({
     code: "decrease",
     display: "Decreased score indicates improvement",
     system: "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
@@ -21,7 +21,7 @@ export const MeasureImprovementNotationValueSet = {
   /**
    * Improvement is indicated as an increase in the score or measurement (e.g. Higher score indicates better quality).
    */
-  measure_improvement_notation_IncreasedScoreIndicatesImprovement: Coding.FromStrict({
+  measure_improvement_notation_IncreasedScoreIndicatesImprovement: new Coding({
     code: "increase",
     display: "Increased score indicates improvement",
     system: "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"

@@ -13,7 +13,7 @@ export const PaymentStatusValueSet = {
     /**
      * The payment has been received by the payee.
      */
-    payment_status_Cleared: Coding.FromStrict({
+    payment_status_Cleared: new Coding({
         code: "cleared",
         display: "Cleared",
         system: "http://terminology.hl7.org/CodeSystem/paymentstatus"
@@ -21,7 +21,7 @@ export const PaymentStatusValueSet = {
     /**
      * The payment has been sent physically or electronically.
      */
-    payment_status_Paid: Coding.FromStrict({
+    payment_status_Paid: new Coding({
         code: "paid",
         display: "Paid",
         system: "http://terminology.hl7.org/CodeSystem/paymentstatus"

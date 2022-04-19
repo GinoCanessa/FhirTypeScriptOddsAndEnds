@@ -10,43 +10,43 @@ import { Coding } from '../fhir'
  * Procedure follow up codes: A selection of SNOMED CT codes relevant to procedure follow up.
  */
 export const ProcedureFollowupValueSet = {
-  ProcedureFollowupValueSet_VAL18949003: Coding.FromStrict({
+  ProcedureFollowupValueSet_VAL18949003: new Coding({
     code: "18949003",
     system: "http://snomed.info/sct"
   }),
-  ProcedureFollowupValueSet_VAL225164002: Coding.FromStrict({
+  ProcedureFollowupValueSet_VAL225164002: new Coding({
     code: "225164002",
     system: "http://snomed.info/sct"
   }),
-  ProcedureFollowupValueSet_VAL229506003: Coding.FromStrict({
+  ProcedureFollowupValueSet_VAL229506003: new Coding({
     code: "229506003",
     system: "http://snomed.info/sct"
   }),
-  ProcedureFollowupValueSet_VAL241031001: Coding.FromStrict({
+  ProcedureFollowupValueSet_VAL241031001: new Coding({
     code: "241031001",
     system: "http://snomed.info/sct"
   }),
-  ProcedureFollowupValueSet_VAL274441001: Coding.FromStrict({
+  ProcedureFollowupValueSet_VAL274441001: new Coding({
     code: "274441001",
     system: "http://snomed.info/sct"
   }),
-  ProcedureFollowupValueSet_VAL30549001: Coding.FromStrict({
+  ProcedureFollowupValueSet_VAL30549001: new Coding({
     code: "30549001",
     system: "http://snomed.info/sct"
   }),
-  ProcedureFollowupValueSet_VAL35963001: Coding.FromStrict({
+  ProcedureFollowupValueSet_VAL35963001: new Coding({
     code: "35963001",
     system: "http://snomed.info/sct"
   }),
-  ProcedureFollowupValueSet_VAL359825008: Coding.FromStrict({
+  ProcedureFollowupValueSet_VAL359825008: new Coding({
     code: "359825008",
     system: "http://snomed.info/sct"
   }),
-  ProcedureFollowupValueSet_VAL394725008: Coding.FromStrict({
+  ProcedureFollowupValueSet_VAL394725008: new Coding({
     code: "394725008",
     system: "http://snomed.info/sct"
   }),
-  ProcedureFollowupValueSet_VAL447346005: Coding.FromStrict({
+  ProcedureFollowupValueSet_VAL447346005: new Coding({
     code: "447346005",
     system: "http://snomed.info/sct"
   }),

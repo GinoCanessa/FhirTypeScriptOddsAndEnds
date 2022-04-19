@@ -278,11 +278,11 @@ export declare class EvidenceVariableCharacteristic extends fhir.BackboneElement
     /**
      * Check if the current EvidenceVariableCharacteristic contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a EvidenceVariableCharacteristic from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEvidenceVariableCharacteristic): EvidenceVariableCharacteristic;
+    static fromStrict(source: fhir.IEvidenceVariableCharacteristic): EvidenceVariableCharacteristic;
 }
 /**
  * The EvidenceVariable resource describes a "PICO" element that knowledge (evidence, assertion, recommendation) is about.
@@ -423,11 +423,11 @@ export declare class EvidenceVariable extends fhir.DomainResource implements fhi
     /**
      * Check if the current EvidenceVariable contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a EvidenceVariable from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEvidenceVariable): EvidenceVariable;
+    static fromStrict(source: fhir.IEvidenceVariable): EvidenceVariable;
 }
 /**
  * Code Values for the EvidenceVariable.characteristic.groupMeasure field

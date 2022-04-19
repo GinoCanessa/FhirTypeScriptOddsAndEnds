@@ -10,1312 +10,1312 @@ import { Coding } from '../fhir';
  * This value set includes [SNOMED CT](http://snomed.info/sct) where concept is-a 105590001 (Substance (substance)) or  concept is-a 260787004 (Physical object)  and provided as an example value set.
  */
 export const SupplyItemValueSet = {
-    SupplyItemValueSet_Heater: Coding.FromStrict({
+    SupplyItemValueSet_Heater: new Coding({
         code: "10172004",
         display: "Heater",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ModifiedFirearm: Coding.FromStrict({
+    SupplyItemValueSet_ModifiedFirearm: new Coding({
         code: "102329004",
         display: "Modified firearm",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_SemiAutomaticFirearm: Coding.FromStrict({
+    SupplyItemValueSet_SemiAutomaticFirearm: new Coding({
         code: "102330009",
         display: "Semi-automatic firearm",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_AutomaticFirearm: Coding.FromStrict({
+    SupplyItemValueSet_AutomaticFirearm: new Coding({
         code: "102331008",
         display: "Automatic firearm",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_SawedOffShotgun: Coding.FromStrict({
+    SupplyItemValueSet_SawedOffShotgun: new Coding({
         code: "102332001",
         display: "Sawed-off shotgun",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_SoftNoseBullet: Coding.FromStrict({
+    SupplyItemValueSet_SoftNoseBullet: new Coding({
         code: "102333006",
         display: "Soft-nose bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_LeadBullet: Coding.FromStrict({
+    SupplyItemValueSet_LeadBullet: new Coding({
         code: "102334000",
         display: "Lead bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_SolidNoseBullet: Coding.FromStrict({
+    SupplyItemValueSet_SolidNoseBullet: new Coding({
         code: "102335004",
         display: "Solid-nose bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_NickelCoveredBullet: Coding.FromStrict({
+    SupplyItemValueSet_NickelCoveredBullet: new Coding({
         code: "102336003",
         display: "Nickel-covered bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_SteelJacketBullet: Coding.FromStrict({
+    SupplyItemValueSet_SteelJacketBullet: new Coding({
         code: "102337007",
         display: "Steel-jacket bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Lance: Coding.FromStrict({
+    SupplyItemValueSet_Lance: new Coding({
         code: "102338002",
         display: "Lance",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Pike: Coding.FromStrict({
+    SupplyItemValueSet_Pike: new Coding({
         code: "102339005",
         display: "Pike",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_SurfaceToAirMissile: Coding.FromStrict({
+    SupplyItemValueSet_SurfaceToAirMissile: new Coding({
         code: "102340007",
         display: "Surface-to-air missile",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_SurfaceToSurfaceMissile: Coding.FromStrict({
+    SupplyItemValueSet_SurfaceToSurfaceMissile: new Coding({
         code: "102341006",
         display: "Surface-to-surface missile",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Shrapnel: Coding.FromStrict({
+    SupplyItemValueSet_Shrapnel: new Coding({
         code: "102342004",
         display: "Shrapnel",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL21InchCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL21InchCaliberBullet: new Coding({
         code: "102344003",
         display: ".21 inch caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL22InchCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL22InchCaliberBullet: new Coding({
         code: "102345002",
         display: ".22 inch caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL6MmCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL6MmCaliberBullet: new Coding({
         code: "102346001",
         display: "6 mm caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL25InchCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL25InchCaliberBullet: new Coding({
         code: "102347005",
         display: ".25 inch caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL65MmCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL65MmCaliberBullet: new Coding({
         code: "102348000",
         display: "6.5 mm caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL270InchCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL270InchCaliberBullet: new Coding({
         code: "102349008",
         display: ".270 inch caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL28InchCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL28InchCaliberBullet: new Coding({
         code: "102350008",
         display: ".28 inch caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL7MmCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL7MmCaliberBullet: new Coding({
         code: "102351007",
         display: "7 mm caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL30InchCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL30InchCaliberBullet: new Coding({
         code: "102352000",
         display: ".30 inch caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL303InchCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL303InchCaliberBullet: new Coding({
         code: "102353005",
         display: ".303 inch caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL8MmCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL8MmCaliberBullet: new Coding({
         code: "102354004",
         display: "8 mm caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL32InchCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL32InchCaliberBullet: new Coding({
         code: "102355003",
         display: ".32 inch caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL338InchCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL338InchCaliberBullet: new Coding({
         code: "102356002",
         display: ".338 inch caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL35InchCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL35InchCaliberBullet: new Coding({
         code: "102357006",
         display: ".35 inch caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL9MmCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL9MmCaliberBullet: new Coding({
         code: "102358001",
         display: "9 mm caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL375InchCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL375InchCaliberBullet: new Coding({
         code: "102359009",
         display: ".375 inch caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL38InchCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL38InchCaliberBullet: new Coding({
         code: "102360004",
         display: ".38 inch caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL10MmCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL10MmCaliberBullet: new Coding({
         code: "102361000",
         display: "10 mm caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL40InchCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL40InchCaliberBullet: new Coding({
         code: "102362007",
         display: ".40 inch caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL41InchCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL41InchCaliberBullet: new Coding({
         code: "102363002",
         display: ".41 inch caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL44InchCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL44InchCaliberBullet: new Coding({
         code: "102364008",
         display: ".44 inch caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL45InchCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL45InchCaliberBullet: new Coding({
         code: "102365009",
         display: ".45 inch caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL50InchCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL50InchCaliberBullet: new Coding({
         code: "102366005",
         display: ".50 inch caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL55InchCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL55InchCaliberBullet: new Coding({
         code: "102367001",
         display: ".55 inch caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_VAL60InchCaliberBullet: Coding.FromStrict({
+    SupplyItemValueSet_VAL60InchCaliberBullet: new Coding({
         code: "102368006",
         display: ".60 inch caliber bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_JetSki: Coding.FromStrict({
+    SupplyItemValueSet_JetSki: new Coding({
         code: "102389002",
         display: "Jet ski",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_InflatableMotorizedCraft: Coding.FromStrict({
+    SupplyItemValueSet_InflatableMotorizedCraft: new Coding({
         code: "102390006",
         display: "Inflatable motorized craft",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_InflatableRaft: Coding.FromStrict({
+    SupplyItemValueSet_InflatableRaft: new Coding({
         code: "102391005",
         display: "Inflatable raft",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_InflatableRowboat: Coding.FromStrict({
+    SupplyItemValueSet_InflatableRowboat: new Coding({
         code: "102392003",
         display: "Inflatable rowboat",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_LandVehicle: Coding.FromStrict({
+    SupplyItemValueSet_LandVehicle: new Coding({
         code: "10533008",
         display: "Land vehicle",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ArcheryBowANDORArrow: Coding.FromStrict({
+    SupplyItemValueSet_ArcheryBowANDORArrow: new Coding({
         code: "105797001",
         display: "Archery bow AND/OR arrow",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_HouseholdDevice: Coding.FromStrict({
+    SupplyItemValueSet_HouseholdDevice: new Coding({
         code: "105799003",
         display: "Household device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_HomeANDORFarmMachineANDORTool: Coding.FromStrict({
+    SupplyItemValueSet_HomeANDORFarmMachineANDORTool: new Coding({
         code: "105800004",
         display: "Home AND/OR farm machine AND/OR tool",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_HelicopterDevice: Coding.FromStrict({
+    SupplyItemValueSet_HelicopterDevice: new Coding({
         code: "1058004",
         display: "Helicopter, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_AirANDORSpacecraft: Coding.FromStrict({
+    SupplyItemValueSet_AirANDORSpacecraft: new Coding({
         code: "105801000",
         display: "Air AND/OR spacecraft",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ClothingMaterialANDORAccessory: Coding.FromStrict({
+    SupplyItemValueSet_ClothingMaterialANDORAccessory: new Coding({
         code: "105802007",
         display: "Clothing material AND/OR accessory",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ClothingMaterialANDORFootwear: Coding.FromStrict({
+    SupplyItemValueSet_ClothingMaterialANDORFootwear: new Coding({
         code: "105803002",
         display: "Clothing material AND/OR footwear",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_InstrumentOfStrangulationDevice: Coding.FromStrict({
+    SupplyItemValueSet_InstrumentOfStrangulationDevice: new Coding({
         code: "1066008",
         display: "Instrument of strangulation, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_IdentificationBracelet: Coding.FromStrict({
+    SupplyItemValueSet_IdentificationBracelet: new Coding({
         code: "111046003",
         display: "Identification bracelet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_BulletFragment: Coding.FromStrict({
+    SupplyItemValueSet_BulletFragment: new Coding({
         code: "111050005",
         display: "Bullet fragment",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_SecondaryMissile: Coding.FromStrict({
+    SupplyItemValueSet_SecondaryMissile: new Coding({
         code: "111051009",
         display: "Secondary missile",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Clothesiron: Coding.FromStrict({
+    SupplyItemValueSet_Clothesiron: new Coding({
         code: "111053007",
         display: "Clothesiron",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Snowblower: Coding.FromStrict({
+    SupplyItemValueSet_Snowblower: new Coding({
         code: "111054001",
         display: "Snowblower",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Clothesdryer: Coding.FromStrict({
+    SupplyItemValueSet_Clothesdryer: new Coding({
         code: "12121004",
         display: "Clothesdryer",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Truck: Coding.FromStrict({
+    SupplyItemValueSet_Truck: new Coding({
         code: "12247004",
         display: "Truck",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_WaterborneCraft: Coding.FromStrict({
+    SupplyItemValueSet_WaterborneCraft: new Coding({
         code: "12561005",
         display: "Waterborne craft",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_SurfaceCraft: Coding.FromStrict({
+    SupplyItemValueSet_SurfaceCraft: new Coding({
         code: "12698003",
         display: "Surface craft",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_HomeFurnace: Coding.FromStrict({
+    SupplyItemValueSet_HomeFurnace: new Coding({
         code: "13268008",
         display: "Home furnace",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_HangGlider: Coding.FromStrict({
+    SupplyItemValueSet_HangGlider: new Coding({
         code: "14026005",
         display: "Hang glider",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_GuidedMissile: Coding.FromStrict({
+    SupplyItemValueSet_GuidedMissile: new Coding({
         code: "14069002",
         display: "Guided missile",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Carbine: Coding.FromStrict({
+    SupplyItemValueSet_Carbine: new Coding({
         code: "14294006",
         display: "Carbine",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ShowerBath: Coding.FromStrict({
+    SupplyItemValueSet_ShowerBath: new Coding({
         code: "14397001",
         display: "Shower bath",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_SitzBathChair: Coding.FromStrict({
+    SupplyItemValueSet_SitzBathChair: new Coding({
         code: "15237007",
         display: "Sitz bath chair",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ClotheswringerDevice: Coding.FromStrict({
+    SupplyItemValueSet_ClotheswringerDevice: new Coding({
         code: "16127002",
         display: "Clotheswringer, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_TankMilitaryVehicle: Coding.FromStrict({
+    SupplyItemValueSet_TankMilitaryVehicle: new Coding({
         code: "16916003",
         display: "Tank - military vehicle",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ElectricalOutletDevice: Coding.FromStrict({
+    SupplyItemValueSet_ElectricalOutletDevice: new Coding({
         code: "18100009",
         display: "Electrical outlet, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_CanisterDevice: Coding.FromStrict({
+    SupplyItemValueSet_CanisterDevice: new Coding({
         code: "18492004",
         display: "Canister, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_UltralightPoweredGliderDevice: Coding.FromStrict({
+    SupplyItemValueSet_UltralightPoweredGliderDevice: new Coding({
         code: "18813000",
         display: "Ultralight powered glider, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_RopeLigatureDevice: Coding.FromStrict({
+    SupplyItemValueSet_RopeLigatureDevice: new Coding({
         code: "19902007",
         display: "Rope ligature, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_FarmMachineDevice: Coding.FromStrict({
+    SupplyItemValueSet_FarmMachineDevice: new Coding({
         code: "19966008",
         display: "Farm machine, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_BathinetteDevice: Coding.FromStrict({
+    SupplyItemValueSet_BathinetteDevice: new Coding({
         code: "20032007",
         display: "Bathinette, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_CombineDevice: Coding.FromStrict({
+    SupplyItemValueSet_CombineDevice: new Coding({
         code: "20909006",
         display: "Combine, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Arrow: Coding.FromStrict({
+    SupplyItemValueSet_Arrow: new Coding({
         code: "210005",
         display: "Arrow",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_RowingBoat: Coding.FromStrict({
+    SupplyItemValueSet_RowingBoat: new Coding({
         code: "21249000",
         display: "Rowing boat",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_CorrectingPaperDevice: Coding.FromStrict({
+    SupplyItemValueSet_CorrectingPaperDevice: new Coding({
         code: "21735008",
         display: "Correcting paper, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_AircraftDevice: Coding.FromStrict({
+    SupplyItemValueSet_AircraftDevice: new Coding({
         code: "21753002",
         display: "Aircraft, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_OceanLinerDevice: Coding.FromStrict({
+    SupplyItemValueSet_OceanLinerDevice: new Coding({
         code: "21812002",
         display: "Ocean liner, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_MotorBusDevice: Coding.FromStrict({
+    SupplyItemValueSet_MotorBusDevice: new Coding({
         code: "22674006",
         display: "Motor bus, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_HouseholdFurnitureDevice: Coding.FromStrict({
+    SupplyItemValueSet_HouseholdFurnitureDevice: new Coding({
         code: "23076004",
         display: "Household furniture, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_HouseholdVentilatorDevice: Coding.FromStrict({
+    SupplyItemValueSet_HouseholdVentilatorDevice: new Coding({
         code: "23562009",
         display: "Household ventilator, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_HandGun: Coding.FromStrict({
+    SupplyItemValueSet_HandGun: new Coding({
         code: "24219003",
         display: "Hand gun",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_PoweredIndustrialTruckDevice: Coding.FromStrict({
+    SupplyItemValueSet_PoweredIndustrialTruckDevice: new Coding({
         code: "24439002",
         display: "Powered industrial truck, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_SailingCraft: Coding.FromStrict({
+    SupplyItemValueSet_SailingCraft: new Coding({
         code: "24561005",
         display: "Sailing craft",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_TruckTrailerDevice: Coding.FromStrict({
+    SupplyItemValueSet_TruckTrailerDevice: new Coding({
         code: "24761008",
         display: "Truck-trailer, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_MopedDevice: Coding.FromStrict({
+    SupplyItemValueSet_MopedDevice: new Coding({
         code: "25139002",
         display: "Moped, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_FerryDevice: Coding.FromStrict({
+    SupplyItemValueSet_FerryDevice: new Coding({
         code: "25851002",
         display: "Ferry, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_CarbonPaperDevice: Coding.FromStrict({
+    SupplyItemValueSet_CarbonPaperDevice: new Coding({
         code: "25864001",
         display: "Carbon paper, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_KayakDevice: Coding.FromStrict({
+    SupplyItemValueSet_KayakDevice: new Coding({
         code: "25923005",
         display: "Kayak, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_OceanFreighterDevice: Coding.FromStrict({
+    SupplyItemValueSet_OceanFreighterDevice: new Coding({
         code: "26744008",
         display: "Ocean freighter, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_BedBoardDevice: Coding.FromStrict({
+    SupplyItemValueSet_BedBoardDevice: new Coding({
         code: "27036008",
         display: "Bed board, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_LandMineDevice: Coding.FromStrict({
+    SupplyItemValueSet_LandMineDevice: new Coding({
         code: "27676004",
         display: "Land mine, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_GliderDevice: Coding.FromStrict({
+    SupplyItemValueSet_GliderDevice: new Coding({
         code: "28422005",
         display: "Glider, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_SideDeliveryHayRakeDevice: Coding.FromStrict({
+    SupplyItemValueSet_SideDeliveryHayRakeDevice: new Coding({
         code: "28519005",
         display: "Side-delivery hay rake, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_DartDevice: Coding.FromStrict({
+    SupplyItemValueSet_DartDevice: new Coding({
         code: "29339003",
         display: "Dart, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_LeatherAccessory: Coding.FromStrict({
+    SupplyItemValueSet_LeatherAccessory: new Coding({
         code: "29873003",
         display: "Leather accessory",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_FireplaceDevice: Coding.FromStrict({
+    SupplyItemValueSet_FireplaceDevice: new Coding({
         code: "30002008",
         display: "Fireplace, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_CrossBowDevice: Coding.FromStrict({
+    SupplyItemValueSet_CrossBowDevice: new Coding({
         code: "3024002",
         display: "Cross-bow, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_AerosolSprayerDevice: Coding.FromStrict({
+    SupplyItemValueSet_AerosolSprayerDevice: new Coding({
         code: "30784000",
         display: "Aerosol sprayer, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Firework: Coding.FromStrict({
+    SupplyItemValueSet_Firework: new Coding({
         code: "30926007",
         display: "Firework",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ShotgunDevice: Coding.FromStrict({
+    SupplyItemValueSet_ShotgunDevice: new Coding({
         code: "31209004",
         display: "Shotgun, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_PedalCycleDevice: Coding.FromStrict({
+    SupplyItemValueSet_PedalCycleDevice: new Coding({
         code: "31493009",
         display: "Pedal cycle, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_MachineGunDevice: Coding.FromStrict({
+    SupplyItemValueSet_MachineGunDevice: new Coding({
         code: "32130004",
         display: "Machine gun, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_MedicalHelicopterDevice: Coding.FromStrict({
+    SupplyItemValueSet_MedicalHelicopterDevice: new Coding({
         code: "32472009",
         display: "Medical helicopter, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ConstructionVehicleDevice: Coding.FromStrict({
+    SupplyItemValueSet_ConstructionVehicleDevice: new Coding({
         code: "32476007",
         display: "Construction vehicle, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_MatchesDevice: Coding.FromStrict({
+    SupplyItemValueSet_MatchesDevice: new Coding({
         code: "33336008",
         display: "Matches, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_CigaretteLighterDevice: Coding.FromStrict({
+    SupplyItemValueSet_CigaretteLighterDevice: new Coding({
         code: "3385008",
         display: "Cigarette lighter, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_LampDevice: Coding.FromStrict({
+    SupplyItemValueSet_LampDevice: new Coding({
         code: "34160005",
         display: "Lamp, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_AirgunPellet: Coding.FromStrict({
+    SupplyItemValueSet_AirgunPellet: new Coding({
         code: "34396001",
         display: "Airgun pellet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_MuzzleLoadingGunDevice: Coding.FromStrict({
+    SupplyItemValueSet_MuzzleLoadingGunDevice: new Coding({
         code: "34942006",
         display: "Muzzle loading gun, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_HeavyLandTransportVehicleDevice: Coding.FromStrict({
+    SupplyItemValueSet_HeavyLandTransportVehicleDevice: new Coding({
         code: "35018000",
         display: "Heavy land transport vehicle, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_SpikeHarrowDevice: Coding.FromStrict({
+    SupplyItemValueSet_SpikeHarrowDevice: new Coding({
         code: "36011000",
         display: "Spike harrow, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_TransportVehicleDevice: Coding.FromStrict({
+    SupplyItemValueSet_TransportVehicleDevice: new Coding({
         code: "36030000",
         display: "Transport vehicle, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_DirigibleAirship: Coding.FromStrict({
+    SupplyItemValueSet_DirigibleAirship: new Coding({
         code: "36531007",
         display: "Dirigible airship",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Trike: Coding.FromStrict({
+    SupplyItemValueSet_Trike: new Coding({
         code: "37299003",
         display: "Trike",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_MediumLandTransportVehicleDevice: Coding.FromStrict({
+    SupplyItemValueSet_MediumLandTransportVehicleDevice: new Coding({
         code: "37823000",
         display: "Medium land transport vehicle, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_MedicalAlertIdentificationBraceletDevice: Coding.FromStrict({
+    SupplyItemValueSet_MedicalAlertIdentificationBraceletDevice: new Coding({
         code: "38472000",
         display: "Medical alert identification bracelet, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_NuclearWeaponDevice: Coding.FromStrict({
+    SupplyItemValueSet_NuclearWeaponDevice: new Coding({
         code: "38485002",
         display: "Nuclear weapon, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_StreetcarDevice: Coding.FromStrict({
+    SupplyItemValueSet_StreetcarDevice: new Coding({
         code: "38548008",
         display: "Streetcar, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_SpacecraftDevice: Coding.FromStrict({
+    SupplyItemValueSet_SpacecraftDevice: new Coding({
         code: "38988005",
         display: "Spacecraft, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_MilitaryShipDevice: Coding.FromStrict({
+    SupplyItemValueSet_MilitaryShipDevice: new Coding({
         code: "39374005",
         display: "Military ship, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_LightAnywhereMatchesDevice: Coding.FromStrict({
+    SupplyItemValueSet_LightAnywhereMatchesDevice: new Coding({
         code: "39661006",
         display: "Light anywhere matches, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_RailwayLocomotiveDevice: Coding.FromStrict({
+    SupplyItemValueSet_RailwayLocomotiveDevice: new Coding({
         code: "39752002",
         display: "Railway locomotive, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_DomesticObject: Coding.FromStrict({
+    SupplyItemValueSet_DomesticObject: new Coding({
         code: "40188005",
         display: "Domestic object",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_CommercialFixedWingAircraftDevice: Coding.FromStrict({
+    SupplyItemValueSet_CommercialFixedWingAircraftDevice: new Coding({
         code: "40353003",
         display: "Commercial fixed-wing aircraft, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_CatamaranDevice: Coding.FromStrict({
+    SupplyItemValueSet_CatamaranDevice: new Coding({
         code: "41338002",
         display: "Catamaran, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ShotgunSlugDevice: Coding.FromStrict({
+    SupplyItemValueSet_ShotgunSlugDevice: new Coding({
         code: "41430008",
         display: "Shotgun slug, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_WagonDevice: Coding.FromStrict({
+    SupplyItemValueSet_WagonDevice: new Coding({
         code: "41456001",
         display: "Wagon, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ArcheryBoltDevice: Coding.FromStrict({
+    SupplyItemValueSet_ArcheryBoltDevice: new Coding({
         code: "42119000",
         display: "Archery bolt, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ClubDevice: Coding.FromStrict({
+    SupplyItemValueSet_ClubDevice: new Coding({
         code: "42974001",
         display: "Club, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_UnicycleDevice: Coding.FromStrict({
+    SupplyItemValueSet_UnicycleDevice: new Coding({
         code: "43423007",
         display: "Unicycle, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_MissileDevice: Coding.FromStrict({
+    SupplyItemValueSet_MissileDevice: new Coding({
         code: "44468009",
         display: "Missile, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_GroundTransportAmbulanceDevice: Coding.FromStrict({
+    SupplyItemValueSet_GroundTransportAmbulanceDevice: new Coding({
         code: "44613004",
         display: "Ground transport ambulance, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_GarbageDisposalApplianceDevice: Coding.FromStrict({
+    SupplyItemValueSet_GarbageDisposalApplianceDevice: new Coding({
         code: "4502000",
         display: "Garbage disposal appliance, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_HospitalShowerBathDevice: Coding.FromStrict({
+    SupplyItemValueSet_HospitalShowerBathDevice: new Coding({
         code: "45984009",
         display: "Hospital shower bath, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_PlasticExplosiveDevice: Coding.FromStrict({
+    SupplyItemValueSet_PlasticExplosiveDevice: new Coding({
         code: "46074001",
         display: "Plastic explosive, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_MotorizedRoadTrafficVehicle: Coding.FromStrict({
+    SupplyItemValueSet_MotorizedRoadTrafficVehicle: new Coding({
         code: "46160005",
         display: "Motorized road traffic vehicle",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_JetAirplaneDevice: Coding.FromStrict({
+    SupplyItemValueSet_JetAirplaneDevice: new Coding({
         code: "46274009",
         display: "Jet airplane, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_RailwayFreightCarDevice: Coding.FromStrict({
+    SupplyItemValueSet_RailwayFreightCarDevice: new Coding({
         code: "46542001",
         display: "Railway freight car, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_InboardMotorboatDevice: Coding.FromStrict({
+    SupplyItemValueSet_InboardMotorboatDevice: new Coding({
         code: "46880008",
         display: "Inboard motorboat, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_BalloonAircraft: Coding.FromStrict({
+    SupplyItemValueSet_BalloonAircraft: new Coding({
         code: "47006006",
         display: "Balloon aircraft",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_HomemadeFirearmDevice: Coding.FromStrict({
+    SupplyItemValueSet_HomemadeFirearmDevice: new Coding({
         code: "47793004",
         display: "Homemade firearm, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_SchoolBusDevice: Coding.FromStrict({
+    SupplyItemValueSet_SchoolBusDevice: new Coding({
         code: "48306000",
         display: "School bus, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_AtomicWeaponDevice: Coding.FromStrict({
+    SupplyItemValueSet_AtomicWeaponDevice: new Coding({
         code: "4841006",
         display: "Atomic weapon, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_FireplaceLighterDevice: Coding.FromStrict({
+    SupplyItemValueSet_FireplaceLighterDevice: new Coding({
         code: "48545009",
         display: "Fireplace lighter, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Device: Coding.FromStrict({
+    SupplyItemValueSet_Device: new Coding({
         code: "49062001",
         display: "Device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_KitchenSinkDevice: Coding.FromStrict({
+    SupplyItemValueSet_KitchenSinkDevice: new Coding({
         code: "4909001",
         display: "Kitchen sink, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_AmbulanceDevice: Coding.FromStrict({
+    SupplyItemValueSet_AmbulanceDevice: new Coding({
         code: "49122002",
         display: "Ambulance, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_BulldozerDevice: Coding.FromStrict({
+    SupplyItemValueSet_BulldozerDevice: new Coding({
         code: "49133004",
         display: "Bulldozer, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_PoweredCraft: Coding.FromStrict({
+    SupplyItemValueSet_PoweredCraft: new Coding({
         code: "49623006",
         display: "Powered craft",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Tractor: Coding.FromStrict({
+    SupplyItemValueSet_Tractor: new Coding({
         code: "49980008",
         display: "Tractor",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_BowStringDevice: Coding.FromStrict({
+    SupplyItemValueSet_BowStringDevice: new Coding({
         code: "50268008",
         display: "Bow string, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_CostumeJewelry: Coding.FromStrict({
+    SupplyItemValueSet_CostumeJewelry: new Coding({
         code: "50488009",
         display: "Costume jewelry",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_PaperDevice: Coding.FromStrict({
+    SupplyItemValueSet_PaperDevice: new Coding({
         code: "50833004",
         display: "Paper, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ThermonuclearWeaponDevice: Coding.FromStrict({
+    SupplyItemValueSet_ThermonuclearWeaponDevice: new Coding({
         code: "51287006",
         display: "Thermonuclear weapon, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_DiaperDevice: Coding.FromStrict({
+    SupplyItemValueSet_DiaperDevice: new Coding({
         code: "52065008",
         display: "Diaper, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_HayWagonDevice: Coding.FromStrict({
+    SupplyItemValueSet_HayWagonDevice: new Coding({
         code: "52325000",
         display: "Hay wagon, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_TaxiDevice: Coding.FromStrict({
+    SupplyItemValueSet_TaxiDevice: new Coding({
         code: "52387005",
         display: "Taxi, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_BloodDrawingChairDevice: Coding.FromStrict({
+    SupplyItemValueSet_BloodDrawingChairDevice: new Coding({
         code: "52495005",
         display: "Blood drawing chair, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_TargetArrowDevice: Coding.FromStrict({
+    SupplyItemValueSet_TargetArrowDevice: new Coding({
         code: "53680008",
         display: "Target arrow, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_DeltaWingAircraftDevice: Coding.FromStrict({
+    SupplyItemValueSet_DeltaWingAircraftDevice: new Coding({
         code: "53811000",
         display: "Delta-wing aircraft, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_MilitaryMobileWeaponCarrierDevice: Coding.FromStrict({
+    SupplyItemValueSet_MilitaryMobileWeaponCarrierDevice: new Coding({
         code: "53977009",
         display: "Military mobile weapon carrier, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_UnidentifiedFlyingObjectDevice: Coding.FromStrict({
+    SupplyItemValueSet_UnidentifiedFlyingObjectDevice: new Coding({
         code: "54752006",
         display: "Unidentified flying object, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_UnexplodedBomb: Coding.FromStrict({
+    SupplyItemValueSet_UnexplodedBomb: new Coding({
         code: "54807002",
         display: "Unexploded bomb",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_LightLandTransportVehicleDevice: Coding.FromStrict({
+    SupplyItemValueSet_LightLandTransportVehicleDevice: new Coding({
         code: "55121009",
         display: "Light land transport vehicle, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_PhotographyPaperDevice: Coding.FromStrict({
+    SupplyItemValueSet_PhotographyPaperDevice: new Coding({
         code: "55263001",
         display: "Photography paper, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_WritingPaperDevice: Coding.FromStrict({
+    SupplyItemValueSet_WritingPaperDevice: new Coding({
         code: "55287004",
         display: "Writing paper, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_AirGunDevice: Coding.FromStrict({
+    SupplyItemValueSet_AirGunDevice: new Coding({
         code: "55674003",
         display: "Air gun, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_HomemadeBombDevice: Coding.FromStrict({
+    SupplyItemValueSet_HomemadeBombDevice: new Coding({
         code: "55684002",
         display: "Homemade bomb, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_MunitionDevice: Coding.FromStrict({
+    SupplyItemValueSet_MunitionDevice: new Coding({
         code: "55964003",
         display: "Munition, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_FirecrackerDevice: Coding.FromStrict({
+    SupplyItemValueSet_FirecrackerDevice: new Coding({
         code: "55980008",
         display: "Firecracker, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_BuggyDevice: Coding.FromStrict({
+    SupplyItemValueSet_BuggyDevice: new Coding({
         code: "56667001",
         display: "Buggy, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_RailwayPassengerCar: Coding.FromStrict({
+    SupplyItemValueSet_RailwayPassengerCar: new Coding({
         code: "5676002",
         display: "Railway passenger car",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ArquebusDevice: Coding.FromStrict({
+    SupplyItemValueSet_ArquebusDevice: new Coding({
         code: "57010004",
         display: "Arquebus, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_RicochetMissileDevice: Coding.FromStrict({
+    SupplyItemValueSet_RicochetMissileDevice: new Coding({
         code: "57295001",
         display: "Ricochet missile, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_RevolverDevice: Coding.FromStrict({
+    SupplyItemValueSet_RevolverDevice: new Coding({
         code: "57512001",
         display: "Revolver, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ExperimentalAircraftDevice: Coding.FromStrict({
+    SupplyItemValueSet_ExperimentalAircraftDevice: new Coding({
         code: "58068001",
         display: "Experimental aircraft, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_InterplanetaryCraftDevice: Coding.FromStrict({
+    SupplyItemValueSet_InterplanetaryCraftDevice: new Coding({
         code: "58222006",
         display: "Interplanetary craft, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_GrenadeDevice: Coding.FromStrict({
+    SupplyItemValueSet_GrenadeDevice: new Coding({
         code: "58824002",
         display: "Grenade, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_PrimaryMissileDevice: Coding.FromStrict({
+    SupplyItemValueSet_PrimaryMissileDevice: new Coding({
         code: "59402003",
         display: "Primary missile, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_SafetyMatchesDevice: Coding.FromStrict({
+    SupplyItemValueSet_SafetyMatchesDevice: new Coding({
         code: "59647009",
         display: "Safety matches, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_AerialBombDevice: Coding.FromStrict({
+    SupplyItemValueSet_AerialBombDevice: new Coding({
         code: "59711004",
         display: "Aerial bomb, device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Spear: Coding.FromStrict({
+    SupplyItemValueSet_Spear: new Coding({
         code: "60320003",
         display: "Spear",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_PlanetarySurfaceCraft: Coding.FromStrict({
+    SupplyItemValueSet_PlanetarySurfaceCraft: new Coding({
         code: "60638008",
         display: "Planetary surface craft",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Harrow: Coding.FromStrict({
+    SupplyItemValueSet_Harrow: new Coding({
         code: "60977008",
         display: "Harrow",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_OutboardMotorboat: Coding.FromStrict({
+    SupplyItemValueSet_OutboardMotorboat: new Coding({
         code: "61119009",
         display: "Outboard motorboat",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Machine: Coding.FromStrict({
+    SupplyItemValueSet_Machine: new Coding({
         code: "61284002",
         display: "Machine",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Glassware: Coding.FromStrict({
+    SupplyItemValueSet_Glassware: new Coding({
         code: "61433001",
         display: "Glassware",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_RailwayTrain: Coding.FromStrict({
+    SupplyItemValueSet_RailwayTrain: new Coding({
         code: "62193008",
         display: "Railway train",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ForkLiftTruck: Coding.FromStrict({
+    SupplyItemValueSet_ForkLiftTruck: new Coding({
         code: "63496001",
         display: "Fork lift truck",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_PrivateFixedWingAircraft: Coding.FromStrict({
+    SupplyItemValueSet_PrivateFixedWingAircraft: new Coding({
         code: "63830003",
         display: "Private fixed-wing aircraft",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_TrackedPersonnelCarrier: Coding.FromStrict({
+    SupplyItemValueSet_TrackedPersonnelCarrier: new Coding({
         code: "63958005",
         display: "Tracked personnel carrier",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ArtilleryMissile: Coding.FromStrict({
+    SupplyItemValueSet_ArtilleryMissile: new Coding({
         code: "641004",
         display: "Artillery missile",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_DumpTruck: Coding.FromStrict({
+    SupplyItemValueSet_DumpTruck: new Coding({
         code: "64223007",
         display: "Dump truck",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_PelletGunMissile: Coding.FromStrict({
+    SupplyItemValueSet_PelletGunMissile: new Coding({
         code: "64867003",
         display: "Pellet gun missile",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Surfboard: Coding.FromStrict({
+    SupplyItemValueSet_Surfboard: new Coding({
         code: "65493007",
         display: "Surfboard",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ArcheryBow: Coding.FromStrict({
+    SupplyItemValueSet_ArcheryBow: new Coding({
         code: "65893002",
         display: "Archery bow",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ExplosiveDevice: Coding.FromStrict({
+    SupplyItemValueSet_ExplosiveDevice: new Coding({
         code: "66113009",
         display: "Explosive device",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Kite: Coding.FromStrict({
+    SupplyItemValueSet_Kite: new Coding({
         code: "66373005",
         display: "Kite",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_LaunchCraft: Coding.FromStrict({
+    SupplyItemValueSet_LaunchCraft: new Coding({
         code: "66567008",
         display: "Launch craft",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Hydrofoil: Coding.FromStrict({
+    SupplyItemValueSet_Hydrofoil: new Coding({
         code: "6662008",
         display: "Hydrofoil",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_HouseholdAppliance: Coding.FromStrict({
+    SupplyItemValueSet_HouseholdAppliance: new Coding({
         code: "67604003",
         display: "Household appliance",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Fist: Coding.FromStrict({
+    SupplyItemValueSet_Fist: new Coding({
         code: "67651001",
         display: "Fist",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_PersonalEffectOfPatient: Coding.FromStrict({
+    SupplyItemValueSet_PersonalEffectOfPatient: new Coding({
         code: "6806005",
         display: "Personal effect of patient",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_BlastingCap: Coding.FromStrict({
+    SupplyItemValueSet_BlastingCap: new Coding({
         code: "6982005",
         display: "Blasting cap",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Firearm: Coding.FromStrict({
+    SupplyItemValueSet_Firearm: new Coding({
         code: "69861004",
         display: "Firearm",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Bicycle: Coding.FromStrict({
+    SupplyItemValueSet_Bicycle: new Coding({
         code: "70224005",
         display: "Bicycle",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Automobile: Coding.FromStrict({
+    SupplyItemValueSet_Automobile: new Coding({
         code: "71783008",
         display: "Automobile",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_SlingshotMissile: Coding.FromStrict({
+    SupplyItemValueSet_SlingshotMissile: new Coding({
         code: "72125006",
         display: "Slingshot missile",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Rifle: Coding.FromStrict({
+    SupplyItemValueSet_Rifle: new Coding({
         code: "72259003",
         display: "Rifle",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_FlyingDebris: Coding.FromStrict({
+    SupplyItemValueSet_FlyingDebris: new Coding({
         code: "73378007",
         display: "Flying debris",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_AirTransportAmbulance: Coding.FromStrict({
+    SupplyItemValueSet_AirTransportAmbulance: new Coding({
         code: "73957001",
         display: "Air transport ambulance",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ElectricRazor: Coding.FromStrict({
+    SupplyItemValueSet_ElectricRazor: new Coding({
         code: "74453004",
         display: "Electric razor",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_FormedAirGunPellet: Coding.FromStrict({
+    SupplyItemValueSet_FormedAirGunPellet: new Coding({
         code: "74695002",
         display: "Formed air gun pellet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_HospitalBath: Coding.FromStrict({
+    SupplyItemValueSet_HospitalBath: new Coding({
         code: "7473003",
         display: "Hospital bath",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_RailwayCar: Coding.FromStrict({
+    SupplyItemValueSet_RailwayCar: new Coding({
         code: "74812000",
         display: "Railway car",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Lighter: Coding.FromStrict({
+    SupplyItemValueSet_Lighter: new Coding({
         code: "75926004",
         display: "Lighter",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Bathtub: Coding.FromStrict({
+    SupplyItemValueSet_Bathtub: new Coding({
         code: "75988000",
         display: "Bathtub",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_DiscHarrow: Coding.FromStrict({
+    SupplyItemValueSet_DiscHarrow: new Coding({
         code: "76757002",
         display: "Disc harrow",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Submarine: Coding.FromStrict({
+    SupplyItemValueSet_Submarine: new Coding({
         code: "77081009",
         display: "Submarine",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Boomerang: Coding.FromStrict({
+    SupplyItemValueSet_Boomerang: new Coding({
         code: "77264007",
         display: "Boomerang",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ShotgunShot: Coding.FromStrict({
+    SupplyItemValueSet_ShotgunShot: new Coding({
         code: "77301004",
         display: "Shotgun shot",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_TruckTractor: Coding.FromStrict({
+    SupplyItemValueSet_TruckTractor: new Coding({
         code: "77508006",
         display: "Truck-tractor",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Clotheswasher: Coding.FromStrict({
+    SupplyItemValueSet_Clotheswasher: new Coding({
         code: "78412001",
         display: "Clotheswasher",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Canoe: Coding.FromStrict({
+    SupplyItemValueSet_Canoe: new Coding({
         code: "78489001",
         display: "Canoe",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_PlatinumJewelry: Coding.FromStrict({
+    SupplyItemValueSet_PlatinumJewelry: new Coding({
         code: "79406004",
         display: "Platinum jewelry",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_SilverJewelry: Coding.FromStrict({
+    SupplyItemValueSet_SilverJewelry: new Coding({
         code: "79641009",
         display: "Silver jewelry",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_HospitalFurniture: Coding.FromStrict({
+    SupplyItemValueSet_HospitalFurniture: new Coding({
         code: "80519002",
         display: "Hospital furniture",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_FragmentationBomb: Coding.FromStrict({
+    SupplyItemValueSet_FragmentationBomb: new Coding({
         code: "80840006",
         display: "Fragmentation bomb",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Jewelry: Coding.FromStrict({
+    SupplyItemValueSet_Jewelry: new Coding({
         code: "80919006",
         display: "Jewelry",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_HayRake: Coding.FromStrict({
+    SupplyItemValueSet_HayRake: new Coding({
         code: "81381000",
         display: "Hay rake",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Meteorite: Coding.FromStrict({
+    SupplyItemValueSet_Meteorite: new Coding({
         code: "81427002",
         display: "Meteorite",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_HuntingBow: Coding.FromStrict({
+    SupplyItemValueSet_HuntingBow: new Coding({
         code: "82192009",
         display: "Hunting bow",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ArtilleryShell: Coding.FromStrict({
+    SupplyItemValueSet_ArtilleryShell: new Coding({
         code: "82652006",
         display: "Artillery shell",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_PowerChopper: Coding.FromStrict({
+    SupplyItemValueSet_PowerChopper: new Coding({
         code: "82924004",
         display: "Power chopper",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_RescueVehicle: Coding.FromStrict({
+    SupplyItemValueSet_RescueVehicle: new Coding({
         code: "83887000",
         display: "Rescue vehicle",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_PropellerAirplane: Coding.FromStrict({
+    SupplyItemValueSet_PropellerAirplane: new Coding({
         code: "83930005",
         display: "Propeller airplane",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_OrbitingCraft: Coding.FromStrict({
+    SupplyItemValueSet_OrbitingCraft: new Coding({
         code: "84151001",
         display: "Orbiting craft",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_LawnMower: Coding.FromStrict({
+    SupplyItemValueSet_LawnMower: new Coding({
         code: "85590000",
         display: "Lawn mower",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_PhotocopyPaper: Coding.FromStrict({
+    SupplyItemValueSet_PhotocopyPaper: new Coding({
         code: "85935002",
         display: "Photocopy paper",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Raft: Coding.FromStrict({
+    SupplyItemValueSet_Raft: new Coding({
         code: "86118007",
         display: "Raft",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Bullet: Coding.FromStrict({
+    SupplyItemValueSet_Bullet: new Coding({
         code: "86122002",
         display: "Bullet",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_TargetBow: Coding.FromStrict({
+    SupplyItemValueSet_TargetBow: new Coding({
         code: "87761008",
         display: "Target bow",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_InflatableBoat: Coding.FromStrict({
+    SupplyItemValueSet_InflatableBoat: new Coding({
         code: "87985005",
         display: "Inflatable boat",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Pistol: Coding.FromStrict({
+    SupplyItemValueSet_Pistol: new Coding({
         code: "9016000",
         display: "Pistol",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_BluntInstrument: Coding.FromStrict({
+    SupplyItemValueSet_BluntInstrument: new Coding({
         code: "9020001",
         display: "Blunt instrument",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_GoldJewelry: Coding.FromStrict({
+    SupplyItemValueSet_GoldJewelry: new Coding({
         code: "90277006",
         display: "Gold jewelry",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Hovercraft: Coding.FromStrict({
+    SupplyItemValueSet_Hovercraft: new Coding({
         code: "90335008",
         display: "Hovercraft",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Motorbike: Coding.FromStrict({
+    SupplyItemValueSet_Motorbike: new Coding({
         code: "90748009",
         display: "Motorbike",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_AnimalDrawnVehicle: Coding.FromStrict({
+    SupplyItemValueSet_AnimalDrawnVehicle: new Coding({
         code: "90963000",
         display: "Animal-drawn vehicle",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Toy: Coding.FromStrict({
+    SupplyItemValueSet_Toy: new Coding({
         code: "91032009",
         display: "Toy",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_ZipGun: Coding.FromStrict({
+    SupplyItemValueSet_ZipGun: new Coding({
         code: "9149007",
         display: "Zip gun",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_FishingVessel: Coding.FromStrict({
+    SupplyItemValueSet_FishingVessel: new Coding({
         code: "91556002",
         display: "Fishing vessel",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_HayBailer: Coding.FromStrict({
+    SupplyItemValueSet_HayBailer: new Coding({
         code: "91582006",
         display: "Hay bailer",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_Stove: Coding.FromStrict({
+    SupplyItemValueSet_Stove: new Coding({
         code: "91656009",
         display: "Stove",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_OilTanker: Coding.FromStrict({
+    SupplyItemValueSet_OilTanker: new Coding({
         code: "9583005",
         display: "Oil tanker",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_HuntingArrow: Coding.FromStrict({
+    SupplyItemValueSet_HuntingArrow: new Coding({
         code: "9916002",
         display: "Hunting arrow",
         system: "http://snomed.info/sct"
     }),
-    SupplyItemValueSet_FarmToolDevice: Coding.FromStrict({
+    SupplyItemValueSet_FarmToolDevice: new Coding({
         code: "995006",
         display: "Farm tool, device",
         system: "http://snomed.info/sct"

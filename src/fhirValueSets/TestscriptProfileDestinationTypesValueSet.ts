@@ -13,7 +13,7 @@ export const TestscriptProfileDestinationTypesValueSet = {
   /**
    * A FHIR server acting as a Structured Data Capture Form Manager.
    */
-  testscript_profile_destination_types_FHIRSDCFormManager: Coding.FromStrict({
+  testscript_profile_destination_types_FHIRSDCFormManager: new Coding({
     code: "FHIR-SDC-FormManager",
     display: "FHIR SDC FormManager",
     system: "http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types"
@@ -21,7 +21,7 @@ export const TestscriptProfileDestinationTypesValueSet = {
   /**
    * A FHIR server acting as a Structured Data Capture Form Processor.
    */
-  testscript_profile_destination_types_FHIRSDCFormProcessor: Coding.FromStrict({
+  testscript_profile_destination_types_FHIRSDCFormProcessor: new Coding({
     code: "FHIR-SDC-FormProcessor",
     display: "FHIR SDC FormProcessor",
     system: "http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types"
@@ -29,7 +29,7 @@ export const TestscriptProfileDestinationTypesValueSet = {
   /**
    * A FHIR server acting as a Structured Data Capture Form Receiver.
    */
-  testscript_profile_destination_types_FHIRSDCFormReceiver: Coding.FromStrict({
+  testscript_profile_destination_types_FHIRSDCFormReceiver: new Coding({
     code: "FHIR-SDC-FormReceiver",
     display: "FHIR SDC FormReceiver",
     system: "http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types"
@@ -37,7 +37,7 @@ export const TestscriptProfileDestinationTypesValueSet = {
   /**
    * General FHIR server used to respond to operations sent from a FHIR client.
    */
-  testscript_profile_destination_types_FHIRServer: Coding.FromStrict({
+  testscript_profile_destination_types_FHIRServer: new Coding({
     code: "FHIR-Server",
     display: "FHIR Server",
     system: "http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types"

@@ -212,11 +212,11 @@ export declare class SubstanceSourceMaterialFractionDescription extends fhir.Bac
     /**
      * Check if the current SubstanceSourceMaterialFractionDescription contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceSourceMaterialFractionDescription from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceSourceMaterialFractionDescription): SubstanceSourceMaterialFractionDescription;
+    static fromStrict(source: fhir.ISubstanceSourceMaterialFractionDescription): SubstanceSourceMaterialFractionDescription;
 }
 /**
  * 4.9.13.6.1 Author type (Conditional).
@@ -238,11 +238,11 @@ export declare class SubstanceSourceMaterialOrganismAuthor extends fhir.Backbone
     /**
      * Check if the current SubstanceSourceMaterialOrganismAuthor contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceSourceMaterialOrganismAuthor from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceSourceMaterialOrganismAuthor): SubstanceSourceMaterialOrganismAuthor;
+    static fromStrict(source: fhir.ISubstanceSourceMaterialOrganismAuthor): SubstanceSourceMaterialOrganismAuthor;
 }
 /**
  * 4.9.13.8.1 Hybrid species maternal organism ID (Optional).
@@ -279,11 +279,11 @@ export declare class SubstanceSourceMaterialOrganismHybrid extends fhir.Backbone
     /**
      * Check if the current SubstanceSourceMaterialOrganismHybrid contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceSourceMaterialOrganismHybrid from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceSourceMaterialOrganismHybrid): SubstanceSourceMaterialOrganismHybrid;
+    static fromStrict(source: fhir.ISubstanceSourceMaterialOrganismHybrid): SubstanceSourceMaterialOrganismHybrid;
 }
 /**
  * 4.9.13.7.1 Kingdom (Conditional).
@@ -312,11 +312,11 @@ export declare class SubstanceSourceMaterialOrganismOrganismGeneral extends fhir
     /**
      * Check if the current SubstanceSourceMaterialOrganismOrganismGeneral contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceSourceMaterialOrganismOrganismGeneral from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceSourceMaterialOrganismOrganismGeneral): SubstanceSourceMaterialOrganismOrganismGeneral;
+    static fromStrict(source: fhir.ISubstanceSourceMaterialOrganismOrganismGeneral): SubstanceSourceMaterialOrganismOrganismGeneral;
 }
 /**
  * This subclause describes the organism which the substance is derived from. For vaccines, the parent organism shall be specified based on these subclause elements. As an example, full taxonomy will be described for the Substance Name: ., Leaf.
@@ -362,11 +362,11 @@ export declare class SubstanceSourceMaterialOrganism extends fhir.BackboneElemen
     /**
      * Check if the current SubstanceSourceMaterialOrganism contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceSourceMaterialOrganism from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceSourceMaterialOrganism): SubstanceSourceMaterialOrganism;
+    static fromStrict(source: fhir.ISubstanceSourceMaterialOrganism): SubstanceSourceMaterialOrganism;
 }
 /**
  * To do.
@@ -387,11 +387,11 @@ export declare class SubstanceSourceMaterialPartDescription extends fhir.Backbon
     /**
      * Check if the current SubstanceSourceMaterialPartDescription contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceSourceMaterialPartDescription from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceSourceMaterialPartDescription): SubstanceSourceMaterialPartDescription;
+    static fromStrict(source: fhir.ISubstanceSourceMaterialPartDescription): SubstanceSourceMaterialPartDescription;
 }
 /**
  * Source material shall capture information on the taxonomic and anatomical origins as well as the fraction of a material that can result in or can be modified to form a substance. This set of data elements shall be used to define polymer substances isolated from biological matrices. Taxonomic and anatomical origins shall be described using a controlled vocabulary as required. This information is captured for naturally derived polymers ( . starch) and structurally diverse substances. For Organisms belonging to the Kingdom Plantae the Substance level defines the fresh material of a single species or infraspecies, the Herbal Drug and the Herbal preparation. For Herbal preparations, the fraction information will be captured at the Substance information level and additional information for herbal extracts will be captured at the Specified Substance Group 1 information level. See for further explanation the Substance Class: Structurally Diverse and the herbal annex.
@@ -463,10 +463,10 @@ export declare class SubstanceSourceMaterial extends fhir.DomainResource impleme
     /**
      * Check if the current SubstanceSourceMaterial contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceSourceMaterial from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceSourceMaterial): SubstanceSourceMaterial;
+    static fromStrict(source: fhir.ISubstanceSourceMaterial): SubstanceSourceMaterial;
 }
 //# sourceMappingURL=SubstanceSourceMaterial.d.ts.map

@@ -98,11 +98,11 @@ export declare class SubscriptionChannel extends fhir.BackboneElement implements
     /**
      * Check if the current SubscriptionChannel contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubscriptionChannel from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubscriptionChannel): SubscriptionChannel;
+    static fromStrict(source: fhir.ISubscriptionChannel): SubscriptionChannel;
 }
 /**
  * The subscription resource is used to define a push-based subscription from a server to another system. Once a subscription is registered with the server, the server checks every resource that is created or updated, and if the resource matches the given criteria, it sends a message on the defined "channel" so that another system can take an appropriate action.
@@ -153,11 +153,11 @@ export declare class Subscription extends fhir.DomainResource implements fhir.IS
     /**
      * Check if the current Subscription contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Subscription from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubscription): Subscription;
+    static fromStrict(source: fhir.ISubscription): Subscription;
 }
 /**
  * Code Values for the Subscription.channel.type field

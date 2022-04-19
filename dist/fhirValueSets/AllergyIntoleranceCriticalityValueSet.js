@@ -13,7 +13,7 @@ export const AllergyIntoleranceCriticalityValueSet = {
     /**
      * Worst case result of a future exposure is assessed to be life-threatening or having high potential for organ system failure.
      */
-    allergy_intolerance_criticality_HighRisk: Coding.FromStrict({
+    allergy_intolerance_criticality_HighRisk: new Coding({
         code: "high",
         display: "High Risk",
         system: "http://hl7.org/fhir/allergy-intolerance-criticality"
@@ -21,7 +21,7 @@ export const AllergyIntoleranceCriticalityValueSet = {
     /**
      * Worst case result of a future exposure is not assessed to be life-threatening or having high potential for organ system failure.
      */
-    allergy_intolerance_criticality_LowRisk: Coding.FromStrict({
+    allergy_intolerance_criticality_LowRisk: new Coding({
         code: "low",
         display: "Low Risk",
         system: "http://hl7.org/fhir/allergy-intolerance-criticality"
@@ -29,7 +29,7 @@ export const AllergyIntoleranceCriticalityValueSet = {
     /**
      * Unable to assess the worst case result of a future exposure.
      */
-    allergy_intolerance_criticality_UnableToAssessRisk: Coding.FromStrict({
+    allergy_intolerance_criticality_UnableToAssessRisk: new Coding({
         code: "unable-to-assess",
         display: "Unable to Assess Risk",
         system: "http://hl7.org/fhir/allergy-intolerance-criticality"

@@ -343,11 +343,11 @@ export declare class ResearchDefinition extends fhir.DomainResource implements f
     /**
      * Check if the current ResearchDefinition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ResearchDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IResearchDefinition): ResearchDefinition;
+    static fromStrict(source: fhir.IResearchDefinition): ResearchDefinition;
 }
 /**
  * Code Values for the ResearchDefinition.status field

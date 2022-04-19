@@ -410,20 +410,20 @@ export class ResearchDefinition extends fhir.DomainResource implements fhir.IRes
   /**
    * Check if the current ResearchDefinition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["population"] === undefined) { missingElements.push("population"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ResearchDefinition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IResearchDefinition):ResearchDefinition {
+  static override fromStrict(source:fhir.IResearchDefinition):ResearchDefinition {
     var dest:ResearchDefinition = new ResearchDefinition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ResearchDefinition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

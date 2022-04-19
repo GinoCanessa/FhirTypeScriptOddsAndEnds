@@ -1013,18 +1013,18 @@ export class ExplanationOfBenefitRelated extends fhir.BackboneElement implements
   /**
    * Check if the current ExplanationOfBenefitRelated contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ExplanationOfBenefitRelated from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExplanationOfBenefitRelated):ExplanationOfBenefitRelated {
+  static override fromStrict(source:fhir.IExplanationOfBenefitRelated):ExplanationOfBenefitRelated {
     var dest:ExplanationOfBenefitRelated = new ExplanationOfBenefitRelated(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ExplanationOfBenefitRelated is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1052,18 +1052,18 @@ export class ExplanationOfBenefitPayee extends fhir.BackboneElement implements f
   /**
    * Check if the current ExplanationOfBenefitPayee contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ExplanationOfBenefitPayee from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExplanationOfBenefitPayee):ExplanationOfBenefitPayee {
+  static override fromStrict(source:fhir.IExplanationOfBenefitPayee):ExplanationOfBenefitPayee {
     var dest:ExplanationOfBenefitPayee = new ExplanationOfBenefitPayee(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ExplanationOfBenefitPayee is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1114,20 +1114,20 @@ export class ExplanationOfBenefitCareTeam extends fhir.BackboneElement implement
   /**
    * Check if the current ExplanationOfBenefitCareTeam contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["provider"] === undefined) { missingElements.push("provider"); }
     if (this["sequence"] === undefined) { missingElements.push("sequence"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ExplanationOfBenefitCareTeam from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExplanationOfBenefitCareTeam):ExplanationOfBenefitCareTeam {
+  static override fromStrict(source:fhir.IExplanationOfBenefitCareTeam):ExplanationOfBenefitCareTeam {
     var dest:ExplanationOfBenefitCareTeam = new ExplanationOfBenefitCareTeam(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ExplanationOfBenefitCareTeam is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1212,20 +1212,20 @@ export class ExplanationOfBenefitSupportingInfo extends fhir.BackboneElement imp
   /**
    * Check if the current ExplanationOfBenefitSupportingInfo contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["category"] === undefined) { missingElements.push("category"); }
     if (this["sequence"] === undefined) { missingElements.push("sequence"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ExplanationOfBenefitSupportingInfo from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExplanationOfBenefitSupportingInfo):ExplanationOfBenefitSupportingInfo {
+  static override fromStrict(source:fhir.IExplanationOfBenefitSupportingInfo):ExplanationOfBenefitSupportingInfo {
     var dest:ExplanationOfBenefitSupportingInfo = new ExplanationOfBenefitSupportingInfo(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ExplanationOfBenefitSupportingInfo is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1277,19 +1277,19 @@ export class ExplanationOfBenefitDiagnosis extends fhir.BackboneElement implemen
   /**
    * Check if the current ExplanationOfBenefitDiagnosis contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["sequence"] === undefined) { missingElements.push("sequence"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ExplanationOfBenefitDiagnosis from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExplanationOfBenefitDiagnosis):ExplanationOfBenefitDiagnosis {
+  static override fromStrict(source:fhir.IExplanationOfBenefitDiagnosis):ExplanationOfBenefitDiagnosis {
     var dest:ExplanationOfBenefitDiagnosis = new ExplanationOfBenefitDiagnosis(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ExplanationOfBenefitDiagnosis is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1343,19 +1343,19 @@ export class ExplanationOfBenefitProcedure extends fhir.BackboneElement implemen
   /**
    * Check if the current ExplanationOfBenefitProcedure contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["sequence"] === undefined) { missingElements.push("sequence"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ExplanationOfBenefitProcedure from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExplanationOfBenefitProcedure):ExplanationOfBenefitProcedure {
+  static override fromStrict(source:fhir.IExplanationOfBenefitProcedure):ExplanationOfBenefitProcedure {
     var dest:ExplanationOfBenefitProcedure = new ExplanationOfBenefitProcedure(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ExplanationOfBenefitProcedure is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1396,20 +1396,20 @@ export class ExplanationOfBenefitInsurance extends fhir.BackboneElement implemen
   /**
    * Check if the current ExplanationOfBenefitInsurance contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["coverage"] === undefined) { missingElements.push("coverage"); }
     if (this["focal"] === undefined) { missingElements.push("focal"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ExplanationOfBenefitInsurance from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExplanationOfBenefitInsurance):ExplanationOfBenefitInsurance {
+  static override fromStrict(source:fhir.IExplanationOfBenefitInsurance):ExplanationOfBenefitInsurance {
     var dest:ExplanationOfBenefitInsurance = new ExplanationOfBenefitInsurance(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ExplanationOfBenefitInsurance is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1449,18 +1449,18 @@ export class ExplanationOfBenefitAccident extends fhir.BackboneElement implement
   /**
    * Check if the current ExplanationOfBenefitAccident contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ExplanationOfBenefitAccident from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExplanationOfBenefitAccident):ExplanationOfBenefitAccident {
+  static override fromStrict(source:fhir.IExplanationOfBenefitAccident):ExplanationOfBenefitAccident {
     var dest:ExplanationOfBenefitAccident = new ExplanationOfBenefitAccident(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ExplanationOfBenefitAccident is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1502,19 +1502,19 @@ export class ExplanationOfBenefitItemAdjudication extends fhir.BackboneElement i
   /**
    * Check if the current ExplanationOfBenefitItemAdjudication contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["category"] === undefined) { missingElements.push("category"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ExplanationOfBenefitItemAdjudication from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExplanationOfBenefitItemAdjudication):ExplanationOfBenefitItemAdjudication {
+  static override fromStrict(source:fhir.IExplanationOfBenefitItemAdjudication):ExplanationOfBenefitItemAdjudication {
     var dest:ExplanationOfBenefitItemAdjudication = new ExplanationOfBenefitItemAdjudication(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ExplanationOfBenefitItemAdjudication is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1607,20 +1607,20 @@ export class ExplanationOfBenefitItemDetailSubDetail extends fhir.BackboneElemen
   /**
    * Check if the current ExplanationOfBenefitItemDetailSubDetail contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["productOrService"] === undefined) { missingElements.push("productOrService"); }
     if (this["sequence"] === undefined) { missingElements.push("sequence"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ExplanationOfBenefitItemDetailSubDetail from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExplanationOfBenefitItemDetailSubDetail):ExplanationOfBenefitItemDetailSubDetail {
+  static override fromStrict(source:fhir.IExplanationOfBenefitItemDetailSubDetail):ExplanationOfBenefitItemDetailSubDetail {
     var dest:ExplanationOfBenefitItemDetailSubDetail = new ExplanationOfBenefitItemDetailSubDetail(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ExplanationOfBenefitItemDetailSubDetail is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1718,20 +1718,20 @@ export class ExplanationOfBenefitItemDetail extends fhir.BackboneElement impleme
   /**
    * Check if the current ExplanationOfBenefitItemDetail contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["productOrService"] === undefined) { missingElements.push("productOrService"); }
     if (this["sequence"] === undefined) { missingElements.push("sequence"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ExplanationOfBenefitItemDetail from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExplanationOfBenefitItemDetail):ExplanationOfBenefitItemDetail {
+  static override fromStrict(source:fhir.IExplanationOfBenefitItemDetail):ExplanationOfBenefitItemDetail {
     var dest:ExplanationOfBenefitItemDetail = new ExplanationOfBenefitItemDetail(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ExplanationOfBenefitItemDetail is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1899,20 +1899,20 @@ export class ExplanationOfBenefitItem extends fhir.BackboneElement implements fh
   /**
    * Check if the current ExplanationOfBenefitItem contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["productOrService"] === undefined) { missingElements.push("productOrService"); }
     if (this["sequence"] === undefined) { missingElements.push("sequence"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ExplanationOfBenefitItem from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExplanationOfBenefitItem):ExplanationOfBenefitItem {
+  static override fromStrict(source:fhir.IExplanationOfBenefitItem):ExplanationOfBenefitItem {
     var dest:ExplanationOfBenefitItem = new ExplanationOfBenefitItem(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ExplanationOfBenefitItem is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1976,19 +1976,19 @@ export class ExplanationOfBenefitAddItemDetailSubDetail extends fhir.BackboneEle
   /**
    * Check if the current ExplanationOfBenefitAddItemDetailSubDetail contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["productOrService"] === undefined) { missingElements.push("productOrService"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ExplanationOfBenefitAddItemDetailSubDetail from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExplanationOfBenefitAddItemDetailSubDetail):ExplanationOfBenefitAddItemDetailSubDetail {
+  static override fromStrict(source:fhir.IExplanationOfBenefitAddItemDetailSubDetail):ExplanationOfBenefitAddItemDetailSubDetail {
     var dest:ExplanationOfBenefitAddItemDetailSubDetail = new ExplanationOfBenefitAddItemDetailSubDetail(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ExplanationOfBenefitAddItemDetailSubDetail is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -2057,19 +2057,19 @@ export class ExplanationOfBenefitAddItemDetail extends fhir.BackboneElement impl
   /**
    * Check if the current ExplanationOfBenefitAddItemDetail contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["productOrService"] === undefined) { missingElements.push("productOrService"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ExplanationOfBenefitAddItemDetail from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExplanationOfBenefitAddItemDetail):ExplanationOfBenefitAddItemDetail {
+  static override fromStrict(source:fhir.IExplanationOfBenefitAddItemDetail):ExplanationOfBenefitAddItemDetail {
     var dest:ExplanationOfBenefitAddItemDetail = new ExplanationOfBenefitAddItemDetail(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ExplanationOfBenefitAddItemDetail is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -2206,19 +2206,19 @@ export class ExplanationOfBenefitAddItem extends fhir.BackboneElement implements
   /**
    * Check if the current ExplanationOfBenefitAddItem contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["productOrService"] === undefined) { missingElements.push("productOrService"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ExplanationOfBenefitAddItem from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExplanationOfBenefitAddItem):ExplanationOfBenefitAddItem {
+  static override fromStrict(source:fhir.IExplanationOfBenefitAddItem):ExplanationOfBenefitAddItem {
     var dest:ExplanationOfBenefitAddItem = new ExplanationOfBenefitAddItem(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ExplanationOfBenefitAddItem is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -2250,20 +2250,20 @@ export class ExplanationOfBenefitTotal extends fhir.BackboneElement implements f
   /**
    * Check if the current ExplanationOfBenefitTotal contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["amount"] === undefined) { missingElements.push("amount"); }
     if (this["category"] === undefined) { missingElements.push("category"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ExplanationOfBenefitTotal from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExplanationOfBenefitTotal):ExplanationOfBenefitTotal {
+  static override fromStrict(source:fhir.IExplanationOfBenefitTotal):ExplanationOfBenefitTotal {
     var dest:ExplanationOfBenefitTotal = new ExplanationOfBenefitTotal(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ExplanationOfBenefitTotal is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -2313,18 +2313,18 @@ export class ExplanationOfBenefitPayment extends fhir.BackboneElement implements
   /**
    * Check if the current ExplanationOfBenefitPayment contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ExplanationOfBenefitPayment from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExplanationOfBenefitPayment):ExplanationOfBenefitPayment {
+  static override fromStrict(source:fhir.IExplanationOfBenefitPayment):ExplanationOfBenefitPayment {
     var dest:ExplanationOfBenefitPayment = new ExplanationOfBenefitPayment(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ExplanationOfBenefitPayment is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -2368,18 +2368,18 @@ export class ExplanationOfBenefitProcessNote extends fhir.BackboneElement implem
   /**
    * Check if the current ExplanationOfBenefitProcessNote contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ExplanationOfBenefitProcessNote from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExplanationOfBenefitProcessNote):ExplanationOfBenefitProcessNote {
+  static override fromStrict(source:fhir.IExplanationOfBenefitProcessNote):ExplanationOfBenefitProcessNote {
     var dest:ExplanationOfBenefitProcessNote = new ExplanationOfBenefitProcessNote(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ExplanationOfBenefitProcessNote is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -2435,19 +2435,19 @@ export class ExplanationOfBenefitBenefitBalanceFinancial extends fhir.BackboneEl
   /**
    * Check if the current ExplanationOfBenefitBenefitBalanceFinancial contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ExplanationOfBenefitBenefitBalanceFinancial from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExplanationOfBenefitBenefitBalanceFinancial):ExplanationOfBenefitBenefitBalanceFinancial {
+  static override fromStrict(source:fhir.IExplanationOfBenefitBenefitBalanceFinancial):ExplanationOfBenefitBenefitBalanceFinancial {
     var dest:ExplanationOfBenefitBenefitBalanceFinancial = new ExplanationOfBenefitBenefitBalanceFinancial(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ExplanationOfBenefitBenefitBalanceFinancial is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -2513,19 +2513,19 @@ export class ExplanationOfBenefitBenefitBalance extends fhir.BackboneElement imp
   /**
    * Check if the current ExplanationOfBenefitBenefitBalance contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["category"] === undefined) { missingElements.push("category"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ExplanationOfBenefitBenefitBalance from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExplanationOfBenefitBenefitBalance):ExplanationOfBenefitBenefitBalance {
+  static override fromStrict(source:fhir.IExplanationOfBenefitBenefitBalance):ExplanationOfBenefitBenefitBalance {
     var dest:ExplanationOfBenefitBenefitBalance = new ExplanationOfBenefitBenefitBalance(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ExplanationOfBenefitBenefitBalance is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -2795,7 +2795,7 @@ export class ExplanationOfBenefit extends fhir.DomainResource implements fhir.IE
   /**
    * Check if the current ExplanationOfBenefit contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["created"] === undefined) { missingElements.push("created"); }
     if ((!this["insurance"]) || (this["insurance"].length === 0)) { missingElements.push("insurance"); }
@@ -2806,16 +2806,16 @@ export class ExplanationOfBenefit extends fhir.DomainResource implements fhir.IE
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
     if (this["use"] === undefined) { missingElements.push("use"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ExplanationOfBenefit from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExplanationOfBenefit):ExplanationOfBenefit {
+  static override fromStrict(source:fhir.IExplanationOfBenefit):ExplanationOfBenefit {
     var dest:ExplanationOfBenefit = new ExplanationOfBenefit(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ExplanationOfBenefit is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

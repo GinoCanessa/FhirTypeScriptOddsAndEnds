@@ -13,7 +13,7 @@ export const ContactentityTypeValueSet = {
     /**
      * Contact details for administrative enquiries.
      */
-    contactentity_type_Administrative: Coding.FromStrict({
+    contactentity_type_Administrative: new Coding({
         code: "ADMIN",
         display: "Administrative",
         system: "http://terminology.hl7.org/CodeSystem/contactentity-type"
@@ -21,7 +21,7 @@ export const ContactentityTypeValueSet = {
     /**
      * Contact details for information regarding to billing/general finance enquiries.
      */
-    contactentity_type_Billing: Coding.FromStrict({
+    contactentity_type_Billing: new Coding({
         code: "BILL",
         display: "Billing",
         system: "http://terminology.hl7.org/CodeSystem/contactentity-type"
@@ -29,7 +29,7 @@ export const ContactentityTypeValueSet = {
     /**
      * Contact details for issues related to Human Resources, such as staff matters, OH&amp;S etc.
      */
-    contactentity_type_HumanResource: Coding.FromStrict({
+    contactentity_type_HumanResource: new Coding({
         code: "HR",
         display: "Human Resource",
         system: "http://terminology.hl7.org/CodeSystem/contactentity-type"
@@ -37,7 +37,7 @@ export const ContactentityTypeValueSet = {
     /**
      * Generic information contact for patients.
      */
-    contactentity_type_Patient: Coding.FromStrict({
+    contactentity_type_Patient: new Coding({
         code: "PATINF",
         display: "Patient",
         system: "http://terminology.hl7.org/CodeSystem/contactentity-type"
@@ -45,7 +45,7 @@ export const ContactentityTypeValueSet = {
     /**
      * Contact details for dealing with issues related to insurance claims/adjudication/payment.
      */
-    contactentity_type_Payor: Coding.FromStrict({
+    contactentity_type_Payor: new Coding({
         code: "PAYOR",
         display: "Payor",
         system: "http://terminology.hl7.org/CodeSystem/contactentity-type"
@@ -53,7 +53,7 @@ export const ContactentityTypeValueSet = {
     /**
      * Dedicated contact point for matters relating to press enquiries.
      */
-    contactentity_type_Press: Coding.FromStrict({
+    contactentity_type_Press: new Coding({
         code: "PRESS",
         display: "Press",
         system: "http://terminology.hl7.org/CodeSystem/contactentity-type"

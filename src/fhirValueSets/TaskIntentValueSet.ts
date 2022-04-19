@@ -13,7 +13,7 @@ export const TaskIntentValueSet = {
   /**
    * The intent is not known.  When dealing with Task, it's not always known (or relevant) how the task was initiated - i.e. whether it was proposed, planned, ordered or just done spontaneously.
    */
-  task_intent_Unknown: Coding.FromStrict({
+  task_intent_Unknown: new Coding({
     code: "unknown",
     display: "Unknown",
     system: "http://hl7.org/fhir/task-intent"

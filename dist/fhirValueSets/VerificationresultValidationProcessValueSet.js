@@ -10,32 +10,32 @@ import { Coding } from '../fhir';
  * The primary process by which the target is validated
  */
 export const VerificationresultValidationProcessValueSet = {
-    verificationresult_validation_process_EditCheck: Coding.FromStrict({
+    verificationresult_validation_process_EditCheck: new Coding({
         code: "edit-check",
         display: "edit check",
         system: "http://terminology.hl7.org/CodeSystem/validation-process"
     }),
-    verificationresult_validation_process_InContext: Coding.FromStrict({
+    verificationresult_validation_process_InContext: new Coding({
         code: "in-context",
         display: "in context",
         system: "http://terminology.hl7.org/CodeSystem/validation-process"
     }),
-    verificationresult_validation_process_MultipleSources: Coding.FromStrict({
+    verificationresult_validation_process_MultipleSources: new Coding({
         code: "multi",
         display: "multiple sources",
         system: "http://terminology.hl7.org/CodeSystem/validation-process"
     }),
-    verificationresult_validation_process_PrimarySource: Coding.FromStrict({
+    verificationresult_validation_process_PrimarySource: new Coding({
         code: "primary",
         display: "primary source",
         system: "http://terminology.hl7.org/CodeSystem/validation-process"
     }),
-    verificationresult_validation_process_Standalone: Coding.FromStrict({
+    verificationresult_validation_process_Standalone: new Coding({
         code: "standalone",
         display: "standalone",
         system: "http://terminology.hl7.org/CodeSystem/validation-process"
     }),
-    verificationresult_validation_process_ValueSet: Coding.FromStrict({
+    verificationresult_validation_process_ValueSet: new Coding({
         code: "valueset",
         display: "value set",
         system: "http://terminology.hl7.org/CodeSystem/validation-process"

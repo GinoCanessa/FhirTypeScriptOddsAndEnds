@@ -10,292 +10,292 @@ import { Coding } from '../fhir'
  * This value set includes some taken and not taken reason codes from SNOMED CT - provided as an exemplar
  */
 export const ReasonMedicationStatusCodesValueSet = {
-  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfMycophenolate: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfMycophenolate: new Coding({
     code: "106511000119106",
     display: "Long-term current use of mycophenolate",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfCyclophosphamide: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfCyclophosphamide: new Coding({
     code: "106521000119104",
     display: "Long-term current use of cyclophosphamide",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfInfliximab: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfInfliximab: new Coding({
     code: "106631000119102",
     display: "Long-term current use of infliximab",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfEtanercept: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfEtanercept: new Coding({
     code: "106691000119103",
     display: "Long-term current use of etanercept",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfNonSteroidalAntiInflammatoryDrug: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfNonSteroidalAntiInflammatoryDrug: new Coding({
     code: "133621000119103",
     display: "Long term current use of non-steroidal anti-inflammatory drug",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_HistoryOfEstrogenTherapy: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_HistoryOfEstrogenTherapy: new Coding({
     code: "134651000119108",
     display: "History of estrogen therapy",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_HistoryOfSystemicSteroidTherapy: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_HistoryOfSystemicSteroidTherapy: new Coding({
     code: "134671000119104",
     display: "History of systemic steroid therapy",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfAzathioprine: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfAzathioprine: new Coding({
     code: "140561000119102",
     display: "Long-term current use of azathioprine",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_OralSteroidsStarted: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_OralSteroidsStarted: new Coding({
     code: "170622002",
     display: "Oral steroids started",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_B12InjectionsStarted: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_B12InjectionsStarted: new Coding({
     code: "170821007",
     display: "B12 injections started",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_HormoneReplacementTherapyHRTStarted: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_HormoneReplacementTherapyHRTStarted: new Coding({
     code: "170955009",
     display: "Hormone replacement therapy (HRT) started",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_DrugCourseCompleted: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_DrugCourseCompleted: new Coding({
     code: "182834008",
     display: "Drug course completed",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_DrugNotTakenDislikeTaste: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_DrugNotTakenDislikeTaste: new Coding({
     code: "182862001",
     display: "Drug not taken - dislike taste",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_DrugNotTakenDislikeForm: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_DrugNotTakenDislikeForm: new Coding({
     code: "182863006",
     display: "Drug not taken - dislike form",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_DrugNotTakenSideEffects: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_DrugNotTakenSideEffects: new Coding({
     code: "182864000",
     display: "Drug not taken - side-effects",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_DrugNotTakenInconvenient: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_DrugNotTakenInconvenient: new Coding({
     code: "182865004",
     display: "Drug not taken - inconvenient",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_DrugNotTakenPatDisbelief: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_DrugNotTakenPatDisbelief: new Coding({
     code: "182867007",
     display: "Drug not taken - pat disbelief",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_TreatmentStoppedAlternativeTherapyUndertaken: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_TreatmentStoppedAlternativeTherapyUndertaken: new Coding({
     code: "182868002",
     display: "Treatment stopped - alternative therapy undertaken",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_DrugNotTakenPatientLostTablets: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_DrugNotTakenPatientLostTablets: new Coding({
     code: "182869005",
     display: "Drug not taken - patient lost tablets",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_DrugDiscontinuedReasonUnknown: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_DrugDiscontinuedReasonUnknown: new Coding({
     code: "182870006",
     display: "Drug discontinued - reason unknown",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_DrugDiscontinuedPatientFearRisk: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_DrugDiscontinuedPatientFearRisk: new Coding({
     code: "182871005",
     display: "Drug discontinued - patient fear/risk",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_DrugDiscontinuedTooExpensive: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_DrugDiscontinuedTooExpensive: new Coding({
     code: "182872003",
     display: "Drug discontinued - too expensive",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_DrugTreatmentStoppedPatientRanOutOfTablets: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_DrugTreatmentStoppedPatientRanOutOfTablets: new Coding({
     code: "182873008",
     display: "Drug treatment stopped - patient ran out of tablets",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_TreatmentStoppedPatientUnableToConcentrate: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_TreatmentStoppedPatientUnableToConcentrate: new Coding({
     code: "182874002",
     display: "Treatment stopped - patient unable to concentrate",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_DrugNotTakenProblemSwallowing: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_DrugNotTakenProblemSwallowing: new Coding({
     code: "266711001",
     display: "Drug not taken - problem swallowing",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_TabletsTooLargeToSwallow: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_TabletsTooLargeToSwallow: new Coding({
     code: "275929009",
     display: "Tablets too large to swallow",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_AntibioticProphylaxisRecommended: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_AntibioticProphylaxisRecommended: new Coding({
     code: "391158008",
     display: "Antibiotic prophylaxis recommended",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_AntibioticProphylaxisNotRecommended: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_AntibioticProphylaxisNotRecommended: new Coding({
     code: "391159000",
     display: "Antibiotic prophylaxis not recommended",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_HormoneReplacementTherapyRequested: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_HormoneReplacementTherapyRequested: new Coding({
     code: "394888000",
     display: "Hormone replacement therapy requested",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_HOProlongedCorticosteroidTherapy: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_HOProlongedCorticosteroidTherapy: new Coding({
     code: "401244004",
     display: "H/O: prolonged corticosteroid therapy",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_DrugTreatmentStillNeeded: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_DrugTreatmentStillNeeded: new Coding({
     code: "408354007",
     display: "Drug treatment still needed",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_DrugTreatmentNoLongerNeeded: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_DrugTreatmentNoLongerNeeded: new Coding({
     code: "408355008",
     display: "Drug treatment no longer needed",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_AntibioticProphylaxisIndicated: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_AntibioticProphylaxisIndicated: new Coding({
     code: "413555000",
     display: "Antibiotic prophylaxis indicated",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_AngiotensinConvertingEnzymeInhibitorTargetDoseNotAchieved: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_AngiotensinConvertingEnzymeInhibitorTargetDoseNotAchieved: new Coding({
     code: "416404000",
     display: "Angiotensin converting enzyme inhibitor target dose not achieved",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_DeferredAntibioticTherapy: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_DeferredAntibioticTherapy: new Coding({
     code: "417576009",
     display: "Deferred antibiotic therapy",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_HODrugTherapy: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_HODrugTherapy: new Coding({
     code: "438553004",
     display: "H/O: drug therapy",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_HOStatinTherapy: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_HOStatinTherapy: new Coding({
     code: "439631004",
     display: "H/O: statin therapy",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_HOBetaBlockerTherapy: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_HOBetaBlockerTherapy: new Coding({
     code: "440935004",
     display: "H/O: beta blocker therapy",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_HONitrateTherapy: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_HONitrateTherapy: new Coding({
     code: "440991005",
     display: "H/O: nitrate therapy",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_HOAntiplateletAgentTherapy: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_HOAntiplateletAgentTherapy: new Coding({
     code: "441186000",
     display: "H/O: antiplatelet agent therapy",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_HOAngiotensinConvertingEnzymeACEInhibitorTherapy: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_HOAngiotensinConvertingEnzymeACEInhibitorTherapy: new Coding({
     code: "441195008",
     display: "H/O: angiotensin converting enzyme (ACE) inhibitor therapy",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_HOAngiotensinIIReceptorAntagonistTherapy: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_HOAngiotensinIIReceptorAntagonistTherapy: new Coding({
     code: "441196009",
     display: "H/O: angiotensin II receptor antagonist therapy",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_HistoryOfTherapyWithOtotoxicMedication: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_HistoryOfTherapyWithOtotoxicMedication: new Coding({
     code: "441899004",
     display: "History of therapy with ototoxic medication",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_HistoryOfTuberculosisChemotherapy: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_HistoryOfTuberculosisChemotherapy: new Coding({
     code: "473151000",
     display: "History of tuberculosis chemotherapy",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_AngiotensinIIReceptorAntagonistIndicated: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_AngiotensinIIReceptorAntagonistIndicated: new Coding({
     code: "698428006",
     display: "Angiotensin II receptor antagonist indicated",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_AntibioticTherapyIndicated: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_AntibioticTherapyIndicated: new Coding({
     code: "698449007",
     display: "Antibiotic therapy indicated",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_LongTermDualAntiplateletDrugTherapyIndicated: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_LongTermDualAntiplateletDrugTherapyIndicated: new Coding({
     code: "698985001",
     display: "Long term dual antiplatelet drug therapy indicated",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_HistoryOfFenfluramineTherapy: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_HistoryOfFenfluramineTherapy: new Coding({
     code: "699008007",
     display: "History of fenfluramine therapy",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_IncretinMimeticTherapyStarted: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_IncretinMimeticTherapyStarted: new Coding({
     code: "702542006",
     display: "Incretin mimetic therapy started",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfImmunosuppressiveDrug: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfImmunosuppressiveDrug: new Coding({
     code: "710159007",
     display: "Long-term current use of immunosuppressive drug",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfDrugTherapy: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfDrugTherapy: new Coding({
     code: "710814002",
     display: "Long-term current use of drug therapy",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfInsulin: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfInsulin: new Coding({
     code: "710815001",
     display: "Long-term current use of insulin",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfSteroid: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfSteroid: new Coding({
     code: "710816000",
     display: "Long-term current use of steroid",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfInhaledSteroid: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfInhaledSteroid: new Coding({
     code: "710817009",
     display: "Long-term current use of inhaled steroid",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfAntibiotic: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfAntibiotic: new Coding({
     code: "711149003",
     display: "Long-term current use of antibiotic",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfAnticoagulant: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfAnticoagulant: new Coding({
     code: "711150003",
     display: "Long-term current use of anticoagulant",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_OralSteroidsUsedSinceLastEncounter: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_OralSteroidsUsedSinceLastEncounter: new Coding({
     code: "711370000",
     display: "Oral steroids used since last encounter",
     system: "http://snomed.info/sct"
   }),
-  ReasonMedicationStatusCodesValueSet_InhaledSteroidsUsedDaily: Coding.FromStrict({
+  ReasonMedicationStatusCodesValueSet_InhaledSteroidsUsedDaily: new Coding({
     code: "711436000",
     display: "Inhaled steroids used daily",
     system: "http://snomed.info/sct"

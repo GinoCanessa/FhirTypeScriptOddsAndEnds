@@ -149,18 +149,18 @@ export class DosageDoseAndRate extends fhir.FhirElement implements fhir.IDosageD
   /**
    * Check if the current DosageDoseAndRate contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DosageDoseAndRate from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDosageDoseAndRate):DosageDoseAndRate {
+  static override fromStrict(source:fhir.IDosageDoseAndRate):DosageDoseAndRate {
     var dest:DosageDoseAndRate = new DosageDoseAndRate(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DosageDoseAndRate is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -256,18 +256,18 @@ export class Dosage extends fhir.BackboneElement implements fhir.IDosage {
   /**
    * Check if the current Dosage contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Dosage from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDosage):Dosage {
+  static override fromStrict(source:fhir.IDosage):Dosage {
     var dest:Dosage = new Dosage(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Dosage is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

@@ -154,20 +154,20 @@ export class NamingSystemUniqueId extends fhir.BackboneElement implements fhir.I
   /**
    * Check if the current NamingSystemUniqueId contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
     if (this["value"] === undefined) { missingElements.push("value"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a NamingSystemUniqueId from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.INamingSystemUniqueId):NamingSystemUniqueId {
+  static override fromStrict(source:fhir.INamingSystemUniqueId):NamingSystemUniqueId {
     var dest:NamingSystemUniqueId = new NamingSystemUniqueId(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `NamingSystemUniqueId is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -281,23 +281,23 @@ export class NamingSystem extends fhir.DomainResource implements fhir.INamingSys
   /**
    * Check if the current NamingSystem contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["date"] === undefined) { missingElements.push("date"); }
     if (this["kind"] === undefined) { missingElements.push("kind"); }
     if (this["name"] === undefined) { missingElements.push("name"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
     if ((!this["uniqueId"]) || (this["uniqueId"].length === 0)) { missingElements.push("uniqueId"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a NamingSystem from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.INamingSystem):NamingSystem {
+  static override fromStrict(source:fhir.INamingSystem):NamingSystem {
     var dest:NamingSystem = new NamingSystem(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `NamingSystem is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

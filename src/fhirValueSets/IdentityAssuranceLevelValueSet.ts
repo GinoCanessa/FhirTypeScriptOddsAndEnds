@@ -13,7 +13,7 @@ export const IdentityAssuranceLevelValueSet = {
   /**
    * Little or no confidence in the asserted identity's accuracy.
    */
-  identity_assuranceLevel_Level1: Coding.FromStrict({
+  identity_assuranceLevel_Level1: new Coding({
     code: "level1",
     display: "Level 1",
     system: "http://hl7.org/fhir/identity-assuranceLevel"
@@ -21,7 +21,7 @@ export const IdentityAssuranceLevelValueSet = {
   /**
    * Some confidence in the asserted identity's accuracy.
    */
-  identity_assuranceLevel_Level2: Coding.FromStrict({
+  identity_assuranceLevel_Level2: new Coding({
     code: "level2",
     display: "Level 2",
     system: "http://hl7.org/fhir/identity-assuranceLevel"
@@ -29,7 +29,7 @@ export const IdentityAssuranceLevelValueSet = {
   /**
    * High confidence in the asserted identity's accuracy.
    */
-  identity_assuranceLevel_Level3: Coding.FromStrict({
+  identity_assuranceLevel_Level3: new Coding({
     code: "level3",
     display: "Level 3",
     system: "http://hl7.org/fhir/identity-assuranceLevel"
@@ -37,7 +37,7 @@ export const IdentityAssuranceLevelValueSet = {
   /**
    * Very high confidence in the asserted identity's accuracy.
    */
-  identity_assuranceLevel_Level4: Coding.FromStrict({
+  identity_assuranceLevel_Level4: new Coding({
     code: "level4",
     display: "Level 4",
     system: "http://hl7.org/fhir/identity-assuranceLevel"

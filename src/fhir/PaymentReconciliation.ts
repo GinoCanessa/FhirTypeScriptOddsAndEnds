@@ -208,19 +208,19 @@ export class PaymentReconciliationDetail extends fhir.BackboneElement implements
   /**
    * Check if the current PaymentReconciliationDetail contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PaymentReconciliationDetail from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPaymentReconciliationDetail):PaymentReconciliationDetail {
+  static override fromStrict(source:fhir.IPaymentReconciliationDetail):PaymentReconciliationDetail {
     var dest:PaymentReconciliationDetail = new PaymentReconciliationDetail(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `PaymentReconciliationDetail is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -252,18 +252,18 @@ export class PaymentReconciliationProcessNote extends fhir.BackboneElement imple
   /**
    * Check if the current PaymentReconciliationProcessNote contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PaymentReconciliationProcessNote from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPaymentReconciliationProcessNote):PaymentReconciliationProcessNote {
+  static override fromStrict(source:fhir.IPaymentReconciliationProcessNote):PaymentReconciliationProcessNote {
     var dest:PaymentReconciliationProcessNote = new PaymentReconciliationProcessNote(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `PaymentReconciliationProcessNote is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -379,22 +379,22 @@ export class PaymentReconciliation extends fhir.DomainResource implements fhir.I
   /**
    * Check if the current PaymentReconciliation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["created"] === undefined) { missingElements.push("created"); }
     if (this["paymentAmount"] === undefined) { missingElements.push("paymentAmount"); }
     if (this["paymentDate"] === undefined) { missingElements.push("paymentDate"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PaymentReconciliation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPaymentReconciliation):PaymentReconciliation {
+  static override fromStrict(source:fhir.IPaymentReconciliation):PaymentReconciliation {
     var dest:PaymentReconciliation = new PaymentReconciliation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `PaymentReconciliation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

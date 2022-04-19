@@ -289,11 +289,11 @@ export declare class EventDefinition extends fhir.DomainResource implements fhir
     /**
      * Check if the current EventDefinition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a EventDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEventDefinition): EventDefinition;
+    static fromStrict(source: fhir.IEventDefinition): EventDefinition;
 }
 /**
  * Code Values for the EventDefinition.status field

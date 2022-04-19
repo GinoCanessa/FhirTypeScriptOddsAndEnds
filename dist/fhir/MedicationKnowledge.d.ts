@@ -377,11 +377,11 @@ export declare class MedicationKnowledgeRelatedMedicationKnowledge extends fhir.
     /**
      * Check if the current MedicationKnowledgeRelatedMedicationKnowledge contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationKnowledgeRelatedMedicationKnowledge from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationKnowledgeRelatedMedicationKnowledge): MedicationKnowledgeRelatedMedicationKnowledge;
+    static fromStrict(source: fhir.IMedicationKnowledgeRelatedMedicationKnowledge): MedicationKnowledgeRelatedMedicationKnowledge;
 }
 /**
  * Associated documentation about the medication.
@@ -402,11 +402,11 @@ export declare class MedicationKnowledgeMonograph extends fhir.BackboneElement i
     /**
      * Check if the current MedicationKnowledgeMonograph contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationKnowledgeMonograph from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationKnowledgeMonograph): MedicationKnowledgeMonograph;
+    static fromStrict(source: fhir.IMedicationKnowledgeMonograph): MedicationKnowledgeMonograph;
 }
 /**
  * Identifies a particular constituent of interest in the product.
@@ -436,11 +436,11 @@ export declare class MedicationKnowledgeIngredient extends fhir.BackboneElement 
     /**
      * Check if the current MedicationKnowledgeIngredient contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationKnowledgeIngredient from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationKnowledgeIngredient): MedicationKnowledgeIngredient;
+    static fromStrict(source: fhir.IMedicationKnowledgeIngredient): MedicationKnowledgeIngredient;
 }
 /**
  * The price of the medication.
@@ -466,11 +466,11 @@ export declare class MedicationKnowledgeCost extends fhir.BackboneElement implem
     /**
      * Check if the current MedicationKnowledgeCost contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationKnowledgeCost from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationKnowledgeCost): MedicationKnowledgeCost;
+    static fromStrict(source: fhir.IMedicationKnowledgeCost): MedicationKnowledgeCost;
 }
 /**
  * The program under which the medication is reviewed.
@@ -492,11 +492,11 @@ export declare class MedicationKnowledgeMonitoringProgram extends fhir.BackboneE
     /**
      * Check if the current MedicationKnowledgeMonitoringProgram contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationKnowledgeMonitoringProgram from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationKnowledgeMonitoringProgram): MedicationKnowledgeMonitoringProgram;
+    static fromStrict(source: fhir.IMedicationKnowledgeMonitoringProgram): MedicationKnowledgeMonitoringProgram;
 }
 /**
  * Dosage for the medication for the specific guidelines.
@@ -517,11 +517,11 @@ export declare class MedicationKnowledgeAdministrationGuidelinesDosage extends f
     /**
      * Check if the current MedicationKnowledgeAdministrationGuidelinesDosage contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationKnowledgeAdministrationGuidelinesDosage from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationKnowledgeAdministrationGuidelinesDosage): MedicationKnowledgeAdministrationGuidelinesDosage;
+    static fromStrict(source: fhir.IMedicationKnowledgeAdministrationGuidelinesDosage): MedicationKnowledgeAdministrationGuidelinesDosage;
 }
 /**
  * Characteristics of the patient that are relevant to the administration guidelines (for example, height, weight, gender, etc.).
@@ -547,11 +547,11 @@ export declare class MedicationKnowledgeAdministrationGuidelinesPatientCharacter
     /**
      * Check if the current MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationKnowledgeAdministrationGuidelinesPatientCharacteristics): MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics;
+    static fromStrict(source: fhir.IMedicationKnowledgeAdministrationGuidelinesPatientCharacteristics): MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics;
 }
 /**
  * Guidelines for the administration of the medication.
@@ -580,11 +580,11 @@ export declare class MedicationKnowledgeAdministrationGuidelines extends fhir.Ba
     /**
      * Check if the current MedicationKnowledgeAdministrationGuidelines contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationKnowledgeAdministrationGuidelines from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationKnowledgeAdministrationGuidelines): MedicationKnowledgeAdministrationGuidelines;
+    static fromStrict(source: fhir.IMedicationKnowledgeAdministrationGuidelines): MedicationKnowledgeAdministrationGuidelines;
 }
 /**
  * Categorization of the medication within a formulary or classification system.
@@ -605,11 +605,11 @@ export declare class MedicationKnowledgeMedicineClassification extends fhir.Back
     /**
      * Check if the current MedicationKnowledgeMedicineClassification contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationKnowledgeMedicineClassification from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationKnowledgeMedicineClassification): MedicationKnowledgeMedicineClassification;
+    static fromStrict(source: fhir.IMedicationKnowledgeMedicineClassification): MedicationKnowledgeMedicineClassification;
 }
 /**
  * Information that only applies to packages (not products).
@@ -630,11 +630,11 @@ export declare class MedicationKnowledgePackaging extends fhir.BackboneElement i
     /**
      * Check if the current MedicationKnowledgePackaging contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationKnowledgePackaging from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationKnowledgePackaging): MedicationKnowledgePackaging;
+    static fromStrict(source: fhir.IMedicationKnowledgePackaging): MedicationKnowledgePackaging;
 }
 /**
  * Specifies descriptive properties of the medicine, such as color, shape, imprints, etc.
@@ -669,11 +669,11 @@ export declare class MedicationKnowledgeDrugCharacteristic extends fhir.Backbone
     /**
      * Check if the current MedicationKnowledgeDrugCharacteristic contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationKnowledgeDrugCharacteristic from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationKnowledgeDrugCharacteristic): MedicationKnowledgeDrugCharacteristic;
+    static fromStrict(source: fhir.IMedicationKnowledgeDrugCharacteristic): MedicationKnowledgeDrugCharacteristic;
 }
 /**
  * Specifies if changes are allowed when dispensing a medication from a regulatory perspective.
@@ -695,11 +695,11 @@ export declare class MedicationKnowledgeRegulatorySubstitution extends fhir.Back
     /**
      * Check if the current MedicationKnowledgeRegulatorySubstitution contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationKnowledgeRegulatorySubstitution from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationKnowledgeRegulatorySubstitution): MedicationKnowledgeRegulatorySubstitution;
+    static fromStrict(source: fhir.IMedicationKnowledgeRegulatorySubstitution): MedicationKnowledgeRegulatorySubstitution;
 }
 /**
  * Specifies the schedule of a medication in jurisdiction.
@@ -716,11 +716,11 @@ export declare class MedicationKnowledgeRegulatorySchedule extends fhir.Backbone
     /**
      * Check if the current MedicationKnowledgeRegulatorySchedule contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationKnowledgeRegulatorySchedule from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationKnowledgeRegulatorySchedule): MedicationKnowledgeRegulatorySchedule;
+    static fromStrict(source: fhir.IMedicationKnowledgeRegulatorySchedule): MedicationKnowledgeRegulatorySchedule;
 }
 /**
  * The maximum number of units of the medication that can be dispensed in a period.
@@ -741,11 +741,11 @@ export declare class MedicationKnowledgeRegulatoryMaxDispense extends fhir.Backb
     /**
      * Check if the current MedicationKnowledgeRegulatoryMaxDispense contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationKnowledgeRegulatoryMaxDispense from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationKnowledgeRegulatoryMaxDispense): MedicationKnowledgeRegulatoryMaxDispense;
+    static fromStrict(source: fhir.IMedicationKnowledgeRegulatoryMaxDispense): MedicationKnowledgeRegulatoryMaxDispense;
 }
 /**
  * Regulatory information about a medication.
@@ -774,11 +774,11 @@ export declare class MedicationKnowledgeRegulatory extends fhir.BackboneElement 
     /**
      * Check if the current MedicationKnowledgeRegulatory contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationKnowledgeRegulatory from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationKnowledgeRegulatory): MedicationKnowledgeRegulatory;
+    static fromStrict(source: fhir.IMedicationKnowledgeRegulatory): MedicationKnowledgeRegulatory;
 }
 /**
  * The time course of drug absorption, distribution, metabolism and excretion of a medication from the body.
@@ -803,11 +803,11 @@ export declare class MedicationKnowledgeKinetics extends fhir.BackboneElement im
     /**
      * Check if the current MedicationKnowledgeKinetics contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationKnowledgeKinetics from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationKnowledgeKinetics): MedicationKnowledgeKinetics;
+    static fromStrict(source: fhir.IMedicationKnowledgeKinetics): MedicationKnowledgeKinetics;
 }
 /**
  * Information about a medication that is used to support knowledge.
@@ -915,11 +915,11 @@ export declare class MedicationKnowledge extends fhir.DomainResource implements 
     /**
      * Check if the current MedicationKnowledge contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationKnowledge from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationKnowledge): MedicationKnowledge;
+    static fromStrict(source: fhir.IMedicationKnowledge): MedicationKnowledge;
 }
 /**
  * Code Values for the MedicationKnowledge.status field

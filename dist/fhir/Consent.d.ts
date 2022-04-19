@@ -198,11 +198,11 @@ export declare class ConsentPolicy extends fhir.BackboneElement implements fhir.
     /**
      * Check if the current ConsentPolicy contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ConsentPolicy from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IConsentPolicy): ConsentPolicy;
+    static fromStrict(source: fhir.IConsentPolicy): ConsentPolicy;
 }
 /**
  * Whether a treatment instruction (e.g. artificial respiration yes or no) was verified with the patient, his/her family or another authorized person.
@@ -229,11 +229,11 @@ export declare class ConsentVerification extends fhir.BackboneElement implements
     /**
      * Check if the current ConsentVerification contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ConsentVerification from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IConsentVerification): ConsentVerification;
+    static fromStrict(source: fhir.IConsentVerification): ConsentVerification;
 }
 /**
  * Who or what is controlled by this rule. Use group to identify a set of actors by some property they share (e.g. 'admitting officers').
@@ -254,11 +254,11 @@ export declare class ConsentProvisionActor extends fhir.BackboneElement implemen
     /**
      * Check if the current ConsentProvisionActor contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ConsentProvisionActor from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IConsentProvisionActor): ConsentProvisionActor;
+    static fromStrict(source: fhir.IConsentProvisionActor): ConsentProvisionActor;
 }
 /**
  * The resources controlled by this rule if specific resources are referenced.
@@ -280,11 +280,11 @@ export declare class ConsentProvisionData extends fhir.BackboneElement implement
     /**
      * Check if the current ConsentProvisionData contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ConsentProvisionData from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IConsentProvisionData): ConsentProvisionData;
+    static fromStrict(source: fhir.IConsentProvisionData): ConsentProvisionData;
 }
 /**
  * An exception to the base policy of this consent. An exception can be an addition or removal of access permissions.
@@ -342,11 +342,11 @@ export declare class ConsentProvision extends fhir.BackboneElement implements fh
     /**
      * Check if the current ConsentProvision contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ConsentProvision from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IConsentProvision): ConsentProvision;
+    static fromStrict(source: fhir.IConsentProvision): ConsentProvision;
 }
 /**
  * A record of a healthcare consumer’s  choices, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.
@@ -421,11 +421,11 @@ export declare class Consent extends fhir.DomainResource implements fhir.IConsen
     /**
      * Check if the current Consent contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Consent from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IConsent): Consent;
+    static fromStrict(source: fhir.IConsent): Consent;
 }
 /**
  * Code Values for the Consent.provision.data.meaning field

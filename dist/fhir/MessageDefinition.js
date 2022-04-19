@@ -51,7 +51,7 @@ export class MessageDefinitionFocus extends fhir.BackboneElement {
     /**
      * Check if the current MessageDefinitionFocus contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["code"] === undefined) {
             missingElements.push("code");
@@ -59,16 +59,16 @@ export class MessageDefinitionFocus extends fhir.BackboneElement {
         if (this["min"] === undefined) {
             missingElements.push("min");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MessageDefinitionFocus from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MessageDefinitionFocus(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MessageDefinitionFocus is missing elements: ${missingElements.join(", ")}`;
         }
@@ -104,21 +104,21 @@ export class MessageDefinitionAllowedResponse extends fhir.BackboneElement {
     /**
      * Check if the current MessageDefinitionAllowedResponse contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["message"] === undefined) {
             missingElements.push("message");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MessageDefinitionAllowedResponse from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MessageDefinitionAllowedResponse(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MessageDefinitionAllowedResponse is missing elements: ${missingElements.join(", ")}`;
         }
@@ -276,7 +276,7 @@ export class MessageDefinition extends fhir.DomainResource {
     /**
      * Check if the current MessageDefinition contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["date"] === undefined) {
             missingElements.push("date");
@@ -284,16 +284,16 @@ export class MessageDefinition extends fhir.DomainResource {
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MessageDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MessageDefinition(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MessageDefinition is missing elements: ${missingElements.join(", ")}`;
         }

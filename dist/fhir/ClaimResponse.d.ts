@@ -533,11 +533,11 @@ export declare class ClaimResponseItemAdjudication extends fhir.BackboneElement 
     /**
      * Check if the current ClaimResponseItemAdjudication contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimResponseItemAdjudication from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimResponseItemAdjudication): ClaimResponseItemAdjudication;
+    static fromStrict(source: fhir.IClaimResponseItemAdjudication): ClaimResponseItemAdjudication;
 }
 /**
  * A sub-detail adjudication of a simple product or service.
@@ -564,11 +564,11 @@ export declare class ClaimResponseItemDetailSubDetail extends fhir.BackboneEleme
     /**
      * Check if the current ClaimResponseItemDetailSubDetail contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimResponseItemDetailSubDetail from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimResponseItemDetailSubDetail): ClaimResponseItemDetailSubDetail;
+    static fromStrict(source: fhir.IClaimResponseItemDetailSubDetail): ClaimResponseItemDetailSubDetail;
 }
 /**
  * A claim detail. Either a simple (a product or service) or a 'group' of sub-details which are simple items.
@@ -599,11 +599,11 @@ export declare class ClaimResponseItemDetail extends fhir.BackboneElement implem
     /**
      * Check if the current ClaimResponseItemDetail contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimResponseItemDetail from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimResponseItemDetail): ClaimResponseItemDetail;
+    static fromStrict(source: fhir.IClaimResponseItemDetail): ClaimResponseItemDetail;
 }
 /**
  * A claim line. Either a simple (a product or service) or a 'group' of details which can also be a simple items or groups of sub-details.
@@ -634,11 +634,11 @@ export declare class ClaimResponseItem extends fhir.BackboneElement implements f
     /**
      * Check if the current ClaimResponseItem contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimResponseItem from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimResponseItem): ClaimResponseItem;
+    static fromStrict(source: fhir.IClaimResponseItem): ClaimResponseItem;
 }
 /**
  * The third-tier service adjudications for payor added services.
@@ -685,11 +685,11 @@ export declare class ClaimResponseAddItemDetailSubDetail extends fhir.BackboneEl
     /**
      * Check if the current ClaimResponseAddItemDetailSubDetail contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimResponseAddItemDetailSubDetail from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimResponseAddItemDetailSubDetail): ClaimResponseAddItemDetailSubDetail;
+    static fromStrict(source: fhir.IClaimResponseAddItemDetailSubDetail): ClaimResponseAddItemDetailSubDetail;
 }
 /**
  * The second-tier service adjudications for payor added services.
@@ -740,11 +740,11 @@ export declare class ClaimResponseAddItemDetail extends fhir.BackboneElement imp
     /**
      * Check if the current ClaimResponseAddItemDetail contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimResponseAddItemDetail from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimResponseAddItemDetail): ClaimResponseAddItemDetail;
+    static fromStrict(source: fhir.IClaimResponseAddItemDetail): ClaimResponseAddItemDetail;
 }
 /**
  * The first-tier service adjudications for payor added product or service lines.
@@ -847,11 +847,11 @@ export declare class ClaimResponseAddItem extends fhir.BackboneElement implement
     /**
      * Check if the current ClaimResponseAddItem contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimResponseAddItem from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimResponseAddItem): ClaimResponseAddItem;
+    static fromStrict(source: fhir.IClaimResponseAddItem): ClaimResponseAddItem;
 }
 /**
  * Totals for amounts submitted, co-pays, benefits payable etc.
@@ -872,11 +872,11 @@ export declare class ClaimResponseTotal extends fhir.BackboneElement implements 
     /**
      * Check if the current ClaimResponseTotal contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimResponseTotal from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimResponseTotal): ClaimResponseTotal;
+    static fromStrict(source: fhir.IClaimResponseTotal): ClaimResponseTotal;
 }
 /**
  * Payment details for the adjudication of the claim.
@@ -914,11 +914,11 @@ export declare class ClaimResponsePayment extends fhir.BackboneElement implement
     /**
      * Check if the current ClaimResponsePayment contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimResponsePayment from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimResponsePayment): ClaimResponsePayment;
+    static fromStrict(source: fhir.IClaimResponsePayment): ClaimResponsePayment;
 }
 /**
  * A note that describes or explains adjudication results in a human readable form.
@@ -950,11 +950,11 @@ export declare class ClaimResponseProcessNote extends fhir.BackboneElement imple
     /**
      * Check if the current ClaimResponseProcessNote contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimResponseProcessNote from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimResponseProcessNote): ClaimResponseProcessNote;
+    static fromStrict(source: fhir.IClaimResponseProcessNote): ClaimResponseProcessNote;
 }
 /**
  * All insurance coverages for the patient which may be applicable for reimbursement, of the products and services listed in the claim, are typically provided in the claim to allow insurers to confirm the ordering of the insurance coverages relative to local 'coordination of benefit' rules. One coverage (and only one) with 'focal=true' is to be used in the adjudication of this claim. Coverages appearing before the focal Coverage in the list, and where 'subrogation=false', should provide a reference to the ClaimResponse containing the adjudication results of the prior claim.
@@ -990,11 +990,11 @@ export declare class ClaimResponseInsurance extends fhir.BackboneElement impleme
     /**
      * Check if the current ClaimResponseInsurance contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimResponseInsurance from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimResponseInsurance): ClaimResponseInsurance;
+    static fromStrict(source: fhir.IClaimResponseInsurance): ClaimResponseInsurance;
 }
 /**
  * If the request contains errors then an error element should be provided and no adjudication related sections (item, addItem, or payment) should be present.
@@ -1026,11 +1026,11 @@ export declare class ClaimResponseError extends fhir.BackboneElement implements 
     /**
      * Check if the current ClaimResponseError contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimResponseError from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimResponseError): ClaimResponseError;
+    static fromStrict(source: fhir.IClaimResponseError): ClaimResponseError;
 }
 /**
  * This resource provides the adjudication details from the processing of a Claim resource.
@@ -1161,11 +1161,11 @@ export declare class ClaimResponse extends fhir.DomainResource implements fhir.I
     /**
      * Check if the current ClaimResponse contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClaimResponse from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClaimResponse): ClaimResponse;
+    static fromStrict(source: fhir.IClaimResponse): ClaimResponse;
 }
 /**
  * Code Values for the ClaimResponse.processNote.type field

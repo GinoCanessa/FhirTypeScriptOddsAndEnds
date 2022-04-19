@@ -13,7 +13,7 @@ export const CoverageFinancialExceptionValueSet = {
   /**
    * Children in the foster care have all copays and deductibles waived.
    */
-  coverage_financial_exception_FosterChild: Coding.FromStrict({
+  coverage_financial_exception_FosterChild: new Coding({
     code: "foster",
     display: "Foster child",
     system: "http://terminology.hl7.org/CodeSystem/ex-coverage-financial-exception"
@@ -21,7 +21,7 @@ export const CoverageFinancialExceptionValueSet = {
   /**
    * Retired persons have all copays and deductibles reduced.
    */
-  coverage_financial_exception_Retired: Coding.FromStrict({
+  coverage_financial_exception_Retired: new Coding({
     code: "retired",
     display: "Retired",
     system: "http://terminology.hl7.org/CodeSystem/ex-coverage-financial-exception"

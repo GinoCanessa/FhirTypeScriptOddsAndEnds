@@ -13,7 +13,7 @@ export const MedicationknowledgeStatusValueSet = {
     /**
      * The medication is available for use.
      */
-    medicationknowledge_status_Active: Coding.FromStrict({
+    medicationknowledge_status_Active: new Coding({
         code: "active",
         display: "Active",
         system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-status"
@@ -21,7 +21,7 @@ export const MedicationknowledgeStatusValueSet = {
     /**
      * The medication was entered in error.
      */
-    medicationknowledge_status_EnteredInError: Coding.FromStrict({
+    medicationknowledge_status_EnteredInError: new Coding({
         code: "entered-in-error",
         display: "Entered in Error",
         system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-status"
@@ -29,7 +29,7 @@ export const MedicationknowledgeStatusValueSet = {
     /**
      * The medication is not available for use.
      */
-    medicationknowledge_status_Inactive: Coding.FromStrict({
+    medicationknowledge_status_Inactive: new Coding({
         code: "inactive",
         display: "Inactive",
         system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-status"

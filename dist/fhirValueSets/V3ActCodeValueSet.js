@@ -14,7 +14,7 @@ export const V3ActCodeValueSet = {
     /**
      * Includes coded responses that will occur as a result of the adjudication of an electronic invoice at a summary level and provides guidance on interpretation of the referenced adjudication results.
      */
-    v3_ActCode_ActAdjudicationCode: Coding.FromStrict({
+    v3_ActCode_ActAdjudicationCode: new Coding({
         code: "_ActAdjudicationCode",
         display: "ActAdjudicationCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -22,7 +22,7 @@ export const V3ActCodeValueSet = {
     /**
      * Catagorization of grouping criteria for the associated transactions and/or summary (totals, subtotals).
      */
-    v3_ActCode_ActAdjudicationGroupCode: Coding.FromStrict({
+    v3_ActCode_ActAdjudicationGroupCode: new Coding({
         code: "_ActAdjudicationGroupCode",
         display: "ActAdjudicationGroupCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -30,7 +30,7 @@ export const V3ActCodeValueSet = {
     /**
      * Actions to be carried out by the recipient of the Adjudication Result information.
      */
-    v3_ActCode_ActAdjudicationResultActionCode: Coding.FromStrict({
+    v3_ActCode_ActAdjudicationResultActionCode: new Coding({
         code: "_ActAdjudicationResultActionCode",
         display: "ActAdjudicationResultActionCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -38,7 +38,7 @@ export const V3ActCodeValueSet = {
     /**
      * ActAdministrativeAuthorizationDetectedIssueCode
      */
-    v3_ActCode_ActAdministrativeAuthorizationDetectedIssueCode: Coding.FromStrict({
+    v3_ActCode_ActAdministrativeAuthorizationDetectedIssueCode: new Coding({
         code: "_ActAdministrativeAuthorizationDetectedIssueCode",
         display: "ActAdministrativeAuthorizationDetectedIssueCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -46,7 +46,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies types of detectyed issues for Act class "ALRT" for the administrative and patient administrative acts domains.
      */
-    v3_ActCode_ActAdministrativeDetectedIssueCode: Coding.FromStrict({
+    v3_ActCode_ActAdministrativeDetectedIssueCode: new Coding({
         code: "_ActAdministrativeDetectedIssueCode",
         display: "ActAdministrativeDetectedIssueCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -54,7 +54,7 @@ export const V3ActCodeValueSet = {
     /**
      * ActAdministrativeRuleDetectedIssueCode
      */
-    v3_ActCode_ActAdministrativeRuleDetectedIssueCode: Coding.FromStrict({
+    v3_ActCode_ActAdministrativeRuleDetectedIssueCode: new Coding({
         code: "_ActAdministrativeRuleDetectedIssueCode",
         display: "ActAdministrativeRuleDetectedIssueCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -62,7 +62,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:An identifying modifier code for healthcare interventions or procedures.
      */
-    v3_ActCode_ActBillableModifierCode: Coding.FromStrict({
+    v3_ActCode_ActBillableModifierCode: new Coding({
         code: "_ActBillableModifierCode",
         display: "ActBillableModifierCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -70,7 +70,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition: An identifying code for billable services, as opposed to codes for similar services used to identify them for functional purposes.
      */
-    v3_ActCode_ActBillableServiceCode: Coding.FromStrict({
+    v3_ActCode_ActBillableServiceCode: new Coding({
         code: "_ActBillableServiceCode",
         display: "ActBillableServiceCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -78,7 +78,7 @@ export const V3ActCodeValueSet = {
     /**
      * The type of provision(s)  made for reimbursing for the deliver of healthcare services and/or goods provided by a Provider, over a specified period.
      */
-    v3_ActCode_ActBillingArrangementCode: Coding.FromStrict({
+    v3_ActCode_ActBillingArrangementCode: new Coding({
         code: "_ActBillingArrangementCode",
         display: "ActBillingArrangementCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -86,7 +86,7 @@ export const V3ActCodeValueSet = {
     /**
      * Type of bounded ROI.
      */
-    v3_ActCode_ActBoundedROICode: Coding.FromStrict({
+    v3_ActCode_ActBoundedROICode: new Coding({
         code: "_ActBoundedROICode",
         display: "ActBoundedROICode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -94,7 +94,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:The type and scope of responsibility taken-on by the performer of the Act for a specific subject of care.
      */
-    v3_ActCode_ActCareProvision: Coding.FromStrict({
+    v3_ActCode_ActCareProvision: new Coding({
         code: "_ActCareProvisionCode",
         display: "act care provision",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -102,7 +102,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Coded types of attachments included to support a healthcare claim.
      */
-    v3_ActCode_ActClaimAttachmentCategoryCode: Coding.FromStrict({
+    v3_ActCode_ActClaimAttachmentCategoryCode: new Coding({
         code: "_ActClaimAttachmentCategoryCode",
         display: "ActClaimAttachmentCategoryCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -126,7 +126,7 @@ export const V3ActCodeValueSet = {
      *                            A mobile device or App privacy policy and terms of service to which a user must agree in whole or in part in order to utilize the service.
      *                            Agreements between a client and an authorization server or between an authorization server and a resource operator and/or resource owner permitting or restricting e.g., collection, access, use, and disclosure of information, and any associated handling caveats.
      */
-    v3_ActCode_ActConsentDirective: Coding.FromStrict({
+    v3_ActCode_ActConsentDirective: new Coding({
         code: "_ActConsentDirective",
         display: "ActConsentDirective",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -134,7 +134,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition: The type of consent directive, e.g., to consent or dissent to collect, access, or use in specific ways within an EHRS or for health information exchange; or to disclose  health information  for purposes such as research.
      */
-    v3_ActCode_ActConsentType: Coding.FromStrict({
+    v3_ActCode_ActConsentType: new Coding({
         code: "_ActConsentType",
         display: "ActConsentType",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -142,7 +142,7 @@ export const V3ActCodeValueSet = {
     /**
      * Constrains the ActCode to the domain of Container Registration
      */
-    v3_ActCode_ActContainerRegistrationCode: Coding.FromStrict({
+    v3_ActCode_ActContainerRegistrationCode: new Coding({
         code: "_ActContainerRegistrationCode",
         display: "ActContainerRegistrationCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -152,7 +152,7 @@ export const V3ActCodeValueSet = {
      *
      *                         Control variables are forms of observations because just as with clinical observations, the Observation.code determines the parameter and the Observation.value assigns the value. While control variables sometimes can be observed (by noting the control settings or an actually measured feedback loop) they are not primary observations, in the sense that a control variable without a primary act is of no use (e.g., it makes no sense to record a blood pressure position without recording a blood pressure, whereas it does make sense to record a systolic blood pressure without a diastolic blood pressure).
      */
-    v3_ActCode_ActControlVariable: Coding.FromStrict({
+    v3_ActCode_ActControlVariable: new Coding({
         code: "_ActControlVariable",
         display: "ActControlVariable",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -160,7 +160,7 @@ export const V3ActCodeValueSet = {
     /**
      * Indication of authorization for healthcare service(s) and/or product(s).  If authorization is approved, funds are set aside.
      */
-    v3_ActCode_ActCoverageAuthorizationConfirmationCode: Coding.FromStrict({
+    v3_ActCode_ActCoverageAuthorizationConfirmationCode: new Coding({
         code: "_ActCoverageAuthorizationConfirmationCode",
         display: "ActCoverageAuthorizationConfirmationCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -168,7 +168,7 @@ export const V3ActCodeValueSet = {
     /**
      * Response to an insurance coverage eligibility query or authorization request.
      */
-    v3_ActCode_ActCoverageConfirmationCode: Coding.FromStrict({
+    v3_ActCode_ActCoverageConfirmationCode: new Coding({
         code: "_ActCoverageConfirmationCode",
         display: "ActCoverageConfirmationCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -176,7 +176,7 @@ export const V3ActCodeValueSet = {
     /**
      * Indication of eligibility coverage for healthcare service(s) and/or product(s).
      */
-    v3_ActCode_ActCoverageEligibilityConfirmationCode: Coding.FromStrict({
+    v3_ActCode_ActCoverageEligibilityConfirmationCode: new Coding({
         code: "_ActCoverageEligibilityConfirmationCode",
         display: "ActCoverageEligibilityConfirmationCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -184,7 +184,7 @@ export const V3ActCodeValueSet = {
     /**
      * Criteria that are applicable to the authorized coverage.
      */
-    v3_ActCode_ActCoverageLimitCode: Coding.FromStrict({
+    v3_ActCode_ActCoverageLimitCode: new Coding({
         code: "_ActCoverageLimitCode",
         display: "ActCoverageLimitCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -192,7 +192,7 @@ export const V3ActCodeValueSet = {
     /**
      * Maximum amount paid or maximum number of services/products covered; or maximum amount or number covered during a specified time period under the policy or program.
      */
-    v3_ActCode_ActCoverageQuantityLimitCode: Coding.FromStrict({
+    v3_ActCode_ActCoverageQuantityLimitCode: new Coding({
         code: "_ActCoverageQuantityLimitCode",
         display: "ActCoverageQuantityLimitCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -200,7 +200,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition: Set of codes indicating the type of insurance policy or program that pays for the cost of benefits provided to covered parties.
      */
-    v3_ActCode_ActCoverageTypeCode: Coding.FromStrict({
+    v3_ActCode_ActCoverageTypeCode: new Coding({
         code: "_ActCoverageTypeCode",
         display: "ActCoverageTypeCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -208,7 +208,7 @@ export const V3ActCodeValueSet = {
     /**
      * Codes representing the types of covered parties that may receive covered benefits under a policy or program.
      */
-    v3_ActCode_ActCoveredPartyLimitCode: Coding.FromStrict({
+    v3_ActCode_ActCoveredPartyLimitCode: new Coding({
         code: "_ActCoveredPartyLimitCode",
         display: "ActCoveredPartyLimitCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -219,7 +219,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Example:Hospital license; physician license; clinic accreditation.
      */
-    v3_ActCode_ActCredentialedCare: Coding.FromStrict({
+    v3_ActCode_ActCredentialedCare: new Coding({
         code: "_ActCredentialedCareCode",
         display: "act credentialed care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -227,7 +227,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:The type and scope of legal and/or professional responsibility taken-on by the performer of the Act for a specific subject of care as described by an agency for credentialing individuals.
      */
-    v3_ActCode_ActCredentialedCareProvisionPeron: Coding.FromStrict({
+    v3_ActCode_ActCredentialedCareProvisionPeron: new Coding({
         code: "_ActCredentialedCareProvisionPersonCode",
         display: "act credentialed care provision peron",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -235,7 +235,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:The type and scope of legal and/or professional responsibility taken-on by the performer of the Act for a specific subject of care as described by an agency for credentialing programs within organizations.
      */
-    v3_ActCode_ActCredentialedCareProvisionProgram: Coding.FromStrict({
+    v3_ActCode_ActCredentialedCareProvisionProgram: new Coding({
         code: "_ActCredentialedCareProvisionProgramCode",
         display: "act credentialed care provision program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -243,7 +243,7 @@ export const V3ActCodeValueSet = {
     /**
      * Accommodation type.  In Intent mood, represents the accommodation type requested.  In Event mood, represents accommodation assigned/used.  In Definition mood, represents the available accommodation type.
      */
-    v3_ActCode_ActEncounterAccommodationCode: Coding.FromStrict({
+    v3_ActCode_ActEncounterAccommodationCode: new Coding({
         code: "_ActEncounterAccommodationCode",
         display: "ActEncounterAccommodationCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -251,7 +251,7 @@ export const V3ActCodeValueSet = {
     /**
      * Domain provides codes that qualify the ActEncounterClass (ENC)
      */
-    v3_ActCode_ActEncounterCode: Coding.FromStrict({
+    v3_ActCode_ActEncounterCode: new Coding({
         code: "_ActEncounterCode",
         display: "ActEncounterCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -259,7 +259,7 @@ export const V3ActCodeValueSet = {
     /**
      * Concepts that identify the type or nature of exposure interaction.  Examples include "household", "care giver", "intimate partner", "common space", "common substance", etc. to further describe the nature of interaction.
      */
-    v3_ActCode_ActExposureCode: Coding.FromStrict({
+    v3_ActCode_ActExposureCode: new Coding({
         code: "_ActExposureCode",
         display: "ActExposureCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -267,7 +267,7 @@ export const V3ActCodeValueSet = {
     /**
      * ActFinancialTransactionCode
      */
-    v3_ActCode_ActFinancialTransactionCode: Coding.FromStrict({
+    v3_ActCode_ActFinancialTransactionCode: new Coding({
         code: "_ActFinancialTransactionCode",
         display: "ActFinancialTransactionCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -275,7 +275,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition: Set of codes indicating the type of health insurance policy that covers health services provided to covered parties.  A health insurance policy is a written contract for insurance between the insurance company and the policyholder, and contains pertinent facts about the policy owner (the policy holder), the health insurance coverage, the insured subscribers and dependents, and the insurer.  Health insurance is typically administered in accordance with a plan, which specifies (1) the type of health services and health conditions that will be covered under what circumstances (e.g., exclusion of a pre-existing condition, service must be deemed medically necessary; service must not be experimental; service must provided in accordance with a protocol; drug must be on a formulary; service must be prior authorized; or be a referral from a primary care provider); (2) the type and affiliation of providers (e.g., only allopathic physicians, only in network, only providers employed by an HMO); (3) financial participations required of covered parties (e.g., co-pays, coinsurance, deductibles, out-of-pocket); and (4) the manner in which services will be paid (e.g., under indemnity or fee-for-service health plans, the covered party typically pays out-of-pocket and then file a claim for reimbursement, while health plans that have contractual relationships with providers, i.e., network providers, typically do not allow the providers to bill the covered party for the cost of the service until after filing a claim with the payer and receiving reimbursement).
      */
-    v3_ActCode_ActHealthInsuranceTypeCode: Coding.FromStrict({
+    v3_ActCode_ActHealthInsuranceTypeCode: new Coding({
         code: "_ActHealthInsuranceTypeCode",
         display: "ActHealthInsuranceTypeCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -283,7 +283,7 @@ export const V3ActCodeValueSet = {
     /**
      * Set of codes indicating the type of incident or accident.
      */
-    v3_ActCode_ActIncidentCode: Coding.FromStrict({
+    v3_ActCode_ActIncidentCode: new Coding({
         code: "_ActIncidentCode",
         display: "ActIncidentCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -291,7 +291,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: The type of health information to which the subject of the information or the subject's delegate consents or dissents.
      */
-    v3_ActCode_ActInformationAccessCode: Coding.FromStrict({
+    v3_ActCode_ActInformationAccessCode: new Coding({
         code: "_ActInformationAccessCode",
         display: "ActInformationAccessCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -299,7 +299,7 @@ export const V3ActCodeValueSet = {
     /**
      * Concepts conveying the context in which authorization given under jurisdictional law, by organizational policy, or by a patient consent directive permits the collection, access, use or disclosure of specified patient health information.
      */
-    v3_ActCode_ActInformationAccessContextCode: Coding.FromStrict({
+    v3_ActCode_ActInformationAccessContextCode: new Coding({
         code: "_ActInformationAccessContextCode",
         display: "ActInformationAccessContextCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -307,7 +307,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:Indicates the set of information types which may be manipulated or referenced, such as for recommending access restrictions.
      */
-    v3_ActCode_ActInformationCategoryCode: Coding.FromStrict({
+    v3_ActCode_ActInformationCategoryCode: new Coding({
         code: "_ActInformationCategoryCode",
         display: "ActInformationCategoryCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -318,7 +318,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Usage Note: ActSensitivity codes are used to bind information to an Act.confidentialityCode according to local sensitivity policy so that those confidentiality codes can then govern its handling across enterprises.  Internally to a policy domain, however, local policies guide the access control system on how end users in that policy domain are  able to use information tagged with these sensitivity values.
      */
-    v3_ActCode_ActInformationSensitivityPolicy: Coding.FromStrict({
+    v3_ActCode_ActInformationSensitivityPolicy: new Coding({
         code: "_ActInformationSensitivityPolicy",
         display: "ActInformationSensitivityPolicy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -326,7 +326,7 @@ export const V3ActCodeValueSet = {
     /**
      * Set of codes indicating the type of insurance policy or other source of funds to cover healthcare costs.
      */
-    v3_ActCode_ActInsurancePolicyCode: Coding.FromStrict({
+    v3_ActCode_ActInsurancePolicyCode: new Coding({
         code: "_ActInsurancePolicyCode",
         display: "ActInsurancePolicyCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -337,7 +337,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Discussion: In contrast to programs, an insurance policy has one or more policy holders, who own the policy.  The policy holder may be the covered party, a relative of the covered party, a partnership, or a corporation, e.g., an employer.  A subscriber of a self-insured health insurance policy is a policy holder.  A subscriber of an employer sponsored health insurance policy is holds a certificate of coverage, but is not a policy holder; the policy holder is the employer.  See CoveredRoleType.
      */
-    v3_ActCode_ActInsuranceTypeCode: Coding.FromStrict({
+    v3_ActCode_ActInsuranceTypeCode: new Coding({
         code: "_ActInsuranceTypeCode",
         display: "ActInsuranceTypeCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -345,7 +345,7 @@ export const V3ActCodeValueSet = {
     /**
      * Codes representing a grouping of invoice elements (totals, sub-totals), reported through a Payment Advice or a Statement of Financial Activity (SOFA).  The code can represent summaries by day, location, payee and other cost elements such as bonus, retroactive adjustment and transaction fees.
      */
-    v3_ActCode_ActInvoiceAdjudicationPaymentCode: Coding.FromStrict({
+    v3_ActCode_ActInvoiceAdjudicationPaymentCode: new Coding({
         code: "_ActInvoiceAdjudicationPaymentCode",
         display: "ActInvoiceAdjudicationPaymentCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -353,7 +353,7 @@ export const V3ActCodeValueSet = {
     /**
      * Codes representing adjustments to a Payment Advice such as retroactive, clawback, garnishee, etc.
      */
-    v3_ActCode_ActInvoiceAdjudicationPaymentGroupCode: Coding.FromStrict({
+    v3_ActCode_ActInvoiceAdjudicationPaymentGroupCode: new Coding({
         code: "_ActInvoiceAdjudicationPaymentGroupCode",
         display: "ActInvoiceAdjudicationPaymentGroupCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -361,7 +361,7 @@ export const V3ActCodeValueSet = {
     /**
      * Codes representing a grouping of invoice elements (totals, sub-totals), reported through a Payment Advice or a Statement of Financial Activity (SOFA).  The code can represent summaries by day, location, payee, etc.
      */
-    v3_ActCode_ActInvoiceAdjudicationPaymentSummaryCode: Coding.FromStrict({
+    v3_ActCode_ActInvoiceAdjudicationPaymentSummaryCode: new Coding({
         code: "_ActInvoiceAdjudicationPaymentSummaryCode",
         display: "ActInvoiceAdjudicationPaymentSummaryCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -369,7 +369,7 @@ export const V3ActCodeValueSet = {
     /**
      * An identifying data string for healthcare products.
      */
-    v3_ActCode_ActInvoiceDetailClinicalProductCode: Coding.FromStrict({
+    v3_ActCode_ActInvoiceDetailClinicalProductCode: new Coding({
         code: "_ActInvoiceDetailClinicalProductCode",
         display: "ActInvoiceDetailClinicalProductCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -377,7 +377,7 @@ export const V3ActCodeValueSet = {
     /**
      * An identifying data string for healthcare procedures.
      */
-    v3_ActCode_ActInvoiceDetailClinicalServiceCode: Coding.FromStrict({
+    v3_ActCode_ActInvoiceDetailClinicalServiceCode: new Coding({
         code: "_ActInvoiceDetailClinicalServiceCode",
         display: "ActInvoiceDetailClinicalServiceCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -385,7 +385,7 @@ export const V3ActCodeValueSet = {
     /**
      * Codes representing a service or product that is being invoiced (billed).  The code can represent such concepts as "office visit", "drug X", "wheelchair" and other billable items such as taxes, service charges and discounts.
      */
-    v3_ActCode_ActInvoiceDetailCode: Coding.FromStrict({
+    v3_ActCode_ActInvoiceDetailCode: new Coding({
         code: "_ActInvoiceDetailCode",
         display: "ActInvoiceDetailCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -393,7 +393,7 @@ export const V3ActCodeValueSet = {
     /**
      * An identifying data string for A substance used as a medication or in the preparation of medication.
      */
-    v3_ActCode_ActInvoiceDetailDrugProductCode: Coding.FromStrict({
+    v3_ActCode_ActInvoiceDetailDrugProductCode: new Coding({
         code: "_ActInvoiceDetailDrugProductCode",
         display: "ActInvoiceDetailDrugProductCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -401,7 +401,7 @@ export const V3ActCodeValueSet = {
     /**
      * The billable item codes to identify adjudicator specified components to the total billing of a claim.
      */
-    v3_ActCode_ActInvoiceDetailGenericAdjudicatorCode: Coding.FromStrict({
+    v3_ActCode_ActInvoiceDetailGenericAdjudicatorCode: new Coding({
         code: "_ActInvoiceDetailGenericAdjudicatorCode",
         display: "ActInvoiceDetailGenericAdjudicatorCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -409,7 +409,7 @@ export const V3ActCodeValueSet = {
     /**
      * The detail item codes to identify charges or changes to the total billing of a claim due to insurance rules and payments.
      */
-    v3_ActCode_ActInvoiceDetailGenericCode: Coding.FromStrict({
+    v3_ActCode_ActInvoiceDetailGenericCode: new Coding({
         code: "_ActInvoiceDetailGenericCode",
         display: "ActInvoiceDetailGenericCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -417,7 +417,7 @@ export const V3ActCodeValueSet = {
     /**
      * The billable item codes to identify modifications to a billable item charge. As for example after hours increase in the office visit fee.
      */
-    v3_ActCode_ActInvoiceDetailGenericModifierCode: Coding.FromStrict({
+    v3_ActCode_ActInvoiceDetailGenericModifierCode: new Coding({
         code: "_ActInvoiceDetailGenericModifierCode",
         display: "ActInvoiceDetailGenericModifierCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -425,7 +425,7 @@ export const V3ActCodeValueSet = {
     /**
      * The billable item codes to identify provider supplied charges or changes to the total billing of a claim.
      */
-    v3_ActCode_ActInvoiceDetailGenericProviderCode: Coding.FromStrict({
+    v3_ActCode_ActInvoiceDetailGenericProviderCode: new Coding({
         code: "_ActInvoiceDetailGenericProviderCode",
         display: "ActInvoiceDetailGenericProviderCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -433,7 +433,7 @@ export const V3ActCodeValueSet = {
     /**
      * An identifying data string for medical facility accommodations.
      */
-    v3_ActCode_ActInvoiceDetailPreferredAccommodationCode: Coding.FromStrict({
+    v3_ActCode_ActInvoiceDetailPreferredAccommodationCode: new Coding({
         code: "_ActInvoiceDetailPreferredAccommodationCode",
         display: "ActInvoiceDetailPreferredAccommodationCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -441,7 +441,7 @@ export const V3ActCodeValueSet = {
     /**
      * The billable item codes to identify modifications to a billable item charge by a tax factor applied to the amount. As for example 7% provincial sales tax.
      */
-    v3_ActCode_ActInvoiceDetailTaxCode: Coding.FromStrict({
+    v3_ActCode_ActInvoiceDetailTaxCode: new Coding({
         code: "_ActInvoiceDetailTaxCode",
         display: "ActInvoiceDetailTaxCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -449,7 +449,7 @@ export const V3ActCodeValueSet = {
     /**
      * Type of invoice element that is used to assist in describing an Invoice that is either submitted for adjudication or for which is returned on adjudication results.
      */
-    v3_ActCode_ActInvoiceElementCode: Coding.FromStrict({
+    v3_ActCode_ActInvoiceElementCode: new Coding({
         code: "_ActInvoiceElementCode",
         display: "ActInvoiceElementCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -457,7 +457,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the different types of summary information that can be reported by queries dealing with Statement of Financial Activity (SOFA).  The summary information is generally used to help resolve balance discrepancies between providers and payors.
      */
-    v3_ActCode_ActInvoiceElementSummaryCode: Coding.FromStrict({
+    v3_ActCode_ActInvoiceElementSummaryCode: new Coding({
         code: "_ActInvoiceElementSummaryCode",
         display: "ActInvoiceElementSummaryCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -467,7 +467,7 @@ export const V3ActCodeValueSet = {
      *
      *                         Invoice elements of this type signify a grouping of one or more children (detail) invoice elements.  They do not have intrinsic costing associated with them, but merely reflect the sum of all costing for it's immediate children invoice elements.
      */
-    v3_ActCode_ActInvoiceGroupCode: Coding.FromStrict({
+    v3_ActCode_ActInvoiceGroupCode: new Coding({
         code: "_ActInvoiceGroupCode",
         display: "ActInvoiceGroupCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -479,7 +479,7 @@ export const V3ActCodeValueSet = {
      *
      *                         The domain is only specified for an intermediate invoice element group (non-root or non-top level) for an Invoice.
      */
-    v3_ActCode_ActInvoiceInterGroupCode: Coding.FromStrict({
+    v3_ActCode_ActInvoiceInterGroupCode: new Coding({
         code: "_ActInvoiceInterGroupCode",
         display: "ActInvoiceInterGroupCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -487,7 +487,7 @@ export const V3ActCodeValueSet = {
     /**
      * Includes coded responses that will occur as a result of the adjudication of an electronic invoice at a summary level and provides guidance on interpretation of the referenced adjudication results.
      */
-    v3_ActCode_ActInvoiceOverrideCode: Coding.FromStrict({
+    v3_ActCode_ActInvoiceOverrideCode: new Coding({
         code: "_ActInvoiceOverrideCode",
         display: "ActInvoiceOverrideCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -499,7 +499,7 @@ export const V3ActCodeValueSet = {
      *
      *                         Codes from this domain reflect the type of Invoice such as Pharmacy Dispense, Clinical Service and Clinical Product.  The domain is only specified for the root (top level) invoice element group for an Invoice.
      */
-    v3_ActCode_ActInvoiceRootGroupCode: Coding.FromStrict({
+    v3_ActCode_ActInvoiceRootGroupCode: new Coding({
         code: "_ActInvoiceRootGroupCode",
         display: "ActInvoiceRootGroupCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -507,7 +507,7 @@ export const V3ActCodeValueSet = {
     /**
      * Provides codes associated with ActClass value of LIST (working list)
      */
-    v3_ActCode_ActListCode: Coding.FromStrict({
+    v3_ActCode_ActListCode: new Coding({
         code: "_ActListCode",
         display: "ActListCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -515,7 +515,7 @@ export const V3ActCodeValueSet = {
     /**
      * General category of medical service provided to the patient during their encounter.
      */
-    v3_ActCode_ActMedicalServiceCode: Coding.FromStrict({
+    v3_ActCode_ActMedicalServiceCode: new Coding({
         code: "_ActMedicalServiceCode",
         display: "ActMedicalServiceCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -526,7 +526,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Examples:"Continuous/Chronic" "Short-Term" and "As Needed"
      */
-    v3_ActCode_ActMedicationTherapyDurationWorkingList: Coding.FromStrict({
+    v3_ActCode_ActMedicationTherapyDurationWorkingList: new Coding({
         code: "_ActMedicationTherapyDurationWorkingListCode",
         display: "act medication therapy duration working list",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -534,7 +534,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies types of monitoring programs
      */
-    v3_ActCode_ActMonitoringProtocolCode: Coding.FromStrict({
+    v3_ActCode_ActMonitoringProtocolCode: new Coding({
         code: "_ActMonitoringProtocolCode",
         display: "ActMonitoringProtocolCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -542,7 +542,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Concepts representing indications (reasons for clinical action) other than diagnosis and symptoms.
      */
-    v3_ActCode_ActNonObservationIndicationCode: Coding.FromStrict({
+    v3_ActCode_ActNonObservationIndicationCode: new Coding({
         code: "_ActNonObservationIndicationCode",
         display: "ActNonObservationIndicationCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -550,7 +550,7 @@ export const V3ActCodeValueSet = {
     /**
      * ActObservationList
      */
-    v3_ActCode_ActObservationList: Coding.FromStrict({
+    v3_ActCode_ActObservationList: new Coding({
         code: "_ActObservationList",
         display: "ActObservationList",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -594,7 +594,7 @@ export const V3ActCodeValueSet = {
      *
      *                               Verification of no adverse findings - e.g. on National Provider Data Bank, Health Integrity Protection Data Base (HIPDB)
      */
-    v3_ActCode_ActObservationVerification: Coding.FromStrict({
+    v3_ActCode_ActObservationVerification: new Coding({
         code: "_ActObservationVerificationType",
         display: "act observation verification",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -602,7 +602,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Provides a categorization for annotations recorded directly against the patient .
      */
-    v3_ActCode_ActPatientAnnotationType: Coding.FromStrict({
+    v3_ActCode_ActPatientAnnotationType: new Coding({
         code: "_ActPatientAnnotationType",
         display: "ActPatientAnnotationType",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -613,7 +613,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Examples: Via ambulance, via public transit, on foot.
      */
-    v3_ActCode_ActPatientTransportationModeCode: Coding.FromStrict({
+    v3_ActCode_ActPatientTransportationModeCode: new Coding({
         code: "_ActPatientTransportationModeCode",
         display: "ActPatientTransportationModeCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -623,7 +623,7 @@ export const V3ActCodeValueSet = {
      *
      *                         Codes are drawn from X12 data element 591 (PaymentMethodCode)
      */
-    v3_ActCode_ActPaymentCode: Coding.FromStrict({
+    v3_ActCode_ActPaymentCode: new Coding({
         code: "_ActPaymentCode",
         display: "ActPaymentCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -631,7 +631,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies types of dispensing events
      */
-    v3_ActCode_ActPharmacySupplyType: Coding.FromStrict({
+    v3_ActCode_ActPharmacySupplyType: new Coding({
         code: "_ActPharmacySupplyType",
         display: "ActPharmacySupplyType",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -639,7 +639,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Types of policies that further specify the ActClassPolicy value set.
      */
-    v3_ActCode_ActPolicyType: Coding.FromStrict({
+    v3_ActCode_ActPolicyType: new Coding({
         code: "_ActPolicyType",
         display: "ActPolicyType",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -652,7 +652,7 @@ export const V3ActCodeValueSet = {
      *                            The behavior of a governed party
      *                            The manner in which an act is executed by a governed party
      */
-    v3_ActCode_ActPrivacyLaw: Coding.FromStrict({
+    v3_ActCode_ActPrivacyLaw: new Coding({
         code: "_ActPrivacyLaw",
         display: "ActPrivacyLaw",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -669,7 +669,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Usage Note: Statutory title may be named in the ActClassPolicy Act Act.title to specify which privacy policy is being referenced.
      */
-    v3_ActCode_ActPrivacyPolicy: Coding.FromStrict({
+    v3_ActCode_ActPrivacyPolicy: new Coding({
         code: "_ActPrivacyPolicy",
         display: "ActPrivacyPolicy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -677,7 +677,7 @@ export const V3ActCodeValueSet = {
     /**
      * An identifying code for healthcare interventions/procedures.
      */
-    v3_ActCode_ActProcedureCode: Coding.FromStrict({
+    v3_ActCode_ActProcedureCode: new Coding({
         code: "_ActProcedureCode",
         display: "ActProcedureCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -685,7 +685,7 @@ export const V3ActCodeValueSet = {
     /**
      * The method that a product is obtained for use by the subject of the supply act (e.g. patient).  Product examples are consumable or durable goods.
      */
-    v3_ActCode_ActProductAcquisitionCode: Coding.FromStrict({
+    v3_ActCode_ActProductAcquisitionCode: new Coding({
         code: "_ActProductAcquisitionCode",
         display: "ActProductAcquisitionCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -696,7 +696,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Discussion: Programs do not have policy holders or subscribers.  Program eligibles are enrolled based on health status, statutory eligibility, financial status, or age.  Program eligibles who are covered parties under the program may be referred to as members, beneficiaries, eligibles, or recipients.  Programs risk are underwritten by not for profit organizations such as governmental entities, and the beneficiaries typically do not pay for any or some portion of the cost of coverage.  See CoveredPartyRoleType.
      */
-    v3_ActCode_ActProgramTypeCode: Coding.FromStrict({
+    v3_ActCode_ActProgramTypeCode: new Coding({
         code: "_ActProgramTypeCode",
         display: "ActProgramTypeCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -704,7 +704,7 @@ export const V3ActCodeValueSet = {
     /**
      * Transportation of a specimen.
      */
-    v3_ActCode_ActSpecimenTransportCode: Coding.FromStrict({
+    v3_ActCode_ActSpecimenTransportCode: new Coding({
         code: "_ActSpecimenTransportCode",
         display: "ActSpecimenTransportCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -712,7 +712,7 @@ export const V3ActCodeValueSet = {
     /**
      * Set of codes related to specimen treatments
      */
-    v3_ActCode_ActSpecimenTreatmentCode: Coding.FromStrict({
+    v3_ActCode_ActSpecimenTreatmentCode: new Coding({
         code: "_ActSpecimenTreatmentCode",
         display: "ActSpecimenTreatmentCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -720,7 +720,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the type of observation that is made about a specimen that may affect its processing, analysis or further result interpretation
      */
-    v3_ActCode_ActSpecObsCode: Coding.FromStrict({
+    v3_ActCode_ActSpecObsCode: new Coding({
         code: "_ActSpecObsCode",
         display: "ActSpecObsCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -728,7 +728,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Describes the type of substance administration being performed.  This should not be used to carry codes for identification of products.  Use an associated role or entity to carry such information.
      */
-    v3_ActCode_ActSubstanceAdministrationCode: Coding.FromStrict({
+    v3_ActCode_ActSubstanceAdministrationCode: new Coding({
         code: "_ActSubstanceAdministrationCode",
         display: "ActSubstanceAdministrationCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -736,7 +736,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: A task or action that a user may perform in a clinical information system (e.g., medication order entry, laboratory test results review, problem list entry).
      */
-    v3_ActCode_ActTaskCode: Coding.FromStrict({
+    v3_ActCode_ActTaskCode: new Coding({
         code: "_ActTaskCode",
         display: "ActTaskCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -744,7 +744,7 @@ export const V3ActCodeValueSet = {
     /**
      * Codes used to identify different types of 'duration-based' working lists.  Examples include "Continuous/Chronic", "Short-Term" and "As-Needed".
      */
-    v3_ActCode_ActTherapyDurationWorkingListCode: Coding.FromStrict({
+    v3_ActCode_ActTherapyDurationWorkingListCode: new Coding({
         code: "_ActTherapyDurationWorkingListCode",
         display: "ActTherapyDurationWorkingListCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -755,7 +755,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Examples: Via private transport, via public transit, via courier.
      */
-    v3_ActCode_ActTransportationModeCode: Coding.FromStrict({
+    v3_ActCode_ActTransportationModeCode: new Coding({
         code: "_ActTransportationModeCode",
         display: "ActTransportationModeCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -766,7 +766,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Usage Note: ActPrivacyLaw codes may be associated with an Act or a Role to indicate the legal provision to which the assignment of an Act.confidentialityCode or Role.confidentialtyCode complies.  May be used to further specify rationale for assignment of other ActPrivacyPolicy codes in the US realm, e.g., ETH and 42CFRPart2 can be differentiated from ETH and Title38Part1.
      */
-    v3_ActCode_ActUSPrivacyLaw: Coding.FromStrict({
+    v3_ActCode_ActUSPrivacyLaw: new Coding({
         code: "_ActUSPrivacyLaw",
         display: "_ActUSPrivacyLaw",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -774,7 +774,7 @@ export const V3ActCodeValueSet = {
     /**
      * AnnotationType
      */
-    v3_ActCode_AnnotationType: Coding.FromStrict({
+    v3_ActCode_AnnotationType: new Coding({
         code: "_AnnotationType",
         display: "AnnotationType",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -782,7 +782,7 @@ export const V3ActCodeValueSet = {
     /**
      * Code for the mechanism by which disease was acquired by the living subject involved in the public health case. Includes sexually transmitted, airborne, bloodborne, vectorborne, foodborne, zoonotic, nosocomial, mechanical, dermal, congenital, environmental exposure, indeterminate.
      */
-    v3_ActCode_CaseTransmissionMode: Coding.FromStrict({
+    v3_ActCode_CaseTransmissionMode: new Coding({
         code: "_CaseTransmissionMode",
         display: "case transmission mode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -790,7 +790,7 @@ export const V3ActCodeValueSet = {
     /**
      * ECGObservationSeriesType
      */
-    v3_ActCode_ECGObservationSeriesType: Coding.FromStrict({
+    v3_ActCode_ECGObservationSeriesType: new Coding({
         code: "_ECGObservationSeriesType",
         display: "ECGObservationSeriesType",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -801,7 +801,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Usage Note: EntitySensitivity codes are used to convey a policy that is applicable to sensitive information conveyed by an entity attribute.  May be used to bind a Role.confidentialityCode associated with an Entity per organizational policy.  Role.confidentialityCode is defined in the RIM as "an indication of the appropriate disclosure of information about this Role with respect to the playing Entity."
      */
-    v3_ActCode_EntityInformationSensitivityPolicy: Coding.FromStrict({
+    v3_ActCode_EntityInformationSensitivityPolicy: new Coding({
         code: "_EntitySensitivityPolicyType",
         display: "EntityInformationSensitivityPolicy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -809,7 +809,7 @@ export const V3ActCodeValueSet = {
     /**
      * FDA label data
      */
-    v3_ActCode_FDALabelData: Coding.FromStrict({
+    v3_ActCode_FDALabelData: new Coding({
         code: "_FDALabelData",
         display: "FDALabelData",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -817,7 +817,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: None provided
      */
-    v3_ActCode_GeneticObservationType: Coding.FromStrict({
+    v3_ActCode_GeneticObservationType: new Coding({
         code: "_GeneticObservationType",
         display: "GeneticObservationType",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -825,7 +825,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Accommodation type. In Intent mood, represents the accommodation type requested. In Event mood, represents accommodation assigned/used. In Definition mood, represents the available accommodation type.
      */
-    v3_ActCode_HL7AccommodationCode: Coding.FromStrict({
+    v3_ActCode_HL7AccommodationCode: new Coding({
         code: "_HL7AccommodationCode",
         display: "HL7AccommodationCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -833,7 +833,7 @@ export const V3ActCodeValueSet = {
     /**
      * Domain provides the root for HL7-defined detailed or rich codes for the Act classes.
      */
-    v3_ActCode_HL7DefinedActCodes: Coding.FromStrict({
+    v3_ActCode_HL7DefinedActCodes: new Coding({
         code: "_HL7DefinedActCodes",
         display: "HL7DefinedActCodes",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -841,7 +841,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Observation codes which describe characteristics of the immunization material.
      */
-    v3_ActCode_ImmunizationObservationType: Coding.FromStrict({
+    v3_ActCode_ImmunizationObservationType: new Coding({
         code: "_ImmunizationObservationType",
         display: "ImmunizationObservationType",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -851,7 +851,7 @@ export const V3ActCodeValueSet = {
      *
      *                         Example concepts include: Spontaneous, Report from study, Other.
      */
-    v3_ActCode_IndividualCaseSafetyReportType: Coding.FromStrict({
+    v3_ActCode_IndividualCaseSafetyReportType: new Coding({
         code: "_IndividualCaseSafetyReportType",
         display: "Individual Case Safety Report Type",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -862,7 +862,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Usage Note: Sensitivity codes are not useful for interoperability outside of a policy domain because sensitivity policies are typically localized and vary drastically across policy domains even for the same information category because of differing organizational business rules, security policies, and jurisdictional requirements.  For example, an employee's sensitivity code would make little sense for use outside of a policy domain.   'Taboo' would rarely be useful outside of a policy domain unless there are jurisdictional requirements requiring that a provider disclose sensitive information to a patient directly.  Sensitivity codes may be more appropriate in a legacy system's Master Files in order to notify those who access a patient's orders and observations about the sensitivity policies that apply.  Newer systems may have a security engine that uses a sensitivity policy's criteria directly.  The specializable InformationSensitivityPolicy Act.code may be useful in some scenarios if used in combination with a sensitivity identifier and/or Act.title.
      */
-    v3_ActCode_InformationSensitivityPolicy: Coding.FromStrict({
+    v3_ActCode_InformationSensitivityPolicy: new Coding({
         code: "_InformationSensitivityPolicy",
         display: "InformationSensitivityPolicy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -870,7 +870,7 @@ export const V3ActCodeValueSet = {
     /**
      * Total counts and total net amounts adjudicated for all  Invoice Groupings that were adjudicated within a time period based on the adjudication date of the Invoice Grouping.
      */
-    v3_ActCode_InvoiceElementAdjudicated: Coding.FromStrict({
+    v3_ActCode_InvoiceElementAdjudicated: new Coding({
         code: "_InvoiceElementAdjudicated",
         display: "InvoiceElementAdjudicated",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -878,7 +878,7 @@ export const V3ActCodeValueSet = {
     /**
      * Total counts and total net amounts paid for all  Invoice Groupings that were paid within a time period based on the payment date.
      */
-    v3_ActCode_InvoiceElementPaid: Coding.FromStrict({
+    v3_ActCode_InvoiceElementPaid: new Coding({
         code: "_InvoiceElementPaid",
         display: "InvoiceElementPaid",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -886,7 +886,7 @@ export const V3ActCodeValueSet = {
     /**
      * Total counts and total net amounts billed for all Invoice Groupings that were submitted within a time period.  Adjudicated invoice elements are included.
      */
-    v3_ActCode_InvoiceElementSubmitted: Coding.FromStrict({
+    v3_ActCode_InvoiceElementSubmitted: new Coding({
         code: "_InvoiceElementSubmitted",
         display: "InvoiceElementSubmitted",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -894,7 +894,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:The set of LOINC codes for the act of determining the period of time that has elapsed since an entity was born or created.
      */
-    v3_ActCode_LOINCObservationActContextAgeType: Coding.FromStrict({
+    v3_ActCode_LOINCObservationActContextAgeType: new Coding({
         code: "_LOINCObservationActContextAgeType",
         display: "LOINCObservationActContextAgeType",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -902,7 +902,7 @@ export const V3ActCodeValueSet = {
     /**
      * MedicationObservationType
      */
-    v3_ActCode_MedicationObservationType: Coding.FromStrict({
+    v3_ActCode_MedicationObservationType: new Coding({
         code: "_MedicationObservationType",
         display: "MedicationObservationType",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -910,7 +910,7 @@ export const V3ActCodeValueSet = {
     /**
      * Distinguishes the kinds of coded observations that could be the trigger for clinical issue detection. These are observations that are not measurable, but instead can be defined with codes. Coded observation types include: Allergy, Intolerance, Medical Condition, Pregnancy status, etc.
      */
-    v3_ActCode_ObservationIssueTriggerCodedObservationType: Coding.FromStrict({
+    v3_ActCode_ObservationIssueTriggerCodedObservationType: new Coding({
         code: "_ObservationIssueTriggerCodedObservationType",
         display: "ObservationIssueTriggerCodedObservationType",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -918,7 +918,7 @@ export const V3ActCodeValueSet = {
     /**
      * Codes used to define various metadata aspects of a health quality measure.
      */
-    v3_ActCode_ObservationQualityMeasureAttribute: Coding.FromStrict({
+    v3_ActCode_ObservationQualityMeasureAttribute: new Coding({
         code: "_ObservationQualityMeasureAttribute",
         display: "ObservationQualityMeasureAttribute",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -926,7 +926,7 @@ export const V3ActCodeValueSet = {
     /**
      * ObservationSequenceType
      */
-    v3_ActCode_ObservationSequenceType: Coding.FromStrict({
+    v3_ActCode_ObservationSequenceType: new Coding({
         code: "_ObservationSequenceType",
         display: "ObservationSequenceType",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -934,7 +934,7 @@ export const V3ActCodeValueSet = {
     /**
      * ObservationSeriesType
      */
-    v3_ActCode_ObservationSeriesType: Coding.FromStrict({
+    v3_ActCode_ObservationSeriesType: new Coding({
         code: "_ObservationSeriesType",
         display: "ObservationSeriesType",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -942,7 +942,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the kinds of observations that can be performed
      */
-    v3_ActCode_ObservationType: Coding.FromStrict({
+    v3_ActCode_ObservationType: new Coding({
         code: "_ObservationType",
         display: "ObservationType",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -950,7 +950,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Reporting codes that are related to an immunization event.
      */
-    v3_ActCode_PatientImmunizationRelatedObservationType: Coding.FromStrict({
+    v3_ActCode_PatientImmunizationRelatedObservationType: new Coding({
         code: "_PatientImmunizationRelatedObservationType",
         display: "PatientImmunizationRelatedObservationType",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -958,7 +958,7 @@ export const V3ActCodeValueSet = {
     /**
      * Observation types for specifying criteria used to assert that a subject is included in a particular population.
      */
-    v3_ActCode_PopulationInclusionObservationType: Coding.FromStrict({
+    v3_ActCode_PopulationInclusionObservationType: new Coding({
         code: "_PopulationInclusionObservationType",
         display: "PopulationInclusionObservationType",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -966,7 +966,7 @@ export const V3ActCodeValueSet = {
     /**
      * Types of observations that can be made about Preferences.
      */
-    v3_ActCode_PreferenceObservationType: Coding.FromStrict({
+    v3_ActCode_PreferenceObservationType: new Coding({
         code: "_PreferenceObservationType",
         display: "_PreferenceObservationType",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -974,7 +974,7 @@ export const V3ActCodeValueSet = {
     /**
      * Shape of the region on the object being referenced
      */
-    v3_ActCode_ROIOverlayShape: Coding.FromStrict({
+    v3_ActCode_ROIOverlayShape: new Coding({
         code: "_ROIOverlayShape",
         display: "ROIOverlayShape",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -985,7 +985,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Usage Notes: RoleSensitivity codes are used to bind information to a Role.confidentialityCode per organizational policy.  Role.confidentialityCode is defined in the RIM as "an indication of the appropriate disclosure of information about this Role with respect to the playing Entity."
      */
-    v3_ActCode_RoleInformationSensitivityPolicy: Coding.FromStrict({
+    v3_ActCode_RoleInformationSensitivityPolicy: new Coding({
         code: "_RoleInformationSensitivityPolicy",
         display: "RoleInformationSensitivityPolicy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -993,7 +993,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:Estimated age.
      */
-    v3_ActCode_AgePatientQnEst: Coding.FromStrict({
+    v3_ActCode_AgePatientQnEst: new Coding({
         code: "21611-9",
         display: "age patient qn est",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1001,7 +1001,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:Reported age.
      */
-    v3_ActCode_AgePatientQnReported: Coding.FromStrict({
+    v3_ActCode_AgePatientQnReported: new Coding({
         code: "21612-7",
         display: "age patient qn reported",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1009,7 +1009,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:Calculated age.
      */
-    v3_ActCode_AgePatientQnCalc: Coding.FromStrict({
+    v3_ActCode_AgePatientQnCalc: new Coding({
         code: "29553-5",
         display: "age patient qn calc",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1017,7 +1017,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:General specification of age with no implied method of determination.
      */
-    v3_ActCode_AgePatientQnDefinition: Coding.FromStrict({
+    v3_ActCode_AgePatientQnDefinition: new Coding({
         code: "30525-0",
         display: "age patient qn definition",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1025,7 +1025,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:Age at onset of associated adverse event; no implied method of determination.
      */
-    v3_ActCode_AgeAtOnsetOfAdverseEvent: Coding.FromStrict({
+    v3_ActCode_AgeAtOnsetOfAdverseEvent: new Coding({
         code: "30972-4",
         display: "age at onset of adverse event",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1039,7 +1039,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Usage Note: May be associated with an Act or a Role to indicate the legal provision to which the assignment of an Act.confidentialityCode or Role.confidentialityCode complies.
      */
-    v3_ActCode_VAL42CFRPart2: Coding.FromStrict({
+    v3_ActCode_VAL42CFRPart2: new Coding({
         code: "42CFRPart2",
         display: "42 CFR Part2",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1053,7 +1053,7 @@ export const V3ActCodeValueSet = {
      *
      *                         Recommend that the invoice element is saved for DUR (Drug Utilization Reporting).
      */
-    v3_ActCode_AdjudicatedWithAdjustments: Coding.FromStrict({
+    v3_ActCode_AdjudicatedWithAdjustments: new Coding({
         code: "AA",
         display: "adjudicated with adjustments",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1061,7 +1061,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the respective accreditation agency.
      */
-    v3_ActCode_AccreditedAssistedLivingCare: Coding.FromStrict({
+    v3_ActCode_AccreditedAssistedLivingCare: new Coding({
         code: "AALC",
         display: "accredited assisted living care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1069,7 +1069,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the respective accreditation agency.
      */
-    v3_ActCode_AccreditedAmbulatoryCare: Coding.FromStrict({
+    v3_ActCode_AccreditedAmbulatoryCare: new Coding({
         code: "AAMC",
         display: "accredited ambulatory care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1077,7 +1077,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the respective accreditation agency.
      */
-    v3_ActCode_AccreditedBehavioralHealthCare: Coding.FromStrict({
+    v3_ActCode_AccreditedBehavioralHealthCare: new Coding({
         code: "ABHC",
         display: "accredited behavioral health care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1085,7 +1085,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:The proposed therapy is frequently misused or abused and therefore should be used with caution and/or monitoring.
      */
-    v3_ActCode_CommonlyAbusedMisusedAlert: Coding.FromStrict({
+    v3_ActCode_CommonlyAbusedMisusedAlert: new Coding({
         code: "ABUSE",
         display: "commonly abused/misused alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1093,7 +1093,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the respective accreditation agency.
      */
-    v3_ActCode_AccreditedCriticalAccessHospitalCare: Coding.FromStrict({
+    v3_ActCode_AccreditedCriticalAccessHospitalCare: new Coding({
         code: "ACAC",
         display: "accredited critical access hospital care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1101,7 +1101,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Provide consent to collect, use, disclose, or access adverse drug reaction information for a patient.
      */
-    v3_ActCode_AdverseDrugReactionAccess: Coding.FromStrict({
+    v3_ActCode_AdverseDrugReactionAccess: new Coding({
         code: "ACADR",
         display: "adverse drug reaction access",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1109,7 +1109,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Provide consent to collect, use, disclose, or access all information for a patient.
      */
-    v3_ActCode_AllAccess: Coding.FromStrict({
+    v3_ActCode_AllAccess: new Coding({
         code: "ACALL",
         display: "all access",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1117,7 +1117,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Provide consent to collect, use, disclose, or access allergy information for a patient.
      */
-    v3_ActCode_AllergyAccess: Coding.FromStrict({
+    v3_ActCode_AllergyAccess: new Coding({
         code: "ACALLG",
         display: "allergy access",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1125,7 +1125,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Provide consent to collect, use, disclose, or access informational consent information for a patient.
      */
-    v3_ActCode_InformationalConsentAccess: Coding.FromStrict({
+    v3_ActCode_InformationalConsentAccess: new Coding({
         code: "ACCONS",
         display: "informational consent access",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1133,7 +1133,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Provide consent to collect, use, disclose, or access demographics information for a patient.
      */
-    v3_ActCode_DemographicsAccess: Coding.FromStrict({
+    v3_ActCode_DemographicsAccess: new Coding({
         code: "ACDEMO",
         display: "demographics access",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1141,7 +1141,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Provide consent to collect, use, disclose, or access diagnostic imaging information for a patient.
      */
-    v3_ActCode_DiagnosticImagingAccess: Coding.FromStrict({
+    v3_ActCode_DiagnosticImagingAccess: new Coding({
         code: "ACDI",
         display: "diagnostic imaging access",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1149,7 +1149,7 @@ export const V3ActCodeValueSet = {
     /**
      * Automated Clearing House (ACH).
      */
-    v3_ActCode_AutomatedClearingHouse: Coding.FromStrict({
+    v3_ActCode_AutomatedClearingHouse: new Coding({
         code: "ACH",
         display: "Automated Clearing House",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1157,7 +1157,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the respective accreditation agency.
      */
-    v3_ActCode_AccreditedHospitalCare: Coding.FromStrict({
+    v3_ActCode_AccreditedHospitalCare: new Coding({
         code: "ACHC",
         display: "accredited hospital care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1165,7 +1165,7 @@ export const V3ActCodeValueSet = {
     /**
      * The lowering of specimen pH through the addition of an acid
      */
-    v3_ActCode_Acidification: Coding.FromStrict({
+    v3_ActCode_Acidification: new Coding({
         code: "ACID",
         display: "Acidification",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1173,7 +1173,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Provide consent to collect, use, disclose, or access immunization information for a patient.
      */
-    v3_ActCode_ImmunizationAccess: Coding.FromStrict({
+    v3_ActCode_ImmunizationAccess: new Coding({
         code: "ACIMMUN",
         display: "immunization access",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1181,7 +1181,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Provide consent to collect, use, disclose, or access lab test result information for a patient.
      */
-    v3_ActCode_LabTestResultAccess: Coding.FromStrict({
+    v3_ActCode_LabTestResultAccess: new Coding({
         code: "ACLAB",
         display: "lab test result access",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1189,7 +1189,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Provide consent to collect, use, disclose, or access medical condition information for a patient.
      */
-    v3_ActCode_MedicationAccess: Coding.FromStrict({
+    v3_ActCode_MedicationAccess: new Coding({
         code: "ACMED",
         display: "medication access",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1197,7 +1197,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition: Provide consent to view or access medical condition information for a patient.
      */
-    v3_ActCode_MedicalConditionAccess: Coding.FromStrict({
+    v3_ActCode_MedicalConditionAccess: new Coding({
         code: "ACMEDC",
         display: "medical condition access",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1205,7 +1205,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Provide consent to collect, use, disclose, or access mental health information for a patient.
      */
-    v3_ActCode_MentalHealthAccess: Coding.FromStrict({
+    v3_ActCode_MentalHealthAccess: new Coding({
         code: "ACMEN",
         display: "mental health access",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1213,7 +1213,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Provide consent to collect, use, disclose, or access common observation information for a patient.
      */
-    v3_ActCode_CommonObservationsAccess: Coding.FromStrict({
+    v3_ActCode_CommonObservationsAccess: new Coding({
         code: "ACOBS",
         display: "common observations access",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1221,7 +1221,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Provide consent to collect, use, disclose, or access coverage policy or program for a patient.
      */
-    v3_ActCode_PolicyOrProgramInformationAccess: Coding.FromStrict({
+    v3_ActCode_PolicyOrProgramInformationAccess: new Coding({
         code: "ACPOLPRG",
         display: "policy or program information access",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1229,7 +1229,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Provide consent to collect, use, disclose, or access provider information for a patient.
      */
-    v3_ActCode_ProviderInformationAccess: Coding.FromStrict({
+    v3_ActCode_ProviderInformationAccess: new Coding({
         code: "ACPROV",
         display: "provider information access",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1237,7 +1237,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Provide consent to collect, use, disclose, or access professional service information for a patient.
      */
-    v3_ActCode_ProfessionalServiceAccess: Coding.FromStrict({
+    v3_ActCode_ProfessionalServiceAccess: new Coding({
         code: "ACPSERV",
         display: "professional service access",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1245,7 +1245,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Provide consent to collect, use, disclose, or access substance abuse information for a patient.
      */
-    v3_ActCode_SubstanceAbuseAccess: Coding.FromStrict({
+    v3_ActCode_SubstanceAbuseAccess: new Coding({
         code: "ACSUBSTAB",
         display: "substance abuse access",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1259,7 +1259,7 @@ export const V3ActCodeValueSet = {
      *
      *                         For example, identity proofing , level of assurance, and Trust Framework.
      */
-    v3_ActCode_TrustPolicy: Coding.FromStrict({
+    v3_ActCode_TrustPolicy: new Coding({
         code: "ActTrustPolicyType",
         display: "trust policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1267,7 +1267,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:A list of medications which the patient is only expected to consume for the duration of the current order or limited set of orders and which is not expected to be renewed.
      */
-    v3_ActCode_ShortTermAcute: Coding.FromStrict({
+    v3_ActCode_ShortTermAcute: new Coding({
         code: "ACU",
         display: "short term/acute",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1275,7 +1275,7 @@ export const V3ActCodeValueSet = {
     /**
      * An acute inpatient encounter.
      */
-    v3_ActCode_InpatientAcute: Coding.FromStrict({
+    v3_ActCode_InpatientAcute: new Coding({
         code: "ACUTE",
         display: "inpatient acute",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1283,7 +1283,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed therapy is outside of the standard practice for an adult patient.
      */
-    v3_ActCode_AdultAlert: Coding.FromStrict({
+    v3_ActCode_AdultAlert: new Coding({
         code: "ADALRT",
         display: "adult alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1291,7 +1291,7 @@ export const V3ActCodeValueSet = {
     /**
      * Admitting diagnosis are the diagnoses documented  for administrative purposes as the basis for a hospital admission.
      */
-    v3_ActCode_AdmittingDiagnosis: Coding.FromStrict({
+    v3_ActCode_AdmittingDiagnosis: new Coding({
         code: "ADMDX",
         display: "admitting diagnosis",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1299,7 +1299,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were adjudicated as payable prior to the specified time period (based on adjudication date), subsequently cancelled in the specified period and submitted electronically.
      */
-    v3_ActCode_AdjudNullifiedPriorPeriodElectronicAmount: Coding.FromStrict({
+    v3_ActCode_AdjudNullifiedPriorPeriodElectronicAmount: new Coding({
         code: "ADNFPPELAT",
         display: "adjud. nullified prior-period electronic amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1307,7 +1307,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were adjudicated as payable prior to the specified time period (based on adjudication date), subsequently cancelled in the specified period and submitted electronically.
      */
-    v3_ActCode_AdjudNullifiedPriorPeriodElectronicCount: Coding.FromStrict({
+    v3_ActCode_AdjudNullifiedPriorPeriodElectronicCount: new Coding({
         code: "ADNFPPELCT",
         display: "adjud. nullified prior-period electronic count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1315,7 +1315,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were adjudicated as payable prior to the specified time period (based on adjudication date), subsequently cancelled in the specified period and submitted manually.
      */
-    v3_ActCode_AdjudNullifiedPriorPeriodManualAmount: Coding.FromStrict({
+    v3_ActCode_AdjudNullifiedPriorPeriodManualAmount: new Coding({
         code: "ADNFPPMNAT",
         display: "adjud. nullified prior-period manual amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1323,7 +1323,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were adjudicated as payable prior to the specified time period (based on adjudication date), subsequently cancelled in the specified period and submitted manually.
      */
-    v3_ActCode_AdjudNullifiedPriorPeriodManualCount: Coding.FromStrict({
+    v3_ActCode_AdjudNullifiedPriorPeriodManualCount: new Coding({
         code: "ADNFPPMNCT",
         display: "adjud. nullified prior-period manual count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1331,7 +1331,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were adjudicated as payable during the specified time period (based on adjudication date), subsequently nullified in the specified period and submitted electronically.
      */
-    v3_ActCode_AdjudNullifiedSamePeriodElectronicAmount: Coding.FromStrict({
+    v3_ActCode_AdjudNullifiedSamePeriodElectronicAmount: new Coding({
         code: "ADNFSPELAT",
         display: "adjud. nullified same-period electronic amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1339,7 +1339,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were adjudicated as payable during the specified time period (based on adjudication date), subsequently nullified in the specified period and submitted electronically.
      */
-    v3_ActCode_AdjudNullifiedSamePeriodElectronicCount: Coding.FromStrict({
+    v3_ActCode_AdjudNullifiedSamePeriodElectronicCount: new Coding({
         code: "ADNFSPELCT",
         display: "adjud. nullified same-period electronic count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1347,7 +1347,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were adjudicated as payable during the specified time period (based on adjudication date), subsequently cancelled in the specified period and submitted manually.
      */
-    v3_ActCode_AdjudNullifiedSamePeriodManualAmount: Coding.FromStrict({
+    v3_ActCode_AdjudNullifiedSamePeriodManualAmount: new Coding({
         code: "ADNFSPMNAT",
         display: "adjud. nullified same-period manual amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1355,7 +1355,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were adjudicated as payable during the specified time period (based on adjudication date), subsequently cancelled in the specified period and submitted manually.
      */
-    v3_ActCode_AdjudNullifiedSamePeriodManualCount: Coding.FromStrict({
+    v3_ActCode_AdjudNullifiedSamePeriodManualCount: new Coding({
         code: "ADNFSPMNCT",
         display: "adjud. nullified same-period manual count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1363,7 +1363,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were adjudicated as payable prior to the specified time period (based on adjudication date) that do not match a specified payee (e.g. pay patient) and submitted electronically.
      */
-    v3_ActCode_AdjudNonPayeePayablePriorPeriodElectronicAmount: Coding.FromStrict({
+    v3_ActCode_AdjudNonPayeePayablePriorPeriodElectronicAmount: new Coding({
         code: "ADNPPPELAT",
         display: "adjud. non-payee payable prior-period electronic amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1371,7 +1371,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were adjudicated as payable prior to the specified time period (based on adjudication date) that do not match a specified payee (e.g. pay patient) and submitted electronically.
      */
-    v3_ActCode_AdjudNonPayeePayablePriorPeriodElectronicCount: Coding.FromStrict({
+    v3_ActCode_AdjudNonPayeePayablePriorPeriodElectronicCount: new Coding({
         code: "ADNPPPELCT",
         display: "adjud. non-payee payable prior-period electronic count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1379,7 +1379,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were adjudicated as payable prior to the specified time period (based on adjudication date) that do not match a specified payee (e.g. pay patient) and submitted manually.
      */
-    v3_ActCode_AdjudNonPayeePayablePriorPeriodManualAmount: Coding.FromStrict({
+    v3_ActCode_AdjudNonPayeePayablePriorPeriodManualAmount: new Coding({
         code: "ADNPPPMNAT",
         display: "adjud. non-payee payable prior-period manual amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1387,7 +1387,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were adjudicated as payable prior to the specified time period (based on adjudication date) that do not match a specified payee (e.g. pay patient) and submitted manually.
      */
-    v3_ActCode_AdjudNonPayeePayablePriorPeriodManualCount: Coding.FromStrict({
+    v3_ActCode_AdjudNonPayeePayablePriorPeriodManualCount: new Coding({
         code: "ADNPPPMNCT",
         display: "adjud. non-payee payable prior-period manual count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1395,7 +1395,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were adjudicated as payable during the specified time period (based on adjudication date) that do not match a specified payee (e.g. pay patient) and submitted electronically.
      */
-    v3_ActCode_AdjudNonPayeePayableSamePeriodElectronicAmount: Coding.FromStrict({
+    v3_ActCode_AdjudNonPayeePayableSamePeriodElectronicAmount: new Coding({
         code: "ADNPSPELAT",
         display: "adjud. non-payee payable same-period electronic amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1403,7 +1403,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were adjudicated as payable during the specified time period (based on adjudication date) that do not match a specified payee (e.g. pay patient) and submitted electronically.
      */
-    v3_ActCode_AdjudNonPayeePayableSamePeriodElectronicCount: Coding.FromStrict({
+    v3_ActCode_AdjudNonPayeePayableSamePeriodElectronicCount: new Coding({
         code: "ADNPSPELCT",
         display: "adjud. non-payee payable same-period electronic count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1411,7 +1411,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were adjudicated as payable during the specified time period (based on adjudication date) that do not match a specified payee (e.g. pay patient) and submitted manually.
      */
-    v3_ActCode_AdjudNonPayeePayableSamePeriodManualAmount: Coding.FromStrict({
+    v3_ActCode_AdjudNonPayeePayableSamePeriodManualAmount: new Coding({
         code: "ADNPSPMNAT",
         display: "adjud. non-payee payable same-period manual amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1419,7 +1419,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were adjudicated as payable during the specified time period (based on adjudication date) that do not match a specified payee (e.g. pay patient) and submitted manually.
      */
-    v3_ActCode_AdjudNonPayeePayableSamePeriodManualCount: Coding.FromStrict({
+    v3_ActCode_AdjudNonPayeePayableSamePeriodManualCount: new Coding({
         code: "ADNPSPMNCT",
         display: "adjud. non-payee payable same-period manual count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1427,7 +1427,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were adjudicated as payable prior to the specified time period (based on adjudication date) that match a specified payee (e.g. pay provider) and submitted electronically.
      */
-    v3_ActCode_AdjudPayeePayablePriorPeriodElectronicAmount: Coding.FromStrict({
+    v3_ActCode_AdjudPayeePayablePriorPeriodElectronicAmount: new Coding({
         code: "ADPPPPELAT",
         display: "adjud. payee payable prior-period electronic amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1435,7 +1435,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were adjudicated as payable prior to the specified time period (based on adjudication date) that match a specified payee (e.g. pay provider) and submitted electronically.
      */
-    v3_ActCode_AdjudPayeePayablePriorPeriodElectronicCount: Coding.FromStrict({
+    v3_ActCode_AdjudPayeePayablePriorPeriodElectronicCount: new Coding({
         code: "ADPPPPELCT",
         display: "adjud. payee payable prior-period electronic count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1443,7 +1443,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were adjudicated as payable prior to the specified time period (based on adjudication date) that match a specified payee (e.g. pay provider) and submitted manually.
      */
-    v3_ActCode_AdjudPayeePayablePriorPeriodManualAmout: Coding.FromStrict({
+    v3_ActCode_AdjudPayeePayablePriorPeriodManualAmout: new Coding({
         code: "ADPPPPMNAT",
         display: "adjud. payee payable prior-period manual amout",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1451,7 +1451,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were adjudicated as payable prior to the specified time period (based on adjudication date) that match a specified payee (e.g. pay provider) and submitted manually.
      */
-    v3_ActCode_AdjudPayeePayablePriorPeriodManualCount: Coding.FromStrict({
+    v3_ActCode_AdjudPayeePayablePriorPeriodManualCount: new Coding({
         code: "ADPPPPMNCT",
         display: "adjud. payee payable prior-period manual count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1459,7 +1459,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were adjudicated as payable during the specified time period (based on adjudication date) that match a specified payee (e.g. pay provider) and submitted electronically.
      */
-    v3_ActCode_AdjudPayeePayableSamePeriodElectronicAmount: Coding.FromStrict({
+    v3_ActCode_AdjudPayeePayableSamePeriodElectronicAmount: new Coding({
         code: "ADPPSPELAT",
         display: "adjud. payee payable same-period electronic amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1467,7 +1467,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were adjudicated as payable during the specified time period (based on adjudication date) that match a specified payee (e.g. pay provider) and submitted electronically.
      */
-    v3_ActCode_AdjudPayeePayableSamePeriodElectronicCount: Coding.FromStrict({
+    v3_ActCode_AdjudPayeePayableSamePeriodElectronicCount: new Coding({
         code: "ADPPSPELCT",
         display: "adjud. payee payable same-period electronic count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1475,7 +1475,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were adjudicated as payable during the specified time period (based on adjudication date) that match a specified payee (e.g. pay provider) and submitted manually.
      */
-    v3_ActCode_AdjudPayeePayableSamePeriodManualAmount: Coding.FromStrict({
+    v3_ActCode_AdjudPayeePayableSamePeriodManualAmount: new Coding({
         code: "ADPPSPMNAT",
         display: "adjud. payee payable same-period manual amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1483,7 +1483,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were adjudicated as payable during the specified time period (based on adjudication date) that match a specified payee (e.g. pay provider) and submitted manually.
      */
-    v3_ActCode_AdjudPayeePayableSamePeriodManualCount: Coding.FromStrict({
+    v3_ActCode_AdjudPayeePayableSamePeriodManualCount: new Coding({
         code: "ADPPSPMNCT",
         display: "adjud. payee payable same-period manual count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1491,7 +1491,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were adjudicated as refused prior to the specified time period (based on adjudication date) and submitted electronically.
      */
-    v3_ActCode_AdjudRefusedPriorPeriodElectronicAmount: Coding.FromStrict({
+    v3_ActCode_AdjudRefusedPriorPeriodElectronicAmount: new Coding({
         code: "ADRFPPELAT",
         display: "adjud. refused prior-period electronic amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1499,7 +1499,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the  total number of all  Invoice Groupings that were adjudicated as refused prior to the specified time period (based on adjudication date) and submitted electronically.
      */
-    v3_ActCode_AdjudRefusedPriorPeriodElectronicCount: Coding.FromStrict({
+    v3_ActCode_AdjudRefusedPriorPeriodElectronicCount: new Coding({
         code: "ADRFPPELCT",
         display: "adjud. refused prior-period electronic count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1507,7 +1507,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were adjudicated as refused prior to the specified time period (based on adjudication date) and submitted manually.
      */
-    v3_ActCode_AdjudRefusedPriorPeriodManualAmount: Coding.FromStrict({
+    v3_ActCode_AdjudRefusedPriorPeriodManualAmount: new Coding({
         code: "ADRFPPMNAT",
         display: "adjud. refused prior-period manual amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1515,7 +1515,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were adjudicated as refused prior to the specified time period (based on adjudication date) and submitted manually.
      */
-    v3_ActCode_AdjudRefusedPriorPeriodManualCount: Coding.FromStrict({
+    v3_ActCode_AdjudRefusedPriorPeriodManualCount: new Coding({
         code: "ADRFPPMNCT",
         display: "adjud. refused prior-period manual count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1523,7 +1523,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were adjudicated as refused during the specified time period (based on adjudication date) and submitted electronically.
      */
-    v3_ActCode_AdjudRefusedSamePeriodElectronicAmount: Coding.FromStrict({
+    v3_ActCode_AdjudRefusedSamePeriodElectronicAmount: new Coding({
         code: "ADRFSPELAT",
         display: "adjud. refused same-period electronic amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1531,7 +1531,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were adjudicated as refused during the specified time period (based on adjudication date) and submitted electronically.
      */
-    v3_ActCode_AdjudRefusedSamePeriodElectronicCount: Coding.FromStrict({
+    v3_ActCode_AdjudRefusedSamePeriodElectronicCount: new Coding({
         code: "ADRFSPELCT",
         display: "adjud. refused same-period electronic count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1539,7 +1539,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were adjudicated as refused during the specified time period (based on adjudication date) and submitted manually.
      */
-    v3_ActCode_AdjudRefusedSamePeriodManualAmount: Coding.FromStrict({
+    v3_ActCode_AdjudRefusedSamePeriodManualAmount: new Coding({
         code: "ADRFSPMNAT",
         display: "adjud. refused same-period manual amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1547,7 +1547,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were adjudicated as refused during the specified time period (based on adjudication date) and submitted manually.
      */
-    v3_ActCode_AdjudRefusedSamePeriodManualCount: Coding.FromStrict({
+    v3_ActCode_AdjudRefusedSamePeriodManualCount: new Coding({
         code: "ADRFSPMNCT",
         display: "adjud. refused same-period manual count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1555,7 +1555,7 @@ export const V3ActCodeValueSet = {
     /**
      * Indicates that the observation is of an unexpected negative occurrence in the subject suspected to result from the subject's exposure to one or more agents.  Observation values would be the symptom resulting from the reaction.
      */
-    v3_ActCode_AdverseReaction: Coding.FromStrict({
+    v3_ActCode_AdverseReaction: new Coding({
         code: "ADVERSE_REACTION",
         display: "Adverse Reaction",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1563,7 +1563,7 @@ export const V3ActCodeValueSet = {
     /**
      * pedestrian transport
      */
-    v3_ActCode_PedestrianTransport: Coding.FromStrict({
+    v3_ActCode_PedestrianTransport: new Coding({
         code: "AFOOT",
         display: "pedestrian transport",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1571,7 +1571,7 @@ export const V3ActCodeValueSet = {
     /**
      * Premium paid on service fees in compensation for practicing outside of normal working hours.
      */
-    v3_ActCode_NonNormalHours: Coding.FromStrict({
+    v3_ActCode_NonNormalHours: new Coding({
         code: "AFTHRS",
         display: "non-normal hours",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1579,7 +1579,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed therapy may be inappropriate or contraindicated due to patient age
      */
-    v3_ActCode_AgeAlert: Coding.FromStrict({
+    v3_ActCode_AgeAlert: new Coding({
         code: "AGE",
         display: "Age Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1587,7 +1587,7 @@ export const V3ActCodeValueSet = {
     /**
      * Indicates that the observation is carrying out an aggregation calculation, contained in the value element.
      */
-    v3_ActCode_AggregateMeasureObservation: Coding.FromStrict({
+    v3_ActCode_AggregateMeasureObservation: new Coding({
         code: "AGGREGATE",
         display: "aggregate measure observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1595,7 +1595,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the respective accreditation agency.
      */
-    v3_ActCode_AccreditedHomeCare: Coding.FromStrict({
+    v3_ActCode_AccreditedHomeCare: new Coding({
         code: "AHOC",
         display: "accredited home care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1603,7 +1603,7 @@ export const V3ActCodeValueSet = {
     /**
      * Communication of an agent from a living subject or environmental source to a living subject through indirect contact via oral or nasal inhalation.
      */
-    v3_ActCode_AirborneTransmission: Coding.FromStrict({
+    v3_ActCode_AirborneTransmission: new Coding({
         code: "AIRTRNS",
         display: "airborne transmission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1611,7 +1611,7 @@ export const V3ActCodeValueSet = {
     /**
      * Provision of Alternate Level of Care to a patient in an acute bed.  Patient is waiting for placement in a long-term care facility and is unable to return home.
      */
-    v3_ActCode_AlternativeLevelOfCare: Coding.FromStrict({
+    v3_ActCode_AlternativeLevelOfCare: new Coding({
         code: "ALC",
         display: "Alternative Level of Care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1619,7 +1619,7 @@ export const V3ActCodeValueSet = {
     /**
      * Payment initiated by the payor as the result of adjudicating a submitted invoice that arrived to the payor from an electronic source that did not provide a conformant set of HL7 messages (e.g. web claim submission).
      */
-    v3_ActCode_AlternateElectronic: Coding.FromStrict({
+    v3_ActCode_AlternateElectronic: new Coding({
         code: "ALEC",
         display: "alternate electronic",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1627,7 +1627,7 @@ export const V3ActCodeValueSet = {
     /**
      * Hypersensitivity to an agent caused by an immunologic response to an initial exposure
      */
-    v3_ActCode_Allergy: Coding.FromStrict({
+    v3_ActCode_Allergy: new Coding({
         code: "ALG",
         display: "Allergy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1635,7 +1635,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed therapy may be inappropriate or contraindicated because of a recorded patient allergy to the proposed product.  (Allergies are immune based reactions.)
      */
-    v3_ActCode_AllergyAlert: Coding.FromStrict({
+    v3_ActCode_AllergyAlert: new Coding({
         code: "ALGY",
         display: "Allergy Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1643,7 +1643,7 @@ export const V3ActCodeValueSet = {
     /**
      * The act rendering alkaline by impregnating with an alkali; a conferring of alkaline qualities.
      */
-    v3_ActCode_Alkalization: Coding.FromStrict({
+    v3_ActCode_Alkalization: new Coding({
         code: "ALK",
         display: "Alkalization",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1651,7 +1651,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: All patient information.
      */
-    v3_ActCode_AllCategories: Coding.FromStrict({
+    v3_ActCode_AllCategories: new Coding({
         code: "ALLCAT",
         display: "all categories",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1659,7 +1659,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: A person enters a known allergy for a given patient.
      */
-    v3_ActCode_AllergyListEntry: Coding.FromStrict({
+    v3_ActCode_AllergyListEntry: new Coding({
         code: "ALLERLE",
         display: "allergy list entry",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1667,7 +1667,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: A person reviews a list of known allergies of a given patient.
      */
-    v3_ActCode_AllergyListReview: Coding.FromStrict({
+    v3_ActCode_AllergyListReview: new Coding({
         code: "ALLERLREV",
         display: "allergy list review",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1675,7 +1675,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:All information pertaining to a patient's allergy and intolerance records.
      */
-    v3_ActCode_AllergyCategory: Coding.FromStrict({
+    v3_ActCode_AllergyCategory: new Coding({
         code: "ALLGCAT",
         display: "allergy category",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1683,7 +1683,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the respective accreditation agency.
      */
-    v3_ActCode_AccreditedLongTermCare: Coding.FromStrict({
+    v3_ActCode_AccreditedLongTermCare: new Coding({
         code: "ALTC",
         display: "accredited long term care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1691,7 +1691,7 @@ export const V3ActCodeValueSet = {
     /**
      * A comprehensive term for health care provided in a healthcare facility (e.g. a practitioneraTMs office, clinic setting, or hospital) on a nonresident basis. The term ambulatory usually implies that the patient has come to the location and is not assigned to a bed. Sometimes referred to as an outpatient encounter.
      */
-    v3_ActCode_Ambulatory: Coding.FromStrict({
+    v3_ActCode_Ambulatory: new Coding({
         code: "AMB",
         display: "ambulatory",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1699,7 +1699,7 @@ export const V3ActCodeValueSet = {
     /**
      * fixed-wing ambulance transport
      */
-    v3_ActCode_FixedWingAmbulanceTransport: Coding.FromStrict({
+    v3_ActCode_FixedWingAmbulanceTransport: new Coding({
         code: "AMBAIR",
         display: "fixed-wing ambulance transport",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1707,7 +1707,7 @@ export const V3ActCodeValueSet = {
     /**
      * ground ambulance transport
      */
-    v3_ActCode_GroundAmbulanceTransport: Coding.FromStrict({
+    v3_ActCode_GroundAmbulanceTransport: new Coding({
         code: "AMBGRND",
         display: "ground ambulance transport",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1715,7 +1715,7 @@ export const V3ActCodeValueSet = {
     /**
      * helicopter ambulance transport
      */
-    v3_ActCode_HelicopterAmbulanceTransport: Coding.FromStrict({
+    v3_ActCode_HelicopterAmbulanceTransport: new Coding({
         code: "AMBHELO",
         display: "helicopter ambulance transport",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1723,7 +1723,7 @@ export const V3ActCodeValueSet = {
     /**
      * ambulance transport
      */
-    v3_ActCode_AmbulanceTransport: Coding.FromStrict({
+    v3_ActCode_AmbulanceTransport: new Coding({
         code: "AMBT",
         display: "ambulance transport",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1731,7 +1731,7 @@ export const V3ActCodeValueSet = {
     /**
      * Communication of an agent from one animal to another proximate animal.
      */
-    v3_ActCode_AnimalToAnimalTransmission: Coding.FromStrict({
+    v3_ActCode_AnimalToAnimalTransmission: new Coding({
         code: "ANANTRNS",
         display: "animal to animal transmission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1743,7 +1743,7 @@ export const V3ActCodeValueSet = {
      *
      *                         Recommend that the invoice element is saved for DUR (Drug Utilization Reporting).
      */
-    v3_ActCode_AdjudicatedWithAdjustmentsAndNoFinancialImpact: Coding.FromStrict({
+    v3_ActCode_AdjudicatedWithAdjustmentsAndNoFinancialImpact: new Coding({
         code: "ANF",
         display: "adjudicated with adjustments and no financial impact",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1751,7 +1751,7 @@ export const V3ActCodeValueSet = {
     /**
      * Communication of an agent from an animal to a proximate person.
      */
-    v3_ActCode_AnimalToHumanTransmission: Coding.FromStrict({
+    v3_ActCode_AnimalToHumanTransmission: new Coding({
         code: "ANHUMTRNS",
         display: "animal to human transmission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1759,7 +1759,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:A note that is specific to a patient's diagnostic images, either historical, current or planned.
      */
-    v3_ActCode_DiagnosticImageNote: Coding.FromStrict({
+    v3_ActCode_DiagnosticImageNote: new Coding({
         code: "ANNDI",
         display: "diagnostic image note",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1767,7 +1767,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:A general or uncategorized note.
      */
-    v3_ActCode_GeneralNote: Coding.FromStrict({
+    v3_ActCode_GeneralNote: new Coding({
         code: "ANNGEN",
         display: "general note",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1775,7 +1775,7 @@ export const V3ActCodeValueSet = {
     /**
      * A note that is specific to a patient's immunizations, either historical, current or planned.
      */
-    v3_ActCode_ImmunizationNote: Coding.FromStrict({
+    v3_ActCode_ImmunizationNote: new Coding({
         code: "ANNIMM",
         display: "immunization note",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1783,7 +1783,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:A note that is specific to a patient's laboratory results, either historical, current or planned.
      */
-    v3_ActCode_LaboratoryNote: Coding.FromStrict({
+    v3_ActCode_LaboratoryNote: new Coding({
         code: "ANNLAB",
         display: "laboratory note",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1791,7 +1791,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:A note that is specific to a patient's medications, either historical, current or planned.
      */
-    v3_ActCode_MedicationNote: Coding.FromStrict({
+    v3_ActCode_MedicationNote: new Coding({
         code: "ANNMED",
         display: "medication note",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1799,7 +1799,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the respective accreditation agency.
      */
-    v3_ActCode_AccreditedOfficeBasedSurgeryCare: Coding.FromStrict({
+    v3_ActCode_AccreditedOfficeBasedSurgeryCare: new Coding({
         code: "AOSC",
         display: "accredited office-based surgery care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1817,7 +1817,7 @@ export const V3ActCodeValueSet = {
      *
      *                         Recommend that the invoice element is not saved for DUR (Drug Utilization Reporting).
      */
-    v3_ActCode_AdjudicatedAsRefused: Coding.FromStrict({
+    v3_ActCode_AdjudicatedAsRefused: new Coding({
         code: "AR",
         display: "adjudicated as refused",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1825,7 +1825,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: All information pertaining to a patient's adverse drug reactions.
      */
-    v3_ActCode_AdverseDrugReactionCategory: Coding.FromStrict({
+    v3_ActCode_AdverseDrugReactionCategory: new Coding({
         code: "ARCAT",
         display: "adverse drug reaction category",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1833,7 +1833,7 @@ export const V3ActCodeValueSet = {
     /**
      * Describes the artificial blood identifier that is associated with the specimen.
      */
-    v3_ActCode_ActSpecObsArtBldCode: Coding.FromStrict({
+    v3_ActCode_ActSpecObsArtBldCode: new Coding({
         code: "ARTBLD",
         display: "ActSpecObsArtBldCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1849,7 +1849,7 @@ export const V3ActCodeValueSet = {
      *
      *                         Recommend that the invoice element is saved for DUR (Drug Utilization Reporting).
      */
-    v3_ActCode_AdjudicatedAsSubmitted: Coding.FromStrict({
+    v3_ActCode_AdjudicatedAsSubmitted: new Coding({
         code: "AS",
         display: "adjudicated as submitted",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1857,7 +1857,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Refines classCode OBS to indicate an observation in which observation.value contains a finding or other nominalized statement, where the encoded information in Observation.value is not altered by Observation.code.  For instance, observation.code="ASSERTION" and observation.value="fracture of femur present" is an assertion of a clinical finding of femur fracture.
      */
-    v3_ActCode_Assertion: Coding.FromStrict({
+    v3_ActCode_Assertion: new Coding({
         code: "ASSERTION",
         display: "Assertion",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1865,7 +1865,7 @@ export const V3ActCodeValueSet = {
     /**
      * Authorization approved and funds have been set aside to pay for specified healthcare service(s) and/or product(s) within defined criteria for the authorization.
      */
-    v3_ActCode_Authorized: Coding.FromStrict({
+    v3_ActCode_Authorized: new Coding({
         code: "AUTH",
         display: "Authorized",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1873,7 +1873,7 @@ export const V3ActCodeValueSet = {
     /**
      * Specifies whether or not automatic repeat testing is to be initiated on specimens.
      */
-    v3_ActCode_AutoRepeatPermission: Coding.FromStrict({
+    v3_ActCode_AutoRepeatPermission: new Coding({
         code: "AUTO",
         display: "auto-repeat permission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1881,7 +1881,7 @@ export const V3ActCodeValueSet = {
     /**
      * The dilution of a sample performed by automated equipment.  The value is specified by the equipment
      */
-    v3_ActCode_AutoHighDilution: Coding.FromStrict({
+    v3_ActCode_AutoHighDilution: new Coding({
         code: "AUTO-HIGH",
         display: "Auto-High Dilution",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1889,7 +1889,7 @@ export const V3ActCodeValueSet = {
     /**
      * The dilution of a sample performed by automated equipment.  The value is specified by the equipment
      */
-    v3_ActCode_AutoLowDilution: Coding.FromStrict({
+    v3_ActCode_AutoLowDilution: new Coding({
         code: "AUTO-LOW",
         display: "Auto-Low Dilution",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1897,7 +1897,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Automobile Information Attachment
      */
-    v3_ActCode_AutoAttachment: Coding.FromStrict({
+    v3_ActCode_AutoAttachment: new Coding({
         code: "AUTOATTCH",
         display: "auto attachment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1905,7 +1905,7 @@ export const V3ActCodeValueSet = {
     /**
      * The available quantity of specimen.   This is the current quantity minus any planned consumption (e.g., tests that are planned)
      */
-    v3_ActCode_AvailableVolume: Coding.FromStrict({
+    v3_ActCode_AvailableVolume: new Coding({
         code: "AVAILABLE",
         display: "Available Volume",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1913,7 +1913,7 @@ export const V3ActCodeValueSet = {
     /**
      * Communication of an agent from one living subject to another living subject through direct contact with any body fluid.
      */
-    v3_ActCode_BodyFluidContactTransmission: Coding.FromStrict({
+    v3_ActCode_BodyFluidContactTransmission: new Coding({
         code: "BDYFLDTRNS",
         display: "body fluid contact transmission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1921,7 +1921,7 @@ export const V3ActCodeValueSet = {
     /**
      * Communication of an agent to a living subject through direct contact with blood or blood products whether the contact with blood is part of  a therapeutic procedure or not.
      */
-    v3_ActCode_BloodBorneTransmission: Coding.FromStrict({
+    v3_ActCode_BloodBorneTransmission: new Coding({
         code: "BLDTRNS",
         display: "blood borne transmission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1931,7 +1931,7 @@ export const V3ActCodeValueSet = {
      *
      *                         This billing arrangement is also known as Program of Care for some specific Payors and Program Fees for other Payors.
      */
-    v3_ActCode_BlockFunding: Coding.FromStrict({
+    v3_ActCode_BlockFunding: new Coding({
         code: "BLK",
         display: "block funding",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1939,7 +1939,7 @@ export const V3ActCodeValueSet = {
     /**
      * Bonus payments based on performance, volume, etc. as agreed to by the payor.
      */
-    v3_ActCode_Bonus: Coding.FromStrict({
+    v3_ActCode_Bonus: new Coding({
         code: "BONUS",
         display: "bonus",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1947,7 +1947,7 @@ export const V3ActCodeValueSet = {
     /**
      * An additional immunization administration within a series intended to bolster or enhance immunity.
      */
-    v3_ActCode_BoosterImmunization: Coding.FromStrict({
+    v3_ActCode_BoosterImmunization: new Coding({
         code: "BOOSTER",
         display: "Booster Immunization",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1955,7 +1955,7 @@ export const V3ActCodeValueSet = {
     /**
      * A diet exclusively composed of oatmeal, semolina, or rice, to be extremely easy to eat and digest.
      */
-    v3_ActCode_BreikostGE: Coding.FromStrict({
+    v3_ActCode_BreikostGE: new Coding({
         code: "BR",
         display: "breikost (GE)",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1963,7 +1963,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:A local business rule relating multiple elements has been violated.
      */
-    v3_ActCode_BusinessConstraintViolation: Coding.FromStrict({
+    v3_ActCode_BusinessConstraintViolation: new Coding({
         code: "BUS",
         display: "business constraint violation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1971,7 +1971,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Indicates that result data has been corrected.
      */
-    v3_ActCode_Corrected: Coding.FromStrict({
+    v3_ActCode_Corrected: new Coding({
         code: "C",
         display: "corrected",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1979,7 +1979,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedAnatomicPathologyAndClinicalPathologyCare: Coding.FromStrict({
+    v3_ActCode_CertifiedAnatomicPathologyAndClinicalPathologyCare: new Coding({
         code: "CACC",
         display: "certified anatomic pathology and clinical pathology care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1987,7 +1987,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedAcuteCoronarySyndromeCare: Coding.FromStrict({
+    v3_ActCode_CertifiedAcuteCoronarySyndromeCare: new Coding({
         code: "CACS",
         display: "certified acute coronary syndrome care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1995,7 +1995,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedAllergyAndImmunologyCare: Coding.FromStrict({
+    v3_ActCode_CertifiedAllergyAndImmunologyCare: new Coding({
         code: "CAIC",
         display: "certified allergy and immunology care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2003,7 +2003,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedAerospaceMedicineCare: Coding.FromStrict({
+    v3_ActCode_CertifiedAerospaceMedicineCare: new Coding({
         code: "CAMC",
         display: "certified aerospace medicine care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2011,7 +2011,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedAcuteMyocardialInfarctionCare: Coding.FromStrict({
+    v3_ActCode_CertifiedAcuteMyocardialInfarctionCare: new Coding({
         code: "CAMI",
         display: "certified acute myocardial infarction care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2019,7 +2019,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedAnesthesiologyCare: Coding.FromStrict({
+    v3_ActCode_CertifiedAnesthesiologyCare: new Coding({
         code: "CANC",
         display: "certified anesthesiology care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2027,7 +2027,7 @@ export const V3ActCodeValueSet = {
     /**
      * A charge to compensate the provider when a patient cancels an appointment with insufficient time for the provider to make another appointment with another patient.
      */
-    v3_ActCode_CancelledAppointment: Coding.FromStrict({
+    v3_ActCode_CancelledAppointment: new Coding({
         code: "CANCAPT",
         display: "cancelled appointment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2035,7 +2035,7 @@ export const V3ActCodeValueSet = {
     /**
      * A billing arrangement where the payment made to a Provider is determined by analyzing one or more demographic attributes about the persons/patients who are enrolled with the Provider (in their practice).
      */
-    v3_ActCode_CapitationFunding: Coding.FromStrict({
+    v3_ActCode_CapitationFunding: new Coding({
         code: "CAP",
         display: "capitation funding",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2043,7 +2043,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedAnatomicPathologyCare: Coding.FromStrict({
+    v3_ActCode_CertifiedAnatomicPathologyCare: new Coding({
         code: "CAPC",
         display: "certified anatomic pathology care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2051,7 +2051,7 @@ export const V3ActCodeValueSet = {
     /**
      * Provision of diagnosis and treatment of diseases and disorders affecting the heart
      */
-    v3_ActCode_Cardiology: Coding.FromStrict({
+    v3_ActCode_Cardiology: new Coding({
         code: "CARD",
         display: "Cardiology",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2059,7 +2059,7 @@ export const V3ActCodeValueSet = {
     /**
      * List of acts representing a care plan.  The acts can be in a varierty of moods including event (EVN) to record acts that have been carried out as part of the care plan.
      */
-    v3_ActCode_CarePlan: Coding.FromStrict({
+    v3_ActCode_CarePlan: new Coding({
         code: "CARELIST",
         display: "care plan",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2067,7 +2067,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:An observation that provides a characterization of the level of harm to an investigation subject as a result of a reaction or event.
      */
-    v3_ActCode_CaseSeriousnessCriteria: Coding.FromStrict({
+    v3_ActCode_CaseSeriousnessCriteria: new Coding({
         code: "CASESER",
         display: "case seriousness criteria",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2075,7 +2075,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedAsthmaCare: Coding.FromStrict({
+    v3_ActCode_CertifiedAsthmaCare: new Coding({
         code: "CAST",
         display: "certified asthma care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2083,7 +2083,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedBariatricSurgeryCare: Coding.FromStrict({
+    v3_ActCode_CertifiedBariatricSurgeryCare: new Coding({
         code: "CBAR",
         display: "certified bariatric surgery care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2091,7 +2091,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedClinicalBiochemicalGeneticsCare: Coding.FromStrict({
+    v3_ActCode_CertifiedClinicalBiochemicalGeneticsCare: new Coding({
         code: "CBGC",
         display: "certified clinical biochemical genetics care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2099,7 +2099,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedCoronaryArteryDiseaseCare: Coding.FromStrict({
+    v3_ActCode_CertifiedCoronaryArteryDiseaseCare: new Coding({
         code: "CCAD",
         display: "certified coronary artery disease care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2107,7 +2107,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedCardiacCare: Coding.FromStrict({
+    v3_ActCode_CertifiedCardiacCare: new Coding({
         code: "CCAR",
         display: "certified cardiac care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2115,7 +2115,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedClinicalCytogeneticsCare: Coding.FromStrict({
+    v3_ActCode_CertifiedClinicalCytogeneticsCare: new Coding({
         code: "CCCC",
         display: "certified clinical cytogenetics care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2123,7 +2123,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedClinicalGeneticsMDCare: Coding.FromStrict({
+    v3_ActCode_CertifiedClinicalGeneticsMDCare: new Coding({
         code: "CCGC",
         display: "certified clinical genetics (M.D.) care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2131,7 +2131,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedClinicalPathologyCare: Coding.FromStrict({
+    v3_ActCode_CertifiedClinicalPathologyCare: new Coding({
         code: "CCPC",
         display: "certified clinical pathology care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2139,7 +2139,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedColonAndRectalSurgeryCare: Coding.FromStrict({
+    v3_ActCode_CertifiedColonAndRectalSurgeryCare: new Coding({
         code: "CCSC",
         display: "certified colon and rectal surgery care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2147,7 +2147,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedDermatologyCare: Coding.FromStrict({
+    v3_ActCode_CertifiedDermatologyCare: new Coding({
         code: "CDEC",
         display: "certified dermatology care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2155,7 +2155,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedDepressionCare: Coding.FromStrict({
+    v3_ActCode_CertifiedDepressionCare: new Coding({
         code: "CDEP",
         display: "certified depression care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2163,7 +2163,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedDigestiveGastrointestinalDisordersCare: Coding.FromStrict({
+    v3_ActCode_CertifiedDigestiveGastrointestinalDisordersCare: new Coding({
         code: "CDGD",
         display: "certified digestive/gastrointestinal disorders care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2171,7 +2171,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedDiabetesCare: Coding.FromStrict({
+    v3_ActCode_CertifiedDiabetesCare: new Coding({
         code: "CDIA",
         display: "certified diabetes care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2182,7 +2182,7 @@ export const V3ActCodeValueSet = {
      *
      *                            OpenIssue: This code could be moved to LOINC if it can be done before there are significant implemenations using it.
      */
-    v3_ActCode_CaseDiseaseImportedObservation: Coding.FromStrict({
+    v3_ActCode_CaseDiseaseImportedObservation: new Coding({
         code: "CDIO",
         display: "case disease imported observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2190,7 +2190,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedDiagnosticRadiologyCare: Coding.FromStrict({
+    v3_ActCode_CertifiedDiagnosticRadiologyCare: new Coding({
         code: "CDRC",
         display: "certified diagnostic radiology care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2198,7 +2198,7 @@ export const V3ActCodeValueSet = {
     /**
      * A person reviews a recommendation/assessment provided automatically by a clinical decision support application for a given patient.
      */
-    v3_ActCode_ClinicalDecisionSupportInterventionReview: Coding.FromStrict({
+    v3_ActCode_ClinicalDecisionSupportInterventionReview: new Coding({
         code: "CDSREV",
         display: "clinical decision support intervention review",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2206,7 +2206,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedEmergencyMedicineCare: Coding.FromStrict({
+    v3_ActCode_CertifiedEmergencyMedicineCare: new Coding({
         code: "CEMC",
         display: "certified emergency medicine care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2214,7 +2214,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedEpilepsyCare: Coding.FromStrict({
+    v3_ActCode_CertifiedEpilepsyCare: new Coding({
         code: "CEPI",
         display: "certified epilepsy care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2222,7 +2222,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedFrailElderlyCare: Coding.FromStrict({
+    v3_ActCode_CertifiedFrailElderlyCare: new Coding({
         code: "CFEL",
         display: "certified frail elderly care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2230,7 +2230,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedFamilyPracticeCare: Coding.FromStrict({
+    v3_ActCode_CertifiedFamilyPracticeCare: new Coding({
         code: "CFPC",
         display: "certified family practice care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2238,7 +2238,7 @@ export const V3ActCodeValueSet = {
     /**
      * An amount still owing to the payor but the payment is 0$ and this cannot be settled until a future payment is made.
      */
-    v3_ActCode_CarryForwardAdjusment: Coding.FromStrict({
+    v3_ActCode_CarryForwardAdjusment: new Coding({
         code: "CFWD",
         display: "carry forward adjusment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2246,7 +2246,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedHeartFailureCare: Coding.FromStrict({
+    v3_ActCode_CertifiedHeartFailureCare: new Coding({
         code: "CHFC",
         display: "certified heart failure care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2254,7 +2254,7 @@ export const V3ActCodeValueSet = {
     /**
      * A written order to a bank to pay the amount specified from funds on deposit.
      */
-    v3_ActCode_Cheque: Coding.FromStrict({
+    v3_ActCode_Cheque: new Coding({
         code: "CHK",
         display: "Cheque",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2262,7 +2262,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Exposure participants' interaction occurred in a child care setting
      */
-    v3_ActCode_DayCareChildCareInteraction: Coding.FromStrict({
+    v3_ActCode_DayCareChildCareInteraction: new Coding({
         code: "CHLDCARE",
         display: "Day care - Child care Interaction",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2270,7 +2270,7 @@ export const V3ActCodeValueSet = {
     /**
      * Provision of recurring care for chronic illness.
      */
-    v3_ActCode_Chronic: Coding.FromStrict({
+    v3_ActCode_Chronic: new Coding({
         code: "CHR",
         display: "Chronic",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2278,7 +2278,7 @@ export const V3ActCodeValueSet = {
     /**
      * A type of transaction that represents a charge for a service or product.  Expressed in monetary terms.
      */
-    v3_ActCode_StandardCharge: Coding.FromStrict({
+    v3_ActCode_StandardCharge: new Coding({
         code: "CHRG",
         display: "Standard Charge",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2286,7 +2286,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedHighRiskObstetricsCare: Coding.FromStrict({
+    v3_ActCode_CertifiedHighRiskObstetricsCare: new Coding({
         code: "CHRO",
         display: "certified high risk obstetrics care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2294,7 +2294,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:A list of medications which are expected to be continued beyond the present order and which the patient should be assumed to be taking unless explicitly stopped.
      */
-    v3_ActCode_ContinuousChronic: Coding.FromStrict({
+    v3_ActCode_ContinuousChronic: new Coding({
         code: "CHRON",
         display: "continuous/chronic",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2302,7 +2302,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedHyperlipidemiaCare: Coding.FromStrict({
+    v3_ActCode_CertifiedHyperlipidemiaCare: new Coding({
         code: "CHYP",
         display: "certified hyperlipidemia care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2310,7 +2310,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedInternalMedicineCare: Coding.FromStrict({
+    v3_ActCode_CertifiedInternalMedicineCare: new Coding({
         code: "CIMC",
         display: "certified internal medicine care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2318,7 +2318,7 @@ export const V3ActCodeValueSet = {
     /**
      * A circle defined by two (column,row) pairs. The first point is the center of the circle and the second point is a point on the perimeter of the circle.
      */
-    v3_ActCode_Circle: Coding.FromStrict({
+    v3_ActCode_Circle: new Coding({
         code: "CIRCLE",
         display: "circle",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2326,7 +2326,7 @@ export const V3ActCodeValueSet = {
     /**
      * A clinician enters a clinical note about a given patient
      */
-    v3_ActCode_ClinicalNoteEntryTask: Coding.FromStrict({
+    v3_ActCode_ClinicalNoteEntryTask: new Coding({
         code: "CLINNOTEE",
         display: "clinical note entry task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2334,7 +2334,7 @@ export const V3ActCodeValueSet = {
     /**
      * A person reviews a clinical note of a given patient.
      */
-    v3_ActCode_ClinicalNoteReviewTask: Coding.FromStrict({
+    v3_ActCode_ClinicalNoteReviewTask: new Coding({
         code: "CLINNOTEREV",
         display: "clinical note review task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2342,7 +2342,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: The class room associated with the patient during the immunization event.
      */
-    v3_ActCode_Classroom: Coding.FromStrict({
+    v3_ActCode_Classroom: new Coding({
         code: "CLSSRM",
         display: "classroom",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2350,7 +2350,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedClinicalMolecularGeneticsCare: Coding.FromStrict({
+    v3_ActCode_CertifiedClinicalMolecularGeneticsCare: new Coding({
         code: "CMGC",
         display: "certified clinical molecular genetics care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2358,7 +2358,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:.
      */
-    v3_ActCode_CertifiedMigraineHeadacheCare: Coding.FromStrict({
+    v3_ActCode_CertifiedMigraineHeadacheCare: new Coding({
         code: "CMIH",
         display: "certified migraine headache care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2366,7 +2366,7 @@ export const V3ActCodeValueSet = {
     /**
      * Indicates what method is used in a quality measure to combine the component measure results included in an composite measure.
      */
-    v3_ActCode_CompositeMeasureMethod: Coding.FromStrict({
+    v3_ActCode_CompositeMeasureMethod: new Coding({
         code: "CMPMSRMTH",
         display: "composite measure method",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2374,7 +2374,7 @@ export const V3ActCodeValueSet = {
     /**
      * An attribute of a quality measure describing the weight this component measure score is to carry in determining the overall composite measure final score. The value is real value greater than 0 and less than 1.0. Each component measure score will be multiplied by its CMPMSRSCRWGHT and then summed with the other component measures to determine the final overall composite measure score. The sum across all CMPMSRSCRWGHT values within a single composite measure SHALL be 1.0. The value assigned is scoped to the composite measure referencing this component measure only.
      */
-    v3_ActCode_ComponentMeasureScoringWeight: Coding.FromStrict({
+    v3_ActCode_ComponentMeasureScoringWeight: new Coding({
         code: "CMPMSRSCRWGHT",
         display: "component measure scoring weight",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2382,7 +2382,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedMultipleSclerosisCare: Coding.FromStrict({
+    v3_ActCode_CertifiedMultipleSclerosisCare: new Coding({
         code: "CMSC",
         display: "certified multiple sclerosis care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2390,7 +2390,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board
      */
-    v3_ActCode_CertifiedNeurologyCare: Coding.FromStrict({
+    v3_ActCode_CertifiedNeurologyCare: new Coding({
         code: "CNEC",
         display: "certified neurology care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2398,7 +2398,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedNuclearMedicineCare: Coding.FromStrict({
+    v3_ActCode_CertifiedNuclearMedicineCare: new Coding({
         code: "CNMC",
         display: "certified nuclear medicine care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2406,7 +2406,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedNeurologyWithSpecialQualificationsInChildNeurologyCare: Coding.FromStrict({
+    v3_ActCode_CertifiedNeurologyWithSpecialQualificationsInChildNeurologyCare: new Coding({
         code: "CNQC",
         display: "certified neurology with special qualifications in child neurology care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2414,7 +2414,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedNeurologicalSurgeryCare: Coding.FromStrict({
+    v3_ActCode_CertifiedNeurologicalSurgeryCare: new Coding({
         code: "CNSC",
         display: "certified neurological surgery care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2422,7 +2422,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:All information pertaining to a patient's common observation records (height, weight, blood pressure, temperature, etc.).
      */
-    v3_ActCode_CommonObservationCategory: Coding.FromStrict({
+    v3_ActCode_CommonObservationCategory: new Coding({
         code: "COBSCAT",
         display: "common observation category",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2430,7 +2430,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:The specified code has been deprecated and should no longer be used.  Select another code from the code system.
      */
-    v3_ActCode_CodeHasBeenDeprecated: Coding.FromStrict({
+    v3_ActCode_CodeHasBeenDeprecated: new Coding({
         code: "CODE_DEPREC",
         display: "code has been deprecated",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2438,7 +2438,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:The specified code is not valid against the list of codes allowed for the element.
      */
-    v3_ActCode_CodeIsNotValid: Coding.FromStrict({
+    v3_ActCode_CodeIsNotValid: new Coding({
         code: "CODE_INVAL",
         display: "code is not valid",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2446,7 +2446,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedObstetricsAndGynecologyCare: Coding.FromStrict({
+    v3_ActCode_CertifiedObstetricsAndGynecologyCare: new Coding({
         code: "COGC",
         display: "certified obstetrics and gynecology care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2454,7 +2454,7 @@ export const V3ActCodeValueSet = {
     /**
      * That portion of the eligible charges which a covered party must pay for each service and/or product. It is a percentage of the eligible amount for the service/product that is typically charged after the covered party has met the policy deductible.  This amount represents the covered party's coinsurance that is applied to a particular adjudication result. It is expressed as a negative dollar amount in adjudication results.
      */
-    v3_ActCode_Coinsurance: Coding.FromStrict({
+    v3_ActCode_Coinsurance: new Coding({
         code: "COIN",
         display: "coinsurance",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2462,7 +2462,7 @@ export const V3ActCodeValueSet = {
     /**
      * The covered party pays a percentage of the cost of covered services.
      */
-    v3_ActCode_CoInsurance: Coding.FromStrict({
+    v3_ActCode_CoInsurance: new Coding({
         code: "COINS",
         display: "co-insurance",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2470,7 +2470,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedOrthopedicJointReplacementCare: Coding.FromStrict({
+    v3_ActCode_CertifiedOrthopedicJointReplacementCare: new Coding({
         code: "COJR",
         display: "certified orthopedic joint replacement care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2478,7 +2478,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedOccupationalMedicineCare: Coding.FromStrict({
+    v3_ActCode_CertifiedOccupationalMedicineCare: new Coding({
         code: "COMC",
         display: "certified occupational medicine care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2492,7 +2492,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Usage Note: May be associated with an Act or a Role to indicate the legal provision to which the assignment of an Act.confidentialityCode or Role.confidentialtyCode complies.
      */
-    v3_ActCode_CommonRule: Coding.FromStrict({
+    v3_ActCode_CommonRule: new Coding({
         code: "CommonRule",
         display: "Common Rule",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2500,7 +2500,7 @@ export const V3ActCodeValueSet = {
     /**
      * There may be an issue with the patient complying with the intentions of the proposed therapy
      */
-    v3_ActCode_ComplianceAlert: Coding.FromStrict({
+    v3_ActCode_ComplianceAlert: new Coding({
         code: "COMPLY",
         display: "Compliance Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2508,7 +2508,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedOncologyCare: Coding.FromStrict({
+    v3_ActCode_CertifiedOncologyCare: new Coding({
         code: "CONC",
         display: "certified oncology care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2516,7 +2516,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed therapy may be inappropriate or contraindicated due to an existing/recent patient condition or diagnosis
      */
-    v3_ActCode_ConditionAlert: Coding.FromStrict({
+    v3_ActCode_ConditionAlert: new Coding({
         code: "COND",
         display: "Condition Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2524,7 +2524,7 @@ export const V3ActCodeValueSet = {
     /**
      * List of condition observations.
      */
-    v3_ActCode_ConditionList: Coding.FromStrict({
+    v3_ActCode_ConditionList: new Coding({
         code: "CONDLIST",
         display: "condition list",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2532,7 +2532,7 @@ export const V3ActCodeValueSet = {
     /**
      * The quantity of specimen that is used each time the equipment uses this substance
      */
-    v3_ActCode_ConsumptionVolume: Coding.FromStrict({
+    v3_ActCode_ConsumptionVolume: new Coding({
         code: "CONSUMPTION",
         display: "Consumption Volume",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2540,7 +2540,7 @@ export const V3ActCodeValueSet = {
     /**
      * Transaction counts and value totals by Contract Identifier.
      */
-    v3_ActCode_Contract: Coding.FromStrict({
+    v3_ActCode_Contract: new Coding({
         code: "CONT",
         display: "contract",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2548,7 +2548,7 @@ export const V3ActCodeValueSet = {
     /**
      * A billing arrangement where a Provider charges a lump sum to provide a particular volume of one or more interventions/procedures or groups of interventions/procedures.
      */
-    v3_ActCode_ContractFunding: Coding.FromStrict({
+    v3_ActCode_ContractFunding: new Coding({
         code: "CONTF",
         display: "contract funding",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2556,19 +2556,19 @@ export const V3ActCodeValueSet = {
     /**
      * Description: An interaction where the exposure participants traveled in/on the same vehicle (not necessarily concurrently, e.g. both are passengers of the same plane, but on different flights of that plane).
      */
-    v3_ActCode_CommonConveyanceInteraction: Coding.FromStrict({
+    v3_ActCode_CommonConveyanceInteraction: new Coding({
         code: "CONVEYNC",
         display: "Common Conveyance Interaction",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
     }),
-    v3_ActCode_COPAY: Coding.FromStrict({
+    v3_ActCode_COPAY: new Coding({
         code: "COPAY",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
     }),
     /**
      * That portion of the eligible charges which a covered party must pay for each service and/or product. It is a defined amount per service/product of the eligible amount for the service/product. This amount represents the covered party's copayment that is applied to a particular adjudication result. It is expressed as a negative dollar amount in adjudication results.
      */
-    v3_ActCode_PatientCoPay: Coding.FromStrict({
+    v3_ActCode_PatientCoPay: new Coding({
         code: "COPAYMENT",
         display: "patient co-pay",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2576,7 +2576,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedOphthalmologyCare: Coding.FromStrict({
+    v3_ActCode_CertifiedOphthalmologyCare: new Coding({
         code: "COPC",
         display: "certified ophthalmology care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2584,7 +2584,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedChronicObstructivePulmonaryDiseaseCare: Coding.FromStrict({
+    v3_ActCode_CertifiedChronicObstructivePulmonaryDiseaseCare: new Coding({
         code: "COPD",
         display: "certified chronic obstructive pulmonary disease care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2592,7 +2592,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the organization(s) who own the intellectual property represented by the eMeasure.
      */
-    v3_ActCode_Copyright: Coding.FromStrict({
+    v3_ActCode_Copyright: new Coding({
         code: "COPY",
         display: "copyright",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2600,7 +2600,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedOrganTransplantCare: Coding.FromStrict({
+    v3_ActCode_CertifiedOrganTransplantCare: new Coding({
         code: "CORT",
         display: "certified organ transplant care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2608,7 +2608,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedOrthopaedicSurgeryCare: Coding.FromStrict({
+    v3_ActCode_CertifiedOrthopaedicSurgeryCare: new Coding({
         code: "COSC",
         display: "certified orthopaedic surgery care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2616,7 +2616,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedOtolaryngologyCare: Coding.FromStrict({
+    v3_ActCode_CertifiedOtolaryngologyCare: new Coding({
         code: "COTC",
         display: "certified otolaryngology care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2624,7 +2624,7 @@ export const V3ActCodeValueSet = {
     /**
      * Insurance coverage problems have been encountered. Additional explanation information to be supplied.
      */
-    v3_ActCode_CoverageProblem: Coding.FromStrict({
+    v3_ActCode_CoverageProblem: new Coding({
         code: "COVGE",
         display: "coverage problem",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2632,7 +2632,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition: Codes representing the maximum coverate or financial participation requirements.
      */
-    v3_ActCode_CoverageMaximum: Coding.FromStrict({
+    v3_ActCode_CoverageMaximum: new Coding({
         code: "COVMX",
         display: "coverage maximum",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2657,7 +2657,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Examples:A clinical protocol imposed by a payer to which a provider must adhere in order to be paid for providing the service.  A formulary from which a provider must select prescribed drugs in order for the patient to incur a lower copay.
      */
-    v3_ActCode_BenefitPolicy: Coding.FromStrict({
+    v3_ActCode_BenefitPolicy: new Coding({
         code: "COVPOL",
         display: "benefit policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2665,7 +2665,7 @@ export const V3ActCodeValueSet = {
     /**
      * Codes representing the time period during which coverage is available; or financial participation requirements are in effect.
      */
-    v3_ActCode_CoveragePeriod: Coding.FromStrict({
+    v3_ActCode_CoveragePeriod: new Coding({
         code: "COVPRD",
         display: "coverage period",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2673,7 +2673,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedParkinsonsDiseaseCare: Coding.FromStrict({
+    v3_ActCode_CertifiedParkinsonsDiseaseCare: new Coding({
         code: "CPAD",
         display: "certified parkinsons disease care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2681,7 +2681,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedPediatricsCare: Coding.FromStrict({
+    v3_ActCode_CertifiedPediatricsCare: new Coding({
         code: "CPEC",
         display: "certified pediatrics care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2689,7 +2689,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedPhDMedicalGeneticsCare: Coding.FromStrict({
+    v3_ActCode_CertifiedPhDMedicalGeneticsCare: new Coding({
         code: "CPGC",
         display: "certified Ph.D. medical genetics care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2697,7 +2697,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedPublicHealthAndGeneralPreventiveMedicineCare: Coding.FromStrict({
+    v3_ActCode_CertifiedPublicHealthAndGeneralPreventiveMedicineCare: new Coding({
         code: "CPHC",
         display: "certified public health and general preventive medicine care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2707,7 +2707,7 @@ export const V3ActCodeValueSet = {
      *
      *                         For example, a crutch or a wheelchair.
      */
-    v3_ActCode_ClinicalProductInvoice: Coding.FromStrict({
+    v3_ActCode_ClinicalProductInvoice: new Coding({
         code: "CPINV",
         display: "clinical product invoice",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2715,7 +2715,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedPneumoniaDiseaseCare: Coding.FromStrict({
+    v3_ActCode_CertifiedPneumoniaDiseaseCare: new Coding({
         code: "CPND",
         display: "certified pneumonia disease care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2723,7 +2723,7 @@ export const V3ActCodeValueSet = {
     /**
      * A grouping of invoice element groups and details including the ones specifying the compound ingredients being invoiced. It may also contain generic detail items such as markup.
      */
-    v3_ActCode_CompoundDrugInvoiceGroup: Coding.FromStrict({
+    v3_ActCode_CompoundDrugInvoiceGroup: new Coding({
         code: "CPNDDRGING",
         display: "compound drug invoice group",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2731,7 +2731,7 @@ export const V3ActCodeValueSet = {
     /**
      * A grouping of invoice element details including the one specifying an ingredient drug being invoiced. It may also contain generic detail items such as tax or markup.
      */
-    v3_ActCode_CompoundIngredientInvoiceGroup: Coding.FromStrict({
+    v3_ActCode_CompoundIngredientInvoiceGroup: new Coding({
         code: "CPNDINDING",
         display: "compound ingredient invoice group",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2739,7 +2739,7 @@ export const V3ActCodeValueSet = {
     /**
      * A grouping of invoice element groups and details including the ones specifying the compound supplies being invoiced. It may also contain generic detail items such as markup.
      */
-    v3_ActCode_CompoundSupplyInvoiceGroup: Coding.FromStrict({
+    v3_ActCode_CompoundSupplyInvoiceGroup: new Coding({
         code: "CPNDSUPING",
         display: "compound supply invoice group",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2747,7 +2747,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedPhysicalMedicineAndRehabilitationCare: Coding.FromStrict({
+    v3_ActCode_CertifiedPhysicalMedicineAndRehabilitationCare: new Coding({
         code: "CPRC",
         display: "certified physical medicine and rehabilitation care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2755,7 +2755,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedPlasticSurgeryCare: Coding.FromStrict({
+    v3_ActCode_CertifiedPlasticSurgeryCare: new Coding({
         code: "CPSC",
         display: "certified plastic surgery care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2763,7 +2763,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedPrimaryStrokeCenterCare: Coding.FromStrict({
+    v3_ActCode_CertifiedPrimaryStrokeCenterCare: new Coding({
         code: "CPST",
         display: "certified primary stroke center care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2771,7 +2771,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:CPT modifier codes are found in Appendix A of CPT 2000 Standard Edition.
      */
-    v3_ActCode_CPTModifierCodes: Coding.FromStrict({
+    v3_ActCode_CPTModifierCodes: new Coding({
         code: "CPTM",
         display: "CPT modifier codes",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2779,7 +2779,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedPsychiatryCare: Coding.FromStrict({
+    v3_ActCode_CertifiedPsychiatryCare: new Coding({
         code: "CPYC",
         display: "certified psychiatry care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2790,7 +2790,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Example:There is no record of a specific sensitivity for the patient, but the presence of the sensitivity is common and therefore caution is warranted.
      */
-    v3_ActCode_CommonReactionAlert: Coding.FromStrict({
+    v3_ActCode_CommonReactionAlert: new Coding({
         code: "CREACT",
         display: "common reaction alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2798,7 +2798,7 @@ export const V3ActCodeValueSet = {
     /**
      * A clinical judgment as to the worst case result of a future exposure (including substance administration). When the worst case result is assessed to have a life-threatening or organ system threatening potential, it is considered to be of high criticality.
      */
-    v3_ActCode_Criticality: Coding.FromStrict({
+    v3_ActCode_Criticality: new Coding({
         code: "CRIT",
         display: "criticality",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2806,7 +2806,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedRadiationOncologyCare: Coding.FromStrict({
+    v3_ActCode_CertifiedRadiationOncologyCare: new Coding({
         code: "CROC",
         display: "certified radiation oncology care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2814,7 +2814,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedRadiologicalPhysicsCare: Coding.FromStrict({
+    v3_ActCode_CertifiedRadiologicalPhysicsCare: new Coding({
         code: "CRPC",
         display: "certified radiological physics care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2822,7 +2822,7 @@ export const V3ActCodeValueSet = {
     /**
      * Summary of relevant clinical guidelines or other clinical recommendations supporting this eMeasure.
      */
-    v3_ActCode_ClinicalRecommendationStatement: Coding.FromStrict({
+    v3_ActCode_ClinicalRecommendationStatement: new Coding({
         code: "CRS",
         display: "clinical recommendation statement",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2830,7 +2830,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedStrokeDiseaseManagementCare: Coding.FromStrict({
+    v3_ActCode_CertifiedStrokeDiseaseManagementCare: new Coding({
         code: "CSDM",
         display: "certified stroke disease management care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2838,7 +2838,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedSickleCellCare: Coding.FromStrict({
+    v3_ActCode_CertifiedSickleCellCare: new Coding({
         code: "CSIC",
         display: "certified sickle cell care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2858,7 +2858,7 @@ export const V3ActCodeValueSet = {
      *
      *                         For example, the same Chiropractic adjustment (service or treatment) delivered on 3 separate occasions over a period of time at the discretion of the provider (e.g. month).
      */
-    v3_ActCode_ClinicalServiceInvoice: Coding.FromStrict({
+    v3_ActCode_ClinicalServiceInvoice: new Coding({
         code: "CSINV",
         display: "clinical service invoice",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2866,7 +2866,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedSleepDisordersCare: Coding.FromStrict({
+    v3_ActCode_CertifiedSleepDisordersCare: new Coding({
         code: "CSLD",
         display: "certified sleep disorders care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2878,7 +2878,7 @@ export const V3ActCodeValueSet = {
      *
      *                         For example , a brace (product) invoiced together with the fitting (service).
      */
-    v3_ActCode_ClinicalServiceAndProduct: Coding.FromStrict({
+    v3_ActCode_ClinicalServiceAndProduct: new Coding({
         code: "CSPINV",
         display: "clinical service and product",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2886,7 +2886,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedSpineTreatmentCare: Coding.FromStrict({
+    v3_ActCode_CertifiedSpineTreatmentCare: new Coding({
         code: "CSPT",
         display: "certified spine treatment care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2894,7 +2894,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedSurgeryCare: Coding.FromStrict({
+    v3_ActCode_CertifiedSurgeryCare: new Coding({
         code: "CSUC",
         display: "certified surgery care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2902,7 +2902,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedTraumaBurnCenterCare: Coding.FromStrict({
+    v3_ActCode_CertifiedTraumaBurnCenterCare: new Coding({
         code: "CTBU",
         display: "certified trauma/burn center care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2910,7 +2910,7 @@ export const V3ActCodeValueSet = {
     /**
      * A monitoring program that focuses on narcotics and/or commonly abused substances that are subject to legal restriction.
      */
-    v3_ActCode_ControlledSubstance: Coding.FromStrict({
+    v3_ActCode_ControlledSubstance: new Coding({
         code: "CTLSUB",
         display: "Controlled Substance",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2921,7 +2921,7 @@ export const V3ActCodeValueSet = {
      *
      *                            OpenIssue: This code could be moved to LOINC if it can be done before there are significant implemenations using it.
      */
-    v3_ActCode_CaseTransmissionModeObservation: Coding.FromStrict({
+    v3_ActCode_CaseTransmissionModeObservation: new Coding({
         code: "CTMO",
         display: "case transmission mode observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2929,7 +2929,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedThoracicSurgeryCare: Coding.FromStrict({
+    v3_ActCode_CertifiedThoracicSurgeryCare: new Coding({
         code: "CTSC",
         display: "certified thoracic surgery care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2937,7 +2937,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedUrologyCare: Coding.FromStrict({
+    v3_ActCode_CertifiedUrologyCare: new Coding({
         code: "CURC",
         display: "certified urology care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2945,7 +2945,7 @@ export const V3ActCodeValueSet = {
     /**
      * List of current medications.
      */
-    v3_ActCode_CurrentMedicationList: Coding.FromStrict({
+    v3_ActCode_CurrentMedicationList: new Coding({
         code: "CURMEDLIST",
         display: "current medication list",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2953,7 +2953,7 @@ export const V3ActCodeValueSet = {
     /**
      * The current quantity of the specimen, i.e., initial quantity minus what has been actually used.
      */
-    v3_ActCode_CurrentVolume: Coding.FromStrict({
+    v3_ActCode_CurrentVolume: new Coding({
         code: "CURRENT",
         display: "Current Volume",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2961,7 +2961,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedVascularDiseasesCare: Coding.FromStrict({
+    v3_ActCode_CertifiedVascularDiseasesCare: new Coding({
         code: "CVDC",
         display: "certified vascular diseases care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2969,7 +2969,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on for specialty care as defined by the respective Specialty Board.
      */
-    v3_ActCode_CertifiedVascularSurgeryCare: Coding.FromStrict({
+    v3_ActCode_CertifiedVascularSurgeryCare: new Coding({
         code: "CVSC",
         display: "certified vascular surgery care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2977,7 +2977,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedWoundManagementCare: Coding.FromStrict({
+    v3_ActCode_CertifiedWoundManagementCare: new Coding({
         code: "CWMA",
         display: "certified wound management care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2985,7 +2985,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken on by an organization for care of a patient as defined by the disease management certification agency.
      */
-    v3_ActCode_CertifiedWomenQuoteSHealthCare: Coding.FromStrict({
+    v3_ActCode_CertifiedWomenQuoteSHealthCare: new Coding({
         code: "CWOH",
         display: "certified women's health care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -2993,7 +2993,7 @@ export const V3ActCodeValueSet = {
     /**
      * An allergy to a pharmaceutical product.
      */
-    v3_ActCode_DrugAllergy: Coding.FromStrict({
+    v3_ActCode_DrugAllergy: new Coding({
         code: "DALG",
         display: "Drug Allergy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3001,7 +3001,7 @@ export const V3ActCodeValueSet = {
     /**
      * Transaction counts and value totals for each calendar day within the date range specified.
      */
-    v3_ActCode_Day: Coding.FromStrict({
+    v3_ActCode_Day: new Coding({
         code: "DAY",
         display: "day",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3009,19 +3009,19 @@ export const V3ActCodeValueSet = {
     /**
      * Electronic Funds Transfer (EFT) deposit into the payee's bank account
      */
-    v3_ActCode_DirectDeposit: Coding.FromStrict({
+    v3_ActCode_DirectDeposit: new Coding({
         code: "DDP",
         display: "Direct Deposit",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
     }),
-    v3_ActCode_DEDUCT: Coding.FromStrict({
+    v3_ActCode_DEDUCT: new Coding({
         code: "DEDUCT",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
     }),
     /**
      * That portion of the eligible charges which a covered party must pay in a particular period (e.g. annual) before the benefits are payable by the adjudicator. This amount represents the covered party's deductible that is applied to a particular adjudication result. It is expressed as a negative dollar amount in adjudication results.
      */
-    v3_ActCode_Deductible: Coding.FromStrict({
+    v3_ActCode_Deductible: new Coding({
         code: "DEDUCTIBLE",
         display: "deductible",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3029,7 +3029,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description of individual terms, provided as needed.
      */
-    v3_ActCode_Definition: Coding.FromStrict({
+    v3_ActCode_Definition: new Coding({
         code: "DEF",
         display: "definition",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3037,7 +3037,7 @@ export const V3ActCodeValueSet = {
     /**
      * The removal of fibrin from whole blood or plasma through physical or chemical means
      */
-    v3_ActCode_Defibrination: Coding.FromStrict({
+    v3_ActCode_Defibrination: new Coding({
         code: "DEFB",
         display: "Defibrination",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3045,7 +3045,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:All information pertaining to a patient's demographics (such as name, date of birth, gender, address, etc).
      */
-    v3_ActCode_DemographicsCategory: Coding.FromStrict({
+    v3_ActCode_DemographicsCategory: new Coding({
         code: "DEMOCAT",
         display: "demographics category",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3053,7 +3053,7 @@ export const V3ActCodeValueSet = {
     /**
      * Criteria which specify subjects who should be removed from the eMeasure population and denominator before determining if numerator criteria are met. Denominator exclusions are used in proportion and ratio measures to help narrow the denominator.
      */
-    v3_ActCode_DenominatorExclusions: Coding.FromStrict({
+    v3_ActCode_DenominatorExclusions: new Coding({
         code: "DENEX",
         display: "denominator exclusions",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3066,7 +3066,7 @@ export const V3ActCodeValueSet = {
      *                            Patient (or subject) reasons
      *                            System reasons
      */
-    v3_ActCode_DenominatorExceptions: Coding.FromStrict({
+    v3_ActCode_DenominatorExceptions: new Coding({
         code: "DENEXCEP",
         display: "denominator exceptions",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3074,7 +3074,7 @@ export const V3ActCodeValueSet = {
     /**
      * Criteria for specifying the entities to be evaluated by a specific quality measure, based on a shared common set of characteristics (within a specific measurement set to which a given measure belongs).  The denominator can be the same as the initial population, or it may be a subset of the initial population to further constrain it for the purpose of the eMeasure. Different measures within an eMeasure set may have different denominators. Continuous Variable eMeasures do not have a denominator, but instead define a measure population.
      */
-    v3_ActCode_Denominator: Coding.FromStrict({
+    v3_ActCode_Denominator: new Coding({
         code: "DENOM",
         display: "denominator",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3082,7 +3082,7 @@ export const V3ActCodeValueSet = {
     /**
      * Communication of an agent from a living subject or environmental source to a living subject via agent migration through intact skin.
      */
-    v3_ActCode_TransdermalTransmission: Coding.FromStrict({
+    v3_ActCode_TransdermalTransmission: new Coding({
         code: "DERMTRNS",
         display: "transdermal transmission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3090,7 +3090,7 @@ export const V3ActCodeValueSet = {
     /**
      * A fill providing sufficient supply for one day
      */
-    v3_ActCode_DailyFill: Coding.FromStrict({
+    v3_ActCode_DailyFill: new Coding({
         code: "DF",
         display: "Daily Fill",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3098,7 +3098,7 @@ export const V3ActCodeValueSet = {
     /**
      * A clinician enters a diagnosis for a given patient.
      */
-    v3_ActCode_DiagnosisListEntryTask: Coding.FromStrict({
+    v3_ActCode_DiagnosisListEntryTask: new Coding({
         code: "DIAGLISTE",
         display: "diagnosis list entry task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3106,7 +3106,7 @@ export const V3ActCodeValueSet = {
     /**
      * A person reviews a list of diagnoses of a given patient.
      */
-    v3_ActCode_DiagnosisListReviewTask: Coding.FromStrict({
+    v3_ActCode_DiagnosisListReviewTask: new Coding({
         code: "DIAGLISTREV",
         display: "diagnosis list review task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3114,7 +3114,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:All information pertaining to a patient's diagnostic image records (orders &amp; results).
      */
-    v3_ActCode_DiagnosticImageCategory: Coding.FromStrict({
+    v3_ActCode_DiagnosticImageCategory: new Coding({
         code: "DICAT",
         display: "diagnostic image category",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3122,7 +3122,7 @@ export const V3ActCodeValueSet = {
     /**
      * Code set to define specialized/allowed diets
      */
-    v3_ActCode_Diet: Coding.FromStrict({
+    v3_ActCode_Diet: new Coding({
         code: "DIET",
         display: "Diet",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3130,7 +3130,7 @@ export const V3ActCodeValueSet = {
     /**
      * An observation that reports the dilution of a sample.
      */
-    v3_ActCode_ActSpecObsDilutionCode: Coding.FromStrict({
+    v3_ActCode_ActSpecObsDilutionCode: new Coding({
         code: "DILUTION",
         display: "ActSpecObsDilutionCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3138,7 +3138,7 @@ export const V3ActCodeValueSet = {
     /**
      * Hypersensitivity resulting in an adverse reaction upon exposure to a drug.
      */
-    v3_ActCode_DrugIntolerance: Coding.FromStrict({
+    v3_ActCode_DrugIntolerance: new Coding({
         code: "DINT",
         display: "Drug Intolerance",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3146,7 +3146,7 @@ export const V3ActCodeValueSet = {
     /**
      * Disclaimer information for the eMeasure.
      */
-    v3_ActCode_Disclaimer: Coding.FromStrict({
+    v3_ActCode_Disclaimer: new Coding({
         code: "DISC",
         display: "disclaimer",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3154,7 +3154,7 @@ export const V3ActCodeValueSet = {
     /**
      * A person provides a discharge instruction to a patient.
      */
-    v3_ActCode_DischargeInstructionEntry: Coding.FromStrict({
+    v3_ActCode_DischargeInstructionEntry: new Coding({
         code: "DISCHINSTE",
         display: "discharge instruction entry",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3162,7 +3162,7 @@ export const V3ActCodeValueSet = {
     /**
      * A clinician enters a discharge summary for a given patient.
      */
-    v3_ActCode_DischargeSummaryEntryTask: Coding.FromStrict({
+    v3_ActCode_DischargeSummaryEntryTask: new Coding({
         code: "DISCHSUME",
         display: "discharge summary entry task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3170,7 +3170,7 @@ export const V3ActCodeValueSet = {
     /**
      * A person reviews a discharge summary of a given patient.
      */
-    v3_ActCode_DischargeSummaryReviewTask: Coding.FromStrict({
+    v3_ActCode_DischargeSummaryReviewTask: new Coding({
         code: "DISCHSUMREV",
         display: "discharge summary review task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3178,7 +3178,7 @@ export const V3ActCodeValueSet = {
     /**
      * List of discharge medications.
      */
-    v3_ActCode_DischargeMedicationList: Coding.FromStrict({
+    v3_ActCode_DischargeMedicationList: new Coding({
         code: "DISCMEDLIST",
         display: "discharge medication list",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3186,7 +3186,7 @@ export const V3ActCodeValueSet = {
     /**
      * Discharge diagnosis are the diagnoses documented for administrative purposes as the time of hospital discharge.
      */
-    v3_ActCode_DischargeDiagnosis: Coding.FromStrict({
+    v3_ActCode_DischargeDiagnosis: new Coding({
         code: "DISDX",
         display: "discharge diagnosis",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3194,7 +3194,7 @@ export const V3ActCodeValueSet = {
     /**
      * The adjudication result associated is to be displayed to the receiver of the adjudication result.
      */
-    v3_ActCode_Display: Coding.FromStrict({
+    v3_ActCode_Display: new Coding({
         code: "DISPLAY",
         display: "Display",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3202,7 +3202,7 @@ export const V3ActCodeValueSet = {
     /**
      * A diet that uses carbohydrates sparingly.  Typically with a restriction in daily energy content (e.g. 1600-2000 kcal).
      */
-    v3_ActCode_DiabetesMellitusDiet: Coding.FromStrict({
+    v3_ActCode_DiabetesMellitusDiet: new Coding({
         code: "DM",
         display: "diabetes mellitus diet",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3210,7 +3210,7 @@ export const V3ActCodeValueSet = {
     /**
      * Hypersensitivity to an agent caused by a mechanism other than an immunologic response to an initial exposure
      */
-    v3_ActCode_DrugNonAllergyIntolerance: Coding.FromStrict({
+    v3_ActCode_DrugNonAllergyIntolerance: new Coding({
         code: "DNAINT",
         display: "Drug Non-Allergy Intolerance",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3218,7 +3218,7 @@ export const V3ActCodeValueSet = {
     /**
      * Provision of treatment for oral health and/or dental surgery.
      */
-    v3_ActCode_Dental: Coding.FromStrict({
+    v3_ActCode_Dental: new Coding({
         code: "DNTL",
         display: "Dental",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3226,7 +3226,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Document Attachment
      */
-    v3_ActCode_Document: Coding.FromStrict({
+    v3_ActCode_Document: new Coding({
         code: "DOCUMENT",
         display: "document",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3234,7 +3234,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed dosage instructions for therapy differ from standard practice.
      */
-    v3_ActCode_DosageProblem: Coding.FromStrict({
+    v3_ActCode_DosageProblem: new Coding({
         code: "DOSE",
         display: "Dosage problem",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3242,7 +3242,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Proposed dosage is inappropriate due to patient's medical condition.
      */
-    v3_ActCode_DosageConditionAlert: Coding.FromStrict({
+    v3_ActCode_DosageConditionAlert: new Coding({
         code: "DOSECOND",
         display: "dosage-condition alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3250,7 +3250,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed length of therapy differs from standard practice.
      */
-    v3_ActCode_DoseDurationAlert: Coding.FromStrict({
+    v3_ActCode_DoseDurationAlert: new Coding({
         code: "DOSEDUR",
         display: "Dose-Duration Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3258,7 +3258,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed length of therapy is longer than standard practice
      */
-    v3_ActCode_DoseDurationHighAlert: Coding.FromStrict({
+    v3_ActCode_DoseDurationHighAlert: new Coding({
         code: "DOSEDURH",
         display: "Dose-Duration High Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3266,7 +3266,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed length of therapy is longer than standard practice for the identified indication or diagnosis
      */
-    v3_ActCode_DoseDurationHighForIndicationAlert: Coding.FromStrict({
+    v3_ActCode_DoseDurationHighForIndicationAlert: new Coding({
         code: "DOSEDURHIND",
         display: "Dose-Duration High for Indication Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3274,7 +3274,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed length of therapy is shorter than that necessary for therapeutic effect
      */
-    v3_ActCode_DoseDurationLowAlert: Coding.FromStrict({
+    v3_ActCode_DoseDurationLowAlert: new Coding({
         code: "DOSEDURL",
         display: "Dose-Duration Low Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3282,7 +3282,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed length of therapy is shorter than standard practice for the identified indication or diagnosis
      */
-    v3_ActCode_DoseDurationLowForIndicationAlert: Coding.FromStrict({
+    v3_ActCode_DoseDurationLowForIndicationAlert: new Coding({
         code: "DOSEDURLIND",
         display: "Dose-Duration Low for Indication Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3290,7 +3290,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed dosage exceeds standard practice
      */
-    v3_ActCode_HighDoseAlert: Coding.FromStrict({
+    v3_ActCode_HighDoseAlert: new Coding({
         code: "DOSEH",
         display: "High Dose Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3298,7 +3298,7 @@ export const V3ActCodeValueSet = {
     /**
      * High Dose for Indication Alert
      */
-    v3_ActCode_HighDoseForIndicationAlert: Coding.FromStrict({
+    v3_ActCode_HighDoseForIndicationAlert: new Coding({
         code: "DOSEHIND",
         display: "High Dose for Indication Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3306,7 +3306,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed dosage exceeds standard practice for the patient's age
      */
-    v3_ActCode_HighDoseForAgeAlert: Coding.FromStrict({
+    v3_ActCode_HighDoseForAgeAlert: new Coding({
         code: "DOSEHINDA",
         display: "High Dose for Age Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3314,7 +3314,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed dosage exceeds standard practice for the patient's height or body surface area
      */
-    v3_ActCode_HighDoseForHeightSurfaceAreaAlert: Coding.FromStrict({
+    v3_ActCode_HighDoseForHeightSurfaceAreaAlert: new Coding({
         code: "DOSEHINDSA",
         display: "High Dose for Height/Surface Area Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3322,19 +3322,19 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed dosage exceeds standard practice for the patient's weight
      */
-    v3_ActCode_HighDoseForWeightAlert: Coding.FromStrict({
+    v3_ActCode_HighDoseForWeightAlert: new Coding({
         code: "DOSEHINDW",
         display: "High Dose for Weight Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
     }),
-    v3_ActCode_DOSEIND: Coding.FromStrict({
+    v3_ActCode_DOSEIND: new Coding({
         code: "DOSEIND",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
     }),
     /**
      * Proposed dosage interval/timing differs from standard practice
      */
-    v3_ActCode_DoseIntervalAlert: Coding.FromStrict({
+    v3_ActCode_DoseIntervalAlert: new Coding({
         code: "DOSEIVL",
         display: "Dose-Interval Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3342,7 +3342,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed dosage interval/timing differs from standard practice for the identified indication or diagnosis
      */
-    v3_ActCode_DoseIntervalForIndicationAlert: Coding.FromStrict({
+    v3_ActCode_DoseIntervalForIndicationAlert: new Coding({
         code: "DOSEIVLIND",
         display: "Dose-Interval for Indication Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3350,7 +3350,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed dosage is below suggested therapeutic levels
      */
-    v3_ActCode_LowDoseAlert: Coding.FromStrict({
+    v3_ActCode_LowDoseAlert: new Coding({
         code: "DOSEL",
         display: "Low Dose Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3358,7 +3358,7 @@ export const V3ActCodeValueSet = {
     /**
      * Low Dose for Indication Alert
      */
-    v3_ActCode_LowDoseForIndicationAlert: Coding.FromStrict({
+    v3_ActCode_LowDoseForIndicationAlert: new Coding({
         code: "DOSELIND",
         display: "Low Dose for Indication Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3366,7 +3366,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed dosage is below suggested therapeutic levels for the patient's age
      */
-    v3_ActCode_LowDoseForAgeAlert: Coding.FromStrict({
+    v3_ActCode_LowDoseForAgeAlert: new Coding({
         code: "DOSELINDA",
         display: "Low Dose for Age Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3374,7 +3374,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed dosage is below suggested therapeutic levels for the patient's height or body surface area
      */
-    v3_ActCode_LowDoseForHeightSurfaceAreaAlert: Coding.FromStrict({
+    v3_ActCode_LowDoseForHeightSurfaceAreaAlert: new Coding({
         code: "DOSELINDSA",
         display: "Low Dose for Height/Surface Area Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3382,7 +3382,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed dosage is below suggested therapeutic levels for the patient's weight
      */
-    v3_ActCode_LowDoseForWeightAlert: Coding.FromStrict({
+    v3_ActCode_LowDoseForWeightAlert: new Coding({
         code: "DOSELINDW",
         display: "Low Dose for Weight Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3390,7 +3390,7 @@ export const V3ActCodeValueSet = {
     /**
      * Provision of treatment for drug abuse.
      */
-    v3_ActCode_DrugRehab: Coding.FromStrict({
+    v3_ActCode_DrugRehab: new Coding({
         code: "DRGRHB",
         display: "Drug Rehab",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3398,7 +3398,7 @@ export const V3ActCodeValueSet = {
     /**
      * The introduction of a drug into a subject with the intention of altering its biologic state with the intent of improving its health status.
      */
-    v3_ActCode_DrugTherapy: Coding.FromStrict({
+    v3_ActCode_DrugTherapy: new Coding({
         code: "DRUG",
         display: "Drug therapy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3406,7 +3406,7 @@ export const V3ActCodeValueSet = {
     /**
      * A grouping of invoice element details including the one specifying the drug being invoiced. It may also contain generic detail items such as markup.
      */
-    v3_ActCode_DrugInvoiceGroup: Coding.FromStrict({
+    v3_ActCode_DrugInvoiceGroup: new Coding({
         code: "DRUGING",
         display: "drug invoice group",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3414,7 +3414,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition: A public or government health program that administers and funds coverage for prescription drugs to assist program eligible who meet financial and health status criteria.
      */
-    v3_ActCode_DrugProgram: Coding.FromStrict({
+    v3_ActCode_DrugProgram: new Coding({
         code: "DRUGPRG",
         display: "drug program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3422,7 +3422,7 @@ export const V3ActCodeValueSet = {
     /**
      * A reduction in the amount charged as a percentage of the amount. For example a 5% discount for volume purchase.
      */
-    v3_ActCode_Discount: Coding.FromStrict({
+    v3_ActCode_Discount: new Coding({
         code: "DSC",
         display: "discount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3430,7 +3430,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:The proposed therapy appears to have the same intended therapeutic benefit as an existing therapy, though the specific mechanisms of action vary.
      */
-    v3_ActCode_DuplicateTherapeuticAlassAlert: Coding.FromStrict({
+    v3_ActCode_DuplicateTherapeuticAlassAlert: new Coding({
         code: "DUPTHPCLS",
         display: "duplicate therapeutic alass alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3438,7 +3438,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:The proposed therapy appears to have the same intended therapeutic benefit as an existing therapy and uses the same mechanisms of action as the existing therapy.
      */
-    v3_ActCode_DuplicateGenericAlert: Coding.FromStrict({
+    v3_ActCode_DuplicateGenericAlert: new Coding({
         code: "DUPTHPGEN",
         display: "duplicate generic alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3446,7 +3446,7 @@ export const V3ActCodeValueSet = {
     /**
      * The proposed therapy appears to duplicate an existing therapy
      */
-    v3_ActCode_DuplicateTherapyAlert: Coding.FromStrict({
+    v3_ActCode_DuplicateTherapyAlert: new Coding({
         code: "DUPTHPY",
         display: "Duplicate Therapy Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3454,7 +3454,7 @@ export const V3ActCodeValueSet = {
     /**
      * Includes all codes defining types of indications such as diagnosis, symptom and other indications such as contrast agents for lab tests.
      */
-    v3_ActCode_ObservationDiagnosisTypes: Coding.FromStrict({
+    v3_ActCode_ObservationDiagnosisTypes: new Coding({
         code: "DX",
         display: "ObservationDiagnosisTypes",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3462,7 +3462,7 @@ export const V3ActCodeValueSet = {
     /**
      * An allergy to a substance other than a drug or a food.  E.g. Latex, pollen, etc.
      */
-    v3_ActCode_EnvironmentalAllergy: Coding.FromStrict({
+    v3_ActCode_EnvironmentalAllergy: new Coding({
         code: "EALG",
         display: "Environmental Allergy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3470,7 +3470,7 @@ export const V3ActCodeValueSet = {
     /**
      * Fees deducted on behalf of a payee for tuition and continuing education.
      */
-    v3_ActCode_EducationFees: Coding.FromStrict({
+    v3_ActCode_EducationFees: new Coding({
         code: "EDU",
         display: "education fees",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3478,7 +3478,7 @@ export const V3ActCodeValueSet = {
     /**
      * Electronic form with supporting or additional information to follow.
      */
-    v3_ActCode_ElectronicFormToFollow: Coding.FromStrict({
+    v3_ActCode_ElectronicFormToFollow: new Coding({
         code: "EFORM",
         display: "electronic form to follow",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3486,7 +3486,7 @@ export const V3ActCodeValueSet = {
     /**
      * Hypersensitivity resulting in an adverse reaction upon exposure to environmental conditions.
      */
-    v3_ActCode_EnvironmentalIntolerance: Coding.FromStrict({
+    v3_ActCode_EnvironmentalIntolerance: new Coding({
         code: "EINT",
         display: "Environmental Intolerance",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3494,7 +3494,7 @@ export const V3ActCodeValueSet = {
     /**
      * Insurance coverage is in effect for healthcare service(s) and/or product(s).
      */
-    v3_ActCode_Eligible: Coding.FromStrict({
+    v3_ActCode_Eligible: new Coding({
         code: "ELG",
         display: "Eligible",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3502,7 +3502,7 @@ export const V3ActCodeValueSet = {
     /**
      * An ellipse defined by four (column,row) pairs, the first two points specifying the endpoints of the major axis and the second two points specifying the endpoints of the minor axis.
      */
-    v3_ActCode_Ellipse: Coding.FromStrict({
+    v3_ActCode_Ellipse: new Coding({
         code: "ELLIPSE",
         display: "ellipse",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3510,7 +3510,7 @@ export const V3ActCodeValueSet = {
     /**
      * A supply action where there is no 'valid' order for the supplied medication.  E.g. Emergency vacation supply, weekend supply (when prescriber is unavailable to provide a renewal prescription)
      */
-    v3_ActCode_EmergencySupply: Coding.FromStrict({
+    v3_ActCode_EmergencySupply: new Coding({
         code: "EM",
         display: "Emergency Supply",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3518,7 +3518,7 @@ export const V3ActCodeValueSet = {
     /**
      * A patient encounter that takes place at a dedicated healthcare service delivery location where the patient receives immediate evaluation and treatment, provided until the patient can be discharged or responsibility for the patient's care is transferred elsewhere (for example, the patient could be admitted as an inpatient or transferred to another facility.)
      */
-    v3_ActCode_Emergency: Coding.FromStrict({
+    v3_ActCode_Emergency: new Coding({
         code: "EMER",
         display: "emergency",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3529,7 +3529,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Definition: Opt-in to disclosure of health information for emergency only consent directive.
      */
-    v3_ActCode_EmergencyOnly: Coding.FromStrict({
+    v3_ActCode_EmergencyOnly: new Coding({
         code: "EMRGONLY",
         display: "emergency only",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3537,7 +3537,7 @@ export const V3ActCodeValueSet = {
     /**
      * Hypersensitivity to an agent caused by a mechanism other than an immunologic response to an initial exposure
      */
-    v3_ActCode_EnvironmentalNonAllergyIntolerance: Coding.FromStrict({
+    v3_ActCode_EnvironmentalNonAllergyIntolerance: new Coding({
         code: "ENAINT",
         display: "Environmental Non-Allergy Intolerance",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3545,7 +3545,7 @@ export const V3ActCodeValueSet = {
     /**
      * A baseline value for the measured test that is inherently contained in the diluent.  In the calculation of the actual result for the measured test, this baseline value is normally considered.
      */
-    v3_ActCode_EndogenousContent: Coding.FromStrict({
+    v3_ActCode_EndogenousContent: new Coding({
         code: "ENDC",
         display: "endogenous content",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3553,7 +3553,7 @@ export const V3ActCodeValueSet = {
     /**
      * Communication of an agent from an environmental surface or source to a living subject by direct contact.
      */
-    v3_ActCode_EnvironmentalExposureTransmission: Coding.FromStrict({
+    v3_ActCode_EnvironmentalExposureTransmission: new Coding({
         code: "ENVTRNS",
         display: "environmental exposure transmission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3561,7 +3561,7 @@ export const V3ActCodeValueSet = {
     /**
      * Fees deducted on behalf of a payee for charges based on a shorter payment frequency (i.e. next day versus biweekly payments.
      */
-    v3_ActCode_EarlyPaymentFee: Coding.FromStrict({
+    v3_ActCode_EarlyPaymentFee: new Coding({
         code: "EPYMT",
         display: "early payment fee",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3569,7 +3569,7 @@ export const V3ActCodeValueSet = {
     /**
      * A premium on a service fee is requested because, due to extenuating circumstances, the service took an extraordinary amount of time or supplies.
      */
-    v3_ActCode_ExtraordinaryServiceAssessment: Coding.FromStrict({
+    v3_ActCode_ExtraordinaryServiceAssessment: new Coding({
         code: "ESA",
         display: "extraordinary service assessment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3577,7 +3577,7 @@ export const V3ActCodeValueSet = {
     /**
      * Domain provides codes that qualify the ActLabObsEnvfctsCode domain. (Environmental Factors)
      */
-    v3_ActCode_ActSpecObsEvntfctsCode: Coding.FromStrict({
+    v3_ActCode_ActSpecObsEvntfctsCode: new Coding({
         code: "EVNFCTS",
         display: "ActSpecObsEvntfctsCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3585,7 +3585,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Indicates that a result is complete.  No further results are to come.  This maps to the 'complete' state in the observation result status code.
      */
-    v3_ActCode_Final: Coding.FromStrict({
+    v3_ActCode_Final: new Coding({
         code: "F",
         display: "final",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3593,7 +3593,7 @@ export const V3ActCodeValueSet = {
     /**
      * An allergy to a substance generally consumed for nutritional purposes.
      */
-    v3_ActCode_FoodAllergy: Coding.FromStrict({
+    v3_ActCode_FoodAllergy: new Coding({
         code: "FALG",
         display: "Food Allergy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3601,7 +3601,7 @@ export const V3ActCodeValueSet = {
     /**
      * A person reviews a Falls Risk Assessment Instrument report of a given patient.
      */
-    v3_ActCode_FallsRiskAssessmentInstrumentTask: Coding.FromStrict({
+    v3_ActCode_FallsRiskAssessmentInstrumentTask: new Coding({
         code: "FALLRISK",
         display: "falls risk assessment instrument task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3609,7 +3609,7 @@ export const V3ActCodeValueSet = {
     /**
      * No enteral intake of foot or liquids  whatsoever, no smoking.  Typically 6 to 8 hours before anesthesia.
      */
-    v3_ActCode_Fasting: Coding.FromStrict({
+    v3_ActCode_Fasting: new Coding({
         code: "FAST",
         display: "fasting",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3617,7 +3617,7 @@ export const V3ActCodeValueSet = {
     /**
      * Fax with supporting or additional information to follow.
      */
-    v3_ActCode_FaxToFollow: Coding.FromStrict({
+    v3_ActCode_FaxToFollow: new Coding({
         code: "FAX",
         display: "fax to follow",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3625,7 +3625,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: The introduction of material into a subject with the intent of providing nutrition or other dietary supplements (e.g. minerals or vitamins).
      */
-    v3_ActCode_Food: Coding.FromStrict({
+    v3_ActCode_Food: new Coding({
         code: "FD",
         display: "food",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3633,7 +3633,7 @@ export const V3ActCodeValueSet = {
     /**
      * FDA label coating
      */
-    v3_ActCode_Coating: Coding.FromStrict({
+    v3_ActCode_Coating: new Coding({
         code: "FDACOATING",
         display: "coating",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3641,7 +3641,7 @@ export const V3ActCodeValueSet = {
     /**
      * FDA label color
      */
-    v3_ActCode_Color: Coding.FromStrict({
+    v3_ActCode_Color: new Coding({
         code: "FDACOLOR",
         display: "color",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3649,7 +3649,7 @@ export const V3ActCodeValueSet = {
     /**
      * FDA label imprint code
      */
-    v3_ActCode_ImprintCode: Coding.FromStrict({
+    v3_ActCode_ImprintCode: new Coding({
         code: "FDAIMPRINTCD",
         display: "imprint code",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3657,7 +3657,7 @@ export const V3ActCodeValueSet = {
     /**
      * FDA label logo
      */
-    v3_ActCode_Logo: Coding.FromStrict({
+    v3_ActCode_Logo: new Coding({
         code: "FDALOGO",
         display: "logo",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3665,7 +3665,7 @@ export const V3ActCodeValueSet = {
     /**
      * FDA label scoring
      */
-    v3_ActCode_Scoring: Coding.FromStrict({
+    v3_ActCode_Scoring: new Coding({
         code: "FDASCORING",
         display: "scoring",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3673,7 +3673,7 @@ export const V3ActCodeValueSet = {
     /**
      * FDA label shape
      */
-    v3_ActCode_Shape: Coding.FromStrict({
+    v3_ActCode_Shape: new Coding({
         code: "FDASHAPE",
         display: "shape",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3681,7 +3681,7 @@ export const V3ActCodeValueSet = {
     /**
      * FDA label size
      */
-    v3_ActCode_Size: Coding.FromStrict({
+    v3_ActCode_Size: new Coding({
         code: "FDASIZE",
         display: "size",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3689,7 +3689,7 @@ export const V3ActCodeValueSet = {
     /**
      * Communication of an agent from a living subject or environmental source to a living subject through oral contact with material contaminated by person or animal fecal material.
      */
-    v3_ActCode_FecalOralTransmission: Coding.FromStrict({
+    v3_ActCode_FecalOralTransmission: new Coding({
         code: "FECTRNS",
         display: "fecal-oral transmission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3697,7 +3697,7 @@ export const V3ActCodeValueSet = {
     /**
      * The initial fill against an order.  (This includes initial fills against refill orders.)
      */
-    v3_ActCode_FirstFill: Coding.FromStrict({
+    v3_ActCode_FirstFill: new Coding({
         code: "FF",
         display: "First Fill",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3705,7 +3705,7 @@ export const V3ActCodeValueSet = {
     /**
      * A first fill where the quantity supplied is equal to one full repetition of the ordered amount. (e.g. If the order was 90 tablets, 3 refills, a complete fill would be for the full 90 tablets).
      */
-    v3_ActCode_FirstFillComplete: Coding.FromStrict({
+    v3_ActCode_FirstFillComplete: new Coding({
         code: "FFC",
         display: "First Fill - Complete",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3713,7 +3713,7 @@ export const V3ActCodeValueSet = {
     /**
      * A first fill where the quantity supplied is equal to one full repetition of the ordered amount. (e.g. If the order was 90 tablets, 3 refills, a complete fill would be for the full 90 tablets) and also where the strength supplied is less than the ordered strength (e.g. 10mg for an order of 50mg where a subsequent fill will dispense 40mg tablets).
      */
-    v3_ActCode_FirstFillCompletePartialStrength: Coding.FromStrict({
+    v3_ActCode_FirstFillCompletePartialStrength: new Coding({
         code: "FFCS",
         display: "first fill complete, partial strength",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3721,7 +3721,7 @@ export const V3ActCodeValueSet = {
     /**
      * A first fill where the quantity supplied is less than one full repetition of the ordered amount. (e.g. If the order was 90 tablets, 3 refills, a partial fill might be for only 30 tablets.)
      */
-    v3_ActCode_FirstFillPartFill: Coding.FromStrict({
+    v3_ActCode_FirstFillPartFill: new Coding({
         code: "FFP",
         display: "First Fill - Part Fill",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3729,7 +3729,7 @@ export const V3ActCodeValueSet = {
     /**
      * A first fill where the quantity supplied is less than one full repetition of the ordered amount. (e.g. If the order was 90 tablets, 3 refills, a partial fill might be for only 30 tablets.) and also where the strength supplied is less than the ordered strength (e.g. 10mg for an order of 50mg where a subsequent fill will dispense 40mg tablets)
      */
-    v3_ActCode_FirstFillPartFillPartialStrength: Coding.FromStrict({
+    v3_ActCode_FirstFillPartFillPartialStrength: new Coding({
         code: "FFPS",
         display: "first fill, part fill, partial strength",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3739,7 +3739,7 @@ export const V3ActCodeValueSet = {
      *
      *                         Fee for Service is used when an individual intervention/procedure/event is used for billing purposes.  In other words, fees are associated with the  intervention/procedure/event.  For example, a specific CCI (Canadian Classification of Interventions) code has an associated fee and is used for billing purposes.
      */
-    v3_ActCode_FeeForService: Coding.FromStrict({
+    v3_ActCode_FeeForService: new Coding({
         code: "FFS",
         display: "fee for service",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3747,7 +3747,7 @@ export const V3ActCodeValueSet = {
     /**
      * A first fill where the strength supplied is less than the ordered strength. (e.g. 10mg for an order of 50mg where a subsequent fill will dispense 40mg tablets).
      */
-    v3_ActCode_FirstFillPartialStrength: Coding.FromStrict({
+    v3_ActCode_FirstFillPartialStrength: new Coding({
         code: "FFSS",
         display: "first fill, partial strength",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3755,7 +3755,7 @@ export const V3ActCodeValueSet = {
     /**
      * Under agreement between the parties (payor and provider), a guaranteed level of income is established for the provider over a specific, pre-determined period of time. The normal course of business for the provider is submission of fee-for-service claims. Should the fee-for-service income during the specified period of time be less than the agreed to amount, a top-up amount is paid to the provider equal to the difference between the fee-for-service total and the guaranteed income amount for that period of time. The details of the agreement may specify (or not) a requirement for repayment to the payor in the event that the fee-for-service income exceeds the guaranteed amount.
      */
-    v3_ActCode_FeeForServiceTopOff: Coding.FromStrict({
+    v3_ActCode_FeeForServiceTopOff: new Coding({
         code: "FFSTOP",
         display: "fee for service top off",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3763,7 +3763,7 @@ export const V3ActCodeValueSet = {
     /**
      * The Fibrin Index of the specimen. In the case of only differentiating between Absent and Present, recommend using 0 and 1
      */
-    v3_ActCode_Fibrin: Coding.FromStrict({
+    v3_ActCode_Fibrin: new Coding({
         code: "FIBRIN",
         display: "Fibrin",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3771,7 +3771,7 @@ export const V3ActCodeValueSet = {
     /**
      * The passage of a liquid through a filter, accomplished by gravity, pressure or vacuum (suction).
      */
-    v3_ActCode_Filtration: Coding.FromStrict({
+    v3_ActCode_Filtration: new Coding({
         code: "FILT",
         display: "Filtration",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3779,7 +3779,7 @@ export const V3ActCodeValueSet = {
     /**
      * The timestamp when the eMeasure was last packaged in the Measure Authoring Tool.
      */
-    v3_ActCode_FinalizedDateTime: Coding.FromStrict({
+    v3_ActCode_FinalizedDateTime: new Coding({
         code: "FINALDT",
         display: "finalized date/time",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3787,7 +3787,7 @@ export const V3ActCodeValueSet = {
     /**
      * A billing arrangement where a Provider charges for non-clinical items.  This includes interest in arrears, mileage, etc.  Clinical content is not 	included in Invoices submitted with this type of billing arrangement.
      */
-    v3_ActCode_Financial: Coding.FromStrict({
+    v3_ActCode_Financial: new Coding({
         code: "FINBILL",
         display: "financial",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3797,7 +3797,7 @@ export const V3ActCodeValueSet = {
      *
      *                         Examples are interest charges and mileage.
      */
-    v3_ActCode_FinancialInvoice: Coding.FromStrict({
+    v3_ActCode_FinancialInvoice: new Coding({
         code: "FININV",
         display: "financial invoice",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3805,7 +3805,7 @@ export const V3ActCodeValueSet = {
     /**
      * Hypersensitivity resulting in an adverse reaction upon exposure to food.
      */
-    v3_ActCode_FoodIntolerance: Coding.FromStrict({
+    v3_ActCode_FoodIntolerance: new Coding({
         code: "FINT",
         display: "Food Intolerance",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3813,7 +3813,7 @@ export const V3ActCodeValueSet = {
     /**
      * A patient encounter that takes place both outside a dedicated service delivery location and outside a patient's residence. Example locations might include an accident site and at a supermarket.
      */
-    v3_ActCode_Field: Coding.FromStrict({
+    v3_ActCode_Field: new Coding({
         code: "FLD",
         display: "field",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3821,7 +3821,7 @@ export const V3ActCodeValueSet = {
     /**
      * Hypersensitivity to an agent caused by a mechanism other than an immunologic response to an initial exposure
      */
-    v3_ActCode_FoodNonAllergyIntolerance: Coding.FromStrict({
+    v3_ActCode_FoodNonAllergyIntolerance: new Coding({
         code: "FNAINT",
         display: "Food Non-Allergy Intolerance",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3829,7 +3829,7 @@ export const V3ActCodeValueSet = {
     /**
      * Anticipated or actual final fee associated with treating a patient.
      */
-    v3_ActCode_FinalFee: Coding.FromStrict({
+    v3_ActCode_FinalFee: new Coding({
         code: "FNLFEE",
         display: "final fee",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3837,7 +3837,7 @@ export const V3ActCodeValueSet = {
     /**
      * Communication of an agent from an non-living material to a living subject through direct contact.
      */
-    v3_ActCode_FomiteTransmission: Coding.FromStrict({
+    v3_ActCode_FomiteTransmission: new Coding({
         code: "FOMTRNS",
         display: "fomite transmission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3845,7 +3845,7 @@ export const V3ActCodeValueSet = {
     /**
      * Communication of an agent from a food source to a living subject via oral consumption.
      */
-    v3_ActCode_FoodBorneTransmission: Coding.FromStrict({
+    v3_ActCode_FoodBorneTransmission: new Coding({
         code: "FOODTRNS",
         display: "food-borne transmission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3853,7 +3853,7 @@ export const V3ActCodeValueSet = {
     /**
      * The adjudication result associated is to be printed on the specified form, which is then provided to the covered party.
      */
-    v3_ActCode_PrintOnForm: Coding.FromStrict({
+    v3_ActCode_PrintOnForm: new Coding({
         code: "FORM",
         display: "Print on Form",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3861,7 +3861,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:The element does not follow the formatting or type rules defined for the field.
      */
-    v3_ActCode_InvalidFormat: Coding.FromStrict({
+    v3_ActCode_InvalidFormat: new Coding({
         code: "FORMAT",
         display: "invalid format",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3869,7 +3869,7 @@ export const V3ActCodeValueSet = {
     /**
      * A diet consisting of a formula feeding, either for an infant or an adult, to provide nutrition either orally or through the gastrointestinal tract via tube, catheter or stoma.
      */
-    v3_ActCode_FormulaDiet: Coding.FromStrict({
+    v3_ActCode_FormulaDiet: new Coding({
         code: "FORMULA",
         display: "formula diet",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3877,7 +3877,7 @@ export const V3ActCodeValueSet = {
     /**
      * A grouping of invoice element details including the ones specifying the frame fee and the frame dispensing cost that are being invoiced.
      */
-    v3_ActCode_FrameInvoiceGroup: Coding.FromStrict({
+    v3_ActCode_FrameInvoiceGroup: new Coding({
         code: "FRAMEING",
         display: "frame invoice group",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3885,7 +3885,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:The request is suspected to have a fraudulent basis.
      */
-    v3_ActCode_PotentialFraud: Coding.FromStrict({
+    v3_ActCode_PotentialFraud: new Coding({
         code: "FRAUD",
         display: "potential fraud",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3893,7 +3893,7 @@ export const V3ActCodeValueSet = {
     /**
      * Anticipated or actual initial fee associated with treating a patient.
      */
-    v3_ActCode_FirstFee: Coding.FromStrict({
+    v3_ActCode_FirstFee: new Coding({
         code: "FRSTFEE",
         display: "first fee",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3901,7 +3901,7 @@ export const V3ActCodeValueSet = {
     /**
      * A supply action to restock a smaller more local dispensary.
      */
-    v3_ActCode_FloorStock: Coding.FromStrict({
+    v3_ActCode_FloorStock: new Coding({
         code: "FS",
         display: "Floor stock",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3909,7 +3909,7 @@ export const V3ActCodeValueSet = {
     /**
      * Federal tax on transactions such as the Goods and Services Tax (GST)
      */
-    v3_ActCode_FederalSalesTax: Coding.FromStrict({
+    v3_ActCode_FederalSalesTax: new Coding({
         code: "FST",
         display: "federal sales tax",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3917,7 +3917,7 @@ export const V3ActCodeValueSet = {
     /**
      * Fees deducted on behalf of a payee for charges based on a per-transaction or time-period (e.g. monthly) fee.
      */
-    v3_ActCode_Garnishee: Coding.FromStrict({
+    v3_ActCode_Garnishee: new Coding({
         code: "GARN",
         display: "garnishee",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3925,7 +3925,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed therapy is outside of standard practice for a geriatric patient.
      */
-    v3_ActCode_GeriatricAlert: Coding.FromStrict({
+    v3_ActCode_GeriatricAlert: new Coding({
         code: "GEALRT",
         display: "geriatric alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3933,7 +3933,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed therapy may be inappropriate or contraindicated due to patient genetic indicators.
      */
-    v3_ActCode_GeneticAlert: Coding.FromStrict({
+    v3_ActCode_GeneticAlert: new Coding({
         code: "GEN",
         display: "Genetic Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3941,7 +3941,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed therapy may be inappropriate or contraindicated due to patient gender.
      */
-    v3_ActCode_GenderAlert: Coding.FromStrict({
+    v3_ActCode_GenderAlert: new Coding({
         code: "GEND",
         display: "Gender Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3949,7 +3949,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: A DNA segment that contributes to phenotype/function. In the absence of demonstrated function a gene may be characterized by sequence, transcription or homology
      */
-    v3_ActCode_Gene: Coding.FromStrict({
+    v3_ActCode_Gene: new Coding({
         code: "GENE",
         display: "gene",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3957,7 +3957,7 @@ export const V3ActCodeValueSet = {
     /**
      * General care performed by a general practitioner or family doctor as a responsible provider for a patient.
      */
-    v3_ActCode_General: Coding.FromStrict({
+    v3_ActCode_General: new Coding({
         code: "GENRL",
         display: "General",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3965,7 +3965,7 @@ export const V3ActCodeValueSet = {
     /**
      * Gluten free diet for celiac disease.
      */
-    v3_ActCode_GlutenFree: Coding.FromStrict({
+    v3_ActCode_GlutenFree: new Coding({
         code: "GF",
         display: "gluten free",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3973,7 +3973,7 @@ export const V3ActCodeValueSet = {
     /**
      * The medical service was provided to a patient in good faith that they had medical coverage, although no evidence of coverage was available before service was rendered.
      */
-    v3_ActCode_GoodFaithIndicator: Coding.FromStrict({
+    v3_ActCode_GoodFaithIndicator: new Coding({
         code: "GFTH",
         display: "good faith indicator",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3981,7 +3981,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Accuracy determined as per the GIS tier code system.
      */
-    v3_ActCode_GISTier: Coding.FromStrict({
+    v3_ActCode_GISTier: new Coding({
         code: "GISTIER",
         display: "GIS tier",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3989,7 +3989,7 @@ export const V3ActCodeValueSet = {
     /**
      * List of observations in goal mood.
      */
-    v3_ActCode_GoalList: Coding.FromStrict({
+    v3_ActCode_GoalList: new Coding({
         code: "GOALLIST",
         display: "goal list",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -3997,7 +3997,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: The school grade or level the patient was in when immunized.
      */
-    v3_ActCode_Grade: Coding.FromStrict({
+    v3_ActCode_Grade: new Coding({
         code: "GRADE",
         display: "grade",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4019,7 +4019,7 @@ export const V3ActCodeValueSet = {
      *                            Healthcare: A PHR account holder [grantor] may require any PHR user [grantee]  to accept the terms of agreement in full, or may permit a PHR user to extend or restrict terms selected by the account holder or requested by the PHR user.
      *                            Non-healthcare: The owner of a resource server [grantor] may require any authorization server [grantee] to meet authorization requirements stipulated in the grantor's terms of agreement.
      */
-    v3_ActCode_GrantorChoice: Coding.FromStrict({
+    v3_ActCode_GrantorChoice: new Coding({
         code: "GRANTORCHOICE",
         display: "grantor choice",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4027,7 +4027,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Global Trade Item Number is an identifier for trade items developed by GS1 (comprising the former EAN International and Uniform Code Council).
      */
-    v3_ActCode_GlobalTradeItemNumber: Coding.FromStrict({
+    v3_ActCode_GlobalTradeItemNumber: new Coding({
         code: "GTIN",
         display: "Global Trade Item Number",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4035,7 +4035,7 @@ export const V3ActCodeValueSet = {
     /**
      * Used to allow measure developers to provide additional guidance for implementers to understand greater specificity than could be provided in the logic for data criteria.
      */
-    v3_ActCode_Guidance: Coding.FromStrict({
+    v3_ActCode_Guidance: new Coding({
         code: "GUIDE",
         display: "guidance",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4043,7 +4043,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:HCPCS Level II (HCFA-assigned) and Carrier-assigned (Level III) modifiers are reported in Appendix A of CPT 2000 Standard Edition and in the Medicare Bulletin.
      */
-    v3_ActCode_HCPCSLevelIIAndCarrierAssigned: Coding.FromStrict({
+    v3_ActCode_HCPCSLevelIIAndCarrierAssigned: new Coding({
         code: "HCPCSA",
         display: "HCPCS Level II and Carrier-assigned",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4051,7 +4051,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Health Record Attachment
      */
-    v3_ActCode_HealthRecord: Coding.FromStrict({
+    v3_ActCode_HealthRecord: new Coding({
         code: "HEALTHREC",
         display: "health record",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4059,19 +4059,19 @@ export const V3ActCodeValueSet = {
     /**
      * An observation of the hemolysis index of the specimen in g/L
      */
-    v3_ActCode_Hemolysis: Coding.FromStrict({
+    v3_ActCode_Hemolysis: new Coding({
         code: "HEMOLYSIS",
         display: "Hemolysis",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
     }),
-    v3_ActCode_HGHT: Coding.FromStrict({
+    v3_ActCode_HGHT: new Coding({
         code: "HGHT",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
     }),
     /**
      * Healthcare encounter that takes place in the residence of the patient or a designee
      */
-    v3_ActCode_HomeHealth: Coding.FromStrict({
+    v3_ActCode_HomeHealth: new Coding({
         code: "HH",
         display: "home health",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4079,7 +4079,7 @@ export const V3ActCodeValueSet = {
     /**
      * Indicates that the observation is of a person’s living situation in a household including the household composition and circumstances.
      */
-    v3_ActCode_HouseholdSituationObservation: Coding.FromStrict({
+    v3_ActCode_HouseholdSituationObservation: new Coding({
         code: "HHOBS",
         display: "household situation observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4093,7 +4093,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Usage Note: May be associated with an Act or a Role to indicate the legal provision to which the assignment of an Act.confidentialityCode or Role.confidentialtyCode complies.
      */
-    v3_ActCode_HIPAANoticeOfPrivacyPractices: Coding.FromStrict({
+    v3_ActCode_HIPAANoticeOfPrivacyPractices: new Coding({
         code: "HIPAANOPP",
         display: "HIPAA notice of privacy practices",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4107,7 +4107,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Usage Note: May be associated with an Act or a Role to indicate the legal provision to which the assignment of an Act.confidentialityCode or Role.confidentialityCode complies.
      */
-    v3_ActCode_HIPAAPsychotherapyNotes: Coding.FromStrict({
+    v3_ActCode_HIPAAPsychotherapyNotes: new Coding({
         code: "HIPAAPsyNotes",
         display: "HIPAA psychotherapy notes",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4121,7 +4121,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Usage Note: May be associated with an Act or a Role to indicate the legal provision to which the assignment of an Act.confidentialityCode or Role.confidentialityCode complies.
      */
-    v3_ActCode_HIPAASelfPay: Coding.FromStrict({
+    v3_ActCode_HIPAASelfPay: new Coding({
         code: "HIPAASelfPay",
         display: "HIPAA self-pay",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4129,7 +4129,7 @@ export const V3ActCodeValueSet = {
     /**
      * Historical list of medications.
      */
-    v3_ActCode_MedicationHistory: Coding.FromStrict({
+    v3_ActCode_MedicationHistory: new Coding({
         code: "HISTMEDLIST",
         display: "medication history",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4137,7 +4137,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Exposure participants' interaction occurred during the course of health care delivery or in a health care delivery setting, but did not involve the direct provision of care (e.g. a janitor cleaning a patient's hospital room).
      */
-    v3_ActCode_HealthCareInteractionNotPatientCare: Coding.FromStrict({
+    v3_ActCode_HealthCareInteractionNotPatientCare: new Coding({
         code: "HLTHCARE",
         display: "Health Care Interaction - Not Patient Care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4145,7 +4145,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Exposure interaction occurred in context of one providing care for the other, i.e. a babysitter providing care for a child, a home-care aide providing assistance to a paraplegic.
      */
-    v3_ActCode_CareGiverInteraction: Coding.FromStrict({
+    v3_ActCode_CareGiverInteraction: new Coding({
         code: "HOMECARE",
         display: "Care Giver Interaction",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4153,7 +4153,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Exposure participants' interaction occurred when both were patients being treated in the same (acute) health care delivery facility.
      */
-    v3_ActCode_HospitalPatientInteraction: Coding.FromStrict({
+    v3_ActCode_HospitalPatientInteraction: new Coding({
         code: "HOSPPTNT",
         display: "Hospital Patient Interaction",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4161,7 +4161,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Exposure participants' interaction occurred when one visited the other who was a patient being treated in a health care delivery facility.
      */
-    v3_ActCode_HospitalVisitorInteraction: Coding.FromStrict({
+    v3_ActCode_HospitalVisitorInteraction: new Coding({
         code: "HOSPVSTR",
         display: "Hospital Visitor Interaction",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4169,7 +4169,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Exposure interaction occurred in context of domestic interaction, i.e. both participants reside in the same household.
      */
-    v3_ActCode_HouseholdInteraction: Coding.FromStrict({
+    v3_ActCode_HouseholdInteraction: new Coding({
         code: "HOUSEHLD",
         display: "Household Interaction",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4177,7 +4177,7 @@ export const V3ActCodeValueSet = {
     /**
      * Joint Federal/Provincial Sales Tax
      */
-    v3_ActCode_HarmonizedSalesTax: Coding.FromStrict({
+    v3_ActCode_HarmonizedSalesTax: new Coding({
         code: "HST",
         display: "harmonized sales Tax",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4185,7 +4185,7 @@ export const V3ActCodeValueSet = {
     /**
      * Communication of an agent from a person to a proximate person.
      */
-    v3_ActCode_HumanToHumanTransmission: Coding.FromStrict({
+    v3_ActCode_HumanToHumanTransmission: new Coding({
         code: "HUMHUMTRNS",
         display: "human to human transmission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4193,7 +4193,7 @@ export const V3ActCodeValueSet = {
     /**
      * Accommodations used in the care of diseases that are transmitted through casual contact or respiratory transmission.
      */
-    v3_ActCode_Isolation: Coding.FromStrict({
+    v3_ActCode_Isolation: new Coding({
         code: "I",
         display: "Isolation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4201,7 +4201,7 @@ export const V3ActCodeValueSet = {
     /**
      * An observation that describes the icterus index of the specimen.  It is recommended to use mMol/L of bilirubin
      */
-    v3_ActCode_Icterus: Coding.FromStrict({
+    v3_ActCode_Icterus: new Coding({
         code: "ICTERUS",
         display: "Icterus",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4209,7 +4209,7 @@ export const V3ActCodeValueSet = {
     /**
      * Used by one system to inform another that it has received a container.
      */
-    v3_ActCode_Identified: Coding.FromStrict({
+    v3_ActCode_Identified: new Coding({
         code: "ID",
         display: "Identified",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4218,7 +4218,7 @@ export const V3ActCodeValueSet = {
      * Information on whether an increase or decrease in score is the preferred result
      * (e.g., a higher score indicates better quality OR a lower score indicates better quality OR quality is within a range).
      */
-    v3_ActCode_ImprovementNotation: Coding.FromStrict({
+    v3_ActCode_ImprovementNotation: new Coding({
         code: "IDUR",
         display: "improvement notation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4226,7 +4226,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:The request is missing elements or contains elements which cause it to not meet the legal standards for actioning.
      */
-    v3_ActCode_Illegal: Coding.FromStrict({
+    v3_ActCode_Illegal: new Coding({
         code: "ILLEGAL",
         display: "illegal",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4234,7 +4234,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Image Attachment
      */
-    v3_ActCode_ImageAttachment: Coding.FromStrict({
+    v3_ActCode_ImageAttachment: new Coding({
         code: "IMG",
         display: "image attachment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4242,7 +4242,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: A person enters an immunization due or received for a given patient.
      */
-    v3_ActCode_ImmunizationListEntry: Coding.FromStrict({
+    v3_ActCode_ImmunizationListEntry: new Coding({
         code: "IMMLE",
         display: "immunization list entry",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4250,7 +4250,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: A person reviews a list of immunizations due or received for a given patient.
      */
-    v3_ActCode_ImmunizationListReview: Coding.FromStrict({
+    v3_ActCode_ImmunizationListReview: new Coding({
         code: "IMMLREV",
         display: "immunization list review",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4258,7 +4258,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:All information pertaining to a patient's vaccination records.
      */
-    v3_ActCode_ImmunizationCategory: Coding.FromStrict({
+    v3_ActCode_ImmunizationCategory: new Coding({
         code: "IMMUCAT",
         display: "immunization category",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4266,7 +4266,7 @@ export const V3ActCodeValueSet = {
     /**
      * The introduction of an immunogen with the intent of stimulating an immune response, aimed at preventing subsequent infections by more viable agents.
      */
-    v3_ActCode_Immunization: Coding.FromStrict({
+    v3_ActCode_Immunization: new Coding({
         code: "IMMUNIZ",
         display: "Immunization",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4274,7 +4274,7 @@ export const V3ActCodeValueSet = {
     /**
      * A patient encounter where a patient is admitted by a hospital or equivalent facility, assigned to a location where patients generally stay at least overnight and provided with room, board, and continuous nursing service.
      */
-    v3_ActCode_InpatientEncounter: Coding.FromStrict({
+    v3_ActCode_InpatientEncounter: new Coding({
         code: "IMP",
         display: "inpatient encounter",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4298,7 +4298,7 @@ export const V3ActCodeValueSet = {
      *                            Non-healthcare: Upon receiving a driver's license, the driver is deemed to have assented without explicitly consenting to undergoing field sobriety tests.
      *                            A corporation that does business in a foreign nation is deemed to have deemed to have assented without explicitly consenting to abide by that nation's laws.
      */
-    v3_ActCode_ImpliedConsent: Coding.FromStrict({
+    v3_ActCode_ImpliedConsent: new Coding({
         code: "IMPLIED",
         display: "implied consent",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4321,7 +4321,7 @@ export const V3ActCodeValueSet = {
      *                            A health information exchanges deems a patient to have assented to disclosure of health information for treatment purposes, but offers the patient an opportunity to dissents to disclosure to particular provider organizations.
      *                            Non-healthcare Examples: A bank deems a banking customer's assent to specified collection, access, use, or disclosure of financial information as a requirement of holding a bank account, but provides the user an opportunity to limit third-party collection, access, use or disclosure of that information for marketing purposes.
      */
-    v3_ActCode_ImpliedConsentWithOpportunityToDissent: Coding.FromStrict({
+    v3_ActCode_ImpliedConsentWithOpportunityToDissent: new Coding({
         code: "IMPLIEDD",
         display: "implied consent with opportunity to dissent",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4329,7 +4329,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Contrast agent required for imaging study.
      */
-    v3_ActCode_ImagingStudyRequiringContrast: Coding.FromStrict({
+    v3_ActCode_ImagingStudyRequiringContrast: new Coding({
         code: "IND01",
         display: "imaging study requiring contrast",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4337,7 +4337,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Provision of prescription or direction to consume a product for purposes of bowel clearance in preparation for a colonoscopy.
      */
-    v3_ActCode_ColonoscopyPrep: Coding.FromStrict({
+    v3_ActCode_ColonoscopyPrep: new Coding({
         code: "IND02",
         display: "colonoscopy prep",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4345,7 +4345,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Provision of medication as a preventative measure during a treatment or other period of increased risk.
      */
-    v3_ActCode_Prophylaxis: Coding.FromStrict({
+    v3_ActCode_Prophylaxis: new Coding({
         code: "IND03",
         display: "prophylaxis",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4353,7 +4353,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Provision of medication during pre-operative phase; e.g., antibiotics before dental surgery or bowel prep before colon surgery.
      */
-    v3_ActCode_SurgicalProphylaxis: Coding.FromStrict({
+    v3_ActCode_SurgicalProphylaxis: new Coding({
         code: "IND04",
         display: "surgical prophylaxis",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4361,7 +4361,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Provision of medication for pregnancy --e.g., vitamins, antibiotic treatments for vaginal tract colonization, etc.
      */
-    v3_ActCode_PregnancyProphylaxis: Coding.FromStrict({
+    v3_ActCode_PregnancyProphylaxis: new Coding({
         code: "IND05",
         display: "pregnancy prophylaxis",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4369,7 +4369,7 @@ export const V3ActCodeValueSet = {
     /**
      * Communication of an agent to a living subject via an undetermined route.
      */
-    v3_ActCode_IndeterminateDiseaseTransmissionMode: Coding.FromStrict({
+    v3_ActCode_IndeterminateDiseaseTransmissionMode: new Coding({
         code: "INDTRNS",
         display: "indeterminate disease transmission mode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4377,7 +4377,7 @@ export const V3ActCodeValueSet = {
     /**
      * Authorization to collect, access, use, or disclose specified patient health information in accordance with jurisdictional law, organizational policy, or a patient's consent directive, which may be implied, deemed, opt-in, opt-out, or explicit.
      */
-    v3_ActCode_AuthorizedInformationTransfer: Coding.FromStrict({
+    v3_ActCode_AuthorizedInformationTransfer: new Coding({
         code: "INFAUT",
         display: "authorized information transfer",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4385,7 +4385,7 @@ export const V3ActCodeValueSet = {
     /**
      * Authorization to collect, access, use, or disclose specified patient health information as explicitly consented to by the subject of the information or the subject's representative.
      */
-    v3_ActCode_AfterExplicitConsent: Coding.FromStrict({
+    v3_ActCode_AfterExplicitConsent: new Coding({
         code: "INFCON",
         display: "after explicit consent",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4393,7 +4393,7 @@ export const V3ActCodeValueSet = {
     /**
      * Authorization to collect, access, use, or disclose specified patient health information in accordance with judicial system protocol, such as in the case of a subpoena or court order.
      */
-    v3_ActCode_OnlyOnCourtOrder: Coding.FromStrict({
+    v3_ActCode_OnlyOnCourtOrder: new Coding({
         code: "INFCRT",
         display: "only on court order",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4401,7 +4401,7 @@ export const V3ActCodeValueSet = {
     /**
      * Authorization to collect, access, use, or disclose specified patient health information where deemed necessary to avert potential danger to other persons in accordance with jurisdictional law, organizational policy, or standards of practice.  For example, disclosure about a person threatening violence.
      */
-    v3_ActCode_OnlyIfDangerToOthers: Coding.FromStrict({
+    v3_ActCode_OnlyIfDangerToOthers: new Coding({
         code: "INFDNG",
         display: "only if danger to others",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4409,7 +4409,7 @@ export const V3ActCodeValueSet = {
     /**
      * Authorization to collect, access, use, or disclose specified patient health information in accordance with emergency information transfer protocol dictated by jurisdictional law, organization policy, or standards of practice. For example, sharing of health information during disaster response.
      */
-    v3_ActCode_OnlyInAnEmergency: Coding.FromStrict({
+    v3_ActCode_OnlyInAnEmergency: new Coding({
         code: "INFEMER",
         display: "only in an emergency",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4417,7 +4417,7 @@ export const V3ActCodeValueSet = {
     /**
      * Authorization to collect, access, use, or disclose specified patient health information necessary to avert potential public welfare risk in accordance with jurisdictional law, organizational policy, or standards of practice.  For example, reporting that a person is a victim of abuse or demonstrating suicidal tendencies.
      */
-    v3_ActCode_OnlyIfPublicWelfareRisk: Coding.FromStrict({
+    v3_ActCode_OnlyIfPublicWelfareRisk: new Coding({
         code: "INFPWR",
         display: "only if public welfare risk",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4425,7 +4425,7 @@ export const V3ActCodeValueSet = {
     /**
      * Authorization to collect, access, use, or disclose specified patient health information for public health, welfare, and safety purposes in accordance with jurisdictional law, organizational policy, or standards of practice.  For example, public health reporting of notifiable conditions.
      */
-    v3_ActCode_RegulatoryInformationTransfer: Coding.FromStrict({
+    v3_ActCode_RegulatoryInformationTransfer: new Coding({
         code: "INFREG",
         display: "regulatory information transfer",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4433,7 +4433,7 @@ export const V3ActCodeValueSet = {
     /**
      * The initial quantity of the specimen in inventory
      */
-    v3_ActCode_InitialVolume: Coding.FromStrict({
+    v3_ActCode_InitialVolume: new Coding({
         code: "INITIAL",
         display: "Initial Volume",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4441,7 +4441,7 @@ export const V3ActCodeValueSet = {
     /**
      * The first immunization administration in a series intended to produce immunity
      */
-    v3_ActCode_InitialImmunization: Coding.FromStrict({
+    v3_ActCode_InitialImmunization: new Coding({
         code: "INITIMMUNIZ",
         display: "Initial Immunization",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4449,7 +4449,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Exposure participants' interaction occurred in the course of one or both participants being incarcerated at a correctional facility
      */
-    v3_ActCode_InmateInteraction: Coding.FromStrict({
+    v3_ActCode_InmateInteraction: new Coding({
         code: "INMATE",
         display: "Inmate Interaction",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4457,7 +4457,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed therapy may be inappropriate or contraindicated because of a recorded patient intolerance to the proposed product.  (Intolerances are non-immune based sensitivities.)
      */
-    v3_ActCode_IntoleranceAlert: Coding.FromStrict({
+    v3_ActCode_IntoleranceAlert: new Coding({
         code: "INT",
         display: "Intolerance Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4465,7 +4465,7 @@ export const V3ActCodeValueSet = {
     /**
      * Intermediate diagnoses are those diagnoses documented for administrative purposes during the course of a hospital stay.
      */
-    v3_ActCode_IntermediateDiagnosis: Coding.FromStrict({
+    v3_ActCode_IntermediateDiagnosis: new Coding({
         code: "INTDX",
         display: "intermediate diagnosis",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4473,7 +4473,7 @@ export const V3ActCodeValueSet = {
     /**
      * An observation that relates to factors that may potentially cause interference with the observation
      */
-    v3_ActCode_ActSpecObsInterferenceCode: Coding.FromStrict({
+    v3_ActCode_ActSpecObsInterferenceCode: new Coding({
         code: "INTFR",
         display: "ActSpecObsInterferenceCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4481,7 +4481,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Exposure interaction was intimate, i.e. participants are intimate companions (e.g. spouses, domestic partners).
      */
-    v3_ActCode_IntimateInteraction: Coding.FromStrict({
+    v3_ActCode_IntimateInteraction: new Coding({
         code: "INTIMATE",
         display: "Intimate Interaction",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4489,7 +4489,7 @@ export const V3ActCodeValueSet = {
     /**
      * List of intolerance observations.
      */
-    v3_ActCode_IntoleranceList: Coding.FromStrict({
+    v3_ActCode_IntoleranceList: new Coding({
         code: "INTOLIST",
         display: "intolerance list",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4497,7 +4497,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:A monitoring program that focuses on a drug which is under investigation and has not received regulatory approval for the condition being investigated
      */
-    v3_ActCode_Investigational: Coding.FromStrict({
+    v3_ActCode_Investigational: new Coding({
         code: "INV",
         display: "investigational",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4505,7 +4505,7 @@ export const V3ActCodeValueSet = {
     /**
      * Payment is based on a payment intent for a previously submitted Invoice, based on formal adjudication results..
      */
-    v3_ActCode_SubmittedInvoice: Coding.FromStrict({
+    v3_ActCode_SubmittedInvoice: new Coding({
         code: "INVOICE",
         display: "submitted invoice",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4513,7 +4513,7 @@ export const V3ActCodeValueSet = {
     /**
      * Transaction counts and value totals by invoice type (e.g. RXDINV - Pharmacy Dispense)
      */
-    v3_ActCode_InvoiceType: Coding.FromStrict({
+    v3_ActCode_InvoiceType: new Coding({
         code: "INVTYPE",
         display: "invoice type",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4521,7 +4521,7 @@ export const V3ActCodeValueSet = {
     /**
      * Used by one system to inform another that the container is in position for specimen transfer (e.g., container removal from track, pipetting, etc.).
      */
-    v3_ActCode_InPosition: Coding.FromStrict({
+    v3_ActCode_InPosition: new Coding({
         code: "IP",
         display: "In Position",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4529,7 +4529,7 @@ export const V3ActCodeValueSet = {
     /**
      * Criteria for specifying the entities to be evaluated by a specific quality measure, based on a shared common set of characteristics (within a specific measurement set to which a given measure belongs).
      */
-    v3_ActCode_InitialPopulation: Coding.FromStrict({
+    v3_ActCode_InitialPopulation: new Coding({
         code: "IPOP",
         display: "initial population",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4537,7 +4537,7 @@ export const V3ActCodeValueSet = {
     /**
      * Criteria for specifying the patients to be evaluated by a specific quality measure, based on a shared common set of characteristics (within a specific measurement set to which a given measure belongs). Details often include information based upon specific age groups, diagnoses, diagnostic and procedure codes, and enrollment periods.
      */
-    v3_ActCode_InitialPatientPopulation: Coding.FromStrict({
+    v3_ActCode_InitialPatientPopulation: new Coding({
         code: "IPPOP",
         display: "initial patient population",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4545,7 +4545,7 @@ export const V3ActCodeValueSet = {
     /**
      * Premium paid on service fees in compensation for practicing in a remote location.
      */
-    v3_ActCode_IsolationAllowance: Coding.FromStrict({
+    v3_ActCode_IsolationAllowance: new Coding({
         code: "ISOL",
         display: "isolation allowance",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4556,7 +4556,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Open Issue: The definition of this code does not correctly represent the concept space of its specializations (children)
      */
-    v3_ActCode_DetectedIssue: Coding.FromStrict({
+    v3_ActCode_DetectedIssue: new Coding({
         code: "ISSUE",
         display: "detected issue",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4564,7 +4564,7 @@ export const V3ActCodeValueSet = {
     /**
      * Describes the items counted by the measure (e.g., patients, encounters, procedures, etc.)
      */
-    v3_ActCode_ItemsCounted: Coding.FromStrict({
+    v3_ActCode_ItemsCounted: new Coding({
         code: "ITMCNT",
         display: "items counted",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4572,7 +4572,7 @@ export const V3ActCodeValueSet = {
     /**
      * A significant word that aids in discoverability.
      */
-    v3_ActCode_Keyword: Coding.FromStrict({
+    v3_ActCode_Keyword: new Coding({
         code: "KEY",
         display: "keyword",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4580,7 +4580,7 @@ export const V3ActCodeValueSet = {
     /**
      * The ID of the patient, order, etc., was not found. Used for transactions other than additions, e.g. transfer of a non-existent patient.
      */
-    v3_ActCode_UnknownKeyIdentifier: Coding.FromStrict({
+    v3_ActCode_UnknownKeyIdentifier: new Coding({
         code: "KEY204",
         display: "Unknown key identifier",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4588,7 +4588,7 @@ export const V3ActCodeValueSet = {
     /**
      * The ID of the patient, order, etc., already exists. Used in response to addition transactions (Admit, New Order, etc.).
      */
-    v3_ActCode_DuplicateKeyIdentifier: Coding.FromStrict({
+    v3_ActCode_DuplicateKeyIdentifier: new Coding({
         code: "KEY205",
         display: "Duplicate key identifier",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4596,7 +4596,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Metadata associated with the identification (e.g. name or gender) does not match the identification being verified.
      */
-    v3_ActCode_NonMatchingIdentification: Coding.FromStrict({
+    v3_ActCode_NonMatchingIdentification: new Coding({
         code: "KEY206",
         display: "non-matching identification",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4604,7 +4604,7 @@ export const V3ActCodeValueSet = {
     /**
      * Categorization of types of observation that capture the main clinical knowledge subject which may be a medication, a laboratory test, a disease.
      */
-    v3_ActCode_KnowledgeSubject: Coding.FromStrict({
+    v3_ActCode_KnowledgeSubject: new Coding({
         code: "KSUBJ",
         display: "knowledge subject",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4612,7 +4612,7 @@ export const V3ActCodeValueSet = {
     /**
      * Categorization of types of observation that capture a knowledge subtopic which might be treatment, etiology, or prognosis.
      */
-    v3_ActCode_KnowledgeSubtopic: Coding.FromStrict({
+    v3_ActCode_KnowledgeSubtopic: new Coding({
         code: "KSUBT",
         display: "knowledge subtopic",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4620,7 +4620,7 @@ export const V3ActCodeValueSet = {
     /**
      * Used by one system to inform another that the container has been released from that system.
      */
-    v3_ActCode_LeftEquipment: Coding.FromStrict({
+    v3_ActCode_LeftEquipment: new Coding({
         code: "L",
         display: "Left Equipment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4628,7 +4628,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed therapy may be inappropriate or contraindicated due to recent lab test results
      */
-    v3_ActCode_LabAlert: Coding.FromStrict({
+    v3_ActCode_LabAlert: new Coding({
         code: "LAB",
         display: "Lab Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4636,7 +4636,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: All information pertaining to a patient's lab test records (orders &amp; results)
      */
-    v3_ActCode_LabTestCategory: Coding.FromStrict({
+    v3_ActCode_LabTestCategory: new Coding({
         code: "LABCAT",
         display: "lab test category",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4644,7 +4644,7 @@ export const V3ActCodeValueSet = {
     /**
      * A clinician creates a request for a laboratory test to be done for a given patient.
      */
-    v3_ActCode_LaboratoryTestOrderEntryTask: Coding.FromStrict({
+    v3_ActCode_LaboratoryTestOrderEntryTask: new Coding({
         code: "LABOE",
         display: "laboratory test order entry task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4652,7 +4652,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Lab Results Attachment
      */
-    v3_ActCode_LabResults: Coding.FromStrict({
+    v3_ActCode_LabResults: new Coding({
         code: "LABRESULTS",
         display: "lab results",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4660,7 +4660,7 @@ export const V3ActCodeValueSet = {
     /**
      * A person reviews a list of laboratory results of a given patient.
      */
-    v3_ActCode_LaboratoryResultsReviewTask: Coding.FromStrict({
+    v3_ActCode_LaboratoryResultsReviewTask: new Coding({
         code: "LABRREV",
         display: "laboratory results review task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4668,7 +4668,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed therapy may be inappropriate or contraindicated when breast-feeding
      */
-    v3_ActCode_LactationAlert: Coding.FromStrict({
+    v3_ActCode_LactationAlert: new Coding({
         code: "LACT",
         display: "Lactation Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4676,7 +4676,7 @@ export const V3ActCodeValueSet = {
     /**
      * Communication of an agent from one living subject to another living subject through direct contact with mammalian milk or colostrum.
      */
-    v3_ActCode_LactationTransmission: Coding.FromStrict({
+    v3_ActCode_LactationTransmission: new Coding({
         code: "LACTTRNS",
         display: "lactation transmission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4684,7 +4684,7 @@ export const V3ActCodeValueSet = {
     /**
      * Knowingly over the payor's published time limit for this invoice possibly due to a previous payor's delays in processing. Additional reason information will be supplied.
      */
-    v3_ActCode_LateInvoice: Coding.FromStrict({
+    v3_ActCode_LateInvoice: new Coding({
         code: "LATE",
         display: "late invoice",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4692,7 +4692,7 @@ export const V3ActCodeValueSet = {
     /**
      * law enforcement transport
      */
-    v3_ActCode_LawEnforcementTransport: Coding.FromStrict({
+    v3_ActCode_LawEnforcementTransport: new Coding({
         code: "LAWENF",
         display: "law enforcement transport",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4700,7 +4700,7 @@ export const V3ActCodeValueSet = {
     /**
      * LDL Precipitation
      */
-    v3_ActCode_LDLPrecipitation: Coding.FromStrict({
+    v3_ActCode_LDLPrecipitation: new Coding({
         code: "LDLP",
         display: "LDL Precipitation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4708,7 +4708,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:The length of the data specified is greater than the maximum length defined for the element.
      */
-    v3_ActCode_LengthIsTooLong: Coding.FromStrict({
+    v3_ActCode_LengthIsTooLong: new Coding({
         code: "LEN_LONG",
         display: "length is too long",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4716,7 +4716,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:The length of the data specified falls out of the range defined for the element.
      */
-    v3_ActCode_LengthOutOfRange: Coding.FromStrict({
+    v3_ActCode_LengthOutOfRange: new Coding({
         code: "LEN_RANGE",
         display: "length out of range",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4724,7 +4724,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:The length of the data specified is less than the minimum length defined for the element.
      */
-    v3_ActCode_LengthIsTooShort: Coding.FromStrict({
+    v3_ActCode_LengthIsTooShort: new Coding({
         code: "LEN_SHORT",
         display: "length is too short",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4732,7 +4732,7 @@ export const V3ActCodeValueSet = {
     /**
      * A grouping of invoice element details including the ones specifying the lens fee and the lens dispensing cost that are being invoiced.
      */
-    v3_ActCode_LensInvoiceGroup: Coding.FromStrict({
+    v3_ActCode_LensInvoiceGroup: new Coding({
         code: "LENSING",
         display: "lens invoice group",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4740,7 +4740,7 @@ export const V3ActCodeValueSet = {
     /**
      * A diet low in fat, particularly to patients with hepatic diseases.
      */
-    v3_ActCode_LowFat: Coding.FromStrict({
+    v3_ActCode_LowFat: new Coding({
         code: "LF",
         display: "low fat",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4748,7 +4748,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition: Maximum amount paid by payer or covered party; or maximum number of services or products covered under the policy or program during a covered party's lifetime.
      */
-    v3_ActCode_LifeTimeMaximum: Coding.FromStrict({
+    v3_ActCode_LifeTimeMaximum: new Coding({
         code: "LFEMX",
         display: "life time maximum",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4756,7 +4756,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Scope of responsibility taken-on for physician care of a patient as defined by a governmental licensing agency.
      */
-    v3_ActCode_LicensedGeneralPhysicianCare: Coding.FromStrict({
+    v3_ActCode_LicensedGeneralPhysicianCare: new Coding({
         code: "LGPC",
         display: "licensed general physician care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4764,7 +4764,7 @@ export const V3ActCodeValueSet = {
     /**
      * An observation used to describe the Lipemia Index of the specimen. It is recommended to use the optical turbidity at 600 nm (in absorbance units).
      */
-    v3_ActCode_Lipemia: Coding.FromStrict({
+    v3_ActCode_Lipemia: new Coding({
         code: "LIPEMIA",
         display: "Lipemia",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4772,7 +4772,7 @@ export const V3ActCodeValueSet = {
     /**
      * Temporary supply of a product without transfer of ownership for the product.
      */
-    v3_ActCode_Loan: Coding.FromStrict({
+    v3_ActCode_Loan: new Coding({
         code: "LOAN",
         display: "Loan",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4780,7 +4780,7 @@ export const V3ActCodeValueSet = {
     /**
      * Transaction counts and value totals by service location (e.g clinic).
      */
-    v3_ActCode_Location: Coding.FromStrict({
+    v3_ActCode_Location: new Coding({
         code: "LOC",
         display: "location",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4788,7 +4788,7 @@ export const V3ActCodeValueSet = {
     /**
      * A low protein diet for patients with renal failure.
      */
-    v3_ActCode_LowProtein: Coding.FromStrict({
+    v3_ActCode_LowProtein: new Coding({
         code: "LP",
         display: "low protein",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4796,7 +4796,7 @@ export const V3ActCodeValueSet = {
     /**
      * A strictly liquid diet, that can be fully absorbed in the intestine, and therefore may not contain fiber.  Used before enteral surgeries.
      */
-    v3_ActCode_Liquid: Coding.FromStrict({
+    v3_ActCode_Liquid: new Coding({
         code: "LQ",
         display: "liquid",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4804,7 +4804,7 @@ export const V3ActCodeValueSet = {
     /**
      * A diet low in sodium for patients with congestive heart failure and/or renal failure.
      */
-    v3_ActCode_LowSodium: Coding.FromStrict({
+    v3_ActCode_LowSodium: new Coding({
         code: "LS",
         display: "low sodium",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4812,7 +4812,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Exposure participants' interaction occurred in the course of one or both participants being resident at a long term care facility (second participant may be a visitor, worker, resident or a physical place or object within the facility).
      */
-    v3_ActCode_LongTermCareFacilityInteraction: Coding.FromStrict({
+    v3_ActCode_LongTermCareFacilityInteraction: new Coding({
         code: "LTRMCARE",
         display: "Long Term Care Facility Interaction",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4820,7 +4820,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:A drug that can be prescribed (and reimbursed) only if it meets certain criteria.
      */
-    v3_ActCode_LimitedUse: Coding.FromStrict({
+    v3_ActCode_LimitedUse: new Coding({
         code: "LU",
         display: "limited use",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4828,7 +4828,7 @@ export const V3ActCodeValueSet = {
     /**
      * Used by one system to inform another that the container did not arrive at its next expected location.
      */
-    v3_ActCode_Missing: Coding.FromStrict({
+    v3_ActCode_Missing: new Coding({
         code: "M",
         display: "Missing",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4836,7 +4836,7 @@ export const V3ActCodeValueSet = {
     /**
      * Manual review of the invoice is requested.  Additional information to be supplied.  This may be used in the case of an appeal.
      */
-    v3_ActCode_ManualReview: Coding.FromStrict({
+    v3_ActCode_ManualReview: new Coding({
         code: "MANUAL",
         display: "manual review",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4844,7 +4844,7 @@ export const V3ActCodeValueSet = {
     /**
      * An increase in the amount charged as a percentage of the amount. For example, 12% markup on product cost.
      */
-    v3_ActCode_MarkupOrUpCharge: Coding.FromStrict({
+    v3_ActCode_MarkupOrUpCharge: new Coding({
         code: "MARKUP",
         display: "markup or up-charge",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4852,7 +4852,7 @@ export const V3ActCodeValueSet = {
     /**
      * A clinician reviews a work list of medications to be administered to a given patient.
      */
-    v3_ActCode_MedicationAdministrationRecordWorkListReviewTask: Coding.FromStrict({
+    v3_ActCode_MedicationAdministrationRecordWorkListReviewTask: new Coding({
         code: "MARWLREV",
         display: "medication administration record work list review task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4860,7 +4860,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:The number of repeating elements is above the maximum number of repetitions allowed.
      */
-    v3_ActCode_RepetitionsAboveMaximum: Coding.FromStrict({
+    v3_ActCode_RepetitionsAboveMaximum: new Coding({
         code: "MAXOCCURS",
         display: "repetitions above maximum",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4868,7 +4868,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:The maximum quantity of this drug allowed to be administered within a particular time-range (month, year, lifetime) has been reached or exceeded.
      */
-    v3_ActCode_MaximumDosageReached: Coding.FromStrict({
+    v3_ActCode_MaximumDosageReached: new Coding({
         code: "MDOSE",
         display: "maximum dosage reached",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4876,7 +4876,7 @@ export const V3ActCodeValueSet = {
     /**
      * Provision of diagnostic and/or therapeutic treatment.
      */
-    v3_ActCode_Medical: Coding.FromStrict({
+    v3_ActCode_Medical: new Coding({
         code: "MED",
         display: "Medical",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4884,7 +4884,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:All information pertaining to a patient's medical condition records.
      */
-    v3_ActCode_MedicalConditionCategory: Coding.FromStrict({
+    v3_ActCode_MedicalConditionCategory: new Coding({
         code: "MEDCCAT",
         display: "medical condition category",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4892,7 +4892,7 @@ export const V3ActCodeValueSet = {
     /**
      * List of medications.
      */
-    v3_ActCode_MedicationList: Coding.FromStrict({
+    v3_ActCode_MedicationList: new Coding({
         code: "MEDLIST",
         display: "medication list",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4900,7 +4900,7 @@ export const V3ActCodeValueSet = {
     /**
      * A clinician creates a request for the administration of one or more medications to a given patient.
      */
-    v3_ActCode_MedicationOrderEntryTask: Coding.FromStrict({
+    v3_ActCode_MedicationOrderEntryTask: new Coding({
         code: "MEDOE",
         display: "medication order entry task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4908,7 +4908,7 @@ export const V3ActCodeValueSet = {
     /**
      * The end date of the measurement period.
      */
-    v3_ActCode_MeasurementEndDate: Coding.FromStrict({
+    v3_ActCode_MeasurementEndDate: new Coding({
         code: "MEDT",
         display: "measurement end date",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4916,7 +4916,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: All information pertaining to a patient's mental health records.
      */
-    v3_ActCode_MentalHealthCategory: Coding.FromStrict({
+    v3_ActCode_MentalHealthCategory: new Coding({
         code: "MENCAT",
         display: "mental health category",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4924,7 +4924,7 @@ export const V3ActCodeValueSet = {
     /**
      * A person reviews organisms of microbiology results of a given patient.
      */
-    v3_ActCode_MicrobiologyOrganismsResultsReviewTask: Coding.FromStrict({
+    v3_ActCode_MicrobiologyOrganismsResultsReviewTask: new Coding({
         code: "MICROORGRREV",
         display: "microbiology organisms results review task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4932,7 +4932,7 @@ export const V3ActCodeValueSet = {
     /**
      * A person reviews a list of microbiology results of a given patient.
      */
-    v3_ActCode_MicrobiologyResultsReviewTask: Coding.FromStrict({
+    v3_ActCode_MicrobiologyResultsReviewTask: new Coding({
         code: "MICRORREV",
         display: "microbiology results review task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4940,7 +4940,7 @@ export const V3ActCodeValueSet = {
     /**
      * A person reviews the sensitivity test of microbiology results of a given patient.
      */
-    v3_ActCode_MicrobiologySensitivityTestResultsReviewTask: Coding.FromStrict({
+    v3_ActCode_MicrobiologySensitivityTestResultsReviewTask: new Coding({
         code: "MICROSENSRREV",
         display: "microbiology sensitivity test results review task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4948,7 +4948,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:The number of repeating elements is below the minimum number of repetitions allowed.
      */
-    v3_ActCode_RepetitionsBelowMinimum: Coding.FromStrict({
+    v3_ActCode_RepetitionsBelowMinimum: new Coding({
         code: "MINOCCURS",
         display: "repetitions below minimum",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4956,7 +4956,7 @@ export const V3ActCodeValueSet = {
     /**
      * A charge to compensate the provider when a patient does not show for an appointment.
      */
-    v3_ActCode_MissedAppointment: Coding.FromStrict({
+    v3_ActCode_MissedAppointment: new Coding({
         code: "MISSAPT",
         display: "missed appointment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4964,7 +4964,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:The specified element must be specified with a non-null value under certain conditions.  In this case, the conditions are true but the element is still missing or null.
      */
-    v3_ActCode_ConditionalElementMissing: Coding.FromStrict({
+    v3_ActCode_ConditionalElementMissing: new Coding({
         code: "MISSCOND",
         display: "conditional element missing",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4972,7 +4972,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:The specified element is mandatory and was not included in the instance.
      */
-    v3_ActCode_MandatoryElementMissing: Coding.FromStrict({
+    v3_ActCode_MandatoryElementMissing: new Coding({
         code: "MISSMAND",
         display: "mandatory element missing",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4980,7 +4980,7 @@ export const V3ActCodeValueSet = {
     /**
      * A person reviews a list of medication orders submitted to a given patient
      */
-    v3_ActCode_MedicationListReviewTask: Coding.FromStrict({
+    v3_ActCode_MedicationListReviewTask: new Coding({
         code: "MLREV",
         display: "medication list review task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4988,7 +4988,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Digital Model Attachment
      */
-    v3_ActCode_Model: Coding.FromStrict({
+    v3_ActCode_Model: new Coding({
         code: "MODEL",
         display: "model",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -4996,7 +4996,7 @@ export const V3ActCodeValueSet = {
     /**
      * Transaction counts and value totals for each calendar month within the date range specified.
      */
-    v3_ActCode_Month: Coding.FromStrict({
+    v3_ActCode_Month: new Coding({
         code: "MONTH",
         display: "month",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5004,7 +5004,7 @@ export const V3ActCodeValueSet = {
     /**
      * A supply of a manufacturer sample
      */
-    v3_ActCode_ManufacturerSample: Coding.FromStrict({
+    v3_ActCode_ManufacturerSample: new Coding({
         code: "MS",
         display: "Manufacturer Sample",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5012,7 +5012,7 @@ export const V3ActCodeValueSet = {
     /**
      * The start date of the measurement period.
      */
-    v3_ActCode_MeasurementStartDate: Coding.FromStrict({
+    v3_ActCode_MeasurementStartDate: new Coding({
         code: "MSD",
         display: "measurement start date",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5020,7 +5020,7 @@ export const V3ActCodeValueSet = {
     /**
      * The method of adjusting for clinical severity and conditions present at the start of care that can influence patient outcomes for making valid comparisons of outcome measures across providers. Indicates whether an eMeasure is subject to the statistical process for reducing, removing, or clarifying the influences of confounding factors to allow more useful comparisons.
      */
-    v3_ActCode_RiskAdjustment: Coding.FromStrict({
+    v3_ActCode_RiskAdjustment: new Coding({
         code: "MSRADJ",
         display: "risk adjustment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5031,7 +5031,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Open Issue: The description does NOT align well with the definition used in the HQMF specfication; correct the MSGAGG definition, and the possible distinction of MSRAGG as a child of AGGREGATE.
      */
-    v3_ActCode_RateAggregation: Coding.FromStrict({
+    v3_ActCode_RateAggregation: new Coding({
         code: "MSRAGG",
         display: "rate aggregation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5039,7 +5039,7 @@ export const V3ActCodeValueSet = {
     /**
      * Information on whether an increase or decrease in score is the preferred result. This should reflect information on which way is better, an increase or decrease in score.
      */
-    v3_ActCode_HealthQualityMeasureImprovementNotation: Coding.FromStrict({
+    v3_ActCode_HealthQualityMeasureImprovementNotation: new Coding({
         code: "MSRIMPROV",
         display: "health quality measure improvement notation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5047,7 +5047,7 @@ export const V3ActCodeValueSet = {
     /**
      * The list of jurisdiction(s) for which the measure applies.
      */
-    v3_ActCode_Jurisdiction: Coding.FromStrict({
+    v3_ActCode_Jurisdiction: new Coding({
         code: "MSRJUR",
         display: "jurisdiction",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5063,7 +5063,7 @@ export const V3ActCodeValueSet = {
      *                            the median time from arrival in the Emergency Room to departure
      *                            the median time from decision to admit to a hospital to the actual admission for Emergency Room patients
      */
-    v3_ActCode_MeasureObservation: Coding.FromStrict({
+    v3_ActCode_MeasureObservation: new Coding({
         code: "MSROBS",
         display: "measure observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5072,7 +5072,7 @@ export const V3ActCodeValueSet = {
      * Criteria for specifying
      * the measure population as a narrative description (e.g., all patients seen in the Emergency Department during the measurement period).  This is used only in continuous variable eMeasures.
      */
-    v3_ActCode_MeasurePopulation: Coding.FromStrict({
+    v3_ActCode_MeasurePopulation: new Coding({
         code: "MSRPOPL",
         display: "measure population",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5080,7 +5080,7 @@ export const V3ActCodeValueSet = {
     /**
      * Criteria for specifying subjects who should be removed from the eMeasure's Initial Population and Measure Population. Measure Population Exclusions are used in Continuous Variable measures to help narrow the Measure Population before determining the value(s) of the continuous variable(s).
      */
-    v3_ActCode_MeasurePopulationExclusions: Coding.FromStrict({
+    v3_ActCode_MeasurePopulationExclusions: new Coding({
         code: "MSRPOPLEX",
         display: "measure population exclusions",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5088,7 +5088,7 @@ export const V3ActCodeValueSet = {
     /**
      * Type of person or organization that is expected to report the issue.
      */
-    v3_ActCode_ReporterType: Coding.FromStrict({
+    v3_ActCode_ReporterType: new Coding({
         code: "MSRRPTR",
         display: "reporter type",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5096,7 +5096,7 @@ export const V3ActCodeValueSet = {
     /**
      * The maximum time that may elapse following completion of the measure until the measure report must be sent to the receiver.
      */
-    v3_ActCode_TimeframeForReporting: Coding.FromStrict({
+    v3_ActCode_TimeframeForReporting: new Coding({
         code: "MSRRPTTIME",
         display: "timeframe for reporting",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5105,7 +5105,7 @@ export const V3ActCodeValueSet = {
      * Indicates how the calculation is performed for the eMeasure
      * (e.g., proportion, continuous variable, ratio)
      */
-    v3_ActCode_MeasureScoring: Coding.FromStrict({
+    v3_ActCode_MeasureScoring: new Coding({
         code: "MSRSCORE",
         display: "measure scoring",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5115,7 +5115,7 @@ export const V3ActCodeValueSet = {
      *
      *                         Usage Note: MSRSET is used rather than RoleCode because the setting applies to what is being measured, as opposed to participating directly in the health quality measure documantion itself).
      */
-    v3_ActCode_HealthQualityMeasureCareSetting: Coding.FromStrict({
+    v3_ActCode_HealthQualityMeasureCareSetting: new Coding({
         code: "MSRSET",
         display: "health quality measure care setting",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5123,7 +5123,7 @@ export const V3ActCodeValueSet = {
     /**
      * health quality measure topic type
      */
-    v3_ActCode_HealthQualityMeasureTopicType: Coding.FromStrict({
+    v3_ActCode_HealthQualityMeasureTopicType: new Coding({
         code: "MSRTOPIC",
         display: "health quality measure topic type",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5131,7 +5131,7 @@ export const V3ActCodeValueSet = {
     /**
      * The time period for which the eMeasure applies.
      */
-    v3_ActCode_MeasurementPeriod: Coding.FromStrict({
+    v3_ActCode_MeasurementPeriod: new Coding({
         code: "MSRTP",
         display: "measurement period",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5140,7 +5140,7 @@ export const V3ActCodeValueSet = {
      * Indicates whether the eMeasure is used to examine a process or an outcome over time
      * (e.g., Structure, Process, Outcome).
      */
-    v3_ActCode_MeasureType: Coding.FromStrict({
+    v3_ActCode_MeasureType: new Coding({
         code: "MSRTYPE",
         display: "measure type",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5148,7 +5148,7 @@ export const V3ActCodeValueSet = {
     /**
      * Incident or accident as the result of a motor vehicle accident
      */
-    v3_ActCode_MotorVehicleAccident: Coding.FromStrict({
+    v3_ActCode_MotorVehicleAccident: new Coding({
         code: "MVA",
         display: "Motor vehicle accident",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5156,7 +5156,7 @@ export const V3ActCodeValueSet = {
     /**
      * A normal diet, i.e. no special preparations or restrictions for medical reasons. This is notwithstanding any preferences the patient might have regarding special foods, such as vegetarian, kosher, etc.
      */
-    v3_ActCode_NormalDiet: Coding.FromStrict({
+    v3_ActCode_NormalDiet: new Coding({
         code: "N",
         display: "normal diet",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5164,7 +5164,7 @@ export const V3ActCodeValueSet = {
     /**
      * Hypersensitivity to an agent caused by a mechanism other than an immunologic response to an initial exposure
      */
-    v3_ActCode_NonAllergyIntolerance: Coding.FromStrict({
+    v3_ActCode_NonAllergyIntolerance: new Coding({
         code: "NAINT",
         display: "Non-Allergy Intolerance",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5172,7 +5172,7 @@ export const V3ActCodeValueSet = {
     /**
      * The requesting party has insufficient authorization to invoke the interaction.
      */
-    v3_ActCode_InsufficientAuthorization: Coding.FromStrict({
+    v3_ActCode_InsufficientAuthorization: new Coding({
         code: "NAT",
         display: "Insufficient authorization",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5180,7 +5180,7 @@ export const V3ActCodeValueSet = {
     /**
      * Authorization for specified healthcare service(s) and/or product(s) denied.
      */
-    v3_ActCode_NotAuthorized: Coding.FromStrict({
+    v3_ActCode_NotAuthorized: new Coding({
         code: "NAUTH",
         display: "Not Authorized",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5188,7 +5188,7 @@ export const V3ActCodeValueSet = {
     /**
      * Insurance coverage is not in effect for healthcare service(s) and/or product(s). May optionally include reasons for the ineligibility.
      */
-    v3_ActCode_NotEligible: Coding.FromStrict({
+    v3_ActCode_NotEligible: new Coding({
         code: "NELG",
         display: "Not Eligible",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5196,7 +5196,7 @@ export const V3ActCodeValueSet = {
     /**
      * Maximum net amount that will be covered for the product or service specified.
      */
-    v3_ActCode_NetAmount: Coding.FromStrict({
+    v3_ActCode_NetAmount: new Coding({
         code: "NETAMT",
         display: "Net Amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5204,7 +5204,7 @@ export const V3ActCodeValueSet = {
     /**
      * The act or process by which an acid and a base are combined in such proportions that the resulting compound is neutral.
      */
-    v3_ActCode_Neutralization: Coding.FromStrict({
+    v3_ActCode_Neutralization: new Coding({
         code: "NEUT",
         display: "Neutralization",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5212,7 +5212,7 @@ export const V3ActCodeValueSet = {
     /**
      * A no fat diet for acute hepatic diseases.
      */
-    v3_ActCode_NoFat: Coding.FromStrict({
+    v3_ActCode_NoFat: new Coding({
         code: "NF",
         display: "no fat",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5236,7 +5236,7 @@ export const V3ActCodeValueSet = {
      *                            Non-healthcare: Without notification or an opportunity to assent or dissent, a consumer's healthcare or non-healthcare internet searches are aggregated for secondary uses such as behavioral tracking and profiling.
      *                            Without notification or an opportunity to assent or dissent, a consumer's location and activities in a shopping mall are tracked by RFID tags on purchased items.
      */
-    v3_ActCode_NoConsent: Coding.FromStrict({
+    v3_ActCode_NoConsent: new Coding({
         code: "NOCONSENT",
         display: "no consent",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5244,7 +5244,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:More than one element with the same value exists in the set.  Duplicates not permission in this set in a set.
      */
-    v3_ActCode_DuplicateValuesAreNotPermitted: Coding.FromStrict({
+    v3_ActCode_DuplicateValuesAreNotPermitted: new Coding({
         code: "NODUPS",
         display: "duplicate values are not permitted",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5252,7 +5252,7 @@ export const V3ActCodeValueSet = {
     /**
      * The type of injury that the injury coding specifies.
      */
-    v3_ActCode_NatureOfInjury: Coding.FromStrict({
+    v3_ActCode_NatureOfInjury: new Coding({
         code: "NOI",
         display: "nature of injury",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5260,7 +5260,7 @@ export const V3ActCodeValueSet = {
     /**
      * Non-Payment Data.
      */
-    v3_ActCode_NonPaymentData: Coding.FromStrict({
+    v3_ActCode_NonPaymentData: new Coding({
         code: "NON",
         display: "Non-Payment Data",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5268,7 +5268,7 @@ export const V3ActCodeValueSet = {
     /**
      * Any category of inpatient encounter except 'acute'
      */
-    v3_ActCode_InpatientNonAcute: Coding.FromStrict({
+    v3_ActCode_InpatientNonAcute: new Coding({
         code: "NONAC",
         display: "inpatient non-acute",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5276,7 +5276,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Element in submitted message will not persist in data storage based on detected issue.
      */
-    v3_ActCode_ElementWillNotBePersisted: Coding.FromStrict({
+    v3_ActCode_ElementWillNotBePersisted: new Coding({
         code: "NOPERSIST",
         display: "element will not be persisted",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5287,7 +5287,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Usage Notes: This type of consent directive acknowledges a custodian's notice of privacy practices including its permitted collection, access, use and disclosure of health information to users and for purposes of use specified.
      */
-    v3_ActCode_NoticeOfPrivacyPractices: Coding.FromStrict({
+    v3_ActCode_NoticeOfPrivacyPractices: new Coding({
         code: "NOPP",
         display: "notice of privacy practices",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5295,7 +5295,7 @@ export const V3ActCodeValueSet = {
     /**
      * Communication of an agent from any entity to a living subject while the living subject is in the patient role in a healthcare facility.
      */
-    v3_ActCode_NosocomialTransmission: Coding.FromStrict({
+    v3_ActCode_NosocomialTransmission: new Coding({
         code: "NOSTRNS",
         display: "nosocomial transmission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5303,7 +5303,7 @@ export const V3ActCodeValueSet = {
     /**
      * Criteria for specifying the processes or outcomes expected for each patient, procedure, or other unit of measurement defined in the denominator for proportion measures, or related to (but not directly derived from) the denominator for ratio measures (e.g., a numerator listing the number of central line blood stream infections and a denominator indicating the days per thousand of central line usage in a specific time period).
      */
-    v3_ActCode_Numerator: Coding.FromStrict({
+    v3_ActCode_Numerator: new Coding({
         code: "NUMER",
         display: "numerator",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5311,7 +5311,7 @@ export const V3ActCodeValueSet = {
     /**
      * Criteria for specifying instances that should not be included in the numerator data. (e.g., if the number of central line blood stream infections per 1000 catheter days were to exclude infections with a specific bacterium, that bacterium would be listed as a numerator exclusion).  Numerator Exclusions are used only in ratio eMeasures.
      */
-    v3_ActCode_NumeratorExclusions: Coding.FromStrict({
+    v3_ActCode_NumeratorExclusions: new Coding({
         code: "NUMEX",
         display: "numerator exclusions",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5319,7 +5319,7 @@ export const V3ActCodeValueSet = {
     /**
      * Used by one system to inform another that the specific container is being processed by the equipment. It is useful as a response to a query about Container Status, when the specific step of the process is not relevant.
      */
-    v3_ActCode_InProcess: Coding.FromStrict({
+    v3_ActCode_InProcess: new Coding({
         code: "O",
         display: "In Process",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5327,7 +5327,7 @@ export const V3ActCodeValueSet = {
     /**
      * Provision of care of women during pregnancy, childbirth and immediate postpartum period.  Also known as Maternity.
      */
-    v3_ActCode_Obstetrics: Coding.FromStrict({
+    v3_ActCode_Obstetrics: new Coding({
         code: "OBS",
         display: "Obstetrics",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5335,7 +5335,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed therapy may be inappropriate or contraindicated due to conditions or characteristics of the patient
      */
-    v3_ActCode_ObservationAlert: Coding.FromStrict({
+    v3_ActCode_ObservationAlert: new Coding({
         code: "OBSA",
         display: "Observation Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5343,7 +5343,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Indicates the valid antigen count.
      */
-    v3_ActCode_AntigenCount: Coding.FromStrict({
+    v3_ActCode_AntigenCount: new Coding({
         code: "OBSANTC",
         display: "antigen count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5351,7 +5351,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Indicates whether an antigen is valid or invalid.
      */
-    v3_ActCode_AntigenValidity: Coding.FromStrict({
+    v3_ActCode_AntigenValidity: new Coding({
         code: "OBSANTV",
         display: "antigen validity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5359,7 +5359,7 @@ export const V3ActCodeValueSet = {
     /**
      * An encounter where the patient usually will start in different encounter, such as one in the emergency department (EMER) but then transition to this type of encounter because they require a significant period of treatment and monitoring to determine whether or not their condition warrants an inpatient admission or discharge. In the majority of cases the decision about admission or discharge will occur within a time period determined by local, regional or national regulation, often between 24 and 48 hours.
      */
-    v3_ActCode_ObservationEncounter: Coding.FromStrict({
+    v3_ActCode_ObservationEncounter: new Coding({
         code: "OBSENC",
         display: "observation encounter",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5367,7 +5367,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: One or more records in the query response have a status of 'obsolete'.
      */
-    v3_ActCode_ObsoleteRecordReturned: Coding.FromStrict({
+    v3_ActCode_ObsoleteRecordReturned: new Coding({
         code: "OBSOLETE",
         display: "obsolete record returned",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5375,7 +5375,7 @@ export const V3ActCodeValueSet = {
     /**
      * A clinician creates a request for a service to be performed for a given patient.
      */
-    v3_ActCode_OrderEntryTask: Coding.FromStrict({
+    v3_ActCode_OrderEntryTask: new Coding({
         code: "OE",
         display: "order entry task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5385,7 +5385,7 @@ export const V3ActCodeValueSet = {
      *
      *                         All items in the Invoice Grouping must be adjudicated together to be acceptable to the Adjudicator.
      */
-    v3_ActCode_OralHealthService: Coding.FromStrict({
+    v3_ActCode_OralHealthService: new Coding({
         code: "OHSINV",
         display: "oral health service",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5393,7 +5393,7 @@ export const V3ActCodeValueSet = {
     /**
      * Hypersensitivity resulting in an adverse reaction upon exposure to an agent.
      */
-    v3_ActCode_Intolerance: Coding.FromStrict({
+    v3_ActCode_Intolerance: new Coding({
         code: "OINT",
         display: "intolerance",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5401,7 +5401,7 @@ export const V3ActCodeValueSet = {
     /**
      * Provision of treatment and/or diagnosis related to tumors and/or cancer.
      */
-    v3_ActCode_Oncology: Coding.FromStrict({
+    v3_ActCode_Oncology: new Coding({
         code: "ONC",
         display: "Oncology",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5409,7 +5409,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:A list of medications which the patient is intended to be administered only once.
      */
-    v3_ActCode_OneTime: Coding.FromStrict({
+    v3_ActCode_OneTime: new Coding({
         code: "ONET",
         display: "one time",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5417,7 +5417,7 @@ export const V3ActCodeValueSet = {
     /**
      * The medical service and/or product was provided to a patient that has coverage in another jurisdiction.
      */
-    v3_ActCode_OutOfJurisdiction: Coding.FromStrict({
+    v3_ActCode_OutOfJurisdiction: new Coding({
         code: "OOJ",
         display: "out of jurisdiction",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5425,7 +5425,7 @@ export const V3ActCodeValueSet = {
     /**
      * Premium paid on service fees in compensation for practicing at a location other than normal working location.
      */
-    v3_ActCode_OutOfOffice: Coding.FromStrict({
+    v3_ActCode_OutOfOffice: new Coding({
         code: "OOO",
         display: "out of office",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5447,7 +5447,7 @@ export const V3ActCodeValueSet = {
      *                            Healthcare: A patient [grantor] signs a provider's [grantee's] consent directive form, which lists permissible collection, access, use, or disclosure activities, purposes of use, handling caveats, and revocation policies.
      *                            Non-healthcare: An employee [grantor] signs an employer's [grantee's] non-disclosure and non-compete agreement.
      */
-    v3_ActCode_OptIn: Coding.FromStrict({
+    v3_ActCode_OptIn: new Coding({
         code: "OPTIN",
         display: "opt-in",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5469,7 +5469,7 @@ export const V3ActCodeValueSet = {
      *                            Healthcare:  A patient assent to grantee's consent directive terms for collection, access, use, or disclosure of health information, and dissents to disclosure to certain recipients as allowed by the provider's pre-approved restriction list.
      *                            Non-Healthcare: A cell phone user assents to the cell phone's privacy practices and terms of use, but dissents from location tracking by turning off the cell phone's tracking capability.
      */
-    v3_ActCode_OptInWithRestrictions: Coding.FromStrict({
+    v3_ActCode_OptInWithRestrictions: new Coding({
         code: "OPTINR",
         display: "opt-in with restrictions",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5492,7 +5492,7 @@ export const V3ActCodeValueSet = {
      *                            Non-healthcare: An employee [grantor] refuses to sign an employer's [grantee's] agreement not to join unions or participate in a strike where state law protects employee's collective bargaining rights.
      *                            A citizen [grantor] refuses to enroll in mandatory government [grantee] health insurance based on religious beliefs, which is an exemption.
      */
-    v3_ActCode_OpOut: Coding.FromStrict({
+    v3_ActCode_OpOut: new Coding({
         code: "OPTOUT",
         display: "op-out",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5514,7 +5514,7 @@ export const V3ActCodeValueSet = {
      *                            Healthcare: A patient [grantor] dissents to a health information exchange consent directive with the exception of disclosure based on a limited "time to live" shared secret [e.g., a token or password], which the patient can give to a provider when seeking care.
      *                            Non-healthcare: A social media user [grantor] dissents from public access to their account, but assents to access to a circle of friends.
      */
-    v3_ActCode_OptOutWithExceptions: Coding.FromStrict({
+    v3_ActCode_OptOutWithExceptions: new Coding({
         code: "OPTOUTE",
         display: "opt-out with exceptions",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5522,7 +5522,7 @@ export const V3ActCodeValueSet = {
     /**
      * A person reviews a list of orders submitted to a given patient.
      */
-    v3_ActCode_OrdersReviewTask: Coding.FromStrict({
+    v3_ActCode_OrdersReviewTask: new Coding({
         code: "OREV",
         display: "orders review task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5530,7 +5530,7 @@ export const V3ActCodeValueSet = {
     /**
      * The service provided is required for orthodontic purposes. If the covered party has orthodontic coverage, then the service may be paid.
      */
-    v3_ActCode_OrthodonticService: Coding.FromStrict({
+    v3_ActCode_OrthodonticService: new Coding({
         code: "ORTHO",
         display: "orthodontic service",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5538,7 +5538,7 @@ export const V3ActCodeValueSet = {
     /**
      * Medicines designated in this way may be supplied for patient use without a prescription.  The exact form of categorisation will vary in different realms.
      */
-    v3_ActCode_NonPrescriptionMedicine: Coding.FromStrict({
+    v3_ActCode_NonPrescriptionMedicine: new Coding({
         code: "OTC",
         display: "non prescription medicine",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5546,7 +5546,7 @@ export const V3ActCodeValueSet = {
     /**
      * Accommodations in which there is only 1 bed.
      */
-    v3_ActCode_Private: Coding.FromStrict({
+    v3_ActCode_Private: new Coding({
         code: "P",
         display: "Private",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5554,7 +5554,7 @@ export const V3ActCodeValueSet = {
     /**
      * Phenylketonuria diet.
      */
-    v3_ActCode_PhenylalanineFree: Coding.FromStrict({
+    v3_ActCode_PhenylalanineFree: new Coding({
         code: "PAF",
         display: "phenylalanine free",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5562,7 +5562,7 @@ export const V3ActCodeValueSet = {
     /**
      * HealthCare facility preferred accommodation invoice.
      */
-    v3_ActCode_PreferredAccommodationInvoice: Coding.FromStrict({
+    v3_ActCode_PreferredAccommodationInvoice: new Coding({
         code: "PAINV",
         display: "preferred accommodation invoice",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5570,7 +5570,7 @@ export const V3ActCodeValueSet = {
     /**
      * Provision of care for patients who are living or dying from an advanced illness.
      */
-    v3_ActCode_Palliative: Coding.FromStrict({
+    v3_ActCode_Palliative: new Coding({
         code: "PALL",
         display: "Palliative",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5578,7 +5578,7 @@ export const V3ActCodeValueSet = {
     /**
      * Paper documentation (or other physical format) with supporting or additional information to follow.
      */
-    v3_ActCode_PaperDocumentationToFollow: Coding.FromStrict({
+    v3_ActCode_PaperDocumentationToFollow: new Coding({
         code: "PAPER",
         display: "paper documentation to follow",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5586,7 +5586,7 @@ export const V3ActCodeValueSet = {
     /**
      * Patient is supplied with parenteral nutrition, typically described in terms of i.v. medications.
      */
-    v3_ActCode_Parenteral: Coding.FromStrict({
+    v3_ActCode_Parenteral: new Coding({
         code: "PAR",
         display: "parenteral",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5594,7 +5594,7 @@ export const V3ActCodeValueSet = {
     /**
      * Communication of an agent from a living subject or environmental source to a living subject where the acquisition of the agent is not via the alimentary canal.
      */
-    v3_ActCode_ParenteralTransmission: Coding.FromStrict({
+    v3_ActCode_ParenteralTransmission: new Coding({
         code: "PARTRNS",
         display: "parenteral transmission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5602,7 +5602,7 @@ export const V3ActCodeValueSet = {
     /**
      * Indicates that the ICSR is describing problems that a patient experienced after receiving a vaccine product.
      */
-    v3_ActCode_PatientAdverseEvent: Coding.FromStrict({
+    v3_ActCode_PatientAdverseEvent: new Coding({
         code: "PAT_ADV_EVNT",
         display: "patient adverse event",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5610,7 +5610,7 @@ export const V3ActCodeValueSet = {
     /**
      * A person enters documentation about a given patient.
      */
-    v3_ActCode_PatientDocumentationTask: Coding.FromStrict({
+    v3_ActCode_PatientDocumentationTask: new Coding({
         code: "PATDOC",
         display: "patient documentation task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5618,7 +5618,7 @@ export const V3ActCodeValueSet = {
     /**
      * A person provides a patient-specific education handout to a patient.
      */
-    v3_ActCode_PatientEducationEntry: Coding.FromStrict({
+    v3_ActCode_PatientEducationEntry: new Coding({
         code: "PATEDUE",
         display: "patient education entry",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5626,7 +5626,7 @@ export const V3ActCodeValueSet = {
     /**
      * A person (e.g., clinician, the patient herself) reviews patient information in the electronic medical record.
      */
-    v3_ActCode_PatientInformationReviewTask: Coding.FromStrict({
+    v3_ActCode_PatientInformationReviewTask: new Coding({
         code: "PATINFO",
         display: "patient information review task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5634,7 +5634,7 @@ export const V3ActCodeValueSet = {
     /**
      * A pathologist enters a report for a given patient.
      */
-    v3_ActCode_PathologyReportEntryTask: Coding.FromStrict({
+    v3_ActCode_PathologyReportEntryTask: new Coding({
         code: "PATREPE",
         display: "pathology report entry task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5642,7 +5642,7 @@ export const V3ActCodeValueSet = {
     /**
      * A person reviews a pathology report of a given patient.
      */
-    v3_ActCode_PathologyReportReviewTask: Coding.FromStrict({
+    v3_ActCode_PathologyReportReviewTask: new Coding({
         code: "PATREPREV",
         display: "pathology report review task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5650,7 +5650,7 @@ export const V3ActCodeValueSet = {
     /**
      * The guarantor, who may be the patient, pays the entire charge for a service. Reasons for such action may include: there is no insurance coverage for the service (e.g. cosmetic surgery); the patient wishes to self-pay for the service; or the insurer denies payment for the service due to contractual provisions such as the need for prior authorization.
      */
-    v3_ActCode_Payment: Coding.FromStrict({
+    v3_ActCode_Payment: new Coding({
         code: "PAY",
         display: "payment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5658,7 +5658,7 @@ export const V3ActCodeValueSet = {
     /**
      * Transaction counts and value totals by each instance of an invoice payee.
      */
-    v3_ActCode_Payee: Coding.FromStrict({
+    v3_ActCode_Payee: new Coding({
         code: "PAYEE",
         display: "payee",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5666,7 +5666,7 @@ export const V3ActCodeValueSet = {
     /**
      * Transaction counts and value totals by each instance of an invoice payor.
      */
-    v3_ActCode_Payor: Coding.FromStrict({
+    v3_ActCode_Payor: new Coding({
         code: "PAYOR",
         display: "payor",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5674,7 +5674,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were paid prior to the specified time period (based on payment date), subsequently nullified in the specified period and submitted electronically.
      */
-    v3_ActCode_PaidNullifiedPriorPeriodElectronicAmount: Coding.FromStrict({
+    v3_ActCode_PaidNullifiedPriorPeriodElectronicAmount: new Coding({
         code: "PDNFPPELAT",
         display: "paid nullified prior-period electronic amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5682,7 +5682,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were paid prior to the specified time period (based on payment date), subsequently nullified in the specified period and submitted electronically.
      */
-    v3_ActCode_PaidNullifiedPriorPeriodElectronicCount: Coding.FromStrict({
+    v3_ActCode_PaidNullifiedPriorPeriodElectronicCount: new Coding({
         code: "PDNFPPELCT",
         display: "paid nullified prior-period electronic count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5690,7 +5690,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were paid prior to the specified time period (based on payment date), subsequently nullified in the specified period and submitted manually.
      */
-    v3_ActCode_PaidNullifiedPriorPeriodManualAmount: Coding.FromStrict({
+    v3_ActCode_PaidNullifiedPriorPeriodManualAmount: new Coding({
         code: "PDNFPPMNAT",
         display: "paid nullified prior-period manual amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5698,7 +5698,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were paid prior to the specified time period (based on payment date), subsequently nullified in the specified period and submitted manually.
      */
-    v3_ActCode_PaidNullifiedPriorPeriodManualCount: Coding.FromStrict({
+    v3_ActCode_PaidNullifiedPriorPeriodManualCount: new Coding({
         code: "PDNFPPMNCT",
         display: "paid nullified prior-period manual count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5706,7 +5706,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were paid during the specified time period (based on payment date), subsequently nullified in the specified period and submitted electronically.
      */
-    v3_ActCode_PaidNullifiedSamePeriodElectronicAmount: Coding.FromStrict({
+    v3_ActCode_PaidNullifiedSamePeriodElectronicAmount: new Coding({
         code: "PDNFSPELAT",
         display: "paid nullified same-period electronic amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5714,7 +5714,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were paid during the specified time period (based on payment date), subsequently cancelled in the specified period and submitted electronically.
      */
-    v3_ActCode_PaidNullifiedSamePeriodElectronicCount: Coding.FromStrict({
+    v3_ActCode_PaidNullifiedSamePeriodElectronicCount: new Coding({
         code: "PDNFSPELCT",
         display: "paid nullified same-period electronic count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5722,7 +5722,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were paid during the specified time period (based on payment date), subsequently nullified in the specified period and submitted manually.
      */
-    v3_ActCode_PaidNullifiedSamePeriodManualAmount: Coding.FromStrict({
+    v3_ActCode_PaidNullifiedSamePeriodManualAmount: new Coding({
         code: "PDNFSPMNAT",
         display: "paid nullified same-period manual amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5730,7 +5730,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were paid during the specified time period (based on payment date), subsequently nullified in the specified period and submitted manually.
      */
-    v3_ActCode_PaidNullifiedSamePeriodManualCount: Coding.FromStrict({
+    v3_ActCode_PaidNullifiedSamePeriodManualCount: new Coding({
         code: "PDNFSPMNCT",
         display: "paid nullified same-period manual count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5738,7 +5738,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were paid prior to the specified time period (based on payment date) that do not match a specified payee (e.g. pay patient) and submitted electronically.
      */
-    v3_ActCode_PaidNonPayeePayablePriorPeriodElectronicAmount: Coding.FromStrict({
+    v3_ActCode_PaidNonPayeePayablePriorPeriodElectronicAmount: new Coding({
         code: "PDNPPPELAT",
         display: "paid non-payee payable prior-period electronic amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5746,7 +5746,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were paid prior to the specified time period (based on payment date) that do not match a specified payee (e.g. pay patient) and submitted electronically.
      */
-    v3_ActCode_PaidNonPayeePayablePriorPeriodElectronicCount: Coding.FromStrict({
+    v3_ActCode_PaidNonPayeePayablePriorPeriodElectronicCount: new Coding({
         code: "PDNPPPELCT",
         display: "paid non-payee payable prior-period electronic count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5754,7 +5754,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were paid prior to the specified time period (based on payment date) that do not match a specified payee (e.g. pay patient) and submitted manually.
      */
-    v3_ActCode_PaidNonPayeePayablePriorPeriodManualAmount: Coding.FromStrict({
+    v3_ActCode_PaidNonPayeePayablePriorPeriodManualAmount: new Coding({
         code: "PDNPPPMNAT",
         display: "paid non-payee payable prior-period manual amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5762,7 +5762,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were paid prior to the specified time period (based on payment date) that do not match a specified payee (e.g. pay patient) and submitted manually.
      */
-    v3_ActCode_PaidNonPayeePayablePriorPeriodManualCount: Coding.FromStrict({
+    v3_ActCode_PaidNonPayeePayablePriorPeriodManualCount: new Coding({
         code: "PDNPPPMNCT",
         display: "paid non-payee payable prior-period manual count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5770,7 +5770,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were paid during the specified time period (based on payment date) that do not match a specified payee (e.g. pay patient) and submitted electronically.
      */
-    v3_ActCode_PaidNonPayeePayableSamePeriodElectronicAmount: Coding.FromStrict({
+    v3_ActCode_PaidNonPayeePayableSamePeriodElectronicAmount: new Coding({
         code: "PDNPSPELAT",
         display: "paid non-payee payable same-period electronic amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5778,7 +5778,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were paid during the specified time period (based on payment date) that do not match a specified payee (e.g. pay patient) and submitted electronically.
      */
-    v3_ActCode_PaidNonPayeePayableSamePeriodElectronicCount: Coding.FromStrict({
+    v3_ActCode_PaidNonPayeePayableSamePeriodElectronicCount: new Coding({
         code: "PDNPSPELCT",
         display: "paid non-payee payable same-period electronic count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5786,7 +5786,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were paid during the specified time period (based on payment date) that do not match a specified payee (e.g. pay patient) and submitted manually.
      */
-    v3_ActCode_PaidNonPayeePayableSamePeriodManualAmount: Coding.FromStrict({
+    v3_ActCode_PaidNonPayeePayableSamePeriodManualAmount: new Coding({
         code: "PDNPSPMNAT",
         display: "paid non-payee payable same-period manual amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5794,7 +5794,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were paid during the specified time period (based on payment date) that do not match a specified payee (e.g. pay patient) and submitted manually.
      */
-    v3_ActCode_PaidNonPayeePayableSamePeriodManualCount: Coding.FromStrict({
+    v3_ActCode_PaidNonPayeePayableSamePeriodManualCount: new Coding({
         code: "PDNPSPMNCT",
         display: "paid non-payee payable same-period manual count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5802,7 +5802,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were paid prior to the specified time period (based on payment date) that match a specified payee (e.g. pay provider) and submitted electronically.
      */
-    v3_ActCode_PaidPayeePayablePriorPeriodElectronicAmount: Coding.FromStrict({
+    v3_ActCode_PaidPayeePayablePriorPeriodElectronicAmount: new Coding({
         code: "PDPPPPELAT",
         display: "paid payee payable prior-period electronic amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5810,7 +5810,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were paid prior to the specified time period (based on payment date) that match a specified payee (e.g. pay provider) and submitted electronically.
      */
-    v3_ActCode_PaidPayeePayablePriorPeriodElectronicCount: Coding.FromStrict({
+    v3_ActCode_PaidPayeePayablePriorPeriodElectronicCount: new Coding({
         code: "PDPPPPELCT",
         display: "paid payee payable prior-period electronic count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5818,7 +5818,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were paid prior to the specified time period (based on payment date) that match a specified payee (e.g. pay provider) and submitted manually.
      */
-    v3_ActCode_PaidPayeePayablePriorPeriodManualAmount: Coding.FromStrict({
+    v3_ActCode_PaidPayeePayablePriorPeriodManualAmount: new Coding({
         code: "PDPPPPMNAT",
         display: "paid payee payable prior-period manual amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5826,7 +5826,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were paid prior to the specified time period (based on payment date) that match a specified payee (e.g. pay provider) and submitted manually.
      */
-    v3_ActCode_PaidPayeePayablePriorPeriodManualCount: Coding.FromStrict({
+    v3_ActCode_PaidPayeePayablePriorPeriodManualCount: new Coding({
         code: "PDPPPPMNCT",
         display: "paid payee payable prior-period manual count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5834,7 +5834,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were paid during the specified time period (based on payment date) that match a specified payee (e.g. pay provider) and submitted electronically.
      */
-    v3_ActCode_PaidPayeePayableSamePeriodElectronicAmount: Coding.FromStrict({
+    v3_ActCode_PaidPayeePayableSamePeriodElectronicAmount: new Coding({
         code: "PDPPSPELAT",
         display: "paid payee payable same-period electronic amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5842,7 +5842,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were paid during the specified time period (based on payment date) that match a specified payee (e.g. pay provider) and submitted electronically.
      */
-    v3_ActCode_PaidPayeePayableSamePeriodElectronicCount: Coding.FromStrict({
+    v3_ActCode_PaidPayeePayableSamePeriodElectronicCount: new Coding({
         code: "PDPPSPELCT",
         display: "paid payee payable same-period electronic count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5850,7 +5850,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount of all  Invoice Groupings that were paid during the specified time period (based on payment date) that match a specified payee (e.g. pay provider) and submitted manually.
      */
-    v3_ActCode_PaidPayeePayableSamePeriodManualAmount: Coding.FromStrict({
+    v3_ActCode_PaidPayeePayableSamePeriodManualAmount: new Coding({
         code: "PDPPSPMNAT",
         display: "paid payee payable same-period manual amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5858,7 +5858,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of all  Invoice Groupings that were paid during the specified time period (based on payment date) that match a specified payee (e.g. pay provider) and submitted manually.
      */
-    v3_ActCode_PaidPayeePayableSamePeriodManualCount: Coding.FromStrict({
+    v3_ActCode_PaidPayeePayableSamePeriodManualCount: new Coding({
         code: "PDPPSPMNCT",
         display: "paid payee payable same-period manual count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5866,7 +5866,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed therapy is outside of the standard practice for a pediatric patient.
      */
-    v3_ActCode_PediatricAlert: Coding.FromStrict({
+    v3_ActCode_PediatricAlert: new Coding({
         code: "PEALRT",
         display: "pediatric alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5874,7 +5874,7 @@ export const V3ActCodeValueSet = {
     /**
      * Provision of diagnosis and treatment of diseases and disorders affecting children.
      */
-    v3_ActCode_Pediatrics: Coding.FromStrict({
+    v3_ActCode_Pediatrics: new Coding({
         code: "PED",
         display: "Pediatrics",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5882,7 +5882,7 @@ export const V3ActCodeValueSet = {
     /**
      * Anticipated or actual periodic fee associated with treating a patient. For example, expected billing cycle such as monthly, quarterly. The actual period (e.g. monthly, quarterly) is specified in the unit quantity of the Invoice Element.
      */
-    v3_ActCode_PeriodicFee: Coding.FromStrict({
+    v3_ActCode_PeriodicFee: new Coding({
         code: "PERFEE",
         display: "periodic fee",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5890,7 +5890,7 @@ export const V3ActCodeValueSet = {
     /**
      * Transaction counts and value totals for the date range specified.
      */
-    v3_ActCode_Period: Coding.FromStrict({
+    v3_ActCode_Period: new Coding({
         code: "PERIOD",
         display: "period",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5898,7 +5898,7 @@ export const V3ActCodeValueSet = {
     /**
      * The amount for a performance bonus that is being requested from a payor for the performance of certain services (childhood immunizations, influenza immunizations, mammograms, pap smears) on a sliding scale. That is, for 90% of childhood immunizations to a maximum of $2200/yr. An invoice is created at the end of the service period (one year) and a code is submitted indicating the percentage achieved and the dollar amount claimed.
      */
-    v3_ActCode_PerformanceBonus: Coding.FromStrict({
+    v3_ActCode_PerformanceBonus: new Coding({
         code: "PERMBNS",
         display: "performance bonus",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5906,7 +5906,7 @@ export const V3ActCodeValueSet = {
     /**
      * Pharmaceutical care performed by a pharmacist.
      */
-    v3_ActCode_Pharmaceutical: Coding.FromStrict({
+    v3_ActCode_Pharmaceutical: new Coding({
         code: "PHAR",
         display: "Pharmaceutical",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5914,7 +5914,7 @@ export const V3ActCodeValueSet = {
     /**
      * Provision of treatment for physical injury.
      */
-    v3_ActCode_PhysicalRehab: Coding.FromStrict({
+    v3_ActCode_PhysicalRehab: new Coding({
         code: "PHYRHB",
         display: "Physical Rehab",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5922,7 +5922,7 @@ export const V3ActCodeValueSet = {
     /**
      * Public Insurance has been exhausted.  Invoice has not been sent to Public Insuror and therefore no Explanation Of Benefits (EOB) is provided with this Invoice submission.
      */
-    v3_ActCode_PublicInsuranceExhausted: Coding.FromStrict({
+    v3_ActCode_PublicInsuranceExhausted: new Coding({
         code: "PIE",
         display: "public insurance exhausted",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5930,7 +5930,7 @@ export const V3ActCodeValueSet = {
     /**
      * Payment initiated by the payor as the result of adjudicating a paper (original, may have been faxed) invoice.
      */
-    v3_ActCode_PaperInvoice: Coding.FromStrict({
+    v3_ActCode_PaperInvoice: new Coding({
         code: "PINV",
         display: "paper invoice",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5938,7 +5938,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: An interaction where the exposure participants were both present in the same location/place/space.
      */
-    v3_ActCode_CommonSpaceInteraction: Coding.FromStrict({
+    v3_ActCode_CommonSpaceInteraction: new Coding({
         code: "PLACE",
         display: "Common Space Interaction",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5946,7 +5946,7 @@ export const V3ActCodeValueSet = {
     /**
      * Communication of an agent from a living subject to the progeny of that living subject via agent migration across the maternal-fetal placental membranes while in utero.
      */
-    v3_ActCode_TransplacentalTransmission: Coding.FromStrict({
+    v3_ActCode_TransplacentalTransmission: new Coding({
         code: "PLACTRNS",
         display: "transplacental transmission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5954,7 +5954,7 @@ export const V3ActCodeValueSet = {
     /**
      * A similar or identical therapy was recently ordered by a different practitioner.
      */
-    v3_ActCode_PolyOrdererAlert: Coding.FromStrict({
+    v3_ActCode_PolyOrdererAlert: new Coding({
         code: "PLYDOC",
         display: "Poly-orderer Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5962,7 +5962,7 @@ export const V3ActCodeValueSet = {
     /**
      * This patient was recently supplied a similar or identical therapy from a different pharmacy or supplier.
      */
-    v3_ActCode_PolySupplierAlert: Coding.FromStrict({
+    v3_ActCode_PolySupplierAlert: new Coding({
         code: "PLYPHRM",
         display: "Poly-supplier Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5970,7 +5970,7 @@ export const V3ActCodeValueSet = {
     /**
      * A single point denoted by a single (column,row) pair, or multiple points each denoted by a (column,row) pair.
      */
-    v3_ActCode_Point: Coding.FromStrict({
+    v3_ActCode_Point: new Coding({
         code: "POINT",
         display: "point",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5978,7 +5978,7 @@ export const V3ActCodeValueSet = {
     /**
      * A series of connected line segments with ordered vertices denoted by (column,row) pairs; if the first and last vertices are the same, it is a closed polygon.
      */
-    v3_ActCode_Polyline: Coding.FromStrict({
+    v3_ActCode_Polyline: new Coding({
         code: "POLY",
         display: "polyline",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -5986,19 +5986,19 @@ export const V3ActCodeValueSet = {
     /**
      * An amount that was owed to the payor as indicated, by a carry forward adjusment, in a previous payment advice
      */
-    v3_ActCode_PriorPeriodAdjustment: Coding.FromStrict({
+    v3_ActCode_PriorPeriodAdjustment: new Coding({
         code: "PPRD",
         display: "prior period adjustment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
     }),
-    v3_ActCode_PRA: Coding.FromStrict({
+    v3_ActCode_PRA: new Coding({
         code: "PRA",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
     }),
     /**
      * A grouping of invoice element details including the one specifying the product (good or supply) being invoiced. It may also contain generic detail items such as tax or discount.
      */
-    v3_ActCode_ProductInvoiceGroup: Coding.FromStrict({
+    v3_ActCode_ProductInvoiceGroup: new Coding({
         code: "PRDING",
         display: "product invoice group",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6006,7 +6006,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition: Maximum amount paid by payer or covered party; or maximum number of services/products covered under the policy or program by time period specified by the effective time on the act.
      */
-    v3_ActCode_PeriodMaximum: Coding.FromStrict({
+    v3_ActCode_PeriodMaximum: new Coding({
         code: "PRDMX",
         display: "period maximum",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6014,7 +6014,7 @@ export const V3ActCodeValueSet = {
     /**
      * The dilution of the specimen made prior to being loaded onto analytical equipment
      */
-    v3_ActCode_PreDilution: Coding.FromStrict({
+    v3_ActCode_PreDilution: new Coding({
         code: "PRE",
         display: "Pre-Dilution",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6022,7 +6022,7 @@ export const V3ActCodeValueSet = {
     /**
      * An observation about how important a preference is to the target of the preference.
      */
-    v3_ActCode_PreferenceStrength: Coding.FromStrict({
+    v3_ActCode_PreferenceStrength: new Coding({
         code: "PREFSTRENGTH",
         display: "preference strength",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6030,7 +6030,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed therapy may be inappropriate or contraindicated during pregnancy
      */
-    v3_ActCode_PregnancyAlert: Coding.FromStrict({
+    v3_ActCode_PregnancyAlert: new Coding({
         code: "PREG",
         display: "Pregnancy Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6041,7 +6041,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Usage Note: This is intended to be used in advance of encounter types such as ambulatory, inpatient encounter, virtual, etc.
      */
-    v3_ActCode_PreAdmission: Coding.FromStrict({
+    v3_ActCode_PreAdmission: new Coding({
         code: "PRENC",
         display: "pre-admission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6049,7 +6049,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Indicates that a result is incomplete.  There are further results to come.  This maps to the 'active' state in the observation result status code.
      */
-    v3_ActCode_Preliminary: Coding.FromStrict({
+    v3_ActCode_Preliminary: new Coding({
         code: "PRLMN",
         display: "preliminary",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6057,7 +6057,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:A list of medications which the patient will consume intermittently based on the behavior of the condition for which the medication is indicated.
      */
-    v3_ActCode_AsNeeded: Coding.FromStrict({
+    v3_ActCode_AsNeeded: new Coding({
         code: "PRN",
         display: "as needed",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6065,7 +6065,7 @@ export const V3ActCodeValueSet = {
     /**
      * Professional association fee that is collected by the payor from the practitioner/provider on behalf of the association
      */
-    v3_ActCode_ProfessionalAssociationDeduction: Coding.FromStrict({
+    v3_ActCode_ProfessionalAssociationDeduction: new Coding({
         code: "PROA",
         display: "professional association deduction",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6073,7 +6073,7 @@ export const V3ActCodeValueSet = {
     /**
      * List of problem observations.
      */
-    v3_ActCode_ProblemList: Coding.FromStrict({
+    v3_ActCode_ProblemList: new Coding({
         code: "PROBLIST",
         display: "problem list",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6081,7 +6081,7 @@ export const V3ActCodeValueSet = {
     /**
      * A clinician enters a problem for a given patient.
      */
-    v3_ActCode_ProblemListEntryTask: Coding.FromStrict({
+    v3_ActCode_ProblemListEntryTask: new Coding({
         code: "PROBLISTE",
         display: "problem list entry task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6089,7 +6089,7 @@ export const V3ActCodeValueSet = {
     /**
      * A person reviews a list of problems of a given patient.
      */
-    v3_ActCode_ProblemListReviewTask: Coding.FromStrict({
+    v3_ActCode_ProblemListReviewTask: new Coding({
         code: "PROBLISTREV",
         display: "problem list review task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6097,7 +6097,7 @@ export const V3ActCodeValueSet = {
     /**
      * Transaction counts and value totals by Provider Identifier.
      */
-    v3_ActCode_Provider: Coding.FromStrict({
+    v3_ActCode_Provider: new Coding({
         code: "PROV",
         display: "provider",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6105,7 +6105,7 @@ export const V3ActCodeValueSet = {
     /**
      * private transport
      */
-    v3_ActCode_PrivateTransport: Coding.FromStrict({
+    v3_ActCode_PrivateTransport: new Coding({
         code: "PRVTRN",
         display: "private transport",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6113,7 +6113,7 @@ export const V3ActCodeValueSet = {
     /**
      * Tax levied by the provincial or state jurisdiction such as Provincial Sales Tax
      */
-    v3_ActCode_ProvincialStateSalesTax: Coding.FromStrict({
+    v3_ActCode_ProvincialStateSalesTax: new Coding({
         code: "PST",
         display: "provincial/state sales tax",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6121,7 +6121,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:All information pertaining to a patient's professional service records (such as smoking cessation, counseling, medication review, mental health).
      */
-    v3_ActCode_ProfessionalServiceCategory: Coding.FromStrict({
+    v3_ActCode_ProfessionalServiceCategory: new Coding({
         code: "PSVCCAT",
         display: "professional service category",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6129,7 +6129,7 @@ export const V3ActCodeValueSet = {
     /**
      * Provision of treatment of psychiatric disorder relating to mental illness.
      */
-    v3_ActCode_Psychiatric: Coding.FromStrict({
+    v3_ActCode_Psychiatric: new Coding({
         code: "PSYCH",
         display: "Psychiatric",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6137,7 +6137,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Exposure participants' interaction occurred during the course of  health care delivery by a provider (e.g. a physician treating a patient in her office).
      */
-    v3_ActCode_HealthCareInteractionPatientCare: Coding.FromStrict({
+    v3_ActCode_HealthCareInteractionPatientCare: new Coding({
         code: "PTNTCARE",
         display: "Health Care Interaction - Patient Care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6145,7 +6145,7 @@ export const V3ActCodeValueSet = {
     /**
      * public transport
      */
-    v3_ActCode_PublicTransport: Coding.FromStrict({
+    v3_ActCode_PublicTransport: new Coding({
         code: "PUBTRN",
         display: "public transport",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6153,7 +6153,7 @@ export const V3ActCodeValueSet = {
     /**
      * Allows provider to explain lateness of invoice to a subsequent payor.
      */
-    v3_ActCode_DelayedByAPreviousPayor: Coding.FromStrict({
+    v3_ActCode_DelayedByAPreviousPayor: new Coding({
         code: "PYRDELAY",
         display: "delayed by a previous payor",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6161,7 +6161,7 @@ export const V3ActCodeValueSet = {
     /**
      * Status is used by one system to inform another that the processing has been completed, but the container has not been released from that system.
      */
-    v3_ActCode_ProcessCompleted: Coding.FromStrict({
+    v3_ActCode_ProcessCompleted: new Coding({
         code: "R",
         display: "Process Completed",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6169,7 +6169,7 @@ export const V3ActCodeValueSet = {
     /**
      * A radiologist enters a report for a given patient.
      */
-    v3_ActCode_RadiologyReportEntryTask: Coding.FromStrict({
+    v3_ActCode_RadiologyReportEntryTask: new Coding({
         code: "RADREPE",
         display: "radiology report entry task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6177,7 +6177,7 @@ export const V3ActCodeValueSet = {
     /**
      * A person reviews a radiology report of a given patient.
      */
-    v3_ActCode_RadiologyReportReviewTask: Coding.FromStrict({
+    v3_ActCode_RadiologyReportReviewTask: new Coding({
         code: "RADREPREV",
         display: "radiology report review task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6185,7 +6185,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed therapy may be inappropriate or contraindicated because of a recorded patient allergy to a cross-sensitivity related product.  (Allergies are immune based reactions.)
      */
-    v3_ActCode_RelatedAllergyAlert: Coding.FromStrict({
+    v3_ActCode_RelatedAllergyAlert: new Coding({
         code: "RALG",
         display: "Related Allergy Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6193,7 +6193,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed therapy may be inappropriate or contraindicated because of a recorded prior adverse reaction to a cross-sensitivity related product.
      */
-    v3_ActCode_RelatedPriorReactionAlert: Coding.FromStrict({
+    v3_ActCode_RelatedPriorReactionAlert: new Coding({
         code: "RAR",
         display: "Related Prior Reaction Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6201,7 +6201,7 @@ export const V3ActCodeValueSet = {
     /**
      * Succinct statement of the need for the measure. Usually includes statements pertaining to Importance criterion: impact, gap in care and evidence.
      */
-    v3_ActCode_Rationale: Coding.FromStrict({
+    v3_ActCode_Rationale: new Coding({
         code: "RAT",
         display: "rationale",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6209,7 +6209,7 @@ export const V3ActCodeValueSet = {
     /**
      * A diet that seeks to reduce body fat, typically low energy content (800-1600 kcal).
      */
-    v3_ActCode_ReductionDiet: Coding.FromStrict({
+    v3_ActCode_ReductionDiet: new Coding({
         code: "RD",
         display: "reduction diet",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6217,7 +6217,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed therapy may be inappropriate or contraindicated based on the potential for a patient reaction to the proposed product
      */
-    v3_ActCode_ReactionAlert: Coding.FromStrict({
+    v3_ActCode_ReactionAlert: new Coding({
         code: "REACT",
         display: "Reaction Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6225,7 +6225,7 @@ export const V3ActCodeValueSet = {
     /**
      * The addition of calcium back to a specimen after it was removed by chelating agents
      */
-    v3_ActCode_Recalcification: Coding.FromStrict({
+    v3_ActCode_Recalcification: new Coding({
         code: "RECA",
         display: "Recalcification",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6233,7 +6233,7 @@ export const V3ActCodeValueSet = {
     /**
      * Retroactive adjustment such as fee rate adjustment due to contract negotiations.
      */
-    v3_ActCode_Recovery: Coding.FromStrict({
+    v3_ActCode_Recovery: new Coding({
         code: "RECOV",
         display: "recovery",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6241,7 +6241,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies bibliographic citations or references to clinical practice guidelines, sources of evidence, or other relevant materials supporting the intent and rationale of the eMeasure.
      */
-    v3_ActCode_Reference: Coding.FromStrict({
+    v3_ActCode_Reference: new Coding({
         code: "REF",
         display: "reference",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6249,7 +6249,7 @@ export const V3ActCodeValueSet = {
     /**
      * Specifies whether or not further testing may be automatically or manually initiated on specimens.
      */
-    v3_ActCode_ReflexPermission: Coding.FromStrict({
+    v3_ActCode_ReflexPermission: new Coding({
         code: "REFLEX",
         display: "reflex permission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6257,7 +6257,7 @@ export const V3ActCodeValueSet = {
     /**
      * Rules of practice do not require a physician's referral for the provider to perform a billable service.
      */
-    v3_ActCode_ReferralNotRequired: Coding.FromStrict({
+    v3_ActCode_ReferralNotRequired: new Coding({
         code: "REFNR",
         display: "referral not required",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6265,7 +6265,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: A person enters a health care reminder for a given patient.
      */
-    v3_ActCode_ReminderListEntry: Coding.FromStrict({
+    v3_ActCode_ReminderListEntry: new Coding({
         code: "REMLE",
         display: "reminder list entry",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6273,7 +6273,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: A person reviews a list of health care reminders for a given patient.
      */
-    v3_ActCode_ReminderListReview: Coding.FromStrict({
+    v3_ActCode_ReminderListReview: new Coding({
         code: "REMLREV",
         display: "reminder list review",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6281,7 +6281,7 @@ export const V3ActCodeValueSet = {
     /**
      * Temporary supply of a product with financial compensation, without transfer of ownership for the product.
      */
-    v3_ActCode_Rent: Coding.FromStrict({
+    v3_ActCode_Rent: new Coding({
         code: "RENT",
         display: "Rent",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6289,7 +6289,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:This observation represents an 'average' or 'expected' half-life typical of the product.
      */
-    v3_ActCode_RepresentativeHalfLife: Coding.FromStrict({
+    v3_ActCode_RepresentativeHalfLife: new Coding({
         code: "REP_HALF_LIFE",
         display: "representative half-life",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6297,7 +6297,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:The number of repeating elements falls outside the range of the allowed number of repetitions.
      */
-    v3_ActCode_RepetitionsOutOfRange: Coding.FromStrict({
+    v3_ActCode_RepetitionsOutOfRange: new Coding({
         code: "REP_RANGE",
         display: "repetitions out of range",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6305,7 +6305,7 @@ export const V3ActCodeValueSet = {
     /**
      * This Observation Series type contains waveforms of a "representative beat" (a.k.a. "median beat" or "average beat").  The waveform samples are measured in relative time, relative to the beginning of the beat as defined by the Observation Series effective time.  The waveforms are not directly acquired from the subject, but rather algorithmically derived from the "rhythm" waveforms.
      */
-    v3_ActCode_ECGRepresentativeBeatWaveforms: Coding.FromStrict({
+    v3_ActCode_ECGRepresentativeBeatWaveforms: new Coding({
         code: "REPRESENTATIVE_BEAT",
         display: "ECG representative beat waveforms",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6313,7 +6313,7 @@ export const V3ActCodeValueSet = {
     /**
      * The same service was delivered within a time period that would usually indicate a duplicate billing.  However, the repeated service is a medical 	necessity and therefore not a duplicate.
      */
-    v3_ActCode_RepeatedService: Coding.FromStrict({
+    v3_ActCode_RepeatedService: new Coding({
         code: "REPSERV",
         display: "repeated service",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6321,7 +6321,7 @@ export const V3ActCodeValueSet = {
     /**
      * The value of the dilution of a sample after it had been analyzed at a prior dilution value
      */
-    v3_ActCode_RerunDilution: Coding.FromStrict({
+    v3_ActCode_RerunDilution: new Coding({
         code: "RERUN",
         display: "Rerun Dilution",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6329,7 +6329,7 @@ export const V3ActCodeValueSet = {
     /**
      * A charge is requested because the patient failed to pick up the item and it took an amount of time to return it to stock for future use.
      */
-    v3_ActCode_RestockingFee: Coding.FromStrict({
+    v3_ActCode_RestockingFee: new Coding({
         code: "RESTOCK",
         display: "restocking fee",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6337,7 +6337,7 @@ export const V3ActCodeValueSet = {
     /**
      * Bonus payments based on performance, volume, etc. as agreed to by the payor.
      */
-    v3_ActCode_RetroAdjustment: Coding.FromStrict({
+    v3_ActCode_RetroAdjustment: new Coding({
         code: "RETRO",
         display: "retro adjustment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6345,7 +6345,7 @@ export const V3ActCodeValueSet = {
     /**
      * A type of transaction that represents a reversal of a previous charge for a service or product. Expressed in monetary terms.  It has the opposite effect of a standard charge.
      */
-    v3_ActCode_StandardChargeReversal: Coding.FromStrict({
+    v3_ActCode_StandardChargeReversal: new Coding({
         code: "REV",
         display: "Standard Charge Reversal",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6353,7 +6353,7 @@ export const V3ActCodeValueSet = {
     /**
      * A fill against an order that has already been filled (or partially filled) at least once.
      */
-    v3_ActCode_Refill: Coding.FromStrict({
+    v3_ActCode_Refill: new Coding({
         code: "RF",
         display: "Refill",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6361,7 +6361,7 @@ export const V3ActCodeValueSet = {
     /**
      * A refill where the quantity supplied is equal to one full repetition of the ordered amount. (e.g. If the order was 90 tablets, 3 refills, a complete fill would be for the full 90 tablets.)
      */
-    v3_ActCode_RefillComplete: Coding.FromStrict({
+    v3_ActCode_RefillComplete: new Coding({
         code: "RFC",
         display: "Refill - Complete",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6369,7 +6369,7 @@ export const V3ActCodeValueSet = {
     /**
      * A refill where the quantity supplied is equal to one full repetition of the ordered amount. (e.g. If the order was 90 tablets, 3 refills, a complete fill would be for the full 90 tablets.) and where the strength supplied is less than the ordered strength (e.g. 10mg for an order of 50mg where a subsequent fill will dispense 40mg tablets).
      */
-    v3_ActCode_RefillCompletePartialStrength: Coding.FromStrict({
+    v3_ActCode_RefillCompletePartialStrength: new Coding({
         code: "RFCS",
         display: "refill complete partial strength",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6377,7 +6377,7 @@ export const V3ActCodeValueSet = {
     /**
      * The first fill against an order that has already been filled at least once at another facility.
      */
-    v3_ActCode_RefillFirstFillThisFacility: Coding.FromStrict({
+    v3_ActCode_RefillFirstFillThisFacility: new Coding({
         code: "RFF",
         display: "Refill (First fill this facility)",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6385,7 +6385,7 @@ export const V3ActCodeValueSet = {
     /**
      * The first fill against an order that has already been filled at least once at another facility and where the strength supplied is less than the ordered strength (e.g. 10mg for an order of 50mg where a subsequent fill will dispense 40mg tablets).
      */
-    v3_ActCode_RefillPartialStrengthFirstFillThisFacility: Coding.FromStrict({
+    v3_ActCode_RefillPartialStrengthFirstFillThisFacility: new Coding({
         code: "RFFS",
         display: "refill partial strength (first fill this facility)",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6393,7 +6393,7 @@ export const V3ActCodeValueSet = {
     /**
      * A refill where the quantity supplied is less than one full repetition of the ordered amount. (e.g. If the order was 90 tablets, 3 refills, a partial fill might be for only 30 tablets.)
      */
-    v3_ActCode_RefillPartFill: Coding.FromStrict({
+    v3_ActCode_RefillPartFill: new Coding({
         code: "RFP",
         display: "Refill - Part Fill",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6401,7 +6401,7 @@ export const V3ActCodeValueSet = {
     /**
      * A refill where the quantity supplied is less than one full repetition of the ordered amount. (e.g. If the order was 90 tablets, 3 refills, a partial fill might be for only 30 tablets.) and where the strength supplied is less than the ordered strength (e.g. 10mg for an order of 50mg where a subsequent fill will dispense 40mg tablets).
      */
-    v3_ActCode_RefillPartFillPartialStrength: Coding.FromStrict({
+    v3_ActCode_RefillPartFillPartialStrength: new Coding({
         code: "RFPS",
         display: "refill part fill partial strength",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6409,7 +6409,7 @@ export const V3ActCodeValueSet = {
     /**
      * A fill against an order that has already been filled (or partially filled) at least once and where the strength supplied is less than the ordered strength (e.g. 10mg for an order of 50mg where a subsequent fill will dispense 40mg tablets).
      */
-    v3_ActCode_RefillPartialStrength: Coding.FromStrict({
+    v3_ActCode_RefillPartialStrength: new Coding({
         code: "RFS",
         display: "refill partial strength",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6417,7 +6417,7 @@ export const V3ActCodeValueSet = {
     /**
      * This Observation type contains ECG "rhythm" waveforms.  The waveform samples are measured in absolute time (a.k.a. "subject time" or "effective time").  These waveforms are usually "raw" with some minimal amount of noise reduction and baseline filtering applied.
      */
-    v3_ActCode_ECGRhythmWaveforms: Coding.FromStrict({
+    v3_ActCode_ECGRhythmWaveforms: new Coding({
         code: "RHYTHM",
         display: "ECG rhythm waveforms",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6425,7 +6425,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed therapy may be inappropriate or contraindicated because of a recorded patient intolerance to a cross-sensitivity related product.  (Intolerances are non-immune based sensitivities.)
      */
-    v3_ActCode_RelatedIntoleranceAlert: Coding.FromStrict({
+    v3_ActCode_RelatedIntoleranceAlert: new Coding({
         code: "RINT",
         display: "Related Intolerance Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6433,7 +6433,7 @@ export const V3ActCodeValueSet = {
     /**
      * A person reviews a Risk Assessment Instrument report of a given patient.
      */
-    v3_ActCode_RiskAssessmentInstrumentTask: Coding.FromStrict({
+    v3_ActCode_RiskAssessmentInstrumentTask: new Coding({
         code: "RISKASSESS",
         display: "risk assessment instrument task",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6441,7 +6441,7 @@ export const V3ActCodeValueSet = {
     /**
      * List of risk factor observations.
      */
-    v3_ActCode_RiskFactors: Coding.FromStrict({
+    v3_ActCode_RiskFactors: new Coding({
         code: "RISKLIST",
         display: "risk factors",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6449,7 +6449,7 @@ export const V3ActCodeValueSet = {
     /**
      * A fully specified bounded Region of Interest (ROI) delineates a ROI in which only those dimensions participate that are specified by boundary criteria, whereas all other dimensions are excluded.  For example a ROI to mark an episode of "ST elevation" in a subset of the EKG leads V2, V3, and V4 would include 4 boundaries, one each for time, V2, V3, and V4.
      */
-    v3_ActCode_FullySpecifiedROI: Coding.FromStrict({
+    v3_ActCode_FullySpecifiedROI: new Coding({
         code: "ROIFS",
         display: "fully specified ROI",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6457,7 +6457,7 @@ export const V3ActCodeValueSet = {
     /**
      * A partially specified bounded Region of Interest (ROI) specifies a ROI in which at least all values in the dimensions specified by the boundary criteria participate. For example, if an episode of ventricular fibrillations (VFib) is observed, it usually doesn't make sense to exclude any EKG leads from the observation and the partially specified ROI would contain only one boundary for time indicating the time interval where VFib was observed.
      */
-    v3_ActCode_PartiallySpecifiedROI: Coding.FromStrict({
+    v3_ActCode_PartiallySpecifiedROI: new Coding({
         code: "ROIPS",
         display: "partially specified ROI",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6465,7 +6465,7 @@ export const V3ActCodeValueSet = {
     /**
      * A billing arrangement where funding is based on a list of individuals registered as patients of the Provider.
      */
-    v3_ActCode_RosterFunding: Coding.FromStrict({
+    v3_ActCode_RosterFunding: new Coding({
         code: "ROST",
         display: "roster funding",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6473,7 +6473,7 @@ export const V3ActCodeValueSet = {
     /**
      * Proposed therapy may be inappropriate or contraindicated because of a potential patient reaction to a cross-sensitivity related product.
      */
-    v3_ActCode_RelatedReactionAlert: Coding.FromStrict({
+    v3_ActCode_RelatedReactionAlert: new Coding({
         code: "RREACT",
         display: "Related Reaction Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6481,7 +6481,7 @@ export const V3ActCodeValueSet = {
     /**
      * Some form of prescription is required before the related medicine can be supplied for a patient.  The exact form of regulation will vary in different realms.
      */
-    v3_ActCode_PrescriptionOnlyMedicine: Coding.FromStrict({
+    v3_ActCode_PrescriptionOnlyMedicine: new Coding({
         code: "RX",
         display: "prescription only medicine",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6489,7 +6489,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:All information pertaining to a patient's medication records (orders, dispenses and other active medications).
      */
-    v3_ActCode_MedicationCategory: Coding.FromStrict({
+    v3_ActCode_MedicationCategory: new Coding({
         code: "RXCAT",
         display: "medication category",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6497,7 +6497,7 @@ export const V3ActCodeValueSet = {
     /**
      * Pharmacy dispense invoice for a compound.
      */
-    v3_ActCode_RxCompoundInvoice: Coding.FromStrict({
+    v3_ActCode_RxCompoundInvoice: new Coding({
         code: "RXCINV",
         display: "Rx compound invoice",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6505,7 +6505,7 @@ export const V3ActCodeValueSet = {
     /**
      * Pharmacy dispense invoice not involving a compound
      */
-    v3_ActCode_RxDispenseInvoice: Coding.FromStrict({
+    v3_ActCode_RxDispenseInvoice: new Coding({
         code: "RXDINV",
         display: "Rx dispense invoice",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6513,7 +6513,7 @@ export const V3ActCodeValueSet = {
     /**
      * Uniquely designed and elegantly decorated accommodations with many amenities available for an additional charge.
      */
-    v3_ActCode_Suite: Coding.FromStrict({
+    v3_ActCode_Suite: new Coding({
         code: "S",
         display: "Suite",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6521,7 +6521,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:A drug that requires prior approval (to be reimbursed) before being dispensed
      */
-    v3_ActCode_SpecialAuthorization: Coding.FromStrict({
+    v3_ActCode_SpecialAuthorization: new Coding({
         code: "SA",
         display: "special authorization",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6529,7 +6529,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:A drug that requires special access permission to be prescribed and dispensed.
      */
-    v3_ActCode_SpecialAccess: Coding.FromStrict({
+    v3_ActCode_SpecialAccess: new Coding({
         code: "SAC",
         display: "special access",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6537,7 +6537,7 @@ export const V3ActCodeValueSet = {
     /**
      * Transfer of ownership for a product for financial compensation.
      */
-    v3_ActCode_Sale: Coding.FromStrict({
+    v3_ActCode_Sale: new Coding({
         code: "SALE",
         display: "Sale",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6545,7 +6545,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount billed for all submitted Invoice Groupings within a time period and submitted electronically.  Adjudicated invoice elements are included.
      */
-    v3_ActCode_SubmittedBilledElectronicAmount: Coding.FromStrict({
+    v3_ActCode_SubmittedBilledElectronicAmount: new Coding({
         code: "SBBLELAT",
         display: "submitted billed electronic amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6553,7 +6553,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of submitted Invoice Groupings within a time period and submitted electronically.  Adjudicated invoice elements are included.
      */
-    v3_ActCode_SubmittedBilledElectronicCount: Coding.FromStrict({
+    v3_ActCode_SubmittedBilledElectronicCount: new Coding({
         code: "SBBLELCT",
         display: "submitted billed electronic count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6561,7 +6561,7 @@ export const V3ActCodeValueSet = {
     /**
      * Clinical services invoice where the Invoice Group contains one billable item for multiple clinical services in one or more sessions.
      */
-    v3_ActCode_SessionalOrBlockFeeInvoice: Coding.FromStrict({
+    v3_ActCode_SessionalOrBlockFeeInvoice: new Coding({
         code: "SBFINV",
         display: "sessional or block fee invoice",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6569,7 +6569,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount billed for all submitted  Invoice Groupings that were nullified within a time period and submitted electronically.  Adjudicated invoice elements are included.
      */
-    v3_ActCode_SubmittedNullifiedElectronicAmount: Coding.FromStrict({
+    v3_ActCode_SubmittedNullifiedElectronicAmount: new Coding({
         code: "SBNFELAT",
         display: "submitted nullified electronic amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6577,7 +6577,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of submitted  Invoice Groupings that were nullified within a time period and submitted electronically.  Adjudicated invoice elements are included.
      */
-    v3_ActCode_SubmittedCancelledElectronicCount: Coding.FromStrict({
+    v3_ActCode_SubmittedCancelledElectronicCount: new Coding({
         code: "SBNFELCT",
         display: "submitted cancelled electronic count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6585,7 +6585,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total net amount billed for all submitted  Invoice Groupings that are pended or held by the payor, within a time period and submitted electronically.  Adjudicated invoice elements are not included.
      */
-    v3_ActCode_SubmittedPendingElectronicAmount: Coding.FromStrict({
+    v3_ActCode_SubmittedPendingElectronicAmount: new Coding({
         code: "SBPDELAT",
         display: "submitted pending electronic amount",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6593,7 +6593,7 @@ export const V3ActCodeValueSet = {
     /**
      * Identifies the total number of submitted  Invoice Groupings that are pended or held by the payor, within a time period and submitted electronically.  Adjudicated invoice elements are not included.
      */
-    v3_ActCode_SubmittedPendingElectronicCount: Coding.FromStrict({
+    v3_ActCode_SubmittedPendingElectronicCount: new Coding({
         code: "SBPDELCT",
         display: "submitted pending electronic count",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6601,7 +6601,7 @@ export const V3ActCodeValueSet = {
     /**
      * A diet that avoids ingredients that might cause digestion problems, e.g., avoid excessive fat, avoid too much fiber (cabbage, peas, beans).
      */
-    v3_ActCode_SchonkostGE: Coding.FromStrict({
+    v3_ActCode_SchonkostGE: new Coding({
         code: "SCH",
         display: "schonkost (GE)",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6609,7 +6609,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: The school the patient attended when immunized.
      */
-    v3_ActCode_School: Coding.FromStrict({
+    v3_ActCode_School: new Coding({
         code: "SCHL",
         display: "school",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6617,7 +6617,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: The school division or district associated with the patient during the immunization event.
      */
-    v3_ActCode_SchoolDivision: Coding.FromStrict({
+    v3_ActCode_SchoolDivision: new Coding({
         code: "SCHLDIV",
         display: "school division",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6625,7 +6625,7 @@ export const V3ActCodeValueSet = {
     /**
      * Incident or accident is the result of a school place accident.
      */
-    v3_ActCode_SchoolAccident: Coding.FromStrict({
+    v3_ActCode_SchoolAccident: new Coding({
         code: "SCHOOL",
         display: "School Accident",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6633,7 +6633,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Exposure participants' interaction occurred in an academic setting (e.g., participants are fellow students, or student and teacher).
      */
-    v3_ActCode_SchoolInteraction: Coding.FromStrict({
+    v3_ActCode_SchoolInteraction: new Coding({
         code: "SCHOOL2",
         display: "School Interaction",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6641,7 +6641,7 @@ export const V3ActCodeValueSet = {
     /**
      * Comparison of results across strata can be used to show where disparities exist or where there is a need to expose differences in results. For example, Centers for Medicare &amp; Medicaid Services (CMS) in the U.S. defines four required Supplemental Data Elements (payer, ethnicity, race, and gender), which are variables used to aggregate data into various subgroups. Additional supplemental data elements required for risk adjustment or other purposes of data aggregation can be included in the Supplemental Data Element section.
      */
-    v3_ActCode_SupplementalDataElements: Coding.FromStrict({
+    v3_ActCode_SupplementalDataElements: new Coding({
         code: "SDE",
         display: "supplemental data elements",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6661,7 +6661,7 @@ export const V3ActCodeValueSet = {
      *                            pseudonymization
      *                            anonymization
      */
-    v3_ActCode_SecurityAlterationIntegrityObservation: Coding.FromStrict({
+    v3_ActCode_SecurityAlterationIntegrityObservation: new Coding({
         code: "SECALTINTOBS",
         display: "security alteration integrity observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6679,7 +6679,7 @@ export const V3ActCodeValueSet = {
      *                            Compartment:  A division of data into isolated blocks with separate security controls for the purpose of reducing risk. (ISO 2382-8).  A security label tag that "segments" an IT resource by indicating that access and use is restricted to members of a defined community or project. (HL7 Healthcare Classification System)
      *                            Sensitivity:  The characteristic of an IT resource which implies its value or importance and may include its vulnerability. (ISO 7492-2)  Privacy metadata for information perceived as undesirable to share.  (HL7 Healthcare Classification System)
      */
-    v3_ActCode_SecurityCategoryObservation: Coding.FromStrict({
+    v3_ActCode_SecurityCategoryObservation: new Coding({
         code: "SECCATOBS",
         display: "security category observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6696,7 +6696,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Usage Note: Security classification observation type codes designate security label field types, which are valued with an applicable SecurityClassificationObservationValue code as the "security label tag".
      */
-    v3_ActCode_SecurityClassificationObservation: Coding.FromStrict({
+    v3_ActCode_SecurityClassificationObservation: new Coding({
         code: "SECCLASSOBS",
         display: "security classification observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6717,7 +6717,7 @@ export const V3ActCodeValueSet = {
      *                            refrain policies
      *                            purpose of use constraints
      */
-    v3_ActCode_SecurityControlObservation: Coding.FromStrict({
+    v3_ActCode_SecurityControlObservation: new Coding({
         code: "SECCONOBS",
         display: "security control observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6728,7 +6728,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Examples: Types of security data integrity observation metadata, which may value the observation, include cryptographic hash function and digital signature.
      */
-    v3_ActCode_SecurityDataIntegrityObservation: Coding.FromStrict({
+    v3_ActCode_SecurityDataIntegrityObservation: new Coding({
         code: "SECDATINTOBS",
         display: "security data integrity observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6742,7 +6742,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Usage Note: A security integrity confidence observation on an Act may indicate that a valued Act.uncertaintycode attribute has been overridden by the entity responsible for ascribing the SecurityIntegrityConfidenceObservationValue.  This supports the business requirements for increasing or decreasing the assessment of the reliability or trustworthiness of an IT resource based on parameters beyond the original assignment of an Act statement level of uncertainty.
      */
-    v3_ActCode_SecurityIntegrityConfidenceObservation: Coding.FromStrict({
+    v3_ActCode_SecurityIntegrityConfidenceObservation: new Coding({
         code: "SECINTCONOBS",
         display: "security integrity confidence observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6764,7 +6764,7 @@ export const V3ActCodeValueSet = {
      *                            Alteration integrity, which indicate the security mechanisms used for authorized transformations of the resource
      *                            Integrity provenance, which indicates the entity responsible for a report or assertion relayed "second-hand" about an IT resource
      */
-    v3_ActCode_SecurityIntegrityObservation: Coding.FromStrict({
+    v3_ActCode_SecurityIntegrityObservation: new Coding({
         code: "SECINTOBS",
         display: "security integrity observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6780,7 +6780,7 @@ export const V3ActCodeValueSet = {
      *                            assertions about an IT resource by a clinician
      *                            assertions about an IT resource by a device
      */
-    v3_ActCode_SecurityIntegrityProvenanceAssertedByObservation: Coding.FromStrict({
+    v3_ActCode_SecurityIntegrityProvenanceAssertedByObservation: new Coding({
         code: "SECINTPRVABOBS",
         display: "security integrity provenance asserted by observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6797,7 +6797,7 @@ export const V3ActCodeValueSet = {
      *                            the entity responsible for a report or assertion about an IT resource relayed â€œsecond-handâ€?
      *                            the entity responsible for excerpting, transforming, or compiling an IT resource
      */
-    v3_ActCode_SecurityIntegrityProvenanceObservation: Coding.FromStrict({
+    v3_ActCode_SecurityIntegrityProvenanceObservation: new Coding({
         code: "SECINTPRVOBS",
         display: "security integrity provenance observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6813,7 +6813,7 @@ export const V3ActCodeValueSet = {
      *                            reports about an IT resource by a clinician
      *                            reports about an IT resource by a device
      */
-    v3_ActCode_SecurityIntegrityProvenanceReportedByObservation: Coding.FromStrict({
+    v3_ActCode_SecurityIntegrityProvenanceReportedByObservation: new Coding({
         code: "SECINTPRVRBOBS",
         display: "security integrity provenance reported by observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6824,7 +6824,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Examples: Types of security integrity status observation metadata, which may value the observation, include codes from the HL7 DocumentCompletion code system such as legally authenticated, in progress, and incomplete.
      */
-    v3_ActCode_SecurityIntegrityStatusObservation: Coding.FromStrict({
+    v3_ActCode_SecurityIntegrityStatusObservation: new Coding({
         code: "SECINTSTOBS",
         display: "security integrity status observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6853,7 +6853,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Usage Note: SecurityObservationType codes designate security label field types, which are valued with an applicable SecurityObservationValue code as the "security label tag".
      */
-    v3_ActCode_SecurityObservationType: Coding.FromStrict({
+    v3_ActCode_SecurityObservationType: new Coding({
         code: "SECOBS",
         display: "SecurityObservationType",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6861,7 +6861,7 @@ export const V3ActCodeValueSet = {
     /**
      * An observation identifying trust metadata about an IT resource (data, information object, service, or system capability), which may be used as a trust attribute to populate a computable trust policy, trust credential, trust assertion, or trust label field in a security label or trust policy, which are principally used for authentication, authorization, and access control decisions.
      */
-    v3_ActCode_SECTRSTOBS: Coding.FromStrict({
+    v3_ActCode_SECTRSTOBS: new Coding({
         code: "SECTRSTOBS",
         display: "SECTRSTOBS",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6869,7 +6869,7 @@ export const V3ActCodeValueSet = {
     /**
      * Transaction counts and value totals by each instance of a messaging application on a single processor. It is a registered identifier known to the receivers.
      */
-    v3_ActCode_SendingApplication: Coding.FromStrict({
+    v3_ActCode_SendingApplication: new Coding({
         code: "SENDAPP",
         display: "sending application",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6877,7 +6877,7 @@ export const V3ActCodeValueSet = {
     /**
      * A billing arrangement where a Provider charges a sum to provide a group (volume) of interventions/procedures to one or more patients within a defined period of time, typically on the same date.  Interventions/procedures included in the session may vary.
      */
-    v3_ActCode_SessionalFunding: Coding.FromStrict({
+    v3_ActCode_SessionalFunding: new Coding({
         code: "SESS",
         display: "sessional funding",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6885,7 +6885,7 @@ export const V3ActCodeValueSet = {
     /**
      * A subjective evaluation of the seriousness or intensity associated with another observation.
      */
-    v3_ActCode_SeverityObservation: Coding.FromStrict({
+    v3_ActCode_SeverityObservation: new Coding({
         code: "SEV",
         display: "Severity Observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6893,7 +6893,7 @@ export const V3ActCodeValueSet = {
     /**
      * Communication of an agent from one living subject to another living subject through direct contact with genital or oral tissues as part of a sexual act.
      */
-    v3_ActCode_SexualTransmission: Coding.FromStrict({
+    v3_ActCode_SexualTransmission: new Coding({
         code: "SEXTRNS",
         display: "sexual transmission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6901,7 +6901,7 @@ export const V3ActCodeValueSet = {
     /**
      * An emergency supply where the expectation is that a formal order authorizing the supply will be provided at a later date.
      */
-    v3_ActCode_ScriptOwing: Coding.FromStrict({
+    v3_ActCode_ScriptOwing: new Coding({
         code: "SO",
         display: "Script Owing",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6909,7 +6909,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: An interaction where the exposure participants are social associates or members of the same extended family
      */
-    v3_ActCode_SocialExtendedFamilyInteraction: Coding.FromStrict({
+    v3_ActCode_SocialExtendedFamilyInteraction: new Coding({
         code: "SOCIAL2",
         display: "Social/Extended Family Interaction",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6917,7 +6917,7 @@ export const V3ActCodeValueSet = {
     /**
      * Accommodations in which there are 2 beds.
      */
-    v3_ActCode_SemiPrivate: Coding.FromStrict({
+    v3_ActCode_SemiPrivate: new Coding({
         code: "SP",
         display: "Semi-private",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6925,7 +6925,7 @@ export const V3ActCodeValueSet = {
     /**
      * That total amount of the eligible charges which a covered party must periodically pay for services and/or products prior to the Medicaid program providing any coverage. This amount represents the covered party's spend down that is applied to a particular adjudication result. It is expressed as a negative dollar amount in adjudication results
      */
-    v3_ActCode_SpendDown: Coding.FromStrict({
+    v3_ActCode_SpendDown: new Coding({
         code: "SPEND",
         display: "spend down",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6936,7 +6936,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Constraints: The Observation.value must be a Boolean (BL) with true for the presence or false for the absence of one or more coatings on a solid dosage form.
      */
-    v3_ActCode_Coating_2: Coding.FromStrict({
+    v3_ActCode_Coating_2: new Coding({
         code: "SPLCOATING",
         display: "coating",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6947,7 +6947,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Constraints: The Observation.value must be a single coded value or a list of multiple coded values, specifying one or more distinct colors that approximate of the color(s) of distinct areas of the solid dosage form, such as the different sides of a tablet or one-part capsule, or the different halves of a two-part capsule.  Bands on banded capsules, regardless of the color, are not considered when assigning an SPLCOLOR. Imprints on the dosage form, regardless of their color are not considered when assigning an SPLCOLOR. If more than one color exists on a particular side or half, then the most predominant color on that side or half is recorded.  If the gelatin capsule shell is colorless and transparent, use the predominant color of the contents that appears through the colorless and transparent capsule shell. Colors can include: Black;Gray;White;Red;Pink;Purple;Green;Yellow;Orange;Brown;Blue;Turquoise.
      */
-    v3_ActCode_Color_2: Coding.FromStrict({
+    v3_ActCode_Color_2: new Coding({
         code: "SPLCOLOR",
         display: "color",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6955,7 +6955,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: A characteristic representing a single file reference that contains two or more views of the same dosage form of the product; in most cases this should represent front and back views of the dosage form, but occasionally additional views might be needed in order to capture all of the important physical characteristics of the dosage form.  Any imprint and/or symbol should be clearly identifiable, and the viewer should not normally need to rotate the image in order to read it.  Images that are submitted with SPL should be included in the same directory as the SPL file.
      */
-    v3_ActCode_Image: Coding.FromStrict({
+    v3_ActCode_Image: new Coding({
         code: "SPLIMAGE",
         display: "image",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6969,7 +6969,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Constraints: The Observation.value must be of type Character String (ST). Excluded from SPLIMPRINT are internal and external cut-outs in the form of alphanumeric text and the letter 'R' with a circle around it (when referring to a registered trademark) and the letters 'TM' (when referring to a 'trade mark').  To record text, begin on either side or part of the dosage form. Start at the top left and progress as one would normally read a book.  Enter a semicolon to show separation between words or line divisions.
      */
-    v3_ActCode_Imprint: Coding.FromStrict({
+    v3_ActCode_Imprint: new Coding({
         code: "SPLIMPRINT",
         display: "imprint",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6983,7 +6983,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Constraints: Whether three parallel score lines create four equal pieces or two intersecting score lines create two equal pieces using one score line and four equal pieces using both score lines, both have the scoring value of 4. Solid dosage forms that are not scored are given a value of 1. Solid dosage forms that can only be divided into unequal pieces are given a null-value with nullFlavor other (OTH).
      */
-    v3_ActCode_Scoring_2: Coding.FromStrict({
+    v3_ActCode_Scoring_2: new Coding({
         code: "SPLSCORING",
         display: "scoring",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -6991,7 +6991,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: A characteristic of an oral solid dosage form of a medicinal product, specifying the two dimensional representation of the solid dose form, in terms of the outside perimeter of a solid dosage form when the dosage form, resting on a flat surface, is viewed from directly above, including slight rounding of corners. SPLSHAPE does not include embossing, scoring, debossing, or internal cut-outs.  SPLSHAPE is independent of the orientation of the imprint and logo. Shapes can include: Triangle (3 sided); Square; Round; Semicircle; Pentagon (5 sided); Diamond; Double circle; Bullet; Hexagon (6 sided); Rectangle; Gear; Capsule; Heptagon (7 sided); Trapezoid; Oval; Clover; Octagon (8 sided); Tear; Freeform.
      */
-    v3_ActCode_Shape_2: Coding.FromStrict({
+    v3_ActCode_Shape_2: new Coding({
         code: "SPLSHAPE",
         display: "shape",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7002,7 +7002,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Example: SPLSIZE for a rectangular shaped tablet is the length and SPLSIZE for a round shaped tablet is the diameter.
      */
-    v3_ActCode_Size_2: Coding.FromStrict({
+    v3_ActCode_Size_2: new Coding({
         code: "SPLSIZE",
         display: "size",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7016,7 +7016,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Example:
      */
-    v3_ActCode_Symbol: Coding.FromStrict({
+    v3_ActCode_Symbol: new Coding({
         code: "SPLSYMBOL",
         display: "symbol",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7024,7 +7024,7 @@ export const V3ActCodeValueSet = {
     /**
      * Incident or accident is the result of a sporting accident.
      */
-    v3_ActCode_SportingAccident: Coding.FromStrict({
+    v3_ActCode_SportingAccident: new Coding({
         code: "SPT",
         display: "Sporting Accident",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7032,7 +7032,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Specimen has been received by the participating organization/department.
      */
-    v3_ActCode_SpecimenReceived: Coding.FromStrict({
+    v3_ActCode_SpecimenReceived: new Coding({
         code: "SREC",
         display: "specimen received",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7040,7 +7040,7 @@ export const V3ActCodeValueSet = {
     /**
      * An encounter where the patient is admitted to a health care facility for a predetermined length of time, usually less than 24 hours.
      */
-    v3_ActCode_ShortStay: Coding.FromStrict({
+    v3_ActCode_ShortStay: new Coding({
         code: "SS",
         display: "short stay",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7048,7 +7048,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Specimen has been placed into storage at a participating location.
      */
-    v3_ActCode_SpecimenInStorage: Coding.FromStrict({
+    v3_ActCode_SpecimenInStorage: new Coding({
         code: "SSTOR",
         display: "specimen in storage",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7056,7 +7056,7 @@ export const V3ActCodeValueSet = {
     /**
      * The act of putting something away for safe keeping. The "something" may be physical object such as a specimen, or information, such as observations regarding a specimen.
      */
-    v3_ActCode_Storage: Coding.FromStrict({
+    v3_ActCode_Storage: new Coding({
         code: "STORE",
         display: "Storage",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7064,7 +7064,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Specimen has been put in transit to a participating receiver.
      */
-    v3_ActCode_SpecimenInTransit: Coding.FromStrict({
+    v3_ActCode_SpecimenInTransit: new Coding({
         code: "STRAN",
         display: "specimen in transit",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7072,7 +7072,7 @@ export const V3ActCodeValueSet = {
     /**
      * Describes the strata for which the measure is to be evaluated. There are three examples of reasons for stratification based on existing work. These include: (1) evaluate the measure based on different age groupings within the population described in the measure (e.g., evaluate the whole [age 14-25] and each sub-stratum [14-19] and [20-25]); (2) evaluate the eMeasure based on either a specific condition, a specific discharge location, or both; (3) evaluate the eMeasure based on different locations within a facility (e.g., evaluate the overall rate for all intensive care units and also some strata include additional findings [specific birth weights for neonatal intensive care units]).
      */
-    v3_ActCode_Stratification: Coding.FromStrict({
+    v3_ActCode_Stratification: new Coding({
         code: "STRAT",
         display: "stratification",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7083,7 +7083,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Discussion: The structure and business processes for underwriting and administering a subsidized fee for service program is further specified by the Underwriter and Payer Role.class and Role.code.
      */
-    v3_ActCode_SubsidizedFeeForServiceProgram: Coding.FromStrict({
+    v3_ActCode_SubsidizedFeeForServiceProgram: new Coding({
         code: "SUBSIDFFS",
         display: "subsidized fee for service program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7091,7 +7091,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: An interaction where the exposure participants shared or co-used a common substance (e.g. drugs, needles, or common food item).
      */
-    v3_ActCode_CommonSubstanceInteraction: Coding.FromStrict({
+    v3_ActCode_CommonSubstanceInteraction: new Coding({
         code: "SUBSTNCE",
         display: "Common Substance Interaction",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7099,7 +7099,7 @@ export const V3ActCodeValueSet = {
     /**
      * A diet that is not intended to be complete but is added to other diets.
      */
-    v3_ActCode_NutritionalSupplement: Coding.FromStrict({
+    v3_ActCode_NutritionalSupplement: new Coding({
         code: "SUPPLEMENT",
         display: "nutritional supplement",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7107,7 +7107,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: One or more records in the query response have been suppressed due to consent or privacy restrictions.
      */
-    v3_ActCode_RecordSuppressed: Coding.FromStrict({
+    v3_ActCode_RecordSuppressed: new Coding({
         code: "SUPPRESSED",
         display: "record suppressed",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7115,7 +7115,7 @@ export const V3ActCodeValueSet = {
     /**
      * Provision of surgical treatment.
      */
-    v3_ActCode_Surgical: Coding.FromStrict({
+    v3_ActCode_Surgical: new Coding({
         code: "SURG",
         display: "Surgical",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7123,7 +7123,7 @@ export const V3ActCodeValueSet = {
     /**
      * This is not really a diet, since it contains little nutritional value, but is essentially just water.  Used before coloscopy examinations.
      */
-    v3_ActCode_TeaOnly: Coding.FromStrict({
+    v3_ActCode_TeaOnly: new Coding({
         code: "T",
         display: "tea only",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7131,7 +7131,7 @@ export const V3ActCodeValueSet = {
     /**
      * A fill where the remainder of a 'complete' fill is provided after a trial fill has been provided.
      */
-    v3_ActCode_TrialBalance: Coding.FromStrict({
+    v3_ActCode_TrialBalance: new Coding({
         code: "TB",
         display: "Trial Balance",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7139,7 +7139,7 @@ export const V3ActCodeValueSet = {
     /**
      * A fill where the remainder of a 'complete' fill is provided after a trial fill has been provided and where the strength supplied is less than the ordered strength (e.g. 10mg for an order of 50mg where a subsequent fill will dispense 40mg tablets).
      */
-    v3_ActCode_TrialBalancePartialStrength: Coding.FromStrict({
+    v3_ActCode_TrialBalancePartialStrength: new Coding({
         code: "TBS",
         display: "trial balance partial strength",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7147,7 +7147,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: The patient's teacher when immunized.
      */
-    v3_ActCode_Teacher: Coding.FromStrict({
+    v3_ActCode_Teacher: new Coding({
         code: "TEACHER",
         display: "teacher",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7155,7 +7155,7 @@ export const V3ActCodeValueSet = {
     /**
      * A fill where a small portion is provided to allow for determination of the therapy effectiveness and patient tolerance.
      */
-    v3_ActCode_TrialFill: Coding.FromStrict({
+    v3_ActCode_TrialFill: new Coding({
         code: "TF",
         display: "Trial Fill",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7163,7 +7163,7 @@ export const V3ActCodeValueSet = {
     /**
      * A fill where a small portion is provided to allow for determination of the therapy effectiveness and patient tolerance and also where the strength supplied is less than the ordered strength (e.g. 10mg for an order of 50mg where a subsequent fill will dispense 40mg tablets).
      */
-    v3_ActCode_TrialFillPartialStrength: Coding.FromStrict({
+    v3_ActCode_TrialFillPartialStrength: new Coding({
         code: "TFS",
         display: "trial fill partial strength",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7171,7 +7171,7 @@ export const V3ActCodeValueSet = {
     /**
      * A sequence of values in the "absolute" time domain.  This is the same time domain that all HL7 timestamps use.  It is time as measured by the Gregorian calendar
      */
-    v3_ActCode_AbsoluteTimeSequence: Coding.FromStrict({
+    v3_ActCode_AbsoluteTimeSequence: new Coding({
         code: "TIME_ABSOLUTE",
         display: "absolute time sequence",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7179,7 +7179,7 @@ export const V3ActCodeValueSet = {
     /**
      * A sequence of values in a "relative" time domain.  The time is measured relative to the earliest effective time in the Observation Series containing this sequence.
      */
-    v3_ActCode_RelativeTimeSequence: Coding.FromStrict({
+    v3_ActCode_RelativeTimeSequence: new Coding({
         code: "TIME_RELATIVE",
         display: "relative time sequence",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7195,7 +7195,7 @@ export const V3ActCodeValueSet = {
      *
      *                            Usage Note: May be associated with an Act or a Role to indicate the legal provision to which the assignment of an Act.confidentialityCode or Role.confidentialityCode complies.
      */
-    v3_ActCode_Title38Section7332: Coding.FromStrict({
+    v3_ActCode_Title38Section7332: new Coding({
         code: "Title38Section7332",
         display: "Title 38 Section 7332",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7203,7 +7203,7 @@ export const V3ActCodeValueSet = {
     /**
      * Fees deducted on behalf of a payee for charges based on a per-transaction or time-period (e.g. monthly) fee.
      */
-    v3_ActCode_TransactionFee: Coding.FromStrict({
+    v3_ActCode_TransactionFee: new Coding({
         code: "TRAN",
         display: "transaction fee",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7211,7 +7211,7 @@ export const V3ActCodeValueSet = {
     /**
      * Can be a URL or hyperlinks that link to the transmission formats that are specified for a particular reporting program.
      */
-    v3_ActCode_TransmissionFormat: Coding.FromStrict({
+    v3_ActCode_TransmissionFormat: new Coding({
         code: "TRANF",
         display: "transmission format",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7219,7 +7219,7 @@ export const V3ActCodeValueSet = {
     /**
      * Transfer of ownership for a product.
      */
-    v3_ActCode_Transfer: Coding.FromStrict({
+    v3_ActCode_Transfer: new Coding({
         code: "TRANSFER",
         display: "Transfer",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7227,7 +7227,7 @@ export const V3ActCodeValueSet = {
     /**
      * A charge to cover the cost of travel time and/or cost in conjuction with providing a service or product. It may be charged per kilometer or per hour based on the effective agreement.
      */
-    v3_ActCode_Travel: Coding.FromStrict({
+    v3_ActCode_Travel: new Coding({
         code: "TRAVEL",
         display: "travel",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7235,7 +7235,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: An interaction where the exposure participants traveled together in/on the same vehicle/trip (e.g. concurrent co-passengers).
      */
-    v3_ActCode_CommonTravelInteraction: Coding.FromStrict({
+    v3_ActCode_CommonTravelInteraction: new Coding({
         code: "TRAVINT",
         display: "Common Travel Interaction",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7243,7 +7243,7 @@ export const V3ActCodeValueSet = {
     /**
      * Communication of an agent from one living subject to another living subject through direct contact with blood or blood products where the contact with blood is part of  a therapeutic procedure.
      */
-    v3_ActCode_TransfusionTransmission: Coding.FromStrict({
+    v3_ActCode_TransfusionTransmission: new Coding({
         code: "TRNSFTRNS",
         display: "transfusion transmission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7251,7 +7251,7 @@ export const V3ActCodeValueSet = {
     /**
      * Type of security metadata about the formal declaration by an authority or neutral third party that validates the technical, security, trust, and business practice conformance of Trust Agents to facilitate security, interoperability, and trust among participants within a security domain or trust framework.
      */
-    v3_ActCode_TrustAccreditation: Coding.FromStrict({
+    v3_ActCode_TrustAccreditation: new Coding({
         code: "TRSTACCRD",
         display: "trust accreditation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7259,7 +7259,7 @@ export const V3ActCodeValueSet = {
     /**
      * Type of security metadata observation made about the formal declaration by an authority or neutral third party that validates the technical, security, trust, and business practice conformance of Trust Agents to facilitate security, interoperability, and trust among participants within a security domain or trust framework.
      */
-    v3_ActCode_TrustAccreditationObservation: Coding.FromStrict({
+    v3_ActCode_TrustAccreditationObservation: new Coding({
         code: "TRSTACCRDOBS",
         display: "trust accreditation observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7267,7 +7267,7 @@ export const V3ActCodeValueSet = {
     /**
      * Type of security metadata about privacy and security requirements with which a security domain must comply. [ISO IEC 10181-1]
      */
-    v3_ActCode_TrustAgreement: Coding.FromStrict({
+    v3_ActCode_TrustAgreement: new Coding({
         code: "TRSTAGRE",
         display: "trust agreement",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7275,7 +7275,7 @@ export const V3ActCodeValueSet = {
     /**
      * Type of security metadata observation made about privacy and security requirements with which a security domain must comply. [ISO IEC 10181-1]
      */
-    v3_ActCode_TrustAgreementObservation: Coding.FromStrict({
+    v3_ActCode_TrustAgreementObservation: new Coding({
         code: "TRSTAGREOBS",
         display: "trust agreement observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7283,7 +7283,7 @@ export const V3ActCodeValueSet = {
     /**
      * Type of security metadata about the digital quality or reliability of a trust assertion, activity, capability, information exchange, mechanism, process, or protocol.
      */
-    v3_ActCode_TrustAssurance: Coding.FromStrict({
+    v3_ActCode_TrustAssurance: new Coding({
         code: "TRSTASSUR",
         display: "trust assurance",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7291,7 +7291,7 @@ export const V3ActCodeValueSet = {
     /**
      * Type of security metadata about a set of security-relevant data issued by a security authority or trusted third party, together with security information which is used to provide the integrity and data origin authentication services for an IT resource (data, information object, service, or system capability). [Based on ISO IEC 10181-1]
      */
-    v3_ActCode_TrustCertificate: Coding.FromStrict({
+    v3_ActCode_TrustCertificate: new Coding({
         code: "TRSTCERT",
         display: "trust certificate",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7307,7 +7307,7 @@ export const V3ActCodeValueSet = {
      *                            A Certificate Policy (CP), which is a named set of rules that indicates the applicability of a certificate to a particular community and/or class of application with common security requirements. For example, a particular Certificate Policy might indicate the applicability of a type of certificate to the authentication of electronic data interchange transactions for the trading of goods within a given price range. [Trust Service Principles and Criteria for Certification Authorities Version 2.0 March 2011 Copyright 2011 by Canadian Institute of Chartered Accountants.
      *                            A Certificate Practice Statement (CSP), which is a statement of the practices which an Authority employs in issuing and managing certificates. [Trust Service Principles and Criteria for Certification Authorities Version 2.0 March 2011 Copyright 2011 by Canadian Institute of Chartered Accountants.]
      */
-    v3_ActCode_TrustCertificateObservation: Coding.FromStrict({
+    v3_ActCode_TrustCertificateObservation: new Coding({
         code: "TRSTCERTOBS",
         display: "trust certificate observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7315,7 +7315,7 @@ export const V3ActCodeValueSet = {
     /**
      * Type of security metadata about a complete set of contracts, regulations, or commitments that enable participating actors to rely on certain assertions by other actors to fulfill their information security requirements. [Kantara Initiative]
      */
-    v3_ActCode_TrustFramework: Coding.FromStrict({
+    v3_ActCode_TrustFramework: new Coding({
         code: "TRSTFWK",
         display: "trust framework",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7323,7 +7323,7 @@ export const V3ActCodeValueSet = {
     /**
      * Type of security metadata observation made about a complete set of contracts, regulations or commitments that enable participating actors to rely on certain assertions by other actors to fulfill their information security requirements. [Kantara Initiative]
      */
-    v3_ActCode_TrustFrameworkObservation: Coding.FromStrict({
+    v3_ActCode_TrustFrameworkObservation: new Coding({
         code: "TRSTFWKOBS",
         display: "trust framework observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7331,7 +7331,7 @@ export const V3ActCodeValueSet = {
     /**
      * Type of security metadata observation made about the digital quality or reliability of a trust assertion, activity, capability, information exchange, mechanism, process, or protocol.
      */
-    v3_ActCode_TrustAssuranceObservation: Coding.FromStrict({
+    v3_ActCode_TrustAssuranceObservation: new Coding({
         code: "TRSTLOAOBS",
         display: "trust assurance observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7339,7 +7339,7 @@ export const V3ActCodeValueSet = {
     /**
      * Type of security metadata about a security architecture system component that supports enforcement of security policies.
      */
-    v3_ActCode_TrustMechanism: Coding.FromStrict({
+    v3_ActCode_TrustMechanism: new Coding({
         code: "TRSTMEC",
         display: "trust mechanism",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7347,7 +7347,7 @@ export const V3ActCodeValueSet = {
     /**
      * Type of security metadata observation made about a security architecture system component that supports enforcement of security policies.
      */
-    v3_ActCode_TrustMechanismObservation: Coding.FromStrict({
+    v3_ActCode_TrustMechanismObservation: new Coding({
         code: "TRSTMECOBS",
         display: "trust mechanism observation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7355,7 +7355,7 @@ export const V3ActCodeValueSet = {
     /**
      * A supply action that provides sufficient material for a single dose.
      */
-    v3_ActCode_UnitDose: Coding.FromStrict({
+    v3_ActCode_UnitDose: new Coding({
         code: "UD",
         display: "Unit Dose",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7363,7 +7363,7 @@ export const V3ActCodeValueSet = {
     /**
      * A supply action that provides sufficient material for a single dose via multiple products.  E.g. 2 50mg tablets for a 100mg unit dose.
      */
-    v3_ActCode_UnitDoseEquivalent: Coding.FromStrict({
+    v3_ActCode_UnitDoseEquivalent: new Coding({
         code: "UDE",
         display: "unit dose equivalent",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7371,7 +7371,7 @@ export const V3ActCodeValueSet = {
     /**
      * The filtration of a colloidal substance through a semipermeable medium that allows only the passage of small molecules.
      */
-    v3_ActCode_Ultrafiltration: Coding.FromStrict({
+    v3_ActCode_Ultrafiltration: new Coding({
         code: "UFIL",
         display: "Ultrafiltration",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7379,7 +7379,7 @@ export const V3ActCodeValueSet = {
     /**
      * Maximum unit price that will be covered for the authorized product or service.
      */
-    v3_ActCode_UnitPrice: Coding.FromStrict({
+    v3_ActCode_UnitPrice: new Coding({
         code: "UNITPRICE",
         display: "Unit Price",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7387,7 +7387,7 @@ export const V3ActCodeValueSet = {
     /**
      * Maximum number of items that will be covered of the product or service specified.
      */
-    v3_ActCode_UnitQuantity: Coding.FromStrict({
+    v3_ActCode_UnitQuantity: new Coding({
         code: "UNITQTY",
         display: "Unit Quantity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7395,7 +7395,7 @@ export const V3ActCodeValueSet = {
     /**
      * The service provided is not related to another billed service. For example, 2 unrelated services provided on the same day to the same patient which may normally result in a refused payment for one of the items.
      */
-    v3_ActCode_UnrelatedService: Coding.FromStrict({
+    v3_ActCode_UnrelatedService: new Coding({
         code: "UNRELAT",
         display: "unrelated service",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7403,7 +7403,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:United Nations Standard Products and Services Classification, managed by Uniform Code Council (UCC): www.unspsc.org
      */
-    v3_ActCode_UnitedNationsStandardProductsAndServicesClassification: Coding.FromStrict({
+    v3_ActCode_UnitedNationsStandardProductsAndServicesClassification: new Coding({
         code: "UNSPSC",
         display: "United Nations Standard Products and Services Classification",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7411,7 +7411,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:Universal Product Code is one of a wide variety of bar code languages widely used in the United States and Canada for items in stores.
      */
-    v3_ActCode_UniversalProductCode: Coding.FromStrict({
+    v3_ActCode_UniversalProductCode: new Coding({
         code: "UPC",
         display: "Universal Product Code",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7419,7 +7419,7 @@ export const V3ActCodeValueSet = {
     /**
      * Premium paid on service fees in compensation for providing an expedited response to an urgent situation.
      */
-    v3_ActCode_Urgent: Coding.FromStrict({
+    v3_ActCode_Urgent: new Coding({
         code: "URGENT",
         display: "urgent",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7427,7 +7427,7 @@ export const V3ActCodeValueSet = {
     /**
      * Usage notes.
      */
-    v3_ActCode_NoticeOfUse: Coding.FromStrict({
+    v3_ActCode_NoticeOfUse: new Coding({
         code: "USE",
         display: "notice of use",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7435,7 +7435,7 @@ export const V3ActCodeValueSet = {
     /**
      * Indicates that the ICSR is describing a problem with the actual vaccine product such as physical defects (cloudy, particulate matter) or inability to confer immunity.
      */
-    v3_ActCode_VaccineProductProblem: Coding.FromStrict({
+    v3_ActCode_VaccineProductProblem: new Coding({
         code: "VAC_PROBLEM",
         display: "vaccine product problem",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7443,7 +7443,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description:The specified element did not pass business-rule validation.
      */
-    v3_ActCode_ValidationIssue: Coding.FromStrict({
+    v3_ActCode_ValidationIssue: new Coding({
         code: "VALIDAT",
         display: "validation issue",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7451,7 +7451,7 @@ export const V3ActCodeValueSet = {
     /**
      * Communication of an agent from a living subject acting as a required intermediary in the agent transmission process to a recipient living subject via direct contact.
      */
-    v3_ActCode_VectorBorneTransmission: Coding.FromStrict({
+    v3_ActCode_VectorBorneTransmission: new Coding({
         code: "VECTRNS",
         display: "vector-borne transmission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7459,7 +7459,7 @@ export const V3ActCodeValueSet = {
     /**
      * The provider has received a verbal permission from an authoritative source to perform the service or supply the item being invoiced.
      */
-    v3_ActCode_VerbalAuthorization: Coding.FromStrict({
+    v3_ActCode_VerbalAuthorization: new Coding({
         code: "VERBAUTH",
         display: "verbal authorization",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7467,7 +7467,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition:Indicates that the paper version of the record has, should be or is being verified against the electronic version.
      */
-    v3_ActCode_VerifyPaper: Coding.FromStrict({
+    v3_ActCode_VerifyPaper: new Coding({
         code: "VFPAPER",
         display: "verify paper",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7475,7 +7475,7 @@ export const V3ActCodeValueSet = {
     /**
      * Diet with low content of the amino-acids valin, leucin, and isoleucin, for "maple syrup disease."
      */
-    v3_ActCode_LowValinLeucinIsoleucin: Coding.FromStrict({
+    v3_ActCode_LowValinLeucinIsoleucin: new Coding({
         code: "VLI",
         display: "low valin, leucin, isoleucin",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7483,7 +7483,7 @@ export const V3ActCodeValueSet = {
     /**
      * An observation that reports the volume of a sample.
      */
-    v3_ActCode_ActSpecObsVolumeCode: Coding.FromStrict({
+    v3_ActCode_ActSpecObsVolumeCode: new Coding({
         code: "VOLUME",
         display: "ActSpecObsVolumeCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7491,7 +7491,7 @@ export const V3ActCodeValueSet = {
     /**
      * A patient encounter where the patient and the practitioner(s) are not in the same physical location. Examples include telephone conference, email exchange, robotic surgery, and televideo conference.
      */
-    v3_ActCode_Virtual: Coding.FromStrict({
+    v3_ActCode_Virtual: new Coding({
         code: "VR",
         display: "virtual",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7499,7 +7499,7 @@ export const V3ActCodeValueSet = {
     /**
      * Vision dispense invoice for up to 2 lens (left and right), frame and optional discount.  Eye exams are invoiced as a clinical service invoice.
      */
-    v3_ActCode_VisionDispenseInvoice: Coding.FromStrict({
+    v3_ActCode_VisionDispenseInvoice: new Coding({
         code: "VRXINV",
         display: "vision dispense invoice",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7507,7 +7507,7 @@ export const V3ActCodeValueSet = {
     /**
      * Accommodations in which there are 3 or more beds.
      */
-    v3_ActCode_Ward: Coding.FromStrict({
+    v3_ActCode_Ward: new Coding({
         code: "W",
         display: "Ward",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7515,7 +7515,7 @@ export const V3ActCodeValueSet = {
     /**
      * Communication of an agent from a contaminated water source to a living subject whether the water is ingested as a food or not. The route of entry of the water may be through any bodily orifice.
      */
-    v3_ActCode_WaterBorneTransmission: Coding.FromStrict({
+    v3_ActCode_WaterBorneTransmission: new Coding({
         code: "WATTRNS",
         display: "water-borne transmission",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7523,7 +7523,7 @@ export const V3ActCodeValueSet = {
     /**
      * Transaction counts and value totals for each calendar week within the date range specified.
      */
-    v3_ActCode_Week: Coding.FromStrict({
+    v3_ActCode_Week: new Coding({
         code: "WEEK",
         display: "week",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7531,7 +7531,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: A person enters a wellness or preventive care reminder for a given patient.
      */
-    v3_ActCode_WellnessReminderListEntry: Coding.FromStrict({
+    v3_ActCode_WellnessReminderListEntry: new Coding({
         code: "WELLREMLE",
         display: "wellness reminder list entry",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7539,19 +7539,19 @@ export const V3ActCodeValueSet = {
     /**
      * Description: A person reviews a list of wellness or preventive care reminders for a given patient.
      */
-    v3_ActCode_WellnessReminderListReview: Coding.FromStrict({
+    v3_ActCode_WellnessReminderListReview: new Coding({
         code: "WELLREMLREV",
         display: "wellness reminder list review",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
     }),
-    v3_ActCode_WGHT: Coding.FromStrict({
+    v3_ActCode_WGHT: new Coding({
         code: "WGHT",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
     }),
     /**
      * Description: Work Injury related additional Information Attachment
      */
-    v3_ActCode_WorkInjuryReportAttachment: Coding.FromStrict({
+    v3_ActCode_WorkInjuryReportAttachment: new Coding({
         code: "WIATTCH",
         display: "work injury report attachment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7559,7 +7559,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Exposure interaction occurred in a work setting, i.e. participants are co-workers.
      */
-    v3_ActCode_WorkInteraction: Coding.FromStrict({
+    v3_ActCode_WorkInteraction: new Coding({
         code: "WORK2",
         display: "Work Interaction",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7567,7 +7567,7 @@ export const V3ActCodeValueSet = {
     /**
      * Incident or accident is the result of a work place accident
      */
-    v3_ActCode_WorkplaceAccident: Coding.FromStrict({
+    v3_ActCode_WorkplaceAccident: new Coding({
         code: "WPA",
         display: "Workplace accident",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7575,7 +7575,7 @@ export const V3ActCodeValueSet = {
     /**
      * Definition: Government mandated program providing coverage, disability income, and vocational rehabilitation for injuries sustained in the work place or in the course of employment.  Employers may either self-fund the program, purchase commercial coverage, or pay a premium to a government entity that administers the program.  Employees may be required to pay premiums toward the cost of coverage as well.
      */
-    v3_ActCode_WorkersCompensationProgram: Coding.FromStrict({
+    v3_ActCode_WorkersCompensationProgram: new Coding({
         code: "WRKCOMP",
         display: "(workers compensation program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7583,7 +7583,7 @@ export const V3ActCodeValueSet = {
     /**
      * Used by one system to inform another that the container is no longer available within the scope of the system (e.g., tube broken or discarded).
      */
-    v3_ActCode_ContainerUnavailable: Coding.FromStrict({
+    v3_ActCode_ContainerUnavailable: new Coding({
         code: "X",
         display: "Container Unavailable",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7591,7 +7591,7 @@ export const V3ActCodeValueSet = {
     /**
      * Description: Digital X-Ray Attachment
      */
-    v3_ActCode_XRay: Coding.FromStrict({
+    v3_ActCode_XRay: new Coding({
         code: "XRAY",
         display: "x-ray",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -7599,7 +7599,7 @@ export const V3ActCodeValueSet = {
     /**
      * Transaction counts and value totals for each calendar year within the date range specified.
      */
-    v3_ActCode_Year: Coding.FromStrict({
+    v3_ActCode_Year: new Coding({
         code: "YEAR",
         display: "year",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"

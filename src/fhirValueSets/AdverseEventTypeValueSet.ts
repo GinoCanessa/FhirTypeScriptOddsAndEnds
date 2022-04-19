@@ -10,5002 +10,5002 @@ import { Coding } from '../fhir'
  * This value set includes all SNOMED CT Clinical Findings.
  */
 export const AdverseEventTypeValueSet = {
-  AdverseEventTypeValueSet_ReligiousDiscrimination: Coding.FromStrict({
+  AdverseEventTypeValueSet_ReligiousDiscrimination: new Coding({
     code: "1003002",
     display: "Religious discrimination",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DiseaseDueToNairovirus: Coding.FromStrict({
+  AdverseEventTypeValueSet_DiseaseDueToNairovirus: new Coding({
     code: "1020003",
     display: "Disease due to Nairovirus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Apneic: Coding.FromStrict({
+  AdverseEventTypeValueSet_Apneic: new Coding({
     code: "1023001",
     display: "Apneic",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BiliaryEsophagitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_BiliaryEsophagitis: new Coding({
     code: "1027000",
     display: "Biliary esophagitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenWoundOfTracheaWithoutComplication: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenWoundOfTracheaWithoutComplication: new Coding({
     code: "1031006",
     display: "Open wound of trachea without complication",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ThoracicArthritis: Coding.FromStrict({
+  AdverseEventTypeValueSet_ThoracicArthritis: new Coding({
     code: "1033009",
     display: "Thoracic arthritis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MesentericPortalFistula: Coding.FromStrict({
+  AdverseEventTypeValueSet_MesentericPortalFistula: new Coding({
     code: "1034003",
     display: "Mesenteric-portal fistula",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Disacchariduria: Coding.FromStrict({
+  AdverseEventTypeValueSet_Disacchariduria: new Coding({
     code: "1038000",
     display: "Disacchariduria",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Colonospasm: Coding.FromStrict({
+  AdverseEventTypeValueSet_Colonospasm: new Coding({
     code: "1045000",
     display: "Colonospasm",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_UreteritisGlandularis: Coding.FromStrict({
+  AdverseEventTypeValueSet_UreteritisGlandularis: new Coding({
     code: "1046004",
     display: "Ureteritis glandularis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HyperplasiaOfIsletAlphaCellsWithGastrinExcess: Coding.FromStrict({
+  AdverseEventTypeValueSet_HyperplasiaOfIsletAlphaCellsWithGastrinExcess: new Coding({
     code: "1051005",
     display: "Hyperplasia of islet alpha cells with gastrin excess",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_StenosisOfPrecerebralArtery: Coding.FromStrict({
+  AdverseEventTypeValueSet_StenosisOfPrecerebralArtery: new Coding({
     code: "1055001",
     display: "Stenosis of precerebral artery",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Opisthorchiasis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Opisthorchiasis: new Coding({
     code: "1059007",
     display: "Opisthorchiasis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FacialMyokymia: Coding.FromStrict({
+  AdverseEventTypeValueSet_FacialMyokymia: new Coding({
     code: "1070000",
     display: "Facial myokymia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_XerodermaPigmentosumGroupB: Coding.FromStrict({
+  AdverseEventTypeValueSet_XerodermaPigmentosumGroupB: new Coding({
     code: "1073003",
     display: "Xeroderma pigmentosum group B",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_GlucocorticoidResponsivePrimaryHyperaldosteronism: Coding.FromStrict({
+  AdverseEventTypeValueSet_GlucocorticoidResponsivePrimaryHyperaldosteronism: new Coding({
     code: "1074009",
     display: "Glucocorticoid-responsive primary hyperaldosteronism",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SeptalInfarctionByEKG: Coding.FromStrict({
+  AdverseEventTypeValueSet_SeptalInfarctionByEKG: new Coding({
     code: "1077002",
     display: "Septal infarction by EKG",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MacularRetinalCyst: Coding.FromStrict({
+  AdverseEventTypeValueSet_MacularRetinalCyst: new Coding({
     code: "1079004",
     display: "Macular retinal cyst",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_VulvalCandidiasis: Coding.FromStrict({
+  AdverseEventTypeValueSet_VulvalCandidiasis: new Coding({
     code: "1085006",
     display: "Vulval candidiasis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalSepsis: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalSepsis: new Coding({
     code: "1089000",
     display: "Congenital sepsis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AnxietyDisorderOfChildhoodORAdolescence: Coding.FromStrict({
+  AdverseEventTypeValueSet_AnxietyDisorderOfChildhoodORAdolescence: new Coding({
     code: "109006",
     display: "Anxiety disorder of childhood OR adolescence",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IntraerythrocyticParasitosisByNuttallia: Coding.FromStrict({
+  AdverseEventTypeValueSet_IntraerythrocyticParasitosisByNuttallia: new Coding({
     code: "1102005",
     display: "Intraerythrocytic parasitosis by Nuttallia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_EarlyLatentSyphilisPositiveSerologyNegativeCerebrospinalFluidWithRelapseAfterTreatment: Coding.FromStrict({
+  AdverseEventTypeValueSet_EarlyLatentSyphilisPositiveSerologyNegativeCerebrospinalFluidWithRelapseAfterTreatment: new Coding({
     code: "1107004",
     display: "Early latent syphilis, positive serology, negative cerebrospinal fluid, with relapse after treatment",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FemalePatternAlopecia: Coding.FromStrict({
+  AdverseEventTypeValueSet_FemalePatternAlopecia: new Coding({
     code: "1108009",
     display: "Female pattern alopecia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NormalSebaceousGlandActivity: Coding.FromStrict({
+  AdverseEventTypeValueSet_NormalSebaceousGlandActivity: new Coding({
     code: "1111005",
     display: "Normal sebaceous gland activity",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DegenerativeDisorderOfEyelid: Coding.FromStrict({
+  AdverseEventTypeValueSet_DegenerativeDisorderOfEyelid: new Coding({
     code: "1112003",
     display: "Degenerative disorder of eyelid",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChronicAggressiveTypeBViralHepatitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChronicAggressiveTypeBViralHepatitis: new Coding({
     code: "1116000",
     display: "Chronic aggressive type B viral hepatitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PostpartumPeriod6Days: Coding.FromStrict({
+  AdverseEventTypeValueSet_PostpartumPeriod6Days: new Coding({
     code: "1124005",
     display: "Postpartum period, 6 days",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SepticemiaDuringLabor: Coding.FromStrict({
+  AdverseEventTypeValueSet_SepticemiaDuringLabor: new Coding({
     code: "1125006",
     display: "Septicemia during labor",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_KneeLocking: Coding.FromStrict({
+  AdverseEventTypeValueSet_KneeLocking: new Coding({
     code: "1126007",
     display: "Knee locking",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalValvularInsufficiency: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalValvularInsufficiency: new Coding({
     code: "1131009",
     display: "Congenital valvular insufficiency",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MuehrckeLines: Coding.FromStrict({
+  AdverseEventTypeValueSet_MuehrckeLines: new Coding({
     code: "1134001",
     display: "Muehrcke lines",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SolarRetinitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_SolarRetinitis: new Coding({
     code: "1135000",
     display: "Solar retinitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ConfrontationVisualTest: Coding.FromStrict({
+  AdverseEventTypeValueSet_ConfrontationVisualTest: new Coding({
     code: "1139006",
     display: "Confrontation (visual) test",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ThermalHypesthesia: Coding.FromStrict({
+  AdverseEventTypeValueSet_ThermalHypesthesia: new Coding({
     code: "1140008",
     display: "Thermal hypesthesia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CircumoralParesthesia: Coding.FromStrict({
+  AdverseEventTypeValueSet_CircumoralParesthesia: new Coding({
     code: "1141007",
     display: "Circumoral paresthesia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DSDDevelopmentalSpeechDisorder: Coding.FromStrict({
+  AdverseEventTypeValueSet_DSDDevelopmentalSpeechDisorder: new Coding({
     code: "1145003",
     display: "DSD - Developmental speech disorder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalMicrocheilia: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalMicrocheilia: new Coding({
     code: "1150009",
     display: "Congenital microcheilia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ConstrictedVisualField: Coding.FromStrict({
+  AdverseEventTypeValueSet_ConstrictedVisualField: new Coding({
     code: "1151008",
     display: "Constricted visual field",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SkinReactionNegative: Coding.FromStrict({
+  AdverseEventTypeValueSet_SkinReactionNegative: new Coding({
     code: "1152001",
     display: "Skin reaction negative",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MyocardialHypertrophyDeterminedByElectrocardiogram: Coding.FromStrict({
+  AdverseEventTypeValueSet_MyocardialHypertrophyDeterminedByElectrocardiogram: new Coding({
     code: "1155004",
     display: "Myocardial hypertrophy, determined by electrocardiogram",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CavitaryProstatitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_CavitaryProstatitis: new Coding({
     code: "1156003",
     display: "Cavitary prostatitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Allotype: Coding.FromStrict({
+  AdverseEventTypeValueSet_Allotype: new Coding({
     code: "1168007",
     display: "Allotype",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_GlasgowComaScale10: Coding.FromStrict({
+  AdverseEventTypeValueSet_GlasgowComaScale10: new Coding({
     code: "1184008",
     display: "Glasgow coma scale, 10",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FamilialAmyloidNeuropathyFinnishType: Coding.FromStrict({
+  AdverseEventTypeValueSet_FamilialAmyloidNeuropathyFinnishType: new Coding({
     code: "1192004",
     display: "Familial amyloid neuropathy, Finnish type",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DiseaseConditionDeterminationWellControlled: Coding.FromStrict({
+  AdverseEventTypeValueSet_DiseaseConditionDeterminationWellControlled: new Coding({
     code: "1194003",
     display: "Disease condition determination, well controlled",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChronicBipolarIIDisorderMostRecentEpisodeMajorDepressive: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChronicBipolarIIDisorderMostRecentEpisodeMajorDepressive: new Coding({
     code: "1196001",
     display: "Chronic bipolar II disorder, most recent episode major depressive",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CarbuncleOfHeel: Coding.FromStrict({
+  AdverseEventTypeValueSet_CarbuncleOfHeel: new Coding({
     code: "1197005",
     display: "Carbuncle of heel",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BenignEssentialHypertension: Coding.FromStrict({
+  AdverseEventTypeValueSet_BenignEssentialHypertension: new Coding({
     code: "1201005",
     display: "Benign essential hypertension",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DeepThirdDegreeBurnOfForeheadANDORCheekWithLossOfBodyPart: Coding.FromStrict({
+  AdverseEventTypeValueSet_DeepThirdDegreeBurnOfForeheadANDORCheekWithLossOfBodyPart: new Coding({
     code: "1203008",
     display: "Deep third degree burn of forehead AND/OR cheek with loss of body part",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpticDiscGlaucomatousAtrophy: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpticDiscGlaucomatousAtrophy: new Coding({
     code: "1207009",
     display: "Optic disc glaucomatous atrophy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Gastroptosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Gastroptosis: new Coding({
     code: "1208004",
     display: "Gastroptosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_JuvenileDermatomyositis: Coding.FromStrict({
+  AdverseEventTypeValueSet_JuvenileDermatomyositis: new Coding({
     code: "1212005",
     display: "Juvenile dermatomyositis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfectionByStrongyloides: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfectionByStrongyloides: new Coding({
     code: "1214006",
     display: "Infection by Strongyloides",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChoroidalHemorrhage: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChoroidalHemorrhage: new Coding({
     code: "122003",
     display: "Choroidal hemorrhage",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NoDiagnosisOnAxis1: Coding.FromStrict({
+  AdverseEventTypeValueSet_NoDiagnosisOnAxis1: new Coding({
     code: "1230003",
     display: "No diagnosis on Axis 1",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalArticularRigidityWithMyopathy: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalArticularRigidityWithMyopathy: new Coding({
     code: "1232006",
     display: "Congenital articular rigidity with myopathy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalAnteversionOfFemoralNeck: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalAnteversionOfFemoralNeck: new Coding({
     code: "1239002",
     display: "Congenital anteversion of femoral neck",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LyingProne: Coding.FromStrict({
+  AdverseEventTypeValueSet_LyingProne: new Coding({
     code: "1240000",
     display: "Lying prone",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Schistosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Schistosis: new Coding({
     code: "1259003",
     display: "Schistosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MultipleFracturesOfRibs: Coding.FromStrict({
+  AdverseEventTypeValueSet_MultipleFracturesOfRibs: new Coding({
     code: "1261007",
     display: "Multiple fractures of ribs",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InjuryOfDescendingLeftColonWithoutOpenWoundIntoAbdominalCavity: Coding.FromStrict({
+  AdverseEventTypeValueSet_InjuryOfDescendingLeftColonWithoutOpenWoundIntoAbdominalCavity: new Coding({
     code: "1264004",
     display: "Injury of descending left colon without open wound into abdominal cavity",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SpontaneousAbortionWithLacerationOfCervix: Coding.FromStrict({
+  AdverseEventTypeValueSet_SpontaneousAbortionWithLacerationOfCervix: new Coding({
     code: "127009",
     display: "Spontaneous abortion with laceration of cervix",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_KnucklePadsLeuconychiaAndDeafness: Coding.FromStrict({
+  AdverseEventTypeValueSet_KnucklePadsLeuconychiaAndDeafness: new Coding({
     code: "1271009",
     display: "Knuckle pads, leuconychia and deafness",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IsologousChimera: Coding.FromStrict({
+  AdverseEventTypeValueSet_IsologousChimera: new Coding({
     code: "1280009",
     display: "Isologous chimera",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LaryngealPerichondritis: Coding.FromStrict({
+  AdverseEventTypeValueSet_LaryngealPerichondritis: new Coding({
     code: "1282001",
     display: "Laryngeal perichondritis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_VisualAcuityLessThan02160CountFingers1MeterOrVisualFieldLessThan5DegreesButBetterThan5: Coding.FromStrict({
+  AdverseEventTypeValueSet_VisualAcuityLessThan02160CountFingers1MeterOrVisualFieldLessThan5DegreesButBetterThan5: new Coding({
     code: "1283006",
     display: "Visual acuity less than .02 (1/60, count fingers 1 meter) or visual field less than 5 degrees, but better than 5.",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AbnormalJawClosure: Coding.FromStrict({
+  AdverseEventTypeValueSet_AbnormalJawClosure: new Coding({
     code: "1284000",
     display: "Abnormal jaw closure",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_VitaminKDeficiencyCoagulationDisorder: Coding.FromStrict({
+  AdverseEventTypeValueSet_VitaminKDeficiencyCoagulationDisorder: new Coding({
     code: "1286003",
     display: "Vitamin K deficiency coagulation disorder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalAbsenceOfBileDuct: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalAbsenceOfBileDuct: new Coding({
     code: "1287007",
     display: "Congenital absence of bile duct",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Homoiothermia: Coding.FromStrict({
+  AdverseEventTypeValueSet_Homoiothermia: new Coding({
     code: "129007",
     display: "Homoiothermia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfectionByCladosporiumCarrionii: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfectionByCladosporiumCarrionii: new Coding({
     code: "1297003",
     display: "Infection by Cladosporium carrionii",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ComplicationOfReimplant: Coding.FromStrict({
+  AdverseEventTypeValueSet_ComplicationOfReimplant: new Coding({
     code: "1308001",
     display: "Complication of reimplant",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ImpairedGlucoseToleranceAssociatedWithGeneticSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_ImpairedGlucoseToleranceAssociatedWithGeneticSyndrome: new Coding({
     code: "1310004",
     display: "Impaired glucose tolerance associated with genetic syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InjuryOfOvaryWithoutOpenWoundIntoAbdominalCavity: Coding.FromStrict({
+  AdverseEventTypeValueSet_InjuryOfOvaryWithoutOpenWoundIntoAbdominalCavity: new Coding({
     code: "1317001",
     display: "Injury of ovary without open wound into abdominal cavity",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PostTranslationalGeneticProteinProcessing: Coding.FromStrict({
+  AdverseEventTypeValueSet_PostTranslationalGeneticProteinProcessing: new Coding({
     code: "1318006",
     display: "Post-translational genetic protein processing",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_KanamycinPoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_KanamycinPoisoning: new Coding({
     code: "1323006",
     display: "Kanamycin poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ConjugatedVisualDeviation: Coding.FromStrict({
+  AdverseEventTypeValueSet_ConjugatedVisualDeviation: new Coding({
     code: "1332008",
     display: "Conjugated visual deviation",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PeyroniesDisease: Coding.FromStrict({
+  AdverseEventTypeValueSet_PeyroniesDisease: new Coding({
     code: "1335005",
     display: "Peyronies disease",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DecreasedHairGrowth: Coding.FromStrict({
+  AdverseEventTypeValueSet_DecreasedHairGrowth: new Coding({
     code: "134006",
     display: "Decreased hair growth",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DTADeepTransverseArrest: Coding.FromStrict({
+  AdverseEventTypeValueSet_DTADeepTransverseArrest: new Coding({
     code: "1343000",
     display: "DTA - Deep transverse arrest",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HangNail: Coding.FromStrict({
+  AdverseEventTypeValueSet_HangNail: new Coding({
     code: "1345007",
     display: "Hang nail",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IliacArteryInjury: Coding.FromStrict({
+  AdverseEventTypeValueSet_IliacArteryInjury: new Coding({
     code: "1351002",
     display: "Iliac artery injury",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CalculusOfCommonDuctWithObstruction: Coding.FromStrict({
+  AdverseEventTypeValueSet_CalculusOfCommonDuctWithObstruction: new Coding({
     code: "1356007",
     display: "Calculus of common duct with obstruction",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Leucocoria: Coding.FromStrict({
+  AdverseEventTypeValueSet_Leucocoria: new Coding({
     code: "1361009",
     display: "Leucocoria",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FetalOrNeonatalEffectOfChronicMaternalRespiratoryDisease: Coding.FromStrict({
+  AdverseEventTypeValueSet_FetalOrNeonatalEffectOfChronicMaternalRespiratoryDisease: new Coding({
     code: "1363007",
     display: "Fetal or neonatal effect of chronic maternal respiratory disease",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InjuryOfSuperiorMesentericArtery: Coding.FromStrict({
+  AdverseEventTypeValueSet_InjuryOfSuperiorMesentericArtery: new Coding({
     code: "1367008",
     display: "Injury of superior mesenteric artery",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenFractureOfMetacarpalBoneS: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenFractureOfMetacarpalBoneS: new Coding({
     code: "1370007",
     display: "Open fracture of metacarpal bone(s)",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_UnicornateUterus: Coding.FromStrict({
+  AdverseEventTypeValueSet_UnicornateUterus: new Coding({
     code: "1372004",
     display: "Unicornate uterus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ObsessiveCompulsivePersonalityDisorder: Coding.FromStrict({
+  AdverseEventTypeValueSet_ObsessiveCompulsivePersonalityDisorder: new Coding({
     code: "1376001",
     display: "Obsessive compulsive personality disorder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SupinationEversionInjuryOfAnkle: Coding.FromStrict({
+  AdverseEventTypeValueSet_SupinationEversionInjuryOfAnkle: new Coding({
     code: "1378000",
     display: "Supination-eversion injury of ankle",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AgoraphobiaWithoutHistoryOfPanicDisorderWithLimitedSymptomAttacks: Coding.FromStrict({
+  AdverseEventTypeValueSet_AgoraphobiaWithoutHistoryOfPanicDisorderWithLimitedSymptomAttacks: new Coding({
     code: "1380006",
     display: "Agoraphobia without history of panic disorder with limited symptom attacks",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HallucinogenInducedMoodDisorder: Coding.FromStrict({
+  AdverseEventTypeValueSet_HallucinogenInducedMoodDisorder: new Coding({
     code: "1383008",
     display: "Hallucinogen induced mood disorder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DiffuseCholesteatosisOfMiddleEar: Coding.FromStrict({
+  AdverseEventTypeValueSet_DiffuseCholesteatosisOfMiddleEar: new Coding({
     code: "1384002",
     display: "Diffuse cholesteatosis of middle ear",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IntracranialHemorrhage: Coding.FromStrict({
+  AdverseEventTypeValueSet_IntracranialHemorrhage: new Coding({
     code: "1386000",
     display: "Intracranial hemorrhage",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SolanumNigrumPoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_SolanumNigrumPoisoning: new Coding({
     code: "1387009",
     display: "Solanum nigrum poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MetabolicAlkalosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_MetabolicAlkalosis: new Coding({
     code: "1388004",
     display: "Metabolic alkalosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LenzMajewskiDysplasia: Coding.FromStrict({
+  AdverseEventTypeValueSet_LenzMajewskiDysplasia: new Coding({
     code: "1393001",
     display: "Lenz-Majewski dysplasia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ComplicationOfUltrasoundTherapy: Coding.FromStrict({
+  AdverseEventTypeValueSet_ComplicationOfUltrasoundTherapy: new Coding({
     code: "1395008",
     display: "Complication of ultrasound therapy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChronicPharyngitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChronicPharyngitis: new Coding({
     code: "140004",
     display: "Chronic pharyngitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Frightened: Coding.FromStrict({
+  AdverseEventTypeValueSet_Frightened: new Coding({
     code: "1402001",
     display: "Frightened",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AnteriorSubcapsularPolarCataract: Coding.FromStrict({
+  AdverseEventTypeValueSet_AnteriorSubcapsularPolarCataract: new Coding({
     code: "1412008",
     display: "Anterior subcapsular polar cataract",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InflammationOfLymphatics: Coding.FromStrict({
+  AdverseEventTypeValueSet_InflammationOfLymphatics: new Coding({
     code: "1415005",
     display: "Inflammation of lymphatics",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HypoplasticChondrodystrophy: Coding.FromStrict({
+  AdverseEventTypeValueSet_HypoplasticChondrodystrophy: new Coding({
     code: "1418007",
     display: "Hypoplastic chondrodystrophy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InjuryOfProstateWithoutOpenWoundIntoAbdominalCavity: Coding.FromStrict({
+  AdverseEventTypeValueSet_InjuryOfProstateWithoutOpenWoundIntoAbdominalCavity: new Coding({
     code: "1419004",
     display: "Injury of prostate without open wound into abdominal cavity",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NecrotizingGlomerulonephritis: Coding.FromStrict({
+  AdverseEventTypeValueSet_NecrotizingGlomerulonephritis: new Coding({
     code: "1426004",
     display: "Necrotizing glomerulonephritis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IntraspinalAbscess: Coding.FromStrict({
+  AdverseEventTypeValueSet_IntraspinalAbscess: new Coding({
     code: "1427008",
     display: "Intraspinal abscess",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IntracranialHemorrhageFollowingInjuryWithoutOpenIntracranialWoundANDWithProlongedLossOfConsciousnessMoreThan24HoursWithoutReturnToPreExistingLevel: Coding.FromStrict({
+  AdverseEventTypeValueSet_IntracranialHemorrhageFollowingInjuryWithoutOpenIntracranialWoundANDWithProlongedLossOfConsciousnessMoreThan24HoursWithoutReturnToPreExistingLevel: new Coding({
     code: "1430001",
     display: "Intracranial hemorrhage following injury without open intracranial wound AND with prolonged loss of consciousness (more than 24 hours) without return to pre-existing level",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NormalPeripheralVision: Coding.FromStrict({
+  AdverseEventTypeValueSet_NormalPeripheralVision: new Coding({
     code: "144008",
     display: "Normal peripheral vision",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Icthyoparasitism: Coding.FromStrict({
+  AdverseEventTypeValueSet_Icthyoparasitism: new Coding({
     code: "1447000",
     display: "Icthyoparasitism",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MiscarriageWithUrinaryTractInfection: Coding.FromStrict({
+  AdverseEventTypeValueSet_MiscarriageWithUrinaryTractInfection: new Coding({
     code: "1469007",
     display: "Miscarriage with urinary tract infection",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SuperficialForeignBodyOfScrotumWithoutMajorOpenWoundButWithInfection: Coding.FromStrict({
+  AdverseEventTypeValueSet_SuperficialForeignBodyOfScrotumWithoutMajorOpenWoundButWithInfection: new Coding({
     code: "147001",
     display: "Superficial foreign body of scrotum without major open wound but with infection",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HypertensiveHeartANDRenalDiseaseComplicatingANDORReasonForCareDuringChildbirth: Coding.FromStrict({
+  AdverseEventTypeValueSet_HypertensiveHeartANDRenalDiseaseComplicatingANDORReasonForCareDuringChildbirth: new Coding({
     code: "1474004",
     display: "Hypertensive heart AND renal disease complicating AND/OR reason for care during childbirth",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HerpesLabialis: Coding.FromStrict({
+  AdverseEventTypeValueSet_HerpesLabialis: new Coding({
     code: "1475003",
     display: "Herpes labialis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ObliterationOfLymphaticVessel: Coding.FromStrict({
+  AdverseEventTypeValueSet_ObliterationOfLymphaticVessel: new Coding({
     code: "1478001",
     display: "Obliteration of lymphatic vessel",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_VAL20qPartialTrisomySyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_VAL20qPartialTrisomySyndrome: new Coding({
     code: "1479009",
     display: "20q partial trisomy syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Chalazion: Coding.FromStrict({
+  AdverseEventTypeValueSet_Chalazion: new Coding({
     code: "1482004",
     display: "Chalazion",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OrbitalCongestion: Coding.FromStrict({
+  AdverseEventTypeValueSet_OrbitalCongestion: new Coding({
     code: "1486001",
     display: "Orbital congestion",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PONVPostoperativeNauseaAndVomiting: Coding.FromStrict({
+  AdverseEventTypeValueSet_PONVPostoperativeNauseaAndVomiting: new Coding({
     code: "1488000",
     display: "PONV - Postoperative nausea and vomiting",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ExternalHordeolum: Coding.FromStrict({
+  AdverseEventTypeValueSet_ExternalHordeolum: new Coding({
     code: "1489008",
     display: "External hordeolum",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalAnomalyOfLargeIntestine: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalAnomalyOfLargeIntestine: new Coding({
     code: "1492007",
     display: "Congenital anomaly of large intestine",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcuteEndophthalmitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcuteEndophthalmitis: new Coding({
     code: "1493002",
     display: "Acute endophthalmitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BipolarIDisorderSingleManicEpisodeWithPostpartumOnset: Coding.FromStrict({
+  AdverseEventTypeValueSet_BipolarIDisorderSingleManicEpisodeWithPostpartumOnset: new Coding({
     code: "1499003",
     display: "Bipolar I disorder, single manic episode with postpartum onset",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AbnormalBladderContinence: Coding.FromStrict({
+  AdverseEventTypeValueSet_AbnormalBladderContinence: new Coding({
     code: "150003",
     display: "Abnormal bladder continence",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MeningitisDueToGonococcus: Coding.FromStrict({
+  AdverseEventTypeValueSet_MeningitisDueToGonococcus: new Coding({
     code: "151004",
     display: "Meningitis due to gonococcus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalStrictureOfBileDuct: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalStrictureOfBileDuct: new Coding({
     code: "1512006",
     display: "Congenital stricture of bile duct",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_GorhamDisease: Coding.FromStrict({
+  AdverseEventTypeValueSet_GorhamDisease: new Coding({
     code: "1515008",
     display: "Gorham disease",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Splenitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Splenitis: new Coding({
     code: "1518005",
     display: "Splenitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalPhlebectasia: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalPhlebectasia: new Coding({
     code: "1519002",
     display: "Congenital phlebectasia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BlisterOfButtockWithoutInfection: Coding.FromStrict({
+  AdverseEventTypeValueSet_BlisterOfButtockWithoutInfection: new Coding({
     code: "1521007",
     display: "Blister of buttock without infection",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ClinicalStageIVB: Coding.FromStrict({
+  AdverseEventTypeValueSet_ClinicalStageIVB: new Coding({
     code: "1523005",
     display: "Clinical stage IV B",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BlisterOfFootWithoutInfection: Coding.FromStrict({
+  AdverseEventTypeValueSet_BlisterOfFootWithoutInfection: new Coding({
     code: "1525003",
     display: "Blister of foot without infection",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NitrofuranDerivativePoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_NitrofuranDerivativePoisoning: new Coding({
     code: "1531000",
     display: "Nitrofuran derivative poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ViralPharyngitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_ViralPharyngitis: new Coding({
     code: "1532007",
     display: "Viral pharyngitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PalsyOfConjugateGaze: Coding.FromStrict({
+  AdverseEventTypeValueSet_PalsyOfConjugateGaze: new Coding({
     code: "1534008",
     display: "Palsy of conjugate gaze",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CentralNervousSystemMalformationInFoetusAffectingObstetricalCare: Coding.FromStrict({
+  AdverseEventTypeValueSet_CentralNervousSystemMalformationInFoetusAffectingObstetricalCare: new Coding({
     code: "1538006",
     display: "Central nervous system malformation in foetus affecting obstetrical care",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NodularTendinousDiseaseOfFinger: Coding.FromStrict({
+  AdverseEventTypeValueSet_NodularTendinousDiseaseOfFinger: new Coding({
     code: "1539003",
     display: "Nodular tendinous disease of finger",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OmphaloceleWithObstruction: Coding.FromStrict({
+  AdverseEventTypeValueSet_OmphaloceleWithObstruction: new Coding({
     code: "1542009",
     display: "Omphalocele with obstruction",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenDislocationOfKnee: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenDislocationOfKnee: new Coding({
     code: "1544005",
     display: "Open dislocation of knee",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OsteomyelitisOfFemur: Coding.FromStrict({
+  AdverseEventTypeValueSet_OsteomyelitisOfFemur: new Coding({
     code: "1551001",
     display: "Osteomyelitis of femur",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ClarkMelanomaLevel4: Coding.FromStrict({
+  AdverseEventTypeValueSet_ClarkMelanomaLevel4: new Coding({
     code: "1556006",
     display: "Clark melanoma level 4",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ProteinSDeficiency: Coding.FromStrict({
+  AdverseEventTypeValueSet_ProteinSDeficiency: new Coding({
     code: "1563006",
     display: "Protein S deficiency",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChronicGastricUlcerWithoutHemorrhageWithoutPerforationANDWithoutObstruction: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChronicGastricUlcerWithoutHemorrhageWithoutPerforationANDWithoutObstruction: new Coding({
     code: "1567007",
     display: "Chronic gastric ulcer without hemorrhage, without perforation AND without obstruction",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HeterosexualPrecociousPuberty: Coding.FromStrict({
+  AdverseEventTypeValueSet_HeterosexualPrecociousPuberty: new Coding({
     code: "1588003",
     display: "Heterosexual precocious puberty",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FailedAttemptedTerminationOfPregnancyWithUremia: Coding.FromStrict({
+  AdverseEventTypeValueSet_FailedAttemptedTerminationOfPregnancyWithUremia: new Coding({
     code: "1592005",
     display: "Failed attempted termination of pregnancy with uremia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfantileHemiplegia: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfantileHemiplegia: new Coding({
     code: "1593000",
     display: "Infantile hemiplegia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfectionCausedByMacracanthorhynchusHirudinaceus: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfectionCausedByMacracanthorhynchusHirudinaceus: new Coding({
     code: "1606009",
     display: "Infection caused by Macracanthorhynchus hirudinaceus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IncreasedCapillaryPermeability: Coding.FromStrict({
+  AdverseEventTypeValueSet_IncreasedCapillaryPermeability: new Coding({
     code: "1608005",
     display: "Increased capillary permeability",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SevereManicBipolarIDisorderWithoutPsychoticFeatures: Coding.FromStrict({
+  AdverseEventTypeValueSet_SevereManicBipolarIDisorderWithoutPsychoticFeatures: new Coding({
     code: "162004",
     display: "Severe manic bipolar I disorder without psychotic features",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AbnormalityOfOrgansANDORSoftTissuesOfPelvisAffectingPregnancy: Coding.FromStrict({
+  AdverseEventTypeValueSet_AbnormalityOfOrgansANDORSoftTissuesOfPelvisAffectingPregnancy: new Coding({
     code: "1639007",
     display: "Abnormality of organs AND/OR soft tissues of pelvis affecting pregnancy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PrimaquinePoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_PrimaquinePoisoning: new Coding({
     code: "1647007",
     display: "Primaquine poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LymphocyticPseudotumorOfLung: Coding.FromStrict({
+  AdverseEventTypeValueSet_LymphocyticPseudotumorOfLung: new Coding({
     code: "1648002",
     display: "Lymphocytic pseudotumor of lung",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AccidentProne: Coding.FromStrict({
+  AdverseEventTypeValueSet_AccidentProne: new Coding({
     code: "165002",
     display: "Accident-prone",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SteroidInducedGlaucoma: Coding.FromStrict({
+  AdverseEventTypeValueSet_SteroidInducedGlaucoma: new Coding({
     code: "1654001",
     display: "Steroid-induced glaucoma",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ToxicEffectOfPhosdrin: Coding.FromStrict({
+  AdverseEventTypeValueSet_ToxicEffectOfPhosdrin: new Coding({
     code: "1657008",
     display: "Toxic effect of phosdrin",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ClosedFractureClavicleLateralEnd: Coding.FromStrict({
+  AdverseEventTypeValueSet_ClosedFractureClavicleLateralEnd: new Coding({
     code: "1658003",
     display: "Closed fracture clavicle, lateral end",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_TumorGradeG2: Coding.FromStrict({
+  AdverseEventTypeValueSet_TumorGradeG2: new Coding({
     code: "1663004",
     display: "Tumor grade G2",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_EarlyFontanelClosure: Coding.FromStrict({
+  AdverseEventTypeValueSet_EarlyFontanelClosure: new Coding({
     code: "1667003",
     display: "Early fontanel closure",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CerebralHemiparesis: Coding.FromStrict({
+  AdverseEventTypeValueSet_CerebralHemiparesis: new Coding({
     code: "1670004",
     display: "Cerebral hemiparesis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SagoSpleen: Coding.FromStrict({
+  AdverseEventTypeValueSet_SagoSpleen: new Coding({
     code: "1671000",
     display: "Sago spleen",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MeesmanQuoteSEpithelialCornealDystrophy: Coding.FromStrict({
+  AdverseEventTypeValueSet_MeesmanQuoteSEpithelialCornealDystrophy: new Coding({
     code: "1674008",
     display: "Meesman's epithelial corneal dystrophy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ArthritisAssociatedWithAnotherDisorder: Coding.FromStrict({
+  AdverseEventTypeValueSet_ArthritisAssociatedWithAnotherDisorder: new Coding({
     code: "1679003",
     display: "Arthritis associated with another disorder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Typhlolithiasis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Typhlolithiasis: new Coding({
     code: "168000",
     display: "Typhlolithiasis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_TransitoryAminoAcidMetabolicDisorder: Coding.FromStrict({
+  AdverseEventTypeValueSet_TransitoryAminoAcidMetabolicDisorder: new Coding({
     code: "1682008",
     display: "Transitory amino acid metabolic disorder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_RatBiteFever: Coding.FromStrict({
+  AdverseEventTypeValueSet_RatBiteFever: new Coding({
     code: "1685005",
     display: "Rat-bite fever",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SedativeHypnoticANDORAnxiolyticInducedAnxietyDisorder: Coding.FromStrict({
+  AdverseEventTypeValueSet_SedativeHypnoticANDORAnxiolyticInducedAnxietyDisorder: new Coding({
     code: "1686006",
     display: "Sedative, hypnotic AND/OR anxiolytic-induced anxiety disorder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AccessoryLobeOfLung: Coding.FromStrict({
+  AdverseEventTypeValueSet_AccessoryLobeOfLung: new Coding({
     code: "1694004",
     display: "Accessory lobe of lung",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_UlcerOfBileDuct: Coding.FromStrict({
+  AdverseEventTypeValueSet_UlcerOfBileDuct: new Coding({
     code: "1698001",
     display: "Ulcer of bile duct",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IncreasedLegCircumference: Coding.FromStrict({
+  AdverseEventTypeValueSet_IncreasedLegCircumference: new Coding({
     code: "1703007",
     display: "Increased leg circumference",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ClosedFractureOfBaseOfNeckOfFemur: Coding.FromStrict({
+  AdverseEventTypeValueSet_ClosedFractureOfBaseOfNeckOfFemur: new Coding({
     code: "1705000",
     display: "Closed fracture of base of neck of femur",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenDislocationOfClavicle: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenDislocationOfClavicle: new Coding({
     code: "1708003",
     display: "Open dislocation of clavicle",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InjuryOfAscendingRightColonWithoutOpenWoundIntoAbdominalCavity: Coding.FromStrict({
+  AdverseEventTypeValueSet_InjuryOfAscendingRightColonWithoutOpenWoundIntoAbdominalCavity: new Coding({
     code: "171008",
     display: "Injury of ascending right colon without open wound into abdominal cavity",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Photokeratitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Photokeratitis: new Coding({
     code: "1714005",
     display: "Photokeratitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_GuttateHypomelanosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_GuttateHypomelanosis: new Coding({
     code: "1717003",
     display: "Guttate hypomelanosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_EndometritisFollowingMolarANDOREctopicPregnancy: Coding.FromStrict({
+  AdverseEventTypeValueSet_EndometritisFollowingMolarANDOREctopicPregnancy: new Coding({
     code: "172001",
     display: "Endometritis following molar AND/OR ectopic pregnancy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_UrethralStrictureDueToSchistosomiasis: Coding.FromStrict({
+  AdverseEventTypeValueSet_UrethralStrictureDueToSchistosomiasis: new Coding({
     code: "1723008",
     display: "Urethral stricture due to schistosomiasis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfectionCausedByCrenosoma: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfectionCausedByCrenosoma: new Coding({
     code: "1724002",
     display: "Infection caused by Crenosoma",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FractureOfVertebralColumnWithSpinalCordInjury: Coding.FromStrict({
+  AdverseEventTypeValueSet_FractureOfVertebralColumnWithSpinalCordInjury: new Coding({
     code: "1734006",
     display: "Fracture of vertebral column with spinal cord injury",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Thrill: Coding.FromStrict({
+  AdverseEventTypeValueSet_Thrill: new Coding({
     code: "1735007",
     display: "Thrill",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OccipitalFracture: Coding.FromStrict({
+  AdverseEventTypeValueSet_OccipitalFracture: new Coding({
     code: "1739001",
     display: "Occipital fracture",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FemaleHypererotism: Coding.FromStrict({
+  AdverseEventTypeValueSet_FemaleHypererotism: new Coding({
     code: "1742007",
     display: "Female hypererotism",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ConnationOfTeeth: Coding.FromStrict({
+  AdverseEventTypeValueSet_ConnationOfTeeth: new Coding({
     code: "1744008",
     display: "Connation of teeth",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ThrombophlebitisOfDeepFemoralVein: Coding.FromStrict({
+  AdverseEventTypeValueSet_ThrombophlebitisOfDeepFemoralVein: new Coding({
     code: "1748006",
     display: "Thrombophlebitis of deep femoral vein",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SupraorbitalNeuralgia: Coding.FromStrict({
+  AdverseEventTypeValueSet_SupraorbitalNeuralgia: new Coding({
     code: "175004",
     display: "Supraorbital neuralgia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HealedCoronary: Coding.FromStrict({
+  AdverseEventTypeValueSet_HealedCoronary: new Coding({
     code: "1755008",
     display: "Healed coronary",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BiliaryCirrhosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_BiliaryCirrhosis: new Coding({
     code: "1761006",
     display: "Biliary cirrhosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_StromalKeratitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_StromalKeratitis: new Coding({
     code: "1763009",
     display: "Stromal keratitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FisherSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_FisherSyndrome: new Coding({
     code: "1767005",
     display: "Fisher syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Thoracodidymus: Coding.FromStrict({
+  AdverseEventTypeValueSet_Thoracodidymus: new Coding({
     code: "1769008",
     display: "Thoracodidymus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PoisoningBySawflyLarvae: Coding.FromStrict({
+  AdverseEventTypeValueSet_PoisoningBySawflyLarvae: new Coding({
     code: "177007",
     display: "Poisoning by sawfly larvae",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InsulinBiosynthesisDefect: Coding.FromStrict({
+  AdverseEventTypeValueSet_InsulinBiosynthesisDefect: new Coding({
     code: "1771008",
     display: "Insulin biosynthesis defect",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_RTARenalTubularAcidosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_RTARenalTubularAcidosis: new Coding({
     code: "1776003",
     display: "RTA - Renal tubular acidosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IncreasedMolecularDissociation: Coding.FromStrict({
+  AdverseEventTypeValueSet_IncreasedMolecularDissociation: new Coding({
     code: "1777007",
     display: "Increased molecular dissociation",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MalocclusionDueToAbnormalSwallowing: Coding.FromStrict({
+  AdverseEventTypeValueSet_MalocclusionDueToAbnormalSwallowing: new Coding({
     code: "1778002",
     display: "Malocclusion due to abnormal swallowing",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OFDIIOrofacialDigitalSyndromeII: Coding.FromStrict({
+  AdverseEventTypeValueSet_OFDIIOrofacialDigitalSyndromeII: new Coding({
     code: "1779005",
     display: "OFD II - Orofacial-digital syndrome II",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ApraxiaOfDressing: Coding.FromStrict({
+  AdverseEventTypeValueSet_ApraxiaOfDressing: new Coding({
     code: "179005",
     display: "Apraxia of dressing",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IdiopathicCornealEdema: Coding.FromStrict({
+  AdverseEventTypeValueSet_IdiopathicCornealEdema: new Coding({
     code: "1794009",
     display: "Idiopathic corneal edema",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HemorrhagicBronchopneumonia: Coding.FromStrict({
+  AdverseEventTypeValueSet_HemorrhagicBronchopneumonia: new Coding({
     code: "181007",
     display: "Hemorrhagic bronchopneumonia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PanicDisorderWithAgoraphobiaSevereAgoraphobicAvoidanceANDMildPanicAttacks: Coding.FromStrict({
+  AdverseEventTypeValueSet_PanicDisorderWithAgoraphobiaSevereAgoraphobicAvoidanceANDMildPanicAttacks: new Coding({
     code: "1816003",
     display: "Panic disorder with agoraphobia, severe agoraphobic avoidance AND mild panic attacks",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChemoreceptorApnea: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChemoreceptorApnea: new Coding({
     code: "1821000",
     display: "Chemoreceptor apnea",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ImpairedGlucoseToleranceAssociatedWithPancreaticDisease: Coding.FromStrict({
+  AdverseEventTypeValueSet_ImpairedGlucoseToleranceAssociatedWithPancreaticDisease: new Coding({
     code: "1822007",
     display: "Impaired glucose tolerance associated with pancreatic disease",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AllergicGastritis: Coding.FromStrict({
+  AdverseEventTypeValueSet_AllergicGastritis: new Coding({
     code: "1824008",
     display: "Allergic gastritis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_GranulomaOfLip: Coding.FromStrict({
+  AdverseEventTypeValueSet_GranulomaOfLip: new Coding({
     code: "1826005",
     display: "Granuloma of lip",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfestationCausedByGasterophilusHemorrhoidalis: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfestationCausedByGasterophilusHemorrhoidalis: new Coding({
     code: "1828006",
     display: "Infestation caused by Gasterophilus hemorrhoidalis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Microcephalus: Coding.FromStrict({
+  AdverseEventTypeValueSet_Microcephalus: new Coding({
     code: "1829003",
     display: "Microcephalus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AutoimmunePancytopenia: Coding.FromStrict({
+  AdverseEventTypeValueSet_AutoimmunePancytopenia: new Coding({
     code: "183005",
     display: "Autoimmune pancytopenia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PhacoanaphylacticEndophthalmitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_PhacoanaphylacticEndophthalmitis: new Coding({
     code: "1833005",
     display: "Phacoanaphylactic endophthalmitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NecrosisOfPancreas: Coding.FromStrict({
+  AdverseEventTypeValueSet_NecrosisOfPancreas: new Coding({
     code: "1835003",
     display: "Necrosis of pancreas",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OrciprenalinePoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_OrciprenalinePoisoning: new Coding({
     code: "1837006",
     display: "Orciprenaline poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_WithdrawalArrhythmia: Coding.FromStrict({
+  AdverseEventTypeValueSet_WithdrawalArrhythmia: new Coding({
     code: "184004",
     display: "Withdrawal arrhythmia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Paraparesis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Paraparesis: new Coding({
     code: "1845001",
     display: "Paraparesis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Endophthalmitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Endophthalmitis: new Coding({
     code: "1847009",
     display: "Endophthalmitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PoisoningCausedByGaseousAnesthetic: Coding.FromStrict({
+  AdverseEventTypeValueSet_PoisoningCausedByGaseousAnesthetic: new Coding({
     code: "1848004",
     display: "Poisoning caused by gaseous anesthetic",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_TraumaticInjuryOfSixthCranialNerve: Coding.FromStrict({
+  AdverseEventTypeValueSet_TraumaticInjuryOfSixthCranialNerve: new Coding({
     code: "1852004",
     display: "Traumatic injury of sixth cranial nerve",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DevelopmentalAcademicDisorder: Coding.FromStrict({
+  AdverseEventTypeValueSet_DevelopmentalAcademicDisorder: new Coding({
     code: "1855002",
     display: "Developmental academic disorder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AccessoryNose: Coding.FromStrict({
+  AdverseEventTypeValueSet_AccessoryNose: new Coding({
     code: "1856001",
     display: "Accessory nose",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalRubellaSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalRubellaSyndrome: new Coding({
     code: "1857005",
     display: "Congenital rubella syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfectionCausedByStilesiaGlobipunctata: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfectionCausedByStilesiaGlobipunctata: new Coding({
     code: "1858000",
     display: "Infection caused by Stilesia globipunctata",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FluidVolumeDisorder: Coding.FromStrict({
+  AdverseEventTypeValueSet_FluidVolumeDisorder: new Coding({
     code: "1860003",
     display: "Fluid volume disorder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ImpairedIntestinalProteinAbsorption: Coding.FromStrict({
+  AdverseEventTypeValueSet_ImpairedIntestinalProteinAbsorption: new Coding({
     code: "1865008",
     display: "Impaired intestinal protein absorption",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_RuptureOfIrisSphincter: Coding.FromStrict({
+  AdverseEventTypeValueSet_RuptureOfIrisSphincter: new Coding({
     code: "1869002",
     display: "Rupture of iris sphincter",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IntercostalArteryInjury: Coding.FromStrict({
+  AdverseEventTypeValueSet_IntercostalArteryInjury: new Coding({
     code: "188001",
     display: "Intercostal artery injury",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IncreasedNutritionalRequirement: Coding.FromStrict({
+  AdverseEventTypeValueSet_IncreasedNutritionalRequirement: new Coding({
     code: "1881003",
     display: "Increased nutritional requirement",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_StarFigureAtTheMacula: Coding.FromStrict({
+  AdverseEventTypeValueSet_StarFigureAtTheMacula: new Coding({
     code: "1892002",
     display: "Star figure at the macula",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_EctopicBreastTissue: Coding.FromStrict({
+  AdverseEventTypeValueSet_EctopicBreastTissue: new Coding({
     code: "1896004",
     display: "Ectopic breast tissue",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AmsinckiaSpeciesPoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_AmsinckiaSpeciesPoisoning: new Coding({
     code: "1897008",
     display: "Amsinckia species poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AutosomalHereditaryDisorder: Coding.FromStrict({
+  AdverseEventTypeValueSet_AutosomalHereditaryDisorder: new Coding({
     code: "1899006",
     display: "Autosomal hereditary disorder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfestationCausedByPsorergatesOvis: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfestationCausedByPsorergatesOvis: new Coding({
     code: "1903004",
     display: "Infestation caused by Psorergates ovis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_VonWillebrandDiseaseTypeIIC: Coding.FromStrict({
+  AdverseEventTypeValueSet_VonWillebrandDiseaseTypeIIC: new Coding({
     code: "1908008",
     display: "von Willebrand disease, type IIC",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ImpairmentLevelBetterEyeSevereImpairmentLesserEyeNearTotalImpairment: Coding.FromStrict({
+  AdverseEventTypeValueSet_ImpairmentLevelBetterEyeSevereImpairmentLesserEyeNearTotalImpairment: new Coding({
     code: "1909000",
     display: "Impairment level: better eye: severe impairment: lesser eye: near-total impairment",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalSyphiliticHepatomegaly: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalSyphiliticHepatomegaly: new Coding({
     code: "192008",
     display: "Congenital syphilitic hepatomegaly",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalAbsenceOfUrethra: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalAbsenceOfUrethra: new Coding({
     code: "1922008",
     display: "Congenital absence of urethra",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Osteopetrosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Osteopetrosis: new Coding({
     code: "1926006",
     display: "Osteopetrosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BenignHypertensiveRenalDisease: Coding.FromStrict({
+  AdverseEventTypeValueSet_BenignHypertensiveRenalDisease: new Coding({
     code: "193003",
     display: "Benign hypertensive renal disease",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_EmotionalANDORMentalDiseaseInMotherComplicatingPregnancyChildbirthANDORPuerperium: Coding.FromStrict({
+  AdverseEventTypeValueSet_EmotionalANDORMentalDiseaseInMotherComplicatingPregnancyChildbirthANDORPuerperium: new Coding({
     code: "1938002",
     display: "Emotional AND/OR mental disease in mother complicating pregnancy, childbirth AND/OR puerperium",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AbnormalVascularFlow: Coding.FromStrict({
+  AdverseEventTypeValueSet_AbnormalVascularFlow: new Coding({
     code: "1939005",
     display: "Abnormal vascular flow",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LeftRightConfusion: Coding.FromStrict({
+  AdverseEventTypeValueSet_LeftRightConfusion: new Coding({
     code: "1943009",
     display: "Left-right confusion",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IllegalAbortionWithEndometritis: Coding.FromStrict({
+  AdverseEventTypeValueSet_IllegalAbortionWithEndometritis: new Coding({
     code: "195005",
     display: "Illegal abortion with endometritis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalDeficiencyOfPigmentOfSkin: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalDeficiencyOfPigmentOfSkin: new Coding({
     code: "1953005",
     display: "Congenital deficiency of pigment of skin",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DilatedCardiomyopathySecondaryToToxicReaction: Coding.FromStrict({
+  AdverseEventTypeValueSet_DilatedCardiomyopathySecondaryToToxicReaction: new Coding({
     code: "1954004",
     display: "Dilated cardiomyopathy secondary to toxic reaction",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PreauricularPit: Coding.FromStrict({
+  AdverseEventTypeValueSet_PreauricularPit: new Coding({
     code: "1955003",
     display: "Preauricular pit",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_EncephalartosSpeciesPoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_EncephalartosSpeciesPoisoning: new Coding({
     code: "1959009",
     display: "Encephalartos species poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChronicPolyarticularJuvenileRheumatoidArthritis: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChronicPolyarticularJuvenileRheumatoidArthritis: new Coding({
     code: "1961000",
     display: "Chronic polyarticular juvenile rheumatoid arthritis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PNHParoxysmalNocturnalHemoglobinuria: Coding.FromStrict({
+  AdverseEventTypeValueSet_PNHParoxysmalNocturnalHemoglobinuria: new Coding({
     code: "1963002",
     display: "PNH - Paroxysmal nocturnal hemoglobinuria",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NormalSkinPH: Coding.FromStrict({
+  AdverseEventTypeValueSet_NormalSkinPH: new Coding({
     code: "1965009",
     display: "Normal skin pH",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalAbsenceOfForearmOnly: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalAbsenceOfForearmOnly: new Coding({
     code: "1967001",
     display: "Congenital absence of forearm only",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SedativeHypnoticANDORAnxiolyticInducedPsychoticDisorderWithDelusions: Coding.FromStrict({
+  AdverseEventTypeValueSet_SedativeHypnoticANDORAnxiolyticInducedPsychoticDisorderWithDelusions: new Coding({
     code: "1973000",
     display: "Sedative, hypnotic AND/OR anxiolytic-induced psychotic disorder with delusions",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OxymetholonePoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_OxymetholonePoisoning: new Coding({
     code: "1977004",
     display: "Oxymetholone poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FocalChoroiditis: Coding.FromStrict({
+  AdverseEventTypeValueSet_FocalChoroiditis: new Coding({
     code: "1979001",
     display: "Focal choroiditis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SeromucinousOtitisMedia: Coding.FromStrict({
+  AdverseEventTypeValueSet_SeromucinousOtitisMedia: new Coding({
     code: "1980003",
     display: "Seromucinous otitis media",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DiseaseDueToFiloviridae: Coding.FromStrict({
+  AdverseEventTypeValueSet_DiseaseDueToFiloviridae: new Coding({
     code: "198007",
     display: "Disease due to Filoviridae",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Urhidrosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Urhidrosis: new Coding({
     code: "1981004",
     display: "Urhidrosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LateEffectOfInjuryToNerveRootsSpinalPlexusANDOROtherNervesOfTrunk: Coding.FromStrict({
+  AdverseEventTypeValueSet_LateEffectOfInjuryToNerveRootsSpinalPlexusANDOROtherNervesOfTrunk: new Coding({
     code: "1988005",
     display: "Late effect of injury to nerve roots, spinal plexus AND/OR other nerves of trunk",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BurnOfVaginaANDORUterus: Coding.FromStrict({
+  AdverseEventTypeValueSet_BurnOfVaginaANDORUterus: new Coding({
     code: "1989002",
     display: "Burn of vagina AND/OR uterus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DecreasedLactation: Coding.FromStrict({
+  AdverseEventTypeValueSet_DecreasedLactation: new Coding({
     code: "199004",
     display: "Decreased lactation",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Normotensive: Coding.FromStrict({
+  AdverseEventTypeValueSet_Normotensive: new Coding({
     code: "2004005",
     display: "Normotensive",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FractureOfLunate: Coding.FromStrict({
+  AdverseEventTypeValueSet_FractureOfLunate: new Coding({
     code: "2012002",
     display: "Fracture of lunate",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DilatedCardiomyopathySecondaryToMetazoalMyocarditis: Coding.FromStrict({
+  AdverseEventTypeValueSet_DilatedCardiomyopathySecondaryToMetazoalMyocarditis: new Coding({
     code: "2024009",
     display: "Dilated cardiomyopathy secondary to metazoal myocarditis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ErythemaInduratum: Coding.FromStrict({
+  AdverseEventTypeValueSet_ErythemaInduratum: new Coding({
     code: "2028007",
     display: "Erythema induratum",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CerebralEdema: Coding.FromStrict({
+  AdverseEventTypeValueSet_CerebralEdema: new Coding({
     code: "2032001",
     display: "Cerebral edema",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcquiredFactorVIIDeficiencyDisease: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcquiredFactorVIIDeficiencyDisease: new Coding({
     code: "2036003",
     display: "Acquired factor VII deficiency disease",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NeurogenicThoracicOutletSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_NeurogenicThoracicOutletSyndrome: new Coding({
     code: "2040007",
     display: "Neurogenic thoracic outlet syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_EunuchoidGigantism: Coding.FromStrict({
+  AdverseEventTypeValueSet_EunuchoidGigantism: new Coding({
     code: "2041006",
     display: "Eunuchoid gigantism",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AlcoholicGastritis: Coding.FromStrict({
+  AdverseEventTypeValueSet_AlcoholicGastritis: new Coding({
     code: "2043009",
     display: "Alcoholic gastritis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LateEffectOfInjuryToBloodVesselsOfThoraxAbdomenANDORPelvis: Coding.FromStrict({
+  AdverseEventTypeValueSet_LateEffectOfInjuryToBloodVesselsOfThoraxAbdomenANDORPelvis: new Coding({
     code: "2053005",
     display: "Late effect of injury to blood vessels of thorax, abdomen AND/OR pelvis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_RecurrentErosionSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_RecurrentErosionSyndrome: new Coding({
     code: "2055003",
     display: "Recurrent erosion syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BilateralLossOfLabyrinthineReactivity: Coding.FromStrict({
+  AdverseEventTypeValueSet_BilateralLossOfLabyrinthineReactivity: new Coding({
     code: "2058001",
     display: "Bilateral loss of labyrinthine reactivity",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ConductiveHearingLossOfCombinedSites: Coding.FromStrict({
+  AdverseEventTypeValueSet_ConductiveHearingLossOfCombinedSites: new Coding({
     code: "2061000",
     display: "Conductive hearing loss of combined sites",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AutosomalDominantOpticAtrophy: Coding.FromStrict({
+  AdverseEventTypeValueSet_AutosomalDominantOpticAtrophy: new Coding({
     code: "2065009",
     display: "Autosomal dominant optic atrophy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_GastricUlcerWithHemorrhageANDPerforationButWithoutObstruction: Coding.FromStrict({
+  AdverseEventTypeValueSet_GastricUlcerWithHemorrhageANDPerforationButWithoutObstruction: new Coding({
     code: "2066005",
     display: "Gastric ulcer with hemorrhage AND perforation but without obstruction",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BurningSensationInEye: Coding.FromStrict({
+  AdverseEventTypeValueSet_BurningSensationInEye: new Coding({
     code: "2070002",
     display: "Burning sensation in eye",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Delusions: Coding.FromStrict({
+  AdverseEventTypeValueSet_Delusions: new Coding({
     code: "2073000",
     display: "Delusions",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NeurocutaneousMelanosisSequence: Coding.FromStrict({
+  AdverseEventTypeValueSet_NeurocutaneousMelanosisSequence: new Coding({
     code: "208008",
     display: "Neurocutaneous melanosis sequence",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PulmonaryNocardiosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_PulmonaryNocardiosis: new Coding({
     code: "2087000",
     display: "Pulmonary nocardiosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PagetsDiseaseOfBone: Coding.FromStrict({
+  AdverseEventTypeValueSet_PagetsDiseaseOfBone: new Coding({
     code: "2089002",
     display: "Pagets disease of bone",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PharyngealDiverticulitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_PharyngealDiverticulitis: new Coding({
     code: "2091005",
     display: "Pharyngeal diverticulitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CarbonDisulfideCausingToxicEffect: Coding.FromStrict({
+  AdverseEventTypeValueSet_CarbonDisulfideCausingToxicEffect: new Coding({
     code: "2094002",
     display: "Carbon disulfide causing toxic effect",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DeepCornealVascularization: Coding.FromStrict({
+  AdverseEventTypeValueSet_DeepCornealVascularization: new Coding({
     code: "2102007",
     display: "Deep corneal vascularization",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ReflexSympatheticDystrophyOfUpperExtremity: Coding.FromStrict({
+  AdverseEventTypeValueSet_ReflexSympatheticDystrophyOfUpperExtremity: new Coding({
     code: "2103002",
     display: "Reflex sympathetic dystrophy of upper extremity",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Anisomelia: Coding.FromStrict({
+  AdverseEventTypeValueSet_Anisomelia: new Coding({
     code: "2107001",
     display: "Anisomelia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IsolatedSomatotropinDeficiency: Coding.FromStrict({
+  AdverseEventTypeValueSet_IsolatedSomatotropinDeficiency: new Coding({
     code: "2109003",
     display: "Isolated somatotropin deficiency",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfectionCausedByCysticercusPisiformis: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfectionCausedByCysticercusPisiformis: new Coding({
     code: "2114004",
     display: "Infection caused by Cysticercus pisiformis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IntramembranousBoneFormation: Coding.FromStrict({
+  AdverseEventTypeValueSet_IntramembranousBoneFormation: new Coding({
     code: "2116002",
     display: "Intramembranous bone formation",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_WeakCry: Coding.FromStrict({
+  AdverseEventTypeValueSet_WeakCry: new Coding({
     code: "2120003",
     display: "Weak cry",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_EthopropazinePoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_EthopropazinePoisoning: new Coding({
     code: "2121004",
     display: "Ethopropazine poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DisorderOfAdenoid: Coding.FromStrict({
+  AdverseEventTypeValueSet_DisorderOfAdenoid: new Coding({
     code: "2128005",
     display: "Disorder of adenoid",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_EdemaOfPharynx: Coding.FromStrict({
+  AdverseEventTypeValueSet_EdemaOfPharynx: new Coding({
     code: "2129002",
     display: "Edema of pharynx",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MeconiumInAmnioticFluidNotedBeforeLaborInLivebornInfant: Coding.FromStrict({
+  AdverseEventTypeValueSet_MeconiumInAmnioticFluidNotedBeforeLaborInLivebornInfant: new Coding({
     code: "2132004",
     display: "Meconium in amniotic fluid noted before labor in liveborn infant",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DiffusePain: Coding.FromStrict({
+  AdverseEventTypeValueSet_DiffusePain: new Coding({
     code: "2134003",
     display: "Diffuse pain",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenWoundOfJawWithComplication: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenWoundOfJawWithComplication: new Coding({
     code: "2136001",
     display: "Open wound of jaw with complication",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LSPLeftSacroposteriorPosition: Coding.FromStrict({
+  AdverseEventTypeValueSet_LSPLeftSacroposteriorPosition: new Coding({
     code: "2138000",
     display: "LSP - Left sacroposterior position",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AnalIntercourse: Coding.FromStrict({
+  AdverseEventTypeValueSet_AnalIntercourse: new Coding({
     code: "2145000",
     display: "Anal intercourse",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DecreasedHormoneProduction: Coding.FromStrict({
+  AdverseEventTypeValueSet_DecreasedHormoneProduction: new Coding({
     code: "2149006",
     display: "Decreased hormone production",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfectionCausedByContracaecum: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfectionCausedByContracaecum: new Coding({
     code: "2158004",
     display: "Infection caused by Contracaecum",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DelusionOfPersecution: Coding.FromStrict({
+  AdverseEventTypeValueSet_DelusionOfPersecution: new Coding({
     code: "216004",
     display: "Delusion of persecution",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_RetinalHemangioblastomatosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_RetinalHemangioblastomatosis: new Coding({
     code: "2167004",
     display: "Retinal hemangioblastomatosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ThoracicRadiculitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_ThoracicRadiculitis: new Coding({
     code: "2169001",
     display: "Thoracic radiculitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_GallopRhythm: Coding.FromStrict({
+  AdverseEventTypeValueSet_GallopRhythm: new Coding({
     code: "2170000",
     display: "Gallop rhythm",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HalogenAcne: Coding.FromStrict({
+  AdverseEventTypeValueSet_HalogenAcne: new Coding({
     code: "2176006",
     display: "Halogen acne",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PHNPostHerpeticNeuralgia: Coding.FromStrict({
+  AdverseEventTypeValueSet_PHNPostHerpeticNeuralgia: new Coding({
     code: "2177002",
     display: "PHN - Post-herpetic neuralgia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CompensatedMetabolicAlkalosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_CompensatedMetabolicAlkalosis: new Coding({
     code: "2186007",
     display: "Compensated metabolic alkalosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AlcoholUser: Coding.FromStrict({
+  AdverseEventTypeValueSet_AlcoholUser: new Coding({
     code: "219006",
     display: "Alcohol user",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_VisceralEpilepsy: Coding.FromStrict({
+  AdverseEventTypeValueSet_VisceralEpilepsy: new Coding({
     code: "2198002",
     display: "Visceral epilepsy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenPosteriorDislocationOfDistalEndOfFemur: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenPosteriorDislocationOfDistalEndOfFemur: new Coding({
     code: "2202000",
     display: "Open posterior dislocation of distal end of femur",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcquiredDeformityOfPinna: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcquiredDeformityOfPinna: new Coding({
     code: "2204004",
     display: "Acquired deformity of pinna",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalAnomalyOfVenaCava: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalAnomalyOfVenaCava: new Coding({
     code: "2213002",
     display: "Congenital anomaly of vena cava",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NocturnalEmission: Coding.FromStrict({
+  AdverseEventTypeValueSet_NocturnalEmission: new Coding({
     code: "2216005",
     display: "Nocturnal emission",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SuperficialInjuryOfPerineumWithoutInfection: Coding.FromStrict({
+  AdverseEventTypeValueSet_SuperficialInjuryOfPerineumWithoutInfection: new Coding({
     code: "2217001",
     display: "Superficial injury of perineum without infection",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DisabilityEvaluationDisability100Percent: Coding.FromStrict({
+  AdverseEventTypeValueSet_DisabilityEvaluationDisability100Percent: new Coding({
     code: "2219003",
     display: "Disability evaluation, disability 100%",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcuteEpiglottitisWithObstruction: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcuteEpiglottitisWithObstruction: new Coding({
     code: "222008",
     display: "Acute epiglottitis with obstruction",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SeleniumPoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_SeleniumPoisoning: new Coding({
     code: "2224000",
     display: "Selenium poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ScintillatingScotoma: Coding.FromStrict({
+  AdverseEventTypeValueSet_ScintillatingScotoma: new Coding({
     code: "2228002",
     display: "Scintillating scotoma",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Chimera: Coding.FromStrict({
+  AdverseEventTypeValueSet_Chimera: new Coding({
     code: "2229005",
     display: "Chimera",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_TumorOfBodyOfUterusAffectingPregnancy: Coding.FromStrict({
+  AdverseEventTypeValueSet_TumorOfBodyOfUterusAffectingPregnancy: new Coding({
     code: "223003",
     display: "Tumor of body of uterus affecting pregnancy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NervePlexusDisorder: Coding.FromStrict({
+  AdverseEventTypeValueSet_NervePlexusDisorder: new Coding({
     code: "2231001",
     display: "Nerve plexus disorder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PainfulBreathingPleurodynia: Coding.FromStrict({
+  AdverseEventTypeValueSet_PainfulBreathingPleurodynia: new Coding({
     code: "2237002",
     display: "Painful breathing -pleurodynia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PreviousPregnancies6: Coding.FromStrict({
+  AdverseEventTypeValueSet_PreviousPregnancies6: new Coding({
     code: "2239004",
     display: "Previous pregnancies 6",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_XLinkedAbsenceOfThyroxineBindingGlobulin: Coding.FromStrict({
+  AdverseEventTypeValueSet_XLinkedAbsenceOfThyroxineBindingGlobulin: new Coding({
     code: "2241003",
     display: "X-linked absence of thyroxine-binding globulin",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HypercalcemiaDueToHyperthyroidism: Coding.FromStrict({
+  AdverseEventTypeValueSet_HypercalcemiaDueToHyperthyroidism: new Coding({
     code: "2243000",
     display: "Hypercalcemia due to hyperthyroidism",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ForeignBodyInNasopharynx: Coding.FromStrict({
+  AdverseEventTypeValueSet_ForeignBodyInNasopharynx: new Coding({
     code: "2245007",
     display: "Foreign body in nasopharynx",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PrimaryHypotonyOfEye: Coding.FromStrict({
+  AdverseEventTypeValueSet_PrimaryHypotonyOfEye: new Coding({
     code: "2251002",
     display: "Primary hypotony of eye",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MonovularTwins: Coding.FromStrict({
+  AdverseEventTypeValueSet_MonovularTwins: new Coding({
     code: "2256007",
     display: "Monovular twins",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ObstetricalPulmonaryFatEmbolism: Coding.FromStrict({
+  AdverseEventTypeValueSet_ObstetricalPulmonaryFatEmbolism: new Coding({
     code: "2261009",
     display: "Obstetrical pulmonary fat embolism",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_VictimOfHomosexualAggression: Coding.FromStrict({
+  AdverseEventTypeValueSet_VictimOfHomosexualAggression: new Coding({
     code: "2268003",
     display: "Victim of homosexual aggression",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LucioPhenomenon: Coding.FromStrict({
+  AdverseEventTypeValueSet_LucioPhenomenon: new Coding({
     code: "228007",
     display: "Lucio phenomenon",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PulsatingExophthalmos: Coding.FromStrict({
+  AdverseEventTypeValueSet_PulsatingExophthalmos: new Coding({
     code: "2284002",
     display: "Pulsating exophthalmos",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ClosedFractureOfUpperEndOfForearm: Coding.FromStrict({
+  AdverseEventTypeValueSet_ClosedFractureOfUpperEndOfForearm: new Coding({
     code: "2295008",
     display: "Closed fracture of upper end of forearm",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IronDextranToxicity: Coding.FromStrict({
+  AdverseEventTypeValueSet_IronDextranToxicity: new Coding({
     code: "2296009",
     display: "Iron dextran toxicity",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FocalFacialDermalDysplasia: Coding.FromStrict({
+  AdverseEventTypeValueSet_FocalFacialDermalDysplasia: new Coding({
     code: "2298005",
     display: "Focal facial dermal dysplasia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PsychosomaticFactorInPhysicalConditionPsychologicalComponentOfUnknownDegree: Coding.FromStrict({
+  AdverseEventTypeValueSet_PsychosomaticFactorInPhysicalConditionPsychologicalComponentOfUnknownDegree: new Coding({
     code: "2301009",
     display: "Psychosomatic factor in physical condition, psychological component of unknown degree",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InguinalHerniaWithGangrene: Coding.FromStrict({
+  AdverseEventTypeValueSet_InguinalHerniaWithGangrene: new Coding({
     code: "2303007",
     display: "Inguinal hernia with gangrene",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IntervertebralDiscitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_IntervertebralDiscitis: new Coding({
     code: "2304001",
     display: "Intervertebral discitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PeripancreaticFatNecrosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_PeripancreaticFatNecrosis: new Coding({
     code: "2307008",
     display: "Peripancreatic fat necrosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SilentAlleles: Coding.FromStrict({
+  AdverseEventTypeValueSet_SilentAlleles: new Coding({
     code: "2308003",
     display: "Silent alleles",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ReactiveAttachmentDisorderOfInfancyOREarlyChildhoodInhibitedType: Coding.FromStrict({
+  AdverseEventTypeValueSet_ReactiveAttachmentDisorderOfInfancyOREarlyChildhoodInhibitedType: new Coding({
     code: "2312009",
     display: "Reactive attachment disorder of infancy OR early childhood, inhibited type",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_UnprotectedIntercourse: Coding.FromStrict({
+  AdverseEventTypeValueSet_UnprotectedIntercourse: new Coding({
     code: "2314005",
     display: "Unprotected intercourse",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MarriageAnnulment: Coding.FromStrict({
+  AdverseEventTypeValueSet_MarriageAnnulment: new Coding({
     code: "2326000",
     display: "Marriage annulment",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SexualOverexposure: Coding.FromStrict({
+  AdverseEventTypeValueSet_SexualOverexposure: new Coding({
     code: "2339001",
     display: "Sexual overexposure",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfectionCausedByMoniliformis: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfectionCausedByMoniliformis: new Coding({
     code: "2341000",
     display: "Infection caused by Moniliformis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_GeneticTransduction: Coding.FromStrict({
+  AdverseEventTypeValueSet_GeneticTransduction: new Coding({
     code: "2351004",
     display: "Genetic transduction",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_RudSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_RudSyndrome: new Coding({
     code: "2355008",
     display: "Rud syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HyperBetaAlaninemia: Coding.FromStrict({
+  AdverseEventTypeValueSet_HyperBetaAlaninemia: new Coding({
     code: "2359002",
     display: "Hyper-beta-alaninemia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SimpleChronicPharyngitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_SimpleChronicPharyngitis: new Coding({
     code: "2365002",
     display: "Simple chronic pharyngitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LateEffectOfDislocation: Coding.FromStrict({
+  AdverseEventTypeValueSet_LateEffectOfDislocation: new Coding({
     code: "2366001",
     display: "Late effect of dislocation",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcuteHemorrhagicGastritis: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcuteHemorrhagicGastritis: new Coding({
     code: "2367005",
     display: "Acute hemorrhagic gastritis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MonofascicularBlock: Coding.FromStrict({
+  AdverseEventTypeValueSet_MonofascicularBlock: new Coding({
     code: "2374000",
     display: "Monofascicular block",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CellulitisOfPectoralRegion: Coding.FromStrict({
+  AdverseEventTypeValueSet_CellulitisOfPectoralRegion: new Coding({
     code: "2385003",
     display: "Cellulitis of pectoral region",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NormalVariationInTranslucency: Coding.FromStrict({
+  AdverseEventTypeValueSet_NormalVariationInTranslucency: new Coding({
     code: "2388001",
     display: "Normal variation in translucency",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcuteGonococcalVulvovaginitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcuteGonococcalVulvovaginitis: new Coding({
     code: "2390000",
     display: "Acute gonococcal vulvovaginitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Achondrogenesis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Achondrogenesis: new Coding({
     code: "2391001",
     display: "Achondrogenesis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MalignantPyoderma: Coding.FromStrict({
+  AdverseEventTypeValueSet_MalignantPyoderma: new Coding({
     code: "2396006",
     display: "Malignant pyoderma",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_QuinidineToxicityByElectrocardiogram: Coding.FromStrict({
+  AdverseEventTypeValueSet_QuinidineToxicityByElectrocardiogram: new Coding({
     code: "2398007",
     display: "Quinidine toxicity by electrocardiogram",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DependenceSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_DependenceSyndrome: new Coding({
     code: "2403008",
     display: "Dependence syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MotorSimplePartialStatus: Coding.FromStrict({
+  AdverseEventTypeValueSet_MotorSimplePartialStatus: new Coding({
     code: "241006",
     display: "Motor simple partial status",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LumbosacralRootLesion: Coding.FromStrict({
+  AdverseEventTypeValueSet_LumbosacralRootLesion: new Coding({
     code: "2415007",
     display: "Lumbosacral root lesion",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PolyesterFumeCausingToxicEffect: Coding.FromStrict({
+  AdverseEventTypeValueSet_PolyesterFumeCausingToxicEffect: new Coding({
     code: "2418009",
     display: "Polyester fume causing toxic effect",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenWoundOfForeheadWithComplication: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenWoundOfForeheadWithComplication: new Coding({
     code: "2419001",
     display: "Open wound of forehead with complication",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ThirdDegreeBurnOfMultipleSitesOfUpperLimb: Coding.FromStrict({
+  AdverseEventTypeValueSet_ThirdDegreeBurnOfMultipleSitesOfUpperLimb: new Coding({
     code: "2420007",
     display: "Third degree burn of multiple sites of upper limb",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NoninfectiousJejunitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_NoninfectiousJejunitis: new Coding({
     code: "242004",
     display: "Noninfectious jejunitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CerebrospinalFluidCirculationDisorder: Coding.FromStrict({
+  AdverseEventTypeValueSet_CerebrospinalFluidCirculationDisorder: new Coding({
     code: "2432006",
     display: "Cerebrospinal fluid circulation disorder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Ascaridiasis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Ascaridiasis: new Coding({
     code: "2435008",
     display: "Ascaridiasis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PlacentaCircumvallata: Coding.FromStrict({
+  AdverseEventTypeValueSet_PlacentaCircumvallata: new Coding({
     code: "2437000",
     display: "Placenta circumvallata",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Iniencephaly: Coding.FromStrict({
+  AdverseEventTypeValueSet_Iniencephaly: new Coding({
     code: "2438005",
     display: "Iniencephaly",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PurulentEndocarditis: Coding.FromStrict({
+  AdverseEventTypeValueSet_PurulentEndocarditis: new Coding({
     code: "2439002",
     display: "Purulent endocarditis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HydrogenSulfidePoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_HydrogenSulfidePoisoning: new Coding({
     code: "2443003",
     display: "Hydrogen sulfide poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FetalRotation: Coding.FromStrict({
+  AdverseEventTypeValueSet_FetalRotation: new Coding({
     code: "2452007",
     display: "Fetal rotation",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcquiredHeterochromiaOfIris: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcquiredHeterochromiaOfIris: new Coding({
     code: "2463005",
     display: "Acquired heterochromia of iris",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Onychomalacia: Coding.FromStrict({
+  AdverseEventTypeValueSet_Onychomalacia: new Coding({
     code: "2469009",
     display: "Onychomalacia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BrainDamage: Coding.FromStrict({
+  AdverseEventTypeValueSet_BrainDamage: new Coding({
     code: "2470005",
     display: "Brain damage",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IntraAbdominalAbscessPostprocedure: Coding.FromStrict({
+  AdverseEventTypeValueSet_IntraAbdominalAbscessPostprocedure: new Coding({
     code: "2471009",
     display: "Intra-abdominal abscess postprocedure",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PassesNoUrine: Coding.FromStrict({
+  AdverseEventTypeValueSet_PassesNoUrine: new Coding({
     code: "2472002",
     display: "Passes no urine",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IntermittentVerticalSquint: Coding.FromStrict({
+  AdverseEventTypeValueSet_IntermittentVerticalSquint: new Coding({
     code: "2473007",
     display: "Intermittent vertical squint",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SuperficialPhlebitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_SuperficialPhlebitis: new Coding({
     code: "2477008",
     display: "Superficial phlebitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DisorderOfNutrition: Coding.FromStrict({
+  AdverseEventTypeValueSet_DisorderOfNutrition: new Coding({
     code: "2492009",
     display: "Disorder of nutrition",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalCerebralArteriovenousAneurysm: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalCerebralArteriovenousAneurysm: new Coding({
     code: "2495006",
     display: "Congenital cerebral arteriovenous aneurysm",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Acalculia: Coding.FromStrict({
+  AdverseEventTypeValueSet_Acalculia: new Coding({
     code: "2496007",
     display: "Acalculia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_EarlyOnsetDysthymia: Coding.FromStrict({
+  AdverseEventTypeValueSet_EarlyOnsetDysthymia: new Coding({
     code: "2506003",
     display: "Early onset dysthymia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_TineaCapitisCausedByTrichophyton: Coding.FromStrict({
+  AdverseEventTypeValueSet_TineaCapitisCausedByTrichophyton: new Coding({
     code: "2513003",
     display: "Tinea capitis caused by Trichophyton",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CryptogenicSexualPrecocity: Coding.FromStrict({
+  AdverseEventTypeValueSet_CryptogenicSexualPrecocity: new Coding({
     code: "2518007",
     display: "Cryptogenic sexual precocity",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BoneConductionBetterThanAir: Coding.FromStrict({
+  AdverseEventTypeValueSet_BoneConductionBetterThanAir: new Coding({
     code: "2521009",
     display: "Bone conduction better than air",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SalmonellaPneumonia: Coding.FromStrict({
+  AdverseEventTypeValueSet_SalmonellaPneumonia: new Coding({
     code: "2523007",
     display: "Salmonella pneumonia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NoninflammatoryDisorderOfTheFemaleGenitalOrgans: Coding.FromStrict({
+  AdverseEventTypeValueSet_NoninflammatoryDisorderOfTheFemaleGenitalOrgans: new Coding({
     code: "2526004",
     display: "Noninflammatory disorder of the female genital organs",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Viremia: Coding.FromStrict({
+  AdverseEventTypeValueSet_Viremia: new Coding({
     code: "2528003",
     display: "Viremia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Sycosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Sycosis: new Coding({
     code: "253005",
     display: "Sycosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChoroidalRupture: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChoroidalRupture: new Coding({
     code: "2532009",
     display: "Choroidal rupture",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalAbsenceOfVenaCava: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalAbsenceOfVenaCava: new Coding({
     code: "2534005",
     display: "Congenital absence of vena cava",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Ketosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Ketosis: new Coding({
     code: "2538008",
     display: "Ketosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CompulsiveBuying: Coding.FromStrict({
+  AdverseEventTypeValueSet_CompulsiveBuying: new Coding({
     code: "2541004",
     display: "Compulsive buying",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcutePurulentPericarditis: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcutePurulentPericarditis: new Coding({
     code: "2554006",
     display: "Acute purulent pericarditis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DiseaseOfSupportingStructuresOfTeeth: Coding.FromStrict({
+  AdverseEventTypeValueSet_DiseaseOfSupportingStructuresOfTeeth: new Coding({
     code: "2556008",
     display: "Disease of supporting structures of teeth",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ComplexSyndactylyOfFingers: Coding.FromStrict({
+  AdverseEventTypeValueSet_ComplexSyndactylyOfFingers: new Coding({
     code: "2560006",
     display: "Complex syndactyly of fingers",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AthanasiaTrifurcataPoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_AthanasiaTrifurcataPoisoning: new Coding({
     code: "2562003",
     display: "Athanasia trifurcata poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcneRosaceaErythematousTelangiectaticType: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcneRosaceaErythematousTelangiectaticType: new Coding({
     code: "257006",
     display: "Acne rosacea, erythematous telangiectatic type",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Trachoma: Coding.FromStrict({
+  AdverseEventTypeValueSet_Trachoma: new Coding({
     code: "2576002",
     display: "Trachoma",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PseudoknucklePad: Coding.FromStrict({
+  AdverseEventTypeValueSet_PseudoknucklePad: new Coding({
     code: "258001",
     display: "Pseudoknuckle pad",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ClaspKnifeRigidity: Coding.FromStrict({
+  AdverseEventTypeValueSet_ClaspKnifeRigidity: new Coding({
     code: "2581006",
     display: "Clasp knife rigidity",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DeepThirdDegreeBurnOfMultipleSitesOfLowerLimb: Coding.FromStrict({
+  AdverseEventTypeValueSet_DeepThirdDegreeBurnOfMultipleSitesOfLowerLimb: new Coding({
     code: "2582004",
     display: "Deep third degree burn of multiple sites of lower limb",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FiligreedNetworkOfVenousValves: Coding.FromStrict({
+  AdverseEventTypeValueSet_FiligreedNetworkOfVenousValves: new Coding({
     code: "2583009",
     display: "Filigreed network of venous valves",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CerebralDegenerationInChildhood: Coding.FromStrict({
+  AdverseEventTypeValueSet_CerebralDegenerationInChildhood: new Coding({
     code: "2584003",
     display: "Cerebral degeneration in childhood",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PneumococcalPleurisy: Coding.FromStrict({
+  AdverseEventTypeValueSet_PneumococcalPleurisy: new Coding({
     code: "2585002",
     display: "Pneumococcal pleurisy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcuteDacryoadenitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcuteDacryoadenitis: new Coding({
     code: "2589008",
     display: "Acute dacryoadenitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CrushInjuryOfShoulderRegion: Coding.FromStrict({
+  AdverseEventTypeValueSet_CrushInjuryOfShoulderRegion: new Coding({
     code: "2591000",
     display: "Crush injury of shoulder region",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DubowitzSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_DubowitzSyndrome: new Coding({
     code: "2593002",
     display: "Dubowitz syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HemarthrosisOfShoulder: Coding.FromStrict({
+  AdverseEventTypeValueSet_HemarthrosisOfShoulder: new Coding({
     code: "2602008",
     display: "Hemarthrosis of shoulder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BoilOfPerineum: Coding.FromStrict({
+  AdverseEventTypeValueSet_BoilOfPerineum: new Coding({
     code: "2606006",
     display: "Boil of perineum",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_GraafianFollicleCyst: Coding.FromStrict({
+  AdverseEventTypeValueSet_GraafianFollicleCyst: new Coding({
     code: "2615004",
     display: "Graafian follicle cyst",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChronicRecurrentMajorDepressiveDisorder: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChronicRecurrentMajorDepressiveDisorder: new Coding({
     code: "2618002",
     display: "Chronic recurrent major depressive disorder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfectedUlcerOfSkin: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfectedUlcerOfSkin: new Coding({
     code: "2622007",
     display: "Infected ulcer of skin",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PrepubertalPeriodontitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_PrepubertalPeriodontitis: new Coding({
     code: "2624008",
     display: "Prepubertal periodontitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SenterSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_SenterSyndrome: new Coding({
     code: "2625009",
     display: "Senter syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenWoundOfFingerWithoutComplication: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenWoundOfFingerWithoutComplication: new Coding({
     code: "2630008",
     display: "Open wound of finger without complication",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DecreasedBloodErythrocyteVolume: Coding.FromStrict({
+  AdverseEventTypeValueSet_DecreasedBloodErythrocyteVolume: new Coding({
     code: "2634004",
     display: "Decreased blood erythrocyte volume",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HypercalcemiaCausedByADrug: Coding.FromStrict({
+  AdverseEventTypeValueSet_HypercalcemiaCausedByADrug: new Coding({
     code: "2638001",
     display: "Hypercalcemia caused by a drug",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ClinicalStage4: Coding.FromStrict({
+  AdverseEventTypeValueSet_ClinicalStage4: new Coding({
     code: "2640006",
     display: "Clinical stage 4",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BlindHypertensiveEye: Coding.FromStrict({
+  AdverseEventTypeValueSet_BlindHypertensiveEye: new Coding({
     code: "264008",
     display: "Blind hypertensive eye",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ClosedTraumaticDislocationOfElbowJoint: Coding.FromStrict({
+  AdverseEventTypeValueSet_ClosedTraumaticDislocationOfElbowJoint: new Coding({
     code: "2651006",
     display: "Closed traumatic dislocation of elbow joint",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Invalidism: Coding.FromStrict({
+  AdverseEventTypeValueSet_Invalidism: new Coding({
     code: "2655002",
     display: "Invalidism",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OverflowProteinuria: Coding.FromStrict({
+  AdverseEventTypeValueSet_OverflowProteinuria: new Coding({
     code: "2657005",
     display: "Overflow proteinuria",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PalpatoryProteinuria: Coding.FromStrict({
+  AdverseEventTypeValueSet_PalpatoryProteinuria: new Coding({
     code: "2663001",
     display: "Palpatory proteinuria",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CoordinateConvulsion: Coding.FromStrict({
+  AdverseEventTypeValueSet_CoordinateConvulsion: new Coding({
     code: "2665008",
     display: "Coordinate convulsion",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NonvenomousInsectBiteOfAxillaWithoutInfection: Coding.FromStrict({
+  AdverseEventTypeValueSet_NonvenomousInsectBiteOfAxillaWithoutInfection: new Coding({
     code: "2683000",
     display: "Nonvenomous insect bite of axilla without infection",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DominantDystrophicEpidermolysisBullosaWithAbsenceOfSkin: Coding.FromStrict({
+  AdverseEventTypeValueSet_DominantDystrophicEpidermolysisBullosaWithAbsenceOfSkin: new Coding({
     code: "2689001",
     display: "Dominant dystrophic epidermolysis bullosa with absence of skin",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MyelophthisicAnemia: Coding.FromStrict({
+  AdverseEventTypeValueSet_MyelophthisicAnemia: new Coding({
     code: "2694001",
     display: "Myelophthisic anemia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcuteDisease: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcuteDisease: new Coding({
     code: "2704003",
     display: "Acute disease",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NecrotizingEnterocolitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_NecrotizingEnterocolitis: new Coding({
     code: "2707005",
     display: "Necrotizing enterocolitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ClosedPneumothorax: Coding.FromStrict({
+  AdverseEventTypeValueSet_ClosedPneumothorax: new Coding({
     code: "2713001",
     display: "Closed pneumothorax",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AuditoryRecruitment: Coding.FromStrict({
+  AdverseEventTypeValueSet_AuditoryRecruitment: new Coding({
     code: "2724004",
     display: "Auditory recruitment",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PreviousAbnormalityOfGlucoseTolerance: Coding.FromStrict({
+  AdverseEventTypeValueSet_PreviousAbnormalityOfGlucoseTolerance: new Coding({
     code: "2725003",
     display: "Previous abnormality of glucose tolerance",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HeelPain: Coding.FromStrict({
+  AdverseEventTypeValueSet_HeelPain: new Coding({
     code: "2733002",
     display: "Heel pain",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HoneycombAtrophyOfFace: Coding.FromStrict({
+  AdverseEventTypeValueSet_HoneycombAtrophyOfFace: new Coding({
     code: "2736005",
     display: "Honeycomb atrophy of face",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_GoutyProteinuria: Coding.FromStrict({
+  AdverseEventTypeValueSet_GoutyProteinuria: new Coding({
     code: "2740001",
     display: "Gouty proteinuria",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalDeformityOfHip: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalDeformityOfHip: new Coding({
     code: "2749000",
     display: "Congenital deformity of hip",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FibrocalculousPancreaticDiabetes: Coding.FromStrict({
+  AdverseEventTypeValueSet_FibrocalculousPancreaticDiabetes: new Coding({
     code: "2751001",
     display: "Fibrocalculous pancreatic diabetes",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OxytocinPoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_OxytocinPoisoning: new Coding({
     code: "276008",
     display: "Oxytocin poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DecreasedStoolCaliber: Coding.FromStrict({
+  AdverseEventTypeValueSet_DecreasedStoolCaliber: new Coding({
     code: "2761008",
     display: "Decreased stool caliber",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_JointCrackle: Coding.FromStrict({
+  AdverseEventTypeValueSet_JointCrackle: new Coding({
     code: "2764000",
     display: "Joint crackle",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FetalOrNeonatalEffectOfAntibioticTransmittedViaPlacentaAndOrBreastMilk: Coding.FromStrict({
+  AdverseEventTypeValueSet_FetalOrNeonatalEffectOfAntibioticTransmittedViaPlacentaAndOrBreastMilk: new Coding({
     code: "2770006",
     display: "Fetal or neonatal effect of antibiotic transmitted via placenta and/or breast milk",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_EpidermolysisBullosaAcquisita: Coding.FromStrict({
+  AdverseEventTypeValueSet_EpidermolysisBullosaAcquisita: new Coding({
     code: "2772003",
     display: "Epidermolysis bullosa acquisita",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IntraArticularLooseBody: Coding.FromStrict({
+  AdverseEventTypeValueSet_IntraArticularLooseBody: new Coding({
     code: "2775001",
     display: "Intra-articular loose body",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OrganicBrainSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_OrganicBrainSyndrome: new Coding({
     code: "2776000",
     display: "Organic brain syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MiscarriageComplicatedByDelayedAndOrExcessiveHemorrhage: Coding.FromStrict({
+  AdverseEventTypeValueSet_MiscarriageComplicatedByDelayedAndOrExcessiveHemorrhage: new Coding({
     code: "2781009",
     display: "Miscarriage complicated by delayed and/or excessive hemorrhage",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_TemporomandibularDysplasia: Coding.FromStrict({
+  AdverseEventTypeValueSet_TemporomandibularDysplasia: new Coding({
     code: "2782002",
     display: "Temporomandibular dysplasia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_GastrojejunalUlcerWithoutHemorrhageANDWithoutPerforation: Coding.FromStrict({
+  AdverseEventTypeValueSet_GastrojejunalUlcerWithoutHemorrhageANDWithoutPerforation: new Coding({
     code: "2783007",
     display: "Gastrojejunal ulcer without hemorrhage AND without perforation",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_EpithelialOvarianTumorInternationalFederationOfGynecologyAndObstetricsStageIII: Coding.FromStrict({
+  AdverseEventTypeValueSet_EpithelialOvarianTumorInternationalFederationOfGynecologyAndObstetricsStageIII: new Coding({
     code: "2786004",
     display: "Epithelial ovarian tumor, International Federation of Gynecology and Obstetrics stage III",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ImpairmentLevelOneEyeTotalImpairmentOtherEyeNotSpecified: Coding.FromStrict({
+  AdverseEventTypeValueSet_ImpairmentLevelOneEyeTotalImpairmentOtherEyeNotSpecified: new Coding({
     code: "2790002",
     display: "Impairment level: one eye: total impairment: other eye: not specified",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SenileMyocarditis: Coding.FromStrict({
+  AdverseEventTypeValueSet_SenileMyocarditis: new Coding({
     code: "279001",
     display: "Senile myocarditis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PhosmetPoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_PhosmetPoisoning: new Coding({
     code: "2805007",
     display: "Phosmet poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ImpairedPsychomotorDevelopment: Coding.FromStrict({
+  AdverseEventTypeValueSet_ImpairedPsychomotorDevelopment: new Coding({
     code: "2806008",
     display: "Impaired psychomotor development",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChronicGastrojejunalUlcerWithPerforation: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChronicGastrojejunalUlcerWithPerforation: new Coding({
     code: "2807004",
     display: "Chronic gastrojejunal ulcer with perforation",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfectionCausedByProsthenorchisElegans: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfectionCausedByProsthenorchisElegans: new Coding({
     code: "2808009",
     display: "Infection caused by Prosthenorchis elegans",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AlcoholicDementia: Coding.FromStrict({
+  AdverseEventTypeValueSet_AlcoholicDementia: new Coding({
     code: "281004",
     display: "Alcoholic dementia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SexualPyromania: Coding.FromStrict({
+  AdverseEventTypeValueSet_SexualPyromania: new Coding({
     code: "2815001",
     display: "Sexual pyromania",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DilatedCardiomyopathySecondaryToMyotonicDystrophy: Coding.FromStrict({
+  AdverseEventTypeValueSet_DilatedCardiomyopathySecondaryToMyotonicDystrophy: new Coding({
     code: "2816000",
     display: "Dilated cardiomyopathy secondary to myotonic dystrophy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalVascularAnomalyOfEye: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalVascularAnomalyOfEye: new Coding({
     code: "2818004",
     display: "Congenital vascular anomaly of eye",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MagnesiumSulfatePoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_MagnesiumSulfatePoisoning: new Coding({
     code: "2819007",
     display: "Magnesium sulfate poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcuteMyocardialInfarctionOfBasalLateralWall: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcuteMyocardialInfarctionOfBasalLateralWall: new Coding({
     code: "282006",
     display: "Acute myocardial infarction of basal-lateral wall",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AbrasionAndOrFrictionBurnOfGumWithoutInfection: Coding.FromStrict({
+  AdverseEventTypeValueSet_AbrasionAndOrFrictionBurnOfGumWithoutInfection: new Coding({
     code: "2825006",
     display: "Abrasion and/or friction burn of gum without infection",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalStenosisOfNares: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalStenosisOfNares: new Coding({
     code: "2828008",
     display: "Congenital stenosis of nares",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_UhlDisease: Coding.FromStrict({
+  AdverseEventTypeValueSet_UhlDisease: new Coding({
     code: "2829000",
     display: "Uhl disease",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PyloricAntralVascularEctasia: Coding.FromStrict({
+  AdverseEventTypeValueSet_PyloricAntralVascularEctasia: new Coding({
     code: "2831009",
     display: "Pyloric antral vascular ectasia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HemolyticAnemiaDueToCardiacTrauma: Coding.FromStrict({
+  AdverseEventTypeValueSet_HemolyticAnemiaDueToCardiacTrauma: new Coding({
     code: "2835000",
     display: "Hemolytic anemia due to cardiac trauma",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ButaneCausingToxicEffect: Coding.FromStrict({
+  AdverseEventTypeValueSet_ButaneCausingToxicEffect: new Coding({
     code: "2836004",
     display: "Butane causing toxic effect",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Piblokto: Coding.FromStrict({
+  AdverseEventTypeValueSet_Piblokto: new Coding({
     code: "2838003",
     display: "Piblokto",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenFractureOfVaultOfSkullWithCerebralLacerationANDORContusion: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenFractureOfVaultOfSkullWithCerebralLacerationANDORContusion: new Coding({
     code: "2840008",
     display: "Open fracture of vault of skull with cerebral laceration AND/OR contusion",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfectionCausedBySchistosomaIncognitum: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfectionCausedBySchistosomaIncognitum: new Coding({
     code: "2850009",
     display: "Infection caused by Schistosoma incognitum",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MacularKeratitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_MacularKeratitis: new Coding({
     code: "2853006",
     display: "Macular keratitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_VitaminAResponsiveDermatosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_VitaminAResponsiveDermatosis: new Coding({
     code: "2856003",
     display: "Vitamin A-responsive dermatosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PostpartumSepsis: Coding.FromStrict({
+  AdverseEventTypeValueSet_PostpartumSepsis: new Coding({
     code: "2858002",
     display: "Postpartum sepsis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SpherophakiaBrachymorphiaSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_SpherophakiaBrachymorphiaSyndrome: new Coding({
     code: "2884008",
     display: "Spherophakia-brachymorphia syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AnomalyOfChromosomePair10: Coding.FromStrict({
+  AdverseEventTypeValueSet_AnomalyOfChromosomePair10: new Coding({
     code: "2893009",
     display: "Anomaly of chromosome pair 10",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ImmuneThrombocytopenia: Coding.FromStrict({
+  AdverseEventTypeValueSet_ImmuneThrombocytopenia: new Coding({
     code: "2897005",
     display: "Immune thrombocytopenia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ThoughtBlocking: Coding.FromStrict({
+  AdverseEventTypeValueSet_ThoughtBlocking: new Coding({
     code: "2899008",
     display: "Thought blocking",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FibromuscularDysplasiaOfRenalArtery: Coding.FromStrict({
+  AdverseEventTypeValueSet_FibromuscularDysplasiaOfRenalArtery: new Coding({
     code: "2900003",
     display: "Fibromuscular dysplasia of renal artery",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MelnickFraserSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_MelnickFraserSyndrome: new Coding({
     code: "290006",
     display: "Melnick-Fraser syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AlteredBloodPassedPerRectum: Coding.FromStrict({
+  AdverseEventTypeValueSet_AlteredBloodPassedPerRectum: new Coding({
     code: "2901004",
     display: "Altered blood passed per rectum",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DecreasedLymphocyteLifeSpan: Coding.FromStrict({
+  AdverseEventTypeValueSet_DecreasedLymphocyteLifeSpan: new Coding({
     code: "2902006",
     display: "Decreased lymphocyte life span",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MaleInfertility: Coding.FromStrict({
+  AdverseEventTypeValueSet_MaleInfertility: new Coding({
     code: "2904007",
     display: "Male infertility",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DischargeFromPenis: Coding.FromStrict({
+  AdverseEventTypeValueSet_DischargeFromPenis: new Coding({
     code: "2910007",
     display: "Discharge from penis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CysticBullousDiseaseOfTheLung: Coding.FromStrict({
+  AdverseEventTypeValueSet_CysticBullousDiseaseOfTheLung: new Coding({
     code: "2912004",
     display: "Cystic-bullous disease of the lung",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_TransientHypothyroidism: Coding.FromStrict({
+  AdverseEventTypeValueSet_TransientHypothyroidism: new Coding({
     code: "2917005",
     display: "Transient hypothyroidism",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfectionCausedByBacteroides: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfectionCausedByBacteroides: new Coding({
     code: "2918000",
     display: "Infection caused by Bacteroides",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NauseaVomitingAndDiarrhea: Coding.FromStrict({
+  AdverseEventTypeValueSet_NauseaVomitingAndDiarrhea: new Coding({
     code: "2919008",
     display: "Nausea, vomiting and diarrhea",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_EEGFinding: Coding.FromStrict({
+  AdverseEventTypeValueSet_EEGFinding: new Coding({
     code: "292003",
     display: "EEG finding",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ArterialOcclusion: Coding.FromStrict({
+  AdverseEventTypeValueSet_ArterialOcclusion: new Coding({
     code: "2929001",
     display: "Arterial occlusion",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AntiasthmaticPoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_AntiasthmaticPoisoning: new Coding({
     code: "2935001",
     display: "Antiasthmatic poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IntrabasalVesicularDermatitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_IntrabasalVesicularDermatitis: new Coding({
     code: "2940009",
     display: "Intrabasal vesicular dermatitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OsmoticDiarrhea: Coding.FromStrict({
+  AdverseEventTypeValueSet_OsmoticDiarrhea: new Coding({
     code: "2946003",
     display: "Osmotic diarrhea",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AtopicCataract: Coding.FromStrict({
+  AdverseEventTypeValueSet_AtopicCataract: new Coding({
     code: "2951009",
     display: "Atopic cataract",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChronicUlcerativePulpitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChronicUlcerativePulpitis: new Coding({
     code: "2955000",
     display: "Chronic ulcerative pulpitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NevoidCongenitalAlopecia: Coding.FromStrict({
+  AdverseEventTypeValueSet_NevoidCongenitalAlopecia: new Coding({
     code: "2965006",
     display: "Nevoid congenital alopecia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NonComitantStrabismus: Coding.FromStrict({
+  AdverseEventTypeValueSet_NonComitantStrabismus: new Coding({
     code: "2967003",
     display: "Non-comitant strabismus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcuteMyringitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcuteMyringitis: new Coding({
     code: "297009",
     display: "Acute myringitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OcclusionOfAnteriorSpinalArtery: Coding.FromStrict({
+  AdverseEventTypeValueSet_OcclusionOfAnteriorSpinalArtery: new Coding({
     code: "2972007",
     display: "Occlusion of anterior spinal artery",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PelvicOrganInjuryWithoutOpenWoundIntoAbdominalCavity: Coding.FromStrict({
+  AdverseEventTypeValueSet_PelvicOrganInjuryWithoutOpenWoundIntoAbdominalCavity: new Coding({
     code: "2973002",
     display: "Pelvic organ injury without open wound into abdominal cavity",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AneurysmOfConjunctiva: Coding.FromStrict({
+  AdverseEventTypeValueSet_AneurysmOfConjunctiva: new Coding({
     code: "2978006",
     display: "Aneurysm of conjunctiva",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PulsatileMassOfAbdomen: Coding.FromStrict({
+  AdverseEventTypeValueSet_PulsatileMassOfAbdomen: new Coding({
     code: "2981001",
     display: "Pulsatile mass of abdomen",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ComplicationFollowingMolarANDOREctopicPregnancy: Coding.FromStrict({
+  AdverseEventTypeValueSet_ComplicationFollowingMolarANDOREctopicPregnancy: new Coding({
     code: "2989004",
     display: "Complication following molar AND/OR ectopic pregnancy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LymphocyticLeukemoidReaction: Coding.FromStrict({
+  AdverseEventTypeValueSet_LymphocyticLeukemoidReaction: new Coding({
     code: "2990008",
     display: "Lymphocytic leukemoid reaction",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ParaffinomaOfSkin: Coding.FromStrict({
+  AdverseEventTypeValueSet_ParaffinomaOfSkin: new Coding({
     code: "299007",
     display: "Paraffinoma of skin",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PigmentaryPallidalDegeneration: Coding.FromStrict({
+  AdverseEventTypeValueSet_PigmentaryPallidalDegeneration: new Coding({
     code: "2992000",
     display: "Pigmentary pallidal degeneration",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BrainFag: Coding.FromStrict({
+  AdverseEventTypeValueSet_BrainFag: new Coding({
     code: "2994004",
     display: "Brain fag",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InjuryOfEarRegion: Coding.FromStrict({
+  AdverseEventTypeValueSet_InjuryOfEarRegion: new Coding({
     code: "2999009",
     display: "Injury of ear region",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ThyroidHemorrhage: Coding.FromStrict({
+  AdverseEventTypeValueSet_ThyroidHemorrhage: new Coding({
     code: "3002002",
     display: "Thyroid hemorrhage",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalDilatationOfEsophagus: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalDilatationOfEsophagus: new Coding({
     code: "3004001",
     display: "Congenital dilatation of esophagus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AlteredConsciousness: Coding.FromStrict({
+  AdverseEventTypeValueSet_AlteredConsciousness: new Coding({
     code: "3006004",
     display: "Altered consciousness",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SolanumMalacoxylonPoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_SolanumMalacoxylonPoisoning: new Coding({
     code: "3009006",
     display: "Solanum malacoxylon poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenWoundOfEarDrumWithoutComplication: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenWoundOfEarDrumWithoutComplication: new Coding({
     code: "3013004",
     display: "Open wound of ear drum without complication",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Autoeczematization: Coding.FromStrict({
+  AdverseEventTypeValueSet_Autoeczematization: new Coding({
     code: "3014005",
     display: "Autoeczematization",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PenetrationOfEyeballWithMagneticForeignBody: Coding.FromStrict({
+  AdverseEventTypeValueSet_PenetrationOfEyeballWithMagneticForeignBody: new Coding({
     code: "3018008",
     display: "Penetration of eyeball with magnetic foreign body",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ClosedAnteriorDislocationOfElbow: Coding.FromStrict({
+  AdverseEventTypeValueSet_ClosedAnteriorDislocationOfElbow: new Coding({
     code: "3019000",
     display: "Closed anterior dislocation of elbow",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NormalGastricAcidity: Coding.FromStrict({
+  AdverseEventTypeValueSet_NormalGastricAcidity: new Coding({
     code: "3021005",
     display: "Normal gastric acidity",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcutePepticUlcerWithoutHemorrhageWithoutPerforationANDWithoutObstruction: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcutePepticUlcerWithoutHemorrhageWithoutPerforationANDWithoutObstruction: new Coding({
     code: "3023008",
     display: "Acute peptic ulcer without hemorrhage, without perforation AND without obstruction",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ApoplecticPancreatitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_ApoplecticPancreatitis: new Coding({
     code: "303002",
     display: "Apoplectic pancreatitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NonvenomousInsectBiteOfCheekWithoutInfection: Coding.FromStrict({
+  AdverseEventTypeValueSet_NonvenomousInsectBiteOfCheekWithoutInfection: new Coding({
     code: "3032005",
     display: "Nonvenomous insect bite of cheek without infection",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BoneANDORJointDisorderOfPelvisInMotherComplicatingPregnancyChildbirthANDORPuerperium: Coding.FromStrict({
+  AdverseEventTypeValueSet_BoneANDORJointDisorderOfPelvisInMotherComplicatingPregnancyChildbirthANDORPuerperium: new Coding({
     code: "3033000",
     display: "Bone AND/OR joint disorder of pelvis in mother complicating pregnancy, childbirth AND/OR puerperium",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcuteLymphangitisOfUmbilicus: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcuteLymphangitisOfUmbilicus: new Coding({
     code: "3038009",
     display: "Acute lymphangitis of umbilicus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_VitreousProlapse: Coding.FromStrict({
+  AdverseEventTypeValueSet_VitreousProlapse: new Coding({
     code: "3044008",
     display: "Vitreous prolapse",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PoisoningCausedByNitroglycerin: Coding.FromStrict({
+  AdverseEventTypeValueSet_PoisoningCausedByNitroglycerin: new Coding({
     code: "3053001",
     display: "Poisoning caused by nitroglycerin",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcuteLymphangitisOfThigh: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcuteLymphangitisOfThigh: new Coding({
     code: "3059002",
     display: "Acute lymphangitis of thigh",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_WeakCPhenotype: Coding.FromStrict({
+  AdverseEventTypeValueSet_WeakCPhenotype: new Coding({
     code: "3067005",
     display: "Weak C phenotype",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Widow: Coding.FromStrict({
+  AdverseEventTypeValueSet_Widow: new Coding({
     code: "3071008",
     display: "Widow",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HormoneInducedHypopituitarism: Coding.FromStrict({
+  AdverseEventTypeValueSet_HormoneInducedHypopituitarism: new Coding({
     code: "3072001",
     display: "Hormone-induced hypopituitarism",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_RuvalcabaSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_RuvalcabaSyndrome: new Coding({
     code: "3073006",
     display: "Ruvalcaba syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PearlyPenilePapules: Coding.FromStrict({
+  AdverseEventTypeValueSet_PearlyPenilePapules: new Coding({
     code: "308006",
     display: "Pearly penile papules",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NonvenomousInsectBiteOfGumWithoutInfection: Coding.FromStrict({
+  AdverseEventTypeValueSet_NonvenomousInsectBiteOfGumWithoutInfection: new Coding({
     code: "3084004",
     display: "Nonvenomous insect bite of gum without infection",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DisabilityEvaluationImpairmentClass7: Coding.FromStrict({
+  AdverseEventTypeValueSet_DisabilityEvaluationImpairmentClass7: new Coding({
     code: "3089009",
     display: "Disability evaluation, impairment, class 7",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_VomitingInInfantsANDORChildren: Coding.FromStrict({
+  AdverseEventTypeValueSet_VomitingInInfantsANDORChildren: new Coding({
     code: "3094009",
     display: "Vomiting in infants AND/OR children",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InducedMalaria: Coding.FromStrict({
+  AdverseEventTypeValueSet_InducedMalaria: new Coding({
     code: "3095005",
     display: "Induced malaria",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SuperficialInjuryOfLipWithInfection: Coding.FromStrict({
+  AdverseEventTypeValueSet_SuperficialInjuryOfLipWithInfection: new Coding({
     code: "3097002",
     display: "Superficial injury of lip with infection",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_VentricularSeptalRupture: Coding.FromStrict({
+  AdverseEventTypeValueSet_VentricularSeptalRupture: new Coding({
     code: "3098007",
     display: "Ventricular septal rupture",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PenileBoil: Coding.FromStrict({
+  AdverseEventTypeValueSet_PenileBoil: new Coding({
     code: "310008",
     display: "Penile boil",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Intron: Coding.FromStrict({
+  AdverseEventTypeValueSet_Intron: new Coding({
     code: "3105002",
     display: "Intron",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SecondaryDysthymiaEarlyOnset: Coding.FromStrict({
+  AdverseEventTypeValueSet_SecondaryDysthymiaEarlyOnset: new Coding({
     code: "3109008",
     display: "Secondary dysthymia early onset",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AOMAcuteOtitisMedia: Coding.FromStrict({
+  AdverseEventTypeValueSet_AOMAcuteOtitisMedia: new Coding({
     code: "3110003",
     display: "AOM - Acute otitis media",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BrainStemLacerationWithOpenIntracranialWoundANDLossOfConsciousness: Coding.FromStrict({
+  AdverseEventTypeValueSet_BrainStemLacerationWithOpenIntracranialWoundANDLossOfConsciousness: new Coding({
     code: "3119002",
     display: "Brain stem laceration with open intracranial wound AND loss of consciousness",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfarctionOfOvary: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfarctionOfOvary: new Coding({
     code: "3129009",
     display: "Infarction of ovary",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DejaVu: Coding.FromStrict({
+  AdverseEventTypeValueSet_DejaVu: new Coding({
     code: "313005",
     display: "Déjà vu",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OEOtitisExterna: Coding.FromStrict({
+  AdverseEventTypeValueSet_OEOtitisExterna: new Coding({
     code: "3135009",
     display: "OE - Otitis externa",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CitrullinemiaSubacuteType: Coding.FromStrict({
+  AdverseEventTypeValueSet_CitrullinemiaSubacuteType: new Coding({
     code: "3140001",
     display: "Citrullinemia, subacute type",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_StaphylococcalPleurisy: Coding.FromStrict({
+  AdverseEventTypeValueSet_StaphylococcalPleurisy: new Coding({
     code: "3144005",
     display: "Staphylococcal pleurisy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PanicDisorderWithAgoraphobiaAgoraphobicAvoidanceInPartialRemissionANDPanicAttacksInPartialRemission: Coding.FromStrict({
+  AdverseEventTypeValueSet_PanicDisorderWithAgoraphobiaAgoraphobicAvoidanceInPartialRemissionANDPanicAttacksInPartialRemission: new Coding({
     code: "3158007",
     display: "Panic disorder with agoraphobia, agoraphobic avoidance in partial remission AND panic attacks in partial remission",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfertilityOfCervicalOrigin: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfertilityOfCervicalOrigin: new Coding({
     code: "3160009",
     display: "Infertility of cervical origin",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcuteAdenoviralFollicularConjunctivitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcuteAdenoviralFollicularConjunctivitis: new Coding({
     code: "3163006",
     display: "Acute adenoviral follicular conjunctivitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ThrombophlebitisOfIntracranialVenousSinus: Coding.FromStrict({
+  AdverseEventTypeValueSet_ThrombophlebitisOfIntracranialVenousSinus: new Coding({
     code: "3168002",
     display: "Thrombophlebitis of intracranial venous sinus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ReactiveHypoglycemia: Coding.FromStrict({
+  AdverseEventTypeValueSet_ReactiveHypoglycemia: new Coding({
     code: "317006",
     display: "Reactive hypoglycemia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MoodCongruentDelusion: Coding.FromStrict({
+  AdverseEventTypeValueSet_MoodCongruentDelusion: new Coding({
     code: "3185000",
     display: "Mood-congruent delusion",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SprainOfShoulderJoint: Coding.FromStrict({
+  AdverseEventTypeValueSet_SprainOfShoulderJoint: new Coding({
     code: "3199001",
     display: "Sprain of shoulder joint",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Sacrocoxalgia: Coding.FromStrict({
+  AdverseEventTypeValueSet_Sacrocoxalgia: new Coding({
     code: "3200003",
     display: "Sacrocoxalgia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CervicalDilatation1cm: Coding.FromStrict({
+  AdverseEventTypeValueSet_CervicalDilatation1cm: new Coding({
     code: "320003",
     display: "Cervical dilatation, 1cm",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenWoundOfOssiclesWithoutComplication: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenWoundOfOssiclesWithoutComplication: new Coding({
     code: "3208005",
     display: "Open wound of ossicles without complication",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InvasivePulmonaryAspergillosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_InvasivePulmonaryAspergillosis: new Coding({
     code: "3214003",
     display: "Invasive pulmonary aspergillosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenDislocationOfSixthCervicalVertebra: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenDislocationOfSixthCervicalVertebra: new Coding({
     code: "3217005",
     display: "Open dislocation of sixth cervical vertebra",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MycoticDisease: Coding.FromStrict({
+  AdverseEventTypeValueSet_MycoticDisease: new Coding({
     code: "3218000",
     display: "Mycotic disease",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DiseaseTypeANDORCategoryUnknown: Coding.FromStrict({
+  AdverseEventTypeValueSet_DiseaseTypeANDORCategoryUnknown: new Coding({
     code: "3219008",
     display: "Disease type AND/OR category unknown",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ClosedFractureOfTheRadialShaft: Coding.FromStrict({
+  AdverseEventTypeValueSet_ClosedFractureOfTheRadialShaft: new Coding({
     code: "3228009",
     display: "Closed fracture of the radial shaft",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_TrachealUlcer: Coding.FromStrict({
+  AdverseEventTypeValueSet_TrachealUlcer: new Coding({
     code: "3229001",
     display: "Tracheal ulcer",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IllegalTerminationOfPregnancyWithAfibrinogenemia: Coding.FromStrict({
+  AdverseEventTypeValueSet_IllegalTerminationOfPregnancyWithAfibrinogenemia: new Coding({
     code: "3230006",
     display: "Illegal termination of pregnancy with afibrinogenemia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Pericarditis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Pericarditis: new Coding({
     code: "3238004",
     display: "Pericarditis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LymphocyteDisorder: Coding.FromStrict({
+  AdverseEventTypeValueSet_LymphocyteDisorder: new Coding({
     code: "3239007",
     display: "Lymphocyte disorder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PlasterUlcer: Coding.FromStrict({
+  AdverseEventTypeValueSet_PlasterUlcer: new Coding({
     code: "324007",
     display: "Plaster ulcer",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Dyschromia: Coding.FromStrict({
+  AdverseEventTypeValueSet_Dyschromia: new Coding({
     code: "3253007",
     display: "Dyschromia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfectionCausedByStrongyloidesWesteri: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfectionCausedByStrongyloidesWesteri: new Coding({
     code: "3254001",
     display: "Infection caused by Strongyloides westeri",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HomeriaSpeciesPoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_HomeriaSpeciesPoisoning: new Coding({
     code: "3259006",
     display: "Homeria species poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MigratoryOsteolysis: Coding.FromStrict({
+  AdverseEventTypeValueSet_MigratoryOsteolysis: new Coding({
     code: "3261002",
     display: "Migratory osteolysis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Verumontanitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Verumontanitis: new Coding({
     code: "3263004",
     display: "Verumontanitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Stomatocytosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Stomatocytosis: new Coding({
     code: "3272007",
     display: "Stomatocytosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FlatChest: Coding.FromStrict({
+  AdverseEventTypeValueSet_FlatChest: new Coding({
     code: "3274008",
     display: "Flat chest",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BehcetSyndromeVascularType: Coding.FromStrict({
+  AdverseEventTypeValueSet_BehcetSyndromeVascularType: new Coding({
     code: "3275009",
     display: "Behcet syndrome, vascular type",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ToadPoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_ToadPoisoning: new Coding({
     code: "3276005",
     display: "Toad poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_TerminalMoodInsomnia: Coding.FromStrict({
+  AdverseEventTypeValueSet_TerminalMoodInsomnia: new Coding({
     code: "3277001",
     display: "Terminal mood insomnia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ArcEye: Coding.FromStrict({
+  AdverseEventTypeValueSet_ArcEye: new Coding({
     code: "3282008",
     display: "Arc eye",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FeelingOfSandOrForeignBodyInEye: Coding.FromStrict({
+  AdverseEventTypeValueSet_FeelingOfSandOrForeignBodyInEye: new Coding({
     code: "3283003",
     display: "Feeling of sand or foreign body in eye",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PatientStatusDeterminationGreatlyImproved: Coding.FromStrict({
+  AdverseEventTypeValueSet_PatientStatusDeterminationGreatlyImproved: new Coding({
     code: "3286006",
     display: "Patient status determination, greatly improved",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Anisometropia: Coding.FromStrict({
+  AdverseEventTypeValueSet_Anisometropia: new Coding({
     code: "3289004",
     display: "Anisometropia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ClosedFractureOfTwoRibs: Coding.FromStrict({
+  AdverseEventTypeValueSet_ClosedFractureOfTwoRibs: new Coding({
     code: "3291007",
     display: "Closed fracture of two ribs",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AmnesticSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_AmnesticSyndrome: new Coding({
     code: "3298001",
     display: "Amnestic syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OccipitalHeadache: Coding.FromStrict({
+  AdverseEventTypeValueSet_OccipitalHeadache: new Coding({
     code: "330007",
     display: "Occipital headache",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DiseaseCausedByArenavirus: Coding.FromStrict({
+  AdverseEventTypeValueSet_DiseaseCausedByArenavirus: new Coding({
     code: "3303004",
     display: "Disease caused by Arenavirus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BronchialCompression: Coding.FromStrict({
+  AdverseEventTypeValueSet_BronchialCompression: new Coding({
     code: "3304005",
     display: "Bronchial compression",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DisorderOfLymphaticVessel: Coding.FromStrict({
+  AdverseEventTypeValueSet_DisorderOfLymphaticVessel: new Coding({
     code: "3305006",
     display: "Disorder of lymphatic vessel",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AtrophicHyperplasticGastritis: Coding.FromStrict({
+  AdverseEventTypeValueSet_AtrophicHyperplasticGastritis: new Coding({
     code: "3308008",
     display: "Atrophic-hyperplastic gastritis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ForeignBodyGranulomaOfSkin: Coding.FromStrict({
+  AdverseEventTypeValueSet_ForeignBodyGranulomaOfSkin: new Coding({
     code: "3310005",
     display: "Foreign body granuloma of skin",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_RenalAbscess: Coding.FromStrict({
+  AdverseEventTypeValueSet_RenalAbscess: new Coding({
     code: "3321001",
     display: "Renal abscess",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LeukoplakiaOfPenis: Coding.FromStrict({
+  AdverseEventTypeValueSet_LeukoplakiaOfPenis: new Coding({
     code: "3323003",
     display: "Leukoplakia of penis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcquiredJerkNystagmus: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcquiredJerkNystagmus: new Coding({
     code: "3327002",
     display: "Acquired jerk nystagmus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenFractureOfNeckOfMetacarpalBone: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenFractureOfNeckOfMetacarpalBone: new Coding({
     code: "3331008",
     display: "Open fracture of neck of metacarpal bone",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ToxicLabyrinthitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_ToxicLabyrinthitis: new Coding({
     code: "3344003",
     display: "Toxic labyrinthitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IdiopathicOsteoporosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_IdiopathicOsteoporosis: new Coding({
     code: "3345002",
     display: "Idiopathic osteoporosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Pylorospasm: Coding.FromStrict({
+  AdverseEventTypeValueSet_Pylorospasm: new Coding({
     code: "335002",
     display: "Pylorospasm",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AntiCommonColdDrugPoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_AntiCommonColdDrugPoisoning: new Coding({
     code: "3355003",
     display: "Anti-common cold drug poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LichenRuberMoniliformis: Coding.FromStrict({
+  AdverseEventTypeValueSet_LichenRuberMoniliformis: new Coding({
     code: "3358001",
     display: "Lichen ruber moniliformis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DullChestPain: Coding.FromStrict({
+  AdverseEventTypeValueSet_DullChestPain: new Coding({
     code: "3368006",
     display: "Dull chest pain",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Pseudoptyalism: Coding.FromStrict({
+  AdverseEventTypeValueSet_Pseudoptyalism: new Coding({
     code: "3376008",
     display: "Pseudoptyalism",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenFractureOfAstragalus: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenFractureOfAstragalus: new Coding({
     code: "3381004",
     display: "Open fracture of astragalus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AuditoryDiscriminationAphasia: Coding.FromStrict({
+  AdverseEventTypeValueSet_AuditoryDiscriminationAphasia: new Coding({
     code: "3387000",
     display: "Auditory discrimination aphasia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NegativeForTumorCells: Coding.FromStrict({
+  AdverseEventTypeValueSet_NegativeForTumorCells: new Coding({
     code: "3391005",
     display: "Negative for tumor cells",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PhlebitisFollowingInfusionPerfusionANDORTransfusion: Coding.FromStrict({
+  AdverseEventTypeValueSet_PhlebitisFollowingInfusionPerfusionANDORTransfusion: new Coding({
     code: "3393008",
     display: "Phlebitis following infusion, perfusion AND/OR transfusion",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CadmiumPoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_CadmiumPoisoning: new Coding({
     code: "3398004",
     display: "Cadmium poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CercopithecusHerpesvirus1Disease: Coding.FromStrict({
+  AdverseEventTypeValueSet_CercopithecusHerpesvirus1Disease: new Coding({
     code: "3401001",
     display: "Cercopithecus herpesvirus 1 disease",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ABOIncompatibilityReaction: Coding.FromStrict({
+  AdverseEventTypeValueSet_ABOIncompatibilityReaction: new Coding({
     code: "341009",
     display: "ABO incompatibility reaction",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Cyanosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Cyanosis: new Coding({
     code: "3415004",
     display: "Cyanosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FaucialDiphtheria: Coding.FromStrict({
+  AdverseEventTypeValueSet_FaucialDiphtheria: new Coding({
     code: "3419005",
     display: "Faucial diphtheria",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenBlowOutFractureOrbit: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenBlowOutFractureOrbit: new Coding({
     code: "3421000",
     display: "Open blow-out fracture orbit",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HeartRateFast: Coding.FromStrict({
+  AdverseEventTypeValueSet_HeartRateFast: new Coding({
     code: "3424008",
     display: "Heart rate fast",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_RetainedMagneticIntraocularForeignBody: Coding.FromStrict({
+  AdverseEventTypeValueSet_RetainedMagneticIntraocularForeignBody: new Coding({
     code: "3426005",
     display: "Retained magnetic intraocular foreign body",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NonglucosuricMelituria: Coding.FromStrict({
+  AdverseEventTypeValueSet_NonglucosuricMelituria: new Coding({
     code: "3427001",
     display: "Nonglucosuric melituria",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Myotonia: Coding.FromStrict({
+  AdverseEventTypeValueSet_Myotonia: new Coding({
     code: "3434004",
     display: "Myotonia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SevereCombinedImmunodeficiencySCIDDueToAbsentPeripheralTCellMaturation: Coding.FromStrict({
+  AdverseEventTypeValueSet_SevereCombinedImmunodeficiencySCIDDueToAbsentPeripheralTCellMaturation: new Coding({
     code: "3439009",
     display: "Severe combined immunodeficiency (SCID) due to absent peripheral T cell maturation",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DisorderOfSebaceousGland: Coding.FromStrict({
+  AdverseEventTypeValueSet_DisorderOfSebaceousGland: new Coding({
     code: "3441005",
     display: "Disorder of sebaceous gland",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenFractureOfT7T12LevelWithSpinalCordInjury: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenFractureOfT7T12LevelWithSpinalCordInjury: new Coding({
     code: "3446000",
     display: "Open fracture of T7-T12 level with spinal cord injury",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FingerAgnosia: Coding.FromStrict({
+  AdverseEventTypeValueSet_FingerAgnosia: new Coding({
     code: "3449007",
     display: "Finger agnosia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChronicProgressiveNonHereditaryChorea: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChronicProgressiveNonHereditaryChorea: new Coding({
     code: "3456001",
     display: "Chronic progressive non-hereditary chorea",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MyositisOssificansAssociatedWithDermatoPolymyositis: Coding.FromStrict({
+  AdverseEventTypeValueSet_MyositisOssificansAssociatedWithDermatoPolymyositis: new Coding({
     code: "3458000",
     display: "Myositis ossificans associated with dermato / polymyositis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DeepThirdDegreeBurnOfThumb: Coding.FromStrict({
+  AdverseEventTypeValueSet_DeepThirdDegreeBurnOfThumb: new Coding({
     code: "3461004",
     display: "Deep third degree burn of thumb",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfectionCausedByOesophagostomumDentatum: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfectionCausedByOesophagostomumDentatum: new Coding({
     code: "3464007",
     display: "Infection caused by Oesophagostomum dentatum",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NeonatalInfectiveMastitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_NeonatalInfectiveMastitis: new Coding({
     code: "3468005",
     display: "Neonatal infective mastitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PartialThicknessBurnOfThumb: Coding.FromStrict({
+  AdverseEventTypeValueSet_PartialThicknessBurnOfThumb: new Coding({
     code: "3469002",
     display: "Partial thickness burn of thumb",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SpondylolisthesisGrade4: Coding.FromStrict({
+  AdverseEventTypeValueSet_SpondylolisthesisGrade4: new Coding({
     code: "3472009",
     display: "Spondylolisthesis, grade 4",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_GlycineMaxPoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_GlycineMaxPoisoning: new Coding({
     code: "3474005",
     display: "Glycine max poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BurnOfWrist: Coding.FromStrict({
+  AdverseEventTypeValueSet_BurnOfWrist: new Coding({
     code: "3480002",
     display: "Burn of wrist",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PostoperativeEsophagitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_PostoperativeEsophagitis: new Coding({
     code: "3482005",
     display: "Postoperative esophagitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChronicPepticUlcerWithPerforation: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChronicPepticUlcerWithPerforation: new Coding({
     code: "3483000",
     display: "Chronic peptic ulcer with perforation",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PulmonaryCandidiasis: Coding.FromStrict({
+  AdverseEventTypeValueSet_PulmonaryCandidiasis: new Coding({
     code: "3487004",
     display: "Pulmonary candidiasis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AbsentTendonReflex: Coding.FromStrict({
+  AdverseEventTypeValueSet_AbsentTendonReflex: new Coding({
     code: "349006",
     display: "Absent tendon reflex",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenWoundOfOssiclesWithComplication: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenWoundOfOssiclesWithComplication: new Coding({
     code: "3500002",
     display: "Open wound of ossicles with complication",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CervicalLymphadenitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_CervicalLymphadenitis: new Coding({
     code: "3502005",
     display: "Cervical lymphadenitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_GenderIdentityDisorderOfAdolescencePreviouslyAsexual: Coding.FromStrict({
+  AdverseEventTypeValueSet_GenderIdentityDisorderOfAdolescencePreviouslyAsexual: new Coding({
     code: "3503000",
     display: "Gender identity disorder of adolescence, previously asexual",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NonallopathicLesionOfTheArm: Coding.FromStrict({
+  AdverseEventTypeValueSet_NonallopathicLesionOfTheArm: new Coding({
     code: "3505007",
     display: "Nonallopathic lesion of the arm",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_StenosisOfRetinalArtery: Coding.FromStrict({
+  AdverseEventTypeValueSet_StenosisOfRetinalArtery: new Coding({
     code: "3506008",
     display: "Stenosis of retinal artery",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AbscessOfThigh: Coding.FromStrict({
+  AdverseEventTypeValueSet_AbscessOfThigh: new Coding({
     code: "3507004",
     display: "Abscess of thigh",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfectiousThyroiditis: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfectiousThyroiditis: new Coding({
     code: "3511005",
     display: "Infectious thyroiditis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PeribronchialFibrosisOfLung: Coding.FromStrict({
+  AdverseEventTypeValueSet_PeribronchialFibrosisOfLung: new Coding({
     code: "3514002",
     display: "Peribronchial fibrosis of lung",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DisorderOfSynovium: Coding.FromStrict({
+  AdverseEventTypeValueSet_DisorderOfSynovium: new Coding({
     code: "3519007",
     display: "Disorder of synovium",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_RestrictedCarbohydrateFatControlledDiet: Coding.FromStrict({
+  AdverseEventTypeValueSet_RestrictedCarbohydrateFatControlledDiet: new Coding({
     code: "3528008",
     display: "Restricted carbohydrate fat controlled diet",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfectionCausedBySanguinicola: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfectionCausedBySanguinicola: new Coding({
     code: "3529000",
     display: "Infection caused by Sanguinicola",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Bipolar1DisorderSingleManicEpisodeFullRemission: Coding.FromStrict({
+  AdverseEventTypeValueSet_Bipolar1DisorderSingleManicEpisodeFullRemission: new Coding({
     code: "3530005",
     display: "Bipolar 1 disorder, single manic episode, full remission",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IntrapsychicConflict: Coding.FromStrict({
+  AdverseEventTypeValueSet_IntrapsychicConflict: new Coding({
     code: "3531009",
     display: "Intrapsychic conflict",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcutePalmoplantarPustularPsoriasis: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcutePalmoplantarPustularPsoriasis: new Coding({
     code: "3533007",
     display: "Acute palmoplantar pustular psoriasis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Enteromenia: Coding.FromStrict({
+  AdverseEventTypeValueSet_Enteromenia: new Coding({
     code: "3539006",
     display: "Enteromenia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LacerationExtendingIntoParenchymaOfSpleenWithOpenWoundIntoAbdominalCavity: Coding.FromStrict({
+  AdverseEventTypeValueSet_LacerationExtendingIntoParenchymaOfSpleenWithOpenWoundIntoAbdominalCavity: new Coding({
     code: "3542000",
     display: "Laceration extending into parenchyma of spleen with open wound into abdominal cavity",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HairSplitting: Coding.FromStrict({
+  AdverseEventTypeValueSet_HairSplitting: new Coding({
     code: "3544004",
     display: "Hair-splitting",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DiastolicDysfunction: Coding.FromStrict({
+  AdverseEventTypeValueSet_DiastolicDysfunction: new Coding({
     code: "3545003",
     display: "Diastolic dysfunction",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BrachialPlexusDisorder: Coding.FromStrict({
+  AdverseEventTypeValueSet_BrachialPlexusDisorder: new Coding({
     code: "3548001",
     display: "Brachial plexus disorder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PancreaticAcinarAtrophy: Coding.FromStrict({
+  AdverseEventTypeValueSet_PancreaticAcinarAtrophy: new Coding({
     code: "3549009",
     display: "Pancreatic acinar atrophy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HemorrhagicShock: Coding.FromStrict({
+  AdverseEventTypeValueSet_HemorrhagicShock: new Coding({
     code: "355001",
     display: "Hemorrhagic shock",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MesentericInfarction: Coding.FromStrict({
+  AdverseEventTypeValueSet_MesentericInfarction: new Coding({
     code: "3558002",
     display: "Mesenteric infarction",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BilateralRecurrentInguinalHernia: Coding.FromStrict({
+  AdverseEventTypeValueSet_BilateralRecurrentInguinalHernia: new Coding({
     code: "3560000",
     display: "Bilateral recurrent inguinal hernia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IncreasedBloodErythrocyteVolume: Coding.FromStrict({
+  AdverseEventTypeValueSet_IncreasedBloodErythrocyteVolume: new Coding({
     code: "3570003",
     display: "Increased blood erythrocyte volume",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ClosedFractureTrapezoid: Coding.FromStrict({
+  AdverseEventTypeValueSet_ClosedFractureTrapezoid: new Coding({
     code: "357009",
     display: "Closed fracture trapezoid",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MegaloblasticAnemiaDueToPancreaticInsufficiency: Coding.FromStrict({
+  AdverseEventTypeValueSet_MegaloblasticAnemiaDueToPancreaticInsufficiency: new Coding({
     code: "3571004",
     display: "Megaloblastic anemia due to pancreatic insufficiency",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LatticeRetinalDegeneration: Coding.FromStrict({
+  AdverseEventTypeValueSet_LatticeRetinalDegeneration: new Coding({
     code: "3577000",
     display: "Lattice retinal degeneration",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SmallpoxVaccinePoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_SmallpoxVaccinePoisoning: new Coding({
     code: "358004",
     display: "Smallpox vaccine poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Blinking: Coding.FromStrict({
+  AdverseEventTypeValueSet_Blinking: new Coding({
     code: "3585009",
     display: "Blinking",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PsychogenicFugue: Coding.FromStrict({
+  AdverseEventTypeValueSet_PsychogenicFugue: new Coding({
     code: "3586005",
     display: "Psychogenic fugue",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SyphiliticPericarditis: Coding.FromStrict({
+  AdverseEventTypeValueSet_SyphiliticPericarditis: new Coding({
     code: "3589003",
     display: "Syphilitic pericarditis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_EnteroentericFistula: Coding.FromStrict({
+  AdverseEventTypeValueSet_EnteroentericFistula: new Coding({
     code: "3590007",
     display: "Enteroenteric fistula",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_KernicterusDueToIsoimmunization: Coding.FromStrict({
+  AdverseEventTypeValueSet_KernicterusDueToIsoimmunization: new Coding({
     code: "359007",
     display: "Kernicterus due to isoimmunization",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MetabolicAcidosisNormalAnionGapBicarbonateLosses: Coding.FromStrict({
+  AdverseEventTypeValueSet_MetabolicAcidosisNormalAnionGapBicarbonateLosses: new Coding({
     code: "3591006",
     display: "Metabolic acidosis, normal anion gap, bicarbonate losses",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PartialRecentRetinalDetachmentWithSingleDefect: Coding.FromStrict({
+  AdverseEventTypeValueSet_PartialRecentRetinalDetachmentWithSingleDefect: new Coding({
     code: "3598000",
     display: "Partial recent retinal detachment with single defect",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcuteRadiationDisease: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcuteRadiationDisease: new Coding({
     code: "360002",
     display: "Acute radiation disease",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DemetonPoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_DemetonPoisoning: new Coding({
     code: "3611003",
     display: "Demeton poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AbscessOfHand: Coding.FromStrict({
+  AdverseEventTypeValueSet_AbscessOfHand: new Coding({
     code: "3633001",
     display: "Abscess of hand",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LegalTerminationOfPregnancyComplicatedByMetabolicDisorder: Coding.FromStrict({
+  AdverseEventTypeValueSet_LegalTerminationOfPregnancyComplicatedByMetabolicDisorder: new Coding({
     code: "3634007",
     display: "Legal termination of pregnancy complicated by metabolic disorder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Glossoptosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Glossoptosis: new Coding({
     code: "3639002",
     display: "Glossoptosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LateEffectOfTraumaticAmputation: Coding.FromStrict({
+  AdverseEventTypeValueSet_LateEffectOfTraumaticAmputation: new Coding({
     code: "3640000",
     display: "Late effect of traumatic amputation",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcuteLeftSidedHeartFailure: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcuteLeftSidedHeartFailure: new Coding({
     code: "364006",
     display: "Acute left-sided heart failure",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfectionCausedByCoenurosisSerialis: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfectionCausedByCoenurosisSerialis: new Coding({
     code: "3641001",
     display: "Infection caused by Coenurosis serialis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SterylSulfateSulfohydrolaseDeficiency: Coding.FromStrict({
+  AdverseEventTypeValueSet_SterylSulfateSulfohydrolaseDeficiency: new Coding({
     code: "3642008",
     display: "Steryl-sulfate sulfohydrolase deficiency",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MaceratedSkin: Coding.FromStrict({
+  AdverseEventTypeValueSet_MaceratedSkin: new Coding({
     code: "3644009",
     display: "Macerated skin",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ContusionMultipleSitesOfTrunk: Coding.FromStrict({
+  AdverseEventTypeValueSet_ContusionMultipleSitesOfTrunk: new Coding({
     code: "3649004",
     display: "Contusion, multiple sites of trunk",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalAbsenceOfLiverTotal: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalAbsenceOfLiverTotal: new Coding({
     code: "3650004",
     display: "Congenital absence of liver,total",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OverproductionOfGrowthHormone: Coding.FromStrict({
+  AdverseEventTypeValueSet_OverproductionOfGrowthHormone: new Coding({
     code: "3652007",
     display: "Overproduction of growth hormone",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OsteospermumSpeciesPoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_OsteospermumSpeciesPoisoning: new Coding({
     code: "3657001",
     display: "Osteospermum species poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LethalGlossopharyngealDefect: Coding.FromStrict({
+  AdverseEventTypeValueSet_LethalGlossopharyngealDefect: new Coding({
     code: "3660008",
     display: "Lethal glossopharyngeal defect",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Hidromeiosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Hidromeiosis: new Coding({
     code: "366008",
     display: "Hidromeiosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_RollingHiatusHernia: Coding.FromStrict({
+  AdverseEventTypeValueSet_RollingHiatusHernia: new Coding({
     code: "3662000",
     display: "Rolling hiatus hernia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcademicProblem: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcademicProblem: new Coding({
     code: "3677008",
     display: "Academic problem",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MonocephalusTripusDibrachius: Coding.FromStrict({
+  AdverseEventTypeValueSet_MonocephalusTripusDibrachius: new Coding({
     code: "3680009",
     display: "Monocephalus tripus dibrachius",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HeartValveDisorder: Coding.FromStrict({
+  AdverseEventTypeValueSet_HeartValveDisorder: new Coding({
     code: "368009",
     display: "Heart valve disorder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ThrombophlebitisOfTorcularHerophili: Coding.FromStrict({
+  AdverseEventTypeValueSet_ThrombophlebitisOfTorcularHerophili: new Coding({
     code: "3681008",
     display: "Thrombophlebitis of torcular Herophili",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NormalJugularVenousPressure: Coding.FromStrict({
+  AdverseEventTypeValueSet_NormalJugularVenousPressure: new Coding({
     code: "369001",
     display: "Normal jugular venous pressure",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FunctionalDyspepsia: Coding.FromStrict({
+  AdverseEventTypeValueSet_FunctionalDyspepsia: new Coding({
     code: "3696007",
     display: "Functional dyspepsia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_TransverseDeficiencyOfArm: Coding.FromStrict({
+  AdverseEventTypeValueSet_TransverseDeficiencyOfArm: new Coding({
     code: "3699000",
     display: "Transverse deficiency of arm",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IschiaticHerniaWithGangrene: Coding.FromStrict({
+  AdverseEventTypeValueSet_IschiaticHerniaWithGangrene: new Coding({
     code: "3703002",
     display: "Ischiatic hernia with gangrene",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DiffuseEndocapillaryProliferativeGlomerulonephritis: Coding.FromStrict({
+  AdverseEventTypeValueSet_DiffuseEndocapillaryProliferativeGlomerulonephritis: new Coding({
     code: "3704008",
     display: "Diffuse endocapillary proliferative glomerulonephritis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalMalformationOfAnteriorChamberOfEye: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalMalformationOfAnteriorChamberOfEye: new Coding({
     code: "3705009",
     display: "Congenital malformation of anterior chamber of eye",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DegeneratedEye: Coding.FromStrict({
+  AdverseEventTypeValueSet_DegeneratedEye: new Coding({
     code: "3712000",
     display: "Degenerated eye",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ThyroidGoiter: Coding.FromStrict({
+  AdverseEventTypeValueSet_ThyroidGoiter: new Coding({
     code: "3716002",
     display: "Thyroid goiter",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AbnormalPresenceOfHemoglobin: Coding.FromStrict({
+  AdverseEventTypeValueSet_AbnormalPresenceOfHemoglobin: new Coding({
     code: "3720003",
     display: "Abnormal presence of hemoglobin",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_JointInflammation: Coding.FromStrict({
+  AdverseEventTypeValueSet_JointInflammation: new Coding({
     code: "3723001",
     display: "Joint inflammation",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalEventrationOfRightCrusOfDiaphragm: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalEventrationOfRightCrusOfDiaphragm: new Coding({
     code: "3733009",
     display: "Congenital eventration of right crus of diaphragm",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenWoundOfThumbnailWithTendonInvolvement: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenWoundOfThumbnailWithTendonInvolvement: new Coding({
     code: "3736001",
     display: "Open wound of thumbnail with tendon involvement",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_VHViralHepatitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_VHViralHepatitis: new Coding({
     code: "3738000",
     display: "VH - Viral hepatitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Hyperlipoproteinemia: Coding.FromStrict({
+  AdverseEventTypeValueSet_Hyperlipoproteinemia: new Coding({
     code: "3744001",
     display: "Hyperlipoproteinemia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SleepRhythmProblem: Coding.FromStrict({
+  AdverseEventTypeValueSet_SleepRhythmProblem: new Coding({
     code: "3745000",
     display: "Sleep rhythm problem",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ECEjectionClick: Coding.FromStrict({
+  AdverseEventTypeValueSet_ECEjectionClick: new Coding({
     code: "3747008",
     display: "EC - Ejection click",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Arteriospasm: Coding.FromStrict({
+  AdverseEventTypeValueSet_Arteriospasm: new Coding({
     code: "3750006",
     display: "Arteriospasm",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ContusionOfLabium: Coding.FromStrict({
+  AdverseEventTypeValueSet_ContusionOfLabium: new Coding({
     code: "3751005",
     display: "Contusion of labium",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfectionByTrichuris: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfectionByTrichuris: new Coding({
     code: "3752003",
     display: "Infection by Trichuris",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DysplasiaOfVagina: Coding.FromStrict({
+  AdverseEventTypeValueSet_DysplasiaOfVagina: new Coding({
     code: "3754002",
     display: "Dysplasia of vagina",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PRPPityriasisRubraPilaris: Coding.FromStrict({
+  AdverseEventTypeValueSet_PRPPityriasisRubraPilaris: new Coding({
     code: "3755001",
     display: "PRP - Pityriasis rubra pilaris",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_StaticAtaxia: Coding.FromStrict({
+  AdverseEventTypeValueSet_StaticAtaxia: new Coding({
     code: "3756000",
     display: "Static ataxia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InjuryOfHeartWithOpenWoundIntoThorax: Coding.FromStrict({
+  AdverseEventTypeValueSet_InjuryOfHeartWithOpenWoundIntoThorax: new Coding({
     code: "3759007",
     display: "Injury of heart with open wound into thorax",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FamilialMultipleFactorDeficiencySyndromeTypeV: Coding.FromStrict({
+  AdverseEventTypeValueSet_FamilialMultipleFactorDeficiencySyndromeTypeV: new Coding({
     code: "3760002",
     display: "Familial multiple factor deficiency syndrome, type V",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BilateralRecurrentFemoralHerniaWithGangrene: Coding.FromStrict({
+  AdverseEventTypeValueSet_BilateralRecurrentFemoralHerniaWithGangrene: new Coding({
     code: "3762005",
     display: "Bilateral recurrent femoral hernia with gangrene",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ExpectedBereavementDueToLifeEvent: Coding.FromStrict({
+  AdverseEventTypeValueSet_ExpectedBereavementDueToLifeEvent: new Coding({
     code: "3763000",
     display: "Expected bereavement due to life event",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MorquioSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_MorquioSyndrome: new Coding({
     code: "378007",
     display: "Morquio syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_EnamelPearls: Coding.FromStrict({
+  AdverseEventTypeValueSet_EnamelPearls: new Coding({
     code: "3783004",
     display: "Enamel pearls",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PeriodontalCyst: Coding.FromStrict({
+  AdverseEventTypeValueSet_PeriodontalCyst: new Coding({
     code: "3797007",
     display: "Periodontal cyst",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PrematureBirthOfIdenticalTwinsBothStillborn: Coding.FromStrict({
+  AdverseEventTypeValueSet_PrematureBirthOfIdenticalTwinsBothStillborn: new Coding({
     code: "3798002",
     display: "Premature birth of identical twins, both stillborn",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CrohnDiseaseOfRectum: Coding.FromStrict({
+  AdverseEventTypeValueSet_CrohnDiseaseOfRectum: new Coding({
     code: "3815005",
     display: "Crohn disease of rectum",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InnerEarConductiveHearingLoss: Coding.FromStrict({
+  AdverseEventTypeValueSet_InnerEarConductiveHearingLoss: new Coding({
     code: "3820005",
     display: "Inner ear conductive hearing loss",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LegalHistoryFindingRelatingToChild: Coding.FromStrict({
+  AdverseEventTypeValueSet_LegalHistoryFindingRelatingToChild: new Coding({
     code: "382009",
     display: "Legal history finding relating to child",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AneurysmOfArteryOfNeck: Coding.FromStrict({
+  AdverseEventTypeValueSet_AneurysmOfArteryOfNeck: new Coding({
     code: "3827008",
     display: "Aneurysm of artery of neck",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SubcutaneousEmphysema: Coding.FromStrict({
+  AdverseEventTypeValueSet_SubcutaneousEmphysema: new Coding({
     code: "3830001",
     display: "Subcutaneous emphysema",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FindingOfPassiveRangeOfHipExtension: Coding.FromStrict({
+  AdverseEventTypeValueSet_FindingOfPassiveRangeOfHipExtension: new Coding({
     code: "383004",
     display: "Finding of passive range of hip extension",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BlisterOfCheekWithInfection: Coding.FromStrict({
+  AdverseEventTypeValueSet_BlisterOfCheekWithInfection: new Coding({
     code: "3841004",
     display: "Blister of cheek with infection",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DuplicationOfIntestine: Coding.FromStrict({
+  AdverseEventTypeValueSet_DuplicationOfIntestine: new Coding({
     code: "3845008",
     display: "Duplication of intestine",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SecondaryPeripheralNeuropathy: Coding.FromStrict({
+  AdverseEventTypeValueSet_SecondaryPeripheralNeuropathy: new Coding({
     code: "385006",
     display: "Secondary peripheral neuropathy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DisorderOfPancreas: Coding.FromStrict({
+  AdverseEventTypeValueSet_DisorderOfPancreas: new Coding({
     code: "3855007",
     display: "Disorder of pancreas",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LateEffectOfOpenWoundOfExtremitiesWithoutTendonInjury: Coding.FromStrict({
+  AdverseEventTypeValueSet_LateEffectOfOpenWoundOfExtremitiesWithoutTendonInjury: new Coding({
     code: "3859001",
     display: "Late effect of open wound of extremities without tendon injury",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Melanuria: Coding.FromStrict({
+  AdverseEventTypeValueSet_Melanuria: new Coding({
     code: "387003",
     display: "Melanuria",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FailedAttemptedTerminationOfPregnancyWithAcuteNecrosisOfLiver: Coding.FromStrict({
+  AdverseEventTypeValueSet_FailedAttemptedTerminationOfPregnancyWithAcuteNecrosisOfLiver: new Coding({
     code: "3873005",
     display: "Failed attempted termination of pregnancy with acute necrosis of liver",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ABOIsoimmunizationInPregnancy: Coding.FromStrict({
+  AdverseEventTypeValueSet_ABOIsoimmunizationInPregnancy: new Coding({
     code: "3885002",
     display: "ABO isoimmunization in pregnancy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalFecaliths: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalFecaliths: new Coding({
     code: "3886001",
     display: "Congenital fecaliths",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NeutropenicTyphlitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_NeutropenicTyphlitis: new Coding({
     code: "3899003",
     display: "Neutropenic typhlitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MixedSensoryMotorPolyneuropathy: Coding.FromStrict({
+  AdverseEventTypeValueSet_MixedSensoryMotorPolyneuropathy: new Coding({
     code: "3900008",
     display: "Mixed sensory-motor polyneuropathy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NonDoseRelatedDrugInducedNeutropenia: Coding.FromStrict({
+  AdverseEventTypeValueSet_NonDoseRelatedDrugInducedNeutropenia: new Coding({
     code: "3902000",
     display: "Non dose-related drug-induced neutropenia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ClosedTraumaticPneumothorax: Coding.FromStrict({
+  AdverseEventTypeValueSet_ClosedTraumaticPneumothorax: new Coding({
     code: "3903005",
     display: "Closed traumatic pneumothorax",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfestationCausedByHaematopinus: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfestationCausedByHaematopinus: new Coding({
     code: "3908001",
     display: "Infestation caused by Haematopinus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CoeurEnSabot: Coding.FromStrict({
+  AdverseEventTypeValueSet_CoeurEnSabot: new Coding({
     code: "3909009",
     display: "Coeur en sabot",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InjuryOfGastrointestinalTractWithOpenWoundIntoAbdominalCavity: Coding.FromStrict({
+  AdverseEventTypeValueSet_InjuryOfGastrointestinalTractWithOpenWoundIntoAbdominalCavity: new Coding({
     code: "3913002",
     display: "Injury of gastrointestinal tract with open wound into abdominal cavity",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MentalDisorderInChildhood: Coding.FromStrict({
+  AdverseEventTypeValueSet_MentalDisorderInChildhood: new Coding({
     code: "3914008",
     display: "Mental disorder in childhood",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ZikaVirusDisease: Coding.FromStrict({
+  AdverseEventTypeValueSet_ZikaVirusDisease: new Coding({
     code: "3928002",
     display: "Zika virus disease",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BacterialColonyDensityTransparent: Coding.FromStrict({
+  AdverseEventTypeValueSet_BacterialColonyDensityTransparent: new Coding({
     code: "3939004",
     display: "Bacterial colony density, transparent",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_XLinkedPlacentalSterylSulfataseDeficiency: Coding.FromStrict({
+  AdverseEventTypeValueSet_XLinkedPlacentalSterylSulfataseDeficiency: new Coding({
     code: "3944006",
     display: "X-linked placental steryl-sulfatase deficiency",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HighOxygenAffinityHemoglobinPolycythemia: Coding.FromStrict({
+  AdverseEventTypeValueSet_HighOxygenAffinityHemoglobinPolycythemia: new Coding({
     code: "3947004",
     display: "High oxygen affinity hemoglobin polycythemia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Birth: Coding.FromStrict({
+  AdverseEventTypeValueSet_Birth: new Coding({
     code: "3950001",
     display: "Birth",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Proctitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Proctitis: new Coding({
     code: "3951002",
     display: "Proctitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IdiopathicInsomnia: Coding.FromStrict({
+  AdverseEventTypeValueSet_IdiopathicInsomnia: new Coding({
     code: "3972004",
     display: "Idiopathic insomnia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DeepThirdDegreeBurnOfLowerLimb: Coding.FromStrict({
+  AdverseEventTypeValueSet_DeepThirdDegreeBurnOfLowerLimb: new Coding({
     code: "3975002",
     display: "Deep third degree burn of lower limb",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AIHAWarmAutoimmuneHemolyticAnemia: Coding.FromStrict({
+  AdverseEventTypeValueSet_AIHAWarmAutoimmuneHemolyticAnemia: new Coding({
     code: "3978000",
     display: "AIHA - Warm autoimmune hemolytic anemia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LeftAxisDeviationGreaterThan90DegreesByEKG: Coding.FromStrict({
+  AdverseEventTypeValueSet_LeftAxisDeviationGreaterThan90DegreesByEKG: new Coding({
     code: "398002",
     display: "Left axis deviation greater than -90 degrees by EKG",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalAbsenceOfTrachea: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalAbsenceOfTrachea: new Coding({
     code: "3987009",
     display: "Congenital absence of trachea",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfectionCausedByMuellerius: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfectionCausedByMuellerius: new Coding({
     code: "3993001",
     display: "Infection caused by Muellerius",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcutePyelitisWithoutRenalMedullaryNecrosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcutePyelitisWithoutRenalMedullaryNecrosis: new Coding({
     code: "3999002",
     display: "Acute pyelitis without renal medullary necrosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AlphavirusDisease: Coding.FromStrict({
+  AdverseEventTypeValueSet_AlphavirusDisease: new Coding({
     code: "4003003",
     display: "Alphavirus disease",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MonsterWithCranialAnomalies: Coding.FromStrict({
+  AdverseEventTypeValueSet_MonsterWithCranialAnomalies: new Coding({
     code: "4004009",
     display: "Monster with cranial anomalies",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FoetalTachycardiaAffectingManagementOfMother: Coding.FromStrict({
+  AdverseEventTypeValueSet_FoetalTachycardiaAffectingManagementOfMother: new Coding({
     code: "4006006",
     display: "Foetal tachycardia affecting management of mother",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LowerUrinaryTractInfection: Coding.FromStrict({
+  AdverseEventTypeValueSet_LowerUrinaryTractInfection: new Coding({
     code: "4009004",
     display: "Lower urinary tract infection",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_EmpyemaOfMastoid: Coding.FromStrict({
+  AdverseEventTypeValueSet_EmpyemaOfMastoid: new Coding({
     code: "4016003",
     display: "Empyema of mastoid",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IncreasedStratumCorneumAdhesiveness: Coding.FromStrict({
+  AdverseEventTypeValueSet_IncreasedStratumCorneumAdhesiveness: new Coding({
     code: "4017007",
     display: "Increased stratum corneum adhesiveness",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_VulvitisCircumscriptaPlasmacellularis: Coding.FromStrict({
+  AdverseEventTypeValueSet_VulvitisCircumscriptaPlasmacellularis: new Coding({
     code: "4022007",
     display: "Vulvitis circumscripta plasmacellularis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InterstitialMastitisAssociatedWithChildbirth: Coding.FromStrict({
+  AdverseEventTypeValueSet_InterstitialMastitisAssociatedWithChildbirth: new Coding({
     code: "4026005",
     display: "Interstitial mastitis associated with childbirth",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LeDantecVirusDisease: Coding.FromStrict({
+  AdverseEventTypeValueSet_LeDantecVirusDisease: new Coding({
     code: "4030008",
     display: "Le Dantec virus disease",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Myrotheciotoxicosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Myrotheciotoxicosis: new Coding({
     code: "4038001",
     display: "Myrotheciotoxicosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MultipleVitaminDeficiencyDisease: Coding.FromStrict({
+  AdverseEventTypeValueSet_MultipleVitaminDeficiencyDisease: new Coding({
     code: "4039009",
     display: "Multiple vitamin deficiency disease",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HassallHenleBodies: Coding.FromStrict({
+  AdverseEventTypeValueSet_HassallHenleBodies: new Coding({
     code: "4040006",
     display: "Hassall-Henle bodies",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalAnomalyOfMacula: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalAnomalyOfMacula: new Coding({
     code: "4041005",
     display: "Congenital anomaly of macula",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DegenerativeSpondylolisthesis: Coding.FromStrict({
+  AdverseEventTypeValueSet_DegenerativeSpondylolisthesis: new Coding({
     code: "4046000",
     display: "Degenerative spondylolisthesis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LumbosacralPlexusLesion: Coding.FromStrict({
+  AdverseEventTypeValueSet_LumbosacralPlexusLesion: new Coding({
     code: "4062006",
     display: "Lumbosacral plexus lesion",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Achillodynia: Coding.FromStrict({
+  AdverseEventTypeValueSet_Achillodynia: new Coding({
     code: "4063001",
     display: "Achillodynia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AnoxicBrainDamageDuringANDORResultingFromAProcedure: Coding.FromStrict({
+  AdverseEventTypeValueSet_AnoxicBrainDamageDuringANDORResultingFromAProcedure: new Coding({
     code: "4069002",
     display: "Anoxic brain damage during AND/OR resulting from a procedure",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalHepatomegaly: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalHepatomegaly: new Coding({
     code: "407000",
     display: "Congenital hepatomegaly",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Palinphrasia: Coding.FromStrict({
+  AdverseEventTypeValueSet_Palinphrasia: new Coding({
     code: "4070001",
     display: "Palinphrasia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PeganumHarmalaPoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_PeganumHarmalaPoisoning: new Coding({
     code: "4075006",
     display: "Peganum harmala poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ToothChattering: Coding.FromStrict({
+  AdverseEventTypeValueSet_ToothChattering: new Coding({
     code: "408005",
     display: "Tooth chattering",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SyphiliticMyocarditis: Coding.FromStrict({
+  AdverseEventTypeValueSet_SyphiliticMyocarditis: new Coding({
     code: "4082005",
     display: "Syphilitic myocarditis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcquiredHydrocephalus: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcquiredHydrocephalus: new Coding({
     code: "4088009",
     display: "Acquired hydrocephalus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Meningococcemia: Coding.FromStrict({
+  AdverseEventTypeValueSet_Meningococcemia: new Coding({
     code: "4089001",
     display: "Meningococcemia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FoodAllergyDiet: Coding.FromStrict({
+  AdverseEventTypeValueSet_FoodAllergyDiet: new Coding({
     code: "409002",
     display: "Food allergy diet",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NonallopathicLesionOfCostovertebralRegion: Coding.FromStrict({
+  AdverseEventTypeValueSet_NonallopathicLesionOfCostovertebralRegion: new Coding({
     code: "4092002",
     display: "Nonallopathic lesion of costovertebral region",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ComplexPartialSeizure: Coding.FromStrict({
+  AdverseEventTypeValueSet_ComplexPartialSeizure: new Coding({
     code: "4103001",
     display: "Complex partial seizure",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_RotatorCuffRupture: Coding.FromStrict({
+  AdverseEventTypeValueSet_RotatorCuffRupture: new Coding({
     code: "4106009",
     display: "Rotator cuff rupture",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfertileMaleSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfertileMaleSyndrome: new Coding({
     code: "4107000",
     display: "Infertile male syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ArrestedHydrocephalus: Coding.FromStrict({
+  AdverseEventTypeValueSet_ArrestedHydrocephalus: new Coding({
     code: "4113009",
     display: "Arrested hydrocephalus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Bronchiolitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Bronchiolitis: new Coding({
     code: "4120002",
     display: "Bronchiolitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InsectBiteNonvenomousOfVaginaInfected: Coding.FromStrict({
+  AdverseEventTypeValueSet_InsectBiteNonvenomousOfVaginaInfected: new Coding({
     code: "4124006",
     display: "Insect bite, nonvenomous, of vagina, infected",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ProstaticObstruction: Coding.FromStrict({
+  AdverseEventTypeValueSet_ProstaticObstruction: new Coding({
     code: "4127004",
     display: "Prostatic obstruction",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ArgyllRobertsonPupil: Coding.FromStrict({
+  AdverseEventTypeValueSet_ArgyllRobertsonPupil: new Coding({
     code: "4129001",
     display: "Argyll-Robertson pupil",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_VAL11pPartialMonosomySyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_VAL11pPartialMonosomySyndrome: new Coding({
     code: "4135001",
     display: "11p partial monosomy syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MacrodactyliaOfToes: Coding.FromStrict({
+  AdverseEventTypeValueSet_MacrodactyliaOfToes: new Coding({
     code: "4136000",
     display: "Macrodactylia of toes",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MuscularAsthenopia: Coding.FromStrict({
+  AdverseEventTypeValueSet_MuscularAsthenopia: new Coding({
     code: "4142001",
     display: "Muscular asthenopia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcquiredHypoprothrombinemia: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcquiredHypoprothrombinemia: new Coding({
     code: "4152002",
     display: "Acquired hypoprothrombinemia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalAnomalyOfUpperRespiratorySystem: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalAnomalyOfUpperRespiratorySystem: new Coding({
     code: "4160001",
     display: "Congenital anomaly of upper respiratory system",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_TibialPlateauChondromalacia: Coding.FromStrict({
+  AdverseEventTypeValueSet_TibialPlateauChondromalacia: new Coding({
     code: "4168008",
     display: "Tibial plateau chondromalacia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_EhlersDanlosSyndromeProcollagenProteinaseResistant: Coding.FromStrict({
+  AdverseEventTypeValueSet_EhlersDanlosSyndromeProcollagenProteinaseResistant: new Coding({
     code: "4170004",
     display: "Ehlers-Danlos syndrome, procollagen proteinase resistant",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_TripartitePlacenta: Coding.FromStrict({
+  AdverseEventTypeValueSet_TripartitePlacenta: new Coding({
     code: "4174008",
     display: "Tripartite placenta",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfestationByEstrus: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfestationByEstrus: new Coding({
     code: "4175009",
     display: "Infestation by Estrus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PartialRecentRetinalDetachmentWithMultipleDefects: Coding.FromStrict({
+  AdverseEventTypeValueSet_PartialRecentRetinalDetachmentWithMultipleDefects: new Coding({
     code: "4178006",
     display: "Partial recent retinal detachment with multiple defects",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NormalPeakExpiratoryFlowRate: Coding.FromStrict({
+  AdverseEventTypeValueSet_NormalPeakExpiratoryFlowRate: new Coding({
     code: "4181001",
     display: "Normal peak expiratory flow rate",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CharcotMarieToothDiseaseTypeIC: Coding.FromStrict({
+  AdverseEventTypeValueSet_CharcotMarieToothDiseaseTypeIC: new Coding({
     code: "4183003",
     display: "Charcot-Marie-Tooth disease, type IC",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalMalformationOfTheEndocrineGlands: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalMalformationOfTheEndocrineGlands: new Coding({
     code: "4184009",
     display: "Congenital malformation of the endocrine glands",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ScaphoidHead: Coding.FromStrict({
+  AdverseEventTypeValueSet_ScaphoidHead: new Coding({
     code: "4191007",
     display: "Scaphoid head",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DuplicationOfAnus: Coding.FromStrict({
+  AdverseEventTypeValueSet_DuplicationOfAnus: new Coding({
     code: "4195003",
     display: "Duplication of anus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DisabilityEvaluationImpairmentClass5: Coding.FromStrict({
+  AdverseEventTypeValueSet_DisabilityEvaluationImpairmentClass5: new Coding({
     code: "4197006",
     display: "Disability evaluation, impairment, class 5",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_VAL18pPartialTrisomySyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_VAL18pPartialTrisomySyndrome: new Coding({
     code: "4199009",
     display: "18p partial trisomy syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ClosedMultipleFracturesOfBothLowerLimbs: Coding.FromStrict({
+  AdverseEventTypeValueSet_ClosedMultipleFracturesOfBothLowerLimbs: new Coding({
     code: "4208000",
     display: "Closed multiple fractures of both lower limbs",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OHOcularHypertension: Coding.FromStrict({
+  AdverseEventTypeValueSet_OHOcularHypertension: new Coding({
     code: "4210003",
     display: "OH - Ocular hypertension",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ParkinsonismCausedByDrug: Coding.FromStrict({
+  AdverseEventTypeValueSet_ParkinsonismCausedByDrug: new Coding({
     code: "4223005",
     display: "Parkinsonism caused by drug",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ComplicationOfInfusion: Coding.FromStrict({
+  AdverseEventTypeValueSet_ComplicationOfInfusion: new Coding({
     code: "4224004",
     display: "Complication of infusion",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NasalTuberculosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_NasalTuberculosis: new Coding({
     code: "4225003",
     display: "Nasal tuberculosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PhthisicalEye: Coding.FromStrict({
+  AdverseEventTypeValueSet_PhthisicalEye: new Coding({
     code: "4229009",
     display: "Phthisical eye",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChronicVulvitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChronicVulvitis: new Coding({
     code: "4232007",
     display: "Chronic vulvitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SuppurativePulpitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_SuppurativePulpitis: new Coding({
     code: "4237001",
     display: "Suppurative pulpitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_RuptureOfAorta: Coding.FromStrict({
+  AdverseEventTypeValueSet_RuptureOfAorta: new Coding({
     code: "4240001",
     display: "Rupture of aorta",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ListeriaInfection: Coding.FromStrict({
+  AdverseEventTypeValueSet_ListeriaInfection: new Coding({
     code: "4241002",
     display: "Listeria infection",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_VAL18qPartialMonosomySyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_VAL18qPartialMonosomySyndrome: new Coding({
     code: "4242009",
     display: "18q partial monosomy syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_UrticariaNeonatorum: Coding.FromStrict({
+  AdverseEventTypeValueSet_UrticariaNeonatorum: new Coding({
     code: "4244005",
     display: "Urticaria neonatorum",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SynovitisANDORTenosynovitisAssociatedWithAnotherDisease: Coding.FromStrict({
+  AdverseEventTypeValueSet_SynovitisANDORTenosynovitisAssociatedWithAnotherDisease: new Coding({
     code: "4248008",
     display: "Synovitis AND/OR tenosynovitis associated with another disease",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PoorPeripheralCirculation: Coding.FromStrict({
+  AdverseEventTypeValueSet_PoorPeripheralCirculation: new Coding({
     code: "4249000",
     display: "Poor peripheral circulation",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InternalEyeSign: Coding.FromStrict({
+  AdverseEventTypeValueSet_InternalEyeSign: new Coding({
     code: "4251001",
     display: "Internal eye sign",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SacralSpinalCordInjuryWithoutBoneInjury: Coding.FromStrict({
+  AdverseEventTypeValueSet_SacralSpinalCordInjuryWithoutBoneInjury: new Coding({
     code: "4260009",
     display: "Sacral spinal cord injury without bone injury",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SuperficialInjuryOfAnkleWithoutInfection: Coding.FromStrict({
+  AdverseEventTypeValueSet_SuperficialInjuryOfAnkleWithoutInfection: new Coding({
     code: "426008",
     display: "Superficial injury of ankle without infection",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PhlebitisOfSuperiorSagittalSinus: Coding.FromStrict({
+  AdverseEventTypeValueSet_PhlebitisOfSuperiorSagittalSinus: new Coding({
     code: "4262001",
     display: "Phlebitis of superior sagittal sinus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChronicPericoronitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChronicPericoronitis: new Coding({
     code: "4264000",
     display: "Chronic pericoronitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChronicGastrojejunalUlcerWithoutHemorrhageANDWithoutPerforation: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChronicGastrojejunalUlcerWithoutHemorrhageANDWithoutPerforation: new Coding({
     code: "4269005",
     display: "Chronic gastrojejunal ulcer without hemorrhage AND without perforation",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ClosedPosteriorDislocationOfElbow: Coding.FromStrict({
+  AdverseEventTypeValueSet_ClosedPosteriorDislocationOfElbow: new Coding({
     code: "4273008",
     display: "Closed posterior dislocation of elbow",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ConjugateGazeSpasm: Coding.FromStrict({
+  AdverseEventTypeValueSet_ConjugateGazeSpasm: new Coding({
     code: "4275001",
     display: "Conjugate gaze spasm",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SuperficialForeignBodyOfAxillaWithoutMajorOpenWoundButWithInfection: Coding.FromStrict({
+  AdverseEventTypeValueSet_SuperficialForeignBodyOfAxillaWithoutMajorOpenWoundButWithInfection: new Coding({
     code: "4278004",
     display: "Superficial foreign body of axilla without major open wound but with infection",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MirizziSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_MirizziSyndrome: new Coding({
     code: "4283007",
     display: "Mirizzi syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChordeeOfPenis: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChordeeOfPenis: new Coding({
     code: "4287008",
     display: "Chordee of penis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IsosexualPrecociousPuberty: Coding.FromStrict({
+  AdverseEventTypeValueSet_IsosexualPrecociousPuberty: new Coding({
     code: "4294006",
     display: "Isosexual precocious puberty",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DeepThirdDegreeBurnOfForearm: Coding.FromStrict({
+  AdverseEventTypeValueSet_DeepThirdDegreeBurnOfForearm: new Coding({
     code: "4300009",
     display: "Deep third degree burn of forearm",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AutoimmuneState: Coding.FromStrict({
+  AdverseEventTypeValueSet_AutoimmuneState: new Coding({
     code: "4301008",
     display: "Autoimmune state",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ClusterBPersonalityDisorder: Coding.FromStrict({
+  AdverseEventTypeValueSet_ClusterBPersonalityDisorder: new Coding({
     code: "4306003",
     display: "Cluster B personality disorder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PregestationalDiabetesMellitusANDORImpairedGlucoseToleranceModifiedWhiteClassF: Coding.FromStrict({
+  AdverseEventTypeValueSet_PregestationalDiabetesMellitusANDORImpairedGlucoseToleranceModifiedWhiteClassF: new Coding({
     code: "4307007",
     display: "Pregestational diabetes mellitus AND/OR impaired glucose tolerance, modified White class F",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_RSISRepetitiveStrainInjurySyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_RSISRepetitiveStrainInjurySyndrome: new Coding({
     code: "4308002",
     display: "RSIS - Repetitive strain injury syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ThirdDegreeBurnOfWristANDORHand: Coding.FromStrict({
+  AdverseEventTypeValueSet_ThirdDegreeBurnOfWristANDORHand: new Coding({
     code: "4310000",
     display: "Third degree burn of wrist AND/OR hand",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HypertrophyOfScrotum: Coding.FromStrict({
+  AdverseEventTypeValueSet_HypertrophyOfScrotum: new Coding({
     code: "431005",
     display: "Hypertrophy of scrotum",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcardiacusAnceps: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcardiacusAnceps: new Coding({
     code: "4313003",
     display: "Acardiacus anceps",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Myometritis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Myometritis: new Coding({
     code: "4316006",
     display: "Myometritis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FactorVDeficiency: Coding.FromStrict({
+  AdverseEventTypeValueSet_FactorVDeficiency: new Coding({
     code: "4320005",
     display: "Factor V deficiency",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SubacuteCystitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_SubacuteCystitis: new Coding({
     code: "4324001",
     display: "Subacute cystitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_VAL11qPartialMonosomySyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_VAL11qPartialMonosomySyndrome: new Coding({
     code: "4325000",
     display: "11q partial monosomy syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SubarachnoidHemorrhageFollowingInjuryWithoutOpenIntracranialWoundANDWithConcussion: Coding.FromStrict({
+  AdverseEventTypeValueSet_SubarachnoidHemorrhageFollowingInjuryWithoutOpenIntracranialWoundANDWithConcussion: new Coding({
     code: "4332009",
     display: "Subarachnoid hemorrhage following injury without open intracranial wound AND with concussion",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ArnoldNerveReflexCoughSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_ArnoldNerveReflexCoughSyndrome: new Coding({
     code: "4338008",
     display: "Arnold nerve reflex cough syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcrodermatitisChronicaAtrophicans: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcrodermatitisChronicaAtrophicans: new Coding({
     code: "4340003",
     display: "Acrodermatitis chronica atrophicans",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenFractureOfMultipleSitesOfMetacarpus: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenFractureOfMultipleSitesOfMetacarpus: new Coding({
     code: "4349002",
     display: "Open fracture of multiple sites of metacarpus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenDislocationOfScapula: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenDislocationOfScapula: new Coding({
     code: "4354006",
     display: "Open dislocation of scapula",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_GingivalSoftTissueRecession: Coding.FromStrict({
+  AdverseEventTypeValueSet_GingivalSoftTissueRecession: new Coding({
     code: "4356008",
     display: "Gingival soft tissue recession",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_EarlyCongenitalSyphilis: Coding.FromStrict({
+  AdverseEventTypeValueSet_EarlyCongenitalSyphilis: new Coding({
     code: "4359001",
     display: "Early congenital syphilis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_StructureOfAssociations: Coding.FromStrict({
+  AdverseEventTypeValueSet_StructureOfAssociations: new Coding({
     code: "4364002",
     display: "Structure of associations",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HooverSign: Coding.FromStrict({
+  AdverseEventTypeValueSet_HooverSign: new Coding({
     code: "4367009",
     display: "Hoover sign",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AbnormalCompositionOfUrine: Coding.FromStrict({
+  AdverseEventTypeValueSet_AbnormalCompositionOfUrine: new Coding({
     code: "437009",
     display: "Abnormal composition of urine",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ClubbingOfNail: Coding.FromStrict({
+  AdverseEventTypeValueSet_ClubbingOfNail: new Coding({
     code: "4373005",
     display: "Clubbing of nail",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_TVCongenitalTricuspidValveAbnormality: Coding.FromStrict({
+  AdverseEventTypeValueSet_TVCongenitalTricuspidValveAbnormality: new Coding({
     code: "4374004",
     display: "TV - Congenital tricuspid valve abnormality",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_VerbalParaphasia: Coding.FromStrict({
+  AdverseEventTypeValueSet_VerbalParaphasia: new Coding({
     code: "4381006",
     display: "Verbal paraphasia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Bronchospasm: Coding.FromStrict({
+  AdverseEventTypeValueSet_Bronchospasm: new Coding({
     code: "4386001",
     display: "Bronchospasm",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChronicLithiumNephrotoxicity: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChronicLithiumNephrotoxicity: new Coding({
     code: "4390004",
     display: "Chronic lithium nephrotoxicity",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PartialCongenitalDuodenalObstruction: Coding.FromStrict({
+  AdverseEventTypeValueSet_PartialCongenitalDuodenalObstruction: new Coding({
     code: "4397001",
     display: "Partial congenital duodenal obstruction",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcuteHemorrhagicPancreatitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcuteHemorrhagicPancreatitis: new Coding({
     code: "4399003",
     display: "Acute hemorrhagic pancreatitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PersistentHyperphenylalaninemia: Coding.FromStrict({
+  AdverseEventTypeValueSet_PersistentHyperphenylalaninemia: new Coding({
     code: "440009",
     display: "Persistent hyperphenylalaninemia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ExclamationPointHair: Coding.FromStrict({
+  AdverseEventTypeValueSet_ExclamationPointHair: new Coding({
     code: "4403007",
     display: "Exclamation point hair",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalAnomalyOfMaleGenitalSystem: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalAnomalyOfMaleGenitalSystem: new Coding({
     code: "4406004",
     display: "Congenital anomaly of male genital system",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CombinedMethylmalonicAcidemiaAndHomocystinuriaDueToDefectsInAdenosylcobalaminAndMethylcobalaminSynthesis: Coding.FromStrict({
+  AdverseEventTypeValueSet_CombinedMethylmalonicAcidemiaAndHomocystinuriaDueToDefectsInAdenosylcobalaminAndMethylcobalaminSynthesis: new Coding({
     code: "4409006",
     display: "Combined methylmalonic acidemia and homocystinuria due to defects in adenosylcobalamin and methylcobalamin synthesis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_RetroperitonealHerniaWithObstruction: Coding.FromStrict({
+  AdverseEventTypeValueSet_RetroperitonealHerniaWithObstruction: new Coding({
     code: "4410001",
     display: "Retroperitoneal hernia with obstruction",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DigitalNerveInjury: Coding.FromStrict({
+  AdverseEventTypeValueSet_DigitalNerveInjury: new Coding({
     code: "4412009",
     display: "Digital nerve injury",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InfectionCausedBySetaria: Coding.FromStrict({
+  AdverseEventTypeValueSet_InfectionCausedBySetaria: new Coding({
     code: "4414005",
     display: "Infection caused by Setaria",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HeerfordtSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_HeerfordtSyndrome: new Coding({
     code: "4416007",
     display: "Heerfordt syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_GangrenousErgotism: Coding.FromStrict({
+  AdverseEventTypeValueSet_GangrenousErgotism: new Coding({
     code: "4418008",
     display: "Gangrenous ergotism",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SecondaryHypopituitarism: Coding.FromStrict({
+  AdverseEventTypeValueSet_SecondaryHypopituitarism: new Coding({
     code: "442001",
     display: "Secondary hypopituitarism",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_TenPreviousInducedTerminationsOfPregnancy: Coding.FromStrict({
+  AdverseEventTypeValueSet_TenPreviousInducedTerminationsOfPregnancy: new Coding({
     code: "4426000",
     display: "Ten previous induced terminations of pregnancy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CystoceleAffectingPregnancy: Coding.FromStrict({
+  AdverseEventTypeValueSet_CystoceleAffectingPregnancy: new Coding({
     code: "443006",
     display: "Cystocele affecting pregnancy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BSBloomSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_BSBloomSyndrome: new Coding({
     code: "4434006",
     display: "BS - Bloom syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AxenfeldSchurenbergSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_AxenfeldSchurenbergSyndrome: new Coding({
     code: "4439001",
     display: "Axenfeld-Schurenberg syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SevereBipolarDisorderWithPsychoticFeatures: Coding.FromStrict({
+  AdverseEventTypeValueSet_SevereBipolarDisorderWithPsychoticFeatures: new Coding({
     code: "4441000",
     display: "Severe bipolar disorder with psychotic features",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_TBUrogenitalTuberculosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_TBUrogenitalTuberculosis: new Coding({
     code: "4445009",
     display: "TB - Urogenital tuberculosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AllergicHeadache: Coding.FromStrict({
+  AdverseEventTypeValueSet_AllergicHeadache: new Coding({
     code: "4448006",
     display: "Allergic headache",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IllegalTerminationOfPregnancyWithRenalTubularNecrosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_IllegalTerminationOfPregnancyWithRenalTubularNecrosis: new Coding({
     code: "4451004",
     display: "Illegal termination of pregnancy with renal tubular necrosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ComplicationOfAdministrativeProcedure: Coding.FromStrict({
+  AdverseEventTypeValueSet_ComplicationOfAdministrativeProcedure: new Coding({
     code: "4461006",
     display: "Complication of administrative procedure",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IndianaMarylandTypeAmyloidPolyneuropathy: Coding.FromStrict({
+  AdverseEventTypeValueSet_IndianaMarylandTypeAmyloidPolyneuropathy: new Coding({
     code: "4463009",
     display: "Indiana-Maryland type amyloid polyneuropathy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_RocioVirusDisease: Coding.FromStrict({
+  AdverseEventTypeValueSet_RocioVirusDisease: new Coding({
     code: "4464003",
     display: "Rocio virus disease",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Spherophakia: Coding.FromStrict({
+  AdverseEventTypeValueSet_Spherophakia: new Coding({
     code: "4465002",
     display: "Spherophakia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OppenheimGait: Coding.FromStrict({
+  AdverseEventTypeValueSet_OppenheimGait: new Coding({
     code: "4468000",
     display: "Oppenheim gait",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BlanchingOfSkin: Coding.FromStrict({
+  AdverseEventTypeValueSet_BlanchingOfSkin: new Coding({
     code: "4470009",
     display: "Blanching of skin",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CoachInSportsActivityAccident: Coding.FromStrict({
+  AdverseEventTypeValueSet_CoachInSportsActivityAccident: new Coding({
     code: "447007",
     display: "Coach in sports activity accident",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MigraineWithAura: Coding.FromStrict({
+  AdverseEventTypeValueSet_MigraineWithAura: new Coding({
     code: "4473006",
     display: "Migraine with aura",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_JuvenileMyopathyANDLactateAcidosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_JuvenileMyopathyANDLactateAcidosis: new Coding({
     code: "4477007",
     display: "Juvenile myopathy AND lactate acidosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MultipleFracturesOfUpperANDLowerLimbs: Coding.FromStrict({
+  AdverseEventTypeValueSet_MultipleFracturesOfUpperANDLowerLimbs: new Coding({
     code: "4478002",
     display: "Multiple fractures of upper AND lower limbs",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AbnormalGastricSecretionRegulation: Coding.FromStrict({
+  AdverseEventTypeValueSet_AbnormalGastricSecretionRegulation: new Coding({
     code: "4481007",
     display: "Abnormal gastric secretion regulation",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SyphiliticPunchedOutUlcer: Coding.FromStrict({
+  AdverseEventTypeValueSet_SyphiliticPunchedOutUlcer: new Coding({
     code: "4483005",
     display: "Syphilitic punched out ulcer",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_UlcerativeStomatitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_UlcerativeStomatitis: new Coding({
     code: "450005",
     display: "Ulcerative stomatitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_BlisterOfGroinWithoutInfection: Coding.FromStrict({
+  AdverseEventTypeValueSet_BlisterOfGroinWithoutInfection: new Coding({
     code: "452002",
     display: "Blister of groin without infection",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SquamousMetaplasiaOfProstateGland: Coding.FromStrict({
+  AdverseEventTypeValueSet_SquamousMetaplasiaOfProstateGland: new Coding({
     code: "460001",
     display: "Squamous metaplasia of prostate gland",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OldLacerationOfPelvicFloorMuscle: Coding.FromStrict({
+  AdverseEventTypeValueSet_OldLacerationOfPelvicFloorMuscle: new Coding({
     code: "467003",
     display: "Old laceration of pelvic floor muscle",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_VitreousTouchSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_VitreousTouchSyndrome: new Coding({
     code: "470004",
     display: "Vitreous touch syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_GravesQuoteDiseaseWithPretibialMyxedemaANDWithThyrotoxicCrisis: Coding.FromStrict({
+  AdverseEventTypeValueSet_GravesQuoteDiseaseWithPretibialMyxedemaANDWithThyrotoxicCrisis: new Coding({
     code: "479003",
     display: "Graves' disease with pretibial myxedema AND with thyrotoxic crisis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcuteVascularInsufficiency: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcuteVascularInsufficiency: new Coding({
     code: "486006",
     display: "Acute vascular insufficiency",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FibroidMyocarditis: Coding.FromStrict({
+  AdverseEventTypeValueSet_FibroidMyocarditis: new Coding({
     code: "488007",
     display: "Fibroid myocarditis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_UpperRespiratoryTractHypersensitivityReaction: Coding.FromStrict({
+  AdverseEventTypeValueSet_UpperRespiratoryTractHypersensitivityReaction: new Coding({
     code: "490008",
     display: "Upper respiratory tract hypersensitivity reaction",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ClosedTraumaticDislocationOfThirdCervicalVertebra: Coding.FromStrict({
+  AdverseEventTypeValueSet_ClosedTraumaticDislocationOfThirdCervicalVertebra: new Coding({
     code: "496002",
     display: "Closed traumatic dislocation of third cervical vertebra",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AndrogenDependentHirsutism: Coding.FromStrict({
+  AdverseEventTypeValueSet_AndrogenDependentHirsutism: new Coding({
     code: "504009",
     display: "Androgen-dependent hirsutism",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ForeignBodyInHypopharynx: Coding.FromStrict({
+  AdverseEventTypeValueSet_ForeignBodyInHypopharynx: new Coding({
     code: "517007",
     display: "Foreign body in hypopharynx",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MultipleAggregation: Coding.FromStrict({
+  AdverseEventTypeValueSet_MultipleAggregation: new Coding({
     code: "518002",
     display: "Multiple aggregation",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalBentNose: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalBentNose: new Coding({
     code: "520004",
     display: "Congenital bent nose",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SpontaneousFetalEvolutionRoedererQuoteSMethod: Coding.FromStrict({
+  AdverseEventTypeValueSet_SpontaneousFetalEvolutionRoedererQuoteSMethod: new Coding({
     code: "527001",
     display: "Spontaneous fetal evolution, Roederer's method",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_GlissonianCirrhosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_GlissonianCirrhosis: new Coding({
     code: "536002",
     display: "Glissonian cirrhosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ConjunctivalArgyrosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_ConjunctivalArgyrosis: new Coding({
     code: "539009",
     display: "Conjunctival argyrosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HypersecretionOfCalcitonin: Coding.FromStrict({
+  AdverseEventTypeValueSet_HypersecretionOfCalcitonin: new Coding({
     code: "547009",
     display: "Hypersecretion of calcitonin",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_VAL13pPartialTrisomySyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_VAL13pPartialTrisomySyndrome: new Coding({
     code: "548004",
     display: "13p partial trisomy syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_VAL2pPartialTrisomySyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_VAL2pPartialTrisomySyndrome: new Coding({
     code: "554003",
     display: "2p partial trisomy syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DicentraSpeciesPoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_DicentraSpeciesPoisoning: new Coding({
     code: "555002",
     display: "Dicentra species poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Nystagmus: Coding.FromStrict({
+  AdverseEventTypeValueSet_Nystagmus: new Coding({
     code: "563001",
     display: "Nystagmus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HabitDisorder: Coding.FromStrict({
+  AdverseEventTypeValueSet_HabitDisorder: new Coding({
     code: "568005",
     display: "Habit disorder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ContactDermatitisDueToPrimrose: Coding.FromStrict({
+  AdverseEventTypeValueSet_ContactDermatitisDueToPrimrose: new Coding({
     code: "586008",
     display: "Contact dermatitis due to primrose",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalAneurysmOfAnteriorCommunicatingArtery: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalAneurysmOfAnteriorCommunicatingArtery: new Coding({
     code: "590005",
     display: "Congenital aneurysm of anterior communicating artery",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PremenstrualDysphoricDisorder: Coding.FromStrict({
+  AdverseEventTypeValueSet_PremenstrualDysphoricDisorder: new Coding({
     code: "596004",
     display: "Premenstrual dysphoric disorder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PersistentPneumothorax: Coding.FromStrict({
+  AdverseEventTypeValueSet_PersistentPneumothorax: new Coding({
     code: "599006",
     display: "Persistent pneumothorax",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Pyromania: Coding.FromStrict({
+  AdverseEventTypeValueSet_Pyromania: new Coding({
     code: "600009",
     display: "Pyromania",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_RossRiverFever: Coding.FromStrict({
+  AdverseEventTypeValueSet_RossRiverFever: new Coding({
     code: "602001",
     display: "Ross river fever",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DecreasedVitalCapacity: Coding.FromStrict({
+  AdverseEventTypeValueSet_DecreasedVitalCapacity: new Coding({
     code: "607007",
     display: "Decreased vital capacity",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SpasticAphonia: Coding.FromStrict({
+  AdverseEventTypeValueSet_SpasticAphonia: new Coding({
     code: "610000",
     display: "Spastic aphonia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FRAXAFragileXSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_FRAXAFragileXSyndrome: new Coding({
     code: "613003",
     display: "FRAXA - Fragile X syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ObstructionDueToForeignBodyAccidentallyLeftInOperativeWoundANDORBodyCavityDuringAProcedure: Coding.FromStrict({
+  AdverseEventTypeValueSet_ObstructionDueToForeignBodyAccidentallyLeftInOperativeWoundANDORBodyCavityDuringAProcedure: new Coding({
     code: "615005",
     display: "Obstruction due to foreign body accidentally left in operative wound AND/OR body cavity during a procedure",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SensorimotorDisorderOfEyelid: Coding.FromStrict({
+  AdverseEventTypeValueSet_SensorimotorDisorderOfEyelid: new Coding({
     code: "616006",
     display: "Sensorimotor disorder of eyelid",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HypercortisolismDueToNonpituitaryTumor: Coding.FromStrict({
+  AdverseEventTypeValueSet_HypercortisolismDueToNonpituitaryTumor: new Coding({
     code: "626004",
     display: "Hypercortisolism due to nonpituitary tumor",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_TransfusionReactionDueToMinorIncompatibility: Coding.FromStrict({
+  AdverseEventTypeValueSet_TransfusionReactionDueToMinorIncompatibility: new Coding({
     code: "631002",
     display: "Transfusion reaction due to minor incompatibility",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SaddleBoil: Coding.FromStrict({
+  AdverseEventTypeValueSet_SaddleBoil: new Coding({
     code: "634005",
     display: "Saddle boil",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InjuryOfPneumogastricNerve: Coding.FromStrict({
+  AdverseEventTypeValueSet_InjuryOfPneumogastricNerve: new Coding({
     code: "640003",
     display: "Injury of pneumogastric nerve",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HypertrophyOfLip: Coding.FromStrict({
+  AdverseEventTypeValueSet_HypertrophyOfLip: new Coding({
     code: "643001",
     display: "Hypertrophy of lip",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_IdiopathicCystOfAnteriorChamber: Coding.FromStrict({
+  AdverseEventTypeValueSet_IdiopathicCystOfAnteriorChamber: new Coding({
     code: "646009",
     display: "Idiopathic cyst of anterior chamber",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenFractureOfDistalEndOfUlna: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenFractureOfDistalEndOfUlna: new Coding({
     code: "649002",
     display: "Open fracture of distal end of ulna",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_RootWork: Coding.FromStrict({
+  AdverseEventTypeValueSet_RootWork: new Coding({
     code: "651003",
     display: "Root work",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_GangrenousTonsillitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_GangrenousTonsillitis: new Coding({
     code: "652005",
     display: "Gangrenous tonsillitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AbnormalFetalHeartBeatNotedBeforeLaborInLivebornInfant: Coding.FromStrict({
+  AdverseEventTypeValueSet_AbnormalFetalHeartBeatNotedBeforeLaborInLivebornInfant: new Coding({
     code: "655007",
     display: "Abnormal fetal heart beat noted before labor in liveborn infant",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InjuryOfColonWithoutOpenWoundIntoAbdominalCavity: Coding.FromStrict({
+  AdverseEventTypeValueSet_InjuryOfColonWithoutOpenWoundIntoAbdominalCavity: new Coding({
     code: "658009",
     display: "Injury of colon without open wound into abdominal cavity",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PulmonaryEmbolismFollowingMolarANDOREctopicPregnancy: Coding.FromStrict({
+  AdverseEventTypeValueSet_PulmonaryEmbolismFollowingMolarANDOREctopicPregnancy: new Coding({
     code: "663008",
     display: "Pulmonary embolism following molar AND/OR ectopic pregnancy",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DelayedOvulation: Coding.FromStrict({
+  AdverseEventTypeValueSet_DelayedOvulation: new Coding({
     code: "664002",
     display: "Delayed ovulation",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PoisoningByAntivaricoseDrugANDORSclerosingAgent: Coding.FromStrict({
+  AdverseEventTypeValueSet_PoisoningByAntivaricoseDrugANDORSclerosingAgent: new Coding({
     code: "666000",
     display: "Poisoning by antivaricose drug AND/OR sclerosing agent",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_TorsionOfIntestine: Coding.FromStrict({
+  AdverseEventTypeValueSet_TorsionOfIntestine: new Coding({
     code: "675003",
     display: "Torsion of intestine",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ThrombosisComplicatingPregnancyANDORPuerperium: Coding.FromStrict({
+  AdverseEventTypeValueSet_ThrombosisComplicatingPregnancyANDORPuerperium: new Coding({
     code: "682004",
     display: "Thrombosis complicating pregnancy AND/OR puerperium",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcquiredTelangiectasiaOfSmallANDORLargeIntestines: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcquiredTelangiectasiaOfSmallANDORLargeIntestines: new Coding({
     code: "685002",
     display: "Acquired telangiectasia of small AND/OR large intestines",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AdultOsteochondritisOfSpine: Coding.FromStrict({
+  AdverseEventTypeValueSet_AdultOsteochondritisOfSpine: new Coding({
     code: "701003",
     display: "Adult osteochondritis of spine",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalAdhesionOfTongue: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalAdhesionOfTongue: new Coding({
     code: "703000",
     display: "Congenital adhesion of tongue",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AbrasionANDORFrictionBurnOfToeWithInfection: Coding.FromStrict({
+  AdverseEventTypeValueSet_AbrasionANDORFrictionBurnOfToeWithInfection: new Coding({
     code: "714002",
     display: "Abrasion AND/OR friction burn of toe with infection",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_NontraumaticRuptureOfUrethra: Coding.FromStrict({
+  AdverseEventTypeValueSet_NontraumaticRuptureOfUrethra: new Coding({
     code: "715001",
     display: "Nontraumatic rupture of urethra",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AcuteBronchiolitisWithObstruction: Coding.FromStrict({
+  AdverseEventTypeValueSet_AcuteBronchiolitisWithObstruction: new Coding({
     code: "718004",
     display: "Acute bronchiolitis with obstruction",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SuperficialForeignBodyOfGroinWithoutMajorOpenWoundButWithInfection: Coding.FromStrict({
+  AdverseEventTypeValueSet_SuperficialForeignBodyOfGroinWithoutMajorOpenWoundButWithInfection: new Coding({
     code: "733007",
     display: "Superficial foreign body of groin without major open wound but with infection",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Opocephalus: Coding.FromStrict({
+  AdverseEventTypeValueSet_Opocephalus: new Coding({
     code: "734001",
     display: "Opocephalus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AbscessOfHip: Coding.FromStrict({
+  AdverseEventTypeValueSet_AbscessOfHip: new Coding({
     code: "736004",
     display: "Abscess of hip",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SchistosomaMansoniInfection: Coding.FromStrict({
+  AdverseEventTypeValueSet_SchistosomaMansoniInfection: new Coding({
     code: "750009",
     display: "Schistosoma mansoni infection",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PostgastrectomyPhytobezoar: Coding.FromStrict({
+  AdverseEventTypeValueSet_PostgastrectomyPhytobezoar: new Coding({
     code: "755004",
     display: "Postgastrectomy phytobezoar",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChronicRheumaticMyopericarditis: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChronicRheumaticMyopericarditis: new Coding({
     code: "756003",
     display: "Chronic rheumatic myopericarditis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CystOfUterus: Coding.FromStrict({
+  AdverseEventTypeValueSet_CystOfUterus: new Coding({
     code: "758002",
     display: "Cyst of uterus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenWoundOfHeadWithComplication: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenWoundOfHeadWithComplication: new Coding({
     code: "775008",
     display: "Open wound of head with complication",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PartialArterialRetinalOcclusion: Coding.FromStrict({
+  AdverseEventTypeValueSet_PartialArterialRetinalOcclusion: new Coding({
     code: "776009",
     display: "Partial arterial retinal occlusion",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CestrumDiurnumPoisoning: Coding.FromStrict({
+  AdverseEventTypeValueSet_CestrumDiurnumPoisoning: new Coding({
     code: "781000",
     display: "Cestrum diurnum poisoning",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ClinicalStageIB: Coding.FromStrict({
+  AdverseEventTypeValueSet_ClinicalStageIB: new Coding({
     code: "786005",
     display: "Clinical stage I B",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_RheumaticMitralStenosisWithRegurgitation: Coding.FromStrict({
+  AdverseEventTypeValueSet_RheumaticMitralStenosisWithRegurgitation: new Coding({
     code: "787001",
     display: "Rheumatic mitral stenosis with regurgitation",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DiseaseRelatedDiet: Coding.FromStrict({
+  AdverseEventTypeValueSet_DiseaseRelatedDiet: new Coding({
     code: "788006",
     display: "Disease-related diet",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CJDCreutzfeldtJakobDisease: Coding.FromStrict({
+  AdverseEventTypeValueSet_CJDCreutzfeldtJakobDisease: new Coding({
     code: "792004",
     display: "CJD - Creutzfeldt-Jakob disease",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SigmoidColonUlcer: Coding.FromStrict({
+  AdverseEventTypeValueSet_SigmoidColonUlcer: new Coding({
     code: "799008",
     display: "Sigmoid colon ulcer",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InsectBiteNonvenomousOfFootInfected: Coding.FromStrict({
+  AdverseEventTypeValueSet_InsectBiteNonvenomousOfFootInfected: new Coding({
     code: "801006",
     display: "Insect bite, nonvenomous, of foot, infected",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PneumoconiosisDueToSilica: Coding.FromStrict({
+  AdverseEventTypeValueSet_PneumoconiosisDueToSilica: new Coding({
     code: "805002",
     display: "Pneumoconiosis due to silica",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FlailMotion: Coding.FromStrict({
+  AdverseEventTypeValueSet_FlailMotion: new Coding({
     code: "811004",
     display: "Flail motion",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AnkleInstability: Coding.FromStrict({
+  AdverseEventTypeValueSet_AnkleInstability: new Coding({
     code: "813001",
     display: "Ankle instability",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Episcleritis: Coding.FromStrict({
+  AdverseEventTypeValueSet_Episcleritis: new Coding({
     code: "815008",
     display: "Episcleritis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_GeneticRecombination: Coding.FromStrict({
+  AdverseEventTypeValueSet_GeneticRecombination: new Coding({
     code: "816009",
     display: "Genetic recombination",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ThirdDegreeBurnOfMultipleSitesOfLowerLimb: Coding.FromStrict({
+  AdverseEventTypeValueSet_ThirdDegreeBurnOfMultipleSitesOfLowerLimb: new Coding({
     code: "818005",
     display: "Third degree burn of multiple sites of lower limb",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SuperficialInjuryOfAxillaWithInfection: Coding.FromStrict({
+  AdverseEventTypeValueSet_SuperficialInjuryOfAxillaWithInfection: new Coding({
     code: "825003",
     display: "Superficial injury of axilla with infection",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_LateCongenitalSyphilisLatentPlusSeroCSF2YearsORMore: Coding.FromStrict({
+  AdverseEventTypeValueSet_LateCongenitalSyphilisLatentPlusSeroCSF2YearsORMore: new Coding({
     code: "827006",
     display: "Late congenital syphilis, latent (+ sero., - C.S.F., 2 years OR more)",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ModerateMajorDepression: Coding.FromStrict({
+  AdverseEventTypeValueSet_ModerateMajorDepression: new Coding({
     code: "832007",
     display: "Moderate major depression",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChairSeatedFacingCoitalPosition: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChairSeatedFacingCoitalPosition: new Coding({
     code: "834008",
     display: "Chair-seated facing coital position",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalAbsenceOfSkullBone: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalAbsenceOfSkullBone: new Coding({
     code: "841002",
     display: "Congenital absence of skull bone",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Consanguinity: Coding.FromStrict({
+  AdverseEventTypeValueSet_Consanguinity: new Coding({
     code: "842009",
     display: "Consanguinity",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_Poliomyelomalacia: Coding.FromStrict({
+  AdverseEventTypeValueSet_Poliomyelomalacia: new Coding({
     code: "843004",
     display: "Poliomyelomalacia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FindingRelatingToBehavior: Coding.FromStrict({
+  AdverseEventTypeValueSet_FindingRelatingToBehavior: new Coding({
     code: "844005",
     display: "Finding relating to behavior",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_InferiorMesentericArteryInjury: Coding.FromStrict({
+  AdverseEventTypeValueSet_InferiorMesentericArteryInjury: new Coding({
     code: "845006",
     display: "Inferior mesenteric artery injury",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_TotalCataract: Coding.FromStrict({
+  AdverseEventTypeValueSet_TotalCataract: new Coding({
     code: "849000",
     display: "Total cataract",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ErythemaSimplex: Coding.FromStrict({
+  AdverseEventTypeValueSet_ErythemaSimplex: new Coding({
     code: "857002",
     display: "Erythema simplex",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AnemiaDueToChlorate: Coding.FromStrict({
+  AdverseEventTypeValueSet_AnemiaDueToChlorate: new Coding({
     code: "862001",
     display: "Anemia due to chlorate",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HyperalimentationFormulaForIleus: Coding.FromStrict({
+  AdverseEventTypeValueSet_HyperalimentationFormulaForIleus: new Coding({
     code: "865004",
     display: "Hyperalimentation formula for ileus",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ContractedPelvis: Coding.FromStrict({
+  AdverseEventTypeValueSet_ContractedPelvis: new Coding({
     code: "871005",
     display: "Contracted pelvis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_TherapeuticDiuresis: Coding.FromStrict({
+  AdverseEventTypeValueSet_TherapeuticDiuresis: new Coding({
     code: "874002",
     display: "Therapeutic diuresis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChalcosisOfEye: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChalcosisOfEye: new Coding({
     code: "875001",
     display: "Chalcosis of eye",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FoetalOrNeonatalEffectOfMaternalBloodLoss: Coding.FromStrict({
+  AdverseEventTypeValueSet_FoetalOrNeonatalEffectOfMaternalBloodLoss: new Coding({
     code: "888003",
     display: "Foetal or neonatal effect of maternal blood loss",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DeepThirdDegreeBurnOfElbow: Coding.FromStrict({
+  AdverseEventTypeValueSet_DeepThirdDegreeBurnOfElbow: new Coding({
     code: "890002",
     display: "Deep third degree burn of elbow",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AxisIDiagnosis: Coding.FromStrict({
+  AdverseEventTypeValueSet_AxisIDiagnosis: new Coding({
     code: "899001",
     display: "Axis I diagnosis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChorioretinalInfarction: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChorioretinalInfarction: new Coding({
     code: "903008",
     display: "Chorioretinal infarction",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PinardQuoteSSign: Coding.FromStrict({
+  AdverseEventTypeValueSet_PinardQuoteSSign: new Coding({
     code: "904002",
     display: "Pinard's sign",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_SuperficialInjuryOfInterscapularRegionWithoutInfection: Coding.FromStrict({
+  AdverseEventTypeValueSet_SuperficialInjuryOfInterscapularRegionWithoutInfection: new Coding({
     code: "908004",
     display: "Superficial injury of interscapular region without infection",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PseudohomosexualState: Coding.FromStrict({
+  AdverseEventTypeValueSet_PseudohomosexualState: new Coding({
     code: "919001",
     display: "Pseudohomosexual state",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_MusculoskeletalDisorder: Coding.FromStrict({
+  AdverseEventTypeValueSet_MusculoskeletalDisorder: new Coding({
     code: "928000",
     display: "Musculoskeletal disorder",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_GestationPeriod9Weeks: Coding.FromStrict({
+  AdverseEventTypeValueSet_GestationPeriod9Weeks: new Coding({
     code: "931004",
     display: "Gestation period, 9 weeks",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_FlatAffect: Coding.FromStrict({
+  AdverseEventTypeValueSet_FlatAffect: new Coding({
     code: "932006",
     display: "Flat affect",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ThalassemiaIntermedia: Coding.FromStrict({
+  AdverseEventTypeValueSet_ThalassemiaIntermedia: new Coding({
     code: "934007",
     display: "Thalassemia intermedia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CongenitalRetinalAneurysm: Coding.FromStrict({
+  AdverseEventTypeValueSet_CongenitalRetinalAneurysm: new Coding({
     code: "943003",
     display: "Congenital retinal aneurysm",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_RenonDelilleSyndrome: Coding.FromStrict({
+  AdverseEventTypeValueSet_RenonDelilleSyndrome: new Coding({
     code: "954008",
     display: "Renon-Delille syndrome",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ErythemaNodosumAcuteForm: Coding.FromStrict({
+  AdverseEventTypeValueSet_ErythemaNodosumAcuteForm: new Coding({
     code: "961007",
     display: "Erythema nodosum, acute form",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_DisabilityEvaluationDisability6Percent: Coding.FromStrict({
+  AdverseEventTypeValueSet_DisabilityEvaluationDisability6Percent: new Coding({
     code: "962000",
     display: "Disability evaluation, disability 6%",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_OpenWoundOfPharynxWithoutComplication: Coding.FromStrict({
+  AdverseEventTypeValueSet_OpenWoundOfPharynxWithoutComplication: new Coding({
     code: "964004",
     display: "Open wound of pharynx without complication",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ToxicAmblyopia: Coding.FromStrict({
+  AdverseEventTypeValueSet_ToxicAmblyopia: new Coding({
     code: "965003",
     display: "Toxic amblyopia",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_AnorectalAgenesis: Coding.FromStrict({
+  AdverseEventTypeValueSet_AnorectalAgenesis: new Coding({
     code: "975000",
     display: "Anorectal agenesis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChronicInfantileEczema: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChronicInfantileEczema: new Coding({
     code: "978003",
     display: "Chronic infantile eczema",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_HemorrhagicProctitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_HemorrhagicProctitis: new Coding({
     code: "981008",
     display: "Hemorrhagic proctitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_PerirectalCellulitis: Coding.FromStrict({
+  AdverseEventTypeValueSet_PerirectalCellulitis: new Coding({
     code: "984000",
     display: "Perirectal cellulitis",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_CellulitisOfTempleRegion: Coding.FromStrict({
+  AdverseEventTypeValueSet_CellulitisOfTempleRegion: new Coding({
     code: "987007",
     display: "Cellulitis of temple region",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_WideQRSComplex: Coding.FromStrict({
+  AdverseEventTypeValueSet_WideQRSComplex: new Coding({
     code: "991002",
     display: "Wide QRS complex",
     system: "http://snomed.info/sct"
   }),
-  AdverseEventTypeValueSet_ChagasQuoteDiseaseWithHeartInvolvement: Coding.FromStrict({
+  AdverseEventTypeValueSet_ChagasQuoteDiseaseWithHeartInvolvement: new Coding({
     code: "998008",
     display: "Chagas' disease with heart involvement",
     system: "http://snomed.info/sct"

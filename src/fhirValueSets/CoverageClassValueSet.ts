@@ -13,7 +13,7 @@ export const CoverageClassValueSet = {
   /**
    * A class of benefits.
    */
-  coverage_class_Class: Coding.FromStrict({
+  coverage_class_Class: new Coding({
     code: "class",
     display: "Class",
     system: "http://terminology.hl7.org/CodeSystem/coverage-class"
@@ -21,7 +21,7 @@ export const CoverageClassValueSet = {
   /**
    * An employee group
    */
-  coverage_class_Group: Coding.FromStrict({
+  coverage_class_Group: new Coding({
     code: "group",
     display: "Group",
     system: "http://terminology.hl7.org/CodeSystem/coverage-class"
@@ -29,7 +29,7 @@ export const CoverageClassValueSet = {
   /**
    * A specific suite of benefits.
    */
-  coverage_class_Plan: Coding.FromStrict({
+  coverage_class_Plan: new Coding({
     code: "plan",
     display: "Plan",
     system: "http://terminology.hl7.org/CodeSystem/coverage-class"
@@ -37,7 +37,7 @@ export const CoverageClassValueSet = {
   /**
    * Pharmacy benefit manager's Business Identification Number.
    */
-  coverage_class_RXBIN: Coding.FromStrict({
+  coverage_class_RXBIN: new Coding({
     code: "rxbin",
     display: "RX BIN",
     system: "http://terminology.hl7.org/CodeSystem/coverage-class"
@@ -45,7 +45,7 @@ export const CoverageClassValueSet = {
   /**
    * A Pharmacy Benefit Manager specified Group number.
    */
-  coverage_class_RXGroup: Coding.FromStrict({
+  coverage_class_RXGroup: new Coding({
     code: "rxgroup",
     display: "RX Group",
     system: "http://terminology.hl7.org/CodeSystem/coverage-class"
@@ -53,7 +53,7 @@ export const CoverageClassValueSet = {
   /**
    * A Pharmacy Benefit Manager specified Member ID.
    */
-  coverage_class_RXId: Coding.FromStrict({
+  coverage_class_RXId: new Coding({
     code: "rxid",
     display: "RX Id",
     system: "http://terminology.hl7.org/CodeSystem/coverage-class"
@@ -61,7 +61,7 @@ export const CoverageClassValueSet = {
   /**
    * A Pharmacy Benefit Manager specified Processor Control Number.
    */
-  coverage_class_RXPCN: Coding.FromStrict({
+  coverage_class_RXPCN: new Coding({
     code: "rxpcn",
     display: "RX PCN",
     system: "http://terminology.hl7.org/CodeSystem/coverage-class"
@@ -69,7 +69,7 @@ export const CoverageClassValueSet = {
   /**
    * A sequence number associated with a short-term continuance of the coverage.
    */
-  coverage_class_Sequence: Coding.FromStrict({
+  coverage_class_Sequence: new Coding({
     code: "sequence",
     display: "Sequence",
     system: "http://terminology.hl7.org/CodeSystem/coverage-class"
@@ -77,7 +77,7 @@ export const CoverageClassValueSet = {
   /**
    * A subset of a class of benefits.
    */
-  coverage_class_SubClass: Coding.FromStrict({
+  coverage_class_SubClass: new Coding({
     code: "subclass",
     display: "SubClass",
     system: "http://terminology.hl7.org/CodeSystem/coverage-class"
@@ -85,7 +85,7 @@ export const CoverageClassValueSet = {
   /**
    * A sub-group of an employee group
    */
-  coverage_class_SubGroup: Coding.FromStrict({
+  coverage_class_SubGroup: new Coding({
     code: "subgroup",
     display: "SubGroup",
     system: "http://terminology.hl7.org/CodeSystem/coverage-class"
@@ -93,7 +93,7 @@ export const CoverageClassValueSet = {
   /**
    * A subset of a specific suite of benefits.
    */
-  coverage_class_SubPlan: Coding.FromStrict({
+  coverage_class_SubPlan: new Coding({
     code: "subplan",
     display: "SubPlan",
     system: "http://terminology.hl7.org/CodeSystem/coverage-class"

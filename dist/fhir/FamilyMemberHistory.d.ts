@@ -208,11 +208,11 @@ export declare class FamilyMemberHistoryCondition extends fhir.BackboneElement i
     /**
      * Check if the current FamilyMemberHistoryCondition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a FamilyMemberHistoryCondition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IFamilyMemberHistoryCondition): FamilyMemberHistoryCondition;
+    static fromStrict(source: fhir.IFamilyMemberHistoryCondition): FamilyMemberHistoryCondition;
 }
 /**
  * Significant health conditions for a person related to the patient relevant in the context of care for the patient.
@@ -345,11 +345,11 @@ export declare class FamilyMemberHistory extends fhir.DomainResource implements 
     /**
      * Check if the current FamilyMemberHistory contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a FamilyMemberHistory from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IFamilyMemberHistory): FamilyMemberHistory;
+    static fromStrict(source: fhir.IFamilyMemberHistory): FamilyMemberHistory;
 }
 /**
  * Code Values for the FamilyMemberHistory.status field

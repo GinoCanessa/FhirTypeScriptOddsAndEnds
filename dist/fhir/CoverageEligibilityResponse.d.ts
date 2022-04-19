@@ -256,11 +256,11 @@ export declare class CoverageEligibilityResponseInsuranceItemBenefit extends fhi
     /**
      * Check if the current CoverageEligibilityResponseInsuranceItemBenefit contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CoverageEligibilityResponseInsuranceItemBenefit from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICoverageEligibilityResponseInsuranceItemBenefit): CoverageEligibilityResponseInsuranceItemBenefit;
+    static fromStrict(source: fhir.ICoverageEligibilityResponseInsuranceItemBenefit): CoverageEligibilityResponseInsuranceItemBenefit;
 }
 /**
  * Benefits and optionally current balances, and authorization details by category or service.
@@ -334,11 +334,11 @@ export declare class CoverageEligibilityResponseInsuranceItem extends fhir.Backb
     /**
      * Check if the current CoverageEligibilityResponseInsuranceItem contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CoverageEligibilityResponseInsuranceItem from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICoverageEligibilityResponseInsuranceItem): CoverageEligibilityResponseInsuranceItem;
+    static fromStrict(source: fhir.ICoverageEligibilityResponseInsuranceItem): CoverageEligibilityResponseInsuranceItem;
 }
 /**
  * All insurance coverages for the patient which may be applicable for reimbursement, of the products and services listed in the claim, are typically provided in the claim to allow insurers to confirm the ordering of the insurance coverages relative to local 'coordination of benefit' rules. One coverage (and only one) with 'focal=true' is to be used in the adjudication of this claim. Coverages appearing before the focal Coverage in the list, and where 'subrogation=false', should provide a reference to the ClaimResponse containing the adjudication results of the prior claim.
@@ -368,11 +368,11 @@ export declare class CoverageEligibilityResponseInsurance extends fhir.BackboneE
     /**
      * Check if the current CoverageEligibilityResponseInsurance contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CoverageEligibilityResponseInsurance from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICoverageEligibilityResponseInsurance): CoverageEligibilityResponseInsurance;
+    static fromStrict(source: fhir.ICoverageEligibilityResponseInsurance): CoverageEligibilityResponseInsurance;
 }
 /**
  * Errors encountered during the processing of the request.
@@ -389,11 +389,11 @@ export declare class CoverageEligibilityResponseError extends fhir.BackboneEleme
     /**
      * Check if the current CoverageEligibilityResponseError contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CoverageEligibilityResponseError from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICoverageEligibilityResponseError): CoverageEligibilityResponseError;
+    static fromStrict(source: fhir.ICoverageEligibilityResponseError): CoverageEligibilityResponseError;
 }
 /**
  * This resource provides eligibility and plan details from the processing of an CoverageEligibilityRequest resource.
@@ -481,11 +481,11 @@ export declare class CoverageEligibilityResponse extends fhir.DomainResource imp
     /**
      * Check if the current CoverageEligibilityResponse contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CoverageEligibilityResponse from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICoverageEligibilityResponse): CoverageEligibilityResponse;
+    static fromStrict(source: fhir.ICoverageEligibilityResponse): CoverageEligibilityResponse;
 }
 /**
  * Code Values for the CoverageEligibilityResponse.outcome field

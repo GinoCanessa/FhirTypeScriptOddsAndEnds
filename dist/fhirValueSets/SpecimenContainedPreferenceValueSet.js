@@ -13,7 +13,7 @@ export const SpecimenContainedPreferenceValueSet = {
     /**
      * This type of conditioned specimen is an alternate.
      */
-    specimen_contained_preference_Alternate: Coding.FromStrict({
+    specimen_contained_preference_Alternate: new Coding({
         code: "alternate",
         display: "Alternate",
         system: "http://hl7.org/fhir/specimen-contained-preference"
@@ -21,7 +21,7 @@ export const SpecimenContainedPreferenceValueSet = {
     /**
      * This type of contained specimen is preferred to collect this kind of specimen.
      */
-    specimen_contained_preference_Preferred: Coding.FromStrict({
+    specimen_contained_preference_Preferred: new Coding({
         code: "preferred",
         display: "Preferred",
         system: "http://hl7.org/fhir/specimen-contained-preference"

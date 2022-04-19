@@ -13,7 +13,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Participations related, but not primary to an act. The Referring, Admitting, and Discharging practitioners must be the same person as those authoring the ControlAct event for their respective trigger events.
      */
-    v3_ParticipationType_ParticipationAncillary: Coding.FromStrict({
+    v3_ParticipationType_ParticipationAncillary: new Coding({
         code: "_ParticipationAncillary",
         display: "ParticipationAncillary",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -21,7 +21,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Parties that may or should contribute or have contributed information to the Act. Such information includes information leading to the decision to perform the Act and how to perform the Act (e.g., consultant), information that the Act itself seeks to reveal (e.g., informant of clinical history), or information about what Act was performed (e.g., informant witness).
      */
-    v3_ParticipationType_ParticipationInformationGenerator: Coding.FromStrict({
+    v3_ParticipationType_ParticipationInformationGenerator: new Coding({
         code: "_ParticipationInformationGenerator",
         display: "ParticipationInformationGenerator",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -35,7 +35,7 @@ export const ProvenanceActivityTypeValueSet = {
      *
      *                            UsageNotes: The Role that this participation connects to may be any Role whose player is that substance measured. Very often, the scoper may indicate the system in which the component is being measured. E.g., for "plasma porcelain" the scoper could be "Plasma".
      */
-    v3_ParticipationType_Analyte: Coding.FromStrict({
+    v3_ParticipationType_Analyte: new Coding({
         code: "ALY",
         display: "analyte",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -43,7 +43,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Custodian system must remove any information that could result in identifying the information subject.
      */
-    v3_ActCode_Anonymize: Coding.FromStrict({
+    v3_ActCode_Anonymize: new Coding({
         code: "ANONY",
         display: "anonymize",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -51,7 +51,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Description:Fundamental operation in an Information System (IS) that results only in the addition of information to an object already in existence. Note: The preceding definition is taken from the HL7 RBAC specification.  There is no restriction on how the operation is invoked, e.g., via a user interface.
      */
-    v3_DataOperation_Append: Coding.FromStrict({
+    v3_DataOperation_Append: new Coding({
         code: "APPEND",
         display: "append",
         system: "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
@@ -59,7 +59,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * A verifier who attests to the accuracy of an act, but who does not have privileges to legally authenticate the act. An example would be a resident physician who sees a patient and dictates a note, then later signs it. Their signature constitutes an authentication.
      */
-    v3_ParticipationType_Authenticator: Coding.FromStrict({
+    v3_ParticipationType_Authenticator: new Coding({
         code: "AUTHEN",
         display: "authenticator",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -67,7 +67,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * In an obstetric service, the baby.
      */
-    v3_ParticipationType_Baby: Coding.FromStrict({
+    v3_ParticipationType_Baby: new Coding({
         code: "BBY",
         display: "baby",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -77,7 +77,7 @@ export const ProvenanceActivityTypeValueSet = {
      *
      *                         Note that the semantic role of the intended recipient who benefits from the happening denoted by the verb in the clause.  Thus, a patient who has no coverage under a policy or program may be a beneficiary of a health service while not being the beneficiary of coverage for that service.
      */
-    v3_ParticipationType_Beneficiary: Coding.FromStrict({
+    v3_ParticipationType_Beneficiary: new Coding({
         code: "BEN",
         display: "beneficiary",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -87,7 +87,7 @@ export const ProvenanceActivityTypeValueSet = {
      *
      *                         Constraint:  The use of this participation is limited to observations.
      */
-    v3_ParticipationType_CausativeAgent: Coding.FromStrict({
+    v3_ParticipationType_CausativeAgent: new Coding({
         code: "CAGNT",
         display: "causative agent",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -95,7 +95,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * The catalyst of a chemical reaction, such as an enzyme or a platinum surface. In biochemical reactions, connects the enzyme with the molecular interaction
      */
-    v3_ParticipationType_Catalyst: Coding.FromStrict({
+    v3_ParticipationType_Catalyst: new Coding({
         code: "CAT",
         display: "catalyst",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -103,7 +103,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * The target participation for an individual in a health care coverage act in which the target role is either the policy holder of the coverage, or a covered party under the coverage.
      */
-    v3_ParticipationType_CoverageTarget: Coding.FromStrict({
+    v3_ParticipationType_CoverageTarget: new Coding({
         code: "COV",
         display: "coverage target",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -111,7 +111,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Description:Fundamental operation in an Information System (IS) that results only in the act of bringing an object into existence. Note: The preceding definition is taken from the HL7 RBAC specification.  There is no restriction on how the operation is invoked, e.g., via a user interface. For an HL7 Act, the state transitions per the HL7 Reference Information Model.
      */
-    v3_DataOperation_Create: Coding.FromStrict({
+    v3_DataOperation_Create: new Coding({
         code: "CREATE",
         display: "create",
         system: "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
@@ -119,7 +119,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Participant material that is taken up, diminished, altered, or disappears in the act.
      */
-    v3_ParticipationType_Consumable: Coding.FromStrict({
+    v3_ParticipationType_Consumable: new Coding({
         code: "CSM",
         display: "consumable",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -127,7 +127,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Custodian system must strip information of data that would allow the identification of the source of the information or the information subject.
      */
-    v3_ActCode_Deidentify: Coding.FromStrict({
+    v3_ActCode_Deidentify: new Coding({
         code: "DEID",
         display: "deidentify",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -135,7 +135,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Description:Fundamental operation in an Information System (IS) that results only in the removal of information about an object from memory or storage. Note: The preceding definition is taken from the HL7 RBAC specification.  There is no restriction on how the operation is invoked, e.g., via a user interface.
      */
-    v3_DataOperation_Delete: Coding.FromStrict({
+    v3_DataOperation_Delete: new Coding({
         code: "DELETE",
         display: "delete",
         system: "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
@@ -146,7 +146,7 @@ export const ProvenanceActivityTypeValueSet = {
      *
      *                            Examples: monitoring equipment, tools, but also access/drainage lines, prostheses, pace maker, etc.
      */
-    v3_ParticipationType_Device: Coding.FromStrict({
+    v3_ParticipationType_Device: new Coding({
         code: "DEV",
         display: "device",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -154,7 +154,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Target participant  that is substantially present in the act  and which is directly involved in the action (includes consumed material, devices, etc.).
      */
-    v3_ParticipationType_DirectTarget: Coding.FromStrict({
+    v3_ParticipationType_DirectTarget: new Coding({
         code: "DIR",
         display: "direct target",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -162,7 +162,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Distributes material used in or generated during the act.
      */
-    v3_ParticipationType_Distributor: Coding.FromStrict({
+    v3_ParticipationType_Distributor: new Coding({
         code: "DIST",
         display: "distributor",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -170,7 +170,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * In some organ transplantation services and rarely in transfusion services a donor will be a target participant in the service.  However, in most cases transplantation is decomposed in three services: explantation, transport, and implantation.  The identity of the donor (recipient) is often irrelevant for the explantation (implantation) service.
      */
-    v3_ParticipationType_Donor: Coding.FromStrict({
+    v3_ParticipationType_Donor: new Coding({
         code: "DON",
         display: "donor",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -178,7 +178,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * The destination for services.  May be a static building (or room therein) or a movable facility (e.g., ship).
      */
-    v3_ParticipationType_Destination: Coding.FromStrict({
+    v3_ParticipationType_Destination: new Coding({
         code: "DST",
         display: "destination",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -186,7 +186,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * A location where data about an Act was entered.
      */
-    v3_ParticipationType_EntryLocation: Coding.FromStrict({
+    v3_ParticipationType_EntryLocation: new Coding({
         code: "ELOC",
         display: "entry location",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -194,7 +194,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * A person entering the data into the originating system.  The data entry person is collected optionally for internal quality control purposes.  This includes the transcriptionist for dictated text.
      */
-    v3_ParticipationType_DataEntryPerson: Coding.FromStrict({
+    v3_ParticipationType_DataEntryPerson: new Coding({
         code: "ENT",
         display: "data entry person",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -202,7 +202,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Description: The entity playing the associated role is the physical (including energy), chemical or biological substance that is participating in the exposure.  For example in communicable diseases, the associated playing entity is the disease causing pathogen.
      */
-    v3_ParticipationType_ExposureAgent: Coding.FromStrict({
+    v3_ParticipationType_ExposureAgent: new Coding({
         code: "EXPAGNT",
         display: "ExposureAgent",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -210,7 +210,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Description:Direct participation in an exposure act where it is unknown that the participant is the source or subject of the exposure.  If the participant is known to be the contact of an exposure then the SBJ participation type should be used.  If the participant is known to be the source then the EXSRC participation type should be used.
      */
-    v3_ParticipationType_ExposureParticipation: Coding.FromStrict({
+    v3_ParticipationType_ExposureParticipation: new Coding({
         code: "EXPART",
         display: "ExposureParticipation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -218,7 +218,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Description: The entity playing the associated role is the target (contact) of exposure.
      */
-    v3_ParticipationType_ExposureTarget: Coding.FromStrict({
+    v3_ParticipationType_ExposureTarget: new Coding({
         code: "EXPTRGT",
         display: "ExposureTarget",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -226,7 +226,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Description:The entity playing the associated role is the source of exposure.
      */
-    v3_ParticipationType_ExposureSource: Coding.FromStrict({
+    v3_ParticipationType_ExposureSource: new Coding({
         code: "EXSRC",
         display: "ExposureSource",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -237,7 +237,7 @@ export const ProvenanceActivityTypeValueSet = {
      *
      *                            Example:The subscriber of the patientaTMs health insurance policy signs a contract with the provider to be fiscally responsible for the patient billing account balance amount owed.
      */
-    v3_ParticipationType_GuarantorParty: Coding.FromStrict({
+    v3_ParticipationType_GuarantorParty: new Coding({
         code: "GUAR",
         display: "guarantor party",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -245,7 +245,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Participant who posses an instrument such as a financial contract (insurance policy) usually based on some agreement with the author.
      */
-    v3_ParticipationType_Holder: Coding.FromStrict({
+    v3_ParticipationType_Holder: new Coding({
         code: "HLD",
         display: "holder",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -253,7 +253,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Target that is not substantially present in the act and which is not directly affected by the act, but which will be a focus of the record or documentation of the act.
      */
-    v3_ParticipationType_IndirectTarget: Coding.FromStrict({
+    v3_ParticipationType_IndirectTarget: new Coding({
         code: "IND",
         display: "indirect target",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -261,7 +261,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * A completion status in which a document has been signed manually or electronically by the individual who is legally responsible for that document. This is the most mature state in the workflow progression.
      */
-    v3_DocumentCompletion_LegallyAuthenticated: Coding.FromStrict({
+    v3_DocumentCompletion_LegallyAuthenticated: new Coding({
         code: "LA",
         display: "legally authenticated",
         system: "http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion"
@@ -272,7 +272,7 @@ export const ProvenanceActivityTypeValueSet = {
      *
      *                            Usage Note: In security systems, security policy label assignments do not change, they may supersede prior assignments, and such reassignments are always tracked for auditing and other purposes.
      */
-    v3_ActCode_AssignSecurityLabel: Coding.FromStrict({
+    v3_ActCode_AssignSecurityLabel: new Coding({
         code: "LABEL",
         display: "assign security label",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -280,7 +280,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * The facility where the service is done.  May be a static building (or room therein) or a moving location (e.g., ambulance, helicopter, aircraft, train, truck, ship, etc.)
      */
-    v3_ParticipationType_Location: Coding.FromStrict({
+    v3_ParticipationType_Location: new Coding({
         code: "LOC",
         display: "location",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -288,7 +288,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Custodian system must render information unreadable and unusable by algorithmically transforming plaintext into ciphertext.  User may be provided a key to decrypt per license or "shared secret".
      */
-    v3_ActCode_Mask: Coding.FromStrict({
+    v3_ActCode_Mask: new Coding({
         code: "MASK",
         display: "mask",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -296,7 +296,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * An information recipient to notify for urgent matters about this Act. (e.g., in a laboratory order, critical results are being called by phone right away, this is the contact to call; or for an inpatient encounter, a next of kin to notify when the patient becomes critically ill).
      */
-    v3_ParticipationType_UgentNotificationContact: Coding.FromStrict({
+    v3_ParticipationType_UgentNotificationContact: new Coding({
         code: "NOT",
         display: "ugent notification contact",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -304,7 +304,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * A device that changes ownership due to the service, e.g., a pacemaker, a prosthesis, an insulin injection equipment (pen), etc.  Such material may need to be restocked after he service.
      */
-    v3_ParticipationType_NonReuseableDevice: Coding.FromStrict({
+    v3_ParticipationType_NonReuseableDevice: new Coding({
         code: "NRD",
         display: "non-reuseable device",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -312,7 +312,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Description:Change the status of an object representing an Act to "nullified", i.e., treat as though it never existed. For an HL7 Act, the state transitions per the HL7 Reference Information Model.
      */
-    v3_DataOperation_Nullify: Coding.FromStrict({
+    v3_DataOperation_Nullify: new Coding({
         code: "NULLIFY",
         display: "nullify",
         system: "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
@@ -320,7 +320,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * The location of origin for services.  May be a static building (or room therein) or a movable facility (e.g., ship).
      */
-    v3_ParticipationType_Origin: Coding.FromStrict({
+    v3_ParticipationType_Origin: new Coding({
         code: "ORG",
         display: "origin",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -328,7 +328,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Information recipient to whom an act statement is primarily directed. E.g., a primary care provider receiving a discharge letter from a hospitalist, a health department receiving information on a suspected case of infectious disease. Multiple of these participations may exist on the same act without requiring that recipients be ranked as primary vs. secondary.
      */
-    v3_ParticipationType_PrimaryInformationRecipient: Coding.FromStrict({
+    v3_ParticipationType_PrimaryInformationRecipient: new Coding({
         code: "PRCP",
         display: "primary information recipient",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -336,7 +336,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Participant material that is brought forth (produced) in the act (e.g., specimen in a specimen collection, access or drainage in a placement service, medication package in a dispense service). It does not matter whether the material produced had existence prior to the service, or whether it is created in the service (e.g., in supply services the product is taken from a stock).
      */
-    v3_ParticipationType_Product: Coding.FromStrict({
+    v3_ParticipationType_Product: new Coding({
         code: "PRD",
         display: "product",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -350,7 +350,7 @@ export const ProvenanceActivityTypeValueSet = {
      *
      *                            Note: that existing HL7 designs assign an organization as the playing entity of the Role that is the performer.  These designs should be revised in subsequent releases to make this the scooping entity for the role involved.
      */
-    v3_ParticipationType_Performer: Coding.FromStrict({
+    v3_ParticipationType_Performer: new Coding({
         code: "PRF",
         display: "performer",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -358,7 +358,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Custodian system must strip information of data that would allow the identification of the source of the information or the information subject.  Custodian may retain a key to relink data necessary to reidentify the information subject.
      */
-    v3_ActCode_Pseudonymize: Coding.FromStrict({
+    v3_ActCode_Pseudonymize: new Coding({
         code: "PSEUD",
         display: "pseudonymize",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -366,7 +366,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * The record target indicates whose medical record holds the documentation of this act.  This is especially important when the subject of a service is not the patient himself.
      */
-    v3_ParticipationType_RecordTarget: Coding.FromStrict({
+    v3_ParticipationType_RecordTarget: new Coding({
         code: "RCT",
         display: "record target",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -374,7 +374,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * The person (or organization) who receives the product of an Act.
      */
-    v3_ParticipationType_Receiver: Coding.FromStrict({
+    v3_ParticipationType_Receiver: new Coding({
         code: "RCV",
         display: "receiver",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -382,7 +382,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * A device that does not change ownership due to the service, i.e., a surgical instrument or tool or an endoscope.  The distinction between reuseable and non-reuseable must be made in order to know whether material must be re-stocked.
      */
-    v3_ParticipationType_ReusableDevice: Coding.FromStrict({
+    v3_ParticipationType_ReusableDevice: new Coding({
         code: "RDV",
         display: "reusable device",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -392,7 +392,7 @@ export const ProvenanceActivityTypeValueSet = {
      *
      *                         Typically, a referred by participant will provide a report (e.g. referral).
      */
-    v3_ParticipationType_ReferredBy: Coding.FromStrict({
+    v3_ParticipationType_ReferredBy: new Coding({
         code: "REFB",
         display: "Referred By",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -400,7 +400,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * The person who receives the patient
      */
-    v3_ParticipationType_ReferredTo: Coding.FromStrict({
+    v3_ParticipationType_ReferredTo: new Coding({
         code: "REFT",
         display: "Referred to",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -411,7 +411,7 @@ export const ProvenanceActivityTypeValueSet = {
      *
      *                            Example: A person who is the head of a biochemical laboratory; a sponsor for a policy or government program.
      */
-    v3_ParticipationType_ResponsibleParty: Coding.FromStrict({
+    v3_ParticipationType_ResponsibleParty: new Coding({
         code: "RESP",
         display: "responsible party",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -419,7 +419,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Some services take place at multiple concurrent locations (e.g., telemedicine, telephone consultation).  The location where the principal performing actor is located is taken as the primary location (LOC) while the other location(s) are considered "remote."
      */
-    v3_ParticipationType_Remote: Coding.FromStrict({
+    v3_ParticipationType_Remote: new Coding({
         code: "RML",
         display: "remote",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -433,7 +433,7 @@ export const ProvenanceActivityTypeValueSet = {
      *
      *                            UsageNotes: Not all direct targets are subjects. Consumables and devices used as tools for an act are not subjects. However, a device may be a subject of a maintenance action.
      */
-    v3_ParticipationType_Subject: Coding.FromStrict({
+    v3_ParticipationType_Subject: new Coding({
         code: "SBJ",
         display: "subject",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -441,7 +441,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * The subject of non-clinical (e.g. laboratory) observation services is a specimen.
      */
-    v3_ParticipationType_Specimen: Coding.FromStrict({
+    v3_ParticipationType_Specimen: new Coding({
         code: "SPC",
         display: "specimen",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -449,7 +449,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Something incorporated in the subject of a therapy service to achieve a physiologic effect (e.g., heal, relieve, provoke a condition, etc.) on the subject.  In an administration service the therapeutic agent is a consumable, in a preparation or dispense service, it is a product.  Thus, consumable or product must be specified in accordance with the kind of service.
      */
-    v3_ParticipationType_TherapeuticAgent: Coding.FromStrict({
+    v3_ParticipationType_TherapeuticAgent: new Coding({
         code: "TPA",
         display: "therapeutic agent",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -457,7 +457,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * An entity entering the data into the originating system. The data entry entity is collected optionally for internal quality control purposes. This includes the transcriptionist for dictated text transcribed into electronic form.
      */
-    v3_ParticipationType_Transcriber: Coding.FromStrict({
+    v3_ParticipationType_Transcriber: new Coding({
         code: "TRANS",
         display: "Transcriber",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -465,7 +465,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * Definition:Fundamental operation in an Information System (IS) that results only in the revision or alteration of an object. Note: The preceding definition is taken from the HL7 RBAC specification. There is no restriction on how the operation is invoked, e.g., via a user interface.
      */
-    v3_DataOperation_Revise: Coding.FromStrict({
+    v3_DataOperation_Revise: new Coding({
         code: "UPDATE",
         display: "revise",
         system: "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
@@ -473,7 +473,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * For services, an intermediate location that specifies a path between origin an destination.
      */
-    v3_ParticipationType_Via: Coding.FromStrict({
+    v3_ParticipationType_Via: new Coding({
         code: "VIA",
         display: "via",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -481,7 +481,7 @@ export const ProvenanceActivityTypeValueSet = {
     /**
      * A person who verifies the correctness and appropriateness of the service (plan, order, event, etc.) and hence takes on accountability.
      */
-    v3_ParticipationType_Verifier: Coding.FromStrict({
+    v3_ParticipationType_Verifier: new Coding({
         code: "VRF",
         display: "verifier",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"

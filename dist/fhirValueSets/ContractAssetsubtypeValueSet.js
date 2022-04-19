@@ -13,7 +13,7 @@ export const ContractAssetsubtypeValueSet = {
     /**
      * To be completed
      */
-    contract_assetsubtype_Participation: Coding.FromStrict({
+    contract_assetsubtype_Participation: new Coding({
         code: "participation",
         display: "Participation",
         system: "http://hl7.org/fhir/contract-asset-subtype"

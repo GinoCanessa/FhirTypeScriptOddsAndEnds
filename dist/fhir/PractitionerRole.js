@@ -43,18 +43,18 @@ export class PractitionerRoleAvailableTime extends fhir.BackboneElement {
     /**
      * Check if the current PractitionerRoleAvailableTime contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a PractitionerRoleAvailableTime from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new PractitionerRoleAvailableTime(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `PractitionerRoleAvailableTime is missing elements: ${missingElements.join(", ")}`;
         }
@@ -87,21 +87,21 @@ export class PractitionerRoleNotAvailable extends fhir.BackboneElement {
     /**
      * Check if the current PractitionerRoleNotAvailable contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["description"] === undefined) {
             missingElements.push("description");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a PractitionerRoleNotAvailable from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new PractitionerRoleNotAvailable(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `PractitionerRoleNotAvailable is missing elements: ${missingElements.join(", ")}`;
         }
@@ -170,18 +170,18 @@ export class PractitionerRole extends fhir.DomainResource {
     /**
      * Check if the current PractitionerRole contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a PractitionerRole from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new PractitionerRole(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `PractitionerRole is missing elements: ${missingElements.join(", ")}`;
         }

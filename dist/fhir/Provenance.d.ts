@@ -121,11 +121,11 @@ export declare class ProvenanceAgent extends fhir.BackboneElement implements fhi
     /**
      * Check if the current ProvenanceAgent contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ProvenanceAgent from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IProvenanceAgent): ProvenanceAgent;
+    static fromStrict(source: fhir.IProvenanceAgent): ProvenanceAgent;
 }
 /**
  * An entity used in this activity.
@@ -151,11 +151,11 @@ export declare class ProvenanceEntity extends fhir.BackboneElement implements fh
     /**
      * Check if the current ProvenanceEntity contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ProvenanceEntity from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IProvenanceEntity): ProvenanceEntity;
+    static fromStrict(source: fhir.IProvenanceEntity): ProvenanceEntity;
 }
 /**
  * Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies.
@@ -219,11 +219,11 @@ export declare class Provenance extends fhir.DomainResource implements fhir.IPro
     /**
      * Check if the current Provenance contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Provenance from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IProvenance): Provenance;
+    static fromStrict(source: fhir.IProvenance): Provenance;
 }
 /**
  * Code Values for the Provenance.entity.role field

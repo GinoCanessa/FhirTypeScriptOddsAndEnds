@@ -13,7 +13,7 @@ export const ImmunizationRouteValueSet = {
   /**
    * Injection, intradermal
    */
-  v3_RouteOfAdministration_InjectionIntradermal: Coding.FromStrict({
+  v3_RouteOfAdministration_InjectionIntradermal: new Coding({
     code: "IDINJ",
     display: "Injection, intradermal",
     system: "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
@@ -21,7 +21,7 @@ export const ImmunizationRouteValueSet = {
   /**
    * Injection, intramuscular
    */
-  v3_RouteOfAdministration_InjectionIntramuscular: Coding.FromStrict({
+  v3_RouteOfAdministration_InjectionIntramuscular: new Coding({
     code: "IM",
     display: "Injection, intramuscular",
     system: "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
@@ -29,7 +29,7 @@ export const ImmunizationRouteValueSet = {
   /**
    * Injection, intravenous
    */
-  v3_RouteOfAdministration_InjectionIntravenous: Coding.FromStrict({
+  v3_RouteOfAdministration_InjectionIntravenous: new Coding({
     code: "IVINJ",
     display: "Injection, intravenous",
     system: "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
@@ -37,7 +37,7 @@ export const ImmunizationRouteValueSet = {
   /**
    * Inhalation, nasal, prongs
    */
-  v3_RouteOfAdministration_InhalationNasalCannula: Coding.FromStrict({
+  v3_RouteOfAdministration_InhalationNasalCannula: new Coding({
     code: "NASINHLC",
     display: "Inhalation, nasal cannula",
     system: "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
@@ -45,7 +45,7 @@ export const ImmunizationRouteValueSet = {
   /**
    * Injection, subcutaneous
    */
-  v3_RouteOfAdministration_InjectionSubcutaneous: Coding.FromStrict({
+  v3_RouteOfAdministration_InjectionSubcutaneous: new Coding({
     code: "SQ",
     display: "Injection, subcutaneous",
     system: "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
@@ -53,7 +53,7 @@ export const ImmunizationRouteValueSet = {
   /**
    * Transdermal
    */
-  v3_RouteOfAdministration_Transdermal: Coding.FromStrict({
+  v3_RouteOfAdministration_Transdermal: new Coding({
     code: "TRNSDERM",
     display: "Transdermal",
     system: "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"

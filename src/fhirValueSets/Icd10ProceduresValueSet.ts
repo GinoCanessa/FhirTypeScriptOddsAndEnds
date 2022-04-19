@@ -13,7 +13,7 @@ export const Icd10ProceduresValueSet = {
   /**
    * Procedure 1
    */
-  icd_10_procedures_PROC1: Coding.FromStrict({
+  icd_10_procedures_PROC1: new Coding({
     code: "123001",
     display: "PROC-1",
     system: "http://hl7.org/fhir/sid/ex-icd-10-procedures"
@@ -21,7 +21,7 @@ export const Icd10ProceduresValueSet = {
   /**
    * Procedure 2
    */
-  icd_10_procedures_PROC2: Coding.FromStrict({
+  icd_10_procedures_PROC2: new Coding({
     code: "123002",
     display: "PROC-2",
     system: "http://hl7.org/fhir/sid/ex-icd-10-procedures"
@@ -29,7 +29,7 @@ export const Icd10ProceduresValueSet = {
   /**
    * Procedure 3
    */
-  icd_10_procedures_PROC3: Coding.FromStrict({
+  icd_10_procedures_PROC3: new Coding({
     code: "123003",
     display: "PROC-3",
     system: "http://hl7.org/fhir/sid/ex-icd-10-procedures"

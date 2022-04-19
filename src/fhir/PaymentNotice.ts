@@ -160,23 +160,23 @@ export class PaymentNotice extends fhir.DomainResource implements fhir.IPaymentN
   /**
    * Check if the current PaymentNotice contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["amount"] === undefined) { missingElements.push("amount"); }
     if (this["created"] === undefined) { missingElements.push("created"); }
     if (this["payment"] === undefined) { missingElements.push("payment"); }
     if (this["recipient"] === undefined) { missingElements.push("recipient"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PaymentNotice from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPaymentNotice):PaymentNotice {
+  static override fromStrict(source:fhir.IPaymentNotice):PaymentNotice {
     var dest:PaymentNotice = new PaymentNotice(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `PaymentNotice is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

@@ -13,7 +13,7 @@ export const ReasonMedicationGivenCodesValueSet = {
     /**
      * No reason known.
      */
-    reason_medication_given_codes_None: Coding.FromStrict({
+    reason_medication_given_codes_None: new Coding({
         code: "a",
         display: "None",
         system: "http://terminology.hl7.org/CodeSystem/reason-medication-given"
@@ -21,7 +21,7 @@ export const ReasonMedicationGivenCodesValueSet = {
     /**
      * The administration was following an ordered protocol.
      */
-    reason_medication_given_codes_GivenAsOrdered: Coding.FromStrict({
+    reason_medication_given_codes_GivenAsOrdered: new Coding({
         code: "b",
         display: "Given as Ordered",
         system: "http://terminology.hl7.org/CodeSystem/reason-medication-given"
@@ -29,7 +29,7 @@ export const ReasonMedicationGivenCodesValueSet = {
     /**
      * The administration was needed to treat an emergency.
      */
-    reason_medication_given_codes_Emergency: Coding.FromStrict({
+    reason_medication_given_codes_Emergency: new Coding({
         code: "c",
         display: "Emergency",
         system: "http://terminology.hl7.org/CodeSystem/reason-medication-given"

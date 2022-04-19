@@ -158,18 +158,18 @@ export class DataRequirementCodeFilter extends fhir.FhirElement implements fhir.
   /**
    * Check if the current DataRequirementCodeFilter contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DataRequirementCodeFilter from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDataRequirementCodeFilter):DataRequirementCodeFilter {
+  static override fromStrict(source:fhir.IDataRequirementCodeFilter):DataRequirementCodeFilter {
     var dest:DataRequirementCodeFilter = new DataRequirementCodeFilter(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DataRequirementCodeFilter is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -218,18 +218,18 @@ export class DataRequirementDateFilter extends fhir.FhirElement implements fhir.
   /**
    * Check if the current DataRequirementDateFilter contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DataRequirementDateFilter from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDataRequirementDateFilter):DataRequirementDateFilter {
+  static override fromStrict(source:fhir.IDataRequirementDateFilter):DataRequirementDateFilter {
     var dest:DataRequirementDateFilter = new DataRequirementDateFilter(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DataRequirementDateFilter is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -265,20 +265,20 @@ export class DataRequirementSort extends fhir.FhirElement implements fhir.IDataR
   /**
    * Check if the current DataRequirementSort contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["direction"] === undefined) { missingElements.push("direction"); }
     if (this["path"] === undefined) { missingElements.push("path"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DataRequirementSort from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDataRequirementSort):DataRequirementSort {
+  static override fromStrict(source:fhir.IDataRequirementSort):DataRequirementSort {
     var dest:DataRequirementSort = new DataRequirementSort(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DataRequirementSort is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -352,19 +352,19 @@ export class DataRequirement extends fhir.FhirElement implements fhir.IDataRequi
   /**
    * Check if the current DataRequirement contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DataRequirement from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDataRequirement):DataRequirement {
+  static override fromStrict(source:fhir.IDataRequirement):DataRequirement {
     var dest:DataRequirement = new DataRequirement(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DataRequirement is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

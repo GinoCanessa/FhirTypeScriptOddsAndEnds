@@ -159,11 +159,11 @@ export declare class ImmunizationEvaluation extends fhir.DomainResource implemen
     /**
      * Check if the current ImmunizationEvaluation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImmunizationEvaluation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImmunizationEvaluation): ImmunizationEvaluation;
+    static fromStrict(source: fhir.IImmunizationEvaluation): ImmunizationEvaluation;
 }
 /**
  * Code Values for the ImmunizationEvaluation.status field

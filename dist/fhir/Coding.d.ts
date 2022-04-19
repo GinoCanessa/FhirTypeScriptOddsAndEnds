@@ -65,10 +65,10 @@ export declare class Coding extends fhir.FhirElement implements fhir.ICoding {
     /**
      * Check if the current Coding contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Coding from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICoding): Coding;
+    static fromStrict(source: fhir.ICoding): Coding;
 }
 //# sourceMappingURL=Coding.d.ts.map

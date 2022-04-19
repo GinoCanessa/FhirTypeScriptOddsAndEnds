@@ -13,7 +13,7 @@ export const ProductStatusValueSet = {
     /**
      * Product is currently available for use.
      */
-    product_status_Available: Coding.FromStrict({
+    product_status_Available: new Coding({
         code: "available",
         display: "Available",
         system: "http://hl7.org/fhir/product-status"
@@ -21,7 +21,7 @@ export const ProductStatusValueSet = {
     /**
      * Product is not currently available for use.
      */
-    product_status_Unavailable: Coding.FromStrict({
+    product_status_Unavailable: new Coding({
         code: "unavailable",
         display: "Unavailable",
         system: "http://hl7.org/fhir/product-status"

@@ -10,32 +10,32 @@ import { Coding } from '../fhir'
  * FHIR Value set/code system definition for HL7 v2 table 0116 ( BED STATUS)
  */
 export const V20116ValueSet = {
-  v2_0116_Closed: Coding.FromStrict({
+  v2_0116_Closed: new Coding({
     code: "C",
     display: "Closed",
     system: "http://terminology.hl7.org/CodeSystem/v2-0116"
   }),
-  v2_0116_Housekeeping: Coding.FromStrict({
+  v2_0116_Housekeeping: new Coding({
     code: "H",
     display: "Housekeeping",
     system: "http://terminology.hl7.org/CodeSystem/v2-0116"
   }),
-  v2_0116_Isolated: Coding.FromStrict({
+  v2_0116_Isolated: new Coding({
     code: "I",
     display: "Isolated",
     system: "http://terminology.hl7.org/CodeSystem/v2-0116"
   }),
-  v2_0116_Contaminated: Coding.FromStrict({
+  v2_0116_Contaminated: new Coding({
     code: "K",
     display: "Contaminated",
     system: "http://terminology.hl7.org/CodeSystem/v2-0116"
   }),
-  v2_0116_Occupied: Coding.FromStrict({
+  v2_0116_Occupied: new Coding({
     code: "O",
     display: "Occupied",
     system: "http://terminology.hl7.org/CodeSystem/v2-0116"
   }),
-  v2_0116_Unoccupied: Coding.FromStrict({
+  v2_0116_Unoccupied: new Coding({
     code: "U",
     display: "Unoccupied",
     system: "http://terminology.hl7.org/CodeSystem/v2-0116"

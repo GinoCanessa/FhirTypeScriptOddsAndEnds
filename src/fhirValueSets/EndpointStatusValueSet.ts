@@ -13,7 +13,7 @@ export const EndpointStatusValueSet = {
   /**
    * This endpoint is expected to be active and can be used.
    */
-  endpoint_status_Active: Coding.FromStrict({
+  endpoint_status_Active: new Coding({
     code: "active",
     display: "Active",
     system: "http://hl7.org/fhir/endpoint-status"
@@ -21,7 +21,7 @@ export const EndpointStatusValueSet = {
   /**
    * This instance should not have been part of this patient's medical record.
    */
-  endpoint_status_EnteredInError: Coding.FromStrict({
+  endpoint_status_EnteredInError: new Coding({
     code: "entered-in-error",
     display: "Entered in error",
     system: "http://hl7.org/fhir/endpoint-status"
@@ -29,7 +29,7 @@ export const EndpointStatusValueSet = {
   /**
    * This endpoint has exceeded connectivity thresholds and is considered in an error state and should no longer be attempted to connect to until corrective action is taken.
    */
-  endpoint_status_Error: Coding.FromStrict({
+  endpoint_status_Error: new Coding({
     code: "error",
     display: "Error",
     system: "http://hl7.org/fhir/endpoint-status"
@@ -37,7 +37,7 @@ export const EndpointStatusValueSet = {
   /**
    * This endpoint is no longer to be used.
    */
-  endpoint_status_Off: Coding.FromStrict({
+  endpoint_status_Off: new Coding({
     code: "off",
     display: "Off",
     system: "http://hl7.org/fhir/endpoint-status"
@@ -45,7 +45,7 @@ export const EndpointStatusValueSet = {
   /**
    * This endpoint is temporarily unavailable.
    */
-  endpoint_status_Suspended: Coding.FromStrict({
+  endpoint_status_Suspended: new Coding({
     code: "suspended",
     display: "Suspended",
     system: "http://hl7.org/fhir/endpoint-status"
@@ -53,7 +53,7 @@ export const EndpointStatusValueSet = {
   /**
    * This endpoint is not intended for production usage.
    */
-  endpoint_status_Test: Coding.FromStrict({
+  endpoint_status_Test: new Coding({
     code: "test",
     display: "Test",
     system: "http://hl7.org/fhir/endpoint-status"

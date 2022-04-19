@@ -218,18 +218,18 @@ export class VerificationResultPrimarySource extends fhir.BackboneElement implem
   /**
    * Check if the current VerificationResultPrimarySource contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a VerificationResultPrimarySource from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IVerificationResultPrimarySource):VerificationResultPrimarySource {
+  static override fromStrict(source:fhir.IVerificationResultPrimarySource):VerificationResultPrimarySource {
     var dest:VerificationResultPrimarySource = new VerificationResultPrimarySource(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `VerificationResultPrimarySource is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -293,18 +293,18 @@ export class VerificationResultAttestation extends fhir.BackboneElement implemen
   /**
    * Check if the current VerificationResultAttestation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a VerificationResultAttestation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IVerificationResultAttestation):VerificationResultAttestation {
+  static override fromStrict(source:fhir.IVerificationResultAttestation):VerificationResultAttestation {
     var dest:VerificationResultAttestation = new VerificationResultAttestation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `VerificationResultAttestation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -341,19 +341,19 @@ export class VerificationResultValidator extends fhir.BackboneElement implements
   /**
    * Check if the current VerificationResultValidator contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["organization"] === undefined) { missingElements.push("organization"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a VerificationResultValidator from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IVerificationResultValidator):VerificationResultValidator {
+  static override fromStrict(source:fhir.IVerificationResultValidator):VerificationResultValidator {
     var dest:VerificationResultValidator = new VerificationResultValidator(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `VerificationResultValidator is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -458,19 +458,19 @@ export class VerificationResult extends fhir.DomainResource implements fhir.IVer
   /**
    * Check if the current VerificationResult contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a VerificationResult from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IVerificationResult):VerificationResult {
+  static override fromStrict(source:fhir.IVerificationResult):VerificationResult {
     var dest:VerificationResult = new VerificationResult(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `VerificationResult is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

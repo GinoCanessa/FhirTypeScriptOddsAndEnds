@@ -13,7 +13,7 @@ export const ConsentActionValueSet = {
     /**
      * Retrieval without permitting collection, use or disclosure. e.g., no screen-scraping for collection, use or disclosure (view-only access)
      */
-    consent_action_Access: Coding.FromStrict({
+    consent_action_Access: new Coding({
         code: "access",
         display: "Access",
         system: "http://terminology.hl7.org/CodeSystem/consentaction"
@@ -21,7 +21,7 @@ export const ConsentActionValueSet = {
     /**
      * Gather retrieved information for storage
      */
-    consent_action_Collect: Coding.FromStrict({
+    consent_action_Collect: new Coding({
         code: "collect",
         display: "Collect",
         system: "http://terminology.hl7.org/CodeSystem/consentaction"
@@ -29,7 +29,7 @@ export const ConsentActionValueSet = {
     /**
      * Allow retrieval of a patient's information for the purpose of update or rectify
      */
-    consent_action_AccessAndCorrect: Coding.FromStrict({
+    consent_action_AccessAndCorrect: new Coding({
         code: "correct",
         display: "Access and Correct",
         system: "http://terminology.hl7.org/CodeSystem/consentaction"
@@ -37,7 +37,7 @@ export const ConsentActionValueSet = {
     /**
      * Transfer retrieved information
      */
-    consent_action_Disclose: Coding.FromStrict({
+    consent_action_Disclose: new Coding({
         code: "disclose",
         display: "Disclose",
         system: "http://terminology.hl7.org/CodeSystem/consentaction"
@@ -45,7 +45,7 @@ export const ConsentActionValueSet = {
     /**
      * Utilize the retrieved information
      */
-    consent_action_Use: Coding.FromStrict({
+    consent_action_Use: new Coding({
         code: "use",
         display: "Use",
         system: "http://terminology.hl7.org/CodeSystem/consentaction"

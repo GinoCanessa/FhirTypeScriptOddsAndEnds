@@ -13,7 +13,7 @@ export const GraphCompartmentUseValueSet = {
   /**
    * This compartment rule is a condition for whether the rule applies.
    */
-  graph_compartment_use_Condition: Coding.FromStrict({
+  graph_compartment_use_Condition: new Coding({
     code: "condition",
     display: "Condition",
     system: "http://hl7.org/fhir/graph-compartment-use"
@@ -21,7 +21,7 @@ export const GraphCompartmentUseValueSet = {
   /**
    * This compartment rule is enforced on any relationships that meet the conditions.
    */
-  graph_compartment_use_Requirement: Coding.FromStrict({
+  graph_compartment_use_Requirement: new Coding({
     code: "requirement",
     display: "Requirement",
     system: "http://hl7.org/fhir/graph-compartment-use"

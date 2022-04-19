@@ -42,7 +42,7 @@ export class Contributor extends fhir.FhirElement {
     /**
      * Check if the current Contributor contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["name"] === undefined) {
             missingElements.push("name");
@@ -50,16 +50,16 @@ export class Contributor extends fhir.FhirElement {
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a Contributor from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new Contributor(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `Contributor is missing elements: ${missingElements.join(", ")}`;
         }

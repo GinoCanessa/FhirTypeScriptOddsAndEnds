@@ -13,7 +13,7 @@ export const AllergyintoleranceVerificationValueSet = {
   /**
    * A high level of certainty about the propensity for a reaction to the identified substance, which may include clinical evidence by testing or rechallenge.
    */
-  allergyintolerance_verification_Confirmed: Coding.FromStrict({
+  allergyintolerance_verification_Confirmed: new Coding({
     code: "confirmed",
     display: "Confirmed",
     system: "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
@@ -21,7 +21,7 @@ export const AllergyintoleranceVerificationValueSet = {
   /**
    * The statement was entered in error and is not valid.
    */
-  allergyintolerance_verification_EnteredInError: Coding.FromStrict({
+  allergyintolerance_verification_EnteredInError: new Coding({
     code: "entered-in-error",
     display: "Entered in Error",
     system: "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
@@ -29,7 +29,7 @@ export const AllergyintoleranceVerificationValueSet = {
   /**
    * A propensity for a reaction to the identified substance has been disputed or disproven with a sufficient level of clinical certainty to justify invalidating the assertion. This might or might not include testing or rechallenge.
    */
-  allergyintolerance_verification_Refuted: Coding.FromStrict({
+  allergyintolerance_verification_Refuted: new Coding({
     code: "refuted",
     display: "Refuted",
     system: "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
@@ -37,7 +37,7 @@ export const AllergyintoleranceVerificationValueSet = {
   /**
    * A low level of certainty about the propensity for a reaction to the identified substance.
    */
-  allergyintolerance_verification_Unconfirmed: Coding.FromStrict({
+  allergyintolerance_verification_Unconfirmed: new Coding({
     code: "unconfirmed",
     display: "Unconfirmed",
     system: "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"

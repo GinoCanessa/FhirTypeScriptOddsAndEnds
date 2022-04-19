@@ -13,7 +13,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 1.
    */
-  chromosome_human_Chromosome1: Coding.FromStrict({
+  chromosome_human_Chromosome1: new Coding({
     code: "1",
     display: "chromosome 1",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -21,7 +21,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 10.
    */
-  chromosome_human_Chromosome10: Coding.FromStrict({
+  chromosome_human_Chromosome10: new Coding({
     code: "10",
     display: "chromosome 10",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -29,7 +29,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 11.
    */
-  chromosome_human_Chromosome11: Coding.FromStrict({
+  chromosome_human_Chromosome11: new Coding({
     code: "11",
     display: "chromosome 11",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -37,7 +37,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 12.
    */
-  chromosome_human_Chromosome12: Coding.FromStrict({
+  chromosome_human_Chromosome12: new Coding({
     code: "12",
     display: "chromosome 12",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -45,7 +45,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 13.
    */
-  chromosome_human_Chromosome13: Coding.FromStrict({
+  chromosome_human_Chromosome13: new Coding({
     code: "13",
     display: "chromosome 13",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -53,7 +53,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 14.
    */
-  chromosome_human_Chromosome14: Coding.FromStrict({
+  chromosome_human_Chromosome14: new Coding({
     code: "14",
     display: "chromosome 14",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -61,7 +61,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 15.
    */
-  chromosome_human_Chromosome15: Coding.FromStrict({
+  chromosome_human_Chromosome15: new Coding({
     code: "15",
     display: "chromosome 15",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -69,7 +69,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 16.
    */
-  chromosome_human_Chromosome16: Coding.FromStrict({
+  chromosome_human_Chromosome16: new Coding({
     code: "16",
     display: "chromosome 16",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -77,7 +77,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 17.
    */
-  chromosome_human_Chromosome17: Coding.FromStrict({
+  chromosome_human_Chromosome17: new Coding({
     code: "17",
     display: "chromosome 17",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -85,7 +85,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 18.
    */
-  chromosome_human_Chromosome18: Coding.FromStrict({
+  chromosome_human_Chromosome18: new Coding({
     code: "18",
     display: "chromosome 18",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -93,7 +93,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 19.
    */
-  chromosome_human_Chromosome19: Coding.FromStrict({
+  chromosome_human_Chromosome19: new Coding({
     code: "19",
     display: "chromosome 19",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -101,7 +101,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 2.
    */
-  chromosome_human_Chromosome2: Coding.FromStrict({
+  chromosome_human_Chromosome2: new Coding({
     code: "2",
     display: "chromosome 2",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -109,7 +109,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 20.
    */
-  chromosome_human_Chromosome20: Coding.FromStrict({
+  chromosome_human_Chromosome20: new Coding({
     code: "20",
     display: "chromosome 20",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -117,7 +117,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 21.
    */
-  chromosome_human_Chromosome21: Coding.FromStrict({
+  chromosome_human_Chromosome21: new Coding({
     code: "21",
     display: "chromosome 21",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -125,7 +125,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 22.
    */
-  chromosome_human_Chromosome22: Coding.FromStrict({
+  chromosome_human_Chromosome22: new Coding({
     code: "22",
     display: "chromosome 22",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -133,7 +133,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 3.
    */
-  chromosome_human_Chromosome3: Coding.FromStrict({
+  chromosome_human_Chromosome3: new Coding({
     code: "3",
     display: "chromosome 3",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -141,7 +141,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 4.
    */
-  chromosome_human_Chromosome4: Coding.FromStrict({
+  chromosome_human_Chromosome4: new Coding({
     code: "4",
     display: "chromosome 4",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -149,7 +149,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 5.
    */
-  chromosome_human_Chromosome5: Coding.FromStrict({
+  chromosome_human_Chromosome5: new Coding({
     code: "5",
     display: "chromosome 5",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -157,7 +157,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 6.
    */
-  chromosome_human_Chromosome6: Coding.FromStrict({
+  chromosome_human_Chromosome6: new Coding({
     code: "6",
     display: "chromosome 6",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -165,7 +165,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 7.
    */
-  chromosome_human_Chromosome7: Coding.FromStrict({
+  chromosome_human_Chromosome7: new Coding({
     code: "7",
     display: "chromosome 7",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -173,7 +173,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 8.
    */
-  chromosome_human_Chromosome8: Coding.FromStrict({
+  chromosome_human_Chromosome8: new Coding({
     code: "8",
     display: "chromosome 8",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -181,7 +181,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome 9.
    */
-  chromosome_human_Chromosome9: Coding.FromStrict({
+  chromosome_human_Chromosome9: new Coding({
     code: "9",
     display: "chromosome 9",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -189,7 +189,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome X.
    */
-  chromosome_human_ChromosomeX: Coding.FromStrict({
+  chromosome_human_ChromosomeX: new Coding({
     code: "X",
     display: "chromosome X",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
@@ -197,7 +197,7 @@ export const ChromosomeHumanValueSet = {
   /**
    * chromosome Y.
    */
-  chromosome_human_ChromosomeY: Coding.FromStrict({
+  chromosome_human_ChromosomeY: new Coding({
     code: "Y",
     display: "chromosome Y",
     system: "http://terminology.hl7.org/CodeSystem/chromosome-human"

@@ -13,7 +13,7 @@ export const InvoiceStatusValueSet = {
     /**
      * the invoice has been balaced / completely paid.
      */
-    invoice_status_Balanced: Coding.FromStrict({
+    invoice_status_Balanced: new Coding({
         code: "balanced",
         display: "balanced",
         system: "http://hl7.org/fhir/invoice-status"
@@ -21,7 +21,7 @@ export const InvoiceStatusValueSet = {
     /**
      * the invoice was cancelled.
      */
-    invoice_status_Cancelled: Coding.FromStrict({
+    invoice_status_Cancelled: new Coding({
         code: "cancelled",
         display: "cancelled",
         system: "http://hl7.org/fhir/invoice-status"
@@ -29,7 +29,7 @@ export const InvoiceStatusValueSet = {
     /**
      * the invoice has been prepared but not yet finalized.
      */
-    invoice_status_Draft: Coding.FromStrict({
+    invoice_status_Draft: new Coding({
         code: "draft",
         display: "draft",
         system: "http://hl7.org/fhir/invoice-status"
@@ -37,7 +37,7 @@ export const InvoiceStatusValueSet = {
     /**
      * the invoice was determined as entered in error before it was issued.
      */
-    invoice_status_EnteredInError: Coding.FromStrict({
+    invoice_status_EnteredInError: new Coding({
         code: "entered-in-error",
         display: "entered in error",
         system: "http://hl7.org/fhir/invoice-status"
@@ -45,7 +45,7 @@ export const InvoiceStatusValueSet = {
     /**
      * the invoice has been finalized and sent to the recipient.
      */
-    invoice_status_Issued: Coding.FromStrict({
+    invoice_status_Issued: new Coding({
         code: "issued",
         display: "issued",
         system: "http://hl7.org/fhir/invoice-status"

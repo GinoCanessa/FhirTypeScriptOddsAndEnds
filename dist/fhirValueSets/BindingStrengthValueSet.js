@@ -13,7 +13,7 @@ export const BindingStrengthValueSet = {
     /**
      * Instances are not expected or even encouraged to draw from the specified value set.  The value set merely provides examples of the types of concepts intended to be included.
      */
-    binding_strength_Example: Coding.FromStrict({
+    binding_strength_Example: new Coding({
         code: "example",
         display: "Example",
         system: "http://hl7.org/fhir/binding-strength"
@@ -21,7 +21,7 @@ export const BindingStrengthValueSet = {
     /**
      * To be conformant, the concept in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.  If the value set does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead.
      */
-    binding_strength_Extensible: Coding.FromStrict({
+    binding_strength_Extensible: new Coding({
         code: "extensible",
         display: "Extensible",
         system: "http://hl7.org/fhir/binding-strength"
@@ -29,7 +29,7 @@ export const BindingStrengthValueSet = {
     /**
      * Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant.
      */
-    binding_strength_Preferred: Coding.FromStrict({
+    binding_strength_Preferred: new Coding({
         code: "preferred",
         display: "Preferred",
         system: "http://hl7.org/fhir/binding-strength"
@@ -37,7 +37,7 @@ export const BindingStrengthValueSet = {
     /**
      * To be conformant, the concept in this element SHALL be from the specified value set.
      */
-    binding_strength_Required: Coding.FromStrict({
+    binding_strength_Required: new Coding({
         code: "required",
         display: "Required",
         system: "http://hl7.org/fhir/binding-strength"

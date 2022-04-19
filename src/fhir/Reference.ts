@@ -75,18 +75,18 @@ export class Reference extends fhir.FhirElement implements fhir.IReference {
   /**
    * Check if the current Reference contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Reference from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IReference):Reference {
+  static override fromStrict(source:fhir.IReference):Reference {
     var dest:Reference = new Reference(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Reference is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -94,7 +94,7 @@ export class Reference extends fhir.FhirElement implements fhir.IReference {
   /**
    * Create a reference from an existing resource
    */
-   static FromResource(source:fhir.IResource, baseUrl:string=''):Reference {
+   static fromResource(source:fhir.IResource, baseUrl:string=''):Reference {
     if (baseUrl.endsWith('/')) {
       return new Reference({
         type: source.resourceType,

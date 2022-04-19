@@ -13,7 +13,7 @@ export const ContractDecisionModeValueSet = {
   /**
    * To be completed
    */
-  contract_decision_mode_Policy: Coding.FromStrict({
+  contract_decision_mode_Policy: new Coding({
     code: "policy",
     display: "Policy",
     system: "http://hl7.org/fhir/contract-decision-mode"

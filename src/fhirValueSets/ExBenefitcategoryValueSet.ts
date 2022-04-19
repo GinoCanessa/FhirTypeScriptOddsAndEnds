@@ -13,7 +13,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Medical Care.
    */
-  ex_benefitcategory_MedicalCare: Coding.FromStrict({
+  ex_benefitcategory_MedicalCare: new Coding({
     code: "1",
     display: "Medical Care",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -21,7 +21,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Renal Supplies excluding Dialysis.
    */
-  ex_benefitcategory_RenalSupplies: Coding.FromStrict({
+  ex_benefitcategory_RenalSupplies: new Coding({
     code: "14",
     display: "Renal Supplies",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -29,7 +29,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Surgical.
    */
-  ex_benefitcategory_Surgical: Coding.FromStrict({
+  ex_benefitcategory_Surgical: new Coding({
     code: "2",
     display: "Surgical",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -37,7 +37,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Diagnostic Dental.
    */
-  ex_benefitcategory_DiagnosticDental: Coding.FromStrict({
+  ex_benefitcategory_DiagnosticDental: new Coding({
     code: "23",
     display: "Diagnostic Dental",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -45,7 +45,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Periodontics.
    */
-  ex_benefitcategory_Periodontics: Coding.FromStrict({
+  ex_benefitcategory_Periodontics: new Coding({
     code: "24",
     display: "Periodontics",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -53,7 +53,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Restorative.
    */
-  ex_benefitcategory_Restorative: Coding.FromStrict({
+  ex_benefitcategory_Restorative: new Coding({
     code: "25",
     display: "Restorative",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -61,7 +61,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Endodontics.
    */
-  ex_benefitcategory_Endodontics: Coding.FromStrict({
+  ex_benefitcategory_Endodontics: new Coding({
     code: "26",
     display: "Endodontics",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -69,7 +69,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Maxillofacial Prosthetics.
    */
-  ex_benefitcategory_MaxillofacialProsthetics: Coding.FromStrict({
+  ex_benefitcategory_MaxillofacialProsthetics: new Coding({
     code: "27",
     display: "Maxillofacial Prosthetics",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -77,7 +77,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Adjunctive Dental Services.
    */
-  ex_benefitcategory_AdjunctiveDentalServices: Coding.FromStrict({
+  ex_benefitcategory_AdjunctiveDentalServices: new Coding({
     code: "28",
     display: "Adjunctive Dental Services",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -85,7 +85,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Consultation.
    */
-  ex_benefitcategory_Consultation: Coding.FromStrict({
+  ex_benefitcategory_Consultation: new Coding({
     code: "3",
     display: "Consultation",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -93,7 +93,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Health Benefit Plan Coverage.
    */
-  ex_benefitcategory_HealthBenefitPlanCoverage: Coding.FromStrict({
+  ex_benefitcategory_HealthBenefitPlanCoverage: new Coding({
     code: "30",
     display: "Health Benefit Plan Coverage",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -101,7 +101,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Dental Care.
    */
-  ex_benefitcategory_DentalCare: Coding.FromStrict({
+  ex_benefitcategory_DentalCare: new Coding({
     code: "35",
     display: "Dental Care",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -109,7 +109,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Dental Crowns.
    */
-  ex_benefitcategory_DentalCrowns: Coding.FromStrict({
+  ex_benefitcategory_DentalCrowns: new Coding({
     code: "36",
     display: "Dental Crowns",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -117,7 +117,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Dental Accident.
    */
-  ex_benefitcategory_DentalAccident: Coding.FromStrict({
+  ex_benefitcategory_DentalAccident: new Coding({
     code: "37",
     display: "Dental Accident",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -125,7 +125,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Diagnostic XRay.
    */
-  ex_benefitcategory_DiagnosticXRay: Coding.FromStrict({
+  ex_benefitcategory_DiagnosticXRay: new Coding({
     code: "4",
     display: "Diagnostic XRay",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -133,7 +133,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Hospital Room and Board.
    */
-  ex_benefitcategory_HospitalRoomAndBoard: Coding.FromStrict({
+  ex_benefitcategory_HospitalRoomAndBoard: new Coding({
     code: "49",
     display: "Hospital Room and Board",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -141,7 +141,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Diagnostic Lab.
    */
-  ex_benefitcategory_DiagnosticLab: Coding.FromStrict({
+  ex_benefitcategory_DiagnosticLab: new Coding({
     code: "5",
     display: "Diagnostic Lab",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -149,7 +149,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Major Medical.
    */
-  ex_benefitcategory_MajorMedical: Coding.FromStrict({
+  ex_benefitcategory_MajorMedical: new Coding({
     code: "55",
     display: "Major Medical",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -157,7 +157,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Medically Related Transportation.
    */
-  ex_benefitcategory_MedicallyRelatedTransportation: Coding.FromStrict({
+  ex_benefitcategory_MedicallyRelatedTransportation: new Coding({
     code: "56",
     display: "Medically Related Transportation",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -165,7 +165,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * In-vitro Fertilization.
    */
-  ex_benefitcategory_InVitroFertilization: Coding.FromStrict({
+  ex_benefitcategory_InVitroFertilization: new Coding({
     code: "61",
     display: "In-vitro Fertilization",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -173,7 +173,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * MRI Scan.
    */
-  ex_benefitcategory_MRIScan: Coding.FromStrict({
+  ex_benefitcategory_MRIScan: new Coding({
     code: "62",
     display: "MRI Scan",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -181,7 +181,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Donor Procedures such as organ harvest.
    */
-  ex_benefitcategory_DonorProcedures: Coding.FromStrict({
+  ex_benefitcategory_DonorProcedures: new Coding({
     code: "63",
     display: "Donor Procedures",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -189,7 +189,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Maternity.
    */
-  ex_benefitcategory_Maternity: Coding.FromStrict({
+  ex_benefitcategory_Maternity: new Coding({
     code: "69",
     display: "Maternity",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -197,7 +197,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Renal dialysis.
    */
-  ex_benefitcategory_RenalDialysis: Coding.FromStrict({
+  ex_benefitcategory_RenalDialysis: new Coding({
     code: "76",
     display: "Renal Dialysis",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -205,7 +205,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Medical Coverage.
    */
-  ex_benefitcategory_MedicalCoverage: Coding.FromStrict({
+  ex_benefitcategory_MedicalCoverage: new Coding({
     code: "F1",
     display: "Medical Coverage",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -213,7 +213,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Dental Coverage.
    */
-  ex_benefitcategory_DentalCoverage: Coding.FromStrict({
+  ex_benefitcategory_DentalCoverage: new Coding({
     code: "F3",
     display: "Dental Coverage",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -221,7 +221,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Hearing Coverage.
    */
-  ex_benefitcategory_HearingCoverage: Coding.FromStrict({
+  ex_benefitcategory_HearingCoverage: new Coding({
     code: "F4",
     display: "Hearing Coverage",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
@@ -229,7 +229,7 @@ export const ExBenefitcategoryValueSet = {
   /**
    * Vision Coverage.
    */
-  ex_benefitcategory_VisionCoverage: Coding.FromStrict({
+  ex_benefitcategory_VisionCoverage: new Coding({
     code: "F6",
     display: "Vision Coverage",
     system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"

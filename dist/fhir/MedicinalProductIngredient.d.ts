@@ -159,11 +159,11 @@ export declare class MedicinalProductIngredientSpecifiedSubstanceStrengthReferen
     /**
      * Check if the current MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength): MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength;
+    static fromStrict(source: fhir.IMedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength): MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength;
 }
 /**
  * Quantity of the substance or specified substance present in the manufactured item or pharmaceutical product.
@@ -205,11 +205,11 @@ export declare class MedicinalProductIngredientSpecifiedSubstanceStrength extend
     /**
      * Check if the current MedicinalProductIngredientSpecifiedSubstanceStrength contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductIngredientSpecifiedSubstanceStrength from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductIngredientSpecifiedSubstanceStrength): MedicinalProductIngredientSpecifiedSubstanceStrength;
+    static fromStrict(source: fhir.IMedicinalProductIngredientSpecifiedSubstanceStrength): MedicinalProductIngredientSpecifiedSubstanceStrength;
 }
 /**
  * A specified substance that comprises this ingredient.
@@ -238,11 +238,11 @@ export declare class MedicinalProductIngredientSpecifiedSubstance extends fhir.B
     /**
      * Check if the current MedicinalProductIngredientSpecifiedSubstance contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductIngredientSpecifiedSubstance from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductIngredientSpecifiedSubstance): MedicinalProductIngredientSpecifiedSubstance;
+    static fromStrict(source: fhir.IMedicinalProductIngredientSpecifiedSubstance): MedicinalProductIngredientSpecifiedSubstance;
 }
 /**
  * The ingredient substance.
@@ -263,11 +263,11 @@ export declare class MedicinalProductIngredientSubstance extends fhir.BackboneEl
     /**
      * Check if the current MedicinalProductIngredientSubstance contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductIngredientSubstance from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductIngredientSubstance): MedicinalProductIngredientSubstance;
+    static fromStrict(source: fhir.IMedicinalProductIngredientSubstance): MedicinalProductIngredientSubstance;
 }
 /**
  * An ingredient of a manufactured item or pharmaceutical product.
@@ -309,10 +309,10 @@ export declare class MedicinalProductIngredient extends fhir.DomainResource impl
     /**
      * Check if the current MedicinalProductIngredient contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductIngredient from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductIngredient): MedicinalProductIngredient;
+    static fromStrict(source: fhir.IMedicinalProductIngredient): MedicinalProductIngredient;
 }
 //# sourceMappingURL=MedicinalProductIngredient.d.ts.map

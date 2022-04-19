@@ -220,19 +220,19 @@ export class ImagingStudySeriesPerformer extends fhir.BackboneElement implements
   /**
    * Check if the current ImagingStudySeriesPerformer contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["actor"] === undefined) { missingElements.push("actor"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ImagingStudySeriesPerformer from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IImagingStudySeriesPerformer):ImagingStudySeriesPerformer {
+  static override fromStrict(source:fhir.IImagingStudySeriesPerformer):ImagingStudySeriesPerformer {
     var dest:ImagingStudySeriesPerformer = new ImagingStudySeriesPerformer(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ImagingStudySeriesPerformer is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -280,20 +280,20 @@ export class ImagingStudySeriesInstance extends fhir.BackboneElement implements 
   /**
    * Check if the current ImagingStudySeriesInstance contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["sopClass"] === undefined) { missingElements.push("sopClass"); }
     if (this["uid"] === undefined) { missingElements.push("uid"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ImagingStudySeriesInstance from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IImagingStudySeriesInstance):ImagingStudySeriesInstance {
+  static override fromStrict(source:fhir.IImagingStudySeriesInstance):ImagingStudySeriesInstance {
     var dest:ImagingStudySeriesInstance = new ImagingStudySeriesInstance(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ImagingStudySeriesInstance is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -385,20 +385,20 @@ export class ImagingStudySeries extends fhir.BackboneElement implements fhir.IIm
   /**
    * Check if the current ImagingStudySeries contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["modality"] === undefined) { missingElements.push("modality"); }
     if (this["uid"] === undefined) { missingElements.push("uid"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ImagingStudySeries from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IImagingStudySeries):ImagingStudySeries {
+  static override fromStrict(source:fhir.IImagingStudySeries):ImagingStudySeries {
     var dest:ImagingStudySeries = new ImagingStudySeries(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ImagingStudySeries is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -535,20 +535,20 @@ export class ImagingStudy extends fhir.DomainResource implements fhir.IImagingSt
   /**
    * Check if the current ImagingStudy contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["subject"] === undefined) { missingElements.push("subject"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ImagingStudy from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IImagingStudy):ImagingStudy {
+  static override fromStrict(source:fhir.IImagingStudy):ImagingStudy {
     var dest:ImagingStudy = new ImagingStudy(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ImagingStudy is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

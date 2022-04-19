@@ -10,1762 +10,1762 @@ import { Coding } from '../fhir';
  * This value set includes all dose form codes from SNOMED CT - provided as an exemplar.
  */
 export const MedicationFormCodesValueSet = {
-    MedicationFormCodesValueSet_DrugStick: Coding.FromStrict({
+    MedicationFormCodesValueSet_DrugStick: new Coding({
         code: "11190007",
         display: "Drug stick",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Lotion: Coding.FromStrict({
+    MedicationFormCodesValueSet_Lotion: new Coding({
         code: "17519006",
         display: "Lotion",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DrugAerosolFoam: Coding.FromStrict({
+    MedicationFormCodesValueSet_DrugAerosolFoam: new Coding({
         code: "30843009",
         display: "Drug aerosol foam",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DrugPatch: Coding.FromStrict({
+    MedicationFormCodesValueSet_DrugPatch: new Coding({
         code: "36875001",
         display: "Drug patch",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DrugPaste: Coding.FromStrict({
+    MedicationFormCodesValueSet_DrugPaste: new Coding({
         code: "37937005",
         display: "Drug paste",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OralDrops: Coding.FromStrict({
+    MedicationFormCodesValueSet_OralDrops: new Coding({
         code: "385018001",
         display: "Oral drops",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OralDropsSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_OralDropsSolution: new Coding({
         code: "385019009",
         display: "Oral drops solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OralDropsSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_OralDropsSuspension: new Coding({
         code: "385020003",
         display: "Oral drops suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OralDropsEmulsion: Coding.FromStrict({
+    MedicationFormCodesValueSet_OralDropsEmulsion: new Coding({
         code: "385021004",
         display: "Oral drops emulsion",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OralLiquid: Coding.FromStrict({
+    MedicationFormCodesValueSet_OralLiquid: new Coding({
         code: "385022006",
         display: "Oral liquid",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OralSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_OralSolution: new Coding({
         code: "385023001",
         display: "Oral solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OralSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_OralSuspension: new Coding({
         code: "385024007",
         display: "Oral suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OralEmulsion: Coding.FromStrict({
+    MedicationFormCodesValueSet_OralEmulsion: new Coding({
         code: "385025008",
         display: "Oral emulsion",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForOralSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForOralSolution: new Coding({
         code: "385026009",
         display: "Powder for oral solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForOralSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForOralSuspension: new Coding({
         code: "385027000",
         display: "Powder for oral suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_GranulesForOralSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_GranulesForOralSolution: new Coding({
         code: "385028005",
         display: "Granules for oral solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_GranulesForOralSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_GranulesForOralSuspension: new Coding({
         code: "385029002",
         display: "Granules for oral suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Syrup: Coding.FromStrict({
+    MedicationFormCodesValueSet_Syrup: new Coding({
         code: "385032004",
         display: "Syrup",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForSyrup: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForSyrup: new Coding({
         code: "385033009",
         display: "Powder for syrup",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_GranulesForSyrup: Coding.FromStrict({
+    MedicationFormCodesValueSet_GranulesForSyrup: new Coding({
         code: "385034003",
         display: "Granules for syrup",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_SolubleTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_SolubleTablet: new Coding({
         code: "385035002",
         display: "Soluble tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DispersibleTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_DispersibleTablet: new Coding({
         code: "385036001",
         display: "Dispersible tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OralGel: Coding.FromStrict({
+    MedicationFormCodesValueSet_OralGel: new Coding({
         code: "385038000",
         display: "Oral gel",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OralPaste: Coding.FromStrict({
+    MedicationFormCodesValueSet_OralPaste: new Coding({
         code: "385039008",
         display: "Oral paste",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OralPowder: Coding.FromStrict({
+    MedicationFormCodesValueSet_OralPowder: new Coding({
         code: "385041009",
         display: "Oral powder",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EffervescentPowder: Coding.FromStrict({
+    MedicationFormCodesValueSet_EffervescentPowder: new Coding({
         code: "385042002",
         display: "Effervescent powder",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Granules: Coding.FromStrict({
+    MedicationFormCodesValueSet_Granules: new Coding({
         code: "385043007",
         display: "Granules",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EffervescentGranules: Coding.FromStrict({
+    MedicationFormCodesValueSet_EffervescentGranules: new Coding({
         code: "385044001",
         display: "Effervescent granules",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_GastroResistantGranules: Coding.FromStrict({
+    MedicationFormCodesValueSet_GastroResistantGranules: new Coding({
         code: "385045000",
         display: "Gastro-resistant granules",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ProlongedReleaseGranules: Coding.FromStrict({
+    MedicationFormCodesValueSet_ProlongedReleaseGranules: new Coding({
         code: "385046004",
         display: "Prolonged-release granules",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ModifiedReleaseGranules: Coding.FromStrict({
+    MedicationFormCodesValueSet_ModifiedReleaseGranules: new Coding({
         code: "385047008",
         display: "Modified-release granules",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Cachet: Coding.FromStrict({
+    MedicationFormCodesValueSet_Cachet: new Coding({
         code: "385048003",
         display: "Cachet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Capsule: Coding.FromStrict({
+    MedicationFormCodesValueSet_Capsule: new Coding({
         code: "385049006",
         display: "Capsule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_HardCapsule: Coding.FromStrict({
+    MedicationFormCodesValueSet_HardCapsule: new Coding({
         code: "385050006",
         display: "Hard capsule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_SoftCapsule: Coding.FromStrict({
+    MedicationFormCodesValueSet_SoftCapsule: new Coding({
         code: "385051005",
         display: "Soft capsule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_GastroResistantCapsule: Coding.FromStrict({
+    MedicationFormCodesValueSet_GastroResistantCapsule: new Coding({
         code: "385052003",
         display: "Gastro-resistant capsule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ProlongedReleaseCapsule: Coding.FromStrict({
+    MedicationFormCodesValueSet_ProlongedReleaseCapsule: new Coding({
         code: "385053008",
         display: "Prolonged-release capsule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ModifiedReleaseCapsule: Coding.FromStrict({
+    MedicationFormCodesValueSet_ModifiedReleaseCapsule: new Coding({
         code: "385054002",
         display: "Modified-release capsule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Tablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_Tablet: new Coding({
         code: "385055001",
         display: "Tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_FilmCoatedTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_FilmCoatedTablet: new Coding({
         code: "385057009",
         display: "Film-coated tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EffervescentTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_EffervescentTablet: new Coding({
         code: "385058004",
         display: "Effervescent tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_GastroResistantTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_GastroResistantTablet: new Coding({
         code: "385059007",
         display: "Gastro-resistant tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ProlongedReleaseTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_ProlongedReleaseTablet: new Coding({
         code: "385060002",
         display: "Prolonged-release tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ModifiedReleaseTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_ModifiedReleaseTablet: new Coding({
         code: "385061003",
         display: "Modified-release tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OralLyophilisate: Coding.FromStrict({
+    MedicationFormCodesValueSet_OralLyophilisate: new Coding({
         code: "385062005",
         display: "Oral lyophilisate",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OralGum: Coding.FromStrict({
+    MedicationFormCodesValueSet_OralGum: new Coding({
         code: "385063000",
         display: "Oral gum",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Pillule: Coding.FromStrict({
+    MedicationFormCodesValueSet_Pillule: new Coding({
         code: "385064006",
         display: "Pillule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OromucosalLiquid: Coding.FromStrict({
+    MedicationFormCodesValueSet_OromucosalLiquid: new Coding({
         code: "385069001",
         display: "Oromucosal liquid",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OromucosalSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_OromucosalSolution: new Coding({
         code: "385070000",
         display: "Oromucosal solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OromucosalSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_OromucosalSuspension: new Coding({
         code: "385071001",
         display: "Oromucosal suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OromucosalSpray: Coding.FromStrict({
+    MedicationFormCodesValueSet_OromucosalSpray: new Coding({
         code: "385073003",
         display: "Oromucosal spray",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_SublingualSpray: Coding.FromStrict({
+    MedicationFormCodesValueSet_SublingualSpray: new Coding({
         code: "385074009",
         display: "Sublingual spray",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_GingivalSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_GingivalSolution: new Coding({
         code: "385077002",
         display: "Gingival solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OromucosalGel: Coding.FromStrict({
+    MedicationFormCodesValueSet_OromucosalGel: new Coding({
         code: "385078007",
         display: "Oromucosal gel",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OromucosalPaste: Coding.FromStrict({
+    MedicationFormCodesValueSet_OromucosalPaste: new Coding({
         code: "385079004",
         display: "Oromucosal paste",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_MedicatedChewingGum: Coding.FromStrict({
+    MedicationFormCodesValueSet_MedicatedChewingGum: new Coding({
         code: "385080001",
         display: "Medicated chewing-gum",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_GingivalGel: Coding.FromStrict({
+    MedicationFormCodesValueSet_GingivalGel: new Coding({
         code: "385081002",
         display: "Gingival gel",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_GingivalPaste: Coding.FromStrict({
+    MedicationFormCodesValueSet_GingivalPaste: new Coding({
         code: "385082009",
         display: "Gingival paste",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OromucosalCapsule: Coding.FromStrict({
+    MedicationFormCodesValueSet_OromucosalCapsule: new Coding({
         code: "385083004",
         display: "Oromucosal capsule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_SublingualTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_SublingualTablet: new Coding({
         code: "385084005",
         display: "Sublingual tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_BuccalTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_BuccalTablet: new Coding({
         code: "385085006",
         display: "Buccal tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_MucoAdhesiveBuccalTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_MucoAdhesiveBuccalTablet: new Coding({
         code: "385086007",
         display: "Muco-adhesive buccal tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Lozenge: Coding.FromStrict({
+    MedicationFormCodesValueSet_Lozenge: new Coding({
         code: "385087003",
         display: "Lozenge",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DentalGel: Coding.FromStrict({
+    MedicationFormCodesValueSet_DentalGel: new Coding({
         code: "385088008",
         display: "Dental gel",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DentalStick: Coding.FromStrict({
+    MedicationFormCodesValueSet_DentalStick: new Coding({
         code: "385089000",
         display: "Dental stick",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DentalInsert: Coding.FromStrict({
+    MedicationFormCodesValueSet_DentalInsert: new Coding({
         code: "385090009",
         display: "Dental insert",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DentalPowder: Coding.FromStrict({
+    MedicationFormCodesValueSet_DentalPowder: new Coding({
         code: "385091008",
         display: "Dental powder",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DentalLiquid: Coding.FromStrict({
+    MedicationFormCodesValueSet_DentalLiquid: new Coding({
         code: "385092001",
         display: "Dental liquid",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DentalSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_DentalSolution: new Coding({
         code: "385094000",
         display: "Dental solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DentalSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_DentalSuspension: new Coding({
         code: "385095004",
         display: "Dental suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DentalEmulsion: Coding.FromStrict({
+    MedicationFormCodesValueSet_DentalEmulsion: new Coding({
         code: "385096003",
         display: "Dental emulsion",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_BathAdditive: Coding.FromStrict({
+    MedicationFormCodesValueSet_BathAdditive: new Coding({
         code: "385098002",
         display: "Bath additive",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Cream: Coding.FromStrict({
+    MedicationFormCodesValueSet_Cream: new Coding({
         code: "385099005",
         display: "Cream",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Gel: Coding.FromStrict({
+    MedicationFormCodesValueSet_Gel: new Coding({
         code: "385100002",
         display: "Gel",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Ointment: Coding.FromStrict({
+    MedicationFormCodesValueSet_Ointment: new Coding({
         code: "385101003",
         display: "Ointment",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_CutaneousPaste: Coding.FromStrict({
+    MedicationFormCodesValueSet_CutaneousPaste: new Coding({
         code: "385102005",
         display: "Cutaneous paste",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_CutaneousFoam: Coding.FromStrict({
+    MedicationFormCodesValueSet_CutaneousFoam: new Coding({
         code: "385103000",
         display: "Cutaneous foam",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Shampoo: Coding.FromStrict({
+    MedicationFormCodesValueSet_Shampoo: new Coding({
         code: "385104006",
         display: "Shampoo",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_CutaneousSpray: Coding.FromStrict({
+    MedicationFormCodesValueSet_CutaneousSpray: new Coding({
         code: "385105007",
         display: "Cutaneous spray",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_CutaneousSolutionSpray: Coding.FromStrict({
+    MedicationFormCodesValueSet_CutaneousSolutionSpray: new Coding({
         code: "385106008",
         display: "Cutaneous solution spray",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_CutaneousLiquid: Coding.FromStrict({
+    MedicationFormCodesValueSet_CutaneousLiquid: new Coding({
         code: "385107004",
         display: "Cutaneous liquid",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_CutaneousSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_CutaneousSolution: new Coding({
         code: "385108009",
         display: "Cutaneous solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_CutaneousSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_CutaneousSuspension: new Coding({
         code: "385110006",
         display: "Cutaneous suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_CutaneousEmulsion: Coding.FromStrict({
+    MedicationFormCodesValueSet_CutaneousEmulsion: new Coding({
         code: "385111005",
         display: "Cutaneous emulsion",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_CutaneousPowder: Coding.FromStrict({
+    MedicationFormCodesValueSet_CutaneousPowder: new Coding({
         code: "385112003",
         display: "Cutaneous powder",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_SolutionForIontophoresis: Coding.FromStrict({
+    MedicationFormCodesValueSet_SolutionForIontophoresis: new Coding({
         code: "385113008",
         display: "Solution for iontophoresis",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_TransdermalPatch: Coding.FromStrict({
+    MedicationFormCodesValueSet_TransdermalPatch: new Coding({
         code: "385114002",
         display: "Transdermal patch",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Collodion: Coding.FromStrict({
+    MedicationFormCodesValueSet_Collodion: new Coding({
         code: "385115001",
         display: "Collodion",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_MedicatedNailLaquer: Coding.FromStrict({
+    MedicationFormCodesValueSet_MedicatedNailLaquer: new Coding({
         code: "385116000",
         display: "Medicated nail laquer",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Poultice: Coding.FromStrict({
+    MedicationFormCodesValueSet_Poultice: new Coding({
         code: "385117009",
         display: "Poultice",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_CutaneousStick: Coding.FromStrict({
+    MedicationFormCodesValueSet_CutaneousStick: new Coding({
         code: "385118004",
         display: "Cutaneous stick",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_CutaneousSponge: Coding.FromStrict({
+    MedicationFormCodesValueSet_CutaneousSponge: new Coding({
         code: "385119007",
         display: "Cutaneous sponge",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EyeCream: Coding.FromStrict({
+    MedicationFormCodesValueSet_EyeCream: new Coding({
         code: "385121002",
         display: "Eye cream",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EyeGel: Coding.FromStrict({
+    MedicationFormCodesValueSet_EyeGel: new Coding({
         code: "385122009",
         display: "Eye gel",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EyeOintment: Coding.FromStrict({
+    MedicationFormCodesValueSet_EyeOintment: new Coding({
         code: "385123004",
         display: "Eye ointment",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EyeDrops: Coding.FromStrict({
+    MedicationFormCodesValueSet_EyeDrops: new Coding({
         code: "385124005",
         display: "Eye drops",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EyeDropsSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_EyeDropsSolution: new Coding({
         code: "385125006",
         display: "Eye drops solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ProlongedReleaseEyeDrops: Coding.FromStrict({
+    MedicationFormCodesValueSet_ProlongedReleaseEyeDrops: new Coding({
         code: "385128008",
         display: "Prolonged-release eye drops",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EyeLotion: Coding.FromStrict({
+    MedicationFormCodesValueSet_EyeLotion: new Coding({
         code: "385130005",
         display: "Eye lotion",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OphthalmicInsert: Coding.FromStrict({
+    MedicationFormCodesValueSet_OphthalmicInsert: new Coding({
         code: "385132002",
         display: "Ophthalmic insert",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EarCream: Coding.FromStrict({
+    MedicationFormCodesValueSet_EarCream: new Coding({
         code: "385133007",
         display: "Ear cream",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EarGel: Coding.FromStrict({
+    MedicationFormCodesValueSet_EarGel: new Coding({
         code: "385134001",
         display: "Ear gel",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EarOintment: Coding.FromStrict({
+    MedicationFormCodesValueSet_EarOintment: new Coding({
         code: "385135000",
         display: "Ear ointment",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EarDrops: Coding.FromStrict({
+    MedicationFormCodesValueSet_EarDrops: new Coding({
         code: "385136004",
         display: "Ear drops",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EarDropsSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_EarDropsSolution: new Coding({
         code: "385137008",
         display: "Ear drops solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EarDropsEmulsion: Coding.FromStrict({
+    MedicationFormCodesValueSet_EarDropsEmulsion: new Coding({
         code: "385138003",
         display: "Ear drops emulsion",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EarPowder: Coding.FromStrict({
+    MedicationFormCodesValueSet_EarPowder: new Coding({
         code: "385139006",
         display: "Ear powder",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EarSpray: Coding.FromStrict({
+    MedicationFormCodesValueSet_EarSpray: new Coding({
         code: "385140008",
         display: "Ear spray",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EarSpraySolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_EarSpraySolution: new Coding({
         code: "385141007",
         display: "Ear spray solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EarSpraySuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_EarSpraySuspension: new Coding({
         code: "385142000",
         display: "Ear spray suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EarSprayEmulsion: Coding.FromStrict({
+    MedicationFormCodesValueSet_EarSprayEmulsion: new Coding({
         code: "385143005",
         display: "Ear spray emulsion",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EarTampon: Coding.FromStrict({
+    MedicationFormCodesValueSet_EarTampon: new Coding({
         code: "385147006",
         display: "Ear tampon",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EarStick: Coding.FromStrict({
+    MedicationFormCodesValueSet_EarStick: new Coding({
         code: "385148001",
         display: "Ear stick",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_NasalCream: Coding.FromStrict({
+    MedicationFormCodesValueSet_NasalCream: new Coding({
         code: "385149009",
         display: "Nasal cream",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_NasalGel: Coding.FromStrict({
+    MedicationFormCodesValueSet_NasalGel: new Coding({
         code: "385150009",
         display: "Nasal gel",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_NasalOintment: Coding.FromStrict({
+    MedicationFormCodesValueSet_NasalOintment: new Coding({
         code: "385151008",
         display: "Nasal ointment",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_NasalDrops: Coding.FromStrict({
+    MedicationFormCodesValueSet_NasalDrops: new Coding({
         code: "385152001",
         display: "Nasal drops",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_NasalDropsSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_NasalDropsSolution: new Coding({
         code: "385153006",
         display: "Nasal drops solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_NasalDropsSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_NasalDropsSuspension: new Coding({
         code: "385154000",
         display: "Nasal drops suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_NasalDropsEmulsion: Coding.FromStrict({
+    MedicationFormCodesValueSet_NasalDropsEmulsion: new Coding({
         code: "385155004",
         display: "Nasal drops emulsion",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_NasalPowder: Coding.FromStrict({
+    MedicationFormCodesValueSet_NasalPowder: new Coding({
         code: "385156003",
         display: "Nasal powder",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_NasalSpray: Coding.FromStrict({
+    MedicationFormCodesValueSet_NasalSpray: new Coding({
         code: "385157007",
         display: "Nasal spray",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_NasalSpraySolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_NasalSpraySolution: new Coding({
         code: "385158002",
         display: "Nasal spray solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_NasalSpraySuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_NasalSpraySuspension: new Coding({
         code: "385159005",
         display: "Nasal spray suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_NasalSprayEmulsion: Coding.FromStrict({
+    MedicationFormCodesValueSet_NasalSprayEmulsion: new Coding({
         code: "385160000",
         display: "Nasal spray emulsion",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_NasalStick: Coding.FromStrict({
+    MedicationFormCodesValueSet_NasalStick: new Coding({
         code: "385162008",
         display: "Nasal stick",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EyeEarNoseDrops: Coding.FromStrict({
+    MedicationFormCodesValueSet_EyeEarNoseDrops: new Coding({
         code: "385163003",
         display: "Eye/ear/nose drops",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EyeEarNoseOintment: Coding.FromStrict({
+    MedicationFormCodesValueSet_EyeEarNoseOintment: new Coding({
         code: "385164009",
         display: "Eye/ear/nose ointment",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_VaginalCream: Coding.FromStrict({
+    MedicationFormCodesValueSet_VaginalCream: new Coding({
         code: "385165005",
         display: "Vaginal cream",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_VaginalGel: Coding.FromStrict({
+    MedicationFormCodesValueSet_VaginalGel: new Coding({
         code: "385166006",
         display: "Vaginal gel",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_VaginalOintment: Coding.FromStrict({
+    MedicationFormCodesValueSet_VaginalOintment: new Coding({
         code: "385167002",
         display: "Vaginal ointment",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_VaginalFoam: Coding.FromStrict({
+    MedicationFormCodesValueSet_VaginalFoam: new Coding({
         code: "385168007",
         display: "Vaginal foam",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_VaginalLiquid: Coding.FromStrict({
+    MedicationFormCodesValueSet_VaginalLiquid: new Coding({
         code: "385169004",
         display: "Vaginal liquid",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_VaginalSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_VaginalSolution: new Coding({
         code: "385170003",
         display: "Vaginal solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_VaginalSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_VaginalSuspension: new Coding({
         code: "385171004",
         display: "Vaginal suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_VaginalEmulsion: Coding.FromStrict({
+    MedicationFormCodesValueSet_VaginalEmulsion: new Coding({
         code: "385172006",
         display: "Vaginal emulsion",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_TabletForVaginalSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_TabletForVaginalSolution: new Coding({
         code: "385173001",
         display: "Tablet for vaginal solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Pessary: Coding.FromStrict({
+    MedicationFormCodesValueSet_Pessary: new Coding({
         code: "385174007",
         display: "Pessary",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_VaginalCapsule: Coding.FromStrict({
+    MedicationFormCodesValueSet_VaginalCapsule: new Coding({
         code: "385175008",
         display: "Vaginal capsule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_HardVaginalCapsule: Coding.FromStrict({
+    MedicationFormCodesValueSet_HardVaginalCapsule: new Coding({
         code: "385176009",
         display: "Hard vaginal capsule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_SoftVaginalCapsule: Coding.FromStrict({
+    MedicationFormCodesValueSet_SoftVaginalCapsule: new Coding({
         code: "385177000",
         display: "Soft vaginal capsule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_VaginalTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_VaginalTablet: new Coding({
         code: "385178005",
         display: "Vaginal tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EffervescentVaginalTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_EffervescentVaginalTablet: new Coding({
         code: "385179002",
         display: "Effervescent vaginal tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_MedicatedVaginalTampon: Coding.FromStrict({
+    MedicationFormCodesValueSet_MedicatedVaginalTampon: new Coding({
         code: "385180004",
         display: "Medicated vaginal tampon",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_RectalCream: Coding.FromStrict({
+    MedicationFormCodesValueSet_RectalCream: new Coding({
         code: "385182007",
         display: "Rectal cream",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_RectalGel: Coding.FromStrict({
+    MedicationFormCodesValueSet_RectalGel: new Coding({
         code: "385183002",
         display: "Rectal gel",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_RectalOintment: Coding.FromStrict({
+    MedicationFormCodesValueSet_RectalOintment: new Coding({
         code: "385184008",
         display: "Rectal ointment",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_RectalFoam: Coding.FromStrict({
+    MedicationFormCodesValueSet_RectalFoam: new Coding({
         code: "385185009",
         display: "Rectal foam",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Enema: Coding.FromStrict({
+    MedicationFormCodesValueSet_Enema: new Coding({
         code: "385186005",
         display: "Enema",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_RectalSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_RectalSolution: new Coding({
         code: "385187001",
         display: "Rectal solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_RectalSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_RectalSuspension: new Coding({
         code: "385188006",
         display: "Rectal suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_RectalEmulsion: Coding.FromStrict({
+    MedicationFormCodesValueSet_RectalEmulsion: new Coding({
         code: "385189003",
         display: "Rectal emulsion",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForRectalSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForRectalSuspension: new Coding({
         code: "385191006",
         display: "Powder for rectal suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_TabletForRectalSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_TabletForRectalSolution: new Coding({
         code: "385192004",
         display: "Tablet for rectal solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_TabletForRectalSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_TabletForRectalSuspension: new Coding({
         code: "385193009",
         display: "Tablet for rectal suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Suppository: Coding.FromStrict({
+    MedicationFormCodesValueSet_Suppository: new Coding({
         code: "385194003",
         display: "Suppository",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_RectalCapsule: Coding.FromStrict({
+    MedicationFormCodesValueSet_RectalCapsule: new Coding({
         code: "385195002",
         display: "Rectal capsule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_RectalTampon: Coding.FromStrict({
+    MedicationFormCodesValueSet_RectalTampon: new Coding({
         code: "385196001",
         display: "Rectal tampon",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_NebulizerLiquid: Coding.FromStrict({
+    MedicationFormCodesValueSet_NebulizerLiquid: new Coding({
         code: "385197005",
         display: "Nebulizer liquid",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_NebulizerSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_NebulizerSolution: new Coding({
         code: "385198000",
         display: "Nebulizer solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_NebulizerSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_NebulizerSuspension: new Coding({
         code: "385199008",
         display: "Nebulizer suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForNebulizerSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForNebulizerSuspension: new Coding({
         code: "385200006",
         display: "Powder for nebulizer suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForNebulizerSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForNebulizerSolution: new Coding({
         code: "385201005",
         display: "Powder for nebulizer solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_NebulizerEmulsion: Coding.FromStrict({
+    MedicationFormCodesValueSet_NebulizerEmulsion: new Coding({
         code: "385202003",
         display: "Nebulizer emulsion",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PressurisedInhalation: Coding.FromStrict({
+    MedicationFormCodesValueSet_PressurisedInhalation: new Coding({
         code: "385203008",
         display: "Pressurised inhalation",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PressurisedInhalationSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_PressurisedInhalationSolution: new Coding({
         code: "385204002",
         display: "Pressurised inhalation solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PressurisedInhalationSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_PressurisedInhalationSuspension: new Coding({
         code: "385205001",
         display: "Pressurised inhalation suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PressurisedInhalationEmulsion: Coding.FromStrict({
+    MedicationFormCodesValueSet_PressurisedInhalationEmulsion: new Coding({
         code: "385206000",
         display: "Pressurised inhalation emulsion",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_InhalationPowder: Coding.FromStrict({
+    MedicationFormCodesValueSet_InhalationPowder: new Coding({
         code: "385207009",
         display: "Inhalation powder",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_HardCapsuleInhalationPowder: Coding.FromStrict({
+    MedicationFormCodesValueSet_HardCapsuleInhalationPowder: new Coding({
         code: "385208004",
         display: "Hard capsule inhalation powder",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_InhalationVapor: Coding.FromStrict({
+    MedicationFormCodesValueSet_InhalationVapor: new Coding({
         code: "385210002",
         display: "Inhalation vapor",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_InhalationVaporPowder: Coding.FromStrict({
+    MedicationFormCodesValueSet_InhalationVaporPowder: new Coding({
         code: "385211003",
         display: "Inhalation vapor powder",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_InhalationVaporCapsule: Coding.FromStrict({
+    MedicationFormCodesValueSet_InhalationVaporCapsule: new Coding({
         code: "385212005",
         display: "Inhalation vapor capsule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_InhalationVaporSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_InhalationVaporSolution: new Coding({
         code: "385213000",
         display: "Inhalation vapor solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_InhalationVaporTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_InhalationVaporTablet: new Coding({
         code: "385214006",
         display: "Inhalation vapor tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_InhalationVaporOintment: Coding.FromStrict({
+    MedicationFormCodesValueSet_InhalationVaporOintment: new Coding({
         code: "385215007",
         display: "Inhalation vapor ointment",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_InhalationVaporLiquid: Coding.FromStrict({
+    MedicationFormCodesValueSet_InhalationVaporLiquid: new Coding({
         code: "385216008",
         display: "Inhalation vapor liquid",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_InhalationGas: Coding.FromStrict({
+    MedicationFormCodesValueSet_InhalationGas: new Coding({
         code: "385217004",
         display: "Inhalation gas",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_InjectionSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_InjectionSolution: new Coding({
         code: "385219001",
         display: "Injection solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_InjectionSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_InjectionSuspension: new Coding({
         code: "385220007",
         display: "Injection suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_InjectionEmulsion: Coding.FromStrict({
+    MedicationFormCodesValueSet_InjectionEmulsion: new Coding({
         code: "385221006",
         display: "Injection emulsion",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_InjectionPowder: Coding.FromStrict({
+    MedicationFormCodesValueSet_InjectionPowder: new Coding({
         code: "385222004",
         display: "Injection powder",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForInjectionSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForInjectionSolution: new Coding({
         code: "385223009",
         display: "Powder for injection solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForInjectionSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForInjectionSuspension: new Coding({
         code: "385224003",
         display: "Powder for injection suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_InfusionSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_InfusionSolution: new Coding({
         code: "385229008",
         display: "Infusion solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_InfusionPowder: Coding.FromStrict({
+    MedicationFormCodesValueSet_InfusionPowder: new Coding({
         code: "385230003",
         display: "Infusion powder",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForInfusionSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForInfusionSolution: new Coding({
         code: "385231004",
         display: "Powder for infusion solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ImplantationTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_ImplantationTablet: new Coding({
         code: "385236009",
         display: "Implantation tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ImplantationChain: Coding.FromStrict({
+    MedicationFormCodesValueSet_ImplantationChain: new Coding({
         code: "385237000",
         display: "Implantation chain",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_IntravesicalSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_IntravesicalSolution: new Coding({
         code: "385242008",
         display: "Intravesical solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_UrethralGel: Coding.FromStrict({
+    MedicationFormCodesValueSet_UrethralGel: new Coding({
         code: "385245005",
         display: "Urethral gel",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_UrethralStick: Coding.FromStrict({
+    MedicationFormCodesValueSet_UrethralStick: new Coding({
         code: "385246006",
         display: "Urethral stick",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EndotracheopulmonaryInstillationSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_EndotracheopulmonaryInstillationSolution: new Coding({
         code: "385247002",
         display: "Endotracheopulmonary instillation solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForEndotracheopulmonaryInstillationSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForEndotracheopulmonaryInstillationSolution: new Coding({
         code: "385248007",
         display: "Powder for endotracheopulmonary instillation solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EndotracheopulmonaryInstillationSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_EndotracheopulmonaryInstillationSuspension: new Coding({
         code: "385250004",
         display: "Endotracheopulmonary instillation suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EndocervicalGel: Coding.FromStrict({
+    MedicationFormCodesValueSet_EndocervicalGel: new Coding({
         code: "385251000",
         display: "Endocervical gel",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_GastroenteralLiquid: Coding.FromStrict({
+    MedicationFormCodesValueSet_GastroenteralLiquid: new Coding({
         code: "385257001",
         display: "Gastroenteral liquid",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_GastroenteralSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_GastroenteralSolution: new Coding({
         code: "385258006",
         display: "Gastroenteral solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_GastroenteralSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_GastroenteralSuspension: new Coding({
         code: "385259003",
         display: "Gastroenteral suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_GastroenteralEmulsion: Coding.FromStrict({
+    MedicationFormCodesValueSet_GastroenteralEmulsion: new Coding({
         code: "385260008",
         display: "Gastroenteral emulsion",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_WoundStick: Coding.FromStrict({
+    MedicationFormCodesValueSet_WoundStick: new Coding({
         code: "385261007",
         display: "Wound stick",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OrganPreservationSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_OrganPreservationSolution: new Coding({
         code: "385262000",
         display: "Organ preservation solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_CutaneousPowderSpray: Coding.FromStrict({
+    MedicationFormCodesValueSet_CutaneousPowderSpray: new Coding({
         code: "385278003",
         display: "Cutaneous powder spray",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_CutaneousSuspensionSpray: Coding.FromStrict({
+    MedicationFormCodesValueSet_CutaneousSuspensionSpray: new Coding({
         code: "385279006",
         display: "Cutaneous suspension spray",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ImplantDosageForm: Coding.FromStrict({
+    MedicationFormCodesValueSet_ImplantDosageForm: new Coding({
         code: "385286003",
         display: "Implant dosage form",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OralElixir: Coding.FromStrict({
+    MedicationFormCodesValueSet_OralElixir: new Coding({
         code: "414951009",
         display: "Oral elixir",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_TamponDoseForm: Coding.FromStrict({
+    MedicationFormCodesValueSet_TamponDoseForm: new Coding({
         code: "420243009",
         display: "Tampon dose form",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OilInjection: Coding.FromStrict({
+    MedicationFormCodesValueSet_OilInjection: new Coding({
         code: "420253005",
         display: "Oil injection",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_SemiSolidDoseForm: Coding.FromStrict({
+    MedicationFormCodesValueSet_SemiSolidDoseForm: new Coding({
         code: "420275007",
         display: "Semi-solid dose form",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_NasalEmulsion: Coding.FromStrict({
+    MedicationFormCodesValueSet_NasalEmulsion: new Coding({
         code: "420283001",
         display: "Nasal emulsion",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_RectalPowder: Coding.FromStrict({
+    MedicationFormCodesValueSet_RectalPowder: new Coding({
         code: "420292003",
         display: "Rectal powder",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_CoatedPelletsCapsule: Coding.FromStrict({
+    MedicationFormCodesValueSet_CoatedPelletsCapsule: new Coding({
         code: "420293008",
         display: "Coated pellets capsule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForOralLiquid: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForOralLiquid: new Coding({
         code: "420305009",
         display: "Powder for oral liquid",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Inhaler: Coding.FromStrict({
+    MedicationFormCodesValueSet_Inhaler: new Coding({
         code: "420317006",
         display: "Inhaler",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ExtendedReleaseFilmCoatedTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_ExtendedReleaseFilmCoatedTablet: new Coding({
         code: "420378007",
         display: "Extended-release film coated tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ExtendedReleaseInsert: Coding.FromStrict({
+    MedicationFormCodesValueSet_ExtendedReleaseInsert: new Coding({
         code: "420385006",
         display: "Extended-release insert",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Emulsion: Coding.FromStrict({
+    MedicationFormCodesValueSet_Emulsion: new Coding({
         code: "420386007",
         display: "Emulsion",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_InhalationAerosolSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_InhalationAerosolSolution: new Coding({
         code: "420407000",
         display: "Inhalation aerosol solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_LyophilizedPowderForInjectableExtendedReleaseLiposomalSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_LyophilizedPowderForInjectableExtendedReleaseLiposomalSuspension: new Coding({
         code: "420430006",
         display: "Lyophilized powder for injectable extended release liposomal suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PressurizedNebulizerSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_PressurizedNebulizerSuspension: new Coding({
         code: "420450005",
         display: "Pressurized nebulizer suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Film: Coding.FromStrict({
+    MedicationFormCodesValueSet_Film: new Coding({
         code: "420460001",
         display: "Film",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OralGranules: Coding.FromStrict({
+    MedicationFormCodesValueSet_OralGranules: new Coding({
         code: "420509004",
         display: "Oral granules",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_VaginalPowder: Coding.FromStrict({
+    MedicationFormCodesValueSet_VaginalPowder: new Coding({
         code: "420536002",
         display: "Vaginal powder",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_CutaneousOil: Coding.FromStrict({
+    MedicationFormCodesValueSet_CutaneousOil: new Coding({
         code: "420540006",
         display: "Cutaneous oil",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_NasalAerosol: Coding.FromStrict({
+    MedicationFormCodesValueSet_NasalAerosol: new Coding({
         code: "420610000",
         display: "Nasal aerosol",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ExtendedReleaseTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_ExtendedReleaseTablet: new Coding({
         code: "420627008",
         display: "Extended-release tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_VaginalInsert: Coding.FromStrict({
+    MedicationFormCodesValueSet_VaginalInsert: new Coding({
         code: "420631002",
         display: "Vaginal insert",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_MicrospheresForInjectableSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_MicrospheresForInjectableSuspension: new Coding({
         code: "420634005",
         display: "Microspheres for injectable suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EyeEarDrops: Coding.FromStrict({
+    MedicationFormCodesValueSet_EyeEarDrops: new Coding({
         code: "420636007",
         display: "Eye/ear drops",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_SolutionForInhalation: Coding.FromStrict({
+    MedicationFormCodesValueSet_SolutionForInhalation: new Coding({
         code: "420641004",
         display: "Solution for inhalation",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_LyophilizedPowderForInjectableLiposomalSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_LyophilizedPowderForInjectableLiposomalSuspension: new Coding({
         code: "420656008",
         display: "Lyophilized powder for injectable liposomal suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OralCapsule: Coding.FromStrict({
+    MedicationFormCodesValueSet_OralCapsule: new Coding({
         code: "420692007",
         display: "Oral capsule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_LiquidDoseForm: Coding.FromStrict({
+    MedicationFormCodesValueSet_LiquidDoseForm: new Coding({
         code: "420699003",
         display: "Liquid dose form",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_InhalationAerosolSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_InhalationAerosolSuspension: new Coding({
         code: "420705007",
         display: "Inhalation aerosol suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EyeSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_EyeSuspension: new Coding({
         code: "420736004",
         display: "Eye suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DelayedReleaseGranules: Coding.FromStrict({
+    MedicationFormCodesValueSet_DelayedReleaseGranules: new Coding({
         code: "420757007",
         display: "Delayed-release granules",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_UrethralSuppository: Coding.FromStrict({
+    MedicationFormCodesValueSet_UrethralSuppository: new Coding({
         code: "420761001",
         display: "Urethral suppository",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DelayedReleasePelletsCapsule: Coding.FromStrict({
+    MedicationFormCodesValueSet_DelayedReleasePelletsCapsule: new Coding({
         code: "420767002",
         display: "Delayed-release pellets capsule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Pellet: Coding.FromStrict({
+    MedicationFormCodesValueSet_Pellet: new Coding({
         code: "420768007",
         display: "Pellet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ExtendedReleaseLiquid: Coding.FromStrict({
+    MedicationFormCodesValueSet_ExtendedReleaseLiquid: new Coding({
         code: "420802004",
         display: "Extended-release liquid",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForReconstitutionForDrugProduct: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForReconstitutionForDrugProduct: new Coding({
         code: "420828001",
         display: "Powder for reconstitution for drug product",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_MeteredDoseAerosol: Coding.FromStrict({
+    MedicationFormCodesValueSet_MeteredDoseAerosol: new Coding({
         code: "420847003",
         display: "Metered dose aerosol",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ExtendedReleaseInjectableSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_ExtendedReleaseInjectableSuspension: new Coding({
         code: "420873008",
         display: "Extended release injectable suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_IntrathecalSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_IntrathecalSuspension: new Coding({
         code: "420887008",
         display: "Intrathecal suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EarDropsSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_EarDropsSuspension: new Coding({
         code: "420891003",
         display: "Ear drops suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EarEmulsion: Coding.FromStrict({
+    MedicationFormCodesValueSet_EarEmulsion: new Coding({
         code: "420901005",
         display: "Ear emulsion",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_MeteredPowder: Coding.FromStrict({
+    MedicationFormCodesValueSet_MeteredPowder: new Coding({
         code: "420927005",
         display: "Metered powder",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_RectalSuppository: Coding.FromStrict({
+    MedicationFormCodesValueSet_RectalSuppository: new Coding({
         code: "420929008",
         display: "Rectal suppository",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForSolution: new Coding({
         code: "420955009",
         display: "Powder for solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_UltramicronizedTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_UltramicronizedTablet: new Coding({
         code: "420956005",
         display: "Ultramicronized tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ImplantablePellet: Coding.FromStrict({
+    MedicationFormCodesValueSet_ImplantablePellet: new Coding({
         code: "420992009",
         display: "Implantable pellet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OralTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_OralTablet: new Coding({
         code: "421026006",
         display: "Oral tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DelayedReleaseCapsule: Coding.FromStrict({
+    MedicationFormCodesValueSet_DelayedReleaseCapsule: new Coding({
         code: "421027002",
         display: "Delayed-release capsule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ExtendedReleaseSuppository: Coding.FromStrict({
+    MedicationFormCodesValueSet_ExtendedReleaseSuppository: new Coding({
         code: "421034000",
         display: "Extended-release suppository",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ExtendedReleaseFilm: Coding.FromStrict({
+    MedicationFormCodesValueSet_ExtendedReleaseFilm: new Coding({
         code: "421043009",
         display: "Extended-release film",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_SonicatedInjectableSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_SonicatedInjectableSuspension: new Coding({
         code: "421051007",
         display: "Sonicated injectable suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EmulsionForInhalation: Coding.FromStrict({
+    MedicationFormCodesValueSet_EmulsionForInhalation: new Coding({
         code: "421056002",
         display: "Emulsion for inhalation",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Pastille: Coding.FromStrict({
+    MedicationFormCodesValueSet_Pastille: new Coding({
         code: "421079001",
         display: "Pastille",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForSuspension: new Coding({
         code: "421080003",
         display: "Powder for suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_AerosolPowder: Coding.FromStrict({
+    MedicationFormCodesValueSet_AerosolPowder: new Coding({
         code: "421104008",
         display: "Aerosol powder",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_GaseousDoseForm: Coding.FromStrict({
+    MedicationFormCodesValueSet_GaseousDoseForm: new Coding({
         code: "421131006",
         display: "Gaseous dose form",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ExtendedReleaseEntericCoatedTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_ExtendedReleaseEntericCoatedTablet: new Coding({
         code: "421155001",
         display: "Extended-release enteric coated tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Foam: Coding.FromStrict({
+    MedicationFormCodesValueSet_Foam: new Coding({
         code: "421166008",
         display: "Foam",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_VaginalSuppository: Coding.FromStrict({
+    MedicationFormCodesValueSet_VaginalSuppository: new Coding({
         code: "421195004",
         display: "Vaginal suppository",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_SuspensionForInhalation: Coding.FromStrict({
+    MedicationFormCodesValueSet_SuspensionForInhalation: new Coding({
         code: "421221008",
         display: "Suspension for inhalation",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ExtendedReleaseBeadImplant: Coding.FromStrict({
+    MedicationFormCodesValueSet_ExtendedReleaseBeadImplant: new Coding({
         code: "421271006",
         display: "Extended-release bead implant",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Sponge: Coding.FromStrict({
+    MedicationFormCodesValueSet_Sponge: new Coding({
         code: "421288004",
         display: "Sponge",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ExtendedReleaseFilmCoatedCapsule: Coding.FromStrict({
+    MedicationFormCodesValueSet_ExtendedReleaseFilmCoatedCapsule: new Coding({
         code: "421300005",
         display: "Extended-release film coated capsule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForEyeDrops: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForEyeDrops: new Coding({
         code: "421316007",
         display: "Powder for eye drops",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ExtendedReleaseCoatedCapsule: Coding.FromStrict({
+    MedicationFormCodesValueSet_ExtendedReleaseCoatedCapsule: new Coding({
         code: "421338009",
         display: "Extended-release coated capsule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderSpray: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderSpray: new Coding({
         code: "421340004",
         display: "Powder spray",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForCutaneousSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForCutaneousSolution: new Coding({
         code: "421343002",
         display: "Powder for cutaneous solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_CutaneousAerosol: Coding.FromStrict({
+    MedicationFormCodesValueSet_CutaneousAerosol: new Coding({
         code: "421347001",
         display: "Cutaneous aerosol",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_TabletForOralSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_TabletForOralSuspension: new Coding({
         code: "421366001",
         display: "Tablet for oral suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DelayedReleaseTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_DelayedReleaseTablet: new Coding({
         code: "421374000",
         display: "Delayed-release tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_SolidDoseForm: Coding.FromStrict({
+    MedicationFormCodesValueSet_SolidDoseForm: new Coding({
         code: "421378002",
         display: "Solid dose form",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EarSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_EarSuspension: new Coding({
         code: "421382000",
         display: "Ear suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_IntravenousSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_IntravenousSolution: new Coding({
         code: "421410002",
         display: "Intravenous solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForInhalationSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForInhalationSolution: new Coding({
         code: "421425002",
         display: "Powder for inhalation solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EyeEarOintment: Coding.FromStrict({
+    MedicationFormCodesValueSet_EyeEarOintment: new Coding({
         code: "421427005",
         display: "Eye/ear ointment",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_InjectableOilSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_InjectableOilSuspension: new Coding({
         code: "421428000",
         display: "Injectable oil suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ExtendedReleaseGranulesForSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_ExtendedReleaseGranulesForSuspension: new Coding({
         code: "421446006",
         display: "Extended-release granules for suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Cone: Coding.FromStrict({
+    MedicationFormCodesValueSet_Cone: new Coding({
         code: "421504000",
         display: "Cone",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_LiposomalInjectableSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_LiposomalInjectableSuspension: new Coding({
         code: "421522002",
         display: "Liposomal injectable suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Insert: Coding.FromStrict({
+    MedicationFormCodesValueSet_Insert: new Coding({
         code: "421532009",
         display: "Insert",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DelayedReleaseParticlesTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_DelayedReleaseParticlesTablet: new Coding({
         code: "421535006",
         display: "Delayed-release particles tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForEarDrops: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForEarDrops: new Coding({
         code: "421575003",
         display: "Powder for ear drops",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_AerosolSpray: Coding.FromStrict({
+    MedicationFormCodesValueSet_AerosolSpray: new Coding({
         code: "421606006",
         display: "Aerosol spray",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForNasalDrops: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForNasalDrops: new Coding({
         code: "421607002",
         display: "Powder for nasal drops",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ExtendedReleaseCapsule: Coding.FromStrict({
+    MedicationFormCodesValueSet_ExtendedReleaseCapsule: new Coding({
         code: "421618002",
         display: "Extended-release capsule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_SustainedReleaseBuccalTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_SustainedReleaseBuccalTablet: new Coding({
         code: "421620004",
         display: "Sustained-release buccal tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_CutaneousCream: Coding.FromStrict({
+    MedicationFormCodesValueSet_CutaneousCream: new Coding({
         code: "421628006",
         display: "Cutaneous cream",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_LyophilizedPowderForInjectableSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_LyophilizedPowderForInjectableSolution: new Coding({
         code: "421637006",
         display: "Lyophilized powder for injectable solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_MeteredGel: Coding.FromStrict({
+    MedicationFormCodesValueSet_MeteredGel: new Coding({
         code: "421669002",
         display: "Metered gel",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_TabletForOralSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_TabletForOralSolution: new Coding({
         code: "421701006",
         display: "Tablet for oral solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EarSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_EarSolution: new Coding({
         code: "421713001",
         display: "Ear solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_TransdermalDrugDeliverySystem: Coding.FromStrict({
+    MedicationFormCodesValueSet_TransdermalDrugDeliverySystem: new Coding({
         code: "421716009",
         display: "Transdermal drug delivery system",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_SprayDoseForm: Coding.FromStrict({
+    MedicationFormCodesValueSet_SprayDoseForm: new Coding({
         code: "421720008",
         display: "Spray dose form",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_CoatedParticlesTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_CoatedParticlesTablet: new Coding({
         code: "421721007",
         display: "Coated particles tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ExtendedReleaseEntericCoatedCapsule: Coding.FromStrict({
+    MedicationFormCodesValueSet_ExtendedReleaseEntericCoatedCapsule: new Coding({
         code: "421752008",
         display: "Extended-release enteric coated capsule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_MeteredDoseAerosolInhaler: Coding.FromStrict({
+    MedicationFormCodesValueSet_MeteredDoseAerosolInhaler: new Coding({
         code: "421759004",
         display: "Metered dose aerosol inhaler",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_IntraperitonealSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_IntraperitonealSolution: new Coding({
         code: "421765004",
         display: "Intraperitoneal solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForOphthalmicSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForOphthalmicSolution: new Coding({
         code: "421857007",
         display: "Powder for ophthalmic solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OralCream: Coding.FromStrict({
+    MedicationFormCodesValueSet_OralCream: new Coding({
         code: "421873001",
         display: "Oral cream",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Oil: Coding.FromStrict({
+    MedicationFormCodesValueSet_Oil: new Coding({
         code: "421890007",
         display: "Oil",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_MultilayerTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_MultilayerTablet: new Coding({
         code: "421932003",
         display: "Multilayer tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_MedicatedToothpaste: Coding.FromStrict({
+    MedicationFormCodesValueSet_MedicatedToothpaste: new Coding({
         code: "421937009",
         display: "Medicated toothpaste",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_LyophilizedPowderForInjectableSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_LyophilizedPowderForInjectableSuspension: new Coding({
         code: "421943006",
         display: "Lyophilized powder for injectable suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_CutaneousGel: Coding.FromStrict({
+    MedicationFormCodesValueSet_CutaneousGel: new Coding({
         code: "421949005",
         display: "Cutaneous gel",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_IntraocularSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_IntraocularSolution: new Coding({
         code: "421987002",
         display: "Intraocular solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ExtendedReleaseCoatedPellets: Coding.FromStrict({
+    MedicationFormCodesValueSet_ExtendedReleaseCoatedPellets: new Coding({
         code: "421999009",
         display: "Extended-release coated pellets",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_MeteredDosePowderInhaler: Coding.FromStrict({
+    MedicationFormCodesValueSet_MeteredDosePowderInhaler: new Coding({
         code: "422054001",
         display: "Metered dose powder inhaler",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_MeteredDoseInhaler: Coding.FromStrict({
+    MedicationFormCodesValueSet_MeteredDoseInhaler: new Coding({
         code: "422059006",
         display: "Metered dose inhaler",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OphthalmicSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_OphthalmicSolution: new Coding({
         code: "422060001",
         display: "Ophthalmic solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_EyeDropsSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_EyeDropsSuspension: new Coding({
         code: "422068008",
         display: "Eye drops suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_NasalSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_NasalSuspension: new Coding({
         code: "422080000",
         display: "Nasal suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForOphthalmicSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForOphthalmicSuspension: new Coding({
         code: "422085005",
         display: "Powder for ophthalmic suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_BreathActivatedPowderInhaler: Coding.FromStrict({
+    MedicationFormCodesValueSet_BreathActivatedPowderInhaler: new Coding({
         code: "422151007",
         display: "Breath activated powder inhaler",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Tincture: Coding.FromStrict({
+    MedicationFormCodesValueSet_Tincture: new Coding({
         code: "422186009",
         display: "Tincture",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_BreathActivatedInhaler: Coding.FromStrict({
+    MedicationFormCodesValueSet_BreathActivatedInhaler: new Coding({
         code: "422197009",
         display: "Breath activated inhaler",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DentalCone: Coding.FromStrict({
+    MedicationFormCodesValueSet_DentalCone: new Coding({
         code: "422199007",
         display: "Dental cone",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_TabletForCutaneousSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_TabletForCutaneousSolution: new Coding({
         code: "422201009",
         display: "Tablet for cutaneous solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ColloidalSuspensionForInjection: Coding.FromStrict({
+    MedicationFormCodesValueSet_ColloidalSuspensionForInjection: new Coding({
         code: "422202002",
         display: "Colloidal suspension for injection",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Spirit: Coding.FromStrict({
+    MedicationFormCodesValueSet_Spirit: new Coding({
         code: "422259002",
         display: "Spirit",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PowderForInjectableExtendedReleaseSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_PowderForInjectableExtendedReleaseSuspension: new Coding({
         code: "422264003",
         display: "Powder for injectable extended release suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ModifiedReleasePessary: Coding.FromStrict({
+    MedicationFormCodesValueSet_ModifiedReleasePessary: new Coding({
         code: "422301006",
         display: "Modified-release pessary",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_NasalSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_NasalSolution: new Coding({
         code: "422336005",
         display: "Nasal solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ExtendedReleaseSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_ExtendedReleaseSuspension: new Coding({
         code: "422353003",
         display: "Extended-release suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_AerosolGenerator: Coding.FromStrict({
+    MedicationFormCodesValueSet_AerosolGenerator: new Coding({
         code: "424179000",
         display: "Aerosol generator",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_VaginalSponge: Coding.FromStrict({
+    MedicationFormCodesValueSet_VaginalSponge: new Coding({
         code: "424552006",
         display: "Vaginal sponge",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_TopicalOintment: Coding.FromStrict({
+    MedicationFormCodesValueSet_TopicalOintment: new Coding({
         code: "425753008",
         display: "Topical ointment",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_RectalSpray: Coding.FromStrict({
+    MedicationFormCodesValueSet_RectalSpray: new Coding({
         code: "425965000",
         display: "Rectal spray",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Gum: Coding.FromStrict({
+    MedicationFormCodesValueSet_Gum: new Coding({
         code: "426210003",
         display: "Gum",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DropsDoseForm: Coding.FromStrict({
+    MedicationFormCodesValueSet_DropsDoseForm: new Coding({
         code: "426684005",
         display: "Drops dose form",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_VaginalSpray: Coding.FromStrict({
+    MedicationFormCodesValueSet_VaginalSpray: new Coding({
         code: "426823003",
         display: "Vaginal spray",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_MeteredSpray: Coding.FromStrict({
+    MedicationFormCodesValueSet_MeteredSpray: new Coding({
         code: "426969004",
         display: "Metered spray",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_CoatedCapsule: Coding.FromStrict({
+    MedicationFormCodesValueSet_CoatedCapsule: new Coding({
         code: "427129005",
         display: "Coated capsule",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_PressurizedSpray: Coding.FromStrict({
+    MedicationFormCodesValueSet_PressurizedSpray: new Coding({
         code: "427564005",
         display: "Pressurized spray",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ModifiedReleaseDropsDoseForm: Coding.FromStrict({
+    MedicationFormCodesValueSet_ModifiedReleaseDropsDoseForm: new Coding({
         code: "427609008",
         display: "Modified release drops dose form",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Bar: Coding.FromStrict({
+    MedicationFormCodesValueSet_Bar: new Coding({
         code: "429885007",
         display: "Bar",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_BuccalFilm: Coding.FromStrict({
+    MedicationFormCodesValueSet_BuccalFilm: new Coding({
         code: "443424002",
         display: "Buccal film",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OrodispersibleFilm: Coding.FromStrict({
+    MedicationFormCodesValueSet_OrodispersibleFilm: new Coding({
         code: "447050008",
         display: "Orodispersible film",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_OrodispersibleTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_OrodispersibleTablet: new Coding({
         code: "447079001",
         display: "Orodispersible tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Pill: Coding.FromStrict({
+    MedicationFormCodesValueSet_Pill: new Coding({
         code: "46992007",
         display: "Pill",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Caplet: Coding.FromStrict({
+    MedicationFormCodesValueSet_Caplet: new Coding({
         code: "48582000",
         display: "Caplet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DrugAerosol: Coding.FromStrict({
+    MedicationFormCodesValueSet_DrugAerosol: new Coding({
         code: "52262001",
         display: "Drug aerosol",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_Liniment: Coding.FromStrict({
+    MedicationFormCodesValueSet_Liniment: new Coding({
         code: "63316001",
         display: "Liniment",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DrugPledget: Coding.FromStrict({
+    MedicationFormCodesValueSet_DrugPledget: new Coding({
         code: "64241004",
         display: "Drug pledget",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_ChewableTablet: Coding.FromStrict({
+    MedicationFormCodesValueSet_ChewableTablet: new Coding({
         code: "66076007",
         display: "Chewable tablet",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DrugSolution: Coding.FromStrict({
+    MedicationFormCodesValueSet_DrugSolution: new Coding({
         code: "77899000",
         display: "Drug solution",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DrugSuspension: Coding.FromStrict({
+    MedicationFormCodesValueSet_DrugSuspension: new Coding({
         code: "7946007",
         display: "Drug suspension",
         system: "http://snomed.info/sct"
     }),
-    MedicationFormCodesValueSet_DrugPowder: Coding.FromStrict({
+    MedicationFormCodesValueSet_DrugPowder: new Coding({
         code: "85581007",
         display: "Drug powder",
         system: "http://snomed.info/sct"

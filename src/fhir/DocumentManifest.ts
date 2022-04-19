@@ -103,18 +103,18 @@ export class DocumentManifestRelated extends fhir.BackboneElement implements fhi
   /**
    * Check if the current DocumentManifestRelated contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DocumentManifestRelated from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDocumentManifestRelated):DocumentManifestRelated {
+  static override fromStrict(source:fhir.IDocumentManifestRelated):DocumentManifestRelated {
     var dest:DocumentManifestRelated = new DocumentManifestRelated(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DocumentManifestRelated is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -209,20 +209,20 @@ export class DocumentManifest extends fhir.DomainResource implements fhir.IDocum
   /**
    * Check if the current DocumentManifest contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["content"]) || (this["content"].length === 0)) { missingElements.push("content"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DocumentManifest from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDocumentManifest):DocumentManifest {
+  static override fromStrict(source:fhir.IDocumentManifest):DocumentManifest {
     var dest:DocumentManifest = new DocumentManifest(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DocumentManifest is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

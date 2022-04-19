@@ -10,17 +10,17 @@ import { Coding } from '../fhir'
  * Ability of the primary source to push updates/alerts
  */
 export const VerificationresultCanPushUpdatesValueSet = {
-  verificationresult_can_push_updates_No: Coding.FromStrict({
+  verificationresult_can_push_updates_No: new Coding({
     code: "no",
     display: "No",
     system: "http://terminology.hl7.org/CodeSystem/can-push-updates"
   }),
-  verificationresult_can_push_updates_Undetermined: Coding.FromStrict({
+  verificationresult_can_push_updates_Undetermined: new Coding({
     code: "undetermined",
     display: "Undetermined",
     system: "http://terminology.hl7.org/CodeSystem/can-push-updates"
   }),
-  verificationresult_can_push_updates_Yes: Coding.FromStrict({
+  verificationresult_can_push_updates_Yes: new Coding({
     code: "yes",
     display: "Yes",
     system: "http://terminology.hl7.org/CodeSystem/can-push-updates"

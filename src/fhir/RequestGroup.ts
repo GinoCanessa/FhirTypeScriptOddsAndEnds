@@ -269,19 +269,19 @@ export class RequestGroupActionCondition extends fhir.BackboneElement implements
   /**
    * Check if the current RequestGroupActionCondition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["kind"] === undefined) { missingElements.push("kind"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a RequestGroupActionCondition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IRequestGroupActionCondition):RequestGroupActionCondition {
+  static override fromStrict(source:fhir.IRequestGroupActionCondition):RequestGroupActionCondition {
     var dest:RequestGroupActionCondition = new RequestGroupActionCondition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `RequestGroupActionCondition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -327,20 +327,20 @@ export class RequestGroupActionRelatedAction extends fhir.BackboneElement implem
   /**
    * Check if the current RequestGroupActionRelatedAction contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["actionId"] === undefined) { missingElements.push("actionId"); }
     if (this["relationship"] === undefined) { missingElements.push("relationship"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a RequestGroupActionRelatedAction from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IRequestGroupActionRelatedAction):RequestGroupActionRelatedAction {
+  static override fromStrict(source:fhir.IRequestGroupActionRelatedAction):RequestGroupActionRelatedAction {
     var dest:RequestGroupActionRelatedAction = new RequestGroupActionRelatedAction(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `RequestGroupActionRelatedAction is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -500,18 +500,18 @@ export class RequestGroupAction extends fhir.BackboneElement implements fhir.IRe
   /**
    * Check if the current RequestGroupAction contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a RequestGroupAction from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IRequestGroupAction):RequestGroupAction {
+  static override fromStrict(source:fhir.IRequestGroupAction):RequestGroupAction {
     var dest:RequestGroupAction = new RequestGroupAction(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `RequestGroupAction is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -640,20 +640,20 @@ export class RequestGroup extends fhir.DomainResource implements fhir.IRequestGr
   /**
    * Check if the current RequestGroup contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["intent"] === undefined) { missingElements.push("intent"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a RequestGroup from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IRequestGroup):RequestGroup {
+  static override fromStrict(source:fhir.IRequestGroup):RequestGroup {
     var dest:RequestGroup = new RequestGroup(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `RequestGroup is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

@@ -13,7 +13,7 @@ export const AllTypesValueSet = {
     /**
      * A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc.
      */
-    resource_types_Account: Coding.FromStrict({
+    resource_types_Account: new Coding({
         code: "Account",
         display: "Account",
         system: "http://hl7.org/fhir/resource-types"
@@ -21,7 +21,7 @@ export const AllTypesValueSet = {
     /**
      * This resource allows for the definition of some activity to be performed, independent of a particular patient, practitioner, or other performance context.
      */
-    resource_types_ActivityDefinition: Coding.FromStrict({
+    resource_types_ActivityDefinition: new Coding({
         code: "ActivityDefinition",
         display: "ActivityDefinition",
         system: "http://hl7.org/fhir/resource-types"
@@ -29,7 +29,7 @@ export const AllTypesValueSet = {
     /**
      * An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world.
      */
-    data_types_Address: Coding.FromStrict({
+    data_types_Address: new Coding({
         code: "Address",
         display: "Address",
         system: "http://hl7.org/fhir/data-types"
@@ -37,7 +37,7 @@ export const AllTypesValueSet = {
     /**
      * Actual or  potential/avoided event causing unintended physical injury resulting from or contributed to by medical care, a research study or other healthcare setting factors that requires additional monitoring, treatment, or hospitalization, or that results in death.
      */
-    resource_types_AdverseEvent: Coding.FromStrict({
+    resource_types_AdverseEvent: new Coding({
         code: "AdverseEvent",
         display: "AdverseEvent",
         system: "http://hl7.org/fhir/resource-types"
@@ -45,7 +45,7 @@ export const AllTypesValueSet = {
     /**
      * A duration of time during which an organism (or a process) has existed.
      */
-    data_types_Age: Coding.FromStrict({
+    data_types_Age: new Coding({
         code: "Age",
         display: "Age",
         system: "http://hl7.org/fhir/data-types"
@@ -53,7 +53,7 @@ export const AllTypesValueSet = {
     /**
      * Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.
      */
-    resource_types_AllergyIntolerance: Coding.FromStrict({
+    resource_types_AllergyIntolerance: new Coding({
         code: "AllergyIntolerance",
         display: "AllergyIntolerance",
         system: "http://hl7.org/fhir/resource-types"
@@ -61,7 +61,7 @@ export const AllTypesValueSet = {
     /**
      * A  text note which also  contains information about who made the statement and when.
      */
-    data_types_Annotation: Coding.FromStrict({
+    data_types_Annotation: new Coding({
         code: "Annotation",
         display: "Annotation",
         system: "http://hl7.org/fhir/data-types"
@@ -69,7 +69,7 @@ export const AllTypesValueSet = {
     /**
      * A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).
      */
-    resource_types_Appointment: Coding.FromStrict({
+    resource_types_Appointment: new Coding({
         code: "Appointment",
         display: "Appointment",
         system: "http://hl7.org/fhir/resource-types"
@@ -77,7 +77,7 @@ export const AllTypesValueSet = {
     /**
      * A reply to an appointment request for a patient and/or practitioner(s), such as a confirmation or rejection.
      */
-    resource_types_AppointmentResponse: Coding.FromStrict({
+    resource_types_AppointmentResponse: new Coding({
         code: "AppointmentResponse",
         display: "AppointmentResponse",
         system: "http://hl7.org/fhir/resource-types"
@@ -85,7 +85,7 @@ export const AllTypesValueSet = {
     /**
      * For referring to data content defined in other formats.
      */
-    data_types_Attachment: Coding.FromStrict({
+    data_types_Attachment: new Coding({
         code: "Attachment",
         display: "Attachment",
         system: "http://hl7.org/fhir/data-types"
@@ -93,7 +93,7 @@ export const AllTypesValueSet = {
     /**
      * A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.
      */
-    resource_types_AuditEvent: Coding.FromStrict({
+    resource_types_AuditEvent: new Coding({
         code: "AuditEvent",
         display: "AuditEvent",
         system: "http://hl7.org/fhir/resource-types"
@@ -101,7 +101,7 @@ export const AllTypesValueSet = {
     /**
      * Base definition for all elements that are defined inside a resource - but not those in a data type.
      */
-    data_types_BackboneElement: Coding.FromStrict({
+    data_types_BackboneElement: new Coding({
         code: "BackboneElement",
         display: "BackboneElement",
         system: "http://hl7.org/fhir/data-types"
@@ -109,7 +109,7 @@ export const AllTypesValueSet = {
     /**
      * A stream of bytes
      */
-    data_types_Base64Binary: Coding.FromStrict({
+    data_types_Base64Binary: new Coding({
         code: "base64Binary",
         display: "base64Binary",
         system: "http://hl7.org/fhir/data-types"
@@ -117,7 +117,7 @@ export const AllTypesValueSet = {
     /**
      * Basic is used for handling concepts not yet defined in FHIR, narrative-only resources that don't map to an existing resource, and custom resources not appropriate for inclusion in the FHIR specification.
      */
-    resource_types_Basic: Coding.FromStrict({
+    resource_types_Basic: new Coding({
         code: "Basic",
         display: "Basic",
         system: "http://hl7.org/fhir/resource-types"
@@ -125,7 +125,7 @@ export const AllTypesValueSet = {
     /**
      * A resource that represents the data of a single raw artifact as digital content accessible in its native format.  A Binary resource can contain any content, whether text, image, pdf, zip archive, etc.
      */
-    resource_types_Binary: Coding.FromStrict({
+    resource_types_Binary: new Coding({
         code: "Binary",
         display: "Binary",
         system: "http://hl7.org/fhir/resource-types"
@@ -134,7 +134,7 @@ export const AllTypesValueSet = {
      * A material substance originating from a biological entity intended to be transplanted or infused
      * into another (possibly the same) biological entity.
      */
-    resource_types_BiologicallyDerivedProduct: Coding.FromStrict({
+    resource_types_BiologicallyDerivedProduct: new Coding({
         code: "BiologicallyDerivedProduct",
         display: "BiologicallyDerivedProduct",
         system: "http://hl7.org/fhir/resource-types"
@@ -142,7 +142,7 @@ export const AllTypesValueSet = {
     /**
      * Record details about an anatomical structure.  This resource may be used when a coded concept does not provide the necessary detail needed for the use case.
      */
-    resource_types_BodyStructure: Coding.FromStrict({
+    resource_types_BodyStructure: new Coding({
         code: "BodyStructure",
         display: "BodyStructure",
         system: "http://hl7.org/fhir/resource-types"
@@ -150,7 +150,7 @@ export const AllTypesValueSet = {
     /**
      * Value of "true" or "false"
      */
-    data_types_Boolean: Coding.FromStrict({
+    data_types_Boolean: new Coding({
         code: "boolean",
         display: "boolean",
         system: "http://hl7.org/fhir/data-types"
@@ -158,7 +158,7 @@ export const AllTypesValueSet = {
     /**
      * A container for a collection of resources.
      */
-    resource_types_Bundle: Coding.FromStrict({
+    resource_types_Bundle: new Coding({
         code: "Bundle",
         display: "Bundle",
         system: "http://hl7.org/fhir/resource-types"
@@ -166,7 +166,7 @@ export const AllTypesValueSet = {
     /**
      * A URI that is a reference to a canonical URL on a FHIR resource
      */
-    data_types_Canonical: Coding.FromStrict({
+    data_types_Canonical: new Coding({
         code: "canonical",
         display: "canonical",
         system: "http://hl7.org/fhir/data-types"
@@ -174,7 +174,7 @@ export const AllTypesValueSet = {
     /**
      * A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
      */
-    resource_types_CapabilityStatement: Coding.FromStrict({
+    resource_types_CapabilityStatement: new Coding({
         code: "CapabilityStatement",
         display: "CapabilityStatement",
         system: "http://hl7.org/fhir/resource-types"
@@ -182,7 +182,7 @@ export const AllTypesValueSet = {
     /**
      * Describes the intention of how one or more practitioners intend to deliver care for a particular patient, group or community for a period of time, possibly limited to care for a specific condition or set of conditions.
      */
-    resource_types_CarePlan: Coding.FromStrict({
+    resource_types_CarePlan: new Coding({
         code: "CarePlan",
         display: "CarePlan",
         system: "http://hl7.org/fhir/resource-types"
@@ -190,7 +190,7 @@ export const AllTypesValueSet = {
     /**
      * The Care Team includes all the people and organizations who plan to participate in the coordination and delivery of care for a patient.
      */
-    resource_types_CareTeam: Coding.FromStrict({
+    resource_types_CareTeam: new Coding({
         code: "CareTeam",
         display: "CareTeam",
         system: "http://hl7.org/fhir/resource-types"
@@ -198,7 +198,7 @@ export const AllTypesValueSet = {
     /**
      * Catalog entries are wrappers that contextualize items included in a catalog.
      */
-    resource_types_CatalogEntry: Coding.FromStrict({
+    resource_types_CatalogEntry: new Coding({
         code: "CatalogEntry",
         display: "CatalogEntry",
         system: "http://hl7.org/fhir/resource-types"
@@ -206,7 +206,7 @@ export const AllTypesValueSet = {
     /**
      * The resource ChargeItem describes the provision of healthcare provider products for a certain patient, therefore referring not only to the product, but containing in addition details of the provision, like date, time, amounts and participating organizations and persons. Main Usage of the ChargeItem is to enable the billing process and internal cost allocation.
      */
-    resource_types_ChargeItem: Coding.FromStrict({
+    resource_types_ChargeItem: new Coding({
         code: "ChargeItem",
         display: "ChargeItem",
         system: "http://hl7.org/fhir/resource-types"
@@ -214,7 +214,7 @@ export const AllTypesValueSet = {
     /**
      * The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system.
      */
-    resource_types_ChargeItemDefinition: Coding.FromStrict({
+    resource_types_ChargeItemDefinition: new Coding({
         code: "ChargeItemDefinition",
         display: "ChargeItemDefinition",
         system: "http://hl7.org/fhir/resource-types"
@@ -222,7 +222,7 @@ export const AllTypesValueSet = {
     /**
      * A provider issued list of professional services and products which have been provided, or are to be provided, to a patient which is sent to an insurer for reimbursement.
      */
-    resource_types_Claim: Coding.FromStrict({
+    resource_types_Claim: new Coding({
         code: "Claim",
         display: "Claim",
         system: "http://hl7.org/fhir/resource-types"
@@ -230,7 +230,7 @@ export const AllTypesValueSet = {
     /**
      * This resource provides the adjudication details from the processing of a Claim resource.
      */
-    resource_types_ClaimResponse: Coding.FromStrict({
+    resource_types_ClaimResponse: new Coding({
         code: "ClaimResponse",
         display: "ClaimResponse",
         system: "http://hl7.org/fhir/resource-types"
@@ -238,7 +238,7 @@ export const AllTypesValueSet = {
     /**
      * A record of a clinical assessment performed to determine what problem(s) may affect the patient and before planning the treatments or management strategies that are best to manage a patient's condition. Assessments are often 1:1 with a clinical consultation / encounter,  but this varies greatly depending on the clinical workflow. This resource is called "ClinicalImpression" rather than "ClinicalAssessment" to avoid confusion with the recording of assessment tools such as Apgar score.
      */
-    resource_types_ClinicalImpression: Coding.FromStrict({
+    resource_types_ClinicalImpression: new Coding({
         code: "ClinicalImpression",
         display: "ClinicalImpression",
         system: "http://hl7.org/fhir/resource-types"
@@ -246,7 +246,7 @@ export const AllTypesValueSet = {
     /**
      * A string which has at least one character and no leading or trailing whitespace and where there is no whitespace other than single spaces in the contents
      */
-    data_types_Code: Coding.FromStrict({
+    data_types_Code: new Coding({
         code: "code",
         display: "code",
         system: "http://hl7.org/fhir/data-types"
@@ -254,7 +254,7 @@ export const AllTypesValueSet = {
     /**
      * A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.
      */
-    data_types_CodeableConcept: Coding.FromStrict({
+    data_types_CodeableConcept: new Coding({
         code: "CodeableConcept",
         display: "CodeableConcept",
         system: "http://hl7.org/fhir/data-types"
@@ -262,7 +262,7 @@ export const AllTypesValueSet = {
     /**
      * The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
      */
-    resource_types_CodeSystem: Coding.FromStrict({
+    resource_types_CodeSystem: new Coding({
         code: "CodeSystem",
         display: "CodeSystem",
         system: "http://hl7.org/fhir/resource-types"
@@ -270,7 +270,7 @@ export const AllTypesValueSet = {
     /**
      * A reference to a code defined by a terminology system.
      */
-    data_types_Coding: Coding.FromStrict({
+    data_types_Coding: new Coding({
         code: "Coding",
         display: "Coding",
         system: "http://hl7.org/fhir/data-types"
@@ -278,7 +278,7 @@ export const AllTypesValueSet = {
     /**
      * An occurrence of information being transmitted; e.g. an alert that was sent to a responsible provider, a public health agency that was notified about a reportable condition.
      */
-    resource_types_Communication: Coding.FromStrict({
+    resource_types_Communication: new Coding({
         code: "Communication",
         display: "Communication",
         system: "http://hl7.org/fhir/resource-types"
@@ -286,7 +286,7 @@ export const AllTypesValueSet = {
     /**
      * A request to convey information; e.g. the CDS system proposes that an alert be sent to a responsible provider, the CDS system proposes that the public health agency be notified about a reportable condition.
      */
-    resource_types_CommunicationRequest: Coding.FromStrict({
+    resource_types_CommunicationRequest: new Coding({
         code: "CommunicationRequest",
         display: "CommunicationRequest",
         system: "http://hl7.org/fhir/resource-types"
@@ -294,7 +294,7 @@ export const AllTypesValueSet = {
     /**
      * A compartment definition that defines how resources are accessed on a server.
      */
-    resource_types_CompartmentDefinition: Coding.FromStrict({
+    resource_types_CompartmentDefinition: new Coding({
         code: "CompartmentDefinition",
         display: "CompartmentDefinition",
         system: "http://hl7.org/fhir/resource-types"
@@ -302,7 +302,7 @@ export const AllTypesValueSet = {
     /**
      * A set of healthcare-related information that is assembled together into a single logical package that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. A Composition defines the structure and narrative content necessary for a document. However, a Composition alone does not constitute a document. Rather, the Composition must be the first entry in a Bundle where Bundle.type=document, and any other resources referenced from Composition must be included as subsequent entries in the Bundle (for example Patient, Practitioner, Encounter, etc.).
      */
-    resource_types_Composition: Coding.FromStrict({
+    resource_types_Composition: new Coding({
         code: "Composition",
         display: "Composition",
         system: "http://hl7.org/fhir/resource-types"
@@ -310,7 +310,7 @@ export const AllTypesValueSet = {
     /**
      * A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
      */
-    resource_types_ConceptMap: Coding.FromStrict({
+    resource_types_ConceptMap: new Coding({
         code: "ConceptMap",
         display: "ConceptMap",
         system: "http://hl7.org/fhir/resource-types"
@@ -318,7 +318,7 @@ export const AllTypesValueSet = {
     /**
      * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
      */
-    resource_types_Condition: Coding.FromStrict({
+    resource_types_Condition: new Coding({
         code: "Condition",
         display: "Condition",
         system: "http://hl7.org/fhir/resource-types"
@@ -326,7 +326,7 @@ export const AllTypesValueSet = {
     /**
      * A record of a healthcare consumer’s  choices, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.
      */
-    resource_types_Consent: Coding.FromStrict({
+    resource_types_Consent: new Coding({
         code: "Consent",
         display: "Consent",
         system: "http://hl7.org/fhir/resource-types"
@@ -334,7 +334,7 @@ export const AllTypesValueSet = {
     /**
      * Specifies contact information for a person or organization.
      */
-    data_types_ContactDetail: Coding.FromStrict({
+    data_types_ContactDetail: new Coding({
         code: "ContactDetail",
         display: "ContactDetail",
         system: "http://hl7.org/fhir/data-types"
@@ -342,7 +342,7 @@ export const AllTypesValueSet = {
     /**
      * Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.
      */
-    data_types_ContactPoint: Coding.FromStrict({
+    data_types_ContactPoint: new Coding({
         code: "ContactPoint",
         display: "ContactPoint",
         system: "http://hl7.org/fhir/data-types"
@@ -350,7 +350,7 @@ export const AllTypesValueSet = {
     /**
      * Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
      */
-    resource_types_Contract: Coding.FromStrict({
+    resource_types_Contract: new Coding({
         code: "Contract",
         display: "Contract",
         system: "http://hl7.org/fhir/resource-types"
@@ -358,7 +358,7 @@ export const AllTypesValueSet = {
     /**
      * A contributor to the content of a knowledge asset, including authors, editors, reviewers, and endorsers.
      */
-    data_types_Contributor: Coding.FromStrict({
+    data_types_Contributor: new Coding({
         code: "Contributor",
         display: "Contributor",
         system: "http://hl7.org/fhir/data-types"
@@ -366,7 +366,7 @@ export const AllTypesValueSet = {
     /**
      * A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
      */
-    data_types_Count: Coding.FromStrict({
+    data_types_Count: new Coding({
         code: "Count",
         display: "Count",
         system: "http://hl7.org/fhir/data-types"
@@ -374,7 +374,7 @@ export const AllTypesValueSet = {
     /**
      * Financial instrument which may be used to reimburse or pay for health care products and services. Includes both insurance and self-payment.
      */
-    resource_types_Coverage: Coding.FromStrict({
+    resource_types_Coverage: new Coding({
         code: "Coverage",
         display: "Coverage",
         system: "http://hl7.org/fhir/resource-types"
@@ -382,7 +382,7 @@ export const AllTypesValueSet = {
     /**
      * The CoverageEligibilityRequest provides patient and insurance coverage information to an insurer for them to respond, in the form of an CoverageEligibilityResponse, with information regarding whether the stated coverage is valid and in-force and optionally to provide the insurance details of the policy.
      */
-    resource_types_CoverageEligibilityRequest: Coding.FromStrict({
+    resource_types_CoverageEligibilityRequest: new Coding({
         code: "CoverageEligibilityRequest",
         display: "CoverageEligibilityRequest",
         system: "http://hl7.org/fhir/resource-types"
@@ -390,7 +390,7 @@ export const AllTypesValueSet = {
     /**
      * This resource provides eligibility and plan details from the processing of an CoverageEligibilityRequest resource.
      */
-    resource_types_CoverageEligibilityResponse: Coding.FromStrict({
+    resource_types_CoverageEligibilityResponse: new Coding({
         code: "CoverageEligibilityResponse",
         display: "CoverageEligibilityResponse",
         system: "http://hl7.org/fhir/resource-types"
@@ -398,7 +398,7 @@ export const AllTypesValueSet = {
     /**
      * Describes a required data item for evaluation in terms of the type of data, and optional code or date-based filters of the data.
      */
-    data_types_DataRequirement: Coding.FromStrict({
+    data_types_DataRequirement: new Coding({
         code: "DataRequirement",
         display: "DataRequirement",
         system: "http://hl7.org/fhir/data-types"
@@ -406,7 +406,7 @@ export const AllTypesValueSet = {
     /**
      * A date or partial date (e.g. just year or year + month). There is no time zone. The format is a union of the schema types gYear, gYearMonth and date.  Dates SHALL be valid dates.
      */
-    data_types_Date: Coding.FromStrict({
+    data_types_Date: new Coding({
         code: "date",
         display: "date",
         system: "http://hl7.org/fhir/data-types"
@@ -414,7 +414,7 @@ export const AllTypesValueSet = {
     /**
      * A date, date-time or partial date (e.g. just year or year + month).  If hours and minutes are specified, a time zone SHALL be populated. The format is a union of the schema types gYear, gYearMonth, date and dateTime. Seconds must be provided due to schema type constraints but may be zero-filled and may be ignored.                 Dates SHALL be valid dates.
      */
-    data_types_DateTime: Coding.FromStrict({
+    data_types_DateTime: new Coding({
         code: "dateTime",
         display: "dateTime",
         system: "http://hl7.org/fhir/data-types"
@@ -422,7 +422,7 @@ export const AllTypesValueSet = {
     /**
      * A rational number with implicit precision
      */
-    data_types_Decimal: Coding.FromStrict({
+    data_types_Decimal: new Coding({
         code: "decimal",
         display: "decimal",
         system: "http://hl7.org/fhir/data-types"
@@ -430,7 +430,7 @@ export const AllTypesValueSet = {
     /**
      * Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction, Ineffective treatment frequency, Procedure-condition conflict, etc.
      */
-    resource_types_DetectedIssue: Coding.FromStrict({
+    resource_types_DetectedIssue: new Coding({
         code: "DetectedIssue",
         display: "DetectedIssue",
         system: "http://hl7.org/fhir/resource-types"
@@ -438,7 +438,7 @@ export const AllTypesValueSet = {
     /**
      * A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
      */
-    resource_types_Device: Coding.FromStrict({
+    resource_types_Device: new Coding({
         code: "Device",
         display: "Device",
         system: "http://hl7.org/fhir/resource-types"
@@ -446,7 +446,7 @@ export const AllTypesValueSet = {
     /**
      * The characteristics, operational status and capabilities of a medical-related component of a medical device.
      */
-    resource_types_DeviceDefinition: Coding.FromStrict({
+    resource_types_DeviceDefinition: new Coding({
         code: "DeviceDefinition",
         display: "DeviceDefinition",
         system: "http://hl7.org/fhir/resource-types"
@@ -454,7 +454,7 @@ export const AllTypesValueSet = {
     /**
      * Describes a measurement, calculation or setting capability of a medical device.
      */
-    resource_types_DeviceMetric: Coding.FromStrict({
+    resource_types_DeviceMetric: new Coding({
         code: "DeviceMetric",
         display: "DeviceMetric",
         system: "http://hl7.org/fhir/resource-types"
@@ -462,7 +462,7 @@ export const AllTypesValueSet = {
     /**
      * Represents a request for a patient to employ a medical device. The device may be an implantable device, or an external assistive device, such as a walker.
      */
-    resource_types_DeviceRequest: Coding.FromStrict({
+    resource_types_DeviceRequest: new Coding({
         code: "DeviceRequest",
         display: "DeviceRequest",
         system: "http://hl7.org/fhir/resource-types"
@@ -470,7 +470,7 @@ export const AllTypesValueSet = {
     /**
      * A record of a device being used by a patient where the record is the result of a report from the patient or another clinician.
      */
-    resource_types_DeviceUseStatement: Coding.FromStrict({
+    resource_types_DeviceUseStatement: new Coding({
         code: "DeviceUseStatement",
         display: "DeviceUseStatement",
         system: "http://hl7.org/fhir/resource-types"
@@ -478,7 +478,7 @@ export const AllTypesValueSet = {
     /**
      * The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.
      */
-    resource_types_DiagnosticReport: Coding.FromStrict({
+    resource_types_DiagnosticReport: new Coding({
         code: "DiagnosticReport",
         display: "DiagnosticReport",
         system: "http://hl7.org/fhir/resource-types"
@@ -486,7 +486,7 @@ export const AllTypesValueSet = {
     /**
      * A length - a value with a unit that is a physical distance.
      */
-    data_types_Distance: Coding.FromStrict({
+    data_types_Distance: new Coding({
         code: "Distance",
         display: "Distance",
         system: "http://hl7.org/fhir/data-types"
@@ -494,7 +494,7 @@ export const AllTypesValueSet = {
     /**
      * A collection of documents compiled for a purpose together with metadata that applies to the collection.
      */
-    resource_types_DocumentManifest: Coding.FromStrict({
+    resource_types_DocumentManifest: new Coding({
         code: "DocumentManifest",
         display: "DocumentManifest",
         system: "http://hl7.org/fhir/resource-types"
@@ -502,7 +502,7 @@ export const AllTypesValueSet = {
     /**
      * A reference to a document of any kind for any purpose. Provides metadata about the document so that the document can be discovered and managed. The scope of a document is any seralized object with a mime-type, so includes formal patient centric documents (CDA), cliical notes, scanned paper, and non-patient specific documents like policy text.
      */
-    resource_types_DocumentReference: Coding.FromStrict({
+    resource_types_DocumentReference: new Coding({
         code: "DocumentReference",
         display: "DocumentReference",
         system: "http://hl7.org/fhir/resource-types"
@@ -510,7 +510,7 @@ export const AllTypesValueSet = {
     /**
      * A resource that includes narrative, extensions, and contained resources.
      */
-    resource_types_DomainResource: Coding.FromStrict({
+    resource_types_DomainResource: new Coding({
         code: "DomainResource",
         display: "DomainResource",
         system: "http://hl7.org/fhir/resource-types"
@@ -518,7 +518,7 @@ export const AllTypesValueSet = {
     /**
      * Indicates how the medication is/was taken or should be taken by the patient.
      */
-    data_types_Dosage: Coding.FromStrict({
+    data_types_Dosage: new Coding({
         code: "Dosage",
         display: "Dosage",
         system: "http://hl7.org/fhir/data-types"
@@ -526,7 +526,7 @@ export const AllTypesValueSet = {
     /**
      * A length of time.
      */
-    data_types_Duration: Coding.FromStrict({
+    data_types_Duration: new Coding({
         code: "Duration",
         display: "Duration",
         system: "http://hl7.org/fhir/data-types"
@@ -534,7 +534,7 @@ export const AllTypesValueSet = {
     /**
      * The EffectEvidenceSynthesis resource describes the difference in an outcome between exposures states in a population where the effect estimate is derived from a combination of research studies.
      */
-    resource_types_EffectEvidenceSynthesis: Coding.FromStrict({
+    resource_types_EffectEvidenceSynthesis: new Coding({
         code: "EffectEvidenceSynthesis",
         display: "EffectEvidenceSynthesis",
         system: "http://hl7.org/fhir/resource-types"
@@ -542,7 +542,7 @@ export const AllTypesValueSet = {
     /**
      * Base definition for all elements in a resource.
      */
-    data_types_VALElement: Coding.FromStrict({
+    data_types_VALElement: new Coding({
         code: "Element",
         display: "Element",
         system: "http://hl7.org/fhir/data-types"
@@ -550,7 +550,7 @@ export const AllTypesValueSet = {
     /**
      * Captures constraints on each element within the resource, profile, or extension.
      */
-    data_types_ElementDefinition: Coding.FromStrict({
+    data_types_ElementDefinition: new Coding({
         code: "ElementDefinition",
         display: "ElementDefinition",
         system: "http://hl7.org/fhir/data-types"
@@ -558,7 +558,7 @@ export const AllTypesValueSet = {
     /**
      * An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
      */
-    resource_types_Encounter: Coding.FromStrict({
+    resource_types_Encounter: new Coding({
         code: "Encounter",
         display: "Encounter",
         system: "http://hl7.org/fhir/resource-types"
@@ -566,7 +566,7 @@ export const AllTypesValueSet = {
     /**
      * The technical details of an endpoint that can be used for electronic services, such as for web services providing XDS.b or a REST endpoint for another FHIR server. This may include any security context information.
      */
-    resource_types_Endpoint: Coding.FromStrict({
+    resource_types_Endpoint: new Coding({
         code: "Endpoint",
         display: "Endpoint",
         system: "http://hl7.org/fhir/resource-types"
@@ -574,7 +574,7 @@ export const AllTypesValueSet = {
     /**
      * This resource provides the insurance enrollment details to the insurer regarding a specified coverage.
      */
-    resource_types_EnrollmentRequest: Coding.FromStrict({
+    resource_types_EnrollmentRequest: new Coding({
         code: "EnrollmentRequest",
         display: "EnrollmentRequest",
         system: "http://hl7.org/fhir/resource-types"
@@ -582,7 +582,7 @@ export const AllTypesValueSet = {
     /**
      * This resource provides enrollment and plan details from the processing of an EnrollmentRequest resource.
      */
-    resource_types_EnrollmentResponse: Coding.FromStrict({
+    resource_types_EnrollmentResponse: new Coding({
         code: "EnrollmentResponse",
         display: "EnrollmentResponse",
         system: "http://hl7.org/fhir/resource-types"
@@ -590,7 +590,7 @@ export const AllTypesValueSet = {
     /**
      * An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.
      */
-    resource_types_EpisodeOfCare: Coding.FromStrict({
+    resource_types_EpisodeOfCare: new Coding({
         code: "EpisodeOfCare",
         display: "EpisodeOfCare",
         system: "http://hl7.org/fhir/resource-types"
@@ -598,7 +598,7 @@ export const AllTypesValueSet = {
     /**
      * The EventDefinition resource provides a reusable description of when a particular event can occur.
      */
-    resource_types_EventDefinition: Coding.FromStrict({
+    resource_types_EventDefinition: new Coding({
         code: "EventDefinition",
         display: "EventDefinition",
         system: "http://hl7.org/fhir/resource-types"
@@ -606,7 +606,7 @@ export const AllTypesValueSet = {
     /**
      * The Evidence resource describes the conditional state (population and any exposures being compared within the population) and outcome (if specified) that the knowledge (evidence, assertion, recommendation) is about.
      */
-    resource_types_Evidence: Coding.FromStrict({
+    resource_types_Evidence: new Coding({
         code: "Evidence",
         display: "Evidence",
         system: "http://hl7.org/fhir/resource-types"
@@ -614,7 +614,7 @@ export const AllTypesValueSet = {
     /**
      * The EvidenceVariable resource describes a "PICO" element that knowledge (evidence, assertion, recommendation) is about.
      */
-    resource_types_EvidenceVariable: Coding.FromStrict({
+    resource_types_EvidenceVariable: new Coding({
         code: "EvidenceVariable",
         display: "EvidenceVariable",
         system: "http://hl7.org/fhir/resource-types"
@@ -622,7 +622,7 @@ export const AllTypesValueSet = {
     /**
      * Example of workflow instance.
      */
-    resource_types_ExampleScenario: Coding.FromStrict({
+    resource_types_ExampleScenario: new Coding({
         code: "ExampleScenario",
         display: "ExampleScenario",
         system: "http://hl7.org/fhir/resource-types"
@@ -630,7 +630,7 @@ export const AllTypesValueSet = {
     /**
      * This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided.
      */
-    resource_types_ExplanationOfBenefit: Coding.FromStrict({
+    resource_types_ExplanationOfBenefit: new Coding({
         code: "ExplanationOfBenefit",
         display: "ExplanationOfBenefit",
         system: "http://hl7.org/fhir/resource-types"
@@ -638,7 +638,7 @@ export const AllTypesValueSet = {
     /**
      * A expression that is evaluated in a specified context and returns a value. The context of use of the expression must specify the context in which the expression is evaluated, and how the result of the expression is used.
      */
-    data_types_Expression: Coding.FromStrict({
+    data_types_Expression: new Coding({
         code: "Expression",
         display: "Expression",
         system: "http://hl7.org/fhir/data-types"
@@ -646,7 +646,7 @@ export const AllTypesValueSet = {
     /**
      * Optional Extension Element - found in all resources.
      */
-    data_types_Extension: Coding.FromStrict({
+    data_types_Extension: new Coding({
         code: "Extension",
         display: "Extension",
         system: "http://hl7.org/fhir/data-types"
@@ -654,7 +654,7 @@ export const AllTypesValueSet = {
     /**
      * Significant health conditions for a person related to the patient relevant in the context of care for the patient.
      */
-    resource_types_FamilyMemberHistory: Coding.FromStrict({
+    resource_types_FamilyMemberHistory: new Coding({
         code: "FamilyMemberHistory",
         display: "FamilyMemberHistory",
         system: "http://hl7.org/fhir/resource-types"
@@ -662,7 +662,7 @@ export const AllTypesValueSet = {
     /**
      * Prospective warnings of potential issues when providing care to the patient.
      */
-    resource_types_Flag: Coding.FromStrict({
+    resource_types_Flag: new Coding({
         code: "Flag",
         display: "Flag",
         system: "http://hl7.org/fhir/resource-types"
@@ -670,7 +670,7 @@ export const AllTypesValueSet = {
     /**
      * Describes the intended objective(s) for a patient, group or organization care, for example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc.
      */
-    resource_types_Goal: Coding.FromStrict({
+    resource_types_Goal: new Coding({
         code: "Goal",
         display: "Goal",
         system: "http://hl7.org/fhir/resource-types"
@@ -678,7 +678,7 @@ export const AllTypesValueSet = {
     /**
      * A formal computable definition of a graph of resources - that is, a coherent set of resources that form a graph by following references. The Graph Definition resource defines a set and makes rules about the set.
      */
-    resource_types_GraphDefinition: Coding.FromStrict({
+    resource_types_GraphDefinition: new Coding({
         code: "GraphDefinition",
         display: "GraphDefinition",
         system: "http://hl7.org/fhir/resource-types"
@@ -686,7 +686,7 @@ export const AllTypesValueSet = {
     /**
      * Represents a defined collection of entities that may be discussed or acted upon collectively but which are not expected to act collectively, and are not formally or legally recognized; i.e. a collection of entities that isn't an Organization.
      */
-    resource_types_Group: Coding.FromStrict({
+    resource_types_Group: new Coding({
         code: "Group",
         display: "Group",
         system: "http://hl7.org/fhir/resource-types"
@@ -694,7 +694,7 @@ export const AllTypesValueSet = {
     /**
      * A guidance response is the formal response to a guidance request, including any output parameters returned by the evaluation, as well as the description of any proposed actions to be taken.
      */
-    resource_types_GuidanceResponse: Coding.FromStrict({
+    resource_types_GuidanceResponse: new Coding({
         code: "GuidanceResponse",
         display: "GuidanceResponse",
         system: "http://hl7.org/fhir/resource-types"
@@ -702,7 +702,7 @@ export const AllTypesValueSet = {
     /**
      * The details of a healthcare service available at a location.
      */
-    resource_types_HealthcareService: Coding.FromStrict({
+    resource_types_HealthcareService: new Coding({
         code: "HealthcareService",
         display: "HealthcareService",
         system: "http://hl7.org/fhir/resource-types"
@@ -710,7 +710,7 @@ export const AllTypesValueSet = {
     /**
      * A human's name with the ability to identify parts and usage.
      */
-    data_types_HumanName: Coding.FromStrict({
+    data_types_HumanName: new Coding({
         code: "HumanName",
         display: "HumanName",
         system: "http://hl7.org/fhir/data-types"
@@ -718,7 +718,7 @@ export const AllTypesValueSet = {
     /**
      * Any combination of letters, numerals, "-" and ".", with a length limit of 64 characters.  (This might be an integer, an unprefixed OID, UUID or any other identifier pattern that meets these constraints.)  Ids are case-insensitive.
      */
-    data_types_Id: Coding.FromStrict({
+    data_types_Id: new Coding({
         code: "id",
         display: "id",
         system: "http://hl7.org/fhir/data-types"
@@ -726,7 +726,7 @@ export const AllTypesValueSet = {
     /**
      * An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers.
      */
-    data_types_Identifier: Coding.FromStrict({
+    data_types_Identifier: new Coding({
         code: "Identifier",
         display: "Identifier",
         system: "http://hl7.org/fhir/data-types"
@@ -734,7 +734,7 @@ export const AllTypesValueSet = {
     /**
      * Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
      */
-    resource_types_ImagingStudy: Coding.FromStrict({
+    resource_types_ImagingStudy: new Coding({
         code: "ImagingStudy",
         display: "ImagingStudy",
         system: "http://hl7.org/fhir/resource-types"
@@ -742,7 +742,7 @@ export const AllTypesValueSet = {
     /**
      * Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party.
      */
-    resource_types_Immunization: Coding.FromStrict({
+    resource_types_Immunization: new Coding({
         code: "Immunization",
         display: "Immunization",
         system: "http://hl7.org/fhir/resource-types"
@@ -750,7 +750,7 @@ export const AllTypesValueSet = {
     /**
      * Describes a comparison of an immunization event against published recommendations to determine if the administration is "valid" in relation to those  recommendations.
      */
-    resource_types_ImmunizationEvaluation: Coding.FromStrict({
+    resource_types_ImmunizationEvaluation: new Coding({
         code: "ImmunizationEvaluation",
         display: "ImmunizationEvaluation",
         system: "http://hl7.org/fhir/resource-types"
@@ -758,7 +758,7 @@ export const AllTypesValueSet = {
     /**
      * A patient's point-in-time set of recommendations (i.e. forecasting) according to a published schedule with optional supporting justification.
      */
-    resource_types_ImmunizationRecommendation: Coding.FromStrict({
+    resource_types_ImmunizationRecommendation: new Coding({
         code: "ImmunizationRecommendation",
         display: "ImmunizationRecommendation",
         system: "http://hl7.org/fhir/resource-types"
@@ -766,7 +766,7 @@ export const AllTypesValueSet = {
     /**
      * A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
      */
-    resource_types_ImplementationGuide: Coding.FromStrict({
+    resource_types_ImplementationGuide: new Coding({
         code: "ImplementationGuide",
         display: "ImplementationGuide",
         system: "http://hl7.org/fhir/resource-types"
@@ -774,7 +774,7 @@ export const AllTypesValueSet = {
     /**
      * An instant in time - known at least to the second
      */
-    data_types_Instant: Coding.FromStrict({
+    data_types_Instant: new Coding({
         code: "instant",
         display: "instant",
         system: "http://hl7.org/fhir/data-types"
@@ -782,7 +782,7 @@ export const AllTypesValueSet = {
     /**
      * Details of a Health Insurance product/plan provided by an organization.
      */
-    resource_types_InsurancePlan: Coding.FromStrict({
+    resource_types_InsurancePlan: new Coding({
         code: "InsurancePlan",
         display: "InsurancePlan",
         system: "http://hl7.org/fhir/resource-types"
@@ -790,7 +790,7 @@ export const AllTypesValueSet = {
     /**
      * A whole number
      */
-    data_types_Integer: Coding.FromStrict({
+    data_types_Integer: new Coding({
         code: "integer",
         display: "integer",
         system: "http://hl7.org/fhir/data-types"
@@ -798,7 +798,7 @@ export const AllTypesValueSet = {
     /**
      * Invoice containing collected ChargeItems from an Account with calculated individual and total price for Billing purpose.
      */
-    resource_types_Invoice: Coding.FromStrict({
+    resource_types_Invoice: new Coding({
         code: "Invoice",
         display: "Invoice",
         system: "http://hl7.org/fhir/resource-types"
@@ -806,7 +806,7 @@ export const AllTypesValueSet = {
     /**
      * The Library resource is a general-purpose container for knowledge asset definitions. It can be used to describe and expose existing knowledge assets such as logic libraries and information model descriptions, as well as to describe a collection of knowledge assets.
      */
-    resource_types_Library: Coding.FromStrict({
+    resource_types_Library: new Coding({
         code: "Library",
         display: "Library",
         system: "http://hl7.org/fhir/resource-types"
@@ -814,7 +814,7 @@ export const AllTypesValueSet = {
     /**
      * Identifies two or more records (resource instances) that refer to the same real-world "occurrence".
      */
-    resource_types_Linkage: Coding.FromStrict({
+    resource_types_Linkage: new Coding({
         code: "Linkage",
         display: "Linkage",
         system: "http://hl7.org/fhir/resource-types"
@@ -822,7 +822,7 @@ export const AllTypesValueSet = {
     /**
      * A list is a curated collection of resources.
      */
-    resource_types_List: Coding.FromStrict({
+    resource_types_List: new Coding({
         code: "List",
         display: "List",
         system: "http://hl7.org/fhir/resource-types"
@@ -830,7 +830,7 @@ export const AllTypesValueSet = {
     /**
      * Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated.
      */
-    resource_types_Location: Coding.FromStrict({
+    resource_types_Location: new Coding({
         code: "Location",
         display: "Location",
         system: "http://hl7.org/fhir/resource-types"
@@ -838,7 +838,7 @@ export const AllTypesValueSet = {
     /**
      * A string that may contain Github Flavored Markdown syntax for optional processing by a mark down presentation engine
      */
-    data_types_Markdown: Coding.FromStrict({
+    data_types_Markdown: new Coding({
         code: "markdown",
         display: "markdown",
         system: "http://hl7.org/fhir/data-types"
@@ -846,7 +846,7 @@ export const AllTypesValueSet = {
     /**
      * The marketing status describes the date when a medicinal product is actually put on the market or the date as of which it is no longer available.
      */
-    data_types_MarketingStatus: Coding.FromStrict({
+    data_types_MarketingStatus: new Coding({
         code: "MarketingStatus",
         display: "MarketingStatus",
         system: "http://hl7.org/fhir/data-types"
@@ -854,7 +854,7 @@ export const AllTypesValueSet = {
     /**
      * The Measure resource provides the definition of a quality measure.
      */
-    resource_types_Measure: Coding.FromStrict({
+    resource_types_Measure: new Coding({
         code: "Measure",
         display: "Measure",
         system: "http://hl7.org/fhir/resource-types"
@@ -862,7 +862,7 @@ export const AllTypesValueSet = {
     /**
      * The MeasureReport resource contains the results of the calculation of a measure; and optionally a reference to the resources involved in that calculation.
      */
-    resource_types_MeasureReport: Coding.FromStrict({
+    resource_types_MeasureReport: new Coding({
         code: "MeasureReport",
         display: "MeasureReport",
         system: "http://hl7.org/fhir/resource-types"
@@ -870,7 +870,7 @@ export const AllTypesValueSet = {
     /**
      * A photo, video, or audio recording acquired or used in healthcare. The actual content may be inline or provided by direct reference.
      */
-    resource_types_Media: Coding.FromStrict({
+    resource_types_Media: new Coding({
         code: "Media",
         display: "Media",
         system: "http://hl7.org/fhir/resource-types"
@@ -878,7 +878,7 @@ export const AllTypesValueSet = {
     /**
      * This resource is primarily used for the identification and definition of a medication for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use.
      */
-    resource_types_Medication: Coding.FromStrict({
+    resource_types_Medication: new Coding({
         code: "Medication",
         display: "Medication",
         system: "http://hl7.org/fhir/resource-types"
@@ -886,7 +886,7 @@ export const AllTypesValueSet = {
     /**
      * Describes the event of a patient consuming or otherwise being administered a medication.  This may be as simple as swallowing a tablet or it may be a long running infusion.  Related resources tie this event to the authorizing prescription, and the specific encounter between patient and health care practitioner.
      */
-    resource_types_MedicationAdministration: Coding.FromStrict({
+    resource_types_MedicationAdministration: new Coding({
         code: "MedicationAdministration",
         display: "MedicationAdministration",
         system: "http://hl7.org/fhir/resource-types"
@@ -894,7 +894,7 @@ export const AllTypesValueSet = {
     /**
      * Indicates that a medication product is to be or has been dispensed for a named person/patient.  This includes a description of the medication product (supply) provided and the instructions for administering the medication.  The medication dispense is the result of a pharmacy system responding to a medication order.
      */
-    resource_types_MedicationDispense: Coding.FromStrict({
+    resource_types_MedicationDispense: new Coding({
         code: "MedicationDispense",
         display: "MedicationDispense",
         system: "http://hl7.org/fhir/resource-types"
@@ -902,7 +902,7 @@ export const AllTypesValueSet = {
     /**
      * Information about a medication that is used to support knowledge.
      */
-    resource_types_MedicationKnowledge: Coding.FromStrict({
+    resource_types_MedicationKnowledge: new Coding({
         code: "MedicationKnowledge",
         display: "MedicationKnowledge",
         system: "http://hl7.org/fhir/resource-types"
@@ -910,7 +910,7 @@ export const AllTypesValueSet = {
     /**
      * An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.
      */
-    resource_types_MedicationRequest: Coding.FromStrict({
+    resource_types_MedicationRequest: new Coding({
         code: "MedicationRequest",
         display: "MedicationRequest",
         system: "http://hl7.org/fhir/resource-types"
@@ -919,7 +919,7 @@ export const AllTypesValueSet = {
      * A record of a medication that is being consumed by a patient.   A MedicationStatement may indicate that the patient may be taking the medication now or has taken the medication in the past or will be taking the medication in the future.  The source of this information can be the patient, significant other (such as a family member or spouse), or a clinician.  A common scenario where this information is captured is during the history taking process during a patient visit or stay.   The medication information may come from sources such as the patient's memory, from a prescription bottle,  or from a list of medications the patient, clinician or other party maintains.
      * The primary difference between a medication statement and a medication administration is that the medication administration has complete administration information and is based on actual administration information from the person who administered the medication.  A medication statement is often, if not always, less specific.  There is no required date/time when the medication was administered, in fact we only know that a source has reported the patient is taking this medication, where details such as time, quantity, or rate or even medication product may be incomplete or missing or less precise.  As stated earlier, the medication statement information may come from the patient's memory, from a prescription bottle or from a list of medications the patient, clinician or other party maintains.  Medication administration is more formal and is not missing detailed information.
      */
-    resource_types_MedicationStatement: Coding.FromStrict({
+    resource_types_MedicationStatement: new Coding({
         code: "MedicationStatement",
         display: "MedicationStatement",
         system: "http://hl7.org/fhir/resource-types"
@@ -927,7 +927,7 @@ export const AllTypesValueSet = {
     /**
      * Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).
      */
-    resource_types_MedicinalProduct: Coding.FromStrict({
+    resource_types_MedicinalProduct: new Coding({
         code: "MedicinalProduct",
         display: "MedicinalProduct",
         system: "http://hl7.org/fhir/resource-types"
@@ -935,7 +935,7 @@ export const AllTypesValueSet = {
     /**
      * The regulatory authorization of a medicinal product.
      */
-    resource_types_MedicinalProductAuthorization: Coding.FromStrict({
+    resource_types_MedicinalProductAuthorization: new Coding({
         code: "MedicinalProductAuthorization",
         display: "MedicinalProductAuthorization",
         system: "http://hl7.org/fhir/resource-types"
@@ -943,7 +943,7 @@ export const AllTypesValueSet = {
     /**
      * The clinical particulars - indications, contraindications etc. of a medicinal product, including for regulatory purposes.
      */
-    resource_types_MedicinalProductContraindication: Coding.FromStrict({
+    resource_types_MedicinalProductContraindication: new Coding({
         code: "MedicinalProductContraindication",
         display: "MedicinalProductContraindication",
         system: "http://hl7.org/fhir/resource-types"
@@ -951,7 +951,7 @@ export const AllTypesValueSet = {
     /**
      * Indication for the Medicinal Product.
      */
-    resource_types_MedicinalProductIndication: Coding.FromStrict({
+    resource_types_MedicinalProductIndication: new Coding({
         code: "MedicinalProductIndication",
         display: "MedicinalProductIndication",
         system: "http://hl7.org/fhir/resource-types"
@@ -959,7 +959,7 @@ export const AllTypesValueSet = {
     /**
      * An ingredient of a manufactured item or pharmaceutical product.
      */
-    resource_types_MedicinalProductIngredient: Coding.FromStrict({
+    resource_types_MedicinalProductIngredient: new Coding({
         code: "MedicinalProductIngredient",
         display: "MedicinalProductIngredient",
         system: "http://hl7.org/fhir/resource-types"
@@ -967,7 +967,7 @@ export const AllTypesValueSet = {
     /**
      * The interactions of the medicinal product with other medicinal products, or other forms of interactions.
      */
-    resource_types_MedicinalProductInteraction: Coding.FromStrict({
+    resource_types_MedicinalProductInteraction: new Coding({
         code: "MedicinalProductInteraction",
         display: "MedicinalProductInteraction",
         system: "http://hl7.org/fhir/resource-types"
@@ -975,7 +975,7 @@ export const AllTypesValueSet = {
     /**
      * The manufactured item as contained in the packaged medicinal product.
      */
-    resource_types_MedicinalProductManufactured: Coding.FromStrict({
+    resource_types_MedicinalProductManufactured: new Coding({
         code: "MedicinalProductManufactured",
         display: "MedicinalProductManufactured",
         system: "http://hl7.org/fhir/resource-types"
@@ -983,7 +983,7 @@ export const AllTypesValueSet = {
     /**
      * A medicinal product in a container or package.
      */
-    resource_types_MedicinalProductPackaged: Coding.FromStrict({
+    resource_types_MedicinalProductPackaged: new Coding({
         code: "MedicinalProductPackaged",
         display: "MedicinalProductPackaged",
         system: "http://hl7.org/fhir/resource-types"
@@ -991,7 +991,7 @@ export const AllTypesValueSet = {
     /**
      * A pharmaceutical product described in terms of its composition and dose form.
      */
-    resource_types_MedicinalProductPharmaceutical: Coding.FromStrict({
+    resource_types_MedicinalProductPharmaceutical: new Coding({
         code: "MedicinalProductPharmaceutical",
         display: "MedicinalProductPharmaceutical",
         system: "http://hl7.org/fhir/resource-types"
@@ -999,7 +999,7 @@ export const AllTypesValueSet = {
     /**
      * Describe the undesirable effects of the medicinal product.
      */
-    resource_types_MedicinalProductUndesirableEffect: Coding.FromStrict({
+    resource_types_MedicinalProductUndesirableEffect: new Coding({
         code: "MedicinalProductUndesirableEffect",
         display: "MedicinalProductUndesirableEffect",
         system: "http://hl7.org/fhir/resource-types"
@@ -1007,7 +1007,7 @@ export const AllTypesValueSet = {
     /**
      * Defines the characteristics of a message that can be shared between systems, including the type of event that initiates the message, the content to be transmitted and what response(s), if any, are permitted.
      */
-    resource_types_MessageDefinition: Coding.FromStrict({
+    resource_types_MessageDefinition: new Coding({
         code: "MessageDefinition",
         display: "MessageDefinition",
         system: "http://hl7.org/fhir/resource-types"
@@ -1015,7 +1015,7 @@ export const AllTypesValueSet = {
     /**
      * The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.
      */
-    resource_types_MessageHeader: Coding.FromStrict({
+    resource_types_MessageHeader: new Coding({
         code: "MessageHeader",
         display: "MessageHeader",
         system: "http://hl7.org/fhir/resource-types"
@@ -1023,7 +1023,7 @@ export const AllTypesValueSet = {
     /**
      * The metadata about a resource. This is content in the resource that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
      */
-    data_types_Meta: Coding.FromStrict({
+    data_types_Meta: new Coding({
         code: "Meta",
         display: "Meta",
         system: "http://hl7.org/fhir/data-types"
@@ -1031,7 +1031,7 @@ export const AllTypesValueSet = {
     /**
      * Raw data describing a biological sequence.
      */
-    resource_types_MolecularSequence: Coding.FromStrict({
+    resource_types_MolecularSequence: new Coding({
         code: "MolecularSequence",
         display: "MolecularSequence",
         system: "http://hl7.org/fhir/resource-types"
@@ -1039,12 +1039,12 @@ export const AllTypesValueSet = {
     /**
      * An amount of economic utility in some recognized currency.
      */
-    data_types_Money: Coding.FromStrict({
+    data_types_Money: new Coding({
         code: "Money",
         display: "Money",
         system: "http://hl7.org/fhir/data-types"
     }),
-    data_types_MoneyQuantity: Coding.FromStrict({
+    data_types_MoneyQuantity: new Coding({
         code: "MoneyQuantity",
         display: "MoneyQuantity",
         system: "http://hl7.org/fhir/data-types"
@@ -1052,7 +1052,7 @@ export const AllTypesValueSet = {
     /**
      * A curated namespace that issues unique symbols within that namespace for the identification of concepts, people, devices, etc.  Represents a "System" used within the Identifier and Coding data types.
      */
-    resource_types_NamingSystem: Coding.FromStrict({
+    resource_types_NamingSystem: new Coding({
         code: "NamingSystem",
         display: "NamingSystem",
         system: "http://hl7.org/fhir/resource-types"
@@ -1060,7 +1060,7 @@ export const AllTypesValueSet = {
     /**
      * A human-readable summary of the resource conveying the essential clinical and business information for the resource.
      */
-    data_types_Narrative: Coding.FromStrict({
+    data_types_Narrative: new Coding({
         code: "Narrative",
         display: "Narrative",
         system: "http://hl7.org/fhir/data-types"
@@ -1068,7 +1068,7 @@ export const AllTypesValueSet = {
     /**
      * A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
      */
-    resource_types_NutritionOrder: Coding.FromStrict({
+    resource_types_NutritionOrder: new Coding({
         code: "NutritionOrder",
         display: "NutritionOrder",
         system: "http://hl7.org/fhir/resource-types"
@@ -1076,7 +1076,7 @@ export const AllTypesValueSet = {
     /**
      * Measurements and simple assertions made about a patient, device or other subject.
      */
-    resource_types_Observation: Coding.FromStrict({
+    resource_types_Observation: new Coding({
         code: "Observation",
         display: "Observation",
         system: "http://hl7.org/fhir/resource-types"
@@ -1084,7 +1084,7 @@ export const AllTypesValueSet = {
     /**
      * Set of definitional characteristics for a kind of observation or measurement produced or consumed by an orderable health care service.
      */
-    resource_types_ObservationDefinition: Coding.FromStrict({
+    resource_types_ObservationDefinition: new Coding({
         code: "ObservationDefinition",
         display: "ObservationDefinition",
         system: "http://hl7.org/fhir/resource-types"
@@ -1092,7 +1092,7 @@ export const AllTypesValueSet = {
     /**
      * An OID represented as a URI
      */
-    data_types_Oid: Coding.FromStrict({
+    data_types_Oid: new Coding({
         code: "oid",
         display: "oid",
         system: "http://hl7.org/fhir/data-types"
@@ -1100,7 +1100,7 @@ export const AllTypesValueSet = {
     /**
      * A formal computable definition of an operation (on the RESTful interface) or a named query (using the search interaction).
      */
-    resource_types_OperationDefinition: Coding.FromStrict({
+    resource_types_OperationDefinition: new Coding({
         code: "OperationDefinition",
         display: "OperationDefinition",
         system: "http://hl7.org/fhir/resource-types"
@@ -1108,7 +1108,7 @@ export const AllTypesValueSet = {
     /**
      * A collection of error, warning, or information messages that result from a system action.
      */
-    resource_types_OperationOutcome: Coding.FromStrict({
+    resource_types_OperationOutcome: new Coding({
         code: "OperationOutcome",
         display: "OperationOutcome",
         system: "http://hl7.org/fhir/resource-types"
@@ -1116,7 +1116,7 @@ export const AllTypesValueSet = {
     /**
      * A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.
      */
-    resource_types_Organization: Coding.FromStrict({
+    resource_types_Organization: new Coding({
         code: "Organization",
         display: "Organization",
         system: "http://hl7.org/fhir/resource-types"
@@ -1124,7 +1124,7 @@ export const AllTypesValueSet = {
     /**
      * Defines an affiliation/assotiation/relationship between 2 distinct oganizations, that is not a part-of relationship/sub-division relationship.
      */
-    resource_types_OrganizationAffiliation: Coding.FromStrict({
+    resource_types_OrganizationAffiliation: new Coding({
         code: "OrganizationAffiliation",
         display: "OrganizationAffiliation",
         system: "http://hl7.org/fhir/resource-types"
@@ -1132,7 +1132,7 @@ export const AllTypesValueSet = {
     /**
      * The parameters to the module. This collection specifies both the input and output parameters. Input parameters are provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.
      */
-    data_types_ParameterDefinition: Coding.FromStrict({
+    data_types_ParameterDefinition: new Coding({
         code: "ParameterDefinition",
         display: "ParameterDefinition",
         system: "http://hl7.org/fhir/data-types"
@@ -1140,7 +1140,7 @@ export const AllTypesValueSet = {
     /**
      * This resource is a non-persisted resource used to pass information into and back from an [operation](operations.html). It has no other use, and there is no RESTful endpoint associated with it.
      */
-    resource_types_Parameters: Coding.FromStrict({
+    resource_types_Parameters: new Coding({
         code: "Parameters",
         display: "Parameters",
         system: "http://hl7.org/fhir/resource-types"
@@ -1148,7 +1148,7 @@ export const AllTypesValueSet = {
     /**
      * Demographics and other administrative information about an individual or animal receiving care or other health-related services.
      */
-    resource_types_Patient: Coding.FromStrict({
+    resource_types_Patient: new Coding({
         code: "Patient",
         display: "Patient",
         system: "http://hl7.org/fhir/resource-types"
@@ -1156,7 +1156,7 @@ export const AllTypesValueSet = {
     /**
      * This resource provides the status of the payment for goods and services rendered, and the request and response resource references.
      */
-    resource_types_PaymentNotice: Coding.FromStrict({
+    resource_types_PaymentNotice: new Coding({
         code: "PaymentNotice",
         display: "PaymentNotice",
         system: "http://hl7.org/fhir/resource-types"
@@ -1164,7 +1164,7 @@ export const AllTypesValueSet = {
     /**
      * This resource provides the details including amount of a payment and allocates the payment items being paid.
      */
-    resource_types_PaymentReconciliation: Coding.FromStrict({
+    resource_types_PaymentReconciliation: new Coding({
         code: "PaymentReconciliation",
         display: "PaymentReconciliation",
         system: "http://hl7.org/fhir/resource-types"
@@ -1172,7 +1172,7 @@ export const AllTypesValueSet = {
     /**
      * A time period defined by a start and end date and optionally time.
      */
-    data_types_Period: Coding.FromStrict({
+    data_types_Period: new Coding({
         code: "Period",
         display: "Period",
         system: "http://hl7.org/fhir/data-types"
@@ -1180,7 +1180,7 @@ export const AllTypesValueSet = {
     /**
      * Demographics and administrative information about a person independent of a specific health-related context.
      */
-    resource_types_Person: Coding.FromStrict({
+    resource_types_Person: new Coding({
         code: "Person",
         display: "Person",
         system: "http://hl7.org/fhir/resource-types"
@@ -1188,7 +1188,7 @@ export const AllTypesValueSet = {
     /**
      * This resource allows for the definition of various types of plans as a sharable, consumable, and executable artifact. The resource is general enough to support the description of a broad range of clinical artifacts such as clinical decision support rules, order sets and protocols.
      */
-    resource_types_PlanDefinition: Coding.FromStrict({
+    resource_types_PlanDefinition: new Coding({
         code: "PlanDefinition",
         display: "PlanDefinition",
         system: "http://hl7.org/fhir/resource-types"
@@ -1196,7 +1196,7 @@ export const AllTypesValueSet = {
     /**
      * A populatioof people with some set of grouping criteria.
      */
-    data_types_Population: Coding.FromStrict({
+    data_types_Population: new Coding({
         code: "Population",
         display: "Population",
         system: "http://hl7.org/fhir/data-types"
@@ -1204,7 +1204,7 @@ export const AllTypesValueSet = {
     /**
      * An integer with a value that is positive (e.g. &gt;0)
      */
-    data_types_PositiveInt: Coding.FromStrict({
+    data_types_PositiveInt: new Coding({
         code: "positiveInt",
         display: "positiveInt",
         system: "http://hl7.org/fhir/data-types"
@@ -1212,7 +1212,7 @@ export const AllTypesValueSet = {
     /**
      * A person who is directly or indirectly involved in the provisioning of healthcare.
      */
-    resource_types_Practitioner: Coding.FromStrict({
+    resource_types_Practitioner: new Coding({
         code: "Practitioner",
         display: "Practitioner",
         system: "http://hl7.org/fhir/resource-types"
@@ -1220,7 +1220,7 @@ export const AllTypesValueSet = {
     /**
      * A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.
      */
-    resource_types_PractitionerRole: Coding.FromStrict({
+    resource_types_PractitionerRole: new Coding({
         code: "PractitionerRole",
         display: "PractitionerRole",
         system: "http://hl7.org/fhir/resource-types"
@@ -1228,7 +1228,7 @@ export const AllTypesValueSet = {
     /**
      * An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.
      */
-    resource_types_Procedure: Coding.FromStrict({
+    resource_types_Procedure: new Coding({
         code: "Procedure",
         display: "Procedure",
         system: "http://hl7.org/fhir/resource-types"
@@ -1236,7 +1236,7 @@ export const AllTypesValueSet = {
     /**
      * The marketing status describes the date when a medicinal product is actually put on the market or the date as of which it is no longer available.
      */
-    data_types_ProdCharacteristic: Coding.FromStrict({
+    data_types_ProdCharacteristic: new Coding({
         code: "ProdCharacteristic",
         display: "ProdCharacteristic",
         system: "http://hl7.org/fhir/data-types"
@@ -1244,7 +1244,7 @@ export const AllTypesValueSet = {
     /**
      * The shelf-life and storage information for a medicinal product item or container can be described using this class.
      */
-    data_types_ProductShelfLife: Coding.FromStrict({
+    data_types_ProductShelfLife: new Coding({
         code: "ProductShelfLife",
         display: "ProductShelfLife",
         system: "http://hl7.org/fhir/data-types"
@@ -1252,7 +1252,7 @@ export const AllTypesValueSet = {
     /**
      * Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies.
      */
-    resource_types_Provenance: Coding.FromStrict({
+    resource_types_Provenance: new Coding({
         code: "Provenance",
         display: "Provenance",
         system: "http://hl7.org/fhir/resource-types"
@@ -1260,7 +1260,7 @@ export const AllTypesValueSet = {
     /**
      * A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
      */
-    data_types_Quantity: Coding.FromStrict({
+    data_types_Quantity: new Coding({
         code: "Quantity",
         display: "Quantity",
         system: "http://hl7.org/fhir/data-types"
@@ -1268,7 +1268,7 @@ export const AllTypesValueSet = {
     /**
      * A structured set of questions intended to guide the collection of answers from end-users. Questionnaires provide detailed control over order, presentation, phraseology and grouping to allow coherent, consistent data collection.
      */
-    resource_types_Questionnaire: Coding.FromStrict({
+    resource_types_Questionnaire: new Coding({
         code: "Questionnaire",
         display: "Questionnaire",
         system: "http://hl7.org/fhir/resource-types"
@@ -1276,7 +1276,7 @@ export const AllTypesValueSet = {
     /**
      * A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.
      */
-    resource_types_QuestionnaireResponse: Coding.FromStrict({
+    resource_types_QuestionnaireResponse: new Coding({
         code: "QuestionnaireResponse",
         display: "QuestionnaireResponse",
         system: "http://hl7.org/fhir/resource-types"
@@ -1284,7 +1284,7 @@ export const AllTypesValueSet = {
     /**
      * A set of ordered Quantities defined by a low and high limit.
      */
-    data_types_Range: Coding.FromStrict({
+    data_types_Range: new Coding({
         code: "Range",
         display: "Range",
         system: "http://hl7.org/fhir/data-types"
@@ -1292,7 +1292,7 @@ export const AllTypesValueSet = {
     /**
      * A relationship of two Quantity values - expressed as a numerator and a denominator.
      */
-    data_types_Ratio: Coding.FromStrict({
+    data_types_Ratio: new Coding({
         code: "Ratio",
         display: "Ratio",
         system: "http://hl7.org/fhir/data-types"
@@ -1300,7 +1300,7 @@ export const AllTypesValueSet = {
     /**
      * A reference from one resource to another.
      */
-    data_types_Reference: Coding.FromStrict({
+    data_types_Reference: new Coding({
         code: "Reference",
         display: "Reference",
         system: "http://hl7.org/fhir/data-types"
@@ -1308,7 +1308,7 @@ export const AllTypesValueSet = {
     /**
      * Related artifacts such as additional documentation, justification, or bibliographic references.
      */
-    data_types_RelatedArtifact: Coding.FromStrict({
+    data_types_RelatedArtifact: new Coding({
         code: "RelatedArtifact",
         display: "RelatedArtifact",
         system: "http://hl7.org/fhir/data-types"
@@ -1316,7 +1316,7 @@ export const AllTypesValueSet = {
     /**
      * Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process.
      */
-    resource_types_RelatedPerson: Coding.FromStrict({
+    resource_types_RelatedPerson: new Coding({
         code: "RelatedPerson",
         display: "RelatedPerson",
         system: "http://hl7.org/fhir/resource-types"
@@ -1324,7 +1324,7 @@ export const AllTypesValueSet = {
     /**
      * A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
      */
-    resource_types_RequestGroup: Coding.FromStrict({
+    resource_types_RequestGroup: new Coding({
         code: "RequestGroup",
         display: "RequestGroup",
         system: "http://hl7.org/fhir/resource-types"
@@ -1332,7 +1332,7 @@ export const AllTypesValueSet = {
     /**
      * The ResearchDefinition resource describes the conditional state (population and any exposures being compared within the population) and outcome (if specified) that the knowledge (evidence, assertion, recommendation) is about.
      */
-    resource_types_ResearchDefinition: Coding.FromStrict({
+    resource_types_ResearchDefinition: new Coding({
         code: "ResearchDefinition",
         display: "ResearchDefinition",
         system: "http://hl7.org/fhir/resource-types"
@@ -1340,7 +1340,7 @@ export const AllTypesValueSet = {
     /**
      * The ResearchElementDefinition resource describes a "PICO" element that knowledge (evidence, assertion, recommendation) is about.
      */
-    resource_types_ResearchElementDefinition: Coding.FromStrict({
+    resource_types_ResearchElementDefinition: new Coding({
         code: "ResearchElementDefinition",
         display: "ResearchElementDefinition",
         system: "http://hl7.org/fhir/resource-types"
@@ -1348,7 +1348,7 @@ export const AllTypesValueSet = {
     /**
      * A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques.  A ResearchStudy involves the gathering of information about human or animal subjects.
      */
-    resource_types_ResearchStudy: Coding.FromStrict({
+    resource_types_ResearchStudy: new Coding({
         code: "ResearchStudy",
         display: "ResearchStudy",
         system: "http://hl7.org/fhir/resource-types"
@@ -1356,7 +1356,7 @@ export const AllTypesValueSet = {
     /**
      * A physical entity which is the primary unit of operational and/or administrative interest in a study.
      */
-    resource_types_ResearchSubject: Coding.FromStrict({
+    resource_types_ResearchSubject: new Coding({
         code: "ResearchSubject",
         display: "ResearchSubject",
         system: "http://hl7.org/fhir/resource-types"
@@ -1364,7 +1364,7 @@ export const AllTypesValueSet = {
     /**
      * This is the base resource type for everything.
      */
-    resource_types_Resource: Coding.FromStrict({
+    resource_types_Resource: new Coding({
         code: "Resource",
         display: "Resource",
         system: "http://hl7.org/fhir/resource-types"
@@ -1372,7 +1372,7 @@ export const AllTypesValueSet = {
     /**
      * An assessment of the likely outcome(s) for a patient or other subject as well as the likelihood of each outcome.
      */
-    resource_types_RiskAssessment: Coding.FromStrict({
+    resource_types_RiskAssessment: new Coding({
         code: "RiskAssessment",
         display: "RiskAssessment",
         system: "http://hl7.org/fhir/resource-types"
@@ -1380,7 +1380,7 @@ export const AllTypesValueSet = {
     /**
      * The RiskEvidenceSynthesis resource describes the likelihood of an outcome in a population plus exposure state where the risk estimate is derived from a combination of research studies.
      */
-    resource_types_RiskEvidenceSynthesis: Coding.FromStrict({
+    resource_types_RiskEvidenceSynthesis: new Coding({
         code: "RiskEvidenceSynthesis",
         display: "RiskEvidenceSynthesis",
         system: "http://hl7.org/fhir/resource-types"
@@ -1388,7 +1388,7 @@ export const AllTypesValueSet = {
     /**
      * A series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the data.
      */
-    data_types_SampledData: Coding.FromStrict({
+    data_types_SampledData: new Coding({
         code: "SampledData",
         display: "SampledData",
         system: "http://hl7.org/fhir/data-types"
@@ -1396,7 +1396,7 @@ export const AllTypesValueSet = {
     /**
      * A container for slots of time that may be available for booking appointments.
      */
-    resource_types_Schedule: Coding.FromStrict({
+    resource_types_Schedule: new Coding({
         code: "Schedule",
         display: "Schedule",
         system: "http://hl7.org/fhir/resource-types"
@@ -1404,7 +1404,7 @@ export const AllTypesValueSet = {
     /**
      * A search parameter that defines a named search item that can be used to search/filter on a resource.
      */
-    resource_types_SearchParameter: Coding.FromStrict({
+    resource_types_SearchParameter: new Coding({
         code: "SearchParameter",
         display: "SearchParameter",
         system: "http://hl7.org/fhir/resource-types"
@@ -1412,7 +1412,7 @@ export const AllTypesValueSet = {
     /**
      * A record of a request for service such as diagnostic investigations, treatments, or operations to be performed.
      */
-    resource_types_ServiceRequest: Coding.FromStrict({
+    resource_types_ServiceRequest: new Coding({
         code: "ServiceRequest",
         display: "ServiceRequest",
         system: "http://hl7.org/fhir/resource-types"
@@ -1420,12 +1420,12 @@ export const AllTypesValueSet = {
     /**
      * A signature along with supporting context. The signature may be a digital signature that is cryptographic in nature, or some other signature acceptable to the domain. This other signature may be as simple as a graphical image representing a hand-written signature, or a signature ceremony Different signature approaches have different utilities.
      */
-    data_types_Signature: Coding.FromStrict({
+    data_types_Signature: new Coding({
         code: "Signature",
         display: "Signature",
         system: "http://hl7.org/fhir/data-types"
     }),
-    data_types_SimpleQuantity: Coding.FromStrict({
+    data_types_SimpleQuantity: new Coding({
         code: "SimpleQuantity",
         display: "SimpleQuantity",
         system: "http://hl7.org/fhir/data-types"
@@ -1433,7 +1433,7 @@ export const AllTypesValueSet = {
     /**
      * A slot of time on a schedule that may be available for booking appointments.
      */
-    resource_types_Slot: Coding.FromStrict({
+    resource_types_Slot: new Coding({
         code: "Slot",
         display: "Slot",
         system: "http://hl7.org/fhir/resource-types"
@@ -1441,7 +1441,7 @@ export const AllTypesValueSet = {
     /**
      * A sample to be used for analysis.
      */
-    resource_types_Specimen: Coding.FromStrict({
+    resource_types_Specimen: new Coding({
         code: "Specimen",
         display: "Specimen",
         system: "http://hl7.org/fhir/resource-types"
@@ -1449,7 +1449,7 @@ export const AllTypesValueSet = {
     /**
      * A kind of specimen with associated set of requirements.
      */
-    resource_types_SpecimenDefinition: Coding.FromStrict({
+    resource_types_SpecimenDefinition: new Coding({
         code: "SpecimenDefinition",
         display: "SpecimenDefinition",
         system: "http://hl7.org/fhir/resource-types"
@@ -1457,7 +1457,7 @@ export const AllTypesValueSet = {
     /**
      * A sequence of Unicode characters
      */
-    data_types_String: Coding.FromStrict({
+    data_types_String: new Coding({
         code: "string",
         display: "string",
         system: "http://hl7.org/fhir/data-types"
@@ -1465,7 +1465,7 @@ export const AllTypesValueSet = {
     /**
      * A definition of a FHIR structure. This resource is used to describe the underlying resources, data types defined in FHIR, and also for describing extensions and constraints on resources and data types.
      */
-    resource_types_StructureDefinition: Coding.FromStrict({
+    resource_types_StructureDefinition: new Coding({
         code: "StructureDefinition",
         display: "StructureDefinition",
         system: "http://hl7.org/fhir/resource-types"
@@ -1473,7 +1473,7 @@ export const AllTypesValueSet = {
     /**
      * A Map of relationships between 2 structures that can be used to transform data.
      */
-    resource_types_StructureMap: Coding.FromStrict({
+    resource_types_StructureMap: new Coding({
         code: "StructureMap",
         display: "StructureMap",
         system: "http://hl7.org/fhir/resource-types"
@@ -1481,7 +1481,7 @@ export const AllTypesValueSet = {
     /**
      * The subscription resource is used to define a push-based subscription from a server to another system. Once a subscription is registered with the server, the server checks every resource that is created or updated, and if the resource matches the given criteria, it sends a message on the defined "channel" so that another system can take an appropriate action.
      */
-    resource_types_Subscription: Coding.FromStrict({
+    resource_types_Subscription: new Coding({
         code: "Subscription",
         display: "Subscription",
         system: "http://hl7.org/fhir/resource-types"
@@ -1489,7 +1489,7 @@ export const AllTypesValueSet = {
     /**
      * A homogeneous material with a definite composition.
      */
-    resource_types_Substance: Coding.FromStrict({
+    resource_types_Substance: new Coding({
         code: "Substance",
         display: "Substance",
         system: "http://hl7.org/fhir/resource-types"
@@ -1497,7 +1497,7 @@ export const AllTypesValueSet = {
     /**
      * Chemical substances are a single substance type whose primary defining element is the molecular structure. Chemical substances shall be defined on the basis of their complete covalent molecular structure; the presence of a salt (counter-ion) and/or solvates (water, alcohols) is also captured. Purity, grade, physical form or particle size are not taken into account in the definition of a chemical substance or in the assignment of a Substance ID.
      */
-    data_types_SubstanceAmount: Coding.FromStrict({
+    data_types_SubstanceAmount: new Coding({
         code: "SubstanceAmount",
         display: "SubstanceAmount",
         system: "http://hl7.org/fhir/data-types"
@@ -1505,7 +1505,7 @@ export const AllTypesValueSet = {
     /**
      * Nucleic acids are defined by three distinct elements: the base, sugar and linkage. Individual substance/moiety IDs will be created for each of these elements. The nucleotide sequence will be always entered in the 5’-3’ direction.
      */
-    resource_types_SubstanceNucleicAcid: Coding.FromStrict({
+    resource_types_SubstanceNucleicAcid: new Coding({
         code: "SubstanceNucleicAcid",
         display: "SubstanceNucleicAcid",
         system: "http://hl7.org/fhir/resource-types"
@@ -1513,7 +1513,7 @@ export const AllTypesValueSet = {
     /**
      * Todo.
      */
-    resource_types_SubstancePolymer: Coding.FromStrict({
+    resource_types_SubstancePolymer: new Coding({
         code: "SubstancePolymer",
         display: "SubstancePolymer",
         system: "http://hl7.org/fhir/resource-types"
@@ -1521,7 +1521,7 @@ export const AllTypesValueSet = {
     /**
      * A SubstanceProtein is defined as a single unit of a linear amino acid sequence, or a combination of subunits that are either covalently linked or have a defined invariant stoichiometric relationship. This includes all synthetic, recombinant and purified SubstanceProteins of defined sequence, whether the use is therapeutic or prophylactic. This set of elements will be used to describe albumins, coagulation factors, cytokines, growth factors, peptide/SubstanceProtein hormones, enzymes, toxins, toxoids, recombinant vaccines, and immunomodulators.
      */
-    resource_types_SubstanceProtein: Coding.FromStrict({
+    resource_types_SubstanceProtein: new Coding({
         code: "SubstanceProtein",
         display: "SubstanceProtein",
         system: "http://hl7.org/fhir/resource-types"
@@ -1529,7 +1529,7 @@ export const AllTypesValueSet = {
     /**
      * Todo.
      */
-    resource_types_SubstanceReferenceInformation: Coding.FromStrict({
+    resource_types_SubstanceReferenceInformation: new Coding({
         code: "SubstanceReferenceInformation",
         display: "SubstanceReferenceInformation",
         system: "http://hl7.org/fhir/resource-types"
@@ -1537,7 +1537,7 @@ export const AllTypesValueSet = {
     /**
      * Source material shall capture information on the taxonomic and anatomical origins as well as the fraction of a material that can result in or can be modified to form a substance. This set of data elements shall be used to define polymer substances isolated from biological matrices. Taxonomic and anatomical origins shall be described using a controlled vocabulary as required. This information is captured for naturally derived polymers ( . starch) and structurally diverse substances. For Organisms belonging to the Kingdom Plantae the Substance level defines the fresh material of a single species or infraspecies, the Herbal Drug and the Herbal preparation. For Herbal preparations, the fraction information will be captured at the Substance information level and additional information for herbal extracts will be captured at the Specified Substance Group 1 information level. See for further explanation the Substance Class: Structurally Diverse and the herbal annex.
      */
-    resource_types_SubstanceSourceMaterial: Coding.FromStrict({
+    resource_types_SubstanceSourceMaterial: new Coding({
         code: "SubstanceSourceMaterial",
         display: "SubstanceSourceMaterial",
         system: "http://hl7.org/fhir/resource-types"
@@ -1545,7 +1545,7 @@ export const AllTypesValueSet = {
     /**
      * The detailed description of a substance, typically at a level beyond what is used for prescribing.
      */
-    resource_types_SubstanceSpecification: Coding.FromStrict({
+    resource_types_SubstanceSpecification: new Coding({
         code: "SubstanceSpecification",
         display: "SubstanceSpecification",
         system: "http://hl7.org/fhir/resource-types"
@@ -1553,7 +1553,7 @@ export const AllTypesValueSet = {
     /**
      * Record of delivery of what is supplied.
      */
-    resource_types_SupplyDelivery: Coding.FromStrict({
+    resource_types_SupplyDelivery: new Coding({
         code: "SupplyDelivery",
         display: "SupplyDelivery",
         system: "http://hl7.org/fhir/resource-types"
@@ -1561,7 +1561,7 @@ export const AllTypesValueSet = {
     /**
      * A record of a request for a medication, substance or device used in the healthcare setting.
      */
-    resource_types_SupplyRequest: Coding.FromStrict({
+    resource_types_SupplyRequest: new Coding({
         code: "SupplyRequest",
         display: "SupplyRequest",
         system: "http://hl7.org/fhir/resource-types"
@@ -1569,7 +1569,7 @@ export const AllTypesValueSet = {
     /**
      * A task to be performed.
      */
-    resource_types_Task: Coding.FromStrict({
+    resource_types_Task: new Coding({
         code: "Task",
         display: "Task",
         system: "http://hl7.org/fhir/resource-types"
@@ -1577,7 +1577,7 @@ export const AllTypesValueSet = {
     /**
      * A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
      */
-    resource_types_TerminologyCapabilities: Coding.FromStrict({
+    resource_types_TerminologyCapabilities: new Coding({
         code: "TerminologyCapabilities",
         display: "TerminologyCapabilities",
         system: "http://hl7.org/fhir/resource-types"
@@ -1585,7 +1585,7 @@ export const AllTypesValueSet = {
     /**
      * A summary of information based on the results of executing a TestScript.
      */
-    resource_types_TestReport: Coding.FromStrict({
+    resource_types_TestReport: new Coding({
         code: "TestReport",
         display: "TestReport",
         system: "http://hl7.org/fhir/resource-types"
@@ -1593,7 +1593,7 @@ export const AllTypesValueSet = {
     /**
      * A structured set of tests against a FHIR server or client implementation to determine compliance against the FHIR specification.
      */
-    resource_types_TestScript: Coding.FromStrict({
+    resource_types_TestScript: new Coding({
         code: "TestScript",
         display: "TestScript",
         system: "http://hl7.org/fhir/resource-types"
@@ -1601,7 +1601,7 @@ export const AllTypesValueSet = {
     /**
      * A time during the day, with no date specified
      */
-    data_types_Time: Coding.FromStrict({
+    data_types_Time: new Coding({
         code: "time",
         display: "time",
         system: "http://hl7.org/fhir/data-types"
@@ -1609,7 +1609,7 @@ export const AllTypesValueSet = {
     /**
      * Specifies an event that may occur multiple times. Timing schedules are used to record when things are planned, expected or requested to occur. The most common usage is in dosage instructions for medications. They are also used when planning care of various kinds, and may be used for reporting the schedule to which past regular activities were carried out.
      */
-    data_types_Timing: Coding.FromStrict({
+    data_types_Timing: new Coding({
         code: "Timing",
         display: "Timing",
         system: "http://hl7.org/fhir/data-types"
@@ -1617,7 +1617,7 @@ export const AllTypesValueSet = {
     /**
      * A description of a triggering event. Triggering events can be named events, data events, or periodic, as determined by the type element.
      */
-    data_types_TriggerDefinition: Coding.FromStrict({
+    data_types_TriggerDefinition: new Coding({
         code: "TriggerDefinition",
         display: "TriggerDefinition",
         system: "http://hl7.org/fhir/data-types"
@@ -1625,7 +1625,7 @@ export const AllTypesValueSet = {
     /**
      * An integer with a value that is not negative (e.g. &gt;= 0)
      */
-    data_types_UnsignedInt: Coding.FromStrict({
+    data_types_UnsignedInt: new Coding({
         code: "unsignedInt",
         display: "unsignedInt",
         system: "http://hl7.org/fhir/data-types"
@@ -1633,7 +1633,7 @@ export const AllTypesValueSet = {
     /**
      * String of characters used to identify a name or a resource
      */
-    data_types_Uri: Coding.FromStrict({
+    data_types_Uri: new Coding({
         code: "uri",
         display: "uri",
         system: "http://hl7.org/fhir/data-types"
@@ -1641,7 +1641,7 @@ export const AllTypesValueSet = {
     /**
      * A URI that is a literal reference
      */
-    data_types_Url: Coding.FromStrict({
+    data_types_Url: new Coding({
         code: "url",
         display: "url",
         system: "http://hl7.org/fhir/data-types"
@@ -1649,7 +1649,7 @@ export const AllTypesValueSet = {
     /**
      * Specifies clinical/business/etc. metadata that can be used to retrieve, index and/or categorize an artifact. This metadata can either be specific to the applicable population (e.g., age category, DRG) or the specific context of care (e.g., venue, care setting, provider of care).
      */
-    data_types_UsageContext: Coding.FromStrict({
+    data_types_UsageContext: new Coding({
         code: "UsageContext",
         display: "UsageContext",
         system: "http://hl7.org/fhir/data-types"
@@ -1657,7 +1657,7 @@ export const AllTypesValueSet = {
     /**
      * A UUID, represented as a URI
      */
-    data_types_Uuid: Coding.FromStrict({
+    data_types_Uuid: new Coding({
         code: "uuid",
         display: "uuid",
         system: "http://hl7.org/fhir/data-types"
@@ -1665,7 +1665,7 @@ export const AllTypesValueSet = {
     /**
      * A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [[[CodeSystem]]] definitions and their use in [coded elements](terminologies.html).
      */
-    resource_types_ValueSet: Coding.FromStrict({
+    resource_types_ValueSet: new Coding({
         code: "ValueSet",
         display: "ValueSet",
         system: "http://hl7.org/fhir/resource-types"
@@ -1673,7 +1673,7 @@ export const AllTypesValueSet = {
     /**
      * Describes validation requirements, source(s), status and dates for one or more elements.
      */
-    resource_types_VerificationResult: Coding.FromStrict({
+    resource_types_VerificationResult: new Coding({
         code: "VerificationResult",
         display: "VerificationResult",
         system: "http://hl7.org/fhir/resource-types"
@@ -1681,7 +1681,7 @@ export const AllTypesValueSet = {
     /**
      * An authorization for the provision of glasses and/or contact lenses to a patient.
      */
-    resource_types_VisionPrescription: Coding.FromStrict({
+    resource_types_VisionPrescription: new Coding({
         code: "VisionPrescription",
         display: "VisionPrescription",
         system: "http://hl7.org/fhir/resource-types"
@@ -1689,7 +1689,7 @@ export const AllTypesValueSet = {
     /**
      * XHTML format, as defined by W3C, but restricted usage (mainly, no active content)
      */
-    data_types_XHTML: Coding.FromStrict({
+    data_types_XHTML: new Coding({
         code: "xhtml",
         display: "XHTML",
         system: "http://hl7.org/fhir/data-types"

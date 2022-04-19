@@ -55,11 +55,11 @@ export declare class LinkageItem extends fhir.BackboneElement implements fhir.IL
     /**
      * Check if the current LinkageItem contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a LinkageItem from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ILinkageItem): LinkageItem;
+    static fromStrict(source: fhir.ILinkageItem): LinkageItem;
 }
 /**
  * Identifies two or more records (resource instances) that refer to the same real-world "occurrence".
@@ -89,11 +89,11 @@ export declare class Linkage extends fhir.DomainResource implements fhir.ILinkag
     /**
      * Check if the current Linkage contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Linkage from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ILinkage): Linkage;
+    static fromStrict(source: fhir.ILinkage): Linkage;
 }
 /**
  * Code Values for the Linkage.item.type field

@@ -153,18 +153,18 @@ export class PractitionerRoleAvailableTime extends fhir.BackboneElement implemen
   /**
    * Check if the current PractitionerRoleAvailableTime contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PractitionerRoleAvailableTime from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPractitionerRoleAvailableTime):PractitionerRoleAvailableTime {
+  static override fromStrict(source:fhir.IPractitionerRoleAvailableTime):PractitionerRoleAvailableTime {
     var dest:PractitionerRoleAvailableTime = new PractitionerRoleAvailableTime(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `PractitionerRoleAvailableTime is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -196,19 +196,19 @@ export class PractitionerRoleNotAvailable extends fhir.BackboneElement implement
   /**
    * Check if the current PractitionerRoleNotAvailable contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["description"] === undefined) { missingElements.push("description"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PractitionerRoleNotAvailable from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPractitionerRoleNotAvailable):PractitionerRoleNotAvailable {
+  static override fromStrict(source:fhir.IPractitionerRoleNotAvailable):PractitionerRoleNotAvailable {
     var dest:PractitionerRoleNotAvailable = new PractitionerRoleNotAvailable(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `PractitionerRoleNotAvailable is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -305,18 +305,18 @@ export class PractitionerRole extends fhir.DomainResource implements fhir.IPract
   /**
    * Check if the current PractitionerRole contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PractitionerRole from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPractitionerRole):PractitionerRole {
+  static override fromStrict(source:fhir.IPractitionerRole):PractitionerRole {
     var dest:PractitionerRole = new PractitionerRole(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `PractitionerRole is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

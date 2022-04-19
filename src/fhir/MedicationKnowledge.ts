@@ -392,20 +392,20 @@ export class MedicationKnowledgeRelatedMedicationKnowledge extends fhir.Backbone
   /**
    * Check if the current MedicationKnowledgeRelatedMedicationKnowledge contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["reference"]) || (this["reference"].length === 0)) { missingElements.push("reference"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicationKnowledgeRelatedMedicationKnowledge from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicationKnowledgeRelatedMedicationKnowledge):MedicationKnowledgeRelatedMedicationKnowledge {
+  static override fromStrict(source:fhir.IMedicationKnowledgeRelatedMedicationKnowledge):MedicationKnowledgeRelatedMedicationKnowledge {
     var dest:MedicationKnowledgeRelatedMedicationKnowledge = new MedicationKnowledgeRelatedMedicationKnowledge(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicationKnowledgeRelatedMedicationKnowledge is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -433,18 +433,18 @@ export class MedicationKnowledgeMonograph extends fhir.BackboneElement implement
   /**
    * Check if the current MedicationKnowledgeMonograph contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicationKnowledgeMonograph from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicationKnowledgeMonograph):MedicationKnowledgeMonograph {
+  static override fromStrict(source:fhir.IMedicationKnowledgeMonograph):MedicationKnowledgeMonograph {
     var dest:MedicationKnowledgeMonograph = new MedicationKnowledgeMonograph(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicationKnowledgeMonograph is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -484,18 +484,18 @@ export class MedicationKnowledgeIngredient extends fhir.BackboneElement implemen
   /**
    * Check if the current MedicationKnowledgeIngredient contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicationKnowledgeIngredient from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicationKnowledgeIngredient):MedicationKnowledgeIngredient {
+  static override fromStrict(source:fhir.IMedicationKnowledgeIngredient):MedicationKnowledgeIngredient {
     var dest:MedicationKnowledgeIngredient = new MedicationKnowledgeIngredient(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicationKnowledgeIngredient is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -534,20 +534,20 @@ export class MedicationKnowledgeCost extends fhir.BackboneElement implements fhi
   /**
    * Check if the current MedicationKnowledgeCost contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["cost"] === undefined) { missingElements.push("cost"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicationKnowledgeCost from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicationKnowledgeCost):MedicationKnowledgeCost {
+  static override fromStrict(source:fhir.IMedicationKnowledgeCost):MedicationKnowledgeCost {
     var dest:MedicationKnowledgeCost = new MedicationKnowledgeCost(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicationKnowledgeCost is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -577,18 +577,18 @@ export class MedicationKnowledgeMonitoringProgram extends fhir.BackboneElement i
   /**
    * Check if the current MedicationKnowledgeMonitoringProgram contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicationKnowledgeMonitoringProgram from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicationKnowledgeMonitoringProgram):MedicationKnowledgeMonitoringProgram {
+  static override fromStrict(source:fhir.IMedicationKnowledgeMonitoringProgram):MedicationKnowledgeMonitoringProgram {
     var dest:MedicationKnowledgeMonitoringProgram = new MedicationKnowledgeMonitoringProgram(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicationKnowledgeMonitoringProgram is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -620,20 +620,20 @@ export class MedicationKnowledgeAdministrationGuidelinesDosage extends fhir.Back
   /**
    * Check if the current MedicationKnowledgeAdministrationGuidelinesDosage contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["dosage"]) || (this["dosage"].length === 0)) { missingElements.push("dosage"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicationKnowledgeAdministrationGuidelinesDosage from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicationKnowledgeAdministrationGuidelinesDosage):MedicationKnowledgeAdministrationGuidelinesDosage {
+  static override fromStrict(source:fhir.IMedicationKnowledgeAdministrationGuidelinesDosage):MedicationKnowledgeAdministrationGuidelinesDosage {
     var dest:MedicationKnowledgeAdministrationGuidelinesDosage = new MedicationKnowledgeAdministrationGuidelinesDosage(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicationKnowledgeAdministrationGuidelinesDosage is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -668,18 +668,18 @@ export class MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics e
   /**
    * Check if the current MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicationKnowledgeAdministrationGuidelinesPatientCharacteristics):MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics {
+  static override fromStrict(source:fhir.IMedicationKnowledgeAdministrationGuidelinesPatientCharacteristics):MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics {
     var dest:MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics = new MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -717,18 +717,18 @@ export class MedicationKnowledgeAdministrationGuidelines extends fhir.BackboneEl
   /**
    * Check if the current MedicationKnowledgeAdministrationGuidelines contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicationKnowledgeAdministrationGuidelines from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicationKnowledgeAdministrationGuidelines):MedicationKnowledgeAdministrationGuidelines {
+  static override fromStrict(source:fhir.IMedicationKnowledgeAdministrationGuidelines):MedicationKnowledgeAdministrationGuidelines {
     var dest:MedicationKnowledgeAdministrationGuidelines = new MedicationKnowledgeAdministrationGuidelines(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicationKnowledgeAdministrationGuidelines is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -758,19 +758,19 @@ export class MedicationKnowledgeMedicineClassification extends fhir.BackboneElem
   /**
    * Check if the current MedicationKnowledgeMedicineClassification contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicationKnowledgeMedicineClassification from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicationKnowledgeMedicineClassification):MedicationKnowledgeMedicineClassification {
+  static override fromStrict(source:fhir.IMedicationKnowledgeMedicineClassification):MedicationKnowledgeMedicineClassification {
     var dest:MedicationKnowledgeMedicineClassification = new MedicationKnowledgeMedicineClassification(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicationKnowledgeMedicineClassification is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -798,18 +798,18 @@ export class MedicationKnowledgePackaging extends fhir.BackboneElement implement
   /**
    * Check if the current MedicationKnowledgePackaging contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicationKnowledgePackaging from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicationKnowledgePackaging):MedicationKnowledgePackaging {
+  static override fromStrict(source:fhir.IMedicationKnowledgePackaging):MedicationKnowledgePackaging {
     var dest:MedicationKnowledgePackaging = new MedicationKnowledgePackaging(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicationKnowledgePackaging is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -856,18 +856,18 @@ export class MedicationKnowledgeDrugCharacteristic extends fhir.BackboneElement 
   /**
    * Check if the current MedicationKnowledgeDrugCharacteristic contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicationKnowledgeDrugCharacteristic from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicationKnowledgeDrugCharacteristic):MedicationKnowledgeDrugCharacteristic {
+  static override fromStrict(source:fhir.IMedicationKnowledgeDrugCharacteristic):MedicationKnowledgeDrugCharacteristic {
     var dest:MedicationKnowledgeDrugCharacteristic = new MedicationKnowledgeDrugCharacteristic(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicationKnowledgeDrugCharacteristic is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -901,20 +901,20 @@ export class MedicationKnowledgeRegulatorySubstitution extends fhir.BackboneElem
   /**
    * Check if the current MedicationKnowledgeRegulatorySubstitution contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["allowed"] === undefined) { missingElements.push("allowed"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicationKnowledgeRegulatorySubstitution from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicationKnowledgeRegulatorySubstitution):MedicationKnowledgeRegulatorySubstitution {
+  static override fromStrict(source:fhir.IMedicationKnowledgeRegulatorySubstitution):MedicationKnowledgeRegulatorySubstitution {
     var dest:MedicationKnowledgeRegulatorySubstitution = new MedicationKnowledgeRegulatorySubstitution(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicationKnowledgeRegulatorySubstitution is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -939,19 +939,19 @@ export class MedicationKnowledgeRegulatorySchedule extends fhir.BackboneElement 
   /**
    * Check if the current MedicationKnowledgeRegulatorySchedule contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["schedule"] === undefined) { missingElements.push("schedule"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicationKnowledgeRegulatorySchedule from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicationKnowledgeRegulatorySchedule):MedicationKnowledgeRegulatorySchedule {
+  static override fromStrict(source:fhir.IMedicationKnowledgeRegulatorySchedule):MedicationKnowledgeRegulatorySchedule {
     var dest:MedicationKnowledgeRegulatorySchedule = new MedicationKnowledgeRegulatorySchedule(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicationKnowledgeRegulatorySchedule is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -981,19 +981,19 @@ export class MedicationKnowledgeRegulatoryMaxDispense extends fhir.BackboneEleme
   /**
    * Check if the current MedicationKnowledgeRegulatoryMaxDispense contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["quantity"] === undefined) { missingElements.push("quantity"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicationKnowledgeRegulatoryMaxDispense from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicationKnowledgeRegulatoryMaxDispense):MedicationKnowledgeRegulatoryMaxDispense {
+  static override fromStrict(source:fhir.IMedicationKnowledgeRegulatoryMaxDispense):MedicationKnowledgeRegulatoryMaxDispense {
     var dest:MedicationKnowledgeRegulatoryMaxDispense = new MedicationKnowledgeRegulatoryMaxDispense(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicationKnowledgeRegulatoryMaxDispense is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1033,19 +1033,19 @@ export class MedicationKnowledgeRegulatory extends fhir.BackboneElement implemen
   /**
    * Check if the current MedicationKnowledgeRegulatory contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["regulatoryAuthority"] === undefined) { missingElements.push("regulatoryAuthority"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicationKnowledgeRegulatory from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicationKnowledgeRegulatory):MedicationKnowledgeRegulatory {
+  static override fromStrict(source:fhir.IMedicationKnowledgeRegulatory):MedicationKnowledgeRegulatory {
     var dest:MedicationKnowledgeRegulatory = new MedicationKnowledgeRegulatory(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicationKnowledgeRegulatory is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1078,18 +1078,18 @@ export class MedicationKnowledgeKinetics extends fhir.BackboneElement implements
   /**
    * Check if the current MedicationKnowledgeKinetics contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicationKnowledgeKinetics from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicationKnowledgeKinetics):MedicationKnowledgeKinetics {
+  static override fromStrict(source:fhir.IMedicationKnowledgeKinetics):MedicationKnowledgeKinetics {
     var dest:MedicationKnowledgeKinetics = new MedicationKnowledgeKinetics(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicationKnowledgeKinetics is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1228,18 +1228,18 @@ export class MedicationKnowledge extends fhir.DomainResource implements fhir.IMe
   /**
    * Check if the current MedicationKnowledge contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicationKnowledge from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicationKnowledge):MedicationKnowledge {
+  static override fromStrict(source:fhir.IMedicationKnowledge):MedicationKnowledge {
     var dest:MedicationKnowledge = new MedicationKnowledge(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicationKnowledge is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

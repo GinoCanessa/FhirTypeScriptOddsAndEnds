@@ -466,11 +466,11 @@ export declare class PlanDefinitionGoalTarget extends fhir.BackboneElement imple
     /**
      * Check if the current PlanDefinitionGoalTarget contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a PlanDefinitionGoalTarget from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPlanDefinitionGoalTarget): PlanDefinitionGoalTarget;
+    static fromStrict(source: fhir.IPlanDefinitionGoalTarget): PlanDefinitionGoalTarget;
 }
 /**
  * Goals that describe what the activities within the plan are intended to achieve. For example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc.
@@ -511,11 +511,11 @@ export declare class PlanDefinitionGoal extends fhir.BackboneElement implements 
     /**
      * Check if the current PlanDefinitionGoal contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a PlanDefinitionGoal from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPlanDefinitionGoal): PlanDefinitionGoal;
+    static fromStrict(source: fhir.IPlanDefinitionGoal): PlanDefinitionGoal;
 }
 /**
  * When multiple conditions of the same kind are present, the effects are combined using AND semantics, so the overall condition is true only if all the conditions are true.
@@ -537,11 +537,11 @@ export declare class PlanDefinitionActionCondition extends fhir.BackboneElement 
     /**
      * Check if the current PlanDefinitionActionCondition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a PlanDefinitionActionCondition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPlanDefinitionActionCondition): PlanDefinitionActionCondition;
+    static fromStrict(source: fhir.IPlanDefinitionActionCondition): PlanDefinitionActionCondition;
 }
 /**
  * When an action depends on multiple actions, the meaning is that all actions are dependencies, rather than that any of the actions are a dependency.
@@ -572,11 +572,11 @@ export declare class PlanDefinitionActionRelatedAction extends fhir.BackboneElem
     /**
      * Check if the current PlanDefinitionActionRelatedAction contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a PlanDefinitionActionRelatedAction from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPlanDefinitionActionRelatedAction): PlanDefinitionActionRelatedAction;
+    static fromStrict(source: fhir.IPlanDefinitionActionRelatedAction): PlanDefinitionActionRelatedAction;
 }
 /**
  * Indicates who should participate in performing the action described.
@@ -598,11 +598,11 @@ export declare class PlanDefinitionActionParticipant extends fhir.BackboneElemen
     /**
      * Check if the current PlanDefinitionActionParticipant contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a PlanDefinitionActionParticipant from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPlanDefinitionActionParticipant): PlanDefinitionActionParticipant;
+    static fromStrict(source: fhir.IPlanDefinitionActionParticipant): PlanDefinitionActionParticipant;
 }
 /**
  * Dynamic values are applied in the order in which they are defined in the PlanDefinition resource. Note that when dynamic values are also specified by a referenced ActivityDefinition, the dynamicValues from the ActivityDefinition are applied first, followed by the dynamicValues specified here. In addition, if both a transform and dynamic values are specific, the dynamic values are applied to the result of the transform.
@@ -624,11 +624,11 @@ export declare class PlanDefinitionActionDynamicValue extends fhir.BackboneEleme
     /**
      * Check if the current PlanDefinitionActionDynamicValue contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a PlanDefinitionActionDynamicValue from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPlanDefinitionActionDynamicValue): PlanDefinitionActionDynamicValue;
+    static fromStrict(source: fhir.IPlanDefinitionActionDynamicValue): PlanDefinitionActionDynamicValue;
 }
 /**
  * Note that there is overlap between many of the elements defined here and the ActivityDefinition resource. When an ActivityDefinition is referenced (using the definition element), the overlapping elements in the plan override the content of the referenced ActivityDefinition unless otherwise documented in the specific elements. See the PlanDefinition resource for more detailed information.
@@ -794,11 +794,11 @@ export declare class PlanDefinitionAction extends fhir.BackboneElement implement
     /**
      * Check if the current PlanDefinitionAction contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a PlanDefinitionAction from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPlanDefinitionAction): PlanDefinitionAction;
+    static fromStrict(source: fhir.IPlanDefinitionAction): PlanDefinitionAction;
 }
 /**
  * This resource allows for the definition of various types of plans as a sharable, consumable, and executable artifact. The resource is general enough to support the description of a broad range of clinical artifacts such as clinical decision support rules, order sets and protocols.
@@ -961,11 +961,11 @@ export declare class PlanDefinition extends fhir.DomainResource implements fhir.
     /**
      * Check if the current PlanDefinition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a PlanDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPlanDefinition): PlanDefinition;
+    static fromStrict(source: fhir.IPlanDefinition): PlanDefinition;
 }
 /**
  * Code Values for the PlanDefinition.action.condition.kind field

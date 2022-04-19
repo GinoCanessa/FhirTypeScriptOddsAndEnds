@@ -10,35 +10,35 @@ import { Coding } from '../fhir';
  * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the disease that the evaluation is against. This value set is provided as a suggestive example and includes the SNOMED CT concepts from the 64572001 (Disease) hierarchy.
  */
 export const ImmunizationEvaluationTargetDiseaseValueSet = {
-    ImmunizationEvaluationTargetDiseaseValueSet_VAL14189004: Coding.FromStrict({
+    ImmunizationEvaluationTargetDiseaseValueSet_VAL14189004: new Coding({
         code: "14189004",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationEvaluationTargetDiseaseValueSet_VAL27836007: Coding.FromStrict({
+    ImmunizationEvaluationTargetDiseaseValueSet_VAL27836007: new Coding({
         code: "27836007",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationEvaluationTargetDiseaseValueSet_VAL36653000: Coding.FromStrict({
+    ImmunizationEvaluationTargetDiseaseValueSet_VAL36653000: new Coding({
         code: "36653000",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationEvaluationTargetDiseaseValueSet_VAL36989005: Coding.FromStrict({
+    ImmunizationEvaluationTargetDiseaseValueSet_VAL36989005: new Coding({
         code: "36989005",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationEvaluationTargetDiseaseValueSet_VAL397430003: Coding.FromStrict({
+    ImmunizationEvaluationTargetDiseaseValueSet_VAL397430003: new Coding({
         code: "397430003",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationEvaluationTargetDiseaseValueSet_VAL398102009: Coding.FromStrict({
+    ImmunizationEvaluationTargetDiseaseValueSet_VAL398102009: new Coding({
         code: "398102009",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationEvaluationTargetDiseaseValueSet_VAL709410003: Coding.FromStrict({
+    ImmunizationEvaluationTargetDiseaseValueSet_VAL709410003: new Coding({
         code: "709410003",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationEvaluationTargetDiseaseValueSet_VAL76902006: Coding.FromStrict({
+    ImmunizationEvaluationTargetDiseaseValueSet_VAL76902006: new Coding({
         code: "76902006",
         system: "http://snomed.info/sct"
     }),

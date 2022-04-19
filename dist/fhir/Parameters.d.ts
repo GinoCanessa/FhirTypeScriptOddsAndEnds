@@ -492,11 +492,11 @@ export declare class ParametersParameter extends fhir.BackboneElement implements
     /**
      * Check if the current ParametersParameter contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ParametersParameter from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IParametersParameter): ParametersParameter;
+    static fromStrict(source: fhir.IParametersParameter): ParametersParameter;
 }
 /**
  * This resource is a non-persisted resource used to pass information into and back from an [operation](operations.html). It has no other use, and there is no RESTful endpoint associated with it.
@@ -517,10 +517,10 @@ export declare class Parameters extends fhir.Resource implements fhir.IParameter
     /**
      * Check if the current Parameters contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Parameters from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IParameters): Parameters;
+    static fromStrict(source: fhir.IParameters): Parameters;
 }
 //# sourceMappingURL=Parameters.d.ts.map

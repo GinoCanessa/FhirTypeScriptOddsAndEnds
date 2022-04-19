@@ -14,10 +14,10 @@ export declare class Count extends fhir.Quantity implements fhir.ICount {
     /**
      * Check if the current Count contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Count from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICount): Count;
+    static fromStrict(source: fhir.ICount): Count;
 }
 //# sourceMappingURL=Count.d.ts.map

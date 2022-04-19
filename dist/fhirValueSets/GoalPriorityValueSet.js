@@ -13,7 +13,7 @@ export const GoalPriorityValueSet = {
     /**
      * Indicates that the goal is of considerable importance and should be a primary focus of care delivery.
      */
-    goal_priority_HighPriority: Coding.FromStrict({
+    goal_priority_HighPriority: new Coding({
         code: "high-priority",
         display: "High Priority",
         system: "http://terminology.hl7.org/CodeSystem/goal-priority"
@@ -21,7 +21,7 @@ export const GoalPriorityValueSet = {
     /**
      * The goal is desirable but is not sufficiently important to devote significant resources to.  Achievement of the goal may be sought when incidental to achieving other goals.
      */
-    goal_priority_LowPriority: Coding.FromStrict({
+    goal_priority_LowPriority: new Coding({
         code: "low-priority",
         display: "Low Priority",
         system: "http://terminology.hl7.org/CodeSystem/goal-priority"
@@ -29,7 +29,7 @@ export const GoalPriorityValueSet = {
     /**
      * Indicates that the goal has a reasonable degree of importance and that concrete action should be taken towards the goal.  Attainment is not as critical as high-priority goals.
      */
-    goal_priority_MediumPriority: Coding.FromStrict({
+    goal_priority_MediumPriority: new Coding({
         code: "medium-priority",
         display: "Medium Priority",
         system: "http://terminology.hl7.org/CodeSystem/goal-priority"

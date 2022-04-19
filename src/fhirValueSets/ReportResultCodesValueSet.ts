@@ -13,7 +13,7 @@ export const ReportResultCodesValueSet = {
   /**
    * One or more test operations failed one or more asserts.
    */
-  report_result_codes_Fail: Coding.FromStrict({
+  report_result_codes_Fail: new Coding({
     code: "fail",
     display: "Fail",
     system: "http://hl7.org/fhir/report-result-codes"
@@ -21,7 +21,7 @@ export const ReportResultCodesValueSet = {
   /**
    * All test operations successfully passed all asserts.
    */
-  report_result_codes_Pass: Coding.FromStrict({
+  report_result_codes_Pass: new Coding({
     code: "pass",
     display: "Pass",
     system: "http://hl7.org/fhir/report-result-codes"
@@ -29,7 +29,7 @@ export const ReportResultCodesValueSet = {
   /**
    * One or more test operations is pending execution completion.
    */
-  report_result_codes_Pending: Coding.FromStrict({
+  report_result_codes_Pending: new Coding({
     code: "pending",
     display: "Pending",
     system: "http://hl7.org/fhir/report-result-codes"

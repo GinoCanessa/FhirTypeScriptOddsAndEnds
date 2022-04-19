@@ -332,20 +332,20 @@ export class Evidence extends fhir.DomainResource implements fhir.IEvidence {
   /**
    * Check if the current Evidence contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["exposureBackground"] === undefined) { missingElements.push("exposureBackground"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Evidence from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IEvidence):Evidence {
+  static override fromStrict(source:fhir.IEvidence):Evidence {
     var dest:Evidence = new Evidence(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Evidence is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

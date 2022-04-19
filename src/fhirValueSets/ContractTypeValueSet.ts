@@ -13,7 +13,7 @@ export const ContractTypeValueSet = {
   /**
    * Consent Directive.
    */
-  contract_type_Consent: Coding.FromStrict({
+  contract_type_Consent: new Coding({
     code: "consent",
     display: "Consent",
     system: "http://terminology.hl7.org/CodeSystem/contract-type"
@@ -21,7 +21,7 @@ export const ContractTypeValueSet = {
   /**
    * Information disclosure policy.
    */
-  contract_type_Disclosure: Coding.FromStrict({
+  contract_type_Disclosure: new Coding({
     code: "disclosure",
     display: "Disclosure",
     system: "http://terminology.hl7.org/CodeSystem/contract-type"
@@ -29,7 +29,7 @@ export const ContractTypeValueSet = {
   /**
    * Health Insurance policy.
    */
-  contract_type_HealthInsurance: Coding.FromStrict({
+  contract_type_HealthInsurance: new Coding({
     code: "healthinsurance",
     display: "Health Insurance",
     system: "http://terminology.hl7.org/CodeSystem/contract-type"
@@ -37,7 +37,7 @@ export const ContractTypeValueSet = {
   /**
    * Privacy policy.
    */
-  contract_type_Privacy: Coding.FromStrict({
+  contract_type_Privacy: new Coding({
     code: "privacy",
     display: "Privacy",
     system: "http://terminology.hl7.org/CodeSystem/contract-type"
@@ -45,7 +45,7 @@ export const ContractTypeValueSet = {
   /**
    * Contract to supply goods or services.
    */
-  contract_type_SupplyContract: Coding.FromStrict({
+  contract_type_SupplyContract: new Coding({
     code: "supply",
     display: "Supply Contract",
     system: "http://terminology.hl7.org/CodeSystem/contract-type"

@@ -146,20 +146,20 @@ export class ImmunizationRecommendationRecommendationDateCriterion extends fhir.
   /**
    * Check if the current ImmunizationRecommendationRecommendationDateCriterion contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
     if (this["value"] === undefined) { missingElements.push("value"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ImmunizationRecommendationRecommendationDateCriterion from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IImmunizationRecommendationRecommendationDateCriterion):ImmunizationRecommendationRecommendationDateCriterion {
+  static override fromStrict(source:fhir.IImmunizationRecommendationRecommendationDateCriterion):ImmunizationRecommendationRecommendationDateCriterion {
     var dest:ImmunizationRecommendationRecommendationDateCriterion = new ImmunizationRecommendationRecommendationDateCriterion(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ImmunizationRecommendationRecommendationDateCriterion is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -261,19 +261,19 @@ export class ImmunizationRecommendationRecommendation extends fhir.BackboneEleme
   /**
    * Check if the current ImmunizationRecommendationRecommendation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["forecastStatus"] === undefined) { missingElements.push("forecastStatus"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ImmunizationRecommendationRecommendation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IImmunizationRecommendationRecommendation):ImmunizationRecommendationRecommendation {
+  static override fromStrict(source:fhir.IImmunizationRecommendationRecommendation):ImmunizationRecommendationRecommendation {
     var dest:ImmunizationRecommendationRecommendation = new ImmunizationRecommendationRecommendation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ImmunizationRecommendationRecommendation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -329,21 +329,21 @@ export class ImmunizationRecommendation extends fhir.DomainResource implements f
   /**
    * Check if the current ImmunizationRecommendation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["date"] === undefined) { missingElements.push("date"); }
     if (this["patient"] === undefined) { missingElements.push("patient"); }
     if ((!this["recommendation"]) || (this["recommendation"].length === 0)) { missingElements.push("recommendation"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ImmunizationRecommendation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IImmunizationRecommendation):ImmunizationRecommendation {
+  static override fromStrict(source:fhir.IImmunizationRecommendation):ImmunizationRecommendation {
     var dest:ImmunizationRecommendation = new ImmunizationRecommendation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ImmunizationRecommendation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

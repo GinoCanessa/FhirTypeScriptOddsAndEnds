@@ -59,7 +59,7 @@ export class Flag extends fhir.DomainResource {
     /**
      * Check if the current Flag contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["code"] === undefined) {
             missingElements.push("code");
@@ -70,16 +70,16 @@ export class Flag extends fhir.DomainResource {
         if (this["subject"] === undefined) {
             missingElements.push("subject");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a Flag from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new Flag(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `Flag is missing elements: ${missingElements.join(", ")}`;
         }

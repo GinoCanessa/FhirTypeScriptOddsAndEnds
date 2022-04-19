@@ -13,7 +13,7 @@ export const ContractDefinitionTypeValueSet = {
   /**
    * To be completed
    */
-  contract_definition_type_TemporaryValue: Coding.FromStrict({
+  contract_definition_type_TemporaryValue: new Coding({
     code: "temp",
     display: "Temporary Value",
     system: "http://hl7.org/fhir/contract-definition-type"

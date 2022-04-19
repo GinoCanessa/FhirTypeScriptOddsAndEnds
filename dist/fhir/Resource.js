@@ -40,16 +40,16 @@ export class Resource {
     /**
      * Check if the current Resource contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         return missingElements;
     }
     /**
      * Factory function to create a Resource from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new Resource(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `Resource is missing elements: ${missingElements.join(", ")}`;
         }

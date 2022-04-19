@@ -10,52 +10,52 @@ import { Coding } from '../fhir';
  * This example value set defines a set of codes that can be used to indicate a type of insurance plan.
  */
 export const InsuranceplanTypeValueSet = {
-    insuranceplan_type_Dental: Coding.FromStrict({
+    insuranceplan_type_Dental: new Coding({
         code: "dental",
         display: "Dental",
         system: "http://terminology.hl7.org/CodeSystem/insurance-plan-type"
     }),
-    insuranceplan_type_Drug: Coding.FromStrict({
+    insuranceplan_type_Drug: new Coding({
         code: "Drug",
         display: "Drug",
         system: "http://terminology.hl7.org/CodeSystem/insurance-plan-type"
     }),
-    insuranceplan_type_HomeHealth: Coding.FromStrict({
+    insuranceplan_type_HomeHealth: new Coding({
         code: "home",
         display: "Home Health",
         system: "http://terminology.hl7.org/CodeSystem/insurance-plan-type"
     }),
-    insuranceplan_type_Hospice: Coding.FromStrict({
+    insuranceplan_type_Hospice: new Coding({
         code: "hospice",
         display: "Hospice",
         system: "http://terminology.hl7.org/CodeSystem/insurance-plan-type"
     }),
-    insuranceplan_type_LongTermCare: Coding.FromStrict({
+    insuranceplan_type_LongTermCare: new Coding({
         code: "long-term",
         display: "Long Term Care",
         system: "http://terminology.hl7.org/CodeSystem/insurance-plan-type"
     }),
-    insuranceplan_type_Medical: Coding.FromStrict({
+    insuranceplan_type_Medical: new Coding({
         code: "medical",
         display: "Medical",
         system: "http://terminology.hl7.org/CodeSystem/insurance-plan-type"
     }),
-    insuranceplan_type_MentalHealth: Coding.FromStrict({
+    insuranceplan_type_MentalHealth: new Coding({
         code: "mental",
         display: "Mental Health",
         system: "http://terminology.hl7.org/CodeSystem/insurance-plan-type"
     }),
-    insuranceplan_type_ShortTerm: Coding.FromStrict({
+    insuranceplan_type_ShortTerm: new Coding({
         code: "short-term",
         display: "Short Term",
         system: "http://terminology.hl7.org/CodeSystem/insurance-plan-type"
     }),
-    insuranceplan_type_SubstanceAbuse: Coding.FromStrict({
+    insuranceplan_type_SubstanceAbuse: new Coding({
         code: "subst-ab",
         display: "Substance Abuse",
         system: "http://terminology.hl7.org/CodeSystem/insurance-plan-type"
     }),
-    insuranceplan_type_Vision: Coding.FromStrict({
+    insuranceplan_type_Vision: new Coding({
         code: "vision",
         display: "Vision",
         system: "http://terminology.hl7.org/CodeSystem/insurance-plan-type"

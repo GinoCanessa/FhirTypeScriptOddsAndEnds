@@ -109,10 +109,10 @@ export declare class ProdCharacteristic extends fhir.BackboneElement implements 
     /**
      * Check if the current ProdCharacteristic contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ProdCharacteristic from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IProdCharacteristic): ProdCharacteristic;
+    static fromStrict(source: fhir.IProdCharacteristic): ProdCharacteristic;
 }
 //# sourceMappingURL=ProdCharacteristic.d.ts.map

@@ -13,7 +13,7 @@ export const ActionRelationshipTypeValueSet = {
   /**
    * The action must be performed after the related action.
    */
-  action_relationship_type_After: Coding.FromStrict({
+  action_relationship_type_After: new Coding({
     code: "after",
     display: "After",
     system: "http://hl7.org/fhir/action-relationship-type"
@@ -21,7 +21,7 @@ export const ActionRelationshipTypeValueSet = {
   /**
    * The action must be performed after the end of the related action.
    */
-  action_relationship_type_AfterEnd: Coding.FromStrict({
+  action_relationship_type_AfterEnd: new Coding({
     code: "after-end",
     display: "After End",
     system: "http://hl7.org/fhir/action-relationship-type"
@@ -29,7 +29,7 @@ export const ActionRelationshipTypeValueSet = {
   /**
    * The action must be performed after the start of the related action.
    */
-  action_relationship_type_AfterStart: Coding.FromStrict({
+  action_relationship_type_AfterStart: new Coding({
     code: "after-start",
     display: "After Start",
     system: "http://hl7.org/fhir/action-relationship-type"
@@ -37,7 +37,7 @@ export const ActionRelationshipTypeValueSet = {
   /**
    * The action must be performed before the related action.
    */
-  action_relationship_type_Before: Coding.FromStrict({
+  action_relationship_type_Before: new Coding({
     code: "before",
     display: "Before",
     system: "http://hl7.org/fhir/action-relationship-type"
@@ -45,7 +45,7 @@ export const ActionRelationshipTypeValueSet = {
   /**
    * The action must be performed before the end of the related action.
    */
-  action_relationship_type_BeforeEnd: Coding.FromStrict({
+  action_relationship_type_BeforeEnd: new Coding({
     code: "before-end",
     display: "Before End",
     system: "http://hl7.org/fhir/action-relationship-type"
@@ -53,7 +53,7 @@ export const ActionRelationshipTypeValueSet = {
   /**
    * The action must be performed before the start of the related action.
    */
-  action_relationship_type_BeforeStart: Coding.FromStrict({
+  action_relationship_type_BeforeStart: new Coding({
     code: "before-start",
     display: "Before Start",
     system: "http://hl7.org/fhir/action-relationship-type"
@@ -61,7 +61,7 @@ export const ActionRelationshipTypeValueSet = {
   /**
    * The action must be performed concurrent with the related action.
    */
-  action_relationship_type_Concurrent: Coding.FromStrict({
+  action_relationship_type_Concurrent: new Coding({
     code: "concurrent",
     display: "Concurrent",
     system: "http://hl7.org/fhir/action-relationship-type"
@@ -69,7 +69,7 @@ export const ActionRelationshipTypeValueSet = {
   /**
    * The action must be performed concurrent with the end of the related action.
    */
-  action_relationship_type_ConcurrentWithEnd: Coding.FromStrict({
+  action_relationship_type_ConcurrentWithEnd: new Coding({
     code: "concurrent-with-end",
     display: "Concurrent With End",
     system: "http://hl7.org/fhir/action-relationship-type"
@@ -77,7 +77,7 @@ export const ActionRelationshipTypeValueSet = {
   /**
    * The action must be performed concurrent with the start of the related action.
    */
-  action_relationship_type_ConcurrentWithStart: Coding.FromStrict({
+  action_relationship_type_ConcurrentWithStart: new Coding({
     code: "concurrent-with-start",
     display: "Concurrent With Start",
     system: "http://hl7.org/fhir/action-relationship-type"

@@ -422,11 +422,11 @@ export declare class QuestionnaireItemEnableWhen extends fhir.BackboneElement im
     /**
      * Check if the current QuestionnaireItemEnableWhen contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a QuestionnaireItemEnableWhen from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IQuestionnaireItemEnableWhen): QuestionnaireItemEnableWhen;
+    static fromStrict(source: fhir.IQuestionnaireItemEnableWhen): QuestionnaireItemEnableWhen;
 }
 /**
  * This element can be used when the value set machinery of answerValueSet is deemed too cumbersome or when there's a need to capture possible answers that are not codes.
@@ -472,11 +472,11 @@ export declare class QuestionnaireItemAnswerOption extends fhir.BackboneElement 
     /**
      * Check if the current QuestionnaireItemAnswerOption contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a QuestionnaireItemAnswerOption from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IQuestionnaireItemAnswerOption): QuestionnaireItemAnswerOption;
+    static fromStrict(source: fhir.IQuestionnaireItemAnswerOption): QuestionnaireItemAnswerOption;
 }
 /**
  * The user is allowed to change the value and override the default (unless marked as read-only). If the user doesn't change the value, then this initial value will be persisted when the QuestionnaireResponse is initially created.  Note that initial values can influence results.  The data type of initial[x] must agree with the item.type, and only repeating items can have more then one initial value.
@@ -545,11 +545,11 @@ export declare class QuestionnaireItemInitial extends fhir.BackboneElement imple
     /**
      * Check if the current QuestionnaireItemInitial contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a QuestionnaireItemInitial from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IQuestionnaireItemInitial): QuestionnaireItemInitial;
+    static fromStrict(source: fhir.IQuestionnaireItemInitial): QuestionnaireItemInitial;
 }
 /**
  * The content of the questionnaire is constructed from an ordered, hierarchical collection of items.
@@ -639,11 +639,11 @@ export declare class QuestionnaireItem extends fhir.BackboneElement implements f
     /**
      * Check if the current QuestionnaireItem contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a QuestionnaireItem from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IQuestionnaireItem): QuestionnaireItem;
+    static fromStrict(source: fhir.IQuestionnaireItem): QuestionnaireItem;
 }
 /**
  * A structured set of questions intended to guide the collection of answers from end-users. Questionnaires provide detailed control over order, presentation, phraseology and grouping to allow coherent, consistent data collection.
@@ -763,11 +763,11 @@ export declare class Questionnaire extends fhir.DomainResource implements fhir.I
     /**
      * Check if the current Questionnaire contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Questionnaire from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IQuestionnaire): Questionnaire;
+    static fromStrict(source: fhir.IQuestionnaire): Questionnaire;
 }
 /**
  * Code Values for the Questionnaire.item.enableWhen.operator field

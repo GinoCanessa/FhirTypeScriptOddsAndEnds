@@ -117,19 +117,19 @@ export class SubscriptionChannel extends fhir.BackboneElement implements fhir.IS
   /**
    * Check if the current SubscriptionChannel contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubscriptionChannel from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubscriptionChannel):SubscriptionChannel {
+  static override fromStrict(source:fhir.ISubscriptionChannel):SubscriptionChannel {
     var dest:SubscriptionChannel = new SubscriptionChannel(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubscriptionChannel is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -206,22 +206,22 @@ export class Subscription extends fhir.DomainResource implements fhir.ISubscript
   /**
    * Check if the current Subscription contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["channel"] === undefined) { missingElements.push("channel"); }
     if (this["criteria"] === undefined) { missingElements.push("criteria"); }
     if (this["reason"] === undefined) { missingElements.push("reason"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Subscription from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubscription):Subscription {
+  static override fromStrict(source:fhir.ISubscription):Subscription {
     var dest:Subscription = new Subscription(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Subscription is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

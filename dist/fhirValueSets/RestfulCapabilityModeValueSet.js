@@ -13,7 +13,7 @@ export const RestfulCapabilityModeValueSet = {
     /**
      * The application acts as a client for this resource.
      */
-    restful_capability_mode_Client: Coding.FromStrict({
+    restful_capability_mode_Client: new Coding({
         code: "client",
         display: "Client",
         system: "http://hl7.org/fhir/restful-capability-mode"
@@ -21,7 +21,7 @@ export const RestfulCapabilityModeValueSet = {
     /**
      * The application acts as a server for this resource.
      */
-    restful_capability_mode_Server: Coding.FromStrict({
+    restful_capability_mode_Server: new Coding({
         code: "server",
         display: "Server",
         system: "http://hl7.org/fhir/restful-capability-mode"

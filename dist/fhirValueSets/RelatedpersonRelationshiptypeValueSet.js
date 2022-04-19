@@ -13,7 +13,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * PersonalRelationshipRoleType
      */
-    v3_RoleCode_PersonalRelationshipRoleType: Coding.FromStrict({
+    v3_RoleCode_PersonalRelationshipRoleType: new Coding({
         code: "_PersonalRelationshipRoleType",
         display: "PersonalRelationshipRoleType",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -21,7 +21,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role (father) is a male who has taken the scoper (child) into their family through legal means and raises them as his own child.
      */
-    v3_RoleCode_AdoptiveFather: Coding.FromStrict({
+    v3_RoleCode_AdoptiveFather: new Coding({
         code: "ADOPTF",
         display: "adoptive father",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -29,7 +29,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role (father) is a female who has taken the scoper (child) into their family through legal means and raises them as her own child.
      */
-    v3_RoleCode_AdoptiveMother: Coding.FromStrict({
+    v3_RoleCode_AdoptiveMother: new Coding({
         code: "ADOPTM",
         display: "adoptive mother",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -37,7 +37,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role (parent) has taken the scoper (child) into their family through legal means and raises them as his or her own child.
      */
-    v3_RoleCode_AdoptiveParent: Coding.FromStrict({
+    v3_RoleCode_AdoptiveParent: new Coding({
         code: "ADOPTP",
         display: "adoptive parent",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -45,7 +45,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a sister of the scoping person's mother or father.
      */
-    v3_RoleCode_Aunt: Coding.FromStrict({
+    v3_RoleCode_Aunt: new Coding({
         code: "AUNT",
         display: "aunt",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -53,7 +53,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a male sharing one or both parents in common with the scoping entity.
      */
-    v3_RoleCode_Brother: Coding.FromStrict({
+    v3_RoleCode_Brother: new Coding({
         code: "BRO",
         display: "brother",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -61,7 +61,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is: (1) a brother of the scoping person's spouse, or (2) the husband of the scoping person's sister, or (3) the husband of a sister of the scoping person's spouse.
      */
-    v3_RoleCode_BrotherInLaw: Coding.FromStrict({
+    v3_RoleCode_BrotherInLaw: new Coding({
         code: "BROINLAW",
         display: "brother-in-law",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -69,7 +69,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a child of the scoping entity.
      */
-    v3_RoleCode_Child: Coding.FromStrict({
+    v3_RoleCode_Child: new Coding({
         code: "CHILD",
         display: "child",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -77,7 +77,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a child taken into a family through legal means and raised by the scoping person (parent) as his or her own child.
      */
-    v3_RoleCode_AdoptedChild: Coding.FromStrict({
+    v3_RoleCode_AdoptedChild: new Coding({
         code: "CHLDADOPT",
         display: "adopted child",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -85,7 +85,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a child receiving parental care and nurture from the scoping person (parent) but not related to him or her through legal or blood ties.
      */
-    v3_RoleCode_FosterChild: Coding.FromStrict({
+    v3_RoleCode_FosterChild: new Coding({
         code: "CHLDFOST",
         display: "foster child",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -93,7 +93,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is the spouse of scoping person's child.
      */
-    v3_RoleCode_ChildInLaw: Coding.FromStrict({
+    v3_RoleCode_ChildInLaw: new Coding({
         code: "CHLDINLAW",
         display: "child-in-law",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -101,7 +101,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a relative of the scoping person descended from a common ancestor, such as a 	grandparent, by two or more steps in a diverging line.
      */
-    v3_RoleCode_Cousin: Coding.FromStrict({
+    v3_RoleCode_Cousin: new Coding({
         code: "COUSN",
         display: "cousin",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -109,7 +109,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a female offspring of the scoping entity (parent).
      */
-    v3_RoleCode_NaturalDaughter: Coding.FromStrict({
+    v3_RoleCode_NaturalDaughter: new Coding({
         code: "DAU",
         display: "natural daughter",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -117,7 +117,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a female child taken into a family through legal means and raised by the scoping person (parent) as his or her own child.
      */
-    v3_RoleCode_AdoptedDaughter: Coding.FromStrict({
+    v3_RoleCode_AdoptedDaughter: new Coding({
         code: "DAUADOPT",
         display: "adopted daughter",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -125,7 +125,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Description: The player of the role is a female child (of any type) of scoping entity (parent)
      */
-    v3_RoleCode_Daughter: Coding.FromStrict({
+    v3_RoleCode_Daughter: new Coding({
         code: "DAUC",
         display: "daughter",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -133,7 +133,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a female child receiving parental care and nurture from the scoping person (parent) but not related to him or her through legal or blood ties.
      */
-    v3_RoleCode_FosterDaughter: Coding.FromStrict({
+    v3_RoleCode_FosterDaughter: new Coding({
         code: "DAUFOST",
         display: "foster daughter",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -141,7 +141,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is the wife of scoping person's son.
      */
-    v3_RoleCode_DaughterInLaw: Coding.FromStrict({
+    v3_RoleCode_DaughterInLaw: new Coding({
         code: "DAUINLAW",
         display: "daughter in-law",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -149,7 +149,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role cohabits with the scoping person but is not the scoping person's spouse.
      */
-    v3_RoleCode_DomesticPartner: Coding.FromStrict({
+    v3_RoleCode_DomesticPartner: new Coding({
         code: "DOMPART",
         display: "domestic partner",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -157,7 +157,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Description: A family member not having an immediate genetic or legal relationship e.g. Aunt, cousin, great grandparent, grandchild, grandparent, niece, nephew or uncle.
      */
-    v3_RoleCode_ExtendedFamilyMember: Coding.FromStrict({
+    v3_RoleCode_ExtendedFamilyMember: new Coding({
         code: "EXT",
         display: "extended family member",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -165,7 +165,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * A relationship between two people characterizing their "familial" relationship
      */
-    v3_RoleCode_FamilyMember: Coding.FromStrict({
+    v3_RoleCode_FamilyMember: new Coding({
         code: "FAMMEMB",
         display: "family member",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -176,7 +176,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
      *
      *                            Usage Note: This is significant to indicate as some jurisdictions have different legal requirements for former spouse to access the patient's record, from a general friend.
      */
-    v3_RoleCode_FormerSpouse: Coding.FromStrict({
+    v3_RoleCode_FormerSpouse: new Coding({
         code: "FMRSPS",
         display: "former spouse",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -184,7 +184,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a person who is known, liked, and trusted by the scoping person.
      */
-    v3_RoleCode_UnrelatedFriend: Coding.FromStrict({
+    v3_RoleCode_UnrelatedFriend: new Coding({
         code: "FRND",
         display: "unrelated friend",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -192,7 +192,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a male who begets or raises or nurtures the scoping entity (child).
      */
-    v3_RoleCode_Father: Coding.FromStrict({
+    v3_RoleCode_Father: new Coding({
         code: "FTH",
         display: "father",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -202,7 +202,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
      *
      *                         The state, via a jurisdiction recognized child protection agency, stands as in loco parentis to the child, making all legal decisions while the foster parent is responsible for the day-to-day care of the specified child.
      */
-    v3_RoleCode_FosterFather: Coding.FromStrict({
+    v3_RoleCode_FosterFather: new Coding({
         code: "FTHFOST",
         display: "foster father",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -210,7 +210,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is the father of the scoping person's husband or wife.
      */
-    v3_RoleCode_FatherInLaw: Coding.FromStrict({
+    v3_RoleCode_FatherInLaw: new Coding({
         code: "FTHINLAW",
         display: "father-in-law",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -218,7 +218,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The scoper and player were carried in the same womb and share common biological parents but are the product of distinct egg/sperm pairs.
      */
-    v3_RoleCode_FraternalTwin: Coding.FromStrict({
+    v3_RoleCode_FraternalTwin: new Coding({
         code: "FTWIN",
         display: "fraternal twin",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -226,7 +226,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The scoper was carried in the same womb as the male player and shares common biological parents but is the product of a distinct egg/sperm pair.
      */
-    v3_RoleCode_FraternalTwinBrother: Coding.FromStrict({
+    v3_RoleCode_FraternalTwinBrother: new Coding({
         code: "FTWINBRO",
         display: "fraternal twin brother",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -234,7 +234,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The scoper was carried in the same womb as the female player and shares common biological parents but is the product of a distinct egg/sperm pair.
      */
-    v3_RoleCode_FraternalTwinSister: Coding.FromStrict({
+    v3_RoleCode_FraternalTwinSister: new Coding({
         code: "FTWINSIS",
         display: "fraternal twin sister",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -242,7 +242,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player is a female whose womb carries the fetus of the scoper.  Generally used when the gestational mother and natural mother are not the same.
      */
-    v3_RoleCode_GestationalMother: Coding.FromStrict({
+    v3_RoleCode_GestationalMother: new Coding({
         code: "GESTM",
         display: "gestational mother",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -250,7 +250,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is the father of the scoping person's grandparent.
      */
-    v3_RoleCode_GreatGrandfather: Coding.FromStrict({
+    v3_RoleCode_GreatGrandfather: new Coding({
         code: "GGRFTH",
         display: "great grandfather",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -258,7 +258,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is the mother of the scoping person's grandparent.
      */
-    v3_RoleCode_GreatGrandmother: Coding.FromStrict({
+    v3_RoleCode_GreatGrandmother: new Coding({
         code: "GGRMTH",
         display: "great grandmother",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -266,7 +266,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a parent of the scoping person's grandparent.
      */
-    v3_RoleCode_GreatGrandparent: Coding.FromStrict({
+    v3_RoleCode_GreatGrandparent: new Coding({
         code: "GGRPRN",
         display: "great grandparent",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -274,7 +274,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is the father of the scoping person's mother or father.
      */
-    v3_RoleCode_Grandfather: Coding.FromStrict({
+    v3_RoleCode_Grandfather: new Coding({
         code: "GRFTH",
         display: "grandfather",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -282,7 +282,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is the mother of the scoping person's mother or father.
      */
-    v3_RoleCode_Grandmother: Coding.FromStrict({
+    v3_RoleCode_Grandmother: new Coding({
         code: "GRMTH",
         display: "grandmother",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -290,7 +290,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a child of the scoping person's son or daughter.
      */
-    v3_RoleCode_Grandchild: Coding.FromStrict({
+    v3_RoleCode_Grandchild: new Coding({
         code: "GRNDCHILD",
         display: "grandchild",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -298,7 +298,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a daughter of the scoping person's son or daughter.
      */
-    v3_RoleCode_Granddaughter: Coding.FromStrict({
+    v3_RoleCode_Granddaughter: new Coding({
         code: "GRNDDAU",
         display: "granddaughter",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -306,7 +306,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a son of the scoping person's son or daughter.
      */
-    v3_RoleCode_Grandson: Coding.FromStrict({
+    v3_RoleCode_Grandson: new Coding({
         code: "GRNDSON",
         display: "grandson",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -314,7 +314,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a parent of the scoping person's mother or father.
      */
-    v3_RoleCode_Grandparent: Coding.FromStrict({
+    v3_RoleCode_Grandparent: new Coding({
         code: "GRPRN",
         display: "grandparent",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -322,7 +322,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a male related to the scoping entity by sharing only one biological parent.
      */
-    v3_RoleCode_HalfBrother: Coding.FromStrict({
+    v3_RoleCode_HalfBrother: new Coding({
         code: "HBRO",
         display: "half-brother",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -330,7 +330,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is related to the scoping entity by sharing only one biological parent.
      */
-    v3_RoleCode_HalfSibling: Coding.FromStrict({
+    v3_RoleCode_HalfSibling: new Coding({
         code: "HSIB",
         display: "half-sibling",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -338,7 +338,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a female related to the scoping entity by sharing only one biological parent.
      */
-    v3_RoleCode_HalfSister: Coding.FromStrict({
+    v3_RoleCode_HalfSister: new Coding({
         code: "HSIS",
         display: "half-sister",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -346,7 +346,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a man joined to a woman (scoping person) in marriage.
      */
-    v3_RoleCode_Husband: Coding.FromStrict({
+    v3_RoleCode_Husband: new Coding({
         code: "HUSB",
         display: "husband",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -354,7 +354,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * A relationship between an individual and a member of their spousal partner's immediate family.
      */
-    v3_RoleCode_Inlaw: Coding.FromStrict({
+    v3_RoleCode_Inlaw: new Coding({
         code: "INLAW",
         display: "inlaw",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -362,7 +362,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The scoper and player are offspring of the same egg-sperm pair.
      */
-    v3_RoleCode_IdenticalTwin: Coding.FromStrict({
+    v3_RoleCode_IdenticalTwin: new Coding({
         code: "ITWIN",
         display: "identical twin",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -370,7 +370,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The male scoper is an offspring of the same egg-sperm pair as the male player.
      */
-    v3_RoleCode_IdenticalTwinBrother: Coding.FromStrict({
+    v3_RoleCode_IdenticalTwinBrother: new Coding({
         code: "ITWINBRO",
         display: "identical twin brother",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -378,7 +378,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The female scoper is an offspring of the same egg-sperm pair as the female player.
      */
-    v3_RoleCode_IdenticalTwinSister: Coding.FromStrict({
+    v3_RoleCode_IdenticalTwinSister: new Coding({
         code: "ITWINSIS",
         display: "identical twin sister",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -386,7 +386,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Description:The player of the role is a biological sister of the scoping person's biological mother.
      */
-    v3_RoleCode_MaternalAunt: Coding.FromStrict({
+    v3_RoleCode_MaternalAunt: new Coding({
         code: "MAUNT",
         display: "maternal aunt",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -394,7 +394,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Description:The player of the role is a biological relative of the scoping person descended from a common ancestor on the player's mother's side, such as a grandparent, by two or more steps in a diverging line.
      */
-    v3_RoleCode_MaternalCousin: Coding.FromStrict({
+    v3_RoleCode_MaternalCousin: new Coding({
         code: "MCOUSN",
         display: "maternal cousin",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -402,7 +402,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Description:The player of the role is the biological father of the scoping person's biological mother's parent.
      */
-    v3_RoleCode_MaternalGreatGrandfather: Coding.FromStrict({
+    v3_RoleCode_MaternalGreatGrandfather: new Coding({
         code: "MGGRFTH",
         display: "maternal great-grandfather",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -410,7 +410,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Description:The player of the role is the biological mother of the scoping person's biological mother's parent.
      */
-    v3_RoleCode_MaternalGreatGrandmother: Coding.FromStrict({
+    v3_RoleCode_MaternalGreatGrandmother: new Coding({
         code: "MGGRMTH",
         display: "maternal great-grandmother",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -418,7 +418,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Description:The player of the role is a biological parent of the scoping person's biological mother's parent.
      */
-    v3_RoleCode_MaternalGreatGrandparent: Coding.FromStrict({
+    v3_RoleCode_MaternalGreatGrandparent: new Coding({
         code: "MGGRPRN",
         display: "maternal great-grandparent",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -426,7 +426,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Description:The player of the role is the biological father of the scoping person's biological mother.
      */
-    v3_RoleCode_MaternalGrandfather: Coding.FromStrict({
+    v3_RoleCode_MaternalGrandfather: new Coding({
         code: "MGRFTH",
         display: "maternal grandfather",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -434,7 +434,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Description:The player of the role is the biological mother of the scoping person's biological mother.
      */
-    v3_RoleCode_MaternalGrandmother: Coding.FromStrict({
+    v3_RoleCode_MaternalGrandmother: new Coding({
         code: "MGRMTH",
         display: "maternal grandmother",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -442,7 +442,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Description:The player of the role is the biological parent of the scoping person's biological mother.
      */
-    v3_RoleCode_MaternalGrandparent: Coding.FromStrict({
+    v3_RoleCode_MaternalGrandparent: new Coding({
         code: "MGRPRN",
         display: "maternal grandparent",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -450,7 +450,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a female who conceives, gives birth to, or raises and nurtures the scoping entity (child).
      */
-    v3_RoleCode_Mother: Coding.FromStrict({
+    v3_RoleCode_Mother: new Coding({
         code: "MTH",
         display: "mother",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -460,7 +460,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
      *
      *                         The state, via a jurisdiction recognized child protection agency, stands as in loco parentis to the child, making all legal decisions while the foster parent is responsible for the day-to-day care of the specified child.
      */
-    v3_RoleCode_FosterMother: Coding.FromStrict({
+    v3_RoleCode_FosterMother: new Coding({
         code: "MTHFOST",
         display: "foster mother",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -468,7 +468,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is the mother of the scoping person's husband or wife.
      */
-    v3_RoleCode_MotherInLaw: Coding.FromStrict({
+    v3_RoleCode_MotherInLaw: new Coding({
         code: "MTHINLAW",
         display: "mother-in-law",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -476,7 +476,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Description:The player of the role is a biological brother of the scoping person's biological mother.
      */
-    v3_RoleCode_MaternalUncle: Coding.FromStrict({
+    v3_RoleCode_MaternalUncle: new Coding({
         code: "MUNCLE",
         display: "maternal uncle",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -484,7 +484,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role lives near or next to the 	scoping person.
      */
-    v3_RoleCode_Neighbor: Coding.FromStrict({
+    v3_RoleCode_Neighbor: new Coding({
         code: "NBOR",
         display: "neighbor",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -492,7 +492,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a male having the same biological parents as the scoping entity.
      */
-    v3_RoleCode_NaturalBrother: Coding.FromStrict({
+    v3_RoleCode_NaturalBrother: new Coding({
         code: "NBRO",
         display: "natural brother",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -500,7 +500,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is an offspring of the scoping entity as determined by birth.
      */
-    v3_RoleCode_NaturalChild: Coding.FromStrict({
+    v3_RoleCode_NaturalChild: new Coding({
         code: "NCHILD",
         display: "natural child",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -508,7 +508,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a son of the scoping person's brother or sister or of the brother or sister of the 	scoping person's spouse.
      */
-    v3_RoleCode_Nephew: Coding.FromStrict({
+    v3_RoleCode_Nephew: new Coding({
         code: "NEPHEW",
         display: "nephew",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -516,7 +516,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a male who begets the scoping entity (child).
      */
-    v3_RoleCode_NaturalFather: Coding.FromStrict({
+    v3_RoleCode_NaturalFather: new Coding({
         code: "NFTH",
         display: "natural father",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -524,7 +524,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Indicates the biologic male parent of a fetus.
      */
-    v3_RoleCode_NaturalFatherOfFetus: Coding.FromStrict({
+    v3_RoleCode_NaturalFatherOfFetus: new Coding({
         code: "NFTHF",
         display: "natural father of fetus",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -532,7 +532,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a daughter of the scoping person's brother or sister or of the brother or sister of the 	scoping person's spouse.
      */
-    v3_RoleCode_Niece: Coding.FromStrict({
+    v3_RoleCode_Niece: new Coding({
         code: "NIECE",
         display: "niece",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -540,7 +540,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a child of scoping person's brother or sister or of the brother or sister of the 	scoping person's spouse.
      */
-    v3_RoleCode_NieceNephew: Coding.FromStrict({
+    v3_RoleCode_NieceNephew: new Coding({
         code: "NIENEPH",
         display: "niece/nephew",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -548,7 +548,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a female who conceives or gives birth to the scoping entity (child).
      */
-    v3_RoleCode_NaturalMother: Coding.FromStrict({
+    v3_RoleCode_NaturalMother: new Coding({
         code: "NMTH",
         display: "natural mother",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -556,7 +556,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player is the biologic female parent of the scoping fetus.
      */
-    v3_RoleCode_NaturalMotherOfFetus: Coding.FromStrict({
+    v3_RoleCode_NaturalMotherOfFetus: new Coding({
         code: "NMTHF",
         display: "natural mother of fetus",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -564,7 +564,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * natural parent
      */
-    v3_RoleCode_NaturalParent: Coding.FromStrict({
+    v3_RoleCode_NaturalParent: new Coding({
         code: "NPRN",
         display: "natural parent",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -572,7 +572,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role has both biological parents in common with the scoping entity.
      */
-    v3_RoleCode_NaturalSibling: Coding.FromStrict({
+    v3_RoleCode_NaturalSibling: new Coding({
         code: "NSIB",
         display: "natural sibling",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -580,12 +580,12 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a female having the same biological parents as the scoping entity.
      */
-    v3_RoleCode_NaturalSister: Coding.FromStrict({
+    v3_RoleCode_NaturalSister: new Coding({
         code: "NSIS",
         display: "natural sister",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
     }),
-    v2_0131_Other: Coding.FromStrict({
+    v2_0131_Other: new Coding({
         code: "O",
         display: "Other",
         system: "http://terminology.hl7.org/CodeSystem/v2-0131"
@@ -593,7 +593,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The relationship that a person has with his or her self.
      */
-    v3_RoleCode_Self: Coding.FromStrict({
+    v3_RoleCode_Self: new Coding({
         code: "ONESELF",
         display: "self",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -601,7 +601,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Description:The player of the role is a biological sister of the scoping person's biological father.
      */
-    v3_RoleCode_PaternalAunt: Coding.FromStrict({
+    v3_RoleCode_PaternalAunt: new Coding({
         code: "PAUNT",
         display: "paternal aunt",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -609,7 +609,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Description:The player of the role is a biological relative of the scoping person descended from a common ancestor on the player's father's side, such as a grandparent, by two or more steps in a diverging line.
      */
-    v3_RoleCode_PaternalCousin: Coding.FromStrict({
+    v3_RoleCode_PaternalCousin: new Coding({
         code: "PCOUSN",
         display: "paternal cousin",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -617,7 +617,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Description:The player of the role is the biological father of the scoping person's biological father's parent.
      */
-    v3_RoleCode_PaternalGreatGrandfather: Coding.FromStrict({
+    v3_RoleCode_PaternalGreatGrandfather: new Coding({
         code: "PGGRFTH",
         display: "paternal great-grandfather",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -625,7 +625,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Description:The player of the role is the biological mother of the scoping person's biological father's parent.
      */
-    v3_RoleCode_PaternalGreatGrandmother: Coding.FromStrict({
+    v3_RoleCode_PaternalGreatGrandmother: new Coding({
         code: "PGGRMTH",
         display: "paternal great-grandmother",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -633,7 +633,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Description:The player of the role is a biological parent of the scoping person's biological father's parent.
      */
-    v3_RoleCode_PaternalGreatGrandparent: Coding.FromStrict({
+    v3_RoleCode_PaternalGreatGrandparent: new Coding({
         code: "PGGRPRN",
         display: "paternal great-grandparent",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -641,7 +641,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Description:The player of the role is the biological father of the scoping person's biological father.
      */
-    v3_RoleCode_PaternalGrandfather: Coding.FromStrict({
+    v3_RoleCode_PaternalGrandfather: new Coding({
         code: "PGRFTH",
         display: "paternal grandfather",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -649,7 +649,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Description:The player of the role is the biological mother of the scoping person's biological father.
      */
-    v3_RoleCode_PaternalGrandmother: Coding.FromStrict({
+    v3_RoleCode_PaternalGrandmother: new Coding({
         code: "PGRMTH",
         display: "paternal grandmother",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -657,7 +657,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Description:The player of the role is the biological parent of the scoping person's biological father.
      */
-    v3_RoleCode_PaternalGrandparent: Coding.FromStrict({
+    v3_RoleCode_PaternalGrandparent: new Coding({
         code: "PGRPRN",
         display: "paternal grandparent",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -665,7 +665,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is one who begets, gives birth to, or nurtures and raises the scoping entity (child).
      */
-    v3_RoleCode_Parent: Coding.FromStrict({
+    v3_RoleCode_Parent: new Coding({
         code: "PRN",
         display: "parent",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -675,7 +675,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
      *
      *                         The state, via a jurisdiction recognized child protection agency, stands as in loco parentis to the child, making all legal decisions while the foster parent is responsible for the day-to-day care of the specified child.
      */
-    v3_RoleCode_FosterParent: Coding.FromStrict({
+    v3_RoleCode_FosterParent: new Coding({
         code: "PRNFOST",
         display: "foster parent",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -683,7 +683,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is the parent of scoping person's husband or wife.
      */
-    v3_RoleCode_ParentInLaw: Coding.FromStrict({
+    v3_RoleCode_ParentInLaw: new Coding({
         code: "PRNINLAW",
         display: "parent in-law",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -691,7 +691,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Description:The player of the role is a biological brother of the scoping person's biological father.
      */
-    v3_RoleCode_PaternalUncle: Coding.FromStrict({
+    v3_RoleCode_PaternalUncle: new Coding({
         code: "PUNCLE",
         display: "paternal uncle",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -699,7 +699,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * One who shares living quarters with the subject.
      */
-    v3_RoleCode_Roommate: Coding.FromStrict({
+    v3_RoleCode_Roommate: new Coding({
         code: "ROOM",
         display: "Roommate",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -707,7 +707,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role shares one or both parents in common with the scoping entity.
      */
-    v3_RoleCode_Sibling: Coding.FromStrict({
+    v3_RoleCode_Sibling: new Coding({
         code: "SIB",
         display: "sibling",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -715,7 +715,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is: (1) a sibling of the scoping person's spouse, or (2) the spouse of the scoping person's sibling, or (3) the spouse of a sibling of the scoping person's spouse.
      */
-    v3_RoleCode_SiblingInLaw: Coding.FromStrict({
+    v3_RoleCode_SiblingInLaw: new Coding({
         code: "SIBINLAW",
         display: "sibling in-law",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -723,7 +723,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * A person who is important to one's well being; especially a spouse or one in a similar relationship.  (The player is the one who is important)
      */
-    v3_RoleCode_SignificantOther: Coding.FromStrict({
+    v3_RoleCode_SignificantOther: new Coding({
         code: "SIGOTHR",
         display: "significant other",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -731,7 +731,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a female sharing one or both parents in common with the scoping entity.
      */
-    v3_RoleCode_Sister: Coding.FromStrict({
+    v3_RoleCode_Sister: new Coding({
         code: "SIS",
         display: "sister",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -739,7 +739,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is: (1) a sister of the scoping person's spouse, or (2) the wife of the scoping person's brother, or (3) the wife of a brother of the scoping person's spouse.
      */
-    v3_RoleCode_SisterInLaw: Coding.FromStrict({
+    v3_RoleCode_SisterInLaw: new Coding({
         code: "SISINLAW",
         display: "sister-in-law",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -747,7 +747,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a male offspring of the scoping entity (parent).
      */
-    v3_RoleCode_NaturalSon: Coding.FromStrict({
+    v3_RoleCode_NaturalSon: new Coding({
         code: "SON",
         display: "natural son",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -755,7 +755,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a male child taken into a family through legal means and raised by the scoping person (parent) as his or her own child.
      */
-    v3_RoleCode_AdoptedSon: Coding.FromStrict({
+    v3_RoleCode_AdoptedSon: new Coding({
         code: "SONADOPT",
         display: "adopted son",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -763,7 +763,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * Description: The player of the role is a male child (of any type) of scoping entity (parent)
      */
-    v3_RoleCode_Son: Coding.FromStrict({
+    v3_RoleCode_Son: new Coding({
         code: "SONC",
         display: "son",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -771,7 +771,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a male child receiving parental care and nurture from the scoping person (parent) but not related to him or her through legal or blood ties.
      */
-    v3_RoleCode_FosterSon: Coding.FromStrict({
+    v3_RoleCode_FosterSon: new Coding({
         code: "SONFOST",
         display: "foster son",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -779,7 +779,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is the husband of scoping person's daughter.
      */
-    v3_RoleCode_SonInLaw: Coding.FromStrict({
+    v3_RoleCode_SonInLaw: new Coding({
         code: "SONINLAW",
         display: "son in-law",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -787,7 +787,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a marriage partner of the scoping person.
      */
-    v3_RoleCode_Spouse: Coding.FromStrict({
+    v3_RoleCode_Spouse: new Coding({
         code: "SPS",
         display: "spouse",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -795,7 +795,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a son of the scoping person's stepparent.
      */
-    v3_RoleCode_Stepbrother: Coding.FromStrict({
+    v3_RoleCode_Stepbrother: new Coding({
         code: "STPBRO",
         display: "stepbrother",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -803,7 +803,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a child of the scoping person's spouse by a previous union.
      */
-    v3_RoleCode_StepChild: Coding.FromStrict({
+    v3_RoleCode_StepChild: new Coding({
         code: "STPCHLD",
         display: "step child",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -811,7 +811,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a daughter of the scoping person's spouse by a previous union.
      */
-    v3_RoleCode_Stepdaughter: Coding.FromStrict({
+    v3_RoleCode_Stepdaughter: new Coding({
         code: "STPDAU",
         display: "stepdaughter",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -819,7 +819,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is the husband of scoping person's mother and not the scoping person's natural father.
      */
-    v3_RoleCode_Stepfather: Coding.FromStrict({
+    v3_RoleCode_Stepfather: new Coding({
         code: "STPFTH",
         display: "stepfather",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -827,7 +827,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is the wife of scoping person's father and not the scoping person's natural mother.
      */
-    v3_RoleCode_Stepmother: Coding.FromStrict({
+    v3_RoleCode_Stepmother: new Coding({
         code: "STPMTH",
         display: "stepmother",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -835,7 +835,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is the spouse of the scoping person's parent and not the scoping person's natural parent.
      */
-    v3_RoleCode_StepParent: Coding.FromStrict({
+    v3_RoleCode_StepParent: new Coding({
         code: "STPPRN",
         display: "step parent",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -843,7 +843,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a child of the scoping person's stepparent.
      */
-    v3_RoleCode_StepSibling: Coding.FromStrict({
+    v3_RoleCode_StepSibling: new Coding({
         code: "STPSIB",
         display: "step sibling",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -851,7 +851,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a daughter of the scoping person's stepparent.
      */
-    v3_RoleCode_Stepsister: Coding.FromStrict({
+    v3_RoleCode_Stepsister: new Coding({
         code: "STPSIS",
         display: "stepsister",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -859,7 +859,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a son of the scoping person's spouse by a previous union.
      */
-    v3_RoleCode_Stepson: Coding.FromStrict({
+    v3_RoleCode_Stepson: new Coding({
         code: "STPSON",
         display: "stepson",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -867,7 +867,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The scoper and player were carried in the same womb and shared common biological parents.
      */
-    v3_RoleCode_Twin: Coding.FromStrict({
+    v3_RoleCode_Twin: new Coding({
         code: "TWIN",
         display: "twin",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -875,7 +875,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The scoper was carried in the same womb as the male player and shares common biological parents.
      */
-    v3_RoleCode_TwinBrother: Coding.FromStrict({
+    v3_RoleCode_TwinBrother: new Coding({
         code: "TWINBRO",
         display: "twin brother",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -883,7 +883,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The scoper was carried in the same womb as the female player and shares common biological parents.
      */
-    v3_RoleCode_TwinSister: Coding.FromStrict({
+    v3_RoleCode_TwinSister: new Coding({
         code: "TWINSIS",
         display: "twin sister",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -891,7 +891,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a brother of the scoping person's mother or father.
      */
-    v3_RoleCode_Uncle: Coding.FromStrict({
+    v3_RoleCode_Uncle: new Coding({
         code: "UNCLE",
         display: "uncle",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -899,7 +899,7 @@ export const RelatedpersonRelationshiptypeValueSet = {
     /**
      * The player of the role is a woman joined to a man (scoping person) in marriage.
      */
-    v3_RoleCode_Wife: Coding.FromStrict({
+    v3_RoleCode_Wife: new Coding({
         code: "WIFE",
         display: "wife",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"

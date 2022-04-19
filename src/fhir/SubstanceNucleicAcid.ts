@@ -159,18 +159,18 @@ export class SubstanceNucleicAcidSubunitLinkage extends fhir.BackboneElement imp
   /**
    * Check if the current SubstanceNucleicAcidSubunitLinkage contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceNucleicAcidSubunitLinkage from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceNucleicAcidSubunitLinkage):SubstanceNucleicAcidSubunitLinkage {
+  static override fromStrict(source:fhir.ISubstanceNucleicAcidSubunitLinkage):SubstanceNucleicAcidSubunitLinkage {
     var dest:SubstanceNucleicAcidSubunitLinkage = new SubstanceNucleicAcidSubunitLinkage(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceNucleicAcidSubunitLinkage is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -207,18 +207,18 @@ export class SubstanceNucleicAcidSubunitSugar extends fhir.BackboneElement imple
   /**
    * Check if the current SubstanceNucleicAcidSubunitSugar contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceNucleicAcidSubunitSugar from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceNucleicAcidSubunitSugar):SubstanceNucleicAcidSubunitSugar {
+  static override fromStrict(source:fhir.ISubstanceNucleicAcidSubunitSugar):SubstanceNucleicAcidSubunitSugar {
     var dest:SubstanceNucleicAcidSubunitSugar = new SubstanceNucleicAcidSubunitSugar(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceNucleicAcidSubunitSugar is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -282,18 +282,18 @@ export class SubstanceNucleicAcidSubunit extends fhir.BackboneElement implements
   /**
    * Check if the current SubstanceNucleicAcidSubunit contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceNucleicAcidSubunit from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceNucleicAcidSubunit):SubstanceNucleicAcidSubunit {
+  static override fromStrict(source:fhir.ISubstanceNucleicAcidSubunit):SubstanceNucleicAcidSubunit {
     var dest:SubstanceNucleicAcidSubunit = new SubstanceNucleicAcidSubunit(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceNucleicAcidSubunit is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -345,18 +345,18 @@ export class SubstanceNucleicAcid extends fhir.DomainResource implements fhir.IS
   /**
    * Check if the current SubstanceNucleicAcid contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceNucleicAcid from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceNucleicAcid):SubstanceNucleicAcid {
+  static override fromStrict(source:fhir.ISubstanceNucleicAcid):SubstanceNucleicAcid {
     var dest:SubstanceNucleicAcid = new SubstanceNucleicAcid(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceNucleicAcid is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

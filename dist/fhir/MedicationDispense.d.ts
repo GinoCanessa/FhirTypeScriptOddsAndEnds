@@ -170,11 +170,11 @@ export declare class MedicationDispensePerformer extends fhir.BackboneElement im
     /**
      * Check if the current MedicationDispensePerformer contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationDispensePerformer from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationDispensePerformer): MedicationDispensePerformer;
+    static fromStrict(source: fhir.IMedicationDispensePerformer): MedicationDispensePerformer;
 }
 /**
  * Indicates whether or not substitution was made as part of the dispense.  In some cases, substitution will be expected but does not happen, in other cases substitution is not expected but does happen.  This block explains what substitution did or did not happen and why.  If nothing is specified, substitution was not done.
@@ -204,11 +204,11 @@ export declare class MedicationDispenseSubstitution extends fhir.BackboneElement
     /**
      * Check if the current MedicationDispenseSubstitution contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationDispenseSubstitution from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationDispenseSubstitution): MedicationDispenseSubstitution;
+    static fromStrict(source: fhir.IMedicationDispenseSubstitution): MedicationDispenseSubstitution;
 }
 /**
  * Indicates that a medication product is to be or has been dispensed for a named person/patient.  This includes a description of the medication product (supply) provided and the instructions for administering the medication.  The medication dispense is the result of a pharmacy system responding to a medication order.
@@ -333,11 +333,11 @@ export declare class MedicationDispense extends fhir.DomainResource implements f
     /**
      * Check if the current MedicationDispense contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationDispense from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationDispense): MedicationDispense;
+    static fromStrict(source: fhir.IMedicationDispense): MedicationDispense;
 }
 /**
  * Code Values for the MedicationDispense.status field

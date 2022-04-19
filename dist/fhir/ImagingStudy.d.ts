@@ -207,11 +207,11 @@ export declare class ImagingStudySeriesPerformer extends fhir.BackboneElement im
     /**
      * Check if the current ImagingStudySeriesPerformer contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImagingStudySeriesPerformer from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImagingStudySeriesPerformer): ImagingStudySeriesPerformer;
+    static fromStrict(source: fhir.IImagingStudySeriesPerformer): ImagingStudySeriesPerformer;
 }
 /**
  * A single SOP instance within the series, e.g. an image, or presentation state.
@@ -243,11 +243,11 @@ export declare class ImagingStudySeriesInstance extends fhir.BackboneElement imp
     /**
      * Check if the current ImagingStudySeriesInstance contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImagingStudySeriesInstance from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImagingStudySeriesInstance): ImagingStudySeriesInstance;
+    static fromStrict(source: fhir.IImagingStudySeriesInstance): ImagingStudySeriesInstance;
 }
 /**
  * Each study has one or more series of images or other content.
@@ -313,11 +313,11 @@ export declare class ImagingStudySeries extends fhir.BackboneElement implements 
     /**
      * Check if the current ImagingStudySeries contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImagingStudySeries from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImagingStudySeries): ImagingStudySeries;
+    static fromStrict(source: fhir.IImagingStudySeries): ImagingStudySeries;
 }
 /**
  * Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
@@ -419,11 +419,11 @@ export declare class ImagingStudy extends fhir.DomainResource implements fhir.II
     /**
      * Check if the current ImagingStudy contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImagingStudy from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImagingStudy): ImagingStudy;
+    static fromStrict(source: fhir.IImagingStudy): ImagingStudy;
 }
 /**
  * Code Values for the ImagingStudy.status field

@@ -13,7 +13,7 @@ export const AdjudicationErrorValueSet = {
   /**
    * Missing Identifier
    */
-  adjudication_error_MissingIdentifier: Coding.FromStrict({
+  adjudication_error_MissingIdentifier: new Coding({
     code: "a001",
     display: "Missing Identifier",
     system: "http://terminology.hl7.org/CodeSystem/adjudication-error"
@@ -21,7 +21,7 @@ export const AdjudicationErrorValueSet = {
   /**
    * Missing Creation Date
    */
-  adjudication_error_MissingCreationDate: Coding.FromStrict({
+  adjudication_error_MissingCreationDate: new Coding({
     code: "a002",
     display: "Missing Creation Date",
     system: "http://terminology.hl7.org/CodeSystem/adjudication-error"

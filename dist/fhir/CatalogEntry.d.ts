@@ -98,11 +98,11 @@ export declare class CatalogEntryRelatedEntry extends fhir.BackboneElement imple
     /**
      * Check if the current CatalogEntryRelatedEntry contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CatalogEntryRelatedEntry from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICatalogEntryRelatedEntry): CatalogEntryRelatedEntry;
+    static fromStrict(source: fhir.ICatalogEntryRelatedEntry): CatalogEntryRelatedEntry;
 }
 /**
  * Catalog entries are wrappers that contextualize items included in a catalog.
@@ -175,11 +175,11 @@ export declare class CatalogEntry extends fhir.DomainResource implements fhir.IC
     /**
      * Check if the current CatalogEntry contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CatalogEntry from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICatalogEntry): CatalogEntry;
+    static fromStrict(source: fhir.ICatalogEntry): CatalogEntry;
 }
 /**
  * Code Values for the CatalogEntry.relatedEntry.relationtype field

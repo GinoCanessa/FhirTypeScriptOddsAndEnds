@@ -13,7 +13,7 @@ export const ClaimSubtypeValueSet = {
     /**
      * A claim for emergency services.
      */
-    claim_subtype_EmergencyClaim: Coding.FromStrict({
+    claim_subtype_EmergencyClaim: new Coding({
         code: "emergency",
         display: "Emergency Claim",
         system: "http://terminology.hl7.org/CodeSystem/ex-claimsubtype"
@@ -21,7 +21,7 @@ export const ClaimSubtypeValueSet = {
     /**
      * A claim for Orthodontic Services.
      */
-    claim_subtype_OrthodonticClaim: Coding.FromStrict({
+    claim_subtype_OrthodonticClaim: new Coding({
         code: "ortho",
         display: "Orthodontic Claim",
         system: "http://terminology.hl7.org/CodeSystem/ex-claimsubtype"

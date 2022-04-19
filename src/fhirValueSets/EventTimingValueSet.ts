@@ -13,7 +13,7 @@ export const EventTimingValueSet = {
   /**
    * before meal (from lat. ante cibus)
    */
-  v3_TimingEvent_AC: Coding.FromStrict({
+  v3_TimingEvent_AC: new Coding({
     code: "AC",
     display: "AC",
     system: "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
@@ -21,7 +21,7 @@ export const EventTimingValueSet = {
   /**
    * before lunch (from lat. ante cibus diurnus)
    */
-  v3_TimingEvent_ACD: Coding.FromStrict({
+  v3_TimingEvent_ACD: new Coding({
     code: "ACD",
     display: "ACD",
     system: "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
@@ -29,7 +29,7 @@ export const EventTimingValueSet = {
   /**
    * before breakfast (from lat. ante cibus matutinus)
    */
-  v3_TimingEvent_ACM: Coding.FromStrict({
+  v3_TimingEvent_ACM: new Coding({
     code: "ACM",
     display: "ACM",
     system: "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
@@ -37,7 +37,7 @@ export const EventTimingValueSet = {
   /**
    * before dinner (from lat. ante cibus vespertinus)
    */
-  v3_TimingEvent_ACV: Coding.FromStrict({
+  v3_TimingEvent_ACV: new Coding({
     code: "ACV",
     display: "ACV",
     system: "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
@@ -45,7 +45,7 @@ export const EventTimingValueSet = {
   /**
    * Event occurs during the afternoon. The exact time is unspecified and established by institution convention or patient interpretation.
    */
-  event_timing_Afternoon: Coding.FromStrict({
+  event_timing_Afternoon: new Coding({
     code: "AFT",
     display: "Afternoon",
     system: "http://hl7.org/fhir/event-timing"
@@ -53,7 +53,7 @@ export const EventTimingValueSet = {
   /**
    * Event occurs during the early afternoon. The exact time is unspecified and established by institution convention or patient interpretation.
    */
-  event_timing_EarlyAfternoon: Coding.FromStrict({
+  event_timing_EarlyAfternoon: new Coding({
     code: "AFT.early",
     display: "Early Afternoon",
     system: "http://hl7.org/fhir/event-timing"
@@ -61,7 +61,7 @@ export const EventTimingValueSet = {
   /**
    * Event occurs during the late afternoon. The exact time is unspecified and established by institution convention or patient interpretation.
    */
-  event_timing_LateAfternoon: Coding.FromStrict({
+  event_timing_LateAfternoon: new Coding({
     code: "AFT.late",
     display: "Late Afternoon",
     system: "http://hl7.org/fhir/event-timing"
@@ -69,7 +69,7 @@ export const EventTimingValueSet = {
   /**
    * Description: meal (from lat. ante cibus)
    */
-  v3_TimingEvent_C: Coding.FromStrict({
+  v3_TimingEvent_C: new Coding({
     code: "C",
     display: "C",
     system: "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
@@ -77,7 +77,7 @@ export const EventTimingValueSet = {
   /**
    * Description: lunch (from lat. cibus diurnus)
    */
-  v3_TimingEvent_CD: Coding.FromStrict({
+  v3_TimingEvent_CD: new Coding({
     code: "CD",
     display: "CD",
     system: "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
@@ -85,7 +85,7 @@ export const EventTimingValueSet = {
   /**
    * Description: breakfast (from lat. cibus matutinus)
    */
-  v3_TimingEvent_CM: Coding.FromStrict({
+  v3_TimingEvent_CM: new Coding({
     code: "CM",
     display: "CM",
     system: "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
@@ -93,7 +93,7 @@ export const EventTimingValueSet = {
   /**
    * Description: dinner (from lat. cibus vespertinus)
    */
-  v3_TimingEvent_CV: Coding.FromStrict({
+  v3_TimingEvent_CV: new Coding({
     code: "CV",
     display: "CV",
     system: "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
@@ -101,7 +101,7 @@ export const EventTimingValueSet = {
   /**
    * Event occurs during the evening. The exact time is unspecified and established by institution convention or patient interpretation.
    */
-  event_timing_Evening: Coding.FromStrict({
+  event_timing_Evening: new Coding({
     code: "EVE",
     display: "Evening",
     system: "http://hl7.org/fhir/event-timing"
@@ -109,7 +109,7 @@ export const EventTimingValueSet = {
   /**
    * Event occurs during the early evening. The exact time is unspecified and established by institution convention or patient interpretation.
    */
-  event_timing_EarlyEvening: Coding.FromStrict({
+  event_timing_EarlyEvening: new Coding({
     code: "EVE.early",
     display: "Early Evening",
     system: "http://hl7.org/fhir/event-timing"
@@ -117,7 +117,7 @@ export const EventTimingValueSet = {
   /**
    * Event occurs during the late evening. The exact time is unspecified and established by institution convention or patient interpretation.
    */
-  event_timing_LateEvening: Coding.FromStrict({
+  event_timing_LateEvening: new Coding({
     code: "EVE.late",
     display: "Late Evening",
     system: "http://hl7.org/fhir/event-timing"
@@ -125,7 +125,7 @@ export const EventTimingValueSet = {
   /**
    * Description: Prior to beginning a regular period of extended sleep (this would exclude naps).  Note that this might occur at different times of day depending on a person's regular sleep schedule.
    */
-  v3_TimingEvent_HS: Coding.FromStrict({
+  v3_TimingEvent_HS: new Coding({
     code: "HS",
     display: "HS",
     system: "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
@@ -133,7 +133,7 @@ export const EventTimingValueSet = {
   /**
    * Event occurs during the morning. The exact time is unspecified and established by institution convention or patient interpretation.
    */
-  event_timing_Morning: Coding.FromStrict({
+  event_timing_Morning: new Coding({
     code: "MORN",
     display: "Morning",
     system: "http://hl7.org/fhir/event-timing"
@@ -141,7 +141,7 @@ export const EventTimingValueSet = {
   /**
    * Event occurs during the early morning. The exact time is unspecified and established by institution convention or patient interpretation.
    */
-  event_timing_EarlyMorning: Coding.FromStrict({
+  event_timing_EarlyMorning: new Coding({
     code: "MORN.early",
     display: "Early Morning",
     system: "http://hl7.org/fhir/event-timing"
@@ -149,7 +149,7 @@ export const EventTimingValueSet = {
   /**
    * Event occurs during the late morning. The exact time is unspecified and established by institution convention or patient interpretation.
    */
-  event_timing_LateMorning: Coding.FromStrict({
+  event_timing_LateMorning: new Coding({
     code: "MORN.late",
     display: "Late Morning",
     system: "http://hl7.org/fhir/event-timing"
@@ -157,7 +157,7 @@ export const EventTimingValueSet = {
   /**
    * Event occurs during the night. The exact time is unspecified and established by institution convention or patient interpretation.
    */
-  event_timing_Night: Coding.FromStrict({
+  event_timing_Night: new Coding({
     code: "NIGHT",
     display: "Night",
     system: "http://hl7.org/fhir/event-timing"
@@ -165,7 +165,7 @@ export const EventTimingValueSet = {
   /**
    * Event occurs around 12:00pm. The exact time is unspecified and established by institution convention or patient interpretation.
    */
-  event_timing_Noon: Coding.FromStrict({
+  event_timing_Noon: new Coding({
     code: "NOON",
     display: "Noon",
     system: "http://hl7.org/fhir/event-timing"
@@ -173,7 +173,7 @@ export const EventTimingValueSet = {
   /**
    * after meal (from lat. post cibus)
    */
-  v3_TimingEvent_PC: Coding.FromStrict({
+  v3_TimingEvent_PC: new Coding({
     code: "PC",
     display: "PC",
     system: "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
@@ -181,7 +181,7 @@ export const EventTimingValueSet = {
   /**
    * after lunch (from lat. post cibus diurnus)
    */
-  v3_TimingEvent_PCD: Coding.FromStrict({
+  v3_TimingEvent_PCD: new Coding({
     code: "PCD",
     display: "PCD",
     system: "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
@@ -189,7 +189,7 @@ export const EventTimingValueSet = {
   /**
    * after breakfast (from lat. post cibus matutinus)
    */
-  v3_TimingEvent_PCM: Coding.FromStrict({
+  v3_TimingEvent_PCM: new Coding({
     code: "PCM",
     display: "PCM",
     system: "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
@@ -197,7 +197,7 @@ export const EventTimingValueSet = {
   /**
    * after dinner (from lat. post cibus vespertinus)
    */
-  v3_TimingEvent_PCV: Coding.FromStrict({
+  v3_TimingEvent_PCV: new Coding({
     code: "PCV",
     display: "PCV",
     system: "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
@@ -205,7 +205,7 @@ export const EventTimingValueSet = {
   /**
    * Event occurs [offset] after subject goes to sleep. The exact time is unspecified and established by institution convention or patient interpretation.
    */
-  event_timing_AfterSleep: Coding.FromStrict({
+  event_timing_AfterSleep: new Coding({
     code: "PHS",
     display: "After Sleep",
     system: "http://hl7.org/fhir/event-timing"
@@ -222,7 +222,7 @@ export const EventTimingValueSet = {
    * 
    *                         Take basal body temperature on waking in establishing date of ovulation
    */
-  v3_TimingEvent_WAKE: Coding.FromStrict({
+  v3_TimingEvent_WAKE: new Coding({
     code: "WAKE",
     display: "WAKE",
     system: "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"

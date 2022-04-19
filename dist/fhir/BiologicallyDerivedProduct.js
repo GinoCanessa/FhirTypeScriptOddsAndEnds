@@ -34,18 +34,18 @@ export class BiologicallyDerivedProductCollection extends fhir.BackboneElement {
     /**
      * Check if the current BiologicallyDerivedProductCollection contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a BiologicallyDerivedProductCollection from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new BiologicallyDerivedProductCollection(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `BiologicallyDerivedProductCollection is missing elements: ${missingElements.join(", ")}`;
         }
@@ -86,18 +86,18 @@ export class BiologicallyDerivedProductProcessing extends fhir.BackboneElement {
     /**
      * Check if the current BiologicallyDerivedProductProcessing contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a BiologicallyDerivedProductProcessing from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new BiologicallyDerivedProductProcessing(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `BiologicallyDerivedProductProcessing is missing elements: ${missingElements.join(", ")}`;
         }
@@ -132,18 +132,18 @@ export class BiologicallyDerivedProductManipulation extends fhir.BackboneElement
     /**
      * Check if the current BiologicallyDerivedProductManipulation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a BiologicallyDerivedProductManipulation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new BiologicallyDerivedProductManipulation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `BiologicallyDerivedProductManipulation is missing elements: ${missingElements.join(", ")}`;
         }
@@ -184,18 +184,18 @@ export class BiologicallyDerivedProductStorage extends fhir.BackboneElement {
     /**
      * Check if the current BiologicallyDerivedProductStorage contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a BiologicallyDerivedProductStorage from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new BiologicallyDerivedProductStorage(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `BiologicallyDerivedProductStorage is missing elements: ${missingElements.join(", ")}`;
         }
@@ -259,18 +259,18 @@ export class BiologicallyDerivedProduct extends fhir.DomainResource {
     /**
      * Check if the current BiologicallyDerivedProduct contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a BiologicallyDerivedProduct from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new BiologicallyDerivedProduct(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `BiologicallyDerivedProduct is missing elements: ${missingElements.join(", ")}`;
         }

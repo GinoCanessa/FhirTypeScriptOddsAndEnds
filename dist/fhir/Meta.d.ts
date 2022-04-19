@@ -73,10 +73,10 @@ export declare class Meta extends fhir.FhirElement implements fhir.IMeta {
     /**
      * Check if the current Meta contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Meta from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMeta): Meta;
+    static fromStrict(source: fhir.IMeta): Meta;
 }
 //# sourceMappingURL=Meta.d.ts.map

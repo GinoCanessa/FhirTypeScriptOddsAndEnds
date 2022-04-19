@@ -29,21 +29,21 @@ export class ImmunizationPerformer extends fhir.BackboneElement {
     /**
      * Check if the current ImmunizationPerformer contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["actor"] === undefined) {
             missingElements.push("actor");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ImmunizationPerformer from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ImmunizationPerformer(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ImmunizationPerformer is missing elements: ${missingElements.join(", ")}`;
         }
@@ -87,18 +87,18 @@ export class ImmunizationEducation extends fhir.BackboneElement {
     /**
      * Check if the current ImmunizationEducation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ImmunizationEducation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ImmunizationEducation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ImmunizationEducation is missing elements: ${missingElements.join(", ")}`;
         }
@@ -133,18 +133,18 @@ export class ImmunizationReaction extends fhir.BackboneElement {
     /**
      * Check if the current ImmunizationReaction contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ImmunizationReaction from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ImmunizationReaction(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ImmunizationReaction is missing elements: ${missingElements.join(", ")}`;
         }
@@ -200,18 +200,18 @@ export class ImmunizationProtocolApplied extends fhir.BackboneElement {
     /**
      * Check if the current ImmunizationProtocolApplied contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ImmunizationProtocolApplied from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ImmunizationProtocolApplied(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ImmunizationProtocolApplied is missing elements: ${missingElements.join(", ")}`;
         }
@@ -355,7 +355,7 @@ export class Immunization extends fhir.DomainResource {
     /**
      * Check if the current Immunization contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["patient"] === undefined) {
             missingElements.push("patient");
@@ -366,16 +366,16 @@ export class Immunization extends fhir.DomainResource {
         if (this["vaccineCode"] === undefined) {
             missingElements.push("vaccineCode");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a Immunization from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new Immunization(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `Immunization is missing elements: ${missingElements.join(", ")}`;
         }

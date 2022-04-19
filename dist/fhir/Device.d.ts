@@ -279,11 +279,11 @@ export declare class DeviceUdiCarrier extends fhir.BackboneElement implements fh
     /**
      * Check if the current DeviceUdiCarrier contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DeviceUdiCarrier from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDeviceUdiCarrier): DeviceUdiCarrier;
+    static fromStrict(source: fhir.IDeviceUdiCarrier): DeviceUdiCarrier;
 }
 /**
  * This represents the manufacturer's name of the device as provided by the device, from a UDI label, or by a person describing the Device.  This typically would be used when a person provides the name(s) or when the device represents one of the names available from DeviceDefinition.
@@ -307,11 +307,11 @@ export declare class DeviceDeviceName extends fhir.BackboneElement implements fh
     /**
      * Check if the current DeviceDeviceName contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DeviceDeviceName from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDeviceDeviceName): DeviceDeviceName;
+    static fromStrict(source: fhir.IDeviceDeviceName): DeviceDeviceName;
 }
 /**
  * The capabilities supported on a  device, the standards to which the device conforms for a particular purpose, and used for the communication.
@@ -333,11 +333,11 @@ export declare class DeviceSpecialization extends fhir.BackboneElement implement
     /**
      * Check if the current DeviceSpecialization contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DeviceSpecialization from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDeviceSpecialization): DeviceSpecialization;
+    static fromStrict(source: fhir.IDeviceSpecialization): DeviceSpecialization;
 }
 /**
  * The actual design of the device or software version running on the device.
@@ -363,11 +363,11 @@ export declare class DeviceVersion extends fhir.BackboneElement implements fhir.
     /**
      * Check if the current DeviceVersion contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DeviceVersion from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDeviceVersion): DeviceVersion;
+    static fromStrict(source: fhir.IDeviceVersion): DeviceVersion;
 }
 /**
  * The actual configuration settings of a device as it actually operates, e.g., regulation status, time properties.
@@ -392,11 +392,11 @@ export declare class DeviceProperty extends fhir.BackboneElement implements fhir
     /**
      * Check if the current DeviceProperty contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DeviceProperty from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDeviceProperty): DeviceProperty;
+    static fromStrict(source: fhir.IDeviceProperty): DeviceProperty;
 }
 /**
  * A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device.
@@ -527,11 +527,11 @@ export declare class Device extends fhir.DomainResource implements fhir.IDevice 
     /**
      * Check if the current Device contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Device from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDevice): Device;
+    static fromStrict(source: fhir.IDevice): Device;
 }
 /**
  * Code Values for the Device.udiCarrier.entryType field

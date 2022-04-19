@@ -125,20 +125,20 @@ export class EpisodeOfCareStatusHistory extends fhir.BackboneElement implements 
   /**
    * Check if the current EpisodeOfCareStatusHistory contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["period"] === undefined) { missingElements.push("period"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a EpisodeOfCareStatusHistory from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IEpisodeOfCareStatusHistory):EpisodeOfCareStatusHistory {
+  static override fromStrict(source:fhir.IEpisodeOfCareStatusHistory):EpisodeOfCareStatusHistory {
     var dest:EpisodeOfCareStatusHistory = new EpisodeOfCareStatusHistory(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `EpisodeOfCareStatusHistory is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -175,19 +175,19 @@ export class EpisodeOfCareDiagnosis extends fhir.BackboneElement implements fhir
   /**
    * Check if the current EpisodeOfCareDiagnosis contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["condition"] === undefined) { missingElements.push("condition"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a EpisodeOfCareDiagnosis from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IEpisodeOfCareDiagnosis):EpisodeOfCareDiagnosis {
+  static override fromStrict(source:fhir.IEpisodeOfCareDiagnosis):EpisodeOfCareDiagnosis {
     var dest:EpisodeOfCareDiagnosis = new EpisodeOfCareDiagnosis(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `EpisodeOfCareDiagnosis is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -276,20 +276,20 @@ export class EpisodeOfCare extends fhir.DomainResource implements fhir.IEpisodeO
   /**
    * Check if the current EpisodeOfCare contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["patient"] === undefined) { missingElements.push("patient"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a EpisodeOfCare from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IEpisodeOfCare):EpisodeOfCare {
+  static override fromStrict(source:fhir.IEpisodeOfCare):EpisodeOfCare {
     var dest:EpisodeOfCare = new EpisodeOfCare(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `EpisodeOfCare is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

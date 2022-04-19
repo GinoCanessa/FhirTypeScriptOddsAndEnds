@@ -249,19 +249,19 @@ export class StructureDefinitionMapping extends fhir.BackboneElement implements 
   /**
    * Check if the current StructureDefinitionMapping contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["identity"] === undefined) { missingElements.push("identity"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a StructureDefinitionMapping from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IStructureDefinitionMapping):StructureDefinitionMapping {
+  static override fromStrict(source:fhir.IStructureDefinitionMapping):StructureDefinitionMapping {
     var dest:StructureDefinitionMapping = new StructureDefinitionMapping(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `StructureDefinitionMapping is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -297,20 +297,20 @@ export class StructureDefinitionContext extends fhir.BackboneElement implements 
   /**
    * Check if the current StructureDefinitionContext contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["expression"] === undefined) { missingElements.push("expression"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a StructureDefinitionContext from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IStructureDefinitionContext):StructureDefinitionContext {
+  static override fromStrict(source:fhir.IStructureDefinitionContext):StructureDefinitionContext {
     var dest:StructureDefinitionContext = new StructureDefinitionContext(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `StructureDefinitionContext is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -335,19 +335,19 @@ export class StructureDefinitionSnapshot extends fhir.BackboneElement implements
   /**
    * Check if the current StructureDefinitionSnapshot contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["element"]) || (this["element"].length === 0)) { missingElements.push("element"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a StructureDefinitionSnapshot from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IStructureDefinitionSnapshot):StructureDefinitionSnapshot {
+  static override fromStrict(source:fhir.IStructureDefinitionSnapshot):StructureDefinitionSnapshot {
     var dest:StructureDefinitionSnapshot = new StructureDefinitionSnapshot(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `StructureDefinitionSnapshot is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -372,19 +372,19 @@ export class StructureDefinitionDifferential extends fhir.BackboneElement implem
   /**
    * Check if the current StructureDefinitionDifferential contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["element"]) || (this["element"].length === 0)) { missingElements.push("element"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a StructureDefinitionDifferential from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IStructureDefinitionDifferential):StructureDefinitionDifferential {
+  static override fromStrict(source:fhir.IStructureDefinitionDifferential):StructureDefinitionDifferential {
     var dest:StructureDefinitionDifferential = new StructureDefinitionDifferential(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `StructureDefinitionDifferential is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -597,7 +597,7 @@ export class StructureDefinition extends fhir.DomainResource implements fhir.ISt
   /**
    * Check if the current StructureDefinition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["abstract"] === undefined) { missingElements.push("abstract"); }
     if (this["kind"] === undefined) { missingElements.push("kind"); }
@@ -605,16 +605,16 @@ export class StructureDefinition extends fhir.DomainResource implements fhir.ISt
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
     if (this["url"] === undefined) { missingElements.push("url"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a StructureDefinition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IStructureDefinition):StructureDefinition {
+  static override fromStrict(source:fhir.IStructureDefinition):StructureDefinition {
     var dest:StructureDefinition = new StructureDefinition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `StructureDefinition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

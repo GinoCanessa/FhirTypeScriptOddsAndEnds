@@ -10,42 +10,42 @@ import { Coding } from '../fhir'
  * The technique that is used to perform the process or preserve the specimen.
  */
 export const SpecimenProcessingProcedureValueSet = {
-  v2_0373_Acidification: Coding.FromStrict({
+  v2_0373_Acidification: new Coding({
     code: "ACID",
     display: "Acidification",
     system: "http://terminology.hl7.org/CodeSystem/v2-0373"
   }),
-  v2_0373_Alkalization: Coding.FromStrict({
+  v2_0373_Alkalization: new Coding({
     code: "ALK",
     display: "Alkalization",
     system: "http://terminology.hl7.org/CodeSystem/v2-0373"
   }),
-  v2_0373_Defibrination: Coding.FromStrict({
+  v2_0373_Defibrination: new Coding({
     code: "DEFB",
     display: "Defibrination",
     system: "http://terminology.hl7.org/CodeSystem/v2-0373"
   }),
-  v2_0373_Filtration: Coding.FromStrict({
+  v2_0373_Filtration: new Coding({
     code: "FILT",
     display: "Filtration",
     system: "http://terminology.hl7.org/CodeSystem/v2-0373"
   }),
-  v2_0373_LDLPrecipitation: Coding.FromStrict({
+  v2_0373_LDLPrecipitation: new Coding({
     code: "LDLP",
     display: "LDL Precipitation",
     system: "http://terminology.hl7.org/CodeSystem/v2-0373"
   }),
-  v2_0373_Neutralization: Coding.FromStrict({
+  v2_0373_Neutralization: new Coding({
     code: "NEUT",
     display: "Neutralization",
     system: "http://terminology.hl7.org/CodeSystem/v2-0373"
   }),
-  v2_0373_Recalification: Coding.FromStrict({
+  v2_0373_Recalification: new Coding({
     code: "RECA",
     display: "Recalification",
     system: "http://terminology.hl7.org/CodeSystem/v2-0373"
   }),
-  v2_0373_Ultrafiltration: Coding.FromStrict({
+  v2_0373_Ultrafiltration: new Coding({
     code: "UFIL",
     display: "Ultrafiltration",
     system: "http://terminology.hl7.org/CodeSystem/v2-0373"

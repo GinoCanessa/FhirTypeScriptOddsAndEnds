@@ -301,18 +301,18 @@ export class RiskEvidenceSynthesisSampleSize extends fhir.BackboneElement implem
   /**
    * Check if the current RiskEvidenceSynthesisSampleSize contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a RiskEvidenceSynthesisSampleSize from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IRiskEvidenceSynthesisSampleSize):RiskEvidenceSynthesisSampleSize {
+  static override fromStrict(source:fhir.IRiskEvidenceSynthesisSampleSize):RiskEvidenceSynthesisSampleSize {
     var dest:RiskEvidenceSynthesisSampleSize = new RiskEvidenceSynthesisSampleSize(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `RiskEvidenceSynthesisSampleSize is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -356,18 +356,18 @@ export class RiskEvidenceSynthesisRiskEstimatePrecisionEstimate extends fhir.Bac
   /**
    * Check if the current RiskEvidenceSynthesisRiskEstimatePrecisionEstimate contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a RiskEvidenceSynthesisRiskEstimatePrecisionEstimate from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IRiskEvidenceSynthesisRiskEstimatePrecisionEstimate):RiskEvidenceSynthesisRiskEstimatePrecisionEstimate {
+  static override fromStrict(source:fhir.IRiskEvidenceSynthesisRiskEstimatePrecisionEstimate):RiskEvidenceSynthesisRiskEstimatePrecisionEstimate {
     var dest:RiskEvidenceSynthesisRiskEstimatePrecisionEstimate = new RiskEvidenceSynthesisRiskEstimatePrecisionEstimate(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `RiskEvidenceSynthesisRiskEstimatePrecisionEstimate is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -428,18 +428,18 @@ export class RiskEvidenceSynthesisRiskEstimate extends fhir.BackboneElement impl
   /**
    * Check if the current RiskEvidenceSynthesisRiskEstimate contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a RiskEvidenceSynthesisRiskEstimate from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IRiskEvidenceSynthesisRiskEstimate):RiskEvidenceSynthesisRiskEstimate {
+  static override fromStrict(source:fhir.IRiskEvidenceSynthesisRiskEstimate):RiskEvidenceSynthesisRiskEstimate {
     var dest:RiskEvidenceSynthesisRiskEstimate = new RiskEvidenceSynthesisRiskEstimate(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `RiskEvidenceSynthesisRiskEstimate is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -472,18 +472,18 @@ export class RiskEvidenceSynthesisCertaintyCertaintySubcomponent extends fhir.Ba
   /**
    * Check if the current RiskEvidenceSynthesisCertaintyCertaintySubcomponent contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a RiskEvidenceSynthesisCertaintyCertaintySubcomponent from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IRiskEvidenceSynthesisCertaintyCertaintySubcomponent):RiskEvidenceSynthesisCertaintyCertaintySubcomponent {
+  static override fromStrict(source:fhir.IRiskEvidenceSynthesisCertaintyCertaintySubcomponent):RiskEvidenceSynthesisCertaintyCertaintySubcomponent {
     var dest:RiskEvidenceSynthesisCertaintyCertaintySubcomponent = new RiskEvidenceSynthesisCertaintyCertaintySubcomponent(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `RiskEvidenceSynthesisCertaintyCertaintySubcomponent is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -516,18 +516,18 @@ export class RiskEvidenceSynthesisCertainty extends fhir.BackboneElement impleme
   /**
    * Check if the current RiskEvidenceSynthesisCertainty contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a RiskEvidenceSynthesisCertainty from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IRiskEvidenceSynthesisCertainty):RiskEvidenceSynthesisCertainty {
+  static override fromStrict(source:fhir.IRiskEvidenceSynthesisCertainty):RiskEvidenceSynthesisCertainty {
     var dest:RiskEvidenceSynthesisCertainty = new RiskEvidenceSynthesisCertainty(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `RiskEvidenceSynthesisCertainty is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -735,21 +735,21 @@ export class RiskEvidenceSynthesis extends fhir.DomainResource implements fhir.I
   /**
    * Check if the current RiskEvidenceSynthesis contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["outcome"] === undefined) { missingElements.push("outcome"); }
     if (this["population"] === undefined) { missingElements.push("population"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a RiskEvidenceSynthesis from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IRiskEvidenceSynthesis):RiskEvidenceSynthesis {
+  static override fromStrict(source:fhir.IRiskEvidenceSynthesis):RiskEvidenceSynthesis {
     var dest:RiskEvidenceSynthesis = new RiskEvidenceSynthesis(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `RiskEvidenceSynthesis is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

@@ -13,7 +13,7 @@ export const MetricCalibrationTypeValueSet = {
   /**
    * Gain metric calibration method.
    */
-  metric_calibration_type_Gain: Coding.FromStrict({
+  metric_calibration_type_Gain: new Coding({
     code: "gain",
     display: "Gain",
     system: "http://hl7.org/fhir/metric-calibration-type"
@@ -21,7 +21,7 @@ export const MetricCalibrationTypeValueSet = {
   /**
    * Offset metric calibration method.
    */
-  metric_calibration_type_Offset: Coding.FromStrict({
+  metric_calibration_type_Offset: new Coding({
     code: "offset",
     display: "Offset",
     system: "http://hl7.org/fhir/metric-calibration-type"
@@ -29,7 +29,7 @@ export const MetricCalibrationTypeValueSet = {
   /**
    * Two-point metric calibration method.
    */
-  metric_calibration_type_TwoPoint: Coding.FromStrict({
+  metric_calibration_type_TwoPoint: new Coding({
     code: "two-point",
     display: "Two Point",
     system: "http://hl7.org/fhir/metric-calibration-type"
@@ -37,7 +37,7 @@ export const MetricCalibrationTypeValueSet = {
   /**
    * Metric calibration method has not been identified.
    */
-  metric_calibration_type_Unspecified: Coding.FromStrict({
+  metric_calibration_type_Unspecified: new Coding({
     code: "unspecified",
     display: "Unspecified",
     system: "http://hl7.org/fhir/metric-calibration-type"

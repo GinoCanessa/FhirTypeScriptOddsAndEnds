@@ -13,7 +13,7 @@ export const VisionBaseCodesValueSet = {
   /**
    * bottom.
    */
-  vision_base_codes_Down: Coding.FromStrict({
+  vision_base_codes_Down: new Coding({
     code: "down",
     display: "Down",
     system: "http://hl7.org/fhir/vision-base-codes"
@@ -21,7 +21,7 @@ export const VisionBaseCodesValueSet = {
   /**
    * inner edge.
    */
-  vision_base_codes_In: Coding.FromStrict({
+  vision_base_codes_In: new Coding({
     code: "in",
     display: "In",
     system: "http://hl7.org/fhir/vision-base-codes"
@@ -29,7 +29,7 @@ export const VisionBaseCodesValueSet = {
   /**
    * outer edge.
    */
-  vision_base_codes_Out: Coding.FromStrict({
+  vision_base_codes_Out: new Coding({
     code: "out",
     display: "Out",
     system: "http://hl7.org/fhir/vision-base-codes"
@@ -37,7 +37,7 @@ export const VisionBaseCodesValueSet = {
   /**
    * top.
    */
-  vision_base_codes_Up: Coding.FromStrict({
+  vision_base_codes_Up: new Coding({
     code: "up",
     display: "Up",
     system: "http://hl7.org/fhir/vision-base-codes"

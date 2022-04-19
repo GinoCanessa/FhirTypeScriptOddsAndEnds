@@ -209,11 +209,11 @@ export declare class GraphDefinitionLinkTargetCompartment extends fhir.BackboneE
     /**
      * Check if the current GraphDefinitionLinkTargetCompartment contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a GraphDefinitionLinkTargetCompartment from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IGraphDefinitionLinkTargetCompartment): GraphDefinitionLinkTargetCompartment;
+    static fromStrict(source: fhir.IGraphDefinitionLinkTargetCompartment): GraphDefinitionLinkTargetCompartment;
 }
 /**
  * Potential target for the link.
@@ -249,11 +249,11 @@ export declare class GraphDefinitionLinkTarget extends fhir.BackboneElement impl
     /**
      * Check if the current GraphDefinitionLinkTarget contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a GraphDefinitionLinkTarget from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IGraphDefinitionLinkTarget): GraphDefinitionLinkTarget;
+    static fromStrict(source: fhir.IGraphDefinitionLinkTarget): GraphDefinitionLinkTarget;
 }
 /**
  * Links this graph makes rules about.
@@ -295,11 +295,11 @@ export declare class GraphDefinitionLink extends fhir.BackboneElement implements
     /**
      * Check if the current GraphDefinitionLink contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a GraphDefinitionLink from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IGraphDefinitionLink): GraphDefinitionLink;
+    static fromStrict(source: fhir.IGraphDefinitionLink): GraphDefinitionLink;
 }
 /**
  * A formal computable definition of a graph of resources - that is, a coherent set of resources that form a graph by following references. The Graph Definition resource defines a set and makes rules about the set.
@@ -389,11 +389,11 @@ export declare class GraphDefinition extends fhir.DomainResource implements fhir
     /**
      * Check if the current GraphDefinition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a GraphDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IGraphDefinition): GraphDefinition;
+    static fromStrict(source: fhir.IGraphDefinition): GraphDefinition;
 }
 /**
  * Code Values for the GraphDefinition.link.target.compartment.code field

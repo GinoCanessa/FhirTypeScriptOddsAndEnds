@@ -13,7 +13,7 @@ export const ContractActionValueSet = {
     /**
      * Definition for Action A
      */
-    contract_action_ActionA: Coding.FromStrict({
+    contract_action_ActionA: new Coding({
         code: "action-a",
         display: "Action A",
         system: "http://terminology.hl7.org/CodeSystem/contractaction"
@@ -21,7 +21,7 @@ export const ContractActionValueSet = {
     /**
      * Definition for Action B
      */
-    contract_action_ActionB: Coding.FromStrict({
+    contract_action_ActionB: new Coding({
         code: "action-b",
         display: "Action B",
         system: "http://terminology.hl7.org/CodeSystem/contractaction"

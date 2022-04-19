@@ -116,11 +116,11 @@ export declare class ListEntry extends fhir.BackboneElement implements fhir.ILis
     /**
      * Check if the current ListEntry contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ListEntry from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IListEntry): ListEntry;
+    static fromStrict(source: fhir.IListEntry): ListEntry;
 }
 /**
  * A list is a curated collection of resources.
@@ -193,11 +193,11 @@ export declare class List extends fhir.DomainResource implements fhir.IList {
     /**
      * Check if the current List contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a List from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IList): List;
+    static fromStrict(source: fhir.IList): List;
 }
 /**
  * Code Values for the List.mode field

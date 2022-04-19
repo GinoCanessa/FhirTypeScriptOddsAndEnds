@@ -95,11 +95,11 @@ export declare class EnrollmentResponse extends fhir.DomainResource implements f
     /**
      * Check if the current EnrollmentResponse contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a EnrollmentResponse from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEnrollmentResponse): EnrollmentResponse;
+    static fromStrict(source: fhir.IEnrollmentResponse): EnrollmentResponse;
 }
 /**
  * Code Values for the EnrollmentResponse.outcome field

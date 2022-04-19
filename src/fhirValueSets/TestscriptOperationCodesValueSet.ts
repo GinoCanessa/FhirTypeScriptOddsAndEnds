@@ -13,7 +13,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Realizes an ActivityDefinition in a specific context
    */
-  testscript_operation_codes_Apply: Coding.FromStrict({
+  testscript_operation_codes_Apply: new Coding({
     code: "apply",
     display: "$apply",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -21,7 +21,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Update, create or delete a set of resources as independent actions.
    */
-  testscript_operation_codes_Batch: Coding.FromStrict({
+  testscript_operation_codes_Batch: new Coding({
     code: "batch",
     display: "Batch",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -29,7 +29,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Get a capability statement for the system.
    */
-  testscript_operation_codes_Capabilities: Coding.FromStrict({
+  testscript_operation_codes_Capabilities: new Coding({
     code: "capabilities",
     display: "Capabilities",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -37,7 +37,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Closure Table Maintenance
    */
-  testscript_operation_codes_Closure: Coding.FromStrict({
+  testscript_operation_codes_Closure: new Coding({
     code: "closure",
     display: "$closure",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -45,7 +45,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Compare two systems CapabilityStatements
    */
-  testscript_operation_codes_Conforms: Coding.FromStrict({
+  testscript_operation_codes_Conforms: new Coding({
     code: "conforms",
     display: "$conforms",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -53,7 +53,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Create a new resource with a server assigned id.
    */
-  testscript_operation_codes_Create: Coding.FromStrict({
+  testscript_operation_codes_Create: new Coding({
     code: "create",
     display: "Create",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -61,7 +61,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Aggregates and returns the parameters and data requirements for a resource and all its dependencies as a single module definition
    */
-  testscript_operation_codes_DataRequirements: Coding.FromStrict({
+  testscript_operation_codes_DataRequirements: new Coding({
     code: "data-requirements",
     display: "$data-requirements",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -69,7 +69,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Delete a resource.
    */
-  testscript_operation_codes_Delete: Coding.FromStrict({
+  testscript_operation_codes_Delete: new Coding({
     code: "delete",
     display: "Delete",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -77,7 +77,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Conditionally delete one or more resources based on search parameters.
    */
-  testscript_operation_codes_DeleteCondMultiple: Coding.FromStrict({
+  testscript_operation_codes_DeleteCondMultiple: new Coding({
     code: "deleteCondMultiple",
     display: "Conditional Delete Multiple",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -85,7 +85,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Conditionally delete a single resource based on search parameters.
    */
-  testscript_operation_codes_DeleteCondSingle: Coding.FromStrict({
+  testscript_operation_codes_DeleteCondSingle: new Coding({
     code: "deleteCondSingle",
     display: "Conditional Delete Single",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -93,7 +93,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Generate a Document
    */
-  testscript_operation_codes_Document: Coding.FromStrict({
+  testscript_operation_codes_Document: new Coding({
     code: "document",
     display: "$document",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -101,7 +101,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Request clinical decision support guidance based on a specific decision support module
    */
-  testscript_operation_codes_Evaluate: Coding.FromStrict({
+  testscript_operation_codes_Evaluate: new Coding({
     code: "evaluate",
     display: "$evaluate",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -109,7 +109,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Invoke an eMeasure and obtain the results
    */
-  testscript_operation_codes_EvaluateMeasure: Coding.FromStrict({
+  testscript_operation_codes_EvaluateMeasure: new Coding({
     code: "evaluate-measure",
     display: "$evaluate-measure",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -117,7 +117,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Return all the related information as described in the Encounter or Patient
    */
-  testscript_operation_codes_Everything: Coding.FromStrict({
+  testscript_operation_codes_Everything: new Coding({
     code: "everything",
     display: "$everything",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -125,7 +125,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Value Set Expansion
    */
-  testscript_operation_codes_Expand: Coding.FromStrict({
+  testscript_operation_codes_Expand: new Coding({
     code: "expand",
     display: "$expand",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -133,7 +133,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Find a functional list
    */
-  testscript_operation_codes_Find: Coding.FromStrict({
+  testscript_operation_codes_Find: new Coding({
     code: "find",
     display: "$find",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -141,7 +141,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Finding Codes based on supplied properties
    */
-  testscript_operation_codes_FindMatches: Coding.FromStrict({
+  testscript_operation_codes_FindMatches: new Coding({
     code: "find-matches",
     display: "$find-matches",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -149,7 +149,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Invoke a GraphQL query
    */
-  testscript_operation_codes_Graphql: Coding.FromStrict({
+  testscript_operation_codes_Graphql: new Coding({
     code: "graphql",
     display: "$graphql",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -157,7 +157,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Retrieve the change history for a particular resource or resource type.
    */
-  testscript_operation_codes_History: Coding.FromStrict({
+  testscript_operation_codes_History: new Coding({
     code: "history",
     display: "History",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -165,7 +165,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Test if a server implements a client's required operations
    */
-  testscript_operation_codes_Implements: Coding.FromStrict({
+  testscript_operation_codes_Implements: new Coding({
     code: "implements",
     display: "$implements",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -173,7 +173,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Last N Observations Query
    */
-  testscript_operation_codes_Lastn: Coding.FromStrict({
+  testscript_operation_codes_Lastn: new Coding({
     code: "lastn",
     display: "$lastn",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -181,7 +181,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Concept Look Up and Decomposition
    */
-  testscript_operation_codes_Lookup: Coding.FromStrict({
+  testscript_operation_codes_Lookup: new Coding({
     code: "lookup",
     display: "$lookup",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -189,7 +189,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Find patient matches using MPI based logic
    */
-  testscript_operation_codes_Match: Coding.FromStrict({
+  testscript_operation_codes_Match: new Coding({
     code: "match",
     display: "$match",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -197,7 +197,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Access a list of profiles, tags, and security labels
    */
-  testscript_operation_codes_Meta: Coding.FromStrict({
+  testscript_operation_codes_Meta: new Coding({
     code: "meta",
     display: "$meta",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -205,7 +205,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Add profiles, tags, and security labels to a resource
    */
-  testscript_operation_codes_MetaAdd: Coding.FromStrict({
+  testscript_operation_codes_MetaAdd: new Coding({
     code: "meta-add",
     display: "$meta-add",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -213,7 +213,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Delete profiles, tags, and security labels for a resource
    */
-  testscript_operation_codes_MetaDelete: Coding.FromStrict({
+  testscript_operation_codes_MetaDelete: new Coding({
     code: "meta-delete",
     display: "$meta-delete",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -221,7 +221,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Patch an existing resource by its id.
    */
-  testscript_operation_codes_Patch: Coding.FromStrict({
+  testscript_operation_codes_Patch: new Coding({
     code: "patch",
     display: "Patch",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -229,7 +229,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Populate Questionnaire
    */
-  testscript_operation_codes_Populate: Coding.FromStrict({
+  testscript_operation_codes_Populate: new Coding({
     code: "populate",
     display: "$populate",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -237,7 +237,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Generate HTML for Questionnaire
    */
-  testscript_operation_codes_Populatehtml: Coding.FromStrict({
+  testscript_operation_codes_Populatehtml: new Coding({
     code: "populatehtml",
     display: "$populatehtml",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -245,7 +245,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Generate a link to a Questionnaire completion webpage
    */
-  testscript_operation_codes_Populatelink: Coding.FromStrict({
+  testscript_operation_codes_Populatelink: new Coding({
     code: "populatelink",
     display: "$populatelink",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -253,7 +253,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Process a message according to the defined event
    */
-  testscript_operation_codes_ProcessMessage: Coding.FromStrict({
+  testscript_operation_codes_ProcessMessage: new Coding({
     code: "process-message",
     display: "$process-message",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -261,7 +261,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Build Questionnaire
    */
-  testscript_operation_codes_Questionnaire: Coding.FromStrict({
+  testscript_operation_codes_Questionnaire: new Coding({
     code: "questionnaire",
     display: "$questionnaire",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -269,7 +269,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Read the current state of the resource.
    */
-  testscript_operation_codes_Read: Coding.FromStrict({
+  testscript_operation_codes_Read: new Coding({
     code: "read",
     display: "Read",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -277,7 +277,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Search based on some filter criteria.
    */
-  testscript_operation_codes_Search: Coding.FromStrict({
+  testscript_operation_codes_Search: new Coding({
     code: "search",
     display: "Search",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -285,7 +285,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Observation Statistics
    */
-  testscript_operation_codes_Stats: Coding.FromStrict({
+  testscript_operation_codes_Stats: new Coding({
     code: "stats",
     display: "$stats",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -293,7 +293,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Fetch a subset of the CapabilityStatement resource
    */
-  testscript_operation_codes_Subset: Coding.FromStrict({
+  testscript_operation_codes_Subset: new Coding({
     code: "subset",
     display: "$subset",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -301,7 +301,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * CodeSystem Subsumption Testing
    */
-  testscript_operation_codes_Subsumes: Coding.FromStrict({
+  testscript_operation_codes_Subsumes: new Coding({
     code: "subsumes",
     display: "$subsumes",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -309,7 +309,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Update, create or delete a set of resources as a single transaction.
    */
-  testscript_operation_codes_Transaction: Coding.FromStrict({
+  testscript_operation_codes_Transaction: new Coding({
     code: "transaction",
     display: "Transaction",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -317,7 +317,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Model Instance Transformation
    */
-  testscript_operation_codes_Transform: Coding.FromStrict({
+  testscript_operation_codes_Transform: new Coding({
     code: "transform",
     display: "$transform",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -325,7 +325,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Concept Translation
    */
-  testscript_operation_codes_Translate: Coding.FromStrict({
+  testscript_operation_codes_Translate: new Coding({
     code: "translate",
     display: "$translate",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -333,7 +333,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Update an existing resource by its id.
    */
-  testscript_operation_codes_Update: Coding.FromStrict({
+  testscript_operation_codes_Update: new Coding({
     code: "update",
     display: "Update",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -341,7 +341,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Update an existing resource by its id (or create it if it is new).
    */
-  testscript_operation_codes_UpdateCreate: Coding.FromStrict({
+  testscript_operation_codes_UpdateCreate: new Coding({
     code: "updateCreate",
     display: "Create using Update",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -349,7 +349,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Validate a resource
    */
-  testscript_operation_codes_Validate: Coding.FromStrict({
+  testscript_operation_codes_Validate: new Coding({
     code: "validate",
     display: "$validate",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -357,7 +357,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * ValueSet based Validation
    */
-  testscript_operation_codes_ValidateCode: Coding.FromStrict({
+  testscript_operation_codes_ValidateCode: new Coding({
     code: "validate-code",
     display: "$validate-code",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
@@ -365,7 +365,7 @@ export const TestscriptOperationCodesValueSet = {
   /**
    * Read the state of a specific version of the resource.
    */
-  testscript_operation_codes_Vread: Coding.FromStrict({
+  testscript_operation_codes_Vread: new Coding({
     code: "vread",
     display: "Version Read",
     system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"

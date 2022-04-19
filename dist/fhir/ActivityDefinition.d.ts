@@ -293,11 +293,11 @@ export declare class ActivityDefinitionParticipant extends fhir.BackboneElement 
     /**
      * Check if the current ActivityDefinitionParticipant contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ActivityDefinitionParticipant from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IActivityDefinitionParticipant): ActivityDefinitionParticipant;
+    static fromStrict(source: fhir.IActivityDefinitionParticipant): ActivityDefinitionParticipant;
 }
 /**
  * Dynamic values are applied in the order in which they are defined in the ActivityDefinition. Note that if both a transform and dynamic values are specified, the dynamic values will be applied to the result of the transform.
@@ -319,11 +319,11 @@ export declare class ActivityDefinitionDynamicValue extends fhir.BackboneElement
     /**
      * Check if the current ActivityDefinitionDynamicValue contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ActivityDefinitionDynamicValue from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IActivityDefinitionDynamicValue): ActivityDefinitionDynamicValue;
+    static fromStrict(source: fhir.IActivityDefinitionDynamicValue): ActivityDefinitionDynamicValue;
 }
 /**
  * This resource allows for the definition of some activity to be performed, independent of a particular patient, practitioner, or other performance context.
@@ -577,11 +577,11 @@ export declare class ActivityDefinition extends fhir.DomainResource implements f
     /**
      * Check if the current ActivityDefinition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ActivityDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IActivityDefinition): ActivityDefinition;
+    static fromStrict(source: fhir.IActivityDefinition): ActivityDefinition;
 }
 /**
  * Code Values for the ActivityDefinition.participant.type field

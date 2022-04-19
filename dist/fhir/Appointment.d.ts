@@ -172,11 +172,11 @@ export declare class AppointmentParticipant extends fhir.BackboneElement impleme
     /**
      * Check if the current AppointmentParticipant contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a AppointmentParticipant from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IAppointmentParticipant): AppointmentParticipant;
+    static fromStrict(source: fhir.IAppointmentParticipant): AppointmentParticipant;
 }
 /**
  * A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).
@@ -293,11 +293,11 @@ export declare class Appointment extends fhir.DomainResource implements fhir.IAp
     /**
      * Check if the current Appointment contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Appointment from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IAppointment): Appointment;
+    static fromStrict(source: fhir.IAppointment): Appointment;
 }
 /**
  * Code Values for the Appointment.participant.required field

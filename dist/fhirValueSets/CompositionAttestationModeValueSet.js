@@ -13,7 +13,7 @@ export const CompositionAttestationModeValueSet = {
     /**
      * The person authenticated the content and accepted legal responsibility for its content.
      */
-    composition_attestation_mode_Legal: Coding.FromStrict({
+    composition_attestation_mode_Legal: new Coding({
         code: "legal",
         display: "Legal",
         system: "http://hl7.org/fhir/composition-attestation-mode"
@@ -21,7 +21,7 @@ export const CompositionAttestationModeValueSet = {
     /**
      * The organization authenticated the content as consistent with their policies and procedures.
      */
-    composition_attestation_mode_Official: Coding.FromStrict({
+    composition_attestation_mode_Official: new Coding({
         code: "official",
         display: "Official",
         system: "http://hl7.org/fhir/composition-attestation-mode"
@@ -29,7 +29,7 @@ export const CompositionAttestationModeValueSet = {
     /**
      * The person authenticated the content in their personal capacity.
      */
-    composition_attestation_mode_Personal: Coding.FromStrict({
+    composition_attestation_mode_Personal: new Coding({
         code: "personal",
         display: "Personal",
         system: "http://hl7.org/fhir/composition-attestation-mode"
@@ -37,7 +37,7 @@ export const CompositionAttestationModeValueSet = {
     /**
      * The person authenticated the content in their professional capacity.
      */
-    composition_attestation_mode_Professional: Coding.FromStrict({
+    composition_attestation_mode_Professional: new Coding({
         code: "professional",
         display: "Professional",
         system: "http://hl7.org/fhir/composition-attestation-mode"

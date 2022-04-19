@@ -61,10 +61,10 @@ export declare class Resource implements fhir.IResource {
     /**
      * Check if the current Resource contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Resource from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IResource): Resource;
+    static fromStrict(source: fhir.IResource): Resource;
 }
 //# sourceMappingURL=Resource.d.ts.map

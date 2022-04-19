@@ -13,7 +13,7 @@ export const PrecisionEstimateTypeValueSet = {
   /**
    * confidence interval.
    */
-  precision_estimate_type_ConfidenceInterval: Coding.FromStrict({
+  precision_estimate_type_ConfidenceInterval: new Coding({
     code: "CI",
     display: "confidence interval",
     system: "http://terminology.hl7.org/CodeSystem/precision-estimate-type"
@@ -21,7 +21,7 @@ export const PrecisionEstimateTypeValueSet = {
   /**
    * interquartile range.
    */
-  precision_estimate_type_InterquartileRange: Coding.FromStrict({
+  precision_estimate_type_InterquartileRange: new Coding({
     code: "IQR",
     display: "interquartile range",
     system: "http://terminology.hl7.org/CodeSystem/precision-estimate-type"
@@ -29,7 +29,7 @@ export const PrecisionEstimateTypeValueSet = {
   /**
    * standard deviation.
    */
-  precision_estimate_type_StandardDeviation: Coding.FromStrict({
+  precision_estimate_type_StandardDeviation: new Coding({
     code: "SD",
     display: "standard deviation",
     system: "http://terminology.hl7.org/CodeSystem/precision-estimate-type"
@@ -37,7 +37,7 @@ export const PrecisionEstimateTypeValueSet = {
   /**
    * standard error.
    */
-  precision_estimate_type_StandardError: Coding.FromStrict({
+  precision_estimate_type_StandardError: new Coding({
     code: "SE",
     display: "standard error",
     system: "http://terminology.hl7.org/CodeSystem/precision-estimate-type"

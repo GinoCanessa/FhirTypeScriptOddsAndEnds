@@ -13,7 +13,7 @@ export const ReferenceVersionRulesValueSet = {
     /**
      * The reference may be either version independent or version specific.
      */
-    reference_version_rules_EitherSpecificOrIndependent: Coding.FromStrict({
+    reference_version_rules_EitherSpecificOrIndependent: new Coding({
         code: "either",
         display: "Either Specific or independent",
         system: "http://hl7.org/fhir/reference-version-rules"
@@ -21,7 +21,7 @@ export const ReferenceVersionRulesValueSet = {
     /**
      * The reference must be version independent.
      */
-    reference_version_rules_VersionIndependent: Coding.FromStrict({
+    reference_version_rules_VersionIndependent: new Coding({
         code: "independent",
         display: "Version independent",
         system: "http://hl7.org/fhir/reference-version-rules"
@@ -29,7 +29,7 @@ export const ReferenceVersionRulesValueSet = {
     /**
      * The reference must be version specific.
      */
-    reference_version_rules_VersionSpecific: Coding.FromStrict({
+    reference_version_rules_VersionSpecific: new Coding({
         code: "specific",
         display: "Version Specific",
         system: "http://hl7.org/fhir/reference-version-rules"

@@ -10,4982 +10,4982 @@ import { Coding } from '../fhir';
  * This value set represents codes for types of foods and is provided as a suggestive example. It include codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 255620007 (Foods (substance)).
  */
 export const FoodTypeValueSet = {
-    FoodTypeValueSet_CitrusFruit: Coding.FromStrict({
+    FoodTypeValueSet_CitrusFruit: new Coding({
         code: "102259006",
         display: "Citrus fruit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PeanutButter: Coding.FromStrict({
+    FoodTypeValueSet_PeanutButter: new Coding({
         code: "102260001",
         display: "Peanut butter",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Strawberries: Coding.FromStrict({
+    FoodTypeValueSet_Strawberries: new Coding({
         code: "102261002",
         display: "Strawberries",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Chocolate: Coding.FromStrict({
+    FoodTypeValueSet_Chocolate: new Coding({
         code: "102262009",
         display: "Chocolate",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_EggsEdible: Coding.FromStrict({
+    FoodTypeValueSet_EggsEdible: new Coding({
         code: "102263004",
         display: "Eggs (edible)",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Cheese: Coding.FromStrict({
+    FoodTypeValueSet_Cheese: new Coding({
         code: "102264005",
         display: "Cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrowthStimulant: Coding.FromStrict({
+    FoodTypeValueSet_GrowthStimulant: new Coding({
         code: "102270004",
         display: "Growth stimulant",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Efrotomycin: Coding.FromStrict({
+    FoodTypeValueSet_Efrotomycin: new Coding({
         code: "102271000",
         display: "Efrotomycin",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Agar: Coding.FromStrict({
+    FoodTypeValueSet_Agar: new Coding({
         code: "10249006",
         display: "Agar",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Lactalbumin: Coding.FromStrict({
+    FoodTypeValueSet_Lactalbumin: new Coding({
         code: "102697003",
         display: "Lactalbumin",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_AlphaLactalbumin: Coding.FromStrict({
+    FoodTypeValueSet_AlphaLactalbumin: new Coding({
         code: "102698008",
         display: "alpha-Lactalbumin",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BetaLactalbumin: Coding.FromStrict({
+    FoodTypeValueSet_BetaLactalbumin: new Coding({
         code: "102699000",
         display: "beta-Lactalbumin",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MilkProtein: Coding.FromStrict({
+    FoodTypeValueSet_MilkProtein: new Coding({
         code: "10827009",
         display: "Milk protein",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PegademaseBovine: Coding.FromStrict({
+    FoodTypeValueSet_PegademaseBovine: new Coding({
         code: "108743002",
         display: "Pegademase bovine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MicrofibrillarCollagenHemostat: Coding.FromStrict({
+    FoodTypeValueSet_MicrofibrillarCollagenHemostat: new Coding({
         code: "109010000",
         display: "Microfibrillar collagen hemostat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BovineShockProteinAntibody: Coding.FromStrict({
+    FoodTypeValueSet_BovineShockProteinAntibody: new Coding({
         code: "116957009",
         display: "Bovine shock protein antibody",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BovineOsteocalcin: Coding.FromStrict({
+    FoodTypeValueSet_BovineOsteocalcin: new Coding({
         code: "117633004",
         display: "Bovine osteocalcin",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FishLiverOil: Coding.FromStrict({
+    FoodTypeValueSet_FishLiverOil: new Coding({
         code: "126076005",
         display: "Fish liver oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BurbotLiverOil: Coding.FromStrict({
+    FoodTypeValueSet_BurbotLiverOil: new Coding({
         code: "126077001",
         display: "Burbot liver oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PercomorphLiverOil: Coding.FromStrict({
+    FoodTypeValueSet_PercomorphLiverOil: new Coding({
         code: "126078006",
         display: "Percomorph liver oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PercoidLiverOil: Coding.FromStrict({
+    FoodTypeValueSet_PercoidLiverOil: new Coding({
         code: "126079003",
         display: "Percoid liver oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SharkLiverOil: Coding.FromStrict({
+    FoodTypeValueSet_SharkLiverOil: new Coding({
         code: "126080000",
         display: "Shark liver oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_HalibutLiverOil: Coding.FromStrict({
+    FoodTypeValueSet_HalibutLiverOil: new Coding({
         code: "126081001",
         display: "Halibut liver oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CodLiverOil: Coding.FromStrict({
+    FoodTypeValueSet_CodLiverOil: new Coding({
         code: "126082008",
         display: "Cod liver oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Salcatonin: Coding.FromStrict({
+    FoodTypeValueSet_Salcatonin: new Coding({
         code: "127384006",
         display: "Salcatonin",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Nut: Coding.FromStrict({
+    FoodTypeValueSet_Nut: new Coding({
         code: "13577000",
         display: "Nut",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PreparedFish: Coding.FromStrict({
+    FoodTypeValueSet_PreparedFish: new Coding({
         code: "14263006",
         display: "Prepared fish",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BombayMix: Coding.FromStrict({
+    FoodTypeValueSet_BombayMix: new Coding({
         code: "226017009",
         display: "Bombay mix",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CauliflowerCheese: Coding.FromStrict({
+    FoodTypeValueSet_CauliflowerCheese: new Coding({
         code: "226021002",
         display: "Cauliflower cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CheesePastry: Coding.FromStrict({
+    FoodTypeValueSet_CheesePastry: new Coding({
         code: "226022009",
         display: "Cheese pastry",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Cheesecake: Coding.FromStrict({
+    FoodTypeValueSet_Cheesecake: new Coding({
         code: "226023004",
         display: "Cheesecake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChocolateDigestiveBiscuit: Coding.FromStrict({
+    FoodTypeValueSet_ChocolateDigestiveBiscuit: new Coding({
         code: "226024005",
         display: "Chocolate digestive biscuit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Lasagne: Coding.FromStrict({
+    FoodTypeValueSet_Lasagne: new Coding({
         code: "226037008",
         display: "Lasagne",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Mint: Coding.FromStrict({
+    FoodTypeValueSet_Mint: new Coding({
         code: "226041007",
         display: "Mint",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PlainDigestiveBiscuit: Coding.FromStrict({
+    FoodTypeValueSet_PlainDigestiveBiscuit: new Coding({
         code: "226046002",
         display: "Plain digestive biscuit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Tamarind: Coding.FromStrict({
+    FoodTypeValueSet_Tamarind: new Coding({
         code: "226061001",
         display: "Tamarind",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TrailMix: Coding.FromStrict({
+    FoodTypeValueSet_TrailMix: new Coding({
         code: "226062008",
         display: "Trail mix",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FatDietary: Coding.FromStrict({
+    FoodTypeValueSet_FatDietary: new Coding({
         code: "226358006",
         display: "Fat - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FishOil: Coding.FromStrict({
+    FoodTypeValueSet_FishOil: new Coding({
         code: "226359003",
         display: "Fish oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_EicosapentaenoicAcid: Coding.FromStrict({
+    FoodTypeValueSet_EicosapentaenoicAcid: new Coding({
         code: "226367006",
         display: "Eicosapentaenoic acid",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DHADocosahexaenoicAcid: Coding.FromStrict({
+    FoodTypeValueSet_DHADocosahexaenoicAcid: new Coding({
         code: "226368001",
         display: "DHA - Docosahexaenoic acid",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_AppleJuice: Coding.FromStrict({
+    FoodTypeValueSet_AppleJuice: new Coding({
         code: "226491003",
         display: "Apple juice",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrapeJuice: Coding.FromStrict({
+    FoodTypeValueSet_GrapeJuice: new Coding({
         code: "226492005",
         display: "Grape juice",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrapefruitJuice: Coding.FromStrict({
+    FoodTypeValueSet_GrapefruitJuice: new Coding({
         code: "226493000",
         display: "Grapefruit juice",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LemonJuice: Coding.FromStrict({
+    FoodTypeValueSet_LemonJuice: new Coding({
         code: "226495007",
         display: "Lemon juice",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_OrangeJuice: Coding.FromStrict({
+    FoodTypeValueSet_OrangeJuice: new Coding({
         code: "226496008",
         display: "Orange juice",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PineappleJuice: Coding.FromStrict({
+    FoodTypeValueSet_PineappleJuice: new Coding({
         code: "226497004",
         display: "Pineapple juice",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TomatoJuice: Coding.FromStrict({
+    FoodTypeValueSet_TomatoJuice: new Coding({
         code: "226498009",
         display: "Tomato juice",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_StarchyFood: Coding.FromStrict({
+    FoodTypeValueSet_StarchyFood: new Coding({
         code: "226529007",
         display: "Starchy food",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BabyCereal: Coding.FromStrict({
+    FoodTypeValueSet_BabyCereal: new Coding({
         code: "226530002",
         display: "Baby cereal",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Rusk: Coding.FromStrict({
+    FoodTypeValueSet_Rusk: new Coding({
         code: "226531003",
         display: "Rusk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FlavoredRusk: Coding.FromStrict({
+    FoodTypeValueSet_FlavoredRusk: new Coding({
         code: "226532005",
         display: "Flavored rusk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LowSugarRusk: Coding.FromStrict({
+    FoodTypeValueSet_LowSugarRusk: new Coding({
         code: "226533000",
         display: "Low sugar rusk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PlainRusk: Coding.FromStrict({
+    FoodTypeValueSet_PlainRusk: new Coding({
         code: "226534006",
         display: "Plain rusk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WholemealRusk: Coding.FromStrict({
+    FoodTypeValueSet_WholemealRusk: new Coding({
         code: "226535007",
         display: "Wholemeal rusk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RiceBasedBabyCereal: Coding.FromStrict({
+    FoodTypeValueSet_RiceBasedBabyCereal: new Coding({
         code: "226536008",
         display: "Rice-based baby cereal",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MixedCerealBasedBabyCereal: Coding.FromStrict({
+    FoodTypeValueSet_MixedCerealBasedBabyCereal: new Coding({
         code: "226537004",
         display: "Mixed cereal-based baby cereal",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WheatBasedBabyCereal: Coding.FromStrict({
+    FoodTypeValueSet_WheatBasedBabyCereal: new Coding({
         code: "226538009",
         display: "Wheat-based baby cereal",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CookieAndOrCracker: Coding.FromStrict({
+    FoodTypeValueSet_CookieAndOrCracker: new Coding({
         code: "226539001",
         display: "Cookie and/or cracker",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChocolateBiscuit: Coding.FromStrict({
+    FoodTypeValueSet_ChocolateBiscuit: new Coding({
         code: "226540004",
         display: "Chocolate biscuit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FullCoatedChocolateBiscuit: Coding.FromStrict({
+    FoodTypeValueSet_FullCoatedChocolateBiscuit: new Coding({
         code: "226541000",
         display: "Full coated chocolate biscuit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_HalfCoatedChocolateBiscuit: Coding.FromStrict({
+    FoodTypeValueSet_HalfCoatedChocolateBiscuit: new Coding({
         code: "226542007",
         display: "Half-coated chocolate biscuit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Cracker: Coding.FromStrict({
+    FoodTypeValueSet_Cracker: new Coding({
         code: "226543002",
         display: "Cracker",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CreamCracker: Coding.FromStrict({
+    FoodTypeValueSet_CreamCracker: new Coding({
         code: "226544008",
         display: "Cream cracker",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WholemealCracker: Coding.FromStrict({
+    FoodTypeValueSet_WholemealCracker: new Coding({
         code: "226546005",
         display: "Wholemeal cracker",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Crispbread: Coding.FromStrict({
+    FoodTypeValueSet_Crispbread: new Coding({
         code: "226547001",
         display: "Crispbread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DigestiveBiscuit: Coding.FromStrict({
+    FoodTypeValueSet_DigestiveBiscuit: new Coding({
         code: "226548006",
         display: "Digestive biscuit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GingernutBiscuit: Coding.FromStrict({
+    FoodTypeValueSet_GingernutBiscuit: new Coding({
         code: "226549003",
         display: "Gingernut biscuit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_HomeMadeBiscuit: Coding.FromStrict({
+    FoodTypeValueSet_HomeMadeBiscuit: new Coding({
         code: "226550003",
         display: "Home-made biscuit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Matzo: Coding.FromStrict({
+    FoodTypeValueSet_Matzo: new Coding({
         code: "226551004",
         display: "Matzo",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Oatcake: Coding.FromStrict({
+    FoodTypeValueSet_Oatcake: new Coding({
         code: "226552006",
         display: "Oatcake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SandwichBiscuit: Coding.FromStrict({
+    FoodTypeValueSet_SandwichBiscuit: new Coding({
         code: "226553001",
         display: "Sandwich biscuit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SemiSweetBiscuit: Coding.FromStrict({
+    FoodTypeValueSet_SemiSweetBiscuit: new Coding({
         code: "226554007",
         display: "Semi-sweet biscuit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ShortSweetBiscuit: Coding.FromStrict({
+    FoodTypeValueSet_ShortSweetBiscuit: new Coding({
         code: "226555008",
         display: "Short-sweet biscuit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ShortbreadBiscuit: Coding.FromStrict({
+    FoodTypeValueSet_ShortbreadBiscuit: new Coding({
         code: "226556009",
         display: "Shortbread biscuit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WaferBiscuit: Coding.FromStrict({
+    FoodTypeValueSet_WaferBiscuit: new Coding({
         code: "226557000",
         display: "Wafer biscuit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WaterBiscuit: Coding.FromStrict({
+    FoodTypeValueSet_WaterBiscuit: new Coding({
         code: "226558005",
         display: "Water biscuit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Bread: Coding.FromStrict({
+    FoodTypeValueSet_Bread: new Coding({
         code: "226559002",
         display: "Bread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BrownBread: Coding.FromStrict({
+    FoodTypeValueSet_BrownBread: new Coding({
         code: "226560007",
         display: "Brown bread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BrownBreadRoll: Coding.FromStrict({
+    FoodTypeValueSet_BrownBreadRoll: new Coding({
         code: "226561006",
         display: "Brown bread roll",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Breadcrumbs: Coding.FromStrict({
+    FoodTypeValueSet_Breadcrumbs: new Coding({
         code: "226562004",
         display: "Breadcrumbs",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Chapati: Coding.FromStrict({
+    FoodTypeValueSet_Chapati: new Coding({
         code: "226563009",
         display: "Chapati",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WhiteChapati: Coding.FromStrict({
+    FoodTypeValueSet_WhiteChapati: new Coding({
         code: "226564003",
         display: "White chapati",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WhiteChapatiMadeWithFat: Coding.FromStrict({
+    FoodTypeValueSet_WhiteChapatiMadeWithFat: new Coding({
         code: "226565002",
         display: "White chapati made with fat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WhiteChapatiMadeWithoutFat: Coding.FromStrict({
+    FoodTypeValueSet_WhiteChapatiMadeWithoutFat: new Coding({
         code: "226566001",
         display: "White chapati made without fat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WholemealChapati: Coding.FromStrict({
+    FoodTypeValueSet_WholemealChapati: new Coding({
         code: "226567005",
         display: "Wholemeal chapati",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WholemealChapatiMadeWithFat: Coding.FromStrict({
+    FoodTypeValueSet_WholemealChapatiMadeWithFat: new Coding({
         code: "226568000",
         display: "Wholemeal chapati made with fat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WholemealChapatiMadeWithoutFat: Coding.FromStrict({
+    FoodTypeValueSet_WholemealChapatiMadeWithoutFat: new Coding({
         code: "226569008",
         display: "Wholemeal chapati made without fat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CurrantBread: Coding.FromStrict({
+    FoodTypeValueSet_CurrantBread: new Coding({
         code: "226570009",
         display: "Currant bread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GranaryBread: Coding.FromStrict({
+    FoodTypeValueSet_GranaryBread: new Coding({
         code: "226571008",
         display: "Granary bread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GranaryBreadRoll: Coding.FromStrict({
+    FoodTypeValueSet_GranaryBreadRoll: new Coding({
         code: "226572001",
         display: "Granary bread roll",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MaltBread: Coding.FromStrict({
+    FoodTypeValueSet_MaltBread: new Coding({
         code: "226574000",
         display: "Malt bread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_NaanBread: Coding.FromStrict({
+    FoodTypeValueSet_NaanBread: new Coding({
         code: "226575004",
         display: "Naan bread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Papadum: Coding.FromStrict({
+    FoodTypeValueSet_Papadum: new Coding({
         code: "226576003",
         display: "Papadum",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedPapadum: Coding.FromStrict({
+    FoodTypeValueSet_FriedPapadum: new Coding({
         code: "226577007",
         display: "Fried papadum",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrilledPapadum: Coding.FromStrict({
+    FoodTypeValueSet_GrilledPapadum: new Coding({
         code: "226578002",
         display: "Grilled papadum",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Paratha: Coding.FromStrict({
+    FoodTypeValueSet_Paratha: new Coding({
         code: "226579005",
         display: "Paratha",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PittaBread: Coding.FromStrict({
+    FoodTypeValueSet_PittaBread: new Coding({
         code: "226580008",
         display: "Pitta bread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WhitePittaBread: Coding.FromStrict({
+    FoodTypeValueSet_WhitePittaBread: new Coding({
         code: "226581007",
         display: "White pitta bread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WholemealPittaBread: Coding.FromStrict({
+    FoodTypeValueSet_WholemealPittaBread: new Coding({
         code: "226582000",
         display: "Wholemeal pitta bread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MilkBread: Coding.FromStrict({
+    FoodTypeValueSet_MilkBread: new Coding({
         code: "226583005",
         display: "Milk bread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RyeBread: Coding.FromStrict({
+    FoodTypeValueSet_RyeBread: new Coding({
         code: "226584004",
         display: "Rye bread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SodaBread: Coding.FromStrict({
+    FoodTypeValueSet_SodaBread: new Coding({
         code: "226585003",
         display: "Soda bread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Tortilla: Coding.FromStrict({
+    FoodTypeValueSet_Tortilla: new Coding({
         code: "226587006",
         display: "Tortilla",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WheatgermBread: Coding.FromStrict({
+    FoodTypeValueSet_WheatgermBread: new Coding({
         code: "226589009",
         display: "Wheatgerm bread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WhiteBread: Coding.FromStrict({
+    FoodTypeValueSet_WhiteBread: new Coding({
         code: "226590000",
         display: "White bread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedWhiteBread: Coding.FromStrict({
+    FoodTypeValueSet_FriedWhiteBread: new Coding({
         code: "226592008",
         display: "Fried white bread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WestIndianWhiteBread: Coding.FromStrict({
+    FoodTypeValueSet_WestIndianWhiteBread: new Coding({
         code: "226593003",
         display: "West Indian white bread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WhiteBreadRoll: Coding.FromStrict({
+    FoodTypeValueSet_WhiteBreadRoll: new Coding({
         code: "226595005",
         display: "White bread roll",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WholemealBread: Coding.FromStrict({
+    FoodTypeValueSet_WholemealBread: new Coding({
         code: "226596006",
         display: "Wholemeal bread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WholemealBreadRoll: Coding.FromStrict({
+    FoodTypeValueSet_WholemealBreadRoll: new Coding({
         code: "226597002",
         display: "Wholemeal bread roll",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BreakfastCereal: Coding.FromStrict({
+    FoodTypeValueSet_BreakfastCereal: new Coding({
         code: "226598007",
         display: "Breakfast cereal",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BranFlakes: Coding.FromStrict({
+    FoodTypeValueSet_BranFlakes: new Coding({
         code: "226601002",
         display: "Bran flakes",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Cornflakes: Coding.FromStrict({
+    FoodTypeValueSet_Cornflakes: new Coding({
         code: "226604005",
         display: "Cornflakes",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CrunchyNutCornflakes: Coding.FromStrict({
+    FoodTypeValueSet_CrunchyNutCornflakes: new Coding({
         code: "226605006",
         display: "Crunchy nut cornflakes",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Muesli: Coding.FromStrict({
+    FoodTypeValueSet_Muesli: new Coding({
         code: "226611009",
         display: "Muesli",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MuesliSwissStyle: Coding.FromStrict({
+    FoodTypeValueSet_MuesliSwissStyle: new Coding({
         code: "226612002",
         display: "Muesli Swiss style",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MuesliWithExtraFruit: Coding.FromStrict({
+    FoodTypeValueSet_MuesliWithExtraFruit: new Coding({
         code: "226613007",
         display: "Muesli with extra fruit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MuesliWithNoAddedSugar: Coding.FromStrict({
+    FoodTypeValueSet_MuesliWithNoAddedSugar: new Coding({
         code: "226614001",
         display: "Muesli with no added sugar",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_OatAndWheatBran: Coding.FromStrict({
+    FoodTypeValueSet_OatAndWheatBran: new Coding({
         code: "226616004",
         display: "Oat and wheat bran",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Porridge: Coding.FromStrict({
+    FoodTypeValueSet_Porridge: new Coding({
         code: "226617008",
         display: "Porridge",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PorridgeMadeWithMilk: Coding.FromStrict({
+    FoodTypeValueSet_PorridgeMadeWithMilk: new Coding({
         code: "226618003",
         display: "Porridge made with milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PorridgeMadeWithSemiSkimmedMilk: Coding.FromStrict({
+    FoodTypeValueSet_PorridgeMadeWithSemiSkimmedMilk: new Coding({
         code: "226619006",
         display: "Porridge made with semi-skimmed milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PorridgeMadeWithSkimmedMilk: Coding.FromStrict({
+    FoodTypeValueSet_PorridgeMadeWithSkimmedMilk: new Coding({
         code: "226620000",
         display: "Porridge made with skimmed milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PorridgeMadeWithWholeMilk: Coding.FromStrict({
+    FoodTypeValueSet_PorridgeMadeWithWholeMilk: new Coding({
         code: "226621001",
         display: "Porridge made with whole milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PorridgeMadeWithWater: Coding.FromStrict({
+    FoodTypeValueSet_PorridgeMadeWithWater: new Coding({
         code: "226622008",
         display: "Porridge made with water",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Cake: Coding.FromStrict({
+    FoodTypeValueSet_Cake: new Coding({
         code: "226639005",
         display: "Cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_AllBranLoaf: Coding.FromStrict({
+    FoodTypeValueSet_AllBranLoaf: new Coding({
         code: "226640007",
         display: "All bran loaf",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BattenburgCake: Coding.FromStrict({
+    FoodTypeValueSet_BattenburgCake: new Coding({
         code: "226641006",
         display: "Battenburg cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WelshCheesecake: Coding.FromStrict({
+    FoodTypeValueSet_WelshCheesecake: new Coding({
         code: "226642004",
         display: "Welsh cheesecake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CherryCake: Coding.FromStrict({
+    FoodTypeValueSet_CherryCake: new Coding({
         code: "226643009",
         display: "Cherry cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChineseCake: Coding.FromStrict({
+    FoodTypeValueSet_ChineseCake: new Coding({
         code: "226644003",
         display: "Chinese cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChineseGlutinousRiceFlourCake: Coding.FromStrict({
+    FoodTypeValueSet_ChineseGlutinousRiceFlourCake: new Coding({
         code: "226645002",
         display: "Chinese glutinous rice flour cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChocolateCake: Coding.FromStrict({
+    FoodTypeValueSet_ChocolateCake: new Coding({
         code: "226647005",
         display: "Chocolate cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChocolateCakeWithButterIcing: Coding.FromStrict({
+    FoodTypeValueSet_ChocolateCakeWithButterIcing: new Coding({
         code: "226648000",
         display: "Chocolate cake with butter icing",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CoconutCake: Coding.FromStrict({
+    FoodTypeValueSet_CoconutCake: new Coding({
         code: "226649008",
         display: "Coconut cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CrispieCake: Coding.FromStrict({
+    FoodTypeValueSet_CrispieCake: new Coding({
         code: "226650008",
         display: "Crispie cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FancyIcedCake: Coding.FromStrict({
+    FoodTypeValueSet_FancyIcedCake: new Coding({
         code: "226651007",
         display: "Fancy iced cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FruitCake: Coding.FromStrict({
+    FoodTypeValueSet_FruitCake: new Coding({
         code: "226652000",
         display: "Fruit cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PlainFruitCake: Coding.FromStrict({
+    FoodTypeValueSet_PlainFruitCake: new Coding({
         code: "226653005",
         display: "Plain fruit cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RichFruitCake: Coding.FromStrict({
+    FoodTypeValueSet_RichFruitCake: new Coding({
         code: "226654004",
         display: "Rich fruit cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_IcedFruitCake: Coding.FromStrict({
+    FoodTypeValueSet_IcedFruitCake: new Coding({
         code: "226655003",
         display: "Iced fruit cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WholemealFruitCake: Coding.FromStrict({
+    FoodTypeValueSet_WholemealFruitCake: new Coding({
         code: "226656002",
         display: "Wholemeal fruit cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Gateau: Coding.FromStrict({
+    FoodTypeValueSet_Gateau: new Coding({
         code: "226657006",
         display: "Gateau",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Gingerbread: Coding.FromStrict({
+    FoodTypeValueSet_Gingerbread: new Coding({
         code: "226658001",
         display: "Gingerbread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LardyCake: Coding.FromStrict({
+    FoodTypeValueSet_LardyCake: new Coding({
         code: "226659009",
         display: "Lardy cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MadeiraCake: Coding.FromStrict({
+    FoodTypeValueSet_MadeiraCake: new Coding({
         code: "226660004",
         display: "Madeira cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RockCake: Coding.FromStrict({
+    FoodTypeValueSet_RockCake: new Coding({
         code: "226661000",
         display: "Rock cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Sevyiann: Coding.FromStrict({
+    FoodTypeValueSet_Sevyiann: new Coding({
         code: "226662007",
         display: "Sevyiann",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SpongeCake: Coding.FromStrict({
+    FoodTypeValueSet_SpongeCake: new Coding({
         code: "226663002",
         display: "Sponge cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FatlessSpongeCake: Coding.FromStrict({
+    FoodTypeValueSet_FatlessSpongeCake: new Coding({
         code: "226664008",
         display: "Fatless sponge cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FrozenSpongeCake: Coding.FromStrict({
+    FoodTypeValueSet_FrozenSpongeCake: new Coding({
         code: "226665009",
         display: "Frozen sponge cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_JamFilledSpongeCake: Coding.FromStrict({
+    FoodTypeValueSet_JamFilledSpongeCake: new Coding({
         code: "226666005",
         display: "Jam-filled sponge cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FreshCreamFilledSpongeCake: Coding.FromStrict({
+    FoodTypeValueSet_FreshCreamFilledSpongeCake: new Coding({
         code: "226667001",
         display: "Fresh cream-filled sponge cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SpongeCakeWithButterIcing: Coding.FromStrict({
+    FoodTypeValueSet_SpongeCakeWithButterIcing: new Coding({
         code: "226668006",
         display: "Sponge cake with butter icing",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SpongeCakeMadeWithCakeMix: Coding.FromStrict({
+    FoodTypeValueSet_SpongeCakeMadeWithCakeMix: new Coding({
         code: "226669003",
         display: "Sponge cake made with cake mix",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SwissRoll: Coding.FromStrict({
+    FoodTypeValueSet_SwissRoll: new Coding({
         code: "226670002",
         display: "Swiss roll",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChocolateFilledSwissRoll: Coding.FromStrict({
+    FoodTypeValueSet_ChocolateFilledSwissRoll: new Coding({
         code: "226671003",
         display: "Chocolate filled swiss roll",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_JamFilledSwissRoll: Coding.FromStrict({
+    FoodTypeValueSet_JamFilledSwissRoll: new Coding({
         code: "226672005",
         display: "Jam filled swiss roll",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_IndividualSwissRoll: Coding.FromStrict({
+    FoodTypeValueSet_IndividualSwissRoll: new Coding({
         code: "226673000",
         display: "Individual swiss roll",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WelshCake: Coding.FromStrict({
+    FoodTypeValueSet_WelshCake: new Coding({
         code: "226674006",
         display: "Welsh cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_IndividualCakesAndPastries: Coding.FromStrict({
+    FoodTypeValueSet_IndividualCakesAndPastries: new Coding({
         code: "226675007",
         display: "Individual cakes and pastries",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_AsianPastry: Coding.FromStrict({
+    FoodTypeValueSet_AsianPastry: new Coding({
         code: "226676008",
         display: "Asian pastry",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BrandySnap: Coding.FromStrict({
+    FoodTypeValueSet_BrandySnap: new Coding({
         code: "226677004",
         display: "Brandy snap",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Burfi: Coding.FromStrict({
+    FoodTypeValueSet_Burfi: new Coding({
         code: "226678009",
         display: "Burfi",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChelseaBun: Coding.FromStrict({
+    FoodTypeValueSet_ChelseaBun: new Coding({
         code: "226679001",
         display: "Chelsea bun",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChouxBun: Coding.FromStrict({
+    FoodTypeValueSet_ChouxBun: new Coding({
         code: "226680003",
         display: "Choux bun",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CreamHorn: Coding.FromStrict({
+    FoodTypeValueSet_CreamHorn: new Coding({
         code: "226681004",
         display: "Cream horn",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Crumpet: Coding.FromStrict({
+    FoodTypeValueSet_Crumpet: new Coding({
         code: "226682006",
         display: "Crumpet",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CurrantBun: Coding.FromStrict({
+    FoodTypeValueSet_CurrantBun: new Coding({
         code: "226683001",
         display: "Currant bun",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CustardTart: Coding.FromStrict({
+    FoodTypeValueSet_CustardTart: new Coding({
         code: "226684007",
         display: "Custard tart",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DanishPastry: Coding.FromStrict({
+    FoodTypeValueSet_DanishPastry: new Coding({
         code: "226685008",
         display: "Danish pastry",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Doughnut: Coding.FromStrict({
+    FoodTypeValueSet_Doughnut: new Coding({
         code: "226686009",
         display: "Doughnut",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_JamDoughnut: Coding.FromStrict({
+    FoodTypeValueSet_JamDoughnut: new Coding({
         code: "226687000",
         display: "Jam doughnut",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RingDoughnut: Coding.FromStrict({
+    FoodTypeValueSet_RingDoughnut: new Coding({
         code: "226688005",
         display: "Ring doughnut",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FreshCreamDoughnut: Coding.FromStrict({
+    FoodTypeValueSet_FreshCreamDoughnut: new Coding({
         code: "226689002",
         display: "Fresh cream doughnut",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_EcclesCake: Coding.FromStrict({
+    FoodTypeValueSet_EcclesCake: new Coding({
         code: "226690006",
         display: "Eccles cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Eclair: Coding.FromStrict({
+    FoodTypeValueSet_Eclair: new Coding({
         code: "226691005",
         display: "Eclair",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Flapjack: Coding.FromStrict({
+    FoodTypeValueSet_Flapjack: new Coding({
         code: "226692003",
         display: "Flapjack",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GreekPastry: Coding.FromStrict({
+    FoodTypeValueSet_GreekPastry: new Coding({
         code: "226693008",
         display: "Greek pastry",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GulabJamen: Coding.FromStrict({
+    FoodTypeValueSet_GulabJamen: new Coding({
         code: "226694002",
         display: "Gulab jamen",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Halwa: Coding.FromStrict({
+    FoodTypeValueSet_Halwa: new Coding({
         code: "226695001",
         display: "Halwa",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_HotCrossBun: Coding.FromStrict({
+    FoodTypeValueSet_HotCrossBun: new Coding({
         code: "226697009",
         display: "Hot cross bun",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_JaffaCake: Coding.FromStrict({
+    FoodTypeValueSet_JaffaCake: new Coding({
         code: "226698004",
         display: "Jaffa cake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_JamTart: Coding.FromStrict({
+    FoodTypeValueSet_JamTart: new Coding({
         code: "226699007",
         display: "Jam tart",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Jellabi: Coding.FromStrict({
+    FoodTypeValueSet_Jellabi: new Coding({
         code: "226700008",
         display: "Jellabi",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MeltingMoment: Coding.FromStrict({
+    FoodTypeValueSet_MeltingMoment: new Coding({
         code: "226701007",
         display: "Melting moment",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MincePie: Coding.FromStrict({
+    FoodTypeValueSet_MincePie: new Coding({
         code: "226702000",
         display: "Mince pie",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MincemeatTart: Coding.FromStrict({
+    FoodTypeValueSet_MincemeatTart: new Coding({
         code: "226703005",
         display: "Mincemeat tart",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Muffin: Coding.FromStrict({
+    FoodTypeValueSet_Muffin: new Coding({
         code: "226704004",
         display: "Muffin",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Pinni: Coding.FromStrict({
+    FoodTypeValueSet_Pinni: new Coding({
         code: "226705003",
         display: "Pinni",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RumBaba: Coding.FromStrict({
+    FoodTypeValueSet_RumBaba: new Coding({
         code: "226706002",
         display: "Rum baba",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Scone: Coding.FromStrict({
+    FoodTypeValueSet_Scone: new Coding({
         code: "226707006",
         display: "Scone",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CheeseScone: Coding.FromStrict({
+    FoodTypeValueSet_CheeseScone: new Coding({
         code: "226708001",
         display: "Cheese scone",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FruitScone: Coding.FromStrict({
+    FoodTypeValueSet_FruitScone: new Coding({
         code: "226709009",
         display: "Fruit scone",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PlainScone: Coding.FromStrict({
+    FoodTypeValueSet_PlainScone: new Coding({
         code: "226710004",
         display: "Plain scone",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PotatoScone: Coding.FromStrict({
+    FoodTypeValueSet_PotatoScone: new Coding({
         code: "226711000",
         display: "Potato scone",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WholemealScone: Coding.FromStrict({
+    FoodTypeValueSet_WholemealScone: new Coding({
         code: "226712007",
         display: "Wholemeal scone",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WholemealFruitScone: Coding.FromStrict({
+    FoodTypeValueSet_WholemealFruitScone: new Coding({
         code: "226713002",
         display: "Wholemeal fruit scone",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ScotchPancake: Coding.FromStrict({
+    FoodTypeValueSet_ScotchPancake: new Coding({
         code: "226714008",
         display: "Scotch pancake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Shortbread: Coding.FromStrict({
+    FoodTypeValueSet_Shortbread: new Coding({
         code: "226715009",
         display: "Shortbread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_StrawberryTartlet: Coding.FromStrict({
+    FoodTypeValueSet_StrawberryTartlet: new Coding({
         code: "226716005",
         display: "Strawberry tartlet",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Teacake: Coding.FromStrict({
+    FoodTypeValueSet_Teacake: new Coding({
         code: "226717001",
         display: "Teacake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_VanillaSlice: Coding.FromStrict({
+    FoodTypeValueSet_VanillaSlice: new Coding({
         code: "226718006",
         display: "Vanilla slice",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Waffle: Coding.FromStrict({
+    FoodTypeValueSet_Waffle: new Coding({
         code: "226719003",
         display: "Waffle",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Arrowroot: Coding.FromStrict({
+    FoodTypeValueSet_Arrowroot: new Coding({
         code: "226720009",
         display: "Arrowroot",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PearlBarley: Coding.FromStrict({
+    FoodTypeValueSet_PearlBarley: new Coding({
         code: "226721008",
         display: "Pearl barley",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WholeGrainBarley: Coding.FromStrict({
+    FoodTypeValueSet_WholeGrainBarley: new Coding({
         code: "226722001",
         display: "Whole grain barley",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BuckwheatCereal: Coding.FromStrict({
+    FoodTypeValueSet_BuckwheatCereal: new Coding({
         code: "226723006",
         display: "Buckwheat - cereal",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BulgurWheat: Coding.FromStrict({
+    FoodTypeValueSet_BulgurWheat: new Coding({
         code: "226724000",
         display: "Bulgur wheat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Oatmeal: Coding.FromStrict({
+    FoodTypeValueSet_Oatmeal: new Coding({
         code: "226725004",
         display: "Oatmeal",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Popcorn: Coding.FromStrict({
+    FoodTypeValueSet_Popcorn: new Coding({
         code: "226726003",
         display: "Popcorn",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PlainPopcorn: Coding.FromStrict({
+    FoodTypeValueSet_PlainPopcorn: new Coding({
         code: "226727007",
         display: "Plain popcorn",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SweetPopcorn: Coding.FromStrict({
+    FoodTypeValueSet_SweetPopcorn: new Coding({
         code: "226728002",
         display: "Sweet popcorn",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SaltedPopcorn: Coding.FromStrict({
+    FoodTypeValueSet_SaltedPopcorn: new Coding({
         code: "226729005",
         display: "Salted popcorn",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ButteredPopcorn: Coding.FromStrict({
+    FoodTypeValueSet_ButteredPopcorn: new Coding({
         code: "226730000",
         display: "Buttered popcorn",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Sago: Coding.FromStrict({
+    FoodTypeValueSet_Sago: new Coding({
         code: "226731001",
         display: "Sago",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Semolina: Coding.FromStrict({
+    FoodTypeValueSet_Semolina: new Coding({
         code: "226732008",
         display: "Semolina",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Tapioca: Coding.FromStrict({
+    FoodTypeValueSet_Tapioca: new Coding({
         code: "226733003",
         display: "Tapioca",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Wheatgerm: Coding.FromStrict({
+    FoodTypeValueSet_Wheatgerm: new Coding({
         code: "226734009",
         display: "Wheatgerm",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Noodles: Coding.FromStrict({
+    FoodTypeValueSet_Noodles: new Coding({
         code: "226735005",
         display: "Noodles",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_EggNoodles: Coding.FromStrict({
+    FoodTypeValueSet_EggNoodles: new Coding({
         code: "226736006",
         display: "Egg noodles",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedNoodles: Coding.FromStrict({
+    FoodTypeValueSet_FriedNoodles: new Coding({
         code: "226737002",
         display: "Fried noodles",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PlainNoodles: Coding.FromStrict({
+    FoodTypeValueSet_PlainNoodles: new Coding({
         code: "226738007",
         display: "Plain noodles",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PotNoodles: Coding.FromStrict({
+    FoodTypeValueSet_PotNoodles: new Coding({
         code: "226739004",
         display: "Pot noodles",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Pasta: Coding.FromStrict({
+    FoodTypeValueSet_Pasta: new Coding({
         code: "226740002",
         display: "Pasta",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Cannelloni: Coding.FromStrict({
+    FoodTypeValueSet_Cannelloni: new Coding({
         code: "226741003",
         display: "Cannelloni",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Macaroni: Coding.FromStrict({
+    FoodTypeValueSet_Macaroni: new Coding({
         code: "226742005",
         display: "Macaroni",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Ravioli: Coding.FromStrict({
+    FoodTypeValueSet_Ravioli: new Coding({
         code: "226743000",
         display: "Ravioli",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Spaghetti: Coding.FromStrict({
+    FoodTypeValueSet_Spaghetti: new Coding({
         code: "226744006",
         display: "Spaghetti",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WhiteSpaghetti: Coding.FromStrict({
+    FoodTypeValueSet_WhiteSpaghetti: new Coding({
         code: "226745007",
         display: "White spaghetti",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WholemealSpaghetti: Coding.FromStrict({
+    FoodTypeValueSet_WholemealSpaghetti: new Coding({
         code: "226746008",
         display: "Wholemeal spaghetti",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedSpaghetti: Coding.FromStrict({
+    FoodTypeValueSet_TinnedSpaghetti: new Coding({
         code: "226747004",
         display: "Tinned spaghetti",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Vermicelli: Coding.FromStrict({
+    FoodTypeValueSet_Vermicelli: new Coding({
         code: "226748009",
         display: "Vermicelli",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Pastry: Coding.FromStrict({
+    FoodTypeValueSet_Pastry: new Coding({
         code: "226749001",
         display: "Pastry",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChouxPastry: Coding.FromStrict({
+    FoodTypeValueSet_ChouxPastry: new Coding({
         code: "226750001",
         display: "Choux pastry",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FlakyPastry: Coding.FromStrict({
+    FoodTypeValueSet_FlakyPastry: new Coding({
         code: "226751002",
         display: "Flaky pastry",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FlanCasePastry: Coding.FromStrict({
+    FoodTypeValueSet_FlanCasePastry: new Coding({
         code: "226752009",
         display: "Flan case pastry",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PuffPastry: Coding.FromStrict({
+    FoodTypeValueSet_PuffPastry: new Coding({
         code: "226753004",
         display: "Puff pastry",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ShortcrustPastry: Coding.FromStrict({
+    FoodTypeValueSet_ShortcrustPastry: new Coding({
         code: "226754005",
         display: "Shortcrust pastry",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WholemealPastry: Coding.FromStrict({
+    FoodTypeValueSet_WholemealPastry: new Coding({
         code: "226755006",
         display: "Wholemeal pastry",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BrownRice: Coding.FromStrict({
+    FoodTypeValueSet_BrownRice: new Coding({
         code: "226756007",
         display: "Brown rice",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RedRice: Coding.FromStrict({
+    FoodTypeValueSet_RedRice: new Coding({
         code: "226757003",
         display: "Red rice",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SavoryRice: Coding.FromStrict({
+    FoodTypeValueSet_SavoryRice: new Coding({
         code: "226758008",
         display: "Savory rice",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WhiteRice: Coding.FromStrict({
+    FoodTypeValueSet_WhiteRice: new Coding({
         code: "226759000",
         display: "White rice",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DairyProducts: Coding.FromStrict({
+    FoodTypeValueSet_DairyProducts: new Coding({
         code: "226760005",
         display: "Dairy products",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GoldTopMilk: Coding.FromStrict({
+    FoodTypeValueSet_GoldTopMilk: new Coding({
         code: "226761009",
         display: "Gold top milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FlavoredCowQuoteSMilk: Coding.FromStrict({
+    FoodTypeValueSet_FlavoredCowQuoteSMilk: new Coding({
         code: "226762002",
         display: "Flavored cow's milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SemiSkimmedMilk: Coding.FromStrict({
+    FoodTypeValueSet_SemiSkimmedMilk: new Coding({
         code: "226763007",
         display: "Semi-skimmed milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CalciumFortifiedSemiSkimmedMilk: Coding.FromStrict({
+    FoodTypeValueSet_CalciumFortifiedSemiSkimmedMilk: new Coding({
         code: "226764001",
         display: "Calcium fortified semi-skimmed milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CalciumFortifiedSkimmedMilk: Coding.FromStrict({
+    FoodTypeValueSet_CalciumFortifiedSkimmedMilk: new Coding({
         code: "226765000",
         display: "Calcium fortified skimmed milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SterilizedMilk: Coding.FromStrict({
+    FoodTypeValueSet_SterilizedMilk: new Coding({
         code: "226766004",
         display: "Sterilized milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WholeMilk: Coding.FromStrict({
+    FoodTypeValueSet_WholeMilk: new Coding({
         code: "226767008",
         display: "Whole milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CalciumFortifiedWholeMilk: Coding.FromStrict({
+    FoodTypeValueSet_CalciumFortifiedWholeMilk: new Coding({
         code: "226768003",
         display: "Calcium fortified whole milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Buttermilk: Coding.FromStrict({
+    FoodTypeValueSet_Buttermilk: new Coding({
         code: "226769006",
         display: "Buttermilk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Whey: Coding.FromStrict({
+    FoodTypeValueSet_Whey: new Coding({
         code: "226770007",
         display: "Whey",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedMilk: Coding.FromStrict({
+    FoodTypeValueSet_DriedMilk: new Coding({
         code: "226771006",
         display: "Dried milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ButtermilkPowder: Coding.FromStrict({
+    FoodTypeValueSet_ButtermilkPowder: new Coding({
         code: "226774003",
         display: "Buttermilk powder",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedGoatQuoteSMilk: Coding.FromStrict({
+    FoodTypeValueSet_DriedGoatQuoteSMilk: new Coding({
         code: "226775002",
         display: "Dried goat's milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedCowQuoteSMilk: Coding.FromStrict({
+    FoodTypeValueSet_DriedCowQuoteSMilk: new Coding({
         code: "226776001",
         display: "Dried cow's milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedSemiSkimmedCowQuoteSMilk: Coding.FromStrict({
+    FoodTypeValueSet_DriedSemiSkimmedCowQuoteSMilk: new Coding({
         code: "226777005",
         display: "Dried semi-skimmed cow's milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SkimmedMilkPowder: Coding.FromStrict({
+    FoodTypeValueSet_SkimmedMilkPowder: new Coding({
         code: "226778000",
         display: "Skimmed milk powder",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedSkimmedCowQuoteSMilkWithVegetableFat: Coding.FromStrict({
+    FoodTypeValueSet_DriedSkimmedCowQuoteSMilkWithVegetableFat: new Coding({
         code: "226779008",
         display: "Dried skimmed cow's milk with vegetable fat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedWholeMilk: Coding.FromStrict({
+    FoodTypeValueSet_DriedWholeMilk: new Coding({
         code: "226780006",
         display: "Dried whole milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedSoyMilk: Coding.FromStrict({
+    FoodTypeValueSet_DriedSoyMilk: new Coding({
         code: "226781005",
         display: "Dried soy milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedWhey: Coding.FromStrict({
+    FoodTypeValueSet_DriedWhey: new Coding({
         code: "226782003",
         display: "Dried whey",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedMilk: Coding.FromStrict({
+    FoodTypeValueSet_TinnedMilk: new Coding({
         code: "226783008",
         display: "Tinned milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CondensedMilk: Coding.FromStrict({
+    FoodTypeValueSet_CondensedMilk: new Coding({
         code: "226784002",
         display: "Condensed milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SkimmedSweetenedCondensedMilk: Coding.FromStrict({
+    FoodTypeValueSet_SkimmedSweetenedCondensedMilk: new Coding({
         code: "226785001",
         display: "Skimmed sweetened condensed milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WholeSweetenedCondensedMilk: Coding.FromStrict({
+    FoodTypeValueSet_WholeSweetenedCondensedMilk: new Coding({
         code: "226786000",
         display: "Whole sweetened condensed milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CondensedMilk_2: Coding.FromStrict({
+    FoodTypeValueSet_CondensedMilk_2: new Coding({
         code: "226787009",
         display: "Condensed milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LowFatEvaporatedMilk: Coding.FromStrict({
+    FoodTypeValueSet_LowFatEvaporatedMilk: new Coding({
         code: "226788004",
         display: "Low fat evaporated milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MotherQuoteSMilk: Coding.FromStrict({
+    FoodTypeValueSet_MotherQuoteSMilk: new Coding({
         code: "226789007",
         display: "Mother's milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_EBMExpressedBreastMilk: Coding.FromStrict({
+    FoodTypeValueSet_EBMExpressedBreastMilk: new Coding({
         code: "226790003",
         display: "EBM - Expressed breast milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SheepMilk: Coding.FromStrict({
+    FoodTypeValueSet_SheepMilk: new Coding({
         code: "226791004",
         display: "Sheep milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SoyMilk: Coding.FromStrict({
+    FoodTypeValueSet_SoyMilk: new Coding({
         code: "226793001",
         display: "Soy milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_JuniorMilk: Coding.FromStrict({
+    FoodTypeValueSet_JuniorMilk: new Coding({
         code: "226795008",
         display: "Junior milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FreshCream: Coding.FromStrict({
+    FoodTypeValueSet_FreshCream: new Coding({
         code: "226796009",
         display: "Fresh cream",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_HalfCream: Coding.FromStrict({
+    FoodTypeValueSet_HalfCream: new Coding({
         code: "226797000",
         display: "Half-cream",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DoubleCream: Coding.FromStrict({
+    FoodTypeValueSet_DoubleCream: new Coding({
         code: "226798005",
         display: "Double cream",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ClottedCream: Coding.FromStrict({
+    FoodTypeValueSet_ClottedCream: new Coding({
         code: "226799002",
         display: "Clotted cream",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SingleCream: Coding.FromStrict({
+    FoodTypeValueSet_SingleCream: new Coding({
         code: "226800003",
         display: "Single cream",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SouredCream: Coding.FromStrict({
+    FoodTypeValueSet_SouredCream: new Coding({
         code: "226801004",
         display: "Soured cream",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WhippingCream: Coding.FromStrict({
+    FoodTypeValueSet_WhippingCream: new Coding({
         code: "226802006",
         display: "Whipping cream",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedCream: Coding.FromStrict({
+    FoodTypeValueSet_TinnedCream: new Coding({
         code: "226803001",
         display: "Tinned cream",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedTipTopCream: Coding.FromStrict({
+    FoodTypeValueSet_TinnedTipTopCream: new Coding({
         code: "226804007",
         display: "Tinned tip-top cream",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ImitationCream: Coding.FromStrict({
+    FoodTypeValueSet_ImitationCream: new Coding({
         code: "226805008",
         display: "Imitation cream",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DessertTopCream: Coding.FromStrict({
+    FoodTypeValueSet_DessertTopCream: new Coding({
         code: "226806009",
         display: "Dessert top cream",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ElmleaCream: Coding.FromStrict({
+    FoodTypeValueSet_ElmleaCream: new Coding({
         code: "226807000",
         display: "Elmlea cream",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Smatana: Coding.FromStrict({
+    FoodTypeValueSet_Smatana: new Coding({
         code: "226808005",
         display: "Smatana",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CheeseSpread: Coding.FromStrict({
+    FoodTypeValueSet_CheeseSpread: new Coding({
         code: "226809002",
         display: "Cheese spread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PlainCheeseSpread: Coding.FromStrict({
+    FoodTypeValueSet_PlainCheeseSpread: new Coding({
         code: "226810007",
         display: "Plain cheese spread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FlavoredCheeseSpread: Coding.FromStrict({
+    FoodTypeValueSet_FlavoredCheeseSpread: new Coding({
         code: "226811006",
         display: "Flavored cheese spread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LacticCheeseSpread: Coding.FromStrict({
+    FoodTypeValueSet_LacticCheeseSpread: new Coding({
         code: "226812004",
         display: "Lactic cheese spread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LowFatCheeseSpread: Coding.FromStrict({
+    FoodTypeValueSet_LowFatCheeseSpread: new Coding({
         code: "226813009",
         display: "Low fat cheese spread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CottageCheese: Coding.FromStrict({
+    FoodTypeValueSet_CottageCheese: new Coding({
         code: "226814003",
         display: "Cottage cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PlainCottageCheese: Coding.FromStrict({
+    FoodTypeValueSet_PlainCottageCheese: new Coding({
         code: "226815002",
         display: "Plain cottage cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_VeryLowFatCottageCheese: Coding.FromStrict({
+    FoodTypeValueSet_VeryLowFatCottageCheese: new Coding({
         code: "226816001",
         display: "Very low fat cottage cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CottageCheeseWithAdditions: Coding.FromStrict({
+    FoodTypeValueSet_CottageCheeseWithAdditions: new Coding({
         code: "226817005",
         display: "Cottage cheese with additions",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_HardCheese: Coding.FromStrict({
+    FoodTypeValueSet_HardCheese: new Coding({
         code: "226818000",
         display: "Hard cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CaerphillyCheese: Coding.FromStrict({
+    FoodTypeValueSet_CaerphillyCheese: new Coding({
         code: "226819008",
         display: "Caerphilly cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CheddarCheese: Coding.FromStrict({
+    FoodTypeValueSet_CheddarCheese: new Coding({
         code: "226820002",
         display: "Cheddar cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ReducedFatCheddarCheese: Coding.FromStrict({
+    FoodTypeValueSet_ReducedFatCheddarCheese: new Coding({
         code: "226821003",
         display: "Reduced fat cheddar cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_VegetarianCheddarCheese: Coding.FromStrict({
+    FoodTypeValueSet_VegetarianCheddarCheese: new Coding({
         code: "226822005",
         display: "Vegetarian cheddar cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CheshireCheese: Coding.FromStrict({
+    FoodTypeValueSet_CheshireCheese: new Coding({
         code: "226823000",
         display: "Cheshire cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ReducedFatCheshireCheese: Coding.FromStrict({
+    FoodTypeValueSet_ReducedFatCheshireCheese: new Coding({
         code: "226824006",
         display: "Reduced fat Cheshire cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DerbyCheese: Coding.FromStrict({
+    FoodTypeValueSet_DerbyCheese: new Coding({
         code: "226825007",
         display: "Derby cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DanishBlueCheese: Coding.FromStrict({
+    FoodTypeValueSet_DanishBlueCheese: new Coding({
         code: "226826008",
         display: "Danish blue cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DoubleGloucesterCheese: Coding.FromStrict({
+    FoodTypeValueSet_DoubleGloucesterCheese: new Coding({
         code: "226827004",
         display: "Double Gloucester cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_EdamCheese: Coding.FromStrict({
+    FoodTypeValueSet_EdamCheese: new Coding({
         code: "226828009",
         display: "Edam cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_EdamTypeCheeseReducedFat: Coding.FromStrict({
+    FoodTypeValueSet_EdamTypeCheeseReducedFat: new Coding({
         code: "226829001",
         display: "Edam-type cheese reduced fat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_EmmentalCheese: Coding.FromStrict({
+    FoodTypeValueSet_EmmentalCheese: new Coding({
         code: "226830006",
         display: "Emmental cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FetaCheese: Coding.FromStrict({
+    FoodTypeValueSet_FetaCheese: new Coding({
         code: "226831005",
         display: "Feta cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GoudaCheese: Coding.FromStrict({
+    FoodTypeValueSet_GoudaCheese: new Coding({
         code: "226832003",
         display: "Gouda cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GruyereCheese: Coding.FromStrict({
+    FoodTypeValueSet_GruyereCheese: new Coding({
         code: "226834002",
         display: "Gruyere cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LancashireCheese: Coding.FromStrict({
+    FoodTypeValueSet_LancashireCheese: new Coding({
         code: "226835001",
         display: "Lancashire cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LeicesterCheese: Coding.FromStrict({
+    FoodTypeValueSet_LeicesterCheese: new Coding({
         code: "226836000",
         display: "Leicester cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MozzarellaCheese: Coding.FromStrict({
+    FoodTypeValueSet_MozzarellaCheese: new Coding({
         code: "226837009",
         display: "Mozzarella cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ParmesanCheese: Coding.FromStrict({
+    FoodTypeValueSet_ParmesanCheese: new Coding({
         code: "226838004",
         display: "Parmesan cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RedWindsorCheese: Coding.FromStrict({
+    FoodTypeValueSet_RedWindsorCheese: new Coding({
         code: "226839007",
         display: "Red Windsor cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RoquefortCheese: Coding.FromStrict({
+    FoodTypeValueSet_RoquefortCheese: new Coding({
         code: "226840009",
         display: "Roquefort cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SageDerbyCheese: Coding.FromStrict({
+    FoodTypeValueSet_SageDerbyCheese: new Coding({
         code: "226841008",
         display: "Sage Derby cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SoyCheese: Coding.FromStrict({
+    FoodTypeValueSet_SoyCheese: new Coding({
         code: "226842001",
         display: "Soy cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_StiltonWhiteCheese: Coding.FromStrict({
+    FoodTypeValueSet_StiltonWhiteCheese: new Coding({
         code: "226843006",
         display: "Stilton - white cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_StiltonBlueCheese: Coding.FromStrict({
+    FoodTypeValueSet_StiltonBlueCheese: new Coding({
         code: "226844000",
         display: "Stilton - blue cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WensleydaleCheese: Coding.FromStrict({
+    FoodTypeValueSet_WensleydaleCheese: new Coding({
         code: "226845004",
         display: "Wensleydale cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ProcessedCheese: Coding.FromStrict({
+    FoodTypeValueSet_ProcessedCheese: new Coding({
         code: "226846003",
         display: "Processed cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SmokedProcessedCheese: Coding.FromStrict({
+    FoodTypeValueSet_SmokedProcessedCheese: new Coding({
         code: "226847007",
         display: "Smoked processed cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SoftCheese: Coding.FromStrict({
+    FoodTypeValueSet_SoftCheese: new Coding({
         code: "226848002",
         display: "Soft cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CreamCheese: Coding.FromStrict({
+    FoodTypeValueSet_CreamCheese: new Coding({
         code: "226849005",
         display: "Cream cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MediumFatCreamCheese: Coding.FromStrict({
+    FoodTypeValueSet_MediumFatCreamCheese: new Coding({
         code: "226850005",
         display: "Medium fat cream cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LowFatCreamCheese: Coding.FromStrict({
+    FoodTypeValueSet_LowFatCreamCheese: new Coding({
         code: "226851009",
         display: "Low fat cream cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GoatsMilkSoftCheese: Coding.FromStrict({
+    FoodTypeValueSet_GoatsMilkSoftCheese: new Coding({
         code: "226852002",
         display: "Goats milk soft cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RicottaCheese: Coding.FromStrict({
+    FoodTypeValueSet_RicottaCheese: new Coding({
         code: "226853007",
         display: "Ricotta cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SoftMoldRipenedCheese: Coding.FromStrict({
+    FoodTypeValueSet_SoftMoldRipenedCheese: new Coding({
         code: "226854001",
         display: "Soft mold ripened cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BrieCheese: Coding.FromStrict({
+    FoodTypeValueSet_BrieCheese: new Coding({
         code: "226855000",
         display: "Brie cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CamembertCheese: Coding.FromStrict({
+    FoodTypeValueSet_CamembertCheese: new Coding({
         code: "226856004",
         display: "Camembert cheese",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FromageFrais: Coding.FromStrict({
+    FoodTypeValueSet_FromageFrais: new Coding({
         code: "226857008",
         display: "Fromage frais",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PlainFromageFrais: Coding.FromStrict({
+    FoodTypeValueSet_PlainFromageFrais: new Coding({
         code: "226858003",
         display: "Plain fromage frais",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FlavoredFromageFrais: Coding.FromStrict({
+    FoodTypeValueSet_FlavoredFromageFrais: new Coding({
         code: "226859006",
         display: "Flavored fromage frais",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FruitFromageFrais: Coding.FromStrict({
+    FoodTypeValueSet_FruitFromageFrais: new Coding({
         code: "226860001",
         display: "Fruit fromage frais",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_VeryLowFatFromageFrais: Coding.FromStrict({
+    FoodTypeValueSet_VeryLowFatFromageFrais: new Coding({
         code: "226861002",
         display: "Very low fat fromage frais",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Quark: Coding.FromStrict({
+    FoodTypeValueSet_Quark: new Coding({
         code: "226862009",
         display: "Quark",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Yoghurt: Coding.FromStrict({
+    FoodTypeValueSet_Yoghurt: new Coding({
         code: "226863004",
         display: "Yoghurt",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WholeMilkYogurt: Coding.FromStrict({
+    FoodTypeValueSet_WholeMilkYogurt: new Coding({
         code: "226864005",
         display: "Whole milk yogurt",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WholeMilkPlainYogurt: Coding.FromStrict({
+    FoodTypeValueSet_WholeMilkPlainYogurt: new Coding({
         code: "226865006",
         display: "Whole milk plain yogurt",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WholeMilkFruitYogurt: Coding.FromStrict({
+    FoodTypeValueSet_WholeMilkFruitYogurt: new Coding({
         code: "226866007",
         display: "Whole milk fruit yogurt",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WholeMilkFlavoredYoghurt: Coding.FromStrict({
+    FoodTypeValueSet_WholeMilkFlavoredYoghurt: new Coding({
         code: "226867003",
         display: "Whole milk flavored yoghurt",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LiveYogurt: Coding.FromStrict({
+    FoodTypeValueSet_LiveYogurt: new Coding({
         code: "226868008",
         display: "Live yogurt",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_OrganicYogurt: Coding.FromStrict({
+    FoodTypeValueSet_OrganicYogurt: new Coding({
         code: "226869000",
         display: "Organic yogurt",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GoatQuoteSMilkYogurt: Coding.FromStrict({
+    FoodTypeValueSet_GoatQuoteSMilkYogurt: new Coding({
         code: "226870004",
         display: "Goat's milk yogurt",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LowFatYogurt: Coding.FromStrict({
+    FoodTypeValueSet_LowFatYogurt: new Coding({
         code: "226871000",
         display: "Low fat yogurt",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PlainLowFatYogurt: Coding.FromStrict({
+    FoodTypeValueSet_PlainLowFatYogurt: new Coding({
         code: "226872007",
         display: "Plain low fat yogurt",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FlavoredLowFatYoghurt: Coding.FromStrict({
+    FoodTypeValueSet_FlavoredLowFatYoghurt: new Coding({
         code: "226873002",
         display: "Flavored low fat yoghurt",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FruitLowFatYogurt: Coding.FromStrict({
+    FoodTypeValueSet_FruitLowFatYogurt: new Coding({
         code: "226874008",
         display: "Fruit low fat yogurt",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MuesliNutLowFatYogurt: Coding.FromStrict({
+    FoodTypeValueSet_MuesliNutLowFatYogurt: new Coding({
         code: "226875009",
         display: "Muesli-nut low fat yogurt",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LowCalorieYogurt: Coding.FromStrict({
+    FoodTypeValueSet_LowCalorieYogurt: new Coding({
         code: "226876005",
         display: "Low calorie yogurt",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DrinkingYogurt: Coding.FromStrict({
+    FoodTypeValueSet_DrinkingYogurt: new Coding({
         code: "226877001",
         display: "Drinking yogurt",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GreekYogurt: Coding.FromStrict({
+    FoodTypeValueSet_GreekYogurt: new Coding({
         code: "226878006",
         display: "Greek yogurt",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SheepQuoteSMilkYogurt: Coding.FromStrict({
+    FoodTypeValueSet_SheepQuoteSMilkYogurt: new Coding({
         code: "226879003",
         display: "Sheep's milk yogurt",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SoyMilkYoghurt: Coding.FromStrict({
+    FoodTypeValueSet_SoyMilkYoghurt: new Coding({
         code: "226880000",
         display: "Soy milk yoghurt",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedEgg: Coding.FromStrict({
+    FoodTypeValueSet_DriedEgg: new Coding({
         code: "226881001",
         display: "Dried egg",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BEBoiledEgg: Coding.FromStrict({
+    FoodTypeValueSet_BEBoiledEgg: new Coding({
         code: "226882008",
         display: "BE - Boiled egg",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedEgg: Coding.FromStrict({
+    FoodTypeValueSet_FriedEgg: new Coding({
         code: "226883003",
         display: "Fried egg",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PEPoachedEgg: Coding.FromStrict({
+    FoodTypeValueSet_PEPoachedEgg: new Coding({
         code: "226884009",
         display: "PE - Poached egg",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RawEgg: Coding.FromStrict({
+    FoodTypeValueSet_RawEgg: new Coding({
         code: "226885005",
         display: "Raw egg",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ScrambledEgg: Coding.FromStrict({
+    FoodTypeValueSet_ScrambledEgg: new Coding({
         code: "226886006",
         display: "Scrambled egg",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DietaryFatsAndOils: Coding.FromStrict({
+    FoodTypeValueSet_DietaryFatsAndOils: new Coding({
         code: "226887002",
         display: "Dietary fats and oils",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Butter: Coding.FromStrict({
+    FoodTypeValueSet_Butter: new Coding({
         code: "226888007",
         display: "Butter",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BlendedSpread: Coding.FromStrict({
+    FoodTypeValueSet_BlendedSpread: new Coding({
         code: "226889004",
         display: "Blended spread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Margarine: Coding.FromStrict({
+    FoodTypeValueSet_Margarine: new Coding({
         code: "226890008",
         display: "Margarine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_HardVegetableFatMargarine: Coding.FromStrict({
+    FoodTypeValueSet_HardVegetableFatMargarine: new Coding({
         code: "226891007",
         display: "Hard vegetable fat margarine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_HardAnimalAndVegetableFatMargarine: Coding.FromStrict({
+    FoodTypeValueSet_HardAnimalAndVegetableFatMargarine: new Coding({
         code: "226892000",
         display: "Hard animal and vegetable fat margarine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SoftPolyunsaturatedFatMargarine: Coding.FromStrict({
+    FoodTypeValueSet_SoftPolyunsaturatedFatMargarine: new Coding({
         code: "226894004",
         display: "Soft polyunsaturated fat margarine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_OliveOilMargarine: Coding.FromStrict({
+    FoodTypeValueSet_OliveOilMargarine: new Coding({
         code: "226895003",
         display: "Olive oil margarine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LowFatSpread: Coding.FromStrict({
+    FoodTypeValueSet_LowFatSpread: new Coding({
         code: "226896002",
         display: "Low fat spread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_VLFVeryLowFatSpread: Coding.FromStrict({
+    FoodTypeValueSet_VLFVeryLowFatSpread: new Coding({
         code: "226897006",
         display: "VLF - Very low fat spread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Dripping: Coding.FromStrict({
+    FoodTypeValueSet_Dripping: new Coding({
         code: "226898001",
         display: "Dripping",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Lard: Coding.FromStrict({
+    FoodTypeValueSet_Lard: new Coding({
         code: "226899009",
         display: "Lard",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Suet: Coding.FromStrict({
+    FoodTypeValueSet_Suet: new Coding({
         code: "226900004",
         display: "Suet",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Ghee: Coding.FromStrict({
+    FoodTypeValueSet_Ghee: new Coding({
         code: "226901000",
         display: "Ghee",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ButterGhee: Coding.FromStrict({
+    FoodTypeValueSet_ButterGhee: new Coding({
         code: "226902007",
         display: "Butter ghee",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PalmOilGhee: Coding.FromStrict({
+    FoodTypeValueSet_PalmOilGhee: new Coding({
         code: "226903002",
         display: "Palm oil ghee",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_VegetableOilGhee: Coding.FromStrict({
+    FoodTypeValueSet_VegetableOilGhee: new Coding({
         code: "226904008",
         display: "Vegetable oil ghee",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_OilDietary: Coding.FromStrict({
+    FoodTypeValueSet_OilDietary: new Coding({
         code: "226905009",
         display: "Oil - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MaizeOil: Coding.FromStrict({
+    FoodTypeValueSet_MaizeOil: new Coding({
         code: "226906005",
         display: "Maize oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PalmOil: Coding.FromStrict({
+    FoodTypeValueSet_PalmOil: new Coding({
         code: "226907001",
         display: "Palm oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RapeseedOil: Coding.FromStrict({
+    FoodTypeValueSet_RapeseedOil: new Coding({
         code: "226908006",
         display: "Rapeseed oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RapeseedOilHighErucicAcid: Coding.FromStrict({
+    FoodTypeValueSet_RapeseedOilHighErucicAcid: new Coding({
         code: "226909003",
         display: "Rapeseed oil high erucic acid",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RapeseedOilLowErucicAcid: Coding.FromStrict({
+    FoodTypeValueSet_RapeseedOilLowErucicAcid: new Coding({
         code: "226910008",
         display: "Rapeseed oil low erucic acid",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SoybeanOil: Coding.FromStrict({
+    FoodTypeValueSet_SoybeanOil: new Coding({
         code: "226911007",
         display: "Soybean oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SunflowerseedOil: Coding.FromStrict({
+    FoodTypeValueSet_SunflowerseedOil: new Coding({
         code: "226912000",
         display: "Sunflowerseed oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BlendedVegetableOil: Coding.FromStrict({
+    FoodTypeValueSet_BlendedVegetableOil: new Coding({
         code: "226913005",
         display: "Blended vegetable oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PolyunsaturatedVegetableOil: Coding.FromStrict({
+    FoodTypeValueSet_PolyunsaturatedVegetableOil: new Coding({
         code: "226914004",
         display: "Polyunsaturated vegetable oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RedMeat: Coding.FromStrict({
+    FoodTypeValueSet_RedMeat: new Coding({
         code: "226915003",
         display: "Red meat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Beef: Coding.FromStrict({
+    FoodTypeValueSet_Beef: new Coding({
         code: "226916002",
         display: "Beef",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BeefSteak: Coding.FromStrict({
+    FoodTypeValueSet_BeefSteak: new Coding({
         code: "226917006",
         display: "Beef steak",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrilledBeefSteak: Coding.FromStrict({
+    FoodTypeValueSet_GrilledBeefSteak: new Coding({
         code: "226918001",
         display: "Grilled beef steak",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedBeefSteak: Coding.FromStrict({
+    FoodTypeValueSet_FriedBeefSteak: new Coding({
         code: "226919009",
         display: "Fried beef steak",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BoiledBeef: Coding.FromStrict({
+    FoodTypeValueSet_BoiledBeef: new Coding({
         code: "226920003",
         display: "Boiled beef",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BoiledSaltBeef: Coding.FromStrict({
+    FoodTypeValueSet_BoiledSaltBeef: new Coding({
         code: "226921004",
         display: "Boiled salt beef",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MincedBeef: Coding.FromStrict({
+    FoodTypeValueSet_MincedBeef: new Coding({
         code: "226922006",
         display: "Minced beef",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_StewedMincedBeef: Coding.FromStrict({
+    FoodTypeValueSet_StewedMincedBeef: new Coding({
         code: "226923001",
         display: "Stewed minced beef",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_StewedExtraLeanMincedBeef: Coding.FromStrict({
+    FoodTypeValueSet_StewedExtraLeanMincedBeef: new Coding({
         code: "226924007",
         display: "Stewed extra-lean minced beef",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RoastBeef: Coding.FromStrict({
+    FoodTypeValueSet_RoastBeef: new Coding({
         code: "226925008",
         display: "Roast beef",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LeanRoastBeef: Coding.FromStrict({
+    FoodTypeValueSet_LeanRoastBeef: new Coding({
         code: "226926009",
         display: "Lean roast beef",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_StewedBeef: Coding.FromStrict({
+    FoodTypeValueSet_StewedBeef: new Coding({
         code: "226927000",
         display: "Stewed beef",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Bacon: Coding.FromStrict({
+    FoodTypeValueSet_Bacon: new Coding({
         code: "226928005",
         display: "Bacon",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BoiledBacon: Coding.FromStrict({
+    FoodTypeValueSet_BoiledBacon: new Coding({
         code: "226929002",
         display: "Boiled bacon",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedBacon: Coding.FromStrict({
+    FoodTypeValueSet_FriedBacon: new Coding({
         code: "226930007",
         display: "Fried bacon",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrilledBacon: Coding.FromStrict({
+    FoodTypeValueSet_GrilledBacon: new Coding({
         code: "226931006",
         display: "Grilled bacon",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Gammon: Coding.FromStrict({
+    FoodTypeValueSet_Gammon: new Coding({
         code: "226932004",
         display: "Gammon",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RoastHam: Coding.FromStrict({
+    FoodTypeValueSet_RoastHam: new Coding({
         code: "226933009",
         display: "Roast ham",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Pork: Coding.FromStrict({
+    FoodTypeValueSet_Pork: new Coding({
         code: "226934003",
         display: "Pork",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedPorkChop: Coding.FromStrict({
+    FoodTypeValueSet_FriedPorkChop: new Coding({
         code: "226935002",
         display: "Fried pork chop",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrilledPorkChop: Coding.FromStrict({
+    FoodTypeValueSet_GrilledPorkChop: new Coding({
         code: "226936001",
         display: "Grilled pork chop",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MincedPork: Coding.FromStrict({
+    FoodTypeValueSet_MincedPork: new Coding({
         code: "226937005",
         display: "Minced pork",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RoastPork: Coding.FromStrict({
+    FoodTypeValueSet_RoastPork: new Coding({
         code: "226938000",
         display: "Roast pork",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LeanRoastPork: Coding.FromStrict({
+    FoodTypeValueSet_LeanRoastPork: new Coding({
         code: "226939008",
         display: "Lean roast pork",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RoastBellyPork: Coding.FromStrict({
+    FoodTypeValueSet_RoastBellyPork: new Coding({
         code: "226940005",
         display: "Roast belly pork",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BoiledHam: Coding.FromStrict({
+    FoodTypeValueSet_BoiledHam: new Coding({
         code: "226941009",
         display: "Boiled ham",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LambMeat: Coding.FromStrict({
+    FoodTypeValueSet_LambMeat: new Coding({
         code: "226942002",
         display: "Lamb - meat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedLambChop: Coding.FromStrict({
+    FoodTypeValueSet_FriedLambChop: new Coding({
         code: "226943007",
         display: "Fried lamb chop",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrilledLambChop: Coding.FromStrict({
+    FoodTypeValueSet_GrilledLambChop: new Coding({
         code: "226944001",
         display: "Grilled lamb chop",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MincedLamb: Coding.FromStrict({
+    FoodTypeValueSet_MincedLamb: new Coding({
         code: "226945000",
         display: "Minced lamb",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RoastLamb: Coding.FromStrict({
+    FoodTypeValueSet_RoastLamb: new Coding({
         code: "226946004",
         display: "Roast lamb",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LeanRoastLamb: Coding.FromStrict({
+    FoodTypeValueSet_LeanRoastLamb: new Coding({
         code: "226947008",
         display: "Lean roast lamb",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RoastLegOfLamb: Coding.FromStrict({
+    FoodTypeValueSet_RoastLegOfLamb: new Coding({
         code: "226948003",
         display: "Roast leg of lamb",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RoastShoulderOfLamb: Coding.FromStrict({
+    FoodTypeValueSet_RoastShoulderOfLamb: new Coding({
         code: "226949006",
         display: "Roast shoulder of lamb",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RoastBreastOfLamb: Coding.FromStrict({
+    FoodTypeValueSet_RoastBreastOfLamb: new Coding({
         code: "226950006",
         display: "Roast breast of lamb",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_StewedLamb: Coding.FromStrict({
+    FoodTypeValueSet_StewedLamb: new Coding({
         code: "226951005",
         display: "Stewed lamb",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Veal: Coding.FromStrict({
+    FoodTypeValueSet_Veal: new Coding({
         code: "226952003",
         display: "Veal",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedVeal: Coding.FromStrict({
+    FoodTypeValueSet_FriedVeal: new Coding({
         code: "226953008",
         display: "Fried veal",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrilledVeal: Coding.FromStrict({
+    FoodTypeValueSet_GrilledVeal: new Coding({
         code: "226954002",
         display: "Grilled veal",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Chicken: Coding.FromStrict({
+    FoodTypeValueSet_Chicken: new Coding({
         code: "226955001",
         display: "Chicken",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BoiledChicken: Coding.FromStrict({
+    FoodTypeValueSet_BoiledChicken: new Coding({
         code: "226956000",
         display: "Boiled chicken",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedChicken: Coding.FromStrict({
+    FoodTypeValueSet_FriedChicken: new Coding({
         code: "226957009",
         display: "Fried chicken",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedChickenInBatter: Coding.FromStrict({
+    FoodTypeValueSet_FriedChickenInBatter: new Coding({
         code: "226958004",
         display: "Fried chicken in batter",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedChickenInBreadcrumb: Coding.FromStrict({
+    FoodTypeValueSet_FriedChickenInBreadcrumb: new Coding({
         code: "226959007",
         display: "Fried chicken in breadcrumb",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedChickenNuggets: Coding.FromStrict({
+    FoodTypeValueSet_FriedChickenNuggets: new Coding({
         code: "226960002",
         display: "Fried chicken nuggets",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RoastChicken: Coding.FromStrict({
+    FoodTypeValueSet_RoastChicken: new Coding({
         code: "226961003",
         display: "Roast chicken",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MincedChicken: Coding.FromStrict({
+    FoodTypeValueSet_MincedChicken: new Coding({
         code: "226962005",
         display: "Minced chicken",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DuckMeat: Coding.FromStrict({
+    FoodTypeValueSet_DuckMeat: new Coding({
         code: "226963000",
         display: "Duck - meat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RoastDuck: Coding.FromStrict({
+    FoodTypeValueSet_RoastDuck: new Coding({
         code: "226964006",
         display: "Roast duck",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GooseMeat: Coding.FromStrict({
+    FoodTypeValueSet_GooseMeat: new Coding({
         code: "226965007",
         display: "Goose - meat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RoastGoose: Coding.FromStrict({
+    FoodTypeValueSet_RoastGoose: new Coding({
         code: "226966008",
         display: "Roast goose",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TurkeyMeat: Coding.FromStrict({
+    FoodTypeValueSet_TurkeyMeat: new Coding({
         code: "226967004",
         display: "Turkey - meat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RoastTurkey: Coding.FromStrict({
+    FoodTypeValueSet_RoastTurkey: new Coding({
         code: "226968009",
         display: "Roast turkey",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_StewedTurkey: Coding.FromStrict({
+    FoodTypeValueSet_StewedTurkey: new Coding({
         code: "226969001",
         display: "Stewed turkey",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MincedTurkey: Coding.FromStrict({
+    FoodTypeValueSet_MincedTurkey: new Coding({
         code: "226970000",
         display: "Minced turkey",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GameMeat: Coding.FromStrict({
+    FoodTypeValueSet_GameMeat: new Coding({
         code: "226971001",
         display: "Game - meat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrouseMeat: Coding.FromStrict({
+    FoodTypeValueSet_GrouseMeat: new Coding({
         code: "226972008",
         display: "Grouse - meat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RoastGrouse: Coding.FromStrict({
+    FoodTypeValueSet_RoastGrouse: new Coding({
         code: "226973003",
         display: "Roast grouse",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PartridgeMeat: Coding.FromStrict({
+    FoodTypeValueSet_PartridgeMeat: new Coding({
         code: "226974009",
         display: "Partridge - meat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RoastPartridge: Coding.FromStrict({
+    FoodTypeValueSet_RoastPartridge: new Coding({
         code: "226975005",
         display: "Roast partridge",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Pheasant: Coding.FromStrict({
+    FoodTypeValueSet_Pheasant: new Coding({
         code: "226976006",
         display: "Pheasant",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RoastPheasant: Coding.FromStrict({
+    FoodTypeValueSet_RoastPheasant: new Coding({
         code: "226977002",
         display: "Roast pheasant",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RoastPigeon: Coding.FromStrict({
+    FoodTypeValueSet_RoastPigeon: new Coding({
         code: "226978007",
         display: "Roast pigeon",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RoastVenison: Coding.FromStrict({
+    FoodTypeValueSet_RoastVenison: new Coding({
         code: "226979004",
         display: "Roast venison",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_StewedHare: Coding.FromStrict({
+    FoodTypeValueSet_StewedHare: new Coding({
         code: "226980001",
         display: "Stewed hare",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_StewedRabbit: Coding.FromStrict({
+    FoodTypeValueSet_StewedRabbit: new Coding({
         code: "226981002",
         display: "Stewed rabbit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Offal: Coding.FromStrict({
+    FoodTypeValueSet_Offal: new Coding({
         code: "226982009",
         display: "Offal",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_HeartMeat: Coding.FromStrict({
+    FoodTypeValueSet_HeartMeat: new Coding({
         code: "226983004",
         display: "Heart - meat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_StewedHeart: Coding.FromStrict({
+    FoodTypeValueSet_StewedHeart: new Coding({
         code: "226984005",
         display: "Stewed heart",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RoastHeart: Coding.FromStrict({
+    FoodTypeValueSet_RoastHeart: new Coding({
         code: "226985006",
         display: "Roast heart",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_KidneyMeat: Coding.FromStrict({
+    FoodTypeValueSet_KidneyMeat: new Coding({
         code: "226987003",
         display: "Kidney - meat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedKidney: Coding.FromStrict({
+    FoodTypeValueSet_FriedKidney: new Coding({
         code: "226988008",
         display: "Fried kidney",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrilledKidney: Coding.FromStrict({
+    FoodTypeValueSet_GrilledKidney: new Coding({
         code: "226989000",
         display: "Grilled kidney",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_StewedKidney: Coding.FromStrict({
+    FoodTypeValueSet_StewedKidney: new Coding({
         code: "226990009",
         display: "Stewed kidney",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LiverMeat: Coding.FromStrict({
+    FoodTypeValueSet_LiverMeat: new Coding({
         code: "226991008",
         display: "Liver - meat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedLiver: Coding.FromStrict({
+    FoodTypeValueSet_FriedLiver: new Coding({
         code: "226992001",
         display: "Fried liver",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrilledLiver: Coding.FromStrict({
+    FoodTypeValueSet_GrilledLiver: new Coding({
         code: "226993006",
         display: "Grilled liver",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_StewedLiver: Coding.FromStrict({
+    FoodTypeValueSet_StewedLiver: new Coding({
         code: "226994000",
         display: "Stewed liver",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_OxtailFood: Coding.FromStrict({
+    FoodTypeValueSet_OxtailFood: new Coding({
         code: "226995004",
         display: "Oxtail - food",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_StewedOxtail: Coding.FromStrict({
+    FoodTypeValueSet_StewedOxtail: new Coding({
         code: "226996003",
         display: "Stewed oxtail",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Sweetbread: Coding.FromStrict({
+    FoodTypeValueSet_Sweetbread: new Coding({
         code: "226997007",
         display: "Sweetbread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedSweetbread: Coding.FromStrict({
+    FoodTypeValueSet_FriedSweetbread: new Coding({
         code: "226998002",
         display: "Fried sweetbread",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TongueMeat: Coding.FromStrict({
+    FoodTypeValueSet_TongueMeat: new Coding({
         code: "226999005",
         display: "Tongue - meat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Tripe: Coding.FromStrict({
+    FoodTypeValueSet_Tripe: new Coding({
         code: "227000008",
         display: "Tripe",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DressedTripe: Coding.FromStrict({
+    FoodTypeValueSet_DressedTripe: new Coding({
         code: "227001007",
         display: "Dressed tripe",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DressedStewedTripe: Coding.FromStrict({
+    FoodTypeValueSet_DressedStewedTripe: new Coding({
         code: "227002000",
         display: "Dressed stewed tripe",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MeatAgents: Coding.FromStrict({
+    FoodTypeValueSet_MeatAgents: new Coding({
         code: "227003005",
         display: "Meat agents",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MeatBurger: Coding.FromStrict({
+    FoodTypeValueSet_MeatBurger: new Coding({
         code: "227004004",
         display: "Meat burger",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BeefBurger: Coding.FromStrict({
+    FoodTypeValueSet_BeefBurger: new Coding({
         code: "227005003",
         display: "Beef burger",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PorkBurger: Coding.FromStrict({
+    FoodTypeValueSet_PorkBurger: new Coding({
         code: "227006002",
         display: "Pork burger",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LambBurger: Coding.FromStrict({
+    FoodTypeValueSet_LambBurger: new Coding({
         code: "227007006",
         display: "Lamb burger",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChickenBurger: Coding.FromStrict({
+    FoodTypeValueSet_ChickenBurger: new Coding({
         code: "227008001",
         display: "Chicken burger",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TurkeyBurger: Coding.FromStrict({
+    FoodTypeValueSet_TurkeyBurger: new Coding({
         code: "227009009",
         display: "Turkey burger",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BlackPudding: Coding.FromStrict({
+    FoodTypeValueSet_BlackPudding: new Coding({
         code: "227010004",
         display: "Black pudding",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BrawnMeat: Coding.FromStrict({
+    FoodTypeValueSet_BrawnMeat: new Coding({
         code: "227011000",
         display: "Brawn - meat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FaggotMeat: Coding.FromStrict({
+    FoodTypeValueSet_FaggotMeat: new Coding({
         code: "227012007",
         display: "Faggot - meat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Haggis: Coding.FromStrict({
+    FoodTypeValueSet_Haggis: new Coding({
         code: "227013002",
         display: "Haggis",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LiverPate: Coding.FromStrict({
+    FoodTypeValueSet_LiverPate: new Coding({
         code: "227014008",
         display: "Liver pate",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LFLowFatLiverPate: Coding.FromStrict({
+    FoodTypeValueSet_LFLowFatLiverPate: new Coding({
         code: "227015009",
         display: "LF - Low fat liver pate",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MeatPaste: Coding.FromStrict({
+    FoodTypeValueSet_MeatPaste: new Coding({
         code: "227016005",
         display: "Meat paste",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PolonyMeatAgent: Coding.FromStrict({
+    FoodTypeValueSet_PolonyMeatAgent: new Coding({
         code: "227017001",
         display: "Polony - meat agent",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Salami: Coding.FromStrict({
+    FoodTypeValueSet_Salami: new Coding({
         code: "227018006",
         display: "Salami",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Saveloy: Coding.FromStrict({
+    FoodTypeValueSet_Saveloy: new Coding({
         code: "227019003",
         display: "Saveloy",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Sausage: Coding.FromStrict({
+    FoodTypeValueSet_Sausage: new Coding({
         code: "227020009",
         display: "Sausage",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Frankfurter: Coding.FromStrict({
+    FoodTypeValueSet_Frankfurter: new Coding({
         code: "227021008",
         display: "Frankfurter",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LFLowFatSausage: Coding.FromStrict({
+    FoodTypeValueSet_LFLowFatSausage: new Coding({
         code: "227022001",
         display: "LF - Low fat sausage",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BeefSausage: Coding.FromStrict({
+    FoodTypeValueSet_BeefSausage: new Coding({
         code: "227023006",
         display: "Beef sausage",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LFLowFatBeefSausage: Coding.FromStrict({
+    FoodTypeValueSet_LFLowFatBeefSausage: new Coding({
         code: "227024000",
         display: "LF - Low fat beef sausage",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PorkSausage: Coding.FromStrict({
+    FoodTypeValueSet_PorkSausage: new Coding({
         code: "227025004",
         display: "Pork sausage",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LFLowFatPorkSausage: Coding.FromStrict({
+    FoodTypeValueSet_LFLowFatPorkSausage: new Coding({
         code: "227026003",
         display: "LF - Low fat pork sausage",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TurkeySausage: Coding.FromStrict({
+    FoodTypeValueSet_TurkeySausage: new Coding({
         code: "227027007",
         display: "Turkey sausage",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LowFatTurkeySausage: Coding.FromStrict({
+    FoodTypeValueSet_LowFatTurkeySausage: new Coding({
         code: "227028002",
         display: "Low fat turkey sausage",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LiverSausage: Coding.FromStrict({
+    FoodTypeValueSet_LiverSausage: new Coding({
         code: "227029005",
         display: "Liver sausage",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WhitePudding: Coding.FromStrict({
+    FoodTypeValueSet_WhitePudding: new Coding({
         code: "227030000",
         display: "White pudding",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ProcessedMeat: Coding.FromStrict({
+    FoodTypeValueSet_ProcessedMeat: new Coding({
         code: "227031001",
         display: "Processed meat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChickenRoll: Coding.FromStrict({
+    FoodTypeValueSet_ChickenRoll: new Coding({
         code: "227032008",
         display: "Chicken roll",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChoppedHamAndPork: Coding.FromStrict({
+    FoodTypeValueSet_ChoppedHamAndPork: new Coding({
         code: "227033003",
         display: "Chopped ham and pork",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CornedBeef: Coding.FromStrict({
+    FoodTypeValueSet_CornedBeef: new Coding({
         code: "227034009",
         display: "Corned beef",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LuncheonMeat: Coding.FromStrict({
+    FoodTypeValueSet_LuncheonMeat: new Coding({
         code: "227036006",
         display: "Luncheon meat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Fish: Coding.FromStrict({
+    FoodTypeValueSet_Fish: new Coding({
         code: "227037002",
         display: "Fish",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WhiteFish: Coding.FromStrict({
+    FoodTypeValueSet_WhiteFish: new Coding({
         code: "227038007",
         display: "White fish",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Bele: Coding.FromStrict({
+    FoodTypeValueSet_Bele: new Coding({
         code: "227040002",
         display: "Bele",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Boal: Coding.FromStrict({
+    FoodTypeValueSet_Boal: new Coding({
         code: "227041003",
         display: "Boal",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Bream: Coding.FromStrict({
+    FoodTypeValueSet_Bream: new Coding({
         code: "227042005",
         display: "Bream",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CatfishDietary: Coding.FromStrict({
+    FoodTypeValueSet_CatfishDietary: new Coding({
         code: "227043000",
         display: "Catfish - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChineseSaltedFish: Coding.FromStrict({
+    FoodTypeValueSet_ChineseSaltedFish: new Coding({
         code: "227044006",
         display: "Chinese salted fish",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Chital: Coding.FromStrict({
+    FoodTypeValueSet_Chital: new Coding({
         code: "227045007",
         display: "Chital",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BakedCod: Coding.FromStrict({
+    FoodTypeValueSet_BakedCod: new Coding({
         code: "227046008",
         display: "Baked cod",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PoachedCod: Coding.FromStrict({
+    FoodTypeValueSet_PoachedCod: new Coding({
         code: "227047004",
         display: "Poached cod",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrilledCod: Coding.FromStrict({
+    FoodTypeValueSet_GrilledCod: new Coding({
         code: "227048009",
         display: "Grilled cod",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedCod: Coding.FromStrict({
+    FoodTypeValueSet_FriedCod: new Coding({
         code: "227049001",
         display: "Fried cod",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedCodInBatter: Coding.FromStrict({
+    FoodTypeValueSet_FriedCodInBatter: new Coding({
         code: "227050001",
         display: "Fried cod in batter",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedCodInBreadcrumbs: Coding.FromStrict({
+    FoodTypeValueSet_FriedCodInBreadcrumbs: new Coding({
         code: "227051002",
         display: "Fried cod in breadcrumbs",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedCodGoujonsInBreadcrumbs: Coding.FromStrict({
+    FoodTypeValueSet_FriedCodGoujonsInBreadcrumbs: new Coding({
         code: "227052009",
         display: "Fried cod goujons in breadcrumbs",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CodInBatterBakedInTheOven: Coding.FromStrict({
+    FoodTypeValueSet_CodInBatterBakedInTheOven: new Coding({
         code: "227053004",
         display: "Cod in batter baked in the oven",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedSaltedCod: Coding.FromStrict({
+    FoodTypeValueSet_DriedSaltedCod: new Coding({
         code: "227054005",
         display: "Dried salted cod",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SmokedPoachedCod: Coding.FromStrict({
+    FoodTypeValueSet_SmokedPoachedCod: new Coding({
         code: "227055006",
         display: "Smoked poached cod",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Coley: Coding.FromStrict({
+    FoodTypeValueSet_Coley: new Coding({
         code: "227056007",
         display: "Coley",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CongerEel: Coding.FromStrict({
+    FoodTypeValueSet_CongerEel: new Coding({
         code: "227057003",
         display: "Conger eel",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Dab: Coding.FromStrict({
+    FoodTypeValueSet_Dab: new Coding({
         code: "227058008",
         display: "Dab",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_HaddockDietary: Coding.FromStrict({
+    FoodTypeValueSet_HaddockDietary: new Coding({
         code: "227059000",
         display: "Haddock - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PoachedHaddock: Coding.FromStrict({
+    FoodTypeValueSet_PoachedHaddock: new Coding({
         code: "227060005",
         display: "Poached haddock",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedHaddock: Coding.FromStrict({
+    FoodTypeValueSet_FriedHaddock: new Coding({
         code: "227061009",
         display: "Fried haddock",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedHaddockInBatter: Coding.FromStrict({
+    FoodTypeValueSet_FriedHaddockInBatter: new Coding({
         code: "227062002",
         display: "Fried haddock in batter",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedHaddockInBreadcrumbs: Coding.FromStrict({
+    FoodTypeValueSet_FriedHaddockInBreadcrumbs: new Coding({
         code: "227063007",
         display: "Fried haddock in breadcrumbs",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedHaddockGoujonsInBreadcrumbs: Coding.FromStrict({
+    FoodTypeValueSet_FriedHaddockGoujonsInBreadcrumbs: new Coding({
         code: "227064001",
         display: "Fried haddock goujons in breadcrumbs",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SmokedPoachedHaddock: Coding.FromStrict({
+    FoodTypeValueSet_SmokedPoachedHaddock: new Coding({
         code: "227065000",
         display: "Smoked poached haddock",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Hake: Coding.FromStrict({
+    FoodTypeValueSet_Hake: new Coding({
         code: "227066004",
         display: "Hake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Halibut: Coding.FromStrict({
+    FoodTypeValueSet_Halibut: new Coding({
         code: "227067008",
         display: "Halibut",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Hoki: Coding.FromStrict({
+    FoodTypeValueSet_Hoki: new Coding({
         code: "227068003",
         display: "Hoki",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedHokiInBatter: Coding.FromStrict({
+    FoodTypeValueSet_FriedHokiInBatter: new Coding({
         code: "227069006",
         display: "Fried hoki in batter",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_JohnDory: Coding.FromStrict({
+    FoodTypeValueSet_JohnDory: new Coding({
         code: "227070007",
         display: "John dory",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Kalabasu: Coding.FromStrict({
+    FoodTypeValueSet_Kalabasu: new Coding({
         code: "227071006",
         display: "Kalabasu",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LemonSole: Coding.FromStrict({
+    FoodTypeValueSet_LemonSole: new Coding({
         code: "227072004",
         display: "Lemon sole",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PoachedLemonSole: Coding.FromStrict({
+    FoodTypeValueSet_PoachedLemonSole: new Coding({
         code: "227073009",
         display: "Poached lemon sole",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedLemonSole: Coding.FromStrict({
+    FoodTypeValueSet_FriedLemonSole: new Coding({
         code: "227074003",
         display: "Fried lemon sole",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedLemonSoleInBreadcrumbs: Coding.FromStrict({
+    FoodTypeValueSet_FriedLemonSoleInBreadcrumbs: new Coding({
         code: "227075002",
         display: "Fried lemon sole in breadcrumbs",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Ling: Coding.FromStrict({
+    FoodTypeValueSet_Ling: new Coding({
         code: "227076001",
         display: "Ling",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Monkfish: Coding.FromStrict({
+    FoodTypeValueSet_Monkfish: new Coding({
         code: "227078000",
         display: "Monkfish",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Mullet: Coding.FromStrict({
+    FoodTypeValueSet_Mullet: new Coding({
         code: "227079008",
         display: "Mullet",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrayMullet: Coding.FromStrict({
+    FoodTypeValueSet_GrayMullet: new Coding({
         code: "227080006",
         display: "Gray mullet",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RedMullet: Coding.FromStrict({
+    FoodTypeValueSet_RedMullet: new Coding({
         code: "227081005",
         display: "Red mullet",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ParrotFishDietary: Coding.FromStrict({
+    FoodTypeValueSet_ParrotFishDietary: new Coding({
         code: "227082003",
         display: "Parrot fish - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Plaice: Coding.FromStrict({
+    FoodTypeValueSet_Plaice: new Coding({
         code: "227083008",
         display: "Plaice",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PoachedPlaice: Coding.FromStrict({
+    FoodTypeValueSet_PoachedPlaice: new Coding({
         code: "227084002",
         display: "Poached plaice",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedPlaice: Coding.FromStrict({
+    FoodTypeValueSet_FriedPlaice: new Coding({
         code: "227085001",
         display: "Fried plaice",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedPlaiceInBatter: Coding.FromStrict({
+    FoodTypeValueSet_FriedPlaiceInBatter: new Coding({
         code: "227086000",
         display: "Fried plaice in batter",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedPlaiceInBreadcrumbs: Coding.FromStrict({
+    FoodTypeValueSet_FriedPlaiceInBreadcrumbs: new Coding({
         code: "227087009",
         display: "Fried plaice in breadcrumbs",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedPlaiceGoujonsInBreadcrumbs: Coding.FromStrict({
+    FoodTypeValueSet_FriedPlaiceGoujonsInBreadcrumbs: new Coding({
         code: "227088004",
         display: "Fried plaice goujons in breadcrumbs",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Pollack: Coding.FromStrict({
+    FoodTypeValueSet_Pollack: new Coding({
         code: "227089007",
         display: "Pollack",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PomfretDietary: Coding.FromStrict({
+    FoodTypeValueSet_PomfretDietary: new Coding({
         code: "227091004",
         display: "Pomfret - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BlackPomfret: Coding.FromStrict({
+    FoodTypeValueSet_BlackPomfret: new Coding({
         code: "227092006",
         display: "Black pomfret",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WhitePomfret: Coding.FromStrict({
+    FoodTypeValueSet_WhitePomfret: new Coding({
         code: "227093001",
         display: "White pomfret",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RedSnapperDietary: Coding.FromStrict({
+    FoodTypeValueSet_RedSnapperDietary: new Coding({
         code: "227094007",
         display: "Red snapper - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Redfish: Coding.FromStrict({
+    FoodTypeValueSet_Redfish: new Coding({
         code: "227095008",
         display: "Redfish",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Rohu: Coding.FromStrict({
+    FoodTypeValueSet_Rohu: new Coding({
         code: "227096009",
         display: "Rohu",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Dogfish: Coding.FromStrict({
+    FoodTypeValueSet_Dogfish: new Coding({
         code: "227097000",
         display: "Dogfish",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedRockSalmonInBatter: Coding.FromStrict({
+    FoodTypeValueSet_FriedRockSalmonInBatter: new Coding({
         code: "227098005",
         display: "Fried rock salmon in batter",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Saithe: Coding.FromStrict({
+    FoodTypeValueSet_Saithe: new Coding({
         code: "227099002",
         display: "Saithe",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SeaBassDietary: Coding.FromStrict({
+    FoodTypeValueSet_SeaBassDietary: new Coding({
         code: "227100005",
         display: "Sea bass - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SharkFood: Coding.FromStrict({
+    FoodTypeValueSet_SharkFood: new Coding({
         code: "227101009",
         display: "Shark - food",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Skate: Coding.FromStrict({
+    FoodTypeValueSet_Skate: new Coding({
         code: "227102002",
         display: "Skate",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedSkateInBatter: Coding.FromStrict({
+    FoodTypeValueSet_FriedSkateInBatter: new Coding({
         code: "227103007",
         display: "Fried skate in batter",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Tiliapa: Coding.FromStrict({
+    FoodTypeValueSet_Tiliapa: new Coding({
         code: "227104001",
         display: "Tiliapa",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Turbot: Coding.FromStrict({
+    FoodTypeValueSet_Turbot: new Coding({
         code: "227105000",
         display: "Turbot",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Whiting: Coding.FromStrict({
+    FoodTypeValueSet_Whiting: new Coding({
         code: "227106004",
         display: "Whiting",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PoachedWhiting: Coding.FromStrict({
+    FoodTypeValueSet_PoachedWhiting: new Coding({
         code: "227107008",
         display: "Poached whiting",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedWhiting: Coding.FromStrict({
+    FoodTypeValueSet_FriedWhiting: new Coding({
         code: "227108003",
         display: "Fried whiting",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedWhitingInBreadcrumbs: Coding.FromStrict({
+    FoodTypeValueSet_FriedWhitingInBreadcrumbs: new Coding({
         code: "227109006",
         display: "Fried whiting in breadcrumbs",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_OilyFish: Coding.FromStrict({
+    FoodTypeValueSet_OilyFish: new Coding({
         code: "227110001",
         display: "Oily fish",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Bacha: Coding.FromStrict({
+    FoodTypeValueSet_Bacha: new Coding({
         code: "227111002",
         display: "Bacha",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BloaterDietary: Coding.FromStrict({
+    FoodTypeValueSet_BloaterDietary: new Coding({
         code: "227112009",
         display: "Bloater - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Carp: Coding.FromStrict({
+    FoodTypeValueSet_Carp: new Coding({
         code: "227113004",
         display: "Carp",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_JelliedEel: Coding.FromStrict({
+    FoodTypeValueSet_JelliedEel: new Coding({
         code: "227114005",
         display: "Jellied eel",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedHerring: Coding.FromStrict({
+    FoodTypeValueSet_DriedHerring: new Coding({
         code: "227115006",
         display: "Dried herring",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedHerringInOatmeal: Coding.FromStrict({
+    FoodTypeValueSet_FriedHerringInOatmeal: new Coding({
         code: "227116007",
         display: "Fried herring in oatmeal",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrilledHerring: Coding.FromStrict({
+    FoodTypeValueSet_GrilledHerring: new Coding({
         code: "227117003",
         display: "Grilled herring",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PickledHerring: Coding.FromStrict({
+    FoodTypeValueSet_PickledHerring: new Coding({
         code: "227118008",
         display: "Pickled herring",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Hilsa: Coding.FromStrict({
+    FoodTypeValueSet_Hilsa: new Coding({
         code: "227119000",
         display: "Hilsa",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Jackfish: Coding.FromStrict({
+    FoodTypeValueSet_Jackfish: new Coding({
         code: "227120006",
         display: "Jackfish",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Katla: Coding.FromStrict({
+    FoodTypeValueSet_Katla: new Coding({
         code: "227121005",
         display: "Katla",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Kipper: Coding.FromStrict({
+    FoodTypeValueSet_Kipper: new Coding({
         code: "227122003",
         display: "Kipper",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PoachedKipper: Coding.FromStrict({
+    FoodTypeValueSet_PoachedKipper: new Coding({
         code: "227123008",
         display: "Poached kipper",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrilledKipper: Coding.FromStrict({
+    FoodTypeValueSet_GrilledKipper: new Coding({
         code: "227124002",
         display: "Grilled kipper",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Mackerel: Coding.FromStrict({
+    FoodTypeValueSet_Mackerel: new Coding({
         code: "227125001",
         display: "Mackerel",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedMackerel: Coding.FromStrict({
+    FoodTypeValueSet_FriedMackerel: new Coding({
         code: "227126000",
         display: "Fried mackerel",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrilledMackerel: Coding.FromStrict({
+    FoodTypeValueSet_GrilledMackerel: new Coding({
         code: "227127009",
         display: "Grilled mackerel",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SmokedMackerel: Coding.FromStrict({
+    FoodTypeValueSet_SmokedMackerel: new Coding({
         code: "227128004",
         display: "Smoked mackerel",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrilledSmokedMackerel: Coding.FromStrict({
+    FoodTypeValueSet_GrilledSmokedMackerel: new Coding({
         code: "227129007",
         display: "Grilled smoked mackerel",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_OrangeRoughy: Coding.FromStrict({
+    FoodTypeValueSet_OrangeRoughy: new Coding({
         code: "227130002",
         display: "Orange roughy",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Pangas: Coding.FromStrict({
+    FoodTypeValueSet_Pangas: new Coding({
         code: "227131003",
         display: "Pangas",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrilledSalmon: Coding.FromStrict({
+    FoodTypeValueSet_GrilledSalmon: new Coding({
         code: "227132005",
         display: "Grilled salmon",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PoachedSalmon: Coding.FromStrict({
+    FoodTypeValueSet_PoachedSalmon: new Coding({
         code: "227133000",
         display: "Poached salmon",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SmokedSalmon: Coding.FromStrict({
+    FoodTypeValueSet_SmokedSalmon: new Coding({
         code: "227134006",
         display: "Smoked salmon",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SalmonEnCroute: Coding.FromStrict({
+    FoodTypeValueSet_SalmonEnCroute: new Coding({
         code: "227135007",
         display: "Salmon en croute",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Sardine: Coding.FromStrict({
+    FoodTypeValueSet_Sardine: new Coding({
         code: "227136008",
         display: "Sardine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrilledSardine: Coding.FromStrict({
+    FoodTypeValueSet_GrilledSardine: new Coding({
         code: "227137004",
         display: "Grilled sardine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedSardine: Coding.FromStrict({
+    FoodTypeValueSet_FriedSardine: new Coding({
         code: "227138009",
         display: "Fried sardine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Sprats: Coding.FromStrict({
+    FoodTypeValueSet_Sprats: new Coding({
         code: "227139001",
         display: "Sprats",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SwordfishDietary: Coding.FromStrict({
+    FoodTypeValueSet_SwordfishDietary: new Coding({
         code: "227140004",
         display: "Swordfish - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedTrout: Coding.FromStrict({
+    FoodTypeValueSet_FriedTrout: new Coding({
         code: "227141000",
         display: "Fried trout",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BakedTrout: Coding.FromStrict({
+    FoodTypeValueSet_BakedTrout: new Coding({
         code: "227142007",
         display: "Baked trout",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SmokedTrout: Coding.FromStrict({
+    FoodTypeValueSet_SmokedTrout: new Coding({
         code: "227143002",
         display: "Smoked trout",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Tuna: Coding.FromStrict({
+    FoodTypeValueSet_Tuna: new Coding({
         code: "227144008",
         display: "Tuna",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WhitebaitFried: Coding.FromStrict({
+    FoodTypeValueSet_WhitebaitFried: new Coding({
         code: "227145009",
         display: "Whitebait fried",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Shellfish: Coding.FromStrict({
+    FoodTypeValueSet_Shellfish: new Coding({
         code: "227146005",
         display: "Shellfish",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Cockles: Coding.FromStrict({
+    FoodTypeValueSet_Cockles: new Coding({
         code: "227147001",
         display: "Cockles",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CocklesBottledInVinegar: Coding.FromStrict({
+    FoodTypeValueSet_CocklesBottledInVinegar: new Coding({
         code: "227148006",
         display: "Cockles bottled in vinegar",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CuttlefishDietary: Coding.FromStrict({
+    FoodTypeValueSet_CuttlefishDietary: new Coding({
         code: "227149003",
         display: "Cuttlefish - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Mussels: Coding.FromStrict({
+    FoodTypeValueSet_Mussels: new Coding({
         code: "227150003",
         display: "Mussels",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Prawns: Coding.FromStrict({
+    FoodTypeValueSet_Prawns: new Coding({
         code: "227151004",
         display: "Prawns",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BoiledPrawns: Coding.FromStrict({
+    FoodTypeValueSet_BoiledPrawns: new Coding({
         code: "227152006",
         display: "Boiled prawns",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedPrawns: Coding.FromStrict({
+    FoodTypeValueSet_FriedPrawns: new Coding({
         code: "227153001",
         display: "Fried prawns",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedPrawnsInBatter: Coding.FromStrict({
+    FoodTypeValueSet_FriedPrawnsInBatter: new Coding({
         code: "227154007",
         display: "Fried prawns in batter",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedPrawns: Coding.FromStrict({
+    FoodTypeValueSet_DriedPrawns: new Coding({
         code: "227155008",
         display: "Dried prawns",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Scampi: Coding.FromStrict({
+    FoodTypeValueSet_Scampi: new Coding({
         code: "227156009",
         display: "Scampi",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedScampiInBatter: Coding.FromStrict({
+    FoodTypeValueSet_FriedScampiInBatter: new Coding({
         code: "227157000",
         display: "Fried scampi in batter",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedScampiInBreadcrumbs: Coding.FromStrict({
+    FoodTypeValueSet_FriedScampiInBreadcrumbs: new Coding({
         code: "227158005",
         display: "Fried scampi in breadcrumbs",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedShrimp: Coding.FromStrict({
+    FoodTypeValueSet_FriedShrimp: new Coding({
         code: "227159002",
         display: "Fried shrimp",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedShrimp: Coding.FromStrict({
+    FoodTypeValueSet_DriedShrimp: new Coding({
         code: "227160007",
         display: "Dried shrimp",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_OctopusDietary: Coding.FromStrict({
+    FoodTypeValueSet_OctopusDietary: new Coding({
         code: "227161006",
         display: "Octopus - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Scallop: Coding.FromStrict({
+    FoodTypeValueSet_Scallop: new Coding({
         code: "227162004",
         display: "Scallop",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SquidDietary: Coding.FromStrict({
+    FoodTypeValueSet_SquidDietary: new Coding({
         code: "227163009",
         display: "Squid - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedSquid: Coding.FromStrict({
+    FoodTypeValueSet_DriedSquid: new Coding({
         code: "227164003",
         display: "Dried squid",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedSquid: Coding.FromStrict({
+    FoodTypeValueSet_FriedSquid: new Coding({
         code: "227165002",
         display: "Fried squid",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedSquidInBatter: Coding.FromStrict({
+    FoodTypeValueSet_FriedSquidInBatter: new Coding({
         code: "227167005",
         display: "Fried squid in batter",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Whelks: Coding.FromStrict({
+    FoodTypeValueSet_Whelks: new Coding({
         code: "227168000",
         display: "Whelks",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Winkles: Coding.FromStrict({
+    FoodTypeValueSet_Winkles: new Coding({
         code: "227169008",
         display: "Winkles",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FishProducts: Coding.FromStrict({
+    FoodTypeValueSet_FishProducts: new Coding({
         code: "227170009",
         display: "Fish products",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Crabstick: Coding.FromStrict({
+    FoodTypeValueSet_Crabstick: new Coding({
         code: "227171008",
         display: "Crabstick",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FishBall: Coding.FromStrict({
+    FoodTypeValueSet_FishBall: new Coding({
         code: "227172001",
         display: "Fish ball",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Fishcake: Coding.FromStrict({
+    FoodTypeValueSet_Fishcake: new Coding({
         code: "227173006",
         display: "Fishcake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrilledFishcake: Coding.FromStrict({
+    FoodTypeValueSet_GrilledFishcake: new Coding({
         code: "227174000",
         display: "Grilled fishcake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedFishcake: Coding.FromStrict({
+    FoodTypeValueSet_FriedFishcake: new Coding({
         code: "227175004",
         display: "Fried fishcake",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FishFingers: Coding.FromStrict({
+    FoodTypeValueSet_FishFingers: new Coding({
         code: "227176003",
         display: "Fish fingers",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedFishFingers: Coding.FromStrict({
+    FoodTypeValueSet_FriedFishFingers: new Coding({
         code: "227177007",
         display: "Fried fish fingers",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GrilledFishFingers: Coding.FromStrict({
+    FoodTypeValueSet_GrilledFishFingers: new Coding({
         code: "227178002",
         display: "Grilled fish fingers",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FishPaste: Coding.FromStrict({
+    FoodTypeValueSet_FishPaste: new Coding({
         code: "227179005",
         display: "Fish paste",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FishPate: Coding.FromStrict({
+    FoodTypeValueSet_FishPate: new Coding({
         code: "227180008",
         display: "Fish pate",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FishPie: Coding.FromStrict({
+    FoodTypeValueSet_FishPie: new Coding({
         code: "227181007",
         display: "Fish pie",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Kedgeree: Coding.FromStrict({
+    FoodTypeValueSet_Kedgeree: new Coding({
         code: "227182000",
         display: "Kedgeree",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FishRoe: Coding.FromStrict({
+    FoodTypeValueSet_FishRoe: new Coding({
         code: "227183005",
         display: "Fish roe",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RawHardFishRoe: Coding.FromStrict({
+    FoodTypeValueSet_RawHardFishRoe: new Coding({
         code: "227184004",
         display: "Raw hard fish roe",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedHardFishRoe: Coding.FromStrict({
+    FoodTypeValueSet_FriedHardFishRoe: new Coding({
         code: "227185003",
         display: "Fried hard fish roe",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedHardFishRoeInBatter: Coding.FromStrict({
+    FoodTypeValueSet_FriedHardFishRoeInBatter: new Coding({
         code: "227186002",
         display: "Fried hard fish roe in batter",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RawSoftFishRoe: Coding.FromStrict({
+    FoodTypeValueSet_RawSoftFishRoe: new Coding({
         code: "227187006",
         display: "Raw soft fish roe",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FriedSoftFishRoe: Coding.FromStrict({
+    FoodTypeValueSet_FriedSoftFishRoe: new Coding({
         code: "227188001",
         display: "Fried soft fish roe",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SeafoodCocktail: Coding.FromStrict({
+    FoodTypeValueSet_SeafoodCocktail: new Coding({
         code: "227189009",
         display: "Seafood cocktail",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Taramasalata: Coding.FromStrict({
+    FoodTypeValueSet_Taramasalata: new Coding({
         code: "227190000",
         display: "Taramasalata",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedFish: Coding.FromStrict({
+    FoodTypeValueSet_TinnedFish: new Coding({
         code: "227191001",
         display: "Tinned fish",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_AnchoviesCannedInOil: Coding.FromStrict({
+    FoodTypeValueSet_AnchoviesCannedInOil: new Coding({
         code: "227193003",
         display: "Anchovies canned in oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_HerringCannedInTomatoSauce: Coding.FromStrict({
+    FoodTypeValueSet_HerringCannedInTomatoSauce: new Coding({
         code: "227194009",
         display: "Herring canned in tomato sauce",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MackerelCannedInTomatoSauce: Coding.FromStrict({
+    FoodTypeValueSet_MackerelCannedInTomatoSauce: new Coding({
         code: "227195005",
         display: "Mackerel canned in tomato sauce",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MackerelCannedInBrine: Coding.FromStrict({
+    FoodTypeValueSet_MackerelCannedInBrine: new Coding({
         code: "227196006",
         display: "Mackerel canned in brine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MusselsCannedInBrine: Coding.FromStrict({
+    FoodTypeValueSet_MusselsCannedInBrine: new Coding({
         code: "227197002",
         display: "Mussels canned in brine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PilchardsCannedInTomatoSauce: Coding.FromStrict({
+    FoodTypeValueSet_PilchardsCannedInTomatoSauce: new Coding({
         code: "227198007",
         display: "Pilchards canned in tomato sauce",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PilchardsCannedInBrine: Coding.FromStrict({
+    FoodTypeValueSet_PilchardsCannedInBrine: new Coding({
         code: "227199004",
         display: "Pilchards canned in brine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SalmonCannedInBrine: Coding.FromStrict({
+    FoodTypeValueSet_SalmonCannedInBrine: new Coding({
         code: "227200001",
         display: "Salmon canned in brine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SardinesCannedInBrine: Coding.FromStrict({
+    FoodTypeValueSet_SardinesCannedInBrine: new Coding({
         code: "227201002",
         display: "Sardines canned in brine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SardinesCannedInOil: Coding.FromStrict({
+    FoodTypeValueSet_SardinesCannedInOil: new Coding({
         code: "227202009",
         display: "Sardines canned in oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SardinesCannedInTomatoSauce: Coding.FromStrict({
+    FoodTypeValueSet_SardinesCannedInTomatoSauce: new Coding({
         code: "227203004",
         display: "Sardines canned in tomato sauce",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TunaCannedInBrine: Coding.FromStrict({
+    FoodTypeValueSet_TunaCannedInBrine: new Coding({
         code: "227204005",
         display: "Tuna canned in brine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TunaCannedInOil: Coding.FromStrict({
+    FoodTypeValueSet_TunaCannedInOil: new Coding({
         code: "227205006",
         display: "Tuna canned in oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CrabCannedInBrine: Coding.FromStrict({
+    FoodTypeValueSet_CrabCannedInBrine: new Coding({
         code: "227206007",
         display: "Crab canned in brine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ShrimpsCannedInBrine: Coding.FromStrict({
+    FoodTypeValueSet_ShrimpsCannedInBrine: new Coding({
         code: "227207003",
         display: "Shrimps canned in brine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_AbaloneCannedInBrine: Coding.FromStrict({
+    FoodTypeValueSet_AbaloneCannedInBrine: new Coding({
         code: "227208008",
         display: "Abalone canned in brine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ClamsCannedInBrine: Coding.FromStrict({
+    FoodTypeValueSet_ClamsCannedInBrine: new Coding({
         code: "227209000",
         display: "Clams canned in brine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_VegetablesPulsesHerbsAndSpices: Coding.FromStrict({
+    FoodTypeValueSet_VegetablesPulsesHerbsAndSpices: new Coding({
         code: "227210005",
         display: "Vegetables pulses herbs and spices",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_AlfalfaSprout: Coding.FromStrict({
+    FoodTypeValueSet_AlfalfaSprout: new Coding({
         code: "227212002",
         display: "Alfalfa sprout",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_AmaranthLeaf: Coding.FromStrict({
+    FoodTypeValueSet_AmaranthLeaf: new Coding({
         code: "227213007",
         display: "Amaranth leaf",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Arrowhead: Coding.FromStrict({
+    FoodTypeValueSet_Arrowhead: new Coding({
         code: "227214001",
         display: "Arrowhead",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Artichoke: Coding.FromStrict({
+    FoodTypeValueSet_Artichoke: new Coding({
         code: "227215000",
         display: "Artichoke",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GlobeArtichoke: Coding.FromStrict({
+    FoodTypeValueSet_GlobeArtichoke: new Coding({
         code: "227216004",
         display: "Globe artichoke",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_JerusalemArtichoke: Coding.FromStrict({
+    FoodTypeValueSet_JerusalemArtichoke: new Coding({
         code: "227217008",
         display: "Jerusalem artichoke",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Asparagus: Coding.FromStrict({
+    FoodTypeValueSet_Asparagus: new Coding({
         code: "227218003",
         display: "Asparagus",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Eggplant: Coding.FromStrict({
+    FoodTypeValueSet_Eggplant: new Coding({
         code: "227219006",
         display: "Eggplant",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Beetroot: Coding.FromStrict({
+    FoodTypeValueSet_Beetroot: new Coding({
         code: "227220000",
         display: "Beetroot",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BrassicaVegetable: Coding.FromStrict({
+    FoodTypeValueSet_BrassicaVegetable: new Coding({
         code: "227221001",
         display: "Brassica vegetable",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Broccoli: Coding.FromStrict({
+    FoodTypeValueSet_Broccoli: new Coding({
         code: "227222008",
         display: "Broccoli",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BrusselsSprouts: Coding.FromStrict({
+    FoodTypeValueSet_BrusselsSprouts: new Coding({
         code: "227223003",
         display: "Brussels sprouts",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CabbageDietary: Coding.FromStrict({
+    FoodTypeValueSet_CabbageDietary: new Coding({
         code: "227224009",
         display: "Cabbage - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChineseCabbage: Coding.FromStrict({
+    FoodTypeValueSet_ChineseCabbage: new Coding({
         code: "227225005",
         display: "Chinese cabbage",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RedCabbage: Coding.FromStrict({
+    FoodTypeValueSet_RedCabbage: new Coding({
         code: "227226006",
         display: "Red cabbage",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SavoyCabbage: Coding.FromStrict({
+    FoodTypeValueSet_SavoyCabbage: new Coding({
         code: "227227002",
         display: "Savoy cabbage",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SpringCabbage: Coding.FromStrict({
+    FoodTypeValueSet_SpringCabbage: new Coding({
         code: "227228007",
         display: "Spring cabbage",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WhiteCabbage: Coding.FromStrict({
+    FoodTypeValueSet_WhiteCabbage: new Coding({
         code: "227229004",
         display: "White cabbage",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CurlyKale: Coding.FromStrict({
+    FoodTypeValueSet_CurlyKale: new Coding({
         code: "227230009",
         display: "Curly kale",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_KohlRabi: Coding.FromStrict({
+    FoodTypeValueSet_KohlRabi: new Coding({
         code: "227231008",
         display: "Kohl rabi",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Seakale: Coding.FromStrict({
+    FoodTypeValueSet_Seakale: new Coding({
         code: "227232001",
         display: "Seakale",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Breadfruit: Coding.FromStrict({
+    FoodTypeValueSet_Breadfruit: new Coding({
         code: "227233006",
         display: "Breadfruit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CassavaDietary: Coding.FromStrict({
+    FoodTypeValueSet_CassavaDietary: new Coding({
         code: "227234000",
         display: "Cassava - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Celeriac: Coding.FromStrict({
+    FoodTypeValueSet_Celeriac: new Coding({
         code: "227235004",
         display: "Celeriac",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Chard: Coding.FromStrict({
+    FoodTypeValueSet_Chard: new Coding({
         code: "227236003",
         display: "Chard",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChicoryDietary: Coding.FromStrict({
+    FoodTypeValueSet_ChicoryDietary: new Coding({
         code: "227237007",
         display: "Chicory - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChoCho: Coding.FromStrict({
+    FoodTypeValueSet_ChoCho: new Coding({
         code: "227238002",
         display: "Cho cho",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Zucchini: Coding.FromStrict({
+    FoodTypeValueSet_Zucchini: new Coding({
         code: "227239005",
         display: "Zucchini",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ColeLeaf: Coding.FromStrict({
+    FoodTypeValueSet_ColeLeaf: new Coding({
         code: "227240007",
         display: "Cole leaf",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CucumberDietary: Coding.FromStrict({
+    FoodTypeValueSet_CucumberDietary: new Coding({
         code: "227241006",
         display: "Cucumber - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DrumstickLeaf: Coding.FromStrict({
+    FoodTypeValueSet_DrumstickLeaf: new Coding({
         code: "227242004",
         display: "Drumstick leaf",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Endive: Coding.FromStrict({
+    FoodTypeValueSet_Endive: new Coding({
         code: "227243009",
         display: "Endive",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Fenugreek: Coding.FromStrict({
+    FoodTypeValueSet_Fenugreek: new Coding({
         code: "227244003",
         display: "Fenugreek",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Gherkin: Coding.FromStrict({
+    FoodTypeValueSet_Gherkin: new Coding({
         code: "227245002",
         display: "Gherkin",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GourdDietary: Coding.FromStrict({
+    FoodTypeValueSet_GourdDietary: new Coding({
         code: "227246001",
         display: "Gourd - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Jackfruit: Coding.FromStrict({
+    FoodTypeValueSet_Jackfruit: new Coding({
         code: "227247005",
         display: "Jackfruit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LeekDietary: Coding.FromStrict({
+    FoodTypeValueSet_LeekDietary: new Coding({
         code: "227248000",
         display: "Leek - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LotusTuber: Coding.FromStrict({
+    FoodTypeValueSet_LotusTuber: new Coding({
         code: "227249008",
         display: "Lotus tuber",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Marrow: Coding.FromStrict({
+    FoodTypeValueSet_Marrow: new Coding({
         code: "227250008",
         display: "Marrow",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Matoki: Coding.FromStrict({
+    FoodTypeValueSet_Matoki: new Coding({
         code: "227251007",
         display: "Matoki",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MushroomDietary: Coding.FromStrict({
+    FoodTypeValueSet_MushroomDietary: new Coding({
         code: "227252000",
         display: "Mushroom - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MustardLeaf: Coding.FromStrict({
+    FoodTypeValueSet_MustardLeaf: new Coding({
         code: "227253005",
         display: "Mustard leaf",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Okra: Coding.FromStrict({
+    FoodTypeValueSet_Okra: new Coding({
         code: "227254004",
         display: "Okra",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SpringOnion: Coding.FromStrict({
+    FoodTypeValueSet_SpringOnion: new Coding({
         code: "227255003",
         display: "Spring onion",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Pawpaw: Coding.FromStrict({
+    FoodTypeValueSet_Pawpaw: new Coding({
         code: "227256002",
         display: "Pawpaw",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Parsnip: Coding.FromStrict({
+    FoodTypeValueSet_Parsnip: new Coding({
         code: "227257006",
         display: "Parsnip",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PatraLeaf: Coding.FromStrict({
+    FoodTypeValueSet_PatraLeaf: new Coding({
         code: "227258001",
         display: "Patra leaf",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Plantain: Coding.FromStrict({
+    FoodTypeValueSet_Plantain: new Coding({
         code: "227259009",
         display: "Plantain",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Pumpkin: Coding.FromStrict({
+    FoodTypeValueSet_Pumpkin: new Coding({
         code: "227260004",
         display: "Pumpkin",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Raddiccio: Coding.FromStrict({
+    FoodTypeValueSet_Raddiccio: new Coding({
         code: "227261000",
         display: "Raddiccio",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RadishWhiteMooli: Coding.FromStrict({
+    FoodTypeValueSet_RadishWhiteMooli: new Coding({
         code: "227262007",
         display: "Radish white - mooli",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RapeLeaf: Coding.FromStrict({
+    FoodTypeValueSet_RapeLeaf: new Coding({
         code: "227263002",
         display: "Rape leaf",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Salsify: Coding.FromStrict({
+    FoodTypeValueSet_Salsify: new Coding({
         code: "227264008",
         display: "Salsify",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SeaweedDietary: Coding.FromStrict({
+    FoodTypeValueSet_SeaweedDietary: new Coding({
         code: "227265009",
         display: "Seaweed - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Swede: Coding.FromStrict({
+    FoodTypeValueSet_Swede: new Coding({
         code: "227266005",
         display: "Swede",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SweetPotatoDietary: Coding.FromStrict({
+    FoodTypeValueSet_SweetPotatoDietary: new Coding({
         code: "227267001",
         display: "Sweet potato - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Sweetcorn: Coding.FromStrict({
+    FoodTypeValueSet_Sweetcorn: new Coding({
         code: "227268006",
         display: "Sweetcorn",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SweetcornKernels: Coding.FromStrict({
+    FoodTypeValueSet_SweetcornKernels: new Coding({
         code: "227269003",
         display: "Sweetcorn kernels",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SweetcornOnTheCob: Coding.FromStrict({
+    FoodTypeValueSet_SweetcornOnTheCob: new Coding({
         code: "227270002",
         display: "Sweetcorn on-the-cob",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Tannia: Coding.FromStrict({
+    FoodTypeValueSet_Tannia: new Coding({
         code: "227271003",
         display: "Tannia",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Taro: Coding.FromStrict({
+    FoodTypeValueSet_Taro: new Coding({
         code: "227272005",
         display: "Taro",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TaroLeaves: Coding.FromStrict({
+    FoodTypeValueSet_TaroLeaves: new Coding({
         code: "227273000",
         display: "Taro leaves",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TomatoPuree: Coding.FromStrict({
+    FoodTypeValueSet_TomatoPuree: new Coding({
         code: "227274006",
         display: "Tomato puree",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Turnip: Coding.FromStrict({
+    FoodTypeValueSet_Turnip: new Coding({
         code: "227275007",
         display: "Turnip",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WaterChestnut: Coding.FromStrict({
+    FoodTypeValueSet_WaterChestnut: new Coding({
         code: "227276008",
         display: "Water chestnut",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Watercress: Coding.FromStrict({
+    FoodTypeValueSet_Watercress: new Coding({
         code: "227277004",
         display: "Watercress",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_YamDietary: Coding.FromStrict({
+    FoodTypeValueSet_YamDietary: new Coding({
         code: "227278009",
         display: "Yam - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BoiledPotato: Coding.FromStrict({
+    FoodTypeValueSet_BoiledPotato: new Coding({
         code: "227279001",
         display: "Boiled potato",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PotatoBoiledInSaltedWater: Coding.FromStrict({
+    FoodTypeValueSet_PotatoBoiledInSaltedWater: new Coding({
         code: "227280003",
         display: "Potato boiled in salted water",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PotatoBoiledInUnsaltedWater: Coding.FromStrict({
+    FoodTypeValueSet_PotatoBoiledInUnsaltedWater: new Coding({
         code: "227281004",
         display: "Potato boiled in unsalted water",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FrenchFries: Coding.FromStrict({
+    FoodTypeValueSet_FrenchFries: new Coding({
         code: "227282006",
         display: "French fries",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ThickCutFrenchFries: Coding.FromStrict({
+    FoodTypeValueSet_ThickCutFrenchFries: new Coding({
         code: "227283001",
         display: "Thick cut French fries",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ThinCutFrenchFries: Coding.FromStrict({
+    FoodTypeValueSet_ThinCutFrenchFries: new Coding({
         code: "227284007",
         display: "Thin cut French fries",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CrinkleCutChips: Coding.FromStrict({
+    FoodTypeValueSet_CrinkleCutChips: new Coding({
         code: "227285008",
         display: "Crinkle cut chips",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FrenchFriesCookedInCornOil: Coding.FromStrict({
+    FoodTypeValueSet_FrenchFriesCookedInCornOil: new Coding({
         code: "227286009",
         display: "French fries cooked in corn oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FrenchFriesCookedInFatDrippings: Coding.FromStrict({
+    FoodTypeValueSet_FrenchFriesCookedInFatDrippings: new Coding({
         code: "227287000",
         display: "French fries cooked in fat drippings",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FrenchFriesCookedInBlendedOil: Coding.FromStrict({
+    FoodTypeValueSet_FrenchFriesCookedInBlendedOil: new Coding({
         code: "227288005",
         display: "French fries cooked in blended oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FrenchFriesCookedInPolyunsaturatedOil: Coding.FromStrict({
+    FoodTypeValueSet_FrenchFriesCookedInPolyunsaturatedOil: new Coding({
         code: "227289002",
         display: "French fries cooked in polyunsaturated oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MicrowaveFrenchFries: Coding.FromStrict({
+    FoodTypeValueSet_MicrowaveFrenchFries: new Coding({
         code: "227290006",
         display: "Microwave French fries",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_OvenFrenchFries: Coding.FromStrict({
+    FoodTypeValueSet_OvenFrenchFries: new Coding({
         code: "227291005",
         display: "Oven French fries",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_JacketPotato: Coding.FromStrict({
+    FoodTypeValueSet_JacketPotato: new Coding({
         code: "227292003",
         display: "Jacket potato",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MashedPotato: Coding.FromStrict({
+    FoodTypeValueSet_MashedPotato: new Coding({
         code: "227294002",
         display: "Mashed potato",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PotatoMashedWithButter: Coding.FromStrict({
+    FoodTypeValueSet_PotatoMashedWithButter: new Coding({
         code: "227295001",
         display: "Potato mashed with butter",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PotatoMashedWithMargarine: Coding.FromStrict({
+    FoodTypeValueSet_PotatoMashedWithMargarine: new Coding({
         code: "227296000",
         display: "Potato mashed with margarine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PotatoMashedWithMilk: Coding.FromStrict({
+    FoodTypeValueSet_PotatoMashedWithMilk: new Coding({
         code: "227297009",
         display: "Potato mashed with milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PotatoMashedWithPolyunsaturatedMargarine: Coding.FromStrict({
+    FoodTypeValueSet_PotatoMashedWithPolyunsaturatedMargarine: new Coding({
         code: "227298004",
         display: "Potato mashed with polyunsaturated margarine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RoastPotato: Coding.FromStrict({
+    FoodTypeValueSet_RoastPotato: new Coding({
         code: "227299007",
         display: "Roast potato",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PotatoRoastedInVegetableOil: Coding.FromStrict({
+    FoodTypeValueSet_PotatoRoastedInVegetableOil: new Coding({
         code: "227300004",
         display: "Potato roasted in vegetable oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PotatoRoastedInPolyunsaturatedOil: Coding.FromStrict({
+    FoodTypeValueSet_PotatoRoastedInPolyunsaturatedOil: new Coding({
         code: "227301000",
         display: "Potato roasted in polyunsaturated oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PotatoRoastedInDripping: Coding.FromStrict({
+    FoodTypeValueSet_PotatoRoastedInDripping: new Coding({
         code: "227302007",
         display: "Potato roasted in dripping",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedPotato: Coding.FromStrict({
+    FoodTypeValueSet_TinnedPotato: new Coding({
         code: "227303002",
         display: "Tinned potato",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PotatoTinnedInSaltedWater: Coding.FromStrict({
+    FoodTypeValueSet_PotatoTinnedInSaltedWater: new Coding({
         code: "227304008",
         display: "Potato tinned in salted water",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PotatoTinnedInUnsaltedWater: Coding.FromStrict({
+    FoodTypeValueSet_PotatoTinnedInUnsaltedWater: new Coding({
         code: "227305009",
         display: "Potato tinned in unsalted water",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_InstantPotato: Coding.FromStrict({
+    FoodTypeValueSet_InstantPotato: new Coding({
         code: "227306005",
         display: "Instant potato",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_InstantPotatoMadeUpWithWater: Coding.FromStrict({
+    FoodTypeValueSet_InstantPotatoMadeUpWithWater: new Coding({
         code: "227307001",
         display: "Instant potato made up with water",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_InstantPotatoMadeUpWithSemiSkimmedMilk: Coding.FromStrict({
+    FoodTypeValueSet_InstantPotatoMadeUpWithSemiSkimmedMilk: new Coding({
         code: "227308006",
         display: "Instant potato made up with semi-skimmed milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_InstantPotatoMadeUpWithSkimmedMilk: Coding.FromStrict({
+    FoodTypeValueSet_InstantPotatoMadeUpWithSkimmedMilk: new Coding({
         code: "227309003",
         display: "Instant potato made up with skimmed milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_InstantPotatoMadeUpWithWholeMilk: Coding.FromStrict({
+    FoodTypeValueSet_InstantPotatoMadeUpWithWholeMilk: new Coding({
         code: "227310008",
         display: "Instant potato made up with whole milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PotatoCroquetteFriedInBlendedOil: Coding.FromStrict({
+    FoodTypeValueSet_PotatoCroquetteFriedInBlendedOil: new Coding({
         code: "227311007",
         display: "Potato croquette fried in blended oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PotatoWaffle: Coding.FromStrict({
+    FoodTypeValueSet_PotatoWaffle: new Coding({
         code: "227312000",
         display: "Potato waffle",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Legumes: Coding.FromStrict({
+    FoodTypeValueSet_Legumes: new Coding({
         code: "227313005",
         display: "Legumes",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CannedBeans: Coding.FromStrict({
+    FoodTypeValueSet_CannedBeans: new Coding({
         code: "227314004",
         display: "Canned beans",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BakedBeans: Coding.FromStrict({
+    FoodTypeValueSet_BakedBeans: new Coding({
         code: "227315003",
         display: "Baked beans",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BakedBeansCannedInTomatoSauce: Coding.FromStrict({
+    FoodTypeValueSet_BakedBeansCannedInTomatoSauce: new Coding({
         code: "227316002",
         display: "Baked beans canned in tomato sauce",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BakedBeansCannedInTomatoSauceReducedSugar: Coding.FromStrict({
+    FoodTypeValueSet_BakedBeansCannedInTomatoSauceReducedSugar: new Coding({
         code: "227317006",
         display: "Baked beans canned in tomato sauce reduced sugar",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BakedBeansCannedInTomatoSauceReducedSalt: Coding.FromStrict({
+    FoodTypeValueSet_BakedBeansCannedInTomatoSauceReducedSalt: new Coding({
         code: "227318001",
         display: "Baked beans canned in tomato sauce reduced salt",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BakedBeansCannedInTomatoSauceWithBurgers: Coding.FromStrict({
+    FoodTypeValueSet_BakedBeansCannedInTomatoSauceWithBurgers: new Coding({
         code: "227319009",
         display: "Baked beans canned in tomato sauce with burgers",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BakedBeansCannedInTomatoSauceWithPorkSausages: Coding.FromStrict({
+    FoodTypeValueSet_BakedBeansCannedInTomatoSauceWithPorkSausages: new Coding({
         code: "227320003",
         display: "Baked beans canned in tomato sauce with pork sausages",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BalorBeansCanned: Coding.FromStrict({
+    FoodTypeValueSet_BalorBeansCanned: new Coding({
         code: "227321004",
         display: "Balor beans canned",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BarbecueBeansCannedInSauce: Coding.FromStrict({
+    FoodTypeValueSet_BarbecueBeansCannedInSauce: new Coding({
         code: "227322006",
         display: "Barbecue beans canned in sauce",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CannedMungBeansprouts: Coding.FromStrict({
+    FoodTypeValueSet_CannedMungBeansprouts: new Coding({
         code: "227323001",
         display: "Canned mung beansprouts",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CannedBroadBeans: Coding.FromStrict({
+    FoodTypeValueSet_CannedBroadBeans: new Coding({
         code: "227324007",
         display: "Canned broad beans",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CannedButterBeans: Coding.FromStrict({
+    FoodTypeValueSet_CannedButterBeans: new Coding({
         code: "227325008",
         display: "Canned butter beans",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CannedChickPeas: Coding.FromStrict({
+    FoodTypeValueSet_CannedChickPeas: new Coding({
         code: "227326009",
         display: "Canned chick peas",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CannedChiliBeans: Coding.FromStrict({
+    FoodTypeValueSet_CannedChiliBeans: new Coding({
         code: "227327000",
         display: "Canned chili beans",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CannedHaricotBeans: Coding.FromStrict({
+    FoodTypeValueSet_CannedHaricotBeans: new Coding({
         code: "227328005",
         display: "Canned haricot beans",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CannedLilvaBeans: Coding.FromStrict({
+    FoodTypeValueSet_CannedLilvaBeans: new Coding({
         code: "227329002",
         display: "Canned lilva beans",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CannedLentilsInTomatoSauce: Coding.FromStrict({
+    FoodTypeValueSet_CannedLentilsInTomatoSauce: new Coding({
         code: "227330007",
         display: "Canned lentils in tomato sauce",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CannedPapriBeans: Coding.FromStrict({
+    FoodTypeValueSet_CannedPapriBeans: new Coding({
         code: "227331006",
         display: "Canned papri beans",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CannedPeas: Coding.FromStrict({
+    FoodTypeValueSet_CannedPeas: new Coding({
         code: "227332004",
         display: "Canned peas",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CannedGardenPeas: Coding.FromStrict({
+    FoodTypeValueSet_CannedGardenPeas: new Coding({
         code: "227333009",
         display: "Canned garden peas",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CannedMarrowfatPeas: Coding.FromStrict({
+    FoodTypeValueSet_CannedMarrowfatPeas: new Coding({
         code: "227334003",
         display: "Canned marrowfat peas",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CannedMushyPeas: Coding.FromStrict({
+    FoodTypeValueSet_CannedMushyPeas: new Coding({
         code: "227335002",
         display: "Canned mushy peas",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CannedPeasePudding: Coding.FromStrict({
+    FoodTypeValueSet_CannedPeasePudding: new Coding({
         code: "227336001",
         display: "Canned pease pudding",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CannedRedKidneyBeans: Coding.FromStrict({
+    FoodTypeValueSet_CannedRedKidneyBeans: new Coding({
         code: "227337005",
         display: "Canned red kidney beans",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_AdukiBeans: Coding.FromStrict({
+    FoodTypeValueSet_AdukiBeans: new Coding({
         code: "227338000",
         display: "Aduki beans",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Beansprouts: Coding.FromStrict({
+    FoodTypeValueSet_Beansprouts: new Coding({
         code: "227339008",
         display: "Beansprouts",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RawMungBeansprouts: Coding.FromStrict({
+    FoodTypeValueSet_RawMungBeansprouts: new Coding({
         code: "227340005",
         display: "Raw mung beansprouts",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_StirFriedMungBeansprouts: Coding.FromStrict({
+    FoodTypeValueSet_StirFriedMungBeansprouts: new Coding({
         code: "227341009",
         display: "Stir-fried mung beansprouts",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BlackGramBeans: Coding.FromStrict({
+    FoodTypeValueSet_BlackGramBeans: new Coding({
         code: "227342002",
         display: "Black gram beans",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BlackeyeBeans: Coding.FromStrict({
+    FoodTypeValueSet_BlackeyeBeans: new Coding({
         code: "227343007",
         display: "Blackeye beans",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BroadBeanDietary: Coding.FromStrict({
+    FoodTypeValueSet_BroadBeanDietary: new Coding({
         code: "227344001",
         display: "Broad bean - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ButterBeans: Coding.FromStrict({
+    FoodTypeValueSet_ButterBeans: new Coding({
         code: "227345000",
         display: "Butter beans",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChickPeas: Coding.FromStrict({
+    FoodTypeValueSet_ChickPeas: new Coding({
         code: "227346004",
         display: "Chick peas",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ClusterBeans: Coding.FromStrict({
+    FoodTypeValueSet_ClusterBeans: new Coding({
         code: "227347008",
         display: "Cluster beans",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_HaricotBeans: Coding.FromStrict({
+    FoodTypeValueSet_HaricotBeans: new Coding({
         code: "227348003",
         display: "Haricot beans",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Hummus: Coding.FromStrict({
+    FoodTypeValueSet_Hummus: new Coding({
         code: "227349006",
         display: "Hummus",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Lentils: Coding.FromStrict({
+    FoodTypeValueSet_Lentils: new Coding({
         code: "227350006",
         display: "Lentils",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GreenLentils: Coding.FromStrict({
+    FoodTypeValueSet_GreenLentils: new Coding({
         code: "227351005",
         display: "Green lentils",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BrownLentils: Coding.FromStrict({
+    FoodTypeValueSet_BrownLentils: new Coding({
         code: "227352003",
         display: "Brown lentils",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RedSplitLentils: Coding.FromStrict({
+    FoodTypeValueSet_RedSplitLentils: new Coding({
         code: "227353008",
         display: "Red split lentils",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Miso: Coding.FromStrict({
+    FoodTypeValueSet_Miso: new Coding({
         code: "227354002",
         display: "Miso",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MungBeans: Coding.FromStrict({
+    FoodTypeValueSet_MungBeans: new Coding({
         code: "227355001",
         display: "Mung beans",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MungBeanDahl: Coding.FromStrict({
+    FoodTypeValueSet_MungBeanDahl: new Coding({
         code: "227356000",
         display: "Mung bean dahl",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PapriBeans: Coding.FromStrict({
+    FoodTypeValueSet_PapriBeans: new Coding({
         code: "227357009",
         display: "Papri beans",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PigeonPeas: Coding.FromStrict({
+    FoodTypeValueSet_PigeonPeas: new Coding({
         code: "227358004",
         display: "Pigeon peas",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PigeonPeaDahl: Coding.FromStrict({
+    FoodTypeValueSet_PigeonPeaDahl: new Coding({
         code: "227359007",
         display: "Pigeon pea dahl",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PintoBeans: Coding.FromStrict({
+    FoodTypeValueSet_PintoBeans: new Coding({
         code: "227360002",
         display: "Pinto beans",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RefriedPintoBeans: Coding.FromStrict({
+    FoodTypeValueSet_RefriedPintoBeans: new Coding({
         code: "227361003",
         display: "Refried pinto beans",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_KidneyBeans: Coding.FromStrict({
+    FoodTypeValueSet_KidneyBeans: new Coding({
         code: "227362005",
         display: "Kidney beans",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SwordBeans: Coding.FromStrict({
+    FoodTypeValueSet_SwordBeans: new Coding({
         code: "227363000",
         display: "Sword beans",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Tempeh: Coding.FromStrict({
+    FoodTypeValueSet_Tempeh: new Coding({
         code: "227364006",
         display: "Tempeh",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Tofu: Coding.FromStrict({
+    FoodTypeValueSet_Tofu: new Coding({
         code: "227365007",
         display: "Tofu",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SteamedTofu: Coding.FromStrict({
+    FoodTypeValueSet_SteamedTofu: new Coding({
         code: "227366008",
         display: "Steamed tofu",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SteamedFriedTofu: Coding.FromStrict({
+    FoodTypeValueSet_SteamedFriedTofu: new Coding({
         code: "227367004",
         display: "Steamed fried tofu",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FuJukTofu: Coding.FromStrict({
+    FoodTypeValueSet_FuJukTofu: new Coding({
         code: "227368009",
         display: "Fu-juk tofu",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FreshPeas: Coding.FromStrict({
+    FoodTypeValueSet_FreshPeas: new Coding({
         code: "227369001",
         display: "Fresh peas",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FreshRawPeas: Coding.FromStrict({
+    FoodTypeValueSet_FreshRawPeas: new Coding({
         code: "227370000",
         display: "Fresh raw peas",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FreshBoiledPeas: Coding.FromStrict({
+    FoodTypeValueSet_FreshBoiledPeas: new Coding({
         code: "227371001",
         display: "Fresh boiled peas",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedBoiledPeas: Coding.FromStrict({
+    FoodTypeValueSet_DriedBoiledPeas: new Coding({
         code: "227372008",
         display: "Dried boiled peas",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedBoiledSplitPeas: Coding.FromStrict({
+    FoodTypeValueSet_DriedBoiledSplitPeas: new Coding({
         code: "227373003",
         display: "Dried boiled split peas",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_HerbsAndSpices: Coding.FromStrict({
+    FoodTypeValueSet_HerbsAndSpices: new Coding({
         code: "227374009",
         display: "Herbs and spices",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Allspice: Coding.FromStrict({
+    FoodTypeValueSet_Allspice: new Coding({
         code: "227375005",
         display: "Allspice",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_AniseSeed: Coding.FromStrict({
+    FoodTypeValueSet_AniseSeed: new Coding({
         code: "227376006",
         display: "Anise seed",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Asafoetida: Coding.FromStrict({
+    FoodTypeValueSet_Asafoetida: new Coding({
         code: "227377002",
         display: "Asafoetida",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BasilDietary: Coding.FromStrict({
+    FoodTypeValueSet_BasilDietary: new Coding({
         code: "227378007",
         display: "Basil - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BayLeaf: Coding.FromStrict({
+    FoodTypeValueSet_BayLeaf: new Coding({
         code: "227379004",
         display: "Bay leaf",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BetelLeaf: Coding.FromStrict({
+    FoodTypeValueSet_BetelLeaf: new Coding({
         code: "227380001",
         display: "Betel leaf",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CarawaySeed: Coding.FromStrict({
+    FoodTypeValueSet_CarawaySeed: new Coding({
         code: "227381002",
         display: "Caraway seed",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Cardemon: Coding.FromStrict({
+    FoodTypeValueSet_Cardemon: new Coding({
         code: "227382009",
         display: "Cardemon",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CelerySeed: Coding.FromStrict({
+    FoodTypeValueSet_CelerySeed: new Coding({
         code: "227383004",
         display: "Celery seed",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChervilDried: Coding.FromStrict({
+    FoodTypeValueSet_ChervilDried: new Coding({
         code: "227384005",
         display: "Chervil, dried",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChiliPowder: Coding.FromStrict({
+    FoodTypeValueSet_ChiliPowder: new Coding({
         code: "227385006",
         display: "Chili powder",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChineseFiveSpice: Coding.FromStrict({
+    FoodTypeValueSet_ChineseFiveSpice: new Coding({
         code: "227386007",
         display: "Chinese five spice",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChiveHerb: Coding.FromStrict({
+    FoodTypeValueSet_ChiveHerb: new Coding({
         code: "227387003",
         display: "Chive - herb",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Cinnamon: Coding.FromStrict({
+    FoodTypeValueSet_Cinnamon: new Coding({
         code: "227388008",
         display: "Cinnamon",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Clove: Coding.FromStrict({
+    FoodTypeValueSet_Clove: new Coding({
         code: "227389000",
         display: "Clove",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Cilantro: Coding.FromStrict({
+    FoodTypeValueSet_Cilantro: new Coding({
         code: "227390009",
         display: "Cilantro",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CorianderSeed: Coding.FromStrict({
+    FoodTypeValueSet_CorianderSeed: new Coding({
         code: "227391008",
         display: "Coriander seed",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CuminSeed: Coding.FromStrict({
+    FoodTypeValueSet_CuminSeed: new Coding({
         code: "227392001",
         display: "Cumin seed",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CurryLeaf: Coding.FromStrict({
+    FoodTypeValueSet_CurryLeaf: new Coding({
         code: "227393006",
         display: "Curry leaf",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CurryPowder: Coding.FromStrict({
+    FoodTypeValueSet_CurryPowder: new Coding({
         code: "227395004",
         display: "Curry powder",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Fennel: Coding.FromStrict({
+    FoodTypeValueSet_Fennel: new Coding({
         code: "227396003",
         display: "Fennel",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FennelSeed: Coding.FromStrict({
+    FoodTypeValueSet_FennelSeed: new Coding({
         code: "227397007",
         display: "Fennel seed",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FenugreekSeed: Coding.FromStrict({
+    FoodTypeValueSet_FenugreekSeed: new Coding({
         code: "227398002",
         display: "Fenugreek seed",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GaramMasala: Coding.FromStrict({
+    FoodTypeValueSet_GaramMasala: new Coding({
         code: "227399005",
         display: "Garam masala",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Ginger: Coding.FromStrict({
+    FoodTypeValueSet_Ginger: new Coding({
         code: "227400003",
         display: "Ginger",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GroundGinger: Coding.FromStrict({
+    FoodTypeValueSet_GroundGinger: new Coding({
         code: "227401004",
         display: "Ground ginger",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_RootGinger: Coding.FromStrict({
+    FoodTypeValueSet_RootGinger: new Coding({
         code: "227402006",
         display: "Root ginger",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_LiquoricePowder: Coding.FromStrict({
+    FoodTypeValueSet_LiquoricePowder: new Coding({
         code: "227403001",
         display: "Liquorice powder",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Mace: Coding.FromStrict({
+    FoodTypeValueSet_Mace: new Coding({
         code: "227404007",
         display: "Mace",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Marjoram: Coding.FromStrict({
+    FoodTypeValueSet_Marjoram: new Coding({
         code: "227405008",
         display: "Marjoram",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MustardSeed: Coding.FromStrict({
+    FoodTypeValueSet_MustardSeed: new Coding({
         code: "227406009",
         display: "Mustard seed",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Oregano: Coding.FromStrict({
+    FoodTypeValueSet_Oregano: new Coding({
         code: "227407000",
         display: "Oregano",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Paprika: Coding.FromStrict({
+    FoodTypeValueSet_Paprika: new Coding({
         code: "227408005",
         display: "Paprika",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PoppySeed: Coding.FromStrict({
+    FoodTypeValueSet_PoppySeed: new Coding({
         code: "227409002",
         display: "Poppy seed",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Rosemary: Coding.FromStrict({
+    FoodTypeValueSet_Rosemary: new Coding({
         code: "227410007",
         display: "Rosemary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Sage: Coding.FromStrict({
+    FoodTypeValueSet_Sage: new Coding({
         code: "227411006",
         display: "Sage",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Tarragon: Coding.FromStrict({
+    FoodTypeValueSet_Tarragon: new Coding({
         code: "227412004",
         display: "Tarragon",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Thyme: Coding.FromStrict({
+    FoodTypeValueSet_Thyme: new Coding({
         code: "227413009",
         display: "Thyme",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Turmeric: Coding.FromStrict({
+    FoodTypeValueSet_Turmeric: new Coding({
         code: "227414003",
         display: "Turmeric",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FruitNutsAndSeeds: Coding.FromStrict({
+    FoodTypeValueSet_FruitNutsAndSeeds: new Coding({
         code: "227415002",
         display: "Fruit nuts and seeds",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FreshFruit: Coding.FromStrict({
+    FoodTypeValueSet_FreshFruit: new Coding({
         code: "227416001",
         display: "Fresh fruit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Bilberry: Coding.FromStrict({
+    FoodTypeValueSet_Bilberry: new Coding({
         code: "227417005",
         display: "Bilberry",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Blackberries: Coding.FromStrict({
+    FoodTypeValueSet_Blackberries: new Coding({
         code: "227418000",
         display: "Blackberries",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Blackcurrant: Coding.FromStrict({
+    FoodTypeValueSet_Blackcurrant: new Coding({
         code: "227419008",
         display: "Blackcurrant",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Clementine: Coding.FromStrict({
+    FoodTypeValueSet_Clementine: new Coding({
         code: "227420002",
         display: "Clementine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Cranberries: Coding.FromStrict({
+    FoodTypeValueSet_Cranberries: new Coding({
         code: "227421003",
         display: "Cranberries",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Damson: Coding.FromStrict({
+    FoodTypeValueSet_Damson: new Coding({
         code: "227422005",
         display: "Damson",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Dates: Coding.FromStrict({
+    FoodTypeValueSet_Dates: new Coding({
         code: "227423000",
         display: "Dates",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Elderberries: Coding.FromStrict({
+    FoodTypeValueSet_Elderberries: new Coding({
         code: "227424006",
         display: "Elderberries",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Figs: Coding.FromStrict({
+    FoodTypeValueSet_Figs: new Coding({
         code: "227425007",
         display: "Figs",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FreshFruitSalad: Coding.FromStrict({
+    FoodTypeValueSet_FreshFruitSalad: new Coding({
         code: "227426008",
         display: "Fresh fruit salad",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Gooseberries: Coding.FromStrict({
+    FoodTypeValueSet_Gooseberries: new Coding({
         code: "227427004",
         display: "Gooseberries",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Greengage: Coding.FromStrict({
+    FoodTypeValueSet_Greengage: new Coding({
         code: "227428009",
         display: "Greengage",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Guava: Coding.FromStrict({
+    FoodTypeValueSet_Guava: new Coding({
         code: "227429001",
         display: "Guava",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Lime: Coding.FromStrict({
+    FoodTypeValueSet_Lime: new Coding({
         code: "227430006",
         display: "Lime",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Kumquat: Coding.FromStrict({
+    FoodTypeValueSet_Kumquat: new Coding({
         code: "227431005",
         display: "Kumquat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Loganberries: Coding.FromStrict({
+    FoodTypeValueSet_Loganberries: new Coding({
         code: "227432003",
         display: "Loganberries",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Lychee: Coding.FromStrict({
+    FoodTypeValueSet_Lychee: new Coding({
         code: "227433008",
         display: "Lychee",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Mulberries: Coding.FromStrict({
+    FoodTypeValueSet_Mulberries: new Coding({
         code: "227434002",
         display: "Mulberries",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Nectarine: Coding.FromStrict({
+    FoodTypeValueSet_Nectarine: new Coding({
         code: "227435001",
         display: "Nectarine",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Olives: Coding.FromStrict({
+    FoodTypeValueSet_Olives: new Coding({
         code: "227436000",
         display: "Olives",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Ortanique: Coding.FromStrict({
+    FoodTypeValueSet_Ortanique: new Coding({
         code: "227437009",
         display: "Ortanique",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PassionFruit: Coding.FromStrict({
+    FoodTypeValueSet_PassionFruit: new Coding({
         code: "227438004",
         display: "Passion fruit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Pawpaw_2: Coding.FromStrict({
+    FoodTypeValueSet_Pawpaw_2: new Coding({
         code: "227439007",
         display: "Pawpaw",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PlumDietary: Coding.FromStrict({
+    FoodTypeValueSet_PlumDietary: new Coding({
         code: "227440009",
         display: "Plum - dietary",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Pomegranate: Coding.FromStrict({
+    FoodTypeValueSet_Pomegranate: new Coding({
         code: "227441008",
         display: "Pomegranate",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Pomelo: Coding.FromStrict({
+    FoodTypeValueSet_Pomelo: new Coding({
         code: "227442001",
         display: "Pomelo",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Quince: Coding.FromStrict({
+    FoodTypeValueSet_Quince: new Coding({
         code: "227443006",
         display: "Quince",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Raspberries: Coding.FromStrict({
+    FoodTypeValueSet_Raspberries: new Coding({
         code: "227444000",
         display: "Raspberries",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Redcurrant: Coding.FromStrict({
+    FoodTypeValueSet_Redcurrant: new Coding({
         code: "227445004",
         display: "Redcurrant",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Satsuma: Coding.FromStrict({
+    FoodTypeValueSet_Satsuma: new Coding({
         code: "227446003",
         display: "Satsuma",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SharonFruit: Coding.FromStrict({
+    FoodTypeValueSet_SharonFruit: new Coding({
         code: "227447007",
         display: "Sharon fruit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Whitecurrant: Coding.FromStrict({
+    FoodTypeValueSet_Whitecurrant: new Coding({
         code: "227448002",
         display: "Whitecurrant",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedFruit: Coding.FromStrict({
+    FoodTypeValueSet_DriedFruit: new Coding({
         code: "227449005",
         display: "Dried fruit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedBanana: Coding.FromStrict({
+    FoodTypeValueSet_DriedBanana: new Coding({
         code: "227450005",
         display: "Dried banana",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedApple: Coding.FromStrict({
+    FoodTypeValueSet_DriedApple: new Coding({
         code: "227451009",
         display: "Dried apple",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedApricot: Coding.FromStrict({
+    FoodTypeValueSet_DriedApricot: new Coding({
         code: "227452002",
         display: "Dried apricot",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Currants: Coding.FromStrict({
+    FoodTypeValueSet_Currants: new Coding({
         code: "227453007",
         display: "Currants",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedDate: Coding.FromStrict({
+    FoodTypeValueSet_DriedDate: new Coding({
         code: "227454001",
         display: "Dried date",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedFig: Coding.FromStrict({
+    FoodTypeValueSet_DriedFig: new Coding({
         code: "227455000",
         display: "Dried fig",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedMixedFruit: Coding.FromStrict({
+    FoodTypeValueSet_DriedMixedFruit: new Coding({
         code: "227456004",
         display: "Dried mixed fruit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedMixedPeel: Coding.FromStrict({
+    FoodTypeValueSet_DriedMixedPeel: new Coding({
         code: "227457008",
         display: "Dried mixed peel",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedPeach: Coding.FromStrict({
+    FoodTypeValueSet_DriedPeach: new Coding({
         code: "227458003",
         display: "Dried peach",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedPear: Coding.FromStrict({
+    FoodTypeValueSet_DriedPear: new Coding({
         code: "227459006",
         display: "Dried pear",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_DriedPineapple: Coding.FromStrict({
+    FoodTypeValueSet_DriedPineapple: new Coding({
         code: "227460001",
         display: "Dried pineapple",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GlaceCherry: Coding.FromStrict({
+    FoodTypeValueSet_GlaceCherry: new Coding({
         code: "227461002",
         display: "Glace cherry",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Prunes: Coding.FromStrict({
+    FoodTypeValueSet_Prunes: new Coding({
         code: "227462009",
         display: "Prunes",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Raisin: Coding.FromStrict({
+    FoodTypeValueSet_Raisin: new Coding({
         code: "227463004",
         display: "Raisin",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Sultanas: Coding.FromStrict({
+    FoodTypeValueSet_Sultanas: new Coding({
         code: "227464005",
         display: "Sultanas",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CannedFruit: Coding.FromStrict({
+    FoodTypeValueSet_CannedFruit: new Coding({
         code: "227465006",
         display: "Canned fruit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedApple: Coding.FromStrict({
+    FoodTypeValueSet_TinnedApple: new Coding({
         code: "227466007",
         display: "Tinned apple",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedApricot: Coding.FromStrict({
+    FoodTypeValueSet_TinnedApricot: new Coding({
         code: "227467003",
         display: "Tinned apricot",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedBlackcurrants: Coding.FromStrict({
+    FoodTypeValueSet_TinnedBlackcurrants: new Coding({
         code: "227468008",
         display: "Tinned blackcurrants",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedCherries: Coding.FromStrict({
+    FoodTypeValueSet_TinnedCherries: new Coding({
         code: "227469000",
         display: "Tinned cherries",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedFigs: Coding.FromStrict({
+    FoodTypeValueSet_TinnedFigs: new Coding({
         code: "227470004",
         display: "Tinned figs",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedFruitCocktail: Coding.FromStrict({
+    FoodTypeValueSet_TinnedFruitCocktail: new Coding({
         code: "227471000",
         display: "Tinned fruit cocktail",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedGooseberries: Coding.FromStrict({
+    FoodTypeValueSet_TinnedGooseberries: new Coding({
         code: "227472007",
         display: "Tinned gooseberries",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedGrapefruit: Coding.FromStrict({
+    FoodTypeValueSet_TinnedGrapefruit: new Coding({
         code: "227473002",
         display: "Tinned grapefruit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedGuava: Coding.FromStrict({
+    FoodTypeValueSet_TinnedGuava: new Coding({
         code: "227474008",
         display: "Tinned guava",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedKumquat: Coding.FromStrict({
+    FoodTypeValueSet_TinnedKumquat: new Coding({
         code: "227475009",
         display: "Tinned kumquat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedLoganberries: Coding.FromStrict({
+    FoodTypeValueSet_TinnedLoganberries: new Coding({
         code: "227476005",
         display: "Tinned loganberries",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedLychees: Coding.FromStrict({
+    FoodTypeValueSet_TinnedLychees: new Coding({
         code: "227477001",
         display: "Tinned lychees",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedMandarinOranges: Coding.FromStrict({
+    FoodTypeValueSet_TinnedMandarinOranges: new Coding({
         code: "227478006",
         display: "Tinned mandarin oranges",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedMango: Coding.FromStrict({
+    FoodTypeValueSet_TinnedMango: new Coding({
         code: "227479003",
         display: "Tinned mango",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedPawPaw: Coding.FromStrict({
+    FoodTypeValueSet_TinnedPawPaw: new Coding({
         code: "227480000",
         display: "Tinned paw-paw",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedPeaches: Coding.FromStrict({
+    FoodTypeValueSet_TinnedPeaches: new Coding({
         code: "227481001",
         display: "Tinned peaches",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedPears: Coding.FromStrict({
+    FoodTypeValueSet_TinnedPears: new Coding({
         code: "227482008",
         display: "Tinned pears",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedPineapple: Coding.FromStrict({
+    FoodTypeValueSet_TinnedPineapple: new Coding({
         code: "227483003",
         display: "Tinned pineapple",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedPlums: Coding.FromStrict({
+    FoodTypeValueSet_TinnedPlums: new Coding({
         code: "227484009",
         display: "Tinned plums",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedPrunes: Coding.FromStrict({
+    FoodTypeValueSet_TinnedPrunes: new Coding({
         code: "227485005",
         display: "Tinned prunes",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedRaspberries: Coding.FromStrict({
+    FoodTypeValueSet_TinnedRaspberries: new Coding({
         code: "227486006",
         display: "Tinned raspberries",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedRhubarb: Coding.FromStrict({
+    FoodTypeValueSet_TinnedRhubarb: new Coding({
         code: "227487002",
         display: "Tinned rhubarb",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedStrawberries: Coding.FromStrict({
+    FoodTypeValueSet_TinnedStrawberries: new Coding({
         code: "227488007",
         display: "Tinned strawberries",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_TinnedFruitPieFilling: Coding.FromStrict({
+    FoodTypeValueSet_TinnedFruitPieFilling: new Coding({
         code: "227489004",
         display: "Tinned fruit pie filling",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Vegetable: Coding.FromStrict({
+    FoodTypeValueSet_Vegetable: new Coding({
         code: "22836000",
         display: "Vegetable",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Cereal: Coding.FromStrict({
+    FoodTypeValueSet_Cereal: new Coding({
         code: "23182003",
         display: "Cereal",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Spice: Coding.FromStrict({
+    FoodTypeValueSet_Spice: new Coding({
         code: "24515005",
         display: "Spice",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SkimmedMilk: Coding.FromStrict({
+    FoodTypeValueSet_SkimmedMilk: new Coding({
         code: "25743006",
         display: "Skimmed milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_WhiteMeat: Coding.FromStrict({
+    FoodTypeValueSet_WhiteMeat: new Coding({
         code: "28230009",
         display: "White meat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Meat: Coding.FromStrict({
+    FoodTypeValueSet_Meat: new Coding({
         code: "28647000",
         display: "Meat",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CoconutOil: Coding.FromStrict({
+    FoodTypeValueSet_CoconutOil: new Coding({
         code: "28942008",
         display: "Coconut oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FoodParticle: Coding.FromStrict({
+    FoodTypeValueSet_FoodParticle: new Coding({
         code: "39102003",
         display: "Food particle",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_OliveOil: Coding.FromStrict({
+    FoodTypeValueSet_OliveOil: new Coding({
         code: "41834005",
         display: "Olive oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_AnimalFeedAdditive: Coding.FromStrict({
+    FoodTypeValueSet_AnimalFeedAdditive: new Coding({
         code: "43708003",
         display: "Animal feed additive",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Seafood: Coding.FromStrict({
+    FoodTypeValueSet_Seafood: new Coding({
         code: "44027008",
         display: "Seafood",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_VAL4710131619DocosahexaenoicAcid: Coding.FromStrict({
+    FoodTypeValueSet_VAL4710131619DocosahexaenoicAcid: new Coding({
         code: "44632005",
         display: "4,7,10,13,16,19-Docosahexaenoic acid",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_ChocolateMilk: Coding.FromStrict({
+    FoodTypeValueSet_ChocolateMilk: new Coding({
         code: "46329000",
         display: "Chocolate milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SoyaProteinIronComplex: Coding.FromStrict({
+    FoodTypeValueSet_SoyaProteinIronComplex: new Coding({
         code: "50479000",
         display: "Soya protein-iron complex",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Casein: Coding.FromStrict({
+    FoodTypeValueSet_Casein: new Coding({
         code: "50593009",
         display: "Casein",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Mustard: Coding.FromStrict({
+    FoodTypeValueSet_Mustard: new Coding({
         code: "51905005",
         display: "Mustard",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FirstMilk: Coding.FromStrict({
+    FoodTypeValueSet_FirstMilk: new Coding({
         code: "53875002",
         display: "First milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SafflowerOil: Coding.FromStrict({
+    FoodTypeValueSet_SafflowerOil: new Coding({
         code: "54041009",
         display: "Safflower oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Berry: Coding.FromStrict({
+    FoodTypeValueSet_Berry: new Coding({
         code: "63045006",
         display: "Berry",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Flour: Coding.FromStrict({
+    FoodTypeValueSet_Flour: new Coding({
         code: "63766005",
         display: "Flour",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Rice: Coding.FromStrict({
+    FoodTypeValueSet_Rice: new Coding({
         code: "67324005",
         display: "Rice",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Milk: Coding.FromStrict({
+    FoodTypeValueSet_Milk: new Coding({
         code: "70813002",
         display: "Milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Fruit: Coding.FromStrict({
+    FoodTypeValueSet_Fruit: new Coding({
         code: "72511004",
         display: "Fruit",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_FoodStarch: Coding.FromStrict({
+    FoodTypeValueSet_FoodStarch: new Coding({
         code: "74242007",
         display: "Food starch",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BovineGrowthHormone: Coding.FromStrict({
+    FoodTypeValueSet_BovineGrowthHormone: new Coding({
         code: "75476008",
         display: "Bovine growth hormone",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_PoultryBone: Coding.FromStrict({
+    FoodTypeValueSet_PoultryBone: new Coding({
         code: "77722008",
         display: "Poultry bone",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MustardBlack: Coding.FromStrict({
+    FoodTypeValueSet_MustardBlack: new Coding({
         code: "80743002",
         display: "Mustard black",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_CottonseedOil: Coding.FromStrict({
+    FoodTypeValueSet_CottonseedOil: new Coding({
         code: "82450006",
         display: "Cottonseed oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_AnimalFeed: Coding.FromStrict({
+    FoodTypeValueSet_AnimalFeed: new Coding({
         code: "82566005",
         display: "Animal feed",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_BovineGrowthHormoneRecombinant: Coding.FromStrict({
+    FoodTypeValueSet_BovineGrowthHormoneRecombinant: new Coding({
         code: "83235009",
         display: "Bovine growth hormone recombinant",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_GoatQuoteSMilk: Coding.FromStrict({
+    FoodTypeValueSet_GoatQuoteSMilk: new Coding({
         code: "83595008",
         display: "Goat's milk",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_StarchPowder: Coding.FromStrict({
+    FoodTypeValueSet_StarchPowder: new Coding({
         code: "85668006",
         display: "Starch powder",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_SesameOil: Coding.FromStrict({
+    FoodTypeValueSet_SesameOil: new Coding({
         code: "89707004",
         display: "Sesame oil",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Gluten: Coding.FromStrict({
+    FoodTypeValueSet_Gluten: new Coding({
         code: "89811004",
         display: "Gluten",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_MustardWhite: Coding.FromStrict({
+    FoodTypeValueSet_MustardWhite: new Coding({
         code: "90677004",
         display: "Mustard white",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Cochineal: Coding.FromStrict({
+    FoodTypeValueSet_Cochineal: new Coding({
         code: "91606004",
         display: "Cochineal",
         system: "http://snomed.info/sct"
     }),
-    FoodTypeValueSet_Sometribove: Coding.FromStrict({
+    FoodTypeValueSet_Sometribove: new Coding({
         code: "96364008",
         display: "Sometribove",
         system: "http://snomed.info/sct"

@@ -13,7 +13,7 @@ export const MedicationknowledgeCharacteristicValueSet = {
     /**
      * Description of the coating of the product
      */
-    medicationknowledge_characteristic_Coating: Coding.FromStrict({
+    medicationknowledge_characteristic_Coating: new Coding({
         code: "coating",
         display: "Coating",
         system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic"
@@ -21,7 +21,7 @@ export const MedicationknowledgeCharacteristicValueSet = {
     /**
      * Description of the color of the product
      */
-    medicationknowledge_characteristic_Color: Coding.FromStrict({
+    medicationknowledge_characteristic_Color: new Coding({
         code: "color",
         display: "Color",
         system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic"
@@ -29,7 +29,7 @@ export const MedicationknowledgeCharacteristicValueSet = {
     /**
      * Identyifying marks on product
      */
-    medicationknowledge_characteristic_ImprintCode: Coding.FromStrict({
+    medicationknowledge_characteristic_ImprintCode: new Coding({
         code: "imprintcd",
         display: "Imprint Code",
         system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic"
@@ -37,7 +37,7 @@ export const MedicationknowledgeCharacteristicValueSet = {
     /**
      * Description of the Logo of the product
      */
-    medicationknowledge_characteristic_Logo: Coding.FromStrict({
+    medicationknowledge_characteristic_Logo: new Coding({
         code: "logo",
         display: "Logo",
         system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic"
@@ -45,7 +45,7 @@ export const MedicationknowledgeCharacteristicValueSet = {
     /**
      * Description of the scoring of the product
      */
-    medicationknowledge_characteristic_Scoring: Coding.FromStrict({
+    medicationknowledge_characteristic_Scoring: new Coding({
         code: "scoring",
         display: "Scoring",
         system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic"
@@ -53,7 +53,7 @@ export const MedicationknowledgeCharacteristicValueSet = {
     /**
      * Description of the shape of the product
      */
-    medicationknowledge_characteristic_Shape: Coding.FromStrict({
+    medicationknowledge_characteristic_Shape: new Coding({
         code: "shape",
         display: "Shape",
         system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic"
@@ -61,7 +61,7 @@ export const MedicationknowledgeCharacteristicValueSet = {
     /**
      * Description of size of the product
      */
-    medicationknowledge_characteristic_Size: Coding.FromStrict({
+    medicationknowledge_characteristic_Size: new Coding({
         code: "size",
         display: "Size",
         system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic"

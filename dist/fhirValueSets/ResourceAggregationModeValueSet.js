@@ -13,7 +13,7 @@ export const ResourceAggregationModeValueSet = {
     /**
      * The resource the reference points to will be found in the same bundle as the resource that includes the reference.
      */
-    resource_aggregation_mode_Bundled: Coding.FromStrict({
+    resource_aggregation_mode_Bundled: new Coding({
         code: "bundled",
         display: "Bundled",
         system: "http://hl7.org/fhir/resource-aggregation-mode"
@@ -21,7 +21,7 @@ export const ResourceAggregationModeValueSet = {
     /**
      * The reference is a local reference to a contained resource.
      */
-    resource_aggregation_mode_Contained: Coding.FromStrict({
+    resource_aggregation_mode_Contained: new Coding({
         code: "contained",
         display: "Contained",
         system: "http://hl7.org/fhir/resource-aggregation-mode"
@@ -29,7 +29,7 @@ export const ResourceAggregationModeValueSet = {
     /**
      * The reference to a resource that has to be resolved externally to the resource that includes the reference.
      */
-    resource_aggregation_mode_Referenced: Coding.FromStrict({
+    resource_aggregation_mode_Referenced: new Coding({
         code: "referenced",
         display: "Referenced",
         system: "http://hl7.org/fhir/resource-aggregation-mode"

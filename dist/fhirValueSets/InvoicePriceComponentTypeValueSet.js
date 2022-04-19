@@ -13,7 +13,7 @@ export const InvoicePriceComponentTypeValueSet = {
     /**
      * the amount is the base price used for calculating the total price before applying surcharges, discount or taxes.
      */
-    invoice_priceComponentType_BasePrice: Coding.FromStrict({
+    invoice_priceComponentType_BasePrice: new Coding({
         code: "base",
         display: "base price",
         system: "http://hl7.org/fhir/invoice-priceComponentType"
@@ -21,7 +21,7 @@ export const InvoicePriceComponentTypeValueSet = {
     /**
      * the amount is a deduction applied on the base price.
      */
-    invoice_priceComponentType_Deduction: Coding.FromStrict({
+    invoice_priceComponentType_Deduction: new Coding({
         code: "deduction",
         display: "deduction",
         system: "http://hl7.org/fhir/invoice-priceComponentType"
@@ -29,7 +29,7 @@ export const InvoicePriceComponentTypeValueSet = {
     /**
      * the amount is a discount applied on the base price.
      */
-    invoice_priceComponentType_Discount: Coding.FromStrict({
+    invoice_priceComponentType_Discount: new Coding({
         code: "discount",
         display: "discount",
         system: "http://hl7.org/fhir/invoice-priceComponentType"
@@ -37,7 +37,7 @@ export const InvoicePriceComponentTypeValueSet = {
     /**
      * the amount is of informational character, it has not been applied in the calculation of the total price.
      */
-    invoice_priceComponentType_Informational: Coding.FromStrict({
+    invoice_priceComponentType_Informational: new Coding({
         code: "informational",
         display: "informational",
         system: "http://hl7.org/fhir/invoice-priceComponentType"
@@ -45,7 +45,7 @@ export const InvoicePriceComponentTypeValueSet = {
     /**
      * the amount is a surcharge applied on the base price.
      */
-    invoice_priceComponentType_Surcharge: Coding.FromStrict({
+    invoice_priceComponentType_Surcharge: new Coding({
         code: "surcharge",
         display: "surcharge",
         system: "http://hl7.org/fhir/invoice-priceComponentType"
@@ -53,7 +53,7 @@ export const InvoicePriceComponentTypeValueSet = {
     /**
      * the amount is the tax component of the total price.
      */
-    invoice_priceComponentType_Tax: Coding.FromStrict({
+    invoice_priceComponentType_Tax: new Coding({
         code: "tax",
         display: "tax",
         system: "http://hl7.org/fhir/invoice-priceComponentType"

@@ -120,21 +120,21 @@ export class ResearchSubject extends fhir.DomainResource implements fhir.IResear
   /**
    * Check if the current ResearchSubject contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["individual"] === undefined) { missingElements.push("individual"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["study"] === undefined) { missingElements.push("study"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ResearchSubject from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IResearchSubject):ResearchSubject {
+  static override fromStrict(source:fhir.IResearchSubject):ResearchSubject {
     var dest:ResearchSubject = new ResearchSubject(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ResearchSubject is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

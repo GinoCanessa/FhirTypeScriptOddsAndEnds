@@ -311,11 +311,11 @@ export declare class EffectEvidenceSynthesisSampleSize extends fhir.BackboneElem
     /**
      * Check if the current EffectEvidenceSynthesisSampleSize contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a EffectEvidenceSynthesisSampleSize from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEffectEvidenceSynthesisSampleSize): EffectEvidenceSynthesisSampleSize;
+    static fromStrict(source: fhir.IEffectEvidenceSynthesisSampleSize): EffectEvidenceSynthesisSampleSize;
 }
 /**
  * A description of the results for each exposure considered in the effect estimate.
@@ -346,11 +346,11 @@ export declare class EffectEvidenceSynthesisResultsByExposure extends fhir.Backb
     /**
      * Check if the current EffectEvidenceSynthesisResultsByExposure contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a EffectEvidenceSynthesisResultsByExposure from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEffectEvidenceSynthesisResultsByExposure): EffectEvidenceSynthesisResultsByExposure;
+    static fromStrict(source: fhir.IEffectEvidenceSynthesisResultsByExposure): EffectEvidenceSynthesisResultsByExposure;
 }
 /**
  * A description of the precision of the estimate for the effect.
@@ -382,11 +382,11 @@ export declare class EffectEvidenceSynthesisEffectEstimatePrecisionEstimate exte
     /**
      * Check if the current EffectEvidenceSynthesisEffectEstimatePrecisionEstimate contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a EffectEvidenceSynthesisEffectEstimatePrecisionEstimate from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEffectEvidenceSynthesisEffectEstimatePrecisionEstimate): EffectEvidenceSynthesisEffectEstimatePrecisionEstimate;
+    static fromStrict(source: fhir.IEffectEvidenceSynthesisEffectEstimatePrecisionEstimate): EffectEvidenceSynthesisEffectEstimatePrecisionEstimate;
 }
 /**
  * The estimated effect of the exposure variant.
@@ -425,11 +425,11 @@ export declare class EffectEvidenceSynthesisEffectEstimate extends fhir.Backbone
     /**
      * Check if the current EffectEvidenceSynthesisEffectEstimate contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a EffectEvidenceSynthesisEffectEstimate from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEffectEvidenceSynthesisEffectEstimate): EffectEvidenceSynthesisEffectEstimate;
+    static fromStrict(source: fhir.IEffectEvidenceSynthesisEffectEstimate): EffectEvidenceSynthesisEffectEstimate;
 }
 /**
  * A description of a component of the overall certainty.
@@ -454,11 +454,11 @@ export declare class EffectEvidenceSynthesisCertaintyCertaintySubcomponent exten
     /**
      * Check if the current EffectEvidenceSynthesisCertaintyCertaintySubcomponent contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a EffectEvidenceSynthesisCertaintyCertaintySubcomponent from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEffectEvidenceSynthesisCertaintyCertaintySubcomponent): EffectEvidenceSynthesisCertaintyCertaintySubcomponent;
+    static fromStrict(source: fhir.IEffectEvidenceSynthesisCertaintyCertaintySubcomponent): EffectEvidenceSynthesisCertaintyCertaintySubcomponent;
 }
 /**
  * A description of the certainty of the effect estimate.
@@ -483,11 +483,11 @@ export declare class EffectEvidenceSynthesisCertainty extends fhir.BackboneEleme
     /**
      * Check if the current EffectEvidenceSynthesisCertainty contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a EffectEvidenceSynthesisCertainty from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEffectEvidenceSynthesisCertainty): EffectEvidenceSynthesisCertainty;
+    static fromStrict(source: fhir.IEffectEvidenceSynthesisCertainty): EffectEvidenceSynthesisCertainty;
 }
 /**
  * The EffectEvidenceSynthesis resource describes the difference in an outcome between exposures states in a population where the effect estimate is derived from a combination of research studies.
@@ -649,11 +649,11 @@ export declare class EffectEvidenceSynthesis extends fhir.DomainResource impleme
     /**
      * Check if the current EffectEvidenceSynthesis contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a EffectEvidenceSynthesis from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEffectEvidenceSynthesis): EffectEvidenceSynthesis;
+    static fromStrict(source: fhir.IEffectEvidenceSynthesis): EffectEvidenceSynthesis;
 }
 /**
  * Code Values for the EffectEvidenceSynthesis.resultsByExposure.exposureState field

@@ -136,11 +136,11 @@ export declare class PractitionerRoleAvailableTime extends fhir.BackboneElement 
     /**
      * Check if the current PractitionerRoleAvailableTime contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a PractitionerRoleAvailableTime from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPractitionerRoleAvailableTime): PractitionerRoleAvailableTime;
+    static fromStrict(source: fhir.IPractitionerRoleAvailableTime): PractitionerRoleAvailableTime;
 }
 /**
  * The practitioner is not available or performing this role during this period of time due to the provided reason.
@@ -162,11 +162,11 @@ export declare class PractitionerRoleNotAvailable extends fhir.BackboneElement i
     /**
      * Check if the current PractitionerRoleNotAvailable contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a PractitionerRoleNotAvailable from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPractitionerRoleNotAvailable): PractitionerRoleNotAvailable;
+    static fromStrict(source: fhir.IPractitionerRoleNotAvailable): PractitionerRoleNotAvailable;
 }
 /**
  * A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.
@@ -241,11 +241,11 @@ export declare class PractitionerRole extends fhir.DomainResource implements fhi
     /**
      * Check if the current PractitionerRole contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a PractitionerRole from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPractitionerRole): PractitionerRole;
+    static fromStrict(source: fhir.IPractitionerRole): PractitionerRole;
 }
 /**
  * Code Values for the PractitionerRole.availableTime.daysOfWeek field

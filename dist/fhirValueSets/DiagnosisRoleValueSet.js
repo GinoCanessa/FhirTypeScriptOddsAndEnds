@@ -10,37 +10,37 @@ import { Coding } from '../fhir';
  * This value set defines a set of codes that can be used to express the role of a diagnosis on the Encounter or EpisodeOfCare record.
  */
 export const DiagnosisRoleValueSet = {
-    diagnosis_role_AdmissionDiagnosis: Coding.FromStrict({
+    diagnosis_role_AdmissionDiagnosis: new Coding({
         code: "AD",
         display: "Admission diagnosis",
         system: "http://terminology.hl7.org/CodeSystem/diagnosis-role"
     }),
-    diagnosis_role_Billing: Coding.FromStrict({
+    diagnosis_role_Billing: new Coding({
         code: "billing",
         display: "Billing",
         system: "http://terminology.hl7.org/CodeSystem/diagnosis-role"
     }),
-    diagnosis_role_ChiefComplaint: Coding.FromStrict({
+    diagnosis_role_ChiefComplaint: new Coding({
         code: "CC",
         display: "Chief complaint",
         system: "http://terminology.hl7.org/CodeSystem/diagnosis-role"
     }),
-    diagnosis_role_ComorbidityDiagnosis: Coding.FromStrict({
+    diagnosis_role_ComorbidityDiagnosis: new Coding({
         code: "CM",
         display: "Comorbidity diagnosis",
         system: "http://terminology.hl7.org/CodeSystem/diagnosis-role"
     }),
-    diagnosis_role_DischargeDiagnosis: Coding.FromStrict({
+    diagnosis_role_DischargeDiagnosis: new Coding({
         code: "DD",
         display: "Discharge diagnosis",
         system: "http://terminology.hl7.org/CodeSystem/diagnosis-role"
     }),
-    diagnosis_role_PostOpDiagnosis: Coding.FromStrict({
+    diagnosis_role_PostOpDiagnosis: new Coding({
         code: "post-op",
         display: "post-op diagnosis",
         system: "http://terminology.hl7.org/CodeSystem/diagnosis-role"
     }),
-    diagnosis_role_PreOpDiagnosis: Coding.FromStrict({
+    diagnosis_role_PreOpDiagnosis: new Coding({
         code: "pre-op",
         display: "pre-op diagnosis",
         system: "http://terminology.hl7.org/CodeSystem/diagnosis-role"

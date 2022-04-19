@@ -224,18 +224,18 @@ export class SubstanceSourceMaterialFractionDescription extends fhir.BackboneEle
   /**
    * Check if the current SubstanceSourceMaterialFractionDescription contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceSourceMaterialFractionDescription from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceSourceMaterialFractionDescription):SubstanceSourceMaterialFractionDescription {
+  static override fromStrict(source:fhir.ISubstanceSourceMaterialFractionDescription):SubstanceSourceMaterialFractionDescription {
     var dest:SubstanceSourceMaterialFractionDescription = new SubstanceSourceMaterialFractionDescription(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceSourceMaterialFractionDescription is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -265,18 +265,18 @@ export class SubstanceSourceMaterialOrganismAuthor extends fhir.BackboneElement 
   /**
    * Check if the current SubstanceSourceMaterialOrganismAuthor contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceSourceMaterialOrganismAuthor from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceSourceMaterialOrganismAuthor):SubstanceSourceMaterialOrganismAuthor {
+  static override fromStrict(source:fhir.ISubstanceSourceMaterialOrganismAuthor):SubstanceSourceMaterialOrganismAuthor {
     var dest:SubstanceSourceMaterialOrganismAuthor = new SubstanceSourceMaterialOrganismAuthor(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceSourceMaterialOrganismAuthor is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -327,18 +327,18 @@ export class SubstanceSourceMaterialOrganismHybrid extends fhir.BackboneElement 
   /**
    * Check if the current SubstanceSourceMaterialOrganismHybrid contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceSourceMaterialOrganismHybrid from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceSourceMaterialOrganismHybrid):SubstanceSourceMaterialOrganismHybrid {
+  static override fromStrict(source:fhir.ISubstanceSourceMaterialOrganismHybrid):SubstanceSourceMaterialOrganismHybrid {
     var dest:SubstanceSourceMaterialOrganismHybrid = new SubstanceSourceMaterialOrganismHybrid(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceSourceMaterialOrganismHybrid is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -376,18 +376,18 @@ export class SubstanceSourceMaterialOrganismOrganismGeneral extends fhir.Backbon
   /**
    * Check if the current SubstanceSourceMaterialOrganismOrganismGeneral contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceSourceMaterialOrganismOrganismGeneral from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceSourceMaterialOrganismOrganismGeneral):SubstanceSourceMaterialOrganismOrganismGeneral {
+  static override fromStrict(source:fhir.ISubstanceSourceMaterialOrganismOrganismGeneral):SubstanceSourceMaterialOrganismOrganismGeneral {
     var dest:SubstanceSourceMaterialOrganismOrganismGeneral = new SubstanceSourceMaterialOrganismOrganismGeneral(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceSourceMaterialOrganismOrganismGeneral is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -447,18 +447,18 @@ export class SubstanceSourceMaterialOrganism extends fhir.BackboneElement implem
   /**
    * Check if the current SubstanceSourceMaterialOrganism contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceSourceMaterialOrganism from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceSourceMaterialOrganism):SubstanceSourceMaterialOrganism {
+  static override fromStrict(source:fhir.ISubstanceSourceMaterialOrganism):SubstanceSourceMaterialOrganism {
     var dest:SubstanceSourceMaterialOrganism = new SubstanceSourceMaterialOrganism(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceSourceMaterialOrganism is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -486,18 +486,18 @@ export class SubstanceSourceMaterialPartDescription extends fhir.BackboneElement
   /**
    * Check if the current SubstanceSourceMaterialPartDescription contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceSourceMaterialPartDescription from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceSourceMaterialPartDescription):SubstanceSourceMaterialPartDescription {
+  static override fromStrict(source:fhir.ISubstanceSourceMaterialPartDescription):SubstanceSourceMaterialPartDescription {
     var dest:SubstanceSourceMaterialPartDescription = new SubstanceSourceMaterialPartDescription(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceSourceMaterialPartDescription is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -591,18 +591,18 @@ export class SubstanceSourceMaterial extends fhir.DomainResource implements fhir
   /**
    * Check if the current SubstanceSourceMaterial contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceSourceMaterial from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceSourceMaterial):SubstanceSourceMaterial {
+  static override fromStrict(source:fhir.ISubstanceSourceMaterial):SubstanceSourceMaterial {
     var dest:SubstanceSourceMaterial = new SubstanceSourceMaterial(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceSourceMaterial is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

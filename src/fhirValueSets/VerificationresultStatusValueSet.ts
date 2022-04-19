@@ -13,7 +13,7 @@ export const VerificationresultStatusValueSet = {
   /**
    * ***TODO***
    */
-  verificationresult_status_Attested: Coding.FromStrict({
+  verificationresult_status_Attested: new Coding({
     code: "attested",
     display: "Attested",
     system: "http://hl7.org/fhir/CodeSystem/status"
@@ -21,7 +21,7 @@ export const VerificationresultStatusValueSet = {
   /**
    * ***TODO***
    */
-  verificationresult_status_InProcess: Coding.FromStrict({
+  verificationresult_status_InProcess: new Coding({
     code: "in-process",
     display: "In process",
     system: "http://hl7.org/fhir/CodeSystem/status"
@@ -29,7 +29,7 @@ export const VerificationresultStatusValueSet = {
   /**
    * ***TODO***
    */
-  verificationresult_status_RequiresRevalidation: Coding.FromStrict({
+  verificationresult_status_RequiresRevalidation: new Coding({
     code: "req-revalid",
     display: "Requires revalidation",
     system: "http://hl7.org/fhir/CodeSystem/status"
@@ -37,7 +37,7 @@ export const VerificationresultStatusValueSet = {
   /**
    * ***TODO***
    */
-  verificationresult_status_ReValidationFailed: Coding.FromStrict({
+  verificationresult_status_ReValidationFailed: new Coding({
     code: "reval-fail",
     display: "Re-Validation failed",
     system: "http://hl7.org/fhir/CodeSystem/status"
@@ -45,7 +45,7 @@ export const VerificationresultStatusValueSet = {
   /**
    * ***TODO***
    */
-  verificationresult_status_ValidationFailed: Coding.FromStrict({
+  verificationresult_status_ValidationFailed: new Coding({
     code: "val-fail",
     display: "Validation failed",
     system: "http://hl7.org/fhir/CodeSystem/status"
@@ -53,7 +53,7 @@ export const VerificationresultStatusValueSet = {
   /**
    * ***TODO***
    */
-  verificationresult_status_Validated: Coding.FromStrict({
+  verificationresult_status_Validated: new Coding({
     code: "validated",
     display: "Validated",
     system: "http://hl7.org/fhir/CodeSystem/status"

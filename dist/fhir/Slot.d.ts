@@ -121,11 +121,11 @@ export declare class Slot extends fhir.DomainResource implements fhir.ISlot {
     /**
      * Check if the current Slot contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Slot from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISlot): Slot;
+    static fromStrict(source: fhir.ISlot): Slot;
 }
 /**
  * Code Values for the Slot.status field

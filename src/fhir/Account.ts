@@ -129,19 +129,19 @@ export class AccountCoverage extends fhir.BackboneElement implements fhir.IAccou
   /**
    * Check if the current AccountCoverage contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["coverage"] === undefined) { missingElements.push("coverage"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a AccountCoverage from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IAccountCoverage):AccountCoverage {
+  static override fromStrict(source:fhir.IAccountCoverage):AccountCoverage {
     var dest:AccountCoverage = new AccountCoverage(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `AccountCoverage is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -178,19 +178,19 @@ export class AccountGuarantor extends fhir.BackboneElement implements fhir.IAcco
   /**
    * Check if the current AccountGuarantor contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["party"] === undefined) { missingElements.push("party"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a AccountGuarantor from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IAccountGuarantor):AccountGuarantor {
+  static override fromStrict(source:fhir.IAccountGuarantor):AccountGuarantor {
     var dest:AccountGuarantor = new AccountGuarantor(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `AccountGuarantor is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -278,19 +278,19 @@ export class Account extends fhir.DomainResource implements fhir.IAccount {
   /**
    * Check if the current Account contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Account from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IAccount):Account {
+  static override fromStrict(source:fhir.IAccount):Account {
     var dest:Account = new Account(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Account is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

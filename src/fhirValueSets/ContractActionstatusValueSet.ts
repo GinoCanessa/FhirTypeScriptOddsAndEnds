@@ -13,7 +13,7 @@ export const ContractActionstatusValueSet = {
   /**
    * To be completed
    */
-  contract_actionstatus_Complete: Coding.FromStrict({
+  contract_actionstatus_Complete: new Coding({
     code: "complete",
     display: "Complete",
     system: "http://hl7.org/fhir/contract-action-status"

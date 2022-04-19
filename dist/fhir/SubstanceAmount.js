@@ -25,18 +25,18 @@ export class SubstanceAmountReferenceRange extends fhir.FhirElement {
     /**
      * Check if the current SubstanceAmountReferenceRange contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SubstanceAmountReferenceRange from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SubstanceAmountReferenceRange(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SubstanceAmountReferenceRange is missing elements: ${missingElements.join(", ")}`;
         }
@@ -80,18 +80,18 @@ export class SubstanceAmount extends fhir.BackboneElement {
     /**
      * Check if the current SubstanceAmount contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SubstanceAmount from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SubstanceAmount(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SubstanceAmount is missing elements: ${missingElements.join(", ")}`;
         }

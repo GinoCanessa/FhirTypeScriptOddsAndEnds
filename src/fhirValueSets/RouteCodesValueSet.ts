@@ -10,752 +10,752 @@ import { Coding } from '../fhir'
  * This value set includes all Route codes from SNOMED CT - provided as an exemplar.
  */
 export const RouteCodesValueSet = {
-  RouteCodesValueSet_AuricularUse: Coding.FromStrict({
+  RouteCodesValueSet_AuricularUse: new Coding({
     code: "10547007",
     display: "Auricular use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntraArticularRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntraArticularRoute: new Coding({
     code: "12130007",
     display: "Intra-articular route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_GastrostomyUse: Coding.FromStrict({
+  RouteCodesValueSet_GastrostomyUse: new Coding({
     code: "127490009",
     display: "Gastrostomy use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_JejunostomyUse: Coding.FromStrict({
+  RouteCodesValueSet_JejunostomyUse: new Coding({
     code: "127491008",
     display: "Jejunostomy use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_NasogastricUse: Coding.FromStrict({
+  RouteCodesValueSet_NasogastricUse: new Coding({
     code: "127492001",
     display: "Nasogastric use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_SublesionalRoute: Coding.FromStrict({
+  RouteCodesValueSet_SublesionalRoute: new Coding({
     code: "1611000175109",
     display: "Sublesional route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_VaginalUse: Coding.FromStrict({
+  RouteCodesValueSet_VaginalUse: new Coding({
     code: "16857009",
     display: "Vaginal use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_Intraventricular: Coding.FromStrict({
+  RouteCodesValueSet_Intraventricular: new Coding({
     code: "180677251000087104",
     display: "Intraventricular",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_OralUse: Coding.FromStrict({
+  RouteCodesValueSet_OralUse: new Coding({
     code: "26643006",
     display: "Oral use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_SCUse: Coding.FromStrict({
+  RouteCodesValueSet_SCUse: new Coding({
     code: "34206005",
     display: "SC use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_RectalUse: Coding.FromStrict({
+  RouteCodesValueSet_RectalUse: new Coding({
     code: "37161004",
     display: "Rectal use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_DentalUse: Coding.FromStrict({
+  RouteCodesValueSet_DentalUse: new Coding({
     code: "372449004",
     display: "Dental use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_EndocervicalUse: Coding.FromStrict({
+  RouteCodesValueSet_EndocervicalUse: new Coding({
     code: "372450004",
     display: "Endocervical use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_EndosinusialUse: Coding.FromStrict({
+  RouteCodesValueSet_EndosinusialUse: new Coding({
     code: "372451000",
     display: "Endosinusial use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_EndotracheopulmonaryUse: Coding.FromStrict({
+  RouteCodesValueSet_EndotracheopulmonaryUse: new Coding({
     code: "372452007",
     display: "Endotracheopulmonary use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_ExtraAmnioticUse: Coding.FromStrict({
+  RouteCodesValueSet_ExtraAmnioticUse: new Coding({
     code: "372453002",
     display: "Extra-amniotic use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_GastroenteralUse: Coding.FromStrict({
+  RouteCodesValueSet_GastroenteralUse: new Coding({
     code: "372454008",
     display: "Gastroenteral use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_GingivalUse: Coding.FromStrict({
+  RouteCodesValueSet_GingivalUse: new Coding({
     code: "372457001",
     display: "Gingival use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntraamnioticUse: Coding.FromStrict({
+  RouteCodesValueSet_IntraamnioticUse: new Coding({
     code: "372458006",
     display: "Intraamniotic use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntrabursalUse: Coding.FromStrict({
+  RouteCodesValueSet_IntrabursalUse: new Coding({
     code: "372459003",
     display: "Intrabursal use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntracardiacUse: Coding.FromStrict({
+  RouteCodesValueSet_IntracardiacUse: new Coding({
     code: "372460008",
     display: "Intracardiac use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntracavernousUse: Coding.FromStrict({
+  RouteCodesValueSet_IntracavernousUse: new Coding({
     code: "372461007",
     display: "Intracavernous use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntracoronaryUse: Coding.FromStrict({
+  RouteCodesValueSet_IntracoronaryUse: new Coding({
     code: "372463005",
     display: "Intracoronary use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntradermalUse: Coding.FromStrict({
+  RouteCodesValueSet_IntradermalUse: new Coding({
     code: "372464004",
     display: "Intradermal use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntradiscalUse: Coding.FromStrict({
+  RouteCodesValueSet_IntradiscalUse: new Coding({
     code: "372465003",
     display: "Intradiscal use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntralesionalUse: Coding.FromStrict({
+  RouteCodesValueSet_IntralesionalUse: new Coding({
     code: "372466002",
     display: "Intralesional use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntralymphaticUse: Coding.FromStrict({
+  RouteCodesValueSet_IntralymphaticUse: new Coding({
     code: "372467006",
     display: "Intralymphatic use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntraocularUse: Coding.FromStrict({
+  RouteCodesValueSet_IntraocularUse: new Coding({
     code: "372468001",
     display: "Intraocular use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntrapleuralUse: Coding.FromStrict({
+  RouteCodesValueSet_IntrapleuralUse: new Coding({
     code: "372469009",
     display: "Intrapleural use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntrasternalUse: Coding.FromStrict({
+  RouteCodesValueSet_IntrasternalUse: new Coding({
     code: "372470005",
     display: "Intrasternal use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntravesicalUse: Coding.FromStrict({
+  RouteCodesValueSet_IntravesicalUse: new Coding({
     code: "372471009",
     display: "Intravesical use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_OromucosalUse: Coding.FromStrict({
+  RouteCodesValueSet_OromucosalUse: new Coding({
     code: "372473007",
     display: "Oromucosal use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_PeriarticularUse: Coding.FromStrict({
+  RouteCodesValueSet_PeriarticularUse: new Coding({
     code: "372474001",
     display: "Periarticular use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_PerineuralUse: Coding.FromStrict({
+  RouteCodesValueSet_PerineuralUse: new Coding({
     code: "372475000",
     display: "Perineural use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_SubconjunctivalUse: Coding.FromStrict({
+  RouteCodesValueSet_SubconjunctivalUse: new Coding({
     code: "372476004",
     display: "Subconjunctival use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntraluminalUse: Coding.FromStrict({
+  RouteCodesValueSet_IntraluminalUse: new Coding({
     code: "37737002",
     display: "Intraluminal use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_SublingualUse: Coding.FromStrict({
+  RouteCodesValueSet_SublingualUse: new Coding({
     code: "37839007",
     display: "Sublingual use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntraperitonealUse: Coding.FromStrict({
+  RouteCodesValueSet_IntraperitonealUse: new Coding({
     code: "38239002",
     display: "Intraperitoneal use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_TransmucosalRoute: Coding.FromStrict({
+  RouteCodesValueSet_TransmucosalRoute: new Coding({
     code: "404815008",
     display: "Transmucosal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntratrachealRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntratrachealRoute: new Coding({
     code: "404818005",
     display: "Intratracheal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntrabiliaryRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntrabiliaryRoute: new Coding({
     code: "404819002",
     display: "Intrabiliary route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_EpiduralRoute: Coding.FromStrict({
+  RouteCodesValueSet_EpiduralRoute: new Coding({
     code: "404820008",
     display: "Epidural route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_SuborbitalRoute: Coding.FromStrict({
+  RouteCodesValueSet_SuborbitalRoute: new Coding({
     code: "416174007",
     display: "Suborbital route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_CaudalRoute: Coding.FromStrict({
+  RouteCodesValueSet_CaudalRoute: new Coding({
     code: "417070009",
     display: "Caudal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntraosseousRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntraosseousRoute: new Coding({
     code: "417255000",
     display: "Intraosseous route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntrathoracicRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntrathoracicRoute: new Coding({
     code: "417950001",
     display: "Intrathoracic route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_EnteralRoute: Coding.FromStrict({
+  RouteCodesValueSet_EnteralRoute: new Coding({
     code: "417985001",
     display: "Enteral route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntraductalRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntraductalRoute: new Coding({
     code: "417989007",
     display: "Intraductal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntratympanicRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntratympanicRoute: new Coding({
     code: "418091004",
     display: "Intratympanic route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntravenousCentralRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntravenousCentralRoute: new Coding({
     code: "418114005",
     display: "Intravenous central route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntramyometrialRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntramyometrialRoute: new Coding({
     code: "418133000",
     display: "Intramyometrial route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_GastroIntestinalStomaRoute: Coding.FromStrict({
+  RouteCodesValueSet_GastroIntestinalStomaRoute: new Coding({
     code: "418136008",
     display: "Gastro-intestinal stoma route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_ColostomyRoute: Coding.FromStrict({
+  RouteCodesValueSet_ColostomyRoute: new Coding({
     code: "418162004",
     display: "Colostomy route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_PeriurethralRoute: Coding.FromStrict({
+  RouteCodesValueSet_PeriurethralRoute: new Coding({
     code: "418204005",
     display: "Periurethral route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntracoronalRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntracoronalRoute: new Coding({
     code: "418287000",
     display: "Intracoronal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_RetrobulbarRoute: Coding.FromStrict({
+  RouteCodesValueSet_RetrobulbarRoute: new Coding({
     code: "418321004",
     display: "Retrobulbar route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntracartilaginousRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntracartilaginousRoute: new Coding({
     code: "418331006",
     display: "Intracartilaginous route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntravitrealRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntravitrealRoute: new Coding({
     code: "418401004",
     display: "Intravitreal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntraspinalRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntraspinalRoute: new Coding({
     code: "418418000",
     display: "Intraspinal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_OrogastricRoute: Coding.FromStrict({
+  RouteCodesValueSet_OrogastricRoute: new Coding({
     code: "418441008",
     display: "Orogastric route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_TransurethralRoute: Coding.FromStrict({
+  RouteCodesValueSet_TransurethralRoute: new Coding({
     code: "418511008",
     display: "Transurethral route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntratendinousRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntratendinousRoute: new Coding({
     code: "418586008",
     display: "Intratendinous route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntracornealRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntracornealRoute: new Coding({
     code: "418608002",
     display: "Intracorneal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_OropharyngealRoute: Coding.FromStrict({
+  RouteCodesValueSet_OropharyngealRoute: new Coding({
     code: "418664002",
     display: "Oropharyngeal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_PeribulbarRoute: Coding.FromStrict({
+  RouteCodesValueSet_PeribulbarRoute: new Coding({
     code: "418722009",
     display: "Peribulbar route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_NasojejunalRoute: Coding.FromStrict({
+  RouteCodesValueSet_NasojejunalRoute: new Coding({
     code: "418730005",
     display: "Nasojejunal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_FistulaRoute: Coding.FromStrict({
+  RouteCodesValueSet_FistulaRoute: new Coding({
     code: "418743005",
     display: "Fistula route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_SurgicalDrainRoute: Coding.FromStrict({
+  RouteCodesValueSet_SurgicalDrainRoute: new Coding({
     code: "418813001",
     display: "Surgical drain route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntracameralRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntracameralRoute: new Coding({
     code: "418821007",
     display: "Intracameral route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_ParacervicalRoute: Coding.FromStrict({
+  RouteCodesValueSet_ParacervicalRoute: new Coding({
     code: "418851001",
     display: "Paracervical route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntrasynovialRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntrasynovialRoute: new Coding({
     code: "418877009",
     display: "Intrasynovial route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntraduodenalRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntraduodenalRoute: new Coding({
     code: "418887008",
     display: "Intraduodenal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntracisternalRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntracisternalRoute: new Coding({
     code: "418892005",
     display: "Intracisternal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntratesticularRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntratesticularRoute: new Coding({
     code: "418947002",
     display: "Intratesticular route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntracranialRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntracranialRoute: new Coding({
     code: "418987007",
     display: "Intracranial route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_TumorCavityRoute: Coding.FromStrict({
+  RouteCodesValueSet_TumorCavityRoute: new Coding({
     code: "419021003",
     display: "Tumor cavity route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_ParavertebralRoute: Coding.FromStrict({
+  RouteCodesValueSet_ParavertebralRoute: new Coding({
     code: "419165009",
     display: "Paravertebral route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntrasinalRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntrasinalRoute: new Coding({
     code: "419231003",
     display: "Intrasinal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_TranscervicalRoute: Coding.FromStrict({
+  RouteCodesValueSet_TranscervicalRoute: new Coding({
     code: "419243002",
     display: "Transcervical route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_SubtendinousRoute: Coding.FromStrict({
+  RouteCodesValueSet_SubtendinousRoute: new Coding({
     code: "419320008",
     display: "Subtendinous route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntraabdominalRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntraabdominalRoute: new Coding({
     code: "419396008",
     display: "Intraabdominal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_SubgingivalRoute: Coding.FromStrict({
+  RouteCodesValueSet_SubgingivalRoute: new Coding({
     code: "419601003",
     display: "Subgingival route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntraovarianRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntraovarianRoute: new Coding({
     code: "419631009",
     display: "Intraovarian route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_UreteralRoute: Coding.FromStrict({
+  RouteCodesValueSet_UreteralRoute: new Coding({
     code: "419684008",
     display: "Ureteral route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_PeritendinousRoute: Coding.FromStrict({
+  RouteCodesValueSet_PeritendinousRoute: new Coding({
     code: "419762003",
     display: "Peritendinous route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntrabronchialRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntrabronchialRoute: new Coding({
     code: "419778001",
     display: "Intrabronchial route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntraprostaticRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntraprostaticRoute: new Coding({
     code: "419810008",
     display: "Intraprostatic route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_SubmucosalRoute: Coding.FromStrict({
+  RouteCodesValueSet_SubmucosalRoute: new Coding({
     code: "419874009",
     display: "Submucosal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_SurgicalCavityRoute: Coding.FromStrict({
+  RouteCodesValueSet_SurgicalCavityRoute: new Coding({
     code: "419894000",
     display: "Surgical cavity route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IleostomyRoute: Coding.FromStrict({
+  RouteCodesValueSet_IleostomyRoute: new Coding({
     code: "419954003",
     display: "Ileostomy route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntravenousPeripheralRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntravenousPeripheralRoute: new Coding({
     code: "419993007",
     display: "Intravenous peripheral route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_PeriostealRoute: Coding.FromStrict({
+  RouteCodesValueSet_PeriostealRoute: new Coding({
     code: "420047004",
     display: "Periosteal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_EsophagostomyRoute: Coding.FromStrict({
+  RouteCodesValueSet_EsophagostomyRoute: new Coding({
     code: "420163009",
     display: "Esophagostomy route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_UrostomyRoute: Coding.FromStrict({
+  RouteCodesValueSet_UrostomyRoute: new Coding({
     code: "420168000",
     display: "Urostomy route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_LaryngealRoute: Coding.FromStrict({
+  RouteCodesValueSet_LaryngealRoute: new Coding({
     code: "420185003",
     display: "Laryngeal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntrapulmonaryRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntrapulmonaryRoute: new Coding({
     code: "420201002",
     display: "Intrapulmonary route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_MucousFistulaRoute: Coding.FromStrict({
+  RouteCodesValueSet_MucousFistulaRoute: new Coding({
     code: "420204005",
     display: "Mucous fistula route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_NasoduodenalRoute: Coding.FromStrict({
+  RouteCodesValueSet_NasoduodenalRoute: new Coding({
     code: "420218003",
     display: "Nasoduodenal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_BodyCavityRoute: Coding.FromStrict({
+  RouteCodesValueSet_BodyCavityRoute: new Coding({
     code: "420254004",
     display: "Body cavity route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntraventricularRouteCardiac: Coding.FromStrict({
+  RouteCodesValueSet_IntraventricularRouteCardiac: new Coding({
     code: "420287000",
     display: "Intraventricular route - cardiac",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntracerebroventricularRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntracerebroventricularRoute: new Coding({
     code: "420719007",
     display: "Intracerebroventricular route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_PercutaneousRoute: Coding.FromStrict({
+  RouteCodesValueSet_PercutaneousRoute: new Coding({
     code: "428191002",
     display: "Percutaneous route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_InterstitialRoute: Coding.FromStrict({
+  RouteCodesValueSet_InterstitialRoute: new Coding({
     code: "429817007",
     display: "Interstitial route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntraesophagealRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntraesophagealRoute: new Coding({
     code: "445752009",
     display: "Intraesophageal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntragingivalRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntragingivalRoute: new Coding({
     code: "445754005",
     display: "Intragingival route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntravascularRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntravascularRoute: new Coding({
     code: "445755006",
     display: "Intravascular route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntraduralRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntraduralRoute: new Coding({
     code: "445756007",
     display: "Intradural route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntrameningealRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntrameningealRoute: new Coding({
     code: "445767008",
     display: "Intrameningeal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntragastricRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntragastricRoute: new Coding({
     code: "445768003",
     display: "Intragastric route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntracorpusCavernosumRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntracorpusCavernosumRoute: new Coding({
     code: "445769006",
     display: "Intracorpus cavernosum route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntrapericardialRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntrapericardialRoute: new Coding({
     code: "445771006",
     display: "Intrapericardial route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntralingualRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntralingualRoute: new Coding({
     code: "445913005",
     display: "Intralingual route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntrahepaticRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntrahepaticRoute: new Coding({
     code: "445941009",
     display: "Intrahepatic route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_ConjunctivalRoute: Coding.FromStrict({
+  RouteCodesValueSet_ConjunctivalRoute: new Coding({
     code: "446105004",
     display: "Conjunctival route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntraepicardialRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntraepicardialRoute: new Coding({
     code: "446407004",
     display: "Intraepicardial route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_TransendocardialRoute: Coding.FromStrict({
+  RouteCodesValueSet_TransendocardialRoute: new Coding({
     code: "446435000",
     display: "Transendocardial route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_TransplacentalRoute: Coding.FromStrict({
+  RouteCodesValueSet_TransplacentalRoute: new Coding({
     code: "446442000",
     display: "Transplacental route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntracerebralRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntracerebralRoute: new Coding({
     code: "446540005",
     display: "Intracerebral route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntrailealRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntrailealRoute: new Coding({
     code: "447026006",
     display: "Intraileal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_PeriodontalRoute: Coding.FromStrict({
+  RouteCodesValueSet_PeriodontalRoute: new Coding({
     code: "447052000",
     display: "Periodontal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_PeriduralRoute: Coding.FromStrict({
+  RouteCodesValueSet_PeriduralRoute: new Coding({
     code: "447080003",
     display: "Peridural route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_LowerRespiratoryTractRoute: Coding.FromStrict({
+  RouteCodesValueSet_LowerRespiratoryTractRoute: new Coding({
     code: "447081004",
     display: "Lower respiratory tract route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntramammaryRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntramammaryRoute: new Coding({
     code: "447121004",
     display: "Intramammary route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntratumorRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntratumorRoute: new Coding({
     code: "447122006",
     display: "Intratumor route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_TranstympanicRoute: Coding.FromStrict({
+  RouteCodesValueSet_TranstympanicRoute: new Coding({
     code: "447227007",
     display: "Transtympanic route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_TranstrachealRoute: Coding.FromStrict({
+  RouteCodesValueSet_TranstrachealRoute: new Coding({
     code: "447229005",
     display: "Transtracheal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_RespiratoryTractRoute: Coding.FromStrict({
+  RouteCodesValueSet_RespiratoryTractRoute: new Coding({
     code: "447694001",
     display: "Respiratory tract route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_DigestiveTractRoute: Coding.FromStrict({
+  RouteCodesValueSet_DigestiveTractRoute: new Coding({
     code: "447964005",
     display: "Digestive tract route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntraepidermalRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntraepidermalRoute: new Coding({
     code: "448077001",
     display: "Intraepidermal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntrajejunalRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntrajejunalRoute: new Coding({
     code: "448491004",
     display: "Intrajejunal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntracolonicRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntracolonicRoute: new Coding({
     code: "448492006",
     display: "Intracolonic route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_CutaneousRoute: Coding.FromStrict({
+  RouteCodesValueSet_CutaneousRoute: new Coding({
     code: "448598008",
     display: "Cutaneous route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_TransdermalUse: Coding.FromStrict({
+  RouteCodesValueSet_TransdermalUse: new Coding({
     code: "45890007",
     display: "Transdermal use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_Translingual: Coding.FromStrict({
+  RouteCodesValueSet_Translingual: new Coding({
     code: "461657851000087101",
     display: "Translingual",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_NasalUse: Coding.FromStrict({
+  RouteCodesValueSet_NasalUse: new Coding({
     code: "46713006",
     display: "Nasal use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntravenousUse: Coding.FromStrict({
+  RouteCodesValueSet_IntravenousUse: new Coding({
     code: "47625008",
     display: "Intravenous use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_BuccalUse: Coding.FromStrict({
+  RouteCodesValueSet_BuccalUse: new Coding({
     code: "54471007",
     display: "Buccal use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_OphthalmicUse: Coding.FromStrict({
+  RouteCodesValueSet_OphthalmicUse: new Coding({
     code: "54485002",
     display: "Ophthalmic use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntraArterialUse: Coding.FromStrict({
+  RouteCodesValueSet_IntraArterialUse: new Coding({
     code: "58100008",
     display: "Intra-arterial use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntramedullaryRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntramedullaryRoute: new Coding({
     code: "60213007",
     display: "Intramedullary route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_TopicalRoute: Coding.FromStrict({
+  RouteCodesValueSet_TopicalRoute: new Coding({
     code: "6064005",
     display: "Topical route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntrauterineRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntrauterineRoute: new Coding({
     code: "62226000",
     display: "Intrauterine route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_ArteriovenousFistulaRoute: Coding.FromStrict({
+  RouteCodesValueSet_ArteriovenousFistulaRoute: new Coding({
     code: "697971008",
     display: "Arteriovenous fistula route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntraneuralRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntraneuralRoute: new Coding({
     code: "711360002",
     display: "Intraneural route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntramuralRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntramuralRoute: new Coding({
     code: "711378007",
     display: "Intramural route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_ExtracorporealRoute: Coding.FromStrict({
+  RouteCodesValueSet_ExtracorporealRoute: new Coding({
     code: "714743009",
     display: "Extracorporeal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_InfiltrationRoute: Coding.FromStrict({
+  RouteCodesValueSet_InfiltrationRoute: new Coding({
     code: "718329006",
     display: "Infiltration route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntrathecalRoute: Coding.FromStrict({
+  RouteCodesValueSet_IntrathecalRoute: new Coding({
     code: "72607000",
     display: "Intrathecal route",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_IntramuscularUse: Coding.FromStrict({
+  RouteCodesValueSet_IntramuscularUse: new Coding({
     code: "78421000",
     display: "Intramuscular use",
     system: "http://snomed.info/sct"
   }),
-  RouteCodesValueSet_UrethralUse: Coding.FromStrict({
+  RouteCodesValueSet_UrethralUse: new Coding({
     code: "90028008",
     display: "Urethral use",
     system: "http://snomed.info/sct"

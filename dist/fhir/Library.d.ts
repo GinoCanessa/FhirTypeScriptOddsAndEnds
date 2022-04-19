@@ -313,11 +313,11 @@ export declare class Library extends fhir.DomainResource implements fhir.ILibrar
     /**
      * Check if the current Library contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Library from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ILibrary): Library;
+    static fromStrict(source: fhir.ILibrary): Library;
 }
 /**
  * Code Values for the Library.status field

@@ -97,11 +97,11 @@ export declare class DeviceMetricCalibration extends fhir.BackboneElement implem
     /**
      * Check if the current DeviceMetricCalibration contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DeviceMetricCalibration from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDeviceMetricCalibration): DeviceMetricCalibration;
+    static fromStrict(source: fhir.IDeviceMetricCalibration): DeviceMetricCalibration;
 }
 /**
  * Describes a measurement, calculation or setting capability of a medical device.
@@ -161,11 +161,11 @@ export declare class DeviceMetric extends fhir.DomainResource implements fhir.ID
     /**
      * Check if the current DeviceMetric contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DeviceMetric from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDeviceMetric): DeviceMetric;
+    static fromStrict(source: fhir.IDeviceMetric): DeviceMetric;
 }
 /**
  * Code Values for the DeviceMetric.calibration.state field

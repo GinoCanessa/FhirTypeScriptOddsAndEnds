@@ -93,11 +93,11 @@ export declare class ResearchSubject extends fhir.DomainResource implements fhir
     /**
      * Check if the current ResearchSubject contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ResearchSubject from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IResearchSubject): ResearchSubject;
+    static fromStrict(source: fhir.IResearchSubject): ResearchSubject;
 }
 /**
  * Code Values for the ResearchSubject.status field

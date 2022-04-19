@@ -33,10 +33,10 @@ export declare class FhirElement implements fhir.IFhirElement {
     /**
      * Check if the current FhirElement contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a FhirElement from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IFhirElement): FhirElement;
+    static fromStrict(source: fhir.IFhirElement): FhirElement;
 }
 //# sourceMappingURL=FhirElement.d.ts.map

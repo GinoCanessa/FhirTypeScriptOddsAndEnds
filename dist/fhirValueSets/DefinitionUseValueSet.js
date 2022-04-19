@@ -13,7 +13,7 @@ export const DefinitionUseValueSet = {
     /**
      * This structure captures an analysis of a domain
      */
-    definition_use_DomainAnalysisModel: Coding.FromStrict({
+    definition_use_DomainAnalysisModel: new Coding({
         code: "archetype",
         display: "Domain Analysis Model",
         system: "http://terminology.hl7.org/CodeSystem/definition-use"
@@ -21,7 +21,7 @@ export const DefinitionUseValueSet = {
     /**
      * This structure is intended to be treated like a FHIR resource (e.g. on the FHIR API)
      */
-    definition_use_CustomResource: Coding.FromStrict({
+    definition_use_CustomResource: new Coding({
         code: "custom-resource",
         display: "Custom Resource",
         system: "http://terminology.hl7.org/CodeSystem/definition-use"
@@ -29,7 +29,7 @@ export const DefinitionUseValueSet = {
     /**
      * This structure captures an analysis of a domain
      */
-    definition_use_DomainAnalysisModel_2: Coding.FromStrict({
+    definition_use_DomainAnalysisModel_2: new Coding({
         code: "dam",
         display: "Domain Analysis Model",
         system: "http://terminology.hl7.org/CodeSystem/definition-use"
@@ -37,7 +37,7 @@ export const DefinitionUseValueSet = {
     /**
      * This structure is defined as part of the base FHIR Specification
      */
-    definition_use_FHIRStructure: Coding.FromStrict({
+    definition_use_FHIRStructure: new Coding({
         code: "fhir-structure",
         display: "FHIR Structure",
         system: "http://terminology.hl7.org/CodeSystem/definition-use"
@@ -45,7 +45,7 @@ export const DefinitionUseValueSet = {
     /**
      * This structure is a template (n.b: 'template' has many meanings)
      */
-    definition_use_Template: Coding.FromStrict({
+    definition_use_Template: new Coding({
         code: "template",
         display: "Template",
         system: "http://terminology.hl7.org/CodeSystem/definition-use"
@@ -53,7 +53,7 @@ export const DefinitionUseValueSet = {
     /**
      * This structure represents and existing structure (e.g. CDA, HL7 v2)
      */
-    definition_use_WireFormat: Coding.FromStrict({
+    definition_use_WireFormat: new Coding({
         code: "wire-format",
         display: "Wire Format",
         system: "http://terminology.hl7.org/CodeSystem/definition-use"

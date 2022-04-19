@@ -13,7 +13,7 @@ export const RiskProbabilityValueSet = {
     /**
      * The specified outcome is effectively guaranteed.
      */
-    risk_probability_Certain: Coding.FromStrict({
+    risk_probability_Certain: new Coding({
         code: "certain",
         display: "Certain",
         system: "http://terminology.hl7.org/CodeSystem/risk-probability"
@@ -21,7 +21,7 @@ export const RiskProbabilityValueSet = {
     /**
      * The specified outcome is more likely to occur than not.
      */
-    risk_probability_HighLikelihood: Coding.FromStrict({
+    risk_probability_HighLikelihood: new Coding({
         code: "high",
         display: "High likelihood",
         system: "http://terminology.hl7.org/CodeSystem/risk-probability"
@@ -29,7 +29,7 @@ export const RiskProbabilityValueSet = {
     /**
      * The specified outcome is possible but unlikely.
      */
-    risk_probability_LowLikelihood: Coding.FromStrict({
+    risk_probability_LowLikelihood: new Coding({
         code: "low",
         display: "Low likelihood",
         system: "http://terminology.hl7.org/CodeSystem/risk-probability"
@@ -37,7 +37,7 @@ export const RiskProbabilityValueSet = {
     /**
      * The specified outcome has a reasonable likelihood of occurrence.
      */
-    risk_probability_ModerateLikelihood: Coding.FromStrict({
+    risk_probability_ModerateLikelihood: new Coding({
         code: "moderate",
         display: "Moderate likelihood",
         system: "http://terminology.hl7.org/CodeSystem/risk-probability"
@@ -45,7 +45,7 @@ export const RiskProbabilityValueSet = {
     /**
      * The specified outcome is exceptionally unlikely.
      */
-    risk_probability_NegligibleLikelihood: Coding.FromStrict({
+    risk_probability_NegligibleLikelihood: new Coding({
         code: "negligible",
         display: "Negligible likelihood",
         system: "http://terminology.hl7.org/CodeSystem/risk-probability"

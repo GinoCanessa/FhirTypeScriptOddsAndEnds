@@ -149,11 +149,11 @@ export declare class ClinicalImpressionInvestigation extends fhir.BackboneElemen
     /**
      * Check if the current ClinicalImpressionInvestigation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClinicalImpressionInvestigation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClinicalImpressionInvestigation): ClinicalImpressionInvestigation;
+    static fromStrict(source: fhir.IClinicalImpressionInvestigation): ClinicalImpressionInvestigation;
 }
 /**
  * Specific findings or diagnoses that were considered likely or relevant to ongoing treatment.
@@ -179,11 +179,11 @@ export declare class ClinicalImpressionFinding extends fhir.BackboneElement impl
     /**
      * Check if the current ClinicalImpressionFinding contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClinicalImpressionFinding from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClinicalImpressionFinding): ClinicalImpressionFinding;
+    static fromStrict(source: fhir.IClinicalImpressionFinding): ClinicalImpressionFinding;
 }
 /**
  * A record of a clinical assessment performed to determine what problem(s) may affect the patient and before planning the treatments or management strategies that are best to manage a patient's condition. Assessments are often 1:1 with a clinical consultation / encounter,  but this varies greatly depending on the clinical workflow. This resource is called "ClinicalImpression" rather than "ClinicalAssessment" to avoid confusion with the recording of assessment tools such as Apgar score.
@@ -291,11 +291,11 @@ export declare class ClinicalImpression extends fhir.DomainResource implements f
     /**
      * Check if the current ClinicalImpression contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ClinicalImpression from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IClinicalImpression): ClinicalImpression;
+    static fromStrict(source: fhir.IClinicalImpression): ClinicalImpression;
 }
 /**
  * Code Values for the ClinicalImpression.status field

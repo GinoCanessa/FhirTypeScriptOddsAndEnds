@@ -13,7 +13,7 @@ export const ClaimUseValueSet = {
     /**
      * The treatment is complete and this represents a Claim for the services.
      */
-    claim_use_Claim: Coding.FromStrict({
+    claim_use_Claim: new Coding({
         code: "claim",
         display: "Claim",
         system: "http://hl7.org/fhir/claim-use"
@@ -21,7 +21,7 @@ export const ClaimUseValueSet = {
     /**
      * The treatment is proposed and this represents a Pre-authorization for the services.
      */
-    claim_use_Preauthorization: Coding.FromStrict({
+    claim_use_Preauthorization: new Coding({
         code: "preauthorization",
         display: "Preauthorization",
         system: "http://hl7.org/fhir/claim-use"
@@ -29,7 +29,7 @@ export const ClaimUseValueSet = {
     /**
      * The treatment is proposed and this represents a Pre-determination for the services.
      */
-    claim_use_Predetermination: Coding.FromStrict({
+    claim_use_Predetermination: new Coding({
         code: "predetermination",
         display: "Predetermination",
         system: "http://hl7.org/fhir/claim-use"

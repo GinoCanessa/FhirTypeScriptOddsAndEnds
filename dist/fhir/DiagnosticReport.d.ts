@@ -122,11 +122,11 @@ export declare class DiagnosticReportMedia extends fhir.BackboneElement implemen
     /**
      * Check if the current DiagnosticReportMedia contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DiagnosticReportMedia from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDiagnosticReportMedia): DiagnosticReportMedia;
+    static fromStrict(source: fhir.IDiagnosticReportMedia): DiagnosticReportMedia;
 }
 /**
  * The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.
@@ -223,11 +223,11 @@ export declare class DiagnosticReport extends fhir.DomainResource implements fhi
     /**
      * Check if the current DiagnosticReport contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DiagnosticReport from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDiagnosticReport): DiagnosticReport;
+    static fromStrict(source: fhir.IDiagnosticReport): DiagnosticReport;
 }
 /**
  * Code Values for the DiagnosticReport.status field

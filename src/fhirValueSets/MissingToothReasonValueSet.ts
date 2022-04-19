@@ -13,7 +13,7 @@ export const MissingToothReasonValueSet = {
   /**
    * Congenital
    */
-  missing_tooth_reason_C: Coding.FromStrict({
+  missing_tooth_reason_C: new Coding({
     code: "c",
     display: "C",
     system: "http://terminology.hl7.org/CodeSystem/missingtoothreason"
@@ -21,7 +21,7 @@ export const MissingToothReasonValueSet = {
   /**
    * Extraction
    */
-  missing_tooth_reason_E: Coding.FromStrict({
+  missing_tooth_reason_E: new Coding({
     code: "e",
     display: "E",
     system: "http://terminology.hl7.org/CodeSystem/missingtoothreason"
@@ -29,7 +29,7 @@ export const MissingToothReasonValueSet = {
   /**
    * Other
    */
-  missing_tooth_reason_O: Coding.FromStrict({
+  missing_tooth_reason_O: new Coding({
     code: "o",
     display: "O",
     system: "http://terminology.hl7.org/CodeSystem/missingtoothreason"
@@ -37,7 +37,7 @@ export const MissingToothReasonValueSet = {
   /**
    * Unknown
    */
-  missing_tooth_reason_U: Coding.FromStrict({
+  missing_tooth_reason_U: new Coding({
     code: "u",
     display: "U",
     system: "http://terminology.hl7.org/CodeSystem/missingtoothreason"

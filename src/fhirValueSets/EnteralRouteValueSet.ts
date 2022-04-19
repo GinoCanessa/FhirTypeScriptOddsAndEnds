@@ -13,7 +13,7 @@ export const EnteralRouteValueSet = {
   /**
    * Instillation, enteral feeding tube
    */
-  v3_RouteOfAdministration_InstillationEnteralFeedingTube: Coding.FromStrict({
+  v3_RouteOfAdministration_InstillationEnteralFeedingTube: new Coding({
     code: "EFT",
     display: "Instillation, enteral feeding tube",
     system: "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
@@ -21,7 +21,7 @@ export const EnteralRouteValueSet = {
   /**
    * Instillation, enteral
    */
-  v3_RouteOfAdministration_InstillationEnteral: Coding.FromStrict({
+  v3_RouteOfAdministration_InstillationEnteral: new Coding({
     code: "ENTINSTL",
     display: "Instillation, enteral",
     system: "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
@@ -29,7 +29,7 @@ export const EnteralRouteValueSet = {
   /**
    * Instillation, gastro-jejunostomy tube
    */
-  v3_RouteOfAdministration_InstillationGastroJejunostomyTube: Coding.FromStrict({
+  v3_RouteOfAdministration_InstillationGastroJejunostomyTube: new Coding({
     code: "GJT",
     display: "Instillation, gastro-jejunostomy tube",
     system: "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
@@ -37,7 +37,7 @@ export const EnteralRouteValueSet = {
   /**
    * Instillation, gastrostomy tube
    */
-  v3_RouteOfAdministration_InstillationGastrostomyTube: Coding.FromStrict({
+  v3_RouteOfAdministration_InstillationGastrostomyTube: new Coding({
     code: "GT",
     display: "Instillation, gastrostomy tube",
     system: "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
@@ -45,7 +45,7 @@ export const EnteralRouteValueSet = {
   /**
    * Instillation, jejunostomy tube
    */
-  v3_RouteOfAdministration_InstillationJejunostomyTube: Coding.FromStrict({
+  v3_RouteOfAdministration_InstillationJejunostomyTube: new Coding({
     code: "JJTINSTL",
     display: "Instillation, jejunostomy tube",
     system: "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
@@ -53,7 +53,7 @@ export const EnteralRouteValueSet = {
   /**
    * Instillation, nasogastric tube
    */
-  v3_RouteOfAdministration_InstillationNasogastricTube: Coding.FromStrict({
+  v3_RouteOfAdministration_InstillationNasogastricTube: new Coding({
     code: "NGT",
     display: "Instillation, nasogastric tube",
     system: "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
@@ -61,7 +61,7 @@ export const EnteralRouteValueSet = {
   /**
    * Instillation, orogastric tube
    */
-  v3_RouteOfAdministration_InstillationOrogastricTube: Coding.FromStrict({
+  v3_RouteOfAdministration_InstillationOrogastricTube: new Coding({
     code: "OGT",
     display: "Instillation, orogastric tube",
     system: "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
@@ -69,7 +69,7 @@ export const EnteralRouteValueSet = {
   /**
    * Instillation, orojejunum tube
    */
-  v3_RouteOfAdministration_InstillationOrojejunumTube: Coding.FromStrict({
+  v3_RouteOfAdministration_InstillationOrojejunumTube: new Coding({
     code: "OJJ",
     display: "Instillation, orojejunum tube",
     system: "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
@@ -77,7 +77,7 @@ export const EnteralRouteValueSet = {
   /**
    * Swallow, oral
    */
-  v3_RouteOfAdministration_SwallowOral: Coding.FromStrict({
+  v3_RouteOfAdministration_SwallowOral: new Coding({
     code: "PO",
     display: "Swallow, oral",
     system: "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"

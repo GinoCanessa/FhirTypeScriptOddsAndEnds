@@ -366,11 +366,11 @@ export declare class ResearchElementDefinitionCharacteristic extends fhir.Backbo
     /**
      * Check if the current ResearchElementDefinitionCharacteristic contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ResearchElementDefinitionCharacteristic from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IResearchElementDefinitionCharacteristic): ResearchElementDefinitionCharacteristic;
+    static fromStrict(source: fhir.IResearchElementDefinitionCharacteristic): ResearchElementDefinitionCharacteristic;
 }
 /**
  * The ResearchElementDefinition resource describes a "PICO" element that knowledge (evidence, assertion, recommendation) is about.
@@ -545,11 +545,11 @@ export declare class ResearchElementDefinition extends fhir.DomainResource imple
     /**
      * Check if the current ResearchElementDefinition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ResearchElementDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IResearchElementDefinition): ResearchElementDefinition;
+    static fromStrict(source: fhir.IResearchElementDefinition): ResearchElementDefinition;
 }
 /**
  * Code Values for the ResearchElementDefinition.characteristic.participantEffectiveGroupMeasure field

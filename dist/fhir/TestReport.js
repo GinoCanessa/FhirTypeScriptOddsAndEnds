@@ -45,7 +45,7 @@ export class TestReportParticipant extends fhir.BackboneElement {
     /**
      * Check if the current TestReportParticipant contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["type"] === undefined) {
             missingElements.push("type");
@@ -53,16 +53,16 @@ export class TestReportParticipant extends fhir.BackboneElement {
         if (this["uri"] === undefined) {
             missingElements.push("uri");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a TestReportParticipant from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new TestReportParticipant(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `TestReportParticipant is missing elements: ${missingElements.join(", ")}`;
         }
@@ -104,21 +104,21 @@ export class TestReportSetupActionOperation extends fhir.BackboneElement {
     /**
      * Check if the current TestReportSetupActionOperation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["result"] === undefined) {
             missingElements.push("result");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a TestReportSetupActionOperation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new TestReportSetupActionOperation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `TestReportSetupActionOperation is missing elements: ${missingElements.join(", ")}`;
         }
@@ -160,21 +160,21 @@ export class TestReportSetupActionAssert extends fhir.BackboneElement {
     /**
      * Check if the current TestReportSetupActionAssert contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["result"] === undefined) {
             missingElements.push("result");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a TestReportSetupActionAssert from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new TestReportSetupActionAssert(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `TestReportSetupActionAssert is missing elements: ${missingElements.join(", ")}`;
         }
@@ -200,18 +200,18 @@ export class TestReportSetupAction extends fhir.BackboneElement {
     /**
      * Check if the current TestReportSetupAction contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a TestReportSetupAction from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new TestReportSetupAction(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `TestReportSetupAction is missing elements: ${missingElements.join(", ")}`;
         }
@@ -238,21 +238,21 @@ export class TestReportSetup extends fhir.BackboneElement {
     /**
      * Check if the current TestReportSetup contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if ((!this["action"]) || (this["action"].length === 0)) {
             missingElements.push("action");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a TestReportSetup from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new TestReportSetup(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `TestReportSetup is missing elements: ${missingElements.join(", ")}`;
         }
@@ -278,18 +278,18 @@ export class TestReportTestAction extends fhir.BackboneElement {
     /**
      * Check if the current TestReportTestAction contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a TestReportTestAction from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new TestReportTestAction(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `TestReportTestAction is missing elements: ${missingElements.join(", ")}`;
         }
@@ -328,21 +328,21 @@ export class TestReportTest extends fhir.BackboneElement {
     /**
      * Check if the current TestReportTest contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if ((!this["action"]) || (this["action"].length === 0)) {
             missingElements.push("action");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a TestReportTest from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new TestReportTest(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `TestReportTest is missing elements: ${missingElements.join(", ")}`;
         }
@@ -369,21 +369,21 @@ export class TestReportTeardownAction extends fhir.BackboneElement {
     /**
      * Check if the current TestReportTeardownAction contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["operation"] === undefined) {
             missingElements.push("operation");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a TestReportTeardownAction from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new TestReportTeardownAction(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `TestReportTeardownAction is missing elements: ${missingElements.join(", ")}`;
         }
@@ -410,21 +410,21 @@ export class TestReportTeardown extends fhir.BackboneElement {
     /**
      * Check if the current TestReportTeardown contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if ((!this["action"]) || (this["action"].length === 0)) {
             missingElements.push("action");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a TestReportTeardown from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new TestReportTeardown(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `TestReportTeardown is missing elements: ${missingElements.join(", ")}`;
         }
@@ -511,7 +511,7 @@ export class TestReport extends fhir.DomainResource {
     /**
      * Check if the current TestReport contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["result"] === undefined) {
             missingElements.push("result");
@@ -522,16 +522,16 @@ export class TestReport extends fhir.DomainResource {
         if (this["testScript"] === undefined) {
             missingElements.push("testScript");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a TestReport from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new TestReport(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `TestReport is missing elements: ${missingElements.join(", ")}`;
         }

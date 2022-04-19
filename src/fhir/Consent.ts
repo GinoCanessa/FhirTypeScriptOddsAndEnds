@@ -211,18 +211,18 @@ export class ConsentPolicy extends fhir.BackboneElement implements fhir.IConsent
   /**
    * Check if the current ConsentPolicy contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ConsentPolicy from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IConsentPolicy):ConsentPolicy {
+  static override fromStrict(source:fhir.IConsentPolicy):ConsentPolicy {
     var dest:ConsentPolicy = new ConsentPolicy(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ConsentPolicy is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -261,19 +261,19 @@ export class ConsentVerification extends fhir.BackboneElement implements fhir.IC
   /**
    * Check if the current ConsentVerification contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["verified"] === undefined) { missingElements.push("verified"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ConsentVerification from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IConsentVerification):ConsentVerification {
+  static override fromStrict(source:fhir.IConsentVerification):ConsentVerification {
     var dest:ConsentVerification = new ConsentVerification(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ConsentVerification is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -305,20 +305,20 @@ export class ConsentProvisionActor extends fhir.BackboneElement implements fhir.
   /**
    * Check if the current ConsentProvisionActor contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["reference"] === undefined) { missingElements.push("reference"); }
     if (this["role"] === undefined) { missingElements.push("role"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ConsentProvisionActor from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IConsentProvisionActor):ConsentProvisionActor {
+  static override fromStrict(source:fhir.IConsentProvisionActor):ConsentProvisionActor {
     var dest:ConsentProvisionActor = new ConsentProvisionActor(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ConsentProvisionActor is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -352,20 +352,20 @@ export class ConsentProvisionData extends fhir.BackboneElement implements fhir.I
   /**
    * Check if the current ConsentProvisionData contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["meaning"] === undefined) { missingElements.push("meaning"); }
     if (this["reference"] === undefined) { missingElements.push("reference"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ConsentProvisionData from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IConsentProvisionData):ConsentProvisionData {
+  static override fromStrict(source:fhir.IConsentProvisionData):ConsentProvisionData {
     var dest:ConsentProvisionData = new ConsentProvisionData(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ConsentProvisionData is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -440,18 +440,18 @@ export class ConsentProvision extends fhir.BackboneElement implements fhir.ICons
   /**
    * Check if the current ConsentProvision contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ConsentProvision from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IConsentProvision):ConsentProvision {
+  static override fromStrict(source:fhir.IConsentProvision):ConsentProvision {
     var dest:ConsentProvision = new ConsentProvision(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ConsentProvision is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -554,21 +554,21 @@ export class Consent extends fhir.DomainResource implements fhir.IConsent {
   /**
    * Check if the current Consent contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["category"]) || (this["category"].length === 0)) { missingElements.push("category"); }
     if (this["scope"] === undefined) { missingElements.push("scope"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Consent from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IConsent):Consent {
+  static override fromStrict(source:fhir.IConsent):Consent {
     var dest:Consent = new Consent(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Consent is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

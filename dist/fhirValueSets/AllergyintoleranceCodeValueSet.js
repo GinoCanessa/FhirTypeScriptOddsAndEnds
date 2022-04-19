@@ -10,15082 +10,15082 @@ import { Coding } from '../fhir';
  * This value set includes concept codes for specific substances/pharmaceutical products, allergy or intolerance conditions, and negation/exclusion codes to specify the absence of specific types of allergies or intolerances.
  */
 export const AllergyintoleranceCodeValueSet = {
-    AllergyintoleranceCodeValueSet_Mannotetraose2AlphaNAcetylglucosaminyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Mannotetraose2AlphaNAcetylglucosaminyltransferase: new Coding({
         code: "1002007",
         display: "Mannotetraose 2-alpha-N-acetylglucosaminyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ketoprofen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ketoprofen: new Coding({
         code: "10099000",
         display: "Ketoprofen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NAcetylneuraminateMonooxygenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NAcetylneuraminateMonooxygenase: new Coding({
         code: "1010008",
         display: "N-Acetylneuraminate monooxygenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CinchonaAlkaloid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CinchonaAlkaloid: new Coding({
         code: "10135005",
         display: "Cinchona alkaloid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Nornicotine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Nornicotine: new Coding({
         code: "1018001",
         display: "Nornicotine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinOkaloosa: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinOkaloosa: new Coding({
         code: "102002",
         display: "Hemoglobin Okaloosa",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BenzoicAndSalicylicAcidOintment: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BenzoicAndSalicylicAcidOintment: new Coding({
         code: "10243007",
         display: "Benzoic and salicylic acid ointment",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power93PowerMolybdenum: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power93PowerMolybdenum: new Coding({
         code: "1025008",
         display: "^93^Molybdenum",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PrednisonePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PrednisonePreparation: new Coding({
         code: "10312003",
         display: "Prednisone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VaccineBacterinToxoid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VaccineBacterinToxoid: new Coding({
         code: "10332002",
         display: "Vaccine - bacterin - toxoid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_InjectableVitaminPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_InjectableVitaminPreparation: new Coding({
         code: "10355004",
         display: "Injectable vitamin preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_UndecylenicAcidAndUndecylenateSalt: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_UndecylenicAcidAndUndecylenateSalt: new Coding({
         code: "10356003",
         display: "Undecylenic acid and undecylenate salt",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ColloidalOatmealPowder: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ColloidalOatmealPowder: new Coding({
         code: "10368007",
         display: "Colloidal oatmeal powder",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL6MPMercaptopurine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL6MPMercaptopurine: new Coding({
         code: "1039008",
         display: "6MP - Mercaptopurine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Nitropentaerythrol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Nitropentaerythrol: new Coding({
         code: "10422008",
         display: "Nitropentaerythrol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GuanineDeaminase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GuanineDeaminase: new Coding({
         code: "1047008",
         display: "Guanine deaminase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Melilotate3Monooxygenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Melilotate3Monooxygenase: new Coding({
         code: "1050006",
         display: "Melilotate 3-monooxygenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Doxycycline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Doxycycline: new Coding({
         code: "10504007",
         display: "Doxycycline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LututrinPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LututrinPreparation: new Coding({
         code: "10515002",
         display: "Lututrin preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Tocainide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Tocainide: new Coding({
         code: "10555000",
         display: "Tocainide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhosphateSalt: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhosphateSalt: new Coding({
         code: "1057009",
         display: "Phosphate salt",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MultivitaminPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MultivitaminPreparation: new Coding({
         code: "10632007",
         display: "Multivitamin preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EColiPeriplasmicProteinase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EColiPeriplasmicProteinase: new Coding({
         code: "1065007",
         display: "E. coli periplasmic proteinase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SkinAntiInfective: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SkinAntiInfective: new Coding({
         code: "10668002",
         display: "Skin anti-infective",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GlucagonProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GlucagonProduct: new Coding({
         code: "10712001",
         display: "Glucagon product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Haloperidol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Haloperidol: new Coding({
         code: "10756001",
         display: "Haloperidol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntiPsychoticAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntiPsychoticAgent: new Coding({
         code: "10784006",
         display: "Anti-psychotic agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power202PowerThallium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power202PowerThallium: new Coding({
         code: "1080001",
         display: "^202^Thallium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CoagulationFactorInhibitor: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CoagulationFactorInhibitor: new Coding({
         code: "1091008",
         display: "Coagulation factor inhibitor",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenMPowerAPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenMPowerAPower: new Coding({
         code: "1097007",
         display: "Blood group antigen M^A^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IsochorismateSynthase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IsochorismateSynthase: new Coding({
         code: "1105007",
         display: "Isochorismate synthase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PancreaticRibonuclease: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PancreaticRibonuclease: new Coding({
         code: "1113008",
         display: "Pancreatic ribonuclease",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AutogenousVaccineAutogenousBacterin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AutogenousVaccineAutogenousBacterin: new Coding({
         code: "11185009",
         display: "Autogenous vaccine - autogenous bacterin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OphthalmicAntiInfectivePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OphthalmicAntiInfectivePreparation: new Coding({
         code: "11260008",
         display: "Ophthalmic anti-infective preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power240PowerUranium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power240PowerUranium: new Coding({
         code: "1137008",
         display: "^240^Uranium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MedicinalEnzyme: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MedicinalEnzyme: new Coding({
         code: "11402001",
         display: "Medicinal enzyme",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TetracyclicAntidepressantDrug: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TetracyclicAntidepressantDrug: new Coding({
         code: "11430001",
         display: "Tetracyclic antidepressant drug",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ticarcillin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ticarcillin: new Coding({
         code: "1148001",
         display: "Ticarcillin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinBarcelona: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinBarcelona: new Coding({
         code: "1149009",
         display: "Hemoglobin Barcelona",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VitaminDPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VitaminDPreparation: new Coding({
         code: "11563006",
         display: "Vitamin D preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntibodyToAntigenInISBTSystemLU: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntibodyToAntigenInISBTSystemLU: new Coding({
         code: "1160000",
         display: "Antibody to antigen in ISBT system LU",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TiTitanium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TiTitanium: new Coding({
         code: "1166006",
         display: "Ti - Titanium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinGower2: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinGower2: new Coding({
         code: "1169004",
         display: "Hemoglobin Gower-2",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FibrinogenKawaguchi: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FibrinogenKawaguchi: new Coding({
         code: "1171004",
         display: "Fibrinogen Kawaguchi",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cetylpyridinium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cetylpyridinium: new Coding({
         code: "11719000",
         display: "Cetylpyridinium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OphthalmicAntibiotic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OphthalmicAntibiotic: new Coding({
         code: "11777007",
         display: "Ophthalmic antibiotic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_StoolSoftener: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_StoolSoftener: new Coding({
         code: "11783005",
         display: "Stool softener",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Methysergide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Methysergide: new Coding({
         code: "11796006",
         display: "Methysergide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HypotensiveAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HypotensiveAgent: new Coding({
         code: "1182007",
         display: "Hypotensive agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Doxepin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Doxepin: new Coding({
         code: "11841005",
         display: "Doxepin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Naproxen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Naproxen: new Coding({
         code: "11847009",
         display: "Naproxen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinRoseauPointeAPitre: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinRoseauPointeAPitre: new Coding({
         code: "1185009",
         display: "Hemoglobin Roseau-Pointe à Pitre",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PlagueVaccine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PlagueVaccine: new Coding({
         code: "11866009",
         display: "Plague vaccine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinFMOsaka: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinFMOsaka: new Coding({
         code: "1189003",
         display: "Hemoglobin F-M-Osaka",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Mephenoxalone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Mephenoxalone: new Coding({
         code: "1190007",
         display: "Mephenoxalone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Procainamide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Procainamide: new Coding({
         code: "11959009",
         display: "Procainamide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OrnithineRacemase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OrnithineRacemase: new Coding({
         code: "120006",
         display: "Ornithine racemase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Alpha2AdrenergicBlockingAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Alpha2AdrenergicBlockingAgent: new Coding({
         code: "1206000",
         display: "Alpha 2 adrenergic blocking agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Nystatin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Nystatin: new Coding({
         code: "12096000",
         display: "Nystatin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiethylXanthogenDisulfide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiethylXanthogenDisulfide: new Coding({
         code: "1219001",
         display: "Diethyl xanthogen disulfide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Metronidazole: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Metronidazole: new Coding({
         code: "1222004",
         display: "Metronidazole",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenMarks: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenMarks: new Coding({
         code: "1223009",
         display: "Blood group antigen Marks",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PancreatinProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PancreatinProduct: new Coding({
         code: "12236006",
         display: "Pancreatin product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_WholeBloodProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_WholeBloodProduct: new Coding({
         code: "12289007",
         display: "Whole blood product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Diatrizoate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Diatrizoate: new Coding({
         code: "12335007",
         display: "Diatrizoate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OxytocinProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OxytocinProduct: new Coding({
         code: "12369008",
         display: "Oxytocin product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HumanWhiteBloodCellProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HumanWhiteBloodCellProduct: new Coding({
         code: "12425002",
         display: "Human white blood cell product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Vinblastine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Vinblastine: new Coding({
         code: "12436009",
         display: "Vinblastine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FibrinogenMadridI: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FibrinogenMadridI: new Coding({
         code: "1244009",
         display: "Fibrinogen Madrid I",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LeucostomaNeutralProteinase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LeucostomaNeutralProteinase: new Coding({
         code: "1248007",
         display: "Leucostoma neutral proteinase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MagnesiumCitrate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MagnesiumCitrate: new Coding({
         code: "12495006",
         display: "Magnesium citrate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FerrousSulfateFePower59Power: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FerrousSulfateFePower59Power: new Coding({
         code: "125001",
         display: "Ferrous sulfate Fe^59^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Triamterene: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Triamterene: new Coding({
         code: "12512008",
         display: "Triamterene",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Emetine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Emetine: new Coding({
         code: "12559001",
         display: "Emetine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GalactosylNAcetylglucosaminylgalactosylglucosylceramideAlphaGalactosyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GalactosylNAcetylglucosaminylgalactosylglucosylceramideAlphaGalactosyltransferase: new Coding({
         code: "126000",
         display: "Galactosyl-N-acetylglucosaminylgalactosylglucosylceramide alpha-galactosyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FludrocortisoneAcetatePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FludrocortisoneAcetatePreparation: new Coding({
         code: "12657005",
         display: "Fludrocortisone acetate preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmikacinSulfate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmikacinSulfate: new Coding({
         code: "1269009",
         display: "Amikacin sulfate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PteridineOxidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PteridineOxidase: new Coding({
         code: "1272002",
         display: "Pteridine oxidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyEvelyn: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyEvelyn: new Coding({
         code: "1273007",
         display: "Blood group antibody Evelyn",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EstradiolProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EstradiolProduct: new Coding({
         code: "12839006",
         display: "Estradiol product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VitaminProducts: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VitaminProducts: new Coding({
         code: "12968008",
         display: "Vitamin products",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinHopkinsII: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinHopkinsII: new Coding({
         code: "130002",
         display: "Hemoglobin Hopkins-II",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DolichylPhosphateMannosyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DolichylPhosphateMannosyltransferase: new Coding({
         code: "131003",
         display: "Dolichyl-phosphate mannosyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NitrateReductaseCytochrome: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NitrateReductaseCytochrome: new Coding({
         code: "1313002",
         display: "Nitrate reductase (cytochrome)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DextranProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DextranProduct: new Coding({
         code: "13132007",
         display: "Dextran product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Chlormethine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Chlormethine: new Coding({
         code: "13154009",
         display: "Chlormethine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RickettsialVaccine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RickettsialVaccine: new Coding({
         code: "13178004",
         display: "Rickettsial vaccine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyK18: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyK18: new Coding({
         code: "1319003",
         display: "Blood group antibody K18",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinManitoba: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinManitoba: new Coding({
         code: "1320009",
         display: "Hemoglobin Manitoba",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MetocurineIodide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MetocurineIodide: new Coding({
         code: "1325004",
         display: "Metocurine iodide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Salsalate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Salsalate: new Coding({
         code: "13252002",
         display: "Salsalate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Methamidophos: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Methamidophos: new Coding({
         code: "1331001",
         display: "Methamidophos",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EstradiolReceptor: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EstradiolReceptor: new Coding({
         code: "1334009",
         display: "Estradiol receptor",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Deoxycortone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Deoxycortone: new Coding({
         code: "1336006",
         display: "Deoxycortone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinTaLi: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinTaLi: new Coding({
         code: "1341003",
         display: "Hemoglobin Ta-li",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cefadroxil: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cefadroxil: new Coding({
         code: "13414000",
         display: "Cefadroxil",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Nortriptyline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Nortriptyline: new Coding({
         code: "13432000",
         display: "Nortriptyline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BlueShadeEosinStain: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BlueShadeEosinStain: new Coding({
         code: "1346008",
         display: "Blue shade eosin stain",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Minocycline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Minocycline: new Coding({
         code: "13512003",
         display: "Minocycline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcetylcholinePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcetylcholinePreparation: new Coding({
         code: "13525006",
         display: "Acetylcholine preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CoagulationFactorIXOxford3Variant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CoagulationFactorIXOxford3Variant: new Coding({
         code: "1355006",
         display: "Coagulation factor IX Oxford 3 variant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Bisacodyl: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Bisacodyl: new Coding({
         code: "13565005",
         display: "Bisacodyl",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Pyrazinamide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Pyrazinamide: new Coding({
         code: "13592004",
         display: "Pyrazinamide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BALBritishAntiLewisite: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BALBritishAntiLewisite: new Coding({
         code: "13664004",
         display: "BAL - British Anti-Lewisite",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Iodine131: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Iodine131: new Coding({
         code: "1368003",
         display: "Iodine 131",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenBig: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenBig: new Coding({
         code: "1371006",
         display: "Blood group antigen Big",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power93PowerZirconium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power93PowerZirconium: new Coding({
         code: "1373009",
         display: "^93^Zirconium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OralFormIronPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OralFormIronPreparation: new Coding({
         code: "13790009",
         display: "Oral form iron preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Naftifine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Naftifine: new Coding({
         code: "13800009",
         display: "Naftifine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power126PowerIodine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power126PowerIodine: new Coding({
         code: "1381005",
         display: "^126^Iodine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BiotinPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BiotinPreparation: new Coding({
         code: "13813003",
         display: "Biotin preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Beclometasone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Beclometasone: new Coding({
         code: "1389007",
         display: "Beclometasone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Spironolactone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Spironolactone: new Coding({
         code: "13929005",
         display: "Spironolactone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Butorphanol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Butorphanol: new Coding({
         code: "13936006",
         display: "Butorphanol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IronPentacarbonyl: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IronPentacarbonyl: new Coding({
         code: "1394007",
         display: "Iron pentacarbonyl",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Actinium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Actinium: new Coding({
         code: "1396009",
         display: "Actinium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ValproicAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ValproicAcid: new Coding({
         code: "13965000",
         display: "Valproic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyMPowerEPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyMPowerEPower: new Coding({
         code: "1405004",
         display: "Blood group antibody M^e^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VitaminBComplexPreps: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VitaminBComplexPreps: new Coding({
         code: "14054003",
         display: "Vitamin B complex preps",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibody1123K: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibody1123K: new Coding({
         code: "1408002",
         display: "Blood group antibody 1123K",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OpiateAntagonist: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OpiateAntagonist: new Coding({
         code: "14103001",
         display: "Opiate antagonist",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RadiumCompound: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RadiumCompound: new Coding({
         code: "1416006",
         display: "Radium compound",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Capreomycin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Capreomycin: new Coding({
         code: "14170004",
         display: "Capreomycin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Calamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Calamine: new Coding({
         code: "1434005",
         display: "Calamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Methylpentynol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Methylpentynol: new Coding({
         code: "1450002",
         display: "Methylpentynol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CaffeineAndSodiumBenzoateInjectionSolutionVial: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CaffeineAndSodiumBenzoateInjectionSolutionVial: new Coding({
         code: "14542005",
         display: "Caffeine and sodium benzoate injection solution vial",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AnticholinergicAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AnticholinergicAgent: new Coding({
         code: "14601000",
         display: "Anticholinergic agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cyclomaltodextrinase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cyclomaltodextrinase: new Coding({
         code: "1466000",
         display: "Cyclomaltodextrinase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Pheneticillin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Pheneticillin: new Coding({
         code: "14706000",
         display: "Pheneticillin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Elastin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Elastin: new Coding({
         code: "1471007",
         display: "Elastin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AdenosinePhosphateDeaminase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AdenosinePhosphateDeaminase: new Coding({
         code: "1472000",
         display: "Adenosine-phosphate deaminase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Chloroquine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Chloroquine: new Coding({
         code: "14728000",
         display: "Chloroquine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HepatitisAVaccine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HepatitisAVaccine: new Coding({
         code: "14745005",
         display: "Hepatitis A vaccine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CodeineSulfate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CodeineSulfate: new Coding({
         code: "1476002",
         display: "Codeine sulfate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinYatsushiro: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinYatsushiro: new Coding({
         code: "1477006",
         display: "Hemoglobin Yatsushiro",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Trimethobenzamide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Trimethobenzamide: new Coding({
         code: "14814001",
         display: "Trimethobenzamide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CocaineProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CocaineProduct: new Coding({
         code: "14816004",
         display: "Cocaine product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProtoOncogene: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProtoOncogene: new Coding({
         code: "1496005",
         display: "Proto-oncogene",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CH1ISBTSymbol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CH1ISBTSymbol: new Coding({
         code: "1506001",
         display: "CH1 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Coagulant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Coagulant: new Coding({
         code: "15117003",
         display: "Coagulant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HLAHumanLeukocyteAntigenB21: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HLAHumanLeukocyteAntigenB21: new Coding({
         code: "1517000",
         display: "HLA - Human leukocyte antigen B21",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Enalapril: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Enalapril: new Coding({
         code: "15222008",
         display: "Enalapril",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FolinicAcidProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FolinicAcidProduct: new Coding({
         code: "1528001",
         display: "Folinic acid product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL6CarboxyhexanoateCoenzymeALigase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL6CarboxyhexanoateCoenzymeALigase: new Coding({
         code: "1530004",
         display: "6-Carboxyhexanoate-coenzyme A ligase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NitrogenFluoride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NitrogenFluoride: new Coding({
         code: "1535009",
         display: "Nitrogen fluoride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PargylineHydrochloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PargylineHydrochloride: new Coding({
         code: "1536005",
         display: "Pargyline hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenanthreneDerivative: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenanthreneDerivative: new Coding({
         code: "15375005",
         display: "Phenanthrene derivative",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Levodopa: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Levodopa: new Coding({
         code: "15383004",
         display: "Levodopa",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HydantoinDerivativeAnticonvulsant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HydantoinDerivativeAnticonvulsant: new Coding({
         code: "15389000",
         display: "Hydantoin derivative anticonvulsant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TelluriumRadioisotope: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TelluriumRadioisotope: new Coding({
         code: "1540001",
         display: "Tellurium radioisotope",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ethinylestradiol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ethinylestradiol: new Coding({
         code: "15432003",
         display: "Ethinylestradiol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_UridinePhosphorylase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_UridinePhosphorylase: new Coding({
         code: "1545006",
         display: "Uridine phosphorylase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SalureticDrug: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SalureticDrug: new Coding({
         code: "1552008",
         display: "Saluretic drug",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TalcDustingPowder: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TalcDustingPowder: new Coding({
         code: "1557002",
         display: "Talc dusting powder",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyBuckalew: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyBuckalew: new Coding({
         code: "1565004",
         display: "Blood group antibody Buckalew",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MaltoseTetrapalmitate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MaltoseTetrapalmitate: new Coding({
         code: "1575001",
         display: "Maltose tetrapalmitate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Beta1BlockingProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Beta1BlockingProduct: new Coding({
         code: "15772006",
         display: "Beta 1 blocking product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EthanolamineDerivativeAntihistamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EthanolamineDerivativeAntihistamine: new Coding({
         code: "15857002",
         display: "Ethanolamine derivative antihistamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FerrocyanideSalt: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FerrocyanideSalt: new Coding({
         code: "159002",
         display: "Ferrocyanide salt",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CowQuoteSMilkProteinSensitivity: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CowQuoteSMilkProteinSensitivity: new Coding({
         code: "15911003",
         display: "Cow's milk protein sensitivity",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Azatadine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Azatadine: new Coding({
         code: "1594006",
         display: "Azatadine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CobaltIsotope: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CobaltIsotope: new Coding({
         code: "1603001",
         display: "Cobalt isotope",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dexchlorpheniramine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dexchlorpheniramine: new Coding({
         code: "16031005",
         display: "Dexchlorpheniramine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TerfenadineProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TerfenadineProduct: new Coding({
         code: "16037009",
         display: "Terfenadine product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Benzodiazepine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Benzodiazepine: new Coding({
         code: "16047007",
         display: "Benzodiazepine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HomoserineKinase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HomoserineKinase: new Coding({
         code: "1607000",
         display: "Homoserine kinase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NOctylIsosafroleSulfoxide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NOctylIsosafroleSulfoxide: new Coding({
         code: "1609002",
         display: "N-octyl isosafrole sulfoxide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DexbrompheniramineMaleate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DexbrompheniramineMaleate: new Coding({
         code: "1613009",
         display: "Dexbrompheniramine maleate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AnimalAntiserum: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AnimalAntiserum: new Coding({
         code: "16131008",
         display: "Animal antiserum",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenVen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenVen: new Coding({
         code: "1634002",
         display: "Blood group antigen Ven",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhosphoenolpyruvateProteinPhosphotransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhosphoenolpyruvateProteinPhosphotransferase: new Coding({
         code: "164003",
         display: "Phosphoenolpyruvate-protein phosphotransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NonSteroidalAntiInflammatoryAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NonSteroidalAntiInflammatoryAgent: new Coding({
         code: "16403005",
         display: "Non-steroidal anti-inflammatory agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenSul: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenSul: new Coding({
         code: "1649005",
         display: "Blood group antigen Sul",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinShaareZedek: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinShaareZedek: new Coding({
         code: "1656004",
         display: "Hemoglobin Shaare Zedek",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PlantSeeds: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PlantSeeds: new Coding({
         code: "1660001",
         display: "Plant seeds",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HydrocortisonePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HydrocortisonePreparation: new Coding({
         code: "16602005",
         display: "Hydrocortisone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ceforanide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ceforanide: new Coding({
         code: "1668008",
         display: "Ceforanide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ligase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ligase: new Coding({
         code: "1672007",
         display: "Ligase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Xylenol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Xylenol: new Coding({
         code: "1673002",
         display: "Xylenol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power86PowerRubidium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power86PowerRubidium: new Coding({
         code: "1675009",
         display: "^86^Rubidium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyLWPowerAbPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyLWPowerAbPower: new Coding({
         code: "1676005",
         display: "Blood group antibody LW^ab^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_StreptococcusEquisimilisSuisAntiserum: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_StreptococcusEquisimilisSuisAntiserum: new Coding({
         code: "16787005",
         display: "Streptococcus equisimilis - suis antiserum",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cefradine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cefradine: new Coding({
         code: "16791000",
         display: "Cefradine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyBLePowerBPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyBLePowerBPower: new Coding({
         code: "1681001",
         display: "Blood group antibody BLe^b^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ConjugatedEstrogens: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ConjugatedEstrogens: new Coding({
         code: "16832004",
         display: "Conjugated estrogens",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Urea: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Urea: new Coding({
         code: "16858004",
         display: "Urea",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Sulfathiazole: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Sulfathiazole: new Coding({
         code: "16867004",
         display: "Sulfathiazole",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HypothalamicReleasingFactorPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HypothalamicReleasingFactorPreparation: new Coding({
         code: "169008",
         display: "Hypothalamic releasing factor preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL12HydroperoxyEicosatetraenoicAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL12HydroperoxyEicosatetraenoicAcid: new Coding({
         code: "1696002",
         display: "12-Hydroperoxy eicosatetraenoic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Proguanil: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Proguanil: new Coding({
         code: "16970001",
         display: "Proguanil",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LithiumCarbonate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LithiumCarbonate: new Coding({
         code: "16977003",
         display: "Lithium carbonate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power191PowerGold: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power191PowerGold: new Coding({
         code: "1701009",
         display: "^191^Gold",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AnimalGammaGlobulin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AnimalGammaGlobulin: new Coding({
         code: "17016006",
         display: "Animal gamma globulin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SystemicAcidifier: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SystemicAcidifier: new Coding({
         code: "17055007",
         display: "Systemic acidifier",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_UAUricAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_UAUricAcid: new Coding({
         code: "1710001",
         display: "UA - Uric acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Diamond: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Diamond: new Coding({
         code: "1726000",
         display: "Diamond",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DeoxylimonateARingLactonase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DeoxylimonateARingLactonase: new Coding({
         code: "1727009",
         display: "Deoxylimonate A-ring-lactonase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dapsone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dapsone: new Coding({
         code: "17308007",
         display: "Dapsone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntiInfectiveAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntiInfectiveAgent: new Coding({
         code: "17386008",
         display: "Anti-infective agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DeoxyCytidineTriphosphate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DeoxyCytidineTriphosphate: new Coding({
         code: "1740004",
         display: "Deoxy cytidine triphosphate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GallamineTriethiodide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GallamineTriethiodide: new Coding({
         code: "17502009",
         display: "Gallamine triethiodide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ParamethasonePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ParamethasonePreparation: new Coding({
         code: "17554004",
         display: "Paramethasone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CornOil: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CornOil: new Coding({
         code: "17558001",
         display: "Corn oil",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntipruriticTopicalAnesthetic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntipruriticTopicalAnesthetic: new Coding({
         code: "1756009",
         display: "Antipruritic topical anesthetic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MotilinPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MotilinPreparation: new Coding({
         code: "1758005",
         display: "Motilin preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiagnosticRadiopharmaceuticals: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiagnosticRadiopharmaceuticals: new Coding({
         code: "17600005",
         display: "Diagnostic radiopharmaceuticals",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SaccharopineDehydrogenaseNicotinamideAdenineDinucleotidePhosphatePowerPlusPowerLGlutamateForming: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SaccharopineDehydrogenaseNicotinamideAdenineDinucleotidePhosphatePowerPlusPowerLGlutamateForming: new Coding({
         code: "1764003",
         display: "Saccharopine dehydrogenase (nicotinamide adenine dinucleotide phosphate ^+^,L-glutamate-forming)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SucrosePhosphorylase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SucrosePhosphorylase: new Coding({
         code: "1768000",
         display: "Sucrose phosphorylase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_UridylDiphosphateGalactose: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_UridylDiphosphateGalactose: new Coding({
         code: "178002",
         display: "Uridyl diphosphate galactose",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LithiumCitrate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LithiumCitrate: new Coding({
         code: "17805003",
         display: "Lithium citrate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PolyvalentCrotalidaeAntivenin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PolyvalentCrotalidaeAntivenin: new Coding({
         code: "17859000",
         display: "Polyvalent crotalidae antivenin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LeucineTransferRibonucleicAcidLigase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LeucineTransferRibonucleicAcidLigase: new Coding({
         code: "1786002",
         display: "Leucine-transfer ribonucleic acid ligase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SkeletalMuscleRelaxant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SkeletalMuscleRelaxant: new Coding({
         code: "17893001",
         display: "Skeletal muscle relaxant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumTrichloroacetate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumTrichloroacetate: new Coding({
         code: "1793003",
         display: "Sodium trichloroacetate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Glyodin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Glyodin: new Coding({
         code: "1795005",
         display: "Glyodin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinHammersmith: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinHammersmith: new Coding({
         code: "1798007",
         display: "Hemoglobin Hammersmith",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LLysineOxidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LLysineOxidase: new Coding({
         code: "1799004",
         display: "L-Lysine oxidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Auranofin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Auranofin: new Coding({
         code: "18002004",
         display: "Auranofin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Fluocinonide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Fluocinonide: new Coding({
         code: "18125000",
         display: "Fluocinonide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinTochigi: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinTochigi: new Coding({
         code: "1823002",
         display: "Hemoglobin Tochigi",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RibonucleaseTGreaterThan1LessThan: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RibonucleaseTGreaterThan1LessThan: new Coding({
         code: "1827001",
         display: "Ribonuclease T>1<",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AureolicAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AureolicAcid: new Coding({
         code: "18335001",
         display: "Aureolic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Oxychlorosene: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Oxychlorosene: new Coding({
         code: "18340009",
         display: "Oxychlorosene",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Prindolol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Prindolol: new Coding({
         code: "18381001",
         display: "Prindolol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Diphemanil: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Diphemanil: new Coding({
         code: "1842003",
         display: "Diphemanil",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GenericDrug: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GenericDrug: new Coding({
         code: "18511007",
         display: "Generic drug",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Methylphenidate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Methylphenidate: new Coding({
         code: "18548003",
         display: "Methylphenidate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HLACw9Antigen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HLACw9Antigen: new Coding({
         code: "186002",
         display: "HLA-Cw9 antigen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PotassiumRemovingResin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PotassiumRemovingResin: new Coding({
         code: "18679008",
         display: "Potassium-removing resin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CyanocobalaminCoPower57Power: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CyanocobalaminCoPower57Power: new Coding({
         code: "187006",
         display: "Cyanocobalamin Co^57^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HexachlorophaneProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HexachlorophaneProduct: new Coding({
         code: "1878008",
         display: "Hexachlorophane product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LAsparaginasePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LAsparaginasePreparation: new Coding({
         code: "18811003",
         display: "L-asparaginase preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LaboratoryAnimalDanderAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LaboratoryAnimalDanderAllergy: new Coding({
         code: "188336009",
         display: "Laboratory animal dander allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Verdoglobin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Verdoglobin: new Coding({
         code: "1886008",
         display: "Verdoglobin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Permethrin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Permethrin: new Coding({
         code: "1887004",
         display: "Permethrin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Hydroflumethiazide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Hydroflumethiazide: new Coding({
         code: "18914005",
         display: "Hydroflumethiazide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Econazole: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Econazole: new Coding({
         code: "18952006",
         display: "Econazole",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Galactoside3Fucosyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Galactoside3Fucosyltransferase: new Coding({
         code: "1904005",
         display: "Galactoside 3-fucosyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PrimaryLactoseIntolerance: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PrimaryLactoseIntolerance: new Coding({
         code: "190751001",
         display: "Primary lactose intolerance",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VonWillebrandFactorAntibody: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VonWillebrandFactorAntibody: new Coding({
         code: "1914001",
         display: "von Willebrand factor antibody",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Boroglycerin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Boroglycerin: new Coding({
         code: "1916004",
         display: "Boroglycerin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DdI: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DdI: new Coding({
         code: "19194001",
         display: "ddI",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Lorazepam: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Lorazepam: new Coding({
         code: "19225000",
         display: "Lorazepam",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Prilocaine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Prilocaine: new Coding({
         code: "19232009",
         display: "Prilocaine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Sulfinpyrazone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Sulfinpyrazone: new Coding({
         code: "19261005",
         display: "Sulfinpyrazone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PyridoxineHydrochloridePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PyridoxineHydrochloridePreparation: new Coding({
         code: "19315007",
         display: "Pyridoxine hydrochloride preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ImmunoglobulinGMGreaterThan21LessThanAllotype: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ImmunoglobulinGMGreaterThan21LessThanAllotype: new Coding({
         code: "1940007",
         display: "Immunoglobulin, GM>21< allotype",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Flurazepam: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Flurazepam: new Coding({
         code: "19403009",
         display: "Flurazepam",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Netilmicin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Netilmicin: new Coding({
         code: "19405002",
         display: "Netilmicin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CoagulationFactorXPatientVariant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CoagulationFactorXPatientVariant: new Coding({
         code: "1944003",
         display: "Coagulation factor X Patient variant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BuclizineHydrochloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BuclizineHydrochloride: new Coding({
         code: "1956002",
         display: "Buclizine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ParasympathomimeticAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ParasympathomimeticAgent: new Coding({
         code: "19581007",
         display: "Parasympathomimetic agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Diclofenamide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Diclofenamide: new Coding({
         code: "19583005",
         display: "Diclofenamide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SilverSulfadiazine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SilverSulfadiazine: new Coding({
         code: "19630009",
         display: "Silver sulfadiazine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LoxapineHydrochloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LoxapineHydrochloride: new Coding({
         code: "1971003",
         display: "Loxapine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MalabsorptionDueToIntoleranceToSoyProtein: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MalabsorptionDueToIntoleranceToSoyProtein: new Coding({
         code: "197493001",
         display: "Malabsorption due to intolerance to soy protein",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IntestinalMalabsorptionOfFat: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IntestinalMalabsorptionOfFat: new Coding({
         code: "197494007",
         display: "Intestinal malabsorption of fat",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyNiemetz: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyNiemetz: new Coding({
         code: "1975007",
         display: "Blood group antibody Niemetz",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlkylatingDrugs: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlkylatingDrugs: new Coding({
         code: "19768003",
         display: "Alkylating drugs",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SiteSpecificMethyltransferaseCytosineSpecific: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SiteSpecificMethyltransferaseCytosineSpecific: new Coding({
         code: "1978009",
         display: "Site-specific methyltransferase (cytosine-specific)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BacitracinOphthalmicPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BacitracinOphthalmicPreparation: new Coding({
         code: "1982006",
         display: "Bacitracin ophthalmic preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ceftriaxone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ceftriaxone: new Coding({
         code: "19841008",
         display: "Ceftriaxone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Vomitus: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Vomitus: new Coding({
         code: "1985008",
         display: "Vomitus",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Lignin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Lignin: new Coding({
         code: "1991005",
         display: "Lignin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HeavyNitrogen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HeavyNitrogen: new Coding({
         code: "2000001",
         display: "Heavy nitrogen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Berberine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Berberine: new Coding({
         code: "200001",
         display: "Berberine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_InosineDiphosphate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_InosineDiphosphate: new Coding({
         code: "2006007",
         display: "Inosine diphosphate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power67PowerGallium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power67PowerGallium: new Coding({
         code: "2008008",
         display: "^67^Gallium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AllergicContactDermatitisDueToPlantsExceptFood: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AllergicContactDermatitisDueToPlantsExceptFood: new Coding({
         code: "200848004",
         display: "Allergic contact dermatitis due to plants, except food",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CobaltCarbonyl: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CobaltCarbonyl: new Coding({
         code: "2009000",
         display: "Cobalt carbonyl",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SomatotropinReleasingFactorPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SomatotropinReleasingFactorPreparation: new Coding({
         code: "20091003",
         display: "Somatotropin releasing factor preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dextromethorphan: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dextromethorphan: new Coding({
         code: "2016004",
         display: "Dextromethorphan",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DeoxyribonucleicAcidTopoisomerase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DeoxyribonucleicAcidTopoisomerase: new Coding({
         code: "2017008",
         display: "Deoxyribonucleic acid topoisomerase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Nafoxidine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Nafoxidine: new Coding({
         code: "20201001",
         display: "Nafoxidine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DihydrotachysterolPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DihydrotachysterolPreparation: new Coding({
         code: "20237006",
         display: "Dihydrotachysterol preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProgestinPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProgestinPreparation: new Coding({
         code: "20249007",
         display: "Progestin preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlternariaSerineProteinase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlternariaSerineProteinase: new Coding({
         code: "2027002",
         display: "Alternaria serine proteinase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FibrinogenOsloII: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FibrinogenOsloII: new Coding({
         code: "2029004",
         display: "Fibrinogen Oslo II",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VinblastineSulfate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VinblastineSulfate: new Coding({
         code: "20303001",
         display: "Vinblastine sulfate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Hydrocodone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Hydrocodone: new Coding({
         code: "20320002",
         display: "Hydrocodone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OticAntiInflammatoryPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OticAntiInflammatoryPreparation: new Coding({
         code: "2037007",
         display: "Otic anti-inflammatory preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyBgPowerBPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyBgPowerBPower: new Coding({
         code: "2038002",
         display: "Blood group antibody Bg^b^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SymNorspermidineSynthase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SymNorspermidineSynthase: new Coding({
         code: "2039005",
         display: "sym-Norspermidine synthase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CholoylglycineHydrolase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CholoylglycineHydrolase: new Coding({
         code: "2050008",
         display: "Choloylglycine hydrolase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HCGHumanChorionicGonadotrophinProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HCGHumanChorionicGonadotrophinProduct: new Coding({
         code: "20577002",
         display: "HCG - Human chorionic gonadotrophin product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LXylulokinase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LXylulokinase: new Coding({
         code: "2064008",
         display: "L-Xylulokinase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VitronectinReceptorAlphaChain: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VitronectinReceptorAlphaChain: new Coding({
         code: "2082006",
         display: "Vitronectin receptor alpha chain",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OncogeneProteinTCL: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OncogeneProteinTCL: new Coding({
         code: "2085008",
         display: "Oncogene protein TCL",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Diflunisal: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Diflunisal: new Coding({
         code: "20865003",
         display: "Diflunisal",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PageBlueG90Stain: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PageBlueG90Stain: new Coding({
         code: "2088005",
         display: "Page blue G-90 stain",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NicotinamideAdenineDinucleotidePowerPlusPowerAdenosineDiphosphateRibosyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NicotinamideAdenineDinucleotidePowerPlusPowerAdenosineDiphosphateRibosyltransferase: new Coding({
         code: "2096000",
         display: "Nicotinamide adenine dinucleotide ^+^ adenosine diphosphate-ribosyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PolyvalentSnakeAntivenin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PolyvalentSnakeAntivenin: new Coding({
         code: "20969008",
         display: "Polyvalent snake antivenin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Sulfonethylmethane: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Sulfonethylmethane: new Coding({
         code: "2100004",
         display: "Sulfonethylmethane",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_YeastProteinaseB: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_YeastProteinaseB: new Coding({
         code: "2101000",
         display: "Yeast proteinase B",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LipotropicAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LipotropicAgent: new Coding({
         code: "21069002",
         display: "Lipotropic agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NorethandrolonePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NorethandrolonePreparation: new Coding({
         code: "211009",
         display: "Norethandrolone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Pargyline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Pargyline: new Coding({
         code: "21159006",
         display: "Pargyline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Betazole: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Betazole: new Coding({
         code: "2125008",
         display: "Betazole",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cyclohexane12DiolDehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cyclohexane12DiolDehydrogenase: new Coding({
         code: "2130007",
         display: "Cyclohexane-1,2-diol dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EggProteinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EggProteinAllergy: new Coding({
         code: "213020009",
         display: "Egg protein allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Hydrogen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Hydrogen: new Coding({
         code: "2141009",
         display: "Hydrogen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Indium113mChloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Indium113mChloride: new Coding({
         code: "21451004",
         display: "Indium-113m chloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenPaular: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenPaular: new Coding({
         code: "2147008",
         display: "Blood group antigen Paular",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PyridoxaminePyruvateAminotransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PyridoxaminePyruvateAminotransferase: new Coding({
         code: "2151005",
         display: "Pyridoxamine-pyruvate aminotransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TagaturonateReductase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TagaturonateReductase: new Coding({
         code: "2154002",
         display: "Tagaturonate reductase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcidRed27: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcidRed27: new Coding({
         code: "2159007",
         display: "Acid red 27",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dicofol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dicofol: new Coding({
         code: "2163000",
         display: "Dicofol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BisphosphoglycerateMutase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BisphosphoglycerateMutase: new Coding({
         code: "2168009",
         display: "Bisphosphoglycerate mutase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MagnesiumTrisilicate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MagnesiumTrisilicate: new Coding({
         code: "21691008",
         display: "Magnesium trisilicate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenIH: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenIH: new Coding({
         code: "217008",
         display: "Blood group antigen IH",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CromoglicicAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CromoglicicAcid: new Coding({
         code: "21701005",
         display: "Cromoglicic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IronDextranComplex: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IronDextranComplex: new Coding({
         code: "21767006",
         display: "Iron dextran complex",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenazopyridineHydrochloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenazopyridineHydrochloride: new Coding({
         code: "21788002",
         display: "Phenazopyridine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MalonateSemialdehydeDehydratase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MalonateSemialdehydeDehydratase: new Coding({
         code: "2179004",
         display: "Malonate-semialdehyde dehydratase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Tetryzoline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Tetryzoline: new Coding({
         code: "2183004",
         display: "Tetryzoline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinFDammam: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinFDammam: new Coding({
         code: "2189000",
         display: "Hemoglobin F-Dammam",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Benzhexol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Benzhexol: new Coding({
         code: "2190009",
         display: "Benzhexol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power101PowerRhodium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power101PowerRhodium: new Coding({
         code: "2194000",
         display: "^101^Rhodium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TocainideHydrochloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TocainideHydrochloride: new Coding({
         code: "2195004",
         display: "Tocainide hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BoricAcidTopicalAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BoricAcidTopicalAgent: new Coding({
         code: "2197007",
         display: "Boric acid topical agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ErysipelothrixRhusiopathiaeAntiserum: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ErysipelothrixRhusiopathiaeAntiserum: new Coding({
         code: "21986005",
         display: "Erysipelothrix rhusiopathiae antiserum",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Bacteriopurpurin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Bacteriopurpurin: new Coding({
         code: "2201007",
         display: "Bacteriopurpurin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenylserineAldolase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenylserineAldolase: new Coding({
         code: "2208001",
         display: "Phenylserine aldolase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HormonePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HormonePreparation: new Coding({
         code: "22091006",
         display: "Hormone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FibrinogenBethesdaII: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FibrinogenBethesdaII: new Coding({
         code: "2212007",
         display: "Fibrinogen Bethesda II",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Azuresin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Azuresin: new Coding({
         code: "2215009",
         display: "Azuresin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Glycopyrronium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Glycopyrronium: new Coding({
         code: "22168005",
         display: "Glycopyrronium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Metolazone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Metolazone: new Coding({
         code: "22198003",
         display: "Metolazone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethandriolPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethandriolPreparation: new Coding({
         code: "22274004",
         display: "Methandriol preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Guanidinobutyrase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Guanidinobutyrase: new Coding({
         code: "2240002",
         display: "Guanidinobutyrase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AldosteronePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AldosteronePreparation: new Coding({
         code: "22474002",
         display: "Aldosterone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GentamicinSulfate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GentamicinSulfate: new Coding({
         code: "2249001",
         display: "Gentamicin sulfate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Orotate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Orotate: new Coding({
         code: "2254005",
         display: "Orotate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DepolarizingMuscleRelaxant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DepolarizingMuscleRelaxant: new Coding({
         code: "22587006",
         display: "Depolarizing muscle relaxant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HumanLeukocyteAntigenDRw18: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HumanLeukocyteAntigenDRw18: new Coding({
         code: "2260005",
         display: "Human leukocyte antigen DRw18",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CellulosePolysulfatase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CellulosePolysulfatase: new Coding({
         code: "2262002",
         display: "Cellulose polysulfatase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SeleniumIsotope: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SeleniumIsotope: new Coding({
         code: "2264001",
         display: "Selenium isotope",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CalcitoninProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CalcitoninProduct: new Coding({
         code: "22657006",
         display: "Calcitonin product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmfetamineGroup: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmfetamineGroup: new Coding({
         code: "22672005",
         display: "Amfetamine group",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Hydralazine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Hydralazine: new Coding({
         code: "22696000",
         display: "Hydralazine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SterileWaterSolution: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SterileWaterSolution: new Coding({
         code: "22801004",
         display: "Sterile water solution",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmmoniaDetoxicant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmmoniaDetoxicant: new Coding({
         code: "22826008",
         display: "Ammonia detoxicant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Oxytetracycline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Oxytetracycline: new Coding({
         code: "22969001",
         display: "Oxytetracycline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Vincristine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Vincristine: new Coding({
         code: "23079006",
         display: "Vincristine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AuGold: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AuGold: new Coding({
         code: "2309006",
         display: "Au - Gold",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL3HydroxyisobutyrateDehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL3HydroxyisobutyrateDehydrogenase: new Coding({
         code: "231008",
         display: "3-Hydroxyisobutyrate dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProstacyclinSynthase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProstacyclinSynthase: new Coding({
         code: "2311002",
         display: "Prostacyclin synthase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Antisera: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Antisera: new Coding({
         code: "23222006",
         display: "Antisera",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AllergyToCatDander: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AllergyToCatDander: new Coding({
         code: "232346004",
         display: "Allergy to cat dander",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AllergyToAnimalDander: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AllergyToAnimalDander: new Coding({
         code: "232347008",
         display: "Allergy to animal dander",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FeatherAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FeatherAllergy: new Coding({
         code: "232348003",
         display: "Feather allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HouseDustAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HouseDustAllergy: new Coding({
         code: "232349006",
         display: "House dust allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HouseDustMiteAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HouseDustMiteAllergy: new Coding({
         code: "232350006",
         display: "House dust mite allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyVel: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyVel: new Coding({
         code: "2329007",
         display: "Blood group antibody Vel",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Saccharide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Saccharide: new Coding({
         code: "2331003",
         display: "Saccharide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HumanPlateletProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HumanPlateletProduct: new Coding({
         code: "23343005",
         display: "Human platelet product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Root: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Root: new Coding({
         code: "2338009",
         display: "Root",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Guthion: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Guthion: new Coding({
         code: "2343002",
         display: "Guthion",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Vascormone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Vascormone: new Coding({
         code: "2346005",
         display: "Vascormone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Phenmetrazine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Phenmetrazine: new Coding({
         code: "23532003",
         display: "Phenmetrazine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL3QuoteNucleotidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL3QuoteNucleotidase: new Coding({
         code: "2354007",
         display: "3'-Nucleotidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FoodIntolerance: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FoodIntolerance: new Coding({
         code: "235719002",
         display: "Food intolerance",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MalabsorptionCausedByIntoleranceToCarbohydrate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MalabsorptionCausedByIntoleranceToCarbohydrate: new Coding({
         code: "235720008",
         display: "Malabsorption caused by intolerance to carbohydrate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GlassFragmentDevice: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GlassFragmentDevice: new Coding({
         code: "2358005",
         display: "Glass fragment, device",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Indole3AcetateBetaGlucosyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Indole3AcetateBetaGlucosyltransferase: new Coding({
         code: "2369008",
         display: "Indole-3-acetate beta-glucosyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_UridineDiphosphateNAcetylmuramateAlanineLigase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_UridineDiphosphateNAcetylmuramateAlanineLigase: new Coding({
         code: "2370009",
         display: "Uridine diphosphate-N-acetylmuramate-alanine ligase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MercuryCompound: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MercuryCompound: new Coding({
         code: "2376003",
         display: "Mercury compound",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GlycerolIntolerance: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GlycerolIntolerance: new Coding({
         code: "237978005",
         display: "Glycerol intolerance",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Heptachlor: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Heptachlor: new Coding({
         code: "238002",
         display: "Heptachlor",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HumanPlasmaFraction: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HumanPlasmaFraction: new Coding({
         code: "23822003",
         display: "Human plasma fraction",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Sulfacetamide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Sulfacetamide: new Coding({
         code: "23827009",
         display: "Sulfacetamide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NonspecificAlphaAdrenergicBlockingAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NonspecificAlphaAdrenergicBlockingAgent: new Coding({
         code: "23838009",
         display: "Nonspecific alpha-adrenergic blocking agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power230PowerUranium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power230PowerUranium: new Coding({
         code: "2384004",
         display: "^230^Uranium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cascara: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cascara: new Coding({
         code: "23888001",
         display: "Cascara",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntianemiaDrug: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntianemiaDrug: new Coding({
         code: "24036003",
         display: "Antianemia drug",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyStPowerAPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyStPowerAPower: new Coding({
         code: "2404002",
         display: "Blood group antibody St^a^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BPropiolactone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BPropiolactone: new Coding({
         code: "2405001",
         display: "b- Propiolactone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProlactinReceptor: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProlactinReceptor: new Coding({
         code: "2414006",
         display: "Prolactin receptor",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SiliconRadioisotope: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SiliconRadioisotope: new Coding({
         code: "2430003",
         display: "Silicon radioisotope",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyFriedberg: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyFriedberg: new Coding({
         code: "2431004",
         display: "Blood group antibody Friedberg",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MercuryRadioisotope: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MercuryRadioisotope: new Coding({
         code: "2441001",
         display: "Mercury radioisotope",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HumanLeukocyteAntigenDw25: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HumanLeukocyteAntigenDw25: new Coding({
         code: "2444009",
         display: "Human leukocyte antigen Dw25",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ethambutolol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ethambutolol: new Coding({
         code: "24450004",
         display: "Ethambutolol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Mannosamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Mannosamine: new Coding({
         code: "2450004",
         display: "Mannosamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Methylcellulose: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Methylcellulose: new Coding({
         code: "24504000",
         display: "Methylcellulose",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GlucoseDehydrogenaseNicotinamideAdenineDinucleotidePhosphatePowerPlusPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GlucoseDehydrogenaseNicotinamideAdenineDinucleotidePhosphatePowerPlusPower: new Coding({
         code: "2462000",
         display: "Glucose dehydrogenase (nicotinamide adenine dinucleotide phosphate ^+^)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChloridePeroxidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChloridePeroxidase: new Coding({
         code: "2466002",
         display: "Chloride peroxidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SalmonellaTyphimuriumAntiserum: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SalmonellaTyphimuriumAntiserum: new Coding({
         code: "24866006",
         display: "Salmonella typhimurium antiserum",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumAmidotrizoate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumAmidotrizoate: new Coding({
         code: "24891006",
         display: "Sodium amidotrizoate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Hexetidine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Hexetidine: new Coding({
         code: "2497003",
         display: "Hexetidine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LymphocyteAntigenCDw41b: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LymphocyteAntigenCDw41b: new Coding({
         code: "2500009",
         display: "Lymphocyte antigen CDw41b",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Tripelennamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Tripelennamine: new Coding({
         code: "25014009",
         display: "Tripelennamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MercurialDiureticProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MercurialDiureticProduct: new Coding({
         code: "25057004",
         display: "Mercurial diuretic product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Carisoprodol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Carisoprodol: new Coding({
         code: "25076002",
         display: "Carisoprodol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CholecystokininPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CholecystokininPreparation: new Coding({
         code: "25085002",
         display: "Cholecystokinin preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DGlutamateOxidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DGlutamateOxidase: new Coding({
         code: "2509005",
         display: "D-Glutamate oxidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Trilostane: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Trilostane: new Coding({
         code: "25142008",
         display: "Trilostane",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MetallicSulfideCompound: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MetallicSulfideCompound: new Coding({
         code: "2516006",
         display: "Metallic sulfide compound",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ExtravascularBlood: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ExtravascularBlood: new Coding({
         code: "2522002",
         display: "Extravascular blood",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Allopurinol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Allopurinol: new Coding({
         code: "25246002",
         display: "Allopurinol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinWood: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinWood: new Coding({
         code: "2529006",
         display: "Hemoglobin Wood",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntituberculosisAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntituberculosisAgent: new Coding({
         code: "2537003",
         display: "Antituberculosis agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ichthammol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ichthammol: new Coding({
         code: "25398003",
         display: "Ichthammol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BariumSulfate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BariumSulfate: new Coding({
         code: "25419009",
         display: "Barium sulfate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EscherichiaColiMonoclonalAntibody: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EscherichiaColiMonoclonalAntibody: new Coding({
         code: "25465007",
         display: "Escherichia coli monoclonal antibody",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Omeprazole: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Omeprazole: new Coding({
         code: "25673006",
         display: "Omeprazole",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenMcAuley: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenMcAuley: new Coding({
         code: "2568004",
         display: "Blood group antigen McAuley",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Busulfan: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Busulfan: new Coding({
         code: "2571007",
         display: "Busulfan",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TetanusToxoidHuman: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TetanusToxoidHuman: new Coding({
         code: "25716001",
         display: "Tetanus toxoid, human",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ImmunoglobulinGMGreaterThan13LessThanAllotype: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ImmunoglobulinGMGreaterThan13LessThanAllotype: new Coding({
         code: "2573005",
         display: "Immunoglobulin, GM>13< allotype",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HereditaryGastrogenicLactoseIntolerance: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HereditaryGastrogenicLactoseIntolerance: new Coding({
         code: "25744000",
         display: "Hereditary gastrogenic lactose intolerance",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ZincAlpha2Glycoprotein: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ZincAlpha2Glycoprotein: new Coding({
         code: "2575003",
         display: "Zinc alpha-2 glycoprotein",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SNPSodiumNitroprusside: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SNPSodiumNitroprusside: new Coding({
         code: "25849001",
         display: "SNP - Sodium nitroprusside",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Terconazole: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Terconazole: new Coding({
         code: "25860005",
         display: "Terconazole",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SoyProteinSensitivity: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SoyProteinSensitivity: new Coding({
         code: "25868003",
         display: "Soy protein sensitivity",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MenadiolSodiumDiphosphatePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MenadiolSodiumDiphosphatePreparation: new Coding({
         code: "25912006",
         display: "Menadiol sodium diphosphate preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power119mPowerTellurium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power119mPowerTellurium: new Coding({
         code: "2595009",
         display: "^119m^Tellurium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Lincomycin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Lincomycin: new Coding({
         code: "2596005",
         display: "Lincomycin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Alpha1Globulin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Alpha1Globulin: new Coding({
         code: "2597001",
         display: "Alpha-1 globulin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Triprolidine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Triprolidine: new Coding({
         code: "25995007",
         display: "Triprolidine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CodeinePhosphate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CodeinePhosphate: new Coding({
         code: "261000",
         display: "Codeine phosphate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyLaFave: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyLaFave: new Coding({
         code: "2611008",
         display: "Blood group antibody La Fave",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dimetindene: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dimetindene: new Coding({
         code: "26122009",
         display: "Dimetindene",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GlipizideProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GlipizideProduct: new Coding({
         code: "26124005",
         display: "Glipizide product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Antimuscarinic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Antimuscarinic: new Coding({
         code: "26244009",
         display: "Antimuscarinic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HexestrolPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HexestrolPreparation: new Coding({
         code: "26303005",
         display: "Hexestrol preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemostaticAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemostaticAgent: new Coding({
         code: "26370007",
         display: "Hemostatic agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IndiumIsotope: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IndiumIsotope: new Coding({
         code: "2637006",
         display: "Indium isotope",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LevothyroxineSodiumPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LevothyroxineSodiumPreparation: new Coding({
         code: "26456008",
         display: "Levothyroxine sodium preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Diphenhydramine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Diphenhydramine: new Coding({
         code: "26458009",
         display: "Diphenhydramine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cyproheptadine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cyproheptadine: new Coding({
         code: "26462003",
         display: "Cyproheptadine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BileVomitus: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BileVomitus: new Coding({
         code: "2648004",
         display: "Bile vomitus",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AzoDye: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AzoDye: new Coding({
         code: "2649007",
         display: "Azo-dye",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Deserpidine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Deserpidine: new Coding({
         code: "26503009",
         display: "Deserpidine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dobutamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dobutamine: new Coding({
         code: "26523005",
         display: "Dobutamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PancreaticHormoneProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PancreaticHormoneProduct: new Coding({
         code: "26548008",
         display: "Pancreatic hormone product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Droperidol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Droperidol: new Coding({
         code: "26574002",
         display: "Droperidol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Digestant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Digestant: new Coding({
         code: "26580005",
         display: "Digestant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumDehydrocholate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumDehydrocholate: new Coding({
         code: "2660003",
         display: "Sodium dehydrocholate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL3Methyl2OxobutanoateHydroxyMethyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL3Methyl2OxobutanoateHydroxyMethyltransferase: new Coding({
         code: "2671002",
         display: "3-Methyl-2-oxobutanoate hydroxy-methyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FerrousGluconate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FerrousGluconate: new Coding({
         code: "26736008",
         display: "Ferrous gluconate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power128PowerCesium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power128PowerCesium: new Coding({
         code: "2674005",
         display: "^128^Cesium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_C3H20: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_C3H20: new Coding({
         code: "2676007",
         display: "C3(H20)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinNewMexico: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinNewMexico: new Coding({
         code: "2678008",
         display: "Hemoglobin New Mexico",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Oxandrolone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Oxandrolone: new Coding({
         code: "2679000",
         display: "Oxandrolone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Midazolam: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Midazolam: new Coding({
         code: "26800000",
         display: "Midazolam",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FactorXIIIAntibody: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FactorXIIIAntibody: new Coding({
         code: "2680002",
         display: "Factor XIII antibody",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BurbotLiverOilPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BurbotLiverOilPreparation: new Coding({
         code: "26842003",
         display: "Burbot liver oil preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NaturalGas: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NaturalGas: new Coding({
         code: "2698003",
         display: "Natural gas",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HeavyMetalAntagonist: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HeavyMetalAntagonist: new Coding({
         code: "27035007",
         display: "Heavy metal antagonist",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power72PowerArsenic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power72PowerArsenic: new Coding({
         code: "2705002",
         display: "^72^Arsenic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenVennera: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenVennera: new Coding({
         code: "2706001",
         display: "Blood group antigen Vennera",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumPolystyreneSulphonate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumPolystyreneSulphonate: new Coding({
         code: "27085003",
         display: "Sodium polystyrene sulphonate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TartrateDehydratase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TartrateDehydratase: new Coding({
         code: "2719002",
         display: "Tartrate dehydratase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Bupivacaine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Bupivacaine: new Coding({
         code: "27196008",
         display: "Bupivacaine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenMcCPowerFPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenMcCPowerFPower: new Coding({
         code: "2721007",
         display: "Blood group antigen McC^f^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethylprednisolonePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethylprednisolonePreparation: new Coding({
         code: "27242001",
         display: "Methylprednisolone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LewisSystemAntigen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LewisSystemAntigen: new Coding({
         code: "2728001",
         display: "Lewis system antigen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AZTAzidothymidine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AZTAzidothymidine: new Coding({
         code: "27479000",
         display: "AZT - Azidothymidine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ParathyroidHormone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ParathyroidHormone: new Coding({
         code: "27518004",
         display: "Parathyroid hormone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyMGreaterThan1LessThan: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyMGreaterThan1LessThan: new Coding({
         code: "2753003",
         display: "Blood group antibody M>1<",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinFKennestone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinFKennestone: new Coding({
         code: "2754009",
         display: "Hemoglobin F-Kennestone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LALocalAnestheticDrug: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LALocalAnestheticDrug: new Coding({
         code: "27548001",
         display: "LA - Local anesthetic drug",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DrugVehiclePreservative: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DrugVehiclePreservative: new Coding({
         code: "27566006",
         display: "Drug vehicle preservative",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TPATissueTypePlasminogenActivator: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TPATissueTypePlasminogenActivator: new Coding({
         code: "27638005",
         display: "T-PA - tissue-type plasminogen activator",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SC3ISBTSymbol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SC3ISBTSymbol: new Coding({
         code: "2765004",
         display: "SC3 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Amoxicilline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Amoxicilline: new Coding({
         code: "27658006",
         display: "Amoxicilline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MedroxyprogesteroneAcetatePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MedroxyprogesteroneAcetatePreparation: new Coding({
         code: "27707001",
         display: "Medroxyprogesterone acetate preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Pyrazinobutazone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Pyrazinobutazone: new Coding({
         code: "27754002",
         display: "Pyrazinobutazone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PleuralFluid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PleuralFluid: new Coding({
         code: "2778004",
         display: "Pleural fluid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Antineoplastic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Antineoplastic: new Coding({
         code: "27867009",
         display: "Antineoplastic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Methanthelinium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Methanthelinium: new Coding({
         code: "2796008",
         display: "Methanthelinium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Methylbenzethonium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Methylbenzethonium: new Coding({
         code: "2799001",
         display: "Methylbenzethonium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SyntheticHormonePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SyntheticHormonePreparation: new Coding({
         code: "28028002",
         display: "Synthetic hormone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Pentostatin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Pentostatin: new Coding({
         code: "28149003",
         display: "Pentostatin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinBristol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinBristol: new Coding({
         code: "2823004",
         display: "Hemoglobin Bristol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Doxapram: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Doxapram: new Coding({
         code: "28235004",
         display: "Doxapram",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EyeCosmetic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EyeCosmetic: new Coding({
         code: "28240007",
         display: "Eye cosmetic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MolybdenumCompound: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MolybdenumCompound: new Coding({
         code: "2832002",
         display: "Molybdenum compound",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlphaCarboxypenicillin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlphaCarboxypenicillin: new Coding({
         code: "28410007",
         display: "alpha-Carboxypenicillin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Methscopolamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Methscopolamine: new Coding({
         code: "28415002",
         display: "Methscopolamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Fluocinolone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Fluocinolone: new Coding({
         code: "28426008",
         display: "Fluocinolone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinSaitama: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinSaitama: new Coding({
         code: "2846002",
         display: "Hemoglobin Saitama",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Flucytosine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Flucytosine: new Coding({
         code: "28506006",
         display: "Flucytosine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EthanoicAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EthanoicAcid: new Coding({
         code: "2869004",
         display: "Ethanoic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChloralHydrate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChloralHydrate: new Coding({
         code: "28748001",
         display: "Chloral hydrate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PethidineHydrochloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PethidineHydrochloride: new Coding({
         code: "2878005",
         display: "Pethidine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CalciumSulfate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CalciumSulfate: new Coding({
         code: "2880004",
         display: "Calcium sulfate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ExopolygalacturonateLyase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ExopolygalacturonateLyase: new Coding({
         code: "2883002",
         display: "Exopolygalacturonate lyase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Anhydrohydroxyprogesterone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Anhydrohydroxyprogesterone: new Coding({
         code: "28841002",
         display: "Anhydrohydroxyprogesterone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PercoidLiverOilPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PercoidLiverOilPreparation: new Coding({
         code: "28906000",
         display: "Percoid liver oil preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LoopDiureticProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LoopDiureticProduct: new Coding({
         code: "29051009",
         display: "Loop diuretic product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Halcinonide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Halcinonide: new Coding({
         code: "29058003",
         display: "Halcinonide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dibromomannitol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dibromomannitol: new Coding({
         code: "29089004",
         display: "Dibromomannitol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Mersalyl: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Mersalyl: new Coding({
         code: "29121001",
         display: "Mersalyl",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Oxymetazoline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Oxymetazoline: new Coding({
         code: "29129004",
         display: "Oxymetazoline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ImmunoglobulinEpsilonChain: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ImmunoglobulinEpsilonChain: new Coding({
         code: "2913009",
         display: "Immunoglobulin Epsilon chain",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Mechlorethamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Mechlorethamine: new Coding({
         code: "29156002",
         display: "Mechlorethamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power22PowerNeon: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power22PowerNeon: new Coding({
         code: "2916001",
         display: "^22^Neon",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RifampicinProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RifampicinProduct: new Coding({
         code: "29175007",
         display: "Rifampicin product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ArachnidaAntivenin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ArachnidaAntivenin: new Coding({
         code: "29237004",
         display: "Arachnida antivenin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Fluoromethalone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Fluoromethalone: new Coding({
         code: "2925007",
         display: "Fluoromethalone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AdverseReactionToOxitropium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AdverseReactionToOxitropium: new Coding({
         code: "292545003",
         display: "Adverse reaction to oxitropium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Rescinnamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Rescinnamine: new Coding({
         code: "2927004",
         display: "Rescinnamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AllergyToOverTheCounterDrug: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AllergyToOverTheCounterDrug: new Coding({
         code: "293580007",
         display: "Allergy to over-the-counter drug",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AnalgesicAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AnalgesicAllergy: new Coding({
         code: "293582004",
         display: "Analgesic allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NonOpioidAnalgesicAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NonOpioidAnalgesicAllergy: new Coding({
         code: "293583009",
         display: "Non-opioid analgesic allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcetaminophenAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcetaminophenAllergy: new Coding({
         code: "293584003",
         display: "Acetaminophen allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SalicylateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SalicylateAllergy: new Coding({
         code: "293585002",
         display: "Salicylate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AspirinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AspirinAllergy: new Coding({
         code: "293586001",
         display: "Aspirin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OpioidAnalgesicAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OpioidAnalgesicAllergy: new Coding({
         code: "293587005",
         display: "Opioid analgesic allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PentazocineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PentazocineAllergy: new Coding({
         code: "293588000",
         display: "Pentazocine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenazocineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenazocineAllergy: new Coding({
         code: "293589008",
         display: "Phenazocine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethadoneAnalogAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethadoneAnalogAllergy: new Coding({
         code: "293590004",
         display: "Methadone analog allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DextromoramideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DextromoramideAllergy: new Coding({
         code: "293591000",
         display: "Dextromoramide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DextropropoxypheneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DextropropoxypheneAllergy: new Coding({
         code: "293592007",
         display: "Dextropropoxyphene allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DipipanoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DipipanoneAllergy: new Coding({
         code: "293593002",
         display: "Dipipanone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethadoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethadoneAllergy: new Coding({
         code: "293594008",
         display: "Methadone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MorphinanOpioidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MorphinanOpioidAllergy: new Coding({
         code: "293595009",
         display: "Morphinan opioid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BuprenorphineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BuprenorphineAllergy: new Coding({
         code: "293596005",
         display: "Buprenorphine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CodeineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CodeineAllergy: new Coding({
         code: "293597001",
         display: "Codeine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiamorphineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiamorphineAllergy: new Coding({
         code: "293598006",
         display: "Diamorphine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DihydrocodeineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DihydrocodeineAllergy: new Coding({
         code: "293599003",
         display: "Dihydrocodeine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NalbuphineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NalbuphineAllergy: new Coding({
         code: "293600000",
         display: "Nalbuphine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MorphineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MorphineAllergy: new Coding({
         code: "293601001",
         display: "Morphine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OpiumAlkaloidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OpiumAlkaloidAllergy: new Coding({
         code: "293602008",
         display: "Opium alkaloid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PethidineAnalogAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PethidineAnalogAllergy: new Coding({
         code: "293603003",
         display: "Pethidine analog allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlfentanilAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlfentanilAllergy: new Coding({
         code: "293604009",
         display: "Alfentanil allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FentanylAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FentanylAllergy: new Coding({
         code: "293605005",
         display: "Fentanyl allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PethidineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PethidineAllergy: new Coding({
         code: "293606006",
         display: "Pethidine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenoperidineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenoperidineAllergy: new Coding({
         code: "293607002",
         display: "Phenoperidine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MeptazinolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MeptazinolAllergy: new Coding({
         code: "293608007",
         display: "Meptazinol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LevorphanolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LevorphanolAllergy: new Coding({
         code: "293609004",
         display: "Levorphanol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NonSteroidalAntiInflammatoryDrugAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NonSteroidalAntiInflammatoryDrugAllergy: new Coding({
         code: "293610009",
         display: "Non-steroidal anti-inflammatory drug allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcemetacinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcemetacinAllergy: new Coding({
         code: "293611008",
         display: "Acemetacin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AzapropazoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AzapropazoneAllergy: new Coding({
         code: "293612001",
         display: "Azapropazone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiclofenacAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiclofenacAllergy: new Coding({
         code: "293613006",
         display: "Diclofenac allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EtodolacAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EtodolacAllergy: new Coding({
         code: "293614000",
         display: "Etodolac allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FelbinacAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FelbinacAllergy: new Coding({
         code: "293615004",
         display: "Felbinac allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FenbufenAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FenbufenAllergy: new Coding({
         code: "293616003",
         display: "Fenbufen allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FenoprofenAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FenoprofenAllergy: new Coding({
         code: "293617007",
         display: "Fenoprofen allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FlurbiprofenAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FlurbiprofenAllergy: new Coding({
         code: "293618002",
         display: "Flurbiprofen allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IbuprofenAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IbuprofenAllergy: new Coding({
         code: "293619005",
         display: "Ibuprofen allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IndometacinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IndometacinAllergy: new Coding({
         code: "293620004",
         display: "Indometacin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_KetoprofenAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_KetoprofenAllergy: new Coding({
         code: "293621000",
         display: "Ketoprofen allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_KetorolacAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_KetorolacAllergy: new Coding({
         code: "293622007",
         display: "Ketorolac allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MefenamicAcidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MefenamicAcidAllergy: new Coding({
         code: "293623002",
         display: "Mefenamic acid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NabumetoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NabumetoneAllergy: new Coding({
         code: "293624008",
         display: "Nabumetone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NaproxenAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NaproxenAllergy: new Coding({
         code: "293625009",
         display: "Naproxen allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NefopamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NefopamAllergy: new Coding({
         code: "293626005",
         display: "Nefopam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OxyphenbutazoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OxyphenbutazoneAllergy: new Coding({
         code: "293627001",
         display: "Oxyphenbutazone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenylbutazoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenylbutazoneAllergy: new Coding({
         code: "293628006",
         display: "Phenylbutazone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PiroxicamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PiroxicamAllergy: new Coding({
         code: "293629003",
         display: "Piroxicam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SulindacAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SulindacAllergy: new Coding({
         code: "293630008",
         display: "Sulindac allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TenoxicamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TenoxicamAllergy: new Coding({
         code: "293631007",
         display: "Tenoxicam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TiaprofenicAcidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TiaprofenicAcidAllergy: new Coding({
         code: "293632000",
         display: "Tiaprofenic acid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TolmetinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TolmetinAllergy: new Coding({
         code: "293633005",
         display: "Tolmetin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiagnosticAgentAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiagnosticAgentAllergy: new Coding({
         code: "293634004",
         display: "Diagnostic agent allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TuberculinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TuberculinAllergy: new Coding({
         code: "293635003",
         display: "Tuberculin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RadiopharmaceuticalAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RadiopharmaceuticalAllergy: new Coding({
         code: "293636002",
         display: "Radiopharmaceutical allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ContrastMediaAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ContrastMediaAllergy: new Coding({
         code: "293637006",
         display: "Contrast media allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_XRayContrastMediaAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_XRayContrastMediaAllergy: new Coding({
         code: "293638001",
         display: "X-ray contrast media allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MagneticResonanceImagingContrastMediaAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MagneticResonanceImagingContrastMediaAllergy: new Coding({
         code: "293639009",
         display: "Magnetic resonance imaging contrast media allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AllergenExtractVaccineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AllergenExtractVaccineAllergy: new Coding({
         code: "293640006",
         display: "Allergen extract vaccine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiagnosticDyeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiagnosticDyeAllergy: new Coding({
         code: "293641005",
         display: "Diagnostic dye allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DrugGroupsPrimarilyAffectingTheGastrointestinalSystemAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DrugGroupsPrimarilyAffectingTheGastrointestinalSystemAllergy: new Coding({
         code: "293643008",
         display: "Drug groups primarily affecting the gastrointestinal system allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_UlcerHealingDrugAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_UlcerHealingDrugAllergy: new Coding({
         code: "293644002",
         display: "Ulcer healing drug allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BismuthChelateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BismuthChelateAllergy: new Coding({
         code: "293645001",
         display: "Bismuth chelate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SucralfateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SucralfateAllergy: new Coding({
         code: "293646000",
         display: "Sucralfate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LiquoriceAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LiquoriceAllergy: new Coding({
         code: "293647009",
         display: "Liquorice allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MisoprostolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MisoprostolAllergy: new Coding({
         code: "293648004",
         display: "Misoprostol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_H2ReceptorAntagonistAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_H2ReceptorAntagonistAllergy: new Coding({
         code: "293649007",
         display: "H2 receptor antagonist allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CimetidineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CimetidineAllergy: new Coding({
         code: "293650007",
         display: "Cimetidine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FamotidineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FamotidineAllergy: new Coding({
         code: "293651006",
         display: "Famotidine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NizatidineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NizatidineAllergy: new Coding({
         code: "293652004",
         display: "Nizatidine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RanitidineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RanitidineAllergy: new Coding({
         code: "293653009",
         display: "Ranitidine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProtonPumpInhibitorAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProtonPumpInhibitorAllergy: new Coding({
         code: "293654003",
         display: "Proton pump inhibitor allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OmeprazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OmeprazoleAllergy: new Coding({
         code: "293655002",
         display: "Omeprazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LansoprazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LansoprazoleAllergy: new Coding({
         code: "293656001",
         display: "Lansoprazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarbenoxoloneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarbenoxoloneAllergy: new Coding({
         code: "293657005",
         display: "Carbenoxolone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PirenzepineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PirenzepineAllergy: new Coding({
         code: "293658000",
         display: "Pirenzepine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PancreatinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PancreatinAllergy: new Coding({
         code: "293659008",
         display: "Pancreatin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MesalazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MesalazineAllergy: new Coding({
         code: "293660003",
         display: "Mesalazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OlsalazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OlsalazineAllergy: new Coding({
         code: "293662006",
         display: "Olsalazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SulfasalazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SulfasalazineAllergy: new Coding({
         code: "293663001",
         display: "Sulfasalazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntacidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntacidAllergy: new Coding({
         code: "293664007",
         display: "Antacid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MagnesiumTrisilicateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MagnesiumTrisilicateAllergy: new Coding({
         code: "293665008",
         display: "Magnesium trisilicate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AluminumHydroxideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AluminumHydroxideAllergy: new Coding({
         code: "293666009",
         display: "Aluminum hydroxide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntidiarrhealDrugAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntidiarrhealDrugAllergy: new Coding({
         code: "293667000",
         display: "Antidiarrheal drug allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LoperamideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LoperamideAllergy: new Coding({
         code: "293668005",
         display: "Loperamide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_KaolinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_KaolinAllergy: new Coding({
         code: "293669002",
         display: "Kaolin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MotilityStimulantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MotilityStimulantAllergy: new Coding({
         code: "293670001",
         display: "Motility stimulant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CisaprideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CisaprideAllergy: new Coding({
         code: "293671002",
         display: "Cisapride allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntiemeticAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntiemeticAllergy: new Coding({
         code: "293672009",
         display: "Antiemetic allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NabiloneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NabiloneAllergy: new Coding({
         code: "293673004",
         display: "Nabilone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DomperidoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DomperidoneAllergy: new Coding({
         code: "293674005",
         display: "Domperidone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MetoclopramideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MetoclopramideAllergy: new Coding({
         code: "293675006",
         display: "Metoclopramide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL5Hydroxytryptamine3ReceptorAntagonistAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL5Hydroxytryptamine3ReceptorAntagonistAllergy: new Coding({
         code: "293676007",
         display: "5-Hydroxytryptamine-3-receptor antagonist allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LaxativeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LaxativeAllergy: new Coding({
         code: "293677003",
         display: "Laxative allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BisacodylAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BisacodylAllergy: new Coding({
         code: "293678008",
         display: "Bisacodyl allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DantronAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DantronAllergy: new Coding({
         code: "293679000",
         display: "Dantron allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumPicosulfateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumPicosulfateAllergy: new Coding({
         code: "293680002",
         display: "Sodium picosulfate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LactuloseAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LactuloseAllergy: new Coding({
         code: "293681003",
         display: "Lactulose allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MagnesiumSulfateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MagnesiumSulfateAllergy: new Coding({
         code: "293682005",
         display: "Magnesium sulfate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BulkFormingLaxativeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BulkFormingLaxativeAllergy: new Coding({
         code: "293683000",
         display: "Bulk-forming laxative allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AnthraquinoneLaxativeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AnthraquinoneLaxativeAllergy: new Coding({
         code: "293684006",
         display: "Anthraquinone laxative allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CascaraAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CascaraAllergy: new Coding({
         code: "293685007",
         display: "Cascara allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SennaAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SennaAllergy: new Coding({
         code: "293686008",
         display: "Senna allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DocusateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DocusateAllergy: new Coding({
         code: "293687004",
         display: "Docusate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntispasmodicAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntispasmodicAllergy: new Coding({
         code: "293688009",
         display: "Antispasmodic allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HyoscineButylbromideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HyoscineButylbromideAllergy: new Coding({
         code: "293689001",
         display: "Hyoscine butylbromide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PeppermintOilAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PeppermintOilAllergy: new Coding({
         code: "293690005",
         display: "Peppermint oil allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlverineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlverineAllergy: new Coding({
         code: "293691009",
         display: "Alverine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MebeverineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MebeverineAllergy: new Coding({
         code: "293692002",
         display: "Mebeverine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DicycloverineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DicycloverineAllergy: new Coding({
         code: "293693007",
         display: "Dicycloverine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MepenzolateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MepenzolateAllergy: new Coding({
         code: "293694001",
         display: "Mepenzolate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PipenzolateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PipenzolateAllergy: new Coding({
         code: "293695000",
         display: "Pipenzolate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PoldineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PoldineAllergy: new Coding({
         code: "293696004",
         display: "Poldine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PropanthelineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PropanthelineAllergy: new Coding({
         code: "293697008",
         display: "Propantheline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BileAgentAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BileAgentAllergy: new Coding({
         code: "293698003",
         display: "Bile agent allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChenodeoxycholicAcidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChenodeoxycholicAcidAllergy: new Coding({
         code: "293699006",
         display: "Chenodeoxycholic acid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DehydrocholicAcidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DehydrocholicAcidAllergy: new Coding({
         code: "293700007",
         display: "Dehydrocholic acid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_UrsodeoxycholicAcidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_UrsodeoxycholicAcidAllergy: new Coding({
         code: "293701006",
         display: "Ursodeoxycholic acid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChenodeoxycholicAndUrsodeoxycholicAcidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChenodeoxycholicAndUrsodeoxycholicAcidAllergy: new Coding({
         code: "293702004",
         display: "Chenodeoxycholic and ursodeoxycholic acid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AnestheticsAndMedicalGasesAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AnestheticsAndMedicalGasesAllergy: new Coding({
         code: "293703009",
         display: "Anesthetics and medical gases allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GeneralAnestheticDrugAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GeneralAnestheticDrugAllergy: new Coding({
         code: "293704003",
         display: "General anesthetic drug allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IntravenousAnestheticsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IntravenousAnestheticsAllergy: new Coding({
         code: "293705002",
         display: "Intravenous anesthetics allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EtomidateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EtomidateAllergy: new Coding({
         code: "293706001",
         display: "Etomidate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_KetamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_KetamineAllergy: new Coding({
         code: "293707005",
         display: "Ketamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PropofolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PropofolAllergy: new Coding({
         code: "293708000",
         display: "Propofol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ThiopentalAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ThiopentalAllergy: new Coding({
         code: "293709008",
         display: "Thiopental allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethohexitoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethohexitoneAllergy: new Coding({
         code: "293710003",
         display: "Methohexitone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_InhalationalAnestheticsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_InhalationalAnestheticsAllergy: new Coding({
         code: "293711004",
         display: "Inhalational anesthetics allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EnfluraneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EnfluraneAllergy: new Coding({
         code: "293712006",
         display: "Enflurane allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EtherAnestheticAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EtherAnestheticAllergy: new Coding({
         code: "293713001",
         display: "Ether, anesthetic allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HalothaneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HalothaneAllergy: new Coding({
         code: "293714007",
         display: "Halothane allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IsofluraneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IsofluraneAllergy: new Coding({
         code: "293715008",
         display: "Isoflurane allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TrichloroethyleneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TrichloroethyleneAllergy: new Coding({
         code: "293716009",
         display: "Trichloroethylene allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DesfluraneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DesfluraneAllergy: new Coding({
         code: "293717000",
         display: "Desflurane allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LocalAnestheticDrugAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LocalAnestheticDrugAllergy: new Coding({
         code: "293718005",
         display: "Local anesthetic drug allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BupivacaineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BupivacaineAllergy: new Coding({
         code: "293719002",
         display: "Bupivacaine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CinchocaineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CinchocaineAllergy: new Coding({
         code: "293720008",
         display: "Cinchocaine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PrilocaineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PrilocaineAllergy: new Coding({
         code: "293721007",
         display: "Prilocaine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LidocaineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LidocaineAllergy: new Coding({
         code: "293722000",
         display: "Lidocaine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CocaineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CocaineAllergy: new Coding({
         code: "293723005",
         display: "Cocaine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BenzocaineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BenzocaineAllergy: new Coding({
         code: "293724004",
         display: "Benzocaine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TetracaineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TetracaineAllergy: new Coding({
         code: "293725003",
         display: "Tetracaine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OxybuprocaineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OxybuprocaineAllergy: new Coding({
         code: "293726002",
         display: "Oxybuprocaine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProcaineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProcaineAllergy: new Coding({
         code: "293727006",
         display: "Procaine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProxymetacaineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProxymetacaineAllergy: new Coding({
         code: "293728001",
         display: "Proxymetacaine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ImmunostimulantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ImmunostimulantAllergy: new Coding({
         code: "293730004",
         display: "Immunostimulant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmifostineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmifostineAllergy: new Coding({
         code: "293732007",
         display: "Amifostine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AldesleukinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AldesleukinAllergy: new Coding({
         code: "293733002",
         display: "Aldesleukin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ColonyStimulatingFactorsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ColonyStimulatingFactorsAllergy: new Coding({
         code: "293734008",
         display: "Colony stimulating factors allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MolgramostimAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MolgramostimAllergy: new Coding({
         code: "293735009",
         display: "Molgramostim allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LenograstimAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LenograstimAllergy: new Coding({
         code: "293736005",
         display: "Lenograstim allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FilgrastimAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FilgrastimAllergy: new Coding({
         code: "293737001",
         display: "Filgrastim allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LevamisoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LevamisoleAllergy: new Coding({
         code: "293738006",
         display: "Levamisole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntineoplasticAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntineoplasticAllergy: new Coding({
         code: "293739003",
         display: "Antineoplastic allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlkylatingDrugAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlkylatingDrugAllergy: new Coding({
         code: "293740001",
         display: "Alkylating drug allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MitobronitolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MitobronitolAllergy: new Coding({
         code: "293741002",
         display: "Mitobronitol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BusulfanAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BusulfanAllergy: new Coding({
         code: "293742009",
         display: "Busulfan allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TreosulfanAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TreosulfanAllergy: new Coding({
         code: "293743004",
         display: "Treosulfan allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ThiotepaAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ThiotepaAllergy: new Coding({
         code: "293745006",
         display: "Thiotepa allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NitrogenMustardDerivativeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NitrogenMustardDerivativeAllergy: new Coding({
         code: "293746007",
         display: "Nitrogen mustard derivative allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChlorambucilAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChlorambucilAllergy: new Coding({
         code: "293747003",
         display: "Chlorambucil allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CyclophosphamideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CyclophosphamideAllergy: new Coding({
         code: "293748008",
         display: "Cyclophosphamide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EthoglucidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EthoglucidAllergy: new Coding({
         code: "293749000",
         display: "Ethoglucid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IfosfamideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IfosfamideAllergy: new Coding({
         code: "293750000",
         display: "Ifosfamide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MelphalanAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MelphalanAllergy: new Coding({
         code: "293751001",
         display: "Melphalan allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EstramustineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EstramustineAllergy: new Coding({
         code: "293752008",
         display: "Estramustine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChlormethineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChlormethineAllergy: new Coding({
         code: "293753003",
         display: "Chlormethine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NitrosureaAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NitrosureaAllergy: new Coding({
         code: "293754009",
         display: "Nitrosurea allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarmustineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarmustineAllergy: new Coding({
         code: "293755005",
         display: "Carmustine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LomustineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LomustineAllergy: new Coding({
         code: "293756006",
         display: "Lomustine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TriazeneAntineoplasticAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TriazeneAntineoplasticAllergy: new Coding({
         code: "293757002",
         display: "Triazene antineoplastic allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DacarbazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DacarbazineAllergy: new Coding({
         code: "293758007",
         display: "Dacarbazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CytotoxicAntibioticAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CytotoxicAntibioticAllergy: new Coding({
         code: "293759004",
         display: "Cytotoxic antibiotic allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DactinomycinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DactinomycinAllergy: new Coding({
         code: "293760009",
         display: "Dactinomycin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BleomycinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BleomycinAllergy: new Coding({
         code: "293761008",
         display: "Bleomycin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MitomycinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MitomycinAllergy: new Coding({
         code: "293762001",
         display: "Mitomycin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PlicamycinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PlicamycinAllergy: new Coding({
         code: "293763006",
         display: "Plicamycin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AclarubicinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AclarubicinAllergy: new Coding({
         code: "293764000",
         display: "Aclarubicin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MitoxantroneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MitoxantroneAllergy: new Coding({
         code: "293765004",
         display: "Mitoxantrone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DoxorubicinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DoxorubicinAllergy: new Coding({
         code: "293766003",
         display: "Doxorubicin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EpirubicinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EpirubicinAllergy: new Coding({
         code: "293767007",
         display: "Epirubicin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IdarubicinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IdarubicinAllergy: new Coding({
         code: "293768002",
         display: "Idarubicin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntimetaboliteAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntimetaboliteAllergy: new Coding({
         code: "293769005",
         display: "Antimetabolite allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MercuricOxideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MercuricOxideAllergy: new Coding({
         code: "293770006",
         display: "Mercuric oxide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethotrexateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethotrexateAllergy: new Coding({
         code: "293771005",
         display: "Methotrexate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MercaptopurineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MercaptopurineAllergy: new Coding({
         code: "293772003",
         display: "Mercaptopurine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TioguanineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TioguanineAllergy: new Coding({
         code: "293773008",
         display: "Tioguanine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PentostatinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PentostatinAllergy: new Coding({
         code: "293774002",
         display: "Pentostatin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CytarabineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CytarabineAllergy: new Coding({
         code: "293775001",
         display: "Cytarabine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FluorouracilAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FluorouracilAllergy: new Coding({
         code: "293776000",
         display: "Fluorouracil allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EtoposideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EtoposideAllergy: new Coding({
         code: "293777009",
         display: "Etoposide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmsacrineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmsacrineAllergy: new Coding({
         code: "293778004",
         display: "Amsacrine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarboplatinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarboplatinAllergy: new Coding({
         code: "293779007",
         display: "Carboplatin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CisplatinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CisplatinAllergy: new Coding({
         code: "293780005",
         display: "Cisplatin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HydroxycarbamideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HydroxycarbamideAllergy: new Coding({
         code: "293781009",
         display: "Hydroxycarbamide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProcarbazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProcarbazineAllergy: new Coding({
         code: "293782002",
         display: "Procarbazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RazoxaneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RazoxaneAllergy: new Coding({
         code: "293783007",
         display: "Razoxane allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CrisantaspaseAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CrisantaspaseAllergy: new Coding({
         code: "293784001",
         display: "Crisantaspase allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PaclitaxelAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PaclitaxelAllergy: new Coding({
         code: "293785000",
         display: "Paclitaxel allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FludarabineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FludarabineAllergy: new Coding({
         code: "293786004",
         display: "Fludarabine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AminoglutethimideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AminoglutethimideAllergy: new Coding({
         code: "293787008",
         display: "Aminoglutethimide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EstrogenAntagonistAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EstrogenAntagonistAllergy: new Coding({
         code: "293788003",
         display: "Estrogen antagonist allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TrilostaneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TrilostaneAllergy: new Coding({
         code: "293789006",
         display: "Trilostane allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TamoxifenAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TamoxifenAllergy: new Coding({
         code: "293790002",
         display: "Tamoxifen allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FormestaneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FormestaneAllergy: new Coding({
         code: "293791003",
         display: "Formestane allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VincaAlkaloidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VincaAlkaloidAllergy: new Coding({
         code: "293792005",
         display: "Vinca alkaloid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VinblastineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VinblastineAllergy: new Coding({
         code: "293793000",
         display: "Vinblastine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VincristineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VincristineAllergy: new Coding({
         code: "293794006",
         display: "Vincristine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VindesineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VindesineAllergy: new Coding({
         code: "293795007",
         display: "Vindesine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DimethylSulfoxideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DimethylSulfoxideAllergy: new Coding({
         code: "293796008",
         display: "Dimethyl sulfoxide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ImmunosuppressantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ImmunosuppressantAllergy: new Coding({
         code: "293797004",
         display: "Immunosuppressant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CiclosporinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CiclosporinAllergy: new Coding({
         code: "293798009",
         display: "Ciclosporin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AzathioprineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AzathioprineAllergy: new Coding({
         code: "293799001",
         display: "Azathioprine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DrugGroupsPrimarilyAffectingTheCentralNervousSystemAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DrugGroupsPrimarilyAffectingTheCentralNervousSystemAllergy: new Coding({
         code: "293800002",
         display: "Drug groups primarily affecting the central nervous system allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Pyrazole: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Pyrazole: new Coding({
         code: "2938004",
         display: "Pyrazole",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CentrallyActingAppetiteSuppressantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CentrallyActingAppetiteSuppressantAllergy: new Coding({
         code: "293801003",
         display: "Centrally acting appetite suppressant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MazindolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MazindolAllergy: new Coding({
         code: "293802005",
         display: "Mazindol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhentermineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhentermineAllergy: new Coding({
         code: "293803000",
         display: "Phentermine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DexfenfluramineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DexfenfluramineAllergy: new Coding({
         code: "293804006",
         display: "Dexfenfluramine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiethylpropionAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiethylpropionAllergy: new Coding({
         code: "293805007",
         display: "Diethylpropion allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FenfluramineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FenfluramineAllergy: new Coding({
         code: "293806008",
         display: "Fenfluramine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DopaminergicDrugUsedInParkinsonismAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DopaminergicDrugUsedInParkinsonismAllergy: new Coding({
         code: "293807004",
         display: "Dopaminergic drug used in parkinsonism allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LevodopaAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LevodopaAllergy: new Coding({
         code: "293808009",
         display: "Levodopa allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BenserazidePlusLevodopaAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BenserazidePlusLevodopaAllergy: new Coding({
         code: "293809001",
         display: "Benserazide + levodopa allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarbidopaPlusLevodopaAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarbidopaPlusLevodopaAllergy: new Coding({
         code: "293810006",
         display: "Carbidopa + levodopa allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmantadineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmantadineAllergy: new Coding({
         code: "293811005",
         display: "Amantadine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ApomorphineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ApomorphineAllergy: new Coding({
         code: "293812003",
         display: "Apomorphine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LisurideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LisurideAllergy: new Coding({
         code: "293813008",
         display: "Lisuride allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PergolideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PergolideAllergy: new Coding({
         code: "293814002",
         display: "Pergolide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BromocriptineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BromocriptineAllergy: new Coding({
         code: "293815001",
         display: "Bromocriptine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntidepressantDrugAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntidepressantDrugAllergy: new Coding({
         code: "293816000",
         display: "Antidepressant drug allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LithiumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LithiumAllergy: new Coding({
         code: "293817009",
         display: "Lithium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LithiumCarbonateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LithiumCarbonateAllergy: new Coding({
         code: "293818004",
         display: "Lithium carbonate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LithiumCitrateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LithiumCitrateAllergy: new Coding({
         code: "293819007",
         display: "Lithium citrate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TricyclicAntidepressantDrugAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TricyclicAntidepressantDrugAllergy: new Coding({
         code: "293821002",
         display: "Tricyclic antidepressant drug allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ButriptylineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ButriptylineAllergy: new Coding({
         code: "293822009",
         display: "Butriptyline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DoxepinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DoxepinAllergy: new Coding({
         code: "293823004",
         display: "Doxepin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IprindoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IprindoleAllergy: new Coding({
         code: "293824005",
         display: "Iprindole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LofepramineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LofepramineAllergy: new Coding({
         code: "293825006",
         display: "Lofepramine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NortriptylineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NortriptylineAllergy: new Coding({
         code: "293826007",
         display: "Nortriptyline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TrimipramineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TrimipramineAllergy: new Coding({
         code: "293827003",
         display: "Trimipramine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmoxapineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmoxapineAllergy: new Coding({
         code: "293828008",
         display: "Amoxapine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmitriptylineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmitriptylineAllergy: new Coding({
         code: "293829000",
         display: "Amitriptyline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ClomipramineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ClomipramineAllergy: new Coding({
         code: "293830005",
         display: "Clomipramine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DesipramineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DesipramineAllergy: new Coding({
         code: "293831009",
         display: "Desipramine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DosulepinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DosulepinAllergy: new Coding({
         code: "293832002",
         display: "Dosulepin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ImipramineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ImipramineAllergy: new Coding({
         code: "293833007",
         display: "Imipramine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProtriptylineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProtriptylineAllergy: new Coding({
         code: "293834001",
         display: "Protriptyline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MonoamineOxidaseInhibitorAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MonoamineOxidaseInhibitorAllergy: new Coding({
         code: "293835000",
         display: "Monoamine oxidase inhibitor allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenelzineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenelzineAllergy: new Coding({
         code: "293836004",
         display: "Phenelzine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IproniazidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IproniazidAllergy: new Coding({
         code: "293837008",
         display: "Iproniazid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IsocarboxazidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IsocarboxazidAllergy: new Coding({
         code: "293838003",
         display: "Isocarboxazid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TranylcypromineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TranylcypromineAllergy: new Coding({
         code: "293839006",
         display: "Tranylcypromine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MoclobemideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MoclobemideAllergy: new Coding({
         code: "293840008",
         display: "Moclobemide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CompoundAntidepressantsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CompoundAntidepressantsAllergy: new Coding({
         code: "293841007",
         display: "Compound antidepressants allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TryptophanAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TryptophanAllergy: new Coding({
         code: "293842000",
         display: "Tryptophan allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VenlafaxineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VenlafaxineAllergy: new Coding({
         code: "293843005",
         display: "Venlafaxine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SelectiveSerotoninReUptakeInhibitorAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SelectiveSerotoninReUptakeInhibitorAllergy: new Coding({
         code: "293844004",
         display: "Selective serotonin re-uptake inhibitor allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SertralineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SertralineAllergy: new Coding({
         code: "293845003",
         display: "Sertraline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ParoxetineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ParoxetineAllergy: new Coding({
         code: "293847006",
         display: "Paroxetine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NefazodoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NefazodoneAllergy: new Coding({
         code: "293848001",
         display: "Nefazodone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CitalopramAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CitalopramAllergy: new Coding({
         code: "293849009",
         display: "Citalopram allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FluoxetineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FluoxetineAllergy: new Coding({
         code: "293850009",
         display: "Fluoxetine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FluvoxamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FluvoxamineAllergy: new Coding({
         code: "293851008",
         display: "Fluvoxamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TetracyclicAntidepressantDrugAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TetracyclicAntidepressantDrugAllergy: new Coding({
         code: "293852001",
         display: "Tetracyclic antidepressant drug allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MaprotilineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MaprotilineAllergy: new Coding({
         code: "293853006",
         display: "Maprotiline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MianserinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MianserinAllergy: new Coding({
         code: "293854000",
         display: "Mianserin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TrazodoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TrazodoneAllergy: new Coding({
         code: "293855004",
         display: "Trazodone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ViloxazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ViloxazineAllergy: new Coding({
         code: "293856003",
         display: "Viloxazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntiepilepticAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntiepilepticAllergy: new Coding({
         code: "293857007",
         display: "Antiepileptic allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BeclamideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BeclamideAllergy: new Coding({
         code: "293858002",
         display: "Beclamide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LamotrigineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LamotrigineAllergy: new Coding({
         code: "293859005",
         display: "Lamotrigine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PiracetamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PiracetamAllergy: new Coding({
         code: "293860000",
         display: "Piracetam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GabapentinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GabapentinAllergy: new Coding({
         code: "293861001",
         display: "Gabapentin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumValproateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumValproateAllergy: new Coding({
         code: "293862008",
         display: "Sodium valproate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BarbiturateAntiepilepticAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BarbiturateAntiepilepticAllergy: new Coding({
         code: "293863003",
         display: "Barbiturate antiepileptic allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethylphenobarbitalAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethylphenobarbitalAllergy: new Coding({
         code: "293864009",
         display: "Methylphenobarbital allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenobarbitalAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenobarbitalAllergy: new Coding({
         code: "293865005",
         display: "Phenobarbital allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PrimidoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PrimidoneAllergy: new Coding({
         code: "293866006",
         display: "Primidone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarbamazepineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarbamazepineAllergy: new Coding({
         code: "293867002",
         display: "Carbamazepine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VigabatrinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VigabatrinAllergy: new Coding({
         code: "293868007",
         display: "Vigabatrin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenytoinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenytoinAllergy: new Coding({
         code: "293869004",
         display: "Phenytoin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EthosuximideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EthosuximideAllergy: new Coding({
         code: "293870003",
         display: "Ethosuximide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ClonazepamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ClonazepamAllergy: new Coding({
         code: "293871004",
         display: "Clonazepam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SedativeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SedativeAllergy: new Coding({
         code: "293873001",
         display: "Sedative allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ZopicloneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ZopicloneAllergy: new Coding({
         code: "293874007",
         display: "Zopiclone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ZolpidemAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ZolpidemAllergy: new Coding({
         code: "293875008",
         display: "Zolpidem allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChlormezanoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChlormezanoneAllergy: new Coding({
         code: "293876009",
         display: "Chlormezanone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethypryloneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethypryloneAllergy: new Coding({
         code: "293877000",
         display: "Methyprylone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ParaldehydeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ParaldehydeAllergy: new Coding({
         code: "293878005",
         display: "Paraldehyde allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BarbiturateSedativeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BarbiturateSedativeAllergy: new Coding({
         code: "293879002",
         display: "Barbiturate sedative allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmobarbitalAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmobarbitalAllergy: new Coding({
         code: "293880004",
         display: "Amobarbital allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ButobarbitalAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ButobarbitalAllergy: new Coding({
         code: "293881000",
         display: "Butobarbital allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CyclobarbitoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CyclobarbitoneAllergy: new Coding({
         code: "293882007",
         display: "Cyclobarbitone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmobarbitalSodiumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmobarbitalSodiumAllergy: new Coding({
         code: "293883002",
         display: "Amobarbital sodium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SecobarbitalAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SecobarbitalAllergy: new Coding({
         code: "293884008",
         display: "Secobarbital allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BenzodiazepineSedativeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BenzodiazepineSedativeAllergy: new Coding({
         code: "293885009",
         display: "Benzodiazepine sedative allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FlunitrazepamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FlunitrazepamAllergy: new Coding({
         code: "293886005",
         display: "Flunitrazepam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FlurazepamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FlurazepamAllergy: new Coding({
         code: "293887001",
         display: "Flurazepam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LoprazolamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LoprazolamAllergy: new Coding({
         code: "293888006",
         display: "Loprazolam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LormetazepamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LormetazepamAllergy: new Coding({
         code: "293889003",
         display: "Lormetazepam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NitrazepamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NitrazepamAllergy: new Coding({
         code: "293890007",
         display: "Nitrazepam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TriazolamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TriazolamAllergy: new Coding({
         code: "293891006",
         display: "Triazolam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlprazolamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlprazolamAllergy: new Coding({
         code: "293892004",
         display: "Alprazolam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BromazepamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BromazepamAllergy: new Coding({
         code: "293893009",
         display: "Bromazepam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChlordiazepoxideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChlordiazepoxideAllergy: new Coding({
         code: "293894003",
         display: "Chlordiazepoxide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ClobazamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ClobazamAllergy: new Coding({
         code: "293895002",
         display: "Clobazam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DipotassiumClorazepateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DipotassiumClorazepateAllergy: new Coding({
         code: "293896001",
         display: "Dipotassium clorazepate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_KetazolamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_KetazolamAllergy: new Coding({
         code: "293897005",
         display: "Ketazolam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MedazepamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MedazepamAllergy: new Coding({
         code: "293898000",
         display: "Medazepam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OxazepamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OxazepamAllergy: new Coding({
         code: "293899008",
         display: "Oxazepam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PrazepamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PrazepamAllergy: new Coding({
         code: "293900003",
         display: "Prazepam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MidazolamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MidazolamAllergy: new Coding({
         code: "293901004",
         display: "Midazolam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiazepamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiazepamAllergy: new Coding({
         code: "293902006",
         display: "Diazepam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LorazepamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LorazepamAllergy: new Coding({
         code: "293903001",
         display: "Lorazepam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TemazepamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TemazepamAllergy: new Coding({
         code: "293904007",
         display: "Temazepam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarbamateSedativeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarbamateSedativeAllergy: new Coding({
         code: "293905008",
         display: "Carbamate sedative allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MeprobamateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MeprobamateAllergy: new Coding({
         code: "293906009",
         display: "Meprobamate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChloralSedativeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChloralSedativeAllergy: new Coding({
         code: "293907000",
         display: "Chloral sedative allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChloralHydrateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChloralHydrateAllergy: new Coding({
         code: "293908005",
         display: "Chloral hydrate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DichloralphenazoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DichloralphenazoneAllergy: new Coding({
         code: "293909002",
         display: "Dichloralphenazone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TriclofosSodiumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TriclofosSodiumAllergy: new Coding({
         code: "293910007",
         display: "Triclofos sodium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BuspironeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BuspironeAllergy: new Coding({
         code: "293911006",
         display: "Buspirone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ClomethiazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ClomethiazoleAllergy: new Coding({
         code: "293912004",
         display: "Clomethiazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NeurolepticAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NeurolepticAllergy: new Coding({
         code: "293913009",
         display: "Neuroleptic allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SulpirideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SulpirideAllergy: new Coding({
         code: "293914003",
         display: "Sulpiride allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LoxapineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LoxapineAllergy: new Coding({
         code: "293915002",
         display: "Loxapine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ClozapineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ClozapineAllergy: new Coding({
         code: "293916001",
         display: "Clozapine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RisperidoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RisperidoneAllergy: new Coding({
         code: "293917005",
         display: "Risperidone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TetrabenazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TetrabenazineAllergy: new Coding({
         code: "293918000",
         display: "Tetrabenazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ButyrophenoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ButyrophenoneAllergy: new Coding({
         code: "293919008",
         display: "Butyrophenone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BenperidolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BenperidolAllergy: new Coding({
         code: "293920002",
         display: "Benperidol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TrifluperidolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TrifluperidolAllergy: new Coding({
         code: "293921003",
         display: "Trifluperidol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HaloperidolDecanoateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HaloperidolDecanoateAllergy: new Coding({
         code: "293922005",
         display: "Haloperidol decanoate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DroperidolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DroperidolAllergy: new Coding({
         code: "293923000",
         display: "Droperidol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HaloperidolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HaloperidolAllergy: new Coding({
         code: "293924006",
         display: "Haloperidol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiphenylbutylpiperidineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiphenylbutylpiperidineAllergy: new Coding({
         code: "293925007",
         display: "Diphenylbutylpiperidine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PimozideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PimozideAllergy: new Coding({
         code: "293926008",
         display: "Pimozide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FluspirileneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FluspirileneAllergy: new Coding({
         code: "293927004",
         display: "Fluspirilene allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenothiazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenothiazineAllergy: new Coding({
         code: "293928009",
         display: "Phenothiazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LevomepromazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LevomepromazineAllergy: new Coding({
         code: "293929001",
         display: "Levomepromazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PericyazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PericyazineAllergy: new Coding({
         code: "293930006",
         display: "Pericyazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FluphenazineDecanoateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FluphenazineDecanoateAllergy: new Coding({
         code: "293931005",
         display: "Fluphenazine decanoate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FluphenazineEnanthateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FluphenazineEnanthateAllergy: new Coding({
         code: "293932003",
         display: "Fluphenazine enanthate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ThiethylperazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ThiethylperazineAllergy: new Coding({
         code: "293933008",
         display: "Thiethylperazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FluphenazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FluphenazineAllergy: new Coding({
         code: "293934002",
         display: "Fluphenazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChlorpromazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChlorpromazineAllergy: new Coding({
         code: "293935001",
         display: "Chlorpromazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PipotiazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PipotiazineAllergy: new Coding({
         code: "293936000",
         display: "Pipotiazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PromazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PromazineAllergy: new Coding({
         code: "293937009",
         display: "Promazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ThioridazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ThioridazineAllergy: new Coding({
         code: "293938004",
         display: "Thioridazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PerphenazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PerphenazineAllergy: new Coding({
         code: "293939007",
         display: "Perphenazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProchlorperazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProchlorperazineAllergy: new Coding({
         code: "293940009",
         display: "Prochlorperazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TrifluoperazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TrifluoperazineAllergy: new Coding({
         code: "293941008",
         display: "Trifluoperazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ThioxantheneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ThioxantheneAllergy: new Coding({
         code: "293942001",
         display: "Thioxanthene allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChlorprothixeneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChlorprothixeneAllergy: new Coding({
         code: "293943006",
         display: "Chlorprothixene allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FlupentixolDecanoateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FlupentixolDecanoateAllergy: new Coding({
         code: "293944000",
         display: "Flupentixol decanoate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ZuclopenthixolDecanoateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ZuclopenthixolDecanoateAllergy: new Coding({
         code: "293945004",
         display: "Zuclopenthixol decanoate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ZuclopenthixolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ZuclopenthixolAllergy: new Coding({
         code: "293946003",
         display: "Zuclopenthixol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FlupentixolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FlupentixolAllergy: new Coding({
         code: "293948002",
         display: "Flupentixol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OxypertineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OxypertineAllergy: new Coding({
         code: "293949005",
         display: "Oxypertine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RemoxiprideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RemoxiprideAllergy: new Coding({
         code: "293950005",
         display: "Remoxipride allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DecarboxylaseInhibitorAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DecarboxylaseInhibitorAllergy: new Coding({
         code: "293951009",
         display: "Decarboxylase inhibitor allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SelegilineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SelegilineAllergy: new Coding({
         code: "293952002",
         display: "Selegiline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CentralStimulantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CentralStimulantAllergy: new Coding({
         code: "293953007",
         display: "Central stimulant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PemolineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PemolineAllergy: new Coding({
         code: "293954001",
         display: "Pemoline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethylphenidateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethylphenidateAllergy: new Coding({
         code: "293955000",
         display: "Methylphenidate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProlintaneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProlintaneAllergy: new Coding({
         code: "293956004",
         display: "Prolintane allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmfetamineGroupAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmfetamineGroupAllergy: new Coding({
         code: "293957008",
         display: "Amfetamine group allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DexamfetamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DexamfetamineAllergy: new Coding({
         code: "293958003",
         display: "Dexamfetamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlcoholMetabolismModifierAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlcoholMetabolismModifierAllergy: new Coding({
         code: "293959006",
         display: "Alcohol metabolism modifier allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DisulfiramAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DisulfiramAllergy: new Coding({
         code: "293960001",
         display: "Disulfiram allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DrugGroupsPrimarilyAffectingTheAutonomicNervousSystemAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DrugGroupsPrimarilyAffectingTheAutonomicNervousSystemAllergy: new Coding({
         code: "293961002",
         display: "Drug groups primarily affecting the autonomic nervous system allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BetaAdrenoceptorBlockingDrugAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BetaAdrenoceptorBlockingDrugAllergy: new Coding({
         code: "293962009",
         display: "Beta-adrenoceptor blocking drug allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CardioselectiveBetaBlockerAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CardioselectiveBetaBlockerAllergy: new Coding({
         code: "293963004",
         display: "Cardioselective beta-blocker allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcebutololAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcebutololAllergy: new Coding({
         code: "293964005",
         display: "Acebutolol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AtenololAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AtenololAllergy: new Coding({
         code: "293965006",
         display: "Atenolol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BetaxololAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BetaxololAllergy: new Coding({
         code: "293966007",
         display: "Betaxolol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BisoprololAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BisoprololAllergy: new Coding({
         code: "293967003",
         display: "Bisoprolol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CeliprololAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CeliprololAllergy: new Coding({
         code: "293968008",
         display: "Celiprolol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EsmololAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EsmololAllergy: new Coding({
         code: "293969000",
         display: "Esmolol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MetoprololAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MetoprololAllergy: new Coding({
         code: "293970004",
         display: "Metoprolol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NonCardioselectiveBetaBlockerAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NonCardioselectiveBetaBlockerAllergy: new Coding({
         code: "293971000",
         display: "Non-cardioselective beta-blocker allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NadololAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NadololAllergy: new Coding({
         code: "293972007",
         display: "Nadolol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PindololAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PindololAllergy: new Coding({
         code: "293973002",
         display: "Pindolol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarvedilolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarvedilolAllergy: new Coding({
         code: "293974008",
         display: "Carvedilol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MetipranololAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MetipranololAllergy: new Coding({
         code: "293975009",
         display: "Metipranolol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarteololAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarteololAllergy: new Coding({
         code: "293976005",
         display: "Carteolol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LabetalolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LabetalolAllergy: new Coding({
         code: "293977001",
         display: "Labetalol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LevobunololAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LevobunololAllergy: new Coding({
         code: "293978006",
         display: "Levobunolol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OxprenololAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OxprenololAllergy: new Coding({
         code: "293979003",
         display: "Oxprenolol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PenbutololAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PenbutololAllergy: new Coding({
         code: "293980000",
         display: "Penbutolol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PractololAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PractololAllergy: new Coding({
         code: "293981001",
         display: "Practolol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PropranololAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PropranololAllergy: new Coding({
         code: "293982008",
         display: "Propranolol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SotalolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SotalolAllergy: new Coding({
         code: "293983003",
         display: "Sotalol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TimololAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TimololAllergy: new Coding({
         code: "293984009",
         display: "Timolol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlphaAdrenoceptorBlockingDrugAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlphaAdrenoceptorBlockingDrugAllergy: new Coding({
         code: "293985005",
         display: "Alpha-adrenoceptor blocking drug allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlfuzosinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlfuzosinAllergy: new Coding({
         code: "293986006",
         display: "Alfuzosin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DoxazosinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DoxazosinAllergy: new Coding({
         code: "293987002",
         display: "Doxazosin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IndoraminAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IndoraminAllergy: new Coding({
         code: "293988007",
         display: "Indoramin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenoxybenzamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenoxybenzamineAllergy: new Coding({
         code: "293989004",
         display: "Phenoxybenzamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhentolamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhentolamineAllergy: new Coding({
         code: "293990008",
         display: "Phentolamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PrazosinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PrazosinAllergy: new Coding({
         code: "293991007",
         display: "Prazosin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TerazosinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TerazosinAllergy: new Coding({
         code: "293992000",
         display: "Terazosin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NicotineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NicotineAllergy: new Coding({
         code: "293993005",
         display: "Nicotine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CalciumChannelBlockerAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CalciumChannelBlockerAllergy: new Coding({
         code: "293994004",
         display: "Calcium-channel blocker allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LidoflazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LidoflazineAllergy: new Coding({
         code: "293995003",
         display: "Lidoflazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NifedipineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NifedipineAllergy: new Coding({
         code: "293996002",
         display: "Nifedipine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PrenylamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PrenylamineAllergy: new Coding({
         code: "293997006",
         display: "Prenylamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IsradipineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IsradipineAllergy: new Coding({
         code: "293998001",
         display: "Isradipine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FelodipineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FelodipineAllergy: new Coding({
         code: "293999009",
         display: "Felodipine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LacidipineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LacidipineAllergy: new Coding({
         code: "294000006",
         display: "Lacidipine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NimodipineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NimodipineAllergy: new Coding({
         code: "294001005",
         display: "Nimodipine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmlodipineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmlodipineAllergy: new Coding({
         code: "294002003",
         display: "Amlodipine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiltiazemAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiltiazemAllergy: new Coding({
         code: "294003008",
         display: "Diltiazem allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NicardipineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NicardipineAllergy: new Coding({
         code: "294004002",
         display: "Nicardipine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VerapamilAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VerapamilAllergy: new Coding({
         code: "294005001",
         display: "Verapamil allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ParasympathomimeticAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ParasympathomimeticAllergy: new Coding({
         code: "294006000",
         display: "Parasympathomimetic allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PilocarpineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PilocarpineAllergy: new Coding({
         code: "294007009",
         display: "Pilocarpine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcetylcholineChlorideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcetylcholineChlorideAllergy: new Coding({
         code: "294008004",
         display: "Acetylcholine chloride allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethacholineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethacholineAllergy: new Coding({
         code: "294009007",
         display: "Methacholine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AnticholinesteraseParasympathomimeticAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AnticholinesteraseParasympathomimeticAllergy: new Coding({
         code: "294010002",
         display: "Anticholinesterase parasympathomimetic allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhysostigmineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhysostigmineAllergy: new Coding({
         code: "294011003",
         display: "Physostigmine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DemecariumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DemecariumAllergy: new Coding({
         code: "294012005",
         display: "Demecarium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DistigmineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DistigmineAllergy: new Coding({
         code: "294013000",
         display: "Distigmine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EcothiopateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EcothiopateAllergy: new Coding({
         code: "294014006",
         display: "Ecothiopate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EdrophoniumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EdrophoniumAllergy: new Coding({
         code: "294015007",
         display: "Edrophonium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PyridostigmineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PyridostigmineAllergy: new Coding({
         code: "294016008",
         display: "Pyridostigmine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NeostigmineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NeostigmineAllergy: new Coding({
         code: "294017004",
         display: "Neostigmine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BethanecholAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BethanecholAllergy: new Coding({
         code: "294018009",
         display: "Bethanechol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarbacholAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarbacholAllergy: new Coding({
         code: "294019001",
         display: "Carbachol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SympathomimeticAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SympathomimeticAllergy: new Coding({
         code: "294020007",
         display: "Sympathomimetic allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IsoetharineHydrochlorideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IsoetharineHydrochlorideAllergy: new Coding({
         code: "294021006",
         display: "Isoetharine hydrochloride allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenylpropanolamineHydrochlorideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenylpropanolamineHydrochlorideAllergy: new Coding({
         code: "294022004",
         display: "Phenylpropanolamine hydrochloride allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PseudoephedrineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PseudoephedrineAllergy: new Coding({
         code: "294023009",
         display: "Pseudoephedrine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlphaAdrenoceptorAgonistAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlphaAdrenoceptorAgonistAllergy: new Coding({
         code: "294024003",
         display: "Alpha-adrenoceptor agonist allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OxedrineTartrateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OxedrineTartrateAllergy: new Coding({
         code: "294025002",
         display: "Oxedrine tartrate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MetaraminolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MetaraminolAllergy: new Coding({
         code: "294026001",
         display: "Metaraminol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethoxamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethoxamineAllergy: new Coding({
         code: "294027005",
         display: "Methoxamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NaphazolineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NaphazolineAllergy: new Coding({
         code: "294028000",
         display: "Naphazoline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NorepinephrineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NorepinephrineAllergy: new Coding({
         code: "294029008",
         display: "Norepinephrine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenylephrineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenylephrineAllergy: new Coding({
         code: "294030003",
         display: "Phenylephrine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_XylometazolineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_XylometazolineAllergy: new Coding({
         code: "294031004",
         display: "Xylometazoline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BetaAdrenoceptorAgonistAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BetaAdrenoceptorAgonistAllergy: new Coding({
         code: "294032006",
         display: "Beta-adrenoceptor agonist allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SelectiveBeta2AdrenoceptorStimulantsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SelectiveBeta2AdrenoceptorStimulantsAllergy: new Coding({
         code: "294033001",
         display: "Selective beta-2 adrenoceptor stimulants allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PirbuterolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PirbuterolAllergy: new Coding({
         code: "294035008",
         display: "Pirbuterol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SalmeterolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SalmeterolAllergy: new Coding({
         code: "294036009",
         display: "Salmeterol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SalbutamolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SalbutamolAllergy: new Coding({
         code: "294037000",
         display: "Salbutamol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BambuterolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BambuterolAllergy: new Coding({
         code: "294038005",
         display: "Bambuterol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FenoterolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FenoterolAllergy: new Coding({
         code: "294039002",
         display: "Fenoterol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OrciprenalineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OrciprenalineAllergy: new Coding({
         code: "294040000",
         display: "Orciprenaline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ReproterolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ReproterolAllergy: new Coding({
         code: "294041001",
         display: "Reproterol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RimiterolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RimiterolAllergy: new Coding({
         code: "294042008",
         display: "Rimiterol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RitodrineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RitodrineAllergy: new Coding({
         code: "294043003",
         display: "Ritodrine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TerbutalineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TerbutalineAllergy: new Coding({
         code: "294044009",
         display: "Terbutaline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TulobuterolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TulobuterolAllergy: new Coding({
         code: "294045005",
         display: "Tulobuterol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SelectiveBeta1AdrenoceptorStimulantsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SelectiveBeta1AdrenoceptorStimulantsAllergy: new Coding({
         code: "294046006",
         display: "Selective beta-1 adrenoceptor stimulants allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DobutamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DobutamineAllergy: new Coding({
         code: "294047002",
         display: "Dobutamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DopexamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DopexamineAllergy: new Coding({
         code: "294048007",
         display: "Dopexamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IsoprenalineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IsoprenalineAllergy: new Coding({
         code: "294050004",
         display: "Isoprenaline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OralIsoprenalineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OralIsoprenalineAllergy: new Coding({
         code: "294051000",
         display: "Oral isoprenaline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_InhaledIsoprenalineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_InhaledIsoprenalineAllergy: new Coding({
         code: "294052007",
         display: "Inhaled isoprenaline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ParenteralIsoprenalineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ParenteralIsoprenalineAllergy: new Coding({
         code: "294053002",
         display: "Parenteral isoprenaline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CentralAlphaAdrenoceptorAgonistAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CentralAlphaAdrenoceptorAgonistAllergy: new Coding({
         code: "294054008",
         display: "Central alpha-adrenoceptor agonist allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethyldopaAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethyldopaAllergy: new Coding({
         code: "294055009",
         display: "Methyldopa allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethyldopaAndDiureticAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethyldopaAndDiureticAllergy: new Coding({
         code: "294056005",
         display: "Methyldopa and diuretic allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ApraclonidineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ApraclonidineAllergy: new Coding({
         code: "294057001",
         display: "Apraclonidine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ClonidineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ClonidineAllergy: new Coding({
         code: "294058006",
         display: "Clonidine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LofexidineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LofexidineAllergy: new Coding({
         code: "294059003",
         display: "Lofexidine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DipivefrineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DipivefrineAllergy: new Coding({
         code: "294060008",
         display: "Dipivefrine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DopamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DopamineAllergy: new Coding({
         code: "294061007",
         display: "Dopamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EphedrineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EphedrineAllergy: new Coding({
         code: "294062000",
         display: "Ephedrine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OxymetazolineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OxymetazolineAllergy: new Coding({
         code: "294063005",
         display: "Oxymetazoline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_XamoterolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_XamoterolAllergy: new Coding({
         code: "294064004",
         display: "Xamoterol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AnticholinergicAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AnticholinergicAllergy: new Coding({
         code: "294065003",
         display: "Anticholinergic allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntimuscarinicAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntimuscarinicAllergy: new Coding({
         code: "294066002",
         display: "Antimuscarinic allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BelladonnaAlkaloidsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BelladonnaAlkaloidsAllergy: new Coding({
         code: "294067006",
         display: "Belladonna alkaloids allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PiperidolateHydrochlorideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PiperidolateHydrochlorideAllergy: new Coding({
         code: "294068001",
         display: "Piperidolate hydrochloride allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BiperidenAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BiperidenAllergy: new Coding({
         code: "294069009",
         display: "Biperiden allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EmeproniumBromideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EmeproniumBromideAllergy: new Coding({
         code: "294070005",
         display: "Emepronium bromide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TerodilineHydrochlorideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TerodilineHydrochlorideAllergy: new Coding({
         code: "294071009",
         display: "Terodiline hydrochloride allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LachesineChlorideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LachesineChlorideAllergy: new Coding({
         code: "294072002",
         display: "Lachesine chloride allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TropicamideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TropicamideAllergy: new Coding({
         code: "294073007",
         display: "Tropicamide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HyoscineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HyoscineAllergy: new Coding({
         code: "294074001",
         display: "Hyoscine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HyoscineHydrobromideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HyoscineHydrobromideAllergy: new Coding({
         code: "294075000",
         display: "Hyoscine hydrobromide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AtropineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AtropineAllergy: new Coding({
         code: "294076004",
         display: "Atropine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TrihexyphenidylAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TrihexyphenidylAllergy: new Coding({
         code: "294077008",
         display: "Trihexyphenidyl allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BenzatropineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BenzatropineAllergy: new Coding({
         code: "294078003",
         display: "Benzatropine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CyclopentolateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CyclopentolateAllergy: new Coding({
         code: "294079006",
         display: "Cyclopentolate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GlycopyrroniumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GlycopyrroniumAllergy: new Coding({
         code: "294080009",
         display: "Glycopyrronium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HomatropineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HomatropineAllergy: new Coding({
         code: "294081008",
         display: "Homatropine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IpratropiumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IpratropiumAllergy: new Coding({
         code: "294082001",
         display: "Ipratropium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethixeneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethixeneAllergy: new Coding({
         code: "294083006",
         display: "Methixene allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OrphenadrineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OrphenadrineAllergy: new Coding({
         code: "294084000",
         display: "Orphenadrine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OrphenadrineHydrochlorideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OrphenadrineHydrochlorideAllergy: new Coding({
         code: "294085004",
         display: "Orphenadrine hydrochloride allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OrphenadrineCitrateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OrphenadrineCitrateAllergy: new Coding({
         code: "294086003",
         display: "Orphenadrine citrate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OxitropiumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OxitropiumAllergy: new Coding({
         code: "294087007",
         display: "Oxitropium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OxybutyninAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OxybutyninAllergy: new Coding({
         code: "294088002",
         display: "Oxybutynin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProcyclidineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProcyclidineAllergy: new Coding({
         code: "294089005",
         display: "Procyclidine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DrugGroupsPrimarilyAffectingTheRespiratorySystemAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DrugGroupsPrimarilyAffectingTheRespiratorySystemAllergy: new Coding({
         code: "294090001",
         display: "Drug groups primarily affecting the respiratory system allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DornaseAlfaAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DornaseAlfaAllergy: new Coding({
         code: "294091002",
         display: "Dornase alfa allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MucolyticsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MucolyticsAllergy: new Coding({
         code: "294092009",
         display: "Mucolytics allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TyloxapolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TyloxapolAllergy: new Coding({
         code: "294093004",
         display: "Tyloxapol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BromhexineHydrochlorideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BromhexineHydrochlorideAllergy: new Coding({
         code: "294094005",
         display: "Bromhexine hydrochloride allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarbocisteineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarbocisteineAllergy: new Coding({
         code: "294095006",
         display: "Carbocisteine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethylcysteineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethylcysteineAllergy: new Coding({
         code: "294096007",
         display: "Methylcysteine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcetylcysteineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcetylcysteineAllergy: new Coding({
         code: "294097003",
         display: "Acetylcysteine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RespiratoryStimulantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RespiratoryStimulantAllergy: new Coding({
         code: "294098008",
         display: "Respiratory stimulant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NikethamideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NikethamideAllergy: new Coding({
         code: "294099000",
         display: "Nikethamide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EthamivanAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EthamivanAllergy: new Coding({
         code: "294100008",
         display: "Ethamivan allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DoxapramAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DoxapramAllergy: new Coding({
         code: "294101007",
         display: "Doxapram allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RespiratorySurfactantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RespiratorySurfactantAllergy: new Coding({
         code: "294102000",
         display: "Respiratory surfactant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BeractantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BeractantAllergy: new Coding({
         code: "294103005",
         display: "Beractant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhospholipidFractionAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhospholipidFractionAllergy: new Coding({
         code: "294104004",
         display: "Phospholipid fraction allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PumactantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PumactantAllergy: new Coding({
         code: "294105003",
         display: "Pumactant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ColfoscerilAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ColfoscerilAllergy: new Coding({
         code: "294106002",
         display: "Colfosceril allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntiallergenicDrugAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntiallergenicDrugAllergy: new Coding({
         code: "294107006",
         display: "Antiallergenic drug allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TopicalAntihistamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TopicalAntihistamineAllergy: new Coding({
         code: "294108001",
         display: "Topical antihistamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_H1AntihistamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_H1AntihistamineAllergy: new Coding({
         code: "294109009",
         display: "H1 antihistamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NonSedatingAntihistamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NonSedatingAntihistamineAllergy: new Coding({
         code: "294110004",
         display: "Non-sedating antihistamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AstemizoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AstemizoleAllergy: new Coding({
         code: "294111000",
         display: "Astemizole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TerfenadineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TerfenadineAllergy: new Coding({
         code: "294112007",
         display: "Terfenadine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcrivastineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcrivastineAllergy: new Coding({
         code: "294113002",
         display: "Acrivastine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LoratadineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LoratadineAllergy: new Coding({
         code: "294114008",
         display: "Loratadine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AzelastineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AzelastineAllergy: new Coding({
         code: "294115009",
         display: "Azelastine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CetirizineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CetirizineAllergy: new Coding({
         code: "294116005",
         display: "Cetirizine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SedatingAntihistamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SedatingAntihistamineAllergy: new Coding({
         code: "294117001",
         display: "Sedating antihistamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ClemastineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ClemastineAllergy: new Coding({
         code: "294118006",
         display: "Clemastine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MebhydrolinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MebhydrolinAllergy: new Coding({
         code: "294119003",
         display: "Mebhydrolin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MequitazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MequitazineAllergy: new Coding({
         code: "294120009",
         display: "Mequitazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OxatomideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OxatomideAllergy: new Coding({
         code: "294121008",
         display: "Oxatomide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CyclizineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CyclizineAllergy: new Coding({
         code: "294122001",
         display: "Cyclizine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DimenhydrinateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DimenhydrinateAllergy: new Coding({
         code: "294123006",
         display: "Dimenhydrinate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MeclozineHydrochlorideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MeclozineHydrochlorideAllergy: new Coding({
         code: "294124000",
         display: "Meclozine hydrochloride allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntazolineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntazolineAllergy: new Coding({
         code: "294125004",
         display: "Antazoline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PromethazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PromethazineAllergy: new Coding({
         code: "294126003",
         display: "Promethazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AzatadineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AzatadineAllergy: new Coding({
         code: "294127007",
         display: "Azatadine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BrompheniramineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BrompheniramineAllergy: new Coding({
         code: "294128002",
         display: "Brompheniramine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChlorphenamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChlorphenamineAllergy: new Coding({
         code: "294129005",
         display: "Chlorphenamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CinnarizineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CinnarizineAllergy: new Coding({
         code: "294130000",
         display: "Cinnarizine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CyproheptadineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CyproheptadineAllergy: new Coding({
         code: "294131001",
         display: "Cyproheptadine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DimetindeneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DimetindeneAllergy: new Coding({
         code: "294132008",
         display: "Dimetindene allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiphenhydramineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiphenhydramineAllergy: new Coding({
         code: "294133003",
         display: "Diphenhydramine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiphenylpyralineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiphenylpyralineAllergy: new Coding({
         code: "294134009",
         display: "Diphenylpyraline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HydroxyzineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HydroxyzineAllergy: new Coding({
         code: "294135005",
         display: "Hydroxyzine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MepyramineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MepyramineAllergy: new Coding({
         code: "294136006",
         display: "Mepyramine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenindamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenindamineAllergy: new Coding({
         code: "294137002",
         display: "Phenindamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PheniramineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PheniramineAllergy: new Coding({
         code: "294138007",
         display: "Pheniramine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TriprolidineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TriprolidineAllergy: new Coding({
         code: "294139004",
         display: "Triprolidine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlimemazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlimemazineAllergy: new Coding({
         code: "294140002",
         display: "Alimemazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CromoglycateAndRelatedAntiallergenicAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CromoglycateAndRelatedAntiallergenicAllergy: new Coding({
         code: "294141003",
         display: "Cromoglycate and related antiallergenic allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NedocromilAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NedocromilAllergy: new Coding({
         code: "294142005",
         display: "Nedocromil allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumCromoglicateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumCromoglicateAllergy: new Coding({
         code: "294143000",
         display: "Sodium cromoglicate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_KetotifenAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_KetotifenAllergy: new Coding({
         code: "294144006",
         display: "Ketotifen allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LodoxamideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LodoxamideAllergy: new Coding({
         code: "294145007",
         display: "Lodoxamide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CoughDecongestantPreparationAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CoughDecongestantPreparationAllergy: new Coding({
         code: "294146008",
         display: "Cough/decongestant preparation allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CoughSuppressantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CoughSuppressantAllergy: new Coding({
         code: "294147004",
         display: "Cough suppressant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IsoaminileAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IsoaminileAllergy: new Coding({
         code: "294148009",
         display: "Isoaminile allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MorphinanCoughSuppressantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MorphinanCoughSuppressantAllergy: new Coding({
         code: "294149001",
         display: "Morphinan cough suppressant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DextromethorphanHydrobromideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DextromethorphanHydrobromideAllergy: new Coding({
         code: "294151002",
         display: "Dextromethorphan hydrobromide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NoscapineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NoscapineAllergy: new Coding({
         code: "294152009",
         display: "Noscapine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PholcodineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PholcodineAllergy: new Coding({
         code: "294153004",
         display: "Pholcodine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CompoundCoughSuppressantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CompoundCoughSuppressantAllergy: new Coding({
         code: "294154005",
         display: "Compound cough suppressant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProprietaryDecongestantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProprietaryDecongestantAllergy: new Coding({
         code: "294155006",
         display: "Proprietary decongestant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ExpectorantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ExpectorantAllergy: new Coding({
         code: "294156007",
         display: "Expectorant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_XanthineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_XanthineAllergy: new Coding({
         code: "294157003",
         display: "Xanthine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AminophyllineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AminophyllineAllergy: new Coding({
         code: "294158008",
         display: "Aminophylline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CholineTheophyllinateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CholineTheophyllinateAllergy: new Coding({
         code: "294159000",
         display: "Choline theophyllinate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TheophyllineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TheophyllineAllergy: new Coding({
         code: "294160005",
         display: "Theophylline allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BronchodilatorPreparationsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BronchodilatorPreparationsAllergy: new Coding({
         code: "294161009",
         display: "Bronchodilator preparations allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AllergyToInhaledCorticosteroids: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AllergyToInhaledCorticosteroids: new Coding({
         code: "294162002",
         display: "Allergy to inhaled corticosteroids",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DrugGroupsAndAgentsPrimarilyActingOnTheSkinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DrugGroupsAndAgentsPrimarilyActingOnTheSkinAllergy: new Coding({
         code: "294163007",
         display: "Drug groups and agents primarily acting on the skin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TopicalDermatologicalPreparationAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TopicalDermatologicalPreparationAllergy: new Coding({
         code: "294164001",
         display: "Topical dermatological preparation allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_UreaCreamsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_UreaCreamsAllergy: new Coding({
         code: "294165000",
         display: "Urea creams allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EmollientBathAdditivesAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EmollientBathAdditivesAllergy: new Coding({
         code: "294166004",
         display: "Emollient bath additives allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DustingPowdersAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DustingPowdersAllergy: new Coding({
         code: "294167008",
         display: "Dusting powders allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CalamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CalamineAllergy: new Coding({
         code: "294168003",
         display: "Calamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CoalTarAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CoalTarAllergy: new Coding({
         code: "294169006",
         display: "Coal tar allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CoalTarScalpPreparationsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CoalTarScalpPreparationsAllergy: new Coding({
         code: "294170007",
         display: "Coal tar scalp preparations allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CoalTarBathPreparationsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CoalTarBathPreparationsAllergy: new Coding({
         code: "294171006",
         display: "Coal tar bath preparations allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BufexamacAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BufexamacAllergy: new Coding({
         code: "294172004",
         display: "Bufexamac allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DithranolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DithranolAllergy: new Coding({
         code: "294173009",
         display: "Dithranol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DithranolOintmentAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DithranolOintmentAllergy: new Coding({
         code: "294174003",
         display: "Dithranol ointment allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DithranolCreamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DithranolCreamAllergy: new Coding({
         code: "294175002",
         display: "Dithranol cream allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DithranolPasteAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DithranolPasteAllergy: new Coding({
         code: "294176001",
         display: "Dithranol paste allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IchthammolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IchthammolAllergy: new Coding({
         code: "294177005",
         display: "Ichthammol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CalcipotriolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CalcipotriolAllergy: new Coding({
         code: "294178000",
         display: "Calcipotriol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SulfurAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SulfurAllergy: new Coding({
         code: "294179008",
         display: "Sulfur allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AzelaicAcidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AzelaicAcidAllergy: new Coding({
         code: "294180006",
         display: "Azelaic acid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BromineComplexesAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BromineComplexesAllergy: new Coding({
         code: "294181005",
         display: "Bromine complexes allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PodophyllumResinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PodophyllumResinAllergy: new Coding({
         code: "294182003",
         display: "Podophyllum resin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PodophyllotoxinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PodophyllotoxinAllergy: new Coding({
         code: "294183008",
         display: "Podophyllotoxin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SunscreeningPreparationsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SunscreeningPreparationsAllergy: new Coding({
         code: "294184002",
         display: "Sunscreening preparations allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CamouflagingPreparationsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CamouflagingPreparationsAllergy: new Coding({
         code: "294185001",
         display: "Camouflaging preparations allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DesloughingAgentsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DesloughingAgentsAllergy: new Coding({
         code: "294187009",
         display: "Desloughing agents allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AserbineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AserbineAllergy: new Coding({
         code: "294188004",
         display: "Aserbine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SurgicalTissueAdhesiveAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SurgicalTissueAdhesiveAllergy: new Coding({
         code: "294189007",
         display: "Surgical tissue adhesive allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EnbucrilateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EnbucrilateAllergy: new Coding({
         code: "294190003",
         display: "Enbucrilate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CollodionAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CollodionAllergy: new Coding({
         code: "294191004",
         display: "Collodion allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CounterIrritantsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CounterIrritantsAllergy: new Coding({
         code: "294192006",
         display: "Counter irritants allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EmollientAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EmollientAllergy: new Coding({
         code: "294193001",
         display: "Emollient allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PoulticesAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PoulticesAllergy: new Coding({
         code: "294194007",
         display: "Poultices allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AnionicSurfactantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AnionicSurfactantAllergy: new Coding({
         code: "294195008",
         display: "Anionic surfactant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlkaliMetalSoapAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlkaliMetalSoapAllergy: new Coding({
         code: "294196009",
         display: "Alkali metal soap allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AstringentAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AstringentAllergy: new Coding({
         code: "294197000",
         display: "Astringent allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AluminumAstringentAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AluminumAstringentAllergy: new Coding({
         code: "294198005",
         display: "Aluminum astringent allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TopicalSeleniumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TopicalSeleniumAllergy: new Coding({
         code: "294199002",
         display: "Topical selenium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CrotamitonAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CrotamitonAllergy: new Coding({
         code: "294200004",
         display: "Crotamiton allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarbonPower14PowerDXylose: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarbonPower14PowerDXylose: new Coding({
         code: "2942001",
         display: "Carbon^14^ D-xylose",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TopicalSalicylicAcidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TopicalSalicylicAcidAllergy: new Coding({
         code: "294201000",
         display: "Topical salicylic acid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TopicalAbrasiveAgentAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TopicalAbrasiveAgentAllergy: new Coding({
         code: "294202007",
         display: "Topical abrasive agent allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BenzoylPeroxideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BenzoylPeroxideAllergy: new Coding({
         code: "294203002",
         display: "Benzoyl peroxide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SilverNitrateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SilverNitrateAllergy: new Coding({
         code: "294204008",
         display: "Silver nitrate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GamolenicAcidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GamolenicAcidAllergy: new Coding({
         code: "294206005",
         display: "Gamolenic acid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RetinoidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RetinoidAllergy: new Coding({
         code: "294207001",
         display: "Retinoid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EtretinateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EtretinateAllergy: new Coding({
         code: "294208006",
         display: "Etretinate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcitretinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcitretinAllergy: new Coding({
         code: "294209003",
         display: "Acitretin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TretinoinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TretinoinAllergy: new Coding({
         code: "294210008",
         display: "Tretinoin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IsotretinoinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IsotretinoinAllergy: new Coding({
         code: "294211007",
         display: "Isotretinoin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DrugGroupsPrimarilyAffectingTheMusculoskeletalSystemAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DrugGroupsPrimarilyAffectingTheMusculoskeletalSystemAllergy: new Coding({
         code: "294212000",
         display: "Drug groups primarily affecting the musculoskeletal system allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DrugForTheTreatmentOfGoutAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DrugForTheTreatmentOfGoutAllergy: new Coding({
         code: "294213005",
         display: "Drug for the treatment of gout allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ColchicumAlkaloidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ColchicumAlkaloidAllergy: new Coding({
         code: "294214004",
         display: "Colchicum alkaloid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ColchicineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ColchicineAllergy: new Coding({
         code: "294215003",
         display: "Colchicine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_UricosuricAgentAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_UricosuricAgentAllergy: new Coding({
         code: "294216002",
         display: "Uricosuric agent allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProbenecidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProbenecidAllergy: new Coding({
         code: "294217006",
         display: "Probenecid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SulfinpyrazoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SulfinpyrazoneAllergy: new Coding({
         code: "294218001",
         display: "Sulfinpyrazone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_XanthineOxidaseInhibitorAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_XanthineOxidaseInhibitorAllergy: new Coding({
         code: "294219009",
         display: "Xanthine oxidase inhibitor allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AllopurinolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AllopurinolAllergy: new Coding({
         code: "294220003",
         display: "Allopurinol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SkeletalMuscleRelaxantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SkeletalMuscleRelaxantAllergy: new Coding({
         code: "294221004",
         display: "Skeletal muscle relaxant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NeuromuscularTransmissionDrugAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NeuromuscularTransmissionDrugAllergy: new Coding({
         code: "294222006",
         display: "Neuromuscular transmission drug allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DepolarizingMuscleRelaxantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DepolarizingMuscleRelaxantAllergy: new Coding({
         code: "294223001",
         display: "Depolarizing muscle relaxant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SuxamethoniumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SuxamethoniumAllergy: new Coding({
         code: "294224007",
         display: "Suxamethonium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NonDepolarizingMuscleRelaxantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NonDepolarizingMuscleRelaxantAllergy: new Coding({
         code: "294225008",
         display: "Non-depolarizing muscle relaxant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MivacuriumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MivacuriumAllergy: new Coding({
         code: "294226009",
         display: "Mivacurium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlcuroniumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlcuroniumAllergy: new Coding({
         code: "294227000",
         display: "Alcuronium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AtracuriumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AtracuriumAllergy: new Coding({
         code: "294228005",
         display: "Atracurium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GallamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GallamineAllergy: new Coding({
         code: "294229002",
         display: "Gallamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PancuroniumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PancuroniumAllergy: new Coding({
         code: "294230007",
         display: "Pancuronium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TubocurarineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TubocurarineAllergy: new Coding({
         code: "294231006",
         display: "Tubocurarine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VecuroniumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VecuroniumAllergy: new Coding({
         code: "294232004",
         display: "Vecuronium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RocuroniumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RocuroniumAllergy: new Coding({
         code: "294233009",
         display: "Rocuronium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BaclofenAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BaclofenAllergy: new Coding({
         code: "294234003",
         display: "Baclofen allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarisoprodolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarisoprodolAllergy: new Coding({
         code: "294235002",
         display: "Carisoprodol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethocarbamolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethocarbamolAllergy: new Coding({
         code: "294236001",
         display: "Methocarbamol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DantroleneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DantroleneAllergy: new Coding({
         code: "294237005",
         display: "Dantrolene allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GoldAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GoldAllergy: new Coding({
         code: "294238000",
         display: "Gold allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumAurothiomalateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumAurothiomalateAllergy: new Coding({
         code: "294239008",
         display: "Sodium aurothiomalate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AuranofinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AuranofinAllergy: new Coding({
         code: "294240005",
         display: "Auranofin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SmoothMuscleRelaxantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SmoothMuscleRelaxantAllergy: new Coding({
         code: "294241009",
         display: "Smooth muscle relaxant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PapaverineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PapaverineAllergy: new Coding({
         code: "294242002",
         display: "Papaverine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FlavoxateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FlavoxateAllergy: new Coding({
         code: "294243007",
         display: "Flavoxate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DrugGroupsPrimarilyUsedInObstetricsGynecologicalAndUrinaryTractDisordersAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DrugGroupsPrimarilyUsedInObstetricsGynecologicalAndUrinaryTractDisordersAllergy: new Coding({
         code: "294244001",
         display: "Drug groups primarily used in obstetrics, gynecological and urinary tract disorders allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MifepristoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MifepristoneAllergy: new Coding({
         code: "294245000",
         display: "Mifepristone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NonIonicSurfactantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NonIonicSurfactantAllergy: new Coding({
         code: "294246004",
         display: "Non-ionic surfactant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NonoxinolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NonoxinolAllergy: new Coding({
         code: "294247008",
         display: "Nonoxinol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OctoxinolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OctoxinolAllergy: new Coding({
         code: "294248003",
         display: "Octoxinol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProstaglandinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProstaglandinAllergy: new Coding({
         code: "294249006",
         display: "Prostaglandin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ASeriesProstaglandinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ASeriesProstaglandinAllergy: new Coding({
         code: "294250006",
         display: "A series prostaglandin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ESeriesProstaglandinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ESeriesProstaglandinAllergy: new Coding({
         code: "294252003",
         display: "E series prostaglandin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DinoprostoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DinoprostoneAllergy: new Coding({
         code: "294253008",
         display: "Dinoprostone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GemeprostAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GemeprostAllergy: new Coding({
         code: "294254002",
         display: "Gemeprost allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlprostadilAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlprostadilAllergy: new Coding({
         code: "294255001",
         display: "Alprostadil allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FSeriesProstaglandinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FSeriesProstaglandinAllergy: new Coding({
         code: "294256000",
         display: "F series prostaglandin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DinoprostAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DinoprostAllergy: new Coding({
         code: "294257009",
         display: "Dinoprost allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarboprostAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarboprostAllergy: new Coding({
         code: "294258004",
         display: "Carboprost allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ISeriesProstaglandinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ISeriesProstaglandinAllergy: new Coding({
         code: "294259007",
         display: "I series prostaglandin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EpoprostenolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EpoprostenolAllergy: new Coding({
         code: "294260002",
         display: "Epoprostenol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TerpenesAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TerpenesAllergy: new Coding({
         code: "294261003",
         display: "Terpenes allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChelatingAgentsAndAntidotesAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChelatingAgentsAndAntidotesAllergy: new Coding({
         code: "294262005",
         display: "Chelating agents and antidotes allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntidoteAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntidoteAllergy: new Coding({
         code: "294263000",
         display: "Antidote allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IpecacuanhaAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IpecacuanhaAllergy: new Coding({
         code: "294264006",
         display: "Ipecacuanha allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CharcoalActivatedAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CharcoalActivatedAllergy: new Coding({
         code: "294265007",
         display: "Charcoal-activated allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumNitriteAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumNitriteAllergy: new Coding({
         code: "294266008",
         display: "Sodium nitrite allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DigoxinSpecificAntibodyAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DigoxinSpecificAntibodyAllergy: new Coding({
         code: "294268009",
         display: "Digoxin-specific-antibody allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MesnaAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MesnaAllergy: new Coding({
         code: "294269001",
         display: "Mesna allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BenzodiazepineAntagonistAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BenzodiazepineAntagonistAllergy: new Coding({
         code: "294270000",
         display: "Benzodiazepine antagonist allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FlumazenilAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FlumazenilAllergy: new Coding({
         code: "294271001",
         display: "Flumazenil allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CholinesteraseReactivatorAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CholinesteraseReactivatorAllergy: new Coding({
         code: "294272008",
         display: "Cholinesterase reactivator allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PralidoximeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PralidoximeAllergy: new Coding({
         code: "294273003",
         display: "Pralidoxime allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HydrofluoricAcidBurnAntidoteAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HydrofluoricAcidBurnAntidoteAllergy: new Coding({
         code: "294274009",
         display: "Hydrofluoric acid burn antidote allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OpioidAntagonistAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OpioidAntagonistAllergy: new Coding({
         code: "294275005",
         display: "Opioid antagonist allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NaltrexoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NaltrexoneAllergy: new Coding({
         code: "294276006",
         display: "Naltrexone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NaloxoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NaloxoneAllergy: new Coding({
         code: "294277002",
         display: "Naloxone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProtamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProtamineAllergy: new Coding({
         code: "294278007",
         display: "Protamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntidotesForPesticidesAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntidotesForPesticidesAllergy: new Coding({
         code: "294279004",
         display: "Antidotes for pesticides allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FullersEarthPowderAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FullersEarthPowderAllergy: new Coding({
         code: "294280001",
         display: "Fullers earth powder allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BentonitePowderAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BentonitePowderAllergy: new Coding({
         code: "294281002",
         display: "Bentonite powder allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChelatingAgentAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChelatingAgentAllergy: new Coding({
         code: "294282009",
         display: "Chelating agent allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DimercaprolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DimercaprolAllergy: new Coding({
         code: "294283004",
         display: "Dimercaprol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DesferrioxamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DesferrioxamineAllergy: new Coding({
         code: "294284005",
         display: "Desferrioxamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EdetateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EdetateAllergy: new Coding({
         code: "294285006",
         display: "Edetate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DicobaltEdetateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DicobaltEdetateAllergy: new Coding({
         code: "294286007",
         display: "Dicobalt edetate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumCalciumEdetateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumCalciumEdetateAllergy: new Coding({
         code: "294287003",
         display: "Sodium calcium edetate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TrisodiumEdetateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TrisodiumEdetateAllergy: new Coding({
         code: "294288008",
         display: "Trisodium edetate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DisodiumEdetateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DisodiumEdetateAllergy: new Coding({
         code: "294289000",
         display: "Disodium edetate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TrientineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TrientineAllergy: new Coding({
         code: "294290009",
         display: "Trientine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PenicillamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PenicillamineAllergy: new Coding({
         code: "294291008",
         display: "Penicillamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HomeopathicMedicineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HomeopathicMedicineAllergy: new Coding({
         code: "294293006",
         display: "Homeopathic medicine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HerbalMedicineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HerbalMedicineAllergy: new Coding({
         code: "294295004",
         display: "Herbal medicine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumHyaluronateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumHyaluronateAllergy: new Coding({
         code: "294297007",
         display: "Sodium hyaluronate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GlycineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GlycineAllergy: new Coding({
         code: "294298002",
         display: "Glycine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DialysisFluidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DialysisFluidAllergy: new Coding({
         code: "294299005",
         display: "Dialysis fluid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PeritonealDialysisSolutionAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PeritonealDialysisSolutionAllergy: new Coding({
         code: "294300002",
         display: "Peritoneal dialysis solution allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemodialysisFluidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemodialysisFluidAllergy: new Coding({
         code: "294301003",
         display: "Hemodialysis fluid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemofiltrationSolutionAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemofiltrationSolutionAllergy: new Coding({
         code: "294302005",
         display: "Hemofiltration solution allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CardioplegiaSolutionAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CardioplegiaSolutionAllergy: new Coding({
         code: "294304006",
         display: "Cardioplegia solution allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DimethylEtherPropaneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DimethylEtherPropaneAllergy: new Coding({
         code: "294306008",
         display: "Dimethyl-ether propane allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CitrateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CitrateAllergy: new Coding({
         code: "294307004",
         display: "Citrate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemorrhoidPreparationAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemorrhoidPreparationAllergy: new Coding({
         code: "294308009",
         display: "Hemorrhoid preparation allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EarWaxRemovalPreparationAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EarWaxRemovalPreparationAllergy: new Coding({
         code: "294309001",
         display: "Ear wax removal preparation allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TopicalPotassiumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TopicalPotassiumAllergy: new Coding({
         code: "294310006",
         display: "Topical potassium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TopicalZincAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TopicalZincAllergy: new Coding({
         code: "294311005",
         display: "Topical zinc allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OropharyngealPreparationsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OropharyngealPreparationsAllergy: new Coding({
         code: "294312003",
         display: "Oropharyngeal preparations allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ArtificialSalivaAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ArtificialSalivaAllergy: new Coding({
         code: "294313008",
         display: "Artificial saliva allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FixedOilAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FixedOilAllergy: new Coding({
         code: "294315001",
         display: "Fixed oil allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OliveOilAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OliveOilAllergy: new Coding({
         code: "294316000",
         display: "Olive oil allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ArachisOilAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ArachisOilAllergy: new Coding({
         code: "294317009",
         display: "Arachis oil allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CastorOilAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CastorOilAllergy: new Coding({
         code: "294318004",
         display: "Castor oil allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GlycerolGlycolMacrogolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GlycerolGlycolMacrogolAllergy: new Coding({
         code: "294319007",
         display: "Glycerol/glycol/macrogol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GlycerolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GlycerolAllergy: new Coding({
         code: "294320001",
         display: "Glycerol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LubricantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LubricantAllergy: new Coding({
         code: "294321002",
         display: "Lubricant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BaseAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BaseAllergy: new Coding({
         code: "294322009",
         display: "Base allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ParaffinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ParaffinAllergy: new Coding({
         code: "294324005",
         display: "Paraffin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ParaffinYellowSoftAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ParaffinYellowSoftAllergy: new Coding({
         code: "294325006",
         display: "Paraffin-yellow soft allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ParaffinWhiteSoftAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ParaffinWhiteSoftAllergy: new Coding({
         code: "294326007",
         display: "Paraffin-white soft allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LiquidParaffinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LiquidParaffinAllergy: new Coding({
         code: "294327003",
         display: "Liquid paraffin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SiliconeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SiliconeAllergy: new Coding({
         code: "294328008",
         display: "Silicone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DimethiconeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DimethiconeAllergy: new Coding({
         code: "294329000",
         display: "Dimethicone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_WoolAlcoholAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_WoolAlcoholAllergy: new Coding({
         code: "294330005",
         display: "Wool alcohol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ViscosityModifierAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ViscosityModifierAllergy: new Coding({
         code: "294331009",
         display: "Viscosity modifier allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PolyvinylAlcoholAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PolyvinylAlcoholAllergy: new Coding({
         code: "294332002",
         display: "Polyvinyl alcohol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Carbomer940Allergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Carbomer940Allergy: new Coding({
         code: "294333007",
         display: "Carbomer-940 allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CelluloseDerivedViscosityModifierAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CelluloseDerivedViscosityModifierAllergy: new Coding({
         code: "294334001",
         display: "Cellulose-derived viscosity modifier allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HypromelloseAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HypromelloseAllergy: new Coding({
         code: "294335000",
         display: "Hypromellose allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HypromelloseEyeDropsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HypromelloseEyeDropsAllergy: new Coding({
         code: "294336004",
         display: "Hypromellose eye drops allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HydroxyethylcelluloseAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HydroxyethylcelluloseAllergy: new Coding({
         code: "294337008",
         display: "Hydroxyethylcellulose allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarmelloseAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarmelloseAllergy: new Coding({
         code: "294339006",
         display: "Carmellose allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntifungalDrugAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntifungalDrugAllergy: new Coding({
         code: "294340008",
         display: "Antifungal drug allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FlucytosineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FlucytosineAllergy: new Coding({
         code: "294341007",
         display: "Flucytosine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TerbinafineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TerbinafineAllergy: new Coding({
         code: "294342000",
         display: "Terbinafine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NitrophenolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NitrophenolAllergy: new Coding({
         code: "294343005",
         display: "Nitrophenol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TolnaftateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TolnaftateAllergy: new Coding({
         code: "294344004",
         display: "Tolnaftate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmorolfineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmorolfineAllergy: new Coding({
         code: "294346002",
         display: "Amorolfine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GriseofulvinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GriseofulvinAllergy: new Coding({
         code: "294348001",
         display: "Griseofulvin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmphotericinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmphotericinAllergy: new Coding({
         code: "294349009",
         display: "Amphotericin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NatamycinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NatamycinAllergy: new Coding({
         code: "294350009",
         display: "Natamycin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NystatinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NystatinAllergy: new Coding({
         code: "294351008",
         display: "Nystatin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AzoleAntifungalAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AzoleAntifungalAllergy: new Coding({
         code: "294352001",
         display: "Azole antifungal allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_UndecenoatesAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_UndecenoatesAllergy: new Coding({
         code: "294354000",
         display: "Undecenoates allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ImidazoleAntifungalAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ImidazoleAntifungalAllergy: new Coding({
         code: "294355004",
         display: "Imidazole antifungal allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ClotrimazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ClotrimazoleAllergy: new Coding({
         code: "294356003",
         display: "Clotrimazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FenticonazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FenticonazoleAllergy: new Coding({
         code: "294357007",
         display: "Fenticonazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TioconazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TioconazoleAllergy: new Coding({
         code: "294358002",
         display: "Tioconazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EconazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EconazoleAllergy: new Coding({
         code: "294359005",
         display: "Econazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IsoconazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IsoconazoleAllergy: new Coding({
         code: "294360000",
         display: "Isoconazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SulconazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SulconazoleAllergy: new Coding({
         code: "294361001",
         display: "Sulconazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_KetoconazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_KetoconazoleAllergy: new Coding({
         code: "294362008",
         display: "Ketoconazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MiconazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MiconazoleAllergy: new Coding({
         code: "294363003",
         display: "Miconazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TriazoleAntifungalsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TriazoleAntifungalsAllergy: new Coding({
         code: "294364009",
         display: "Triazole antifungals allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FluconazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FluconazoleAllergy: new Coding({
         code: "294365005",
         display: "Fluconazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ItraconazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ItraconazoleAllergy: new Coding({
         code: "294366006",
         display: "Itraconazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntiviralDrugAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntiviralDrugAllergy: new Coding({
         code: "294367002",
         display: "Antiviral drug allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_InosinePranobexAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_InosinePranobexAllergy: new Coding({
         code: "294368007",
         display: "Inosine pranobex allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ZidovudineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ZidovudineAllergy: new Coding({
         code: "294369004",
         display: "Zidovudine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GanciclovirAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GanciclovirAllergy: new Coding({
         code: "294370003",
         display: "Ganciclovir allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FamciclovirAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FamciclovirAllergy: new Coding({
         code: "294371004",
         display: "Famciclovir allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DidanosineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DidanosineAllergy: new Coding({
         code: "294372006",
         display: "Didanosine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ZalcitabineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ZalcitabineAllergy: new Coding({
         code: "294373001",
         display: "Zalcitabine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ValaciclovirAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ValaciclovirAllergy: new Coding({
         code: "294374007",
         display: "Valaciclovir allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_InterferonsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_InterferonsAllergy: new Coding({
         code: "294375008",
         display: "Interferons allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HumanInterferonGamma1bAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HumanInterferonGamma1bAllergy: new Coding({
         code: "294376009",
         display: "Human interferon gamma-1b allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_InterferonA2aAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_InterferonA2aAllergy: new Coding({
         code: "294377000",
         display: "Interferon-A-2a allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_InterferonA2bAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_InterferonA2bAllergy: new Coding({
         code: "294378005",
         display: "Interferon-A-2b allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_InterferonAN1Allergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_InterferonAN1Allergy: new Coding({
         code: "294379002",
         display: "Interferon-A-N1 allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RibavirinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RibavirinAllergy: new Coding({
         code: "294380004",
         display: "Ribavirin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TrifluorothymidineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TrifluorothymidineAllergy: new Coding({
         code: "294381000",
         display: "Trifluorothymidine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FoscarnetAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FoscarnetAllergy: new Coding({
         code: "294382007",
         display: "Foscarnet allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VidarabineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VidarabineAllergy: new Coding({
         code: "294383002",
         display: "Vidarabine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AciclovirAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AciclovirAllergy: new Coding({
         code: "294384008",
         display: "Aciclovir allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IdoxuridineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IdoxuridineAllergy: new Coding({
         code: "294385009",
         display: "Idoxuridine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IdoxuridineInDimethylsulfoxideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IdoxuridineInDimethylsulfoxideAllergy: new Coding({
         code: "294386005",
         display: "Idoxuridine in dimethylsulfoxide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntimalarialDrugAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntimalarialDrugAllergy: new Coding({
         code: "294387001",
         display: "Antimalarial drug allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PyrimethamineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PyrimethamineAllergy: new Coding({
         code: "294388006",
         display: "Pyrimethamine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AminoquinolineAntimalarialAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AminoquinolineAntimalarialAllergy: new Coding({
         code: "294389003",
         display: "Aminoquinoline antimalarial allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmodiaquineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmodiaquineAllergy: new Coding({
         code: "294390007",
         display: "Amodiaquine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Captopril: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Captopril: new Coding({
         code: "29439004",
         display: "Captopril",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PrimaquineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PrimaquineAllergy: new Coding({
         code: "294391006",
         display: "Primaquine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MefloquineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MefloquineAllergy: new Coding({
         code: "294392004",
         display: "Mefloquine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HydroxychloroquineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HydroxychloroquineAllergy: new Coding({
         code: "294393009",
         display: "Hydroxychloroquine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChloroquineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChloroquineAllergy: new Coding({
         code: "294394003",
         display: "Chloroquine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BiguanideAntimalarialAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BiguanideAntimalarialAllergy: new Coding({
         code: "294395002",
         display: "Biguanide antimalarial allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProguanilAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProguanilAllergy: new Coding({
         code: "294396001",
         display: "Proguanil allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CinchonaAntimalarialAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CinchonaAntimalarialAllergy: new Coding({
         code: "294397005",
         display: "Cinchona antimalarial allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_QuinineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_QuinineAllergy: new Coding({
         code: "294398000",
         display: "Quinine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HalofantrineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HalofantrineAllergy: new Coding({
         code: "294399008",
         display: "Halofantrine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DepilatoryAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DepilatoryAgent: new Coding({
         code: "2944000",
         display: "Depilatory agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MepacrineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MepacrineAllergy: new Coding({
         code: "294400001",
         display: "Mepacrine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LactobacillAcidophilVaccineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LactobacillAcidophilVaccineAllergy: new Coding({
         code: "294401002",
         display: "Lactobacill acidophil vaccine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntiInfectiveNasalPreparationsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntiInfectiveNasalPreparationsAllergy: new Coding({
         code: "294402009",
         display: "Anti-infective nasal preparations allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DisinfectantsAndCleansersAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DisinfectantsAndCleansersAllergy: new Coding({
         code: "294403004",
         display: "Disinfectants and cleansers allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AceticAcidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AceticAcidAllergy: new Coding({
         code: "294404005",
         display: "Acetic acid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HydrargaphenAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HydrargaphenAllergy: new Coding({
         code: "294405006",
         display: "Hydrargaphen allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PolynoxylinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PolynoxylinAllergy: new Coding({
         code: "294406007",
         display: "Polynoxylin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HexetidineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HexetidineAllergy: new Coding({
         code: "294407003",
         display: "Hexetidine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumPerborateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumPerborateAllergy: new Coding({
         code: "294408008",
         display: "Sodium perborate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChlorinatedSolutionsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChlorinatedSolutionsAllergy: new Coding({
         code: "294409000",
         display: "Chlorinated solutions allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PotassiumPermanganateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PotassiumPermanganateAllergy: new Coding({
         code: "294410005",
         display: "Potassium permanganate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BismuthSubnitrateAndIodoformPasteImpregnatedGauzeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BismuthSubnitrateAndIodoformPasteImpregnatedGauzeAllergy: new Coding({
         code: "294411009",
         display: "Bismuth subnitrate and iodoform paste impregnated gauze allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenolicsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenolicsAllergy: new Coding({
         code: "294412002",
         display: "Phenolics allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ThymolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ThymolAllergy: new Coding({
         code: "294413007",
         display: "Thymol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChlorinatedPhenolDisinfectantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChlorinatedPhenolDisinfectantAllergy: new Coding({
         code: "294414001",
         display: "Chlorinated phenol disinfectant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChloroxylenolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChloroxylenolAllergy: new Coding({
         code: "294415000",
         display: "Chloroxylenol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HexachloropheneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HexachloropheneAllergy: new Coding({
         code: "294416004",
         display: "Hexachlorophene allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TriclosanAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TriclosanAllergy: new Coding({
         code: "294417008",
         display: "Triclosan allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenolAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenolAllergy: new Coding({
         code: "294418003",
         display: "Phenol allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlcoholicDisinfectantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlcoholicDisinfectantAllergy: new Coding({
         code: "294419006",
         display: "Alcoholic disinfectant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlcoholProductsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlcoholProductsAllergy: new Coding({
         code: "294420000",
         display: "Alcohol products allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IndustrialMethylatedSpiritAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IndustrialMethylatedSpiritAllergy: new Coding({
         code: "294421001",
         display: "Industrial methylated spirit allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AldehydeDisinfectantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AldehydeDisinfectantAllergy: new Coding({
         code: "294422008",
         display: "Aldehyde disinfectant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GlutaraldehydeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GlutaraldehydeAllergy: new Coding({
         code: "294423003",
         display: "Glutaraldehyde allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NoxythiolinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NoxythiolinAllergy: new Coding({
         code: "294425005",
         display: "Noxythiolin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FormaldehydeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FormaldehydeAllergy: new Coding({
         code: "294426006",
         display: "Formaldehyde allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmidineDisinfectantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmidineDisinfectantAllergy: new Coding({
         code: "294427002",
         display: "Amidine disinfectant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PropamidineIsethionateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PropamidineIsethionateAllergy: new Coding({
         code: "294428007",
         display: "Propamidine isethionate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DibrompropamidineIsethionateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DibrompropamidineIsethionateAllergy: new Coding({
         code: "294429004",
         display: "Dibrompropamidine isethionate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BiguanideDisinfectantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BiguanideDisinfectantAllergy: new Coding({
         code: "294430009",
         display: "Biguanide disinfectant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChlorhexidineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChlorhexidineAllergy: new Coding({
         code: "294431008",
         display: "Chlorhexidine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChlorhexidineHydrochlorideAndNeomycinSulfateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChlorhexidineHydrochlorideAndNeomycinSulfateAllergy: new Coding({
         code: "294432001",
         display: "Chlorhexidine hydrochloride and neomycin sulfate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BorateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BorateAllergy: new Coding({
         code: "294433006",
         display: "Borate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BoricAcidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BoricAcidAllergy: new Coding({
         code: "294434000",
         display: "Boric acid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CationicSurfactantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CationicSurfactantAllergy: new Coding({
         code: "294435004",
         display: "Cationic surfactant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_QuaternaryAmmoniumSurfactantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_QuaternaryAmmoniumSurfactantAllergy: new Coding({
         code: "294436003",
         display: "Quaternary ammonium surfactant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CetrimideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CetrimideAllergy: new Coding({
         code: "294437007",
         display: "Cetrimide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BenzalkoniumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BenzalkoniumAllergy: new Coding({
         code: "294438002",
         display: "Benzalkonium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DomiphenAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DomiphenAllergy: new Coding({
         code: "294439005",
         display: "Domiphen allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_QuaternaryPyridiniumSurfactantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_QuaternaryPyridiniumSurfactantAllergy: new Coding({
         code: "294440007",
         display: "Quaternary pyridinium surfactant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CetylpyridiniumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CetylpyridiniumAllergy: new Coding({
         code: "294441006",
         display: "Cetylpyridinium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_QuaternaryQuinoliniumSurfactantAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_QuaternaryQuinoliniumSurfactantAllergy: new Coding({
         code: "294442004",
         display: "Quaternary quinolinium surfactant allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DequaliniumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DequaliniumAllergy: new Coding({
         code: "294443009",
         display: "Dequalinium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DisinfectantDyeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DisinfectantDyeAllergy: new Coding({
         code: "294444003",
         display: "Disinfectant dye allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcridineAzoDisinfectantDyeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcridineAzoDisinfectantDyeAllergy: new Coding({
         code: "294445002",
         display: "Acridine azo disinfectant dye allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TriphenylmethaneAzoDisinfectantDyeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TriphenylmethaneAzoDisinfectantDyeAllergy: new Coding({
         code: "294446001",
         display: "Triphenylmethane azo disinfectant dye allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CrystalVioletAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CrystalVioletAllergy: new Coding({
         code: "294447005",
         display: "Crystal violet allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BrilliantGreenAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BrilliantGreenAllergy: new Coding({
         code: "294448000",
         display: "Brilliant green allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HydrogenPeroxideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HydrogenPeroxideAllergy: new Coding({
         code: "294449008",
         display: "Hydrogen peroxide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AnthelminticsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AnthelminticsAllergy: new Coding({
         code: "294450008",
         display: "Anthelmintics allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PiperazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PiperazineAllergy: new Coding({
         code: "294451007",
         display: "Piperazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PyrantelAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PyrantelAllergy: new Coding({
         code: "294452000",
         display: "Pyrantel allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NiclosamideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NiclosamideAllergy: new Coding({
         code: "294453005",
         display: "Niclosamide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BepheniumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BepheniumAllergy: new Coding({
         code: "294455003",
         display: "Bephenium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiethylcarbamazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiethylcarbamazineAllergy: new Coding({
         code: "294456002",
         display: "Diethylcarbamazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BenzimidazoleAnthelminticAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BenzimidazoleAnthelminticAllergy: new Coding({
         code: "294457006",
         display: "Benzimidazole anthelmintic allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MebendazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MebendazoleAllergy: new Coding({
         code: "294458001",
         display: "Mebendazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlbendazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlbendazoleAllergy: new Coding({
         code: "294459009",
         display: "Albendazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TiabendazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TiabendazoleAllergy: new Coding({
         code: "294460004",
         display: "Tiabendazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntibacterialDrugAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntibacterialDrugAllergy: new Coding({
         code: "294461000",
         display: "Antibacterial drug allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AminoglycosidesAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AminoglycosidesAllergy: new Coding({
         code: "294462007",
         display: "Aminoglycosides allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmikacinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmikacinAllergy: new Coding({
         code: "294463002",
         display: "Amikacin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_KanamycinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_KanamycinAllergy: new Coding({
         code: "294464008",
         display: "Kanamycin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NetilmicinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NetilmicinAllergy: new Coding({
         code: "294465009",
         display: "Netilmicin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_StreptomycinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_StreptomycinAllergy: new Coding({
         code: "294466005",
         display: "Streptomycin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FramycetinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FramycetinAllergy: new Coding({
         code: "294467001",
         display: "Framycetin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NeomycinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NeomycinAllergy: new Coding({
         code: "294468006",
         display: "Neomycin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GentamicinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GentamicinAllergy: new Coding({
         code: "294469003",
         display: "Gentamicin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TobramycinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TobramycinAllergy: new Coding({
         code: "294470002",
         display: "Tobramycin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ClarithromycinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ClarithromycinAllergy: new Coding({
         code: "294471003",
         display: "Clarithromycin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AzithromycinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AzithromycinAllergy: new Coding({
         code: "294472005",
         display: "Azithromycin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumFusidateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumFusidateAllergy: new Coding({
         code: "294473000",
         display: "Sodium fusidate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SpectinomycinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SpectinomycinAllergy: new Coding({
         code: "294474006",
         display: "Spectinomycin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VancomycinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VancomycinAllergy: new Coding({
         code: "294475007",
         display: "Vancomycin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TeicoplaninAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TeicoplaninAllergy: new Coding({
         code: "294476008",
         display: "Teicoplanin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TrimethoprimAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TrimethoprimAllergy: new Coding({
         code: "294477004",
         display: "Trimethoprim allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NitrofurantoinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NitrofurantoinAllergy: new Coding({
         code: "294478009",
         display: "Nitrofurantoin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethenamineHippurateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethenamineHippurateAllergy: new Coding({
         code: "294479001",
         display: "Methenamine hippurate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MupirocinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MupirocinAllergy: new Coding({
         code: "294480003",
         display: "Mupirocin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NitrofurazoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NitrofurazoneAllergy: new Coding({
         code: "294481004",
         display: "Nitrofurazone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FusidicAcidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FusidicAcidAllergy: new Coding({
         code: "294482006",
         display: "Fusidic acid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL4QuinolonesAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL4QuinolonesAllergy: new Coding({
         code: "294483001",
         display: "4-quinolones allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcrosoxacinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcrosoxacinAllergy: new Coding({
         code: "294484007",
         display: "Acrosoxacin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CinoxacinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CinoxacinAllergy: new Coding({
         code: "294485008",
         display: "Cinoxacin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NalidixicAcidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NalidixicAcidAllergy: new Coding({
         code: "294486009",
         display: "Nalidixic acid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CiprofloxacinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CiprofloxacinAllergy: new Coding({
         code: "294487000",
         display: "Ciprofloxacin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EnoxacinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EnoxacinAllergy: new Coding({
         code: "294488005",
         display: "Enoxacin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OfloxacinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OfloxacinAllergy: new Coding({
         code: "294489002",
         display: "Ofloxacin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NorfloxacinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NorfloxacinAllergy: new Coding({
         code: "294490006",
         display: "Norfloxacin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TemafloxacinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TemafloxacinAllergy: new Coding({
         code: "294491005",
         display: "Temafloxacin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PenicillinaseSensitivePenicillinsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PenicillinaseSensitivePenicillinsAllergy: new Coding({
         code: "294492003",
         display: "Penicillinase-sensitive penicillins allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BenethaminePenicillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BenethaminePenicillinAllergy: new Coding({
         code: "294494002",
         display: "Benethamine penicillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BenzathinePenicillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BenzathinePenicillinAllergy: new Coding({
         code: "294495001",
         display: "Benzathine penicillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenethicillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenethicillinAllergy: new Coding({
         code: "294496000",
         display: "Phenethicillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenoxymethylpenicillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenoxymethylpenicillinAllergy: new Coding({
         code: "294497009",
         display: "Phenoxymethylpenicillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProcaineBenzylpenicillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProcaineBenzylpenicillinAllergy: new Coding({
         code: "294498004",
         display: "Procaine benzylpenicillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BenzylpenicillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BenzylpenicillinAllergy: new Coding({
         code: "294499007",
         display: "Benzylpenicillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PenicillinaseResistantPenicillinsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PenicillinaseResistantPenicillinsAllergy: new Coding({
         code: "294500003",
         display: "Penicillinase-resistant penicillins allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CloxacillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CloxacillinAllergy: new Coding({
         code: "294501004",
         display: "Cloxacillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FlucloxacillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FlucloxacillinAllergy: new Coding({
         code: "294502006",
         display: "Flucloxacillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethicillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethicillinAllergy: new Coding({
         code: "294503001",
         display: "Methicillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BroadSpectrumPenicillinsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BroadSpectrumPenicillinsAllergy: new Coding({
         code: "294504007",
         display: "Broad spectrum penicillins allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmoxicillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmoxicillinAllergy: new Coding({
         code: "294505008",
         display: "Amoxicillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmpicillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmpicillinAllergy: new Coding({
         code: "294506009",
         display: "Ampicillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CiclacillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CiclacillinAllergy: new Coding({
         code: "294507000",
         display: "Ciclacillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MezlocillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MezlocillinAllergy: new Coding({
         code: "294508005",
         display: "Mezlocillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PivampicillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PivampicillinAllergy: new Coding({
         code: "294509002",
         display: "Pivampicillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarbenicillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarbenicillinAllergy: new Coding({
         code: "294510007",
         display: "Carbenicillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BacampicillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BacampicillinAllergy: new Coding({
         code: "294511006",
         display: "Bacampicillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TalampicillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TalampicillinAllergy: new Coding({
         code: "294512004",
         display: "Talampicillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntipseudomonalPenicillinsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntipseudomonalPenicillinsAllergy: new Coding({
         code: "294513009",
         display: "Antipseudomonal penicillins allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TemocillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TemocillinAllergy: new Coding({
         code: "294514003",
         display: "Temocillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PiperacillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PiperacillinAllergy: new Coding({
         code: "294515002",
         display: "Piperacillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AzlocillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AzlocillinAllergy: new Coding({
         code: "294516001",
         display: "Azlocillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TicarcillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TicarcillinAllergy: new Coding({
         code: "294517005",
         display: "Ticarcillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarfecillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarfecillinAllergy: new Coding({
         code: "294518000",
         display: "Carfecillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MecillinamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MecillinamAllergy: new Coding({
         code: "294519008",
         display: "Mecillinam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PivmecillinamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PivmecillinamAllergy: new Coding({
         code: "294520002",
         display: "Pivmecillinam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CombinedPenicillinPreparationAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CombinedPenicillinPreparationAllergy: new Coding({
         code: "294521003",
         display: "Combined penicillin preparation allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmpicillinAndCloxacillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmpicillinAndCloxacillinAllergy: new Coding({
         code: "294522005",
         display: "Ampicillin and cloxacillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmoxicillinPlusClavulanatePotassiumAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmoxicillinPlusClavulanatePotassiumAllergy: new Coding({
         code: "294523000",
         display: "Amoxicillin + clavulanate potassium allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmpicillinPlusFloxacillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmpicillinPlusFloxacillinAllergy: new Coding({
         code: "294524006",
         display: "Ampicillin + floxacillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PiperacillinAndTazobactamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PiperacillinAndTazobactamAllergy: new Coding({
         code: "294525007",
         display: "Piperacillin and tazobactam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PivampicillinAndPivmecillinamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PivampicillinAndPivmecillinamAllergy: new Coding({
         code: "294526008",
         display: "Pivampicillin and pivmecillinam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TicarcillinAndClavulanicAcidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TicarcillinAndClavulanicAcidAllergy: new Coding({
         code: "294527004",
         display: "Ticarcillin and clavulanic acid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PolymyxinsAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PolymyxinsAllergy: new Coding({
         code: "294528009",
         display: "Polymyxins allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ColistinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ColistinAllergy: new Coding({
         code: "294529001",
         display: "Colistin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PolymyxinBAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PolymyxinBAllergy: new Coding({
         code: "294530006",
         display: "Polymyxin B allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarbapenemAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarbapenemAllergy: new Coding({
         code: "294531005",
         display: "Carbapenem allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CephalosporinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CephalosporinAllergy: new Coding({
         code: "294532003",
         display: "Cephalosporin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FirstGenerationCephalosporinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FirstGenerationCephalosporinAllergy: new Coding({
         code: "294533008",
         display: "First generation cephalosporin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CefadroxilAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CefadroxilAllergy: new Coding({
         code: "294534002",
         display: "Cefadroxil allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CefalexinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CefalexinAllergy: new Coding({
         code: "294535001",
         display: "Cefalexin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CephalothinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CephalothinAllergy: new Coding({
         code: "294536000",
         display: "Cephalothin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CefazolinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CefazolinAllergy: new Coding({
         code: "294537009",
         display: "Cefazolin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CefradineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CefradineAllergy: new Coding({
         code: "294538004",
         display: "Cefradine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LatamoxefAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LatamoxefAllergy: new Coding({
         code: "294539007",
         display: "Latamoxef allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SecondGenerationCephalosporinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SecondGenerationCephalosporinAllergy: new Coding({
         code: "294540009",
         display: "Second generation cephalosporin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CefaclorAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CefaclorAllergy: new Coding({
         code: "294541008",
         display: "Cefaclor allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CefuroximeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CefuroximeAllergy: new Coding({
         code: "294542001",
         display: "Cefuroxime allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CephamandoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CephamandoleAllergy: new Coding({
         code: "294543006",
         display: "Cephamandole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ThirdGenerationCephalosporinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ThirdGenerationCephalosporinAllergy: new Coding({
         code: "294544000",
         display: "Third generation cephalosporin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CefotaximeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CefotaximeAllergy: new Coding({
         code: "294545004",
         display: "Cefotaxime allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CeftazidimeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CeftazidimeAllergy: new Coding({
         code: "294546003",
         display: "Ceftazidime allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CeftizoximeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CeftizoximeAllergy: new Coding({
         code: "294547007",
         display: "Ceftizoxime allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CefiximeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CefiximeAllergy: new Coding({
         code: "294548002",
         display: "Cefixime allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CefodizimeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CefodizimeAllergy: new Coding({
         code: "294549005",
         display: "Cefodizime allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CefpodoximeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CefpodoximeAllergy: new Coding({
         code: "294550005",
         display: "Cefpodoxime allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CeftriaxoneAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CeftriaxoneAllergy: new Coding({
         code: "294551009",
         display: "Ceftriaxone allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CeftibutenAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CeftibutenAllergy: new Coding({
         code: "294552002",
         display: "Ceftibuten allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CefsulodinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CefsulodinAllergy: new Coding({
         code: "294554001",
         display: "Cefsulodin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FourthGenerationCephalosporinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FourthGenerationCephalosporinAllergy: new Coding({
         code: "294555000",
         display: "Fourth generation cephalosporin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CefpiromeAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CefpiromeAllergy: new Coding({
         code: "294556004",
         display: "Cefpirome allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CephamycinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CephamycinAllergy: new Coding({
         code: "294557008",
         display: "Cephamycin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CefoxitinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CefoxitinAllergy: new Coding({
         code: "294558003",
         display: "Cefoxitin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FosfomycinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FosfomycinAllergy: new Coding({
         code: "294559006",
         display: "Fosfomycin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LincomycinAndDerivativesAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LincomycinAndDerivativesAllergy: new Coding({
         code: "294560001",
         display: "Lincomycin and derivatives allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ClindamycinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ClindamycinAllergy: new Coding({
         code: "294561002",
         display: "Clindamycin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LincomycinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LincomycinAllergy: new Coding({
         code: "294562009",
         display: "Lincomycin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MandelicAcidAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MandelicAcidAllergy: new Coding({
         code: "294563004",
         display: "Mandelic acid allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MonobactamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MonobactamAllergy: new Coding({
         code: "294564005",
         display: "Monobactam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AztreonamAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AztreonamAllergy: new Coding({
         code: "294565006",
         display: "Aztreonam allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NitroimidazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NitroimidazoleAllergy: new Coding({
         code: "294566007",
         display: "Nitroimidazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MetronidazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MetronidazoleAllergy: new Coding({
         code: "294567003",
         display: "Metronidazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TinidazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TinidazoleAllergy: new Coding({
         code: "294568008",
         display: "Tinidazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NimorazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NimorazoleAllergy: new Coding({
         code: "294569000",
         display: "Nimorazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CalciumSulfaloxateAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CalciumSulfaloxateAllergy: new Coding({
         code: "294570004",
         display: "Calcium sulfaloxate allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhthalylsulfathiazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhthalylsulfathiazoleAllergy: new Coding({
         code: "294571000",
         display: "Phthalylsulfathiazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SulfametopyrazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SulfametopyrazineAllergy: new Coding({
         code: "294572007",
         display: "Sulfametopyrazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SulfadiazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SulfadiazineAllergy: new Coding({
         code: "294573002",
         display: "Sulfadiazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SulfadimethoxineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SulfadimethoxineAllergy: new Coding({
         code: "294574008",
         display: "Sulfadimethoxine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SulfadimidineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SulfadimidineAllergy: new Coding({
         code: "294575009",
         display: "Sulfadimidine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SulfafurazoleAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SulfafurazoleAllergy: new Coding({
         code: "294576005",
         display: "Sulfafurazole allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SulfaguanidineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SulfaguanidineAllergy: new Coding({
         code: "294577001",
         display: "Sulfaguanidine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SulfaureaAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SulfaureaAllergy: new Coding({
         code: "294578006",
         display: "Sulfaurea allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MafenideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MafenideAllergy: new Coding({
         code: "294579003",
         display: "Mafenide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SilverSulfadiazineAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SilverSulfadiazineAllergy: new Coding({
         code: "294580000",
         display: "Silver sulfadiazine allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CombinedSulfonamidesAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CombinedSulfonamidesAllergy: new Coding({
         code: "294581001",
         display: "Combined sulfonamides allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiagnosticAgents: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiagnosticAgents: new Coding({
         code: "2949005",
         display: "Diagnostic agents",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinLPersianGulf: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinLPersianGulf: new Coding({
         code: "2950005",
         display: "Hemoglobin L-Persian Gulf",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LactaseDeficiencyInDiseasesOtherThanOfTheSmallIntestine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LactaseDeficiencyInDiseasesOtherThanOfTheSmallIntestine: new Coding({
         code: "29512005",
         display: "Lactase deficiency in diseases other than of the small intestine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ZincCaprylate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ZincCaprylate: new Coding({
         code: "2958003",
         display: "Zinc caprylate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Coumachlor: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Coumachlor: new Coding({
         code: "296000",
         display: "Coumachlor",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BetaTocopherolPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BetaTocopherolPreparation: new Coding({
         code: "29620001",
         display: "beta-Tocopherol preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dimethoxyamphetamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dimethoxyamphetamine: new Coding({
         code: "2964005",
         display: "Dimethoxyamphetamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TrichophytonSchoenleiniiCollagenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TrichophytonSchoenleiniiCollagenase: new Coding({
         code: "2974008",
         display: "Trichophyton schoenleinii collagenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Amoxapine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Amoxapine: new Coding({
         code: "29840005",
         display: "Amoxapine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MAOIIsocarboxazid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MAOIIsocarboxazid: new Coding({
         code: "29877002",
         display: "MAOI - Isocarboxazid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HumanLeukocyteAntigenAw: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HumanLeukocyteAntigenAw: new Coding({
         code: "2988007",
         display: "Human leukocyte antigen Aw",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ClassIVAntiarrhythmic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ClassIVAntiarrhythmic: new Coding({
         code: "29883004",
         display: "Class IV antiarrhythmic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Betamethasone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Betamethasone: new Coding({
         code: "29896003",
         display: "Betamethasone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MecamylamineHydrochloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MecamylamineHydrochloride: new Coding({
         code: "2991007",
         display: "Mecamylamine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Arecoline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Arecoline: new Coding({
         code: "2995003",
         display: "Arecoline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VitaminsAAndDPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VitaminsAAndDPreparation: new Coding({
         code: "29987004",
         display: "Vitamins A and D preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CyanocobalaminProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CyanocobalaminProduct: new Coding({
         code: "30010009",
         display: "Cyanocobalamin product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SennaProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SennaProduct: new Coding({
         code: "30125007",
         display: "Senna product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Spiramycin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Spiramycin: new Coding({
         code: "302007",
         display: "Spiramycin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power133PowerBarium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power133PowerBarium: new Coding({
         code: "3027009",
         display: "^133^Barium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VitaminB1Preparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VitaminB1Preparation: new Coding({
         code: "30306003",
         display: "Vitamin B1 preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DihydroxyaluminumSodiumCarbonate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DihydroxyaluminumSodiumCarbonate: new Coding({
         code: "3031003",
         display: "Dihydroxyaluminum sodium carbonate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cisapride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cisapride: new Coding({
         code: "30317002",
         display: "Cisapride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FlumethasonePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FlumethasonePreparation: new Coding({
         code: "3037004",
         display: "Flumethasone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TechnetiumTcPower99mPowerDisofenin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TechnetiumTcPower99mPowerDisofenin: new Coding({
         code: "3040004",
         display: "Technetium Tc^99m^ disofenin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ErythromycinProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ErythromycinProduct: new Coding({
         code: "30427009",
         display: "Erythromycin product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Nitrochlorobenzene: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Nitrochlorobenzene: new Coding({
         code: "3045009",
         display: "Nitrochlorobenzene",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EnalaprilMaleate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EnalaprilMaleate: new Coding({
         code: "3046005",
         display: "Enalapril maleate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Chloramiphene: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Chloramiphene: new Coding({
         code: "30466001",
         display: "Chloramiphene",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Diuretic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Diuretic: new Coding({
         code: "30492008",
         display: "Diuretic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OrnithineKetoacidAminotransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OrnithineKetoacidAminotransferase: new Coding({
         code: "3052006",
         display: "Ornithine ketoacid aminotransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TriiodothyroaceticAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TriiodothyroaceticAcid: new Coding({
         code: "3066001",
         display: "Triiodothyroacetic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ToxoidHuman: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ToxoidHuman: new Coding({
         code: "30666008",
         display: "Toxoid (human)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AspartateAmmoniaLigase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AspartateAmmoniaLigase: new Coding({
         code: "3070009",
         display: "Aspartate-ammonia ligase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IronPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IronPreparation: new Coding({
         code: "30729008",
         display: "Iron preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MannitolProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MannitolProduct: new Coding({
         code: "30761007",
         display: "Mannitol product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OilOfMaleFern: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OilOfMaleFern: new Coding({
         code: "3087006",
         display: "Oil of male fern",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Methyprylone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Methyprylone: new Coding({
         code: "30964009",
         display: "Methyprylone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DienestrolPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DienestrolPreparation: new Coding({
         code: "30988006",
         display: "Dienestrol preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DibenzoxazepineDerivativeAntipsychoticAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DibenzoxazepineDerivativeAntipsychoticAgent: new Coding({
         code: "31025003",
         display: "Dibenzoxazepine derivative antipsychotic agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinShuangfeng: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinShuangfeng: new Coding({
         code: "3107005",
         display: "Hemoglobin Shuangfeng",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AspergillusDeoxyribonucleaseKGreaterThan1LessThan: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AspergillusDeoxyribonucleaseKGreaterThan1LessThan: new Coding({
         code: "3108000",
         display: "Aspergillus deoxyribonuclease K>1<",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ampicillin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ampicillin: new Coding({
         code: "31087008",
         display: "Ampicillin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_InjectableTestosteronePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_InjectableTestosteronePreparation: new Coding({
         code: "31181006",
         display: "Injectable testosterone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_H2O2HydrogenPeroxide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_H2O2HydrogenPeroxide: new Coding({
         code: "31231007",
         display: "H2O2 - Hydrogen peroxide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL5FUFluorouracil: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL5FUFluorouracil: new Coding({
         code: "3127006",
         display: "5FU - Fluorouracil",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_StreptococcusEquisimilisAntiserum: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_StreptococcusEquisimilisAntiserum: new Coding({
         code: "31305008",
         display: "Streptococcus equisimilis antiserum",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Quinidine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Quinidine: new Coding({
         code: "31306009",
         display: "Quinidine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenMiddel: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenMiddel: new Coding({
         code: "3131000",
         display: "Blood group antigen Middel",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NormalColostralWhey: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NormalColostralWhey: new Coding({
         code: "31352002",
         display: "Normal colostral whey",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CefoperazoneSodium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CefoperazoneSodium: new Coding({
         code: "3136005",
         display: "Cefoperazone sodium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Azacyclonol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Azacyclonol: new Coding({
         code: "3142009",
         display: "Azacyclonol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PenicillicAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PenicillicAcid: new Coding({
         code: "3145006",
         display: "Penicillic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SialateOAcetylesterase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SialateOAcetylesterase: new Coding({
         code: "3150000",
         display: "Sialate O-acetylesterase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LeftUpperLobeMucus: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LeftUpperLobeMucus: new Coding({
         code: "3151001",
         display: "Left upper lobe mucus",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL3PhosphoglyceroylPhosphatePolyphosphatePhosphotransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL3PhosphoglyceroylPhosphatePolyphosphatePhosphotransferase: new Coding({
         code: "3155005",
         display: "3-Phosphoglyceroyl-phosphate-polyphosphate phosphotransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlmondOilLiquid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlmondOilLiquid: new Coding({
         code: "31587003",
         display: "Almond oil liquid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL3Methylhistidine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL3Methylhistidine: new Coding({
         code: "3161008",
         display: "3-Methylhistidine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HardCoal: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HardCoal: new Coding({
         code: "3167007",
         display: "Hard coal",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Buprenorphine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Buprenorphine: new Coding({
         code: "31684002",
         display: "Buprenorphine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Bethanechol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Bethanechol: new Coding({
         code: "31690003",
         display: "Bethanechol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Pentamidine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Pentamidine: new Coding({
         code: "31692006",
         display: "Pentamidine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FrozenPlasmaProductHuman: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FrozenPlasmaProductHuman: new Coding({
         code: "31716004",
         display: "Frozen plasma product, human",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Fluconazole: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Fluconazole: new Coding({
         code: "31865003",
         display: "Fluconazole",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenNielsen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenNielsen: new Coding({
         code: "3187008",
         display: "Blood group antigen Nielsen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Pramocaine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Pramocaine: new Coding({
         code: "31872002",
         display: "Pramocaine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Alpha14GlucanProteinSynthaseUridineDiphosphateForming: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Alpha14GlucanProteinSynthaseUridineDiphosphateForming: new Coding({
         code: "3193000",
         display: "alpha-1,4-Glucan-protein synthase (uridine diphosphate-forming)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NitrateVasodilator: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NitrateVasodilator: new Coding({
         code: "31970009",
         display: "Nitrate vasodilator",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_InosineMonophosphate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_InosineMonophosphate: new Coding({
         code: "3197004",
         display: "Inosine monophosphate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PancuroniumSodium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PancuroniumSodium: new Coding({
         code: "3209002",
         display: "Pancuronium sodium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ManganeseSulfate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ManganeseSulfate: new Coding({
         code: "3212004",
         display: "Manganese sulfate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OctylphenoxyPHEthanol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OctylphenoxyPHEthanol: new Coding({
         code: "322006",
         display: "Octylphenoxy P.H. ethanol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RingerSolution: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RingerSolution: new Coding({
         code: "3221003",
         display: "Ringer solution",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntiviralDrugs: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntiviralDrugs: new Coding({
         code: "32249005",
         display: "Antiviral drugs",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FibrinogenSeattleI: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FibrinogenSeattleI: new Coding({
         code: "3225007",
         display: "Fibrinogen Seattle I",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Enflurane: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Enflurane: new Coding({
         code: "32313007",
         display: "Enflurane",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OBenzylParachlorophenol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OBenzylParachlorophenol: new Coding({
         code: "3232003",
         display: "o-Benzyl-parachlorophenol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BeclometasoneDipropionateNasalPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BeclometasoneDipropionateNasalPreparation: new Coding({
         code: "32460003",
         display: "Beclometasone dipropionate nasal preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MelanocyteStimulatingHormoneReleasingFactorPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MelanocyteStimulatingHormoneReleasingFactorPreparation: new Coding({
         code: "32462006",
         display: "Melanocyte stimulating hormone releasing factor preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SpiderAntivenin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SpiderAntivenin: new Coding({
         code: "32473004",
         display: "Spider antivenin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Probucol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Probucol: new Coding({
         code: "32474005",
         display: "Probucol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntiseborrheicDrug: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntiseborrheicDrug: new Coding({
         code: "32583002",
         display: "Antiseborrheic drug",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ergotamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ergotamine: new Coding({
         code: "32647002",
         display: "Ergotamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ErgosterolPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ErgosterolPreparation: new Coding({
         code: "32653002",
         display: "Ergosterol preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power76PowerArsenic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power76PowerArsenic: new Coding({
         code: "327000",
         display: "^76^Arsenic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinSouthampton: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinSouthampton: new Coding({
         code: "3271000",
         display: "Hemoglobin Southampton",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TyrosineEsterSulfotransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TyrosineEsterSulfotransferase: new Coding({
         code: "3273002",
         display: "Tyrosine-ester sulfotransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Trimethoprim: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Trimethoprim: new Coding({
         code: "32792001",
         display: "Trimethoprim",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Maprotiline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Maprotiline: new Coding({
         code: "32823007",
         display: "Maprotiline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NaClSodiumChlorideSolution: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NaClSodiumChlorideSolution: new Coding({
         code: "32841004",
         display: "NaCl - Sodium chloride solution",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power127PowerAntimony: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power127PowerAntimony: new Coding({
         code: "329002",
         display: "^127^Antimony",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Domperidone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Domperidone: new Coding({
         code: "32955006",
         display: "Domperidone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Thiosalicylate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Thiosalicylate: new Coding({
         code: "32960005",
         display: "Thiosalicylate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Euphorbain: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Euphorbain: new Coding({
         code: "3300001",
         display: "Euphorbain",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Butamidum: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Butamidum: new Coding({
         code: "33124007",
         display: "Butamidum",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OphthalmicAntiInflammatoryPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OphthalmicAntiInflammatoryPreparation: new Coding({
         code: "33133009",
         display: "Ophthalmic anti-inflammatory preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VaginalSecretions: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VaginalSecretions: new Coding({
         code: "3318003",
         display: "Vaginal secretions",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TricyclicAntidepressant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TricyclicAntidepressant: new Coding({
         code: "33219003",
         display: "Tricyclic antidepressant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Pentobarbital: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Pentobarbital: new Coding({
         code: "33231001",
         display: "Pentobarbital",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VarVac: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VarVac: new Coding({
         code: "33234009",
         display: "Var/Vac",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CortisoneAcetatePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CortisoneAcetatePreparation: new Coding({
         code: "33236006",
         display: "Cortisone acetate preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Lipopolysaccharide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Lipopolysaccharide: new Coding({
         code: "3325005",
         display: "Lipopolysaccharide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BetaAdrenoceptorBlockingDrug: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BetaAdrenoceptorBlockingDrug: new Coding({
         code: "33252009",
         display: "beta-adrenoceptor blocking drug",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cefotaxime: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cefotaxime: new Coding({
         code: "3334000",
         display: "Cefotaxime",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Desipramine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Desipramine: new Coding({
         code: "33378002",
         display: "Desipramine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_R20HydroxysteroidDehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_R20HydroxysteroidDehydrogenase: new Coding({
         code: "3339005",
         display: "(R)-20-Hydroxysteroid dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Diastase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Diastase: new Coding({
         code: "3340007",
         display: "Diastase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CopperIsotope: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CopperIsotope: new Coding({
         code: "3342004",
         display: "Copper isotope",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinBrest: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinBrest: new Coding({
         code: "3346001",
         display: "Hemoglobin Brest",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProprietaryDrug: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProprietaryDrug: new Coding({
         code: "33484000",
         display: "Proprietary drug",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Thioridazine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Thioridazine: new Coding({
         code: "33588000",
         display: "Thioridazine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CardiacGlycoside: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CardiacGlycoside: new Coding({
         code: "33589008",
         display: "Cardiac glycoside",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FibrinogenTokyoII: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FibrinogenTokyoII: new Coding({
         code: "336001",
         display: "Fibrinogen Tokyo II",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntiHeparinAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntiHeparinAgent: new Coding({
         code: "3361000",
         display: "Anti-heparin agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Acetazolamide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Acetazolamide: new Coding({
         code: "33664007",
         display: "Acetazolamide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Carbachol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Carbachol: new Coding({
         code: "33675006",
         display: "Carbachol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Mydriatic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Mydriatic: new Coding({
         code: "33682005",
         display: "Mydriatic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ImipramineHydrochloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ImipramineHydrochloride: new Coding({
         code: "3378009",
         display: "Imipramine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Merthiolate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Merthiolate: new Coding({
         code: "3379001",
         display: "Merthiolate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_StreptococcusSuisAntiserum: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_StreptococcusSuisAntiserum: new Coding({
         code: "33815001",
         display: "Streptococcus suis antiserum",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AldehydeDehydrogenaseAcceptor: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AldehydeDehydrogenaseAcceptor: new Coding({
         code: "3392003",
         display: "Aldehyde dehydrogenase (acceptor)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EnzymeVariant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EnzymeVariant: new Coding({
         code: "340005",
         display: "Enzyme variant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SulfonylureaProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SulfonylureaProduct: new Coding({
         code: "34012005",
         display: "Sulfonylurea product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL2Hydroxy3OxoadipateSynthase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL2Hydroxy3OxoadipateSynthase: new Coding({
         code: "3405005",
         display: "2-Hydroxy-3-oxoadipate synthase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BisDimethylthiocarbamylDisulfide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BisDimethylthiocarbamylDisulfide: new Coding({
         code: "3411008",
         display: "bis-(Dimethylthiocarbamyl) disulfide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Oxyquinoline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Oxyquinoline: new Coding({
         code: "34217006",
         display: "Oxyquinoline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MefenamicAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MefenamicAcid: new Coding({
         code: "34364009",
         display: "Mefenamic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HydroxymethylglutarylCoenzymeAHydrolase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HydroxymethylglutarylCoenzymeAHydrolase: new Coding({
         code: "3437006",
         display: "Hydroxymethylglutaryl-coenzyme A hydrolase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Tolazamide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Tolazamide: new Coding({
         code: "34393009",
         display: "Tolazamide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BiotinCarboxylase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BiotinCarboxylase: new Coding({
         code: "3440006",
         display: "Biotin carboxylase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Natamycin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Natamycin: new Coding({
         code: "34462007",
         display: "Natamycin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiscontinuedPesticide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiscontinuedPesticide: new Coding({
         code: "3455002",
         display: "Discontinued pesticide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ImmunobiologicAgentAvailableFromTheCentersForDiseaseControlAndPrevention: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ImmunobiologicAgentAvailableFromTheCentersForDiseaseControlAndPrevention: new Coding({
         code: "34598001",
         display: "Immunobiologic agent available from the Centers for Disease Control and Prevention",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ThyroglobulinPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ThyroglobulinPreparation: new Coding({
         code: "34599009",
         display: "Thyroglobulin preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LAminoAcidDehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LAminoAcidDehydrogenase: new Coding({
         code: "3463001",
         display: "L-Amino-acid dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DeoxyribonucleicAcidTopoisomeraseAdenosineTriphosphateATPHydrolysing: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DeoxyribonucleicAcidTopoisomeraseAdenosineTriphosphateATPHydrolysing: new Coding({
         code: "3465008",
         display: "Deoxyribonucleic acid topoisomerase (adenosine triphosphate [ATP]-hydrolysing)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dimethylamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dimethylamine: new Coding({
         code: "3466009",
         display: "Dimethylamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HepatitisBVaccine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HepatitisBVaccine: new Coding({
         code: "34689006",
         display: "Hepatitis B vaccine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Zalcitabine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Zalcitabine: new Coding({
         code: "34693000",
         display: "Zalcitabine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumAscorbatePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumAscorbatePreparation: new Coding({
         code: "34696008",
         display: "Sodium ascorbate preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Carbenicillin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Carbenicillin: new Coding({
         code: "34731007",
         display: "Carbenicillin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CodLiverOil: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CodLiverOil: new Coding({
         code: "34816007",
         display: "Cod liver oil",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HydrocortisoneOphthalmicPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HydrocortisoneOphthalmicPreparation: new Coding({
         code: "34833000",
         display: "Hydrocortisone ophthalmic preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GalactinolSucroseGalactosyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GalactinolSucroseGalactosyltransferase: new Coding({
         code: "3492002",
         display: "Galactinol-sucrose galactosyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Benzethonium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Benzethonium: new Coding({
         code: "34929006",
         display: "Benzethonium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SmegmaClitoridis: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SmegmaClitoridis: new Coding({
         code: "3493007",
         display: "Smegma clitoridis",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CystineAminopeptidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CystineAminopeptidase: new Coding({
         code: "3495000",
         display: "Cystine aminopeptidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IsoxsuprineHydrochloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IsoxsuprineHydrochloride: new Coding({
         code: "3501003",
         display: "Isoxsuprine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Orphenadrine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Orphenadrine: new Coding({
         code: "35035001",
         display: "Orphenadrine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ribavirin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ribavirin: new Coding({
         code: "35063004",
         display: "Ribavirin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FleaAntigen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FleaAntigen: new Coding({
         code: "35097006",
         display: "Flea antigen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinQIndia: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinQIndia: new Coding({
         code: "3523004",
         display: "Hemoglobin Q-India",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RabiesVaccineHuman: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RabiesVaccineHuman: new Coding({
         code: "3526007",
         display: "Rabies vaccine, human",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Gemfibrozil: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Gemfibrozil: new Coding({
         code: "35282000",
         display: "Gemfibrozil",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Daunorubicin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Daunorubicin: new Coding({
         code: "35300007",
         display: "Daunorubicin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LaryngealMucus: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LaryngealMucus: new Coding({
         code: "3532002",
         display: "Laryngeal mucus",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ParaldehydeProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ParaldehydeProduct: new Coding({
         code: "35324004",
         display: "Paraldehyde product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CalciumRemovingResin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CalciumRemovingResin: new Coding({
         code: "35392005",
         display: "Calcium-removing resin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SilverNitrateProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SilverNitrateProduct: new Coding({
         code: "35476001",
         display: "Silver nitrate product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HydrocortamatePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HydrocortamatePreparation: new Coding({
         code: "35531004",
         display: "Hydrocortamate preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenMorrison: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenMorrison: new Coding({
         code: "3555004",
         display: "Blood group antigen Morrison",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CholeraVaccines: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CholeraVaccines: new Coding({
         code: "35736007",
         display: "Cholera vaccines",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Oxybutynin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Oxybutynin: new Coding({
         code: "35768004",
         display: "Oxybutynin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power129PowerCesium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power129PowerCesium: new Coding({
         code: "3579002",
         display: "^129^Cesium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PeritonealDialysisSolution: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PeritonealDialysisSolution: new Coding({
         code: "35792007",
         display: "Peritoneal dialysis solution",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Glucose6Phosphatase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Glucose6Phosphatase: new Coding({
         code: "3581000",
         display: "Glucose-6-phosphatase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MalateDehydrogenaseDecarboxylating: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MalateDehydrogenaseDecarboxylating: new Coding({
         code: "3587001",
         display: "Malate dehydrogenase (decarboxylating)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ComplementEnzyme: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ComplementEnzyme: new Coding({
         code: "3588006",
         display: "Complement enzyme",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ShortActingThyroidStimulator: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ShortActingThyroidStimulator: new Coding({
         code: "3592004",
         display: "Short-acting thyroid stimulator",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OticAntiInfectivePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OticAntiInfectivePreparation: new Coding({
         code: "3593009",
         display: "Otic anti-infective preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Medazepam: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Medazepam: new Coding({
         code: "35967000",
         display: "Medazepam",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcebutololHydrochloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcebutololHydrochloride: new Coding({
         code: "3597005",
         display: "Acebutolol hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CellularBloodProductHuman: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CellularBloodProductHuman: new Coding({
         code: "35983000",
         display: "Cellular blood product, human",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EtherSolvent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EtherSolvent: new Coding({
         code: "3601005",
         display: "Ether solvent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_WarmAntibody: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_WarmAntibody: new Coding({
         code: "3602003",
         display: "Warm antibody",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Pyrantel: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Pyrantel: new Coding({
         code: "36068003",
         display: "Pyrantel",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EpoxideHydrolase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EpoxideHydrolase: new Coding({
         code: "3610002",
         display: "Epoxide hydrolase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Imipramine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Imipramine: new Coding({
         code: "36113004",
         display: "Imipramine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntiInfectiveNasalPreparations: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntiInfectiveNasalPreparations: new Coding({
         code: "36168000",
         display: "Anti-infective nasal preparations",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power79PowerSelenium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power79PowerSelenium: new Coding({
         code: "3617004",
         display: "^79^Selenium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Thiethylperazine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Thiethylperazine: new Coding({
         code: "36218003",
         display: "Thiethylperazine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Antidepressant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Antidepressant: new Coding({
         code: "36236003",
         display: "Antidepressant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FibrinogenSanJuan: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FibrinogenSanJuan: new Coding({
         code: "363000",
         display: "Fibrinogen San Juan",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Primaquine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Primaquine: new Coding({
         code: "36391008",
         display: "Primaquine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GlucocorticoidReceptor: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GlucocorticoidReceptor: new Coding({
         code: "3648007",
         display: "Glucocorticoid receptor",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ambenonium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ambenonium: new Coding({
         code: "36537006",
         display: "Ambenonium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HbHemoglobinConstantSpring: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HbHemoglobinConstantSpring: new Coding({
         code: "3655009",
         display: "Hb - Hemoglobin Constant Spring",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Tiabendazole: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Tiabendazole: new Coding({
         code: "36594001",
         display: "Tiabendazole",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Medroxyprogesterone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Medroxyprogesterone: new Coding({
         code: "36621009",
         display: "Medroxyprogesterone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Propantheline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Propantheline: new Coding({
         code: "36642006",
         display: "Propantheline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FibrinogenCaracas: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FibrinogenCaracas: new Coding({
         code: "3672002",
         display: "Fibrinogen Caracas",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ImmuneGlobulinIM: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ImmuneGlobulinIM: new Coding({
         code: "36763003",
         display: "Immune globulin IM",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PiperazineEstroneSulfate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PiperazineEstroneSulfate: new Coding({
         code: "36795002",
         display: "Piperazine estrone sulfate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenylaceticAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenylaceticAcid: new Coding({
         code: "3684000",
         display: "Phenylacetic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinMizushi: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinMizushi: new Coding({
         code: "3689005",
         display: "Hemoglobin Mizushi",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ceftazidime: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ceftazidime: new Coding({
         code: "36893000",
         display: "Ceftazidime",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Phenindamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Phenindamine: new Coding({
         code: "36909007",
         display: "Phenindamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumSulfite: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumSulfite: new Coding({
         code: "3692009",
         display: "Sodium sulfite",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FibrinogenDusart: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FibrinogenDusart: new Coding({
         code: "3693004",
         display: "Fibrinogen Dusart",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ThioxantheneDerivativeAntipsychoticAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ThioxantheneDerivativeAntipsychoticAgent: new Coding({
         code: "36940000",
         display: "Thioxanthene derivative antipsychotic agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VitaminB6Preparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VitaminB6Preparation: new Coding({
         code: "36944009",
         display: "Vitamin B6 preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BetaGreaterThan2SLessThanGlycoprotein: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BetaGreaterThan2SLessThanGlycoprotein: new Coding({
         code: "370000",
         display: "beta>2S< Glycoprotein",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CytidineDiphosphateCDPGlycerolGlycerophosphotransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CytidineDiphosphateCDPGlycerolGlycerophosphotransferase: new Coding({
         code: "3702007",
         display: "Cytidine diphosphate (CDP) glycerol glycerophosphotransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL4Quinolones: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL4Quinolones: new Coding({
         code: "37084008",
         display: "4-quinolones",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProstaglandinEndoperoxideSynthase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProstaglandinEndoperoxideSynthase: new Coding({
         code: "3710008",
         display: "Prostaglandin-endoperoxide synthase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcylcarnitineHydrolase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcylcarnitineHydrolase: new Coding({
         code: "371001",
         display: "Acylcarnitine hydrolase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TyphusVaccine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TyphusVaccine: new Coding({
         code: "37146000",
         display: "Typhus vaccine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CowQuoteSMilk: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CowQuoteSMilk: new Coding({
         code: "3718001",
         display: "Cow's milk",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ValineTransferRibonucleicAcidLigase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ValineTransferRibonucleicAcidLigase: new Coding({
         code: "3726009",
         display: "Valine-transfer ribonucleic acid ligase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinFPortRoyal: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinFPortRoyal: new Coding({
         code: "3727000",
         display: "Hemoglobin F-Port Royal",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenLanthois: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenLanthois: new Coding({
         code: "3730007",
         display: "Blood group antigen Lanthois",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Vidarabine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Vidarabine: new Coding({
         code: "37306000",
         display: "Vidarabine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NitrateReductaseReducedNicotinamideAdenineDinucleotide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NitrateReductaseReducedNicotinamideAdenineDinucleotide: new Coding({
         code: "3737005",
         display: "Nitrate reductase (reduced nicotinamide adenine dinucleotide)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MagnesiumSulfate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MagnesiumSulfate: new Coding({
         code: "37400007",
         display: "Magnesium sulfate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ExtracellularCrystal: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ExtracellularCrystal: new Coding({
         code: "3742002",
         display: "Extracellular crystal",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Gossypol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Gossypol: new Coding({
         code: "3757009",
         display: "Gossypol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cefalotin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cefalotin: new Coding({
         code: "37628007",
         display: "Cefalotin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AutogenousBacterin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AutogenousBacterin: new Coding({
         code: "37643009",
         display: "Autogenous bacterin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Sparteine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Sparteine: new Coding({
         code: "377002",
         display: "Sparteine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Neuromelanin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Neuromelanin: new Coding({
         code: "3771001",
         display: "Neuromelanin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CholineDehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CholineDehydrogenase: new Coding({
         code: "3775005",
         display: "Choline dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_XanthineDehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_XanthineDehydrogenase: new Coding({
         code: "3776006",
         display: "Xanthine dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiphenylbutylpiperidineDerivativeAntipsychoticAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiphenylbutylpiperidineDerivativeAntipsychoticAgent: new Coding({
         code: "37773009",
         display: "Diphenylbutylpiperidine derivative antipsychotic agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DTCTubocurarine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DTCTubocurarine: new Coding({
         code: "37803001",
         display: "d-TC - Tubocurarine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AAArachidonicAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AAArachidonicAcid: new Coding({
         code: "3792001",
         display: "AA - Arachidonic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SolubleBariumCompound: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SolubleBariumCompound: new Coding({
         code: "3793006",
         display: "Soluble barium compound",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcetateKinase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcetateKinase: new Coding({
         code: "3800009",
         display: "Acetate kinase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OntogenicLateOnsetLactaseDeficiency: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OntogenicLateOnsetLactaseDeficiency: new Coding({
         code: "38032004",
         display: "Ontogenic late onset lactase deficiency",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RH4ISBTSymbol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RH4ISBTSymbol: new Coding({
         code: "3807007",
         display: "RH4 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumThyroxine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumThyroxine: new Coding({
         code: "38076006",
         display: "Sodium thyroxine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MagnesiumProtoporphyrinMethyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MagnesiumProtoporphyrinMethyltransferase: new Coding({
         code: "3811001",
         display: "Magnesium-protoporphyrin methyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BerylliumIsotope: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BerylliumIsotope: new Coding({
         code: "3812008",
         display: "Beryllium isotope",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SyntheticDrug: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SyntheticDrug: new Coding({
         code: "38131009",
         display: "Synthetic drug",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PropylthiouracilProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PropylthiouracilProduct: new Coding({
         code: "3814009",
         display: "Propylthiouracil product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VanadiumIsotope: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VanadiumIsotope: new Coding({
         code: "3816006",
         display: "Vanadium isotope",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Tolnaftate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Tolnaftate: new Coding({
         code: "38166006",
         display: "Tolnaftate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntineoplasticAntibiotic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntineoplasticAntibiotic: new Coding({
         code: "38181000",
         display: "Antineoplastic antibiotic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Suxamethonium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Suxamethonium: new Coding({
         code: "3822002",
         display: "Suxamethonium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProchlorperazineEdisylate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProchlorperazineEdisylate: new Coding({
         code: "3823007",
         display: "Prochlorperazine edisylate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PolysaccharideIronComplex: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PolysaccharideIronComplex: new Coding({
         code: "38231004",
         display: "Polysaccharide iron complex",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PropionicAcidIbuprofen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PropionicAcidIbuprofen: new Coding({
         code: "38268001",
         display: "Propionic acid-ibuprofen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FeIron: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FeIron: new Coding({
         code: "3829006",
         display: "Fe - Iron",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Isotretinoin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Isotretinoin: new Coding({
         code: "38314008",
         display: "Isotretinoin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CMPNAcetylneuraminateAlphaNAcetylNeuraminyl23BetaGalactosyl13NAcetylGalactosaminideAlpha26Sialyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CMPNAcetylneuraminateAlphaNAcetylNeuraminyl23BetaGalactosyl13NAcetylGalactosaminideAlpha26Sialyltransferase: new Coding({
         code: "3834005",
         display: "CMP-N-acetylneuraminate-(alpha-N-acetyl-neuraminyl-2,3-beta-galactosyl-1,3)-N-acetyl-galactosaminide alpha-2,6-sialyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Glutaminase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Glutaminase: new Coding({
         code: "3836007",
         display: "Glutaminase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OticDosageFormProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OticDosageFormProduct: new Coding({
         code: "38413003",
         display: "Otic dosage form product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProtoaphinAgluconeDehydrataseCyclizing: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProtoaphinAgluconeDehydrataseCyclizing: new Coding({
         code: "3844007",
         display: "Protoaphin-aglucone dehydratase (cyclizing)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Nitrotoluene: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Nitrotoluene: new Coding({
         code: "3848005",
         display: "Nitrotoluene",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarbonBlack: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarbonBlack: new Coding({
         code: "3849002",
         display: "Carbon black",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BisChloroMethylEther: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BisChloroMethylEther: new Coding({
         code: "3854006",
         display: "bis-Chloro methyl ether",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MegestrolPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MegestrolPreparation: new Coding({
         code: "38578004",
         display: "Megestrol preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HydrocodoneBitartrate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HydrocodoneBitartrate: new Coding({
         code: "3874004",
         display: "Hydrocodone bitartrate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumThiosulfate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumThiosulfate: new Coding({
         code: "38828006",
         display: "Sodium thiosulfate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProliferantAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProliferantAgent: new Coding({
         code: "38900001",
         display: "Proliferant agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Thymidine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Thymidine: new Coding({
         code: "3892007",
         display: "Thymidine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PHydroxybenzoateEster: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PHydroxybenzoateEster: new Coding({
         code: "3896005",
         display: "p-Hydroxybenzoate ester",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MNS30ISBTSymbol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MNS30ISBTSymbol: new Coding({
         code: "3897001",
         display: "MNS30 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RectifiedBirchTarOil: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RectifiedBirchTarOil: new Coding({
         code: "3906002",
         display: "Rectified birch tar oil",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Acetohexamide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Acetohexamide: new Coding({
         code: "39064002",
         display: "Acetohexamide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Methohexital: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Methohexital: new Coding({
         code: "39124003",
         display: "Methohexital",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Famotidine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Famotidine: new Coding({
         code: "39128000",
         display: "Famotidine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Phendimetrazine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Phendimetrazine: new Coding({
         code: "39142008",
         display: "Phendimetrazine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinAtago: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinAtago: new Coding({
         code: "3920009",
         display: "Hemoglobin Atago",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power151PowerGadolinium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power151PowerGadolinium: new Coding({
         code: "392001",
         display: "^151^Gadolinium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_WaterBalanceAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_WaterBalanceAgent: new Coding({
         code: "39252001",
         display: "Water balance agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ManufacturedGas: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ManufacturedGas: new Coding({
         code: "3930000",
         display: "Manufactured gas",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power64PowerCopper: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power64PowerCopper: new Coding({
         code: "3932008",
         display: "^64^Copper",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PenicillinV: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PenicillinV: new Coding({
         code: "39359008",
         display: "Penicillin V",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MetronidazoleHydrochloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MetronidazoleHydrochloride: new Coding({
         code: "3941003",
         display: "Metronidazole hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Deodorant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Deodorant: new Coding({
         code: "39432004",
         display: "Deodorant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TinIsotope: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TinIsotope: new Coding({
         code: "3945007",
         display: "Tin isotope",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RegularInsulinProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RegularInsulinProduct: new Coding({
         code: "39487003",
         display: "Regular insulin product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ImmunoglobulinPentamer: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ImmunoglobulinPentamer: new Coding({
         code: "395004",
         display: "Immunoglobulin pentamer",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DisulfiramProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DisulfiramProduct: new Coding({
         code: "39516004",
         display: "Disulfiram product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power245PowerCalifornium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power245PowerCalifornium: new Coding({
         code: "3958008",
         display: "^245^Californium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MarijuanaDerivative: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MarijuanaDerivative: new Coding({
         code: "39598004",
         display: "Marijuana derivative",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Pentazocine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Pentazocine: new Coding({
         code: "39608003",
         display: "Pentazocine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenRitherford: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenRitherford: new Coding({
         code: "3961009",
         display: "Blood group antigen Ritherford",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AminobenzoicAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AminobenzoicAcid: new Coding({
         code: "39707000",
         display: "Aminobenzoic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DrugGroupsPrimarilyAffectingTheGastroIntestinalSystem: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DrugGroupsPrimarilyAffectingTheGastroIntestinalSystem: new Coding({
         code: "39741008",
         display: "Drug groups primarily affecting the gastro-intestinal system",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenHEMPAS: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenHEMPAS: new Coding({
         code: "3976001",
         display: "Blood group antigen HEMPAS",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OxaloacetateDecarboxylase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OxaloacetateDecarboxylase: new Coding({
         code: "3982003",
         display: "Oxaloacetate decarboxylase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NNDimethyltryptamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NNDimethyltryptamine: new Coding({
         code: "3983008",
         display: "N,-N-dimethyltryptamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FructoseProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FructoseProduct: new Coding({
         code: "39860005",
         display: "Fructose product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlkalinePhosphataseBoneIsoenzyme: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlkalinePhosphataseBoneIsoenzyme: new Coding({
         code: "3990003",
         display: "Alkaline phosphatase bone isoenzyme",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Phenyltoloxamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Phenyltoloxamine: new Coding({
         code: "39939003",
         display: "Phenyltoloxamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinTampa: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinTampa: new Coding({
         code: "3994007",
         display: "Hemoglobin Tampa",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Sulfisomidine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Sulfisomidine: new Coding({
         code: "4014000",
         display: "Sulfisomidine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BulkFormingLaxatives: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BulkFormingLaxatives: new Coding({
         code: "40162007",
         display: "Bulk-forming laxatives",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ketoconazole: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ketoconazole: new Coding({
         code: "40232005",
         display: "Ketoconazole",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SoftMetal: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SoftMetal: new Coding({
         code: "4024008",
         display: "Soft metal",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Captodiame: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Captodiame: new Coding({
         code: "4025009",
         display: "Captodiame",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CalciumLactate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CalciumLactate: new Coding({
         code: "40339003",
         display: "Calcium lactate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Etomidate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Etomidate: new Coding({
         code: "40429005",
         display: "Etomidate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Bromelains: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Bromelains: new Coding({
         code: "40430000",
         display: "Bromelains",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EtidocaineHydrochloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EtidocaineHydrochloride: new Coding({
         code: "4043008",
         display: "Etidocaine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cis12Dihydrobenzene12DiolDehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cis12Dihydrobenzene12DiolDehydrogenase: new Coding({
         code: "4047009",
         display: "cis-1,2-Dihydrobenzene-1,2-diol dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL1122Tetrachloro12Difluoroethane: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL1122Tetrachloro12Difluoroethane: new Coding({
         code: "4048004",
         display: "1,1,2,2-Tetrachloro-1,2- difluoroethane",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenytoinProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenytoinProduct: new Coding({
         code: "40556005",
         display: "Phenytoin product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethylergonovinePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethylergonovinePreparation: new Coding({
         code: "40562000",
         display: "Methylergonovine preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Amitriptyline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Amitriptyline: new Coding({
         code: "40589005",
         display: "Amitriptyline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OrphanDrug: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OrphanDrug: new Coding({
         code: "40606008",
         display: "Orphan drug",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FentanylProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FentanylProduct: new Coding({
         code: "40648001",
         display: "Fentanyl product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CromolynSodium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CromolynSodium: new Coding({
         code: "40652001",
         display: "Cromolyn sodium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChorismateMutase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChorismateMutase: new Coding({
         code: "4067000",
         display: "Chorismate mutase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PTHParathyroidHormone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PTHParathyroidHormone: new Coding({
         code: "4076007",
         display: "PTH - Parathyroid hormone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DihydrolipoamideSuccinyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DihydrolipoamideSuccinyltransferase: new Coding({
         code: "4077003",
         display: "Dihydrolipoamide succinyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinGradyDakar: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinGradyDakar: new Coding({
         code: "4080002",
         display: "Hemoglobin Grady, Dakar",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarbamazepineProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarbamazepineProduct: new Coding({
         code: "40820003",
         display: "Carbamazepine product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Streptomycin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Streptomycin: new Coding({
         code: "40877002",
         display: "Streptomycin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DesferrioxamineMesylate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DesferrioxamineMesylate: new Coding({
         code: "40901001",
         display: "Desferrioxamine mesylate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Beractant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Beractant: new Coding({
         code: "40905005",
         display: "Beractant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Enteropeptidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Enteropeptidase: new Coding({
         code: "4091009",
         display: "Enteropeptidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NoKnownHistoryOfDrugAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NoKnownHistoryOfDrugAllergy: new Coding({
         code: "409137002",
         display: "No known history of drug allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ApoSAAComplex: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ApoSAAComplex: new Coding({
         code: "4097008",
         display: "Apo-SAA complex",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Phenylpiperone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Phenylpiperone: new Coding({
         code: "40974005",
         display: "Phenylpiperone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CCNULomustine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CCNULomustine: new Coding({
         code: "40999006",
         display: "CCNU - Lomustine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dinoprost: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dinoprost: new Coding({
         code: "41001009",
         display: "Dinoprost",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Metaraminol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Metaraminol: new Coding({
         code: "41015006",
         display: "Metaraminol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChondroitinSulfate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChondroitinSulfate: new Coding({
         code: "4104007",
         display: "Chondroitin sulfate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AdenylateCyclase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AdenylateCyclase: new Coding({
         code: "4105008",
         display: "Adenylate cyclase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Perphenazine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Perphenazine: new Coding({
         code: "41147003",
         display: "Perphenazine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyNorlander: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyNorlander: new Coding({
         code: "4115002",
         display: "Blood group antibody Norlander",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Aciclovir: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Aciclovir: new Coding({
         code: "41193000",
         display: "Aciclovir",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ribose5PhosphateIsomerase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ribose5PhosphateIsomerase: new Coding({
         code: "412004",
         display: "Ribose-5-phosphate isomerase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FluprednisolonePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FluprednisolonePreparation: new Coding({
         code: "4126008",
         display: "Fluprednisolone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Propiomazine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Propiomazine: new Coding({
         code: "41324009",
         display: "Propiomazine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Fluphenazine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Fluphenazine: new Coding({
         code: "41365009",
         display: "Fluphenazine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EnterogastronePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EnterogastronePreparation: new Coding({
         code: "41367001",
         display: "Enterogastrone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SecButylAcetate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SecButylAcetate: new Coding({
         code: "4137009",
         display: "sec-Butyl acetate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Oxazolidinedione: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Oxazolidinedione: new Coding({
         code: "41399007",
         display: "Oxazolidinedione",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Corbadrine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Corbadrine: new Coding({
         code: "41470001",
         display: "Corbadrine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dicycloverine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dicycloverine: new Coding({
         code: "41493007",
         display: "Dicycloverine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LongChainEnoylCoenzymeAHydratase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LongChainEnoylCoenzymeAHydratase: new Coding({
         code: "4153007",
         display: "Long-chain-enoyl-coenzyme A hydratase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AngiotensinConvertingEnzymeInhibitor: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AngiotensinConvertingEnzymeInhibitor: new Coding({
         code: "41549009",
         display: "Angiotensin-converting enzyme inhibitor",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PECAM1PlateletEndothelialCellAdhesionMolecule1: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PECAM1PlateletEndothelialCellAdhesionMolecule1: new Coding({
         code: "4167003",
         display: "PECAM-1 - Platelet endothelial cell adhesion molecule-1",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyLePowerBHPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyLePowerBHPower: new Coding({
         code: "4169000",
         display: "Blood group antibody Le^bH^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinLongIslandMarseille: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinLongIslandMarseille: new Coding({
         code: "4177001",
         display: "Hemoglobin Long Island-Marseille",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CytidineDiphosphateCDPDiacylglycerolSerineOPhosphatidylTransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CytidineDiphosphateCDPDiacylglycerolSerineOPhosphatidylTransferase: new Coding({
         code: "4182008",
         display: "Cytidine diphosphate (CDP) diacylglycerol-serine O-phosphatidyl-transferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FibrinogenSydneyII: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FibrinogenSydneyII: new Coding({
         code: "4188007",
         display: "Fibrinogen Sydney II",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Mazindol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Mazindol: new Coding({
         code: "4194004",
         display: "Mazindol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Bitolterol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Bitolterol: new Coding({
         code: "41985001",
         display: "Bitolterol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Neriifolin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Neriifolin: new Coding({
         code: "4200007",
         display: "Neriifolin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL6AminohexanoateDimerHydrolase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL6AminohexanoateDimerHydrolase: new Coding({
         code: "4201006",
         display: "6-Aminohexanoate-dimer hydrolase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ImipraminePamoate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ImipraminePamoate: new Coding({
         code: "4203009",
         display: "Imipramine pamoate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CortisoneBetaReductase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CortisoneBetaReductase: new Coding({
         code: "4207005",
         display: "Cortisone beta-reductase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Vancomycin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Vancomycin: new Coding({
         code: "42082003",
         display: "Vancomycin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DexamethasoneOphthalmicPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DexamethasoneOphthalmicPreparation: new Coding({
         code: "42098005",
         display: "Dexamethasone ophthalmic preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FluorosilicateSalt: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FluorosilicateSalt: new Coding({
         code: "4217000",
         display: "Fluorosilicate salt",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ImmunoglobulinGMGreaterThan23LessThanAllotype: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ImmunoglobulinGMGreaterThan23LessThanAllotype: new Coding({
         code: "4218005",
         display: "Immunoglobulin, GM>23< allotype",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Penicillamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Penicillamine: new Coding({
         code: "4219002",
         display: "Penicillamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Tolazoline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Tolazoline: new Coding({
         code: "4220008",
         display: "Tolazoline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GlutamicAcidProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GlutamicAcidProduct: new Coding({
         code: "42271003",
         display: "Glutamic acid product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GalliumIsotope: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GalliumIsotope: new Coding({
         code: "4231000",
         display: "Gallium isotope",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Methyltestosterone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Methyltestosterone: new Coding({
         code: "42348003",
         display: "Methyltestosterone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DextromethorphanHydrobromide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DextromethorphanHydrobromide: new Coding({
         code: "42374009",
         display: "Dextromethorphan hydrobromide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GlycerolDehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GlycerolDehydrogenase: new Coding({
         code: "4239003",
         display: "Glycerol dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CitramalylCoALyase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CitramalylCoALyase: new Coding({
         code: "424006",
         display: "Citramalyl-CoA lyase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Secobarbital: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Secobarbital: new Coding({
         code: "42444000",
         display: "Secobarbital",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinNagoya: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinNagoya: new Coding({
         code: "425007",
         display: "Hemoglobin Nagoya",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProcaineProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProcaineProduct: new Coding({
         code: "42514000",
         display: "Procaine product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Americium241: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Americium241: new Coding({
         code: "4255005",
         display: "Americium 241",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethylrosaniliumChloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethylrosaniliumChloride: new Coding({
         code: "42638008",
         display: "Methylrosanilium chloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EscherichiaColiAntiserum: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EscherichiaColiAntiserum: new Coding({
         code: "42714002",
         display: "Escherichia coli antiserum",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Miconazole: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Miconazole: new Coding({
         code: "42720001",
         display: "Miconazole",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NoKnownInsectAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NoKnownInsectAllergy: new Coding({
         code: "428197003",
         display: "No known insect allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NoKnownEnvironmentalAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NoKnownEnvironmentalAllergy: new Coding({
         code: "428607008",
         display: "No known environmental allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DesmopressinAcetatePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DesmopressinAcetatePreparation: new Coding({
         code: "42863006",
         display: "Desmopressin acetate preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_KeyholeLimpetHemocyanin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_KeyholeLimpetHemocyanin: new Coding({
         code: "4289006",
         display: "Keyhole-limpet hemocyanin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LinamarinSynthase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LinamarinSynthase: new Coding({
         code: "4290002",
         display: "Linamarin synthase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NoKnownFoodAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NoKnownFoodAllergy: new Coding({
         code: "429625007",
         display: "No known food allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyAllchurch: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyAllchurch: new Coding({
         code: "4314009",
         display: "Blood group antibody Allchurch",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarminicAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarminicAcid: new Coding({
         code: "432003",
         display: "Carminic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TarOil: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TarOil: new Coding({
         code: "4334005",
         display: "Tar oil",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Magaldrate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Magaldrate: new Coding({
         code: "43343000",
         display: "Magaldrate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL2Aminopyridine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL2Aminopyridine: new Coding({
         code: "4342006",
         display: "2-Aminopyridine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_InjectableInterferon: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_InjectableInterferon: new Coding({
         code: "43499003",
         display: "Injectable interferon",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiNButylphthalate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiNButylphthalate: new Coding({
         code: "4353000",
         display: "Di-n-butylphthalate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChloramphenicolOphthalmicPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChloramphenicolOphthalmicPreparation: new Coding({
         code: "43533002",
         display: "Chloramphenicol ophthalmic preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CoagulationFactorIXSanDimasVariant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CoagulationFactorIXSanDimasVariant: new Coding({
         code: "4355007",
         display: "Coagulation factor IX San Dimas variant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SkinBleachingPreparations: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SkinBleachingPreparations: new Coding({
         code: "43594006",
         display: "Skin bleaching preparations",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL4CoumarateCoenzymeALigase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL4CoumarateCoenzymeALigase: new Coding({
         code: "4362003",
         display: "4-Coumarate-coenzyme A ligase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MisoprostolProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MisoprostolProduct: new Coding({
         code: "43684009",
         display: "Misoprostol product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Acetone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Acetone: new Coding({
         code: "4370008",
         display: "Acetone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DrugExcipient: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DrugExcipient: new Coding({
         code: "43747001",
         display: "Drug excipient",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dydrogesterone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dydrogesterone: new Coding({
         code: "43753001",
         display: "Dydrogesterone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL2HydroxyglutarateDehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL2HydroxyglutarateDehydrogenase: new Coding({
         code: "438004",
         display: "2-Hydroxyglutarate dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CentrallyActingAntihypertensiveAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CentrallyActingAntihypertensiveAgent: new Coding({
         code: "4382004",
         display: "Centrally acting antihypertensive agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Flunisolide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Flunisolide: new Coding({
         code: "43879000",
         display: "Flunisolide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TherapeuticRadiopharmaceuticals: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TherapeuticRadiopharmaceuticals: new Coding({
         code: "439007",
         display: "Therapeutic radiopharmaceuticals",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AnalepticAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AnalepticAgent: new Coding({
         code: "43927002",
         display: "Analeptic agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenFedor: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenFedor: new Coding({
         code: "4393002",
         display: "Blood group antigen Fedor",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyHGreaterThanTLessThan: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyHGreaterThanTLessThan: new Coding({
         code: "4401009",
         display: "Blood group antibody H>T<",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Benzypyrinium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Benzypyrinium: new Coding({
         code: "4413004",
         display: "Benzypyrinium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Diperodon: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Diperodon: new Coding({
         code: "44175000",
         display: "Diperodon",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigen: new Coding({
         code: "4422003",
         display: "Blood group antigen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FibrinogenNewYorkII: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FibrinogenNewYorkII: new Coding({
         code: "4423008",
         display: "Fibrinogen New York II",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyBinge: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyBinge: new Coding({
         code: "4425001",
         display: "Blood group antibody Binge",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SulfurylFluoride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SulfurylFluoride: new Coding({
         code: "4435007",
         display: "Sulfuryl fluoride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power127PowerCesium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power127PowerCesium: new Coding({
         code: "4437004",
         display: "^127^Cesium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PercomorphLiverOilPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PercomorphLiverOilPreparation: new Coding({
         code: "44418001",
         display: "Percomorph liver oil preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Promazine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Promazine: new Coding({
         code: "44658005",
         display: "Promazine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power244PowerCalifornium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power244PowerCalifornium: new Coding({
         code: "4471008",
         display: "^244^Californium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OticFormHydrocortisone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OticFormHydrocortisone: new Coding({
         code: "44731005",
         display: "Otic form hydrocortisone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ethosuximide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ethosuximide: new Coding({
         code: "44790008",
         display: "Ethosuximide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinBrockton: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinBrockton: new Coding({
         code: "4479005",
         display: "Hemoglobin Brockton",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DinoprostoneProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DinoprostoneProduct: new Coding({
         code: "44798001",
         display: "Dinoprostone product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Sulfaethidole: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Sulfaethidole: new Coding({
         code: "4480008",
         display: "Sulfaethidole",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProcainePenicillin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProcainePenicillin: new Coding({
         code: "449005",
         display: "Procaine penicillin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cefoperazone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cefoperazone: new Coding({
         code: "44938006",
         display: "Cefoperazone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Procyclidine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Procyclidine: new Coding({
         code: "44990002",
         display: "Procyclidine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PlantPhenanthreneToxin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PlantPhenanthreneToxin: new Coding({
         code: "4509009",
         display: "Plant phenanthrene toxin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Buthenal: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Buthenal: new Coding({
         code: "4518006",
         display: "Buthenal",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Meclastine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Meclastine: new Coding({
         code: "45218006",
         display: "Meclastine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Terbutaline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Terbutaline: new Coding({
         code: "45311002",
         display: "Terbutaline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PropylpiperazineDerivativeOfPhenothiazine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PropylpiperazineDerivativeOfPhenothiazine: new Coding({
         code: "45313004",
         display: "Propylpiperazine derivative of phenothiazine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power208PowerBismuth: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power208PowerBismuth: new Coding({
         code: "4534009",
         display: "^208^Bismuth",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RockyMountainSpottedFeverVaccine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RockyMountainSpottedFeverVaccine: new Coding({
         code: "45355008",
         display: "Rocky Mountain spotted fever vaccine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AdenosineDiphosphateADPDeaminase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AdenosineDiphosphateADPDeaminase: new Coding({
         code: "4540002",
         display: "Adenosine diphosphate (ADP) deaminase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TetradecanoicAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TetradecanoicAcid: new Coding({
         code: "4546008",
         display: "Tetradecanoic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ThiazideDiureticProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ThiazideDiureticProduct: new Coding({
         code: "45518007",
         display: "Thiazide diuretic product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyRils: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyRils: new Coding({
         code: "4555006",
         display: "Blood group antibody Rils",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinMizuho: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinMizuho: new Coding({
         code: "4560005",
         display: "Hemoglobin Mizuho",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ArginineDecarboxylase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ArginineDecarboxylase: new Coding({
         code: "4561009",
         display: "Arginine decarboxylase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodySisson: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodySisson: new Coding({
         code: "4564001",
         display: "Blood group antibody Sisson",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Galactose1PhosphateThymidylyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Galactose1PhosphateThymidylyltransferase: new Coding({
         code: "4567008",
         display: "Galactose-1-phosphate thymidylyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Tolmetin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Tolmetin: new Coding({
         code: "45680002",
         display: "Tolmetin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenNPowerAPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenNPowerAPower: new Coding({
         code: "4582003",
         display: "Blood group antigen N^A^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Sulfasalazine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Sulfasalazine: new Coding({
         code: "45844004",
         display: "Sulfasalazine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GammaTocopherolPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GammaTocopherolPreparation: new Coding({
         code: "45888006",
         display: "gamma-Tocopherol preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MNS22ISBTSymbol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MNS22ISBTSymbol: new Coding({
         code: "4591004",
         display: "MNS22 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_E331SodiumCitrate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_E331SodiumCitrate: new Coding({
         code: "45923000",
         display: "E331 - Sodium citrate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Chlorambucil: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Chlorambucil: new Coding({
         code: "46009007",
         display: "Chlorambucil",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PsychotherapeuticAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PsychotherapeuticAgent: new Coding({
         code: "46063005",
         display: "Psychotherapeutic agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SenileCardiacProtein: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SenileCardiacProtein: new Coding({
         code: "4610008",
         display: "Senile cardiac protein",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AscorbicAcidProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AscorbicAcidProduct: new Coding({
         code: "46123006",
         display: "Ascorbic acid product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TriclobisoniumChloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TriclobisoniumChloride: new Coding({
         code: "4616002",
         display: "Triclobisonium chloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_UreaseATPHydrolysing: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_UreaseATPHydrolysing: new Coding({
         code: "462009",
         display: "Urease (ATP-hydrolysing)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FLUInfluenzaVaccine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FLUInfluenzaVaccine: new Coding({
         code: "46233009",
         display: "FLU - Influenza vaccine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HypoglycinB: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HypoglycinB: new Coding({
         code: "4629002",
         display: "Hypoglycin B",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ArterialBlood: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ArterialBlood: new Coding({
         code: "4635002",
         display: "Arterial blood",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CalfThymusRibonucleaseH: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CalfThymusRibonucleaseH: new Coding({
         code: "4643007",
         display: "Calf thymus ribonuclease H",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Haloprogin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Haloprogin: new Coding({
         code: "46436003",
         display: "Haloprogin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Encainide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Encainide: new Coding({
         code: "46479001",
         display: "Encainide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BrilliantGreen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BrilliantGreen: new Coding({
         code: "46532003",
         display: "Brilliant green",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Labetalol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Labetalol: new Coding({
         code: "46547007",
         display: "Labetalol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlcianBlue8GXStain: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlcianBlue8GXStain: new Coding({
         code: "4656000",
         display: "Alcian blue 8GX stain",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Flecainide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Flecainide: new Coding({
         code: "46576005",
         display: "Flecainide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Methylphenobarbital: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Methylphenobarbital: new Coding({
         code: "46709004",
         display: "Methylphenobarbital",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL23DihydroxybenzoateSerineLigase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL23DihydroxybenzoateSerineLigase: new Coding({
         code: "4674009",
         display: "2,3-Dihydroxybenzoate serine ligase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SASalicylicAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SASalicylicAcid: new Coding({
         code: "46741005",
         display: "SA - Salicylic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PotassiumPermanganate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PotassiumPermanganate: new Coding({
         code: "4681002",
         display: "Potassium permanganate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Edrophonium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Edrophonium: new Coding({
         code: "46913003",
         display: "Edrophonium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChromiumPower51PowerAlbumin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChromiumPower51PowerAlbumin: new Coding({
         code: "4693006",
         display: "Chromium^51^ albumin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BovineInsulin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BovineInsulin: new Coding({
         code: "4700006",
         display: "Bovine insulin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Iothiouracil: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Iothiouracil: new Coding({
         code: "4704002",
         display: "Iothiouracil",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChlorineMonoxide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChlorineMonoxide: new Coding({
         code: "4706000",
         display: "Chlorine monoxide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Quinine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Quinine: new Coding({
         code: "47065008",
         display: "Quinine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Hexamidinum: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Hexamidinum: new Coding({
         code: "47120002",
         display: "Hexamidinum",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Aminoglutethimide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Aminoglutethimide: new Coding({
         code: "47124006",
         display: "Aminoglutethimide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Medrysone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Medrysone: new Coding({
         code: "47140009",
         display: "Medrysone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power183mPowerOsmium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power183mPowerOsmium: new Coding({
         code: "4714006",
         display: "^183m^Osmium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VegetableTextileFiber: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VegetableTextileFiber: new Coding({
         code: "472007",
         display: "Vegetable textile fiber",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ScopulariopsisProteinase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ScopulariopsisProteinase: new Coding({
         code: "4728000",
         display: "Scopulariopsis proteinase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AluminumPyroPowder: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AluminumPyroPowder: new Coding({
         code: "4731004",
         display: "Aluminum pyro powder",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OncogeneProteinP55VMYC: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OncogeneProteinP55VMYC: new Coding({
         code: "4732006",
         display: "Oncogene protein P55, V-MYC",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CPZChlorpromazine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CPZChlorpromazine: new Coding({
         code: "47331002",
         display: "CPZ - Chlorpromazine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumFolatePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumFolatePreparation: new Coding({
         code: "4741001",
         display: "Sodium folate preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinMito: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinMito: new Coding({
         code: "4746006",
         display: "Hemoglobin Mito",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Phenindione: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Phenindione: new Coding({
         code: "47527007",
         display: "Phenindione",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TriamcinoloneDentalPaste: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TriamcinoloneDentalPaste: new Coding({
         code: "4753002",
         display: "Triamcinolone dental paste",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CD1bClusterOfDifferentiationAntigen1b: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CD1bClusterOfDifferentiationAntigen1b: new Coding({
         code: "476005",
         display: "CD1b - Cluster of differentiation antigen 1b",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NalidixicAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NalidixicAcid: new Coding({
         code: "47602007",
         display: "Nalidixic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CD30ClusterOfDifferentiationAntigen30: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CD30ClusterOfDifferentiationAntigen30: new Coding({
         code: "4761007",
         display: "CD30 - Cluster of differentiation antigen 30",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PlateletAntigenHPA3b: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PlateletAntigenHPA3b: new Coding({
         code: "4762000",
         display: "Platelet antigen HPA-3b",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PotassiumSparingDiuretic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PotassiumSparingDiuretic: new Coding({
         code: "47755009",
         display: "Potassium sparing diuretic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Fluroxene: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Fluroxene: new Coding({
         code: "4777008",
         display: "Fluroxene",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FenfluramineHydrochloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FenfluramineHydrochloride: new Coding({
         code: "47772002",
         display: "Fenfluramine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SecbutabarbitalSodium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SecbutabarbitalSodium: new Coding({
         code: "4780009",
         display: "Secbutabarbital sodium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Beta14MannosylGlycoproteinBeta14NAcetylglucosaminyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Beta14MannosylGlycoproteinBeta14NAcetylglucosaminyltransferase: new Coding({
         code: "4786003",
         display: "beta-1,4-Mannosyl-glycoprotein beta-1,4-N-acetylglucosaminyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyBultar: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyBultar: new Coding({
         code: "4789005",
         display: "Blood group antibody Bultar",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Verapamil: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Verapamil: new Coding({
         code: "47898004",
         display: "Verapamil",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AzobenzeneReductase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AzobenzeneReductase: new Coding({
         code: "4793004",
         display: "Azobenzene reductase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HaemophilusInfluenzaeTypeBHibDiphtheriaTetanusPertussisVaccine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HaemophilusInfluenzaeTypeBHibDiphtheriaTetanusPertussisVaccine: new Coding({
         code: "48028008",
         display: "Haemophilus influenzae Type b (Hib)/diphtheria/tetanus/pertussis vaccine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Valethamate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Valethamate: new Coding({
         code: "4814001",
         display: "Valethamate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ranitidine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ranitidine: new Coding({
         code: "48174005",
         display: "Ranitidine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MAOMonoamineOxidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MAOMonoamineOxidase: new Coding({
         code: "4824009",
         display: "MAO - Monoamine oxidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PeptidylGlycinamidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PeptidylGlycinamidase: new Coding({
         code: "4825005",
         display: "Peptidyl-glycinamidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BenzylBenzoate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BenzylBenzoate: new Coding({
         code: "48256008",
         display: "Benzyl benzoate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EmollientProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EmollientProduct: new Coding({
         code: "48279009",
         display: "Emollient product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Arabinose5PhosphateIsomerase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Arabinose5PhosphateIsomerase: new Coding({
         code: "4831008",
         display: "Arabinose-5-phosphate isomerase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TechnetiumTcPower99mPowerMebrofenin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TechnetiumTcPower99mPowerMebrofenin: new Coding({
         code: "4832001",
         display: "Technetium Tc^99m^ mebrofenin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GlucanEndo13AlphaGlucosidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GlucanEndo13AlphaGlucosidase: new Coding({
         code: "4833006",
         display: "Glucan endo-1,3-alpha-glucosidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Butadione: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Butadione: new Coding({
         code: "48351000",
         display: "Butadione",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL33QuoteDiiodothyronine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL33QuoteDiiodothyronine: new Coding({
         code: "4844003",
         display: "3,3' Diiodothyronine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiazepamProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiazepamProduct: new Coding({
         code: "48546005",
         display: "Diazepam product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Warfarin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Warfarin: new Coding({
         code: "48603004",
         display: "Warfarin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Clobetasol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Clobetasol: new Coding({
         code: "48614001",
         display: "Clobetasol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AMPAdenosineMonophosphate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AMPAdenosineMonophosphate: new Coding({
         code: "4864008",
         display: "AMP - Adenosine monophosphate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Pancrelipase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Pancrelipase: new Coding({
         code: "48647005",
         display: "Pancrelipase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProlactinReleasingFactorPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProlactinReleasingFactorPreparation: new Coding({
         code: "4865009",
         display: "Prolactin releasing factor preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CalciumChannelBlocker: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CalciumChannelBlocker: new Coding({
         code: "48698004",
         display: "Calcium-channel blocker",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Glucosulfone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Glucosulfone: new Coding({
         code: "4872005",
         display: "Glucosulfone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HumanLeukocyteAntigenDw3: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HumanLeukocyteAntigenDw3: new Coding({
         code: "4878009",
         display: "Human leukocyte antigen Dw3",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ichthyoallyeinotoxin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ichthyoallyeinotoxin: new Coding({
         code: "4882006",
         display: "Ichthyoallyeinotoxin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Amikacin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Amikacin: new Coding({
         code: "48836000",
         display: "Amikacin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DihydroergotamineProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DihydroergotamineProduct: new Coding({
         code: "48875009",
         display: "Dihydroergotamine product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Xylulokinase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Xylulokinase: new Coding({
         code: "4889002",
         display: "Xylulokinase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Hyoscyamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Hyoscyamine: new Coding({
         code: "48899009",
         display: "Hyoscyamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PyruvateOxidaseCoenzymeAAcetylating: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PyruvateOxidaseCoenzymeAAcetylating: new Coding({
         code: "4901003",
         display: "Pyruvate oxidase (coenzyme A-acetylating)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PrednisoloneOphthalmicPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PrednisoloneOphthalmicPreparation: new Coding({
         code: "49019002",
         display: "Prednisolone ophthalmic preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_UricosuricProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_UricosuricProduct: new Coding({
         code: "49157004",
         display: "Uricosuric product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntiflatulentAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntiflatulentAgent: new Coding({
         code: "49192007",
         display: "Antiflatulent agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OncogeneProteinVABC: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OncogeneProteinVABC: new Coding({
         code: "4925006",
         display: "Oncogene protein V-ABC",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Hydroxyphenylbutazone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Hydroxyphenylbutazone: new Coding({
         code: "49267000",
         display: "Hydroxyphenylbutazone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Protriptyline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Protriptyline: new Coding({
         code: "49299006",
         display: "Protriptyline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LeukocyteM1: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LeukocyteM1: new Coding({
         code: "4933007",
         display: "Leukocyte M1",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cefaclor: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cefaclor: new Coding({
         code: "4937008",
         display: "Cefaclor",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TattooDye: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TattooDye: new Coding({
         code: "4940008",
         display: "Tattoo dye",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Norfloxacin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Norfloxacin: new Coding({
         code: "49485009",
         display: "Norfloxacin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NeoplasticStructuralGene: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NeoplasticStructuralGene: new Coding({
         code: "4955004",
         display: "Neoplastic structural gene",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Minoxidil: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Minoxidil: new Coding({
         code: "49577002",
         display: "Minoxidil",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ClassIAntiarrhythmic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ClassIAntiarrhythmic: new Coding({
         code: "49590009",
         display: "Class I antiarrhythmic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NormalAnimalPlasma: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NormalAnimalPlasma: new Coding({
         code: "49600008",
         display: "Normal animal plasma",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DisodiumEnoxolone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DisodiumEnoxolone: new Coding({
         code: "49617001",
         display: "Disodium enoxolone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TreeBark: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TreeBark: new Coding({
         code: "4962008",
         display: "Tree bark",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NeutralAminoAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NeutralAminoAcid: new Coding({
         code: "4963003",
         display: "Neutral amino acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GlutathioneReductase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GlutathioneReductase: new Coding({
         code: "4965005",
         display: "Glutathione reductase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SunscreeningPreparations: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SunscreeningPreparations: new Coding({
         code: "49663007",
         display: "Sunscreening preparations",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EscherichiaColiPasteurellaMultocidaSalmonellaTyphimuriumAntiserum: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EscherichiaColiPasteurellaMultocidaSalmonellaTyphimuriumAntiserum: new Coding({
         code: "49669006",
         display: "Escherichia coli - pasteurella multocida - salmonella typhimurium antiserum",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Acumentin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Acumentin: new Coding({
         code: "4968007",
         display: "Acumentin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Hexocyclium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Hexocyclium: new Coding({
         code: "49688004",
         display: "Hexocyclium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Mucolytics: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Mucolytics: new Coding({
         code: "49694007",
         display: "Mucolytics",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Idoxuridine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Idoxuridine: new Coding({
         code: "49705006",
         display: "Idoxuridine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Nitrilase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Nitrilase: new Coding({
         code: "498001",
         display: "Nitrilase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntiDRhImmunoglobulin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntiDRhImmunoglobulin: new Coding({
         code: "49802003",
         display: "Anti-D (Rh) immunoglobulin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GoldProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GoldProduct: new Coding({
         code: "49860008",
         display: "Gold product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MagnesiumBorate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MagnesiumBorate: new Coding({
         code: "4986005",
         display: "Magnesium borate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Pheniramine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Pheniramine: new Coding({
         code: "49953001",
         display: "Pheniramine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DexamethasoneSodiumPhosphate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DexamethasoneSodiumPhosphate: new Coding({
         code: "49992008",
         display: "Dexamethasone sodium phosphate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinSwanRiver: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinSwanRiver: new Coding({
         code: "5003005",
         display: "Hemoglobin Swan River",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyPanzar: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyPanzar: new Coding({
         code: "5004004",
         display: "Blood group antibody Panzar",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Papain: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Papain: new Coding({
         code: "5007006",
         display: "Papain",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Hetastarch: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Hetastarch: new Coding({
         code: "50094009",
         display: "Hetastarch",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodySfPowerAPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodySfPowerAPower: new Coding({
         code: "501001",
         display: "Blood group antibody Sf^a^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GlycineSolution: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GlycineSolution: new Coding({
         code: "50137001",
         display: "Glycine solution",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemodialysisFluid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemodialysisFluid: new Coding({
         code: "50182002",
         display: "Hemodialysis fluid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FreshWater: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FreshWater: new Coding({
         code: "5024000",
         display: "Fresh water",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IntravenousAnesthetic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IntravenousAnesthetic: new Coding({
         code: "50244000",
         display: "Intravenous anesthetic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntitrichomonalAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntitrichomonalAgent: new Coding({
         code: "50256004",
         display: "Antitrichomonal agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL33QuoteDichlorobenzidine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL33QuoteDichlorobenzidine: new Coding({
         code: "5031001",
         display: "3-3'Dichlorobenzidine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LutealHormone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LutealHormone: new Coding({
         code: "50318003",
         display: "Luteal hormone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Levorphanol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Levorphanol: new Coding({
         code: "50335004",
         display: "Levorphanol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cesium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cesium: new Coding({
         code: "5040002",
         display: "Cesium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ErythrosinYStain: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ErythrosinYStain: new Coding({
         code: "5043000",
         display: "Erythrosin Y stain",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OncogeneProteinTCL4: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OncogeneProteinTCL4: new Coding({
         code: "5045007",
         display: "Oncogene protein TCL4",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyMQuote: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyMQuote: new Coding({
         code: "505005",
         display: "Blood group antibody M'",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NeomycinB: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NeomycinB: new Coding({
         code: "50520001",
         display: "Neomycin B",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power97PowerTechnetium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power97PowerTechnetium: new Coding({
         code: "5059000",
         display: "^97^Technetium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power132PowerCesium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power132PowerCesium: new Coding({
         code: "5060005",
         display: "^132^Cesium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL3OxosteroidDeltaPower1PowerDehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL3OxosteroidDeltaPower1PowerDehydrogenase: new Coding({
         code: "506006",
         display: "3-Oxosteroid delta^1^-dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProteinMethionineSOxideReductase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProteinMethionineSOxideReductase: new Coding({
         code: "5061009",
         display: "Protein-methionine-S-oxide reductase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyD1276: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyD1276: new Coding({
         code: "5064001",
         display: "Blood group antibody D 1276",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntithyroidDrugs: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntithyroidDrugs: new Coding({
         code: "5067008",
         display: "Antithyroid drugs",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RH31ISBTSymbol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RH31ISBTSymbol: new Coding({
         code: "5081005",
         display: "RH31 (ISBT symbol)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OticFormChloramphenicol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OticFormChloramphenicol: new Coding({
         code: "50841004",
         display: "Otic form chloramphenicol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Gelsolin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Gelsolin: new Coding({
         code: "5086000",
         display: "Gelsolin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dexamfetamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dexamfetamine: new Coding({
         code: "50868004",
         display: "Dexamfetamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenRios: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenRios: new Coding({
         code: "5094007",
         display: "Blood group antigen Rios",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FennelOil: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FennelOil: new Coding({
         code: "5098005",
         display: "Fennel oil",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Sulfadimethoxine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Sulfadimethoxine: new Coding({
         code: "51013009",
         display: "Sulfadimethoxine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenobarbitalProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenobarbitalProduct: new Coding({
         code: "51073002",
         display: "Phenobarbital product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethylatedDeoxyribonucleicAcidProteinCysteineMethyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethylatedDeoxyribonucleicAcidProteinCysteineMethyltransferase: new Coding({
         code: "5109006",
         display: "Methylated-deoxyribonucleic acid-protein-cysteine methyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HypertonicSaline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HypertonicSaline: new Coding({
         code: "51103004",
         display: "Hypertonic saline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BenzestrolPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BenzestrolPreparation: new Coding({
         code: "51126006",
         display: "Benzestrol preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HyaluronidaseProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HyaluronidaseProduct: new Coding({
         code: "51132001",
         display: "Hyaluronidase product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BCNUCarmustine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BCNUCarmustine: new Coding({
         code: "51326002",
         display: "BCNU - Carmustine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cycloserine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cycloserine: new Coding({
         code: "51334008",
         display: "Cycloserine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Amantadine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Amantadine: new Coding({
         code: "51361008",
         display: "Amantadine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CoagulationFactorIIHoustonVariant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CoagulationFactorIIHoustonVariant: new Coding({
         code: "5142007",
         display: "Coagulation factor II Houston variant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ScorpionAntivenin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ScorpionAntivenin: new Coding({
         code: "51425004",
         display: "Scorpion antivenin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenGiaigue: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenGiaigue: new Coding({
         code: "515004",
         display: "Blood group antigen Giaigue",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DesiccatedLiverPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DesiccatedLiverPreparation: new Coding({
         code: "51555009",
         display: "Desiccated liver preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MetalCompound: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MetalCompound: new Coding({
         code: "5160007",
         display: "Metal compound",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Scombrotoxin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Scombrotoxin: new Coding({
         code: "5163009",
         display: "Scombrotoxin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ZincChlorideFumes: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ZincChlorideFumes: new Coding({
         code: "5167005",
         display: "Zinc chloride fumes",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CoagulationFactorXa: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CoagulationFactorXa: new Coding({
         code: "5172001",
         display: "Coagulation factor Xa",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Chologon: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Chologon: new Coding({
         code: "51752005",
         display: "Chologon",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Amidine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Amidine: new Coding({
         code: "51758009",
         display: "Amidine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CephalosporinClassOfAntibiotic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CephalosporinClassOfAntibiotic: new Coding({
         code: "51779009",
         display: "Cephalosporin -class of antibiotic-",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ConnectiveTissueFiber: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ConnectiveTissueFiber: new Coding({
         code: "5179005",
         display: "Connective tissue fiber",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FreeProteinS: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FreeProteinS: new Coding({
         code: "519005",
         display: "Free protein S",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Prenylamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Prenylamine: new Coding({
         code: "51908007",
         display: "Prenylamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GastrinPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GastrinPreparation: new Coding({
         code: "51992002",
         display: "Gastrin preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TransEpoxysuccinateHydrolase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TransEpoxysuccinateHydrolase: new Coding({
         code: "5200001",
         display: "trans-Epoxysuccinate hydrolase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Antiemetic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Antiemetic: new Coding({
         code: "52017007",
         display: "Antiemetic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CyanateCompound: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CyanateCompound: new Coding({
         code: "5206007",
         display: "Cyanate compound",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcquiredMonosaccharideMalabsorption: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcquiredMonosaccharideMalabsorption: new Coding({
         code: "52070001",
         display: "Acquired monosaccharide malabsorption",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power197PowerMercury: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power197PowerMercury: new Coding({
         code: "521000",
         display: "^197^Mercury",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FerrousFumarate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FerrousFumarate: new Coding({
         code: "52108005",
         display: "Ferrous fumarate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Bacitracin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Bacitracin: new Coding({
         code: "5220000",
         display: "Bacitracin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Desonide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Desonide: new Coding({
         code: "52215008",
         display: "Desonide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FlavoneOPower7PowerBetaGlucosyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FlavoneOPower7PowerBetaGlucosyltransferase: new Coding({
         code: "5226006",
         display: "Flavone O^7^-beta-glucosyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Prednisolone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Prednisolone: new Coding({
         code: "52388000",
         display: "Prednisolone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethylergonovineMaleatePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethylergonovineMaleatePreparation: new Coding({
         code: "52412009",
         display: "Methylergonovine maleate preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TarPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TarPreparation: new Coding({
         code: "52423008",
         display: "Tar preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DihydroindoloneDerivativeAntipsychoticAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DihydroindoloneDerivativeAntipsychoticAgent: new Coding({
         code: "52451004",
         display: "Dihydroindolone derivative antipsychotic agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VasopressinTannatePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VasopressinTannatePreparation: new Coding({
         code: "52489009",
         display: "Vasopressin tannate preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ThymusIndependentAntigen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ThymusIndependentAntigen: new Coding({
         code: "5250008",
         display: "Thymus-independent antigen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HafniumRadioisotope: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HafniumRadioisotope: new Coding({
         code: "5252000",
         display: "Hafnium radioisotope",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinWoodville: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinWoodville: new Coding({
         code: "5253005",
         display: "Hemoglobin Woodville",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenBraden: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenBraden: new Coding({
         code: "5259009",
         display: "Blood group antigen Braden",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TyphoidParatyphoidVaccine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TyphoidParatyphoidVaccine: new Coding({
         code: "52628005",
         display: "Typhoid-paratyphoid vaccine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AnticholinesteraseParasympathomimetic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AnticholinesteraseParasympathomimetic: new Coding({
         code: "52761007",
         display: "Anticholinesterase parasympathomimetic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ParaHydroxyamphetamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ParaHydroxyamphetamine: new Coding({
         code: "52883001",
         display: "para-Hydroxyamphetamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Scilliroside: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Scilliroside: new Coding({
         code: "5289002",
         display: "Scilliroside",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Chinoform: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Chinoform: new Coding({
         code: "52896000",
         display: "Chinoform",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Guanosine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Guanosine: new Coding({
         code: "529003",
         display: "Guanosine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Analgesic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Analgesic: new Coding({
         code: "53009005",
         display: "Analgesic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinHoshida: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinHoshida: new Coding({
         code: "5303002",
         display: "Hemoglobin Hoshida",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Polynucleotide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Polynucleotide: new Coding({
         code: "5305009",
         display: "Polynucleotide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenHamet: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenHamet: new Coding({
         code: "5307001",
         display: "Blood group antigen Hamet",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power65PowerZinc: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power65PowerZinc: new Coding({
         code: "5312000",
         display: "^65^Zinc",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_UridineDiphosphateGlucuronicAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_UridineDiphosphateGlucuronicAcid: new Coding({
         code: "5323001",
         display: "Uridine diphosphate glucuronic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ActinBindingProtein: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ActinBindingProtein: new Coding({
         code: "5330007",
         display: "Actin-binding protein",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LGlycolDehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LGlycolDehydrogenase: new Coding({
         code: "5339008",
         display: "L-Glycol dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenSwietlik: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenSwietlik: new Coding({
         code: "5340005",
         display: "Blood group antigen Swietlik",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Phentermine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Phentermine: new Coding({
         code: "53480001",
         display: "Phentermine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Methacholine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Methacholine: new Coding({
         code: "53584007",
         display: "Methacholine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Fluoxetine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Fluoxetine: new Coding({
         code: "53640004",
         display: "Fluoxetine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Flavoxate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Flavoxate: new Coding({
         code: "53641000",
         display: "Flavoxate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CalciumGluconate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CalciumGluconate: new Coding({
         code: "53691001",
         display: "Calcium gluconate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EscherichiaColiAntibody: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EscherichiaColiAntibody: new Coding({
         code: "53793005",
         display: "Escherichia coli antibody",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dithranol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dithranol: new Coding({
         code: "53800008",
         display: "Dithranol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL23Dihydroxybenzoate34Dioxygenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL23Dihydroxybenzoate34Dioxygenase: new Coding({
         code: "538001",
         display: "2,3-Dihydroxybenzoate 3,4-dioxygenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Metyrapone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Metyrapone: new Coding({
         code: "53848009",
         display: "Metyrapone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NeostigmineBromide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NeostigmineBromide: new Coding({
         code: "53855006",
         display: "Neostigmine bromide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CongenitalLactaseDeficiency: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CongenitalLactaseDeficiency: new Coding({
         code: "5388008",
         display: "Congenital lactase deficiency",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PropyleneGlycolMonomethylEther: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PropyleneGlycolMonomethylEther: new Coding({
         code: "5392001",
         display: "Propylene glycol monomethyl ether",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PyridoxaminePhosphateOxidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PyridoxaminePhosphateOxidase: new Coding({
         code: "5395004",
         display: "Pyridoxamine-phosphate oxidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LymphocyteAntigenCD45RA: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LymphocyteAntigenCD45RA: new Coding({
         code: "5404007",
         display: "Lymphocyte antigen CD45RA",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power60PowerCobalt: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power60PowerCobalt: new Coding({
         code: "5405008",
         display: "^60^Cobalt",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BetaLArabinosidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BetaLArabinosidase: new Coding({
         code: "5406009",
         display: "beta-L-Arabinosidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Domiphen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Domiphen: new Coding({
         code: "54142000",
         display: "Domiphen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AccessorySinusMucus: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AccessorySinusMucus: new Coding({
         code: "5420002",
         display: "Accessory sinus mucus",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LactoseIntoleranceInChildrenWithoutLactaseDeficiency: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LactoseIntoleranceInChildrenWithoutLactaseDeficiency: new Coding({
         code: "54250004",
         display: "Lactose intolerance in children without lactase deficiency",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Flurbiprofen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Flurbiprofen: new Coding({
         code: "54344006",
         display: "Flurbiprofen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyDoPowerAPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyDoPowerAPower: new Coding({
         code: "5439007",
         display: "Blood group antibody Do^a^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Levamisole: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Levamisole: new Coding({
         code: "54391004",
         display: "Levamisole",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Melphalan: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Melphalan: new Coding({
         code: "544002",
         display: "Melphalan",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Methoxamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Methoxamine: new Coding({
         code: "54406003",
         display: "Methoxamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PageBlue83: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PageBlue83: new Coding({
         code: "5442001",
         display: "Page blue 83",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IridiumIsotope: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IridiumIsotope: new Coding({
         code: "5453007",
         display: "Iridium isotope",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ErgometrinePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ErgometrinePreparation: new Coding({
         code: "54541002",
         display: "Ergometrine preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Pethidine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Pethidine: new Coding({
         code: "54544005",
         display: "Pethidine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ceftizoxime: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ceftizoxime: new Coding({
         code: "54577009",
         display: "Ceftizoxime",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PropitocaineHydrochloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PropitocaineHydrochloride: new Coding({
         code: "5465006",
         display: "Propitocaine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ThiamineHydrochloridePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ThiamineHydrochloridePreparation: new Coding({
         code: "54659006",
         display: "Thiamine hydrochloride preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Temazepam: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Temazepam: new Coding({
         code: "54705000",
         display: "Temazepam",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinGCoushatta: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinGCoushatta: new Coding({
         code: "5471000",
         display: "Hemoglobin G-Coushatta",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PropionateCoALigase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PropionateCoALigase: new Coding({
         code: "5474008",
         display: "Propionate-CoA ligase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Phenylephrine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Phenylephrine: new Coding({
         code: "54765002",
         display: "Phenylephrine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FerricSubsulfate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FerricSubsulfate: new Coding({
         code: "5477001",
         display: "Ferric subsulfate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Trifluperidol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Trifluperidol: new Coding({
         code: "5478006",
         display: "Trifluperidol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Isometheptene: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Isometheptene: new Coding({
         code: "54824008",
         display: "Isometheptene",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OxalateCoATransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OxalateCoATransferase: new Coding({
         code: "5483003",
         display: "Oxalate CoA-transferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TherapeuticAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TherapeuticAgent: new Coding({
         code: "5487002",
         display: "Therapeutic agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Amfepramone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Amfepramone: new Coding({
         code: "54882005",
         display: "Amfepramone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cefalexin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cefalexin: new Coding({
         code: "54887004",
         display: "Cefalexin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Tretinoin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Tretinoin: new Coding({
         code: "54972005",
         display: "Tretinoin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PromethestrolPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PromethestrolPreparation: new Coding({
         code: "54982006",
         display: "Promethestrol preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_E325SodiumLactate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_E325SodiumLactate: new Coding({
         code: "55015008",
         display: "E325 - Sodium lactate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenFuerhart: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenFuerhart: new Coding({
         code: "5504009",
         display: "Blood group antigen Fuerhart",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_InosinateNucleosidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_InosinateNucleosidase: new Coding({
         code: "5511008",
         display: "Inosinate nucleosidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ImmunoglobulinAlphaChain: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ImmunoglobulinAlphaChain: new Coding({
         code: "5513006",
         display: "Immunoglobulin, Alpha chain",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RhodiumFumes: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RhodiumFumes: new Coding({
         code: "5515004",
         display: "Rhodium fumes",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CalciumCarbonate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CalciumCarbonate: new Coding({
         code: "55217007",
         display: "Calcium carbonate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyKpPowerAPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyKpPowerAPower: new Coding({
         code: "5533005",
         display: "Blood group antibody Kp^a^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ImmunoglobulinDeltaChain: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ImmunoglobulinDeltaChain: new Coding({
         code: "5537006",
         display: "Immunoglobulin, Delta chain",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Calcium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Calcium: new Coding({
         code: "5540006",
         display: "Calcium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Azlocillin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Azlocillin: new Coding({
         code: "55432002",
         display: "Azlocillin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power233PowerPlutonium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power233PowerPlutonium: new Coding({
         code: "5547009",
         display: "^233^Plutonium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL2Dehydro3DeoxyDPentonateAldolase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL2Dehydro3DeoxyDPentonateAldolase: new Coding({
         code: "5548004",
         display: "2-Dehydro-3-deoxy-D-pentonate aldolase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Tetracaine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Tetracaine: new Coding({
         code: "55556000",
         display: "Tetracaine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IothalamateSodiumIPower125Power: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IothalamateSodiumIPower125Power: new Coding({
         code: "55673009",
         display: "Iothalamate sodium I^125^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinHijiyama: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinHijiyama: new Coding({
         code: "5568005",
         display: "Hemoglobin Hijiyama",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenOca: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenOca: new Coding({
         code: "5573004",
         display: "Blood group antigen Oca",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Propranolol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Propranolol: new Coding({
         code: "55745002",
         display: "Propranolol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmideTypeAnesthetic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmideTypeAnesthetic: new Coding({
         code: "55782006",
         display: "Amide-type anesthetic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NaturalHormonePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NaturalHormonePreparation: new Coding({
         code: "55784007",
         display: "Natural hormone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Menotrophin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Menotrophin: new Coding({
         code: "55830003",
         display: "Menotrophin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Aminophylline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Aminophylline: new Coding({
         code: "55867006",
         display: "Aminophylline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Praziquantel: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Praziquantel: new Coding({
         code: "55889005",
         display: "Praziquantel",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LicodioneOPower2QuotePowerMethyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LicodioneOPower2QuotePowerMethyltransferase: new Coding({
         code: "5589001",
         display: "Licodione O^2'^-methyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BerylliumRadioisotope: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BerylliumRadioisotope: new Coding({
         code: "5590005",
         display: "Beryllium radioisotope",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_StingingInsectsImmunotherapyExtract: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_StingingInsectsImmunotherapyExtract: new Coding({
         code: "56011005",
         display: "Stinging insects immunotherapy extract",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Hydroxyprogesterone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Hydroxyprogesterone: new Coding({
         code: "56014002",
         display: "Hydroxyprogesterone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Androstanolone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Androstanolone: new Coding({
         code: "56032002",
         display: "Androstanolone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MebendazoleProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MebendazoleProduct: new Coding({
         code: "56059005",
         display: "Mebendazole product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DexamethasoneNasalPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DexamethasoneNasalPreparation: new Coding({
         code: "5606003",
         display: "Dexamethasone nasal preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Hexamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Hexamine: new Coding({
         code: "56123002",
         display: "Hexamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Bretylium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Bretylium: new Coding({
         code: "56230001",
         display: "Bretylium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GrowthHormoneProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GrowthHormoneProduct: new Coding({
         code: "56234005",
         display: "Growth hormone product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ParamethasoneAcetatePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ParamethasoneAcetatePreparation: new Coding({
         code: "56240003",
         display: "Paramethasone acetate preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinIHighWycombe: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinIHighWycombe: new Coding({
         code: "5628003",
         display: "Hemoglobin I-High Wycombe",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AnestheticEther: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AnestheticEther: new Coding({
         code: "56281006",
         display: "Anesthetic ether",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CytidylicAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CytidylicAcid: new Coding({
         code: "5629006",
         display: "Cytidylic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HLADQw6Antigen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HLADQw6Antigen: new Coding({
         code: "5637003",
         display: "HLA-DQw6 antigen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ValproateSemisodium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ValproateSemisodium: new Coding({
         code: "5641004",
         display: "Valproate semisodium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GriseofulvinUltramicrosize: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GriseofulvinUltramicrosize: new Coding({
         code: "5647000",
         display: "Griseofulvin ultramicrosize",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Parabromdylamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Parabromdylamine: new Coding({
         code: "56480005",
         display: "Parabromdylamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Metoclopramide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Metoclopramide: new Coding({
         code: "56549003",
         display: "Metoclopramide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power116mPowerAntimony: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power116mPowerAntimony: new Coding({
         code: "5656008",
         display: "^116m^Antimony",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CoalTarTopicalSolution: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CoalTarTopicalSolution: new Coding({
         code: "5657004",
         display: "Coal tar topical solution",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinJTongariki: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinJTongariki: new Coding({
         code: "5659001",
         display: "Hemoglobin J-Tongariki",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Acrosin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Acrosin: new Coding({
         code: "566009",
         display: "Acrosin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Hydroxycarbamide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Hydroxycarbamide: new Coding({
         code: "56602009",
         display: "Hydroxycarbamide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PolyestradiolPhosphatePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PolyestradiolPhosphatePreparation: new Coding({
         code: "56615000",
         display: "Polyestradiol phosphate preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MagnesiumBasedAntacid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MagnesiumBasedAntacid: new Coding({
         code: "56656002",
         display: "Magnesium-based antacid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GoldIsotope: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GoldIsotope: new Coding({
         code: "5670008",
         display: "Gold isotope",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CeftizoximeSodium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CeftizoximeSodium: new Coding({
         code: "5681006",
         display: "Ceftizoxime sodium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_YellowFeverVaccineProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_YellowFeverVaccineProduct: new Coding({
         code: "56844000",
         display: "Yellow fever vaccine product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AbsorbableGelatinSponge: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AbsorbableGelatinSponge: new Coding({
         code: "5691000",
         display: "Absorbable gelatin sponge",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CyanocobalaminCoPower58Power: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CyanocobalaminCoPower58Power: new Coding({
         code: "5692007",
         display: "Cyanocobalamin Co^58^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EtoposideProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EtoposideProduct: new Coding({
         code: "56928005",
         display: "Etoposide product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PVPPolyvinylpyrrolidone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PVPPolyvinylpyrrolidone: new Coding({
         code: "56934003",
         display: "PVP - Polyvinylpyrrolidone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SomatomedinC: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SomatomedinC: new Coding({
         code: "5699003",
         display: "Somatomedin C",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyGomez: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyGomez: new Coding({
         code: "5700002",
         display: "Blood group antibody Gomez",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Chlorprothixene: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Chlorprothixene: new Coding({
         code: "57002000",
         display: "Chlorprothixene",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power106mPowerSilver: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power106mPowerSilver: new Coding({
         code: "5702005",
         display: "^106m^Silver",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Galactokinase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Galactokinase: new Coding({
         code: "5704006",
         display: "Galactokinase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL13PropanediolDehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL13PropanediolDehydrogenase: new Coding({
         code: "5705007",
         display: "1,3-Propanediol dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CisplatinProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CisplatinProduct: new Coding({
         code: "57066004",
         display: "Cisplatin product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_UrinaryAcidifier: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_UrinaryAcidifier: new Coding({
         code: "57123008",
         display: "Urinary acidifier",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChloramphenicolProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChloramphenicolProduct: new Coding({
         code: "57191001",
         display: "Chloramphenicol product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LatrodectusMactansAntivenin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LatrodectusMactansAntivenin: new Coding({
         code: "5720001",
         display: "Latrodectus mactans antivenin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Oxiconazole: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Oxiconazole: new Coding({
         code: "57263002",
         display: "Oxiconazole",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Demeclocycline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Demeclocycline: new Coding({
         code: "5737008",
         display: "Demeclocycline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MonosodiumCarbonate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MonosodiumCarbonate: new Coding({
         code: "57376006",
         display: "Monosodium carbonate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Stramonium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Stramonium: new Coding({
         code: "5739006",
         display: "Stramonium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power118mPowerAntimony: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power118mPowerAntimony: new Coding({
         code: "5746002",
         display: "^118m^Antimony",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Chlortetracycline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Chlortetracycline: new Coding({
         code: "57538001",
         display: "Chlortetracycline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HLACw8Antigen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HLACw8Antigen: new Coding({
         code: "5757007",
         display: "HLA-Cw8 antigen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyDuck: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyDuck: new Coding({
         code: "576007",
         display: "Blood group antibody Duck",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_STDSodiumTetradecylSulfate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_STDSodiumTetradecylSulfate: new Coding({
         code: "57616006",
         display: "STD - Sodium tetradecyl sulfate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HeterogeneousNuclearRNA: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HeterogeneousNuclearRNA: new Coding({
         code: "5762008",
         display: "Heterogeneous nuclear RNA",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power242PowerPlutonium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power242PowerPlutonium: new Coding({
         code: "5764009",
         display: "^242^Plutonium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cefoxitin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cefoxitin: new Coding({
         code: "57670008",
         display: "Cefoxitin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Sulfamerazine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Sulfamerazine: new Coding({
         code: "5767002",
         display: "Sulfamerazine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_WhitePetrolatum: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_WhitePetrolatum: new Coding({
         code: "5774007",
         display: "White petrolatum",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GentamicinProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GentamicinProduct: new Coding({
         code: "57752001",
         display: "Gentamicin product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Anesthetic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Anesthetic: new Coding({
         code: "5776009",
         display: "Anesthetic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinJianghua: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinJianghua: new Coding({
         code: "578008",
         display: "Hemoglobin Jianghua",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dihydrocodeine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dihydrocodeine: new Coding({
         code: "57811004",
         display: "Dihydrocodeine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SomatotropinInhibitingFactorPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SomatotropinInhibitingFactorPreparation: new Coding({
         code: "57819002",
         display: "Somatotropin inhibiting factor preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Isoprenaline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Isoprenaline: new Coding({
         code: "57845006",
         display: "Isoprenaline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Clidinium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Clidinium: new Coding({
         code: "57853003",
         display: "Clidinium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Chlorothiazide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Chlorothiazide: new Coding({
         code: "5786005",
         display: "Chlorothiazide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Chlortalidone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Chlortalidone: new Coding({
         code: "57893000",
         display: "Chlortalidone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LipidLoweringDrug: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LipidLoweringDrug: new Coding({
         code: "57952007",
         display: "Lipid lowering drug",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Clotrimazole: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Clotrimazole: new Coding({
         code: "5797005",
         display: "Clotrimazole",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TRNA5Methylaminomethyl2ThiouridylateMethyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TRNA5Methylaminomethyl2ThiouridylateMethyltransferase: new Coding({
         code: "5800007",
         display: "tRNA (5-methylaminomethyl-2-thiouridylate)-methyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntiparkinsonianAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntiparkinsonianAgent: new Coding({
         code: "58050004",
         display: "Antiparkinsonian agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TetanusToxoidAdsorbed: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TetanusToxoidAdsorbed: new Coding({
         code: "58098008",
         display: "Tetanus toxoid adsorbed",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MalateDehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MalateDehydrogenase: new Coding({
         code: "5813001",
         display: "Malate dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ethyl4BisHydroxypropyl1Aminobenzoate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ethyl4BisHydroxypropyl1Aminobenzoate: new Coding({
         code: "5826002",
         display: "Ethyl-4-bis-(hydroxypropyl)-1-aminobenzoate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Crotonaldehyde: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Crotonaldehyde: new Coding({
         code: "5827006",
         display: "Crotonaldehyde",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinVaasa: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinVaasa: new Coding({
         code: "5829009",
         display: "Hemoglobin Vaasa",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinBart: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinBart: new Coding({
         code: "5830004",
         display: "Hemoglobin Bart",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Phenazocine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Phenazocine: new Coding({
         code: "58360000",
         display: "Phenazocine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyWj: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyWj: new Coding({
         code: "5840001",
         display: "Blood group antibody Wj",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyWrPowerBPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyWrPowerBPower: new Coding({
         code: "584006",
         display: "Blood group antibody Wr^b^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Papaverine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Papaverine: new Coding({
         code: "58467001",
         display: "Papaverine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SPSubstanceP: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SPSubstanceP: new Coding({
         code: "585007",
         display: "SP - Substance P",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PropylamineDerivativeAntihistamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PropylamineDerivativeAntihistamine: new Coding({
         code: "58502006",
         display: "Propylamine derivative antihistamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power110mPowerIndium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power110mPowerIndium: new Coding({
         code: "5858007",
         display: "^110m^Indium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VitexinBetaGlucosyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VitexinBetaGlucosyltransferase: new Coding({
         code: "5863006",
         display: "Vitexin beta-glucosyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Antimetabolites: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Antimetabolites: new Coding({
         code: "58760003",
         display: "Antimetabolites",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PituitaryHormonePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PituitaryHormonePreparation: new Coding({
         code: "58805000",
         display: "Pituitary hormone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Clindamycin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Clindamycin: new Coding({
         code: "58883005",
         display: "Clindamycin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_F3TTrifluorothymidine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_F3TTrifluorothymidine: new Coding({
         code: "58892008",
         display: "F3T - trifluorothymidine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Diazoxide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Diazoxide: new Coding({
         code: "58905004",
         display: "Diazoxide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Vasodilator: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Vasodilator: new Coding({
         code: "58944007",
         display: "Vasodilator",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Hellebrin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Hellebrin: new Coding({
         code: "5896008",
         display: "Hellebrin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BacterialStructuralGene: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BacterialStructuralGene: new Coding({
         code: "5899001",
         display: "Bacterial structural gene",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DrugIntolerance: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DrugIntolerance: new Coding({
         code: "59037007",
         display: "Drug intolerance",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntihemophilicFactorPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntihemophilicFactorPreparation: new Coding({
         code: "59057006",
         display: "Antihemophilic factor preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_QuinidinePolygalacturonate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_QuinidinePolygalacturonate: new Coding({
         code: "5907009",
         display: "Quinidine polygalacturonate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OncogeneProteinPP60VSRC: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OncogeneProteinPP60VSRC: new Coding({
         code: "5910002",
         display: "Oncogene protein PP60, V-SRC",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL2OxoisovalerateDehydrogenaseAcylating: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL2OxoisovalerateDehydrogenaseAcylating: new Coding({
         code: "591009",
         display: "2-Oxoisovalerate dehydrogenase (acylating)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenGladding: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenGladding: new Coding({
         code: "5915007",
         display: "Blood group antigen Gladding",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DopamineProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DopamineProduct: new Coding({
         code: "59187003",
         display: "Dopamine product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MMCMitomycinC: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MMCMitomycinC: new Coding({
         code: "59240002",
         display: "MMC-Mitomycin-C",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IsosorbideDinitrate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IsosorbideDinitrate: new Coding({
         code: "5924003",
         display: "Isosorbide dinitrate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HypophysiostaticFactorPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HypophysiostaticFactorPreparation: new Coding({
         code: "59245007",
         display: "Hypophysiostatic factor preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Sulfonamide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Sulfonamide: new Coding({
         code: "59255006",
         display: "Sulfonamide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OralContraceptivePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OralContraceptivePreparation: new Coding({
         code: "59261009",
         display: "Oral contraceptive preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Loxapine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Loxapine: new Coding({
         code: "59270007",
         display: "Loxapine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LactaldehydeDehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LactaldehydeDehydrogenase: new Coding({
         code: "5927005",
         display: "Lactaldehyde dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyHolmes: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyHolmes: new Coding({
         code: "593007",
         display: "Blood group antibody Holmes",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TechnetiumTcPower99mPowerSulfurColloid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TechnetiumTcPower99mPowerSulfurColloid: new Coding({
         code: "5931004",
         display: "Technetium Tc^99m^ sulfur colloid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cysteine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cysteine: new Coding({
         code: "5932006",
         display: "Cysteine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL2OxoglutarateSynthase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL2OxoglutarateSynthase: new Coding({
         code: "594001",
         display: "2-Oxoglutarate synthase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Astemizole: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Astemizole: new Coding({
         code: "59456005",
         display: "Astemizole",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL3Quote5QuoteCyclicNucleotidePhosphodiesterase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL3Quote5QuoteCyclicNucleotidePhosphodiesterase: new Coding({
         code: "5950004",
         display: "3',5'-Cyclic-nucleotide phosphodiesterase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiethyleneGlycol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiethyleneGlycol: new Coding({
         code: "5955009",
         display: "Diethylene glycol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PyrimethamineProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PyrimethamineProduct: new Coding({
         code: "59589008",
         display: "Pyrimethamine product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NondepolarizingAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NondepolarizingAgent: new Coding({
         code: "59594008",
         display: "Nondepolarizing agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power247PowerCalifornium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power247PowerCalifornium: new Coding({
         code: "597008",
         display: "^247^Californium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Niclosamide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Niclosamide: new Coding({
         code: "5975000",
         display: "Niclosamide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CoughSuppressant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CoughSuppressant: new Coding({
         code: "59751001",
         display: "Cough suppressant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenBullock: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenBullock: new Coding({
         code: "5977008",
         display: "Blood group antigen Bullock",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OsmoticDiureticProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OsmoticDiureticProduct: new Coding({
         code: "59799001",
         display: "Osmotic diuretic product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ImmunoglobulinGMGreaterThan17LessThanAllotype: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ImmunoglobulinGMGreaterThan17LessThanAllotype: new Coding({
         code: "5989005",
         display: "Immunoglobulin, GM>17< allotype",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DFuconateDehydratase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DFuconateDehydratase: new Coding({
         code: "5991002",
         display: "D-Fuconate dehydratase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Diltiazem: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Diltiazem: new Coding({
         code: "59941008",
         display: "Diltiazem",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Pyridostigmine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Pyridostigmine: new Coding({
         code: "59953007",
         display: "Pyridostigmine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TetanusAndDiphtheriaToxoidAdsorbedForAdultUse: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TetanusAndDiphtheriaToxoidAdsorbedForAdultUse: new Coding({
         code: "59999009",
         display: "Tetanus and diphtheria toxoid adsorbed for adult use",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SoftDrug: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SoftDrug: new Coding({
         code: "60090003",
         display: "Soft drug",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenylpropanolamineHydrochloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenylpropanolamineHydrochloride: new Coding({
         code: "60093001",
         display: "Phenylpropanolamine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Indometacin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Indometacin: new Coding({
         code: "60149003",
         display: "Indometacin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Antacid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Antacid: new Coding({
         code: "60169008",
         display: "Antacid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power88PowerYttrium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power88PowerYttrium: new Coding({
         code: "6021003",
         display: "^88^Yttrium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TriamcinolonePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TriamcinolonePreparation: new Coding({
         code: "6028009",
         display: "Triamcinolone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OxygenRadioisotope: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OxygenRadioisotope: new Coding({
         code: "6038004",
         display: "Oxygen radioisotope",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PlantSapogeninGlycoside: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PlantSapogeninGlycoside: new Coding({
         code: "604000",
         display: "Plant sapogenin glycoside",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcquiredLactaseDeficiency: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcquiredLactaseDeficiency: new Coding({
         code: "60414003",
         display: "Acquired lactase deficiency",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BoneCement: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BoneCement: new Coding({
         code: "6043006",
         display: "Bone cement",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarbonDisulfide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarbonDisulfide: new Coding({
         code: "6044000",
         display: "Carbon disulfide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MagnesiumHydroxide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MagnesiumHydroxide: new Coding({
         code: "60468008",
         display: "Magnesium hydroxide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ThiamineMononitratePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ThiamineMononitratePreparation: new Coding({
         code: "60520004",
         display: "Thiamine mononitrate preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AstringentDrug: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AstringentDrug: new Coding({
         code: "60533005",
         display: "Astringent drug",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DoxylamineSuccinate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DoxylamineSuccinate: new Coding({
         code: "6054001",
         display: "Doxylamine succinate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LanatosideC: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LanatosideC: new Coding({
         code: "60541005",
         display: "Lanatoside C",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyWkPowerAPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyWkPowerAPower: new Coding({
         code: "6056004",
         display: "Blood group antibody Wk^a^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Orciprenaline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Orciprenaline: new Coding({
         code: "6067003",
         display: "Orciprenaline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenMil: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenMil: new Coding({
         code: "6068008",
         display: "Blood group antigen Mil",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Echothiophate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Echothiophate: new Coding({
         code: "60682004",
         display: "Echothiophate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CoalTarPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CoalTarPreparation: new Coding({
         code: "6071000",
         display: "Coal tar preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Diethylcarbamazine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Diethylcarbamazine: new Coding({
         code: "60731009",
         display: "Diethylcarbamazine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NormalAnimalSerum: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NormalAnimalSerum: new Coding({
         code: "60767002",
         display: "Normal animal serum",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Hydroxylysine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Hydroxylysine: new Coding({
         code: "6083003",
         display: "Hydroxylysine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SynovialFluid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SynovialFluid: new Coding({
         code: "6085005",
         display: "Synovial fluid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BenzfetamineHydrochloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BenzfetamineHydrochloride: new Coding({
         code: "6088007",
         display: "Benzfetamine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Heroin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Heroin: new Coding({
         code: "60881009",
         display: "Heroin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LochiaAlba: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LochiaAlba: new Coding({
         code: "6089004",
         display: "Lochia alba",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyLHarris: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyLHarris: new Coding({
         code: "6091007",
         display: "Blood group antibody L Harris",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IrrigatingSolution: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IrrigatingSolution: new Coding({
         code: "60972002",
         display: "Irrigating solution",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Barbiturate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Barbiturate: new Coding({
         code: "60978003",
         display: "Barbiturate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ThyroidPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ThyroidPreparation: new Coding({
         code: "61020000",
         display: "Thyroid preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Baclofen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Baclofen: new Coding({
         code: "6102009",
         display: "Baclofen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AsparagusateReductaseNADH: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AsparagusateReductaseNADH: new Coding({
         code: "6107003",
         display: "Asparagusate reductase (NADH)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AromaticAminoAcidAminotransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AromaticAminoAcidAminotransferase: new Coding({
         code: "6109000",
         display: "Aromatic-amino-acid aminotransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProlactinInhibitingFactorPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProlactinInhibitingFactorPreparation: new Coding({
         code: "61093008",
         display: "Prolactin inhibiting factor preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HippurateHydrolase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HippurateHydrolase: new Coding({
         code: "611001",
         display: "Hippurate hydrolase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmobarbitalSodium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmobarbitalSodium: new Coding({
         code: "61123001",
         display: "Amobarbital sodium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GasGangreneAntitoxin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GasGangreneAntitoxin: new Coding({
         code: "61132004",
         display: "Gas gangrene antitoxin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyAnuszewska: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyAnuszewska: new Coding({
         code: "6115000",
         display: "Blood group antibody Anuszewska",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MeaslesMumpsAndRubellaVaccine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MeaslesMumpsAndRubellaVaccine: new Coding({
         code: "61153008",
         display: "Measles, mumps and rubella vaccine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OxymetholonePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OxymetholonePreparation: new Coding({
         code: "6116004",
         display: "Oxymetholone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MeprednisonePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MeprednisonePreparation: new Coding({
         code: "61181002",
         display: "Meprednisone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ClassIaAntiarrhythmicDrug: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ClassIaAntiarrhythmicDrug: new Coding({
         code: "6122008",
         display: "Class Ia antiarrhythmic drug",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenDuck: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenDuck: new Coding({
         code: "6135004",
         display: "Blood group antigen Duck",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenLeProvost: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenLeProvost: new Coding({
         code: "6138002",
         display: "Blood group antigen Le Provost",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Molindone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Molindone: new Coding({
         code: "61408004",
         display: "Molindone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AdrenalHormonePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AdrenalHormonePreparation: new Coding({
         code: "61457001",
         display: "Adrenal hormone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PertussisVaccine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PertussisVaccine: new Coding({
         code: "61602008",
         display: "Pertussis vaccine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Meclocycline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Meclocycline: new Coding({
         code: "6162007",
         display: "Meclocycline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Laxative: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Laxative: new Coding({
         code: "61621000",
         display: "Laxative",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Buclizine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Buclizine: new Coding({
         code: "61623002",
         display: "Buclizine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NiacinamidePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NiacinamidePreparation: new Coding({
         code: "61650007",
         display: "Niacinamide preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cefamandole: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cefamandole: new Coding({
         code: "61651006",
         display: "Cefamandole",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HeatLabileAntibody: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HeatLabileAntibody: new Coding({
         code: "6170002",
         display: "Heat labile antibody",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TransientGlutenSensitivity: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TransientGlutenSensitivity: new Coding({
         code: "61712006",
         display: "Transient gluten sensitivity",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FattyAcidMethyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FattyAcidMethyltransferase: new Coding({
         code: "6172005",
         display: "Fatty-acid methyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LymphocyteAntigenCD63: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LymphocyteAntigenCD63: new Coding({
         code: "6178009",
         display: "Lymphocyte antigen CD63",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OMethyBufotenine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OMethyBufotenine: new Coding({
         code: "6179001",
         display: "o-Methy-bufotenine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Chloroacetone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Chloroacetone: new Coding({
         code: "6182006",
         display: "Chloroacetone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Meticillin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Meticillin: new Coding({
         code: "61862008",
         display: "Meticillin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiphenylmethaneLaxative: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiphenylmethaneLaxative: new Coding({
         code: "61939007",
         display: "Diphenylmethane laxative",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EstrogenicPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EstrogenicPreparation: new Coding({
         code: "61946003",
         display: "Estrogenic preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenZd: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenZd: new Coding({
         code: "6197009",
         display: "Blood group antigen Zd",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Trichlorophenol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Trichlorophenol: new Coding({
         code: "620005",
         display: "Trichlorophenol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DichlorisonePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DichlorisonePreparation: new Coding({
         code: "62051009",
         display: "Dichlorisone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NasalAntiInflammatoryPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NasalAntiInflammatoryPreparation: new Coding({
         code: "62063004",
         display: "Nasal anti-inflammatory preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_InjectableLiverPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_InjectableLiverPreparation: new Coding({
         code: "62191005",
         display: "Injectable liver preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Anthelmintic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Anthelmintic: new Coding({
         code: "62288001",
         display: "Anthelmintic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VaricellaZosterImmuneGlobulin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VaricellaZosterImmuneGlobulin: new Coding({
         code: "62294009",
         display: "Varicella-zoster immune globulin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Naphazoline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Naphazoline: new Coding({
         code: "6232005",
         display: "Naphazoline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ClomifeneCitrate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ClomifeneCitrate: new Coding({
         code: "62353003",
         display: "Clomifene citrate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BronchitisVaccine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BronchitisVaccine: new Coding({
         code: "62354009",
         display: "Bronchitis vaccine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Bemegride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Bemegride: new Coding({
         code: "6237004",
         display: "Bemegride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FolicAcidPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FolicAcidPreparation: new Coding({
         code: "6247001",
         display: "Folic acid preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PotassiumMetabisulfite: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PotassiumMetabisulfite: new Coding({
         code: "6249003",
         display: "Potassium metabisulfite",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Tiotixene: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Tiotixene: new Coding({
         code: "62529008",
         display: "Tiotixene",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FluorometholoneOphthalmicPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FluorometholoneOphthalmicPreparation: new Coding({
         code: "62560008",
         display: "Fluorometholone ophthalmic preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RiboseIsomerase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RiboseIsomerase: new Coding({
         code: "6256009",
         display: "Ribose isomerase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumChlorideNaPower22Power: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumChlorideNaPower22Power: new Coding({
         code: "6257000",
         display: "Sodium chloride Na^22^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HydrogenPeroxideSolution3Percent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HydrogenPeroxideSolution3Percent: new Coding({
         code: "6259002",
         display: "Hydrogen peroxide solution 3%",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Protokylol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Protokylol: new Coding({
         code: "6260007",
         display: "Protokylol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Indoklon: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Indoklon: new Coding({
         code: "6261006",
         display: "Indoklon",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PlantResidue: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PlantResidue: new Coding({
         code: "6263009",
         display: "Plant residue",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Diazinon: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Diazinon: new Coding({
         code: "6264003",
         display: "Diazinon",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Clonidine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Clonidine: new Coding({
         code: "62782004",
         display: "Clonidine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Methidathion: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Methidathion: new Coding({
         code: "6287006",
         display: "Methidathion",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NAcetylglucosamine1PhosphodiesterNAcetylglucosaminidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NAcetylglucosamine1PhosphodiesterNAcetylglucosaminidase: new Coding({
         code: "6291001",
         display: "N-Acetylglucosamine-1-phosphodiester N-acetylglucosaminidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power178PowerTantalum: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power178PowerTantalum: new Coding({
         code: "6301006",
         display: "^178^Tantalum",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Anticonvulsant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Anticonvulsant: new Coding({
         code: "63094006",
         display: "Anticonvulsant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ParticulateAntigen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ParticulateAntigen: new Coding({
         code: "6310003",
         display: "Particulate antigen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhytonadionePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhytonadionePreparation: new Coding({
         code: "63136007",
         display: "Phytonadione preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenolBetaGlucosyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenolBetaGlucosyltransferase: new Coding({
         code: "6314007",
         display: "Phenol beta-glucosyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BenzoicAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BenzoicAcid: new Coding({
         code: "63318000",
         display: "Benzoic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SquillExtract: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SquillExtract: new Coding({
         code: "6333002",
         display: "Squill extract",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DrugFlavoring: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DrugFlavoring: new Coding({
         code: "63338004",
         display: "Drug flavoring",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Imidazolonepropionase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Imidazolonepropionase: new Coding({
         code: "6338006",
         display: "Imidazolonepropionase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FluoxymesteronePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FluoxymesteronePreparation: new Coding({
         code: "63470003",
         display: "Fluoxymesterone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Chlorodiallylacetamide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Chlorodiallylacetamide: new Coding({
         code: "6356006",
         display: "Chlorodiallylacetamide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_KallidinII: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_KallidinII: new Coding({
         code: "6360009",
         display: "Kallidin II",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NiacinPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NiacinPreparation: new Coding({
         code: "63639004",
         display: "Niacin preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power95mPowerTechnetium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power95mPowerTechnetium: new Coding({
         code: "6367007",
         display: "^95m^Technetium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Halothane: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Halothane: new Coding({
         code: "63682003",
         display: "Halothane",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PenicillinClassOfAntibiotic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PenicillinClassOfAntibiotic: new Coding({
         code: "6369005",
         display: "Penicillin -class of antibiotic-",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NorethindronePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NorethindronePreparation: new Coding({
         code: "63758001",
         display: "Norethindrone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VitaminEPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VitaminEPreparation: new Coding({
         code: "63822004",
         display: "Vitamin E preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NAcetylneuraminateOPower4PowerAcetyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NAcetylneuraminateOPower4PowerAcetyltransferase: new Coding({
         code: "6386004",
         display: "N-Acetylneuraminate O^4^-acetyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhentermineHydrochloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhentermineHydrochloride: new Coding({
         code: "6394006",
         display: "Phentermine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Lichenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Lichenase: new Coding({
         code: "6401007",
         display: "Lichenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GenitourinarySmoothMuscleRelaxant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GenitourinarySmoothMuscleRelaxant: new Coding({
         code: "64083002",
         display: "Genitourinary smooth muscle relaxant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Morpholine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Morpholine: new Coding({
         code: "6409009",
         display: "Morpholine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Interleukin12: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Interleukin12: new Coding({
         code: "6411000",
         display: "Interleukin-12",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Amodiaquin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Amodiaquin: new Coding({
         code: "64115004",
         display: "Amodiaquin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dactinomycin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dactinomycin: new Coding({
         code: "64127001",
         display: "Dactinomycin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HLADRw14Antigen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HLADRw14Antigen: new Coding({
         code: "6422001",
         display: "HLA-DRw14 antigen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethandrostenolonePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethandrostenolonePreparation: new Coding({
         code: "64240003",
         display: "Methandrostenolone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Antihistamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Antihistamine: new Coding({
         code: "6425004",
         display: "Antihistamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_StaphylococcusToxoid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_StaphylococcusToxoid: new Coding({
         code: "64296005",
         display: "Staphylococcus toxoid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Griseofulvin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Griseofulvin: new Coding({
         code: "64349004",
         display: "Griseofulvin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Terpin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Terpin: new Coding({
         code: "64462001",
         display: "Terpin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Chlorobenzilate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Chlorobenzilate: new Coding({
         code: "6451002",
         display: "Chlorobenzilate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Chloroprene: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Chloroprene: new Coding({
         code: "6455006",
         display: "Chloroprene",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Metixene: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Metixene: new Coding({
         code: "64558005",
         display: "Metixene",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DeltaPower1PowerPiperideine2CarboxylateReductase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DeltaPower1PowerPiperideine2CarboxylateReductase: new Coding({
         code: "6469006",
         display: "delta^1^-Piperideine-2-carboxylate reductase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL6Phosphofructokinase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL6Phosphofructokinase: new Coding({
         code: "6478000",
         display: "6-Phosphofructokinase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OilOfCalamus: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OilOfCalamus: new Coding({
         code: "648005",
         display: "Oil of calamus",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Diiodohydroxyquin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Diiodohydroxyquin: new Coding({
         code: "64851009",
         display: "Diiodohydroxyquin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Methylthiouracil: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Methylthiouracil: new Coding({
         code: "64878006",
         display: "Methylthiouracil",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FibrinogenMontrealII: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FibrinogenMontrealII: new Coding({
         code: "6495008",
         display: "Fibrinogen Montreal II",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Benzocaine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Benzocaine: new Coding({
         code: "65020006",
         display: "Benzocaine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ephedrine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ephedrine: new Coding({
         code: "65026000",
         display: "Ephedrine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Biperiden: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Biperiden: new Coding({
         code: "65041000",
         display: "Biperiden",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenMuch: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenMuch: new Coding({
         code: "6507009",
         display: "Blood group antigen Much",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Chloropyrilene: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Chloropyrilene: new Coding({
         code: "65092008",
         display: "Chloropyrilene",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Flumethiazide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Flumethiazide: new Coding({
         code: "6513000",
         display: "Flumethiazide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IndiumPower111PowerFeOHGreaterThan3LessThan: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IndiumPower111PowerFeOHGreaterThan3LessThan: new Coding({
         code: "6516008",
         display: "Indium^111^-Fe(OH)>3<",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ButyrophenoneDerivativeAntipsychoticAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ButyrophenoneDerivativeAntipsychoticAgent: new Coding({
         code: "6517004",
         display: "Butyrophenone derivative antipsychotic agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DistilledSpirits: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DistilledSpirits: new Coding({
         code: "6524003",
         display: "Distilled spirits",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Nalorphine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Nalorphine: new Coding({
         code: "6526001",
         display: "Nalorphine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Thromboplastin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Thromboplastin: new Coding({
         code: "65265006",
         display: "Thromboplastin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenClPowerAPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenClPowerAPower: new Coding({
         code: "6529008",
         display: "Blood group antigen Cl^a^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MacrophageActivatingFactor: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MacrophageActivatingFactor: new Coding({
         code: "6532006",
         display: "Macrophage activating factor",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AdrenalCortexExtract: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AdrenalCortexExtract: new Coding({
         code: "65461004",
         display: "Adrenal cortex extract",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProstacyclinePGIGreaterThan2LessThanPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProstacyclinePGIGreaterThan2LessThanPreparation: new Coding({
         code: "65484006",
         display: "Prostacycline PGI>2< preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EpinephrinePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EpinephrinePreparation: new Coding({
         code: "65502005",
         display: "Epinephrine preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GastrointestinalSmoothMuscleRelaxant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GastrointestinalSmoothMuscleRelaxant: new Coding({
         code: "65505007",
         display: "Gastrointestinal smooth muscle relaxant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL4Amino2Methyl1NaphtholHydratePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL4Amino2Methyl1NaphtholHydratePreparation: new Coding({
         code: "65627005",
         display: "4-Amino-2-methyl-1-naphthol hydrate preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SkinAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SkinAgent: new Coding({
         code: "65628000",
         display: "Skin agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CorticotropinZincHydroxidePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CorticotropinZincHydroxidePreparation: new Coding({
         code: "65638005",
         display: "Corticotropin zinc hydroxide preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GeneralInhalationAnesthetic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GeneralInhalationAnesthetic: new Coding({
         code: "65695006",
         display: "General inhalation anesthetic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProtectiveAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProtectiveAgent: new Coding({
         code: "65823007",
         display: "Protective agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Antrapurol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Antrapurol: new Coding({
         code: "65884003",
         display: "Antrapurol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Galactosylceramidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Galactosylceramidase: new Coding({
         code: "6590001",
         display: "Galactosylceramidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HLADw12Antigen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HLADw12Antigen: new Coding({
         code: "6592009",
         display: "HLA-Dw12 antigen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MicrurusFulviusAntivenin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MicrurusFulviusAntivenin: new Coding({
         code: "65965000",
         display: "Micrurus fulvius antivenin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Aminoacridine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Aminoacridine: new Coding({
         code: "6602005",
         display: "Aminoacridine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SalineLaxative: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SalineLaxative: new Coding({
         code: "66065008",
         display: "Saline laxative",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Probenecid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Probenecid: new Coding({
         code: "66094001",
         display: "Probenecid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Diethylaminoethanol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Diethylaminoethanol: new Coding({
         code: "6611005",
         display: "Diethylaminoethanol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChloramphenicolSodiumSuccinate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChloramphenicolSodiumSuccinate: new Coding({
         code: "6612003",
         display: "Chloramphenicol sodium succinate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FlunisolideNasalPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FlunisolideNasalPreparation: new Coding({
         code: "66125007",
         display: "Flunisolide nasal preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BilirubinYTransportProtein: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BilirubinYTransportProtein: new Coding({
         code: "6619007",
         display: "Bilirubin Y transport protein",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AeromonasProteolyticaAminopeptidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AeromonasProteolyticaAminopeptidase: new Coding({
         code: "662003",
         display: "Aeromonas proteolytica aminopeptidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NorethindroneAcetatePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NorethindroneAcetatePreparation: new Coding({
         code: "66243004",
         display: "Norethindrone acetate preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ZincSulfate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ZincSulfate: new Coding({
         code: "6625006",
         display: "Zinc sulfate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Tetracycline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Tetracycline: new Coding({
         code: "66261008",
         display: "Tetracycline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AndrogenicPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AndrogenicPreparation: new Coding({
         code: "66349002",
         display: "Androgenic preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Opsonin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Opsonin: new Coding({
         code: "6642000",
         display: "Opsonin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HomoserineDehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HomoserineDehydrogenase: new Coding({
         code: "6644004",
         display: "Homoserine dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PantothenicAcidPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PantothenicAcidPreparation: new Coding({
         code: "66441000",
         display: "Pantothenic acid preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Isoflurane: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Isoflurane: new Coding({
         code: "66492008",
         display: "Isoflurane",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Theophylline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Theophylline: new Coding({
         code: "66493003",
         display: "Theophylline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CalciumPantothenatePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CalciumPantothenatePreparation: new Coding({
         code: "6652001",
         display: "Calcium pantothenate preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_StanozololPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_StanozololPreparation: new Coding({
         code: "66602007",
         display: "Stanozolol preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EsterTypeLocalAnesthetic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EsterTypeLocalAnesthetic: new Coding({
         code: "66672008",
         display: "Ester type local anesthetic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenCaw: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenCaw: new Coding({
         code: "6671004",
         display: "Blood group antigen Caw",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Phosphoadenylate3QuoteNucleotidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Phosphoadenylate3QuoteNucleotidase: new Coding({
         code: "6672006",
         display: "Phosphoadenylate 3'-nucleotidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PigmentingAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PigmentingAgent: new Coding({
         code: "66742008",
         display: "Pigmenting agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power185PowerOsmium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power185PowerOsmium: new Coding({
         code: "668004",
         display: "^185^Osmium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BetamethasoneValerate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BetamethasoneValerate: new Coding({
         code: "66854004",
         display: "Betamethasone valerate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dipyridamole: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dipyridamole: new Coding({
         code: "66859009",
         display: "Dipyridamole",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AluminumChloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AluminumChloride: new Coding({
         code: "66860004",
         display: "Aluminum chloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VacciniaVirusVaccine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VacciniaVirusVaccine: new Coding({
         code: "669007",
         display: "Vaccinia virus vaccine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Methyclothiazide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Methyclothiazide: new Coding({
         code: "66919007",
         display: "Methyclothiazide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Colestipol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Colestipol: new Coding({
         code: "66971004",
         display: "Colestipol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TitaniumRadioisotope: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TitaniumRadioisotope: new Coding({
         code: "6699008",
         display: "Titanium radioisotope",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LissamineFastRedB: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LissamineFastRedB: new Coding({
         code: "6701008",
         display: "Lissamine fast red B",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EthylMercaptoethylDiethylThiophosphate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EthylMercaptoethylDiethylThiophosphate: new Coding({
         code: "6702001",
         display: "Ethyl mercaptoethyl diethyl thiophosphate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Gentamicin2DoubleQuoteNucleotidyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Gentamicin2DoubleQuoteNucleotidyltransferase: new Coding({
         code: "6709005",
         display: "Gentamicin 2''-nucleotidyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NitricOxide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NitricOxide: new Coding({
         code: "6710000",
         display: "Nitric oxide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power91PowerYttrium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power91PowerYttrium: new Coding({
         code: "6713003",
         display: "^91^Yttrium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AbortientAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AbortientAgent: new Coding({
         code: "6716006",
         display: "Abortient agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Nifuroxime: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Nifuroxime: new Coding({
         code: "6717002",
         display: "Nifuroxime",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LymphocyteImmuneGlobulin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LymphocyteImmuneGlobulin: new Coding({
         code: "67213005",
         display: "Lymphocyte immune globulin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethyleneBlue: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethyleneBlue: new Coding({
         code: "6725000",
         display: "Methylene blue",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power234PowerUranium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power234PowerUranium: new Coding({
         code: "6730001",
         display: "^234^Uranium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntiDNAAntibody: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntiDNAAntibody: new Coding({
         code: "6741004",
         display: "Anti DNA antibody",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Acylaminopenicillin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Acylaminopenicillin: new Coding({
         code: "67423003",
         display: "Acylaminopenicillin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AlphaAdrenergicBlockingAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AlphaAdrenergicBlockingAgent: new Coding({
         code: "67440007",
         display: "Alpha-adrenergic blocking agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Valproate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Valproate: new Coding({
         code: "67477004",
         display: "Valproate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntiarrhythmicDrug: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntiarrhythmicDrug: new Coding({
         code: "67507000",
         display: "Antiarrhythmic drug",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TLAntigen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TLAntigen: new Coding({
         code: "6755007",
         display: "TL antigen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TopicalAnesthetic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TopicalAnesthetic: new Coding({
         code: "67585005",
         display: "Topical anesthetic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Paclitaxel: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Paclitaxel: new Coding({
         code: "67735003",
         display: "Paclitaxel",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SilverDifluoride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SilverDifluoride: new Coding({
         code: "6786001",
         display: "Silver difluoride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SecondGenerationCephalosporin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SecondGenerationCephalosporin: new Coding({
         code: "67891001",
         display: "Second generation cephalosporin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Aminopterin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Aminopterin: new Coding({
         code: "6790004",
         display: "Aminopterin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Veratrine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Veratrine: new Coding({
         code: "6792007",
         display: "Veratrine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Apomorphine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Apomorphine: new Coding({
         code: "67939000",
         display: "Apomorphine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FerrousIronCompound: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FerrousIronCompound: new Coding({
         code: "6808006",
         display: "Ferrous iron compound",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Acebutolol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Acebutolol: new Coding({
         code: "68088000",
         display: "Acebutolol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Phomopsin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Phomopsin: new Coding({
         code: "6809003",
         display: "Phomopsin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HibOligosaccharideConjugateDiphtheriaCRMGreaterThan197LessThanProteinConjugateVaccine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HibOligosaccharideConjugateDiphtheriaCRMGreaterThan197LessThanProteinConjugateVaccine: new Coding({
         code: "68113000",
         display: "Hib oligosaccharide conjugate (diphtheria CRM>197< protein conjugate) vaccine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiscadenineSynthase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiscadenineSynthase: new Coding({
         code: "6814004",
         display: "Discadenine synthase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OxidizedGlutathione: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OxidizedGlutathione: new Coding({
         code: "6817006",
         display: "Oxidized glutathione",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CalcitriolPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CalcitriolPreparation: new Coding({
         code: "68206008",
         display: "Calcitriol preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiphtheriaAndTetanusToxoidAdsorbed: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiphtheriaAndTetanusToxoidAdsorbed: new Coding({
         code: "68208009",
         display: "Diphtheria and tetanus toxoid adsorbed",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SterolHormone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SterolHormone: new Coding({
         code: "6826009",
         display: "Sterol hormone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MercuricAcetate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MercuricAcetate: new Coding({
         code: "683009",
         display: "Mercuric acetate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DextropropoxypheneNapsylate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DextropropoxypheneNapsylate: new Coding({
         code: "6837005",
         display: "Dextropropoxyphene napsylate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CalciumChloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CalciumChloride: new Coding({
         code: "68395000",
         display: "Calcium chloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SomatomedinPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SomatomedinPreparation: new Coding({
         code: "68398003",
         display: "Somatomedin preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarbonicAnhydraseInhibitor: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarbonicAnhydraseInhibitor: new Coding({
         code: "68402007",
         display: "Carbonic anhydrase inhibitor",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HydrogenPeroxideSolution30Percent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HydrogenPeroxideSolution30Percent: new Coding({
         code: "68407001",
         display: "Hydrogen peroxide solution 30%",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cloxacillin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cloxacillin: new Coding({
         code: "68422006",
         display: "Cloxacillin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Isoflurophate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Isoflurophate: new Coding({
         code: "68424007",
         display: "Isoflurophate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Doxorubicin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Doxorubicin: new Coding({
         code: "68444001",
         display: "Doxorubicin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SurgicalJelly: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SurgicalJelly: new Coding({
         code: "68461003",
         display: "Surgical jelly",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumPropionate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumPropionate: new Coding({
         code: "68490009",
         display: "Sodium propionate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power188PowerPlatinum: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power188PowerPlatinum: new Coding({
         code: "6854002",
         display: "^188^Platinum",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PlastoquinolPlastocyaninReductase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PlastoquinolPlastocyaninReductase: new Coding({
         code: "686001",
         display: "Plastoquinol-plastocyanin reductase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SecretinPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SecretinPreparation: new Coding({
         code: "68622003",
         display: "Secretin preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TheophyllineCalciumSalicylate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TheophyllineCalciumSalicylate: new Coding({
         code: "6865007",
         display: "Theophylline calcium salicylate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumAurothiomalate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumAurothiomalate: new Coding({
         code: "68702006",
         display: "Sodium aurothiomalate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CefapirinSodium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CefapirinSodium: new Coding({
         code: "6873003",
         display: "Cefapirin sodium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Isoxsuprine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Isoxsuprine: new Coding({
         code: "68774008",
         display: "Isoxsuprine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL5811EicosatrienoicAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL5811EicosatrienoicAcid: new Coding({
         code: "6879004",
         display: "5,8,11-Eicosatrienoic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MagnesiumFumes: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MagnesiumFumes: new Coding({
         code: "6881002",
         display: "Magnesium fumes",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_S3Amino2MethylpropionateAminotransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_S3Amino2MethylpropionateAminotransferase: new Coding({
         code: "6884005",
         display: "(S)-3-Amino-2-methylpropionate aminotransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PolyvalentReptileAntivenin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PolyvalentReptileAntivenin: new Coding({
         code: "68864001",
         display: "Polyvalent reptile antivenin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Methotrexate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Methotrexate: new Coding({
         code: "68887009",
         display: "Methotrexate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PenicillinaseResistantPenicillin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PenicillinaseResistantPenicillin: new Coding({
         code: "68892006",
         display: "Penicillinase-resistant penicillin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL3DeoxyMannoOctulosonate8Phosphatase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL3DeoxyMannoOctulosonate8Phosphatase: new Coding({
         code: "6890009",
         display: "3-Deoxy-manno-octulosonate-8-phosphatase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ThiopurineMethyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ThiopurineMethyltransferase: new Coding({
         code: "6896003",
         display: "Thiopurine methyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumFluoride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumFluoride: new Coding({
         code: "6910009",
         display: "Sodium fluoride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dantrolene: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dantrolene: new Coding({
         code: "69107004",
         display: "Dantrolene",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DeoxycytidylateMethyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DeoxycytidylateMethyltransferase: new Coding({
         code: "6911008",
         display: "Deoxycytidylate methyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Bowieine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Bowieine: new Coding({
         code: "6916003",
         display: "Bowieine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Guanadrel: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Guanadrel: new Coding({
         code: "69204002",
         display: "Guanadrel",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ClassIIAntiarrhythmicDrug: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ClassIIAntiarrhythmicDrug: new Coding({
         code: "69227005",
         display: "Class II antiarrhythmic drug",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Amiodarone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Amiodarone: new Coding({
         code: "69236009",
         display: "Amiodarone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Exopolyphosphatase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Exopolyphosphatase: new Coding({
         code: "6924008",
         display: "Exopolyphosphatase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Miotic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Miotic: new Coding({
         code: "69242008",
         display: "Miotic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LeucineAcetyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LeucineAcetyltransferase: new Coding({
         code: "6925009",
         display: "Leucine acetyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power121PowerTin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power121PowerTin: new Coding({
         code: "6927001",
         display: "^121^Tin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Trichothecene: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Trichothecene: new Coding({
         code: "693002",
         display: "Trichothecene",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Aminocyclohexylpenicillin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Aminocyclohexylpenicillin: new Coding({
         code: "69331001",
         display: "Aminocyclohexylpenicillin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ThymidylateSynthase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ThymidylateSynthase: new Coding({
         code: "6937006",
         display: "Thymidylate synthase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Immunosuppressant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Immunosuppressant: new Coding({
         code: "69431002",
         display: "Immunosuppressant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenLePowerBHPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenLePowerBHPower: new Coding({
         code: "6945001",
         display: "Blood group antigen Le^bH^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BiologicalAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BiologicalAgent: new Coding({
         code: "69509008",
         display: "Biological agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power121mPowerTin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power121mPowerTin: new Coding({
         code: "6952004",
         display: "^121m^Tin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MenadionePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MenadionePreparation: new Coding({
         code: "69576000",
         display: "Menadione preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyFrando: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyFrando: new Coding({
         code: "6958000",
         display: "Blood group antibody Frando",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PolymyxinB: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PolymyxinB: new Coding({
         code: "6960003",
         display: "Polymyxin B",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LysolecithinAcylmutase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LysolecithinAcylmutase: new Coding({
         code: "6961004",
         display: "Lysolecithin acylmutase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL4HydroxyprolineEpimerase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL4HydroxyprolineEpimerase: new Coding({
         code: "6970001",
         display: "4-Hydroxyproline epimerase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Clonazepam: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Clonazepam: new Coding({
         code: "69708003",
         display: "Clonazepam",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChromiumPower51PowerChloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChromiumPower51PowerChloride: new Coding({
         code: "6973004",
         display: "Chromium^51^ chloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ErythromycinLactobionate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ErythromycinLactobionate: new Coding({
         code: "698006",
         display: "Erythromycin lactobionate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumEstroneSulfatePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumEstroneSulfatePreparation: new Coding({
         code: "69801001",
         display: "Sodium estrone sulfate preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Acrylamide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Acrylamide: new Coding({
         code: "6983000",
         display: "Acrylamide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OpiumPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OpiumPreparation: new Coding({
         code: "6985007",
         display: "Opium preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Altretamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Altretamine: new Coding({
         code: "69879000",
         display: "Altretamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CoalTarExtract: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CoalTarExtract: new Coding({
         code: "699003",
         display: "Coal tar extract",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Aztreonam: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Aztreonam: new Coding({
         code: "69918003",
         display: "Aztreonam",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TriflupromazineHydrochloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TriflupromazineHydrochloride: new Coding({
         code: "6992002",
         display: "Triflupromazine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SeminalFluid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SeminalFluid: new Coding({
         code: "6993007",
         display: "Seminal fluid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Sucralfate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Sucralfate: new Coding({
         code: "69967001",
         display: "Sucralfate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AmmoniumCompound: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AmmoniumCompound: new Coding({
         code: "6999006",
         display: "Ammonium compound",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MilkIntolerance: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MilkIntolerance: new Coding({
         code: "700094005",
         display: "Milk intolerance",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Sulfamethoxazole: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Sulfamethoxazole: new Coding({
         code: "70047000",
         display: "Sulfamethoxazole",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BetaCarotene1515QuoteDioxygenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BetaCarotene1515QuoteDioxygenase: new Coding({
         code: "7008002",
         display: "beta-Carotene 15,15'-dioxygenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MalateCoALigase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MalateCoALigase: new Coding({
         code: "7018007",
         display: "Malate-CoA ligase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_UndecylenateSalt: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_UndecylenateSalt: new Coding({
         code: "70216000",
         display: "Undecylenate salt",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Sulfamethizole: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Sulfamethizole: new Coding({
         code: "70254000",
         display: "Sulfamethizole",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenGreenlee: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenGreenlee: new Coding({
         code: "7029006",
         display: "Blood group antigen Greenlee",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Globoside: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Globoside: new Coding({
         code: "7030001",
         display: "Globoside",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Diclofenac: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Diclofenac: new Coding({
         code: "7034005",
         display: "Diclofenac",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PiperazineDerivativeAntihistamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PiperazineDerivativeAntihistamine: new Coding({
         code: "70343008",
         display: "Piperazine derivative antihistamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumChloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumChloride: new Coding({
         code: "70379000",
         display: "Sodium chloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenRx: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenRx: new Coding({
         code: "704006",
         display: "Blood group antigen Rx",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PolyvalentPneumococcalVaccine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PolyvalentPneumococcalVaccine: new Coding({
         code: "70447008",
         display: "Polyvalent pneumococcal vaccine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Lycorine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Lycorine: new Coding({
         code: "7045008",
         display: "Lycorine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FishLiverOilPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FishLiverOilPreparation: new Coding({
         code: "70460002",
         display: "Fish liver oil preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AsphyxiantAtmosphere: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AsphyxiantAtmosphere: new Coding({
         code: "7047000",
         display: "Asphyxiant atmosphere",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PyruvateCarboxylase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PyruvateCarboxylase: new Coding({
         code: "7049002",
         display: "Pyruvate carboxylase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinPoissy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinPoissy: new Coding({
         code: "7054006",
         display: "Hemoglobin Poissy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL3PropylmalateSynthase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL3PropylmalateSynthase: new Coding({
         code: "7056008",
         display: "3-Propylmalate synthase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NAcylneuraminate9Phosphatase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NAcylneuraminate9Phosphatase: new Coding({
         code: "7059001",
         display: "N-Acylneuraminate-9-phosphatase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AnthocyanidinOPower3PowerGlucosyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AnthocyanidinOPower3PowerGlucosyltransferase: new Coding({
         code: "7061005",
         display: "Anthocyanidin O^3^-glucosyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Convallamarin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Convallamarin: new Coding({
         code: "7070008",
         display: "Convallamarin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Deferoxamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Deferoxamine: new Coding({
         code: "70702006",
         display: "Deferoxamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Pemoline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Pemoline: new Coding({
         code: "70776005",
         display: "Pemoline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FibrinogenBuenosAiresII: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FibrinogenBuenosAiresII: new Coding({
         code: "7084003",
         display: "Fibrinogen Buenos Aires II",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChymotrypsinPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChymotrypsinPreparation: new Coding({
         code: "70841003",
         display: "Chymotrypsin preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Meprobamate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Meprobamate: new Coding({
         code: "70864001",
         display: "Meprobamate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Metoprolol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Metoprolol: new Coding({
         code: "7092007",
         display: "Metoprolol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Demecarium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Demecarium: new Coding({
         code: "70934008",
         display: "Demecarium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power69PowerGermanium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power69PowerGermanium: new Coding({
         code: "7110002",
         display: "^69^Germanium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Vaccine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Vaccine: new Coding({
         code: "71181003",
         display: "Vaccine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Antigen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Antigen: new Coding({
         code: "7120007",
         display: "Antigen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SnakeAntivenin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SnakeAntivenin: new Coding({
         code: "71289008",
         display: "Snake antivenin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power73PowerGallium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power73PowerGallium: new Coding({
         code: "7132006",
         display: "^73^Gallium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VasopressinPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VasopressinPreparation: new Coding({
         code: "71338005",
         display: "Vasopressin preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcidCoALigaseGDPForming: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcidCoALigaseGDPForming: new Coding({
         code: "7139002",
         display: "Acid-CoA ligase (GDP-forming)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RadiographicContrastMedia: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RadiographicContrastMedia: new Coding({
         code: "7140000",
         display: "Radiographic contrast media",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Kanamycin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Kanamycin: new Coding({
         code: "71451001",
         display: "Kanamycin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Mupirocin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Mupirocin: new Coding({
         code: "71453003",
         display: "Mupirocin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FlurandrenolonePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FlurandrenolonePreparation: new Coding({
         code: "71455005",
         display: "Flurandrenolone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CyclohexeneOxide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CyclohexeneOxide: new Coding({
         code: "7146006",
         display: "Cyclohexene oxide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PodophyllumResin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PodophyllumResin: new Coding({
         code: "71462001",
         display: "Podophyllum resin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ErgocalciferolPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ErgocalciferolPreparation: new Coding({
         code: "71516007",
         display: "Ergocalciferol preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Chlorthion: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Chlorthion: new Coding({
         code: "7152007",
         display: "Chlorthion",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhosphorusIsotope: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhosphorusIsotope: new Coding({
         code: "7156005",
         display: "Phosphorus isotope",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HLADw19Antigen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HLADw19Antigen: new Coding({
         code: "7158006",
         display: "HLA-Dw19 antigen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumPhosphate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumPhosphate: new Coding({
         code: "71584004",
         display: "Sodium phosphate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HematologicalAgents: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HematologicalAgents: new Coding({
         code: "716000",
         display: "Hematological agents",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ComplementComponentC2a: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ComplementComponentC2a: new Coding({
         code: "7161007",
         display: "Complement component C2a",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NoKnownLatexAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NoKnownLatexAllergy: new Coding({
         code: "716184000",
         display: "No known latex allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NoKnownAnimalAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NoKnownAnimalAllergy: new Coding({
         code: "716220001",
         display: "No known animal allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Chlormezanone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Chlormezanone: new Coding({
         code: "71634000",
         display: "Chlormezanone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MagnesiumCarbonate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MagnesiumCarbonate: new Coding({
         code: "7168001",
         display: "Magnesium carbonate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Trifluoperazine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Trifluoperazine: new Coding({
         code: "71699007",
         display: "Trifluoperazine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FerrousSulfate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FerrousSulfate: new Coding({
         code: "71724000",
         display: "Ferrous sulfate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MedrysoneOphthalmicPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MedrysoneOphthalmicPreparation: new Coding({
         code: "71731001",
         display: "Medrysone ophthalmic preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Nitroglycerin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Nitroglycerin: new Coding({
         code: "71759000",
         display: "Nitroglycerin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MonoamineOxidaseInhibitor: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MonoamineOxidaseInhibitor: new Coding({
         code: "71770007",
         display: "Monoamine oxidase inhibitor",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Prekallikrein: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Prekallikrein: new Coding({
         code: "7179006",
         display: "Prekallikrein",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Fenoprofen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Fenoprofen: new Coding({
         code: "71798005",
         display: "Fenoprofen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CytotoxicAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CytotoxicAgent: new Coding({
         code: "71837009",
         display: "Cytotoxic agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethenyltetrahydrofolateCyclohydrolase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethenyltetrahydrofolateCyclohydrolase: new Coding({
         code: "7191002",
         display: "Methenyltetrahydrofolate cyclohydrolase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ThiolOxidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ThiolOxidase: new Coding({
         code: "7208009",
         display: "Thiol oxidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyHaakestad: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyHaakestad: new Coding({
         code: "7211005",
         display: "Blood group antibody Haakestad",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BrucellaVaccine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BrucellaVaccine: new Coding({
         code: "7230005",
         display: "Brucella vaccine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cyclandelate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cyclandelate: new Coding({
         code: "72312007",
         display: "Cyclandelate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EthylenediamineDerivativeAntihistamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EthylenediamineDerivativeAntihistamine: new Coding({
         code: "7235000",
         display: "Ethylenediamine derivative antihistamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OralContraceptiveIntolerance: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OralContraceptiveIntolerance: new Coding({
         code: "72354005",
         display: "Oral contraceptive intolerance",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GalactonateDehydratase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GalactonateDehydratase: new Coding({
         code: "7237008",
         display: "Galactonate dehydratase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OphthalmicSulfonamidePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OphthalmicSulfonamidePreparation: new Coding({
         code: "72398005",
         display: "Ophthalmic sulfonamide preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Metacycline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Metacycline: new Coding({
         code: "72416006",
         display: "Metacycline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethylIsocyanate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethylIsocyanate: new Coding({
         code: "7243005",
         display: "Methyl isocyanate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL2Amino6Mercaptopurine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL2Amino6Mercaptopurine: new Coding({
         code: "72623000",
         display: "2-Amino-6-mercaptopurine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ThThorium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ThThorium: new Coding({
         code: "7269004",
         display: "Th - Thorium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MixedDust: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MixedDust: new Coding({
         code: "7271004",
         display: "Mixed dust",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DTDP4DehydrorhamnoseReductase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DTDP4DehydrorhamnoseReductase: new Coding({
         code: "7280004",
         display: "dTDP4-dehydrorhamnose reductase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TechnetiumTcPower99mPowerLidofenin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TechnetiumTcPower99mPowerLidofenin: new Coding({
         code: "7281000",
         display: "Technetium Tc^99m^ lidofenin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cholestyramine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cholestyramine: new Coding({
         code: "72824008",
         display: "Cholestyramine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MercaptanCompound: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MercaptanCompound: new Coding({
         code: "7284008",
         display: "Mercaptan compound",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Scopolamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Scopolamine: new Coding({
         code: "72870001",
         display: "Scopolamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IndocyanineGreen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IndocyanineGreen: new Coding({
         code: "7292004",
         display: "Indocyanine green",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Clofazimine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Clofazimine: new Coding({
         code: "72924009",
         display: "Clofazimine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TertButylAcetate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TertButylAcetate: new Coding({
         code: "7294003",
         display: "tert-Butyl acetate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumSalicylate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumSalicylate: new Coding({
         code: "72968006",
         display: "Sodium salicylate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DrugBuilder: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DrugBuilder: new Coding({
         code: "72996000",
         display: "Drug builder",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ambuphylline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ambuphylline: new Coding({
         code: "7302008",
         display: "Ambuphylline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Colistin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Colistin: new Coding({
         code: "73074003",
         display: "Colistin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Neomycin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Neomycin: new Coding({
         code: "73093001",
         display: "Neomycin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Colchicine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Colchicine: new Coding({
         code: "73133000",
         display: "Colchicine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Menthol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Menthol: new Coding({
         code: "73170009",
         display: "Menthol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Bacteriochlorophyll: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Bacteriochlorophyll: new Coding({
         code: "7318002",
         display: "Bacteriochlorophyll",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NValeraldehyde: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NValeraldehyde: new Coding({
         code: "732002",
         display: "N-valeraldehyde",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Pyrimidine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Pyrimidine: new Coding({
         code: "7321000",
         display: "Pyrimidine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Adipiodone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Adipiodone: new Coding({
         code: "73212002",
         display: "Adipiodone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NonSteroidalEstrogenPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NonSteroidalEstrogenPreparation: new Coding({
         code: "73228007",
         display: "Non-steroidal estrogen preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CalciumHydroxide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CalciumHydroxide: new Coding({
         code: "7325009",
         display: "Calcium hydroxide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SulfurousAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SulfurousAcid: new Coding({
         code: "7327001",
         display: "Sulfurous acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HumanPlasmaCryoprecipitate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HumanPlasmaCryoprecipitate: new Coding({
         code: "73274006",
         display: "Human plasma cryoprecipitate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Mecamylamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Mecamylamine: new Coding({
         code: "73277004",
         display: "Mecamylamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RedPetrolatum: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RedPetrolatum: new Coding({
         code: "7328006",
         display: "Red petrolatum",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Shellac: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Shellac: new Coding({
         code: "7330008",
         display: "Shellac",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Trazodone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Trazodone: new Coding({
         code: "7336002",
         display: "Trazodone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyTrPowerAPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyTrPowerAPower: new Coding({
         code: "7337006",
         display: "Blood group antibody Tr^a^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DesmopressinPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DesmopressinPreparation: new Coding({
         code: "73454001",
         display: "Desmopressin preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FactorII: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FactorII: new Coding({
         code: "7348004",
         display: "Factor II",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenJobbins: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenJobbins: new Coding({
         code: "735000",
         display: "Blood group antigen Jobbins",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Morphine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Morphine: new Coding({
         code: "73572009",
         display: "Morphine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenytoinSodium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenytoinSodium: new Coding({
         code: "73585007",
         display: "Phenytoin sodium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CaloricAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CaloricAgent: new Coding({
         code: "73627008",
         display: "Caloric agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PrescriptionDrug: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PrescriptionDrug: new Coding({
         code: "73639000",
         display: "Prescription drug",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dipivefrine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dipivefrine: new Coding({
         code: "73647000",
         display: "Dipivefrine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Amobarbital: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Amobarbital: new Coding({
         code: "73756003",
         display: "Amobarbital",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ExtendedSpectrumPenicillin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ExtendedSpectrumPenicillin: new Coding({
         code: "73763003",
         display: "Extended spectrum penicillin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ThyrotropinReleasingHormonePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ThyrotropinReleasingHormonePreparation: new Coding({
         code: "73805002",
         display: "Thyrotropin releasing hormone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AminoalcoholEster: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AminoalcoholEster: new Coding({
         code: "7382005",
         display: "Aminoalcohol ester",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Atropine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Atropine: new Coding({
         code: "73949004",
         display: "Atropine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cefuroxime: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cefuroxime: new Coding({
         code: "73986003",
         display: "Cefuroxime",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemeHemopexinComplex: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemeHemopexinComplex: new Coding({
         code: "7401000",
         display: "Heme-hemopexin complex",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Mepenzolate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Mepenzolate: new Coding({
         code: "74022005",
         display: "Mepenzolate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Prazepam: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Prazepam: new Coding({
         code: "74065006",
         display: "Prazepam",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Atracurium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Atracurium: new Coding({
         code: "74074008",
         display: "Atracurium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyHLAB8: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyHLAB8: new Coding({
         code: "7411007",
         display: "Blood group antibody HLA-B8",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_EdetateDisodium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_EdetateDisodium: new Coding({
         code: "74147005",
         display: "Edetate disodium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Indapamide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Indapamide: new Coding({
         code: "74213004",
         display: "Indapamide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VitaminKPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VitaminKPreparation: new Coding({
         code: "74226000",
         display: "Vitamin K preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SepiapterinReductase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SepiapterinReductase: new Coding({
         code: "7427000",
         display: "Sepiapterin reductase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ErythrosinB: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ErythrosinB: new Coding({
         code: "7434003",
         display: "Erythrosin B",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ruthenium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ruthenium: new Coding({
         code: "7446004",
         display: "Ruthenium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cyclophosphamide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cyclophosphamide: new Coding({
         code: "74470007",
         display: "Cyclophosphamide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PotassiumSupplement: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PotassiumSupplement: new Coding({
         code: "74480006",
         display: "Potassium supplement",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TobramycinOphthalmicAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TobramycinOphthalmicAgent: new Coding({
         code: "7451005",
         display: "Tobramycin ophthalmic agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Piperacillin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Piperacillin: new Coding({
         code: "74575000",
         display: "Piperacillin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HydroquinoneProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HydroquinoneProduct: new Coding({
         code: "74583006",
         display: "Hydroquinone product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power127PowerTellurium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power127PowerTellurium: new Coding({
         code: "7460002",
         display: "^127^Tellurium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DrugDiluent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DrugDiluent: new Coding({
         code: "74626007",
         display: "Drug diluent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Succinimide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Succinimide: new Coding({
         code: "74632002",
         display: "Succinimide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Propofol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Propofol: new Coding({
         code: "74674007",
         display: "Propofol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PTertButyltoluene: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PTertButyltoluene: new Coding({
         code: "7470000",
         display: "p-tert-Butyltoluene",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Oxamniquine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Oxamniquine: new Coding({
         code: "747006",
         display: "Oxamniquine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Phenoxybenzamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Phenoxybenzamine: new Coding({
         code: "74771007",
         display: "Phenoxybenzamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AnthraquinoneLaxatives: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AnthraquinoneLaxatives: new Coding({
         code: "74780007",
         display: "Anthraquinone laxatives",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NaturallyOccurringAlkaloid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NaturallyOccurringAlkaloid: new Coding({
         code: "74782004",
         display: "Naturally occurring alkaloid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Pipenzolate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Pipenzolate: new Coding({
         code: "74798006",
         display: "Pipenzolate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcetohydroxamicAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcetohydroxamicAcid: new Coding({
         code: "74819009",
         display: "Acetohydroxamic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HomocytotropicAntibody: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HomocytotropicAntibody: new Coding({
         code: "7489000",
         display: "Homocytotropic antibody",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DesoxycorticosteronePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DesoxycorticosteronePreparation: new Coding({
         code: "75029008",
         display: "Desoxycorticosterone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power72PowerGallium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power72PowerGallium: new Coding({
         code: "7503004",
         display: "^72^Gallium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MannitolHexanitrate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MannitolHexanitrate: new Coding({
         code: "7509000",
         display: "Mannitol hexanitrate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HepatotoxicMycotoxin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HepatotoxicMycotoxin: new Coding({
         code: "7515000",
         display: "Hepatotoxic mycotoxin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BacterinToxoid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BacterinToxoid: new Coding({
         code: "75201000",
         display: "Bacterin - toxoid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Mometasone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Mometasone: new Coding({
         code: "75203002",
         display: "Mometasone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VincristineSulfate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VincristineSulfate: new Coding({
         code: "75292001",
         display: "Vincristine sulfate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumCalciumedetate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumCalciumedetate: new Coding({
         code: "75366006",
         display: "Sodium calciumedetate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_StizolobinateSynthase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_StizolobinateSynthase: new Coding({
         code: "7537007",
         display: "Stizolobinate synthase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dexbrompheniramine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dexbrompheniramine: new Coding({
         code: "75429004",
         display: "Dexbrompheniramine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinLincolnPark: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinLincolnPark: new Coding({
         code: "7547005",
         display: "Hemoglobin Lincoln Park",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FibrinogenBethesdaI: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FibrinogenBethesdaI: new Coding({
         code: "7549008",
         display: "Fibrinogen Bethesda I",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Bromazine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Bromazine: new Coding({
         code: "75501004",
         display: "Bromazine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DexamethasonePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DexamethasonePreparation: new Coding({
         code: "7561000",
         display: "Dexamethasone preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DeltaTocopherolPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DeltaTocopherolPreparation: new Coding({
         code: "75661008",
         display: "delta-Tocopherol preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TheophyllineSodiumGlycinate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TheophyllineSodiumGlycinate: new Coding({
         code: "75748004",
         display: "Theophylline sodium glycinate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_UreaTopicalPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_UreaTopicalPreparation: new Coding({
         code: "75770001",
         display: "Urea topical preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ciprofloxacin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ciprofloxacin: new Coding({
         code: "7577004",
         display: "Ciprofloxacin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodySkPowerAPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodySkPowerAPower: new Coding({
         code: "7588005",
         display: "Blood group antibody Sk^a^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Floxuridine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Floxuridine: new Coding({
         code: "75927008",
         display: "Floxuridine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Tamoxifen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Tamoxifen: new Coding({
         code: "75959001",
         display: "Tamoxifen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GonadotropinReleasingFactorPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GonadotropinReleasingFactorPreparation: new Coding({
         code: "75969007",
         display: "Gonadotropin releasing factor preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Prazosin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Prazosin: new Coding({
         code: "76058001",
         display: "Prazosin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TriethyleneGlycol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TriethyleneGlycol: new Coding({
         code: "7608003",
         display: "Triethylene glycol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IopanoicAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IopanoicAcid: new Coding({
         code: "76155001",
         display: "Iopanoic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyPruitt: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyPruitt: new Coding({
         code: "7616007",
         display: "Blood group antibody Pruitt",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumPerborateProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumPerborateProduct: new Coding({
         code: "7624002",
         display: "Sodium perborate product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Gallamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Gallamine: new Coding({
         code: "76286000",
         display: "Gallamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Xylometazoline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Xylometazoline: new Coding({
         code: "76289007",
         display: "Xylometazoline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Alpha1AdrenergicBlockingAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Alpha1AdrenergicBlockingAgent: new Coding({
         code: "76385003",
         display: "Alpha 1 adrenergic blocking agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Practolol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Practolol: new Coding({
         code: "76390000",
         display: "Practolol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HLABw70Antigen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HLABw70Antigen: new Coding({
         code: "7648006",
         display: "HLA-Bw70 antigen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Bleomycin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Bleomycin: new Coding({
         code: "76591000",
         display: "Bleomycin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FishBone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FishBone: new Coding({
         code: "7661006",
         display: "Fish bone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Noscapine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Noscapine: new Coding({
         code: "76696004",
         display: "Noscapine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AminobutyraldehydeDehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AminobutyraldehydeDehydrogenase: new Coding({
         code: "7670009",
         display: "Aminobutyraldehyde dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenTowey: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenTowey: new Coding({
         code: "7675004",
         display: "Blood group antigen Towey",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DisopyramideProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DisopyramideProduct: new Coding({
         code: "76759004",
         display: "Disopyramide product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_StrongOxidizingCompound: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_StrongOxidizingCompound: new Coding({
         code: "7679005",
         display: "Strong oxidizing compound",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyBgPowerCPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyBgPowerCPower: new Coding({
         code: "7685003",
         display: "Blood group antibody Bg^c^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FerrovanadiumDust: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FerrovanadiumDust: new Coding({
         code: "7696006",
         display: "Ferrovanadium dust",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Iproniazid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Iproniazid: new Coding({
         code: "76962009",
         display: "Iproniazid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Clofibrate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Clofibrate: new Coding({
         code: "77035009",
         display: "Clofibrate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DipSer: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DipSer: new Coding({
         code: "77048008",
         display: "Dip/ser",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IsovalerylCoenzymeADehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IsovalerylCoenzymeADehydrogenase: new Coding({
         code: "7716001",
         display: "Isovaleryl coenzyme A dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Emetic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Emetic: new Coding({
         code: "77237006",
         display: "Emetic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinMIwate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinMIwate: new Coding({
         code: "773001",
         display: "Hemoglobin M-Iwate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NormalAnimalGlobulinConcentrate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NormalAnimalGlobulinConcentrate: new Coding({
         code: "77331005",
         display: "Normal animal globulin concentrate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChlortetracyclineHydrochloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChlortetracyclineHydrochloride: new Coding({
         code: "7737009",
         display: "Chlortetracycline hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HLAB49Antigen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HLAB49Antigen: new Coding({
         code: "7738004",
         display: "HLA-B49 antigen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Benzatropine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Benzatropine: new Coding({
         code: "77390008",
         display: "Benzatropine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntidiarrheaAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntidiarrheaAgent: new Coding({
         code: "77398001",
         display: "Antidiarrhea agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Terpene: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Terpene: new Coding({
         code: "77549006",
         display: "Terpene",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power111PowerSilver: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power111PowerSilver: new Coding({
         code: "7761002",
         display: "^111^Silver",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_IllegalDrug: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_IllegalDrug: new Coding({
         code: "77657003",
         display: "Illegal drug",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power89PowerStrontium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power89PowerStrontium: new Coding({
         code: "7770004",
         display: "^89^Strontium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NAcetylcysteine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NAcetylcysteine: new Coding({
         code: "77731008",
         display: "N-Acetylcysteine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NeoBVitaminAGreaterThan1LessThan: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NeoBVitaminAGreaterThan1LessThan: new Coding({
         code: "7774008",
         display: "Neo-b-vitamin A>1<",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dacarbazine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dacarbazine: new Coding({
         code: "77750008",
         display: "Dacarbazine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power103PowerRuthenium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power103PowerRuthenium: new Coding({
         code: "7779003",
         display: "^103^Ruthenium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SphingomyelinPhosphodiesteraseD: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SphingomyelinPhosphodiesteraseD: new Coding({
         code: "7785005",
         display: "Sphingomyelin phosphodiesterase D",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Esmolol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Esmolol: new Coding({
         code: "77856005",
         display: "Esmolol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MestranolProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MestranolProduct: new Coding({
         code: "77885004",
         display: "Mestranol product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Simethicone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Simethicone: new Coding({
         code: "77898008",
         display: "Simethicone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL1Monoacylglycerol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL1Monoacylglycerol: new Coding({
         code: "7790008",
         display: "1-Monoacylglycerol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SoyProtein: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SoyProtein: new Coding({
         code: "7791007",
         display: "Soy protein",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OxalateOxidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OxalateOxidase: new Coding({
         code: "7795003",
         display: "Oxalate oxidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TetrahydroxypteridineCycloisomerase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TetrahydroxypteridineCycloisomerase: new Coding({
         code: "7801007",
         display: "Tetrahydroxypteridine cycloisomerase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GanciclovirProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GanciclovirProduct: new Coding({
         code: "78025001",
         display: "Ganciclovir product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarbolFuchsinTopicalSolution: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarbolFuchsinTopicalSolution: new Coding({
         code: "78057000",
         display: "Carbol-fuchsin topical solution",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntazolineHydrochloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntazolineHydrochloride: new Coding({
         code: "7816005",
         display: "Antazoline hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Mezlocillin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Mezlocillin: new Coding({
         code: "78174002",
         display: "Mezlocillin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcetylDigitoxin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcetylDigitoxin: new Coding({
         code: "7834009",
         display: "Acetyl digitoxin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Expectorants: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Expectorants: new Coding({
         code: "7836006",
         display: "Expectorants",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Reserpine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Reserpine: new Coding({
         code: "78379001",
         display: "Reserpine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ThiopentalSodium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ThiopentalSodium: new Coding({
         code: "78411008",
         display: "Thiopental sodium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CitrateSalt: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CitrateSalt: new Coding({
         code: "78439009",
         display: "Citrate salt",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Nitrazepam: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Nitrazepam: new Coding({
         code: "78449007",
         display: "Nitrazepam",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SphingomyelinPhosphodiesterase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SphingomyelinPhosphodiesterase: new Coding({
         code: "7846008",
         display: "Sphingomyelin phosphodiesterase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL1PhosphatidylinositolPhosphodiesterase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL1PhosphatidylinositolPhosphodiesterase: new Coding({
         code: "7848009",
         display: "1-Phosphatidylinositol phosphodiesterase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dextranase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dextranase: new Coding({
         code: "785009",
         display: "Dextranase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Benzylpenicillin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Benzylpenicillin: new Coding({
         code: "78507004",
         display: "Benzylpenicillin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PotassiumCitrateProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PotassiumCitrateProduct: new Coding({
         code: "78542000",
         display: "Potassium citrate product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BetaCyclopiazonateDehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BetaCyclopiazonateDehydrogenase: new Coding({
         code: "7868003",
         display: "beta-Cyclopiazonate dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power218PowerRadon: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power218PowerRadon: new Coding({
         code: "7879008",
         display: "^218^Radon",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinPresbyterian: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinPresbyterian: new Coding({
         code: "7900007",
         display: "Hemoglobin Presbyterian",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Deanol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Deanol: new Coding({
         code: "7904003",
         display: "Deanol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ArginineCarboxypeptidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ArginineCarboxypeptidase: new Coding({
         code: "7909008",
         display: "Arginine carboxypeptidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Diflorasone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Diflorasone: new Coding({
         code: "7924004",
         display: "Diflorasone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DArabinitolDehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DArabinitolDehydrogenase: new Coding({
         code: "7938006",
         display: "D-Arabinitol dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OrsellinateDepsideHydrolase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OrsellinateDepsideHydrolase: new Coding({
         code: "7945006",
         display: "Orsellinate-depside hydrolase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcetylsalicylicAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcetylsalicylicAcid: new Coding({
         code: "7947003",
         display: "Acetylsalicylic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ReedSternbergAntibody: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ReedSternbergAntibody: new Coding({
         code: "7948008",
         display: "Reed-Sternberg antibody",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Thioneb: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Thioneb: new Coding({
         code: "7953003",
         display: "Thioneb",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhosphatidateCytidylyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhosphatidateCytidylyltransferase: new Coding({
         code: "7957002",
         display: "Phosphatidate cytidylyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Teniposide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Teniposide: new Coding({
         code: "7959004",
         display: "Teniposide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DigoxinProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DigoxinProduct: new Coding({
         code: "796001",
         display: "Digoxin product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinFShanghai: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinFShanghai: new Coding({
         code: "7961008",
         display: "Hemoglobin F-Shanghai",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Allograft: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Allograft: new Coding({
         code: "7970006",
         display: "Allograft",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyDalman: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyDalman: new Coding({
         code: "7974002",
         display: "Blood group antibody Dalman",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Amiphenazole: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Amiphenazole: new Coding({
         code: "7975001",
         display: "Amiphenazole",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL3QuotePhosphoadenylylsulfate3QuotePhosphatase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL3QuotePhosphoadenylylsulfate3QuotePhosphatase: new Coding({
         code: "7979007",
         display: "3'-Phosphoadenylylsulfate 3'-phosphatase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhenmetrazineHydrochloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhenmetrazineHydrochloride: new Coding({
         code: "7982002",
         display: "Phenmetrazine hydrochloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumRhodanide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumRhodanide: new Coding({
         code: "7983007",
         display: "Sodium rhodanide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SulfurIsotope: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SulfurIsotope: new Coding({
         code: "7985000",
         display: "Sulfur isotope",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ButylMercaptan: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ButylMercaptan: new Coding({
         code: "7997004",
         display: "Butyl mercaptan",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CucurbitacinDeltaPower23PowerReductase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CucurbitacinDeltaPower23PowerReductase: new Coding({
         code: "8000007",
         display: "Cucurbitacin delta^23^-reductase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyFleming: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyFleming: new Coding({
         code: "8002004",
         display: "Blood group antibody Fleming",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyGibson: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyGibson: new Coding({
         code: "8025003",
         display: "Blood group antibody Gibson",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Butacaine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Butacaine: new Coding({
         code: "8028001",
         display: "Butacaine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AllylGlycidylEther: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AllylGlycidylEther: new Coding({
         code: "8029009",
         display: "Allyl glycidyl ether",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PEGPolyethyleneGlycol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PEGPolyethyleneGlycol: new Coding({
         code: "8030004",
         display: "PEG - Polyethylene glycol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CholestenolDeltaIsomerase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CholestenolDeltaIsomerase: new Coding({
         code: "8035009",
         display: "Cholestenol delta-isomerase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CreosoticAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CreosoticAcid: new Coding({
         code: "804003",
         display: "Creosotic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenTh: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenTh: new Coding({
         code: "8048008",
         display: "Blood group antigen Th",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OrotateReductaseNADPH: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OrotateReductaseNADPH: new Coding({
         code: "8054009",
         display: "Orotate reductase (NADPH)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GalactosideAcetyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GalactosideAcetyltransferase: new Coding({
         code: "8055005",
         display: "Galactoside acetyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinLeiden: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinLeiden: new Coding({
         code: "8105004",
         display: "Hemoglobin Leiden",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_UndecaprenylDiphosphatase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_UndecaprenylDiphosphatase: new Coding({
         code: "8108002",
         display: "Undecaprenyl-diphosphatase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Alimemazine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Alimemazine: new Coding({
         code: "8109005",
         display: "Alimemazine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodySchuppenhauer: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodySchuppenhauer: new Coding({
         code: "8123007",
         display: "Blood group antibody Schuppenhauer",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MagnesiumAcetylsalicylate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MagnesiumAcetylsalicylate: new Coding({
         code: "8132009",
         display: "Magnesium acetylsalicylate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Diosmin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Diosmin: new Coding({
         code: "8143001",
         display: "Diosmin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Homoproline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Homoproline: new Coding({
         code: "8153000",
         display: "Homoproline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ImmunoglobulinFdFragment: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ImmunoglobulinFdFragment: new Coding({
         code: "8156008",
         display: "Immunoglobulin, Fd fragment",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Nitroprusside: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Nitroprusside: new Coding({
         code: "8163008",
         display: "Nitroprusside",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ClusterOfDifferentiationAntigen67: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ClusterOfDifferentiationAntigen67: new Coding({
         code: "8164002",
         display: "Cluster of differentiation antigen 67",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Uracil5CarboxylateDecarboxylase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Uracil5CarboxylateDecarboxylase: new Coding({
         code: "8168004",
         display: "Uracil-5-carboxylate decarboxylase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cevadilline: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cevadilline: new Coding({
         code: "8179009",
         display: "Cevadilline",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Convallamarogenin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Convallamarogenin: new Coding({
         code: "8184003",
         display: "Convallamarogenin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DiaminopimelateEpimerase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DiaminopimelateEpimerase: new Coding({
         code: "8190004",
         display: "Diaminopimelate epimerase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LyticAntibody: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LyticAntibody: new Coding({
         code: "819002",
         display: "Lytic antibody",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power43PowerPotassium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power43PowerPotassium: new Coding({
         code: "8202008",
         display: "^43^Potassium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HumanMenopausalGonadotropin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HumanMenopausalGonadotropin: new Coding({
         code: "8203003",
         display: "Human menopausal gonadotropin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Polyester: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Polyester: new Coding({
         code: "8204009",
         display: "Polyester",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CoagulationFactorIIPaduaVariant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CoagulationFactorIIPaduaVariant: new Coding({
         code: "8222007",
         display: "Coagulation factor II Padua variant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power106PowerRuthenium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power106PowerRuthenium: new Coding({
         code: "8227001",
         display: "^106^Ruthenium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_StreptococcalCysteineProteinase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_StreptococcalCysteineProteinase: new Coding({
         code: "8230008",
         display: "Streptococcal cysteine proteinase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Strobane: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Strobane: new Coding({
         code: "8237006",
         display: "Strobane",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChlorothiazideSodium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChlorothiazideSodium: new Coding({
         code: "8252004",
         display: "Chlorothiazide sodium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AbnormalHemoglobin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AbnormalHemoglobin: new Coding({
         code: "8257005",
         display: "Abnormal hemoglobin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PotassiumThiosulfate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PotassiumThiosulfate: new Coding({
         code: "8261004",
         display: "Potassium thiosulfate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyHildebrandt: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyHildebrandt: new Coding({
         code: "8268005",
         display: "Blood group antibody Hildebrandt",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TRNAAdenylyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TRNAAdenylyltransferase: new Coding({
         code: "8270001",
         display: "tRNA adenylyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethionineSOxideReductase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethionineSOxideReductase: new Coding({
         code: "8275006",
         display: "Methionine-S-oxide reductase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_UromucoidProtein: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_UromucoidProtein: new Coding({
         code: "8295000",
         display: "Uromucoid protein",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cyclohexanol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cyclohexanol: new Coding({
         code: "8300003",
         display: "Cyclohexanol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinMadrid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinMadrid: new Coding({
         code: "8310007",
         display: "Hemoglobin Madrid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RNADirectedDNAPolymerase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RNADirectedDNAPolymerase: new Coding({
         code: "8313009",
         display: "RNA-directed DNA polymerase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ProcollagenLysine2Oxoglutarate5Dioxygenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ProcollagenLysine2Oxoglutarate5Dioxygenase: new Coding({
         code: "8340009",
         display: "Procollagen-lysine,2-oxoglutarate 5-dioxygenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BrilliantCresylBlue: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BrilliantCresylBlue: new Coding({
         code: "8342001",
         display: "Brilliant cresyl blue",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyRePowerAPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyRePowerAPower: new Coding({
         code: "8343006",
         display: "Blood group antibody Re^a^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cyclopentolate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cyclopentolate: new Coding({
         code: "8348002",
         display: "Cyclopentolate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ManganeseEthyleneBisDithiocarbamate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ManganeseEthyleneBisDithiocarbamate: new Coding({
         code: "8354001",
         display: "Manganese ethylene bis-dithiocarbamate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HafniumIsotope: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HafniumIsotope: new Coding({
         code: "8355000",
         display: "Hafnium isotope",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntiC: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntiC: new Coding({
         code: "8362009",
         display: "Anti c",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OilOfPennyroyalEuropean: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OilOfPennyroyalEuropean: new Coding({
         code: "8365006",
         display: "Oil of pennyroyal-European",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Xylan144BetaXylosidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Xylan144BetaXylosidase: new Coding({
         code: "8368008",
         display: "Xylan 1,44-beta-xylosidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Promethazine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Promethazine: new Coding({
         code: "8372007",
         display: "Promethazine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DuffyBloodGroupAntibody: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DuffyBloodGroupAntibody: new Coding({
         code: "8376005",
         display: "Duffy blood group antibody",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcidAlphaGlucosidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcidAlphaGlucosidase: new Coding({
         code: "8385005",
         display: "Acid alpha-glucosidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NicotineResinComplex: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NicotineResinComplex: new Coding({
         code: "8397006",
         display: "Nicotine resin complex",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NitroethaneOxidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NitroethaneOxidase: new Coding({
         code: "8406008",
         display: "Nitroethane oxidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dicloxacillin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dicloxacillin: new Coding({
         code: "8416000",
         display: "Dicloxacillin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BrilliantOrange: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BrilliantOrange: new Coding({
         code: "8429000",
         display: "Brilliant orange",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LemonGrassOil: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LemonGrassOil: new Coding({
         code: "8450009",
         display: "Lemon grass oil",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenSisson: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenSisson: new Coding({
         code: "8452001",
         display: "Blood group antigen Sisson",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethylEthylKetonePeroxide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethylEthylKetonePeroxide: new Coding({
         code: "8456003",
         display: "Methyl ethyl ketone peroxide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyVgPowerAPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyVgPowerAPower: new Coding({
         code: "8460000",
         display: "Blood group antibody Vg^a^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DThyroxinePreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DThyroxinePreparation: new Coding({
         code: "847003",
         display: "D-thyroxine preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HomocysteineMethyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HomocysteineMethyltransferase: new Coding({
         code: "8473001",
         display: "Homocysteine methyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LeadOleate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LeadOleate: new Coding({
         code: "8474007",
         display: "Lead oleate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenMur: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenMur: new Coding({
         code: "8484008",
         display: "Blood group antigen Mur",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OncogeneProteinP210BCRABL: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OncogeneProteinP210BCRABL: new Coding({
         code: "8485009",
         display: "Oncogene protein P210, BCR-ABL",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HLADRw15Antigen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HLADRw15Antigen: new Coding({
         code: "8486005",
         display: "HLA-DRw15 antigen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power48PowerVanadium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power48PowerVanadium: new Coding({
         code: "8487001",
         display: "^48^Vanadium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ComplementInhibitor: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ComplementInhibitor: new Coding({
         code: "8491006",
         display: "Complement inhibitor",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Allantoicase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Allantoicase: new Coding({
         code: "8492004",
         display: "Allantoicase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ShortNeurotoxinVenom: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ShortNeurotoxinVenom: new Coding({
         code: "8498000",
         display: "Short neurotoxin venom",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_StizolobateSynthase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_StizolobateSynthase: new Coding({
         code: "850000",
         display: "Stizolobate synthase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Cyclohexane: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Cyclohexane: new Coding({
         code: "8507001",
         display: "Cyclohexane",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ornithine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ornithine: new Coding({
         code: "8514004",
         display: "Ornithine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinMachida: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinMachida: new Coding({
         code: "8520003",
         display: "Hemoglobin Machida",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power183PowerOsmium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power183PowerOsmium: new Coding({
         code: "8525008",
         display: "^183^Osmium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_UrinaryProteinOfLowMolecularWeight: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_UrinaryProteinOfLowMolecularWeight: new Coding({
         code: "8529002",
         display: "Urinary protein of low molecular weight",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power110PowerTin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power110PowerTin: new Coding({
         code: "8534003",
         display: "^110^Tin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Solution: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Solution: new Coding({
         code: "8537005",
         display: "Solution",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Vasoconstrictor: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Vasoconstrictor: new Coding({
         code: "8571001",
         display: "Vasoconstrictor",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PotassiumCyanate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PotassiumCyanate: new Coding({
         code: "8578007",
         display: "Potassium cyanate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PeptideNPower4PowerNAcetylBGlucosaminylAsparagineAmidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PeptideNPower4PowerNAcetylBGlucosaminylAsparagineAmidase: new Coding({
         code: "859004",
         display: "Peptide-N^4^-(N-acetyl-b-glucosaminyl) asparagine amidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Dichlorodifluoromethane: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Dichlorodifluoromethane: new Coding({
         code: "8591008",
         display: "Dichlorodifluoromethane",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ImmunoglobulinAggregated: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ImmunoglobulinAggregated: new Coding({
         code: "860009",
         display: "Immunoglobulin, aggregated",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TumorNecrosisFactor: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TumorNecrosisFactor: new Coding({
         code: "8612007",
         display: "Tumor necrosis factor",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OncogeneProteinTCL6: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OncogeneProteinTCL6: new Coding({
         code: "8620009",
         display: "Oncogene protein TCL6",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PotassiumChloride: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PotassiumChloride: new Coding({
         code: "8631001",
         display: "Potassium chloride",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Rubijervine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Rubijervine: new Coding({
         code: "8653004",
         display: "Rubijervine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HumanSerumAlbuminPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HumanSerumAlbuminPreparation: new Coding({
         code: "8658008",
         display: "Human serum albumin preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ComplementComponentC3c: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ComplementComponentC3c: new Coding({
         code: "8660005",
         display: "Complement component C3c",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ReplacementPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ReplacementPreparation: new Coding({
         code: "8661009",
         display: "Replacement preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_GumArabic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_GumArabic: new Coding({
         code: "8687009",
         display: "Gum arabic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_KanamycinSulfate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_KanamycinSulfate: new Coding({
         code: "8689007",
         display: "Kanamycin sulfate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Metamfetamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Metamfetamine: new Coding({
         code: "8692006",
         display: "Metamfetamine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Antispasmodic: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Antispasmodic: new Coding({
         code: "8696009",
         display: "Antispasmodic",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Sulfachlorpyridazine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Sulfachlorpyridazine: new Coding({
         code: "8701002",
         display: "Sulfachlorpyridazine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL4HydroxybenzoateDecarboxylase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL4HydroxybenzoateDecarboxylase: new Coding({
         code: "8705006",
         display: "4-Hydroxybenzoate decarboxylase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Urethan: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Urethan: new Coding({
         code: "873008",
         display: "Urethan",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyAustin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyAustin: new Coding({
         code: "8731008",
         display: "Blood group antibody Austin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_C3H20Bb: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_C3H20Bb: new Coding({
         code: "8740007",
         display: "C3(H20)Bb",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DAntigen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DAntigen: new Coding({
         code: "876000",
         display: "D antigen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AdenylylsulfateKinase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AdenylylsulfateKinase: new Coding({
         code: "8761000",
         display: "Adenylylsulfate kinase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Santonin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Santonin: new Coding({
         code: "8767001",
         display: "Santonin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarboxypeptidaseA: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarboxypeptidaseA: new Coding({
         code: "877009",
         display: "Carboxypeptidase A",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ChlorineDioxide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ChlorineDioxide: new Coding({
         code: "8785008",
         display: "Chlorine dioxide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenWdPowerAPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenWdPowerAPower: new Coding({
         code: "8786009",
         display: "Blood group antigen Wd^a^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HbFHemoglobinF: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HbFHemoglobinF: new Coding({
         code: "8795001",
         display: "Hb F - Hemoglobin F",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LHReceptorSite: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LHReceptorSite: new Coding({
         code: "8817004",
         display: "LH receptor site",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyTriW: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyTriW: new Coding({
         code: "8818009",
         display: "Blood group antibody Tri W",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_LinoleicAcid: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_LinoleicAcid: new Coding({
         code: "8822004",
         display: "Linoleic acid",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NitrateReductaseNADPH: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NitrateReductaseNADPH: new Coding({
         code: "8830003",
         display: "Nitrate reductase (NAD(P)H)",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Gallocyanine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Gallocyanine: new Coding({
         code: "8836009",
         display: "Gallocyanine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HydroxybutyrateDimerHydrolase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HydroxybutyrateDimerHydrolase: new Coding({
         code: "8844009",
         display: "Hydroxybutyrate-dimer hydrolase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_StrontiumNitrateSrPower85Power: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_StrontiumNitrateSrPower85Power: new Coding({
         code: "8858006",
         display: "Strontium nitrate Sr^85^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Graphite: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Graphite: new Coding({
         code: "8865003",
         display: "Graphite",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntigenEvelyn: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntigenEvelyn: new Coding({
         code: "8878003",
         display: "Blood group antigen Evelyn",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL3Hydroxybenzoate6Monooxygenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL3Hydroxybenzoate6Monooxygenase: new Coding({
         code: "8882001",
         display: "3-Hydroxybenzoate 6-monooxygenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FlecainideAcetate: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FlecainideAcetate: new Coding({
         code: "8886003",
         display: "Flecainide acetate",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AcetylCoACarboxylaseKinase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AcetylCoACarboxylaseKinase: new Coding({
         code: "889006",
         display: "[Acetyl-CoA carboxylase] kinase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyIPowerTPower: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyIPowerTPower: new Coding({
         code: "8908003",
         display: "Blood group antibody I^T^",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Endolymph: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Endolymph: new Coding({
         code: "8914005",
         display: "Endolymph",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Biotin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Biotin: new Coding({
         code: "8919000",
         display: "Biotin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AzurB: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AzurB: new Coding({
         code: "8926000",
         display: "Azur B",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PhosphopantothenateCysteineLigase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PhosphopantothenateCysteineLigase: new Coding({
         code: "8945009",
         display: "Phosphopantothenate-cysteine ligase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_VAL23Dihydroxyindole23Dioxygenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_VAL23Dihydroxyindole23Dioxygenase: new Coding({
         code: "8953001",
         display: "2,3-Dihydroxyindole 2,3-dioxygenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ice: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ice: new Coding({
         code: "896008",
         display: "Ice",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NAcetylmuramoylLAlanineAmidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NAcetylmuramoylLAlanineAmidase: new Coding({
         code: "8963009",
         display: "N-Acetylmuramoyl-L-alanine amidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BulbourethralSecretions: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BulbourethralSecretions: new Coding({
         code: "8969008",
         display: "Bulbourethral secretions",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyTarplee: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyTarplee: new Coding({
         code: "8977007",
         display: "Blood group antibody Tarplee",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_OleateHydratase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_OleateHydratase: new Coding({
         code: "8982000",
         display: "Oleate hydratase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CyclePhaseSpecificAgent: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CyclePhaseSpecificAgent: new Coding({
         code: "8987006",
         display: "Cycle-phase specific agent",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Ribulokinase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Ribulokinase: new Coding({
         code: "8991001",
         display: "Ribulokinase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MethylBlue: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MethylBlue: new Coding({
         code: "9010006",
         display: "Methyl blue",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_DephosphoCoAKinase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_DephosphoCoAKinase: new Coding({
         code: "9013008",
         display: "Dephospho-CoA kinase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ExperimentalDrug: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ExperimentalDrug: new Coding({
         code: "902003",
         display: "Experimental drug",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Carbaryl: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Carbaryl: new Coding({
         code: "9021002",
         display: "Carbaryl",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_G6PDGlucose6PhosphateDehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_G6PDGlucose6PhosphateDehydrogenase: new Coding({
         code: "9024005",
         display: "G6PD - Glucose-6-phosphate dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RadonRadioisotope: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RadonRadioisotope: new Coding({
         code: "9045003",
         display: "Radon radioisotope",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ODihydroxycoumarinOPower7PowerGlucosyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ODihydroxycoumarinOPower7PowerGlucosyltransferase: new Coding({
         code: "905001",
         display: "o-Dihydroxycoumarin O^7^-glucosyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AllspiceOil: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AllspiceOil: new Coding({
         code: "9052001",
         display: "Allspice oil",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HumanLeukocyteAntigenB15: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HumanLeukocyteAntigenB15: new Coding({
         code: "9054000",
         display: "Human leukocyte antigen B15",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_RetinolFattyAcyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_RetinolFattyAcyltransferase: new Coding({
         code: "9103003",
         display: "Retinol fatty-acyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MercuricCompound: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MercuricCompound: new Coding({
         code: "9110009",
         display: "Mercuric compound",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Sempervirine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Sempervirine: new Coding({
         code: "9125009",
         display: "Sempervirine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_TriacetateLactonase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_TriacetateLactonase: new Coding({
         code: "9159008",
         display: "Triacetate-lactonase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BloodGroupAntibodyAlda: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BloodGroupAntibodyAlda: new Coding({
         code: "9172009",
         display: "Blood group antibody Alda",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FibrinogenPoitiers: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FibrinogenPoitiers: new Coding({
         code: "9174005",
         display: "Fibrinogen Poitiers",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BetaNAcetylgalactosaminidase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BetaNAcetylgalactosaminidase: new Coding({
         code: "9183000",
         display: "beta-N-Acetylgalactosaminidase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CMPNAcetylneuraminateLactosylceramideAlpha23Sialyltransferase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CMPNAcetylneuraminateLactosylceramideAlpha23Sialyltransferase: new Coding({
         code: "9189001",
         display: "CMP-N-acetylneuraminate-lactosylceramide alpha-2,3-sialyltransferase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Tropicamide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Tropicamide: new Coding({
         code: "9190005",
         display: "Tropicamide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntiInfectivesAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntiInfectivesAllergy: new Coding({
         code: "91929009",
         display: "Anti-infectives allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AllergyToEggs: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AllergyToEggs: new Coding({
         code: "91930004",
         display: "Allergy to eggs",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ErythromycinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ErythromycinAllergy: new Coding({
         code: "91931000",
         display: "Erythromycin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AllergyToFruit: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AllergyToFruit: new Coding({
         code: "91932007",
         display: "Allergy to fruit",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MacrolideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MacrolideAllergy: new Coding({
         code: "91933002",
         display: "Macrolide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_NutAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_NutAllergy: new Coding({
         code: "91934008",
         display: "Nut allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AllergyToPeanuts: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AllergyToPeanuts: new Coding({
         code: "91935009",
         display: "Allergy to peanuts",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PenicillinAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PenicillinAllergy: new Coding({
         code: "91936005",
         display: "Penicillin allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SeafoodAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SeafoodAllergy: new Coding({
         code: "91937001",
         display: "Seafood allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AllergyToStrawberries: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AllergyToStrawberries: new Coding({
         code: "91938006",
         display: "Allergy to strawberries",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SulfonamideAllergy: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SulfonamideAllergy: new Coding({
         code: "91939003",
         display: "Sulfonamide allergy",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AllergyToWalnut: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AllergyToWalnut: new Coding({
         code: "91940001",
         display: "Allergy to walnut",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ImmunoglobulinGeneINVAllotype: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ImmunoglobulinGeneINVAllotype: new Coding({
         code: "9195000",
         display: "Immunoglobulin gene INV allotype",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ApioseReductase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ApioseReductase: new Coding({
         code: "9197008",
         display: "Apiose reductase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HemoglobinTarrant: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HemoglobinTarrant: new Coding({
         code: "9205004",
         display: "Hemoglobin Tarrant",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PlantPhenolOil: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PlantPhenolOil: new Coding({
         code: "9220005",
         display: "Plant phenol oil",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Pralidoxime: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Pralidoxime: new Coding({
         code: "922004",
         display: "Pralidoxime",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_BorneolDehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_BorneolDehydrogenase: new Coding({
         code: "9223007",
         display: "Borneol dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_ComplementComponent2: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_ComplementComponent2: new Coding({
         code: "923009",
         display: "Complement component 2",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Chlorobutanol: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Chlorobutanol: new Coding({
         code: "9234005",
         display: "Chlorobutanol",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Power118PowerTellurium: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Power118PowerTellurium: new Coding({
         code: "9246009",
         display: "^118^Tellurium",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SodiumIodipamide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SodiumIodipamide: new Coding({
         code: "925002",
         display: "Sodium iodipamide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_HLADRw16Antigen: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_HLADRw16Antigen: new Coding({
         code: "9253000",
         display: "HLA-DRw16 antigen",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Butabarbitone: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Butabarbitone: new Coding({
         code: "9268004",
         display: "Butabarbitone",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CatecholamineReceptor: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CatecholamineReceptor: new Coding({
         code: "9270008",
         display: "Catecholamine receptor",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_FibrinogenPontoise: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_FibrinogenPontoise: new Coding({
         code: "9271007",
         display: "Fibrinogen Pontoise",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AnimalSerumGlobulinPreparation: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AnimalSerumGlobulinPreparation: new Coding({
         code: "9307009",
         display: "Animal serum globulin preparation",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_MAOIPhenelzine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_MAOIPhenelzine: new Coding({
         code: "9500005",
         display: "MAOI - Phenelzine",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AntihepatitisBImmunoglobulin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AntihepatitisBImmunoglobulin: new Coding({
         code: "9542007",
         display: "Antihepatitis B immunoglobulin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Pyridoxine4Dehydrogenase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Pyridoxine4Dehydrogenase: new Coding({
         code: "963005",
         display: "Pyridoxine 4-dehydrogenase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Nikethamide: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Nikethamide: new Coding({
         code: "9690006",
         display: "Nikethamide",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_AdenosylmethionineDecarboxylase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_AdenosylmethionineDecarboxylase: new Coding({
         code: "974001",
         display: "Adenosylmethionine decarboxylase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_SucroseProduct: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_SucroseProduct: new Coding({
         code: "9745007",
         display: "Sucrose product",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CytomegalovirusImmuneGlobulin: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CytomegalovirusImmuneGlobulin: new Coding({
         code: "9778000",
         display: "Cytomegalovirus immune globulin",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_CarbamateKinase: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_CarbamateKinase: new Coding({
         code: "979006",
         display: "Carbamate kinase",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_PalladiumCompound: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_PalladiumCompound: new Coding({
         code: "993004",
         display: "Palladium compound",
         system: "http://snomed.info/sct"
     }),
-    AllergyintoleranceCodeValueSet_Chlorphenamine: Coding.FromStrict({
+    AllergyintoleranceCodeValueSet_Chlorphenamine: new Coding({
         code: "9944001",
         display: "Chlorphenamine",
         system: "http://snomed.info/sct"

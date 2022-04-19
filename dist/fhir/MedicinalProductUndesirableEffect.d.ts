@@ -63,10 +63,10 @@ export declare class MedicinalProductUndesirableEffect extends fhir.DomainResour
     /**
      * Check if the current MedicinalProductUndesirableEffect contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductUndesirableEffect from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductUndesirableEffect): MedicinalProductUndesirableEffect;
+    static fromStrict(source: fhir.IMedicinalProductUndesirableEffect): MedicinalProductUndesirableEffect;
 }
 //# sourceMappingURL=MedicinalProductUndesirableEffect.d.ts.map

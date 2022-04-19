@@ -13,7 +13,7 @@ export const SurfaceValueSet = {
   /**
    * The surface of a posterior tooth facing the cheeks.
    */
-  surface_Buccal: Coding.FromStrict({
+  surface_Buccal: new Coding({
     code: "B",
     display: "Buccal",
     system: "http://terminology.hl7.org/CodeSystem/FDI-surface"
@@ -21,7 +21,7 @@ export const SurfaceValueSet = {
   /**
    * The surface of a tooth that faces away from the midline of the face.
    */
-  surface_Distal: Coding.FromStrict({
+  surface_Distal: new Coding({
     code: "D",
     display: "Distal",
     system: "http://terminology.hl7.org/CodeSystem/FDI-surface"
@@ -29,7 +29,7 @@ export const SurfaceValueSet = {
   /**
    * The Distoincisal surfaces of a tooth.
    */
-  surface_Distoincisal: Coding.FromStrict({
+  surface_Distoincisal: new Coding({
     code: "DI",
     display: "Distoincisal",
     system: "http://terminology.hl7.org/CodeSystem/FDI-surface"
@@ -37,7 +37,7 @@ export const SurfaceValueSet = {
   /**
    * The Distoclusal surfaces of a tooth.
    */
-  surface_Distoclusal: Coding.FromStrict({
+  surface_Distoclusal: new Coding({
     code: "DO",
     display: "Distoclusal",
     system: "http://terminology.hl7.org/CodeSystem/FDI-surface"
@@ -45,7 +45,7 @@ export const SurfaceValueSet = {
   /**
    * The biting edge of anterior teeth.
    */
-  surface_Incisal: Coding.FromStrict({
+  surface_Incisal: new Coding({
     code: "I",
     display: "Incisal",
     system: "http://terminology.hl7.org/CodeSystem/FDI-surface"
@@ -53,7 +53,7 @@ export const SurfaceValueSet = {
   /**
    * The surface of a tooth facing the tongue.
    */
-  surface_Lingual: Coding.FromStrict({
+  surface_Lingual: new Coding({
     code: "L",
     display: "Lingual",
     system: "http://terminology.hl7.org/CodeSystem/FDI-surface"
@@ -61,7 +61,7 @@ export const SurfaceValueSet = {
   /**
    * The surface of a tooth that is closest to the midline (middle) of the face.
    */
-  surface_Mesial: Coding.FromStrict({
+  surface_Mesial: new Coding({
     code: "M",
     display: "Mesial",
     system: "http://terminology.hl7.org/CodeSystem/FDI-surface"
@@ -69,7 +69,7 @@ export const SurfaceValueSet = {
   /**
    * The Mesioclusal surfaces of a tooth.
    */
-  surface_Mesioclusal: Coding.FromStrict({
+  surface_Mesioclusal: new Coding({
     code: "MO",
     display: "Mesioclusal",
     system: "http://terminology.hl7.org/CodeSystem/FDI-surface"
@@ -77,7 +77,7 @@ export const SurfaceValueSet = {
   /**
    * The Mesioclusodistal surfaces of a tooth.
    */
-  surface_Mesioclusodistal: Coding.FromStrict({
+  surface_Mesioclusodistal: new Coding({
     code: "MOD",
     display: "Mesioclusodistal",
     system: "http://terminology.hl7.org/CodeSystem/FDI-surface"
@@ -85,7 +85,7 @@ export const SurfaceValueSet = {
   /**
    * The chewing surface of posterior teeth.
    */
-  surface_Occlusal: Coding.FromStrict({
+  surface_Occlusal: new Coding({
     code: "O",
     display: "Occlusal",
     system: "http://terminology.hl7.org/CodeSystem/FDI-surface"
@@ -93,7 +93,7 @@ export const SurfaceValueSet = {
   /**
    * The surface of a tooth facing the lips.
    */
-  surface_Ventral: Coding.FromStrict({
+  surface_Ventral: new Coding({
     code: "V",
     display: "Ventral",
     system: "http://terminology.hl7.org/CodeSystem/FDI-surface"

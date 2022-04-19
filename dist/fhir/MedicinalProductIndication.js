@@ -32,21 +32,21 @@ export class MedicinalProductIndicationOtherTherapy extends fhir.BackboneElement
     /**
      * Check if the current MedicinalProductIndicationOtherTherapy contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["therapyRelationshipType"] === undefined) {
             missingElements.push("therapyRelationshipType");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductIndicationOtherTherapy from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductIndicationOtherTherapy(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductIndicationOtherTherapy is missing elements: ${missingElements.join(", ")}`;
         }
@@ -94,18 +94,18 @@ export class MedicinalProductIndication extends fhir.DomainResource {
     /**
      * Check if the current MedicinalProductIndication contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductIndication from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductIndication(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductIndication is missing elements: ${missingElements.join(", ")}`;
         }

@@ -234,21 +234,21 @@ export class GraphDefinitionLinkTargetCompartment extends fhir.BackboneElement i
   /**
    * Check if the current GraphDefinitionLinkTargetCompartment contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
     if (this["rule"] === undefined) { missingElements.push("rule"); }
     if (this["use"] === undefined) { missingElements.push("use"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a GraphDefinitionLinkTargetCompartment from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IGraphDefinitionLinkTargetCompartment):GraphDefinitionLinkTargetCompartment {
+  static override fromStrict(source:fhir.IGraphDefinitionLinkTargetCompartment):GraphDefinitionLinkTargetCompartment {
     var dest:GraphDefinitionLinkTargetCompartment = new GraphDefinitionLinkTargetCompartment(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `GraphDefinitionLinkTargetCompartment is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -299,19 +299,19 @@ export class GraphDefinitionLinkTarget extends fhir.BackboneElement implements f
   /**
    * Check if the current GraphDefinitionLinkTarget contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a GraphDefinitionLinkTarget from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IGraphDefinitionLinkTarget):GraphDefinitionLinkTarget {
+  static override fromStrict(source:fhir.IGraphDefinitionLinkTarget):GraphDefinitionLinkTarget {
     var dest:GraphDefinitionLinkTarget = new GraphDefinitionLinkTarget(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `GraphDefinitionLinkTarget is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -369,18 +369,18 @@ export class GraphDefinitionLink extends fhir.BackboneElement implements fhir.IG
   /**
    * Check if the current GraphDefinitionLink contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a GraphDefinitionLink from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IGraphDefinitionLink):GraphDefinitionLink {
+  static override fromStrict(source:fhir.IGraphDefinitionLink):GraphDefinitionLink {
     var dest:GraphDefinitionLink = new GraphDefinitionLink(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `GraphDefinitionLink is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -508,21 +508,21 @@ export class GraphDefinition extends fhir.DomainResource implements fhir.IGraphD
   /**
    * Check if the current GraphDefinition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["name"] === undefined) { missingElements.push("name"); }
     if (this["start"] === undefined) { missingElements.push("start"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a GraphDefinition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IGraphDefinition):GraphDefinition {
+  static override fromStrict(source:fhir.IGraphDefinition):GraphDefinition {
     var dest:GraphDefinition = new GraphDefinition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `GraphDefinition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

@@ -13,7 +13,7 @@ export const PublicationStatusValueSet = {
   /**
    * This resource is ready for normal use.
    */
-  publication_status_Active: Coding.FromStrict({
+  publication_status_Active: new Coding({
     code: "active",
     display: "Active",
     system: "http://hl7.org/fhir/publication-status"
@@ -21,7 +21,7 @@ export const PublicationStatusValueSet = {
   /**
    * This resource is still under development and is not yet considered to be ready for normal use.
    */
-  publication_status_Draft: Coding.FromStrict({
+  publication_status_Draft: new Coding({
     code: "draft",
     display: "Draft",
     system: "http://hl7.org/fhir/publication-status"
@@ -29,7 +29,7 @@ export const PublicationStatusValueSet = {
   /**
    * This resource has been withdrawn or superseded and should no longer be used.
    */
-  publication_status_Retired: Coding.FromStrict({
+  publication_status_Retired: new Coding({
     code: "retired",
     display: "Retired",
     system: "http://hl7.org/fhir/publication-status"
@@ -37,7 +37,7 @@ export const PublicationStatusValueSet = {
   /**
    * The authoring system does not know which of the status values currently applies for this resource.  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, it's just not known which one.
    */
-  publication_status_Unknown: Coding.FromStrict({
+  publication_status_Unknown: new Coding({
     code: "unknown",
     display: "Unknown",
     system: "http://hl7.org/fhir/publication-status"

@@ -185,11 +185,11 @@ export declare class GoalTarget extends fhir.BackboneElement implements fhir.IGo
     /**
      * Check if the current GoalTarget contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a GoalTarget from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IGoalTarget): GoalTarget;
+    static fromStrict(source: fhir.IGoalTarget): GoalTarget;
 }
 /**
  * Describes the intended objective(s) for a patient, group or organization care, for example, weight loss, restoring an activity of daily living, obtaining herd immunity via immunization, meeting a process improvement objective, etc.
@@ -279,11 +279,11 @@ export declare class Goal extends fhir.DomainResource implements fhir.IGoal {
     /**
      * Check if the current Goal contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Goal from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IGoal): Goal;
+    static fromStrict(source: fhir.IGoal): Goal;
 }
 /**
  * Code Values for the Goal.lifecycleStatus field

@@ -120,18 +120,18 @@ export class MedicationIngredient extends fhir.BackboneElement implements fhir.I
   /**
    * Check if the current MedicationIngredient contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicationIngredient from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicationIngredient):MedicationIngredient {
+  static override fromStrict(source:fhir.IMedicationIngredient):MedicationIngredient {
     var dest:MedicationIngredient = new MedicationIngredient(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicationIngredient is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -163,18 +163,18 @@ export class MedicationBatch extends fhir.BackboneElement implements fhir.IMedic
   /**
    * Check if the current MedicationBatch contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicationBatch from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicationBatch):MedicationBatch {
+  static override fromStrict(source:fhir.IMedicationBatch):MedicationBatch {
     var dest:MedicationBatch = new MedicationBatch(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicationBatch is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -239,18 +239,18 @@ export class Medication extends fhir.DomainResource implements fhir.IMedication 
   /**
    * Check if the current Medication contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Medication from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedication):Medication {
+  static override fromStrict(source:fhir.IMedication):Medication {
     var dest:Medication = new Medication(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Medication is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

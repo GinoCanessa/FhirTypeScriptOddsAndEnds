@@ -57,10 +57,10 @@ export declare class MarketingStatus extends fhir.BackboneElement implements fhi
     /**
      * Check if the current MarketingStatus contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MarketingStatus from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMarketingStatus): MarketingStatus;
+    static fromStrict(source: fhir.IMarketingStatus): MarketingStatus;
 }
 //# sourceMappingURL=MarketingStatus.d.ts.map

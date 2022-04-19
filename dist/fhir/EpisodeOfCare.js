@@ -36,7 +36,7 @@ export class EpisodeOfCareStatusHistory extends fhir.BackboneElement {
     /**
      * Check if the current EpisodeOfCareStatusHistory contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["period"] === undefined) {
             missingElements.push("period");
@@ -44,16 +44,16 @@ export class EpisodeOfCareStatusHistory extends fhir.BackboneElement {
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a EpisodeOfCareStatusHistory from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new EpisodeOfCareStatusHistory(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `EpisodeOfCareStatusHistory is missing elements: ${missingElements.join(", ")}`;
         }
@@ -89,21 +89,21 @@ export class EpisodeOfCareDiagnosis extends fhir.BackboneElement {
     /**
      * Check if the current EpisodeOfCareDiagnosis contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["condition"] === undefined) {
             missingElements.push("condition");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a EpisodeOfCareDiagnosis from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new EpisodeOfCareDiagnosis(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `EpisodeOfCareDiagnosis is missing elements: ${missingElements.join(", ")}`;
         }
@@ -171,7 +171,7 @@ export class EpisodeOfCare extends fhir.DomainResource {
     /**
      * Check if the current EpisodeOfCare contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["patient"] === undefined) {
             missingElements.push("patient");
@@ -179,16 +179,16 @@ export class EpisodeOfCare extends fhir.DomainResource {
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a EpisodeOfCare from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new EpisodeOfCare(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `EpisodeOfCare is missing elements: ${missingElements.join(", ")}`;
         }

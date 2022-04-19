@@ -13,7 +13,7 @@ export const SlotstatusValueSet = {
   /**
    * Indicates that the time interval is busy because one  or more events have been scheduled for that interval.
    */
-  slotstatus_Busy: Coding.FromStrict({
+  slotstatus_Busy: new Coding({
     code: "busy",
     display: "Busy",
     system: "http://hl7.org/fhir/slotstatus"
@@ -21,7 +21,7 @@ export const SlotstatusValueSet = {
   /**
    * Indicates that the time interval is busy because one or more events have been tentatively scheduled for that interval.
    */
-  slotstatus_BusyTentative: Coding.FromStrict({
+  slotstatus_BusyTentative: new Coding({
     code: "busy-tentative",
     display: "Busy (Tentative)",
     system: "http://hl7.org/fhir/slotstatus"
@@ -29,7 +29,7 @@ export const SlotstatusValueSet = {
   /**
    * Indicates that the time interval is busy and that the interval cannot be scheduled.
    */
-  slotstatus_BusyUnavailable: Coding.FromStrict({
+  slotstatus_BusyUnavailable: new Coding({
     code: "busy-unavailable",
     display: "Busy (Unavailable)",
     system: "http://hl7.org/fhir/slotstatus"
@@ -37,7 +37,7 @@ export const SlotstatusValueSet = {
   /**
    * This instance should not have been part of this patient's medical record.
    */
-  slotstatus_EnteredInError: Coding.FromStrict({
+  slotstatus_EnteredInError: new Coding({
     code: "entered-in-error",
     display: "Entered in error",
     system: "http://hl7.org/fhir/slotstatus"
@@ -45,7 +45,7 @@ export const SlotstatusValueSet = {
   /**
    * Indicates that the time interval is free for scheduling.
    */
-  slotstatus_Free: Coding.FromStrict({
+  slotstatus_Free: new Coding({
     code: "free",
     display: "Free",
     system: "http://hl7.org/fhir/slotstatus"

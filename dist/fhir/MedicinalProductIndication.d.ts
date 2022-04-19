@@ -84,11 +84,11 @@ export declare class MedicinalProductIndicationOtherTherapy extends fhir.Backbon
     /**
      * Check if the current MedicinalProductIndicationOtherTherapy contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductIndicationOtherTherapy from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductIndicationOtherTherapy): MedicinalProductIndicationOtherTherapy;
+    static fromStrict(source: fhir.IMedicinalProductIndicationOtherTherapy): MedicinalProductIndicationOtherTherapy;
 }
 /**
  * Indication for the Medicinal Product.
@@ -141,10 +141,10 @@ export declare class MedicinalProductIndication extends fhir.DomainResource impl
     /**
      * Check if the current MedicinalProductIndication contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductIndication from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductIndication): MedicinalProductIndication;
+    static fromStrict(source: fhir.IMedicinalProductIndication): MedicinalProductIndication;
 }
 //# sourceMappingURL=MedicinalProductIndication.d.ts.map

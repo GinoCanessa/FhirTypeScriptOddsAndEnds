@@ -229,11 +229,11 @@ export declare class AuditEventAgentNetwork extends fhir.BackboneElement impleme
     /**
      * Check if the current AuditEventAgentNetwork contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a AuditEventAgentNetwork from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IAuditEventAgentNetwork): AuditEventAgentNetwork;
+    static fromStrict(source: fhir.IAuditEventAgentNetwork): AuditEventAgentNetwork;
 }
 /**
  * Several agents may be associated (i.e. have some responsibility for an activity) with an event or activity.
@@ -295,11 +295,11 @@ export declare class AuditEventAgent extends fhir.BackboneElement implements fhi
     /**
      * Check if the current AuditEventAgent contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a AuditEventAgent from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IAuditEventAgent): AuditEventAgent;
+    static fromStrict(source: fhir.IAuditEventAgent): AuditEventAgent;
 }
 /**
  * Since multi-tier, distributed, or composite applications make source identification ambiguous, this collection of fields may repeat for each application or process actively involved in the event. For example, multiple value-sets can identify participating web servers, application processes, and database server threads in an n-tier distributed application. Passive event participants (e.g. low-level network transports) need not be identified.
@@ -325,11 +325,11 @@ export declare class AuditEventSource extends fhir.BackboneElement implements fh
     /**
      * Check if the current AuditEventSource contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a AuditEventSource from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IAuditEventSource): AuditEventSource;
+    static fromStrict(source: fhir.IAuditEventSource): AuditEventSource;
 }
 /**
  * Tagged value pairs for conveying additional information about the entity.
@@ -357,11 +357,11 @@ export declare class AuditEventEntityDetail extends fhir.BackboneElement impleme
     /**
      * Check if the current AuditEventEntityDetail contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a AuditEventEntityDetail from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IAuditEventEntityDetail): AuditEventEntityDetail;
+    static fromStrict(source: fhir.IAuditEventEntityDetail): AuditEventEntityDetail;
 }
 /**
  * Required unless the values for event identification, agent identification, and audit source identification are sufficient to document the entire auditable event. Because events may have more than one entity, this group can be a repeating set of values.
@@ -413,11 +413,11 @@ export declare class AuditEventEntity extends fhir.BackboneElement implements fh
     /**
      * Check if the current AuditEventEntity contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a AuditEventEntity from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IAuditEventEntity): AuditEventEntity;
+    static fromStrict(source: fhir.IAuditEventEntity): AuditEventEntity;
 }
 /**
  * A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage.
@@ -483,10 +483,10 @@ export declare class AuditEvent extends fhir.DomainResource implements fhir.IAud
     /**
      * Check if the current AuditEvent contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a AuditEvent from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IAuditEvent): AuditEvent;
+    static fromStrict(source: fhir.IAuditEvent): AuditEvent;
 }
 //# sourceMappingURL=AuditEvent.d.ts.map

@@ -13,7 +13,7 @@ export const AdjudicationReasonValueSet = {
     /**
      * Not covered
      */
-    adjudication_reason_NotCovered: Coding.FromStrict({
+    adjudication_reason_NotCovered: new Coding({
         code: "ar001",
         display: "Not covered",
         system: "http://terminology.hl7.org/CodeSystem/adjudication-reason"
@@ -21,7 +21,7 @@ export const AdjudicationReasonValueSet = {
     /**
      * Plan Limit Reached
      */
-    adjudication_reason_PlanLimitReached: Coding.FromStrict({
+    adjudication_reason_PlanLimitReached: new Coding({
         code: "ar002",
         display: "Plan Limit Reached",
         system: "http://terminology.hl7.org/CodeSystem/adjudication-reason"

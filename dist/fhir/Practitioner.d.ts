@@ -105,11 +105,11 @@ export declare class PractitionerQualification extends fhir.BackboneElement impl
     /**
      * Check if the current PractitionerQualification contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a PractitionerQualification from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPractitionerQualification): PractitionerQualification;
+    static fromStrict(source: fhir.IPractitionerQualification): PractitionerQualification;
 }
 /**
  * A person who is directly or indirectly involved in the provisioning of healthcare.
@@ -175,11 +175,11 @@ export declare class Practitioner extends fhir.DomainResource implements fhir.IP
     /**
      * Check if the current Practitioner contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Practitioner from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPractitioner): Practitioner;
+    static fromStrict(source: fhir.IPractitioner): Practitioner;
 }
 /**
  * Code Values for the Practitioner.gender field

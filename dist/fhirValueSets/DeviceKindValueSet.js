@@ -10,5002 +10,5002 @@ import { Coding } from '../fhir';
  * Codes used to identify medical devices. Includes concepts from SNOMED CT (http://www.snomed.org/) where concept is-a 49062001 (Device)  and is provided as a suggestive example.
  */
 export const DeviceKindValueSet = {
-    DeviceKindValueSet_VascularProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_VascularProsthesis: new Coding({
         code: "102303004",
         display: "Vascular prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MeasuringRuler: Coding.FromStrict({
+    DeviceKindValueSet_MeasuringRuler: new Coding({
         code: "102304005",
         display: "Measuring ruler",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_IntramedullaryReamer: Coding.FromStrict({
+    DeviceKindValueSet_IntramedullaryReamer: new Coding({
         code: "102305006",
         display: "Intramedullary reamer",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Reamer: Coding.FromStrict({
+    DeviceKindValueSet_Reamer: new Coding({
         code: "102306007",
         display: "Reamer",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SurgicalKnife: Coding.FromStrict({
+    DeviceKindValueSet_SurgicalKnife: new Coding({
         code: "102307003",
         display: "Surgical knife",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Scalpel: Coding.FromStrict({
+    DeviceKindValueSet_Scalpel: new Coding({
         code: "102308008",
         display: "Scalpel",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SurgicalSaw: Coding.FromStrict({
+    DeviceKindValueSet_SurgicalSaw: new Coding({
         code: "102309000",
         display: "Surgical saw",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_GigliQuoteSWireSaw: Coding.FromStrict({
+    DeviceKindValueSet_GigliQuoteSWireSaw: new Coding({
         code: "102310005",
         display: "Gigli's wire saw",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_StarckDilator: Coding.FromStrict({
+    DeviceKindValueSet_StarckDilator: new Coding({
         code: "102311009",
         display: "Starck dilator",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AtherectomyDevice: Coding.FromStrict({
+    DeviceKindValueSet_AtherectomyDevice: new Coding({
         code: "102312002",
         display: "Atherectomy device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RotationalAtherectomyDevice: Coding.FromStrict({
+    DeviceKindValueSet_RotationalAtherectomyDevice: new Coding({
         code: "102313007",
         display: "Rotational atherectomy device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_EmbolizationCoil: Coding.FromStrict({
+    DeviceKindValueSet_EmbolizationCoil: new Coding({
         code: "102314001",
         display: "Embolization coil",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_EmbolizationBall: Coding.FromStrict({
+    DeviceKindValueSet_EmbolizationBall: new Coding({
         code: "102315000",
         display: "Embolization ball",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_EmbolizationParticulate: Coding.FromStrict({
+    DeviceKindValueSet_EmbolizationParticulate: new Coding({
         code: "102316004",
         display: "Embolization particulate",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_GuidingCatheter: Coding.FromStrict({
+    DeviceKindValueSet_GuidingCatheter: new Coding({
         code: "102317008",
         display: "Guiding catheter",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ImplantableVenousCatheter: Coding.FromStrict({
+    DeviceKindValueSet_ImplantableVenousCatheter: new Coding({
         code: "102318003",
         display: "Implantable venous catheter",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PercutaneousTransluminalAngioplastyBalloon: Coding.FromStrict({
+    DeviceKindValueSet_PercutaneousTransluminalAngioplastyBalloon: new Coding({
         code: "102319006",
         display: "Percutaneous transluminal angioplasty balloon",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DetachableBalloon: Coding.FromStrict({
+    DeviceKindValueSet_DetachableBalloon: new Coding({
         code: "102320000",
         display: "Detachable balloon",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_OperatingMicroscope: Coding.FromStrict({
+    DeviceKindValueSet_OperatingMicroscope: new Coding({
         code: "102321001",
         display: "Operating microscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ExternalProsthesisForSonographicProcedure: Coding.FromStrict({
+    DeviceKindValueSet_ExternalProsthesisForSonographicProcedure: new Coding({
         code: "102322008",
         display: "External prosthesis for sonographic procedure",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_WaterBagProsthesisForImagingProcedure: Coding.FromStrict({
+    DeviceKindValueSet_WaterBagProsthesisForImagingProcedure: new Coding({
         code: "102323003",
         display: "Water bag prosthesis for imaging procedure",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SalineBagProsthesisForImagingProcedure: Coding.FromStrict({
+    DeviceKindValueSet_SalineBagProsthesisForImagingProcedure: new Coding({
         code: "102324009",
         display: "Saline bag prosthesis for imaging procedure",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_GelProsthesisForImagingProcedure: Coding.FromStrict({
+    DeviceKindValueSet_GelProsthesisForImagingProcedure: new Coding({
         code: "102325005",
         display: "Gel prosthesis for imaging procedure",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Dagger: Coding.FromStrict({
+    DeviceKindValueSet_Dagger: new Coding({
         code: "102326006",
         display: "Dagger",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Dirk: Coding.FromStrict({
+    DeviceKindValueSet_Dirk: new Coding({
         code: "102327002",
         display: "Dirk",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Sword: Coding.FromStrict({
+    DeviceKindValueSet_Sword: new Coding({
         code: "102328007",
         display: "Sword",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MotorVehicleAirbag: Coding.FromStrict({
+    DeviceKindValueSet_MotorVehicleAirbag: new Coding({
         code: "102384007",
         display: "Motor vehicle airbag",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FrontAirbag: Coding.FromStrict({
+    DeviceKindValueSet_FrontAirbag: new Coding({
         code: "102385008",
         display: "Front airbag",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FrontDriverAirbag: Coding.FromStrict({
+    DeviceKindValueSet_FrontDriverAirbag: new Coding({
         code: "102386009",
         display: "Front driver airbag",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FrontPassengerAirbag: Coding.FromStrict({
+    DeviceKindValueSet_FrontPassengerAirbag: new Coding({
         code: "102387000",
         display: "Front passenger airbag",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SideAirbag: Coding.FromStrict({
+    DeviceKindValueSet_SideAirbag: new Coding({
         code: "102388005",
         display: "Side airbag",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Snowboard: Coding.FromStrict({
+    DeviceKindValueSet_Snowboard: new Coding({
         code: "102402008",
         display: "Snowboard",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_WaterSki: Coding.FromStrict({
+    DeviceKindValueSet_WaterSki: new Coding({
         code: "102403003",
         display: "Water ski",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NeedleGuide: Coding.FromStrict({
+    DeviceKindValueSet_NeedleGuide: new Coding({
         code: "10244001",
         display: "Needle guide",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ElectrostimulatingAnalgesiaUnit: Coding.FromStrict({
+    DeviceKindValueSet_ElectrostimulatingAnalgesiaUnit: new Coding({
         code: "10371004",
         display: "Electrostimulating analgesia unit",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Toeboard: Coding.FromStrict({
+    DeviceKindValueSet_Toeboard: new Coding({
         code: "10507000",
         display: "Toeboard",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LifeSupportEquipment: Coding.FromStrict({
+    DeviceKindValueSet_LifeSupportEquipment: new Coding({
         code: "105784003",
         display: "Life support equipment",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AdhesiveBandageANDORSuture: Coding.FromStrict({
+    DeviceKindValueSet_AdhesiveBandageANDORSuture: new Coding({
         code: "105785002",
         display: "Adhesive, bandage AND/OR suture",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BeltANDORBinder: Coding.FromStrict({
+    DeviceKindValueSet_BeltANDORBinder: new Coding({
         code: "105787005",
         display: "Belt AND/OR binder",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ProbeSoundBougieANDORAirway: Coding.FromStrict({
+    DeviceKindValueSet_ProbeSoundBougieANDORAirway: new Coding({
         code: "105788000",
         display: "Probe, sound, bougie AND/OR airway",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CannulaTubeANDORCatheter: Coding.FromStrict({
+    DeviceKindValueSet_CannulaTubeANDORCatheter: new Coding({
         code: "105789008",
         display: "Cannula, tube AND/OR catheter",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BagBalloonANDORBottle: Coding.FromStrict({
+    DeviceKindValueSet_BagBalloonANDORBottle: new Coding({
         code: "105790004",
         display: "Bag, balloon AND/OR bottle",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PumpInjectorANDORAspirator: Coding.FromStrict({
+    DeviceKindValueSet_PumpInjectorANDORAspirator: new Coding({
         code: "105791000",
         display: "Pump, injector AND/OR aspirator",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AnalgesiaANDORAnesthesiaUnit: Coding.FromStrict({
+    DeviceKindValueSet_AnalgesiaANDORAnesthesiaUnit: new Coding({
         code: "105792007",
         display: "Analgesia AND/OR anesthesia unit",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MonitorAlarmANDORStimulator: Coding.FromStrict({
+    DeviceKindValueSet_MonitorAlarmANDORStimulator: new Coding({
         code: "105793002",
         display: "Monitor, alarm AND/OR stimulator",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ScopeANDORCamera: Coding.FromStrict({
+    DeviceKindValueSet_ScopeANDORCamera: new Coding({
         code: "105794008",
         display: "Scope AND/OR camera",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PhysicalRestraintEquipmentANDORStructure: Coding.FromStrict({
+    DeviceKindValueSet_PhysicalRestraintEquipmentANDORStructure: new Coding({
         code: "105809003",
         display: "Physical restraint equipment AND/OR structure",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_IndustrialSaw: Coding.FromStrict({
+    DeviceKindValueSet_IndustrialSaw: new Coding({
         code: "10826000",
         display: "Industrial saw",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RadiographicTherapeuticUnit: Coding.FromStrict({
+    DeviceKindValueSet_RadiographicTherapeuticUnit: new Coding({
         code: "10850003",
         display: "Radiographic-therapeutic unit",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SiliconePlug: Coding.FromStrict({
+    DeviceKindValueSet_SiliconePlug: new Coding({
         code: "108874005",
         display: "Silicone plug",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_VeinStripper: Coding.FromStrict({
+    DeviceKindValueSet_VeinStripper: new Coding({
         code: "10906003",
         display: "Vein stripper",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PregnancyTestingKit: Coding.FromStrict({
+    DeviceKindValueSet_PregnancyTestingKit: new Coding({
         code: "109184000",
         display: "Pregnancy testing kit",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DentalPin: Coding.FromStrict({
+    DeviceKindValueSet_DentalPin: new Coding({
         code: "109226007",
         display: "Dental pin",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HandJointProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_HandJointProsthesis: new Coding({
         code: "109227003",
         display: "Hand joint prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_KneeJointProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_KneeJointProsthesis: new Coding({
         code: "109228008",
         display: "Knee joint prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ArtificialNails: Coding.FromStrict({
+    DeviceKindValueSet_ArtificialNails: new Coding({
         code: "111041008",
         display: "Artificial nails",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ArtificialOrgan: Coding.FromStrict({
+    DeviceKindValueSet_ArtificialOrgan: new Coding({
         code: "111042001",
         display: "Artificial organ",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MedicalTuningFork: Coding.FromStrict({
+    DeviceKindValueSet_MedicalTuningFork: new Coding({
         code: "111043006",
         display: "Medical tuning fork",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BoneTap: Coding.FromStrict({
+    DeviceKindValueSet_BoneTap: new Coding({
         code: "111044000",
         display: "Bone tap",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Exerciser: Coding.FromStrict({
+    DeviceKindValueSet_Exerciser: new Coding({
         code: "111045004",
         display: "Exerciser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_UrethralBougie: Coding.FromStrict({
+    DeviceKindValueSet_UrethralBougie: new Coding({
         code: "111047007",
         display: "Urethral bougie",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Rhinoscope: Coding.FromStrict({
+    DeviceKindValueSet_Rhinoscope: new Coding({
         code: "111048002",
         display: "Rhinoscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ProtectiveBreastPlate: Coding.FromStrict({
+    DeviceKindValueSet_ProtectiveBreastPlate: new Coding({
         code: "111052002",
         display: "Protective breast plate",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_IndustrialSewingMachine: Coding.FromStrict({
+    DeviceKindValueSet_IndustrialSewingMachine: new Coding({
         code: "111060001",
         display: "Industrial sewing machine",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FoodWasteDisposalEquipment: Coding.FromStrict({
+    DeviceKindValueSet_FoodWasteDisposalEquipment: new Coding({
         code: "111062009",
         display: "Food waste disposal equipment",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BoneGrowthStimulator: Coding.FromStrict({
+    DeviceKindValueSet_BoneGrowthStimulator: new Coding({
         code: "11141007",
         display: "Bone growth stimulator",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ElectromyographicMonitorAndRecorder: Coding.FromStrict({
+    DeviceKindValueSet_ElectromyographicMonitorAndRecorder: new Coding({
         code: "11158002",
         display: "Electromyographic monitor and recorder",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ProstheticValve: Coding.FromStrict({
+    DeviceKindValueSet_ProstheticValve: new Coding({
         code: "11358008",
         display: "Prosthetic valve",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SoftCast: Coding.FromStrict({
+    DeviceKindValueSet_SoftCast: new Coding({
         code: "115961006",
         display: "Soft Cast",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FiberglassCast: Coding.FromStrict({
+    DeviceKindValueSet_FiberglassCast: new Coding({
         code: "115962004",
         display: "Fiberglass cast",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BloodProductUnit: Coding.FromStrict({
+    DeviceKindValueSet_BloodProductUnit: new Coding({
         code: "116146000",
         display: "Blood product unit",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CatheterTip: Coding.FromStrict({
+    DeviceKindValueSet_CatheterTip: new Coding({
         code: "116204000",
         display: "Catheter tip",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BloodBag: Coding.FromStrict({
+    DeviceKindValueSet_BloodBag: new Coding({
         code: "116205004",
         display: "Blood bag",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PlasmaBag: Coding.FromStrict({
+    DeviceKindValueSet_PlasmaBag: new Coding({
         code: "116206003",
         display: "Plasma bag",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Filter: Coding.FromStrict({
+    DeviceKindValueSet_Filter: new Coding({
         code: "116250002",
         display: "Filter",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Wick: Coding.FromStrict({
+    DeviceKindValueSet_Wick: new Coding({
         code: "116251003",
         display: "Wick",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SolidStateLaser: Coding.FromStrict({
+    DeviceKindValueSet_SolidStateLaser: new Coding({
         code: "118294000",
         display: "Solid-state laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_GasLaser: Coding.FromStrict({
+    DeviceKindValueSet_GasLaser: new Coding({
         code: "118295004",
         display: "Gas laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ChemicalLaser: Coding.FromStrict({
+    DeviceKindValueSet_ChemicalLaser: new Coding({
         code: "118296003",
         display: "Chemical laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ExcimerLaser: Coding.FromStrict({
+    DeviceKindValueSet_ExcimerLaser: new Coding({
         code: "118297007",
         display: "Excimer laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DyeLaser: Coding.FromStrict({
+    DeviceKindValueSet_DyeLaser: new Coding({
         code: "118298002",
         display: "Dye laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DiodeLaser: Coding.FromStrict({
+    DeviceKindValueSet_DiodeLaser: new Coding({
         code: "118299005",
         display: "Diode laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NdYVOGreaterThan4LessThanLaser: Coding.FromStrict({
+    DeviceKindValueSet_NdYVOGreaterThan4LessThanLaser: new Coding({
         code: "118301003",
         display: "Nd:YVO>4< laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NdYLFLaser: Coding.FromStrict({
+    DeviceKindValueSet_NdYLFLaser: new Coding({
         code: "118302005",
         display: "Nd:YLF laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NdGlassLaser: Coding.FromStrict({
+    DeviceKindValueSet_NdGlassLaser: new Coding({
         code: "118303000",
         display: "Nd:Glass laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ChromiumSapphireLaserDevice: Coding.FromStrict({
+    DeviceKindValueSet_ChromiumSapphireLaserDevice: new Coding({
         code: "118304006",
         display: "Chromium sapphire laser device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ErGlassLaser: Coding.FromStrict({
+    DeviceKindValueSet_ErGlassLaser: new Coding({
         code: "118305007",
         display: "Er:Glass laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ErbiumYAGLaser: Coding.FromStrict({
+    DeviceKindValueSet_ErbiumYAGLaser: new Coding({
         code: "118306008",
         display: "Erbium-YAG laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HoYLFLaser: Coding.FromStrict({
+    DeviceKindValueSet_HoYLFLaser: new Coding({
         code: "118307004",
         display: "Ho:YLF laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HolmiumYAGLaser: Coding.FromStrict({
+    DeviceKindValueSet_HolmiumYAGLaser: new Coding({
         code: "118308009",
         display: "Holmium-YAG laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TiSapphireLaserDevice: Coding.FromStrict({
+    DeviceKindValueSet_TiSapphireLaserDevice: new Coding({
         code: "118309001",
         display: "Ti:sapphire laser device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AlexandriteLaser: Coding.FromStrict({
+    DeviceKindValueSet_AlexandriteLaser: new Coding({
         code: "118310006",
         display: "Alexandrite laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ArgonLaser: Coding.FromStrict({
+    DeviceKindValueSet_ArgonLaser: new Coding({
         code: "118311005",
         display: "Argon laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CO2Laser: Coding.FromStrict({
+    DeviceKindValueSet_CO2Laser: new Coding({
         code: "118312003",
         display: "CO2 laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HeLaser: Coding.FromStrict({
+    DeviceKindValueSet_HeLaser: new Coding({
         code: "118313008",
         display: "He laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HeliumCadmiumLaser: Coding.FromStrict({
+    DeviceKindValueSet_HeliumCadmiumLaser: new Coding({
         code: "118314002",
         display: "Helium cadmium laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HeNeLaser: Coding.FromStrict({
+    DeviceKindValueSet_HeNeLaser: new Coding({
         code: "118315001",
         display: "HeNe laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_KryptonLaser: Coding.FromStrict({
+    DeviceKindValueSet_KryptonLaser: new Coding({
         code: "118316000",
         display: "Krypton laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NeonGasLaser: Coding.FromStrict({
+    DeviceKindValueSet_NeonGasLaser: new Coding({
         code: "118317009",
         display: "Neon gas laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NitrogenGasLaser: Coding.FromStrict({
+    DeviceKindValueSet_NitrogenGasLaser: new Coding({
         code: "118318004",
         display: "Nitrogen gas laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_XenonGasLaser: Coding.FromStrict({
+    DeviceKindValueSet_XenonGasLaser: new Coding({
         code: "118319007",
         display: "Xenon gas laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CopperVaporLaser: Coding.FromStrict({
+    DeviceKindValueSet_CopperVaporLaser: new Coding({
         code: "118320001",
         display: "Copper vapor laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_GoldVaporLaser: Coding.FromStrict({
+    DeviceKindValueSet_GoldVaporLaser: new Coding({
         code: "118321002",
         display: "Gold vapor laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DFLaser: Coding.FromStrict({
+    DeviceKindValueSet_DFLaser: new Coding({
         code: "118322009",
         display: "DF laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DFCOGreaterThan2LessThanLaserDevice: Coding.FromStrict({
+    DeviceKindValueSet_DFCOGreaterThan2LessThanLaserDevice: new Coding({
         code: "118323004",
         display: "DF-CO>2< laser device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HFLaser: Coding.FromStrict({
+    DeviceKindValueSet_HFLaser: new Coding({
         code: "118324005",
         display: "HF laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ArFLaser: Coding.FromStrict({
+    DeviceKindValueSet_ArFLaser: new Coding({
         code: "118325006",
         display: "ArF laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_KrFLaser: Coding.FromStrict({
+    DeviceKindValueSet_KrFLaser: new Coding({
         code: "118326007",
         display: "KrF laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_KrClLaser: Coding.FromStrict({
+    DeviceKindValueSet_KrClLaser: new Coding({
         code: "118327003",
         display: "KrCl laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_XeClLaser: Coding.FromStrict({
+    DeviceKindValueSet_XeClLaser: new Coding({
         code: "118328008",
         display: "XeCl laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_XeFlLaser: Coding.FromStrict({
+    DeviceKindValueSet_XeFlLaser: new Coding({
         code: "118329000",
         display: "XeFl laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FreeElectronLaser: Coding.FromStrict({
+    DeviceKindValueSet_FreeElectronLaser: new Coding({
         code: "118330005",
         display: "Free electron laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TunableDyeLaser: Coding.FromStrict({
+    DeviceKindValueSet_TunableDyeLaser: new Coding({
         code: "118331009",
         display: "Tunable dye laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TunableDyeArgonLaser: Coding.FromStrict({
+    DeviceKindValueSet_TunableDyeArgonLaser: new Coding({
         code: "118332002",
         display: "Tunable dye argon laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_GalliumArsenideLaser: Coding.FromStrict({
+    DeviceKindValueSet_GalliumArsenideLaser: new Coding({
         code: "118333007",
         display: "Gallium arsenide laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_GalliumAluminumArsenideLaser: Coding.FromStrict({
+    DeviceKindValueSet_GalliumAluminumArsenideLaser: new Coding({
         code: "118334001",
         display: "Gallium aluminum arsenide laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LeadSaltLaser: Coding.FromStrict({
+    DeviceKindValueSet_LeadSaltLaser: new Coding({
         code: "118335000",
         display: "Lead-salt laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Rhodamine6GDyeLaser: Coding.FromStrict({
+    DeviceKindValueSet_Rhodamine6GDyeLaser: new Coding({
         code: "118336004",
         display: "Rhodamine 6G dye laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CoumarinC30DyeLaser: Coding.FromStrict({
+    DeviceKindValueSet_CoumarinC30DyeLaser: new Coding({
         code: "118337008",
         display: "Coumarin C30 dye laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Coumarin102DyeLaser: Coding.FromStrict({
+    DeviceKindValueSet_Coumarin102DyeLaser: new Coding({
         code: "118338003",
         display: "Coumarin 102 dye laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DiodePumpedLaser: Coding.FromStrict({
+    DeviceKindValueSet_DiodePumpedLaser: new Coding({
         code: "118342000",
         display: "Diode pumped laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FlashlampPumpedLaserDevice: Coding.FromStrict({
+    DeviceKindValueSet_FlashlampPumpedLaserDevice: new Coding({
         code: "118343005",
         display: "Flashlamp pumped laser device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PulsedDyeLaser: Coding.FromStrict({
+    DeviceKindValueSet_PulsedDyeLaser: new Coding({
         code: "118346002",
         display: "Pulsed dye laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_QSLaser: Coding.FromStrict({
+    DeviceKindValueSet_QSLaser: new Coding({
         code: "118347006",
         display: "QS laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FlashlampPulsedDyeLaser: Coding.FromStrict({
+    DeviceKindValueSet_FlashlampPulsedDyeLaser: new Coding({
         code: "118348001",
         display: "Flashlamp pulsed dye laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CWCOGreaterThan2LessThanLaser: Coding.FromStrict({
+    DeviceKindValueSet_CWCOGreaterThan2LessThanLaser: new Coding({
         code: "118349009",
         display: "CW CO>2< laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HighEnergyPulsedCOGreaterThan2LessThanLaser: Coding.FromStrict({
+    DeviceKindValueSet_HighEnergyPulsedCOGreaterThan2LessThanLaser: new Coding({
         code: "118350009",
         display: "High energy pulsed CO>2< laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FrequencyDoubledNdYAGLaser: Coding.FromStrict({
+    DeviceKindValueSet_FrequencyDoubledNdYAGLaser: new Coding({
         code: "118351008",
         display: "Frequency doubled Nd:YAG laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ContinuousWaveLaser: Coding.FromStrict({
+    DeviceKindValueSet_ContinuousWaveLaser: new Coding({
         code: "118354000",
         display: "Continuous wave laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PulsedLaser: Coding.FromStrict({
+    DeviceKindValueSet_PulsedLaser: new Coding({
         code: "118355004",
         display: "Pulsed laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MetalVaporLaser: Coding.FromStrict({
+    DeviceKindValueSet_MetalVaporLaser: new Coding({
         code: "118356003",
         display: "Metal vapor laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_KTPLaser: Coding.FromStrict({
+    DeviceKindValueSet_KTPLaser: new Coding({
         code: "118357007",
         display: "KTP laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_IonLaser: Coding.FromStrict({
+    DeviceKindValueSet_IonLaser: new Coding({
         code: "118371004",
         display: "Ion laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PlasticImplant: Coding.FromStrict({
+    DeviceKindValueSet_PlasticImplant: new Coding({
         code: "118372006",
         display: "Plastic implant",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SilasticImplant: Coding.FromStrict({
+    DeviceKindValueSet_SilasticImplant: new Coding({
         code: "118373001",
         display: "Silastic implant",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SiliconeImplant: Coding.FromStrict({
+    DeviceKindValueSet_SiliconeImplant: new Coding({
         code: "118374007",
         display: "Silicone implant",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CardiacSeptumProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_CardiacSeptumProsthesis: new Coding({
         code: "118375008",
         display: "Cardiac septum prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Thermocouple: Coding.FromStrict({
+    DeviceKindValueSet_Thermocouple: new Coding({
         code: "118376009",
         display: "Thermocouple",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BiopsyNeedle: Coding.FromStrict({
+    DeviceKindValueSet_BiopsyNeedle: new Coding({
         code: "118377000",
         display: "Biopsy needle",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PacemakerPulseGenerator: Coding.FromStrict({
+    DeviceKindValueSet_PacemakerPulseGenerator: new Coding({
         code: "118378005",
         display: "Pacemaker pulse generator",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AutomaticImplantableCardioverterSensingElectrodes: Coding.FromStrict({
+    DeviceKindValueSet_AutomaticImplantableCardioverterSensingElectrodes: new Coding({
         code: "118379002",
         display: "Automatic implantable cardioverter sensing electrodes",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ImplantableDefibrillatorLeads: Coding.FromStrict({
+    DeviceKindValueSet_ImplantableDefibrillatorLeads: new Coding({
         code: "118380004",
         display: "Implantable defibrillator leads",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ImplantableCardioverterLeads: Coding.FromStrict({
+    DeviceKindValueSet_ImplantableCardioverterLeads: new Coding({
         code: "118381000",
         display: "Implantable cardioverter leads",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NeuropacemakerDevice: Coding.FromStrict({
+    DeviceKindValueSet_NeuropacemakerDevice: new Coding({
         code: "118382007",
         display: "Neuropacemaker device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ExternalFixationDevice: Coding.FromStrict({
+    DeviceKindValueSet_ExternalFixationDevice: new Coding({
         code: "118383002",
         display: "External fixation device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LongArmSplint: Coding.FromStrict({
+    DeviceKindValueSet_LongArmSplint: new Coding({
         code: "118384008",
         display: "Long arm splint",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ShortArmSplint: Coding.FromStrict({
+    DeviceKindValueSet_ShortArmSplint: new Coding({
         code: "118385009",
         display: "Short arm splint",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FigureOfEightPlasterCast: Coding.FromStrict({
+    DeviceKindValueSet_FigureOfEightPlasterCast: new Coding({
         code: "118386005",
         display: "Figure of eight plaster cast",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HaloJacket: Coding.FromStrict({
+    DeviceKindValueSet_HaloJacket: new Coding({
         code: "118387001",
         display: "Halo jacket",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BodyCastShoulderToHips: Coding.FromStrict({
+    DeviceKindValueSet_BodyCastShoulderToHips: new Coding({
         code: "118388006",
         display: "Body cast, shoulder to hips",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BodyCastShoulderToHipsIncludingHeadMinervaType: Coding.FromStrict({
+    DeviceKindValueSet_BodyCastShoulderToHipsIncludingHeadMinervaType: new Coding({
         code: "118389003",
         display: "Body cast, shoulder to hips including head, Minerva type",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BodyCastShoulderToHipsIncludingOneThigh: Coding.FromStrict({
+    DeviceKindValueSet_BodyCastShoulderToHipsIncludingOneThigh: new Coding({
         code: "118390007",
         display: "Body cast, shoulder to hips including one thigh",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BodyCastShoulderToHipsIncludingBothThighs: Coding.FromStrict({
+    DeviceKindValueSet_BodyCastShoulderToHipsIncludingBothThighs: new Coding({
         code: "118391006",
         display: "Body cast, shoulder to hips including both thighs",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ShoulderCast: Coding.FromStrict({
+    DeviceKindValueSet_ShoulderCast: new Coding({
         code: "118392004",
         display: "Shoulder cast",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LongArmCylinder: Coding.FromStrict({
+    DeviceKindValueSet_LongArmCylinder: new Coding({
         code: "118393009",
         display: "Long arm cylinder",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ForearmCylinder: Coding.FromStrict({
+    DeviceKindValueSet_ForearmCylinder: new Coding({
         code: "118394003",
         display: "Forearm cylinder",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CylinderCastThighToAnkle: Coding.FromStrict({
+    DeviceKindValueSet_CylinderCastThighToAnkle: new Coding({
         code: "118396001",
         display: "Cylinder cast, thigh to ankle",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LongLegCast: Coding.FromStrict({
+    DeviceKindValueSet_LongLegCast: new Coding({
         code: "118397005",
         display: "Long leg cast",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LongLegCastWalkerOrAmbulatoryType: Coding.FromStrict({
+    DeviceKindValueSet_LongLegCastWalkerOrAmbulatoryType: new Coding({
         code: "118398000",
         display: "Long leg cast, walker or ambulatory type",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LongLegCastBraceType: Coding.FromStrict({
+    DeviceKindValueSet_LongLegCastBraceType: new Coding({
         code: "118399008",
         display: "Long leg cast, brace type",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ShortLegCastBelowKneeToToes: Coding.FromStrict({
+    DeviceKindValueSet_ShortLegCastBelowKneeToToes: new Coding({
         code: "118400001",
         display: "Short leg cast below knee to toes",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ShortLegCastBelowKneeToToesWalkingOrAmbulatoryType: Coding.FromStrict({
+    DeviceKindValueSet_ShortLegCastBelowKneeToToesWalkingOrAmbulatoryType: new Coding({
         code: "118401002",
         display: "Short leg cast below knee to toes, walking or ambulatory type",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ClubfootCast: Coding.FromStrict({
+    DeviceKindValueSet_ClubfootCast: new Coding({
         code: "118402009",
         display: "Clubfoot cast",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ClubfootCastShortLeg: Coding.FromStrict({
+    DeviceKindValueSet_ClubfootCastShortLeg: new Coding({
         code: "118403004",
         display: "Clubfoot cast, short leg",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ClubfootCastLongLeg: Coding.FromStrict({
+    DeviceKindValueSet_ClubfootCastLongLeg: new Coding({
         code: "118404005",
         display: "Clubfoot cast, long leg",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SpicaCast: Coding.FromStrict({
+    DeviceKindValueSet_SpicaCast: new Coding({
         code: "118405006",
         display: "Spica cast",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HipSpicaCastBothLegs: Coding.FromStrict({
+    DeviceKindValueSet_HipSpicaCastBothLegs: new Coding({
         code: "118406007",
         display: "Hip spica cast, both legs",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HipSpicaCastOneLeg: Coding.FromStrict({
+    DeviceKindValueSet_HipSpicaCastOneLeg: new Coding({
         code: "118407003",
         display: "Hip spica cast, one leg",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HipSpicaCastOneAndOneHalfSpica: Coding.FromStrict({
+    DeviceKindValueSet_HipSpicaCastOneAndOneHalfSpica: new Coding({
         code: "118408008",
         display: "Hip spica cast, one and one-half spica",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PatellarTendonBearingCast: Coding.FromStrict({
+    DeviceKindValueSet_PatellarTendonBearingCast: new Coding({
         code: "118409000",
         display: "Patellar tendon bearing cast",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BootCast: Coding.FromStrict({
+    DeviceKindValueSet_BootCast: new Coding({
         code: "118410005",
         display: "Boot cast",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SugarTongCast: Coding.FromStrict({
+    DeviceKindValueSet_SugarTongCast: new Coding({
         code: "118411009",
         display: "Sugar tong cast",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_GauntletCast: Coding.FromStrict({
+    DeviceKindValueSet_GauntletCast: new Coding({
         code: "118412002",
         display: "Gauntlet cast",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CompleteCast: Coding.FromStrict({
+    DeviceKindValueSet_CompleteCast: new Coding({
         code: "118413007",
         display: "Complete cast",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PressureDressing: Coding.FromStrict({
+    DeviceKindValueSet_PressureDressing: new Coding({
         code: "118414001",
         display: "Pressure dressing",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PackingMaterial: Coding.FromStrict({
+    DeviceKindValueSet_PackingMaterial: new Coding({
         code: "118415000",
         display: "Packing material",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_WoundPackingMaterial: Coding.FromStrict({
+    DeviceKindValueSet_WoundPackingMaterial: new Coding({
         code: "118416004",
         display: "Wound packing material",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Trocar: Coding.FromStrict({
+    DeviceKindValueSet_Trocar: new Coding({
         code: "118418003",
         display: "Trocar",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_UmbrellaDevice: Coding.FromStrict({
+    DeviceKindValueSet_UmbrellaDevice: new Coding({
         code: "118419006",
         display: "Umbrella device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AtrialSeptalUmbrella: Coding.FromStrict({
+    DeviceKindValueSet_AtrialSeptalUmbrella: new Coding({
         code: "118420000",
         display: "Atrial septal umbrella",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_KingMillsUmbrellaDevice: Coding.FromStrict({
+    DeviceKindValueSet_KingMillsUmbrellaDevice: new Coding({
         code: "118421001",
         display: "King-Mills umbrella device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MobitzUddinUmbrellaDevice: Coding.FromStrict({
+    DeviceKindValueSet_MobitzUddinUmbrellaDevice: new Coding({
         code: "118422008",
         display: "Mobitz-Uddin umbrella device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RashkindUmbrellaDevice: Coding.FromStrict({
+    DeviceKindValueSet_RashkindUmbrellaDevice: new Coding({
         code: "118423003",
         display: "Rashkind umbrella device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ReservoirDevice: Coding.FromStrict({
+    DeviceKindValueSet_ReservoirDevice: new Coding({
         code: "118424009",
         display: "Reservoir device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_VentricularReservoir: Coding.FromStrict({
+    DeviceKindValueSet_VentricularReservoir: new Coding({
         code: "118425005",
         display: "Ventricular reservoir",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_OmmayaReservoir: Coding.FromStrict({
+    DeviceKindValueSet_OmmayaReservoir: new Coding({
         code: "118426006",
         display: "Ommaya reservoir",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RickhamReservoir: Coding.FromStrict({
+    DeviceKindValueSet_RickhamReservoir: new Coding({
         code: "118427002",
         display: "Rickham reservoir",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FlexibleFiberopticEndoscope: Coding.FromStrict({
+    DeviceKindValueSet_FlexibleFiberopticEndoscope: new Coding({
         code: "118428007",
         display: "Flexible fiberoptic endoscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FlexibleFiberopticLaryngoscopeWithStrobe: Coding.FromStrict({
+    DeviceKindValueSet_FlexibleFiberopticLaryngoscopeWithStrobe: new Coding({
         code: "118429004",
         display: "Flexible fiberoptic laryngoscope with strobe",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Cast: Coding.FromStrict({
+    DeviceKindValueSet_Cast: new Coding({
         code: "118643004",
         display: "Cast",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ClinicalChemistryAnalyzer: Coding.FromStrict({
+    DeviceKindValueSet_ClinicalChemistryAnalyzer: new Coding({
         code: "11987000",
         display: "Clinical chemistry analyzer",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TreadmillDevice: Coding.FromStrict({
+    DeviceKindValueSet_TreadmillDevice: new Coding({
         code: "1211003",
         display: "Treadmill, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Cannula: Coding.FromStrict({
+    DeviceKindValueSet_Cannula: new Coding({
         code: "12150006",
         display: "Cannula",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_UpperLimbProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_UpperLimbProsthesis: new Coding({
         code: "12183004",
         display: "Upper limb prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_IceSkate: Coding.FromStrict({
+    DeviceKindValueSet_IceSkate: new Coding({
         code: "12198002",
         display: "Ice skate",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Laser: Coding.FromStrict({
+    DeviceKindValueSet_Laser: new Coding({
         code: "122456005",
         display: "Laser",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SSSilkSuture: Coding.FromStrict({
+    DeviceKindValueSet_SSSilkSuture: new Coding({
         code: "123636009",
         display: "SS - Silk suture",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_GastrostomyTubeDevice: Coding.FromStrict({
+    DeviceKindValueSet_GastrostomyTubeDevice: new Coding({
         code: "126064005",
         display: "Gastrostomy tube, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_JejunostomyTubeDevice: Coding.FromStrict({
+    DeviceKindValueSet_JejunostomyTubeDevice: new Coding({
         code: "126065006",
         display: "Jejunostomy tube, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Baffle: Coding.FromStrict({
+    DeviceKindValueSet_Baffle: new Coding({
         code: "128981007",
         display: "Baffle",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_IntraAorticBalloonPump: Coding.FromStrict({
+    DeviceKindValueSet_IntraAorticBalloonPump: new Coding({
         code: "129113006",
         display: "Intra-aortic balloon pump",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TracheostomyTube: Coding.FromStrict({
+    DeviceKindValueSet_TracheostomyTube: new Coding({
         code: "129121000",
         display: "Tracheostomy tube",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FineBiopsyNeedle: Coding.FromStrict({
+    DeviceKindValueSet_FineBiopsyNeedle: new Coding({
         code: "129247000",
         display: "Fine biopsy needle",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CoreBiopsyNeedle: Coding.FromStrict({
+    DeviceKindValueSet_CoreBiopsyNeedle: new Coding({
         code: "129248005",
         display: "Core biopsy needle",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CompressionPaddle: Coding.FromStrict({
+    DeviceKindValueSet_CompressionPaddle: new Coding({
         code: "129460009",
         display: "Compression paddle",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CatheterGuideWire: Coding.FromStrict({
+    DeviceKindValueSet_CatheterGuideWire: new Coding({
         code: "129462001",
         display: "Catheter guide wire",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_JWire: Coding.FromStrict({
+    DeviceKindValueSet_JWire: new Coding({
         code: "129463006",
         display: "J wire",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MedicalAdministrativeEquipment: Coding.FromStrict({
+    DeviceKindValueSet_MedicalAdministrativeEquipment: new Coding({
         code: "129464000",
         display: "Medical administrative equipment",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MedicalRecord: Coding.FromStrict({
+    DeviceKindValueSet_MedicalRecord: new Coding({
         code: "129465004",
         display: "Medical record",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PatientChart: Coding.FromStrict({
+    DeviceKindValueSet_PatientChart: new Coding({
         code: "129466003",
         display: "Patient chart",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_IdentificationPlate: Coding.FromStrict({
+    DeviceKindValueSet_IdentificationPlate: new Coding({
         code: "129467007",
         display: "Identification plate",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_File: Coding.FromStrict({
+    DeviceKindValueSet_File: new Coding({
         code: "12953007",
         display: "File",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_WoolCloth: Coding.FromStrict({
+    DeviceKindValueSet_WoolCloth: new Coding({
         code: "13118005",
         display: "Wool cloth",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Gastroscope: Coding.FromStrict({
+    DeviceKindValueSet_Gastroscope: new Coding({
         code: "13219008",
         display: "Gastroscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Monitors: Coding.FromStrict({
+    DeviceKindValueSet_Monitors: new Coding({
         code: "13288007",
         display: "Monitors",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_EmesisBasinDevice: Coding.FromStrict({
+    DeviceKindValueSet_EmesisBasinDevice: new Coding({
         code: "1333003",
         display: "Emesis basin, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TemporaryArtificialHeartProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_TemporaryArtificialHeartProsthesis: new Coding({
         code: "13459008",
         display: "Temporary artificial heart prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SterileAbsorbentDressingPad: Coding.FromStrict({
+    DeviceKindValueSet_SterileAbsorbentDressingPad: new Coding({
         code: "134823007",
         display: "Sterile absorbent dressing pad",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_WoundDrainagePouchDressing: Coding.FromStrict({
+    DeviceKindValueSet_WoundDrainagePouchDressing: new Coding({
         code: "134963007",
         display: "Wound drainage pouch dressing",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_UterineSound: Coding.FromStrict({
+    DeviceKindValueSet_UterineSound: new Coding({
         code: "13764006",
         display: "Uterine sound",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Pillow: Coding.FromStrict({
+    DeviceKindValueSet_Pillow: new Coding({
         code: "13855007",
         display: "Pillow",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TennisBall: Coding.FromStrict({
+    DeviceKindValueSet_TennisBall: new Coding({
         code: "13905003",
         display: "Tennis ball",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CardiacPacemakerImplant: Coding.FromStrict({
+    DeviceKindValueSet_CardiacPacemakerImplant: new Coding({
         code: "14106009",
         display: "Cardiac pacemaker implant",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Cage: Coding.FromStrict({
+    DeviceKindValueSet_Cage: new Coding({
         code: "14108005",
         display: "Cage",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AnalgesiaUnit: Coding.FromStrict({
+    DeviceKindValueSet_AnalgesiaUnit: new Coding({
         code: "14116001",
         display: "Analgesia unit",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_OilWell: Coding.FromStrict({
+    DeviceKindValueSet_OilWell: new Coding({
         code: "14208000",
         display: "Oil well",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PlasticMoldDevice: Coding.FromStrict({
+    DeviceKindValueSet_PlasticMoldDevice: new Coding({
         code: "1422002",
         display: "Plastic mold, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NasalSeptumButton: Coding.FromStrict({
+    DeviceKindValueSet_NasalSeptumButton: new Coding({
         code: "14288003",
         display: "Nasal septum button",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Button: Coding.FromStrict({
+    DeviceKindValueSet_Button: new Coding({
         code: "14339000",
         display: "Button",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Camera: Coding.FromStrict({
+    DeviceKindValueSet_Camera: new Coding({
         code: "14364002",
         display: "Camera",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AdhesiveBandage: Coding.FromStrict({
+    DeviceKindValueSet_AdhesiveBandage: new Coding({
         code: "14423008",
         display: "Adhesive bandage",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Aspirator: Coding.FromStrict({
+    DeviceKindValueSet_Aspirator: new Coding({
         code: "14519003",
         display: "Aspirator",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HarringtonRod: Coding.FromStrict({
+    DeviceKindValueSet_HarringtonRod: new Coding({
         code: "14548009",
         display: "Harrington rod",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AlloySteelChainSling: Coding.FromStrict({
+    DeviceKindValueSet_AlloySteelChainSling: new Coding({
         code: "14762000",
         display: "Alloy steel chain sling",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ProstheticImplant: Coding.FromStrict({
+    DeviceKindValueSet_ProstheticImplant: new Coding({
         code: "14789005",
         display: "Prosthetic implant",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AirConditioner: Coding.FromStrict({
+    DeviceKindValueSet_AirConditioner: new Coding({
         code: "15000008",
         display: "Air-conditioner",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_WoodQuoteSLight: Coding.FromStrict({
+    DeviceKindValueSet_WoodQuoteSLight: new Coding({
         code: "15340005",
         display: "Wood's light",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ArthroplastyProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_ArthroplastyProsthesis: new Coding({
         code: "15447007",
         display: "Arthroplasty prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SpineBoard: Coding.FromStrict({
+    DeviceKindValueSet_SpineBoard: new Coding({
         code: "156009",
         display: "Spine board",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AnesthesiaUnit: Coding.FromStrict({
+    DeviceKindValueSet_AnesthesiaUnit: new Coding({
         code: "15644007",
         display: "Anesthesia unit",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SurgicalDrillDevice: Coding.FromStrict({
+    DeviceKindValueSet_SurgicalDrillDevice: new Coding({
         code: "1579007",
         display: "Surgical drill, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DosimeterDevice: Coding.FromStrict({
+    DeviceKindValueSet_DosimeterDevice: new Coding({
         code: "15869005",
         display: "Dosimeter, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BoilerDevice: Coding.FromStrict({
+    DeviceKindValueSet_BoilerDevice: new Coding({
         code: "15873008",
         display: "Boiler, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_GownDevice: Coding.FromStrict({
+    DeviceKindValueSet_GownDevice: new Coding({
         code: "15922004",
         display: "Gown, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Boots: Coding.FromStrict({
+    DeviceKindValueSet_Boots: new Coding({
         code: "16056004",
         display: "Boots",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_OrthopedicEquipment: Coding.FromStrict({
+    DeviceKindValueSet_OrthopedicEquipment: new Coding({
         code: "16349000",
         display: "Orthopedic equipment",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CommercialBreathingSupplyHosesDivingOperationDevice: Coding.FromStrict({
+    DeviceKindValueSet_CommercialBreathingSupplyHosesDivingOperationDevice: new Coding({
         code: "16417001",
         display: "Commercial breathing supply hoses diving operation, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ElectrodeDevice: Coding.FromStrict({
+    DeviceKindValueSet_ElectrodeDevice: new Coding({
         code: "16470007",
         display: "Electrode, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ElectricClipperDevice: Coding.FromStrict({
+    DeviceKindValueSet_ElectricClipperDevice: new Coding({
         code: "16497000",
         display: "Electric clipper, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CottonCloth: Coding.FromStrict({
+    DeviceKindValueSet_CottonCloth: new Coding({
         code: "16524003",
         display: "Cotton cloth",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_UmbrellaCatheterDevice: Coding.FromStrict({
+    DeviceKindValueSet_UmbrellaCatheterDevice: new Coding({
         code: "16540000",
         display: "Umbrella catheter, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SplintDevice: Coding.FromStrict({
+    DeviceKindValueSet_SplintDevice: new Coding({
         code: "16650009",
         display: "Splint, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HomeNebulizer: Coding.FromStrict({
+    DeviceKindValueSet_HomeNebulizer: new Coding({
         code: "170615005",
         display: "Home nebulizer",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NGNasogastricTube: Coding.FromStrict({
+    DeviceKindValueSet_NGNasogastricTube: new Coding({
         code: "17102003",
         display: "NG - Nasogastric tube",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ProstheticMitralValve: Coding.FromStrict({
+    DeviceKindValueSet_ProstheticMitralValve: new Coding({
         code: "17107009",
         display: "Prosthetic mitral valve",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MattressDevice: Coding.FromStrict({
+    DeviceKindValueSet_MattressDevice: new Coding({
         code: "17207004",
         display: "Mattress, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HerniaBeltDevice: Coding.FromStrict({
+    DeviceKindValueSet_HerniaBeltDevice: new Coding({
         code: "17306006",
         display: "Hernia belt, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CardiacCompressionBoardDevice: Coding.FromStrict({
+    DeviceKindValueSet_CardiacCompressionBoardDevice: new Coding({
         code: "17404008",
         display: "Cardiac compression board, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_KnifeDevice: Coding.FromStrict({
+    DeviceKindValueSet_KnifeDevice: new Coding({
         code: "17472008",
         display: "Knife, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TobogganDevice: Coding.FromStrict({
+    DeviceKindValueSet_TobogganDevice: new Coding({
         code: "1766001",
         display: "Toboggan, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PunchDevice: Coding.FromStrict({
+    DeviceKindValueSet_PunchDevice: new Coding({
         code: "18151003",
         display: "Punch, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FluorescenceImmunoassayAnalyzerDevice: Coding.FromStrict({
+    DeviceKindValueSet_FluorescenceImmunoassayAnalyzerDevice: new Coding({
         code: "18153000",
         display: "Fluorescence immunoassay analyzer, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PlasterJacket: Coding.FromStrict({
+    DeviceKindValueSet_PlasterJacket: new Coding({
         code: "182562006",
         display: "Plaster jacket",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ShoulderSpica: Coding.FromStrict({
+    DeviceKindValueSet_ShoulderSpica: new Coding({
         code: "182563001",
         display: "Shoulder spica",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HumeralUSlab: Coding.FromStrict({
+    DeviceKindValueSet_HumeralUSlab: new Coding({
         code: "182564007",
         display: "Humeral U-slab",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LongArmSlab: Coding.FromStrict({
+    DeviceKindValueSet_LongArmSlab: new Coding({
         code: "182565008",
         display: "Long arm slab",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HumeralHangingSlab: Coding.FromStrict({
+    DeviceKindValueSet_HumeralHangingSlab: new Coding({
         code: "182566009",
         display: "Humeral hanging slab",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ForearmSlab: Coding.FromStrict({
+    DeviceKindValueSet_ForearmSlab: new Coding({
         code: "182567000",
         display: "Forearm slab",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ScaphoidCast: Coding.FromStrict({
+    DeviceKindValueSet_ScaphoidCast: new Coding({
         code: "182568005",
         display: "Scaphoid cast",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BennettCast: Coding.FromStrict({
+    DeviceKindValueSet_BennettCast: new Coding({
         code: "182569002",
         display: "Bennett cast",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HipSpica: Coding.FromStrict({
+    DeviceKindValueSet_HipSpica: new Coding({
         code: "182570001",
         display: "Hip spica",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LongLegSpica: Coding.FromStrict({
+    DeviceKindValueSet_LongLegSpica: new Coding({
         code: "182571002",
         display: "Long leg spica",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BelowKneeNonWeightBearingCast: Coding.FromStrict({
+    DeviceKindValueSet_BelowKneeNonWeightBearingCast: new Coding({
         code: "182572009",
         display: "Below knee non-weight-bearing cast",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BelowKneeWeightBearingCast: Coding.FromStrict({
+    DeviceKindValueSet_BelowKneeWeightBearingCast: new Coding({
         code: "182573004",
         display: "Below knee weight-bearing cast",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PlasterStripper: Coding.FromStrict({
+    DeviceKindValueSet_PlasterStripper: new Coding({
         code: "182574005",
         display: "Plaster stripper",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HumeralBrace: Coding.FromStrict({
+    DeviceKindValueSet_HumeralBrace: new Coding({
         code: "182576007",
         display: "Humeral brace",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FunctionalElbowBrace: Coding.FromStrict({
+    DeviceKindValueSet_FunctionalElbowBrace: new Coding({
         code: "182577003",
         display: "Functional elbow brace",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ForearmBrace: Coding.FromStrict({
+    DeviceKindValueSet_ForearmBrace: new Coding({
         code: "182578008",
         display: "Forearm brace",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HipBrace: Coding.FromStrict({
+    DeviceKindValueSet_HipBrace: new Coding({
         code: "182579000",
         display: "Hip brace",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FemoralBrace: Coding.FromStrict({
+    DeviceKindValueSet_FemoralBrace: new Coding({
         code: "182580002",
         display: "Femoral brace",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TibialBrace: Coding.FromStrict({
+    DeviceKindValueSet_TibialBrace: new Coding({
         code: "182581003",
         display: "Tibial brace",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BodySupport: Coding.FromStrict({
+    DeviceKindValueSet_BodySupport: new Coding({
         code: "182587004",
         display: "Body support",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SpinalFrame: Coding.FromStrict({
+    DeviceKindValueSet_SpinalFrame: new Coding({
         code: "182588009",
         display: "Spinal frame",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CorsetSupport: Coding.FromStrict({
+    DeviceKindValueSet_CorsetSupport: new Coding({
         code: "182589001",
         display: "Corset support",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CardiacBed: Coding.FromStrict({
+    DeviceKindValueSet_CardiacBed: new Coding({
         code: "182590005",
         display: "Cardiac bed",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_WaterBed: Coding.FromStrict({
+    DeviceKindValueSet_WaterBed: new Coding({
         code: "182591009",
         display: "Water bed",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HighAirLossBed: Coding.FromStrict({
+    DeviceKindValueSet_HighAirLossBed: new Coding({
         code: "182592002",
         display: "High air loss bed",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AutomatedDrugMicroinjector: Coding.FromStrict({
+    DeviceKindValueSet_AutomatedDrugMicroinjector: new Coding({
         code: "182839003",
         display: "Automated drug microinjector",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DentalAid: Coding.FromStrict({
+    DeviceKindValueSet_DentalAid: new Coding({
         code: "183116000",
         display: "Dental aid",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_EarFittingHearingAid: Coding.FromStrict({
+    DeviceKindValueSet_EarFittingHearingAid: new Coding({
         code: "183125006",
         display: "Ear fitting hearing aid",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MobilityAid: Coding.FromStrict({
+    DeviceKindValueSet_MobilityAid: new Coding({
         code: "183135000",
         display: "Mobility aid",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_InshoeOrthosis: Coding.FromStrict({
+    DeviceKindValueSet_InshoeOrthosis: new Coding({
         code: "183141007",
         display: "Inshoe orthosis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SurgicalStockings: Coding.FromStrict({
+    DeviceKindValueSet_SurgicalStockings: new Coding({
         code: "183143005",
         display: "Surgical stockings",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AntiembolicStockings: Coding.FromStrict({
+    DeviceKindValueSet_AntiembolicStockings: new Coding({
         code: "183144004",
         display: "Antiembolic stockings",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ZFZimmerFrame: Coding.FromStrict({
+    DeviceKindValueSet_ZFZimmerFrame: new Coding({
         code: "183146002",
         display: "ZF - Zimmer frame",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Tripod: Coding.FromStrict({
+    DeviceKindValueSet_Tripod: new Coding({
         code: "183147006",
         display: "Tripod",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RGOReciprocatingGaitOrthosis: Coding.FromStrict({
+    DeviceKindValueSet_RGOReciprocatingGaitOrthosis: new Coding({
         code: "183148001",
         display: "RGO - Reciprocating gait orthosis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HipGuidanceOrthosis: Coding.FromStrict({
+    DeviceKindValueSet_HipGuidanceOrthosis: new Coding({
         code: "183149009",
         display: "Hip guidance orthosis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_StandingFrame: Coding.FromStrict({
+    DeviceKindValueSet_StandingFrame: new Coding({
         code: "183150009",
         display: "Standing frame",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HipAbductionOrthosis: Coding.FromStrict({
+    DeviceKindValueSet_HipAbductionOrthosis: new Coding({
         code: "183152001",
         display: "Hip abduction orthosis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HipKneeAnkleFootOrthosis: Coding.FromStrict({
+    DeviceKindValueSet_HipKneeAnkleFootOrthosis: new Coding({
         code: "183153006",
         display: "Hip-knee-ankle-foot orthosis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_KneeAnkleFootOrthosis: Coding.FromStrict({
+    DeviceKindValueSet_KneeAnkleFootOrthosis: new Coding({
         code: "183154000",
         display: "Knee-ankle-foot orthosis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FlexibleKneeSupport: Coding.FromStrict({
+    DeviceKindValueSet_FlexibleKneeSupport: new Coding({
         code: "183155004",
         display: "Flexible knee support",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CollateralLigamentBrace: Coding.FromStrict({
+    DeviceKindValueSet_CollateralLigamentBrace: new Coding({
         code: "183156003",
         display: "Collateral ligament brace",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AnteriorCruciateLigamentBrace: Coding.FromStrict({
+    DeviceKindValueSet_AnteriorCruciateLigamentBrace: new Coding({
         code: "183157007",
         display: "Anterior cruciate ligament brace",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PosteriorCruciateLigamentBrace: Coding.FromStrict({
+    DeviceKindValueSet_PosteriorCruciateLigamentBrace: new Coding({
         code: "183158002",
         display: "Posterior cruciate ligament brace",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_GroundReactionOrthosis: Coding.FromStrict({
+    DeviceKindValueSet_GroundReactionOrthosis: new Coding({
         code: "183159005",
         display: "Ground reaction orthosis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RigidAnkleFootOrthosis: Coding.FromStrict({
+    DeviceKindValueSet_RigidAnkleFootOrthosis: new Coding({
         code: "183160000",
         display: "Rigid ankle-foot orthosis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FlexibleAnkleFootOrthosis: Coding.FromStrict({
+    DeviceKindValueSet_FlexibleAnkleFootOrthosis: new Coding({
         code: "183161001",
         display: "Flexible ankle-foot orthosis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DoubleBelowKneeIron: Coding.FromStrict({
+    DeviceKindValueSet_DoubleBelowKneeIron: new Coding({
         code: "183162008",
         display: "Double below-knee iron",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_InsideIron: Coding.FromStrict({
+    DeviceKindValueSet_InsideIron: new Coding({
         code: "183164009",
         display: "Inside iron",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_OutsideIron: Coding.FromStrict({
+    DeviceKindValueSet_OutsideIron: new Coding({
         code: "183165005",
         display: "Outside iron",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_InsideTStrap: Coding.FromStrict({
+    DeviceKindValueSet_InsideTStrap: new Coding({
         code: "183166006",
         display: "Inside T-strap",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HindquarterProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_HindquarterProsthesis: new Coding({
         code: "183170003",
         display: "Hindquarter prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HipDisarticulationProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_HipDisarticulationProsthesis: new Coding({
         code: "183171004",
         display: "Hip disarticulation prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AboveKneeProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_AboveKneeProsthesis: new Coding({
         code: "183172006",
         display: "Above knee prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ThroughKneeProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_ThroughKneeProsthesis: new Coding({
         code: "183173001",
         display: "Through knee prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BelowKneeProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_BelowKneeProsthesis: new Coding({
         code: "183174007",
         display: "Below knee prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SymeQuoteSProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_SymeQuoteSProsthesis: new Coding({
         code: "183175008",
         display: "Syme's prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MidfootAmputationProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_MidfootAmputationProsthesis: new Coding({
         code: "183176009",
         display: "Midfoot amputation prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ShoeFiller: Coding.FromStrict({
+    DeviceKindValueSet_ShoeFiller: new Coding({
         code: "183177000",
         display: "Shoe filler",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MilwaukeeBrace: Coding.FromStrict({
+    DeviceKindValueSet_MilwaukeeBrace: new Coding({
         code: "183183002",
         display: "Milwaukee brace",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BostonBrace: Coding.FromStrict({
+    DeviceKindValueSet_BostonBrace: new Coding({
         code: "183184008",
         display: "Boston brace",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_JewettBrace: Coding.FromStrict({
+    DeviceKindValueSet_JewettBrace: new Coding({
         code: "183185009",
         display: "Jewett brace",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HaloDevice: Coding.FromStrict({
+    DeviceKindValueSet_HaloDevice: new Coding({
         code: "183187001",
         display: "Halo device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FourPosterBrace: Coding.FromStrict({
+    DeviceKindValueSet_FourPosterBrace: new Coding({
         code: "183188006",
         display: "Four poster brace",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RigidCollar: Coding.FromStrict({
+    DeviceKindValueSet_RigidCollar: new Coding({
         code: "183189003",
         display: "Rigid collar",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FlexibleCollar: Coding.FromStrict({
+    DeviceKindValueSet_FlexibleCollar: new Coding({
         code: "183190007",
         display: "Flexible collar",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ShoulderAbductionBrace: Coding.FromStrict({
+    DeviceKindValueSet_ShoulderAbductionBrace: new Coding({
         code: "183192004",
         display: "Shoulder abduction brace",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ElbowBrace: Coding.FromStrict({
+    DeviceKindValueSet_ElbowBrace: new Coding({
         code: "183193009",
         display: "Elbow brace",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PassiveWristExtensionSplint: Coding.FromStrict({
+    DeviceKindValueSet_PassiveWristExtensionSplint: new Coding({
         code: "183194003",
         display: "Passive wrist extension splint",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ActiveWristExtensionSplint: Coding.FromStrict({
+    DeviceKindValueSet_ActiveWristExtensionSplint: new Coding({
         code: "183195002",
         display: "Active wrist extension splint",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PassiveFingerExtensionSplint: Coding.FromStrict({
+    DeviceKindValueSet_PassiveFingerExtensionSplint: new Coding({
         code: "183196001",
         display: "Passive finger extension splint",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ActiveFingerExtensionSplint: Coding.FromStrict({
+    DeviceKindValueSet_ActiveFingerExtensionSplint: new Coding({
         code: "183197005",
         display: "Active finger extension splint",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_KleinertTraction: Coding.FromStrict({
+    DeviceKindValueSet_KleinertTraction: new Coding({
         code: "183198000",
         display: "Kleinert traction",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PassiveThumbSplint: Coding.FromStrict({
+    DeviceKindValueSet_PassiveThumbSplint: new Coding({
         code: "183199008",
         display: "Passive thumb splint",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ActiveThumbSplint: Coding.FromStrict({
+    DeviceKindValueSet_ActiveThumbSplint: new Coding({
         code: "183200006",
         display: "Active thumb splint",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ShinSplint: Coding.FromStrict({
+    DeviceKindValueSet_ShinSplint: new Coding({
         code: "183202003",
         display: "Shin splint",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ExcretoryControlAid: Coding.FromStrict({
+    DeviceKindValueSet_ExcretoryControlAid: new Coding({
         code: "183204002",
         display: "Excretory control aid",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FacialNonSurgicalProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_FacialNonSurgicalProsthesis: new Coding({
         code: "183235008",
         display: "Facial non-surgical prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BreastNonSurgicalProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_BreastNonSurgicalProsthesis: new Coding({
         code: "183236009",
         display: "Breast non-surgical prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PatientPropelledWheelchair: Coding.FromStrict({
+    DeviceKindValueSet_PatientPropelledWheelchair: new Coding({
         code: "183240000",
         display: "Patient-propelled wheelchair",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PedalPoweredWheelchair: Coding.FromStrict({
+    DeviceKindValueSet_PedalPoweredWheelchair: new Coding({
         code: "183241001",
         display: "Pedal powered wheelchair",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AttendantPoweredWheelchair: Coding.FromStrict({
+    DeviceKindValueSet_AttendantPoweredWheelchair: new Coding({
         code: "183248007",
         display: "Attendant powered wheelchair",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_WheelchairSeating: Coding.FromStrict({
+    DeviceKindValueSet_WheelchairSeating: new Coding({
         code: "183249004",
         display: "Wheelchair seating",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MoldedWheelchairSeat: Coding.FromStrict({
+    DeviceKindValueSet_MoldedWheelchairSeat: new Coding({
         code: "183250004",
         display: "Molded wheelchair seat",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MatrixSeat: Coding.FromStrict({
+    DeviceKindValueSet_MatrixSeat: new Coding({
         code: "183251000",
         display: "Matrix seat",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ChiselDevice: Coding.FromStrict({
+    DeviceKindValueSet_ChiselDevice: new Coding({
         code: "18411005",
         display: "Chisel, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FinespunGlass: Coding.FromStrict({
+    DeviceKindValueSet_FinespunGlass: new Coding({
         code: "18666004",
         display: "Finespun glass",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DefibrillatorDevice: Coding.FromStrict({
+    DeviceKindValueSet_DefibrillatorDevice: new Coding({
         code: "19257004",
         display: "Defibrillator, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BlanketDevice: Coding.FromStrict({
+    DeviceKindValueSet_BlanketDevice: new Coding({
         code: "19328000",
         display: "Blanket, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SilkCloth: Coding.FromStrict({
+    DeviceKindValueSet_SilkCloth: new Coding({
         code: "1941006",
         display: "Silk cloth",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RadioactiveImplantDevice: Coding.FromStrict({
+    DeviceKindValueSet_RadioactiveImplantDevice: new Coding({
         code: "19443004",
         display: "Radioactive implant, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DikeDevice: Coding.FromStrict({
+    DeviceKindValueSet_DikeDevice: new Coding({
         code: "1962007",
         display: "Dike, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Leather: Coding.FromStrict({
+    DeviceKindValueSet_Leather: new Coding({
         code: "19627002",
         display: "Leather",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LeatherBelt: Coding.FromStrict({
+    DeviceKindValueSet_LeatherBelt: new Coding({
         code: "19762002",
         display: "Leather belt",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FanBladeDevice: Coding.FromStrict({
+    DeviceKindValueSet_FanBladeDevice: new Coding({
         code: "19817005",
         display: "Fan blade, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ScaleDevice: Coding.FromStrict({
+    DeviceKindValueSet_ScaleDevice: new Coding({
         code: "19892000",
         display: "Scale, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CatheterDevice: Coding.FromStrict({
+    DeviceKindValueSet_CatheterDevice: new Coding({
         code: "19923001",
         display: "Catheter, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_IntracranialPressureTransducer: Coding.FromStrict({
+    DeviceKindValueSet_IntracranialPressureTransducer: new Coding({
         code: "201706006",
         display: "Intracranial pressure transducer",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LegProsthesisDevice: Coding.FromStrict({
+    DeviceKindValueSet_LegProsthesisDevice: new Coding({
         code: "20195009",
         display: "Leg prosthesis, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ToothbrushDevice: Coding.FromStrict({
+    DeviceKindValueSet_ToothbrushDevice: new Coding({
         code: "20235003",
         display: "Toothbrush, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_IndustrialMachineDevice: Coding.FromStrict({
+    DeviceKindValueSet_IndustrialMachineDevice: new Coding({
         code: "20273004",
         display: "Industrial machine, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ContraceptiveDiaphragmDevice: Coding.FromStrict({
+    DeviceKindValueSet_ContraceptiveDiaphragmDevice: new Coding({
         code: "20359006",
         display: "Contraceptive diaphragm, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BackRestsDevice: Coding.FromStrict({
+    DeviceKindValueSet_BackRestsDevice: new Coding({
         code: "20406008",
         display: "Back rests, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_OxygenTentDevice: Coding.FromStrict({
+    DeviceKindValueSet_OxygenTentDevice: new Coding({
         code: "20428008",
         display: "Oxygen tent, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PowerToolDevice: Coding.FromStrict({
+    DeviceKindValueSet_PowerToolDevice: new Coding({
         code: "20513005",
         display: "Power tool, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_UrinaryCatheterDevice: Coding.FromStrict({
+    DeviceKindValueSet_UrinaryCatheterDevice: new Coding({
         code: "20568009",
         display: "Urinary catheter, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CystoscopeDevice: Coding.FromStrict({
+    DeviceKindValueSet_CystoscopeDevice: new Coding({
         code: "20613002",
         display: "Cystoscope, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PlugPackDevice: Coding.FromStrict({
+    DeviceKindValueSet_PlugPackDevice: new Coding({
         code: "20861007",
         display: "Plug pack, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ExperimentalImplantDevice: Coding.FromStrict({
+    DeviceKindValueSet_ExperimentalImplantDevice: new Coding({
         code: "20867006",
         display: "Experimental implant, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PlasticClothLikeMaterial: Coding.FromStrict({
+    DeviceKindValueSet_PlasticClothLikeMaterial: new Coding({
         code: "20873007",
         display: "Plastic cloth-like material",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HandToolDevice: Coding.FromStrict({
+    DeviceKindValueSet_HandToolDevice: new Coding({
         code: "20997002",
         display: "Hand tool, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CarbonMonoxideAnalyzerDevice: Coding.FromStrict({
+    DeviceKindValueSet_CarbonMonoxideAnalyzerDevice: new Coding({
         code: "21079000",
         display: "Carbon monoxide analyzer, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Icebox: Coding.FromStrict({
+    DeviceKindValueSet_Icebox: new Coding({
         code: "21546008",
         display: "Icebox",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TransluminalExtractionCatheterDevice: Coding.FromStrict({
+    DeviceKindValueSet_TransluminalExtractionCatheterDevice: new Coding({
         code: "21870002",
         display: "Transluminal extraction catheter, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AbdominalBinderDevice: Coding.FromStrict({
+    DeviceKindValueSet_AbdominalBinderDevice: new Coding({
         code: "21944004",
         display: "Abdominal binder, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TimerDevice: Coding.FromStrict({
+    DeviceKindValueSet_TimerDevice: new Coding({
         code: "22251003",
         display: "Timer, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ArtificialMembraneDevice: Coding.FromStrict({
+    DeviceKindValueSet_ArtificialMembraneDevice: new Coding({
         code: "22283009",
         display: "Artificial membrane, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_EquipmentForPositioning: Coding.FromStrict({
+    DeviceKindValueSet_EquipmentForPositioning: new Coding({
         code: "223394001",
         display: "Equipment for positioning",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TopSecurityPrison: Coding.FromStrict({
+    DeviceKindValueSet_TopSecurityPrison: new Coding({
         code: "224684009",
         display: "Top security prison",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CategoryBPrison: Coding.FromStrict({
+    DeviceKindValueSet_CategoryBPrison: new Coding({
         code: "224685005",
         display: "Category B prison",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LowSecurityPrison: Coding.FromStrict({
+    DeviceKindValueSet_LowSecurityPrison: new Coding({
         code: "224686006",
         display: "Low security prison",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TrachealTubeCuff: Coding.FromStrict({
+    DeviceKindValueSet_TrachealTubeCuff: new Coding({
         code: "2248009",
         display: "Tracheal tube cuff",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_StreetLighting: Coding.FromStrict({
+    DeviceKindValueSet_StreetLighting: new Coding({
         code: "224823002",
         display: "Street lighting",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SignPosting: Coding.FromStrict({
+    DeviceKindValueSet_SignPosting: new Coding({
         code: "224824008",
         display: "Sign posting",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_StreetNameSign: Coding.FromStrict({
+    DeviceKindValueSet_StreetNameSign: new Coding({
         code: "224825009",
         display: "Street name sign",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BuildingNameSign: Coding.FromStrict({
+    DeviceKindValueSet_BuildingNameSign: new Coding({
         code: "224826005",
         display: "Building name sign",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PedestrianDirectionSign: Coding.FromStrict({
+    DeviceKindValueSet_PedestrianDirectionSign: new Coding({
         code: "224827001",
         display: "Pedestrian direction sign",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TrafficSign: Coding.FromStrict({
+    DeviceKindValueSet_TrafficSign: new Coding({
         code: "224828006",
         display: "Traffic sign",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_OrthoticDevice: Coding.FromStrict({
+    DeviceKindValueSet_OrthoticDevice: new Coding({
         code: "224898003",
         display: "Orthotic device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_WalkingAid: Coding.FromStrict({
+    DeviceKindValueSet_WalkingAid: new Coding({
         code: "224899006",
         display: "Walking aid",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CommunicationAid: Coding.FromStrict({
+    DeviceKindValueSet_CommunicationAid: new Coding({
         code: "224900001",
         display: "Communication aid",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CytologyBrushDevice: Coding.FromStrict({
+    DeviceKindValueSet_CytologyBrushDevice: new Coding({
         code: "22566001",
         display: "Cytology brush, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RetainingHarnessDevice: Coding.FromStrict({
+    DeviceKindValueSet_RetainingHarnessDevice: new Coding({
         code: "22662007",
         display: "Retaining harness, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HandcuffsDevice: Coding.FromStrict({
+    DeviceKindValueSet_HandcuffsDevice: new Coding({
         code: "22679001",
         display: "Handcuffs, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ArtificialHairWigDevice: Coding.FromStrict({
+    DeviceKindValueSet_ArtificialHairWigDevice: new Coding({
         code: "22744006",
         display: "Artificial hair wig, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Corset: Coding.FromStrict({
+    DeviceKindValueSet_Corset: new Coding({
         code: "228167008",
         display: "Corset",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BreastImplant: Coding.FromStrict({
+    DeviceKindValueSet_BreastImplant: new Coding({
         code: "2282003",
         display: "Breast implant",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Slippers: Coding.FromStrict({
+    DeviceKindValueSet_Slippers: new Coding({
         code: "228235002",
         display: "Slippers",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Mules: Coding.FromStrict({
+    DeviceKindValueSet_Mules: new Coding({
         code: "228236001",
         display: "Mules",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Slippersox: Coding.FromStrict({
+    DeviceKindValueSet_Slippersox: new Coding({
         code: "228237005",
         display: "Slippersox",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Trainers: Coding.FromStrict({
+    DeviceKindValueSet_Trainers: new Coding({
         code: "228239008",
         display: "Trainers",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Plimsolls: Coding.FromStrict({
+    DeviceKindValueSet_Plimsolls: new Coding({
         code: "228240005",
         display: "Plimsolls",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Sandals: Coding.FromStrict({
+    DeviceKindValueSet_Sandals: new Coding({
         code: "228241009",
         display: "Sandals",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_GumBoots: Coding.FromStrict({
+    DeviceKindValueSet_GumBoots: new Coding({
         code: "228242002",
         display: "Gum boots",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Chappel: Coding.FromStrict({
+    DeviceKindValueSet_Chappel: new Coding({
         code: "228243007",
         display: "Chappel",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Fastening: Coding.FromStrict({
+    DeviceKindValueSet_Fastening: new Coding({
         code: "228259007",
         display: "Fastening",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Velcro: Coding.FromStrict({
+    DeviceKindValueSet_Velcro: new Coding({
         code: "228260002",
         display: "Velcro",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Buckle: Coding.FromStrict({
+    DeviceKindValueSet_Buckle: new Coding({
         code: "228261003",
         display: "Buckle",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Zipper: Coding.FromStrict({
+    DeviceKindValueSet_Zipper: new Coding({
         code: "228262005",
         display: "Zipper",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SmallButton: Coding.FromStrict({
+    DeviceKindValueSet_SmallButton: new Coding({
         code: "228264006",
         display: "Small button",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MediumButton: Coding.FromStrict({
+    DeviceKindValueSet_MediumButton: new Coding({
         code: "228265007",
         display: "Medium button",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LargeButton: Coding.FromStrict({
+    DeviceKindValueSet_LargeButton: new Coding({
         code: "228266008",
         display: "Large button",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PressStud: Coding.FromStrict({
+    DeviceKindValueSet_PressStud: new Coding({
         code: "228267004",
         display: "Press stud",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HookAndEye: Coding.FromStrict({
+    DeviceKindValueSet_HookAndEye: new Coding({
         code: "228268009",
         display: "Hook and eye",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Laces: Coding.FromStrict({
+    DeviceKindValueSet_Laces: new Coding({
         code: "228270000",
         display: "Laces",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ShoeLaces: Coding.FromStrict({
+    DeviceKindValueSet_ShoeLaces: new Coding({
         code: "228271001",
         display: "Shoe laces",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TherapeuticImplantDevice: Coding.FromStrict({
+    DeviceKindValueSet_TherapeuticImplantDevice: new Coding({
         code: "22852002",
         display: "Therapeutic implant, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NailFileDevice: Coding.FromStrict({
+    DeviceKindValueSet_NailFileDevice: new Coding({
         code: "2287009",
         display: "Nail file, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RadiotherapyEquipmentAndAppliances: Coding.FromStrict({
+    DeviceKindValueSet_RadiotherapyEquipmentAndAppliances: new Coding({
         code: "228731007",
         display: "Radiotherapy equipment and appliances",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BeamDirectionShell: Coding.FromStrict({
+    DeviceKindValueSet_BeamDirectionShell: new Coding({
         code: "228732000",
         display: "Beam direction shell",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HeadAndNeckBeamDirectionShell: Coding.FromStrict({
+    DeviceKindValueSet_HeadAndNeckBeamDirectionShell: new Coding({
         code: "228733005",
         display: "Head and neck beam direction shell",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BodyBeamDirectionShell: Coding.FromStrict({
+    DeviceKindValueSet_BodyBeamDirectionShell: new Coding({
         code: "228734004",
         display: "Body beam direction shell",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BeamModifier: Coding.FromStrict({
+    DeviceKindValueSet_BeamModifier: new Coding({
         code: "228735003",
         display: "Beam modifier",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SurfaceBolus: Coding.FromStrict({
+    DeviceKindValueSet_SurfaceBolus: new Coding({
         code: "228736002",
         display: "Surface bolus",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SurfaceCompensator: Coding.FromStrict({
+    DeviceKindValueSet_SurfaceCompensator: new Coding({
         code: "228737006",
         display: "Surface compensator",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Cutout: Coding.FromStrict({
+    DeviceKindValueSet_Cutout: new Coding({
         code: "228738001",
         display: "Cutout",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ShieldingBlock: Coding.FromStrict({
+    DeviceKindValueSet_ShieldingBlock: new Coding({
         code: "228739009",
         display: "Shielding block",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LungBlock: Coding.FromStrict({
+    DeviceKindValueSet_LungBlock: new Coding({
         code: "228740006",
         display: "Lung block",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HumerusBlock: Coding.FromStrict({
+    DeviceKindValueSet_HumerusBlock: new Coding({
         code: "228741005",
         display: "Humerus block",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ScrotalBlock: Coding.FromStrict({
+    DeviceKindValueSet_ScrotalBlock: new Coding({
         code: "228742003",
         display: "Scrotal block",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_KidneyBlock: Coding.FromStrict({
+    DeviceKindValueSet_KidneyBlock: new Coding({
         code: "228743008",
         display: "Kidney block",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_EyeBlock: Coding.FromStrict({
+    DeviceKindValueSet_EyeBlock: new Coding({
         code: "228744002",
         display: "Eye block",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BiteBlock: Coding.FromStrict({
+    DeviceKindValueSet_BiteBlock: new Coding({
         code: "228745001",
         display: "Bite block",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_WedgeFilter: Coding.FromStrict({
+    DeviceKindValueSet_WedgeFilter: new Coding({
         code: "228746000",
         display: "Wedge filter",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_KilovoltageGrid: Coding.FromStrict({
+    DeviceKindValueSet_KilovoltageGrid: new Coding({
         code: "228747009",
         display: "Kilovoltage grid",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BrachytherapyImplant: Coding.FromStrict({
+    DeviceKindValueSet_BrachytherapyImplant: new Coding({
         code: "228748004",
         display: "Brachytherapy implant",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SinglePlaneImplant: Coding.FromStrict({
+    DeviceKindValueSet_SinglePlaneImplant: new Coding({
         code: "228749007",
         display: "Single plane implant",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TwoPlaneImplant: Coding.FromStrict({
+    DeviceKindValueSet_TwoPlaneImplant: new Coding({
         code: "228750007",
         display: "Two plane implant",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SemicircularImplant: Coding.FromStrict({
+    DeviceKindValueSet_SemicircularImplant: new Coding({
         code: "228751006",
         display: "Semicircular implant",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RegularVolumeImplant: Coding.FromStrict({
+    DeviceKindValueSet_RegularVolumeImplant: new Coding({
         code: "228752004",
         display: "Regular volume implant",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_IrregularVolumeImplant: Coding.FromStrict({
+    DeviceKindValueSet_IrregularVolumeImplant: new Coding({
         code: "228753009",
         display: "Irregular volume implant",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BrachytherapySurfaceMold: Coding.FromStrict({
+    DeviceKindValueSet_BrachytherapySurfaceMold: new Coding({
         code: "228754003",
         display: "Brachytherapy surface mold",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TwoPlaneMold: Coding.FromStrict({
+    DeviceKindValueSet_TwoPlaneMold: new Coding({
         code: "228755002",
         display: "Two plane mold",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SinglePlaneMold: Coding.FromStrict({
+    DeviceKindValueSet_SinglePlaneMold: new Coding({
         code: "228756001",
         display: "Single plane mold",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CylinderMold: Coding.FromStrict({
+    DeviceKindValueSet_CylinderMold: new Coding({
         code: "228757005",
         display: "Cylinder mold",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AdhesiveFeltMold: Coding.FromStrict({
+    DeviceKindValueSet_AdhesiveFeltMold: new Coding({
         code: "228759008",
         display: "Adhesive felt mold",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ElastoplastMold: Coding.FromStrict({
+    DeviceKindValueSet_ElastoplastMold: new Coding({
         code: "228760003",
         display: "Elastoplast mold",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Collimator: Coding.FromStrict({
+    DeviceKindValueSet_Collimator: new Coding({
         code: "228761004",
         display: "Collimator",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MultileafCollimator: Coding.FromStrict({
+    DeviceKindValueSet_MultileafCollimator: new Coding({
         code: "228762006",
         display: "Multileaf collimator",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AsymmetricJawsCollimator: Coding.FromStrict({
+    DeviceKindValueSet_AsymmetricJawsCollimator: new Coding({
         code: "228763001",
         display: "Asymmetric jaws collimator",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_StandardCollimator: Coding.FromStrict({
+    DeviceKindValueSet_StandardCollimator: new Coding({
         code: "228765008",
         display: "Standard collimator",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FormOfBrachytherapySource: Coding.FromStrict({
+    DeviceKindValueSet_FormOfBrachytherapySource: new Coding({
         code: "228766009",
         display: "Form of brachytherapy source",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_WireSource: Coding.FromStrict({
+    DeviceKindValueSet_WireSource: new Coding({
         code: "228767000",
         display: "Wire source",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SeedsSource: Coding.FromStrict({
+    DeviceKindValueSet_SeedsSource: new Coding({
         code: "228768005",
         display: "Seeds source",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HairpinsSource: Coding.FromStrict({
+    DeviceKindValueSet_HairpinsSource: new Coding({
         code: "228770001",
         display: "Hairpins source",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NeedlesSource: Coding.FromStrict({
+    DeviceKindValueSet_NeedlesSource: new Coding({
         code: "228771002",
         display: "Needles source",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PelletsSource: Coding.FromStrict({
+    DeviceKindValueSet_PelletsSource: new Coding({
         code: "228772009",
         display: "Pellets source",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CapsulesSource: Coding.FromStrict({
+    DeviceKindValueSet_CapsulesSource: new Coding({
         code: "228773004",
         display: "Capsules source",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ChainsSource: Coding.FromStrict({
+    DeviceKindValueSet_ChainsSource: new Coding({
         code: "228774005",
         display: "Chains source",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TubesSource: Coding.FromStrict({
+    DeviceKindValueSet_TubesSource: new Coding({
         code: "228775006",
         display: "Tubes source",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RodsSource: Coding.FromStrict({
+    DeviceKindValueSet_RodsSource: new Coding({
         code: "228776007",
         display: "Rods source",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_GrainsSource: Coding.FromStrict({
+    DeviceKindValueSet_GrainsSource: new Coding({
         code: "228777003",
         display: "Grains source",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PlaqueSource: Coding.FromStrict({
+    DeviceKindValueSet_PlaqueSource: new Coding({
         code: "228778008",
         display: "Plaque source",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ManualWheelchair: Coding.FromStrict({
+    DeviceKindValueSet_ManualWheelchair: new Coding({
         code: "228869008",
         display: "Manual wheelchair",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Bed: Coding.FromStrict({
+    DeviceKindValueSet_Bed: new Coding({
         code: "229772003",
         display: "Bed",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FunctionalFootOrthosis: Coding.FromStrict({
+    DeviceKindValueSet_FunctionalFootOrthosis: new Coding({
         code: "229839006",
         display: "Functional foot orthosis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NonFunctionalFootOrthosis: Coding.FromStrict({
+    DeviceKindValueSet_NonFunctionalFootOrthosis: new Coding({
         code: "229840008",
         display: "Non-functional foot orthosis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DetachablePadForTheFoot: Coding.FromStrict({
+    DeviceKindValueSet_DetachablePadForTheFoot: new Coding({
         code: "229841007",
         display: "Detachable pad for the foot",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DetachableToeProp: Coding.FromStrict({
+    DeviceKindValueSet_DetachableToeProp: new Coding({
         code: "229842000",
         display: "Detachable toe prop",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DetachableHorseshoePad: Coding.FromStrict({
+    DeviceKindValueSet_DetachableHorseshoePad: new Coding({
         code: "229843005",
         display: "Detachable horseshoe pad",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ArthroscopeDevice: Coding.FromStrict({
+    DeviceKindValueSet_ArthroscopeDevice: new Coding({
         code: "23228005",
         display: "Arthroscope, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MotorizedWheelchairDevice: Coding.FromStrict({
+    DeviceKindValueSet_MotorizedWheelchairDevice: new Coding({
         code: "23366006",
         display: "Motorized wheelchair device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BaseballDevice: Coding.FromStrict({
+    DeviceKindValueSet_BaseballDevice: new Coding({
         code: "23699001",
         display: "Baseball, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ArthroscopicIrrigationDistensionPumpDevice: Coding.FromStrict({
+    DeviceKindValueSet_ArthroscopicIrrigationDistensionPumpDevice: new Coding({
         code: "23785007",
         display: "Arthroscopic irrigation/distension pump, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_IndwellingUrinaryCatheterDevice: Coding.FromStrict({
+    DeviceKindValueSet_IndwellingUrinaryCatheterDevice: new Coding({
         code: "23973005",
         display: "Indwelling urinary catheter, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MechanicalCardiacValveProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_MechanicalCardiacValveProsthesis: new Coding({
         code: "24073000",
         display: "Mechanical cardiac valve prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AnoscopeDevice: Coding.FromStrict({
+    DeviceKindValueSet_AnoscopeDevice: new Coding({
         code: "24110008",
         display: "Anoscope, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BronchoscopeDevice: Coding.FromStrict({
+    DeviceKindValueSet_BronchoscopeDevice: new Coding({
         code: "24174009",
         display: "Bronchoscope, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_VibratorDevice: Coding.FromStrict({
+    DeviceKindValueSet_VibratorDevice: new Coding({
         code: "24230000",
         display: "Vibrator, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CardiacValveBioprosthesis: Coding.FromStrict({
+    DeviceKindValueSet_CardiacValveBioprosthesis: new Coding({
         code: "24290003",
         display: "Cardiac valve bioprosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Spacer: Coding.FromStrict({
+    DeviceKindValueSet_Spacer: new Coding({
         code: "243135003",
         display: "Spacer",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NearLowVisionAidIntegralEyeglassMagnifier: Coding.FromStrict({
+    DeviceKindValueSet_NearLowVisionAidIntegralEyeglassMagnifier: new Coding({
         code: "243719003",
         display: "Near low vision aid - integral eyeglass magnifier",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NearLowVisionAidClipOnEyeglassMagnifier: Coding.FromStrict({
+    DeviceKindValueSet_NearLowVisionAidClipOnEyeglassMagnifier: new Coding({
         code: "243720009",
         display: "Near low vision aid - clip-on eyeglass magnifier",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NearLowVisionAidIntegralEyeglassTelescope: Coding.FromStrict({
+    DeviceKindValueSet_NearLowVisionAidIntegralEyeglassTelescope: new Coding({
         code: "243722001",
         display: "Near low vision aid - integral eyeglass telescope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NearLowVisionAidClipOnEyeglassTelescope: Coding.FromStrict({
+    DeviceKindValueSet_NearLowVisionAidClipOnEyeglassTelescope: new Coding({
         code: "243723006",
         display: "Near low vision aid - clip-on eyeglass telescope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_StepladderDevice: Coding.FromStrict({
+    DeviceKindValueSet_StepladderDevice: new Coding({
         code: "24402003",
         display: "Stepladder, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_WrenchDevice: Coding.FromStrict({
+    DeviceKindValueSet_WrenchDevice: new Coding({
         code: "24470005",
         display: "Wrench, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PlasticBoots: Coding.FromStrict({
+    DeviceKindValueSet_PlasticBoots: new Coding({
         code: "24513003",
         display: "Plastic boots",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BreathAnalyzerDevice: Coding.FromStrict({
+    DeviceKindValueSet_BreathAnalyzerDevice: new Coding({
         code: "2468001",
         display: "Breath analyzer, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_OstomyBeltDevice: Coding.FromStrict({
+    DeviceKindValueSet_OstomyBeltDevice: new Coding({
         code: "24697008",
         display: "Ostomy belt, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_EustachianTubeProsthesisDevice: Coding.FromStrict({
+    DeviceKindValueSet_EustachianTubeProsthesisDevice: new Coding({
         code: "24767007",
         display: "Eustachian tube prosthesis, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_OcularProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_OcularProsthesis: new Coding({
         code: "2478003",
         display: "Ocular prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_IntraAorticBalloonCatheterDevice: Coding.FromStrict({
+    DeviceKindValueSet_IntraAorticBalloonCatheterDevice: new Coding({
         code: "2491002",
         display: "Intra-aortic balloon catheter, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SnareDevice: Coding.FromStrict({
+    DeviceKindValueSet_SnareDevice: new Coding({
         code: "25005004",
         display: "Snare, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FeedingTubeDevice: Coding.FromStrict({
+    DeviceKindValueSet_FeedingTubeDevice: new Coding({
         code: "25062003",
         display: "Feeding tube, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SqueezeCageDevice: Coding.FromStrict({
+    DeviceKindValueSet_SqueezeCageDevice: new Coding({
         code: "25152007",
         display: "Squeeze cage, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HeartValveProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_HeartValveProsthesis: new Coding({
         code: "25510005",
         display: "Heart valve prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Wedge: Coding.FromStrict({
+    DeviceKindValueSet_Wedge: new Coding({
         code: "255296002",
         display: "Wedge",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Television: Coding.FromStrict({
+    DeviceKindValueSet_Television: new Coding({
         code: "255712000",
         display: "Television",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LatexRubberGloves: Coding.FromStrict({
+    DeviceKindValueSet_LatexRubberGloves: new Coding({
         code: "255716002",
         display: "Latex rubber gloves",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Textiles: Coding.FromStrict({
+    DeviceKindValueSet_Textiles: new Coding({
         code: "256245006",
         display: "Textiles",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CottonTextile: Coding.FromStrict({
+    DeviceKindValueSet_CottonTextile: new Coding({
         code: "256246007",
         display: "Cotton - textile",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Flax: Coding.FromStrict({
+    DeviceKindValueSet_Flax: new Coding({
         code: "256247003",
         display: "Flax",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HockeyPuckDevice: Coding.FromStrict({
+    DeviceKindValueSet_HockeyPuckDevice: new Coding({
         code: "25632005",
         display: "Hockey puck, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CottonWool: Coding.FromStrict({
+    DeviceKindValueSet_CottonWool: new Coding({
         code: "256562002",
         display: "Cotton wool",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CottonWoolRoll: Coding.FromStrict({
+    DeviceKindValueSet_CottonWoolRoll: new Coding({
         code: "256563007",
         display: "Cotton wool roll",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CottonWoolPledget: Coding.FromStrict({
+    DeviceKindValueSet_CottonWoolPledget: new Coding({
         code: "256564001",
         display: "Cotton wool pledget",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DentalRubberDam: Coding.FromStrict({
+    DeviceKindValueSet_DentalRubberDam: new Coding({
         code: "256589007",
         display: "Dental rubber dam",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_EndodonticSponge: Coding.FromStrict({
+    DeviceKindValueSet_EndodonticSponge: new Coding({
         code: "256590003",
         display: "Endodontic sponge",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_OrthodonticElastic: Coding.FromStrict({
+    DeviceKindValueSet_OrthodonticElastic: new Coding({
         code: "256593001",
         display: "Orthodontic elastic",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RibbonGauze: Coding.FromStrict({
+    DeviceKindValueSet_RibbonGauze: new Coding({
         code: "256641009",
         display: "Ribbon gauze",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_WetRibbonGauze: Coding.FromStrict({
+    DeviceKindValueSet_WetRibbonGauze: new Coding({
         code: "256642002",
         display: "Wet ribbon gauze",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DryRibbonGauze: Coding.FromStrict({
+    DeviceKindValueSet_DryRibbonGauze: new Coding({
         code: "256643007",
         display: "Dry ribbon gauze",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ScaffoldDevice: Coding.FromStrict({
+    DeviceKindValueSet_ScaffoldDevice: new Coding({
         code: "25680008",
         display: "Scaffold, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AidToVision: Coding.FromStrict({
+    DeviceKindValueSet_AidToVision: new Coding({
         code: "257192006",
         display: "Aid to vision",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TelescopicEyeglasses: Coding.FromStrict({
+    DeviceKindValueSet_TelescopicEyeglasses: new Coding({
         code: "257193001",
         display: "Telescopic eyeglasses",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Video: Coding.FromStrict({
+    DeviceKindValueSet_Video: new Coding({
         code: "257194007",
         display: "Video",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CylinderCutter: Coding.FromStrict({
+    DeviceKindValueSet_CylinderCutter: new Coding({
         code: "257211007",
         display: "Cylinder cutter",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RotaryCutter: Coding.FromStrict({
+    DeviceKindValueSet_RotaryCutter: new Coding({
         code: "257212000",
         display: "Rotary cutter",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RotaryCutterWithSteelBlades: Coding.FromStrict({
+    DeviceKindValueSet_RotaryCutterWithSteelBlades: new Coding({
         code: "257213005",
         display: "Rotary cutter with steel blades",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RotaryCutterWithPlasticBlades: Coding.FromStrict({
+    DeviceKindValueSet_RotaryCutterWithPlasticBlades: new Coding({
         code: "257214004",
         display: "Rotary cutter with plastic blades",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NailInstrument: Coding.FromStrict({
+    DeviceKindValueSet_NailInstrument: new Coding({
         code: "257215003",
         display: "Nail instrument",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FlexibleEndoscope: Coding.FromStrict({
+    DeviceKindValueSet_FlexibleEndoscope: new Coding({
         code: "257216002",
         display: "Flexible endoscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RigidEndoscope: Coding.FromStrict({
+    DeviceKindValueSet_RigidEndoscope: new Coding({
         code: "257217006",
         display: "Rigid endoscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FlexibleCystoscope: Coding.FromStrict({
+    DeviceKindValueSet_FlexibleCystoscope: new Coding({
         code: "257218001",
         display: "Flexible cystoscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RigidCystoscope: Coding.FromStrict({
+    DeviceKindValueSet_RigidCystoscope: new Coding({
         code: "257219009",
         display: "Rigid cystoscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Hysteroscope: Coding.FromStrict({
+    DeviceKindValueSet_Hysteroscope: new Coding({
         code: "257220003",
         display: "Hysteroscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FlexibleHysteroscope: Coding.FromStrict({
+    DeviceKindValueSet_FlexibleHysteroscope: new Coding({
         code: "257221004",
         display: "Flexible hysteroscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RigidHysteroscope: Coding.FromStrict({
+    DeviceKindValueSet_RigidHysteroscope: new Coding({
         code: "257222006",
         display: "Rigid hysteroscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ContactHysteroscope: Coding.FromStrict({
+    DeviceKindValueSet_ContactHysteroscope: new Coding({
         code: "257223001",
         display: "Contact hysteroscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PanoramicHysteroscope: Coding.FromStrict({
+    DeviceKindValueSet_PanoramicHysteroscope: new Coding({
         code: "257224007",
         display: "Panoramic hysteroscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FlexibleBronchoscope: Coding.FromStrict({
+    DeviceKindValueSet_FlexibleBronchoscope: new Coding({
         code: "257225008",
         display: "Flexible bronchoscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RigidBronchoscope: Coding.FromStrict({
+    DeviceKindValueSet_RigidBronchoscope: new Coding({
         code: "257226009",
         display: "Rigid bronchoscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_StandardLaryngoscope: Coding.FromStrict({
+    DeviceKindValueSet_StandardLaryngoscope: new Coding({
         code: "257227000",
         display: "Standard laryngoscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FiberlightAnestheticLaryngoscope: Coding.FromStrict({
+    DeviceKindValueSet_FiberlightAnestheticLaryngoscope: new Coding({
         code: "257228005",
         display: "Fiberlight anesthetic laryngoscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PharyngealMirror: Coding.FromStrict({
+    DeviceKindValueSet_PharyngealMirror: new Coding({
         code: "257229002",
         display: "Pharyngeal mirror",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ObstetricForceps: Coding.FromStrict({
+    DeviceKindValueSet_ObstetricForceps: new Coding({
         code: "257230007",
         display: "Obstetric forceps",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BarnesForceps: Coding.FromStrict({
+    DeviceKindValueSet_BarnesForceps: new Coding({
         code: "257231006",
         display: "Barnes forceps",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_OrthodonticApplianceDevice: Coding.FromStrict({
+    DeviceKindValueSet_OrthodonticApplianceDevice: new Coding({
         code: "25742001",
         display: "Orthodontic appliance, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NeurostimulationDevice: Coding.FromStrict({
+    DeviceKindValueSet_NeurostimulationDevice: new Coding({
         code: "25937001",
         display: "Neurostimulation device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BougieDevice: Coding.FromStrict({
+    DeviceKindValueSet_BougieDevice: new Coding({
         code: "26128008",
         display: "Bougie, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SoccerBallDevice: Coding.FromStrict({
+    DeviceKindValueSet_SoccerBallDevice: new Coding({
         code: "26239002",
         display: "Soccer ball, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DockboardDevice: Coding.FromStrict({
+    DeviceKindValueSet_DockboardDevice: new Coding({
         code: "26334009",
         display: "Dockboard, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ReservoirBag: Coding.FromStrict({
+    DeviceKindValueSet_ReservoirBag: new Coding({
         code: "26397000",
         display: "Reservoir bag",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ETEndotrachealTube: Coding.FromStrict({
+    DeviceKindValueSet_ETEndotrachealTube: new Coding({
         code: "26412008",
         display: "ET - Endotracheal tube",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HolterValveDevice: Coding.FromStrict({
+    DeviceKindValueSet_HolterValveDevice: new Coding({
         code: "26579007",
         display: "Holter valve, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CelestinTubeDevice: Coding.FromStrict({
+    DeviceKindValueSet_CelestinTubeDevice: new Coding({
         code: "26719000",
         display: "Celestin tube, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RongeurDevice: Coding.FromStrict({
+    DeviceKindValueSet_RongeurDevice: new Coding({
         code: "26882005",
         display: "Rongeur, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NeedleAdapterDevice: Coding.FromStrict({
+    DeviceKindValueSet_NeedleAdapterDevice: new Coding({
         code: "27042007",
         display: "Needle adapter, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Suture: Coding.FromStrict({
+    DeviceKindValueSet_Suture: new Coding({
         code: "27065002",
         display: "Suture",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DumbwaiterDevice: Coding.FromStrict({
+    DeviceKindValueSet_DumbwaiterDevice: new Coding({
         code: "27091001",
         display: "Dumbwaiter, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BonePlate: Coding.FromStrict({
+    DeviceKindValueSet_BonePlate: new Coding({
         code: "271003",
         display: "Bone plate",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PowerBeltDevice: Coding.FromStrict({
+    DeviceKindValueSet_PowerBeltDevice: new Coding({
         code: "27126002",
         display: "Power belt, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SprayBoothDevice: Coding.FromStrict({
+    DeviceKindValueSet_SprayBoothDevice: new Coding({
         code: "27229001",
         display: "Spray booth, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DentalProsthesisDevice: Coding.FromStrict({
+    DeviceKindValueSet_DentalProsthesisDevice: new Coding({
         code: "27606000",
         display: "Dental prosthesis, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AthleticSupporterDevice: Coding.FromStrict({
+    DeviceKindValueSet_AthleticSupporterDevice: new Coding({
         code: "27785006",
         display: "Athletic supporter, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ElectricHeatingPadDevice: Coding.FromStrict({
+    DeviceKindValueSet_ElectricHeatingPadDevice: new Coding({
         code: "27812008",
         display: "Electric heating pad, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_WoodworkingMachineryDevice: Coding.FromStrict({
+    DeviceKindValueSet_WoodworkingMachineryDevice: new Coding({
         code: "27976001",
         display: "Woodworking machinery, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ThermometerDevice: Coding.FromStrict({
+    DeviceKindValueSet_ThermometerDevice: new Coding({
         code: "27991004",
         display: "Thermometer, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HairbrushDevice: Coding.FromStrict({
+    DeviceKindValueSet_HairbrushDevice: new Coding({
         code: "28026003",
         display: "Hairbrush, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AirReceiver: Coding.FromStrict({
+    DeviceKindValueSet_AirReceiver: new Coding({
         code: "287000",
         display: "Air receiver",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Atomizer: Coding.FromStrict({
+    DeviceKindValueSet_Atomizer: new Coding({
         code: "291005",
         display: "Atomizer",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FurGarment: Coding.FromStrict({
+    DeviceKindValueSet_FurGarment: new Coding({
         code: "29292008",
         display: "Fur garment",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ForcepsDevice: Coding.FromStrict({
+    DeviceKindValueSet_ForcepsDevice: new Coding({
         code: "29319002",
         display: "Forceps, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ResuscitatorDevice: Coding.FromStrict({
+    DeviceKindValueSet_ResuscitatorDevice: new Coding({
         code: "29396008",
         display: "Resuscitator, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ElevatorDevice: Coding.FromStrict({
+    DeviceKindValueSet_ElevatorDevice: new Coding({
         code: "30012001",
         display: "Elevator, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MultistageSuspensionScaffoldingDevice: Coding.FromStrict({
+    DeviceKindValueSet_MultistageSuspensionScaffoldingDevice: new Coding({
         code: "30070001",
         display: "Multistage suspension scaffolding, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ShieldDevice: Coding.FromStrict({
+    DeviceKindValueSet_ShieldDevice: new Coding({
         code: "30115002",
         display: "Shield, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BaseballBatDevice: Coding.FromStrict({
+    DeviceKindValueSet_BaseballBatDevice: new Coding({
         code: "30176005",
         display: "Baseball bat, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MedicalLaboratoryAnalyzerDevice: Coding.FromStrict({
+    DeviceKindValueSet_MedicalLaboratoryAnalyzerDevice: new Coding({
         code: "30234008",
         display: "Medical laboratory analyzer, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_EpiduralCatheterDevice: Coding.FromStrict({
+    DeviceKindValueSet_EpiduralCatheterDevice: new Coding({
         code: "30610008",
         display: "Epidural catheter, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CosmeticProsthesisDevice: Coding.FromStrict({
+    DeviceKindValueSet_CosmeticProsthesisDevice: new Coding({
         code: "30661003",
         display: "Cosmetic prosthesis, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LigatorDevice: Coding.FromStrict({
+    DeviceKindValueSet_LigatorDevice: new Coding({
         code: "30929000",
         display: "Ligator, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DrainageBagDevice: Coding.FromStrict({
+    DeviceKindValueSet_DrainageBagDevice: new Coding({
         code: "30968007",
         display: "Drainage bag, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PeritonealCatheterDevice: Coding.FromStrict({
+    DeviceKindValueSet_PeritonealCatheterDevice: new Coding({
         code: "31030004",
         display: "Peritoneal catheter, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_InternalFixator: Coding.FromStrict({
+    DeviceKindValueSet_InternalFixator: new Coding({
         code: "31031000",
         display: "Internal fixator",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LumbosacralBeltDevice: Coding.FromStrict({
+    DeviceKindValueSet_LumbosacralBeltDevice: new Coding({
         code: "31174004",
         display: "Lumbosacral belt, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TractionBeltDevice: Coding.FromStrict({
+    DeviceKindValueSet_TractionBeltDevice: new Coding({
         code: "31791005",
         display: "Traction belt, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SurgicalScissorsDevice: Coding.FromStrict({
+    DeviceKindValueSet_SurgicalScissorsDevice: new Coding({
         code: "31878003",
         display: "Surgical scissors, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TentDevice: Coding.FromStrict({
+    DeviceKindValueSet_TentDevice: new Coding({
         code: "3201004",
         display: "Tent, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ArterialPressureMonitorDevice: Coding.FromStrict({
+    DeviceKindValueSet_ArterialPressureMonitorDevice: new Coding({
         code: "32033000",
         display: "Arterial pressure monitor, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MachineGuardingDevice: Coding.FromStrict({
+    DeviceKindValueSet_MachineGuardingDevice: new Coding({
         code: "32356002",
         display: "Machine guarding, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ScrewdriverDevice: Coding.FromStrict({
+    DeviceKindValueSet_ScrewdriverDevice: new Coding({
         code: "32504006",
         display: "Screwdriver, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FixedLadderDevice: Coding.FromStrict({
+    DeviceKindValueSet_FixedLadderDevice: new Coding({
         code: "32634007",
         display: "Fixed ladder, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_OralAirway: Coding.FromStrict({
+    DeviceKindValueSet_OralAirway: new Coding({
         code: "32667006",
         display: "Oral airway",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_OstomyCollectionBagDevice: Coding.FromStrict({
+    DeviceKindValueSet_OstomyCollectionBagDevice: new Coding({
         code: "32711007",
         display: "Ostomy collection bag, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DrainDevice: Coding.FromStrict({
+    DeviceKindValueSet_DrainDevice: new Coding({
         code: "32712000",
         display: "Drain, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TweezerDevice: Coding.FromStrict({
+    DeviceKindValueSet_TweezerDevice: new Coding({
         code: "32871007",
         display: "Tweezer, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ArtificialLiverDevice: Coding.FromStrict({
+    DeviceKindValueSet_ArtificialLiverDevice: new Coding({
         code: "3319006",
         display: "Artificial liver, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_WeldingEquipmentDevice: Coding.FromStrict({
+    DeviceKindValueSet_WeldingEquipmentDevice: new Coding({
         code: "33194000",
         display: "Welding equipment, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AxDevice: Coding.FromStrict({
+    DeviceKindValueSet_AxDevice: new Coding({
         code: "33352006",
         display: "Ax, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CarbonDioxideAnalyzerDevice: Coding.FromStrict({
+    DeviceKindValueSet_CarbonDioxideAnalyzerDevice: new Coding({
         code: "33388001",
         display: "Carbon dioxide analyzer, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RubberBoots: Coding.FromStrict({
+    DeviceKindValueSet_RubberBoots: new Coding({
         code: "33482001",
         display: "Rubber boots",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_StyletDevice: Coding.FromStrict({
+    DeviceKindValueSet_StyletDevice: new Coding({
         code: "33686008",
         display: "Stylet, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SharpInstrumentDevice: Coding.FromStrict({
+    DeviceKindValueSet_SharpInstrumentDevice: new Coding({
         code: "33690005",
         display: "Sharp instrument, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_EnemaBagDevice: Coding.FromStrict({
+    DeviceKindValueSet_EnemaBagDevice: new Coding({
         code: "33802005",
         display: "Enema bag, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ExperimentalDevice: Coding.FromStrict({
+    DeviceKindValueSet_ExperimentalDevice: new Coding({
         code: "33894003",
         display: "Experimental device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RubberizedCloth: Coding.FromStrict({
+    DeviceKindValueSet_RubberizedCloth: new Coding({
         code: "33918000",
         display: "Rubberized cloth",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_POPPlasterOfParisCast: Coding.FromStrict({
+    DeviceKindValueSet_POPPlasterOfParisCast: new Coding({
         code: "34164001",
         display: "POP - Plaster of Paris cast",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_StraightjacketDevice: Coding.FromStrict({
+    DeviceKindValueSet_StraightjacketDevice: new Coding({
         code: "34188004",
         display: "Straightjacket, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PlasticTubeDevice: Coding.FromStrict({
+    DeviceKindValueSet_PlasticTubeDevice: new Coding({
         code: "34234003",
         display: "Plastic tube, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MedicalBalloonDevice: Coding.FromStrict({
+    DeviceKindValueSet_MedicalBalloonDevice: new Coding({
         code: "34263000",
         display: "Medical balloon, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_VascularDevice: Coding.FromStrict({
+    DeviceKindValueSet_VascularDevice: new Coding({
         code: "34362008",
         display: "Vascular device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_UrethralCatheterDevice: Coding.FromStrict({
+    DeviceKindValueSet_UrethralCatheterDevice: new Coding({
         code: "34759008",
         display: "Urethral catheter, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_OstomyApplianceDevice: Coding.FromStrict({
+    DeviceKindValueSet_OstomyApplianceDevice: new Coding({
         code: "35398009",
         display: "Ostomy appliance, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_WireLigatureDevice: Coding.FromStrict({
+    DeviceKindValueSet_WireLigatureDevice: new Coding({
         code: "35593004",
         display: "Wire ligature, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CerebrospinalCatheterDevice: Coding.FromStrict({
+    DeviceKindValueSet_CerebrospinalCatheterDevice: new Coding({
         code: "35870000",
         display: "Cerebrospinal catheter, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_IcePickDevice: Coding.FromStrict({
+    DeviceKindValueSet_IcePickDevice: new Coding({
         code: "36365007",
         display: "Ice-pick, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AspiratorTrapBottleDevice: Coding.FromStrict({
+    DeviceKindValueSet_AspiratorTrapBottleDevice: new Coding({
         code: "36370000",
         display: "Aspirator trap bottle, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_StimulatorDevice: Coding.FromStrict({
+    DeviceKindValueSet_StimulatorDevice: new Coding({
         code: "36645008",
         display: "Stimulator, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NaturalHairWigDevice: Coding.FromStrict({
+    DeviceKindValueSet_NaturalHairWigDevice: new Coding({
         code: "36761001",
         display: "Natural hair wig, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HemodialysisMachineDevice: Coding.FromStrict({
+    DeviceKindValueSet_HemodialysisMachineDevice: new Coding({
         code: "36965003",
         display: "Hemodialysis machine, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PeripheralNerveStimulator: Coding.FromStrict({
+    DeviceKindValueSet_PeripheralNerveStimulator: new Coding({
         code: "36977008",
         display: "Peripheral nerve stimulator",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MagneticDetectorDevice: Coding.FromStrict({
+    DeviceKindValueSet_MagneticDetectorDevice: new Coding({
         code: "37189001",
         display: "Magnetic detector, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_EndoscopeDevice: Coding.FromStrict({
+    DeviceKindValueSet_EndoscopeDevice: new Coding({
         code: "37270008",
         display: "Endoscope, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BagDevice: Coding.FromStrict({
+    DeviceKindValueSet_BagDevice: new Coding({
         code: "37284003",
         display: "Bag, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_StoneRetrievalBasketDevice: Coding.FromStrict({
+    DeviceKindValueSet_StoneRetrievalBasketDevice: new Coding({
         code: "37311003",
         display: "Stone retrieval basket, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DildoDevice: Coding.FromStrict({
+    DeviceKindValueSet_DildoDevice: new Coding({
         code: "37347002",
         display: "Dildo, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PatientIsolatorDevice: Coding.FromStrict({
+    DeviceKindValueSet_PatientIsolatorDevice: new Coding({
         code: "37360008",
         display: "Patient isolator, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ProtectiveBlindDevice: Coding.FromStrict({
+    DeviceKindValueSet_ProtectiveBlindDevice: new Coding({
         code: "37503007",
         display: "Protective blind, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SurgicalInstrumentDevice: Coding.FromStrict({
+    DeviceKindValueSet_SurgicalInstrumentDevice: new Coding({
         code: "37759000",
         display: "Surgical instrument, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ContinuingPositiveAirwayPressureUnitDevice: Coding.FromStrict({
+    DeviceKindValueSet_ContinuingPositiveAirwayPressureUnitDevice: new Coding({
         code: "37874008",
         display: "Continuing positive airway pressure unit, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BedsideRailsDevice: Coding.FromStrict({
+    DeviceKindValueSet_BedsideRailsDevice: new Coding({
         code: "37953008",
         display: "Bedside rails, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ProtectiveLenses: Coding.FromStrict({
+    DeviceKindValueSet_ProtectiveLenses: new Coding({
         code: "38126007",
         display: "Protective lenses",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TourniquetDevice: Coding.FromStrict({
+    DeviceKindValueSet_TourniquetDevice: new Coding({
         code: "38141007",
         display: "Tourniquet, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ProtectiveDevice: Coding.FromStrict({
+    DeviceKindValueSet_ProtectiveDevice: new Coding({
         code: "38277008",
         display: "Protective device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HockeyStickDevice: Coding.FromStrict({
+    DeviceKindValueSet_HockeyStickDevice: new Coding({
         code: "38806006",
         display: "Hockey stick, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SheetMetalBendingEquipment: Coding.FromStrict({
+    DeviceKindValueSet_SheetMetalBendingEquipment: new Coding({
         code: "38862006",
         display: "Sheet metal bending equipment",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MetallicCloth: Coding.FromStrict({
+    DeviceKindValueSet_MetallicCloth: new Coding({
         code: "38871002",
         display: "Metallic cloth",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AirCompressorDevice: Coding.FromStrict({
+    DeviceKindValueSet_AirCompressorDevice: new Coding({
         code: "39590006",
         display: "Air compressor, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SphygmomanometerDevice: Coding.FromStrict({
+    DeviceKindValueSet_SphygmomanometerDevice: new Coding({
         code: "39690000",
         display: "Sphygmomanometer, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RaspDevice: Coding.FromStrict({
+    DeviceKindValueSet_RaspDevice: new Coding({
         code: "39768008",
         display: "Rasp, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NonElectricHeatingPadDevice: Coding.FromStrict({
+    DeviceKindValueSet_NonElectricHeatingPadDevice: new Coding({
         code: "39790008",
         display: "Non-electric heating pad, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TongueBladeDevice: Coding.FromStrict({
+    DeviceKindValueSet_TongueBladeDevice: new Coding({
         code: "39802000",
         display: "Tongue blade, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PositronEmissionTomographyUnitDevice: Coding.FromStrict({
+    DeviceKindValueSet_PositronEmissionTomographyUnitDevice: new Coding({
         code: "39821008",
         display: "Positron emission tomography unit, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NasalOxygenCannula: Coding.FromStrict({
+    DeviceKindValueSet_NasalOxygenCannula: new Coding({
         code: "39849001",
         display: "Nasal oxygen cannula",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AlarmDevice: Coding.FromStrict({
+    DeviceKindValueSet_AlarmDevice: new Coding({
         code: "39869006",
         display: "Alarm, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BiomedicalImplant: Coding.FromStrict({
+    DeviceKindValueSet_BiomedicalImplant: new Coding({
         code: "40388003",
         display: "Biomedical implant",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BinderDevice: Coding.FromStrict({
+    DeviceKindValueSet_BinderDevice: new Coding({
         code: "40519001",
         display: "Binder, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_OrthopedicImmobilizer: Coding.FromStrict({
+    DeviceKindValueSet_OrthopedicImmobilizer: new Coding({
         code: "41157002",
         display: "Orthopedic immobilizer",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_UrinaryCollectionBagDevice: Coding.FromStrict({
+    DeviceKindValueSet_UrinaryCollectionBagDevice: new Coding({
         code: "41323003",
         display: "Urinary collection bag, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ArtificialStructureDevice: Coding.FromStrict({
+    DeviceKindValueSet_ArtificialStructureDevice: new Coding({
         code: "41525006",
         display: "Artificial structure, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_IndustrialToolDevice: Coding.FromStrict({
+    DeviceKindValueSet_IndustrialToolDevice: new Coding({
         code: "41684000",
         display: "Industrial tool, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MetalTubeDevice: Coding.FromStrict({
+    DeviceKindValueSet_MetalTubeDevice: new Coding({
         code: "42152006",
         display: "Metal tube, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AmbulationDevice: Coding.FromStrict({
+    DeviceKindValueSet_AmbulationDevice: new Coding({
         code: "42305009",
         display: "Ambulation device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_EarPlugDevice: Coding.FromStrict({
+    DeviceKindValueSet_EarPlugDevice: new Coding({
         code: "42380001",
         display: "Ear plug, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BloodWarmerDevice: Coding.FromStrict({
+    DeviceKindValueSet_BloodWarmerDevice: new Coding({
         code: "42451009",
         display: "Blood warmer, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Wool: Coding.FromStrict({
+    DeviceKindValueSet_Wool: new Coding({
         code: "42716000",
         display: "Wool",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HypodermicSprayDevice: Coding.FromStrict({
+    DeviceKindValueSet_HypodermicSprayDevice: new Coding({
         code: "42882002",
         display: "Hypodermic spray, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PhlebotomyKitDevice: Coding.FromStrict({
+    DeviceKindValueSet_PhlebotomyKitDevice: new Coding({
         code: "43001000",
         display: "Phlebotomy kit, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BonePencilDevice: Coding.FromStrict({
+    DeviceKindValueSet_BonePencilDevice: new Coding({
         code: "43192004",
         display: "Bone pencil, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CochlearImplant: Coding.FromStrict({
+    DeviceKindValueSet_CochlearImplant: new Coding({
         code: "43252007",
         display: "Cochlear implant",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AirwayEquipment: Coding.FromStrict({
+    DeviceKindValueSet_AirwayEquipment: new Coding({
         code: "43725001",
         display: "Airway equipment",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BloodAdministrationSetDevice: Coding.FromStrict({
+    DeviceKindValueSet_BloodAdministrationSetDevice: new Coding({
         code: "43734006",
         display: "Blood administration set, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DopplerDevice: Coding.FromStrict({
+    DeviceKindValueSet_DopplerDevice: new Coding({
         code: "43770009",
         display: "Doppler device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Shoes: Coding.FromStrict({
+    DeviceKindValueSet_Shoes: new Coding({
         code: "43983001",
         display: "Shoes",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CaliperDevice: Coding.FromStrict({
+    DeviceKindValueSet_CaliperDevice: new Coding({
         code: "44056008",
         display: "Caliper, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_EndoscopicCameraDevice: Coding.FromStrict({
+    DeviceKindValueSet_EndoscopicCameraDevice: new Coding({
         code: "4408003",
         display: "Endoscopic camera, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MagnetDevice: Coding.FromStrict({
+    DeviceKindValueSet_MagnetDevice: new Coding({
         code: "44396004",
         display: "Magnet, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_IndustrialRobotDevice: Coding.FromStrict({
+    DeviceKindValueSet_IndustrialRobotDevice: new Coding({
         code: "44492001",
         display: "Industrial robot, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PumpDevice: Coding.FromStrict({
+    DeviceKindValueSet_PumpDevice: new Coding({
         code: "44668000",
         display: "Pump, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LaryngoscopeDevice: Coding.FromStrict({
+    DeviceKindValueSet_LaryngoscopeDevice: new Coding({
         code: "44738004",
         display: "Laryngoscope, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_EsophagealBougieDevice: Coding.FromStrict({
+    DeviceKindValueSet_EsophagealBougieDevice: new Coding({
         code: "44806002",
         display: "Esophageal bougie, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_GolfBallDevice: Coding.FromStrict({
+    DeviceKindValueSet_GolfBallDevice: new Coding({
         code: "44845007",
         display: "Golf ball, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FourWheeledAllTerrainVehicleDevice: Coding.FromStrict({
+    DeviceKindValueSet_FourWheeledAllTerrainVehicleDevice: new Coding({
         code: "44907005",
         display: "Four-wheeled all-terrain vehicle, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AngioplastyBalloonCatheterDevice: Coding.FromStrict({
+    DeviceKindValueSet_AngioplastyBalloonCatheterDevice: new Coding({
         code: "44959004",
         display: "Angioplasty balloon catheter, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PeritonealDialyzerDevice: Coding.FromStrict({
+    DeviceKindValueSet_PeritonealDialyzerDevice: new Coding({
         code: "45633005",
         display: "Peritoneal dialyzer, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PenroseDrainDevice: Coding.FromStrict({
+    DeviceKindValueSet_PenroseDrainDevice: new Coding({
         code: "45901004",
         display: "Penrose drain, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AutomaticFireExtinguisherSystemDevice: Coding.FromStrict({
+    DeviceKindValueSet_AutomaticFireExtinguisherSystemDevice: new Coding({
         code: "46181005",
         display: "Automatic fire extinguisher system, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ArtificialLashesDevice: Coding.FromStrict({
+    DeviceKindValueSet_ArtificialLashesDevice: new Coding({
         code: "46265007",
         display: "Artificial lashes, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SanitaryBeltDevice: Coding.FromStrict({
+    DeviceKindValueSet_SanitaryBeltDevice: new Coding({
         code: "46299005",
         display: "Sanitary belt, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HairCloth: Coding.FromStrict({
+    DeviceKindValueSet_HairCloth: new Coding({
         code: "4632004",
         display: "Hair cloth",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ClampDevice: Coding.FromStrict({
+    DeviceKindValueSet_ClampDevice: new Coding({
         code: "46364009",
         display: "Clamp, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BasketballDevice: Coding.FromStrict({
+    DeviceKindValueSet_BasketballDevice: new Coding({
         code: "46440007",
         display: "Basketball, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Suppository: Coding.FromStrict({
+    DeviceKindValueSet_Suppository: new Coding({
         code: "46625003",
         display: "Suppository",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ChainDevice: Coding.FromStrict({
+    DeviceKindValueSet_ChainDevice: new Coding({
         code: "46666003",
         display: "Chain, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DeckMachineryDevice: Coding.FromStrict({
+    DeviceKindValueSet_DeckMachineryDevice: new Coding({
         code: "46949002",
         display: "Deck machinery, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MirrorDevice: Coding.FromStrict({
+    DeviceKindValueSet_MirrorDevice: new Coding({
         code: "47162009",
         display: "Mirror, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ElectricalUtilizationEquipmentDevice: Coding.FromStrict({
+    DeviceKindValueSet_ElectricalUtilizationEquipmentDevice: new Coding({
         code: "47326004",
         display: "Electrical utilization equipment, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ApgarScoringTimerDevice: Coding.FromStrict({
+    DeviceKindValueSet_ApgarScoringTimerDevice: new Coding({
         code: "47424002",
         display: "Apgar scoring timer, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_UretericCatheter: Coding.FromStrict({
+    DeviceKindValueSet_UretericCatheter: new Coding({
         code: "47528002",
         display: "Ureteric catheter",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BirthingChairDevice: Coding.FromStrict({
+    DeviceKindValueSet_BirthingChairDevice: new Coding({
         code: "47731004",
         display: "Birthing chair, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ChromicCatgutSuture: Coding.FromStrict({
+    DeviceKindValueSet_ChromicCatgutSuture: new Coding({
         code: "47734007",
         display: "Chromic catgut suture",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Mittens: Coding.FromStrict({
+    DeviceKindValueSet_Mittens: new Coding({
         code: "47776004",
         display: "Mittens",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ProctoscopeDevice: Coding.FromStrict({
+    DeviceKindValueSet_ProctoscopeDevice: new Coding({
         code: "47942000",
         display: "Proctoscope, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CircularPortableSawDevice: Coding.FromStrict({
+    DeviceKindValueSet_CircularPortableSawDevice: new Coding({
         code: "48066006",
         display: "Circular portable saw, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BathtubRailsDevice: Coding.FromStrict({
+    DeviceKindValueSet_BathtubRailsDevice: new Coding({
         code: "48096001",
         display: "Bathtub rails, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MetalDevice: Coding.FromStrict({
+    DeviceKindValueSet_MetalDevice: new Coding({
         code: "4816004",
         display: "Metal device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TrainingEquipmentDevice: Coding.FromStrict({
+    DeviceKindValueSet_TrainingEquipmentDevice: new Coding({
         code: "48240003",
         display: "Training equipment, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_StudgunDevice: Coding.FromStrict({
+    DeviceKindValueSet_StudgunDevice: new Coding({
         code: "48246009",
         display: "Studgun, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_VascularFilterDevice: Coding.FromStrict({
+    DeviceKindValueSet_VascularFilterDevice: new Coding({
         code: "48295009",
         display: "Vascular filter, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ProtectiveBodyArmorDevice: Coding.FromStrict({
+    DeviceKindValueSet_ProtectiveBodyArmorDevice: new Coding({
         code: "48473008",
         display: "Protective body armor, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BilirubinLightDevice: Coding.FromStrict({
+    DeviceKindValueSet_BilirubinLightDevice: new Coding({
         code: "48822005",
         display: "Bilirubin light, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_StrapDevice: Coding.FromStrict({
+    DeviceKindValueSet_StrapDevice: new Coding({
         code: "48990009",
         display: "Strap, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RazorDevice: Coding.FromStrict({
+    DeviceKindValueSet_RazorDevice: new Coding({
         code: "49448001",
         display: "Razor, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HospitalCartDevice: Coding.FromStrict({
+    DeviceKindValueSet_HospitalCartDevice: new Coding({
         code: "49890001",
         display: "Hospital cart, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Glasses: Coding.FromStrict({
+    DeviceKindValueSet_Glasses: new Coding({
         code: "50121007",
         display: "Glasses",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AdhesiveStripDevice: Coding.FromStrict({
+    DeviceKindValueSet_AdhesiveStripDevice: new Coding({
         code: "5041003",
         display: "Adhesive strip, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PatientScaleDevice: Coding.FromStrict({
+    DeviceKindValueSet_PatientScaleDevice: new Coding({
         code: "5042005",
         display: "Patient scale, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_WorkoverRigServiceToOilWellDevice: Coding.FromStrict({
+    DeviceKindValueSet_WorkoverRigServiceToOilWellDevice: new Coding({
         code: "50457005",
         display: "Workover rig service to oil well, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_OilRig: Coding.FromStrict({
+    DeviceKindValueSet_OilRig: new Coding({
         code: "50483000",
         display: "Oil rig",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PenileTumescenceMonitorDevice: Coding.FromStrict({
+    DeviceKindValueSet_PenileTumescenceMonitorDevice: new Coding({
         code: "50851003",
         display: "Penile tumescence monitor, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HammerDevice: Coding.FromStrict({
+    DeviceKindValueSet_HammerDevice: new Coding({
         code: "51016001",
         display: "Hammer, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ShowerCurtainDevice: Coding.FromStrict({
+    DeviceKindValueSet_ShowerCurtainDevice: new Coding({
         code: "51086006",
         display: "Shower curtain, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_StripperDevice: Coding.FromStrict({
+    DeviceKindValueSet_StripperDevice: new Coding({
         code: "51324004",
         display: "Stripper, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PhysiologicMonitoringSystemDevice: Coding.FromStrict({
+    DeviceKindValueSet_PhysiologicMonitoringSystemDevice: new Coding({
         code: "5159002",
         display: "Physiologic monitoring system, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RollerSkateDevice: Coding.FromStrict({
+    DeviceKindValueSet_RollerSkateDevice: new Coding({
         code: "51685009",
         display: "Roller skate, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MeasuringTapeDevice: Coding.FromStrict({
+    DeviceKindValueSet_MeasuringTapeDevice: new Coding({
         code: "51791000",
         display: "Measuring tape, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ValvedTubeDevice: Coding.FromStrict({
+    DeviceKindValueSet_ValvedTubeDevice: new Coding({
         code: "51832004",
         display: "Valved tube, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SlingDevice: Coding.FromStrict({
+    DeviceKindValueSet_SlingDevice: new Coding({
         code: "51883004",
         display: "Sling, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CentralLine: Coding.FromStrict({
+    DeviceKindValueSet_CentralLine: new Coding({
         code: "52124006",
         display: "Central line",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MoltenLava: Coding.FromStrict({
+    DeviceKindValueSet_MoltenLava: new Coding({
         code: "52161002",
         display: "Molten lava",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Gloves: Coding.FromStrict({
+    DeviceKindValueSet_Gloves: new Coding({
         code: "52291003",
         display: "Gloves",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LadderDevice: Coding.FromStrict({
+    DeviceKindValueSet_LadderDevice: new Coding({
         code: "52520009",
         display: "Ladder, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AspiratorCollectionCanisterDevice: Coding.FromStrict({
+    DeviceKindValueSet_AspiratorCollectionCanisterDevice: new Coding({
         code: "52537002",
         display: "Aspirator collection canister, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RadiofrequencyGeneratorDevice: Coding.FromStrict({
+    DeviceKindValueSet_RadiofrequencyGeneratorDevice: new Coding({
         code: "52624007",
         display: "Radiofrequency generator, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SkiDevice: Coding.FromStrict({
+    DeviceKindValueSet_SkiDevice: new Coding({
         code: "52773007",
         display: "Ski, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NasopharyngealCatheterDevice: Coding.FromStrict({
+    DeviceKindValueSet_NasopharyngealCatheterDevice: new Coding({
         code: "52809000",
         display: "Nasopharyngeal catheter, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BloodGasPHAnalyzerDevice: Coding.FromStrict({
+    DeviceKindValueSet_BloodGasPHAnalyzerDevice: new Coding({
         code: "52893008",
         display: "Blood gas/pH analyzer, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PlatformSuspendedBoomDevice: Coding.FromStrict({
+    DeviceKindValueSet_PlatformSuspendedBoomDevice: new Coding({
         code: "53167006",
         display: "Platform suspended boom, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NasalBalloonDevice: Coding.FromStrict({
+    DeviceKindValueSet_NasalBalloonDevice: new Coding({
         code: "53177008",
         display: "Nasal balloon, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ArtificialLungDevice: Coding.FromStrict({
+    DeviceKindValueSet_ArtificialLungDevice: new Coding({
         code: "53217009",
         display: "Artificial lung, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ProsthesisDevice: Coding.FromStrict({
+    DeviceKindValueSet_ProsthesisDevice: new Coding({
         code: "53350007",
         display: "Prosthesis, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RetractorDevice: Coding.FromStrict({
+    DeviceKindValueSet_RetractorDevice: new Coding({
         code: "53535004",
         display: "Retractor, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_StethoscopeDevice: Coding.FromStrict({
+    DeviceKindValueSet_StethoscopeDevice: new Coding({
         code: "53639001",
         display: "Stethoscope, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_GastricBalloonDevice: Coding.FromStrict({
+    DeviceKindValueSet_GastricBalloonDevice: new Coding({
         code: "53671008",
         display: "Gastric balloon, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PenileProsthesisDevice: Coding.FromStrict({
+    DeviceKindValueSet_PenileProsthesisDevice: new Coding({
         code: "53996008",
         display: "Penile prosthesis, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CryogenicAnalgesiaUnitDevice: Coding.FromStrict({
+    DeviceKindValueSet_CryogenicAnalgesiaUnitDevice: new Coding({
         code: "54234007",
         display: "Cryogenic analgesia unit, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TowelDevice: Coding.FromStrict({
+    DeviceKindValueSet_TowelDevice: new Coding({
         code: "54638004",
         display: "Towel, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ComputerizedAxialTomographyScannerDevice: Coding.FromStrict({
+    DeviceKindValueSet_ComputerizedAxialTomographyScannerDevice: new Coding({
         code: "54953005",
         display: "Computerized axial tomography scanner, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BloodCoagulationAnalyzerDevice: Coding.FromStrict({
+    DeviceKindValueSet_BloodCoagulationAnalyzerDevice: new Coding({
         code: "55091003",
         display: "Blood coagulation analyzer, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SutureButtonDevice: Coding.FromStrict({
+    DeviceKindValueSet_SutureButtonDevice: new Coding({
         code: "55206006",
         display: "Suture button, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AmnioscopeDevice: Coding.FromStrict({
+    DeviceKindValueSet_AmnioscopeDevice: new Coding({
         code: "55216003",
         display: "Amnioscope, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AuscultoscopeDevice: Coding.FromStrict({
+    DeviceKindValueSet_AuscultoscopeDevice: new Coding({
         code: "55337009",
         display: "Auscultoscope, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BassinetDevice: Coding.FromStrict({
+    DeviceKindValueSet_BassinetDevice: new Coding({
         code: "55567004",
         display: "Bassinet, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HotObject: Coding.FromStrict({
+    DeviceKindValueSet_HotObject: new Coding({
         code: "55658008",
         display: "Hot object",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TongDevice: Coding.FromStrict({
+    DeviceKindValueSet_TongDevice: new Coding({
         code: "55986002",
         display: "Tong, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BackBracesDevice: Coding.FromStrict({
+    DeviceKindValueSet_BackBracesDevice: new Coding({
         code: "56144002",
         display: "Back braces, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_StapleDevice: Coding.FromStrict({
+    DeviceKindValueSet_StapleDevice: new Coding({
         code: "56353002",
         display: "Staple, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TrephineDevice: Coding.FromStrict({
+    DeviceKindValueSet_TrephineDevice: new Coding({
         code: "56547001",
         display: "Trephine, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BedSheet: Coding.FromStrict({
+    DeviceKindValueSet_BedSheet: new Coding({
         code: "5679009",
         display: "Bed sheet",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PacemakerCatheterDevice: Coding.FromStrict({
+    DeviceKindValueSet_PacemakerCatheterDevice: new Coding({
         code: "56896002",
         display: "Pacemaker catheter, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CardiacTransvenousPacemakerDevice: Coding.FromStrict({
+    DeviceKindValueSet_CardiacTransvenousPacemakerDevice: new Coding({
         code: "56961003",
         display: "Cardiac transvenous pacemaker, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PerfusionPumpDevice: Coding.FromStrict({
+    DeviceKindValueSet_PerfusionPumpDevice: new Coding({
         code: "57118008",
         display: "Perfusion pump, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ClinicalInstrument: Coding.FromStrict({
+    DeviceKindValueSet_ClinicalInstrument: new Coding({
         code: "57134006",
         display: "Clinical instrument",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ContactLens: Coding.FromStrict({
+    DeviceKindValueSet_ContactLens: new Coding({
         code: "57368009",
         display: "Contact lens",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PhysicalRestraintEquipmentDevice: Coding.FromStrict({
+    DeviceKindValueSet_PhysicalRestraintEquipmentDevice: new Coding({
         code: "57395004",
         display: "Physical restraint equipment, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AbrasiveGrindingDevice: Coding.FromStrict({
+    DeviceKindValueSet_AbrasiveGrindingDevice: new Coding({
         code: "57730005",
         display: "Abrasive grinding, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AndroidDevice: Coding.FromStrict({
+    DeviceKindValueSet_AndroidDevice: new Coding({
         code: "58153004",
         display: "Android, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SuctionCatheterDevice: Coding.FromStrict({
+    DeviceKindValueSet_SuctionCatheterDevice: new Coding({
         code: "58253008",
         display: "Suction catheter, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_InfantScaleDevice: Coding.FromStrict({
+    DeviceKindValueSet_InfantScaleDevice: new Coding({
         code: "58514003",
         display: "Infant scale, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ProtectiveVestDevice: Coding.FromStrict({
+    DeviceKindValueSet_ProtectiveVestDevice: new Coding({
         code: "58878002",
         display: "Protective vest, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_WCWheelchair: Coding.FromStrict({
+    DeviceKindValueSet_WCWheelchair: new Coding({
         code: "58938008",
         display: "WC - Wheelchair",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_IceBagDevice: Coding.FromStrict({
+    DeviceKindValueSet_IceBagDevice: new Coding({
         code: "59102007",
         display: "Ice bag, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ApneaAlarmDevice: Coding.FromStrict({
+    DeviceKindValueSet_ApneaAlarmDevice: new Coding({
         code: "59127000",
         display: "Apnea alarm, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BargeDevice: Coding.FromStrict({
+    DeviceKindValueSet_BargeDevice: new Coding({
         code: "59153008",
         display: "Barge, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ChipguardDevice: Coding.FromStrict({
+    DeviceKindValueSet_ChipguardDevice: new Coding({
         code: "59160002",
         display: "Chipguard, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_OxygenAnalyzerDevice: Coding.FromStrict({
+    DeviceKindValueSet_OxygenAnalyzerDevice: new Coding({
         code: "59181002",
         display: "Oxygen analyzer, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LigatureDevice: Coding.FromStrict({
+    DeviceKindValueSet_LigatureDevice: new Coding({
         code: "59432006",
         display: "Ligature, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NeedleHolderDevice: Coding.FromStrict({
+    DeviceKindValueSet_NeedleHolderDevice: new Coding({
         code: "59746007",
         display: "Needle holder, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CuldoscopeDevice: Coding.FromStrict({
+    DeviceKindValueSet_CuldoscopeDevice: new Coding({
         code: "59772003",
         display: "Culdoscope, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SpeculumDevice: Coding.FromStrict({
+    DeviceKindValueSet_SpeculumDevice: new Coding({
         code: "59782002",
         display: "Speculum, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CollapsibleBalloonDevice: Coding.FromStrict({
+    DeviceKindValueSet_CollapsibleBalloonDevice: new Coding({
         code: "59833007",
         display: "Collapsible balloon, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SBSeatBelt: Coding.FromStrict({
+    DeviceKindValueSet_SBSeatBelt: new Coding({
         code: "60054005",
         display: "SB - Seat belt",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_WigDevice: Coding.FromStrict({
+    DeviceKindValueSet_WigDevice: new Coding({
         code: "60110001",
         display: "Wig, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HearingAid: Coding.FromStrict({
+    DeviceKindValueSet_HearingAid: new Coding({
         code: "6012004",
         display: "Hearing aid",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SkipoleDevice: Coding.FromStrict({
+    DeviceKindValueSet_SkipoleDevice: new Coding({
         code: "60150003",
         display: "Skipole, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AcupunctureNeedleDevice: Coding.FromStrict({
+    DeviceKindValueSet_AcupunctureNeedleDevice: new Coding({
         code: "60161006",
         display: "Acupuncture needle, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CarbonDioxideAbsorberDevice: Coding.FromStrict({
+    DeviceKindValueSet_CarbonDioxideAbsorberDevice: new Coding({
         code: "60185003",
         display: "Carbon dioxide absorber, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LeatherBoots: Coding.FromStrict({
+    DeviceKindValueSet_LeatherBoots: new Coding({
         code: "60311007",
         display: "Leather boots",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Injector: Coding.FromStrict({
+    DeviceKindValueSet_Injector: new Coding({
         code: "60773001",
         display: "Injector",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_WhirlpoolBath: Coding.FromStrict({
+    DeviceKindValueSet_WhirlpoolBath: new Coding({
         code: "60806001",
         display: "Whirlpool bath",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Otoscope: Coding.FromStrict({
+    DeviceKindValueSet_Otoscope: new Coding({
         code: "60957001",
         display: "Otoscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TTube: Coding.FromStrict({
+    DeviceKindValueSet_TTube: new Coding({
         code: "6097006",
         display: "T-tube",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NasopharyngealAirwayDevice: Coding.FromStrict({
+    DeviceKindValueSet_NasopharyngealAirwayDevice: new Coding({
         code: "61330002",
         display: "Nasopharyngeal airway device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TennisRacket: Coding.FromStrict({
+    DeviceKindValueSet_TennisRacket: new Coding({
         code: "61512008",
         display: "Tennis racket",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Dilator: Coding.FromStrict({
+    DeviceKindValueSet_Dilator: new Coding({
         code: "61835000",
         display: "Dilator",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Syringe: Coding.FromStrict({
+    DeviceKindValueSet_Syringe: new Coding({
         code: "61968008",
         display: "Syringe",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AntiembolicDevice: Coding.FromStrict({
+    DeviceKindValueSet_AntiembolicDevice: new Coding({
         code: "61979003",
         display: "Antiembolic device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ElectricCable: Coding.FromStrict({
+    DeviceKindValueSet_ElectricCable: new Coding({
         code: "62336005",
         display: "Electric cable",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_GammaCounter: Coding.FromStrict({
+    DeviceKindValueSet_GammaCounter: new Coding({
         code: "62495008",
         display: "Gamma counter",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_OverheadAndGantryCrane: Coding.FromStrict({
+    DeviceKindValueSet_OverheadAndGantryCrane: new Coding({
         code: "62614002",
         display: "Overhead and gantry crane",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TubularBandage: Coding.FromStrict({
+    DeviceKindValueSet_TubularBandage: new Coding({
         code: "62980002",
         display: "Tubular bandage",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BoneWire: Coding.FromStrict({
+    DeviceKindValueSet_BoneWire: new Coding({
         code: "63112008",
         display: "Bone wire",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HatBand: Coding.FromStrict({
+    DeviceKindValueSet_HatBand: new Coding({
         code: "63173005",
         display: "Hat band",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MetalNail: Coding.FromStrict({
+    DeviceKindValueSet_MetalNail: new Coding({
         code: "63289001",
         display: "Metal nail",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BonePlug: Coding.FromStrict({
+    DeviceKindValueSet_BonePlug: new Coding({
         code: "63336000",
         display: "Bone plug",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Derrick: Coding.FromStrict({
+    DeviceKindValueSet_Derrick: new Coding({
         code: "63548003",
         display: "Derrick",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CervicalCollar: Coding.FromStrict({
+    DeviceKindValueSet_CervicalCollar: new Coding({
         code: "63562005",
         display: "Cervical collar",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FiberopticCable: Coding.FromStrict({
+    DeviceKindValueSet_FiberopticCable: new Coding({
         code: "63619003",
         display: "Fiberoptic cable",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MedicalDevice: Coding.FromStrict({
+    DeviceKindValueSet_MedicalDevice: new Coding({
         code: "63653004",
         display: "Medical device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TractionUnit: Coding.FromStrict({
+    DeviceKindValueSet_TractionUnit: new Coding({
         code: "63797009",
         display: "Traction unit",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Electroejaculator: Coding.FromStrict({
+    DeviceKindValueSet_Electroejaculator: new Coding({
         code: "63839002",
         display: "Electroejaculator",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Bandage: Coding.FromStrict({
+    DeviceKindValueSet_Bandage: new Coding({
         code: "63995005",
         display: "Bandage",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Snowmobile: Coding.FromStrict({
+    DeviceKindValueSet_Snowmobile: new Coding({
         code: "64174005",
         display: "Snowmobile",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_EsophagealBalloon: Coding.FromStrict({
+    DeviceKindValueSet_EsophagealBalloon: new Coding({
         code: "64255007",
         display: "Esophageal balloon",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AirTool: Coding.FromStrict({
+    DeviceKindValueSet_AirTool: new Coding({
         code: "64565002",
         display: "Air tool",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HairClipper: Coding.FromStrict({
+    DeviceKindValueSet_HairClipper: new Coding({
         code: "64571008",
         display: "Hair clipper",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_InhalationAnalgesiaUnit: Coding.FromStrict({
+    DeviceKindValueSet_InhalationAnalgesiaUnit: new Coding({
         code: "64883003",
         display: "Inhalation analgesia unit",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Scissors: Coding.FromStrict({
+    DeviceKindValueSet_Scissors: new Coding({
         code: "64973003",
         display: "Scissors",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Escalator: Coding.FromStrict({
+    DeviceKindValueSet_Escalator: new Coding({
         code: "64989000",
         display: "Escalator",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ElectricalBattery: Coding.FromStrict({
+    DeviceKindValueSet_ElectricalBattery: new Coding({
         code: "65053001",
         display: "Electrical battery",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SurgicalDrapes: Coding.FromStrict({
+    DeviceKindValueSet_SurgicalDrapes: new Coding({
         code: "65105002",
         display: "Surgical drapes",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ChartRecorder: Coding.FromStrict({
+    DeviceKindValueSet_ChartRecorder: new Coding({
         code: "65268008",
         display: "Chart recorder",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Microscope: Coding.FromStrict({
+    DeviceKindValueSet_Microscope: new Coding({
         code: "65473004",
         display: "Microscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_XRayShield: Coding.FromStrict({
+    DeviceKindValueSet_XRayShield: new Coding({
         code: "65577000",
         display: "X-ray shield",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Stent: Coding.FromStrict({
+    DeviceKindValueSet_Stent: new Coding({
         code: "65818007",
         display: "Stent",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HospitalRobot: Coding.FromStrict({
+    DeviceKindValueSet_HospitalRobot: new Coding({
         code: "66222000",
         display: "Hospital robot",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AudiometricTestingEquipment: Coding.FromStrict({
+    DeviceKindValueSet_AudiometricTestingEquipment: new Coding({
         code: "66415006",
         display: "Audiometric testing equipment",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ElectricBed: Coding.FromStrict({
+    DeviceKindValueSet_ElectricBed: new Coding({
         code: "66435007",
         display: "Electric bed",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FaceCloth: Coding.FromStrict({
+    DeviceKindValueSet_FaceCloth: new Coding({
         code: "66494009",
         display: "Face cloth",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HipProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_HipProsthesis: new Coding({
         code: "67270000",
         display: "Hip prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CoronaryPerfusionCatheter: Coding.FromStrict({
+    DeviceKindValueSet_CoronaryPerfusionCatheter: new Coding({
         code: "67387001",
         display: "Coronary perfusion catheter",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RadiographicTomographicUnit: Coding.FromStrict({
+    DeviceKindValueSet_RadiographicTomographicUnit: new Coding({
         code: "67670006",
         display: "Radiographic-tomographic unit",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MovingWalk: Coding.FromStrict({
+    DeviceKindValueSet_MovingWalk: new Coding({
         code: "67777003",
         display: "Moving walk",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Epilator: Coding.FromStrict({
+    DeviceKindValueSet_Epilator: new Coding({
         code: "678001",
         display: "Epilator",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Esophagoscope: Coding.FromStrict({
+    DeviceKindValueSet_Esophagoscope: new Coding({
         code: "67829007",
         display: "Esophagoscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AerialLift: Coding.FromStrict({
+    DeviceKindValueSet_AerialLift: new Coding({
         code: "67920005",
         display: "Aerial lift",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_EnemaTube: Coding.FromStrict({
+    DeviceKindValueSet_EnemaTube: new Coding({
         code: "67966000",
         display: "Enema tube",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RadiographicUnit: Coding.FromStrict({
+    DeviceKindValueSet_RadiographicUnit: new Coding({
         code: "68080007",
         display: "Radiographic unit",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_VibratingElectricHeatingPad: Coding.FromStrict({
+    DeviceKindValueSet_VibratingElectricHeatingPad: new Coding({
         code: "68181008",
         display: "Vibrating electric heating pad",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BoneScrew: Coding.FromStrict({
+    DeviceKindValueSet_BoneScrew: new Coding({
         code: "68183006",
         display: "Bone screw",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MicrowaveOven: Coding.FromStrict({
+    DeviceKindValueSet_MicrowaveOven: new Coding({
         code: "6822006",
         display: "Microwave oven",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Bottle: Coding.FromStrict({
+    DeviceKindValueSet_Bottle: new Coding({
         code: "68276009",
         display: "Bottle",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Sound: Coding.FromStrict({
+    DeviceKindValueSet_Sound: new Coding({
         code: "68325009",
         display: "Sound",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SupportBelt: Coding.FromStrict({
+    DeviceKindValueSet_SupportBelt: new Coding({
         code: "68597009",
         display: "Support belt",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HouseholdRobot: Coding.FromStrict({
+    DeviceKindValueSet_HouseholdRobot: new Coding({
         code: "68685003",
         display: "Household robot",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Gastroduodenoscope: Coding.FromStrict({
+    DeviceKindValueSet_Gastroduodenoscope: new Coding({
         code: "68842005",
         display: "Gastroduodenoscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ProtectiveClothingMaterial: Coding.FromStrict({
+    DeviceKindValueSet_ProtectiveClothingMaterial: new Coding({
         code: "6919005",
         display: "Protective clothing material",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PatientUtensilKit: Coding.FromStrict({
+    DeviceKindValueSet_PatientUtensilKit: new Coding({
         code: "69670004",
         display: "Patient utensil kit",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Lithotripter: Coding.FromStrict({
+    DeviceKindValueSet_Lithotripter: new Coding({
         code: "6972009",
         display: "Lithotripter",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_InsulinPump: Coding.FromStrict({
+    DeviceKindValueSet_InsulinPump: new Coding({
         code: "69805005",
         display: "Insulin pump",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TracheostomyButton: Coding.FromStrict({
+    DeviceKindValueSet_TracheostomyButton: new Coding({
         code: "69922008",
         display: "Tracheostomy button",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RadiographicFluoroscopicUnit: Coding.FromStrict({
+    DeviceKindValueSet_RadiographicFluoroscopicUnit: new Coding({
         code: "7007007",
         display: "Radiographic-fluoroscopic unit",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Bayonet: Coding.FromStrict({
+    DeviceKindValueSet_Bayonet: new Coding({
         code: "70080007",
         display: "Bayonet",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SkullTongs: Coding.FromStrict({
+    DeviceKindValueSet_SkullTongs: new Coding({
         code: "70300000",
         display: "Skull tongs",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Freezer: Coding.FromStrict({
+    DeviceKindValueSet_Freezer: new Coding({
         code: "70303003",
         display: "Freezer",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Sled: Coding.FromStrict({
+    DeviceKindValueSet_Sled: new Coding({
         code: "70453008",
         display: "Sled",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BloodPressureCuff: Coding.FromStrict({
+    DeviceKindValueSet_BloodPressureCuff: new Coding({
         code: "70665002",
         display: "Blood pressure cuff",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RecreationEquipment: Coding.FromStrict({
+    DeviceKindValueSet_RecreationEquipment: new Coding({
         code: "70793005",
         display: "Recreation equipment",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_WashBasin: Coding.FromStrict({
+    DeviceKindValueSet_WashBasin: new Coding({
         code: "70872004",
         display: "Wash basin",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Warmer: Coding.FromStrict({
+    DeviceKindValueSet_Warmer: new Coding({
         code: "71384000",
         display: "Warmer",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DivingStage: Coding.FromStrict({
+    DeviceKindValueSet_DivingStage: new Coding({
         code: "71483007",
         display: "Diving stage",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Humidifier: Coding.FromStrict({
+    DeviceKindValueSet_Humidifier: new Coding({
         code: "71545009",
         display: "Humidifier",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Proctosigmoidoscope: Coding.FromStrict({
+    DeviceKindValueSet_Proctosigmoidoscope: new Coding({
         code: "71601002",
         display: "Proctosigmoidoscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BoneWax: Coding.FromStrict({
+    DeviceKindValueSet_BoneWax: new Coding({
         code: "71667001",
         display: "Bone wax",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Autoclave: Coding.FromStrict({
+    DeviceKindValueSet_Autoclave: new Coding({
         code: "71948003",
         display: "Autoclave",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Ring: Coding.FromStrict({
+    DeviceKindValueSet_Ring: new Coding({
         code: "72070000",
         display: "Ring",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TissueExpander: Coding.FromStrict({
+    DeviceKindValueSet_TissueExpander: new Coding({
         code: "72188006",
         display: "Tissue expander",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LeadCable: Coding.FromStrict({
+    DeviceKindValueSet_LeadCable: new Coding({
         code: "72302000",
         display: "Lead cable",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ImplantableDefibrillator: Coding.FromStrict({
+    DeviceKindValueSet_ImplantableDefibrillator: new Coding({
         code: "72506001",
         display: "Implantable defibrillator",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AspiratorCollectionBottle: Coding.FromStrict({
+    DeviceKindValueSet_AspiratorCollectionBottle: new Coding({
         code: "72742007",
         display: "Aspirator collection bottle",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_InfantIncubator: Coding.FromStrict({
+    DeviceKindValueSet_InfantIncubator: new Coding({
         code: "73027007",
         display: "Infant incubator",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ArtificialSkin: Coding.FromStrict({
+    DeviceKindValueSet_ArtificialSkin: new Coding({
         code: "73534004",
         display: "Artificial skin",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Transilluminator: Coding.FromStrict({
+    DeviceKindValueSet_Transilluminator: new Coding({
         code: "73562006",
         display: "Transilluminator",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_IntravenousAnalgesiaUnit: Coding.FromStrict({
+    DeviceKindValueSet_IntravenousAnalgesiaUnit: new Coding({
         code: "73571002",
         display: "Intravenous analgesia unit",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PowerSaw: Coding.FromStrict({
+    DeviceKindValueSet_PowerSaw: new Coding({
         code: "73618007",
         display: "Power saw",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HandSaw: Coding.FromStrict({
+    DeviceKindValueSet_HandSaw: new Coding({
         code: "73878004",
         display: "Hand saw",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BicycleErgometer: Coding.FromStrict({
+    DeviceKindValueSet_BicycleErgometer: new Coding({
         code: "739006",
         display: "Bicycle ergometer",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FaceProtectionInConstructionIndustry: Coding.FromStrict({
+    DeviceKindValueSet_FaceProtectionInConstructionIndustry: new Coding({
         code: "73985004",
         display: "Face protection in construction industry",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Probe: Coding.FromStrict({
+    DeviceKindValueSet_Probe: new Coding({
         code: "7402007",
         display: "Probe",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Crib: Coding.FromStrict({
+    DeviceKindValueSet_Crib: new Coding({
         code: "7406005",
         display: "Crib",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Belt: Coding.FromStrict({
+    DeviceKindValueSet_Belt: new Coding({
         code: "74094004",
         display: "Belt",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Recorder: Coding.FromStrict({
+    DeviceKindValueSet_Recorder: new Coding({
         code: "74108008",
         display: "Recorder",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SanitaryPad: Coding.FromStrict({
+    DeviceKindValueSet_SanitaryPad: new Coding({
         code: "74300007",
         display: "Sanitary pad",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ALArtificialLimb: Coding.FromStrict({
+    DeviceKindValueSet_ALArtificialLimb: new Coding({
         code: "74444006",
         display: "AL - Artificial limb",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Crutch: Coding.FromStrict({
+    DeviceKindValueSet_Crutch: new Coding({
         code: "74566002",
         display: "Crutch",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BoatswainQuoteSChair: Coding.FromStrict({
+    DeviceKindValueSet_BoatswainQuoteSChair: new Coding({
         code: "74884005",
         display: "Boatswain's chair",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ShoringAndBracingMasonryAndWoodwork: Coding.FromStrict({
+    DeviceKindValueSet_ShoringAndBracingMasonryAndWoodwork: new Coding({
         code: "75075000",
         display: "Shoring and bracing (masonry and woodwork)",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LocalAnesthesiaKit: Coding.FromStrict({
+    DeviceKindValueSet_LocalAnesthesiaKit: new Coding({
         code: "75187009",
         display: "Local anesthesia kit",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ArterialCannula: Coding.FromStrict({
+    DeviceKindValueSet_ArterialCannula: new Coding({
         code: "75192006",
         display: "Arterial cannula",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ManualRespirator: Coding.FromStrict({
+    DeviceKindValueSet_ManualRespirator: new Coding({
         code: "75751006",
         display: "Manual respirator",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ArtificialKidney: Coding.FromStrict({
+    DeviceKindValueSet_ArtificialKidney: new Coding({
         code: "75780002",
         display: "Artificial kidney",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Skateboard: Coding.FromStrict({
+    DeviceKindValueSet_Skateboard: new Coding({
         code: "75963008",
         display: "Skateboard",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_StainlessSteelWireSuture: Coding.FromStrict({
+    DeviceKindValueSet_StainlessSteelWireSuture: new Coding({
         code: "76091005",
         display: "Stainless steel wire suture",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_GlassTube: Coding.FromStrict({
+    DeviceKindValueSet_GlassTube: new Coding({
         code: "76123001",
         display: "Glass tube",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ElbowJointProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_ElbowJointProsthesis: new Coding({
         code: "76428000",
         display: "Elbow joint prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Apron: Coding.FromStrict({
+    DeviceKindValueSet_Apron: new Coding({
         code: "76433001",
         display: "Apron",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ArtificialPancreas: Coding.FromStrict({
+    DeviceKindValueSet_ArtificialPancreas: new Coding({
         code: "76664007",
         display: "Artificial pancreas",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ApplicatorStick: Coding.FromStrict({
+    DeviceKindValueSet_ApplicatorStick: new Coding({
         code: "76705002",
         display: "Applicator stick",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AbrasiveWheelMachinery: Coding.FromStrict({
+    DeviceKindValueSet_AbrasiveWheelMachinery: new Coding({
         code: "76825006",
         display: "Abrasive wheel machinery",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Guillotine: Coding.FromStrict({
+    DeviceKindValueSet_Guillotine: new Coding({
         code: "76937009",
         display: "Guillotine",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_StabilizingAppliance: Coding.FromStrict({
+    DeviceKindValueSet_StabilizingAppliance: new Coding({
         code: "7704007",
         display: "Stabilizing appliance",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HydrocephalicShuntCatheter: Coding.FromStrict({
+    DeviceKindValueSet_HydrocephalicShuntCatheter: new Coding({
         code: "7733008",
         display: "Hydrocephalic shunt catheter",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Pins: Coding.FromStrict({
+    DeviceKindValueSet_Pins: new Coding({
         code: "77444004",
         display: "Pins",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Band: Coding.FromStrict({
+    DeviceKindValueSet_Band: new Coding({
         code: "77541009",
         display: "Band",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Clips: Coding.FromStrict({
+    DeviceKindValueSet_Clips: new Coding({
         code: "77720000",
         display: "Clips",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ChemicalFiberCloth: Coding.FromStrict({
+    DeviceKindValueSet_ChemicalFiberCloth: new Coding({
         code: "77755003",
         display: "Chemical fiber cloth",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BoneStaple: Coding.FromStrict({
+    DeviceKindValueSet_BoneStaple: new Coding({
         code: "77777004",
         display: "Bone staple",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NailClipper: Coding.FromStrict({
+    DeviceKindValueSet_NailClipper: new Coding({
         code: "78279003",
         display: "Nail clipper",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TesticularProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_TesticularProsthesis: new Coding({
         code: "78498003",
         display: "Testicular prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_NylonSuture: Coding.FromStrict({
+    DeviceKindValueSet_NylonSuture: new Coding({
         code: "78641001",
         display: "Nylon suture",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ElectronicMonitor: Coding.FromStrict({
+    DeviceKindValueSet_ElectronicMonitor: new Coding({
         code: "78886001",
         display: "Electronic monitor",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_GreenfieldFilter: Coding.FromStrict({
+    DeviceKindValueSet_GreenfieldFilter: new Coding({
         code: "79051006",
         display: "Greenfield filter",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Needle: Coding.FromStrict({
+    DeviceKindValueSet_Needle: new Coding({
         code: "79068005",
         display: "Needle",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_VehicleMountedWorkPlatform: Coding.FromStrict({
+    DeviceKindValueSet_VehicleMountedWorkPlatform: new Coding({
         code: "79218005",
         display: "Vehicle-mounted work platform",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Tampon: Coding.FromStrict({
+    DeviceKindValueSet_Tampon: new Coding({
         code: "79287008",
         display: "Tampon",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MechanicalPowerPress: Coding.FromStrict({
+    DeviceKindValueSet_MechanicalPowerPress: new Coding({
         code: "793009",
         display: "Mechanical power press",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Chute: Coding.FromStrict({
+    DeviceKindValueSet_Chute: new Coding({
         code: "79401009",
         display: "Chute",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FootProtection: Coding.FromStrict({
+    DeviceKindValueSet_FootProtection: new Coding({
         code: "79438009",
         display: "Foot protection",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SwingOrSlidingCutOffSaw: Coding.FromStrict({
+    DeviceKindValueSet_SwingOrSlidingCutOffSaw: new Coding({
         code: "79481007",
         display: "Swing or sliding cut-off saw",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TransvenousElectrode: Coding.FromStrict({
+    DeviceKindValueSet_TransvenousElectrode: new Coding({
         code: "79593001",
         display: "Transvenous electrode",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_StorageTank: Coding.FromStrict({
+    DeviceKindValueSet_StorageTank: new Coding({
         code: "79618001",
         display: "Storage tank",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ThreeWheeledAllTerrainVehicle: Coding.FromStrict({
+    DeviceKindValueSet_ThreeWheeledAllTerrainVehicle: new Coding({
         code: "7968002",
         display: "Three-wheeled all-terrain vehicle",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FogartyCatheter: Coding.FromStrict({
+    DeviceKindValueSet_FogartyCatheter: new Coding({
         code: "7971005",
         display: "Fogarty catheter",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ElectricBlanket: Coding.FromStrict({
+    DeviceKindValueSet_ElectricBlanket: new Coding({
         code: "79811009",
         display: "Electric blanket",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HickmanLine: Coding.FromStrict({
+    DeviceKindValueSet_HickmanLine: new Coding({
         code: "79834000",
         display: "Hickman line",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SwanGanzCatheterDevice: Coding.FromStrict({
+    DeviceKindValueSet_SwanGanzCatheterDevice: new Coding({
         code: "79952001",
         display: "Swan-Ganz catheter, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PediatricBed: Coding.FromStrict({
+    DeviceKindValueSet_PediatricBed: new Coding({
         code: "80278003",
         display: "Pediatric bed",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ChainFall: Coding.FromStrict({
+    DeviceKindValueSet_ChainFall: new Coding({
         code: "80404000",
         display: "Chain fall",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Denture: Coding.FromStrict({
+    DeviceKindValueSet_Denture: new Coding({
         code: "8060009",
         display: "Denture",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Analysers: Coding.FromStrict({
+    DeviceKindValueSet_Analysers: new Coding({
         code: "80617005",
         display: "Analysers",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MotorHome: Coding.FromStrict({
+    DeviceKindValueSet_MotorHome: new Coding({
         code: "80664005",
         display: "Motor home",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TendonHammer: Coding.FromStrict({
+    DeviceKindValueSet_TendonHammer: new Coding({
         code: "80853009",
         display: "Tendon hammer",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Oven: Coding.FromStrict({
+    DeviceKindValueSet_Oven: new Coding({
         code: "80950008",
         display: "Oven",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Crane: Coding.FromStrict({
+    DeviceKindValueSet_Crane: new Coding({
         code: "8118007",
         display: "Crane",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_TextileMaterial: Coding.FromStrict({
+    DeviceKindValueSet_TextileMaterial: new Coding({
         code: "81293006",
         display: "Textile material",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SocketWrench: Coding.FromStrict({
+    DeviceKindValueSet_SocketWrench: new Coding({
         code: "81317009",
         display: "Socket wrench",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_EnzymeImmunoassayAnalyzer: Coding.FromStrict({
+    DeviceKindValueSet_EnzymeImmunoassayAnalyzer: new Coding({
         code: "81320001",
         display: "Enzyme immunoassay analyzer",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Adhesive: Coding.FromStrict({
+    DeviceKindValueSet_Adhesive: new Coding({
         code: "8170008",
         display: "Adhesive",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AllTerrainVehicle: Coding.FromStrict({
+    DeviceKindValueSet_AllTerrainVehicle: new Coding({
         code: "81826000",
         display: "All-terrain vehicle",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RadialSaw: Coding.FromStrict({
+    DeviceKindValueSet_RadialSaw: new Coding({
         code: "81892008",
         display: "Radial saw",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Hemostat: Coding.FromStrict({
+    DeviceKindValueSet_Hemostat: new Coding({
         code: "82379000",
         display: "Hemostat",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PeripheralIntravenousCatheter: Coding.FromStrict({
+    DeviceKindValueSet_PeripheralIntravenousCatheter: new Coding({
         code: "82449006",
         display: "Peripheral intravenous catheter",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BonyTissueForceps: Coding.FromStrict({
+    DeviceKindValueSet_BonyTissueForceps: new Coding({
         code: "82657000",
         display: "Bony tissue forceps",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RoboticArm: Coding.FromStrict({
+    DeviceKindValueSet_RoboticArm: new Coding({
         code: "82830000",
         display: "Robotic arm",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SafetyBelt: Coding.FromStrict({
+    DeviceKindValueSet_SafetyBelt: new Coding({
         code: "82879008",
         display: "Safety belt",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Tube: Coding.FromStrict({
+    DeviceKindValueSet_Tube: new Coding({
         code: "83059008",
         display: "Tube",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AudioAnalgesiaUnit: Coding.FromStrict({
+    DeviceKindValueSet_AudioAnalgesiaUnit: new Coding({
         code: "83315005",
         display: "Audio analgesia unit",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DipTank: Coding.FromStrict({
+    DeviceKindValueSet_DipTank: new Coding({
         code: "83320005",
         display: "Dip tank",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PlasticShoes: Coding.FromStrict({
+    DeviceKindValueSet_PlasticShoes: new Coding({
         code: "83369007",
         display: "Plastic shoes",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Robot: Coding.FromStrict({
+    DeviceKindValueSet_Robot: new Coding({
         code: "83517001",
         display: "Robot",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BandSaw: Coding.FromStrict({
+    DeviceKindValueSet_BandSaw: new Coding({
         code: "8384009",
         display: "Band saw",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ManLift: Coding.FromStrict({
+    DeviceKindValueSet_ManLift: new Coding({
         code: "83903000",
         display: "Man lift",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SkiTow: Coding.FromStrict({
+    DeviceKindValueSet_SkiTow: new Coding({
         code: "84023008",
         display: "Ski tow",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BileCollectionBag: Coding.FromStrict({
+    DeviceKindValueSet_BileCollectionBag: new Coding({
         code: "8407004",
         display: "Bile collection bag",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Pliers: Coding.FromStrict({
+    DeviceKindValueSet_Pliers: new Coding({
         code: "84330009",
         display: "Pliers",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Gaol: Coding.FromStrict({
+    DeviceKindValueSet_Gaol: new Coding({
         code: "8434001",
         display: "Gaol",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ChainSaw: Coding.FromStrict({
+    DeviceKindValueSet_ChainSaw: new Coding({
         code: "84444002",
         display: "Chain saw",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_IntramedullaryNail: Coding.FromStrict({
+    DeviceKindValueSet_IntramedullaryNail: new Coding({
         code: "8451008",
         display: "Intramedullary nail",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Barricade: Coding.FromStrict({
+    DeviceKindValueSet_Barricade: new Coding({
         code: "84546002",
         display: "Barricade",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DetonatingCord: Coding.FromStrict({
+    DeviceKindValueSet_DetonatingCord: new Coding({
         code: "84599008",
         display: "Detonating cord",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ImplantableDentalProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_ImplantableDentalProsthesis: new Coding({
         code: "84610002",
         display: "Implantable dental prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AorticValveProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_AorticValveProsthesis: new Coding({
         code: "84683006",
         display: "Aortic valve prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AdhesiveTape: Coding.FromStrict({
+    DeviceKindValueSet_AdhesiveTape: new Coding({
         code: "84756000",
         display: "Adhesive tape",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BoringMachine: Coding.FromStrict({
+    DeviceKindValueSet_BoringMachine: new Coding({
         code: "85106006",
         display: "Boring machine",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AbortionPump: Coding.FromStrict({
+    DeviceKindValueSet_AbortionPump: new Coding({
         code: "85329008",
         display: "Abortion pump",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Cart: Coding.FromStrict({
+    DeviceKindValueSet_Cart: new Coding({
         code: "85455005",
         display: "Cart",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_EngravingPress: Coding.FromStrict({
+    DeviceKindValueSet_EngravingPress: new Coding({
         code: "85684007",
         display: "Engraving press",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_GolfClub: Coding.FromStrict({
+    DeviceKindValueSet_GolfClub: new Coding({
         code: "86056006",
         display: "Golf club",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BloodElectrolyteAnalyzer: Coding.FromStrict({
+    DeviceKindValueSet_BloodElectrolyteAnalyzer: new Coding({
         code: "8615009",
         display: "Blood electrolyte analyzer",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Laparoscope: Coding.FromStrict({
+    DeviceKindValueSet_Laparoscope: new Coding({
         code: "86174004",
         display: "Laparoscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ElectrocardiographicMonitorAndRecorder: Coding.FromStrict({
+    DeviceKindValueSet_ElectrocardiographicMonitorAndRecorder: new Coding({
         code: "86184003",
         display: "Electrocardiographic monitor and recorder",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Table: Coding.FromStrict({
+    DeviceKindValueSet_Table: new Coding({
         code: "86407004",
         display: "Table",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MortisingMachine: Coding.FromStrict({
+    DeviceKindValueSet_MortisingMachine: new Coding({
         code: "8643000",
         display: "Mortising machine",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DefibrillatorPaddle: Coding.FromStrict({
+    DeviceKindValueSet_DefibrillatorPaddle: new Coding({
         code: "86453006",
         display: "Defibrillator paddle",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ArteriovenousShuntCatheter: Coding.FromStrict({
+    DeviceKindValueSet_ArteriovenousShuntCatheter: new Coding({
         code: "86572008",
         display: "Arteriovenous shunt catheter",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BalloonPump: Coding.FromStrict({
+    DeviceKindValueSet_BalloonPump: new Coding({
         code: "86768006",
         display: "Balloon pump",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DivingLadder: Coding.FromStrict({
+    DeviceKindValueSet_DivingLadder: new Coding({
         code: "86816008",
         display: "Diving ladder",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ProtectiveShield: Coding.FromStrict({
+    DeviceKindValueSet_ProtectiveShield: new Coding({
         code: "8682003",
         display: "Protective shield",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Tool: Coding.FromStrict({
+    DeviceKindValueSet_Tool: new Coding({
         code: "86967005",
         display: "Tool",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_SolderingIron: Coding.FromStrict({
+    DeviceKindValueSet_SolderingIron: new Coding({
         code: "87088005",
         display: "Soldering iron",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ClothingMaterial: Coding.FromStrict({
+    DeviceKindValueSet_ClothingMaterial: new Coding({
         code: "87140005",
         display: "Clothing material",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Cane: Coding.FromStrict({
+    DeviceKindValueSet_Cane: new Coding({
         code: "87405001",
         display: "Cane",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_PhysicalRestraintStructure: Coding.FromStrict({
+    DeviceKindValueSet_PhysicalRestraintStructure: new Coding({
         code: "87710003",
         display: "Physical restraint structure",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Tester: Coding.FromStrict({
+    DeviceKindValueSet_Tester: new Coding({
         code: "87717000",
         display: "Tester",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BloodCellCounterAndAnalyzer: Coding.FromStrict({
+    DeviceKindValueSet_BloodCellCounterAndAnalyzer: new Coding({
         code: "87851008",
         display: "Blood cell counter and analyzer",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Footwear: Coding.FromStrict({
+    DeviceKindValueSet_Footwear: new Coding({
         code: "88063004",
         display: "Footwear",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MaximumSecurityCell: Coding.FromStrict({
+    DeviceKindValueSet_MaximumSecurityCell: new Coding({
         code: "88168006",
         display: "Maximum security cell",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_DiagnosticImplant: Coding.FromStrict({
+    DeviceKindValueSet_DiagnosticImplant: new Coding({
         code: "882002",
         display: "Diagnostic implant",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_IntravenousAnesthesiaAdministrationSet: Coding.FromStrict({
+    DeviceKindValueSet_IntravenousAnesthesiaAdministrationSet: new Coding({
         code: "88208003",
         display: "Intravenous anesthesia administration set",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ArtificialTissue: Coding.FromStrict({
+    DeviceKindValueSet_ArtificialTissue: new Coding({
         code: "88765001",
         display: "Artificial tissue",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HypodermicNeedle: Coding.FromStrict({
+    DeviceKindValueSet_HypodermicNeedle: new Coding({
         code: "88959008",
         display: "Hypodermic needle",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Stretcher: Coding.FromStrict({
+    DeviceKindValueSet_Stretcher: new Coding({
         code: "89149003",
         display: "Stretcher",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LeatherShoes: Coding.FromStrict({
+    DeviceKindValueSet_LeatherShoes: new Coding({
         code: "89236003",
         display: "Leather shoes",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BloodCultureAnalyzer: Coding.FromStrict({
+    DeviceKindValueSet_BloodCultureAnalyzer: new Coding({
         code: "89509004",
         display: "Blood culture analyzer",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MagneticResonanceImagingUnit: Coding.FromStrict({
+    DeviceKindValueSet_MagneticResonanceImagingUnit: new Coding({
         code: "90003000",
         display: "Magnetic resonance imaging unit",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AlcoholSponge: Coding.FromStrict({
+    DeviceKindValueSet_AlcoholSponge: new Coding({
         code: "90035000",
         display: "Alcohol sponge",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CastCutter: Coding.FromStrict({
+    DeviceKindValueSet_CastCutter: new Coding({
         code: "90082007",
         display: "Cast cutter",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_MetalPeriostealImplant: Coding.FromStrict({
+    DeviceKindValueSet_MetalPeriostealImplant: new Coding({
         code: "90134004",
         display: "Metal periosteal implant",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_VentricularIntracranialCatheter: Coding.FromStrict({
+    DeviceKindValueSet_VentricularIntracranialCatheter: new Coding({
         code: "9017009",
         display: "Ventricular intracranial catheter",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Colonoscope: Coding.FromStrict({
+    DeviceKindValueSet_Colonoscope: new Coding({
         code: "90412006",
         display: "Colonoscope",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AuricularProsthesis: Coding.FromStrict({
+    DeviceKindValueSet_AuricularProsthesis: new Coding({
         code: "90504001",
         display: "Auricular prosthesis",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_RubberShoes: Coding.FromStrict({
+    DeviceKindValueSet_RubberShoes: new Coding({
         code: "90913005",
         display: "Rubber shoes",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AbrasiveBlastByCleaningNozzles: Coding.FromStrict({
+    DeviceKindValueSet_AbrasiveBlastByCleaningNozzles: new Coding({
         code: "90948003",
         display: "Abrasive blast by cleaning nozzles",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Support: Coding.FromStrict({
+    DeviceKindValueSet_Support: new Coding({
         code: "9096001",
         display: "Support",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_FeedingCatheter: Coding.FromStrict({
+    DeviceKindValueSet_FeedingCatheter: new Coding({
         code: "9129003",
         display: "Feeding catheter",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ThomasCollar: Coding.FromStrict({
+    DeviceKindValueSet_ThomasCollar: new Coding({
         code: "91294003",
         display: "Thomas collar",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HyperbaricChamber: Coding.FromStrict({
+    DeviceKindValueSet_HyperbaricChamber: new Coding({
         code: "91318002",
         display: "Hyperbaric chamber",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Basin: Coding.FromStrict({
+    DeviceKindValueSet_Basin: new Coding({
         code: "91535004",
         display: "Basin",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_HospitalBed: Coding.FromStrict({
+    DeviceKindValueSet_HospitalBed: new Coding({
         code: "91537007",
         display: "Hospital bed",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Bobsled: Coding.FromStrict({
+    DeviceKindValueSet_Bobsled: new Coding({
         code: "9419002",
         display: "Bobsled",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_ElasticBandage: Coding.FromStrict({
+    DeviceKindValueSet_ElasticBandage: new Coding({
         code: "9458007",
         display: "Elastic bandage",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_Dermatotome: Coding.FromStrict({
+    DeviceKindValueSet_Dermatotome: new Coding({
         code: "9611009",
         display: "Dermatotome",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_AirFilterDevice: Coding.FromStrict({
+    DeviceKindValueSet_AirFilterDevice: new Coding({
         code: "972002",
         display: "Air filter, device",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_CargoHandlingGear: Coding.FromStrict({
+    DeviceKindValueSet_CargoHandlingGear: new Coding({
         code: "9883003",
         display: "Cargo handling gear",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_LinenCloth: Coding.FromStrict({
+    DeviceKindValueSet_LinenCloth: new Coding({
         code: "989005",
         display: "Linen cloth",
         system: "http://snomed.info/sct"
     }),
-    DeviceKindValueSet_BrushDevice: Coding.FromStrict({
+    DeviceKindValueSet_BrushDevice: new Coding({
         code: "994005",
         display: "Brush, device",
         system: "http://snomed.info/sct"

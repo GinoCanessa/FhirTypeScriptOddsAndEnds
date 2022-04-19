@@ -31,18 +31,18 @@ export class InsurancePlanContact extends fhir.BackboneElement {
     /**
      * Check if the current InsurancePlanContact contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a InsurancePlanContact from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new InsurancePlanContact(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `InsurancePlanContact is missing elements: ${missingElements.join(", ")}`;
         }
@@ -68,18 +68,18 @@ export class InsurancePlanCoverageBenefitLimit extends fhir.BackboneElement {
     /**
      * Check if the current InsurancePlanCoverageBenefitLimit contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a InsurancePlanCoverageBenefitLimit from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new InsurancePlanCoverageBenefitLimit(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `InsurancePlanCoverageBenefitLimit is missing elements: ${missingElements.join(", ")}`;
         }
@@ -115,21 +115,21 @@ export class InsurancePlanCoverageBenefit extends fhir.BackboneElement {
     /**
      * Check if the current InsurancePlanCoverageBenefit contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a InsurancePlanCoverageBenefit from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new InsurancePlanCoverageBenefit(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `InsurancePlanCoverageBenefit is missing elements: ${missingElements.join(", ")}`;
         }
@@ -166,7 +166,7 @@ export class InsurancePlanCoverage extends fhir.BackboneElement {
     /**
      * Check if the current InsurancePlanCoverage contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if ((!this["benefit"]) || (this["benefit"].length === 0)) {
             missingElements.push("benefit");
@@ -174,16 +174,16 @@ export class InsurancePlanCoverage extends fhir.BackboneElement {
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a InsurancePlanCoverage from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new InsurancePlanCoverage(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `InsurancePlanCoverage is missing elements: ${missingElements.join(", ")}`;
         }
@@ -221,18 +221,18 @@ export class InsurancePlanPlanGeneralCost extends fhir.BackboneElement {
     /**
      * Check if the current InsurancePlanPlanGeneralCost contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a InsurancePlanPlanGeneralCost from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new InsurancePlanPlanGeneralCost(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `InsurancePlanPlanGeneralCost is missing elements: ${missingElements.join(", ")}`;
         }
@@ -268,21 +268,21 @@ export class InsurancePlanPlanSpecificCostBenefitCost extends fhir.BackboneEleme
     /**
      * Check if the current InsurancePlanPlanSpecificCostBenefitCost contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a InsurancePlanPlanSpecificCostBenefitCost from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new InsurancePlanPlanSpecificCostBenefitCost(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `InsurancePlanPlanSpecificCostBenefitCost is missing elements: ${missingElements.join(", ")}`;
         }
@@ -312,21 +312,21 @@ export class InsurancePlanPlanSpecificCostBenefit extends fhir.BackboneElement {
     /**
      * Check if the current InsurancePlanPlanSpecificCostBenefit contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a InsurancePlanPlanSpecificCostBenefit from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new InsurancePlanPlanSpecificCostBenefit(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `InsurancePlanPlanSpecificCostBenefit is missing elements: ${missingElements.join(", ")}`;
         }
@@ -356,21 +356,21 @@ export class InsurancePlanPlanSpecificCost extends fhir.BackboneElement {
     /**
      * Check if the current InsurancePlanPlanSpecificCost contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["category"] === undefined) {
             missingElements.push("category");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a InsurancePlanPlanSpecificCost from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new InsurancePlanPlanSpecificCost(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `InsurancePlanPlanSpecificCost is missing elements: ${missingElements.join(", ")}`;
         }
@@ -408,18 +408,18 @@ export class InsurancePlanPlan extends fhir.BackboneElement {
     /**
      * Check if the current InsurancePlanPlan contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a InsurancePlanPlan from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new InsurancePlanPlan(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `InsurancePlanPlan is missing elements: ${missingElements.join(", ")}`;
         }
@@ -491,18 +491,18 @@ export class InsurancePlan extends fhir.DomainResource {
     /**
      * Check if the current InsurancePlan contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a InsurancePlan from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new InsurancePlan(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `InsurancePlan is missing elements: ${missingElements.join(", ")}`;
         }

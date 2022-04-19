@@ -598,18 +598,18 @@ export class ClaimRelated extends fhir.BackboneElement implements fhir.IClaimRel
   /**
    * Check if the current ClaimRelated contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ClaimRelated from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IClaimRelated):ClaimRelated {
+  static override fromStrict(source:fhir.IClaimRelated):ClaimRelated {
     var dest:ClaimRelated = new ClaimRelated(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ClaimRelated is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -639,19 +639,19 @@ export class ClaimPayee extends fhir.BackboneElement implements fhir.IClaimPayee
   /**
    * Check if the current ClaimPayee contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ClaimPayee from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IClaimPayee):ClaimPayee {
+  static override fromStrict(source:fhir.IClaimPayee):ClaimPayee {
     var dest:ClaimPayee = new ClaimPayee(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ClaimPayee is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -702,20 +702,20 @@ export class ClaimCareTeam extends fhir.BackboneElement implements fhir.IClaimCa
   /**
    * Check if the current ClaimCareTeam contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["provider"] === undefined) { missingElements.push("provider"); }
     if (this["sequence"] === undefined) { missingElements.push("sequence"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ClaimCareTeam from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IClaimCareTeam):ClaimCareTeam {
+  static override fromStrict(source:fhir.IClaimCareTeam):ClaimCareTeam {
     var dest:ClaimCareTeam = new ClaimCareTeam(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ClaimCareTeam is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -800,20 +800,20 @@ export class ClaimSupportingInfo extends fhir.BackboneElement implements fhir.IC
   /**
    * Check if the current ClaimSupportingInfo contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["category"] === undefined) { missingElements.push("category"); }
     if (this["sequence"] === undefined) { missingElements.push("sequence"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ClaimSupportingInfo from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IClaimSupportingInfo):ClaimSupportingInfo {
+  static override fromStrict(source:fhir.IClaimSupportingInfo):ClaimSupportingInfo {
     var dest:ClaimSupportingInfo = new ClaimSupportingInfo(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ClaimSupportingInfo is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -865,19 +865,19 @@ export class ClaimDiagnosis extends fhir.BackboneElement implements fhir.IClaimD
   /**
    * Check if the current ClaimDiagnosis contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["sequence"] === undefined) { missingElements.push("sequence"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ClaimDiagnosis from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IClaimDiagnosis):ClaimDiagnosis {
+  static override fromStrict(source:fhir.IClaimDiagnosis):ClaimDiagnosis {
     var dest:ClaimDiagnosis = new ClaimDiagnosis(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ClaimDiagnosis is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -931,19 +931,19 @@ export class ClaimProcedure extends fhir.BackboneElement implements fhir.IClaimP
   /**
    * Check if the current ClaimProcedure contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["sequence"] === undefined) { missingElements.push("sequence"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ClaimProcedure from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IClaimProcedure):ClaimProcedure {
+  static override fromStrict(source:fhir.IClaimProcedure):ClaimProcedure {
     var dest:ClaimProcedure = new ClaimProcedure(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ClaimProcedure is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1010,21 +1010,21 @@ export class ClaimInsurance extends fhir.BackboneElement implements fhir.IClaimI
   /**
    * Check if the current ClaimInsurance contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["coverage"] === undefined) { missingElements.push("coverage"); }
     if (this["focal"] === undefined) { missingElements.push("focal"); }
     if (this["sequence"] === undefined) { missingElements.push("sequence"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ClaimInsurance from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IClaimInsurance):ClaimInsurance {
+  static override fromStrict(source:fhir.IClaimInsurance):ClaimInsurance {
     var dest:ClaimInsurance = new ClaimInsurance(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ClaimInsurance is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1066,19 +1066,19 @@ export class ClaimAccident extends fhir.BackboneElement implements fhir.IClaimAc
   /**
    * Check if the current ClaimAccident contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["date"] === undefined) { missingElements.push("date"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ClaimAccident from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IClaimAccident):ClaimAccident {
+  static override fromStrict(source:fhir.IClaimAccident):ClaimAccident {
     var dest:ClaimAccident = new ClaimAccident(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ClaimAccident is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1159,20 +1159,20 @@ export class ClaimItemDetailSubDetail extends fhir.BackboneElement implements fh
   /**
    * Check if the current ClaimItemDetailSubDetail contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["productOrService"] === undefined) { missingElements.push("productOrService"); }
     if (this["sequence"] === undefined) { missingElements.push("sequence"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ClaimItemDetailSubDetail from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IClaimItemDetailSubDetail):ClaimItemDetailSubDetail {
+  static override fromStrict(source:fhir.IClaimItemDetailSubDetail):ClaimItemDetailSubDetail {
     var dest:ClaimItemDetailSubDetail = new ClaimItemDetailSubDetail(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ClaimItemDetailSubDetail is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1258,20 +1258,20 @@ export class ClaimItemDetail extends fhir.BackboneElement implements fhir.IClaim
   /**
    * Check if the current ClaimItemDetail contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["productOrService"] === undefined) { missingElements.push("productOrService"); }
     if (this["sequence"] === undefined) { missingElements.push("sequence"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ClaimItemDetail from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IClaimItemDetail):ClaimItemDetail {
+  static override fromStrict(source:fhir.IClaimItemDetail):ClaimItemDetail {
     var dest:ClaimItemDetail = new ClaimItemDetail(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ClaimItemDetail is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1427,20 +1427,20 @@ export class ClaimItem extends fhir.BackboneElement implements fhir.IClaimItem {
   /**
    * Check if the current ClaimItem contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["productOrService"] === undefined) { missingElements.push("productOrService"); }
     if (this["sequence"] === undefined) { missingElements.push("sequence"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ClaimItem from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IClaimItem):ClaimItem {
+  static override fromStrict(source:fhir.IClaimItem):ClaimItem {
     var dest:ClaimItem = new ClaimItem(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ClaimItem is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1620,7 +1620,7 @@ export class Claim extends fhir.DomainResource implements fhir.IClaim {
   /**
    * Check if the current Claim contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["created"] === undefined) { missingElements.push("created"); }
     if ((!this["insurance"]) || (this["insurance"].length === 0)) { missingElements.push("insurance"); }
@@ -1630,16 +1630,16 @@ export class Claim extends fhir.DomainResource implements fhir.IClaim {
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
     if (this["use"] === undefined) { missingElements.push("use"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Claim from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IClaim):Claim {
+  static override fromStrict(source:fhir.IClaim):Claim {
     var dest:Claim = new Claim(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Claim is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

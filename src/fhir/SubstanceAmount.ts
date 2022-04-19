@@ -73,18 +73,18 @@ export class SubstanceAmountReferenceRange extends fhir.FhirElement implements f
   /**
    * Check if the current SubstanceAmountReferenceRange contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceAmountReferenceRange from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceAmountReferenceRange):SubstanceAmountReferenceRange {
+  static override fromStrict(source:fhir.ISubstanceAmountReferenceRange):SubstanceAmountReferenceRange {
     var dest:SubstanceAmountReferenceRange = new SubstanceAmountReferenceRange(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceAmountReferenceRange is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -136,18 +136,18 @@ export class SubstanceAmount extends fhir.BackboneElement implements fhir.ISubst
   /**
    * Check if the current SubstanceAmount contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceAmount from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceAmount):SubstanceAmount {
+  static override fromStrict(source:fhir.ISubstanceAmount):SubstanceAmount {
     var dest:SubstanceAmount = new SubstanceAmount(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceAmount is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

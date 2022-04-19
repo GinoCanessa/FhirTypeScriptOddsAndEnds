@@ -43,11 +43,11 @@ export declare class Contributor extends fhir.FhirElement implements fhir.IContr
     /**
      * Check if the current Contributor contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Contributor from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IContributor): Contributor;
+    static fromStrict(source: fhir.IContributor): Contributor;
 }
 /**
  * Code Values for the Contributor.type field

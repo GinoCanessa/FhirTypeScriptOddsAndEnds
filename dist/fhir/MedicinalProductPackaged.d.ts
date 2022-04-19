@@ -130,11 +130,11 @@ export declare class MedicinalProductPackagedBatchIdentifier extends fhir.Backbo
     /**
      * Check if the current MedicinalProductPackagedBatchIdentifier contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductPackagedBatchIdentifier from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductPackagedBatchIdentifier): MedicinalProductPackagedBatchIdentifier;
+    static fromStrict(source: fhir.IMedicinalProductPackagedBatchIdentifier): MedicinalProductPackagedBatchIdentifier;
 }
 /**
  * A packaging item, as a contained for medicine, possibly with other packaging items within.
@@ -195,11 +195,11 @@ export declare class MedicinalProductPackagedPackageItem extends fhir.BackboneEl
     /**
      * Check if the current MedicinalProductPackagedPackageItem contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductPackagedPackageItem from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductPackagedPackageItem): MedicinalProductPackagedPackageItem;
+    static fromStrict(source: fhir.IMedicinalProductPackagedPackageItem): MedicinalProductPackagedPackageItem;
 }
 /**
  * A medicinal product in a container or package.
@@ -253,10 +253,10 @@ export declare class MedicinalProductPackaged extends fhir.DomainResource implem
     /**
      * Check if the current MedicinalProductPackaged contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductPackaged from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductPackaged): MedicinalProductPackaged;
+    static fromStrict(source: fhir.IMedicinalProductPackaged): MedicinalProductPackaged;
 }
 //# sourceMappingURL=MedicinalProductPackaged.d.ts.map

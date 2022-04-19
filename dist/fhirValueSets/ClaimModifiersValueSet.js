@@ -13,7 +13,7 @@ export const ClaimModifiersValueSet = {
     /**
      * Repair of prior service or installation.
      */
-    claim_modifiers_RepairOfPriorServiceOrInstallation: Coding.FromStrict({
+    claim_modifiers_RepairOfPriorServiceOrInstallation: new Coding({
         code: "a",
         display: "Repair of prior service or installation",
         system: "http://terminology.hl7.org/CodeSystem/modifiers"
@@ -21,7 +21,7 @@ export const ClaimModifiersValueSet = {
     /**
      * Temporary service or installation.
      */
-    claim_modifiers_TemporaryServiceOrInstallation: Coding.FromStrict({
+    claim_modifiers_TemporaryServiceOrInstallation: new Coding({
         code: "b",
         display: "Temporary service or installation",
         system: "http://terminology.hl7.org/CodeSystem/modifiers"
@@ -29,7 +29,7 @@ export const ClaimModifiersValueSet = {
     /**
      * Treatment associated with TMJ.
      */
-    claim_modifiers_TMJTreatment: Coding.FromStrict({
+    claim_modifiers_TMJTreatment: new Coding({
         code: "c",
         display: "TMJ treatment",
         system: "http://terminology.hl7.org/CodeSystem/modifiers"
@@ -37,7 +37,7 @@ export const ClaimModifiersValueSet = {
     /**
      * Implant or associated with an implant.
      */
-    claim_modifiers_ImplantOrAssociatedWithAnImplant: Coding.FromStrict({
+    claim_modifiers_ImplantOrAssociatedWithAnImplant: new Coding({
         code: "e",
         display: "Implant or associated with an implant",
         system: "http://terminology.hl7.org/CodeSystem/modifiers"
@@ -45,7 +45,7 @@ export const ClaimModifiersValueSet = {
     /**
      * A Rush service or service performed outside of normal office hours.
      */
-    claim_modifiers_RushOrOutsideOfOfficeHours: Coding.FromStrict({
+    claim_modifiers_RushOrOutsideOfOfficeHours: new Coding({
         code: "rooh",
         display: "Rush or Outside of office hours",
         system: "http://terminology.hl7.org/CodeSystem/modifiers"
@@ -53,7 +53,7 @@ export const ClaimModifiersValueSet = {
     /**
      * None.
      */
-    claim_modifiers_None: Coding.FromStrict({
+    claim_modifiers_None: new Coding({
         code: "x",
         display: "None",
         system: "http://terminology.hl7.org/CodeSystem/modifiers"

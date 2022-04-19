@@ -125,11 +125,11 @@ export declare class PaymentNotice extends fhir.DomainResource implements fhir.I
     /**
      * Check if the current PaymentNotice contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a PaymentNotice from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPaymentNotice): PaymentNotice;
+    static fromStrict(source: fhir.IPaymentNotice): PaymentNotice;
 }
 /**
  * Code Values for the PaymentNotice.status field

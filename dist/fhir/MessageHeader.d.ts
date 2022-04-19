@@ -158,11 +158,11 @@ export declare class MessageHeaderDestination extends fhir.BackboneElement imple
     /**
      * Check if the current MessageHeaderDestination contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MessageHeaderDestination from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMessageHeaderDestination): MessageHeaderDestination;
+    static fromStrict(source: fhir.IMessageHeaderDestination): MessageHeaderDestination;
 }
 /**
  * The source application from which this message originated.
@@ -199,11 +199,11 @@ export declare class MessageHeaderSource extends fhir.BackboneElement implements
     /**
      * Check if the current MessageHeaderSource contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MessageHeaderSource from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMessageHeaderSource): MessageHeaderSource;
+    static fromStrict(source: fhir.IMessageHeaderSource): MessageHeaderSource;
 }
 /**
  * Information about the message that this message is a response to.  Only present if this message is a response.
@@ -230,11 +230,11 @@ export declare class MessageHeaderResponse extends fhir.BackboneElement implemen
     /**
      * Check if the current MessageHeaderResponse contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MessageHeaderResponse from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMessageHeaderResponse): MessageHeaderResponse;
+    static fromStrict(source: fhir.IMessageHeaderResponse): MessageHeaderResponse;
 }
 /**
  * The header for a message exchange that is either requesting or responding to an action.  The reference(s) that are the subject of the action as well as other information related to the action are typically transmitted in a bundle in which the MessageHeader resource instance is the first resource in the bundle.
@@ -301,11 +301,11 @@ export declare class MessageHeader extends fhir.DomainResource implements fhir.I
     /**
      * Check if the current MessageHeader contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MessageHeader from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMessageHeader): MessageHeader;
+    static fromStrict(source: fhir.IMessageHeader): MessageHeader;
 }
 /**
  * Code Values for the MessageHeader.response.code field

@@ -386,11 +386,11 @@ export declare class ImplementationGuideDependsOn extends fhir.BackboneElement i
     /**
      * Check if the current ImplementationGuideDependsOn contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImplementationGuideDependsOn from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImplementationGuideDependsOn): ImplementationGuideDependsOn;
+    static fromStrict(source: fhir.IImplementationGuideDependsOn): ImplementationGuideDependsOn;
 }
 /**
  * See [Default Profiles](implementationguide.html#default) for a discussion of which resources are 'covered' by an implementation guide.
@@ -413,11 +413,11 @@ export declare class ImplementationGuideGlobal extends fhir.BackboneElement impl
     /**
      * Check if the current ImplementationGuideGlobal contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImplementationGuideGlobal from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImplementationGuideGlobal): ImplementationGuideGlobal;
+    static fromStrict(source: fhir.IImplementationGuideGlobal): ImplementationGuideGlobal;
 }
 /**
  * Groupings are arbitrary sub-divisions of content. Typically, they are used to help build Table of Contents automatically.
@@ -440,11 +440,11 @@ export declare class ImplementationGuideDefinitionGrouping extends fhir.Backbone
     /**
      * Check if the current ImplementationGuideDefinitionGrouping contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImplementationGuideDefinitionGrouping from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImplementationGuideDefinitionGrouping): ImplementationGuideDefinitionGrouping;
+    static fromStrict(source: fhir.IImplementationGuideDefinitionGrouping): ImplementationGuideDefinitionGrouping;
 }
 /**
  * A resource that is part of the implementation guide. Conformance resources (value set, structure definition, capability statements etc.) are obvious candidates for inclusion, but any kind of resource can be included as an example resource.
@@ -499,11 +499,11 @@ export declare class ImplementationGuideDefinitionResource extends fhir.Backbone
     /**
      * Check if the current ImplementationGuideDefinitionResource contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImplementationGuideDefinitionResource from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImplementationGuideDefinitionResource): ImplementationGuideDefinitionResource;
+    static fromStrict(source: fhir.IImplementationGuideDefinitionResource): ImplementationGuideDefinitionResource;
 }
 /**
  * Pages automatically become sections if they have sub-pages. By convention, the home page is called index.html.
@@ -539,11 +539,11 @@ export declare class ImplementationGuideDefinitionPage extends fhir.BackboneElem
     /**
      * Check if the current ImplementationGuideDefinitionPage contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImplementationGuideDefinitionPage from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImplementationGuideDefinitionPage): ImplementationGuideDefinitionPage;
+    static fromStrict(source: fhir.IImplementationGuideDefinitionPage): ImplementationGuideDefinitionPage;
 }
 /**
  * Defines how IG is built by tools.
@@ -566,11 +566,11 @@ export declare class ImplementationGuideDefinitionParameter extends fhir.Backbon
     /**
      * Check if the current ImplementationGuideDefinitionParameter contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImplementationGuideDefinitionParameter from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImplementationGuideDefinitionParameter): ImplementationGuideDefinitionParameter;
+    static fromStrict(source: fhir.IImplementationGuideDefinitionParameter): ImplementationGuideDefinitionParameter;
 }
 /**
  * A template for building resources.
@@ -598,11 +598,11 @@ export declare class ImplementationGuideDefinitionTemplate extends fhir.Backbone
     /**
      * Check if the current ImplementationGuideDefinitionTemplate contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImplementationGuideDefinitionTemplate from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImplementationGuideDefinitionTemplate): ImplementationGuideDefinitionTemplate;
+    static fromStrict(source: fhir.IImplementationGuideDefinitionTemplate): ImplementationGuideDefinitionTemplate;
 }
 /**
  * Principally, this consists of information abuot source resource and file locations, and build parameters and templates.
@@ -635,11 +635,11 @@ export declare class ImplementationGuideDefinition extends fhir.BackboneElement 
     /**
      * Check if the current ImplementationGuideDefinition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImplementationGuideDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImplementationGuideDefinition): ImplementationGuideDefinition;
+    static fromStrict(source: fhir.IImplementationGuideDefinition): ImplementationGuideDefinition;
 }
 /**
  * A resource that is part of the implementation guide. Conformance resources (value set, structure definition, capability statements etc.) are obvious candidates for inclusion, but any kind of resource can be included as an example resource.
@@ -671,11 +671,11 @@ export declare class ImplementationGuideManifestResource extends fhir.BackboneEl
     /**
      * Check if the current ImplementationGuideManifestResource contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImplementationGuideManifestResource from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImplementationGuideManifestResource): ImplementationGuideManifestResource;
+    static fromStrict(source: fhir.IImplementationGuideManifestResource): ImplementationGuideManifestResource;
 }
 /**
  * Information about a page within the IG.
@@ -703,11 +703,11 @@ export declare class ImplementationGuideManifestPage extends fhir.BackboneElemen
     /**
      * Check if the current ImplementationGuideManifestPage contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImplementationGuideManifestPage from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImplementationGuideManifestPage): ImplementationGuideManifestPage;
+    static fromStrict(source: fhir.IImplementationGuideManifestPage): ImplementationGuideManifestPage;
 }
 /**
  * Information about an assembled implementation guide, created by the publication tooling.
@@ -743,11 +743,11 @@ export declare class ImplementationGuideManifest extends fhir.BackboneElement im
     /**
      * Check if the current ImplementationGuideManifest contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImplementationGuideManifest from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImplementationGuideManifest): ImplementationGuideManifest;
+    static fromStrict(source: fhir.IImplementationGuideManifest): ImplementationGuideManifest;
 }
 /**
  * A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
@@ -859,11 +859,11 @@ export declare class ImplementationGuide extends fhir.DomainResource implements 
     /**
      * Check if the current ImplementationGuide contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImplementationGuide from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImplementationGuide): ImplementationGuide;
+    static fromStrict(source: fhir.IImplementationGuide): ImplementationGuide;
 }
 /**
  * Code Values for the ImplementationGuide.definition.page.generation field

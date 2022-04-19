@@ -41,7 +41,7 @@ export class BundleLink extends fhir.BackboneElement {
     /**
      * Check if the current BundleLink contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["relation"] === undefined) {
             missingElements.push("relation");
@@ -49,16 +49,16 @@ export class BundleLink extends fhir.BackboneElement {
         if (this["url"] === undefined) {
             missingElements.push("url");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a BundleLink from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new BundleLink(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `BundleLink is missing elements: ${missingElements.join(", ")}`;
         }
@@ -90,18 +90,18 @@ export class BundleEntrySearch extends fhir.BackboneElement {
     /**
      * Check if the current BundleEntrySearch contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a BundleEntrySearch from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new BundleEntrySearch(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `BundleEntrySearch is missing elements: ${missingElements.join(", ")}`;
         }
@@ -165,7 +165,7 @@ export class BundleEntryRequest extends fhir.BackboneElement {
     /**
      * Check if the current BundleEntryRequest contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["method"] === undefined) {
             missingElements.push("method");
@@ -173,16 +173,16 @@ export class BundleEntryRequest extends fhir.BackboneElement {
         if (this["url"] === undefined) {
             missingElements.push("url");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a BundleEntryRequest from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new BundleEntryRequest(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `BundleEntryRequest is missing elements: ${missingElements.join(", ")}`;
         }
@@ -218,7 +218,7 @@ export class BundleEntryResponse extends fhir.BackboneElement {
             this._location = new fhir.FhirElement(source._location);
         }
         if (source["outcome"]) {
-            this.outcome = ((_a = fhir.FhirResourceFactory(source.outcome)) !== null && _a !== void 0 ? _a : undefined);
+            this.outcome = ((_a = fhir.fhirResourceFactory(source.outcome)) !== null && _a !== void 0 ? _a : undefined);
         }
         this.status = null;
         if (source["status"]) {
@@ -234,21 +234,21 @@ export class BundleEntryResponse extends fhir.BackboneElement {
     /**
      * Check if the current BundleEntryResponse contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a BundleEntryResponse from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new BundleEntryResponse(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `BundleEntryResponse is missing elements: ${missingElements.join(", ")}`;
         }
@@ -278,7 +278,7 @@ export class BundleEntry extends fhir.BackboneElement {
             this.request = new fhir.BundleEntryRequest(source.request);
         }
         if (source["resource"]) {
-            this.resource = ((_a = fhir.FhirResourceFactory(source.resource)) !== null && _a !== void 0 ? _a : undefined);
+            this.resource = ((_a = fhir.fhirResourceFactory(source.resource)) !== null && _a !== void 0 ? _a : undefined);
         }
         if (source["response"]) {
             this.response = new fhir.BundleEntryResponse(source.response);
@@ -290,18 +290,18 @@ export class BundleEntry extends fhir.BackboneElement {
     /**
      * Check if the current BundleEntry contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a BundleEntry from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new BundleEntry(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `BundleEntry is missing elements: ${missingElements.join(", ")}`;
         }
@@ -356,21 +356,21 @@ export class Bundle extends fhir.Resource {
     /**
      * Check if the current Bundle contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a Bundle from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new Bundle(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `Bundle is missing elements: ${missingElements.join(", ")}`;
         }

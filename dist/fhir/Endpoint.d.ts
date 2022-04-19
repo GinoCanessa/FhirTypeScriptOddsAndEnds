@@ -127,11 +127,11 @@ export declare class Endpoint extends fhir.DomainResource implements fhir.IEndpo
     /**
      * Check if the current Endpoint contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Endpoint from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEndpoint): Endpoint;
+    static fromStrict(source: fhir.IEndpoint): Endpoint;
 }
 /**
  * Code Values for the Endpoint.status field

@@ -10,27 +10,27 @@ import { Coding } from '../fhir'
  * FHIR Value set/code system definition for HL7 v2 table 0276 ( Appointment Reason Codes)
  */
 export const V20276ValueSet = {
-  v2_0276_ARoutineCheckUpSuchAsAnAnnualPhysical: Coding.FromStrict({
+  v2_0276_ARoutineCheckUpSuchAsAnAnnualPhysical: new Coding({
     code: "CHECKUP",
     display: "A routine check-up, such as an annual physical",
     system: "http://terminology.hl7.org/CodeSystem/v2-0276"
   }),
-  v2_0276_EmergencyAppointment: Coding.FromStrict({
+  v2_0276_EmergencyAppointment: new Coding({
     code: "EMERGENCY",
     display: "Emergency appointment",
     system: "http://terminology.hl7.org/CodeSystem/v2-0276"
   }),
-  v2_0276_AFollowUpVisitFromAPreviousAppointment: Coding.FromStrict({
+  v2_0276_AFollowUpVisitFromAPreviousAppointment: new Coding({
     code: "FOLLOWUP",
     display: "A follow up visit from a previous appointment",
     system: "http://terminology.hl7.org/CodeSystem/v2-0276"
   }),
-  v2_0276_RoutineAppointmentDefaultIfNotValued: Coding.FromStrict({
+  v2_0276_RoutineAppointmentDefaultIfNotValued: new Coding({
     code: "ROUTINE",
     display: "Routine appointment - default if not valued",
     system: "http://terminology.hl7.org/CodeSystem/v2-0276"
   }),
-  v2_0276_APreviouslyUnscheduledWalkInVisit: Coding.FromStrict({
+  v2_0276_APreviouslyUnscheduledWalkInVisit: new Coding({
     code: "WALKIN",
     display: "A previously unscheduled walk-in visit",
     system: "http://terminology.hl7.org/CodeSystem/v2-0276"

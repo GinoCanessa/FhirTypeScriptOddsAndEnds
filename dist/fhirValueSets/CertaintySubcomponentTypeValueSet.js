@@ -13,7 +13,7 @@ export const CertaintySubcomponentTypeValueSet = {
     /**
      * higher certainty due to dose response relationship.
      */
-    certainty_subcomponent_type_DoseResponseGradient: Coding.FromStrict({
+    certainty_subcomponent_type_DoseResponseGradient: new Coding({
         code: "DoseResponseGradient",
         display: "Dose response gradient",
         system: "http://terminology.hl7.org/CodeSystem/certainty-subcomponent-type"
@@ -21,7 +21,7 @@ export const CertaintySubcomponentTypeValueSet = {
     /**
      * High quality evidence.
      */
-    certainty_subcomponent_type_Imprecision: Coding.FromStrict({
+    certainty_subcomponent_type_Imprecision: new Coding({
         code: "Imprecision",
         display: "Imprecision",
         system: "http://terminology.hl7.org/CodeSystem/certainty-subcomponent-type"
@@ -29,7 +29,7 @@ export const CertaintySubcomponentTypeValueSet = {
     /**
      * concerns that findings are not similar enough to support certainty.
      */
-    certainty_subcomponent_type_Inconsistency: Coding.FromStrict({
+    certainty_subcomponent_type_Inconsistency: new Coding({
         code: "Inconsistency",
         display: "Inconsistency",
         system: "http://terminology.hl7.org/CodeSystem/certainty-subcomponent-type"
@@ -37,7 +37,7 @@ export const CertaintySubcomponentTypeValueSet = {
     /**
      * concerns reducing external validity.
      */
-    certainty_subcomponent_type_Indirectness: Coding.FromStrict({
+    certainty_subcomponent_type_Indirectness: new Coding({
         code: "Indirectness",
         display: "Indirectness",
         system: "http://terminology.hl7.org/CodeSystem/certainty-subcomponent-type"
@@ -45,7 +45,7 @@ export const CertaintySubcomponentTypeValueSet = {
     /**
      * higher certainty due to large effect size.
      */
-    certainty_subcomponent_type_LargeEffect: Coding.FromStrict({
+    certainty_subcomponent_type_LargeEffect: new Coding({
         code: "LargeEffect",
         display: "Large effect",
         system: "http://terminology.hl7.org/CodeSystem/certainty-subcomponent-type"
@@ -53,7 +53,7 @@ export const CertaintySubcomponentTypeValueSet = {
     /**
      * higher certainty due to risk of bias in opposite direction.
      */
-    certainty_subcomponent_type_PlausibleConfounding: Coding.FromStrict({
+    certainty_subcomponent_type_PlausibleConfounding: new Coding({
         code: "PlausibleConfounding",
         display: "Plausible confounding",
         system: "http://terminology.hl7.org/CodeSystem/certainty-subcomponent-type"
@@ -61,7 +61,7 @@ export const CertaintySubcomponentTypeValueSet = {
     /**
      * likelihood that what is published misrepresents what is available to publish.
      */
-    certainty_subcomponent_type_PublicationBias: Coding.FromStrict({
+    certainty_subcomponent_type_PublicationBias: new Coding({
         code: "PublicationBias",
         display: "Publication bias",
         system: "http://terminology.hl7.org/CodeSystem/certainty-subcomponent-type"
@@ -69,7 +69,7 @@ export const CertaintySubcomponentTypeValueSet = {
     /**
      * methodologic concerns reducing internal validity.
      */
-    certainty_subcomponent_type_RiskOfBias: Coding.FromStrict({
+    certainty_subcomponent_type_RiskOfBias: new Coding({
         code: "RiskOfBias",
         display: "Risk of bias",
         system: "http://terminology.hl7.org/CodeSystem/certainty-subcomponent-type"

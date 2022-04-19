@@ -151,11 +151,11 @@ export declare class DeviceUseStatement extends fhir.DomainResource implements f
     /**
      * Check if the current DeviceUseStatement contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DeviceUseStatement from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDeviceUseStatement): DeviceUseStatement;
+    static fromStrict(source: fhir.IDeviceUseStatement): DeviceUseStatement;
 }
 /**
  * Code Values for the DeviceUseStatement.status field

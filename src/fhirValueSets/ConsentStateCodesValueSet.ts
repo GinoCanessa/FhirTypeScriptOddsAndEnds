@@ -13,7 +13,7 @@ export const ConsentStateCodesValueSet = {
   /**
    * The consent is to be followed and enforced.
    */
-  consent_state_codes_Active: Coding.FromStrict({
+  consent_state_codes_Active: new Coding({
     code: "active",
     display: "Active",
     system: "http://hl7.org/fhir/consent-state-codes"
@@ -21,7 +21,7 @@ export const ConsentStateCodesValueSet = {
   /**
    * The consent is in development or awaiting use but is not yet intended to be acted upon.
    */
-  consent_state_codes_Pending: Coding.FromStrict({
+  consent_state_codes_Pending: new Coding({
     code: "draft",
     display: "Pending",
     system: "http://hl7.org/fhir/consent-state-codes"
@@ -29,7 +29,7 @@ export const ConsentStateCodesValueSet = {
   /**
    * The consent was created wrongly (e.g. wrong patient) and should be ignored.
    */
-  consent_state_codes_EnteredInError: Coding.FromStrict({
+  consent_state_codes_EnteredInError: new Coding({
     code: "entered-in-error",
     display: "Entered in Error",
     system: "http://hl7.org/fhir/consent-state-codes"
@@ -37,7 +37,7 @@ export const ConsentStateCodesValueSet = {
   /**
    * The consent is terminated or replaced.
    */
-  consent_state_codes_Inactive: Coding.FromStrict({
+  consent_state_codes_Inactive: new Coding({
     code: "inactive",
     display: "Inactive",
     system: "http://hl7.org/fhir/consent-state-codes"
@@ -45,7 +45,7 @@ export const ConsentStateCodesValueSet = {
   /**
    * The consent has been proposed but not yet agreed to by all parties. The negotiation stage.
    */
-  consent_state_codes_Proposed: Coding.FromStrict({
+  consent_state_codes_Proposed: new Coding({
     code: "proposed",
     display: "Proposed",
     system: "http://hl7.org/fhir/consent-state-codes"
@@ -53,7 +53,7 @@ export const ConsentStateCodesValueSet = {
   /**
    * The consent has been rejected by one or more of the parties.
    */
-  consent_state_codes_Rejected: Coding.FromStrict({
+  consent_state_codes_Rejected: new Coding({
     code: "rejected",
     display: "Rejected",
     system: "http://hl7.org/fhir/consent-state-codes"

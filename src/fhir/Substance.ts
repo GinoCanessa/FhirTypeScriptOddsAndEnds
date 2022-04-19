@@ -110,18 +110,18 @@ export class SubstanceInstance extends fhir.BackboneElement implements fhir.ISub
   /**
    * Check if the current SubstanceInstance contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceInstance from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceInstance):SubstanceInstance {
+  static override fromStrict(source:fhir.ISubstanceInstance):SubstanceInstance {
     var dest:SubstanceInstance = new SubstanceInstance(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceInstance is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -154,18 +154,18 @@ export class SubstanceIngredient extends fhir.BackboneElement implements fhir.IS
   /**
    * Check if the current SubstanceIngredient contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceIngredient from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceIngredient):SubstanceIngredient {
+  static override fromStrict(source:fhir.ISubstanceIngredient):SubstanceIngredient {
     var dest:SubstanceIngredient = new SubstanceIngredient(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceIngredient is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -229,19 +229,19 @@ export class Substance extends fhir.DomainResource implements fhir.ISubstance {
   /**
    * Check if the current Substance contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Substance from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstance):Substance {
+  static override fromStrict(source:fhir.ISubstance):Substance {
     var dest:Substance = new Substance(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Substance is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

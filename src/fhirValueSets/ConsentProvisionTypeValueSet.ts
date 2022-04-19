@@ -13,7 +13,7 @@ export const ConsentProvisionTypeValueSet = {
   /**
    * Consent is denied for actions meeting these rules.
    */
-  consent_provision_type_OptOut: Coding.FromStrict({
+  consent_provision_type_OptOut: new Coding({
     code: "deny",
     display: "Opt Out",
     system: "http://hl7.org/fhir/consent-provision-type"
@@ -21,7 +21,7 @@ export const ConsentProvisionTypeValueSet = {
   /**
    * Consent is provided for actions meeting these rules.
    */
-  consent_provision_type_OptIn: Coding.FromStrict({
+  consent_provision_type_OptIn: new Coding({
     code: "permit",
     display: "Opt In",
     system: "http://hl7.org/fhir/consent-provision-type"

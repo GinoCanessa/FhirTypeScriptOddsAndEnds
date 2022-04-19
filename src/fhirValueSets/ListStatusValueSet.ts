@@ -13,7 +13,7 @@ export const ListStatusValueSet = {
   /**
    * The list is considered to be an active part of the patient's record.
    */
-  list_status_Current: Coding.FromStrict({
+  list_status_Current: new Coding({
     code: "current",
     display: "Current",
     system: "http://hl7.org/fhir/list-status"
@@ -21,7 +21,7 @@ export const ListStatusValueSet = {
   /**
    * The list was never accurate.  It is retained for medico-legal purposes only.
    */
-  list_status_EnteredInError: Coding.FromStrict({
+  list_status_EnteredInError: new Coding({
     code: "entered-in-error",
     display: "Entered In Error",
     system: "http://hl7.org/fhir/list-status"
@@ -29,7 +29,7 @@ export const ListStatusValueSet = {
   /**
    * The list is "old" and should no longer be considered accurate or relevant.
    */
-  list_status_Retired: Coding.FromStrict({
+  list_status_Retired: new Coding({
     code: "retired",
     display: "Retired",
     system: "http://hl7.org/fhir/list-status"

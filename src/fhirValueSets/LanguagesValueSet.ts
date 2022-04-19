@@ -10,282 +10,282 @@ import { Coding } from '../fhir'
  * This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47)
  */
 export const LanguagesValueSet = {
-  LanguagesValueSet_Arabic: Coding.FromStrict({
+  LanguagesValueSet_Arabic: new Coding({
     code: "ar",
     display: "Arabic",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Bengali: Coding.FromStrict({
+  LanguagesValueSet_Bengali: new Coding({
     code: "bn",
     display: "Bengali",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Czech: Coding.FromStrict({
+  LanguagesValueSet_Czech: new Coding({
     code: "cs",
     display: "Czech",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Danish: Coding.FromStrict({
+  LanguagesValueSet_Danish: new Coding({
     code: "da",
     display: "Danish",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_German: Coding.FromStrict({
+  LanguagesValueSet_German: new Coding({
     code: "de",
     display: "German",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_GermanAustria: Coding.FromStrict({
+  LanguagesValueSet_GermanAustria: new Coding({
     code: "de-AT",
     display: "German (Austria)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_GermanSwitzerland: Coding.FromStrict({
+  LanguagesValueSet_GermanSwitzerland: new Coding({
     code: "de-CH",
     display: "German (Switzerland)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_GermanGermany: Coding.FromStrict({
+  LanguagesValueSet_GermanGermany: new Coding({
     code: "de-DE",
     display: "German (Germany)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Greek: Coding.FromStrict({
+  LanguagesValueSet_Greek: new Coding({
     code: "el",
     display: "Greek",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_English: Coding.FromStrict({
+  LanguagesValueSet_English: new Coding({
     code: "en",
     display: "English",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_EnglishAustralia: Coding.FromStrict({
+  LanguagesValueSet_EnglishAustralia: new Coding({
     code: "en-AU",
     display: "English (Australia)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_EnglishCanada: Coding.FromStrict({
+  LanguagesValueSet_EnglishCanada: new Coding({
     code: "en-CA",
     display: "English (Canada)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_EnglishGreatBritain: Coding.FromStrict({
+  LanguagesValueSet_EnglishGreatBritain: new Coding({
     code: "en-GB",
     display: "English (Great Britain)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_EnglishIndia: Coding.FromStrict({
+  LanguagesValueSet_EnglishIndia: new Coding({
     code: "en-IN",
     display: "English (India)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_EnglishNewZeland: Coding.FromStrict({
+  LanguagesValueSet_EnglishNewZeland: new Coding({
     code: "en-NZ",
     display: "English (New Zeland)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_EnglishSingapore: Coding.FromStrict({
+  LanguagesValueSet_EnglishSingapore: new Coding({
     code: "en-SG",
     display: "English (Singapore)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_EnglishUnitedStates: Coding.FromStrict({
+  LanguagesValueSet_EnglishUnitedStates: new Coding({
     code: "en-US",
     display: "English (United States)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Spanish: Coding.FromStrict({
+  LanguagesValueSet_Spanish: new Coding({
     code: "es",
     display: "Spanish",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_SpanishArgentina: Coding.FromStrict({
+  LanguagesValueSet_SpanishArgentina: new Coding({
     code: "es-AR",
     display: "Spanish (Argentina)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_SpanishSpain: Coding.FromStrict({
+  LanguagesValueSet_SpanishSpain: new Coding({
     code: "es-ES",
     display: "Spanish (Spain)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_SpanishUruguay: Coding.FromStrict({
+  LanguagesValueSet_SpanishUruguay: new Coding({
     code: "es-UY",
     display: "Spanish (Uruguay)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Finnish: Coding.FromStrict({
+  LanguagesValueSet_Finnish: new Coding({
     code: "fi",
     display: "Finnish",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_French: Coding.FromStrict({
+  LanguagesValueSet_French: new Coding({
     code: "fr",
     display: "French",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_FrenchBelgium: Coding.FromStrict({
+  LanguagesValueSet_FrenchBelgium: new Coding({
     code: "fr-BE",
     display: "French (Belgium)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_FrenchSwitzerland: Coding.FromStrict({
+  LanguagesValueSet_FrenchSwitzerland: new Coding({
     code: "fr-CH",
     display: "French (Switzerland)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_FrenchFrance: Coding.FromStrict({
+  LanguagesValueSet_FrenchFrance: new Coding({
     code: "fr-FR",
     display: "French (France)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Frysian: Coding.FromStrict({
+  LanguagesValueSet_Frysian: new Coding({
     code: "fy",
     display: "Frysian",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_FrysianNetherlands: Coding.FromStrict({
+  LanguagesValueSet_FrysianNetherlands: new Coding({
     code: "fy-NL",
     display: "Frysian (Netherlands)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Hindi: Coding.FromStrict({
+  LanguagesValueSet_Hindi: new Coding({
     code: "hi",
     display: "Hindi",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Croatian: Coding.FromStrict({
+  LanguagesValueSet_Croatian: new Coding({
     code: "hr",
     display: "Croatian",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Italian: Coding.FromStrict({
+  LanguagesValueSet_Italian: new Coding({
     code: "it",
     display: "Italian",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_ItalianSwitzerland: Coding.FromStrict({
+  LanguagesValueSet_ItalianSwitzerland: new Coding({
     code: "it-CH",
     display: "Italian (Switzerland)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_ItalianItaly: Coding.FromStrict({
+  LanguagesValueSet_ItalianItaly: new Coding({
     code: "it-IT",
     display: "Italian (Italy)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Japanese: Coding.FromStrict({
+  LanguagesValueSet_Japanese: new Coding({
     code: "ja",
     display: "Japanese",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Korean: Coding.FromStrict({
+  LanguagesValueSet_Korean: new Coding({
     code: "ko",
     display: "Korean",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Dutch: Coding.FromStrict({
+  LanguagesValueSet_Dutch: new Coding({
     code: "nl",
     display: "Dutch",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_DutchBelgium: Coding.FromStrict({
+  LanguagesValueSet_DutchBelgium: new Coding({
     code: "nl-BE",
     display: "Dutch (Belgium)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_DutchNetherlands: Coding.FromStrict({
+  LanguagesValueSet_DutchNetherlands: new Coding({
     code: "nl-NL",
     display: "Dutch (Netherlands)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Norwegian: Coding.FromStrict({
+  LanguagesValueSet_Norwegian: new Coding({
     code: "no",
     display: "Norwegian",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_NorwegianNorway: Coding.FromStrict({
+  LanguagesValueSet_NorwegianNorway: new Coding({
     code: "no-NO",
     display: "Norwegian (Norway)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Punjabi: Coding.FromStrict({
+  LanguagesValueSet_Punjabi: new Coding({
     code: "pa",
     display: "Punjabi",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Polish: Coding.FromStrict({
+  LanguagesValueSet_Polish: new Coding({
     code: "pl",
     display: "Polish",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Portuguese: Coding.FromStrict({
+  LanguagesValueSet_Portuguese: new Coding({
     code: "pt",
     display: "Portuguese",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_PortugueseBrazil: Coding.FromStrict({
+  LanguagesValueSet_PortugueseBrazil: new Coding({
     code: "pt-BR",
     display: "Portuguese (Brazil)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Russian: Coding.FromStrict({
+  LanguagesValueSet_Russian: new Coding({
     code: "ru",
     display: "Russian",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_RussianRussia: Coding.FromStrict({
+  LanguagesValueSet_RussianRussia: new Coding({
     code: "ru-RU",
     display: "Russian (Russia)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Serbian: Coding.FromStrict({
+  LanguagesValueSet_Serbian: new Coding({
     code: "sr",
     display: "Serbian",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_SerbianSerbia: Coding.FromStrict({
+  LanguagesValueSet_SerbianSerbia: new Coding({
     code: "sr-RS",
     display: "Serbian (Serbia)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Swedish: Coding.FromStrict({
+  LanguagesValueSet_Swedish: new Coding({
     code: "sv",
     display: "Swedish",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_SwedishSweden: Coding.FromStrict({
+  LanguagesValueSet_SwedishSweden: new Coding({
     code: "sv-SE",
     display: "Swedish (Sweden)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Telegu: Coding.FromStrict({
+  LanguagesValueSet_Telegu: new Coding({
     code: "te",
     display: "Telegu",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_Chinese: Coding.FromStrict({
+  LanguagesValueSet_Chinese: new Coding({
     code: "zh",
     display: "Chinese",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_ChineseChina: Coding.FromStrict({
+  LanguagesValueSet_ChineseChina: new Coding({
     code: "zh-CN",
     display: "Chinese (China)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_ChineseHongKong: Coding.FromStrict({
+  LanguagesValueSet_ChineseHongKong: new Coding({
     code: "zh-HK",
     display: "Chinese (Hong Kong)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_ChineseSingapore: Coding.FromStrict({
+  LanguagesValueSet_ChineseSingapore: new Coding({
     code: "zh-SG",
     display: "Chinese (Singapore)",
     system: "urn:ietf:bcp:47"
   }),
-  LanguagesValueSet_ChineseTaiwan: Coding.FromStrict({
+  LanguagesValueSet_ChineseTaiwan: new Coding({
     code: "zh-TW",
     display: "Chinese (Taiwan)",
     system: "urn:ietf:bcp:47"

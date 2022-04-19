@@ -13,7 +13,7 @@ export const SupplydeliveryTypeValueSet = {
   /**
    * What is supplied (or requested) is a device.
    */
-  supplydelivery_type_Device: Coding.FromStrict({
+  supplydelivery_type_Device: new Coding({
     code: "device",
     display: "Device",
     system: "http://terminology.hl7.org/CodeSystem/supply-item-type"
@@ -21,7 +21,7 @@ export const SupplydeliveryTypeValueSet = {
   /**
    * Supply is a kind of medication.
    */
-  supplydelivery_type_Medication: Coding.FromStrict({
+  supplydelivery_type_Medication: new Coding({
     code: "medication",
     display: "Medication",
     system: "http://terminology.hl7.org/CodeSystem/supply-item-type"

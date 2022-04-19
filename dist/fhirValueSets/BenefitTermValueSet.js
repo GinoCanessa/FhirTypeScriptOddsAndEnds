@@ -13,7 +13,7 @@ export const BenefitTermValueSet = {
     /**
      * Annual, renewing on the anniversary
      */
-    benefit_term_Annual: Coding.FromStrict({
+    benefit_term_Annual: new Coding({
         code: "annual",
         display: "Annual",
         system: "http://terminology.hl7.org/CodeSystem/benefit-term"
@@ -21,7 +21,7 @@ export const BenefitTermValueSet = {
     /**
      * Per day
      */
-    benefit_term_Day: Coding.FromStrict({
+    benefit_term_Day: new Coding({
         code: "day",
         display: "Day",
         system: "http://terminology.hl7.org/CodeSystem/benefit-term"
@@ -29,7 +29,7 @@ export const BenefitTermValueSet = {
     /**
      * For the total term, lifetime, of the policy or coverage
      */
-    benefit_term_Lifetime: Coding.FromStrict({
+    benefit_term_Lifetime: new Coding({
         code: "lifetime",
         display: "Lifetime",
         system: "http://terminology.hl7.org/CodeSystem/benefit-term"

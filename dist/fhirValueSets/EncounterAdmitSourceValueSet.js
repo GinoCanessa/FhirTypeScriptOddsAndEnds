@@ -13,7 +13,7 @@ export const EncounterAdmitSourceValueSet = {
     /**
      * The patient is a newborn and the encounter will track the baby related activities (as opposed to the Mothers encounter - that may be associated using the newborn encounters partof property)
      */
-    encounter_admit_source_BornInHospital: Coding.FromStrict({
+    encounter_admit_source_BornInHospital: new Coding({
         code: "born",
         display: "Born in hospital",
         system: "http://terminology.hl7.org/CodeSystem/admit-source"
@@ -21,7 +21,7 @@ export const EncounterAdmitSourceValueSet = {
     /**
      * The patient has been transferred from the emergency department within the hospital. This is typically used in the transition to an inpatient encounter
      */
-    encounter_admit_source_FromAccidentEmergencyDepartment: Coding.FromStrict({
+    encounter_admit_source_FromAccidentEmergencyDepartment: new Coding({
         code: "emd",
         display: "From accident/emergency department",
         system: "http://terminology.hl7.org/CodeSystem/admit-source"
@@ -29,7 +29,7 @@ export const EncounterAdmitSourceValueSet = {
     /**
      * The patient has been admitted due to a referred from a General Practitioner.
      */
-    encounter_admit_source_GeneralPractitionerReferral: Coding.FromStrict({
+    encounter_admit_source_GeneralPractitionerReferral: new Coding({
         code: "gp",
         display: "General Practitioner referral",
         system: "http://terminology.hl7.org/CodeSystem/admit-source"
@@ -37,7 +37,7 @@ export const EncounterAdmitSourceValueSet = {
     /**
      * The Patient has been transferred from another hospital for this encounter.
      */
-    encounter_admit_source_TransferredFromOtherHospital: Coding.FromStrict({
+    encounter_admit_source_TransferredFromOtherHospital: new Coding({
         code: "hosp-trans",
         display: "Transferred from other hospital",
         system: "http://terminology.hl7.org/CodeSystem/admit-source"
@@ -45,7 +45,7 @@ export const EncounterAdmitSourceValueSet = {
     /**
      * The patient has been admitted due to a referred from a Specialist (as opposed to a General Practitioner).
      */
-    encounter_admit_source_MedicalPractitionerPhysicianReferral: Coding.FromStrict({
+    encounter_admit_source_MedicalPractitionerPhysicianReferral: new Coding({
         code: "mp",
         display: "Medical Practitioner/physician referral",
         system: "http://terminology.hl7.org/CodeSystem/admit-source"
@@ -53,7 +53,7 @@ export const EncounterAdmitSourceValueSet = {
     /**
      * The patient has been transferred from a nursing home.
      */
-    encounter_admit_source_FromNursingHome: Coding.FromStrict({
+    encounter_admit_source_FromNursingHome: new Coding({
         code: "nursing",
         display: "From nursing home",
         system: "http://terminology.hl7.org/CodeSystem/admit-source"
@@ -61,7 +61,7 @@ export const EncounterAdmitSourceValueSet = {
     /**
      * The patient has been admitted from a source otherwise not specified here.
      */
-    encounter_admit_source_Other: Coding.FromStrict({
+    encounter_admit_source_Other: new Coding({
         code: "other",
         display: "Other",
         system: "http://terminology.hl7.org/CodeSystem/admit-source"
@@ -69,7 +69,7 @@ export const EncounterAdmitSourceValueSet = {
     /**
      * The patient has been transferred from an outpatient department within the hospital.
      */
-    encounter_admit_source_FromOutpatientDepartment: Coding.FromStrict({
+    encounter_admit_source_FromOutpatientDepartment: new Coding({
         code: "outp",
         display: "From outpatient department",
         system: "http://terminology.hl7.org/CodeSystem/admit-source"
@@ -77,7 +77,7 @@ export const EncounterAdmitSourceValueSet = {
     /**
      * The patient has been transferred from a psychiatric facility.
      */
-    encounter_admit_source_FromPsychiatricHospital: Coding.FromStrict({
+    encounter_admit_source_FromPsychiatricHospital: new Coding({
         code: "psych",
         display: "From psychiatric hospital",
         system: "http://terminology.hl7.org/CodeSystem/admit-source"
@@ -85,7 +85,7 @@ export const EncounterAdmitSourceValueSet = {
     /**
      * The patient has been transferred from a rehabilitation facility or clinic.
      */
-    encounter_admit_source_FromRehabilitationFacility: Coding.FromStrict({
+    encounter_admit_source_FromRehabilitationFacility: new Coding({
         code: "rehab",
         display: "From rehabilitation facility",
         system: "http://terminology.hl7.org/CodeSystem/admit-source"

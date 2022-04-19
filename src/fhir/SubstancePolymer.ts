@@ -190,18 +190,18 @@ export class SubstancePolymerMonomerSetStartingMaterial extends fhir.BackboneEle
   /**
    * Check if the current SubstancePolymerMonomerSetStartingMaterial contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstancePolymerMonomerSetStartingMaterial from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstancePolymerMonomerSetStartingMaterial):SubstancePolymerMonomerSetStartingMaterial {
+  static override fromStrict(source:fhir.ISubstancePolymerMonomerSetStartingMaterial):SubstancePolymerMonomerSetStartingMaterial {
     var dest:SubstancePolymerMonomerSetStartingMaterial = new SubstancePolymerMonomerSetStartingMaterial(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstancePolymerMonomerSetStartingMaterial is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -229,18 +229,18 @@ export class SubstancePolymerMonomerSet extends fhir.BackboneElement implements 
   /**
    * Check if the current SubstancePolymerMonomerSet contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstancePolymerMonomerSet from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstancePolymerMonomerSet):SubstancePolymerMonomerSet {
+  static override fromStrict(source:fhir.ISubstancePolymerMonomerSet):SubstancePolymerMonomerSet {
     var dest:SubstancePolymerMonomerSet = new SubstancePolymerMonomerSet(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstancePolymerMonomerSet is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -268,18 +268,18 @@ export class SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation extends fhir
   /**
    * Check if the current SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation):SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation {
+  static override fromStrict(source:fhir.ISubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation):SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation {
     var dest:SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation = new SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -314,18 +314,18 @@ export class SubstancePolymerRepeatRepeatUnitStructuralRepresentation extends fh
   /**
    * Check if the current SubstancePolymerRepeatRepeatUnitStructuralRepresentation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstancePolymerRepeatRepeatUnitStructuralRepresentation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstancePolymerRepeatRepeatUnitStructuralRepresentation):SubstancePolymerRepeatRepeatUnitStructuralRepresentation {
+  static override fromStrict(source:fhir.ISubstancePolymerRepeatRepeatUnitStructuralRepresentation):SubstancePolymerRepeatRepeatUnitStructuralRepresentation {
     var dest:SubstancePolymerRepeatRepeatUnitStructuralRepresentation = new SubstancePolymerRepeatRepeatUnitStructuralRepresentation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstancePolymerRepeatRepeatUnitStructuralRepresentation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -370,18 +370,18 @@ export class SubstancePolymerRepeatRepeatUnit extends fhir.BackboneElement imple
   /**
    * Check if the current SubstancePolymerRepeatRepeatUnit contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstancePolymerRepeatRepeatUnit from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstancePolymerRepeatRepeatUnit):SubstancePolymerRepeatRepeatUnit {
+  static override fromStrict(source:fhir.ISubstancePolymerRepeatRepeatUnit):SubstancePolymerRepeatRepeatUnit {
     var dest:SubstancePolymerRepeatRepeatUnit = new SubstancePolymerRepeatRepeatUnit(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstancePolymerRepeatRepeatUnit is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -423,18 +423,18 @@ export class SubstancePolymerRepeat extends fhir.BackboneElement implements fhir
   /**
    * Check if the current SubstancePolymerRepeat contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstancePolymerRepeat from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstancePolymerRepeat):SubstancePolymerRepeat {
+  static override fromStrict(source:fhir.ISubstancePolymerRepeat):SubstancePolymerRepeat {
     var dest:SubstancePolymerRepeat = new SubstancePolymerRepeat(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstancePolymerRepeat is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -489,18 +489,18 @@ export class SubstancePolymer extends fhir.DomainResource implements fhir.ISubst
   /**
    * Check if the current SubstancePolymer contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstancePolymer from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstancePolymer):SubstancePolymer {
+  static override fromStrict(source:fhir.ISubstancePolymer):SubstancePolymer {
     var dest:SubstancePolymer = new SubstancePolymer(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstancePolymer is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

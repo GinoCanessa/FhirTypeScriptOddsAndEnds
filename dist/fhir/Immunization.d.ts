@@ -246,11 +246,11 @@ export declare class ImmunizationPerformer extends fhir.BackboneElement implemen
     /**
      * Check if the current ImmunizationPerformer contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImmunizationPerformer from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImmunizationPerformer): ImmunizationPerformer;
+    static fromStrict(source: fhir.IImmunizationPerformer): ImmunizationPerformer;
 }
 /**
  * Educational material presented to the patient (or guardian) at the time of vaccine administration.
@@ -283,11 +283,11 @@ export declare class ImmunizationEducation extends fhir.BackboneElement implemen
     /**
      * Check if the current ImmunizationEducation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImmunizationEducation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImmunizationEducation): ImmunizationEducation;
+    static fromStrict(source: fhir.IImmunizationEducation): ImmunizationEducation;
 }
 /**
  * A reaction may be an indication of an allergy or intolerance and, if this is determined to be the case, it should be recorded as a new AllergyIntolerance resource instance as most systems will not query against past Immunization.reaction elements.
@@ -314,11 +314,11 @@ export declare class ImmunizationReaction extends fhir.BackboneElement implement
     /**
      * Check if the current ImmunizationReaction contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImmunizationReaction from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImmunizationReaction): ImmunizationReaction;
+    static fromStrict(source: fhir.IImmunizationReaction): ImmunizationReaction;
 }
 /**
  * The protocol (set of recommendations) being followed by the provider who administered the dose.
@@ -364,11 +364,11 @@ export declare class ImmunizationProtocolApplied extends fhir.BackboneElement im
     /**
      * Check if the current ImmunizationProtocolApplied contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImmunizationProtocolApplied from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImmunizationProtocolApplied): ImmunizationProtocolApplied;
+    static fromStrict(source: fhir.IImmunizationProtocolApplied): ImmunizationProtocolApplied;
 }
 /**
  * Describes the event of a patient being administered a vaccine or a record of an immunization as reported by a patient, a clinician or another party.
@@ -509,11 +509,11 @@ export declare class Immunization extends fhir.DomainResource implements fhir.II
     /**
      * Check if the current Immunization contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Immunization from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImmunization): Immunization;
+    static fromStrict(source: fhir.IImmunization): Immunization;
 }
 /**
  * Code Values for the Immunization.status field

@@ -184,11 +184,11 @@ export declare class MeasureReportGroupPopulation extends fhir.BackboneElement i
     /**
      * Check if the current MeasureReportGroupPopulation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MeasureReportGroupPopulation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMeasureReportGroupPopulation): MeasureReportGroupPopulation;
+    static fromStrict(source: fhir.IMeasureReportGroupPopulation): MeasureReportGroupPopulation;
 }
 /**
  * A stratifier component value.
@@ -209,11 +209,11 @@ export declare class MeasureReportGroupStratifierStratumComponent extends fhir.B
     /**
      * Check if the current MeasureReportGroupStratifierStratumComponent contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MeasureReportGroupStratifierStratumComponent from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMeasureReportGroupStratifierStratumComponent): MeasureReportGroupStratifierStratumComponent;
+    static fromStrict(source: fhir.IMeasureReportGroupStratifierStratumComponent): MeasureReportGroupStratifierStratumComponent;
 }
 /**
  * The populations that make up the stratum, one for each type of population appropriate to the measure.
@@ -239,11 +239,11 @@ export declare class MeasureReportGroupStratifierStratumPopulation extends fhir.
     /**
      * Check if the current MeasureReportGroupStratifierStratumPopulation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MeasureReportGroupStratifierStratumPopulation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMeasureReportGroupStratifierStratumPopulation): MeasureReportGroupStratifierStratumPopulation;
+    static fromStrict(source: fhir.IMeasureReportGroupStratifierStratumPopulation): MeasureReportGroupStratifierStratumPopulation;
 }
 /**
  * This element contains the results for a single stratum within the stratifier. For example, when stratifying on administrative gender, there will be four strata, one for each possible gender value.
@@ -272,11 +272,11 @@ export declare class MeasureReportGroupStratifierStratum extends fhir.BackboneEl
     /**
      * Check if the current MeasureReportGroupStratifierStratum contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MeasureReportGroupStratifierStratum from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMeasureReportGroupStratifierStratum): MeasureReportGroupStratifierStratum;
+    static fromStrict(source: fhir.IMeasureReportGroupStratifierStratum): MeasureReportGroupStratifierStratum;
 }
 /**
  * When a measure includes multiple stratifiers, there will be a stratifier group for each stratifier defined by the measure.
@@ -297,11 +297,11 @@ export declare class MeasureReportGroupStratifier extends fhir.BackboneElement i
     /**
      * Check if the current MeasureReportGroupStratifier contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MeasureReportGroupStratifier from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMeasureReportGroupStratifier): MeasureReportGroupStratifier;
+    static fromStrict(source: fhir.IMeasureReportGroupStratifier): MeasureReportGroupStratifier;
 }
 /**
  * The results of the calculation, one for each population group in the measure.
@@ -330,11 +330,11 @@ export declare class MeasureReportGroup extends fhir.BackboneElement implements 
     /**
      * Check if the current MeasureReportGroup contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MeasureReportGroup from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMeasureReportGroup): MeasureReportGroup;
+    static fromStrict(source: fhir.IMeasureReportGroup): MeasureReportGroup;
 }
 /**
  * The MeasureReport resource contains the results of the calculation of a measure; and optionally a reference to the resources involved in that calculation.
@@ -399,11 +399,11 @@ export declare class MeasureReport extends fhir.DomainResource implements fhir.I
     /**
      * Check if the current MeasureReport contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MeasureReport from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMeasureReport): MeasureReport;
+    static fromStrict(source: fhir.IMeasureReport): MeasureReport;
 }
 /**
  * Code Values for the MeasureReport.status field

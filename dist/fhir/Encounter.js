@@ -36,7 +36,7 @@ export class EncounterStatusHistory extends fhir.BackboneElement {
     /**
      * Check if the current EncounterStatusHistory contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["period"] === undefined) {
             missingElements.push("period");
@@ -44,16 +44,16 @@ export class EncounterStatusHistory extends fhir.BackboneElement {
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a EncounterStatusHistory from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new EncounterStatusHistory(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `EncounterStatusHistory is missing elements: ${missingElements.join(", ")}`;
         }
@@ -87,7 +87,7 @@ export class EncounterClassHistory extends fhir.BackboneElement {
     /**
      * Check if the current EncounterClassHistory contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["class"] === undefined) {
             missingElements.push("class");
@@ -95,16 +95,16 @@ export class EncounterClassHistory extends fhir.BackboneElement {
         if (this["period"] === undefined) {
             missingElements.push("period");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a EncounterClassHistory from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new EncounterClassHistory(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `EncounterClassHistory is missing elements: ${missingElements.join(", ")}`;
         }
@@ -133,18 +133,18 @@ export class EncounterParticipant extends fhir.BackboneElement {
     /**
      * Check if the current EncounterParticipant contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a EncounterParticipant from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new EncounterParticipant(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `EncounterParticipant is missing elements: ${missingElements.join(", ")}`;
         }
@@ -180,21 +180,21 @@ export class EncounterDiagnosis extends fhir.BackboneElement {
     /**
      * Check if the current EncounterDiagnosis contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["condition"] === undefined) {
             missingElements.push("condition");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a EncounterDiagnosis from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new EncounterDiagnosis(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `EncounterDiagnosis is missing elements: ${missingElements.join(", ")}`;
         }
@@ -242,18 +242,18 @@ export class EncounterHospitalization extends fhir.BackboneElement {
     /**
      * Check if the current EncounterHospitalization contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a EncounterHospitalization from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new EncounterHospitalization(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `EncounterHospitalization is missing elements: ${missingElements.join(", ")}`;
         }
@@ -292,21 +292,21 @@ export class EncounterLocation extends fhir.BackboneElement {
     /**
      * Check if the current EncounterLocation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["location"] === undefined) {
             missingElements.push("location");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a EncounterLocation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new EncounterLocation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `EncounterLocation is missing elements: ${missingElements.join(", ")}`;
         }
@@ -407,7 +407,7 @@ export class Encounter extends fhir.DomainResource {
     /**
      * Check if the current Encounter contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["class"] === undefined) {
             missingElements.push("class");
@@ -415,16 +415,16 @@ export class Encounter extends fhir.DomainResource {
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a Encounter from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new Encounter(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `Encounter is missing elements: ${missingElements.join(", ")}`;
         }

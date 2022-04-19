@@ -10,91 +10,91 @@ import { Coding } from '../fhir'
  * Document section codes (LOINC codes used in CCDA sections).
  */
 export const DocSectionCodesValueSet = {
-  DocSectionCodesValueSet_VAL113290: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL113290: new Coding({
     code: "11329-0",
     system: "http://loinc.org"
   }),
-  DocSectionCodesValueSet_VAL113480: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL113480: new Coding({
     code: "11348-0",
     system: "http://loinc.org"
   }),
-  DocSectionCodesValueSet_VAL113696: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL113696: new Coding({
     code: "11369-6",
     system: "http://loinc.org"
   }),
-  DocSectionCodesValueSet_VAL114934: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL114934: new Coding({
     code: "11493-4",
     system: "http://loinc.org"
   }),
-  DocSectionCodesValueSet_VAL115352: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL115352: new Coding({
     code: "11535-2",
     system: "http://loinc.org"
   }),
-  DocSectionCodesValueSet_VAL115378: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL115378: new Coding({
     code: "11537-8",
     system: "http://loinc.org"
   }),
-  DocSectionCodesValueSet_VAL187765: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL187765: new Coding({
     code: "18776-5",
     system: "http://loinc.org"
   }),
-  DocSectionCodesValueSet_VAL292995: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL292995: new Coding({
     code: "29299-5",
     system: "http://loinc.org"
   }),
-  DocSectionCodesValueSet_VAL295451: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL295451: new Coding({
     code: "29545-1",
     system: "http://loinc.org"
   }),
-  DocSectionCodesValueSet_VAL295493: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL295493: new Coding({
     code: "29549-3",
     system: "http://loinc.org"
   }),
-  DocSectionCodesValueSet_VAL295543: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL295543: new Coding({
     code: "29554-3",
     system: "http://loinc.org"
   }),
-  DocSectionCodesValueSet_VAL297622: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL297622: new Coding({
     code: "29762-2",
     system: "http://loinc.org"
   }),
-  DocSectionCodesValueSet_VAL309542: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL309542: new Coding({
     code: "30954-2",
     system: "http://loinc.org"
   }),
-  DocSectionCodesValueSet_VAL423442: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL423442: new Coding({
     code: "42344-2",
     system: "http://loinc.org"
   }),
-  DocSectionCodesValueSet_VAL423467: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL423467: new Coding({
     code: "42346-7",
     system: "http://loinc.org"
   }),
-  DocSectionCodesValueSet_VAL423483: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL423483: new Coding({
     code: "42348-3",
     system: "http://loinc.org"
   }),
-  DocSectionCodesValueSet_VAL423491: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL423491: new Coding({
     code: "42349-1",
     system: "http://loinc.org"
   }),
-  DocSectionCodesValueSet_VAL462408: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL462408: new Coding({
     code: "46240-8",
     system: "http://loinc.org"
   }),
-  DocSectionCodesValueSet_VAL462416: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL462416: new Coding({
     code: "46241-6",
     system: "http://loinc.org"
   }),
-  DocSectionCodesValueSet_VAL578526: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL578526: new Coding({
     code: "57852-6",
     system: "http://loinc.org"
   }),
-  DocSectionCodesValueSet_VAL86488: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL86488: new Coding({
     code: "8648-8",
     system: "http://loinc.org"
   }),
-  DocSectionCodesValueSet_VAL87163: Coding.FromStrict({
+  DocSectionCodesValueSet_VAL87163: new Coding({
     code: "8716-3",
     system: "http://loinc.org"
   }),

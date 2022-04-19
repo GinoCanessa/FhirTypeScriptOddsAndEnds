@@ -38,21 +38,21 @@ export class ValueSetComposeIncludeConceptDesignation extends fhir.BackboneEleme
     /**
      * Check if the current ValueSetComposeIncludeConceptDesignation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["value"] === undefined) {
             missingElements.push("value");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ValueSetComposeIncludeConceptDesignation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ValueSetComposeIncludeConceptDesignation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ValueSetComposeIncludeConceptDesignation is missing elements: ${missingElements.join(", ")}`;
         }
@@ -91,21 +91,21 @@ export class ValueSetComposeIncludeConcept extends fhir.BackboneElement {
     /**
      * Check if the current ValueSetComposeIncludeConcept contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["code"] === undefined) {
             missingElements.push("code");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ValueSetComposeIncludeConcept from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ValueSetComposeIncludeConcept(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ValueSetComposeIncludeConcept is missing elements: ${missingElements.join(", ")}`;
         }
@@ -155,7 +155,7 @@ export class ValueSetComposeIncludeFilter extends fhir.BackboneElement {
     /**
      * Check if the current ValueSetComposeIncludeFilter contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["op"] === undefined) {
             missingElements.push("op");
@@ -166,16 +166,16 @@ export class ValueSetComposeIncludeFilter extends fhir.BackboneElement {
         if (this["value"] === undefined) {
             missingElements.push("value");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ValueSetComposeIncludeFilter from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ValueSetComposeIncludeFilter(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ValueSetComposeIncludeFilter is missing elements: ${missingElements.join(", ")}`;
         }
@@ -219,18 +219,18 @@ export class ValueSetComposeInclude extends fhir.BackboneElement {
     /**
      * Check if the current ValueSetComposeInclude contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ValueSetComposeInclude from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ValueSetComposeInclude(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ValueSetComposeInclude is missing elements: ${missingElements.join(", ")}`;
         }
@@ -272,21 +272,21 @@ export class ValueSetCompose extends fhir.BackboneElement {
     /**
      * Check if the current ValueSetCompose contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if ((!this["include"]) || (this["include"].length === 0)) {
             missingElements.push("include");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ValueSetCompose from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ValueSetCompose(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ValueSetCompose is missing elements: ${missingElements.join(", ")}`;
         }
@@ -358,21 +358,21 @@ export class ValueSetExpansionParameter extends fhir.BackboneElement {
     /**
      * Check if the current ValueSetExpansionParameter contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["name"] === undefined) {
             missingElements.push("name");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ValueSetExpansionParameter from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ValueSetExpansionParameter(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ValueSetExpansionParameter is missing elements: ${missingElements.join(", ")}`;
         }
@@ -434,18 +434,18 @@ export class ValueSetExpansionContains extends fhir.BackboneElement {
     /**
      * Check if the current ValueSetExpansionContains contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ValueSetExpansionContains from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ValueSetExpansionContains(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ValueSetExpansionContains is missing elements: ${missingElements.join(", ")}`;
         }
@@ -500,21 +500,21 @@ export class ValueSetExpansion extends fhir.BackboneElement {
     /**
      * Check if the current ValueSetExpansion contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["timestamp"] === undefined) {
             missingElements.push("timestamp");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ValueSetExpansion from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ValueSetExpansion(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ValueSetExpansion is missing elements: ${missingElements.join(", ")}`;
         }
@@ -629,21 +629,21 @@ export class ValueSet extends fhir.DomainResource {
     /**
      * Check if the current ValueSet contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ValueSet from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ValueSet(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ValueSet is missing elements: ${missingElements.join(", ")}`;
         }

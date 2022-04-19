@@ -13,7 +13,7 @@ export const AccountTypeValueSet = {
   /**
    * An account represents a grouping of financial transactions that are tracked and reported together with a single balance. 	 	Examples of account codes (types) are Patient billing accounts (collection of charges), Cost centers; Cash.
    */
-  v3_ActCode_ActAccountCode: Coding.FromStrict({
+  v3_ActCode_ActAccountCode: new Coding({
     code: "_ActAccountCode",
     display: "ActAccountCode",
     system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -21,7 +21,7 @@ export const AccountTypeValueSet = {
   /**
    * An account for collecting charges, reversals, adjustments and payments, including deductibles, copayments, coinsurance (financial transactions) credited or debited to the account receivable account for a patient's encounter.
    */
-  v3_ActCode_AccountReceivable: Coding.FromStrict({
+  v3_ActCode_AccountReceivable: new Coding({
     code: "ACCTRECEIVABLE",
     display: "account receivable",
     system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -29,7 +29,7 @@ export const AccountTypeValueSet = {
   /**
    * American Express
    */
-  v3_ActCode_AmericanExpress: Coding.FromStrict({
+  v3_ActCode_AmericanExpress: new Coding({
     code: "AE",
     display: "American Express",
     system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -37,7 +37,7 @@ export const AccountTypeValueSet = {
   /**
    * Cash
    */
-  v3_ActCode_Cash: Coding.FromStrict({
+  v3_ActCode_Cash: new Coding({
     code: "CASH",
     display: "Cash",
     system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -45,7 +45,7 @@ export const AccountTypeValueSet = {
   /**
    * Description: Types of advance payment to be made on a plastic card usually issued by a financial institution used of purchasing services and/or products.
    */
-  v3_ActCode_CreditCard: Coding.FromStrict({
+  v3_ActCode_CreditCard: new Coding({
     code: "CC",
     display: "credit card",
     system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -53,7 +53,7 @@ export const AccountTypeValueSet = {
   /**
    * Diner's Club
    */
-  v3_ActCode_DinerQuoteSClub: Coding.FromStrict({
+  v3_ActCode_DinerQuoteSClub: new Coding({
     code: "DN",
     display: "Diner's Club",
     system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -61,7 +61,7 @@ export const AccountTypeValueSet = {
   /**
    * Discover Card
    */
-  v3_ActCode_DiscoverCard: Coding.FromStrict({
+  v3_ActCode_DiscoverCard: new Coding({
     code: "DV",
     display: "Discover Card",
     system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -69,7 +69,7 @@ export const AccountTypeValueSet = {
   /**
    * Master Card
    */
-  v3_ActCode_MasterCard: Coding.FromStrict({
+  v3_ActCode_MasterCard: new Coding({
     code: "MC",
     display: "Master Card",
     system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -77,7 +77,7 @@ export const AccountTypeValueSet = {
   /**
    * An account representing charges and credits (financial transactions) for a patient's encounter.
    */
-  v3_ActCode_PatientBillingAccount: Coding.FromStrict({
+  v3_ActCode_PatientBillingAccount: new Coding({
     code: "PBILLACCT",
     display: "patient billing account",
     system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -85,7 +85,7 @@ export const AccountTypeValueSet = {
   /**
    * Visa
    */
-  v3_ActCode_Visa: Coding.FromStrict({
+  v3_ActCode_Visa: new Coding({
     code: "V",
     display: "Visa",
     system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"

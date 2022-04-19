@@ -208,18 +208,18 @@ export class GoalTarget extends fhir.BackboneElement implements fhir.IGoalTarget
   /**
    * Check if the current GoalTarget contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a GoalTarget from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IGoalTarget):GoalTarget {
+  static override fromStrict(source:fhir.IGoalTarget):GoalTarget {
     var dest:GoalTarget = new GoalTarget(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `GoalTarget is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -342,21 +342,21 @@ export class Goal extends fhir.DomainResource implements fhir.IGoal {
   /**
    * Check if the current Goal contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["description"] === undefined) { missingElements.push("description"); }
     if (this["lifecycleStatus"] === undefined) { missingElements.push("lifecycleStatus"); }
     if (this["subject"] === undefined) { missingElements.push("subject"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Goal from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IGoal):Goal {
+  static override fromStrict(source:fhir.IGoal):Goal {
     var dest:Goal = new Goal(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Goal is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

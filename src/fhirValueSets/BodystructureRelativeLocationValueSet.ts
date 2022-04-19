@@ -10,47 +10,47 @@ import { Coding } from '../fhir'
  * SNOMED-CT concepts modifying the anatomic location
  */
 export const BodystructureRelativeLocationValueSet = {
-  BodystructureRelativeLocationValueSet_Posterior: Coding.FromStrict({
+  BodystructureRelativeLocationValueSet_Posterior: new Coding({
     code: "255551008",
     display: "Posterior",
     system: "http://snomed.info/sct"
   }),
-  BodystructureRelativeLocationValueSet_Medial: Coding.FromStrict({
+  BodystructureRelativeLocationValueSet_Medial: new Coding({
     code: "255561001",
     display: "Medial",
     system: "http://snomed.info/sct"
   }),
-  BodystructureRelativeLocationValueSet_Inferior: Coding.FromStrict({
+  BodystructureRelativeLocationValueSet_Inferior: new Coding({
     code: "261089000",
     display: "Inferior",
     system: "http://snomed.info/sct"
   }),
-  BodystructureRelativeLocationValueSet_Lower: Coding.FromStrict({
+  BodystructureRelativeLocationValueSet_Lower: new Coding({
     code: "261122009",
     display: "Lower",
     system: "http://snomed.info/sct"
   }),
-  BodystructureRelativeLocationValueSet_Upper: Coding.FromStrict({
+  BodystructureRelativeLocationValueSet_Upper: new Coding({
     code: "261183002",
     display: "Upper",
     system: "http://snomed.info/sct"
   }),
-  BodystructureRelativeLocationValueSet_Superior: Coding.FromStrict({
+  BodystructureRelativeLocationValueSet_Superior: new Coding({
     code: "264217000",
     display: "Superior",
     system: "http://snomed.info/sct"
   }),
-  BodystructureRelativeLocationValueSet_Below: Coding.FromStrict({
+  BodystructureRelativeLocationValueSet_Below: new Coding({
     code: "351726001",
     display: "Below",
     system: "http://snomed.info/sct"
   }),
-  BodystructureRelativeLocationValueSet_Above: Coding.FromStrict({
+  BodystructureRelativeLocationValueSet_Above: new Coding({
     code: "352730000",
     display: "Above",
     system: "http://snomed.info/sct"
   }),
-  BodystructureRelativeLocationValueSet_Lateral: Coding.FromStrict({
+  BodystructureRelativeLocationValueSet_Lateral: new Coding({
     code: "49370004",
     display: "Lateral",
     system: "http://snomed.info/sct"

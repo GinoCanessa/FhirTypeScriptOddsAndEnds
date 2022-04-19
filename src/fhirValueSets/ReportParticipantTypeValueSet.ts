@@ -13,7 +13,7 @@ export const ReportParticipantTypeValueSet = {
   /**
    * A FHIR Client.
    */
-  report_participant_type_Client: Coding.FromStrict({
+  report_participant_type_Client: new Coding({
     code: "client",
     display: "Client",
     system: "http://hl7.org/fhir/report-participant-type"
@@ -21,7 +21,7 @@ export const ReportParticipantTypeValueSet = {
   /**
    * A FHIR Server.
    */
-  report_participant_type_Server: Coding.FromStrict({
+  report_participant_type_Server: new Coding({
     code: "server",
     display: "Server",
     system: "http://hl7.org/fhir/report-participant-type"
@@ -29,7 +29,7 @@ export const ReportParticipantTypeValueSet = {
   /**
    * The test execution engine.
    */
-  report_participant_type_TestEngine: Coding.FromStrict({
+  report_participant_type_TestEngine: new Coding({
     code: "test-engine",
     display: "Test Engine",
     system: "http://hl7.org/fhir/report-participant-type"

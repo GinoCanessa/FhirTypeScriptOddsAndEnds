@@ -10,47 +10,47 @@ import { Coding } from '../fhir';
  * Type of the validation primary source
  */
 export const VerificationresultPrimarySourceTypeValueSet = {
-    verificationresult_primary_source_type_AuthoritativeSource: Coding.FromStrict({
+    verificationresult_primary_source_type_AuthoritativeSource: new Coding({
         code: "auth-source",
         display: "Authoritative source",
         system: "http://terminology.hl7.org/CodeSystem/primary-source-type"
     }),
-    verificationresult_primary_source_type_ContinuingEducation: Coding.FromStrict({
+    verificationresult_primary_source_type_ContinuingEducation: new Coding({
         code: "cont-ed",
         display: "Continuing Education",
         system: "http://terminology.hl7.org/CodeSystem/primary-source-type"
     }),
-    verificationresult_primary_source_type_IssuingSource: Coding.FromStrict({
+    verificationresult_primary_source_type_IssuingSource: new Coding({
         code: "issuer",
         display: "Issuing source",
         system: "http://terminology.hl7.org/CodeSystem/primary-source-type"
     }),
-    verificationresult_primary_source_type_LegalSource: Coding.FromStrict({
+    verificationresult_primary_source_type_LegalSource: new Coding({
         code: "legal",
         display: "Legal source",
         system: "http://terminology.hl7.org/CodeSystem/primary-source-type"
     }),
-    verificationresult_primary_source_type_LicenseBoard: Coding.FromStrict({
+    verificationresult_primary_source_type_LicenseBoard: new Coding({
         code: "lic-board",
         display: "License Board",
         system: "http://terminology.hl7.org/CodeSystem/primary-source-type"
     }),
-    verificationresult_primary_source_type_PostalService: Coding.FromStrict({
+    verificationresult_primary_source_type_PostalService: new Coding({
         code: "post-serv",
         display: "Postal Service",
         system: "http://terminology.hl7.org/CodeSystem/primary-source-type"
     }),
-    verificationresult_primary_source_type_PrimaryEducation: Coding.FromStrict({
+    verificationresult_primary_source_type_PrimaryEducation: new Coding({
         code: "prim",
         display: "Primary Education",
         system: "http://terminology.hl7.org/CodeSystem/primary-source-type"
     }),
-    verificationresult_primary_source_type_RegistrationAuthority: Coding.FromStrict({
+    verificationresult_primary_source_type_RegistrationAuthority: new Coding({
         code: "reg-auth",
         display: "Registration Authority",
         system: "http://terminology.hl7.org/CodeSystem/primary-source-type"
     }),
-    verificationresult_primary_source_type_RelationshipOwner: Coding.FromStrict({
+    verificationresult_primary_source_type_RelationshipOwner: new Coding({
         code: "rel-own",
         display: "Relationship owner",
         system: "http://terminology.hl7.org/CodeSystem/primary-source-type"

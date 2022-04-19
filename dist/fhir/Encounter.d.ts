@@ -250,11 +250,11 @@ export declare class EncounterStatusHistory extends fhir.BackboneElement impleme
     /**
      * Check if the current EncounterStatusHistory contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a EncounterStatusHistory from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEncounterStatusHistory): EncounterStatusHistory;
+    static fromStrict(source: fhir.IEncounterStatusHistory): EncounterStatusHistory;
 }
 /**
  * The class history permits the tracking of the encounters transitions without needing to go  through the resource history.  This would be used for a case where an admission starts of as an emergency encounter, then transitions into an inpatient scenario. Doing this and not restarting a new encounter ensures that any lab/diagnostic results can more easily follow the patient and not require re-processing and not get lost or cancelled during a kind of discharge from emergency to inpatient.
@@ -275,11 +275,11 @@ export declare class EncounterClassHistory extends fhir.BackboneElement implemen
     /**
      * Check if the current EncounterClassHistory contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a EncounterClassHistory from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEncounterClassHistory): EncounterClassHistory;
+    static fromStrict(source: fhir.IEncounterClassHistory): EncounterClassHistory;
 }
 /**
  * The list of people responsible for providing the service.
@@ -304,11 +304,11 @@ export declare class EncounterParticipant extends fhir.BackboneElement implement
     /**
      * Check if the current EncounterParticipant contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a EncounterParticipant from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEncounterParticipant): EncounterParticipant;
+    static fromStrict(source: fhir.IEncounterParticipant): EncounterParticipant;
 }
 /**
  * The list of diagnosis relevant to this encounter.
@@ -334,11 +334,11 @@ export declare class EncounterDiagnosis extends fhir.BackboneElement implements 
     /**
      * Check if the current EncounterDiagnosis contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a EncounterDiagnosis from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEncounterDiagnosis): EncounterDiagnosis;
+    static fromStrict(source: fhir.IEncounterDiagnosis): EncounterDiagnosis;
 }
 /**
  * An Encounter may cover more than just the inpatient stay. Contexts such as outpatients, community clinics, and aged care facilities are also included.
@@ -388,11 +388,11 @@ export declare class EncounterHospitalization extends fhir.BackboneElement imple
     /**
      * Check if the current EncounterHospitalization contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a EncounterHospitalization from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEncounterHospitalization): EncounterHospitalization;
+    static fromStrict(source: fhir.IEncounterHospitalization): EncounterHospitalization;
 }
 /**
  * Virtual encounters can be recorded in the Encounter by specifying a location reference to a location of type "kind" such as "client's home" and an encounter.class = "virtual".
@@ -423,11 +423,11 @@ export declare class EncounterLocation extends fhir.BackboneElement implements f
     /**
      * Check if the current EncounterLocation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a EncounterLocation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEncounterLocation): EncounterLocation;
+    static fromStrict(source: fhir.IEncounterLocation): EncounterLocation;
 }
 /**
  * An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
@@ -539,11 +539,11 @@ export declare class Encounter extends fhir.DomainResource implements fhir.IEnco
     /**
      * Check if the current Encounter contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Encounter from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEncounter): Encounter;
+    static fromStrict(source: fhir.IEncounter): Encounter;
 }
 /**
  * Code Values for the Encounter.statusHistory.status field

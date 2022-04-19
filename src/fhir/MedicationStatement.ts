@@ -221,20 +221,20 @@ export class MedicationStatement extends fhir.DomainResource implements fhir.IMe
   /**
    * Check if the current MedicationStatement contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["subject"] === undefined) { missingElements.push("subject"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicationStatement from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicationStatement):MedicationStatement {
+  static override fromStrict(source:fhir.IMedicationStatement):MedicationStatement {
     var dest:MedicationStatement = new MedicationStatement(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicationStatement is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

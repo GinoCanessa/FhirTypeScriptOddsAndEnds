@@ -1001,11 +1001,11 @@ export declare class ExplanationOfBenefitRelated extends fhir.BackboneElement im
     /**
      * Check if the current ExplanationOfBenefitRelated contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExplanationOfBenefitRelated from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExplanationOfBenefitRelated): ExplanationOfBenefitRelated;
+    static fromStrict(source: fhir.IExplanationOfBenefitRelated): ExplanationOfBenefitRelated;
 }
 /**
  * Often providers agree to receive the benefits payable to reduce the near-term costs to the patient. The insurer may decline to pay the provider and may choose to pay the subscriber instead.
@@ -1026,11 +1026,11 @@ export declare class ExplanationOfBenefitPayee extends fhir.BackboneElement impl
     /**
      * Check if the current ExplanationOfBenefitPayee contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExplanationOfBenefitPayee from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExplanationOfBenefitPayee): ExplanationOfBenefitPayee;
+    static fromStrict(source: fhir.IExplanationOfBenefitPayee): ExplanationOfBenefitPayee;
 }
 /**
  * The members of the team who provided the products and services.
@@ -1065,11 +1065,11 @@ export declare class ExplanationOfBenefitCareTeam extends fhir.BackboneElement i
     /**
      * Check if the current ExplanationOfBenefitCareTeam contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExplanationOfBenefitCareTeam from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExplanationOfBenefitCareTeam): ExplanationOfBenefitCareTeam;
+    static fromStrict(source: fhir.IExplanationOfBenefitCareTeam): ExplanationOfBenefitCareTeam;
 }
 /**
  * Often there are multiple jurisdiction specific valuesets which are required.
@@ -1130,11 +1130,11 @@ export declare class ExplanationOfBenefitSupportingInfo extends fhir.BackboneEle
     /**
      * Check if the current ExplanationOfBenefitSupportingInfo contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExplanationOfBenefitSupportingInfo from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExplanationOfBenefitSupportingInfo): ExplanationOfBenefitSupportingInfo;
+    static fromStrict(source: fhir.IExplanationOfBenefitSupportingInfo): ExplanationOfBenefitSupportingInfo;
 }
 /**
  * Information about diagnoses relevant to the claim items.
@@ -1172,11 +1172,11 @@ export declare class ExplanationOfBenefitDiagnosis extends fhir.BackboneElement 
     /**
      * Check if the current ExplanationOfBenefitDiagnosis contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExplanationOfBenefitDiagnosis from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExplanationOfBenefitDiagnosis): ExplanationOfBenefitDiagnosis;
+    static fromStrict(source: fhir.IExplanationOfBenefitDiagnosis): ExplanationOfBenefitDiagnosis;
 }
 /**
  * Procedures performed on the patient relevant to the billing items with the claim.
@@ -1215,11 +1215,11 @@ export declare class ExplanationOfBenefitProcedure extends fhir.BackboneElement 
     /**
      * Check if the current ExplanationOfBenefitProcedure contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExplanationOfBenefitProcedure from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExplanationOfBenefitProcedure): ExplanationOfBenefitProcedure;
+    static fromStrict(source: fhir.IExplanationOfBenefitProcedure): ExplanationOfBenefitProcedure;
 }
 /**
  * All insurance coverages for the patient which may be applicable for reimbursement, of the products and services listed in the claim, are typically provided in the claim to allow insurers to confirm the ordering of the insurance coverages relative to local 'coordination of benefit' rules. One coverage (and only one) with 'focal=true' is to be used in the adjudication of this claim. Coverages appearing before the focal Coverage in the list, and where 'Coverage.subrogation=false', should provide a reference to the ClaimResponse containing the adjudication results of the prior claim.
@@ -1246,11 +1246,11 @@ export declare class ExplanationOfBenefitInsurance extends fhir.BackboneElement 
     /**
      * Check if the current ExplanationOfBenefitInsurance contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExplanationOfBenefitInsurance from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExplanationOfBenefitInsurance): ExplanationOfBenefitInsurance;
+    static fromStrict(source: fhir.IExplanationOfBenefitInsurance): ExplanationOfBenefitInsurance;
 }
 /**
  * Details of a accident which resulted in injuries which required the products and services listed in the claim.
@@ -1280,11 +1280,11 @@ export declare class ExplanationOfBenefitAccident extends fhir.BackboneElement i
     /**
      * Check if the current ExplanationOfBenefitAccident contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExplanationOfBenefitAccident from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExplanationOfBenefitAccident): ExplanationOfBenefitAccident;
+    static fromStrict(source: fhir.IExplanationOfBenefitAccident): ExplanationOfBenefitAccident;
 }
 /**
  * If this item is a group then the values here are a summary of the adjudication of the detail items. If this item is a simple product or service then this is the result of the adjudication of this item.
@@ -1314,11 +1314,11 @@ export declare class ExplanationOfBenefitItemAdjudication extends fhir.BackboneE
     /**
      * Check if the current ExplanationOfBenefitItemAdjudication contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExplanationOfBenefitItemAdjudication from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExplanationOfBenefitItemAdjudication): ExplanationOfBenefitItemAdjudication;
+    static fromStrict(source: fhir.IExplanationOfBenefitItemAdjudication): ExplanationOfBenefitItemAdjudication;
 }
 /**
  * Third-tier of goods and services.
@@ -1386,11 +1386,11 @@ export declare class ExplanationOfBenefitItemDetailSubDetail extends fhir.Backbo
     /**
      * Check if the current ExplanationOfBenefitItemDetailSubDetail contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExplanationOfBenefitItemDetailSubDetail from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExplanationOfBenefitItemDetailSubDetail): ExplanationOfBenefitItemDetailSubDetail;
+    static fromStrict(source: fhir.IExplanationOfBenefitItemDetailSubDetail): ExplanationOfBenefitItemDetailSubDetail;
 }
 /**
  * Second-tier of goods and services.
@@ -1462,11 +1462,11 @@ export declare class ExplanationOfBenefitItemDetail extends fhir.BackboneElement
     /**
      * Check if the current ExplanationOfBenefitItemDetail contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExplanationOfBenefitItemDetail from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExplanationOfBenefitItemDetail): ExplanationOfBenefitItemDetail;
+    static fromStrict(source: fhir.IExplanationOfBenefitItemDetail): ExplanationOfBenefitItemDetail;
 }
 /**
  * A claim line. Either a simple (a product or service) or a 'group' of details which can also be a simple items or groups of sub-details.
@@ -1591,11 +1591,11 @@ export declare class ExplanationOfBenefitItem extends fhir.BackboneElement imple
     /**
      * Check if the current ExplanationOfBenefitItem contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExplanationOfBenefitItem from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExplanationOfBenefitItem): ExplanationOfBenefitItem;
+    static fromStrict(source: fhir.IExplanationOfBenefitItem): ExplanationOfBenefitItem;
 }
 /**
  * The third-tier service adjudications for payor added services.
@@ -1642,11 +1642,11 @@ export declare class ExplanationOfBenefitAddItemDetailSubDetail extends fhir.Bac
     /**
      * Check if the current ExplanationOfBenefitAddItemDetailSubDetail contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExplanationOfBenefitAddItemDetailSubDetail from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExplanationOfBenefitAddItemDetailSubDetail): ExplanationOfBenefitAddItemDetailSubDetail;
+    static fromStrict(source: fhir.IExplanationOfBenefitAddItemDetailSubDetail): ExplanationOfBenefitAddItemDetailSubDetail;
 }
 /**
  * The second-tier service adjudications for payor added services.
@@ -1697,11 +1697,11 @@ export declare class ExplanationOfBenefitAddItemDetail extends fhir.BackboneElem
     /**
      * Check if the current ExplanationOfBenefitAddItemDetail contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExplanationOfBenefitAddItemDetail from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExplanationOfBenefitAddItemDetail): ExplanationOfBenefitAddItemDetail;
+    static fromStrict(source: fhir.IExplanationOfBenefitAddItemDetail): ExplanationOfBenefitAddItemDetail;
 }
 /**
  * The first-tier service adjudications for payor added product or service lines.
@@ -1804,11 +1804,11 @@ export declare class ExplanationOfBenefitAddItem extends fhir.BackboneElement im
     /**
      * Check if the current ExplanationOfBenefitAddItem contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExplanationOfBenefitAddItem from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExplanationOfBenefitAddItem): ExplanationOfBenefitAddItem;
+    static fromStrict(source: fhir.IExplanationOfBenefitAddItem): ExplanationOfBenefitAddItem;
 }
 /**
  * Totals for amounts submitted, co-pays, benefits payable etc.
@@ -1829,11 +1829,11 @@ export declare class ExplanationOfBenefitTotal extends fhir.BackboneElement impl
     /**
      * Check if the current ExplanationOfBenefitTotal contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExplanationOfBenefitTotal from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExplanationOfBenefitTotal): ExplanationOfBenefitTotal;
+    static fromStrict(source: fhir.IExplanationOfBenefitTotal): ExplanationOfBenefitTotal;
 }
 /**
  * Payment details for the adjudication of the claim.
@@ -1871,11 +1871,11 @@ export declare class ExplanationOfBenefitPayment extends fhir.BackboneElement im
     /**
      * Check if the current ExplanationOfBenefitPayment contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExplanationOfBenefitPayment from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExplanationOfBenefitPayment): ExplanationOfBenefitPayment;
+    static fromStrict(source: fhir.IExplanationOfBenefitPayment): ExplanationOfBenefitPayment;
 }
 /**
  * A note that describes or explains adjudication results in a human readable form.
@@ -1907,11 +1907,11 @@ export declare class ExplanationOfBenefitProcessNote extends fhir.BackboneElemen
     /**
      * Check if the current ExplanationOfBenefitProcessNote contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExplanationOfBenefitProcessNote from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExplanationOfBenefitProcessNote): ExplanationOfBenefitProcessNote;
+    static fromStrict(source: fhir.IExplanationOfBenefitProcessNote): ExplanationOfBenefitProcessNote;
 }
 /**
  * Benefits Used to date.
@@ -1951,11 +1951,11 @@ export declare class ExplanationOfBenefitBenefitBalanceFinancial extends fhir.Ba
     /**
      * Check if the current ExplanationOfBenefitBenefitBalanceFinancial contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExplanationOfBenefitBenefitBalanceFinancial from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExplanationOfBenefitBenefitBalanceFinancial): ExplanationOfBenefitBenefitBalanceFinancial;
+    static fromStrict(source: fhir.IExplanationOfBenefitBenefitBalanceFinancial): ExplanationOfBenefitBenefitBalanceFinancial;
 }
 /**
  * Balance by Benefit Category.
@@ -2003,11 +2003,11 @@ export declare class ExplanationOfBenefitBenefitBalance extends fhir.BackboneEle
     /**
      * Check if the current ExplanationOfBenefitBenefitBalance contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExplanationOfBenefitBenefitBalance from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExplanationOfBenefitBenefitBalance): ExplanationOfBenefitBenefitBalance;
+    static fromStrict(source: fhir.IExplanationOfBenefitBenefitBalance): ExplanationOfBenefitBenefitBalance;
 }
 /**
  * This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided.
@@ -2203,11 +2203,11 @@ export declare class ExplanationOfBenefit extends fhir.DomainResource implements
     /**
      * Check if the current ExplanationOfBenefit contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ExplanationOfBenefit from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExplanationOfBenefit): ExplanationOfBenefit;
+    static fromStrict(source: fhir.IExplanationOfBenefit): ExplanationOfBenefit;
 }
 /**
  * Code Values for the ExplanationOfBenefit.processNote.type field

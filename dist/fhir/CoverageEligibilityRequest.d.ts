@@ -194,11 +194,11 @@ export declare class CoverageEligibilityRequestSupportingInfo extends fhir.Backb
     /**
      * Check if the current CoverageEligibilityRequestSupportingInfo contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CoverageEligibilityRequestSupportingInfo from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICoverageEligibilityRequestSupportingInfo): CoverageEligibilityRequestSupportingInfo;
+    static fromStrict(source: fhir.ICoverageEligibilityRequestSupportingInfo): CoverageEligibilityRequestSupportingInfo;
 }
 /**
  * All insurance coverages for the patient which may be applicable for reimbursement, of the products and services listed in the claim, are typically provided in the claim to allow insurers to confirm the ordering of the insurance coverages relative to local 'coordination of benefit' rules. One coverage (and only one) with 'focal=true' is to be used in the adjudication of this claim. Coverages appearing before the focal Coverage in the list, and where 'subrogation=false', should provide a reference to the ClaimResponse containing the adjudication results of the prior claim.
@@ -225,11 +225,11 @@ export declare class CoverageEligibilityRequestInsurance extends fhir.BackboneEl
     /**
      * Check if the current CoverageEligibilityRequestInsurance contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CoverageEligibilityRequestInsurance from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICoverageEligibilityRequestInsurance): CoverageEligibilityRequestInsurance;
+    static fromStrict(source: fhir.ICoverageEligibilityRequestInsurance): CoverageEligibilityRequestInsurance;
 }
 /**
  * Patient diagnosis for which care is sought.
@@ -250,11 +250,11 @@ export declare class CoverageEligibilityRequestItemDiagnosis extends fhir.Backbo
     /**
      * Check if the current CoverageEligibilityRequestItemDiagnosis contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CoverageEligibilityRequestItemDiagnosis from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICoverageEligibilityRequestItemDiagnosis): CoverageEligibilityRequestItemDiagnosis;
+    static fromStrict(source: fhir.ICoverageEligibilityRequestItemDiagnosis): CoverageEligibilityRequestItemDiagnosis;
 }
 /**
  * Service categories or billable services for which benefit details and/or an authorization prior to service delivery may be required by the payor.
@@ -308,11 +308,11 @@ export declare class CoverageEligibilityRequestItem extends fhir.BackboneElement
     /**
      * Check if the current CoverageEligibilityRequestItem contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CoverageEligibilityRequestItem from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICoverageEligibilityRequestItem): CoverageEligibilityRequestItem;
+    static fromStrict(source: fhir.ICoverageEligibilityRequestItem): CoverageEligibilityRequestItem;
 }
 /**
  * The CoverageEligibilityRequest provides patient and insurance coverage information to an insurer for them to respond, in the form of an CoverageEligibilityResponse, with information regarding whether the stated coverage is valid and in-force and optionally to provide the insurance details of the policy.
@@ -393,11 +393,11 @@ export declare class CoverageEligibilityRequest extends fhir.DomainResource impl
     /**
      * Check if the current CoverageEligibilityRequest contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CoverageEligibilityRequest from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICoverageEligibilityRequest): CoverageEligibilityRequest;
+    static fromStrict(source: fhir.ICoverageEligibilityRequest): CoverageEligibilityRequest;
 }
 /**
  * Code Values for the CoverageEligibilityRequest.purpose field

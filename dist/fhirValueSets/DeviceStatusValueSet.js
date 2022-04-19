@@ -13,7 +13,7 @@ export const DeviceStatusValueSet = {
     /**
      * The device is available for use.  Note: For *implanted devices*  this means that the device is implanted in the patient.
      */
-    device_status_Active: Coding.FromStrict({
+    device_status_Active: new Coding({
         code: "active",
         display: "Active",
         system: "http://hl7.org/fhir/device-status"
@@ -21,7 +21,7 @@ export const DeviceStatusValueSet = {
     /**
      * The device was entered in error and voided.
      */
-    device_status_EnteredInError: Coding.FromStrict({
+    device_status_EnteredInError: new Coding({
         code: "entered-in-error",
         display: "Entered in Error",
         system: "http://hl7.org/fhir/device-status"
@@ -29,7 +29,7 @@ export const DeviceStatusValueSet = {
     /**
      * The device is no longer available for use (e.g. lost, expired, damaged).  Note: For *implanted devices*  this means that the device has been removed from the patient.
      */
-    device_status_Inactive: Coding.FromStrict({
+    device_status_Inactive: new Coding({
         code: "inactive",
         display: "Inactive",
         system: "http://hl7.org/fhir/device-status"
@@ -37,7 +37,7 @@ export const DeviceStatusValueSet = {
     /**
      * The status of the device has not been determined.
      */
-    device_status_Unknown: Coding.FromStrict({
+    device_status_Unknown: new Coding({
         code: "unknown",
         display: "Unknown",
         system: "http://hl7.org/fhir/device-status"

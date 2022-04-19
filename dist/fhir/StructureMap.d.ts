@@ -602,11 +602,11 @@ export declare class StructureMapStructure extends fhir.BackboneElement implemen
     /**
      * Check if the current StructureMapStructure contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a StructureMapStructure from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IStructureMapStructure): StructureMapStructure;
+    static fromStrict(source: fhir.IStructureMapStructure): StructureMapStructure;
 }
 /**
  * If no inputs are named, then the entry mappings are type based.
@@ -639,11 +639,11 @@ export declare class StructureMapGroupInput extends fhir.BackboneElement impleme
     /**
      * Check if the current StructureMapGroupInput contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a StructureMapGroupInput from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IStructureMapGroupInput): StructureMapGroupInput;
+    static fromStrict(source: fhir.IStructureMapGroupInput): StructureMapGroupInput;
 }
 /**
  * Source inputs to the mapping.
@@ -925,11 +925,11 @@ export declare class StructureMapGroupRuleSource extends fhir.BackboneElement im
     /**
      * Check if the current StructureMapGroupRuleSource contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a StructureMapGroupRuleSource from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IStructureMapGroupRuleSource): StructureMapGroupRuleSource;
+    static fromStrict(source: fhir.IStructureMapGroupRuleSource): StructureMapGroupRuleSource;
 }
 /**
  * Parameters to the transform.
@@ -967,11 +967,11 @@ export declare class StructureMapGroupRuleTargetParameter extends fhir.BackboneE
     /**
      * Check if the current StructureMapGroupRuleTargetParameter contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a StructureMapGroupRuleTargetParameter from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IStructureMapGroupRuleTargetParameter): StructureMapGroupRuleTargetParameter;
+    static fromStrict(source: fhir.IStructureMapGroupRuleTargetParameter): StructureMapGroupRuleTargetParameter;
 }
 /**
  * Content to create because of this mapping rule.
@@ -1023,11 +1023,11 @@ export declare class StructureMapGroupRuleTarget extends fhir.BackboneElement im
     /**
      * Check if the current StructureMapGroupRuleTarget contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a StructureMapGroupRuleTarget from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IStructureMapGroupRuleTarget): StructureMapGroupRuleTarget;
+    static fromStrict(source: fhir.IStructureMapGroupRuleTarget): StructureMapGroupRuleTarget;
 }
 /**
  * Which other rules to apply in the context of this rule.
@@ -1050,11 +1050,11 @@ export declare class StructureMapGroupRuleDependent extends fhir.BackboneElement
     /**
      * Check if the current StructureMapGroupRuleDependent contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a StructureMapGroupRuleDependent from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IStructureMapGroupRuleDependent): StructureMapGroupRuleDependent;
+    static fromStrict(source: fhir.IStructureMapGroupRuleDependent): StructureMapGroupRuleDependent;
 }
 /**
  * Transform Rule from source to target.
@@ -1093,11 +1093,11 @@ export declare class StructureMapGroupRule extends fhir.BackboneElement implemen
     /**
      * Check if the current StructureMapGroupRule contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a StructureMapGroupRule from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IStructureMapGroupRule): StructureMapGroupRule;
+    static fromStrict(source: fhir.IStructureMapGroupRule): StructureMapGroupRule;
 }
 /**
  * Organizes the mapping into manageable chunks for human review/ease of maintenance.
@@ -1138,11 +1138,11 @@ export declare class StructureMapGroup extends fhir.BackboneElement implements f
     /**
      * Check if the current StructureMapGroup contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a StructureMapGroup from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IStructureMapGroup): StructureMapGroup;
+    static fromStrict(source: fhir.IStructureMapGroup): StructureMapGroup;
 }
 /**
  * A Map of relationships between 2 structures that can be used to transform data.
@@ -1245,11 +1245,11 @@ export declare class StructureMap extends fhir.DomainResource implements fhir.IS
     /**
      * Check if the current StructureMap contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a StructureMap from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IStructureMap): StructureMap;
+    static fromStrict(source: fhir.IStructureMap): StructureMap;
 }
 /**
  * Code Values for the StructureMap.structure.mode field

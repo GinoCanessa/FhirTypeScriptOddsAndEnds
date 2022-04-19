@@ -313,11 +313,11 @@ export declare class TerminologyCapabilitiesSoftware extends fhir.BackboneElemen
     /**
      * Check if the current TerminologyCapabilitiesSoftware contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TerminologyCapabilitiesSoftware from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITerminologyCapabilitiesSoftware): TerminologyCapabilitiesSoftware;
+    static fromStrict(source: fhir.ITerminologyCapabilitiesSoftware): TerminologyCapabilitiesSoftware;
 }
 /**
  * Identifies a specific implementation instance that is described by the terminology capability statement - i.e. a particular installation, rather than the capabilities of a software program.
@@ -340,11 +340,11 @@ export declare class TerminologyCapabilitiesImplementation extends fhir.Backbone
     /**
      * Check if the current TerminologyCapabilitiesImplementation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TerminologyCapabilitiesImplementation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITerminologyCapabilitiesImplementation): TerminologyCapabilitiesImplementation;
+    static fromStrict(source: fhir.ITerminologyCapabilitiesImplementation): TerminologyCapabilitiesImplementation;
 }
 /**
  * Filter Properties supported.
@@ -367,11 +367,11 @@ export declare class TerminologyCapabilitiesCodeSystemVersionFilter extends fhir
     /**
      * Check if the current TerminologyCapabilitiesCodeSystemVersionFilter contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TerminologyCapabilitiesCodeSystemVersionFilter from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITerminologyCapabilitiesCodeSystemVersionFilter): TerminologyCapabilitiesCodeSystemVersionFilter;
+    static fromStrict(source: fhir.ITerminologyCapabilitiesCodeSystemVersionFilter): TerminologyCapabilitiesCodeSystemVersionFilter;
 }
 /**
  * Language translations might not be available for all codes.
@@ -413,11 +413,11 @@ export declare class TerminologyCapabilitiesCodeSystemVersion extends fhir.Backb
     /**
      * Check if the current TerminologyCapabilitiesCodeSystemVersion contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TerminologyCapabilitiesCodeSystemVersion from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITerminologyCapabilitiesCodeSystemVersion): TerminologyCapabilitiesCodeSystemVersion;
+    static fromStrict(source: fhir.ITerminologyCapabilitiesCodeSystemVersion): TerminologyCapabilitiesCodeSystemVersion;
 }
 /**
  * The code system - identified by its system URL - may also be declared explicitly as a Code System Resource at /CodeSystem, but it might not be.
@@ -444,11 +444,11 @@ export declare class TerminologyCapabilitiesCodeSystem extends fhir.BackboneElem
     /**
      * Check if the current TerminologyCapabilitiesCodeSystem contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TerminologyCapabilitiesCodeSystem from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITerminologyCapabilitiesCodeSystem): TerminologyCapabilitiesCodeSystem;
+    static fromStrict(source: fhir.ITerminologyCapabilitiesCodeSystem): TerminologyCapabilitiesCodeSystem;
 }
 /**
  * Supported expansion parameter.
@@ -471,11 +471,11 @@ export declare class TerminologyCapabilitiesExpansionParameter extends fhir.Back
     /**
      * Check if the current TerminologyCapabilitiesExpansionParameter contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TerminologyCapabilitiesExpansionParameter from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITerminologyCapabilitiesExpansionParameter): TerminologyCapabilitiesExpansionParameter;
+    static fromStrict(source: fhir.ITerminologyCapabilitiesExpansionParameter): TerminologyCapabilitiesExpansionParameter;
 }
 /**
  * Information about the [ValueSet/$expand](valueset-operation-expand.html) operation.
@@ -512,11 +512,11 @@ export declare class TerminologyCapabilitiesExpansion extends fhir.BackboneEleme
     /**
      * Check if the current TerminologyCapabilitiesExpansion contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TerminologyCapabilitiesExpansion from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITerminologyCapabilitiesExpansion): TerminologyCapabilitiesExpansion;
+    static fromStrict(source: fhir.ITerminologyCapabilitiesExpansion): TerminologyCapabilitiesExpansion;
 }
 /**
  * Information about the [ValueSet/$validate-code](valueset-operation-validate-code.html) operation.
@@ -534,11 +534,11 @@ export declare class TerminologyCapabilitiesValidateCode extends fhir.BackboneEl
     /**
      * Check if the current TerminologyCapabilitiesValidateCode contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TerminologyCapabilitiesValidateCode from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITerminologyCapabilitiesValidateCode): TerminologyCapabilitiesValidateCode;
+    static fromStrict(source: fhir.ITerminologyCapabilitiesValidateCode): TerminologyCapabilitiesValidateCode;
 }
 /**
  * Information about the [ConceptMap/$translate](conceptmap-operation-translate.html) operation.
@@ -556,11 +556,11 @@ export declare class TerminologyCapabilitiesTranslation extends fhir.BackboneEle
     /**
      * Check if the current TerminologyCapabilitiesTranslation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TerminologyCapabilitiesTranslation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITerminologyCapabilitiesTranslation): TerminologyCapabilitiesTranslation;
+    static fromStrict(source: fhir.ITerminologyCapabilitiesTranslation): TerminologyCapabilitiesTranslation;
 }
 /**
  * Whether the $closure operation is supported.
@@ -578,11 +578,11 @@ export declare class TerminologyCapabilitiesClosure extends fhir.BackboneElement
     /**
      * Check if the current TerminologyCapabilitiesClosure contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TerminologyCapabilitiesClosure from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITerminologyCapabilitiesClosure): TerminologyCapabilitiesClosure;
+    static fromStrict(source: fhir.ITerminologyCapabilitiesClosure): TerminologyCapabilitiesClosure;
 }
 /**
  * A TerminologyCapabilities resource documents a set of capabilities (behaviors) of a FHIR Terminology Server that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
@@ -711,11 +711,11 @@ export declare class TerminologyCapabilities extends fhir.DomainResource impleme
     /**
      * Check if the current TerminologyCapabilities contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TerminologyCapabilities from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITerminologyCapabilities): TerminologyCapabilities;
+    static fromStrict(source: fhir.ITerminologyCapabilities): TerminologyCapabilities;
 }
 /**
  * Code Values for the TerminologyCapabilities.codeSearch field

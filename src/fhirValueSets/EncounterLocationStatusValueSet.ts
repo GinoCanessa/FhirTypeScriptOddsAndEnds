@@ -14,7 +14,7 @@ export const EncounterLocationStatusValueSet = {
    * The patient is currently at this location, or was between the period specified.
    * A system may update these records when the patient leaves the location to either reserved, or completed.
    */
-  encounter_location_status_Active: Coding.FromStrict({
+  encounter_location_status_Active: new Coding({
     code: "active",
     display: "Active",
     system: "http://hl7.org/fhir/encounter-location-status"
@@ -23,7 +23,7 @@ export const EncounterLocationStatusValueSet = {
    * The patient was at this location during the period specified.
    * Not to be used when the patient is currently at the location.
    */
-  encounter_location_status_Completed: Coding.FromStrict({
+  encounter_location_status_Completed: new Coding({
     code: "completed",
     display: "Completed",
     system: "http://hl7.org/fhir/encounter-location-status"
@@ -31,7 +31,7 @@ export const EncounterLocationStatusValueSet = {
   /**
    * The patient is planned to be moved to this location at some point in the future.
    */
-  encounter_location_status_Planned: Coding.FromStrict({
+  encounter_location_status_Planned: new Coding({
     code: "planned",
     display: "Planned",
     system: "http://hl7.org/fhir/encounter-location-status"
@@ -39,7 +39,7 @@ export const EncounterLocationStatusValueSet = {
   /**
    * This location is held empty for this patient.
    */
-  encounter_location_status_Reserved: Coding.FromStrict({
+  encounter_location_status_Reserved: new Coding({
     code: "reserved",
     display: "Reserved",
     system: "http://hl7.org/fhir/encounter-location-status"

@@ -29,21 +29,21 @@ export class InvoiceParticipant extends fhir.BackboneElement {
     /**
      * Check if the current InvoiceParticipant contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["actor"] === undefined) {
             missingElements.push("actor");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a InvoiceParticipant from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new InvoiceParticipant(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `InvoiceParticipant is missing elements: ${missingElements.join(", ")}`;
         }
@@ -85,21 +85,21 @@ export class InvoiceLineItemPriceComponent extends fhir.BackboneElement {
     /**
      * Check if the current InvoiceLineItemPriceComponent contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a InvoiceLineItemPriceComponent from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new InvoiceLineItemPriceComponent(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `InvoiceLineItemPriceComponent is missing elements: ${missingElements.join(", ")}`;
         }
@@ -134,18 +134,18 @@ export class InvoiceLineItem extends fhir.BackboneElement {
     /**
      * Check if the current InvoiceLineItem contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a InvoiceLineItem from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new InvoiceLineItem(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `InvoiceLineItem is missing elements: ${missingElements.join(", ")}`;
         }
@@ -230,21 +230,21 @@ export class Invoice extends fhir.DomainResource {
     /**
      * Check if the current Invoice contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a Invoice from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new Invoice(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `Invoice is missing elements: ${missingElements.join(", ")}`;
         }

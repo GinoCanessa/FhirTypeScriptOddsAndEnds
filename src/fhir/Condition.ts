@@ -179,18 +179,18 @@ export class ConditionStage extends fhir.BackboneElement implements fhir.ICondit
   /**
    * Check if the current ConditionStage contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ConditionStage from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IConditionStage):ConditionStage {
+  static override fromStrict(source:fhir.IConditionStage):ConditionStage {
     var dest:ConditionStage = new ConditionStage(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ConditionStage is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -218,18 +218,18 @@ export class ConditionEvidence extends fhir.BackboneElement implements fhir.ICon
   /**
    * Check if the current ConditionEvidence contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ConditionEvidence from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IConditionEvidence):ConditionEvidence {
+  static override fromStrict(source:fhir.IConditionEvidence):ConditionEvidence {
     var dest:ConditionEvidence = new ConditionEvidence(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ConditionEvidence is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -390,19 +390,19 @@ export class Condition extends fhir.DomainResource implements fhir.ICondition {
   /**
    * Check if the current Condition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["subject"] === undefined) { missingElements.push("subject"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Condition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICondition):Condition {
+  static override fromStrict(source:fhir.ICondition):Condition {
     var dest:Condition = new Condition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Condition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

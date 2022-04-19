@@ -13,7 +13,7 @@ export const SubstanceCategoryValueSet = {
   /**
    * A substance that causes an allergic reaction.
    */
-  substance_category_Allergen: Coding.FromStrict({
+  substance_category_Allergen: new Coding({
     code: "allergen",
     display: "Allergen",
     system: "http://terminology.hl7.org/CodeSystem/substance-category"
@@ -21,7 +21,7 @@ export const SubstanceCategoryValueSet = {
   /**
    * A substance that is produced by or extracted from a biological source.
    */
-  substance_category_BiologicalSubstance: Coding.FromStrict({
+  substance_category_BiologicalSubstance: new Coding({
     code: "biological",
     display: "Biological Substance",
     system: "http://terminology.hl7.org/CodeSystem/substance-category"
@@ -29,7 +29,7 @@ export const SubstanceCategoryValueSet = {
   /**
    * A substance that comes directly from a human or an animal (e.g. blood, urine, feces, tears, etc.).
    */
-  substance_category_BodySubstance: Coding.FromStrict({
+  substance_category_BodySubstance: new Coding({
     code: "body",
     display: "Body Substance",
     system: "http://terminology.hl7.org/CodeSystem/substance-category"
@@ -37,7 +37,7 @@ export const SubstanceCategoryValueSet = {
   /**
    * Any organic or inorganic substance of a particular molecular identity, including -- (i) any combination of such substances occurring in whole or in part as a result of a chemical reaction or occurring in nature and (ii) any element or uncombined radical (http://www.epa.gov/opptintr/import-export/pubs/importguide.pdf).
    */
-  substance_category_Chemical: Coding.FromStrict({
+  substance_category_Chemical: new Coding({
     code: "chemical",
     display: "Chemical",
     system: "http://terminology.hl7.org/CodeSystem/substance-category"
@@ -45,7 +45,7 @@ export const SubstanceCategoryValueSet = {
   /**
    * A substance intended for use in the diagnosis, cure, mitigation, treatment, or prevention of disease in man or other animals (Federal Food Drug and Cosmetic Act).
    */
-  substance_category_DrugOrMedicament: Coding.FromStrict({
+  substance_category_DrugOrMedicament: new Coding({
     code: "drug",
     display: "Drug or Medicament",
     system: "http://terminology.hl7.org/CodeSystem/substance-category"
@@ -53,7 +53,7 @@ export const SubstanceCategoryValueSet = {
   /**
    * A food, dietary ingredient, or dietary supplement for human or animal.
    */
-  substance_category_DietarySubstance: Coding.FromStrict({
+  substance_category_DietarySubstance: new Coding({
     code: "food",
     display: "Dietary Substance",
     system: "http://terminology.hl7.org/CodeSystem/substance-category"
@@ -61,7 +61,7 @@ export const SubstanceCategoryValueSet = {
   /**
    * A finished product which is not normally ingested, absorbed or injected (e.g. steel, iron, wood, plastic and paper).
    */
-  substance_category_Material: Coding.FromStrict({
+  substance_category_Material: new Coding({
     code: "material",
     display: "Material",
     system: "http://terminology.hl7.org/CodeSystem/substance-category"

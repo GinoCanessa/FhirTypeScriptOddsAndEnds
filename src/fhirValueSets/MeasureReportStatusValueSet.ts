@@ -13,7 +13,7 @@ export const MeasureReportStatusValueSet = {
   /**
    * The report is complete and ready for use.
    */
-  measure_report_status_Complete: Coding.FromStrict({
+  measure_report_status_Complete: new Coding({
     code: "complete",
     display: "Complete",
     system: "http://hl7.org/fhir/measure-report-status"
@@ -21,7 +21,7 @@ export const MeasureReportStatusValueSet = {
   /**
    * An error occurred attempting to generate the report.
    */
-  measure_report_status_Error: Coding.FromStrict({
+  measure_report_status_Error: new Coding({
     code: "error",
     display: "Error",
     system: "http://hl7.org/fhir/measure-report-status"
@@ -29,7 +29,7 @@ export const MeasureReportStatusValueSet = {
   /**
    * The report is currently being generated.
    */
-  measure_report_status_Pending: Coding.FromStrict({
+  measure_report_status_Pending: new Coding({
     code: "pending",
     display: "Pending",
     system: "http://hl7.org/fhir/measure-report-status"

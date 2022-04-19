@@ -120,19 +120,19 @@ export class PractitionerQualification extends fhir.BackboneElement implements f
   /**
    * Check if the current PractitionerQualification contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PractitionerQualification from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPractitionerQualification):PractitionerQualification {
+  static override fromStrict(source:fhir.IPractitionerQualification):PractitionerQualification {
     var dest:PractitionerQualification = new PractitionerQualification(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `PractitionerQualification is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -217,18 +217,18 @@ export class Practitioner extends fhir.DomainResource implements fhir.IPractitio
   /**
    * Check if the current Practitioner contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Practitioner from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPractitioner):Practitioner {
+  static override fromStrict(source:fhir.IPractitioner):Practitioner {
     var dest:Practitioner = new Practitioner(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Practitioner is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

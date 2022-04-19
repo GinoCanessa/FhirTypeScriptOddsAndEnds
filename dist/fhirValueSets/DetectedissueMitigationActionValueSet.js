@@ -13,7 +13,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Codes dealing with the management of Detected Issue observations for the administrative and patient administrative acts domains.
      */
-    v3_ActCode_ActAdministrativeDetectedIssueManagementCode: Coding.FromStrict({
+    v3_ActCode_ActAdministrativeDetectedIssueManagementCode: new Coding({
         code: "_ActAdministrativeDetectedIssueManagementCode",
         display: "ActAdministrativeDetectedIssueManagementCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -21,7 +21,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Codes dealing with the management of Detected Issue observations
      */
-    v3_ActCode_ActDetectedIssueManagementCode: Coding.FromStrict({
+    v3_ActCode_ActDetectedIssueManagementCode: new Coding({
         code: "_ActDetectedIssueManagementCode",
         display: "ActDetectedIssueManagementCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -29,7 +29,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Authorization Issue Management Code
      */
-    v3_ActCode_AuthorizationIssueManagementCode: Coding.FromStrict({
+    v3_ActCode_AuthorizationIssueManagementCode: new Coding({
         code: "_AuthorizationIssueManagementCode",
         display: "Authorization Issue Management Code",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -37,7 +37,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Confirmed drug therapy appropriate
      */
-    v3_ActCode_TherapyAppropriate: Coding.FromStrict({
+    v3_ActCode_TherapyAppropriate: new Coding({
         code: "1",
         display: "Therapy Appropriate",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -45,7 +45,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Provided education or training to the patient on appropriate therapy use
      */
-    v3_ActCode_ProvidedPatientEducation: Coding.FromStrict({
+    v3_ActCode_ProvidedPatientEducation: new Coding({
         code: "10",
         display: "Provided Patient Education",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -53,7 +53,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Instituted an additional therapy to mitigate potential negative effects
      */
-    v3_ActCode_AddedConcurrentTherapy: Coding.FromStrict({
+    v3_ActCode_AddedConcurrentTherapy: new Coding({
         code: "11",
         display: "Added Concurrent Therapy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -61,7 +61,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Suspended existing therapy that triggered interaction for the duration of this therapy
      */
-    v3_ActCode_TemporarilySuspendedConcurrentTherapy: Coding.FromStrict({
+    v3_ActCode_TemporarilySuspendedConcurrentTherapy: new Coding({
         code: "12",
         display: "Temporarily Suspended Concurrent Therapy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -69,7 +69,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Aborted existing therapy that triggered interaction.
      */
-    v3_ActCode_StoppedConcurrentTherapy: Coding.FromStrict({
+    v3_ActCode_StoppedConcurrentTherapy: new Coding({
         code: "13",
         display: "Stopped Concurrent Therapy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -77,7 +77,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Confirmed supply action appropriate
      */
-    v3_ActCode_SupplyAppropriate: Coding.FromStrict({
+    v3_ActCode_SupplyAppropriate: new Coding({
         code: "14",
         display: "Supply Appropriate",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -85,7 +85,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Patient's existing supply was lost/wasted
      */
-    v3_ActCode_Replacement: Coding.FromStrict({
+    v3_ActCode_Replacement: new Coding({
         code: "15",
         display: "Replacement",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -93,7 +93,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Supply date is due to patient vacation
      */
-    v3_ActCode_VacationSupply: Coding.FromStrict({
+    v3_ActCode_VacationSupply: new Coding({
         code: "16",
         display: "Vacation Supply",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -101,7 +101,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Supply date is intended to carry patient over weekend
      */
-    v3_ActCode_WeekendSupply: Coding.FromStrict({
+    v3_ActCode_WeekendSupply: new Coding({
         code: "17",
         display: "Weekend Supply",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -109,7 +109,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Supply is intended for use during a leave of absence from an institution.
      */
-    v3_ActCode_LeaveOfAbsence: Coding.FromStrict({
+    v3_ActCode_LeaveOfAbsence: new Coding({
         code: "18",
         display: "Leave of Absence",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -117,7 +117,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Consulted other supplier/pharmacy, therapy confirmed
      */
-    v3_ActCode_ConsultedSupplier: Coding.FromStrict({
+    v3_ActCode_ConsultedSupplier: new Coding({
         code: "19",
         display: "Consulted Supplier",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -125,7 +125,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Assessed patient, therapy is appropriate
      */
-    v3_ActCode_AssessedPatient: Coding.FromStrict({
+    v3_ActCode_AssessedPatient: new Coding({
         code: "2",
         display: "Assessed Patient",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -133,7 +133,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Description: Supply is different than expected as an additional quantity has been supplied in a separate dispense.
      */
-    v3_ActCode_AdditionalQuantityOnSeparateDispense: Coding.FromStrict({
+    v3_ActCode_AdditionalQuantityOnSeparateDispense: new Coding({
         code: "20",
         display: "additional quantity on separate dispense",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -141,7 +141,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Description: Indicates that the permissions have been externally verified and the request should be processed.
      */
-    v3_ActCode_AuthorizationConfirmed: Coding.FromStrict({
+    v3_ActCode_AuthorizationConfirmed: new Coding({
         code: "21",
         display: "authorization confirmed",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -149,7 +149,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Description: The patient has the appropriate indication or diagnosis for the action to be taken.
      */
-    v3_ActCode_AppropriateIndicationOrDiagnosis: Coding.FromStrict({
+    v3_ActCode_AppropriateIndicationOrDiagnosis: new Coding({
         code: "22",
         display: "appropriate indication or diagnosis",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -157,7 +157,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Description: It has been confirmed that the appropriate pre-requisite therapy has been tried.
      */
-    v3_ActCode_PriorTherapyDocumented: Coding.FromStrict({
+    v3_ActCode_PriorTherapyDocumented: new Coding({
         code: "23",
         display: "prior therapy documented",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -165,7 +165,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Patient gave adequate explanation
      */
-    v3_ActCode_PatientExplanation: Coding.FromStrict({
+    v3_ActCode_PatientExplanation: new Coding({
         code: "3",
         display: "Patient Explanation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -173,7 +173,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Consulted other supply source, therapy still appropriate
      */
-    v3_ActCode_ConsultedOtherSource: Coding.FromStrict({
+    v3_ActCode_ConsultedOtherSource: new Coding({
         code: "4",
         display: "Consulted Other Source",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -181,7 +181,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Consulted prescriber, therapy confirmed
      */
-    v3_ActCode_ConsultedPrescriber: Coding.FromStrict({
+    v3_ActCode_ConsultedPrescriber: new Coding({
         code: "5",
         display: "Consulted Prescriber",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -189,7 +189,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Consulted prescriber and recommended change, prescriber declined
      */
-    v3_ActCode_PrescriberDeclinedChange: Coding.FromStrict({
+    v3_ActCode_PrescriberDeclinedChange: new Coding({
         code: "6",
         display: "Prescriber Declined Change",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -197,7 +197,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Concurrent therapy triggering alert is no longer on-going or planned
      */
-    v3_ActCode_InteractingTherapyNoLongerActivePlanned: Coding.FromStrict({
+    v3_ActCode_InteractingTherapyNoLongerActivePlanned: new Coding({
         code: "7",
         display: "Interacting Therapy No Longer Active/Planned",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -205,7 +205,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Order is performed as issued, but other action taken to mitigate potential adverse effects
      */
-    v3_ActCode_OtherActionTaken: Coding.FromStrict({
+    v3_ActCode_OtherActionTaken: new Coding({
         code: "8",
         display: "Other Action Taken",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -213,7 +213,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Arranged to monitor patient for adverse effects
      */
-    v3_ActCode_InstitutedOngoingMonitoringProgram: Coding.FromStrict({
+    v3_ActCode_InstitutedOngoingMonitoringProgram: new Coding({
         code: "9",
         display: "Instituted Ongoing Monitoring Program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -221,7 +221,7 @@ export const DetectedissueMitigationActionValueSet = {
     /**
      * Used to temporarily override normal authorization rules to gain access to data in a case of emergency. Use of this override code will typically be monitored, and a procedure to verify its proper use may be triggered when used.
      */
-    v3_ActCode_EmergencyAuthorizationOverride: Coding.FromStrict({
+    v3_ActCode_EmergencyAuthorizationOverride: new Coding({
         code: "EMAUTH",
         display: "emergency authorization override",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"

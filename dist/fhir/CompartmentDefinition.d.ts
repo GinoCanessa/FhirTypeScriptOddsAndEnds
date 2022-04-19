@@ -123,11 +123,11 @@ export declare class CompartmentDefinitionResource extends fhir.BackboneElement 
     /**
      * Check if the current CompartmentDefinitionResource contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CompartmentDefinitionResource from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICompartmentDefinitionResource): CompartmentDefinitionResource;
+    static fromStrict(source: fhir.ICompartmentDefinitionResource): CompartmentDefinitionResource;
 }
 /**
  * A compartment definition that defines how resources are accessed on a server.
@@ -213,11 +213,11 @@ export declare class CompartmentDefinition extends fhir.DomainResource implement
     /**
      * Check if the current CompartmentDefinition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CompartmentDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICompartmentDefinition): CompartmentDefinition;
+    static fromStrict(source: fhir.ICompartmentDefinition): CompartmentDefinition;
 }
 /**
  * Code Values for the CompartmentDefinition.code field

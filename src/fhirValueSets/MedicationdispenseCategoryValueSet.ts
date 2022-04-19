@@ -13,7 +13,7 @@ export const MedicationdispenseCategoryValueSet = {
   /**
    * Includes dispenses for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.).
    */
-  medicationdispense_category_Community: Coding.FromStrict({
+  medicationdispense_category_Community: new Coding({
     code: "community",
     display: "Community",
     system: "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category"
@@ -21,7 +21,7 @@ export const MedicationdispenseCategoryValueSet = {
   /**
    * Includes dispenses for medications created when the patient is being released from a facility.
    */
-  medicationdispense_category_Discharge: Coding.FromStrict({
+  medicationdispense_category_Discharge: new Coding({
     code: "discharge",
     display: "Discharge",
     system: "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category"
@@ -29,7 +29,7 @@ export const MedicationdispenseCategoryValueSet = {
   /**
    * Includes dispenses for medications to be administered or consumed in an inpatient or acute care setting.
    */
-  medicationdispense_category_Inpatient: Coding.FromStrict({
+  medicationdispense_category_Inpatient: new Coding({
     code: "inpatient",
     display: "Inpatient",
     system: "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category"
@@ -37,7 +37,7 @@ export const MedicationdispenseCategoryValueSet = {
   /**
    * Includes dispenses for medications to be administered or consumed in an outpatient setting (for example, Emergency Department, Outpatient Clinic, Outpatient Surgery, Doctor's office).
    */
-  medicationdispense_category_Outpatient: Coding.FromStrict({
+  medicationdispense_category_Outpatient: new Coding({
     code: "outpatient",
     display: "Outpatient",
     system: "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category"

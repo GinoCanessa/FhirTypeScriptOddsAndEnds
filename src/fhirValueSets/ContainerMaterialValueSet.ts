@@ -10,17 +10,17 @@ import { Coding } from '../fhir'
  * This value set includes SNOMED CT codes for materials that specimen containers are made of
  */
 export const ContainerMaterialValueSet = {
-  ContainerMaterialValueSet_Glass: Coding.FromStrict({
+  ContainerMaterialValueSet_Glass: new Coding({
     code: "32039001",
     display: "glass",
     system: "http://snomed.info/sct"
   }),
-  ContainerMaterialValueSet_Metal: Coding.FromStrict({
+  ContainerMaterialValueSet_Metal: new Coding({
     code: "425620007",
     display: "metal",
     system: "http://snomed.info/sct"
   }),
-  ContainerMaterialValueSet_Plastic: Coding.FromStrict({
+  ContainerMaterialValueSet_Plastic: new Coding({
     code: "61088005",
     display: "plastic",
     system: "http://snomed.info/sct"

@@ -10,112 +10,112 @@ import { Coding } from '../fhir'
  * MedicationKnowledge Package Type Codes
  */
 export const MedicationknowledgePackageTypeValueSet = {
-  medicationknowledge_package_type_Ampule: Coding.FromStrict({
+  medicationknowledge_package_type_Ampule: new Coding({
     code: "amp",
     display: "Ampule",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
   }),
-  medicationknowledge_package_type_Bag: Coding.FromStrict({
+  medicationknowledge_package_type_Bag: new Coding({
     code: "bag",
     display: "Bag",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
   }),
-  medicationknowledge_package_type_BlisterPack: Coding.FromStrict({
+  medicationknowledge_package_type_BlisterPack: new Coding({
     code: "blstrpk",
     display: "Blister Pack",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
   }),
-  medicationknowledge_package_type_Bottle: Coding.FromStrict({
+  medicationknowledge_package_type_Bottle: new Coding({
     code: "bot",
     display: "Bottle",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
   }),
-  medicationknowledge_package_type_Box: Coding.FromStrict({
+  medicationknowledge_package_type_Box: new Coding({
     code: "box",
     display: "Box",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
   }),
-  medicationknowledge_package_type_Can: Coding.FromStrict({
+  medicationknowledge_package_type_Can: new Coding({
     code: "can",
     display: "Can",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
   }),
-  medicationknowledge_package_type_Cartridge: Coding.FromStrict({
+  medicationknowledge_package_type_Cartridge: new Coding({
     code: "cart",
     display: "Cartridge",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
   }),
-  medicationknowledge_package_type_Disk: Coding.FromStrict({
+  medicationknowledge_package_type_Disk: new Coding({
     code: "disk",
     display: "Disk",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
   }),
-  medicationknowledge_package_type_Dosette: Coding.FromStrict({
+  medicationknowledge_package_type_Dosette: new Coding({
     code: "doset",
     display: "Dosette",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
   }),
-  medicationknowledge_package_type_Jar: Coding.FromStrict({
+  medicationknowledge_package_type_Jar: new Coding({
     code: "jar",
     display: "Jar",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
   }),
-  medicationknowledge_package_type_Jug: Coding.FromStrict({
+  medicationknowledge_package_type_Jug: new Coding({
     code: "jug",
     display: "Jug",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
   }),
-  medicationknowledge_package_type_Minim: Coding.FromStrict({
+  medicationknowledge_package_type_Minim: new Coding({
     code: "minim",
     display: "Minim",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
   }),
-  medicationknowledge_package_type_NebuleAmp: Coding.FromStrict({
+  medicationknowledge_package_type_NebuleAmp: new Coding({
     code: "nebamp",
     display: "Nebule Amp",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
   }),
-  medicationknowledge_package_type_Ovule: Coding.FromStrict({
+  medicationknowledge_package_type_Ovule: new Coding({
     code: "ovul",
     display: "Ovule",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
   }),
-  medicationknowledge_package_type_Pouch: Coding.FromStrict({
+  medicationknowledge_package_type_Pouch: new Coding({
     code: "pch",
     display: "Pouch",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
   }),
-  medicationknowledge_package_type_Packet: Coding.FromStrict({
+  medicationknowledge_package_type_Packet: new Coding({
     code: "pkt",
     display: "Packet",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
   }),
-  medicationknowledge_package_type_Sashet: Coding.FromStrict({
+  medicationknowledge_package_type_Sashet: new Coding({
     code: "sash",
     display: "Sashet",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
   }),
-  medicationknowledge_package_type_Strip: Coding.FromStrict({
+  medicationknowledge_package_type_Strip: new Coding({
     code: "strip",
     display: "Strip",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
   }),
-  medicationknowledge_package_type_Tin: Coding.FromStrict({
+  medicationknowledge_package_type_Tin: new Coding({
     code: "tin",
     display: "Tin",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
   }),
-  medicationknowledge_package_type_Tub: Coding.FromStrict({
+  medicationknowledge_package_type_Tub: new Coding({
     code: "tub",
     display: "Tub",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
   }),
-  medicationknowledge_package_type_Tube: Coding.FromStrict({
+  medicationknowledge_package_type_Tube: new Coding({
     code: "tube",
     display: "Tube",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
   }),
-  medicationknowledge_package_type_Vial: Coding.FromStrict({
+  medicationknowledge_package_type_Vial: new Coding({
     code: "vial",
     display: "Vial",
     system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"

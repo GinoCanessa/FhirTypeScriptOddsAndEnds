@@ -56,7 +56,7 @@ export class DomainResource extends fhir.Resource implements fhir.IDomainResourc
     if (source["contained"]) {
       this.contained = [];
       source.contained.forEach((x) => {
-        var r = fhir.FhirResourceFactory(x);
+        var r = fhir.fhirResourceFactory(x);
         if (r) { this.contained!.push(r); }
       });
     }
@@ -67,18 +67,18 @@ export class DomainResource extends fhir.Resource implements fhir.IDomainResourc
   /**
    * Check if the current DomainResource contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DomainResource from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDomainResource):DomainResource {
+  static override fromStrict(source:fhir.IDomainResource):DomainResource {
     var dest:DomainResource = new DomainResource(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DomainResource is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

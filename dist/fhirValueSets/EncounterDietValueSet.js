@@ -13,7 +13,7 @@ export const EncounterDietValueSet = {
     /**
      * Excludes dairy products.
      */
-    encounter_diet_DairyFree: Coding.FromStrict({
+    encounter_diet_DairyFree: new Coding({
         code: "dairy-free",
         display: "Dairy Free",
         system: "http://terminology.hl7.org/CodeSystem/diet"
@@ -21,7 +21,7 @@ export const EncounterDietValueSet = {
     /**
      * Excludes ingredients containing gluten.
      */
-    encounter_diet_GlutenFree: Coding.FromStrict({
+    encounter_diet_GlutenFree: new Coding({
         code: "gluten-free",
         display: "Gluten Free",
         system: "http://terminology.hl7.org/CodeSystem/diet"
@@ -29,7 +29,7 @@ export const EncounterDietValueSet = {
     /**
      * Foods that conform to Islamic law.
      */
-    encounter_diet_Halal: Coding.FromStrict({
+    encounter_diet_Halal: new Coding({
         code: "halal",
         display: "Halal",
         system: "http://terminology.hl7.org/CodeSystem/diet"
@@ -37,7 +37,7 @@ export const EncounterDietValueSet = {
     /**
      * Foods that conform to Jewish dietary law.
      */
-    encounter_diet_Kosher: Coding.FromStrict({
+    encounter_diet_Kosher: new Coding({
         code: "kosher",
         display: "Kosher",
         system: "http://terminology.hl7.org/CodeSystem/diet"
@@ -45,7 +45,7 @@ export const EncounterDietValueSet = {
     /**
      * Excludes ingredients containing nuts.
      */
-    encounter_diet_NutFree: Coding.FromStrict({
+    encounter_diet_NutFree: new Coding({
         code: "nut-free",
         display: "Nut Free",
         system: "http://terminology.hl7.org/CodeSystem/diet"
@@ -53,7 +53,7 @@ export const EncounterDietValueSet = {
     /**
      * Food without meat, poultry, seafood, eggs, dairy products and other animal-derived substances.
      */
-    encounter_diet_Vegan: Coding.FromStrict({
+    encounter_diet_Vegan: new Coding({
         code: "vegan",
         display: "Vegan",
         system: "http://terminology.hl7.org/CodeSystem/diet"
@@ -61,7 +61,7 @@ export const EncounterDietValueSet = {
     /**
      * Food without meat, poultry or seafood.
      */
-    encounter_diet_Vegetarian: Coding.FromStrict({
+    encounter_diet_Vegetarian: new Coding({
         code: "vegetarian",
         display: "Vegetarian",
         system: "http://terminology.hl7.org/CodeSystem/diet"

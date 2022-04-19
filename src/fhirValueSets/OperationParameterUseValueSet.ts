@@ -13,7 +13,7 @@ export const OperationParameterUseValueSet = {
   /**
    * This is an input parameter.
    */
-  operation_parameter_use_In: Coding.FromStrict({
+  operation_parameter_use_In: new Coding({
     code: "in",
     display: "In",
     system: "http://hl7.org/fhir/operation-parameter-use"
@@ -21,7 +21,7 @@ export const OperationParameterUseValueSet = {
   /**
    * This is an output parameter.
    */
-  operation_parameter_use_Out: Coding.FromStrict({
+  operation_parameter_use_Out: new Coding({
     code: "out",
     display: "Out",
     system: "http://hl7.org/fhir/operation-parameter-use"

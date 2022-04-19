@@ -10,22 +10,22 @@ import { Coding } from '../fhir'
  * Identifies types of events that might trigger the start of a goal.
  */
 export const GoalStartEventValueSet = {
-  GoalStartEventValueSet_DischargeFromHospital: Coding.FromStrict({
+  GoalStartEventValueSet_DischargeFromHospital: new Coding({
     code: "308283009",
     display: "Discharge from hospital",
     system: "http://snomed.info/sct"
   }),
-  GoalStartEventValueSet_AdmissionToHospital: Coding.FromStrict({
+  GoalStartEventValueSet_AdmissionToHospital: new Coding({
     code: "32485007",
     display: "Admission to hospital",
     system: "http://snomed.info/sct"
   }),
-  GoalStartEventValueSet_Childbirth: Coding.FromStrict({
+  GoalStartEventValueSet_Childbirth: new Coding({
     code: "386216000",
     display: "Childbirth",
     system: "http://snomed.info/sct"
   }),
-  GoalStartEventValueSet_CompletionTimeOfProcedure: Coding.FromStrict({
+  GoalStartEventValueSet_CompletionTimeOfProcedure: new Coding({
     code: "442137000",
     display: "Completion time of procedure",
     system: "http://snomed.info/sct"

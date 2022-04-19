@@ -10,12 +10,12 @@ import { Coding } from '../fhir';
  * An example value set of SNOMED CT concepts that can classify a requested service
  */
 export const ServicerequestCategoryValueSet = {
-    ServicerequestCategoryValueSet_LaboratoryProcedure: Coding.FromStrict({
+    ServicerequestCategoryValueSet_LaboratoryProcedure: new Coding({
         code: "108252007",
         display: "Laboratory procedure",
         system: "http://snomed.info/sct"
     }),
-    ServicerequestCategoryValueSet_Imaging: Coding.FromStrict({
+    ServicerequestCategoryValueSet_Imaging: new Coding({
         code: "363679005",
         display: "Imaging",
         system: "http://snomed.info/sct"

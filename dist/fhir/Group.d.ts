@@ -155,11 +155,11 @@ export declare class GroupCharacteristic extends fhir.BackboneElement implements
     /**
      * Check if the current GroupCharacteristic contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a GroupCharacteristic from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IGroupCharacteristic): GroupCharacteristic;
+    static fromStrict(source: fhir.IGroupCharacteristic): GroupCharacteristic;
 }
 /**
  * Identifies the resource instances that are members of the group.
@@ -185,11 +185,11 @@ export declare class GroupMember extends fhir.BackboneElement implements fhir.IG
     /**
      * Check if the current GroupMember contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a GroupMember from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IGroupMember): GroupMember;
+    static fromStrict(source: fhir.IGroupMember): GroupMember;
 }
 /**
  * Represents a defined collection of entities that may be discussed or acted upon collectively but which are not expected to act collectively, and are not formally or legally recognized; i.e. a collection of entities that isn't an Organization.
@@ -251,11 +251,11 @@ export declare class Group extends fhir.DomainResource implements fhir.IGroup {
     /**
      * Check if the current Group contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Group from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IGroup): Group;
+    static fromStrict(source: fhir.IGroup): Group;
 }
 /**
  * Code Values for the Group.type field

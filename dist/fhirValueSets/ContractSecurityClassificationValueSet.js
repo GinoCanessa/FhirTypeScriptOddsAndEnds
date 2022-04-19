@@ -13,7 +13,7 @@ export const ContractSecurityClassificationValueSet = {
     /**
      * To be completed
      */
-    contract_security_classification_Policy: Coding.FromStrict({
+    contract_security_classification_Policy: new Coding({
         code: "policy",
         display: "Policy",
         system: "http://hl7.org/fhir/contract-security-classification"

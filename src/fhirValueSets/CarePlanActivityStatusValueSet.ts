@@ -13,7 +13,7 @@ export const CarePlanActivityStatusValueSet = {
   /**
    * The planned care plan activity has been withdrawn.
    */
-  care_plan_activity_status_Cancelled: Coding.FromStrict({
+  care_plan_activity_status_Cancelled: new Coding({
     code: "cancelled",
     display: "Cancelled",
     system: "http://hl7.org/fhir/care-plan-activity-status"
@@ -21,7 +21,7 @@ export const CarePlanActivityStatusValueSet = {
   /**
    * Care plan activity has been completed (more or less) as planned.
    */
-  care_plan_activity_status_Completed: Coding.FromStrict({
+  care_plan_activity_status_Completed: new Coding({
     code: "completed",
     display: "Completed",
     system: "http://hl7.org/fhir/care-plan-activity-status"
@@ -29,7 +29,7 @@ export const CarePlanActivityStatusValueSet = {
   /**
    * Care plan activity was entered in error and voided.
    */
-  care_plan_activity_status_EnteredInError: Coding.FromStrict({
+  care_plan_activity_status_EnteredInError: new Coding({
     code: "entered-in-error",
     display: "Entered in Error",
     system: "http://hl7.org/fhir/care-plan-activity-status"
@@ -37,7 +37,7 @@ export const CarePlanActivityStatusValueSet = {
   /**
    * Care plan activity has been started but is not yet complete.
    */
-  care_plan_activity_status_InProgress: Coding.FromStrict({
+  care_plan_activity_status_InProgress: new Coding({
     code: "in-progress",
     display: "In Progress",
     system: "http://hl7.org/fhir/care-plan-activity-status"
@@ -45,7 +45,7 @@ export const CarePlanActivityStatusValueSet = {
   /**
    * Care plan activity is planned but no action has yet been taken.
    */
-  care_plan_activity_status_NotStarted: Coding.FromStrict({
+  care_plan_activity_status_NotStarted: new Coding({
     code: "not-started",
     display: "Not Started",
     system: "http://hl7.org/fhir/care-plan-activity-status"
@@ -53,7 +53,7 @@ export const CarePlanActivityStatusValueSet = {
   /**
    * Care plan activity was started but has temporarily ceased with an expectation of resumption at a future time.
    */
-  care_plan_activity_status_OnHold: Coding.FromStrict({
+  care_plan_activity_status_OnHold: new Coding({
     code: "on-hold",
     display: "On Hold",
     system: "http://hl7.org/fhir/care-plan-activity-status"
@@ -61,7 +61,7 @@ export const CarePlanActivityStatusValueSet = {
   /**
    * Appointment or other booking has occurred but activity has not yet begun.
    */
-  care_plan_activity_status_Scheduled: Coding.FromStrict({
+  care_plan_activity_status_Scheduled: new Coding({
     code: "scheduled",
     display: "Scheduled",
     system: "http://hl7.org/fhir/care-plan-activity-status"
@@ -69,7 +69,7 @@ export const CarePlanActivityStatusValueSet = {
   /**
    * The planned care plan activity has been ended prior to completion after the activity was started.
    */
-  care_plan_activity_status_Stopped: Coding.FromStrict({
+  care_plan_activity_status_Stopped: new Coding({
     code: "stopped",
     display: "Stopped",
     system: "http://hl7.org/fhir/care-plan-activity-status"
@@ -77,7 +77,7 @@ export const CarePlanActivityStatusValueSet = {
   /**
    * The current state of the care plan activity is not known.  Note: This concept is not to be used for "other" - one of the listed statuses is presumed to apply, but the authoring/source system does not know which one.
    */
-  care_plan_activity_status_Unknown: Coding.FromStrict({
+  care_plan_activity_status_Unknown: new Coding({
     code: "unknown",
     display: "Unknown",
     system: "http://hl7.org/fhir/care-plan-activity-status"

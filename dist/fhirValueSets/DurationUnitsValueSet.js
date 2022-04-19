@@ -10,12 +10,12 @@ import { Coding } from '../fhir';
  * Unified Code for Units of Measure (UCUM). This value set includes all UCUM codes
  */
 export const DurationUnitsValueSet = {
-    DurationUnitsValueSet_Milliseconds: Coding.FromStrict({
+    DurationUnitsValueSet_Milliseconds: new Coding({
         code: "ms",
         display: "milliseconds",
         system: "http://unitsofmeasure.org"
     }),
-    DurationUnitsValueSet_Seconds: Coding.FromStrict({
+    DurationUnitsValueSet_Seconds: new Coding({
         code: "s",
         display: "seconds",
         system: "http://unitsofmeasure.org"

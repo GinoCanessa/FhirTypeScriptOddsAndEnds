@@ -456,20 +456,20 @@ export class QuestionnaireItemEnableWhen extends fhir.BackboneElement implements
   /**
    * Check if the current QuestionnaireItemEnableWhen contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["operator"] === undefined) { missingElements.push("operator"); }
     if (this["question"] === undefined) { missingElements.push("question"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a QuestionnaireItemEnableWhen from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IQuestionnaireItemEnableWhen):QuestionnaireItemEnableWhen {
+  static override fromStrict(source:fhir.IQuestionnaireItemEnableWhen):QuestionnaireItemEnableWhen {
     var dest:QuestionnaireItemEnableWhen = new QuestionnaireItemEnableWhen(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `QuestionnaireItemEnableWhen is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -532,18 +532,18 @@ export class QuestionnaireItemAnswerOption extends fhir.BackboneElement implemen
   /**
    * Check if the current QuestionnaireItemAnswerOption contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a QuestionnaireItemAnswerOption from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IQuestionnaireItemAnswerOption):QuestionnaireItemAnswerOption {
+  static override fromStrict(source:fhir.IQuestionnaireItemAnswerOption):QuestionnaireItemAnswerOption {
     var dest:QuestionnaireItemAnswerOption = new QuestionnaireItemAnswerOption(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `QuestionnaireItemAnswerOption is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -637,18 +637,18 @@ export class QuestionnaireItemInitial extends fhir.BackboneElement implements fh
   /**
    * Check if the current QuestionnaireItemInitial contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a QuestionnaireItemInitial from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IQuestionnaireItemInitial):QuestionnaireItemInitial {
+  static override fromStrict(source:fhir.IQuestionnaireItemInitial):QuestionnaireItemInitial {
     var dest:QuestionnaireItemInitial = new QuestionnaireItemInitial(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `QuestionnaireItemInitial is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -774,20 +774,20 @@ export class QuestionnaireItem extends fhir.BackboneElement implements fhir.IQue
   /**
    * Check if the current QuestionnaireItem contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["linkId"] === undefined) { missingElements.push("linkId"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a QuestionnaireItem from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IQuestionnaireItem):QuestionnaireItem {
+  static override fromStrict(source:fhir.IQuestionnaireItem):QuestionnaireItem {
     var dest:QuestionnaireItem = new QuestionnaireItem(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `QuestionnaireItem is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -952,19 +952,19 @@ export class Questionnaire extends fhir.DomainResource implements fhir.IQuestion
   /**
    * Check if the current Questionnaire contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Questionnaire from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IQuestionnaire):Questionnaire {
+  static override fromStrict(source:fhir.IQuestionnaire):Questionnaire {
     var dest:Questionnaire = new Questionnaire(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Questionnaire is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

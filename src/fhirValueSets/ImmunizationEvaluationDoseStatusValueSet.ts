@@ -13,7 +13,7 @@ export const ImmunizationEvaluationDoseStatusValueSet = {
   /**
    * The dose does not count toward fulfilling a path to immunity for a patient.
    */
-  immunization_evaluation_dose_status_NotValid: Coding.FromStrict({
+  immunization_evaluation_dose_status_NotValid: new Coding({
     code: "notvalid",
     display: "Not valid",
     system: "http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status"
@@ -21,7 +21,7 @@ export const ImmunizationEvaluationDoseStatusValueSet = {
   /**
    * The dose counts toward fulfilling a path to immunity for a patient, providing protection against the target disease.
    */
-  immunization_evaluation_dose_status_Valid: Coding.FromStrict({
+  immunization_evaluation_dose_status_Valid: new Coding({
     code: "valid",
     display: "Valid",
     system: "http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status"

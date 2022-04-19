@@ -60,7 +60,7 @@ export class OperationOutcomeIssue extends fhir.BackboneElement {
     /**
      * Check if the current OperationOutcomeIssue contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["code"] === undefined) {
             missingElements.push("code");
@@ -68,16 +68,16 @@ export class OperationOutcomeIssue extends fhir.BackboneElement {
         if (this["severity"] === undefined) {
             missingElements.push("severity");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a OperationOutcomeIssue from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new OperationOutcomeIssue(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `OperationOutcomeIssue is missing elements: ${missingElements.join(", ")}`;
         }
@@ -105,21 +105,21 @@ export class OperationOutcome extends fhir.DomainResource {
     /**
      * Check if the current OperationOutcome contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if ((!this["issue"]) || (this["issue"].length === 0)) {
             missingElements.push("issue");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a OperationOutcome from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new OperationOutcome(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `OperationOutcome is missing elements: ${missingElements.join(", ")}`;
         }

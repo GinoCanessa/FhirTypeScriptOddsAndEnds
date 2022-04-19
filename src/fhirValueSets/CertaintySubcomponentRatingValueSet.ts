@@ -13,7 +13,7 @@ export const CertaintySubcomponentRatingValueSet = {
   /**
    * possible reason for increasing quality rating was checked and found to be absent.
    */
-  certainty_subcomponent_rating_Absent: Coding.FromStrict({
+  certainty_subcomponent_rating_Absent: new Coding({
     code: "absent",
     display: "absent",
     system: "http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"
@@ -21,7 +21,7 @@ export const CertaintySubcomponentRatingValueSet = {
   /**
    * critical concern.
    */
-  certainty_subcomponent_rating_CriticalConcern: Coding.FromStrict({
+  certainty_subcomponent_rating_CriticalConcern: new Coding({
     code: "critical-concern",
     display: "critical concern",
     system: "http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"
@@ -29,7 +29,7 @@ export const CertaintySubcomponentRatingValueSet = {
   /**
    * reduce quality rating by 1.
    */
-  certainty_subcomponent_rating_ReduceRating1: Coding.FromStrict({
+  certainty_subcomponent_rating_ReduceRating1: new Coding({
     code: "downcode1",
     display: "reduce rating: -1",
     system: "http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"
@@ -37,7 +37,7 @@ export const CertaintySubcomponentRatingValueSet = {
   /**
    * reduce quality rating by 2.
    */
-  certainty_subcomponent_rating_ReduceRating2: Coding.FromStrict({
+  certainty_subcomponent_rating_ReduceRating2: new Coding({
     code: "downcode2",
     display: "reduce rating: -2",
     system: "http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"
@@ -45,7 +45,7 @@ export const CertaintySubcomponentRatingValueSet = {
   /**
    * reduce quality rating by 3.
    */
-  certainty_subcomponent_rating_ReduceRating3: Coding.FromStrict({
+  certainty_subcomponent_rating_ReduceRating3: new Coding({
     code: "downcode3",
     display: "reduce rating: -3",
     system: "http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"
@@ -53,7 +53,7 @@ export const CertaintySubcomponentRatingValueSet = {
   /**
    * no change to quality rating.
    */
-  certainty_subcomponent_rating_NoChangeToRating: Coding.FromStrict({
+  certainty_subcomponent_rating_NoChangeToRating: new Coding({
     code: "no-change",
     display: "no change to rating",
     system: "http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"
@@ -61,7 +61,7 @@ export const CertaintySubcomponentRatingValueSet = {
   /**
    * no serious concern.
    */
-  certainty_subcomponent_rating_NoSeriousConcern: Coding.FromStrict({
+  certainty_subcomponent_rating_NoSeriousConcern: new Coding({
     code: "no-concern",
     display: "no serious concern",
     system: "http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"
@@ -69,7 +69,7 @@ export const CertaintySubcomponentRatingValueSet = {
   /**
    * possible reason for increasing quality rating was checked and found to bepresent.
    */
-  certainty_subcomponent_rating_Present: Coding.FromStrict({
+  certainty_subcomponent_rating_Present: new Coding({
     code: "present",
     display: "present",
     system: "http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"
@@ -77,7 +77,7 @@ export const CertaintySubcomponentRatingValueSet = {
   /**
    * serious concern.
    */
-  certainty_subcomponent_rating_SeriousConcern: Coding.FromStrict({
+  certainty_subcomponent_rating_SeriousConcern: new Coding({
     code: "serious-concern",
     display: "serious concern",
     system: "http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"
@@ -85,7 +85,7 @@ export const CertaintySubcomponentRatingValueSet = {
   /**
    * increase quality rating by 1.
    */
-  certainty_subcomponent_rating_IncreaseRatingPlus1: Coding.FromStrict({
+  certainty_subcomponent_rating_IncreaseRatingPlus1: new Coding({
     code: "upcode1",
     display: "increase rating: +1",
     system: "http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"
@@ -93,7 +93,7 @@ export const CertaintySubcomponentRatingValueSet = {
   /**
    * increase quality rating by 2.
    */
-  certainty_subcomponent_rating_IncreaseRatingPlus2: Coding.FromStrict({
+  certainty_subcomponent_rating_IncreaseRatingPlus2: new Coding({
     code: "upcode2",
     display: "increase rating: +2",
     system: "http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"

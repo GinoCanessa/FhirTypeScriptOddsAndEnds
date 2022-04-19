@@ -41,21 +41,21 @@ export class MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStreng
     /**
      * Check if the current MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["strength"] === undefined) {
             missingElements.push("strength");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength is missing elements: ${missingElements.join(", ")}`;
         }
@@ -103,21 +103,21 @@ export class MedicinalProductIngredientSpecifiedSubstanceStrength extends fhir.B
     /**
      * Check if the current MedicinalProductIngredientSpecifiedSubstanceStrength contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["presentation"] === undefined) {
             missingElements.push("presentation");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductIngredientSpecifiedSubstanceStrength from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductIngredientSpecifiedSubstanceStrength(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductIngredientSpecifiedSubstanceStrength is missing elements: ${missingElements.join(", ")}`;
         }
@@ -157,7 +157,7 @@ export class MedicinalProductIngredientSpecifiedSubstance extends fhir.BackboneE
     /**
      * Check if the current MedicinalProductIngredientSpecifiedSubstance contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["code"] === undefined) {
             missingElements.push("code");
@@ -165,16 +165,16 @@ export class MedicinalProductIngredientSpecifiedSubstance extends fhir.BackboneE
         if (this["group"] === undefined) {
             missingElements.push("group");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductIngredientSpecifiedSubstance from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductIngredientSpecifiedSubstance(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductIngredientSpecifiedSubstance is missing elements: ${missingElements.join(", ")}`;
         }
@@ -204,21 +204,21 @@ export class MedicinalProductIngredientSubstance extends fhir.BackboneElement {
     /**
      * Check if the current MedicinalProductIngredientSubstance contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["code"] === undefined) {
             missingElements.push("code");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductIngredientSubstance from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductIngredientSubstance(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductIngredientSubstance is missing elements: ${missingElements.join(", ")}`;
         }
@@ -264,21 +264,21 @@ export class MedicinalProductIngredient extends fhir.DomainResource {
     /**
      * Check if the current MedicinalProductIngredient contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["role"] === undefined) {
             missingElements.push("role");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductIngredient from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductIngredient(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductIngredient is missing elements: ${missingElements.join(", ")}`;
         }

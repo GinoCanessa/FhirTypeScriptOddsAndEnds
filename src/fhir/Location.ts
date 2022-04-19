@@ -174,20 +174,20 @@ export class LocationPosition extends fhir.BackboneElement implements fhir.ILoca
   /**
    * Check if the current LocationPosition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["latitude"] === undefined) { missingElements.push("latitude"); }
     if (this["longitude"] === undefined) { missingElements.push("longitude"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a LocationPosition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ILocationPosition):LocationPosition {
+  static override fromStrict(source:fhir.ILocationPosition):LocationPosition {
     var dest:LocationPosition = new LocationPosition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `LocationPosition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -234,18 +234,18 @@ export class LocationHoursOfOperation extends fhir.BackboneElement implements fh
   /**
    * Check if the current LocationHoursOfOperation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a LocationHoursOfOperation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ILocationHoursOfOperation):LocationHoursOfOperation {
+  static override fromStrict(source:fhir.ILocationHoursOfOperation):LocationHoursOfOperation {
     var dest:LocationHoursOfOperation = new LocationHoursOfOperation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `LocationHoursOfOperation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -366,18 +366,18 @@ export class Location extends fhir.DomainResource implements fhir.ILocation {
   /**
    * Check if the current Location contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Location from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ILocation):Location {
+  static override fromStrict(source:fhir.ILocation):Location {
     var dest:Location = new Location(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Location is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

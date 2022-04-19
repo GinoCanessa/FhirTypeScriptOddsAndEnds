@@ -13,7 +13,7 @@ export const QualityTypeValueSet = {
   /**
    * INDEL Comparison.
    */
-  quality_type_INDELComparison: Coding.FromStrict({
+  quality_type_INDELComparison: new Coding({
     code: "indel",
     display: "INDEL Comparison",
     system: "http://hl7.org/fhir/quality-type"
@@ -21,7 +21,7 @@ export const QualityTypeValueSet = {
   /**
    * SNP Comparison.
    */
-  quality_type_SNPComparison: Coding.FromStrict({
+  quality_type_SNPComparison: new Coding({
     code: "snp",
     display: "SNP Comparison",
     system: "http://hl7.org/fhir/quality-type"
@@ -29,7 +29,7 @@ export const QualityTypeValueSet = {
   /**
    * UNKNOWN Comparison.
    */
-  quality_type_UNKNOWNComparison: Coding.FromStrict({
+  quality_type_UNKNOWNComparison: new Coding({
     code: "unknown",
     display: "UNKNOWN Comparison",
     system: "http://hl7.org/fhir/quality-type"

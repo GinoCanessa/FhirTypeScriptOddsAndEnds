@@ -45,7 +45,7 @@ export class LocationPosition extends fhir.BackboneElement {
     /**
      * Check if the current LocationPosition contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["latitude"] === undefined) {
             missingElements.push("latitude");
@@ -53,16 +53,16 @@ export class LocationPosition extends fhir.BackboneElement {
         if (this["longitude"] === undefined) {
             missingElements.push("longitude");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a LocationPosition from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new LocationPosition(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `LocationPosition is missing elements: ${missingElements.join(", ")}`;
         }
@@ -107,18 +107,18 @@ export class LocationHoursOfOperation extends fhir.BackboneElement {
     /**
      * Check if the current LocationHoursOfOperation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a LocationHoursOfOperation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new LocationHoursOfOperation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `LocationHoursOfOperation is missing elements: ${missingElements.join(", ")}`;
         }
@@ -208,18 +208,18 @@ export class Location extends fhir.DomainResource {
     /**
      * Check if the current Location contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a Location from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new Location(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `Location is missing elements: ${missingElements.join(", ")}`;
         }

@@ -13,7 +13,7 @@ export const TestscriptProfileOriginTypesValueSet = {
   /**
    * General FHIR client used to initiate operations against a FHIR server.
    */
-  testscript_profile_origin_types_FHIRClient: Coding.FromStrict({
+  testscript_profile_origin_types_FHIRClient: new Coding({
     code: "FHIR-Client",
     display: "FHIR Client",
     system: "http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types"
@@ -21,7 +21,7 @@ export const TestscriptProfileOriginTypesValueSet = {
   /**
    * A FHIR client acting as a Structured Data Capture Form Filler.
    */
-  testscript_profile_origin_types_FHIRSDCFormFiller: Coding.FromStrict({
+  testscript_profile_origin_types_FHIRSDCFormFiller: new Coding({
     code: "FHIR-SDC-FormFiller",
     display: "FHIR SDC FormFiller",
     system: "http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types"

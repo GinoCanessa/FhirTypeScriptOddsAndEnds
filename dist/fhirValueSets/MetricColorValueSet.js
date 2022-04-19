@@ -13,7 +13,7 @@ export const MetricColorValueSet = {
     /**
      * Color for representation - black.
      */
-    metric_color_ColorBlack: Coding.FromStrict({
+    metric_color_ColorBlack: new Coding({
         code: "black",
         display: "Color Black",
         system: "http://hl7.org/fhir/metric-color"
@@ -21,7 +21,7 @@ export const MetricColorValueSet = {
     /**
      * Color for representation - blue.
      */
-    metric_color_ColorBlue: Coding.FromStrict({
+    metric_color_ColorBlue: new Coding({
         code: "blue",
         display: "Color Blue",
         system: "http://hl7.org/fhir/metric-color"
@@ -29,7 +29,7 @@ export const MetricColorValueSet = {
     /**
      * Color for representation - cyan.
      */
-    metric_color_ColorCyan: Coding.FromStrict({
+    metric_color_ColorCyan: new Coding({
         code: "cyan",
         display: "Color Cyan",
         system: "http://hl7.org/fhir/metric-color"
@@ -37,7 +37,7 @@ export const MetricColorValueSet = {
     /**
      * Color for representation - green.
      */
-    metric_color_ColorGreen: Coding.FromStrict({
+    metric_color_ColorGreen: new Coding({
         code: "green",
         display: "Color Green",
         system: "http://hl7.org/fhir/metric-color"
@@ -45,7 +45,7 @@ export const MetricColorValueSet = {
     /**
      * Color for representation - magenta.
      */
-    metric_color_ColorMagenta: Coding.FromStrict({
+    metric_color_ColorMagenta: new Coding({
         code: "magenta",
         display: "Color Magenta",
         system: "http://hl7.org/fhir/metric-color"
@@ -53,7 +53,7 @@ export const MetricColorValueSet = {
     /**
      * Color for representation - red.
      */
-    metric_color_ColorRed: Coding.FromStrict({
+    metric_color_ColorRed: new Coding({
         code: "red",
         display: "Color Red",
         system: "http://hl7.org/fhir/metric-color"
@@ -61,7 +61,7 @@ export const MetricColorValueSet = {
     /**
      * Color for representation - white.
      */
-    metric_color_ColorWhite: Coding.FromStrict({
+    metric_color_ColorWhite: new Coding({
         code: "white",
         display: "Color White",
         system: "http://hl7.org/fhir/metric-color"
@@ -69,7 +69,7 @@ export const MetricColorValueSet = {
     /**
      * Color for representation - yellow.
      */
-    metric_color_ColorYellow: Coding.FromStrict({
+    metric_color_ColorYellow: new Coding({
         code: "yellow",
         display: "Color Yellow",
         system: "http://hl7.org/fhir/metric-color"

@@ -136,19 +136,19 @@ export class ProvenanceAgent extends fhir.BackboneElement implements fhir.IProve
   /**
    * Check if the current ProvenanceAgent contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["who"] === undefined) { missingElements.push("who"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ProvenanceAgent from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IProvenanceAgent):ProvenanceAgent {
+  static override fromStrict(source:fhir.IProvenanceAgent):ProvenanceAgent {
     var dest:ProvenanceAgent = new ProvenanceAgent(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ProvenanceAgent is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -187,20 +187,20 @@ export class ProvenanceEntity extends fhir.BackboneElement implements fhir.IProv
   /**
    * Check if the current ProvenanceEntity contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["role"] === undefined) { missingElements.push("role"); }
     if (this["what"] === undefined) { missingElements.push("what"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ProvenanceEntity from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IProvenanceEntity):ProvenanceEntity {
+  static override fromStrict(source:fhir.IProvenanceEntity):ProvenanceEntity {
     var dest:ProvenanceEntity = new ProvenanceEntity(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ProvenanceEntity is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -290,21 +290,21 @@ export class Provenance extends fhir.DomainResource implements fhir.IProvenance 
   /**
    * Check if the current Provenance contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["agent"]) || (this["agent"].length === 0)) { missingElements.push("agent"); }
     if (this["recorded"] === undefined) { missingElements.push("recorded"); }
     if ((!this["target"]) || (this["target"].length === 0)) { missingElements.push("target"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Provenance from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IProvenance):Provenance {
+  static override fromStrict(source:fhir.IProvenance):Provenance {
     var dest:Provenance = new Provenance(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Provenance is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

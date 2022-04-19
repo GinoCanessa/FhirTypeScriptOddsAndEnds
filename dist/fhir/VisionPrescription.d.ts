@@ -151,11 +151,11 @@ export declare class VisionPrescriptionLensSpecificationPrism extends fhir.Backb
     /**
      * Check if the current VisionPrescriptionLensSpecificationPrism contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a VisionPrescriptionLensSpecificationPrism from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IVisionPrescriptionLensSpecificationPrism): VisionPrescriptionLensSpecificationPrism;
+    static fromStrict(source: fhir.IVisionPrescriptionLensSpecificationPrism): VisionPrescriptionLensSpecificationPrism;
 }
 /**
  * Contain the details of  the individual lens specifications and serves as the authorization for the fullfillment by certified professionals.
@@ -235,11 +235,11 @@ export declare class VisionPrescriptionLensSpecification extends fhir.BackboneEl
     /**
      * Check if the current VisionPrescriptionLensSpecification contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a VisionPrescriptionLensSpecification from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IVisionPrescriptionLensSpecification): VisionPrescriptionLensSpecification;
+    static fromStrict(source: fhir.IVisionPrescriptionLensSpecification): VisionPrescriptionLensSpecification;
 }
 /**
  * An authorization for the provision of glasses and/or contact lenses to a patient.
@@ -291,11 +291,11 @@ export declare class VisionPrescription extends fhir.DomainResource implements f
     /**
      * Check if the current VisionPrescription contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a VisionPrescription from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IVisionPrescription): VisionPrescription;
+    static fromStrict(source: fhir.IVisionPrescription): VisionPrescription;
 }
 /**
  * Code Values for the VisionPrescription.lensSpecification.prism.base field

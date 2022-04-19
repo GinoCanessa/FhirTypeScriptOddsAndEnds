@@ -13,7 +13,7 @@ export const HistoryStatusValueSet = {
   /**
    * All available related health information is captured as of the date (and possibly time) when the family member history was taken.
    */
-  history_status_Completed: Coding.FromStrict({
+  history_status_Completed: new Coding({
     code: "completed",
     display: "Completed",
     system: "http://hl7.org/fhir/history-status"
@@ -21,7 +21,7 @@ export const HistoryStatusValueSet = {
   /**
    * This instance should not have been part of this patient's medical record.
    */
-  history_status_EnteredInError: Coding.FromStrict({
+  history_status_EnteredInError: new Coding({
     code: "entered-in-error",
     display: "Entered in Error",
     system: "http://hl7.org/fhir/history-status"
@@ -29,7 +29,7 @@ export const HistoryStatusValueSet = {
   /**
    * Health information for this family member is unavailable/unknown.
    */
-  history_status_HealthUnknown: Coding.FromStrict({
+  history_status_HealthUnknown: new Coding({
     code: "health-unknown",
     display: "Health Unknown",
     system: "http://hl7.org/fhir/history-status"
@@ -37,7 +37,7 @@ export const HistoryStatusValueSet = {
   /**
    * Some health information is known and captured, but not complete - see notes for details.
    */
-  history_status_Partial: Coding.FromStrict({
+  history_status_Partial: new Coding({
     code: "partial",
     display: "Partial",
     system: "http://hl7.org/fhir/history-status"

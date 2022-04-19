@@ -13,7 +13,7 @@ export const CommunicationNotDoneReasonValueSet = {
   /**
    * The communication was not done due to a family objection.
    */
-  communication_not_done_reason_FamilyObjection: Coding.FromStrict({
+  communication_not_done_reason_FamilyObjection: new Coding({
     code: "family-objection",
     display: "Family Objection",
     system: "http://terminology.hl7.org/CodeSystem/communication-not-done-reason"
@@ -21,7 +21,7 @@ export const CommunicationNotDoneReasonValueSet = {
   /**
    * The communication was not done due to an invalid phone number.
    */
-  communication_not_done_reason_InvalidPhoneNumber: Coding.FromStrict({
+  communication_not_done_reason_InvalidPhoneNumber: new Coding({
     code: "invalid-phone-number",
     display: "Invalid Phone Number",
     system: "http://terminology.hl7.org/CodeSystem/communication-not-done-reason"
@@ -29,7 +29,7 @@ export const CommunicationNotDoneReasonValueSet = {
   /**
    * The communication was not done due to a patient objection.
    */
-  communication_not_done_reason_PatientObjection: Coding.FromStrict({
+  communication_not_done_reason_PatientObjection: new Coding({
     code: "patient-objection",
     display: "Patient Objection",
     system: "http://terminology.hl7.org/CodeSystem/communication-not-done-reason"
@@ -37,7 +37,7 @@ export const CommunicationNotDoneReasonValueSet = {
   /**
    * The communication was not done due to the recipient being unavailable.
    */
-  communication_not_done_reason_RecipientUnavailable: Coding.FromStrict({
+  communication_not_done_reason_RecipientUnavailable: new Coding({
     code: "recipient-unavailable",
     display: "Recipient Unavailable",
     system: "http://terminology.hl7.org/CodeSystem/communication-not-done-reason"
@@ -45,7 +45,7 @@ export const CommunicationNotDoneReasonValueSet = {
   /**
    * The communication was not done due to a system error.
    */
-  communication_not_done_reason_SystemError: Coding.FromStrict({
+  communication_not_done_reason_SystemError: new Coding({
     code: "system-error",
     display: "System Error",
     system: "http://terminology.hl7.org/CodeSystem/communication-not-done-reason"
@@ -53,7 +53,7 @@ export const CommunicationNotDoneReasonValueSet = {
   /**
    * The communication was not done due to an unknown reason.
    */
-  communication_not_done_reason_Unknown: Coding.FromStrict({
+  communication_not_done_reason_Unknown: new Coding({
     code: "unknown",
     display: "Unknown",
     system: "http://terminology.hl7.org/CodeSystem/communication-not-done-reason"

@@ -10,227 +10,227 @@ import { Coding } from '../fhir'
  * This value set defines an example set of codes that could be can be used to classify groupings of service-types/specialties.
  */
 export const ProgramValueSet = {
-  program_AcquiredBrainInjuryABIProgram: Coding.FromStrict({
+  program_AcquiredBrainInjuryABIProgram: new Coding({
     code: "1",
     display: "Acquired Brain Injury (ABI) Program ",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_CognitiveDementiaMemoryServiceCDAMS: Coding.FromStrict({
+  program_CognitiveDementiaMemoryServiceCDAMS: new Coding({
     code: "10",
     display: "Cognitive Dementia Memory Service (CDAMS)",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_ChildFIRST: Coding.FromStrict({
+  program_ChildFIRST: new Coding({
     code: "11",
     display: "ChildFIRST",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_ChildrenQuoteSContactServices: Coding.FromStrict({
+  program_ChildrenQuoteSContactServices: new Coding({
     code: "12",
     display: "Children's Contact Services",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_CommunityVisitorsScheme: Coding.FromStrict({
+  program_CommunityVisitorsScheme: new Coding({
     code: "13",
     display: "Community Visitors Scheme",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_CPPCommunityPartnersProgram: Coding.FromStrict({
+  program_CPPCommunityPartnersProgram: new Coding({
     code: "14",
     display: "CPP (Community Partners Program)",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_ClosingTheGapCTG: Coding.FromStrict({
+  program_ClosingTheGapCTG: new Coding({
     code: "15",
     display: "Closing the Gap (CTG)",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_CoordinatedVeteransQuoteCareCVCProgram: Coding.FromStrict({
+  program_CoordinatedVeteransQuoteCareCVCProgram: new Coding({
     code: "16",
     display: "Coordinated Veterans' Care (CVC) Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_DayProgram: Coding.FromStrict({
+  program_DayProgram: new Coding({
     code: "17",
     display: "Day Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_DropInProgram: Coding.FromStrict({
+  program_DropInProgram: new Coding({
     code: "18",
     display: "Drop In Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_EarlyYearsProgram: Coding.FromStrict({
+  program_EarlyYearsProgram: new Coding({
     code: "19",
     display: "Early Years Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_ABISlowToRecoverABISTRProgram: Coding.FromStrict({
+  program_ABISlowToRecoverABISTRProgram: new Coding({
     code: "2",
     display: "ABI Slow To Recover (ABI STR) Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_EmployeeAssistanceProgram: Coding.FromStrict({
+  program_EmployeeAssistanceProgram: new Coding({
     code: "20",
     display: "Employee Assistance Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_HomeAndCommunityCareHACC: Coding.FromStrict({
+  program_HomeAndCommunityCareHACC: new Coding({
     code: "21",
     display: "Home And Community Care (HACC)",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_HospitalAdmissionRiskProgramHARP: Coding.FromStrict({
+  program_HospitalAdmissionRiskProgramHARP: new Coding({
     code: "22",
     display: "Hospital Admission Risk Program (HARP)",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_HospitalInTheHomeHITHProgram: Coding.FromStrict({
+  program_HospitalInTheHomeHITHProgram: new Coding({
     code: "23",
     display: "Hospital in the Home (HITH) Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_ICTPIntensiveCommunityTreatmentProgram: Coding.FromStrict({
+  program_ICTPIntensiveCommunityTreatmentProgram: new Coding({
     code: "24",
     display: "ICTP (Intensive Community Treatment Program)",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_IFSSIntensiveFamilySupportProgram: Coding.FromStrict({
+  program_IFSSIntensiveFamilySupportProgram: new Coding({
     code: "25",
     display: "IFSS (Intensive Family Support Program)",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_JPETJobPlacementEducationAndTraining: Coding.FromStrict({
+  program_JPETJobPlacementEducationAndTraining: new Coding({
     code: "26",
     display: "JPET (Job Placement, Education and Training)",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_KooriJuvenileJusticeProgram: Coding.FromStrict({
+  program_KooriJuvenileJusticeProgram: new Coding({
     code: "27",
     display: "Koori Juvenile Justice Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_LanguageLiteracyAndNumeracyProgram: Coding.FromStrict({
+  program_LanguageLiteracyAndNumeracyProgram: new Coding({
     code: "28",
     display: "Language Literacy and Numeracy Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_LifeSkillsProgram: Coding.FromStrict({
+  program_LifeSkillsProgram: new Coding({
     code: "29",
     display: "Life Skills Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_AccessPrograms: Coding.FromStrict({
+  program_AccessPrograms: new Coding({
     code: "3",
     display: "Access Programs",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_LMPLifestyleModificationProgram: Coding.FromStrict({
+  program_LMPLifestyleModificationProgram: new Coding({
     code: "30",
     display: "LMP (Lifestyle Modification Program)",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_MedsCheckProgram: Coding.FromStrict({
+  program_MedsCheckProgram: new Coding({
     code: "31",
     display: "MedsCheck Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_MethadoneBuprenorphineProgram: Coding.FromStrict({
+  program_MethadoneBuprenorphineProgram: new Coding({
     code: "32",
     display: "Methadone/Buprenorphine Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_NationalDisabilitiesInsuranceSchemeNDIS: Coding.FromStrict({
+  program_NationalDisabilitiesInsuranceSchemeNDIS: new Coding({
     code: "33",
     display: "National Disabilities Insurance Scheme (NDIS)",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_NationalDiabetesServicesSchemeNDSS: Coding.FromStrict({
+  program_NationalDiabetesServicesSchemeNDSS: new Coding({
     code: "34",
     display: "National Diabetes Services Scheme (NDSS)",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_NeedleSyringeProgram: Coding.FromStrict({
+  program_NeedleSyringeProgram: new Coding({
     code: "35",
     display: "Needle/Syringe Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_NPEPProgram: Coding.FromStrict({
+  program_NPEPProgram: new Coding({
     code: "36",
     display: "nPEP Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_PersonalSupportProgram: Coding.FromStrict({
+  program_PersonalSupportProgram: new Coding({
     code: "37",
     display: "Personal Support Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_PartnersInRecoveryPIRProgram: Coding.FromStrict({
+  program_PartnersInRecoveryPIRProgram: new Coding({
     code: "38",
     display: "Partners in Recovery (PIR) Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_PreEmploymentProgram: Coding.FromStrict({
+  program_PreEmploymentProgram: new Coding({
     code: "39",
     display: "Pre-employment Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_AdultAndFurtherEducationACFEProgram: Coding.FromStrict({
+  program_AdultAndFurtherEducationACFEProgram: new Coding({
     code: "4",
     display: "Adult and Further Education (ACFE) Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_ReconnectProgram: Coding.FromStrict({
+  program_ReconnectProgram: new Coding({
     code: "40",
     display: "Reconnect Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_SexualAbuseCounsellingAndPreventionProgramSACPP: Coding.FromStrict({
+  program_SexualAbuseCounsellingAndPreventionProgramSACPP: new Coding({
     code: "41",
     display: "Sexual Abuse Counselling and Prevention Program (SACPP)",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_SocialSupportPrograms: Coding.FromStrict({
+  program_SocialSupportPrograms: new Coding({
     code: "42",
     display: "Social Support Programs",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_SupportedResidentialServiceSRS: Coding.FromStrict({
+  program_SupportedResidentialServiceSRS: new Coding({
     code: "43",
     display: "Supported Residential Service (SRS)",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_TasmanianAboriginalCentreTAC: Coding.FromStrict({
+  program_TasmanianAboriginalCentreTAC: new Coding({
     code: "44",
     display: "Tasmanian Aboriginal Centre (TAC)",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_VictimQuoteSAssistanceProgram: Coding.FromStrict({
+  program_VictimQuoteSAssistanceProgram: new Coding({
     code: "45",
     display: "Victim's Assistance Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_AdultDayActivityAndSupportServicesADASSProgram: Coding.FromStrict({
+  program_AdultDayActivityAndSupportServicesADASSProgram: new Coding({
     code: "5",
     display: "Adult Day Activity and Support Services (ADASS) Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_AdultDayCareProgram: Coding.FromStrict({
+  program_AdultDayCareProgram: new Coding({
     code: "6",
     display: "Adult Day Care Program",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_ATSSAdultTrainingSupportService: Coding.FromStrict({
+  program_ATSSAdultTrainingSupportService: new Coding({
     code: "7",
     display: "ATSS (Adult Training Support Service)",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_CommunityAgedCarePackagesCACP: Coding.FromStrict({
+  program_CommunityAgedCarePackagesCACP: new Coding({
     code: "8",
     display: "Community Aged Care Packages (CACP)",
     system: "http://terminology.hl7.org/CodeSystem/program"
   }),
-  program_CareCoordinationAndSupplementaryServicesCCSS: Coding.FromStrict({
+  program_CareCoordinationAndSupplementaryServicesCCSS: new Coding({
     code: "9",
     display: "Care Coordination & Supplementary Services (CCSS)",
     system: "http://terminology.hl7.org/CodeSystem/program"

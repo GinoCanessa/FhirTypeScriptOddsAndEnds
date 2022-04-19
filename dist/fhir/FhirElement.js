@@ -27,16 +27,16 @@ export class FhirElement {
     /**
      * Check if the current FhirElement contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         return missingElements;
     }
     /**
      * Factory function to create a FhirElement from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new FhirElement(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `FhirElement is missing elements: ${missingElements.join(", ")}`;
         }

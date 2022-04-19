@@ -51,7 +51,7 @@ export class StructureMapStructure extends fhir.BackboneElement {
     /**
      * Check if the current StructureMapStructure contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["mode"] === undefined) {
             missingElements.push("mode");
@@ -59,16 +59,16 @@ export class StructureMapStructure extends fhir.BackboneElement {
         if (this["url"] === undefined) {
             missingElements.push("url");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a StructureMapStructure from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new StructureMapStructure(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `StructureMapStructure is missing elements: ${missingElements.join(", ")}`;
         }
@@ -120,7 +120,7 @@ export class StructureMapGroupInput extends fhir.BackboneElement {
     /**
      * Check if the current StructureMapGroupInput contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["mode"] === undefined) {
             missingElements.push("mode");
@@ -128,16 +128,16 @@ export class StructureMapGroupInput extends fhir.BackboneElement {
         if (this["name"] === undefined) {
             missingElements.push("name");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a StructureMapGroupInput from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new StructureMapGroupInput(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `StructureMapGroupInput is missing elements: ${missingElements.join(", ")}`;
         }
@@ -428,21 +428,21 @@ export class StructureMapGroupRuleSource extends fhir.BackboneElement {
     /**
      * Check if the current StructureMapGroupRuleSource contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["context"] === undefined) {
             missingElements.push("context");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a StructureMapGroupRuleSource from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new StructureMapGroupRuleSource(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `StructureMapGroupRuleSource is missing elements: ${missingElements.join(", ")}`;
         }
@@ -492,18 +492,18 @@ export class StructureMapGroupRuleTargetParameter extends fhir.BackboneElement {
     /**
      * Check if the current StructureMapGroupRuleTargetParameter contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a StructureMapGroupRuleTargetParameter from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new StructureMapGroupRuleTargetParameter(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `StructureMapGroupRuleTargetParameter is missing elements: ${missingElements.join(", ")}`;
         }
@@ -568,18 +568,18 @@ export class StructureMapGroupRuleTarget extends fhir.BackboneElement {
     /**
      * Check if the current StructureMapGroupRuleTarget contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a StructureMapGroupRuleTarget from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new StructureMapGroupRuleTarget(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `StructureMapGroupRuleTarget is missing elements: ${missingElements.join(", ")}`;
         }
@@ -619,7 +619,7 @@ export class StructureMapGroupRuleDependent extends fhir.BackboneElement {
     /**
      * Check if the current StructureMapGroupRuleDependent contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["name"] === undefined) {
             missingElements.push("name");
@@ -627,16 +627,16 @@ export class StructureMapGroupRuleDependent extends fhir.BackboneElement {
         if ((!this["variable"]) || (this["variable"].length === 0)) {
             missingElements.push("variable");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a StructureMapGroupRuleDependent from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new StructureMapGroupRuleDependent(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `StructureMapGroupRuleDependent is missing elements: ${missingElements.join(", ")}`;
         }
@@ -688,7 +688,7 @@ export class StructureMapGroupRule extends fhir.BackboneElement {
     /**
      * Check if the current StructureMapGroupRule contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["name"] === undefined) {
             missingElements.push("name");
@@ -696,16 +696,16 @@ export class StructureMapGroupRule extends fhir.BackboneElement {
         if ((!this["source"]) || (this["source"].length === 0)) {
             missingElements.push("source");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a StructureMapGroupRule from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new StructureMapGroupRule(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `StructureMapGroupRule is missing elements: ${missingElements.join(", ")}`;
         }
@@ -771,7 +771,7 @@ export class StructureMapGroup extends fhir.BackboneElement {
     /**
      * Check if the current StructureMapGroup contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if ((!this["input"]) || (this["input"].length === 0)) {
             missingElements.push("input");
@@ -785,16 +785,16 @@ export class StructureMapGroup extends fhir.BackboneElement {
         if (this["typeMode"] === undefined) {
             missingElements.push("typeMode");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a StructureMapGroup from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new StructureMapGroup(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `StructureMapGroup is missing elements: ${missingElements.join(", ")}`;
         }
@@ -921,7 +921,7 @@ export class StructureMap extends fhir.DomainResource {
     /**
      * Check if the current StructureMap contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if ((!this["group"]) || (this["group"].length === 0)) {
             missingElements.push("group");
@@ -935,16 +935,16 @@ export class StructureMap extends fhir.DomainResource {
         if (this["url"] === undefined) {
             missingElements.push("url");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a StructureMap from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new StructureMap(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `StructureMap is missing elements: ${missingElements.join(", ")}`;
         }

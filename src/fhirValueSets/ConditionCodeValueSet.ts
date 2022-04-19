@@ -10,7 +10,7 @@ import { Coding } from '../fhir'
  * Example value set for Condition/Problem/Diagnosis codes.
  */
 export const ConditionCodeValueSet = {
-  ConditionCodeValueSet_NoCurrentProblemsOrDisability: Coding.FromStrict({
+  ConditionCodeValueSet_NoCurrentProblemsOrDisability: new Coding({
     code: "160245001",
     display: "No current problems or disability",
     system: "http://snomed.info/sct"

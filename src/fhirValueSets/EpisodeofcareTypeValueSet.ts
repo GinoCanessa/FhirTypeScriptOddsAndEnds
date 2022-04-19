@@ -10,27 +10,27 @@ import { Coding } from '../fhir'
  * This example value set defines a set of codes that can be used to express the usage type of an EpisodeOfCare record.
  */
 export const EpisodeofcareTypeValueSet = {
-  episodeofcare_type_CommunityBasedAgedCare: Coding.FromStrict({
+  episodeofcare_type_CommunityBasedAgedCare: new Coding({
     code: "cacp",
     display: "Community-based aged care",
     system: "http://terminology.hl7.org/CodeSystem/episodeofcare-type"
   }),
-  episodeofcare_type_DrugAndAlcoholRehabilitation: Coding.FromStrict({
+  episodeofcare_type_DrugAndAlcoholRehabilitation: new Coding({
     code: "da",
     display: "Drug and alcohol rehabilitation",
     system: "http://terminology.hl7.org/CodeSystem/episodeofcare-type"
   }),
-  episodeofcare_type_PostCoordinatedDiabetesProgram: Coding.FromStrict({
+  episodeofcare_type_PostCoordinatedDiabetesProgram: new Coding({
     code: "diab",
     display: "Post coordinated diabetes program",
     system: "http://terminology.hl7.org/CodeSystem/episodeofcare-type"
   }),
-  episodeofcare_type_HomeAndCommunityCare: Coding.FromStrict({
+  episodeofcare_type_HomeAndCommunityCare: new Coding({
     code: "hacc",
     display: "Home and Community Care",
     system: "http://terminology.hl7.org/CodeSystem/episodeofcare-type"
   }),
-  episodeofcare_type_PostAcuteCare: Coding.FromStrict({
+  episodeofcare_type_PostAcuteCare: new Coding({
     code: "pac",
     display: "Post Acute Care",
     system: "http://terminology.hl7.org/CodeSystem/episodeofcare-type"

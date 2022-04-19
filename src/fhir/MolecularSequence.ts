@@ -442,18 +442,18 @@ export class MolecularSequenceReferenceSeq extends fhir.BackboneElement implemen
   /**
    * Check if the current MolecularSequenceReferenceSeq contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MolecularSequenceReferenceSeq from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMolecularSequenceReferenceSeq):MolecularSequenceReferenceSeq {
+  static override fromStrict(source:fhir.IMolecularSequenceReferenceSeq):MolecularSequenceReferenceSeq {
     var dest:MolecularSequenceReferenceSeq = new MolecularSequenceReferenceSeq(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MolecularSequenceReferenceSeq is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -511,18 +511,18 @@ export class MolecularSequenceVariant extends fhir.BackboneElement implements fh
   /**
    * Check if the current MolecularSequenceVariant contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MolecularSequenceVariant from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMolecularSequenceVariant):MolecularSequenceVariant {
+  static override fromStrict(source:fhir.IMolecularSequenceVariant):MolecularSequenceVariant {
     var dest:MolecularSequenceVariant = new MolecularSequenceVariant(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MolecularSequenceVariant is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -589,18 +589,18 @@ export class MolecularSequenceQualityRoc extends fhir.BackboneElement implements
   /**
    * Check if the current MolecularSequenceQualityRoc contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MolecularSequenceQualityRoc from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMolecularSequenceQualityRoc):MolecularSequenceQualityRoc {
+  static override fromStrict(source:fhir.IMolecularSequenceQualityRoc):MolecularSequenceQualityRoc {
     var dest:MolecularSequenceQualityRoc = new MolecularSequenceQualityRoc(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MolecularSequenceQualityRoc is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -717,19 +717,19 @@ export class MolecularSequenceQuality extends fhir.BackboneElement implements fh
   /**
    * Check if the current MolecularSequenceQuality contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MolecularSequenceQuality from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMolecularSequenceQuality):MolecularSequenceQuality {
+  static override fromStrict(source:fhir.IMolecularSequenceQuality):MolecularSequenceQuality {
     var dest:MolecularSequenceQuality = new MolecularSequenceQuality(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MolecularSequenceQuality is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -791,19 +791,19 @@ export class MolecularSequenceRepository extends fhir.BackboneElement implements
   /**
    * Check if the current MolecularSequenceRepository contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MolecularSequenceRepository from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMolecularSequenceRepository):MolecularSequenceRepository {
+  static override fromStrict(source:fhir.IMolecularSequenceRepository):MolecularSequenceRepository {
     var dest:MolecularSequenceRepository = new MolecularSequenceRepository(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MolecularSequenceRepository is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -835,18 +835,18 @@ export class MolecularSequenceStructureVariantOuter extends fhir.BackboneElement
   /**
    * Check if the current MolecularSequenceStructureVariantOuter contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MolecularSequenceStructureVariantOuter from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMolecularSequenceStructureVariantOuter):MolecularSequenceStructureVariantOuter {
+  static override fromStrict(source:fhir.IMolecularSequenceStructureVariantOuter):MolecularSequenceStructureVariantOuter {
     var dest:MolecularSequenceStructureVariantOuter = new MolecularSequenceStructureVariantOuter(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MolecularSequenceStructureVariantOuter is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -878,18 +878,18 @@ export class MolecularSequenceStructureVariantInner extends fhir.BackboneElement
   /**
    * Check if the current MolecularSequenceStructureVariantInner contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MolecularSequenceStructureVariantInner from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMolecularSequenceStructureVariantInner):MolecularSequenceStructureVariantInner {
+  static override fromStrict(source:fhir.IMolecularSequenceStructureVariantInner):MolecularSequenceStructureVariantInner {
     var dest:MolecularSequenceStructureVariantInner = new MolecularSequenceStructureVariantInner(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MolecularSequenceStructureVariantInner is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -936,18 +936,18 @@ export class MolecularSequenceStructureVariant extends fhir.BackboneElement impl
   /**
    * Check if the current MolecularSequenceStructureVariant contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MolecularSequenceStructureVariant from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMolecularSequenceStructureVariant):MolecularSequenceStructureVariant {
+  static override fromStrict(source:fhir.IMolecularSequenceStructureVariant):MolecularSequenceStructureVariant {
     var dest:MolecularSequenceStructureVariant = new MolecularSequenceStructureVariant(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MolecularSequenceStructureVariant is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1060,19 +1060,19 @@ export class MolecularSequence extends fhir.DomainResource implements fhir.IMole
   /**
    * Check if the current MolecularSequence contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["coordinateSystem"] === undefined) { missingElements.push("coordinateSystem"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MolecularSequence from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMolecularSequence):MolecularSequence {
+  static override fromStrict(source:fhir.IMolecularSequence):MolecularSequence {
     var dest:MolecularSequence = new MolecularSequence(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MolecularSequence is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

@@ -13,7 +13,7 @@ export const VisionEyeCodesValueSet = {
     /**
      * Left Eye.
      */
-    vision_eye_codes_LeftEye: Coding.FromStrict({
+    vision_eye_codes_LeftEye: new Coding({
         code: "left",
         display: "Left Eye",
         system: "http://hl7.org/fhir/vision-eye-codes"
@@ -21,7 +21,7 @@ export const VisionEyeCodesValueSet = {
     /**
      * Right Eye.
      */
-    vision_eye_codes_RightEye: Coding.FromStrict({
+    vision_eye_codes_RightEye: new Coding({
         code: "right",
         display: "Right Eye",
         system: "http://hl7.org/fhir/vision-eye-codes"

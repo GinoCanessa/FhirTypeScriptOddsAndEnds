@@ -13,7 +13,7 @@ export const InsuranceplanApplicabilityValueSet = {
     /**
      * Provider is contracted with the health insurance company to provide services to plan members for specific pre-negotiated rates
      */
-    insuranceplan_applicability_InNetwork: Coding.FromStrict({
+    insuranceplan_applicability_InNetwork: new Coding({
         code: "in-network",
         display: "In Network",
         system: "http://terminology.hl7.org/CodeSystem/applicability"
@@ -21,7 +21,7 @@ export const InsuranceplanApplicabilityValueSet = {
     /**
      * Other applicability
      */
-    insuranceplan_applicability_Other: Coding.FromStrict({
+    insuranceplan_applicability_Other: new Coding({
         code: "other",
         display: "Other",
         system: "http://terminology.hl7.org/CodeSystem/applicability"
@@ -29,7 +29,7 @@ export const InsuranceplanApplicabilityValueSet = {
     /**
      * Provider is  not contracted with the health insurance company to provide services to plan members for specific pre-negotiated rates
      */
-    insuranceplan_applicability_OutOfNetwork: Coding.FromStrict({
+    insuranceplan_applicability_OutOfNetwork: new Coding({
         code: "out-of-network",
         display: "Out of Network",
         system: "http://terminology.hl7.org/CodeSystem/applicability"

@@ -274,20 +274,20 @@ export class Media extends fhir.DomainResource implements fhir.IMedia {
   /**
    * Check if the current Media contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["content"] === undefined) { missingElements.push("content"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Media from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedia):Media {
+  static override fromStrict(source:fhir.IMedia):Media {
     var dest:Media = new Media(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Media is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

@@ -69,11 +69,11 @@ export declare class Identifier extends fhir.FhirElement implements fhir.IIdenti
     /**
      * Check if the current Identifier contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Identifier from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IIdentifier): Identifier;
+    static fromStrict(source: fhir.IIdentifier): Identifier;
 }
 /**
  * Code Values for the Identifier.use field

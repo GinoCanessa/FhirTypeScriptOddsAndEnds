@@ -13,7 +13,7 @@ export const RemittanceOutcomeValueSet = {
   /**
    * The processing has completed without errors
    */
-  remittance_outcome_ProcessingComplete: Coding.FromStrict({
+  remittance_outcome_ProcessingComplete: new Coding({
     code: "complete",
     display: "Processing Complete",
     system: "http://hl7.org/fhir/remittance-outcome"
@@ -21,7 +21,7 @@ export const RemittanceOutcomeValueSet = {
   /**
    * One or more errors have been detected in the Claim
    */
-  remittance_outcome_Error: Coding.FromStrict({
+  remittance_outcome_Error: new Coding({
     code: "error",
     display: "Error",
     system: "http://hl7.org/fhir/remittance-outcome"
@@ -29,7 +29,7 @@ export const RemittanceOutcomeValueSet = {
   /**
    * No errors have been detected in the Claim and some of the adjudication has been performed.
    */
-  remittance_outcome_PartialProcessing: Coding.FromStrict({
+  remittance_outcome_PartialProcessing: new Coding({
     code: "partial",
     display: "Partial Processing",
     system: "http://hl7.org/fhir/remittance-outcome"
@@ -37,7 +37,7 @@ export const RemittanceOutcomeValueSet = {
   /**
    * The Claim/Pre-authorization/Pre-determination has been received but processing has not begun.
    */
-  remittance_outcome_Queued: Coding.FromStrict({
+  remittance_outcome_Queued: new Coding({
     code: "queued",
     display: "Queued",
     system: "http://hl7.org/fhir/remittance-outcome"

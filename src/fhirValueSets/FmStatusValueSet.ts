@@ -13,7 +13,7 @@ export const FmStatusValueSet = {
   /**
    * The instance is currently in-force.
    */
-  fm_status_Active: Coding.FromStrict({
+  fm_status_Active: new Coding({
     code: "active",
     display: "Active",
     system: "http://hl7.org/fhir/fm-status"
@@ -21,7 +21,7 @@ export const FmStatusValueSet = {
   /**
    * The instance is withdrawn, rescinded or reversed.
    */
-  fm_status_Cancelled: Coding.FromStrict({
+  fm_status_Cancelled: new Coding({
     code: "cancelled",
     display: "Cancelled",
     system: "http://hl7.org/fhir/fm-status"
@@ -29,7 +29,7 @@ export const FmStatusValueSet = {
   /**
    * A new instance the contents of which is not complete.
    */
-  fm_status_Draft: Coding.FromStrict({
+  fm_status_Draft: new Coding({
     code: "draft",
     display: "Draft",
     system: "http://hl7.org/fhir/fm-status"
@@ -37,7 +37,7 @@ export const FmStatusValueSet = {
   /**
    * The instance was entered in error.
    */
-  fm_status_EnteredInError: Coding.FromStrict({
+  fm_status_EnteredInError: new Coding({
     code: "entered-in-error",
     display: "Entered in Error",
     system: "http://hl7.org/fhir/fm-status"

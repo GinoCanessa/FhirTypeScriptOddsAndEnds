@@ -13,7 +13,7 @@ export const AbstractTypesValueSet = {
     /**
      * A place holder that means any kind of resource
      */
-    abstract_types_Any: Coding.FromStrict({
+    abstract_types_Any: new Coding({
         code: "Any",
         display: "Any",
         system: "http://hl7.org/fhir/abstract-types"
@@ -21,7 +21,7 @@ export const AbstractTypesValueSet = {
     /**
      * A place holder that means any kind of data type
      */
-    abstract_types_Type: Coding.FromStrict({
+    abstract_types_Type: new Coding({
         code: "Type",
         display: "Type",
         system: "http://hl7.org/fhir/abstract-types"

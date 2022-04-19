@@ -13,7 +13,7 @@ export const ClaimInformationcategoryValueSet = {
   /**
    * Materials attached such as images, documents and resources.
    */
-  claim_informationcategory_Attachment: Coding.FromStrict({
+  claim_informationcategory_Attachment: new Coding({
     code: "attachment",
     display: "Attachment",
     system: "http://terminology.hl7.org/CodeSystem/claiminformationcategory"
@@ -21,7 +21,7 @@ export const ClaimInformationcategoryValueSet = {
   /**
    * Discharge status and discharge to locations.
    */
-  claim_informationcategory_Discharge: Coding.FromStrict({
+  claim_informationcategory_Discharge: new Coding({
     code: "discharge",
     display: "Discharge",
     system: "http://terminology.hl7.org/CodeSystem/claiminformationcategory"
@@ -29,7 +29,7 @@ export const ClaimInformationcategoryValueSet = {
   /**
    * An indication that the patient was unable to work, the period if known otherwise a Yes/No (boolean).
    */
-  claim_informationcategory_EmploymentImpacted: Coding.FromStrict({
+  claim_informationcategory_EmploymentImpacted: new Coding({
     code: "employmentimpacted",
     display: "EmploymentImpacted",
     system: "http://terminology.hl7.org/CodeSystem/claiminformationcategory"
@@ -37,7 +37,7 @@ export const ClaimInformationcategoryValueSet = {
   /**
    * Insurance policy exceptions.
    */
-  claim_informationcategory_Exception: Coding.FromStrict({
+  claim_informationcategory_Exception: new Coding({
     code: "exception",
     display: "Exception",
     system: "http://terminology.hl7.org/CodeSystem/claiminformationcategory"
@@ -45,7 +45,7 @@ export const ClaimInformationcategoryValueSet = {
   /**
    * The external cause of an illness or injury.
    */
-  claim_informationcategory_ExternalCaause: Coding.FromStrict({
+  claim_informationcategory_ExternalCaause: new Coding({
     code: "externalcause",
     display: "External Caause",
     system: "http://terminology.hl7.org/CodeSystem/claiminformationcategory"
@@ -53,7 +53,7 @@ export const ClaimInformationcategoryValueSet = {
   /**
    * An indication that the patient was hospitalized, the period if known otherwise a Yes/No (boolean).
    */
-  claim_informationcategory_Hospitalized: Coding.FromStrict({
+  claim_informationcategory_Hospitalized: new Coding({
     code: "hospitalized",
     display: "Hospitalized",
     system: "http://terminology.hl7.org/CodeSystem/claiminformationcategory"
@@ -61,7 +61,7 @@ export const ClaimInformationcategoryValueSet = {
   /**
    * Codes conveying additional situation and condition information.
    */
-  claim_informationcategory_Information: Coding.FromStrict({
+  claim_informationcategory_Information: new Coding({
     code: "info",
     display: "Information",
     system: "http://terminology.hl7.org/CodeSystem/claiminformationcategory"
@@ -69,7 +69,7 @@ export const ClaimInformationcategoryValueSet = {
   /**
    * Materials being forwarded, e.g. Models, molds, images, documents.
    */
-  claim_informationcategory_MaterialsForwarded: Coding.FromStrict({
+  claim_informationcategory_MaterialsForwarded: new Coding({
     code: "material",
     display: "Materials Forwarded",
     system: "http://terminology.hl7.org/CodeSystem/claiminformationcategory"
@@ -77,7 +77,7 @@ export const ClaimInformationcategoryValueSet = {
   /**
    * Teeth which are missing for any reason, for example: prior extraction, never developed.
    */
-  claim_informationcategory_MissingTooth: Coding.FromStrict({
+  claim_informationcategory_MissingTooth: new Coding({
     code: "missingtooth",
     display: "Missing Tooth",
     system: "http://terminology.hl7.org/CodeSystem/claiminformationcategory"
@@ -85,7 +85,7 @@ export const ClaimInformationcategoryValueSet = {
   /**
    * Period, start or end dates of aspects of the Condition.
    */
-  claim_informationcategory_Onset: Coding.FromStrict({
+  claim_informationcategory_Onset: new Coding({
     code: "onset",
     display: "Onset",
     system: "http://terminology.hl7.org/CodeSystem/claiminformationcategory"
@@ -93,7 +93,7 @@ export const ClaimInformationcategoryValueSet = {
   /**
    * Other information identified by the type.system.
    */
-  claim_informationcategory_Other: Coding.FromStrict({
+  claim_informationcategory_Other: new Coding({
     code: "other",
     display: "Other",
     system: "http://terminology.hl7.org/CodeSystem/claiminformationcategory"
@@ -101,7 +101,7 @@ export const ClaimInformationcategoryValueSet = {
   /**
    * The reason for the patient visit.
    */
-  claim_informationcategory_PatientReasonForVisit: Coding.FromStrict({
+  claim_informationcategory_PatientReasonForVisit: new Coding({
     code: "patientreasonforvisit",
     display: "Patient Reason for Visit",
     system: "http://terminology.hl7.org/CodeSystem/claiminformationcategory"
@@ -109,7 +109,7 @@ export const ClaimInformationcategoryValueSet = {
   /**
    * The type of prosthesis and date of supply if a previously supplied prosthesis.
    */
-  claim_informationcategory_Prosthesis: Coding.FromStrict({
+  claim_informationcategory_Prosthesis: new Coding({
     code: "prosthesis",
     display: "Prosthesis",
     system: "http://terminology.hl7.org/CodeSystem/claiminformationcategory"
@@ -117,7 +117,7 @@ export const ClaimInformationcategoryValueSet = {
   /**
    * Nature and date of the related event e.g. Last exam, service, X-ray etc.
    */
-  claim_informationcategory_RelatedServices: Coding.FromStrict({
+  claim_informationcategory_RelatedServices: new Coding({
     code: "related",
     display: "Related Services",
     system: "http://terminology.hl7.org/CodeSystem/claiminformationcategory"

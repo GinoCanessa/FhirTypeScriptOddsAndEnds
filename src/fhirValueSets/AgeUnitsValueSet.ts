@@ -10,32 +10,32 @@ import { Coding } from '../fhir'
  * Unified Code for Units of Measure (UCUM). This value set includes all UCUM codes
  */
 export const AgeUnitsValueSet = {
-  AgeUnitsValueSet_Years: Coding.FromStrict({
+  AgeUnitsValueSet_Years: new Coding({
     code: "a",
     display: "years",
     system: "http://unitsofmeasure.org"
   }),
-  AgeUnitsValueSet_Days: Coding.FromStrict({
+  AgeUnitsValueSet_Days: new Coding({
     code: "d",
     display: "days",
     system: "http://unitsofmeasure.org"
   }),
-  AgeUnitsValueSet_Hours: Coding.FromStrict({
+  AgeUnitsValueSet_Hours: new Coding({
     code: "h",
     display: "hours",
     system: "http://unitsofmeasure.org"
   }),
-  AgeUnitsValueSet_Minutes: Coding.FromStrict({
+  AgeUnitsValueSet_Minutes: new Coding({
     code: "min",
     display: "minutes",
     system: "http://unitsofmeasure.org"
   }),
-  AgeUnitsValueSet_Months: Coding.FromStrict({
+  AgeUnitsValueSet_Months: new Coding({
     code: "mo",
     display: "months",
     system: "http://unitsofmeasure.org"
   }),
-  AgeUnitsValueSet_Weeks: Coding.FromStrict({
+  AgeUnitsValueSet_Weeks: new Coding({
     code: "wk",
     display: "weeks",
     system: "http://unitsofmeasure.org"

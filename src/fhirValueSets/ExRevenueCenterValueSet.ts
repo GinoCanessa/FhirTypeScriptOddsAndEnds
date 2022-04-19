@@ -13,7 +13,7 @@ export const ExRevenueCenterValueSet = {
   /**
    * Vision Clinic
    */
-  ex_revenue_center_VisionClinic: Coding.FromStrict({
+  ex_revenue_center_VisionClinic: new Coding({
     code: "0010",
     display: "Vision Clinic",
     system: "http://terminology.hl7.org/CodeSystem/ex-revenue-center"
@@ -21,7 +21,7 @@ export const ExRevenueCenterValueSet = {
   /**
    * Anaesthesia.
    */
-  ex_revenue_center_Anaesthesia: Coding.FromStrict({
+  ex_revenue_center_Anaesthesia: new Coding({
     code: "0370",
     display: "Anaesthesia",
     system: "http://terminology.hl7.org/CodeSystem/ex-revenue-center"
@@ -29,7 +29,7 @@ export const ExRevenueCenterValueSet = {
   /**
    * Physical Therapy.
    */
-  ex_revenue_center_PhysicalTherapy: Coding.FromStrict({
+  ex_revenue_center_PhysicalTherapy: new Coding({
     code: "0420",
     display: "Physical Therapy",
     system: "http://terminology.hl7.org/CodeSystem/ex-revenue-center"
@@ -37,7 +37,7 @@ export const ExRevenueCenterValueSet = {
   /**
    * Physical Therapy - visit charge.
    */
-  ex_revenue_center_PhysicalTherapy_2: Coding.FromStrict({
+  ex_revenue_center_PhysicalTherapy_2: new Coding({
     code: "0421",
     display: "Physical Therapy - ",
     system: "http://terminology.hl7.org/CodeSystem/ex-revenue-center"
@@ -45,7 +45,7 @@ export const ExRevenueCenterValueSet = {
   /**
    * Speech-Language Pathology.
    */
-  ex_revenue_center_SpeechLanguagePathology: Coding.FromStrict({
+  ex_revenue_center_SpeechLanguagePathology: new Coding({
     code: "0440",
     display: "Speech-Language Pathology",
     system: "http://terminology.hl7.org/CodeSystem/ex-revenue-center"
@@ -53,7 +53,7 @@ export const ExRevenueCenterValueSet = {
   /**
    * Speech-Language Pathology- visit charge
    */
-  ex_revenue_center_SpeechLanguagePathologyVisit: Coding.FromStrict({
+  ex_revenue_center_SpeechLanguagePathologyVisit: new Coding({
     code: "0441",
     display: "Speech-Language Pathology - Visit",
     system: "http://terminology.hl7.org/CodeSystem/ex-revenue-center"
@@ -61,7 +61,7 @@ export const ExRevenueCenterValueSet = {
   /**
    * Emergency Room
    */
-  ex_revenue_center_EmergencyRoom: Coding.FromStrict({
+  ex_revenue_center_EmergencyRoom: new Coding({
     code: "0450",
     display: "Emergency Room",
     system: "http://terminology.hl7.org/CodeSystem/ex-revenue-center"
@@ -69,7 +69,7 @@ export const ExRevenueCenterValueSet = {
   /**
    * Emergency Room - EM/EMTALA
    */
-  ex_revenue_center_EmergencyRoomEMEMTALA: Coding.FromStrict({
+  ex_revenue_center_EmergencyRoomEMEMTALA: new Coding({
     code: "0451",
     display: "Emergency Room - EM/EMTALA",
     system: "http://terminology.hl7.org/CodeSystem/ex-revenue-center"
@@ -77,7 +77,7 @@ export const ExRevenueCenterValueSet = {
   /**
    * Emergency Room - beyond EMTALA
    */
-  ex_revenue_center_EmergencyRoomBeyondEMTALA: Coding.FromStrict({
+  ex_revenue_center_EmergencyRoomBeyondEMTALA: new Coding({
     code: "0452",
     display: "Emergency Room - beyond EMTALA",
     system: "http://terminology.hl7.org/CodeSystem/ex-revenue-center"

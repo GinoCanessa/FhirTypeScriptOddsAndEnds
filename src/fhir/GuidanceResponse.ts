@@ -200,19 +200,19 @@ export class GuidanceResponse extends fhir.DomainResource implements fhir.IGuida
   /**
    * Check if the current GuidanceResponse contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a GuidanceResponse from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IGuidanceResponse):GuidanceResponse {
+  static override fromStrict(source:fhir.IGuidanceResponse):GuidanceResponse {
     var dest:GuidanceResponse = new GuidanceResponse(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `GuidanceResponse is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

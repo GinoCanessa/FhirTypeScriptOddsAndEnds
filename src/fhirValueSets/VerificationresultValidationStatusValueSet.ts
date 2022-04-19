@@ -10,12 +10,12 @@ import { Coding } from '../fhir'
  * Status of the validation of the target against the primary source
  */
 export const VerificationresultValidationStatusValueSet = {
-  verificationresult_validation_status_Failed: Coding.FromStrict({
+  verificationresult_validation_status_Failed: new Coding({
     code: "failed",
     display: "Failed",
     system: "http://terminology.hl7.org/CodeSystem/validation-status"
   }),
-  verificationresult_validation_status_Successful: Coding.FromStrict({
+  verificationresult_validation_status_Successful: new Coding({
     code: "successful",
     display: "Successful",
     system: "http://terminology.hl7.org/CodeSystem/validation-status"
@@ -23,7 +23,7 @@ export const VerificationresultValidationStatusValueSet = {
   /**
    * The validations status has not been determined yet
    */
-  verificationresult_validation_status_Unknown: Coding.FromStrict({
+  verificationresult_validation_status_Unknown: new Coding({
     code: "unknown",
     display: "Unknown",
     system: "http://terminology.hl7.org/CodeSystem/validation-status"

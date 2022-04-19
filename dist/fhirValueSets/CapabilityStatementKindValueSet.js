@@ -13,7 +13,7 @@ export const CapabilityStatementKindValueSet = {
     /**
      * The CapabilityStatement instance represents the capabilities of a system or piece of software, independent of a particular installation.
      */
-    capability_statement_kind_Capability: Coding.FromStrict({
+    capability_statement_kind_Capability: new Coding({
         code: "capability",
         display: "Capability",
         system: "http://hl7.org/fhir/capability-statement-kind"
@@ -21,7 +21,7 @@ export const CapabilityStatementKindValueSet = {
     /**
      * The CapabilityStatement instance represents the present capabilities of a specific system instance.  This is the kind returned by /metadata for a FHIR server end-point.
      */
-    capability_statement_kind_Instance: Coding.FromStrict({
+    capability_statement_kind_Instance: new Coding({
         code: "instance",
         display: "Instance",
         system: "http://hl7.org/fhir/capability-statement-kind"
@@ -29,7 +29,7 @@ export const CapabilityStatementKindValueSet = {
     /**
      * The CapabilityStatement instance represents a set of requirements for other systems to meet; e.g. as part of an implementation guide or 'request for proposal'.
      */
-    capability_statement_kind_Requirements: Coding.FromStrict({
+    capability_statement_kind_Requirements: new Coding({
         code: "requirements",
         display: "Requirements",
         system: "http://hl7.org/fhir/capability-statement-kind"

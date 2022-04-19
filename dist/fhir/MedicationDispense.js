@@ -29,21 +29,21 @@ export class MedicationDispensePerformer extends fhir.BackboneElement {
     /**
      * Check if the current MedicationDispensePerformer contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["actor"] === undefined) {
             missingElements.push("actor");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicationDispensePerformer from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicationDispensePerformer(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicationDispensePerformer is missing elements: ${missingElements.join(", ")}`;
         }
@@ -82,21 +82,21 @@ export class MedicationDispenseSubstitution extends fhir.BackboneElement {
     /**
      * Check if the current MedicationDispenseSubstitution contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["wasSubstituted"] === undefined) {
             missingElements.push("wasSubstituted");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicationDispenseSubstitution from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicationDispenseSubstitution(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicationDispenseSubstitution is missing elements: ${missingElements.join(", ")}`;
         }
@@ -208,21 +208,21 @@ export class MedicationDispense extends fhir.DomainResource {
     /**
      * Check if the current MedicationDispense contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicationDispense from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicationDispense(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicationDispense is missing elements: ${missingElements.join(", ")}`;
         }

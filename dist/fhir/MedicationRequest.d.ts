@@ -238,11 +238,11 @@ export declare class MedicationRequestDispenseRequestInitialFill extends fhir.Ba
     /**
      * Check if the current MedicationRequestDispenseRequestInitialFill contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationRequestDispenseRequestInitialFill from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationRequestDispenseRequestInitialFill): MedicationRequestDispenseRequestInitialFill;
+    static fromStrict(source: fhir.IMedicationRequestDispenseRequestInitialFill): MedicationRequestDispenseRequestInitialFill;
 }
 /**
  * Indicates the specific details for the dispense or medication supply part of a medication request (also known as a Medication Prescription or Medication Order).  Note that this information is not always sent with the order.  There may be in some settings (e.g. hospitals) institutional or system support for completing the dispense details in the pharmacy department.
@@ -284,11 +284,11 @@ export declare class MedicationRequestDispenseRequest extends fhir.BackboneEleme
     /**
      * Check if the current MedicationRequestDispenseRequest contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationRequestDispenseRequest from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationRequestDispenseRequest): MedicationRequestDispenseRequest;
+    static fromStrict(source: fhir.IMedicationRequestDispenseRequest): MedicationRequestDispenseRequest;
 }
 /**
  * Indicates whether or not substitution can or should be part of the dispense. In some cases, substitution must happen, in other cases substitution must not happen. This block explains the prescriber's intent. If nothing is specified substitution may be done.
@@ -314,11 +314,11 @@ export declare class MedicationRequestSubstitution extends fhir.BackboneElement 
     /**
      * Check if the current MedicationRequestSubstitution contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationRequestSubstitution from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationRequestSubstitution): MedicationRequestSubstitution;
+    static fromStrict(source: fhir.IMedicationRequestSubstitution): MedicationRequestSubstitution;
 }
 /**
  * An order or request for both supply of the medication and the instructions for administration of the medication to a patient. The resource is called "MedicationRequest" rather than "MedicationPrescription" or "MedicationOrder" to generalize the use across inpatient and outpatient settings, including care plans, etc., and to harmonize with workflow patterns.
@@ -481,11 +481,11 @@ export declare class MedicationRequest extends fhir.DomainResource implements fh
     /**
      * Check if the current MedicationRequest contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationRequest from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationRequest): MedicationRequest;
+    static fromStrict(source: fhir.IMedicationRequest): MedicationRequest;
 }
 /**
  * Code Values for the MedicationRequest.intent field

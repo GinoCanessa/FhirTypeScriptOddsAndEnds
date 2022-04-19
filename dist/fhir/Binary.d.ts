@@ -51,10 +51,10 @@ export declare class Binary extends fhir.Resource implements fhir.IBinary {
     /**
      * Check if the current Binary contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Binary from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IBinary): Binary;
+    static fromStrict(source: fhir.IBinary): Binary;
 }
 //# sourceMappingURL=Binary.d.ts.map

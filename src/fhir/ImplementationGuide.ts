@@ -403,19 +403,19 @@ export class ImplementationGuideDependsOn extends fhir.BackboneElement implement
   /**
    * Check if the current ImplementationGuideDependsOn contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["uri"] === undefined) { missingElements.push("uri"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ImplementationGuideDependsOn from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IImplementationGuideDependsOn):ImplementationGuideDependsOn {
+  static override fromStrict(source:fhir.IImplementationGuideDependsOn):ImplementationGuideDependsOn {
     var dest:ImplementationGuideDependsOn = new ImplementationGuideDependsOn(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ImplementationGuideDependsOn is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -451,20 +451,20 @@ export class ImplementationGuideGlobal extends fhir.BackboneElement implements f
   /**
    * Check if the current ImplementationGuideGlobal contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["profile"] === undefined) { missingElements.push("profile"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ImplementationGuideGlobal from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IImplementationGuideGlobal):ImplementationGuideGlobal {
+  static override fromStrict(source:fhir.IImplementationGuideGlobal):ImplementationGuideGlobal {
     var dest:ImplementationGuideGlobal = new ImplementationGuideGlobal(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ImplementationGuideGlobal is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -498,19 +498,19 @@ export class ImplementationGuideDefinitionGrouping extends fhir.BackboneElement 
   /**
    * Check if the current ImplementationGuideDefinitionGrouping contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["name"] === undefined) { missingElements.push("name"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ImplementationGuideDefinitionGrouping from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IImplementationGuideDefinitionGrouping):ImplementationGuideDefinitionGrouping {
+  static override fromStrict(source:fhir.IImplementationGuideDefinitionGrouping):ImplementationGuideDefinitionGrouping {
     var dest:ImplementationGuideDefinitionGrouping = new ImplementationGuideDefinitionGrouping(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ImplementationGuideDefinitionGrouping is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -585,19 +585,19 @@ export class ImplementationGuideDefinitionResource extends fhir.BackboneElement 
   /**
    * Check if the current ImplementationGuideDefinitionResource contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["reference"] === undefined) { missingElements.push("reference"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ImplementationGuideDefinitionResource from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IImplementationGuideDefinitionResource):ImplementationGuideDefinitionResource {
+  static override fromStrict(source:fhir.IImplementationGuideDefinitionResource):ImplementationGuideDefinitionResource {
     var dest:ImplementationGuideDefinitionResource = new ImplementationGuideDefinitionResource(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ImplementationGuideDefinitionResource is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -650,20 +650,20 @@ export class ImplementationGuideDefinitionPage extends fhir.BackboneElement impl
   /**
    * Check if the current ImplementationGuideDefinitionPage contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["generation"] === undefined) { missingElements.push("generation"); }
     if (this["title"] === undefined) { missingElements.push("title"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ImplementationGuideDefinitionPage from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IImplementationGuideDefinitionPage):ImplementationGuideDefinitionPage {
+  static override fromStrict(source:fhir.IImplementationGuideDefinitionPage):ImplementationGuideDefinitionPage {
     var dest:ImplementationGuideDefinitionPage = new ImplementationGuideDefinitionPage(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ImplementationGuideDefinitionPage is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -699,20 +699,20 @@ export class ImplementationGuideDefinitionParameter extends fhir.BackboneElement
   /**
    * Check if the current ImplementationGuideDefinitionParameter contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
     if (this["value"] === undefined) { missingElements.push("value"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ImplementationGuideDefinitionParameter from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IImplementationGuideDefinitionParameter):ImplementationGuideDefinitionParameter {
+  static override fromStrict(source:fhir.IImplementationGuideDefinitionParameter):ImplementationGuideDefinitionParameter {
     var dest:ImplementationGuideDefinitionParameter = new ImplementationGuideDefinitionParameter(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ImplementationGuideDefinitionParameter is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -755,20 +755,20 @@ export class ImplementationGuideDefinitionTemplate extends fhir.BackboneElement 
   /**
    * Check if the current ImplementationGuideDefinitionTemplate contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
     if (this["source"] === undefined) { missingElements.push("source"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ImplementationGuideDefinitionTemplate from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IImplementationGuideDefinitionTemplate):ImplementationGuideDefinitionTemplate {
+  static override fromStrict(source:fhir.IImplementationGuideDefinitionTemplate):ImplementationGuideDefinitionTemplate {
     var dest:ImplementationGuideDefinitionTemplate = new ImplementationGuideDefinitionTemplate(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ImplementationGuideDefinitionTemplate is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -813,19 +813,19 @@ export class ImplementationGuideDefinition extends fhir.BackboneElement implemen
   /**
    * Check if the current ImplementationGuideDefinition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["resource"]) || (this["resource"].length === 0)) { missingElements.push("resource"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ImplementationGuideDefinition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IImplementationGuideDefinition):ImplementationGuideDefinition {
+  static override fromStrict(source:fhir.IImplementationGuideDefinition):ImplementationGuideDefinition {
     var dest:ImplementationGuideDefinition = new ImplementationGuideDefinition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ImplementationGuideDefinition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -871,19 +871,19 @@ export class ImplementationGuideManifestResource extends fhir.BackboneElement im
   /**
    * Check if the current ImplementationGuideManifestResource contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["reference"] === undefined) { missingElements.push("reference"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ImplementationGuideManifestResource from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IImplementationGuideManifestResource):ImplementationGuideManifestResource {
+  static override fromStrict(source:fhir.IImplementationGuideManifestResource):ImplementationGuideManifestResource {
     var dest:ImplementationGuideManifestResource = new ImplementationGuideManifestResource(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ImplementationGuideManifestResource is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -924,19 +924,19 @@ export class ImplementationGuideManifestPage extends fhir.BackboneElement implem
   /**
    * Check if the current ImplementationGuideManifestPage contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["name"] === undefined) { missingElements.push("name"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ImplementationGuideManifestPage from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IImplementationGuideManifestPage):ImplementationGuideManifestPage {
+  static override fromStrict(source:fhir.IImplementationGuideManifestPage):ImplementationGuideManifestPage {
     var dest:ImplementationGuideManifestPage = new ImplementationGuideManifestPage(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ImplementationGuideManifestPage is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -987,19 +987,19 @@ export class ImplementationGuideManifest extends fhir.BackboneElement implements
   /**
    * Check if the current ImplementationGuideManifest contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["resource"]) || (this["resource"].length === 0)) { missingElements.push("resource"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ImplementationGuideManifest from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IImplementationGuideManifest):ImplementationGuideManifest {
+  static override fromStrict(source:fhir.IImplementationGuideManifest):ImplementationGuideManifest {
     var dest:ImplementationGuideManifest = new ImplementationGuideManifest(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ImplementationGuideManifest is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1160,23 +1160,23 @@ export class ImplementationGuide extends fhir.DomainResource implements fhir.IIm
   /**
    * Check if the current ImplementationGuide contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["fhirVersion"]) || (this["fhirVersion"].length === 0)) { missingElements.push("fhirVersion"); }
     if (this["name"] === undefined) { missingElements.push("name"); }
     if (this["packageId"] === undefined) { missingElements.push("packageId"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["url"] === undefined) { missingElements.push("url"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ImplementationGuide from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IImplementationGuide):ImplementationGuide {
+  static override fromStrict(source:fhir.IImplementationGuide):ImplementationGuide {
     var dest:ImplementationGuide = new ImplementationGuide(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ImplementationGuide is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

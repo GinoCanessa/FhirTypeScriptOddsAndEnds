@@ -13,7 +13,7 @@ export const IssueSeverityValueSet = {
   /**
    * The issue is sufficiently important to cause the action to fail.
    */
-  issue_severity_Error: Coding.FromStrict({
+  issue_severity_Error: new Coding({
     code: "error",
     display: "Error",
     system: "http://hl7.org/fhir/issue-severity"
@@ -21,7 +21,7 @@ export const IssueSeverityValueSet = {
   /**
    * The issue caused the action to fail and no further checking could be performed.
    */
-  issue_severity_Fatal: Coding.FromStrict({
+  issue_severity_Fatal: new Coding({
     code: "fatal",
     display: "Fatal",
     system: "http://hl7.org/fhir/issue-severity"
@@ -29,7 +29,7 @@ export const IssueSeverityValueSet = {
   /**
    * The issue has no relation to the degree of success of the action.
    */
-  issue_severity_Information: Coding.FromStrict({
+  issue_severity_Information: new Coding({
     code: "information",
     display: "Information",
     system: "http://hl7.org/fhir/issue-severity"
@@ -37,7 +37,7 @@ export const IssueSeverityValueSet = {
   /**
    * The issue is not important enough to cause the action to fail but may cause it to be performed suboptimally or in a way that is not as desired.
    */
-  issue_severity_Warning: Coding.FromStrict({
+  issue_severity_Warning: new Coding({
     code: "warning",
     display: "Warning",
     system: "http://hl7.org/fhir/issue-severity"

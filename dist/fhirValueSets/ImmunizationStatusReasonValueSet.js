@@ -10,117 +10,117 @@ import { Coding } from '../fhir';
  * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the reason why a dose of vaccine was not administered. This value set is provided as a suggestive example.
  */
 export const ImmunizationStatusReasonValueSet = {
-    ImmunizationStatusReasonValueSet_NoConsentTetanusLowDoseDiphtheriaVaccine: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_NoConsentTetanusLowDoseDiphtheriaVaccine: new Coding({
         code: "171257003",
         display: "No consent - Tetanus/low dose diphtheria vaccine",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_PertussisVaccineRefused: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_PertussisVaccineRefused: new Coding({
         code: "171265000",
         display: "Pertussis vaccine refused",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_NoConsentDiphtheriaImmunization: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_NoConsentDiphtheriaImmunization: new Coding({
         code: "171266004",
         display: "No consent - diphtheria immunization",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_NoConsentTetanusImmunization: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_NoConsentTetanusImmunization: new Coding({
         code: "171267008",
         display: "No consent - tetanus immunization",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_PolioImmunizationRefused: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_PolioImmunizationRefused: new Coding({
         code: "171268003",
         display: "Polio immunization refused",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_NoConsentMeaslesImmunization: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_NoConsentMeaslesImmunization: new Coding({
         code: "171269006",
         display: "No consent - measles immunization",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_NoConsentRubellaImmunization: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_NoConsentRubellaImmunization: new Coding({
         code: "171270007",
         display: "No consent - rubella immunization",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_NoConsentBCG: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_NoConsentBCG: new Coding({
         code: "171271006",
         display: "No consent - BCG",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_NoConsentInfluenzaImmunization: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_NoConsentInfluenzaImmunization: new Coding({
         code: "171272004",
         display: "No consent - influenza immunization",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_NoConsentForMMR: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_NoConsentForMMR: new Coding({
         code: "171280006",
         display: "No consent for MMR",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_NoConsentForAnyPrimaryImmunization: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_NoConsentForAnyPrimaryImmunization: new Coding({
         code: "171283008",
         display: "No consent for any primary immunization",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_NoConsentPreSchoolVaccinations: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_NoConsentPreSchoolVaccinations: new Coding({
         code: "171285001",
         display: "No consent - pre-school vaccinations",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_NoConsentSchoolExitVaccinations: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_NoConsentSchoolExitVaccinations: new Coding({
         code: "171286000",
         display: "No consent - school exit vaccinations",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_NoConsentHaemophilusInfluenzaeTypeBImmunization: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_NoConsentHaemophilusInfluenzaeTypeBImmunization: new Coding({
         code: "171291004",
         display: "No consent - Haemophilus influenzae type B immunization",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_NoConsentPneumococcalImmunization: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_NoConsentPneumococcalImmunization: new Coding({
         code: "171292006",
         display: "No consent pneumococcal immunization",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_NoConsentForMRMeaslesRubellaVaccine: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_NoConsentForMRMeaslesRubellaVaccine: new Coding({
         code: "171293001",
         display: "No consent for MR - Measles/rubella vaccine",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_NoConsentForAnyImmunization: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_NoConsentForAnyImmunization: new Coding({
         code: "268559007",
         display: "No consent for any immunization",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_NoConsentForMMR1: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_NoConsentForMMR1: new Coding({
         code: "310839003",
         display: "No consent for MMR1",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_NoConsentForSecondMeaslesMumpsAndRubellaVaccine: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_NoConsentForSecondMeaslesMumpsAndRubellaVaccine: new Coding({
         code: "310840001",
         display: "No consent for second measles, mumps and rubella vaccine",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_NoConsentDiphtheriaTetanusPertussisImmunization: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_NoConsentDiphtheriaTetanusPertussisImmunization: new Coding({
         code: "314768003",
         display: "No consent diphtheria, tetanus, pertussis immunization",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_NoConsentTetanusPlusDiphtheriaImmunization: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_NoConsentTetanusPlusDiphtheriaImmunization: new Coding({
         code: "314769006",
         display: "No consent tetanus plus diphtheria immunization",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_NoConsentForMeningitisCImmunization: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_NoConsentForMeningitisCImmunization: new Coding({
         code: "314936001",
         display: "No consent for meningitis C immunization",
         system: "http://snomed.info/sct"
     }),
-    ImmunizationStatusReasonValueSet_NoConsentFor3rdHIBBooster: Coding.FromStrict({
+    ImmunizationStatusReasonValueSet_NoConsentFor3rdHIBBooster: new Coding({
         code: "407598009",
         display: "No consent for 3rd HIB booster",
         system: "http://snomed.info/sct"
@@ -128,7 +128,7 @@ export const ImmunizationStatusReasonValueSet = {
     /**
      * Definition:Testing has shown that the patient already has immunity to the agent targeted by the immunization.
      */
-    v3_ActReason_Immunity: Coding.FromStrict({
+    v3_ActReason_Immunity: new Coding({
         code: "IMMUNE",
         display: "immunity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -136,7 +136,7 @@ export const ImmunizationStatusReasonValueSet = {
     /**
      * Definition:The patient currently has a medical condition for which the vaccine is contraindicated or for which precaution is warranted.
      */
-    v3_ActReason_MedicalPrecaution: Coding.FromStrict({
+    v3_ActReason_MedicalPrecaution: new Coding({
         code: "MEDPREC",
         display: "medical precaution",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -144,7 +144,7 @@ export const ImmunizationStatusReasonValueSet = {
     /**
      * Definition:There was no supply of the product on hand to perform the service.
      */
-    v3_ActReason_ProductOutOfStock: Coding.FromStrict({
+    v3_ActReason_ProductOutOfStock: new Coding({
         code: "OSTOCK",
         display: "product out of stock",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -152,7 +152,7 @@ export const ImmunizationStatusReasonValueSet = {
     /**
      * Definition:The patient or their guardian objects to receiving the vaccine.
      */
-    v3_ActReason_PatientObjection: Coding.FromStrict({
+    v3_ActReason_PatientObjection: new Coding({
         code: "PATOBJ",
         display: "patient objection",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"

@@ -83,11 +83,11 @@ export declare class EnrollmentRequest extends fhir.DomainResource implements fh
     /**
      * Check if the current EnrollmentRequest contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a EnrollmentRequest from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEnrollmentRequest): EnrollmentRequest;
+    static fromStrict(source: fhir.IEnrollmentRequest): EnrollmentRequest;
 }
 /**
  * Code Values for the EnrollmentRequest.status field

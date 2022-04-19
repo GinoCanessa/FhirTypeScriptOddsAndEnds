@@ -37,18 +37,18 @@ export class EffectEvidenceSynthesisSampleSize extends fhir.BackboneElement {
     /**
      * Check if the current EffectEvidenceSynthesisSampleSize contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a EffectEvidenceSynthesisSampleSize from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new EffectEvidenceSynthesisSampleSize(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `EffectEvidenceSynthesisSampleSize is missing elements: ${missingElements.join(", ")}`;
         }
@@ -90,21 +90,21 @@ export class EffectEvidenceSynthesisResultsByExposure extends fhir.BackboneEleme
     /**
      * Check if the current EffectEvidenceSynthesisResultsByExposure contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["riskEvidenceSynthesis"] === undefined) {
             missingElements.push("riskEvidenceSynthesis");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a EffectEvidenceSynthesisResultsByExposure from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new EffectEvidenceSynthesisResultsByExposure(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `EffectEvidenceSynthesisResultsByExposure is missing elements: ${missingElements.join(", ")}`;
         }
@@ -145,18 +145,18 @@ export class EffectEvidenceSynthesisEffectEstimatePrecisionEstimate extends fhir
     /**
      * Check if the current EffectEvidenceSynthesisEffectEstimatePrecisionEstimate contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a EffectEvidenceSynthesisEffectEstimatePrecisionEstimate from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new EffectEvidenceSynthesisEffectEstimatePrecisionEstimate(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `EffectEvidenceSynthesisEffectEstimatePrecisionEstimate is missing elements: ${missingElements.join(", ")}`;
         }
@@ -200,18 +200,18 @@ export class EffectEvidenceSynthesisEffectEstimate extends fhir.BackboneElement 
     /**
      * Check if the current EffectEvidenceSynthesisEffectEstimate contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a EffectEvidenceSynthesisEffectEstimate from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new EffectEvidenceSynthesisEffectEstimate(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `EffectEvidenceSynthesisEffectEstimate is missing elements: ${missingElements.join(", ")}`;
         }
@@ -240,18 +240,18 @@ export class EffectEvidenceSynthesisCertaintyCertaintySubcomponent extends fhir.
     /**
      * Check if the current EffectEvidenceSynthesisCertaintyCertaintySubcomponent contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a EffectEvidenceSynthesisCertaintyCertaintySubcomponent from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new EffectEvidenceSynthesisCertaintyCertaintySubcomponent(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `EffectEvidenceSynthesisCertaintyCertaintySubcomponent is missing elements: ${missingElements.join(", ")}`;
         }
@@ -280,18 +280,18 @@ export class EffectEvidenceSynthesisCertainty extends fhir.BackboneElement {
     /**
      * Check if the current EffectEvidenceSynthesisCertainty contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a EffectEvidenceSynthesisCertainty from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new EffectEvidenceSynthesisCertainty(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `EffectEvidenceSynthesisCertainty is missing elements: ${missingElements.join(", ")}`;
         }
@@ -464,7 +464,7 @@ export class EffectEvidenceSynthesis extends fhir.DomainResource {
     /**
      * Check if the current EffectEvidenceSynthesis contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["exposure"] === undefined) {
             missingElements.push("exposure");
@@ -481,16 +481,16 @@ export class EffectEvidenceSynthesis extends fhir.DomainResource {
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a EffectEvidenceSynthesis from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new EffectEvidenceSynthesis(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `EffectEvidenceSynthesis is missing elements: ${missingElements.join(", ")}`;
         }

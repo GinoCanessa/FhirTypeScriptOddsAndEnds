@@ -13,7 +13,7 @@ export const ExPaymenttypeValueSet = {
     /**
      * Complete (final) payment of the benefit under the Claim less any adjustments.
      */
-    ex_paymenttype_Complete: Coding.FromStrict({
+    ex_paymenttype_Complete: new Coding({
         code: "complete",
         display: "Complete",
         system: "http://terminology.hl7.org/CodeSystem/ex-paymenttype"
@@ -21,7 +21,7 @@ export const ExPaymenttypeValueSet = {
     /**
      * Partial payment of the benefit under the Claim less any adjustments.
      */
-    ex_paymenttype_Partial: Coding.FromStrict({
+    ex_paymenttype_Partial: new Coding({
         code: "partial",
         display: "Partial",
         system: "http://terminology.hl7.org/CodeSystem/ex-paymenttype"

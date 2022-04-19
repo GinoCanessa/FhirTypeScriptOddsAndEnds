@@ -13,7 +13,7 @@ export const MessageTransportValueSet = {
     /**
      * The application sends or receives messages using File Transfer Protocol.
      */
-    message_transport_FTP: Coding.FromStrict({
+    message_transport_FTP: new Coding({
         code: "ftp",
         display: "FTP",
         system: "http://terminology.hl7.org/CodeSystem/message-transport"
@@ -21,7 +21,7 @@ export const MessageTransportValueSet = {
     /**
      * The application sends or receives messages using HTTP POST (may be over http: or https:).
      */
-    message_transport_HTTP: Coding.FromStrict({
+    message_transport_HTTP: new Coding({
         code: "http",
         display: "HTTP",
         system: "http://terminology.hl7.org/CodeSystem/message-transport"
@@ -29,7 +29,7 @@ export const MessageTransportValueSet = {
     /**
      * The application sends or receives messages using HL7's Minimal Lower Level Protocol.
      */
-    message_transport_MLLP: Coding.FromStrict({
+    message_transport_MLLP: new Coding({
         code: "mllp",
         display: "MLLP",
         system: "http://terminology.hl7.org/CodeSystem/message-transport"

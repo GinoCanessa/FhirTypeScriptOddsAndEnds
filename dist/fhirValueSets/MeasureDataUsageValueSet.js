@@ -13,7 +13,7 @@ export const MeasureDataUsageValueSet = {
     /**
      * The data is intended to be used to calculate and apply a risk adjustment model for the measure.
      */
-    measure_data_usage_RiskAdjustmentFactor: Coding.FromStrict({
+    measure_data_usage_RiskAdjustmentFactor: new Coding({
         code: "risk-adjustment-factor",
         display: "Risk Adjustment Factor",
         system: "http://terminology.hl7.org/CodeSystem/measure-data-usage"
@@ -21,7 +21,7 @@ export const MeasureDataUsageValueSet = {
     /**
      * The data is intended to be provided as additional information alongside the measure results.
      */
-    measure_data_usage_SupplementalData: Coding.FromStrict({
+    measure_data_usage_SupplementalData: new Coding({
         code: "supplemental-data",
         display: "Supplemental Data",
         system: "http://terminology.hl7.org/CodeSystem/measure-data-usage"

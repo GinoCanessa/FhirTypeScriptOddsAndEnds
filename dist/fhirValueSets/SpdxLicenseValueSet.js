@@ -13,7 +13,7 @@ export const SpdxLicenseValueSet = {
     /**
      * BSD Zero Clause License.
      */
-    spdx_license_BSDZeroClauseLicense: Coding.FromStrict({
+    spdx_license_BSDZeroClauseLicense: new Coding({
         code: "0BSD",
         display: "BSD Zero Clause License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -21,7 +21,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Attribution Assurance License.
      */
-    spdx_license_AttributionAssuranceLicense: Coding.FromStrict({
+    spdx_license_AttributionAssuranceLicense: new Coding({
         code: "AAL",
         display: "Attribution Assurance License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -29,7 +29,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Abstyles License.
      */
-    spdx_license_AbstylesLicense: Coding.FromStrict({
+    spdx_license_AbstylesLicense: new Coding({
         code: "Abstyles",
         display: "Abstyles License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -37,7 +37,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Adobe Systems Incorporated Source Code License Agreement.
      */
-    spdx_license_AdobeSystemsIncorporatedSourceCodeLicenseAgreement: Coding.FromStrict({
+    spdx_license_AdobeSystemsIncorporatedSourceCodeLicenseAgreement: new Coding({
         code: "Adobe-2006",
         display: "Adobe Systems Incorporated Source Code License Agreement",
         system: "http://hl7.org/fhir/spdx-license"
@@ -45,7 +45,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Adobe Glyph List License.
      */
-    spdx_license_AdobeGlyphListLicense: Coding.FromStrict({
+    spdx_license_AdobeGlyphListLicense: new Coding({
         code: "Adobe-Glyph",
         display: "Adobe Glyph List License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -53,7 +53,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Amazon Digital Services License.
      */
-    spdx_license_AmazonDigitalServicesLicense: Coding.FromStrict({
+    spdx_license_AmazonDigitalServicesLicense: new Coding({
         code: "ADSL",
         display: "Amazon Digital Services License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -61,7 +61,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Academic Free License v1.1.
      */
-    spdx_license_AcademicFreeLicenseV11: Coding.FromStrict({
+    spdx_license_AcademicFreeLicenseV11: new Coding({
         code: "AFL-1.1",
         display: "Academic Free License v1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -69,7 +69,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Academic Free License v1.2.
      */
-    spdx_license_AcademicFreeLicenseV12: Coding.FromStrict({
+    spdx_license_AcademicFreeLicenseV12: new Coding({
         code: "AFL-1.2",
         display: "Academic Free License v1.2",
         system: "http://hl7.org/fhir/spdx-license"
@@ -77,7 +77,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Academic Free License v2.0.
      */
-    spdx_license_AcademicFreeLicenseV20: Coding.FromStrict({
+    spdx_license_AcademicFreeLicenseV20: new Coding({
         code: "AFL-2.0",
         display: "Academic Free License v2.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -85,7 +85,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Academic Free License v2.1.
      */
-    spdx_license_AcademicFreeLicenseV21: Coding.FromStrict({
+    spdx_license_AcademicFreeLicenseV21: new Coding({
         code: "AFL-2.1",
         display: "Academic Free License v2.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -93,7 +93,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Academic Free License v3.0.
      */
-    spdx_license_AcademicFreeLicenseV30: Coding.FromStrict({
+    spdx_license_AcademicFreeLicenseV30: new Coding({
         code: "AFL-3.0",
         display: "Academic Free License v3.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -101,7 +101,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Afmparse License.
      */
-    spdx_license_AfmparseLicense: Coding.FromStrict({
+    spdx_license_AfmparseLicense: new Coding({
         code: "Afmparse",
         display: "Afmparse License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -109,7 +109,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Affero General Public License v1.0 only.
      */
-    spdx_license_AfferoGeneralPublicLicenseV10Only: Coding.FromStrict({
+    spdx_license_AfferoGeneralPublicLicenseV10Only: new Coding({
         code: "AGPL-1.0-only",
         display: "Affero General Public License v1.0 only",
         system: "http://hl7.org/fhir/spdx-license"
@@ -117,7 +117,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Affero General Public License v1.0 or later.
      */
-    spdx_license_AfferoGeneralPublicLicenseV10OrLater: Coding.FromStrict({
+    spdx_license_AfferoGeneralPublicLicenseV10OrLater: new Coding({
         code: "AGPL-1.0-or-later",
         display: "Affero General Public License v1.0 or later",
         system: "http://hl7.org/fhir/spdx-license"
@@ -125,7 +125,7 @@ export const SpdxLicenseValueSet = {
     /**
      * GNU Affero General Public License v3.0 only.
      */
-    spdx_license_GNUAfferoGeneralPublicLicenseV30Only: Coding.FromStrict({
+    spdx_license_GNUAfferoGeneralPublicLicenseV30Only: new Coding({
         code: "AGPL-3.0-only",
         display: "GNU Affero General Public License v3.0 only",
         system: "http://hl7.org/fhir/spdx-license"
@@ -133,7 +133,7 @@ export const SpdxLicenseValueSet = {
     /**
      * GNU Affero General Public License v3.0 or later.
      */
-    spdx_license_GNUAfferoGeneralPublicLicenseV30OrLater: Coding.FromStrict({
+    spdx_license_GNUAfferoGeneralPublicLicenseV30OrLater: new Coding({
         code: "AGPL-3.0-or-later",
         display: "GNU Affero General Public License v3.0 or later",
         system: "http://hl7.org/fhir/spdx-license"
@@ -141,7 +141,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Aladdin Free Public License.
      */
-    spdx_license_AladdinFreePublicLicense: Coding.FromStrict({
+    spdx_license_AladdinFreePublicLicense: new Coding({
         code: "Aladdin",
         display: "Aladdin Free Public License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -149,7 +149,7 @@ export const SpdxLicenseValueSet = {
     /**
      * AMD's plpa_map.c License.
      */
-    spdx_license_AMDQuoteSPlpaMapCLicense: Coding.FromStrict({
+    spdx_license_AMDQuoteSPlpaMapCLicense: new Coding({
         code: "AMDPLPA",
         display: "AMD's plpa_map.c License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -157,7 +157,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Apple MIT License.
      */
-    spdx_license_AppleMITLicense: Coding.FromStrict({
+    spdx_license_AppleMITLicense: new Coding({
         code: "AML",
         display: "Apple MIT License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -165,7 +165,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Academy of Motion Picture Arts and Sciences BSD.
      */
-    spdx_license_AcademyOfMotionPictureArtsAndSciencesBSD: Coding.FromStrict({
+    spdx_license_AcademyOfMotionPictureArtsAndSciencesBSD: new Coding({
         code: "AMPAS",
         display: "Academy of Motion Picture Arts and Sciences BSD",
         system: "http://hl7.org/fhir/spdx-license"
@@ -173,7 +173,7 @@ export const SpdxLicenseValueSet = {
     /**
      * ANTLR Software Rights Notice.
      */
-    spdx_license_ANTLRSoftwareRightsNotice: Coding.FromStrict({
+    spdx_license_ANTLRSoftwareRightsNotice: new Coding({
         code: "ANTLR-PD",
         display: "ANTLR Software Rights Notice",
         system: "http://hl7.org/fhir/spdx-license"
@@ -181,7 +181,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Apache License 1.0.
      */
-    spdx_license_ApacheLicense10: Coding.FromStrict({
+    spdx_license_ApacheLicense10: new Coding({
         code: "Apache-1.0",
         display: "Apache License 1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -189,7 +189,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Apache License 1.1.
      */
-    spdx_license_ApacheLicense11: Coding.FromStrict({
+    spdx_license_ApacheLicense11: new Coding({
         code: "Apache-1.1",
         display: "Apache License 1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -197,7 +197,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Apache License 2.0.
      */
-    spdx_license_ApacheLicense20: Coding.FromStrict({
+    spdx_license_ApacheLicense20: new Coding({
         code: "Apache-2.0",
         display: "Apache License 2.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -205,7 +205,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Adobe Postscript AFM License.
      */
-    spdx_license_AdobePostscriptAFMLicense: Coding.FromStrict({
+    spdx_license_AdobePostscriptAFMLicense: new Coding({
         code: "APAFML",
         display: "Adobe Postscript AFM License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -213,7 +213,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Adaptive Public License 1.0.
      */
-    spdx_license_AdaptivePublicLicense10: Coding.FromStrict({
+    spdx_license_AdaptivePublicLicense10: new Coding({
         code: "APL-1.0",
         display: "Adaptive Public License 1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -221,7 +221,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Apple Public Source License 1.0.
      */
-    spdx_license_ApplePublicSourceLicense10: Coding.FromStrict({
+    spdx_license_ApplePublicSourceLicense10: new Coding({
         code: "APSL-1.0",
         display: "Apple Public Source License 1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -229,7 +229,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Apple Public Source License 1.1.
      */
-    spdx_license_ApplePublicSourceLicense11: Coding.FromStrict({
+    spdx_license_ApplePublicSourceLicense11: new Coding({
         code: "APSL-1.1",
         display: "Apple Public Source License 1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -237,7 +237,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Apple Public Source License 1.2.
      */
-    spdx_license_ApplePublicSourceLicense12: Coding.FromStrict({
+    spdx_license_ApplePublicSourceLicense12: new Coding({
         code: "APSL-1.2",
         display: "Apple Public Source License 1.2",
         system: "http://hl7.org/fhir/spdx-license"
@@ -245,7 +245,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Apple Public Source License 2.0.
      */
-    spdx_license_ApplePublicSourceLicense20: Coding.FromStrict({
+    spdx_license_ApplePublicSourceLicense20: new Coding({
         code: "APSL-2.0",
         display: "Apple Public Source License 2.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -253,7 +253,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Artistic License 1.0.
      */
-    spdx_license_ArtisticLicense10: Coding.FromStrict({
+    spdx_license_ArtisticLicense10: new Coding({
         code: "Artistic-1.0",
         display: "Artistic License 1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -261,7 +261,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Artistic License 1.0 w/clause 8.
      */
-    spdx_license_ArtisticLicense10WClause8: Coding.FromStrict({
+    spdx_license_ArtisticLicense10WClause8: new Coding({
         code: "Artistic-1.0-cl8",
         display: "Artistic License 1.0 w/clause 8",
         system: "http://hl7.org/fhir/spdx-license"
@@ -269,7 +269,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Artistic License 1.0 (Perl).
      */
-    spdx_license_ArtisticLicense10Perl: Coding.FromStrict({
+    spdx_license_ArtisticLicense10Perl: new Coding({
         code: "Artistic-1.0-Perl",
         display: "Artistic License 1.0 (Perl)",
         system: "http://hl7.org/fhir/spdx-license"
@@ -277,7 +277,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Artistic License 2.0.
      */
-    spdx_license_ArtisticLicense20: Coding.FromStrict({
+    spdx_license_ArtisticLicense20: new Coding({
         code: "Artistic-2.0",
         display: "Artistic License 2.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -285,7 +285,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Bahyph License.
      */
-    spdx_license_BahyphLicense: Coding.FromStrict({
+    spdx_license_BahyphLicense: new Coding({
         code: "Bahyph",
         display: "Bahyph License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -293,7 +293,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Barr License.
      */
-    spdx_license_BarrLicense: Coding.FromStrict({
+    spdx_license_BarrLicense: new Coding({
         code: "Barr",
         display: "Barr License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -301,7 +301,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Beerware License.
      */
-    spdx_license_BeerwareLicense: Coding.FromStrict({
+    spdx_license_BeerwareLicense: new Coding({
         code: "Beerware",
         display: "Beerware License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -309,7 +309,7 @@ export const SpdxLicenseValueSet = {
     /**
      * BitTorrent Open Source License v1.0.
      */
-    spdx_license_BitTorrentOpenSourceLicenseV10: Coding.FromStrict({
+    spdx_license_BitTorrentOpenSourceLicenseV10: new Coding({
         code: "BitTorrent-1.0",
         display: "BitTorrent Open Source License v1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -317,7 +317,7 @@ export const SpdxLicenseValueSet = {
     /**
      * BitTorrent Open Source License v1.1.
      */
-    spdx_license_BitTorrentOpenSourceLicenseV11: Coding.FromStrict({
+    spdx_license_BitTorrentOpenSourceLicenseV11: new Coding({
         code: "BitTorrent-1.1",
         display: "BitTorrent Open Source License v1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -325,7 +325,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Borceux license.
      */
-    spdx_license_BorceuxLicense: Coding.FromStrict({
+    spdx_license_BorceuxLicense: new Coding({
         code: "Borceux",
         display: "Borceux license",
         system: "http://hl7.org/fhir/spdx-license"
@@ -333,7 +333,7 @@ export const SpdxLicenseValueSet = {
     /**
      * BSD 1-Clause License.
      */
-    spdx_license_BSD1ClauseLicense: Coding.FromStrict({
+    spdx_license_BSD1ClauseLicense: new Coding({
         code: "BSD-1-Clause",
         display: "BSD 1-Clause License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -341,7 +341,7 @@ export const SpdxLicenseValueSet = {
     /**
      * BSD 2-Clause "Simplified" License.
      */
-    spdx_license_BSD2ClauseQuotationSimplifiedQuotationLicense: Coding.FromStrict({
+    spdx_license_BSD2ClauseQuotationSimplifiedQuotationLicense: new Coding({
         code: "BSD-2-Clause",
         display: "BSD 2-Clause \"Simplified\" License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -349,7 +349,7 @@ export const SpdxLicenseValueSet = {
     /**
      * BSD 2-Clause FreeBSD License.
      */
-    spdx_license_BSD2ClauseFreeBSDLicense: Coding.FromStrict({
+    spdx_license_BSD2ClauseFreeBSDLicense: new Coding({
         code: "BSD-2-Clause-FreeBSD",
         display: "BSD 2-Clause FreeBSD License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -357,7 +357,7 @@ export const SpdxLicenseValueSet = {
     /**
      * BSD 2-Clause NetBSD License.
      */
-    spdx_license_BSD2ClauseNetBSDLicense: Coding.FromStrict({
+    spdx_license_BSD2ClauseNetBSDLicense: new Coding({
         code: "BSD-2-Clause-NetBSD",
         display: "BSD 2-Clause NetBSD License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -365,7 +365,7 @@ export const SpdxLicenseValueSet = {
     /**
      * BSD-2-Clause Plus Patent License.
      */
-    spdx_license_BSD2ClausePlusPatentLicense: Coding.FromStrict({
+    spdx_license_BSD2ClausePlusPatentLicense: new Coding({
         code: "BSD-2-Clause-Patent",
         display: "BSD-2-Clause Plus Patent License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -373,7 +373,7 @@ export const SpdxLicenseValueSet = {
     /**
      * BSD 3-Clause "New" or "Revised" License.
      */
-    spdx_license_BSD3ClauseQuotationNewQuotationOrQuotationRevisedQuotationLicense: Coding.FromStrict({
+    spdx_license_BSD3ClauseQuotationNewQuotationOrQuotationRevisedQuotationLicense: new Coding({
         code: "BSD-3-Clause",
         display: "BSD 3-Clause \"New\" or \"Revised\" License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -381,7 +381,7 @@ export const SpdxLicenseValueSet = {
     /**
      * BSD with attribution.
      */
-    spdx_license_BSDWithAttribution: Coding.FromStrict({
+    spdx_license_BSDWithAttribution: new Coding({
         code: "BSD-3-Clause-Attribution",
         display: "BSD with attribution",
         system: "http://hl7.org/fhir/spdx-license"
@@ -389,7 +389,7 @@ export const SpdxLicenseValueSet = {
     /**
      * BSD 3-Clause Clear License.
      */
-    spdx_license_BSD3ClauseClearLicense: Coding.FromStrict({
+    spdx_license_BSD3ClauseClearLicense: new Coding({
         code: "BSD-3-Clause-Clear",
         display: "BSD 3-Clause Clear License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -397,7 +397,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Lawrence Berkeley National Labs BSD variant license.
      */
-    spdx_license_LawrenceBerkeleyNationalLabsBSDVariantLicense: Coding.FromStrict({
+    spdx_license_LawrenceBerkeleyNationalLabsBSDVariantLicense: new Coding({
         code: "BSD-3-Clause-LBNL",
         display: "Lawrence Berkeley National Labs BSD variant license",
         system: "http://hl7.org/fhir/spdx-license"
@@ -405,7 +405,7 @@ export const SpdxLicenseValueSet = {
     /**
      * BSD 3-Clause No Nuclear License.
      */
-    spdx_license_BSD3ClauseNoNuclearLicense: Coding.FromStrict({
+    spdx_license_BSD3ClauseNoNuclearLicense: new Coding({
         code: "BSD-3-Clause-No-Nuclear-License",
         display: "BSD 3-Clause No Nuclear License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -413,7 +413,7 @@ export const SpdxLicenseValueSet = {
     /**
      * BSD 3-Clause No Nuclear License 2014.
      */
-    spdx_license_BSD3ClauseNoNuclearLicense2014: Coding.FromStrict({
+    spdx_license_BSD3ClauseNoNuclearLicense2014: new Coding({
         code: "BSD-3-Clause-No-Nuclear-License-2014",
         display: "BSD 3-Clause No Nuclear License 2014",
         system: "http://hl7.org/fhir/spdx-license"
@@ -421,7 +421,7 @@ export const SpdxLicenseValueSet = {
     /**
      * BSD 3-Clause No Nuclear Warranty.
      */
-    spdx_license_BSD3ClauseNoNuclearWarranty: Coding.FromStrict({
+    spdx_license_BSD3ClauseNoNuclearWarranty: new Coding({
         code: "BSD-3-Clause-No-Nuclear-Warranty",
         display: "BSD 3-Clause No Nuclear Warranty",
         system: "http://hl7.org/fhir/spdx-license"
@@ -429,7 +429,7 @@ export const SpdxLicenseValueSet = {
     /**
      * BSD 4-Clause "Original" or "Old" License.
      */
-    spdx_license_BSD4ClauseQuotationOriginalQuotationOrQuotationOldQuotationLicense: Coding.FromStrict({
+    spdx_license_BSD4ClauseQuotationOriginalQuotationOrQuotationOldQuotationLicense: new Coding({
         code: "BSD-4-Clause",
         display: "BSD 4-Clause \"Original\" or \"Old\" License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -437,7 +437,7 @@ export const SpdxLicenseValueSet = {
     /**
      * BSD-4-Clause (University of California-Specific).
      */
-    spdx_license_BSD4ClauseUniversityOfCaliforniaSpecific: Coding.FromStrict({
+    spdx_license_BSD4ClauseUniversityOfCaliforniaSpecific: new Coding({
         code: "BSD-4-Clause-UC",
         display: "BSD-4-Clause (University of California-Specific)",
         system: "http://hl7.org/fhir/spdx-license"
@@ -445,7 +445,7 @@ export const SpdxLicenseValueSet = {
     /**
      * BSD Protection License.
      */
-    spdx_license_BSDProtectionLicense: Coding.FromStrict({
+    spdx_license_BSDProtectionLicense: new Coding({
         code: "BSD-Protection",
         display: "BSD Protection License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -453,7 +453,7 @@ export const SpdxLicenseValueSet = {
     /**
      * BSD Source Code Attribution.
      */
-    spdx_license_BSDSourceCodeAttribution: Coding.FromStrict({
+    spdx_license_BSDSourceCodeAttribution: new Coding({
         code: "BSD-Source-Code",
         display: "BSD Source Code Attribution",
         system: "http://hl7.org/fhir/spdx-license"
@@ -461,7 +461,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Boost Software License 1.0.
      */
-    spdx_license_BoostSoftwareLicense10: Coding.FromStrict({
+    spdx_license_BoostSoftwareLicense10: new Coding({
         code: "BSL-1.0",
         display: "Boost Software License 1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -469,7 +469,7 @@ export const SpdxLicenseValueSet = {
     /**
      * bzip2 and libbzip2 License v1.0.5.
      */
-    spdx_license_Bzip2AndLibbzip2LicenseV105: Coding.FromStrict({
+    spdx_license_Bzip2AndLibbzip2LicenseV105: new Coding({
         code: "bzip2-1.0.5",
         display: "bzip2 and libbzip2 License v1.0.5",
         system: "http://hl7.org/fhir/spdx-license"
@@ -477,7 +477,7 @@ export const SpdxLicenseValueSet = {
     /**
      * bzip2 and libbzip2 License v1.0.6.
      */
-    spdx_license_Bzip2AndLibbzip2LicenseV106: Coding.FromStrict({
+    spdx_license_Bzip2AndLibbzip2LicenseV106: new Coding({
         code: "bzip2-1.0.6",
         display: "bzip2 and libbzip2 License v1.0.6",
         system: "http://hl7.org/fhir/spdx-license"
@@ -485,7 +485,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Caldera License.
      */
-    spdx_license_CalderaLicense: Coding.FromStrict({
+    spdx_license_CalderaLicense: new Coding({
         code: "Caldera",
         display: "Caldera License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -493,7 +493,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Computer Associates Trusted Open Source License 1.1.
      */
-    spdx_license_ComputerAssociatesTrustedOpenSourceLicense11: Coding.FromStrict({
+    spdx_license_ComputerAssociatesTrustedOpenSourceLicense11: new Coding({
         code: "CATOSL-1.1",
         display: "Computer Associates Trusted Open Source License 1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -501,7 +501,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution 1.0 Generic.
      */
-    spdx_license_CreativeCommonsAttribution10Generic: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttribution10Generic: new Coding({
         code: "CC-BY-1.0",
         display: "Creative Commons Attribution 1.0 Generic",
         system: "http://hl7.org/fhir/spdx-license"
@@ -509,7 +509,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution 2.0 Generic.
      */
-    spdx_license_CreativeCommonsAttribution20Generic: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttribution20Generic: new Coding({
         code: "CC-BY-2.0",
         display: "Creative Commons Attribution 2.0 Generic",
         system: "http://hl7.org/fhir/spdx-license"
@@ -517,7 +517,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution 2.5 Generic.
      */
-    spdx_license_CreativeCommonsAttribution25Generic: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttribution25Generic: new Coding({
         code: "CC-BY-2.5",
         display: "Creative Commons Attribution 2.5 Generic",
         system: "http://hl7.org/fhir/spdx-license"
@@ -525,7 +525,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution 3.0 Unported.
      */
-    spdx_license_CreativeCommonsAttribution30Unported: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttribution30Unported: new Coding({
         code: "CC-BY-3.0",
         display: "Creative Commons Attribution 3.0 Unported",
         system: "http://hl7.org/fhir/spdx-license"
@@ -533,7 +533,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution 4.0 International.
      */
-    spdx_license_CreativeCommonsAttribution40International: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttribution40International: new Coding({
         code: "CC-BY-4.0",
         display: "Creative Commons Attribution 4.0 International",
         system: "http://hl7.org/fhir/spdx-license"
@@ -541,7 +541,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution Non Commercial 1.0 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercial10Generic: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionNonCommercial10Generic: new Coding({
         code: "CC-BY-NC-1.0",
         display: "Creative Commons Attribution Non Commercial 1.0 Generic",
         system: "http://hl7.org/fhir/spdx-license"
@@ -549,7 +549,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution Non Commercial 2.0 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercial20Generic: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionNonCommercial20Generic: new Coding({
         code: "CC-BY-NC-2.0",
         display: "Creative Commons Attribution Non Commercial 2.0 Generic",
         system: "http://hl7.org/fhir/spdx-license"
@@ -557,7 +557,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution Non Commercial 2.5 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercial25Generic: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionNonCommercial25Generic: new Coding({
         code: "CC-BY-NC-2.5",
         display: "Creative Commons Attribution Non Commercial 2.5 Generic",
         system: "http://hl7.org/fhir/spdx-license"
@@ -565,7 +565,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution Non Commercial 3.0 Unported.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercial30Unported: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionNonCommercial30Unported: new Coding({
         code: "CC-BY-NC-3.0",
         display: "Creative Commons Attribution Non Commercial 3.0 Unported",
         system: "http://hl7.org/fhir/spdx-license"
@@ -573,7 +573,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution Non Commercial 4.0 International.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercial40International: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionNonCommercial40International: new Coding({
         code: "CC-BY-NC-4.0",
         display: "Creative Commons Attribution Non Commercial 4.0 International",
         system: "http://hl7.org/fhir/spdx-license"
@@ -581,7 +581,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution Non Commercial No Derivatives 1.0 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercialNoDerivatives10Generic: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionNonCommercialNoDerivatives10Generic: new Coding({
         code: "CC-BY-NC-ND-1.0",
         display: "Creative Commons Attribution Non Commercial No Derivatives 1.0 Generic",
         system: "http://hl7.org/fhir/spdx-license"
@@ -589,7 +589,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution Non Commercial No Derivatives 2.0 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercialNoDerivatives20Generic: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionNonCommercialNoDerivatives20Generic: new Coding({
         code: "CC-BY-NC-ND-2.0",
         display: "Creative Commons Attribution Non Commercial No Derivatives 2.0 Generic",
         system: "http://hl7.org/fhir/spdx-license"
@@ -597,7 +597,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution Non Commercial No Derivatives 2.5 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercialNoDerivatives25Generic: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionNonCommercialNoDerivatives25Generic: new Coding({
         code: "CC-BY-NC-ND-2.5",
         display: "Creative Commons Attribution Non Commercial No Derivatives 2.5 Generic",
         system: "http://hl7.org/fhir/spdx-license"
@@ -605,7 +605,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution Non Commercial No Derivatives 3.0 Unported.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercialNoDerivatives30Unported: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionNonCommercialNoDerivatives30Unported: new Coding({
         code: "CC-BY-NC-ND-3.0",
         display: "Creative Commons Attribution Non Commercial No Derivatives 3.0 Unported",
         system: "http://hl7.org/fhir/spdx-license"
@@ -613,7 +613,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution Non Commercial No Derivatives 4.0 International.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercialNoDerivatives40International: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionNonCommercialNoDerivatives40International: new Coding({
         code: "CC-BY-NC-ND-4.0",
         display: "Creative Commons Attribution Non Commercial No Derivatives 4.0 International",
         system: "http://hl7.org/fhir/spdx-license"
@@ -621,7 +621,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution Non Commercial Share Alike 1.0 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercialShareAlike10Generic: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionNonCommercialShareAlike10Generic: new Coding({
         code: "CC-BY-NC-SA-1.0",
         display: "Creative Commons Attribution Non Commercial Share Alike 1.0 Generic",
         system: "http://hl7.org/fhir/spdx-license"
@@ -629,7 +629,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution Non Commercial Share Alike 2.0 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercialShareAlike20Generic: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionNonCommercialShareAlike20Generic: new Coding({
         code: "CC-BY-NC-SA-2.0",
         display: "Creative Commons Attribution Non Commercial Share Alike 2.0 Generic",
         system: "http://hl7.org/fhir/spdx-license"
@@ -637,7 +637,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution Non Commercial Share Alike 2.5 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercialShareAlike25Generic: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionNonCommercialShareAlike25Generic: new Coding({
         code: "CC-BY-NC-SA-2.5",
         display: "Creative Commons Attribution Non Commercial Share Alike 2.5 Generic",
         system: "http://hl7.org/fhir/spdx-license"
@@ -645,7 +645,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution Non Commercial Share Alike 3.0 Unported.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercialShareAlike30Unported: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionNonCommercialShareAlike30Unported: new Coding({
         code: "CC-BY-NC-SA-3.0",
         display: "Creative Commons Attribution Non Commercial Share Alike 3.0 Unported",
         system: "http://hl7.org/fhir/spdx-license"
@@ -653,7 +653,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution Non Commercial Share Alike 4.0 International.
      */
-    spdx_license_CreativeCommonsAttributionNonCommercialShareAlike40International: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionNonCommercialShareAlike40International: new Coding({
         code: "CC-BY-NC-SA-4.0",
         display: "Creative Commons Attribution Non Commercial Share Alike 4.0 International",
         system: "http://hl7.org/fhir/spdx-license"
@@ -661,7 +661,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution No Derivatives 1.0 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNoDerivatives10Generic: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionNoDerivatives10Generic: new Coding({
         code: "CC-BY-ND-1.0",
         display: "Creative Commons Attribution No Derivatives 1.0 Generic",
         system: "http://hl7.org/fhir/spdx-license"
@@ -669,7 +669,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution No Derivatives 2.0 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNoDerivatives20Generic: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionNoDerivatives20Generic: new Coding({
         code: "CC-BY-ND-2.0",
         display: "Creative Commons Attribution No Derivatives 2.0 Generic",
         system: "http://hl7.org/fhir/spdx-license"
@@ -677,7 +677,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution No Derivatives 2.5 Generic.
      */
-    spdx_license_CreativeCommonsAttributionNoDerivatives25Generic: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionNoDerivatives25Generic: new Coding({
         code: "CC-BY-ND-2.5",
         display: "Creative Commons Attribution No Derivatives 2.5 Generic",
         system: "http://hl7.org/fhir/spdx-license"
@@ -685,7 +685,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution No Derivatives 3.0 Unported.
      */
-    spdx_license_CreativeCommonsAttributionNoDerivatives30Unported: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionNoDerivatives30Unported: new Coding({
         code: "CC-BY-ND-3.0",
         display: "Creative Commons Attribution No Derivatives 3.0 Unported",
         system: "http://hl7.org/fhir/spdx-license"
@@ -693,7 +693,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution No Derivatives 4.0 International.
      */
-    spdx_license_CreativeCommonsAttributionNoDerivatives40International: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionNoDerivatives40International: new Coding({
         code: "CC-BY-ND-4.0",
         display: "Creative Commons Attribution No Derivatives 4.0 International",
         system: "http://hl7.org/fhir/spdx-license"
@@ -701,7 +701,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution Share Alike 1.0 Generic.
      */
-    spdx_license_CreativeCommonsAttributionShareAlike10Generic: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionShareAlike10Generic: new Coding({
         code: "CC-BY-SA-1.0",
         display: "Creative Commons Attribution Share Alike 1.0 Generic",
         system: "http://hl7.org/fhir/spdx-license"
@@ -709,7 +709,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution Share Alike 2.0 Generic.
      */
-    spdx_license_CreativeCommonsAttributionShareAlike20Generic: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionShareAlike20Generic: new Coding({
         code: "CC-BY-SA-2.0",
         display: "Creative Commons Attribution Share Alike 2.0 Generic",
         system: "http://hl7.org/fhir/spdx-license"
@@ -717,7 +717,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution Share Alike 2.5 Generic.
      */
-    spdx_license_CreativeCommonsAttributionShareAlike25Generic: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionShareAlike25Generic: new Coding({
         code: "CC-BY-SA-2.5",
         display: "Creative Commons Attribution Share Alike 2.5 Generic",
         system: "http://hl7.org/fhir/spdx-license"
@@ -725,7 +725,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution Share Alike 3.0 Unported.
      */
-    spdx_license_CreativeCommonsAttributionShareAlike30Unported: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionShareAlike30Unported: new Coding({
         code: "CC-BY-SA-3.0",
         display: "Creative Commons Attribution Share Alike 3.0 Unported",
         system: "http://hl7.org/fhir/spdx-license"
@@ -733,7 +733,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Attribution Share Alike 4.0 International.
      */
-    spdx_license_CreativeCommonsAttributionShareAlike40International: Coding.FromStrict({
+    spdx_license_CreativeCommonsAttributionShareAlike40International: new Coding({
         code: "CC-BY-SA-4.0",
         display: "Creative Commons Attribution Share Alike 4.0 International",
         system: "http://hl7.org/fhir/spdx-license"
@@ -741,7 +741,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Creative Commons Zero v1.0 Universal.
      */
-    spdx_license_CreativeCommonsZeroV10Universal: Coding.FromStrict({
+    spdx_license_CreativeCommonsZeroV10Universal: new Coding({
         code: "CC0-1.0",
         display: "Creative Commons Zero v1.0 Universal",
         system: "http://hl7.org/fhir/spdx-license"
@@ -749,7 +749,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Common Development and Distribution License 1.0.
      */
-    spdx_license_CommonDevelopmentAndDistributionLicense10: Coding.FromStrict({
+    spdx_license_CommonDevelopmentAndDistributionLicense10: new Coding({
         code: "CDDL-1.0",
         display: "Common Development and Distribution License 1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -757,7 +757,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Common Development and Distribution License 1.1.
      */
-    spdx_license_CommonDevelopmentAndDistributionLicense11: Coding.FromStrict({
+    spdx_license_CommonDevelopmentAndDistributionLicense11: new Coding({
         code: "CDDL-1.1",
         display: "Common Development and Distribution License 1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -765,7 +765,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Community Data License Agreement Permissive 1.0.
      */
-    spdx_license_CommunityDataLicenseAgreementPermissive10: Coding.FromStrict({
+    spdx_license_CommunityDataLicenseAgreementPermissive10: new Coding({
         code: "CDLA-Permissive-1.0",
         display: "Community Data License Agreement Permissive 1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -773,7 +773,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Community Data License Agreement Sharing 1.0.
      */
-    spdx_license_CommunityDataLicenseAgreementSharing10: Coding.FromStrict({
+    spdx_license_CommunityDataLicenseAgreementSharing10: new Coding({
         code: "CDLA-Sharing-1.0",
         display: "Community Data License Agreement Sharing 1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -781,7 +781,7 @@ export const SpdxLicenseValueSet = {
     /**
      * CeCILL Free Software License Agreement v1.0.
      */
-    spdx_license_CeCILLFreeSoftwareLicenseAgreementV10: Coding.FromStrict({
+    spdx_license_CeCILLFreeSoftwareLicenseAgreementV10: new Coding({
         code: "CECILL-1.0",
         display: "CeCILL Free Software License Agreement v1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -789,7 +789,7 @@ export const SpdxLicenseValueSet = {
     /**
      * CeCILL Free Software License Agreement v1.1.
      */
-    spdx_license_CeCILLFreeSoftwareLicenseAgreementV11: Coding.FromStrict({
+    spdx_license_CeCILLFreeSoftwareLicenseAgreementV11: new Coding({
         code: "CECILL-1.1",
         display: "CeCILL Free Software License Agreement v1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -797,7 +797,7 @@ export const SpdxLicenseValueSet = {
     /**
      * CeCILL Free Software License Agreement v2.0.
      */
-    spdx_license_CeCILLFreeSoftwareLicenseAgreementV20: Coding.FromStrict({
+    spdx_license_CeCILLFreeSoftwareLicenseAgreementV20: new Coding({
         code: "CECILL-2.0",
         display: "CeCILL Free Software License Agreement v2.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -805,7 +805,7 @@ export const SpdxLicenseValueSet = {
     /**
      * CeCILL Free Software License Agreement v2.1.
      */
-    spdx_license_CeCILLFreeSoftwareLicenseAgreementV21: Coding.FromStrict({
+    spdx_license_CeCILLFreeSoftwareLicenseAgreementV21: new Coding({
         code: "CECILL-2.1",
         display: "CeCILL Free Software License Agreement v2.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -813,7 +813,7 @@ export const SpdxLicenseValueSet = {
     /**
      * CeCILL-B Free Software License Agreement.
      */
-    spdx_license_CeCILLBFreeSoftwareLicenseAgreement: Coding.FromStrict({
+    spdx_license_CeCILLBFreeSoftwareLicenseAgreement: new Coding({
         code: "CECILL-B",
         display: "CeCILL-B Free Software License Agreement",
         system: "http://hl7.org/fhir/spdx-license"
@@ -821,7 +821,7 @@ export const SpdxLicenseValueSet = {
     /**
      * CeCILL-C Free Software License Agreement.
      */
-    spdx_license_CeCILLCFreeSoftwareLicenseAgreement: Coding.FromStrict({
+    spdx_license_CeCILLCFreeSoftwareLicenseAgreement: new Coding({
         code: "CECILL-C",
         display: "CeCILL-C Free Software License Agreement",
         system: "http://hl7.org/fhir/spdx-license"
@@ -829,7 +829,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Clarified Artistic License.
      */
-    spdx_license_ClarifiedArtisticLicense: Coding.FromStrict({
+    spdx_license_ClarifiedArtisticLicense: new Coding({
         code: "ClArtistic",
         display: "Clarified Artistic License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -837,7 +837,7 @@ export const SpdxLicenseValueSet = {
     /**
      * CNRI Jython License.
      */
-    spdx_license_CNRIJythonLicense: Coding.FromStrict({
+    spdx_license_CNRIJythonLicense: new Coding({
         code: "CNRI-Jython",
         display: "CNRI Jython License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -845,7 +845,7 @@ export const SpdxLicenseValueSet = {
     /**
      * CNRI Python License.
      */
-    spdx_license_CNRIPythonLicense: Coding.FromStrict({
+    spdx_license_CNRIPythonLicense: new Coding({
         code: "CNRI-Python",
         display: "CNRI Python License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -853,7 +853,7 @@ export const SpdxLicenseValueSet = {
     /**
      * CNRI Python Open Source GPL Compatible License Agreement.
      */
-    spdx_license_CNRIPythonOpenSourceGPLCompatibleLicenseAgreement: Coding.FromStrict({
+    spdx_license_CNRIPythonOpenSourceGPLCompatibleLicenseAgreement: new Coding({
         code: "CNRI-Python-GPL-Compatible",
         display: "CNRI Python Open Source GPL Compatible License Agreement",
         system: "http://hl7.org/fhir/spdx-license"
@@ -861,7 +861,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Condor Public License v1.1.
      */
-    spdx_license_CondorPublicLicenseV11: Coding.FromStrict({
+    spdx_license_CondorPublicLicenseV11: new Coding({
         code: "Condor-1.1",
         display: "Condor Public License v1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -869,7 +869,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Common Public Attribution License 1.0.
      */
-    spdx_license_CommonPublicAttributionLicense10: Coding.FromStrict({
+    spdx_license_CommonPublicAttributionLicense10: new Coding({
         code: "CPAL-1.0",
         display: "Common Public Attribution License 1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -877,7 +877,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Common Public License 1.0.
      */
-    spdx_license_CommonPublicLicense10: Coding.FromStrict({
+    spdx_license_CommonPublicLicense10: new Coding({
         code: "CPL-1.0",
         display: "Common Public License 1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -885,7 +885,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Code Project Open License 1.02.
      */
-    spdx_license_CodeProjectOpenLicense102: Coding.FromStrict({
+    spdx_license_CodeProjectOpenLicense102: new Coding({
         code: "CPOL-1.02",
         display: "Code Project Open License 1.02",
         system: "http://hl7.org/fhir/spdx-license"
@@ -893,7 +893,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Crossword License.
      */
-    spdx_license_CrosswordLicense: Coding.FromStrict({
+    spdx_license_CrosswordLicense: new Coding({
         code: "Crossword",
         display: "Crossword License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -901,7 +901,7 @@ export const SpdxLicenseValueSet = {
     /**
      * CrystalStacker License.
      */
-    spdx_license_CrystalStackerLicense: Coding.FromStrict({
+    spdx_license_CrystalStackerLicense: new Coding({
         code: "CrystalStacker",
         display: "CrystalStacker License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -909,7 +909,7 @@ export const SpdxLicenseValueSet = {
     /**
      * CUA Office Public License v1.0.
      */
-    spdx_license_CUAOfficePublicLicenseV10: Coding.FromStrict({
+    spdx_license_CUAOfficePublicLicenseV10: new Coding({
         code: "CUA-OPL-1.0",
         display: "CUA Office Public License v1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -917,7 +917,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Cube License.
      */
-    spdx_license_CubeLicense: Coding.FromStrict({
+    spdx_license_CubeLicense: new Coding({
         code: "Cube",
         display: "Cube License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -925,7 +925,7 @@ export const SpdxLicenseValueSet = {
     /**
      * curl License.
      */
-    spdx_license_CurlLicense: Coding.FromStrict({
+    spdx_license_CurlLicense: new Coding({
         code: "curl",
         display: "curl License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -933,7 +933,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Deutsche Freie Software Lizenz.
      */
-    spdx_license_DeutscheFreieSoftwareLizenz: Coding.FromStrict({
+    spdx_license_DeutscheFreieSoftwareLizenz: new Coding({
         code: "D-FSL-1.0",
         display: "Deutsche Freie Software Lizenz",
         system: "http://hl7.org/fhir/spdx-license"
@@ -941,7 +941,7 @@ export const SpdxLicenseValueSet = {
     /**
      * diffmark license.
      */
-    spdx_license_DiffmarkLicense: Coding.FromStrict({
+    spdx_license_DiffmarkLicense: new Coding({
         code: "diffmark",
         display: "diffmark license",
         system: "http://hl7.org/fhir/spdx-license"
@@ -949,7 +949,7 @@ export const SpdxLicenseValueSet = {
     /**
      * DOC License.
      */
-    spdx_license_DOCLicense: Coding.FromStrict({
+    spdx_license_DOCLicense: new Coding({
         code: "DOC",
         display: "DOC License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -957,7 +957,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Dotseqn License.
      */
-    spdx_license_DotseqnLicense: Coding.FromStrict({
+    spdx_license_DotseqnLicense: new Coding({
         code: "Dotseqn",
         display: "Dotseqn License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -965,7 +965,7 @@ export const SpdxLicenseValueSet = {
     /**
      * DSDP License.
      */
-    spdx_license_DSDPLicense: Coding.FromStrict({
+    spdx_license_DSDPLicense: new Coding({
         code: "DSDP",
         display: "DSDP License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -973,7 +973,7 @@ export const SpdxLicenseValueSet = {
     /**
      * dvipdfm License.
      */
-    spdx_license_DvipdfmLicense: Coding.FromStrict({
+    spdx_license_DvipdfmLicense: new Coding({
         code: "dvipdfm",
         display: "dvipdfm License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -981,7 +981,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Educational Community License v1.0.
      */
-    spdx_license_EducationalCommunityLicenseV10: Coding.FromStrict({
+    spdx_license_EducationalCommunityLicenseV10: new Coding({
         code: "ECL-1.0",
         display: "Educational Community License v1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -989,7 +989,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Educational Community License v2.0.
      */
-    spdx_license_EducationalCommunityLicenseV20: Coding.FromStrict({
+    spdx_license_EducationalCommunityLicenseV20: new Coding({
         code: "ECL-2.0",
         display: "Educational Community License v2.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -997,7 +997,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Eiffel Forum License v1.0.
      */
-    spdx_license_EiffelForumLicenseV10: Coding.FromStrict({
+    spdx_license_EiffelForumLicenseV10: new Coding({
         code: "EFL-1.0",
         display: "Eiffel Forum License v1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1005,7 +1005,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Eiffel Forum License v2.0.
      */
-    spdx_license_EiffelForumLicenseV20: Coding.FromStrict({
+    spdx_license_EiffelForumLicenseV20: new Coding({
         code: "EFL-2.0",
         display: "Eiffel Forum License v2.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1013,7 +1013,7 @@ export const SpdxLicenseValueSet = {
     /**
      * eGenix.com Public License 1.1.0.
      */
-    spdx_license_EGenixComPublicLicense110: Coding.FromStrict({
+    spdx_license_EGenixComPublicLicense110: new Coding({
         code: "eGenix",
         display: "eGenix.com Public License 1.1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1021,7 +1021,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Entessa Public License v1.0.
      */
-    spdx_license_EntessaPublicLicenseV10: Coding.FromStrict({
+    spdx_license_EntessaPublicLicenseV10: new Coding({
         code: "Entessa",
         display: "Entessa Public License v1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1029,7 +1029,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Eclipse Public License 1.0.
      */
-    spdx_license_EclipsePublicLicense10: Coding.FromStrict({
+    spdx_license_EclipsePublicLicense10: new Coding({
         code: "EPL-1.0",
         display: "Eclipse Public License 1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1037,7 +1037,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Eclipse Public License 2.0.
      */
-    spdx_license_EclipsePublicLicense20: Coding.FromStrict({
+    spdx_license_EclipsePublicLicense20: new Coding({
         code: "EPL-2.0",
         display: "Eclipse Public License 2.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1045,7 +1045,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Erlang Public License v1.1.
      */
-    spdx_license_ErlangPublicLicenseV11: Coding.FromStrict({
+    spdx_license_ErlangPublicLicenseV11: new Coding({
         code: "ErlPL-1.1",
         display: "Erlang Public License v1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1053,7 +1053,7 @@ export const SpdxLicenseValueSet = {
     /**
      * EU DataGrid Software License.
      */
-    spdx_license_EUDataGridSoftwareLicense: Coding.FromStrict({
+    spdx_license_EUDataGridSoftwareLicense: new Coding({
         code: "EUDatagrid",
         display: "EU DataGrid Software License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1061,7 +1061,7 @@ export const SpdxLicenseValueSet = {
     /**
      * European Union Public License 1.0.
      */
-    spdx_license_EuropeanUnionPublicLicense10: Coding.FromStrict({
+    spdx_license_EuropeanUnionPublicLicense10: new Coding({
         code: "EUPL-1.0",
         display: "European Union Public License 1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1069,7 +1069,7 @@ export const SpdxLicenseValueSet = {
     /**
      * European Union Public License 1.1.
      */
-    spdx_license_EuropeanUnionPublicLicense11: Coding.FromStrict({
+    spdx_license_EuropeanUnionPublicLicense11: new Coding({
         code: "EUPL-1.1",
         display: "European Union Public License 1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1077,7 +1077,7 @@ export const SpdxLicenseValueSet = {
     /**
      * European Union Public License 1.2.
      */
-    spdx_license_EuropeanUnionPublicLicense12: Coding.FromStrict({
+    spdx_license_EuropeanUnionPublicLicense12: new Coding({
         code: "EUPL-1.2",
         display: "European Union Public License 1.2",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1085,7 +1085,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Eurosym License.
      */
-    spdx_license_EurosymLicense: Coding.FromStrict({
+    spdx_license_EurosymLicense: new Coding({
         code: "Eurosym",
         display: "Eurosym License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1093,7 +1093,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Fair License.
      */
-    spdx_license_FairLicense: Coding.FromStrict({
+    spdx_license_FairLicense: new Coding({
         code: "Fair",
         display: "Fair License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1101,7 +1101,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Frameworx Open License 1.0.
      */
-    spdx_license_FrameworxOpenLicense10: Coding.FromStrict({
+    spdx_license_FrameworxOpenLicense10: new Coding({
         code: "Frameworx-1.0",
         display: "Frameworx Open License 1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1109,7 +1109,7 @@ export const SpdxLicenseValueSet = {
     /**
      * FreeImage Public License v1.0.
      */
-    spdx_license_FreeImagePublicLicenseV10: Coding.FromStrict({
+    spdx_license_FreeImagePublicLicenseV10: new Coding({
         code: "FreeImage",
         display: "FreeImage Public License v1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1117,7 +1117,7 @@ export const SpdxLicenseValueSet = {
     /**
      * FSF All Permissive License.
      */
-    spdx_license_FSFAllPermissiveLicense: Coding.FromStrict({
+    spdx_license_FSFAllPermissiveLicense: new Coding({
         code: "FSFAP",
         display: "FSF All Permissive License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1125,7 +1125,7 @@ export const SpdxLicenseValueSet = {
     /**
      * FSF Unlimited License.
      */
-    spdx_license_FSFUnlimitedLicense: Coding.FromStrict({
+    spdx_license_FSFUnlimitedLicense: new Coding({
         code: "FSFUL",
         display: "FSF Unlimited License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1133,7 +1133,7 @@ export const SpdxLicenseValueSet = {
     /**
      * FSF Unlimited License (with License Retention).
      */
-    spdx_license_FSFUnlimitedLicenseWithLicenseRetention: Coding.FromStrict({
+    spdx_license_FSFUnlimitedLicenseWithLicenseRetention: new Coding({
         code: "FSFULLR",
         display: "FSF Unlimited License (with License Retention)",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1141,7 +1141,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Freetype Project License.
      */
-    spdx_license_FreetypeProjectLicense: Coding.FromStrict({
+    spdx_license_FreetypeProjectLicense: new Coding({
         code: "FTL",
         display: "Freetype Project License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1149,7 +1149,7 @@ export const SpdxLicenseValueSet = {
     /**
      * GNU Free Documentation License v1.1 only.
      */
-    spdx_license_GNUFreeDocumentationLicenseV11Only: Coding.FromStrict({
+    spdx_license_GNUFreeDocumentationLicenseV11Only: new Coding({
         code: "GFDL-1.1-only",
         display: "GNU Free Documentation License v1.1 only",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1157,7 +1157,7 @@ export const SpdxLicenseValueSet = {
     /**
      * GNU Free Documentation License v1.1 or later.
      */
-    spdx_license_GNUFreeDocumentationLicenseV11OrLater: Coding.FromStrict({
+    spdx_license_GNUFreeDocumentationLicenseV11OrLater: new Coding({
         code: "GFDL-1.1-or-later",
         display: "GNU Free Documentation License v1.1 or later",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1165,7 +1165,7 @@ export const SpdxLicenseValueSet = {
     /**
      * GNU Free Documentation License v1.2 only.
      */
-    spdx_license_GNUFreeDocumentationLicenseV12Only: Coding.FromStrict({
+    spdx_license_GNUFreeDocumentationLicenseV12Only: new Coding({
         code: "GFDL-1.2-only",
         display: "GNU Free Documentation License v1.2 only",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1173,7 +1173,7 @@ export const SpdxLicenseValueSet = {
     /**
      * GNU Free Documentation License v1.2 or later.
      */
-    spdx_license_GNUFreeDocumentationLicenseV12OrLater: Coding.FromStrict({
+    spdx_license_GNUFreeDocumentationLicenseV12OrLater: new Coding({
         code: "GFDL-1.2-or-later",
         display: "GNU Free Documentation License v1.2 or later",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1181,7 +1181,7 @@ export const SpdxLicenseValueSet = {
     /**
      * GNU Free Documentation License v1.3 only.
      */
-    spdx_license_GNUFreeDocumentationLicenseV13Only: Coding.FromStrict({
+    spdx_license_GNUFreeDocumentationLicenseV13Only: new Coding({
         code: "GFDL-1.3-only",
         display: "GNU Free Documentation License v1.3 only",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1189,7 +1189,7 @@ export const SpdxLicenseValueSet = {
     /**
      * GNU Free Documentation License v1.3 or later.
      */
-    spdx_license_GNUFreeDocumentationLicenseV13OrLater: Coding.FromStrict({
+    spdx_license_GNUFreeDocumentationLicenseV13OrLater: new Coding({
         code: "GFDL-1.3-or-later",
         display: "GNU Free Documentation License v1.3 or later",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1197,7 +1197,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Giftware License.
      */
-    spdx_license_GiftwareLicense: Coding.FromStrict({
+    spdx_license_GiftwareLicense: new Coding({
         code: "Giftware",
         display: "Giftware License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1205,7 +1205,7 @@ export const SpdxLicenseValueSet = {
     /**
      * GL2PS License.
      */
-    spdx_license_GL2PSLicense: Coding.FromStrict({
+    spdx_license_GL2PSLicense: new Coding({
         code: "GL2PS",
         display: "GL2PS License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1213,7 +1213,7 @@ export const SpdxLicenseValueSet = {
     /**
      * 3dfx Glide License.
      */
-    spdx_license_VAL3dfxGlideLicense: Coding.FromStrict({
+    spdx_license_VAL3dfxGlideLicense: new Coding({
         code: "Glide",
         display: "3dfx Glide License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1221,7 +1221,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Glulxe License.
      */
-    spdx_license_GlulxeLicense: Coding.FromStrict({
+    spdx_license_GlulxeLicense: new Coding({
         code: "Glulxe",
         display: "Glulxe License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1229,7 +1229,7 @@ export const SpdxLicenseValueSet = {
     /**
      * gnuplot License.
      */
-    spdx_license_GnuplotLicense: Coding.FromStrict({
+    spdx_license_GnuplotLicense: new Coding({
         code: "gnuplot",
         display: "gnuplot License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1237,7 +1237,7 @@ export const SpdxLicenseValueSet = {
     /**
      * GNU General Public License v1.0 only.
      */
-    spdx_license_GNUGeneralPublicLicenseV10Only: Coding.FromStrict({
+    spdx_license_GNUGeneralPublicLicenseV10Only: new Coding({
         code: "GPL-1.0-only",
         display: "GNU General Public License v1.0 only",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1245,7 +1245,7 @@ export const SpdxLicenseValueSet = {
     /**
      * GNU General Public License v1.0 or later.
      */
-    spdx_license_GNUGeneralPublicLicenseV10OrLater: Coding.FromStrict({
+    spdx_license_GNUGeneralPublicLicenseV10OrLater: new Coding({
         code: "GPL-1.0-or-later",
         display: "GNU General Public License v1.0 or later",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1253,7 +1253,7 @@ export const SpdxLicenseValueSet = {
     /**
      * GNU General Public License v2.0 only.
      */
-    spdx_license_GNUGeneralPublicLicenseV20Only: Coding.FromStrict({
+    spdx_license_GNUGeneralPublicLicenseV20Only: new Coding({
         code: "GPL-2.0-only",
         display: "GNU General Public License v2.0 only",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1261,7 +1261,7 @@ export const SpdxLicenseValueSet = {
     /**
      * GNU General Public License v2.0 or later.
      */
-    spdx_license_GNUGeneralPublicLicenseV20OrLater: Coding.FromStrict({
+    spdx_license_GNUGeneralPublicLicenseV20OrLater: new Coding({
         code: "GPL-2.0-or-later",
         display: "GNU General Public License v2.0 or later",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1269,7 +1269,7 @@ export const SpdxLicenseValueSet = {
     /**
      * GNU General Public License v3.0 only.
      */
-    spdx_license_GNUGeneralPublicLicenseV30Only: Coding.FromStrict({
+    spdx_license_GNUGeneralPublicLicenseV30Only: new Coding({
         code: "GPL-3.0-only",
         display: "GNU General Public License v3.0 only",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1277,7 +1277,7 @@ export const SpdxLicenseValueSet = {
     /**
      * GNU General Public License v3.0 or later.
      */
-    spdx_license_GNUGeneralPublicLicenseV30OrLater: Coding.FromStrict({
+    spdx_license_GNUGeneralPublicLicenseV30OrLater: new Coding({
         code: "GPL-3.0-or-later",
         display: "GNU General Public License v3.0 or later",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1285,7 +1285,7 @@ export const SpdxLicenseValueSet = {
     /**
      * gSOAP Public License v1.3b.
      */
-    spdx_license_GSOAPPublicLicenseV13b: Coding.FromStrict({
+    spdx_license_GSOAPPublicLicenseV13b: new Coding({
         code: "gSOAP-1.3b",
         display: "gSOAP Public License v1.3b",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1293,7 +1293,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Haskell Language Report License.
      */
-    spdx_license_HaskellLanguageReportLicense: Coding.FromStrict({
+    spdx_license_HaskellLanguageReportLicense: new Coding({
         code: "HaskellReport",
         display: "Haskell Language Report License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1301,7 +1301,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Historical Permission Notice and Disclaimer.
      */
-    spdx_license_HistoricalPermissionNoticeAndDisclaimer: Coding.FromStrict({
+    spdx_license_HistoricalPermissionNoticeAndDisclaimer: new Coding({
         code: "HPND",
         display: "Historical Permission Notice and Disclaimer",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1309,7 +1309,7 @@ export const SpdxLicenseValueSet = {
     /**
      * IBM PowerPC Initialization and Boot Software.
      */
-    spdx_license_IBMPowerPCInitializationAndBootSoftware: Coding.FromStrict({
+    spdx_license_IBMPowerPCInitializationAndBootSoftware: new Coding({
         code: "IBM-pibs",
         display: "IBM PowerPC Initialization and Boot Software",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1317,7 +1317,7 @@ export const SpdxLicenseValueSet = {
     /**
      * ICU License.
      */
-    spdx_license_ICULicense: Coding.FromStrict({
+    spdx_license_ICULicense: new Coding({
         code: "ICU",
         display: "ICU License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1325,7 +1325,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Independent JPEG Group License.
      */
-    spdx_license_IndependentJPEGGroupLicense: Coding.FromStrict({
+    spdx_license_IndependentJPEGGroupLicense: new Coding({
         code: "IJG",
         display: "Independent JPEG Group License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1333,7 +1333,7 @@ export const SpdxLicenseValueSet = {
     /**
      * ImageMagick License.
      */
-    spdx_license_ImageMagickLicense: Coding.FromStrict({
+    spdx_license_ImageMagickLicense: new Coding({
         code: "ImageMagick",
         display: "ImageMagick License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1341,7 +1341,7 @@ export const SpdxLicenseValueSet = {
     /**
      * iMatix Standard Function Library Agreement.
      */
-    spdx_license_IMatixStandardFunctionLibraryAgreement: Coding.FromStrict({
+    spdx_license_IMatixStandardFunctionLibraryAgreement: new Coding({
         code: "iMatix",
         display: "iMatix Standard Function Library Agreement",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1349,7 +1349,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Imlib2 License.
      */
-    spdx_license_Imlib2License: Coding.FromStrict({
+    spdx_license_Imlib2License: new Coding({
         code: "Imlib2",
         display: "Imlib2 License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1357,7 +1357,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Info-ZIP License.
      */
-    spdx_license_InfoZIPLicense: Coding.FromStrict({
+    spdx_license_InfoZIPLicense: new Coding({
         code: "Info-ZIP",
         display: "Info-ZIP License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1365,7 +1365,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Intel Open Source License.
      */
-    spdx_license_IntelOpenSourceLicense: Coding.FromStrict({
+    spdx_license_IntelOpenSourceLicense: new Coding({
         code: "Intel",
         display: "Intel Open Source License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1373,7 +1373,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Intel ACPI Software License Agreement.
      */
-    spdx_license_IntelACPISoftwareLicenseAgreement: Coding.FromStrict({
+    spdx_license_IntelACPISoftwareLicenseAgreement: new Coding({
         code: "Intel-ACPI",
         display: "Intel ACPI Software License Agreement",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1381,7 +1381,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Interbase Public License v1.0.
      */
-    spdx_license_InterbasePublicLicenseV10: Coding.FromStrict({
+    spdx_license_InterbasePublicLicenseV10: new Coding({
         code: "Interbase-1.0",
         display: "Interbase Public License v1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1389,7 +1389,7 @@ export const SpdxLicenseValueSet = {
     /**
      * IPA Font License.
      */
-    spdx_license_IPAFontLicense: Coding.FromStrict({
+    spdx_license_IPAFontLicense: new Coding({
         code: "IPA",
         display: "IPA Font License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1397,7 +1397,7 @@ export const SpdxLicenseValueSet = {
     /**
      * IBM Public License v1.0.
      */
-    spdx_license_IBMPublicLicenseV10: Coding.FromStrict({
+    spdx_license_IBMPublicLicenseV10: new Coding({
         code: "IPL-1.0",
         display: "IBM Public License v1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1405,7 +1405,7 @@ export const SpdxLicenseValueSet = {
     /**
      * ISC License.
      */
-    spdx_license_ISCLicense: Coding.FromStrict({
+    spdx_license_ISCLicense: new Coding({
         code: "ISC",
         display: "ISC License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1413,7 +1413,7 @@ export const SpdxLicenseValueSet = {
     /**
      * JasPer License.
      */
-    spdx_license_JasPerLicense: Coding.FromStrict({
+    spdx_license_JasPerLicense: new Coding({
         code: "JasPer-2.0",
         display: "JasPer License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1421,7 +1421,7 @@ export const SpdxLicenseValueSet = {
     /**
      * JSON License.
      */
-    spdx_license_JSONLicense: Coding.FromStrict({
+    spdx_license_JSONLicense: new Coding({
         code: "JSON",
         display: "JSON License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1429,7 +1429,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Licence Art Libre 1.2.
      */
-    spdx_license_LicenceArtLibre12: Coding.FromStrict({
+    spdx_license_LicenceArtLibre12: new Coding({
         code: "LAL-1.2",
         display: "Licence Art Libre 1.2",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1437,7 +1437,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Licence Art Libre 1.3.
      */
-    spdx_license_LicenceArtLibre13: Coding.FromStrict({
+    spdx_license_LicenceArtLibre13: new Coding({
         code: "LAL-1.3",
         display: "Licence Art Libre 1.3",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1445,7 +1445,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Latex2e License.
      */
-    spdx_license_Latex2eLicense: Coding.FromStrict({
+    spdx_license_Latex2eLicense: new Coding({
         code: "Latex2e",
         display: "Latex2e License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1453,7 +1453,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Leptonica License.
      */
-    spdx_license_LeptonicaLicense: Coding.FromStrict({
+    spdx_license_LeptonicaLicense: new Coding({
         code: "Leptonica",
         display: "Leptonica License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1461,7 +1461,7 @@ export const SpdxLicenseValueSet = {
     /**
      * GNU Library General Public License v2 only.
      */
-    spdx_license_GNULibraryGeneralPublicLicenseV2Only: Coding.FromStrict({
+    spdx_license_GNULibraryGeneralPublicLicenseV2Only: new Coding({
         code: "LGPL-2.0-only",
         display: "GNU Library General Public License v2 only",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1469,7 +1469,7 @@ export const SpdxLicenseValueSet = {
     /**
      * GNU Library General Public License v2 or later.
      */
-    spdx_license_GNULibraryGeneralPublicLicenseV2OrLater: Coding.FromStrict({
+    spdx_license_GNULibraryGeneralPublicLicenseV2OrLater: new Coding({
         code: "LGPL-2.0-or-later",
         display: "GNU Library General Public License v2 or later",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1477,7 +1477,7 @@ export const SpdxLicenseValueSet = {
     /**
      * GNU Lesser General Public License v2.1 only.
      */
-    spdx_license_GNULesserGeneralPublicLicenseV21Only: Coding.FromStrict({
+    spdx_license_GNULesserGeneralPublicLicenseV21Only: new Coding({
         code: "LGPL-2.1-only",
         display: "GNU Lesser General Public License v2.1 only",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1485,7 +1485,7 @@ export const SpdxLicenseValueSet = {
     /**
      * GNU Lesser General Public License v2.1 or later.
      */
-    spdx_license_GNULesserGeneralPublicLicenseV21OrLater: Coding.FromStrict({
+    spdx_license_GNULesserGeneralPublicLicenseV21OrLater: new Coding({
         code: "LGPL-2.1-or-later",
         display: "GNU Lesser General Public License v2.1 or later",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1493,7 +1493,7 @@ export const SpdxLicenseValueSet = {
     /**
      * GNU Lesser General Public License v3.0 only.
      */
-    spdx_license_GNULesserGeneralPublicLicenseV30Only: Coding.FromStrict({
+    spdx_license_GNULesserGeneralPublicLicenseV30Only: new Coding({
         code: "LGPL-3.0-only",
         display: "GNU Lesser General Public License v3.0 only",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1501,7 +1501,7 @@ export const SpdxLicenseValueSet = {
     /**
      * GNU Lesser General Public License v3.0 or later.
      */
-    spdx_license_GNULesserGeneralPublicLicenseV30OrLater: Coding.FromStrict({
+    spdx_license_GNULesserGeneralPublicLicenseV30OrLater: new Coding({
         code: "LGPL-3.0-or-later",
         display: "GNU Lesser General Public License v3.0 or later",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1509,7 +1509,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Lesser General Public License For Linguistic Resources.
      */
-    spdx_license_LesserGeneralPublicLicenseForLinguisticResources: Coding.FromStrict({
+    spdx_license_LesserGeneralPublicLicenseForLinguisticResources: new Coding({
         code: "LGPLLR",
         display: "Lesser General Public License For Linguistic Resources",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1517,7 +1517,7 @@ export const SpdxLicenseValueSet = {
     /**
      * libpng License.
      */
-    spdx_license_LibpngLicense: Coding.FromStrict({
+    spdx_license_LibpngLicense: new Coding({
         code: "Libpng",
         display: "libpng License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1525,7 +1525,7 @@ export const SpdxLicenseValueSet = {
     /**
      * libtiff License.
      */
-    spdx_license_LibtiffLicense: Coding.FromStrict({
+    spdx_license_LibtiffLicense: new Coding({
         code: "libtiff",
         display: "libtiff License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1533,7 +1533,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Licence Libre du Québec – Permissive version 1.1.
      */
-    spdx_license_LicenceLibreDuQuebecPermissiveVersion11: Coding.FromStrict({
+    spdx_license_LicenceLibreDuQuebecPermissiveVersion11: new Coding({
         code: "LiLiQ-P-1.1",
         display: "Licence Libre du Québec – Permissive version 1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1541,7 +1541,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Licence Libre du Québec – Réciprocité version 1.1.
      */
-    spdx_license_LicenceLibreDuQuebecReciprociteVersion11: Coding.FromStrict({
+    spdx_license_LicenceLibreDuQuebecReciprociteVersion11: new Coding({
         code: "LiLiQ-R-1.1",
         display: "Licence Libre du Québec – Réciprocité version 1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1549,7 +1549,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Licence Libre du Québec – Réciprocité forte version 1.1.
      */
-    spdx_license_LicenceLibreDuQuebecReciprociteForteVersion11: Coding.FromStrict({
+    spdx_license_LicenceLibreDuQuebecReciprociteForteVersion11: new Coding({
         code: "LiLiQ-Rplus-1.1",
         display: "Licence Libre du Québec – Réciprocité forte version 1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1557,7 +1557,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Linux Kernel Variant of OpenIB.org license.
      */
-    spdx_license_LinuxKernelVariantOfOpenIBOrgLicense: Coding.FromStrict({
+    spdx_license_LinuxKernelVariantOfOpenIBOrgLicense: new Coding({
         code: "Linux-OpenIB",
         display: "Linux Kernel Variant of OpenIB.org license",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1565,7 +1565,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Lucent Public License Version 1.0.
      */
-    spdx_license_LucentPublicLicenseVersion10: Coding.FromStrict({
+    spdx_license_LucentPublicLicenseVersion10: new Coding({
         code: "LPL-1.0",
         display: "Lucent Public License Version 1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1573,7 +1573,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Lucent Public License v1.02.
      */
-    spdx_license_LucentPublicLicenseV102: Coding.FromStrict({
+    spdx_license_LucentPublicLicenseV102: new Coding({
         code: "LPL-1.02",
         display: "Lucent Public License v1.02",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1581,7 +1581,7 @@ export const SpdxLicenseValueSet = {
     /**
      * LaTeX Project Public License v1.0.
      */
-    spdx_license_LaTeXProjectPublicLicenseV10: Coding.FromStrict({
+    spdx_license_LaTeXProjectPublicLicenseV10: new Coding({
         code: "LPPL-1.0",
         display: "LaTeX Project Public License v1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1589,7 +1589,7 @@ export const SpdxLicenseValueSet = {
     /**
      * LaTeX Project Public License v1.1.
      */
-    spdx_license_LaTeXProjectPublicLicenseV11: Coding.FromStrict({
+    spdx_license_LaTeXProjectPublicLicenseV11: new Coding({
         code: "LPPL-1.1",
         display: "LaTeX Project Public License v1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1597,7 +1597,7 @@ export const SpdxLicenseValueSet = {
     /**
      * LaTeX Project Public License v1.2.
      */
-    spdx_license_LaTeXProjectPublicLicenseV12: Coding.FromStrict({
+    spdx_license_LaTeXProjectPublicLicenseV12: new Coding({
         code: "LPPL-1.2",
         display: "LaTeX Project Public License v1.2",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1605,7 +1605,7 @@ export const SpdxLicenseValueSet = {
     /**
      * LaTeX Project Public License v1.3a.
      */
-    spdx_license_LaTeXProjectPublicLicenseV13a: Coding.FromStrict({
+    spdx_license_LaTeXProjectPublicLicenseV13a: new Coding({
         code: "LPPL-1.3a",
         display: "LaTeX Project Public License v1.3a",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1613,7 +1613,7 @@ export const SpdxLicenseValueSet = {
     /**
      * LaTeX Project Public License v1.3c.
      */
-    spdx_license_LaTeXProjectPublicLicenseV13c: Coding.FromStrict({
+    spdx_license_LaTeXProjectPublicLicenseV13c: new Coding({
         code: "LPPL-1.3c",
         display: "LaTeX Project Public License v1.3c",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1621,7 +1621,7 @@ export const SpdxLicenseValueSet = {
     /**
      * MakeIndex License.
      */
-    spdx_license_MakeIndexLicense: Coding.FromStrict({
+    spdx_license_MakeIndexLicense: new Coding({
         code: "MakeIndex",
         display: "MakeIndex License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1629,7 +1629,7 @@ export const SpdxLicenseValueSet = {
     /**
      * MirOS License.
      */
-    spdx_license_MirOSLicense: Coding.FromStrict({
+    spdx_license_MirOSLicense: new Coding({
         code: "MirOS",
         display: "MirOS License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1637,7 +1637,7 @@ export const SpdxLicenseValueSet = {
     /**
      * MIT License.
      */
-    spdx_license_MITLicense: Coding.FromStrict({
+    spdx_license_MITLicense: new Coding({
         code: "MIT",
         display: "MIT License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1645,7 +1645,7 @@ export const SpdxLicenseValueSet = {
     /**
      * MIT No Attribution.
      */
-    spdx_license_MITNoAttribution: Coding.FromStrict({
+    spdx_license_MITNoAttribution: new Coding({
         code: "MIT-0",
         display: "MIT No Attribution",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1653,7 +1653,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Enlightenment License (e16).
      */
-    spdx_license_EnlightenmentLicenseE16: Coding.FromStrict({
+    spdx_license_EnlightenmentLicenseE16: new Coding({
         code: "MIT-advertising",
         display: "Enlightenment License (e16)",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1661,7 +1661,7 @@ export const SpdxLicenseValueSet = {
     /**
      * CMU License.
      */
-    spdx_license_CMULicense: Coding.FromStrict({
+    spdx_license_CMULicense: new Coding({
         code: "MIT-CMU",
         display: "CMU License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1669,7 +1669,7 @@ export const SpdxLicenseValueSet = {
     /**
      * enna License.
      */
-    spdx_license_EnnaLicense: Coding.FromStrict({
+    spdx_license_EnnaLicense: new Coding({
         code: "MIT-enna",
         display: "enna License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1677,7 +1677,7 @@ export const SpdxLicenseValueSet = {
     /**
      * feh License.
      */
-    spdx_license_FehLicense: Coding.FromStrict({
+    spdx_license_FehLicense: new Coding({
         code: "MIT-feh",
         display: "feh License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1685,7 +1685,7 @@ export const SpdxLicenseValueSet = {
     /**
      * MIT +no-false-attribs license.
      */
-    spdx_license_MITPlusNoFalseAttribsLicense: Coding.FromStrict({
+    spdx_license_MITPlusNoFalseAttribsLicense: new Coding({
         code: "MITNFA",
         display: "MIT +no-false-attribs license",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1693,7 +1693,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Motosoto License.
      */
-    spdx_license_MotosotoLicense: Coding.FromStrict({
+    spdx_license_MotosotoLicense: new Coding({
         code: "Motosoto",
         display: "Motosoto License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1701,7 +1701,7 @@ export const SpdxLicenseValueSet = {
     /**
      * mpich2 License.
      */
-    spdx_license_Mpich2License: Coding.FromStrict({
+    spdx_license_Mpich2License: new Coding({
         code: "mpich2",
         display: "mpich2 License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1709,7 +1709,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Mozilla Public License 1.0.
      */
-    spdx_license_MozillaPublicLicense10: Coding.FromStrict({
+    spdx_license_MozillaPublicLicense10: new Coding({
         code: "MPL-1.0",
         display: "Mozilla Public License 1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1717,7 +1717,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Mozilla Public License 1.1.
      */
-    spdx_license_MozillaPublicLicense11: Coding.FromStrict({
+    spdx_license_MozillaPublicLicense11: new Coding({
         code: "MPL-1.1",
         display: "Mozilla Public License 1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1725,7 +1725,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Mozilla Public License 2.0.
      */
-    spdx_license_MozillaPublicLicense20: Coding.FromStrict({
+    spdx_license_MozillaPublicLicense20: new Coding({
         code: "MPL-2.0",
         display: "Mozilla Public License 2.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1733,7 +1733,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Mozilla Public License 2.0 (no copyleft exception).
      */
-    spdx_license_MozillaPublicLicense20NoCopyleftException: Coding.FromStrict({
+    spdx_license_MozillaPublicLicense20NoCopyleftException: new Coding({
         code: "MPL-2.0-no-copyleft-exception",
         display: "Mozilla Public License 2.0 (no copyleft exception)",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1741,7 +1741,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Microsoft Public License.
      */
-    spdx_license_MicrosoftPublicLicense: Coding.FromStrict({
+    spdx_license_MicrosoftPublicLicense: new Coding({
         code: "MS-PL",
         display: "Microsoft Public License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1749,7 +1749,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Microsoft Reciprocal License.
      */
-    spdx_license_MicrosoftReciprocalLicense: Coding.FromStrict({
+    spdx_license_MicrosoftReciprocalLicense: new Coding({
         code: "MS-RL",
         display: "Microsoft Reciprocal License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1757,7 +1757,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Matrix Template Library License.
      */
-    spdx_license_MatrixTemplateLibraryLicense: Coding.FromStrict({
+    spdx_license_MatrixTemplateLibraryLicense: new Coding({
         code: "MTLL",
         display: "Matrix Template Library License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1765,7 +1765,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Multics License.
      */
-    spdx_license_MulticsLicense: Coding.FromStrict({
+    spdx_license_MulticsLicense: new Coding({
         code: "Multics",
         display: "Multics License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1773,7 +1773,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Mup License.
      */
-    spdx_license_MupLicense: Coding.FromStrict({
+    spdx_license_MupLicense: new Coding({
         code: "Mup",
         display: "Mup License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1781,7 +1781,7 @@ export const SpdxLicenseValueSet = {
     /**
      * NASA Open Source Agreement 1.3.
      */
-    spdx_license_NASAOpenSourceAgreement13: Coding.FromStrict({
+    spdx_license_NASAOpenSourceAgreement13: new Coding({
         code: "NASA-1.3",
         display: "NASA Open Source Agreement 1.3",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1789,7 +1789,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Naumen Public License.
      */
-    spdx_license_NaumenPublicLicense: Coding.FromStrict({
+    spdx_license_NaumenPublicLicense: new Coding({
         code: "Naumen",
         display: "Naumen Public License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1797,7 +1797,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Net Boolean Public License v1.
      */
-    spdx_license_NetBooleanPublicLicenseV1: Coding.FromStrict({
+    spdx_license_NetBooleanPublicLicenseV1: new Coding({
         code: "NBPL-1.0",
         display: "Net Boolean Public License v1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1805,7 +1805,7 @@ export const SpdxLicenseValueSet = {
     /**
      * University of Illinois/NCSA Open Source License.
      */
-    spdx_license_UniversityOfIllinoisNCSAOpenSourceLicense: Coding.FromStrict({
+    spdx_license_UniversityOfIllinoisNCSAOpenSourceLicense: new Coding({
         code: "NCSA",
         display: "University of Illinois/NCSA Open Source License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1813,7 +1813,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Net-SNMP License.
      */
-    spdx_license_NetSNMPLicense: Coding.FromStrict({
+    spdx_license_NetSNMPLicense: new Coding({
         code: "Net-SNMP",
         display: "Net-SNMP License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1821,7 +1821,7 @@ export const SpdxLicenseValueSet = {
     /**
      * NetCDF license.
      */
-    spdx_license_NetCDFLicense: Coding.FromStrict({
+    spdx_license_NetCDFLicense: new Coding({
         code: "NetCDF",
         display: "NetCDF license",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1829,7 +1829,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Newsletr License.
      */
-    spdx_license_NewsletrLicense: Coding.FromStrict({
+    spdx_license_NewsletrLicense: new Coding({
         code: "Newsletr",
         display: "Newsletr License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1837,7 +1837,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Nethack General Public License.
      */
-    spdx_license_NethackGeneralPublicLicense: Coding.FromStrict({
+    spdx_license_NethackGeneralPublicLicense: new Coding({
         code: "NGPL",
         display: "Nethack General Public License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1845,7 +1845,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Norwegian Licence for Open Government Data.
      */
-    spdx_license_NorwegianLicenceForOpenGovernmentData: Coding.FromStrict({
+    spdx_license_NorwegianLicenceForOpenGovernmentData: new Coding({
         code: "NLOD-1.0",
         display: "Norwegian Licence for Open Government Data",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1853,7 +1853,7 @@ export const SpdxLicenseValueSet = {
     /**
      * No Limit Public License.
      */
-    spdx_license_NoLimitPublicLicense: Coding.FromStrict({
+    spdx_license_NoLimitPublicLicense: new Coding({
         code: "NLPL",
         display: "No Limit Public License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1861,7 +1861,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Nokia Open Source License.
      */
-    spdx_license_NokiaOpenSourceLicense: Coding.FromStrict({
+    spdx_license_NokiaOpenSourceLicense: new Coding({
         code: "Nokia",
         display: "Nokia Open Source License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1869,7 +1869,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Netizen Open Source License.
      */
-    spdx_license_NetizenOpenSourceLicense: Coding.FromStrict({
+    spdx_license_NetizenOpenSourceLicense: new Coding({
         code: "NOSL",
         display: "Netizen Open Source License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1877,7 +1877,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Not an open source license.
      */
-    spdx_license_NotOpenSource: Coding.FromStrict({
+    spdx_license_NotOpenSource: new Coding({
         code: "not-open-source",
         display: "Not open source",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1885,7 +1885,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Noweb License.
      */
-    spdx_license_NowebLicense: Coding.FromStrict({
+    spdx_license_NowebLicense: new Coding({
         code: "Noweb",
         display: "Noweb License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1893,7 +1893,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Netscape Public License v1.0.
      */
-    spdx_license_NetscapePublicLicenseV10: Coding.FromStrict({
+    spdx_license_NetscapePublicLicenseV10: new Coding({
         code: "NPL-1.0",
         display: "Netscape Public License v1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1901,7 +1901,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Netscape Public License v1.1.
      */
-    spdx_license_NetscapePublicLicenseV11: Coding.FromStrict({
+    spdx_license_NetscapePublicLicenseV11: new Coding({
         code: "NPL-1.1",
         display: "Netscape Public License v1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1909,7 +1909,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Non-Profit Open Software License 3.0.
      */
-    spdx_license_NonProfitOpenSoftwareLicense30: Coding.FromStrict({
+    spdx_license_NonProfitOpenSoftwareLicense30: new Coding({
         code: "NPOSL-3.0",
         display: "Non-Profit Open Software License 3.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1917,7 +1917,7 @@ export const SpdxLicenseValueSet = {
     /**
      * NRL License.
      */
-    spdx_license_NRLLicense: Coding.FromStrict({
+    spdx_license_NRLLicense: new Coding({
         code: "NRL",
         display: "NRL License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1925,7 +1925,7 @@ export const SpdxLicenseValueSet = {
     /**
      * NTP License.
      */
-    spdx_license_NTPLicense: Coding.FromStrict({
+    spdx_license_NTPLicense: new Coding({
         code: "NTP",
         display: "NTP License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1933,7 +1933,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open CASCADE Technology Public License.
      */
-    spdx_license_OpenCASCADETechnologyPublicLicense: Coding.FromStrict({
+    spdx_license_OpenCASCADETechnologyPublicLicense: new Coding({
         code: "OCCT-PL",
         display: "Open CASCADE Technology Public License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1941,7 +1941,7 @@ export const SpdxLicenseValueSet = {
     /**
      * OCLC Research Public License 2.0.
      */
-    spdx_license_OCLCResearchPublicLicense20: Coding.FromStrict({
+    spdx_license_OCLCResearchPublicLicense20: new Coding({
         code: "OCLC-2.0",
         display: "OCLC Research Public License 2.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1949,7 +1949,7 @@ export const SpdxLicenseValueSet = {
     /**
      * ODC Open Database License v1.0.
      */
-    spdx_license_ODCOpenDatabaseLicenseV10: Coding.FromStrict({
+    spdx_license_ODCOpenDatabaseLicenseV10: new Coding({
         code: "ODbL-1.0",
         display: "ODC Open Database License v1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1957,7 +1957,7 @@ export const SpdxLicenseValueSet = {
     /**
      * SIL Open Font License 1.0.
      */
-    spdx_license_SILOpenFontLicense10: Coding.FromStrict({
+    spdx_license_SILOpenFontLicense10: new Coding({
         code: "OFL-1.0",
         display: "SIL Open Font License 1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1965,7 +1965,7 @@ export const SpdxLicenseValueSet = {
     /**
      * SIL Open Font License 1.1.
      */
-    spdx_license_SILOpenFontLicense11: Coding.FromStrict({
+    spdx_license_SILOpenFontLicense11: new Coding({
         code: "OFL-1.1",
         display: "SIL Open Font License 1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1973,7 +1973,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open Group Test Suite License.
      */
-    spdx_license_OpenGroupTestSuiteLicense: Coding.FromStrict({
+    spdx_license_OpenGroupTestSuiteLicense: new Coding({
         code: "OGTSL",
         display: "Open Group Test Suite License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1981,7 +1981,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open LDAP Public License v1.1.
      */
-    spdx_license_OpenLDAPPublicLicenseV11: Coding.FromStrict({
+    spdx_license_OpenLDAPPublicLicenseV11: new Coding({
         code: "OLDAP-1.1",
         display: "Open LDAP Public License v1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1989,7 +1989,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open LDAP Public License v1.2.
      */
-    spdx_license_OpenLDAPPublicLicenseV12: Coding.FromStrict({
+    spdx_license_OpenLDAPPublicLicenseV12: new Coding({
         code: "OLDAP-1.2",
         display: "Open LDAP Public License v1.2",
         system: "http://hl7.org/fhir/spdx-license"
@@ -1997,7 +1997,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open LDAP Public License v1.3.
      */
-    spdx_license_OpenLDAPPublicLicenseV13: Coding.FromStrict({
+    spdx_license_OpenLDAPPublicLicenseV13: new Coding({
         code: "OLDAP-1.3",
         display: "Open LDAP Public License v1.3",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2005,7 +2005,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open LDAP Public License v1.4.
      */
-    spdx_license_OpenLDAPPublicLicenseV14: Coding.FromStrict({
+    spdx_license_OpenLDAPPublicLicenseV14: new Coding({
         code: "OLDAP-1.4",
         display: "Open LDAP Public License v1.4",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2013,7 +2013,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open LDAP Public License v2.0 (or possibly 2.0A and 2.0B).
      */
-    spdx_license_OpenLDAPPublicLicenseV20OrPossibly20AAnd20B: Coding.FromStrict({
+    spdx_license_OpenLDAPPublicLicenseV20OrPossibly20AAnd20B: new Coding({
         code: "OLDAP-2.0",
         display: "Open LDAP Public License v2.0 (or possibly 2.0A and 2.0B)",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2021,7 +2021,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open LDAP Public License v2.0.1.
      */
-    spdx_license_OpenLDAPPublicLicenseV201: Coding.FromStrict({
+    spdx_license_OpenLDAPPublicLicenseV201: new Coding({
         code: "OLDAP-2.0.1",
         display: "Open LDAP Public License v2.0.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2029,7 +2029,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open LDAP Public License v2.1.
      */
-    spdx_license_OpenLDAPPublicLicenseV21: Coding.FromStrict({
+    spdx_license_OpenLDAPPublicLicenseV21: new Coding({
         code: "OLDAP-2.1",
         display: "Open LDAP Public License v2.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2037,7 +2037,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open LDAP Public License v2.2.
      */
-    spdx_license_OpenLDAPPublicLicenseV22: Coding.FromStrict({
+    spdx_license_OpenLDAPPublicLicenseV22: new Coding({
         code: "OLDAP-2.2",
         display: "Open LDAP Public License v2.2",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2045,7 +2045,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open LDAP Public License v2.2.1.
      */
-    spdx_license_OpenLDAPPublicLicenseV221: Coding.FromStrict({
+    spdx_license_OpenLDAPPublicLicenseV221: new Coding({
         code: "OLDAP-2.2.1",
         display: "Open LDAP Public License v2.2.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2053,7 +2053,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open LDAP Public License 2.2.2.
      */
-    spdx_license_OpenLDAPPublicLicense222: Coding.FromStrict({
+    spdx_license_OpenLDAPPublicLicense222: new Coding({
         code: "OLDAP-2.2.2",
         display: "Open LDAP Public License 2.2.2",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2061,7 +2061,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open LDAP Public License v2.3.
      */
-    spdx_license_OpenLDAPPublicLicenseV23: Coding.FromStrict({
+    spdx_license_OpenLDAPPublicLicenseV23: new Coding({
         code: "OLDAP-2.3",
         display: "Open LDAP Public License v2.3",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2069,7 +2069,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open LDAP Public License v2.4.
      */
-    spdx_license_OpenLDAPPublicLicenseV24: Coding.FromStrict({
+    spdx_license_OpenLDAPPublicLicenseV24: new Coding({
         code: "OLDAP-2.4",
         display: "Open LDAP Public License v2.4",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2077,7 +2077,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open LDAP Public License v2.5.
      */
-    spdx_license_OpenLDAPPublicLicenseV25: Coding.FromStrict({
+    spdx_license_OpenLDAPPublicLicenseV25: new Coding({
         code: "OLDAP-2.5",
         display: "Open LDAP Public License v2.5",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2085,7 +2085,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open LDAP Public License v2.6.
      */
-    spdx_license_OpenLDAPPublicLicenseV26: Coding.FromStrict({
+    spdx_license_OpenLDAPPublicLicenseV26: new Coding({
         code: "OLDAP-2.6",
         display: "Open LDAP Public License v2.6",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2093,7 +2093,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open LDAP Public License v2.7.
      */
-    spdx_license_OpenLDAPPublicLicenseV27: Coding.FromStrict({
+    spdx_license_OpenLDAPPublicLicenseV27: new Coding({
         code: "OLDAP-2.7",
         display: "Open LDAP Public License v2.7",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2101,7 +2101,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open LDAP Public License v2.8.
      */
-    spdx_license_OpenLDAPPublicLicenseV28: Coding.FromStrict({
+    spdx_license_OpenLDAPPublicLicenseV28: new Coding({
         code: "OLDAP-2.8",
         display: "Open LDAP Public License v2.8",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2109,7 +2109,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open Market License.
      */
-    spdx_license_OpenMarketLicense: Coding.FromStrict({
+    spdx_license_OpenMarketLicense: new Coding({
         code: "OML",
         display: "Open Market License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2117,7 +2117,7 @@ export const SpdxLicenseValueSet = {
     /**
      * OpenSSL License.
      */
-    spdx_license_OpenSSLLicense: Coding.FromStrict({
+    spdx_license_OpenSSLLicense: new Coding({
         code: "OpenSSL",
         display: "OpenSSL License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2125,7 +2125,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open Public License v1.0.
      */
-    spdx_license_OpenPublicLicenseV10: Coding.FromStrict({
+    spdx_license_OpenPublicLicenseV10: new Coding({
         code: "OPL-1.0",
         display: "Open Public License v1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2133,7 +2133,7 @@ export const SpdxLicenseValueSet = {
     /**
      * OSET Public License version 2.1.
      */
-    spdx_license_OSETPublicLicenseVersion21: Coding.FromStrict({
+    spdx_license_OSETPublicLicenseVersion21: new Coding({
         code: "OSET-PL-2.1",
         display: "OSET Public License version 2.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2141,7 +2141,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open Software License 1.0.
      */
-    spdx_license_OpenSoftwareLicense10: Coding.FromStrict({
+    spdx_license_OpenSoftwareLicense10: new Coding({
         code: "OSL-1.0",
         display: "Open Software License 1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2149,7 +2149,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open Software License 1.1.
      */
-    spdx_license_OpenSoftwareLicense11: Coding.FromStrict({
+    spdx_license_OpenSoftwareLicense11: new Coding({
         code: "OSL-1.1",
         display: "Open Software License 1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2157,7 +2157,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open Software License 2.0.
      */
-    spdx_license_OpenSoftwareLicense20: Coding.FromStrict({
+    spdx_license_OpenSoftwareLicense20: new Coding({
         code: "OSL-2.0",
         display: "Open Software License 2.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2165,7 +2165,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open Software License 2.1.
      */
-    spdx_license_OpenSoftwareLicense21: Coding.FromStrict({
+    spdx_license_OpenSoftwareLicense21: new Coding({
         code: "OSL-2.1",
         display: "Open Software License 2.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2173,7 +2173,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Open Software License 3.0.
      */
-    spdx_license_OpenSoftwareLicense30: Coding.FromStrict({
+    spdx_license_OpenSoftwareLicense30: new Coding({
         code: "OSL-3.0",
         display: "Open Software License 3.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2181,7 +2181,7 @@ export const SpdxLicenseValueSet = {
     /**
      * ODC Public Domain Dedication &amp; License 1.0.
      */
-    spdx_license_ODCPublicDomainDedicationAndLicense10: Coding.FromStrict({
+    spdx_license_ODCPublicDomainDedicationAndLicense10: new Coding({
         code: "PDDL-1.0",
         display: "ODC Public Domain Dedication & License 1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2189,7 +2189,7 @@ export const SpdxLicenseValueSet = {
     /**
      * PHP License v3.0.
      */
-    spdx_license_PHPLicenseV30: Coding.FromStrict({
+    spdx_license_PHPLicenseV30: new Coding({
         code: "PHP-3.0",
         display: "PHP License v3.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2197,7 +2197,7 @@ export const SpdxLicenseValueSet = {
     /**
      * PHP License v3.01.
      */
-    spdx_license_PHPLicenseV301: Coding.FromStrict({
+    spdx_license_PHPLicenseV301: new Coding({
         code: "PHP-3.01",
         display: "PHP License v3.01",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2205,7 +2205,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Plexus Classworlds License.
      */
-    spdx_license_PlexusClassworldsLicense: Coding.FromStrict({
+    spdx_license_PlexusClassworldsLicense: new Coding({
         code: "Plexus",
         display: "Plexus Classworlds License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2213,7 +2213,7 @@ export const SpdxLicenseValueSet = {
     /**
      * PostgreSQL License.
      */
-    spdx_license_PostgreSQLLicense: Coding.FromStrict({
+    spdx_license_PostgreSQLLicense: new Coding({
         code: "PostgreSQL",
         display: "PostgreSQL License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2221,7 +2221,7 @@ export const SpdxLicenseValueSet = {
     /**
      * psfrag License.
      */
-    spdx_license_PsfragLicense: Coding.FromStrict({
+    spdx_license_PsfragLicense: new Coding({
         code: "psfrag",
         display: "psfrag License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2229,7 +2229,7 @@ export const SpdxLicenseValueSet = {
     /**
      * psutils License.
      */
-    spdx_license_PsutilsLicense: Coding.FromStrict({
+    spdx_license_PsutilsLicense: new Coding({
         code: "psutils",
         display: "psutils License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2237,7 +2237,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Python License 2.0.
      */
-    spdx_license_PythonLicense20: Coding.FromStrict({
+    spdx_license_PythonLicense20: new Coding({
         code: "Python-2.0",
         display: "Python License 2.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2245,7 +2245,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Qhull License.
      */
-    spdx_license_QhullLicense: Coding.FromStrict({
+    spdx_license_QhullLicense: new Coding({
         code: "Qhull",
         display: "Qhull License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2253,7 +2253,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Q Public License 1.0.
      */
-    spdx_license_QPublicLicense10: Coding.FromStrict({
+    spdx_license_QPublicLicense10: new Coding({
         code: "QPL-1.0",
         display: "Q Public License 1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2261,7 +2261,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Rdisc License.
      */
-    spdx_license_RdiscLicense: Coding.FromStrict({
+    spdx_license_RdiscLicense: new Coding({
         code: "Rdisc",
         display: "Rdisc License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2269,7 +2269,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Red Hat eCos Public License v1.1.
      */
-    spdx_license_RedHatECosPublicLicenseV11: Coding.FromStrict({
+    spdx_license_RedHatECosPublicLicenseV11: new Coding({
         code: "RHeCos-1.1",
         display: "Red Hat eCos Public License v1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2277,7 +2277,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Reciprocal Public License 1.1.
      */
-    spdx_license_ReciprocalPublicLicense11: Coding.FromStrict({
+    spdx_license_ReciprocalPublicLicense11: new Coding({
         code: "RPL-1.1",
         display: "Reciprocal Public License 1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2285,7 +2285,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Reciprocal Public License 1.5.
      */
-    spdx_license_ReciprocalPublicLicense15: Coding.FromStrict({
+    spdx_license_ReciprocalPublicLicense15: new Coding({
         code: "RPL-1.5",
         display: "Reciprocal Public License 1.5",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2293,7 +2293,7 @@ export const SpdxLicenseValueSet = {
     /**
      * RealNetworks Public Source License v1.0.
      */
-    spdx_license_RealNetworksPublicSourceLicenseV10: Coding.FromStrict({
+    spdx_license_RealNetworksPublicSourceLicenseV10: new Coding({
         code: "RPSL-1.0",
         display: "RealNetworks Public Source License v1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2301,7 +2301,7 @@ export const SpdxLicenseValueSet = {
     /**
      * RSA Message-Digest License.
      */
-    spdx_license_RSAMessageDigestLicense: Coding.FromStrict({
+    spdx_license_RSAMessageDigestLicense: new Coding({
         code: "RSA-MD",
         display: "RSA Message-Digest License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2309,7 +2309,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Ricoh Source Code Public License.
      */
-    spdx_license_RicohSourceCodePublicLicense: Coding.FromStrict({
+    spdx_license_RicohSourceCodePublicLicense: new Coding({
         code: "RSCPL",
         display: "Ricoh Source Code Public License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2317,7 +2317,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Ruby License.
      */
-    spdx_license_RubyLicense: Coding.FromStrict({
+    spdx_license_RubyLicense: new Coding({
         code: "Ruby",
         display: "Ruby License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2325,7 +2325,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Sax Public Domain Notice.
      */
-    spdx_license_SaxPublicDomainNotice: Coding.FromStrict({
+    spdx_license_SaxPublicDomainNotice: new Coding({
         code: "SAX-PD",
         display: "Sax Public Domain Notice",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2333,7 +2333,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Saxpath License.
      */
-    spdx_license_SaxpathLicense: Coding.FromStrict({
+    spdx_license_SaxpathLicense: new Coding({
         code: "Saxpath",
         display: "Saxpath License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2341,7 +2341,7 @@ export const SpdxLicenseValueSet = {
     /**
      * SCEA Shared Source License.
      */
-    spdx_license_SCEASharedSourceLicense: Coding.FromStrict({
+    spdx_license_SCEASharedSourceLicense: new Coding({
         code: "SCEA",
         display: "SCEA Shared Source License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2349,7 +2349,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Sendmail License.
      */
-    spdx_license_SendmailLicense: Coding.FromStrict({
+    spdx_license_SendmailLicense: new Coding({
         code: "Sendmail",
         display: "Sendmail License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2357,7 +2357,7 @@ export const SpdxLicenseValueSet = {
     /**
      * SGI Free Software License B v1.0.
      */
-    spdx_license_SGIFreeSoftwareLicenseBV10: Coding.FromStrict({
+    spdx_license_SGIFreeSoftwareLicenseBV10: new Coding({
         code: "SGI-B-1.0",
         display: "SGI Free Software License B v1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2365,7 +2365,7 @@ export const SpdxLicenseValueSet = {
     /**
      * SGI Free Software License B v1.1.
      */
-    spdx_license_SGIFreeSoftwareLicenseBV11: Coding.FromStrict({
+    spdx_license_SGIFreeSoftwareLicenseBV11: new Coding({
         code: "SGI-B-1.1",
         display: "SGI Free Software License B v1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2373,7 +2373,7 @@ export const SpdxLicenseValueSet = {
     /**
      * SGI Free Software License B v2.0.
      */
-    spdx_license_SGIFreeSoftwareLicenseBV20: Coding.FromStrict({
+    spdx_license_SGIFreeSoftwareLicenseBV20: new Coding({
         code: "SGI-B-2.0",
         display: "SGI Free Software License B v2.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2381,7 +2381,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Simple Public License 2.0.
      */
-    spdx_license_SimplePublicLicense20: Coding.FromStrict({
+    spdx_license_SimplePublicLicense20: new Coding({
         code: "SimPL-2.0",
         display: "Simple Public License 2.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2389,7 +2389,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Sun Industry Standards Source License v1.1.
      */
-    spdx_license_SunIndustryStandardsSourceLicenseV11: Coding.FromStrict({
+    spdx_license_SunIndustryStandardsSourceLicenseV11: new Coding({
         code: "SISSL",
         display: "Sun Industry Standards Source License v1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2397,7 +2397,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Sun Industry Standards Source License v1.2.
      */
-    spdx_license_SunIndustryStandardsSourceLicenseV12: Coding.FromStrict({
+    spdx_license_SunIndustryStandardsSourceLicenseV12: new Coding({
         code: "SISSL-1.2",
         display: "Sun Industry Standards Source License v1.2",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2405,7 +2405,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Sleepycat License.
      */
-    spdx_license_SleepycatLicense: Coding.FromStrict({
+    spdx_license_SleepycatLicense: new Coding({
         code: "Sleepycat",
         display: "Sleepycat License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2413,7 +2413,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Standard ML of New Jersey License.
      */
-    spdx_license_StandardMLOfNewJerseyLicense: Coding.FromStrict({
+    spdx_license_StandardMLOfNewJerseyLicense: new Coding({
         code: "SMLNJ",
         display: "Standard ML of New Jersey License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2421,7 +2421,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Secure Messaging Protocol Public License.
      */
-    spdx_license_SecureMessagingProtocolPublicLicense: Coding.FromStrict({
+    spdx_license_SecureMessagingProtocolPublicLicense: new Coding({
         code: "SMPPL",
         display: "Secure Messaging Protocol Public License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2429,7 +2429,7 @@ export const SpdxLicenseValueSet = {
     /**
      * SNIA Public License 1.1.
      */
-    spdx_license_SNIAPublicLicense11: Coding.FromStrict({
+    spdx_license_SNIAPublicLicense11: new Coding({
         code: "SNIA",
         display: "SNIA Public License 1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2437,7 +2437,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Spencer License 86.
      */
-    spdx_license_SpencerLicense86: Coding.FromStrict({
+    spdx_license_SpencerLicense86: new Coding({
         code: "Spencer-86",
         display: "Spencer License 86",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2445,7 +2445,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Spencer License 94.
      */
-    spdx_license_SpencerLicense94: Coding.FromStrict({
+    spdx_license_SpencerLicense94: new Coding({
         code: "Spencer-94",
         display: "Spencer License 94",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2453,7 +2453,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Spencer License 99.
      */
-    spdx_license_SpencerLicense99: Coding.FromStrict({
+    spdx_license_SpencerLicense99: new Coding({
         code: "Spencer-99",
         display: "Spencer License 99",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2461,7 +2461,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Sun Public License v1.0.
      */
-    spdx_license_SunPublicLicenseV10: Coding.FromStrict({
+    spdx_license_SunPublicLicenseV10: new Coding({
         code: "SPL-1.0",
         display: "Sun Public License v1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2469,7 +2469,7 @@ export const SpdxLicenseValueSet = {
     /**
      * SugarCRM Public License v1.1.3.
      */
-    spdx_license_SugarCRMPublicLicenseV113: Coding.FromStrict({
+    spdx_license_SugarCRMPublicLicenseV113: new Coding({
         code: "SugarCRM-1.1.3",
         display: "SugarCRM Public License v1.1.3",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2477,7 +2477,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Scheme Widget Library (SWL) Software License Agreement.
      */
-    spdx_license_SchemeWidgetLibrarySWLSoftwareLicenseAgreement: Coding.FromStrict({
+    spdx_license_SchemeWidgetLibrarySWLSoftwareLicenseAgreement: new Coding({
         code: "SWL",
         display: "Scheme Widget Library (SWL) Software License Agreement",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2485,7 +2485,7 @@ export const SpdxLicenseValueSet = {
     /**
      * TCL/TK License.
      */
-    spdx_license_TCLTKLicense: Coding.FromStrict({
+    spdx_license_TCLTKLicense: new Coding({
         code: "TCL",
         display: "TCL/TK License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2493,7 +2493,7 @@ export const SpdxLicenseValueSet = {
     /**
      * TCP Wrappers License.
      */
-    spdx_license_TCPWrappersLicense: Coding.FromStrict({
+    spdx_license_TCPWrappersLicense: new Coding({
         code: "TCP-wrappers",
         display: "TCP Wrappers License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2501,7 +2501,7 @@ export const SpdxLicenseValueSet = {
     /**
      * TMate Open Source License.
      */
-    spdx_license_TMateOpenSourceLicense: Coding.FromStrict({
+    spdx_license_TMateOpenSourceLicense: new Coding({
         code: "TMate",
         display: "TMate Open Source License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2509,7 +2509,7 @@ export const SpdxLicenseValueSet = {
     /**
      * TORQUE v2.5+ Software License v1.1.
      */
-    spdx_license_TORQUEV25PlusSoftwareLicenseV11: Coding.FromStrict({
+    spdx_license_TORQUEV25PlusSoftwareLicenseV11: new Coding({
         code: "TORQUE-1.1",
         display: "TORQUE v2.5+ Software License v1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2517,7 +2517,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Trusster Open Source License.
      */
-    spdx_license_TrussterOpenSourceLicense: Coding.FromStrict({
+    spdx_license_TrussterOpenSourceLicense: new Coding({
         code: "TOSL",
         display: "Trusster Open Source License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2525,7 +2525,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Unicode License Agreement - Data Files and Software (2015).
      */
-    spdx_license_UnicodeLicenseAgreementDataFilesAndSoftware2015: Coding.FromStrict({
+    spdx_license_UnicodeLicenseAgreementDataFilesAndSoftware2015: new Coding({
         code: "Unicode-DFS-2015",
         display: "Unicode License Agreement - Data Files and Software (2015)",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2533,7 +2533,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Unicode License Agreement - Data Files and Software (2016).
      */
-    spdx_license_UnicodeLicenseAgreementDataFilesAndSoftware2016: Coding.FromStrict({
+    spdx_license_UnicodeLicenseAgreementDataFilesAndSoftware2016: new Coding({
         code: "Unicode-DFS-2016",
         display: "Unicode License Agreement - Data Files and Software (2016)",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2541,7 +2541,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Unicode Terms of Use.
      */
-    spdx_license_UnicodeTermsOfUse: Coding.FromStrict({
+    spdx_license_UnicodeTermsOfUse: new Coding({
         code: "Unicode-TOU",
         display: "Unicode Terms of Use",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2549,7 +2549,7 @@ export const SpdxLicenseValueSet = {
     /**
      * The Unlicense.
      */
-    spdx_license_TheUnlicense: Coding.FromStrict({
+    spdx_license_TheUnlicense: new Coding({
         code: "Unlicense",
         display: "The Unlicense",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2557,7 +2557,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Universal Permissive License v1.0.
      */
-    spdx_license_UniversalPermissiveLicenseV10: Coding.FromStrict({
+    spdx_license_UniversalPermissiveLicenseV10: new Coding({
         code: "UPL-1.0",
         display: "Universal Permissive License v1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2565,7 +2565,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Vim License.
      */
-    spdx_license_VimLicense: Coding.FromStrict({
+    spdx_license_VimLicense: new Coding({
         code: "Vim",
         display: "Vim License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2573,7 +2573,7 @@ export const SpdxLicenseValueSet = {
     /**
      * VOSTROM Public License for Open Source.
      */
-    spdx_license_VOSTROMPublicLicenseForOpenSource: Coding.FromStrict({
+    spdx_license_VOSTROMPublicLicenseForOpenSource: new Coding({
         code: "VOSTROM",
         display: "VOSTROM Public License for Open Source",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2581,7 +2581,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Vovida Software License v1.0.
      */
-    spdx_license_VovidaSoftwareLicenseV10: Coding.FromStrict({
+    spdx_license_VovidaSoftwareLicenseV10: new Coding({
         code: "VSL-1.0",
         display: "Vovida Software License v1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2589,7 +2589,7 @@ export const SpdxLicenseValueSet = {
     /**
      * W3C Software Notice and License (2002-12-31).
      */
-    spdx_license_W3CSoftwareNoticeAndLicense20021231: Coding.FromStrict({
+    spdx_license_W3CSoftwareNoticeAndLicense20021231: new Coding({
         code: "W3C",
         display: "W3C Software Notice and License (2002-12-31)",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2597,7 +2597,7 @@ export const SpdxLicenseValueSet = {
     /**
      * W3C Software Notice and License (1998-07-20).
      */
-    spdx_license_W3CSoftwareNoticeAndLicense19980720: Coding.FromStrict({
+    spdx_license_W3CSoftwareNoticeAndLicense19980720: new Coding({
         code: "W3C-19980720",
         display: "W3C Software Notice and License (1998-07-20)",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2605,7 +2605,7 @@ export const SpdxLicenseValueSet = {
     /**
      * W3C Software Notice and Document License (2015-05-13).
      */
-    spdx_license_W3CSoftwareNoticeAndDocumentLicense20150513: Coding.FromStrict({
+    spdx_license_W3CSoftwareNoticeAndDocumentLicense20150513: new Coding({
         code: "W3C-20150513",
         display: "W3C Software Notice and Document License (2015-05-13)",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2613,7 +2613,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Sybase Open Watcom Public License 1.0.
      */
-    spdx_license_SybaseOpenWatcomPublicLicense10: Coding.FromStrict({
+    spdx_license_SybaseOpenWatcomPublicLicense10: new Coding({
         code: "Watcom-1.0",
         display: "Sybase Open Watcom Public License 1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2621,7 +2621,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Wsuipa License.
      */
-    spdx_license_WsuipaLicense: Coding.FromStrict({
+    spdx_license_WsuipaLicense: new Coding({
         code: "Wsuipa",
         display: "Wsuipa License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2629,7 +2629,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Do What The F*ck You Want To Public License.
      */
-    spdx_license_DoWhatTheFAsteriskCkYouWantToPublicLicense: Coding.FromStrict({
+    spdx_license_DoWhatTheFAsteriskCkYouWantToPublicLicense: new Coding({
         code: "WTFPL",
         display: "Do What The F*ck You Want To Public License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2637,7 +2637,7 @@ export const SpdxLicenseValueSet = {
     /**
      * X11 License.
      */
-    spdx_license_X11License: Coding.FromStrict({
+    spdx_license_X11License: new Coding({
         code: "X11",
         display: "X11 License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2645,7 +2645,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Xerox License.
      */
-    spdx_license_XeroxLicense: Coding.FromStrict({
+    spdx_license_XeroxLicense: new Coding({
         code: "Xerox",
         display: "Xerox License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2653,7 +2653,7 @@ export const SpdxLicenseValueSet = {
     /**
      * XFree86 License 1.1.
      */
-    spdx_license_XFree86License11: Coding.FromStrict({
+    spdx_license_XFree86License11: new Coding({
         code: "XFree86-1.1",
         display: "XFree86 License 1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2661,7 +2661,7 @@ export const SpdxLicenseValueSet = {
     /**
      * xinetd License.
      */
-    spdx_license_XinetdLicense: Coding.FromStrict({
+    spdx_license_XinetdLicense: new Coding({
         code: "xinetd",
         display: "xinetd License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2669,7 +2669,7 @@ export const SpdxLicenseValueSet = {
     /**
      * X.Net License.
      */
-    spdx_license_XNetLicense: Coding.FromStrict({
+    spdx_license_XNetLicense: new Coding({
         code: "Xnet",
         display: "X.Net License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2677,7 +2677,7 @@ export const SpdxLicenseValueSet = {
     /**
      * XPP License.
      */
-    spdx_license_XPPLicense: Coding.FromStrict({
+    spdx_license_XPPLicense: new Coding({
         code: "xpp",
         display: "XPP License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2685,7 +2685,7 @@ export const SpdxLicenseValueSet = {
     /**
      * XSkat License.
      */
-    spdx_license_XSkatLicense: Coding.FromStrict({
+    spdx_license_XSkatLicense: new Coding({
         code: "XSkat",
         display: "XSkat License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2693,7 +2693,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Yahoo! Public License v1.0.
      */
-    spdx_license_YahooNotPublicLicenseV10: Coding.FromStrict({
+    spdx_license_YahooNotPublicLicenseV10: new Coding({
         code: "YPL-1.0",
         display: "Yahoo! Public License v1.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2701,7 +2701,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Yahoo! Public License v1.1.
      */
-    spdx_license_YahooNotPublicLicenseV11: Coding.FromStrict({
+    spdx_license_YahooNotPublicLicenseV11: new Coding({
         code: "YPL-1.1",
         display: "Yahoo! Public License v1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2709,7 +2709,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Zed License.
      */
-    spdx_license_ZedLicense: Coding.FromStrict({
+    spdx_license_ZedLicense: new Coding({
         code: "Zed",
         display: "Zed License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2717,7 +2717,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Zend License v2.0.
      */
-    spdx_license_ZendLicenseV20: Coding.FromStrict({
+    spdx_license_ZendLicenseV20: new Coding({
         code: "Zend-2.0",
         display: "Zend License v2.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2725,7 +2725,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Zimbra Public License v1.3.
      */
-    spdx_license_ZimbraPublicLicenseV13: Coding.FromStrict({
+    spdx_license_ZimbraPublicLicenseV13: new Coding({
         code: "Zimbra-1.3",
         display: "Zimbra Public License v1.3",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2733,7 +2733,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Zimbra Public License v1.4.
      */
-    spdx_license_ZimbraPublicLicenseV14: Coding.FromStrict({
+    spdx_license_ZimbraPublicLicenseV14: new Coding({
         code: "Zimbra-1.4",
         display: "Zimbra Public License v1.4",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2741,7 +2741,7 @@ export const SpdxLicenseValueSet = {
     /**
      * zlib License.
      */
-    spdx_license_ZlibLicense: Coding.FromStrict({
+    spdx_license_ZlibLicense: new Coding({
         code: "Zlib",
         display: "zlib License",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2749,7 +2749,7 @@ export const SpdxLicenseValueSet = {
     /**
      * zlib/libpng License with Acknowledgement.
      */
-    spdx_license_ZlibLibpngLicenseWithAcknowledgement: Coding.FromStrict({
+    spdx_license_ZlibLibpngLicenseWithAcknowledgement: new Coding({
         code: "zlib-acknowledgement",
         display: "zlib/libpng License with Acknowledgement",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2757,7 +2757,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Zope Public License 1.1.
      */
-    spdx_license_ZopePublicLicense11: Coding.FromStrict({
+    spdx_license_ZopePublicLicense11: new Coding({
         code: "ZPL-1.1",
         display: "Zope Public License 1.1",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2765,7 +2765,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Zope Public License 2.0.
      */
-    spdx_license_ZopePublicLicense20: Coding.FromStrict({
+    spdx_license_ZopePublicLicense20: new Coding({
         code: "ZPL-2.0",
         display: "Zope Public License 2.0",
         system: "http://hl7.org/fhir/spdx-license"
@@ -2773,7 +2773,7 @@ export const SpdxLicenseValueSet = {
     /**
      * Zope Public License 2.1.
      */
-    spdx_license_ZopePublicLicense21: Coding.FromStrict({
+    spdx_license_ZopePublicLicense21: new Coding({
         code: "ZPL-2.1",
         display: "Zope Public License 2.1",
         system: "http://hl7.org/fhir/spdx-license"

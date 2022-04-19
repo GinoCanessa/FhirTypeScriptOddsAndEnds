@@ -13,7 +13,7 @@ export const MapModelModeValueSet = {
     /**
      * This structure describes an instance that the mapping engine may ask to create that is used a target of data.
      */
-    map_model_mode_ProducedStructureDefinition: Coding.FromStrict({
+    map_model_mode_ProducedStructureDefinition: new Coding({
         code: "produced",
         display: "Produced Structure Definition",
         system: "http://hl7.org/fhir/map-model-mode"
@@ -21,7 +21,7 @@ export const MapModelModeValueSet = {
     /**
      * This structure describes an instance that the mapping engine may ask for that is used a source of data.
      */
-    map_model_mode_QueriedStructureDefinition: Coding.FromStrict({
+    map_model_mode_QueriedStructureDefinition: new Coding({
         code: "queried",
         display: "Queried Structure Definition",
         system: "http://hl7.org/fhir/map-model-mode"
@@ -29,7 +29,7 @@ export const MapModelModeValueSet = {
     /**
      * This structure describes an instance passed to the mapping engine that is used a source of data.
      */
-    map_model_mode_SourceStructureDefinition: Coding.FromStrict({
+    map_model_mode_SourceStructureDefinition: new Coding({
         code: "source",
         display: "Source Structure Definition",
         system: "http://hl7.org/fhir/map-model-mode"
@@ -37,7 +37,7 @@ export const MapModelModeValueSet = {
     /**
      * This structure describes an instance passed to the mapping engine that is used a target of data.
      */
-    map_model_mode_TargetStructureDefinition: Coding.FromStrict({
+    map_model_mode_TargetStructureDefinition: new Coding({
         code: "target",
         display: "Target Structure Definition",
         system: "http://hl7.org/fhir/map-model-mode"

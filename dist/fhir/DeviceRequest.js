@@ -37,18 +37,18 @@ export class DeviceRequestParameter extends fhir.BackboneElement {
     /**
      * Check if the current DeviceRequestParameter contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a DeviceRequestParameter from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new DeviceRequestParameter(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `DeviceRequestParameter is missing elements: ${missingElements.join(", ")}`;
         }
@@ -179,7 +179,7 @@ export class DeviceRequest extends fhir.DomainResource {
     /**
      * Check if the current DeviceRequest contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["intent"] === undefined) {
             missingElements.push("intent");
@@ -187,16 +187,16 @@ export class DeviceRequest extends fhir.DomainResource {
         if (this["subject"] === undefined) {
             missingElements.push("subject");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a DeviceRequest from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new DeviceRequest(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `DeviceRequest is missing elements: ${missingElements.join(", ")}`;
         }

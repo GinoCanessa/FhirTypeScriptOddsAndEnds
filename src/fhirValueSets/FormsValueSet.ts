@@ -13,7 +13,7 @@ export const FormsValueSet = {
   /**
    * Example: The #1 form to be used when printing this information.
    */
-  forms_FormNumber1: Coding.FromStrict({
+  forms_FormNumber1: new Coding({
     code: "1",
     display: "Form #1",
     system: "http://terminology.hl7.org/CodeSystem/forms-codes"
@@ -21,7 +21,7 @@ export const FormsValueSet = {
   /**
    * Example: The #2 form to be used when printing this information.
    */
-  forms_FormNumber1_2: Coding.FromStrict({
+  forms_FormNumber1_2: new Coding({
     code: "2",
     display: "Form #1",
     system: "http://terminology.hl7.org/CodeSystem/forms-codes"

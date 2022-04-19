@@ -13,7 +13,7 @@ export const ConditionVerStatusValueSet = {
   /**
    * There is sufficient diagnostic and/or clinical evidence to treat this as a confirmed condition.
    */
-  condition_ver_status_Confirmed: Coding.FromStrict({
+  condition_ver_status_Confirmed: new Coding({
     code: "confirmed",
     display: "Confirmed",
     system: "http://terminology.hl7.org/CodeSystem/condition-ver-status"
@@ -21,7 +21,7 @@ export const ConditionVerStatusValueSet = {
   /**
    * One of a set of potential (and typically mutually exclusive) diagnoses asserted to further guide the diagnostic process and preliminary treatment.
    */
-  condition_ver_status_Differential: Coding.FromStrict({
+  condition_ver_status_Differential: new Coding({
     code: "differential",
     display: "Differential",
     system: "http://terminology.hl7.org/CodeSystem/condition-ver-status"
@@ -29,7 +29,7 @@ export const ConditionVerStatusValueSet = {
   /**
    * The statement was entered in error and is not valid.
    */
-  condition_ver_status_EnteredInError: Coding.FromStrict({
+  condition_ver_status_EnteredInError: new Coding({
     code: "entered-in-error",
     display: "Entered in Error",
     system: "http://terminology.hl7.org/CodeSystem/condition-ver-status"
@@ -37,7 +37,7 @@ export const ConditionVerStatusValueSet = {
   /**
    * This is a tentative diagnosis - still a candidate that is under consideration.
    */
-  condition_ver_status_Provisional: Coding.FromStrict({
+  condition_ver_status_Provisional: new Coding({
     code: "provisional",
     display: "Provisional",
     system: "http://terminology.hl7.org/CodeSystem/condition-ver-status"
@@ -45,7 +45,7 @@ export const ConditionVerStatusValueSet = {
   /**
    * This condition has been ruled out by diagnostic and clinical evidence.
    */
-  condition_ver_status_Refuted: Coding.FromStrict({
+  condition_ver_status_Refuted: new Coding({
     code: "refuted",
     display: "Refuted",
     system: "http://terminology.hl7.org/CodeSystem/condition-ver-status"
@@ -53,7 +53,7 @@ export const ConditionVerStatusValueSet = {
   /**
    * There is not sufficient diagnostic and/or clinical evidence to treat this as a confirmed condition.
    */
-  condition_ver_status_Unconfirmed: Coding.FromStrict({
+  condition_ver_status_Unconfirmed: new Coding({
     code: "unconfirmed",
     display: "Unconfirmed",
     system: "http://terminology.hl7.org/CodeSystem/condition-ver-status"

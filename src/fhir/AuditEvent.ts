@@ -242,18 +242,18 @@ export class AuditEventAgentNetwork extends fhir.BackboneElement implements fhir
   /**
    * Check if the current AuditEventAgentNetwork contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a AuditEventAgentNetwork from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IAuditEventAgentNetwork):AuditEventAgentNetwork {
+  static override fromStrict(source:fhir.IAuditEventAgentNetwork):AuditEventAgentNetwork {
     var dest:AuditEventAgentNetwork = new AuditEventAgentNetwork(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `AuditEventAgentNetwork is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -337,19 +337,19 @@ export class AuditEventAgent extends fhir.BackboneElement implements fhir.IAudit
   /**
    * Check if the current AuditEventAgent contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["requestor"] === undefined) { missingElements.push("requestor"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a AuditEventAgent from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IAuditEventAgent):AuditEventAgent {
+  static override fromStrict(source:fhir.IAuditEventAgent):AuditEventAgent {
     var dest:AuditEventAgent = new AuditEventAgent(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `AuditEventAgent is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -386,19 +386,19 @@ export class AuditEventSource extends fhir.BackboneElement implements fhir.IAudi
   /**
    * Check if the current AuditEventSource contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["observer"] === undefined) { missingElements.push("observer"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a AuditEventSource from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IAuditEventSource):AuditEventSource {
+  static override fromStrict(source:fhir.IAuditEventSource):AuditEventSource {
     var dest:AuditEventSource = new AuditEventSource(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `AuditEventSource is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -439,19 +439,19 @@ export class AuditEventEntityDetail extends fhir.BackboneElement implements fhir
   /**
    * Check if the current AuditEventEntityDetail contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a AuditEventEntityDetail from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IAuditEventEntityDetail):AuditEventEntityDetail {
+  static override fromStrict(source:fhir.IAuditEventEntityDetail):AuditEventEntityDetail {
     var dest:AuditEventEntityDetail = new AuditEventEntityDetail(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `AuditEventEntityDetail is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -520,18 +520,18 @@ export class AuditEventEntity extends fhir.BackboneElement implements fhir.IAudi
   /**
    * Check if the current AuditEventEntity contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a AuditEventEntity from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IAuditEventEntity):AuditEventEntity {
+  static override fromStrict(source:fhir.IAuditEventEntity):AuditEventEntity {
     var dest:AuditEventEntity = new AuditEventEntity(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `AuditEventEntity is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -626,22 +626,22 @@ export class AuditEvent extends fhir.DomainResource implements fhir.IAuditEvent 
   /**
    * Check if the current AuditEvent contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["agent"]) || (this["agent"].length === 0)) { missingElements.push("agent"); }
     if (this["recorded"] === undefined) { missingElements.push("recorded"); }
     if (this["source"] === undefined) { missingElements.push("source"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a AuditEvent from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IAuditEvent):AuditEvent {
+  static override fromStrict(source:fhir.IAuditEvent):AuditEvent {
     var dest:AuditEvent = new AuditEvent(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `AuditEvent is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

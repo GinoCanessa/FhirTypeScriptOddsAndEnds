@@ -110,19 +110,19 @@ export class TriggerDefinition extends fhir.FhirElement implements fhir.ITrigger
   /**
    * Check if the current TriggerDefinition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TriggerDefinition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITriggerDefinition):TriggerDefinition {
+  static override fromStrict(source:fhir.ITriggerDefinition):TriggerDefinition {
     var dest:TriggerDefinition = new TriggerDefinition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TriggerDefinition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

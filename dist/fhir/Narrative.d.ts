@@ -35,11 +35,11 @@ export declare class Narrative extends fhir.FhirElement implements fhir.INarrati
     /**
      * Check if the current Narrative contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Narrative from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.INarrative): Narrative;
+    static fromStrict(source: fhir.INarrative): Narrative;
 }
 /**
  * Code Values for the Narrative.status field

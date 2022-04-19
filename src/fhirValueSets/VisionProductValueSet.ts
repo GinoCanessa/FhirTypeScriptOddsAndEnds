@@ -13,7 +13,7 @@ export const VisionProductValueSet = {
   /**
    * A lens to be fitted for wearing directly on an eye.
    */
-  vision_product_ContactLens: Coding.FromStrict({
+  vision_product_ContactLens: new Coding({
     code: "contact",
     display: "Contact Lens",
     system: "http://terminology.hl7.org/CodeSystem/ex-visionprescriptionproduct"
@@ -21,7 +21,7 @@ export const VisionProductValueSet = {
   /**
    * A lens to be fitted to a frame to comprise a pair of glasses.
    */
-  vision_product_Lens: Coding.FromStrict({
+  vision_product_Lens: new Coding({
     code: "lens",
     display: "Lens",
     system: "http://terminology.hl7.org/CodeSystem/ex-visionprescriptionproduct"

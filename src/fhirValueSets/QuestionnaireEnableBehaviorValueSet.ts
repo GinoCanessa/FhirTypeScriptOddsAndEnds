@@ -13,7 +13,7 @@ export const QuestionnaireEnableBehaviorValueSet = {
   /**
    * Enable the question when all the enableWhen criteria are satisfied.
    */
-  questionnaire_enable_behavior_All: Coding.FromStrict({
+  questionnaire_enable_behavior_All: new Coding({
     code: "all",
     display: "All",
     system: "http://hl7.org/fhir/questionnaire-enable-behavior"
@@ -21,7 +21,7 @@ export const QuestionnaireEnableBehaviorValueSet = {
   /**
    * Enable the question when any of the enableWhen criteria are satisfied.
    */
-  questionnaire_enable_behavior_Any: Coding.FromStrict({
+  questionnaire_enable_behavior_Any: new Coding({
     code: "any",
     display: "Any",
     system: "http://hl7.org/fhir/questionnaire-enable-behavior"

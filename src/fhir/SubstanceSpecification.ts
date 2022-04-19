@@ -473,18 +473,18 @@ export class SubstanceSpecificationMoiety extends fhir.BackboneElement implement
   /**
    * Check if the current SubstanceSpecificationMoiety contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceSpecificationMoiety from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceSpecificationMoiety):SubstanceSpecificationMoiety {
+  static override fromStrict(source:fhir.ISubstanceSpecificationMoiety):SubstanceSpecificationMoiety {
     var dest:SubstanceSpecificationMoiety = new SubstanceSpecificationMoiety(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceSpecificationMoiety is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -541,18 +541,18 @@ export class SubstanceSpecificationProperty extends fhir.BackboneElement impleme
   /**
    * Check if the current SubstanceSpecificationProperty contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceSpecificationProperty from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceSpecificationProperty):SubstanceSpecificationProperty {
+  static override fromStrict(source:fhir.ISubstanceSpecificationProperty):SubstanceSpecificationProperty {
     var dest:SubstanceSpecificationProperty = new SubstanceSpecificationProperty(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceSpecificationProperty is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -585,18 +585,18 @@ export class SubstanceSpecificationStructureIsotopeMolecularWeight extends fhir.
   /**
    * Check if the current SubstanceSpecificationStructureIsotopeMolecularWeight contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceSpecificationStructureIsotopeMolecularWeight from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceSpecificationStructureIsotopeMolecularWeight):SubstanceSpecificationStructureIsotopeMolecularWeight {
+  static override fromStrict(source:fhir.ISubstanceSpecificationStructureIsotopeMolecularWeight):SubstanceSpecificationStructureIsotopeMolecularWeight {
     var dest:SubstanceSpecificationStructureIsotopeMolecularWeight = new SubstanceSpecificationStructureIsotopeMolecularWeight(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceSpecificationStructureIsotopeMolecularWeight is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -639,18 +639,18 @@ export class SubstanceSpecificationStructureIsotope extends fhir.BackboneElement
   /**
    * Check if the current SubstanceSpecificationStructureIsotope contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceSpecificationStructureIsotope from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceSpecificationStructureIsotope):SubstanceSpecificationStructureIsotope {
+  static override fromStrict(source:fhir.ISubstanceSpecificationStructureIsotope):SubstanceSpecificationStructureIsotope {
     var dest:SubstanceSpecificationStructureIsotope = new SubstanceSpecificationStructureIsotope(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceSpecificationStructureIsotope is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -685,18 +685,18 @@ export class SubstanceSpecificationStructureRepresentation extends fhir.Backbone
   /**
    * Check if the current SubstanceSpecificationStructureRepresentation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceSpecificationStructureRepresentation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceSpecificationStructureRepresentation):SubstanceSpecificationStructureRepresentation {
+  static override fromStrict(source:fhir.ISubstanceSpecificationStructureRepresentation):SubstanceSpecificationStructureRepresentation {
     var dest:SubstanceSpecificationStructureRepresentation = new SubstanceSpecificationStructureRepresentation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceSpecificationStructureRepresentation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -758,18 +758,18 @@ export class SubstanceSpecificationStructure extends fhir.BackboneElement implem
   /**
    * Check if the current SubstanceSpecificationStructure contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceSpecificationStructure from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceSpecificationStructure):SubstanceSpecificationStructure {
+  static override fromStrict(source:fhir.ISubstanceSpecificationStructure):SubstanceSpecificationStructure {
     var dest:SubstanceSpecificationStructure = new SubstanceSpecificationStructure(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceSpecificationStructure is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -816,18 +816,18 @@ export class SubstanceSpecificationCode extends fhir.BackboneElement implements 
   /**
    * Check if the current SubstanceSpecificationCode contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceSpecificationCode from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceSpecificationCode):SubstanceSpecificationCode {
+  static override fromStrict(source:fhir.ISubstanceSpecificationCode):SubstanceSpecificationCode {
     var dest:SubstanceSpecificationCode = new SubstanceSpecificationCode(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceSpecificationCode is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -862,18 +862,18 @@ export class SubstanceSpecificationNameOfficial extends fhir.BackboneElement imp
   /**
    * Check if the current SubstanceSpecificationNameOfficial contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceSpecificationNameOfficial from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceSpecificationNameOfficial):SubstanceSpecificationNameOfficial {
+  static override fromStrict(source:fhir.ISubstanceSpecificationNameOfficial):SubstanceSpecificationNameOfficial {
     var dest:SubstanceSpecificationNameOfficial = new SubstanceSpecificationNameOfficial(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceSpecificationNameOfficial is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -952,19 +952,19 @@ export class SubstanceSpecificationName extends fhir.BackboneElement implements 
   /**
    * Check if the current SubstanceSpecificationName contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["name"] === undefined) { missingElements.push("name"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceSpecificationName from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceSpecificationName):SubstanceSpecificationName {
+  static override fromStrict(source:fhir.ISubstanceSpecificationName):SubstanceSpecificationName {
     var dest:SubstanceSpecificationName = new SubstanceSpecificationName(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceSpecificationName is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1041,18 +1041,18 @@ export class SubstanceSpecificationRelationship extends fhir.BackboneElement imp
   /**
    * Check if the current SubstanceSpecificationRelationship contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceSpecificationRelationship from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceSpecificationRelationship):SubstanceSpecificationRelationship {
+  static override fromStrict(source:fhir.ISubstanceSpecificationRelationship):SubstanceSpecificationRelationship {
     var dest:SubstanceSpecificationRelationship = new SubstanceSpecificationRelationship(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceSpecificationRelationship is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1174,18 +1174,18 @@ export class SubstanceSpecification extends fhir.DomainResource implements fhir.
   /**
    * Check if the current SubstanceSpecification contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceSpecification from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceSpecification):SubstanceSpecification {
+  static override fromStrict(source:fhir.ISubstanceSpecification):SubstanceSpecification {
     var dest:SubstanceSpecification = new SubstanceSpecification(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceSpecification is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

@@ -10,162 +10,162 @@ import { Coding } from '../fhir'
  * This example value set defines a set of reasons for the cancellation of an appointment.
  */
 export const AppointmentCancellationReasonValueSet = {
-  appointment_cancellation_reason_EquipmentMaintenanceRepair: Coding.FromStrict({
+  appointment_cancellation_reason_EquipmentMaintenanceRepair: new Coding({
     code: "maint",
     display: "Equipment Maintenance/Repair",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_PrepMedIncomplete: Coding.FromStrict({
+  appointment_cancellation_reason_PrepMedIncomplete: new Coding({
     code: "meds-inc",
     display: "Prep/Med Incomplete",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_OtherCMSTherapyCapServiceNotAuthorized: Coding.FromStrict({
+  appointment_cancellation_reason_OtherCMSTherapyCapServiceNotAuthorized: new Coding({
     code: "oth-cms",
     display: "Other: CMS Therapy Cap Service Not Authorized",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_OtherError: Coding.FromStrict({
+  appointment_cancellation_reason_OtherError: new Coding({
     code: "oth-err",
     display: "Other: Error",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_OtherFinancial: Coding.FromStrict({
+  appointment_cancellation_reason_OtherFinancial: new Coding({
     code: "oth-fin",
     display: "Other: Financial",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_OtherNoInterpreterAvailable: Coding.FromStrict({
+  appointment_cancellation_reason_OtherNoInterpreterAvailable: new Coding({
     code: "oth-int",
     display: "Other: No Interpreter Available",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_OtherImproperIVAccessInfiltrateIV: Coding.FromStrict({
+  appointment_cancellation_reason_OtherImproperIVAccessInfiltrateIV: new Coding({
     code: "oth-iv",
     display: "Other: Improper IV Access/Infiltrate IV",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_OtherPrepMedResultsUnavailable: Coding.FromStrict({
+  appointment_cancellation_reason_OtherPrepMedResultsUnavailable: new Coding({
     code: "oth-mu",
     display: "Other: Prep/Med/Results Unavailable",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_OtherScheduleOrderError: Coding.FromStrict({
+  appointment_cancellation_reason_OtherScheduleOrderError: new Coding({
     code: "oth-oerr",
     display: "Other: Schedule Order Error",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_OtherRoomResourceMaintenance: Coding.FromStrict({
+  appointment_cancellation_reason_OtherRoomResourceMaintenance: new Coding({
     code: "oth-room",
     display: "Other: Room/Resource Maintenance",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_OtherSilentWalkInError: Coding.FromStrict({
+  appointment_cancellation_reason_OtherSilentWalkInError: new Coding({
     code: "oth-swie",
     display: "Other: Silent Walk In Error",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_OtherWeather: Coding.FromStrict({
+  appointment_cancellation_reason_OtherWeather: new Coding({
     code: "oth-weath",
     display: "Other: Weather",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_Other: Coding.FromStrict({
+  appointment_cancellation_reason_Other: new Coding({
     code: "other",
     display: "Other",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_Patient: Coding.FromStrict({
+  appointment_cancellation_reason_Patient: new Coding({
     code: "pat",
     display: "Patient",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_PatientCanceledViaPatientPortal: Coding.FromStrict({
+  appointment_cancellation_reason_PatientCanceledViaPatientPortal: new Coding({
     code: "pat-cpp",
     display: "Patient: Canceled via Patient Portal",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_PatientCanceledViaAutomatedReminderSystem: Coding.FromStrict({
+  appointment_cancellation_reason_PatientCanceledViaAutomatedReminderSystem: new Coding({
     code: "pat-crs",
     display: "Patient: Canceled via automated reminder system",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_PatientDeceased: Coding.FromStrict({
+  appointment_cancellation_reason_PatientDeceased: new Coding({
     code: "pat-dec",
     display: "Patient: Deceased",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_PatientFeelingBetter: Coding.FromStrict({
+  appointment_cancellation_reason_PatientFeelingBetter: new Coding({
     code: "pat-fb",
     display: "Patient: Feeling Better",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_PatientLackOfTransportation: Coding.FromStrict({
+  appointment_cancellation_reason_PatientLackOfTransportation: new Coding({
     code: "pat-lt",
     display: "Patient: Lack of Transportation",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_PatientMemberTerminated: Coding.FromStrict({
+  appointment_cancellation_reason_PatientMemberTerminated: new Coding({
     code: "pat-mt",
     display: "Patient: Member Terminated",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_PatientMoved: Coding.FromStrict({
+  appointment_cancellation_reason_PatientMoved: new Coding({
     code: "pat-mv",
     display: "Patient: Moved",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_PatientPregnant: Coding.FromStrict({
+  appointment_cancellation_reason_PatientPregnant: new Coding({
     code: "pat-preg",
     display: "Patient: Pregnant",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_PatientScheduledFromWaitList: Coding.FromStrict({
+  appointment_cancellation_reason_PatientScheduledFromWaitList: new Coding({
     code: "pat-swl",
     display: "Patient: Scheduled from Wait List",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_PatientUnhappyChangedProvider: Coding.FromStrict({
+  appointment_cancellation_reason_PatientUnhappyChangedProvider: new Coding({
     code: "pat-ucp",
     display: "Patient: Unhappy/Changed Provider",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_Provider: Coding.FromStrict({
+  appointment_cancellation_reason_Provider: new Coding({
     code: "prov",
     display: "Provider",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_ProviderDischarged: Coding.FromStrict({
+  appointment_cancellation_reason_ProviderDischarged: new Coding({
     code: "prov-dch",
     display: "Provider: Discharged",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_ProviderEduMeeting: Coding.FromStrict({
+  appointment_cancellation_reason_ProviderEduMeeting: new Coding({
     code: "prov-edu",
     display: "Provider: Edu/Meeting",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_ProviderHospitalized: Coding.FromStrict({
+  appointment_cancellation_reason_ProviderHospitalized: new Coding({
     code: "prov-hosp",
     display: "Provider: Hospitalized",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_ProviderLabsOutOfAcceptableRange: Coding.FromStrict({
+  appointment_cancellation_reason_ProviderLabsOutOfAcceptableRange: new Coding({
     code: "prov-labs",
     display: "Provider: Labs Out of Acceptable Range",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_ProviderMRIScreeningFormMarkedDoNotProceed: Coding.FromStrict({
+  appointment_cancellation_reason_ProviderMRIScreeningFormMarkedDoNotProceed: new Coding({
     code: "prov-mri",
     display: "Provider: MRI Screening Form Marked Do Not Proceed",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_ProviderOncologyTreatmentPlanChanges: Coding.FromStrict({
+  appointment_cancellation_reason_ProviderOncologyTreatmentPlanChanges: new Coding({
     code: "prov-onc",
     display: "Provider: Oncology Treatment Plan Changes",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
   }),
-  appointment_cancellation_reason_ProviderPersonal: Coding.FromStrict({
+  appointment_cancellation_reason_ProviderPersonal: new Coding({
     code: "prov-pers",
     display: "Provider: Personal",
     system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"

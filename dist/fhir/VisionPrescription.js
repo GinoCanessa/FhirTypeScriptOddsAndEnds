@@ -39,7 +39,7 @@ export class VisionPrescriptionLensSpecificationPrism extends fhir.BackboneEleme
     /**
      * Check if the current VisionPrescriptionLensSpecificationPrism contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["amount"] === undefined) {
             missingElements.push("amount");
@@ -47,16 +47,16 @@ export class VisionPrescriptionLensSpecificationPrism extends fhir.BackboneEleme
         if (this["base"] === undefined) {
             missingElements.push("base");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a VisionPrescriptionLensSpecificationPrism from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new VisionPrescriptionLensSpecificationPrism(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `VisionPrescriptionLensSpecificationPrism is missing elements: ${missingElements.join(", ")}`;
         }
@@ -156,7 +156,7 @@ export class VisionPrescriptionLensSpecification extends fhir.BackboneElement {
     /**
      * Check if the current VisionPrescriptionLensSpecification contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["eye"] === undefined) {
             missingElements.push("eye");
@@ -164,16 +164,16 @@ export class VisionPrescriptionLensSpecification extends fhir.BackboneElement {
         if (this["product"] === undefined) {
             missingElements.push("product");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a VisionPrescriptionLensSpecification from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new VisionPrescriptionLensSpecification(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `VisionPrescriptionLensSpecification is missing elements: ${missingElements.join(", ")}`;
         }
@@ -251,7 +251,7 @@ export class VisionPrescription extends fhir.DomainResource {
     /**
      * Check if the current VisionPrescription contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["created"] === undefined) {
             missingElements.push("created");
@@ -271,16 +271,16 @@ export class VisionPrescription extends fhir.DomainResource {
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a VisionPrescription from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new VisionPrescription(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `VisionPrescription is missing elements: ${missingElements.join(", ")}`;
         }

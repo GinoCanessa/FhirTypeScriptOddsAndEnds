@@ -31,10 +31,10 @@ export declare class Ratio extends fhir.FhirElement implements fhir.IRatio {
     /**
      * Check if the current Ratio contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Ratio from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IRatio): Ratio;
+    static fromStrict(source: fhir.IRatio): Ratio;
 }
 //# sourceMappingURL=Ratio.d.ts.map

@@ -13,7 +13,7 @@ export const HandlingConditionValueSet = {
   /**
    * frozen temperature.
    */
-  handling_condition_Frozen: Coding.FromStrict({
+  handling_condition_Frozen: new Coding({
     code: "frozen",
     display: "frozen",
     system: "http://terminology.hl7.org/CodeSystem/handling-condition"
@@ -21,7 +21,7 @@ export const HandlingConditionValueSet = {
   /**
    * refrigerated temperature.
    */
-  handling_condition_Refrigerated: Coding.FromStrict({
+  handling_condition_Refrigerated: new Coding({
     code: "refrigerated",
     display: "refrigerated",
     system: "http://terminology.hl7.org/CodeSystem/handling-condition"
@@ -29,7 +29,7 @@ export const HandlingConditionValueSet = {
   /**
    * room temperature.
    */
-  handling_condition_RoomTemperature: Coding.FromStrict({
+  handling_condition_RoomTemperature: new Coding({
     code: "room",
     display: "room temperature",
     system: "http://terminology.hl7.org/CodeSystem/handling-condition"

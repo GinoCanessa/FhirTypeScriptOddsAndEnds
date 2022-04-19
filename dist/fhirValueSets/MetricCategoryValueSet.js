@@ -13,7 +13,7 @@ export const MetricCategoryValueSet = {
     /**
      * DeviceObservations generated for this DeviceMetric are calculated.
      */
-    metric_category_Calculation: Coding.FromStrict({
+    metric_category_Calculation: new Coding({
         code: "calculation",
         display: "Calculation",
         system: "http://hl7.org/fhir/metric-category"
@@ -21,7 +21,7 @@ export const MetricCategoryValueSet = {
     /**
      * DeviceObservations generated for this DeviceMetric are measured.
      */
-    metric_category_Measurement: Coding.FromStrict({
+    metric_category_Measurement: new Coding({
         code: "measurement",
         display: "Measurement",
         system: "http://hl7.org/fhir/metric-category"
@@ -29,7 +29,7 @@ export const MetricCategoryValueSet = {
     /**
      * DeviceObservations generated for this DeviceMetric is a setting that will influence the behavior of the Device.
      */
-    metric_category_Setting: Coding.FromStrict({
+    metric_category_Setting: new Coding({
         code: "setting",
         display: "Setting",
         system: "http://hl7.org/fhir/metric-category"
@@ -37,7 +37,7 @@ export const MetricCategoryValueSet = {
     /**
      * The category of this DeviceMetric is unspecified.
      */
-    metric_category_Unspecified: Coding.FromStrict({
+    metric_category_Unspecified: new Coding({
         code: "unspecified",
         display: "Unspecified",
         system: "http://hl7.org/fhir/metric-category"

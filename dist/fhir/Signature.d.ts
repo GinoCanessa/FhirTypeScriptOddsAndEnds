@@ -79,10 +79,10 @@ export declare class Signature extends fhir.FhirElement implements fhir.ISignatu
     /**
      * Check if the current Signature contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Signature from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISignature): Signature;
+    static fromStrict(source: fhir.ISignature): Signature;
 }
 //# sourceMappingURL=Signature.d.ts.map

@@ -13,7 +13,7 @@ export const SequenceTypeValueSet = {
     /**
      * Amino acid sequence.
      */
-    sequence_type_AASequence: Coding.FromStrict({
+    sequence_type_AASequence: new Coding({
         code: "aa",
         display: "AA Sequence",
         system: "http://hl7.org/fhir/sequence-type"
@@ -21,7 +21,7 @@ export const SequenceTypeValueSet = {
     /**
      * DNA Sequence.
      */
-    sequence_type_DNASequence: Coding.FromStrict({
+    sequence_type_DNASequence: new Coding({
         code: "dna",
         display: "DNA Sequence",
         system: "http://hl7.org/fhir/sequence-type"
@@ -29,7 +29,7 @@ export const SequenceTypeValueSet = {
     /**
      * RNA Sequence.
      */
-    sequence_type_RNASequence: Coding.FromStrict({
+    sequence_type_RNASequence: new Coding({
         code: "rna",
         display: "RNA Sequence",
         system: "http://hl7.org/fhir/sequence-type"

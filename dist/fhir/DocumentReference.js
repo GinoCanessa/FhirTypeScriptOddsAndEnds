@@ -36,7 +36,7 @@ export class DocumentReferenceRelatesTo extends fhir.BackboneElement {
     /**
      * Check if the current DocumentReferenceRelatesTo contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["code"] === undefined) {
             missingElements.push("code");
@@ -44,16 +44,16 @@ export class DocumentReferenceRelatesTo extends fhir.BackboneElement {
         if (this["target"] === undefined) {
             missingElements.push("target");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a DocumentReferenceRelatesTo from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new DocumentReferenceRelatesTo(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `DocumentReferenceRelatesTo is missing elements: ${missingElements.join(", ")}`;
         }
@@ -83,21 +83,21 @@ export class DocumentReferenceContent extends fhir.BackboneElement {
     /**
      * Check if the current DocumentReferenceContent contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["attachment"] === undefined) {
             missingElements.push("attachment");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a DocumentReferenceContent from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new DocumentReferenceContent(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `DocumentReferenceContent is missing elements: ${missingElements.join(", ")}`;
         }
@@ -138,18 +138,18 @@ export class DocumentReferenceContext extends fhir.BackboneElement {
     /**
      * Check if the current DocumentReferenceContext contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a DocumentReferenceContext from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new DocumentReferenceContext(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `DocumentReferenceContext is missing elements: ${missingElements.join(", ")}`;
         }
@@ -238,7 +238,7 @@ export class DocumentReference extends fhir.DomainResource {
     /**
      * Check if the current DocumentReference contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if ((!this["content"]) || (this["content"].length === 0)) {
             missingElements.push("content");
@@ -246,16 +246,16 @@ export class DocumentReference extends fhir.DomainResource {
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a DocumentReference from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new DocumentReference(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `DocumentReference is missing elements: ${missingElements.join(", ")}`;
         }

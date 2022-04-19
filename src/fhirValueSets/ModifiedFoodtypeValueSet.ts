@@ -10,17 +10,17 @@ import { Coding } from '../fhir'
  * TextureModifiedFoodType: Codes for types of foods that are texture-modified. This value set is composed SNOMED CT Concepts from SCTID 255620007 Foods (substance) and is provided as a suggestive example.
  */
 export const ModifiedFoodtypeValueSet = {
-  ModifiedFoodtypeValueSet_SauceSeasoningsAndSoups: Coding.FromStrict({
+  ModifiedFoodtypeValueSet_SauceSeasoningsAndSoups: new Coding({
     code: "227518002",
     display: "Sauce seasonings and soups",
     system: "http://snomed.info/sct"
   }),
-  ModifiedFoodtypeValueSet_Foods: Coding.FromStrict({
+  ModifiedFoodtypeValueSet_Foods: new Coding({
     code: "255620007",
     display: "Foods",
     system: "http://snomed.info/sct"
   }),
-  ModifiedFoodtypeValueSet_Grain: Coding.FromStrict({
+  ModifiedFoodtypeValueSet_Grain: new Coding({
     code: "264331002",
     display: "Grain",
     system: "http://snomed.info/sct"

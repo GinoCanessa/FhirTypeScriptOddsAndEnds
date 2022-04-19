@@ -277,11 +277,11 @@ export declare class Evidence extends fhir.DomainResource implements fhir.IEvide
     /**
      * Check if the current Evidence contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Evidence from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEvidence): Evidence;
+    static fromStrict(source: fhir.IEvidence): Evidence;
 }
 /**
  * Code Values for the Evidence.status field

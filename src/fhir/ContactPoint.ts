@@ -81,18 +81,18 @@ export class ContactPoint extends fhir.FhirElement implements fhir.IContactPoint
   /**
    * Check if the current ContactPoint contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ContactPoint from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IContactPoint):ContactPoint {
+  static override fromStrict(source:fhir.IContactPoint):ContactPoint {
     var dest:ContactPoint = new ContactPoint(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ContactPoint is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

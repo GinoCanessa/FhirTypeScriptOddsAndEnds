@@ -13,7 +13,7 @@ export const VersioningPolicyValueSet = {
     /**
      * VersionId meta-property is not supported (server) or used (client).
      */
-    versioning_policy_NoVersionIdSupport: Coding.FromStrict({
+    versioning_policy_NoVersionIdSupport: new Coding({
         code: "no-version",
         display: "No VersionId Support",
         system: "http://hl7.org/fhir/versioning-policy"
@@ -21,7 +21,7 @@ export const VersioningPolicyValueSet = {
     /**
      * VersionId meta-property is supported (server) or used (client).
      */
-    versioning_policy_Versioned: Coding.FromStrict({
+    versioning_policy_Versioned: new Coding({
         code: "versioned",
         display: "Versioned",
         system: "http://hl7.org/fhir/versioning-policy"
@@ -29,7 +29,7 @@ export const VersioningPolicyValueSet = {
     /**
      * VersionId must be correct for updates (server) or will be specified (If-match header) for updates (client).
      */
-    versioning_policy_VersionIdTrackedFully: Coding.FromStrict({
+    versioning_policy_VersionIdTrackedFully: new Coding({
         code: "versioned-update",
         display: "VersionId tracked fully",
         system: "http://hl7.org/fhir/versioning-policy"

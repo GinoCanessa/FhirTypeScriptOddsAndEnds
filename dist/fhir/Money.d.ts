@@ -35,10 +35,10 @@ export declare class Money extends fhir.FhirElement implements fhir.IMoney {
     /**
      * Check if the current Money contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Money from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMoney): Money;
+    static fromStrict(source: fhir.IMoney): Money;
 }
 //# sourceMappingURL=Money.d.ts.map

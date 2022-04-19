@@ -13,7 +13,7 @@ export const ContributorTypeValueSet = {
     /**
      * An author of the content of the module.
      */
-    contributor_type_Author: Coding.FromStrict({
+    contributor_type_Author: new Coding({
         code: "author",
         display: "Author",
         system: "http://hl7.org/fhir/contributor-type"
@@ -21,7 +21,7 @@ export const ContributorTypeValueSet = {
     /**
      * An editor of the content of the module.
      */
-    contributor_type_Editor: Coding.FromStrict({
+    contributor_type_Editor: new Coding({
         code: "editor",
         display: "Editor",
         system: "http://hl7.org/fhir/contributor-type"
@@ -29,7 +29,7 @@ export const ContributorTypeValueSet = {
     /**
      * An endorser of the content of the module.
      */
-    contributor_type_Endorser: Coding.FromStrict({
+    contributor_type_Endorser: new Coding({
         code: "endorser",
         display: "Endorser",
         system: "http://hl7.org/fhir/contributor-type"
@@ -37,7 +37,7 @@ export const ContributorTypeValueSet = {
     /**
      * A reviewer of the content of the module.
      */
-    contributor_type_Reviewer: Coding.FromStrict({
+    contributor_type_Reviewer: new Coding({
         code: "reviewer",
         display: "Reviewer",
         system: "http://hl7.org/fhir/contributor-type"

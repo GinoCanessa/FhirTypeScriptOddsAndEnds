@@ -201,11 +201,11 @@ export declare class VerificationResultPrimarySource extends fhir.BackboneElemen
     /**
      * Check if the current VerificationResultPrimarySource contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a VerificationResultPrimarySource from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IVerificationResultPrimarySource): VerificationResultPrimarySource;
+    static fromStrict(source: fhir.IVerificationResultPrimarySource): VerificationResultPrimarySource;
 }
 /**
  * Information about the entity attesting to information.
@@ -253,11 +253,11 @@ export declare class VerificationResultAttestation extends fhir.BackboneElement 
     /**
      * Check if the current VerificationResultAttestation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a VerificationResultAttestation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IVerificationResultAttestation): VerificationResultAttestation;
+    static fromStrict(source: fhir.IVerificationResultAttestation): VerificationResultAttestation;
 }
 /**
  * Information about the entity validating information.
@@ -283,11 +283,11 @@ export declare class VerificationResultValidator extends fhir.BackboneElement im
     /**
      * Check if the current VerificationResultValidator contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a VerificationResultValidator from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IVerificationResultValidator): VerificationResultValidator;
+    static fromStrict(source: fhir.IVerificationResultValidator): VerificationResultValidator;
 }
 /**
  * Describes validation requirements, source(s), status and dates for one or more elements.
@@ -365,11 +365,11 @@ export declare class VerificationResult extends fhir.DomainResource implements f
     /**
      * Check if the current VerificationResult contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a VerificationResult from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IVerificationResult): VerificationResult;
+    static fromStrict(source: fhir.IVerificationResult): VerificationResult;
 }
 /**
  * Code Values for the VerificationResult.status field

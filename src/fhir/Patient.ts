@@ -211,18 +211,18 @@ export class PatientContact extends fhir.BackboneElement implements fhir.IPatien
   /**
    * Check if the current PatientContact contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PatientContact from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPatientContact):PatientContact {
+  static override fromStrict(source:fhir.IPatientContact):PatientContact {
     var dest:PatientContact = new PatientContact(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `PatientContact is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -254,19 +254,19 @@ export class PatientCommunication extends fhir.BackboneElement implements fhir.I
   /**
    * Check if the current PatientCommunication contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["language"] === undefined) { missingElements.push("language"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PatientCommunication from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPatientCommunication):PatientCommunication {
+  static override fromStrict(source:fhir.IPatientCommunication):PatientCommunication {
     var dest:PatientCommunication = new PatientCommunication(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `PatientCommunication is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -300,20 +300,20 @@ export class PatientLink extends fhir.BackboneElement implements fhir.IPatientLi
   /**
    * Check if the current PatientLink contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["other"] === undefined) { missingElements.push("other"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PatientLink from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPatientLink):PatientLink {
+  static override fromStrict(source:fhir.IPatientLink):PatientLink {
     var dest:PatientLink = new PatientLink(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `PatientLink is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -445,18 +445,18 @@ export class Patient extends fhir.DomainResource implements fhir.IPatient {
   /**
    * Check if the current Patient contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Patient from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPatient):Patient {
+  static override fromStrict(source:fhir.IPatient):Patient {
     var dest:Patient = new Patient(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Patient is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

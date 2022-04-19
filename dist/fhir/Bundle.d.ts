@@ -200,11 +200,11 @@ export declare class BundleLink extends fhir.BackboneElement implements fhir.IBu
     /**
      * Check if the current BundleLink contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a BundleLink from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IBundleLink): BundleLink;
+    static fromStrict(source: fhir.IBundleLink): BundleLink;
 }
 /**
  * Information about the search process that lead to the creation of this entry.
@@ -228,11 +228,11 @@ export declare class BundleEntrySearch extends fhir.BackboneElement implements f
     /**
      * Check if the current BundleEntrySearch contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a BundleEntrySearch from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IBundleEntrySearch): BundleEntrySearch;
+    static fromStrict(source: fhir.IBundleEntrySearch): BundleEntrySearch;
 }
 /**
  * Additional information about how this entry should be processed as part of a transaction or batch.  For history, it shows how the entry was processed to create the version contained in the entry.
@@ -275,11 +275,11 @@ export declare class BundleEntryRequest extends fhir.BackboneElement implements 
     /**
      * Check if the current BundleEntryRequest contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a BundleEntryRequest from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IBundleEntryRequest): BundleEntryRequest;
+    static fromStrict(source: fhir.IBundleEntryRequest): BundleEntryRequest;
 }
 /**
  * Indicates the results of processing the corresponding 'request' entry in the batch or transaction being responded to or what the results of an operation where when returning history.
@@ -317,11 +317,11 @@ export declare class BundleEntryResponse extends fhir.BackboneElement implements
     /**
      * Check if the current BundleEntryResponse contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a BundleEntryResponse from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IBundleEntryResponse): BundleEntryResponse;
+    static fromStrict(source: fhir.IBundleEntryResponse): BundleEntryResponse;
 }
 /**
  * An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only).
@@ -360,11 +360,11 @@ export declare class BundleEntry extends fhir.BackboneElement implements fhir.IB
     /**
      * Check if the current BundleEntry contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a BundleEntry from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IBundleEntry): BundleEntry;
+    static fromStrict(source: fhir.IBundleEntry): BundleEntry;
 }
 /**
  * A container for a collection of resources.
@@ -421,11 +421,11 @@ export declare class Bundle extends fhir.Resource implements fhir.IBundle {
     /**
      * Check if the current Bundle contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Bundle from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IBundle): Bundle;
+    static fromStrict(source: fhir.IBundle): Bundle;
 }
 /**
  * Code Values for the Bundle.entry.search.mode field

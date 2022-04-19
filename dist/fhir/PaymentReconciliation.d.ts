@@ -186,11 +186,11 @@ export declare class PaymentReconciliationDetail extends fhir.BackboneElement im
     /**
      * Check if the current PaymentReconciliationDetail contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a PaymentReconciliationDetail from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPaymentReconciliationDetail): PaymentReconciliationDetail;
+    static fromStrict(source: fhir.IPaymentReconciliationDetail): PaymentReconciliationDetail;
 }
 /**
  * A note that describes or explains the processing in a human readable form.
@@ -213,11 +213,11 @@ export declare class PaymentReconciliationProcessNote extends fhir.BackboneEleme
     /**
      * Check if the current PaymentReconciliationProcessNote contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a PaymentReconciliationProcessNote from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPaymentReconciliationProcessNote): PaymentReconciliationProcessNote;
+    static fromStrict(source: fhir.IPaymentReconciliationProcessNote): PaymentReconciliationProcessNote;
 }
 /**
  * This resource provides the details including amount of a payment and allocates the payment items being paid.
@@ -299,11 +299,11 @@ export declare class PaymentReconciliation extends fhir.DomainResource implement
     /**
      * Check if the current PaymentReconciliation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a PaymentReconciliation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPaymentReconciliation): PaymentReconciliation;
+    static fromStrict(source: fhir.IPaymentReconciliation): PaymentReconciliation;
 }
 /**
  * Code Values for the PaymentReconciliation.processNote.type field

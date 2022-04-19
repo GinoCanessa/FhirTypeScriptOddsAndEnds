@@ -30,7 +30,7 @@ export class ParametersParameter extends fhir.BackboneElement {
             this.part = source.part.map((x) => new fhir.ParametersParameter(x));
         }
         if (source["resource"]) {
-            this.resource = ((_a = fhir.FhirResourceFactory(source.resource)) !== null && _a !== void 0 ? _a : undefined);
+            this.resource = ((_a = fhir.fhirResourceFactory(source.resource)) !== null && _a !== void 0 ? _a : undefined);
         }
         if (source["valueBase64Binary"]) {
             this.valueBase64Binary = source.valueBase64Binary;
@@ -243,21 +243,21 @@ export class ParametersParameter extends fhir.BackboneElement {
     /**
      * Check if the current ParametersParameter contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["name"] === undefined) {
             missingElements.push("name");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ParametersParameter from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ParametersParameter(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ParametersParameter is missing elements: ${missingElements.join(", ")}`;
         }
@@ -281,18 +281,18 @@ export class Parameters extends fhir.Resource {
     /**
      * Check if the current Parameters contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a Parameters from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new Parameters(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `Parameters is missing elements: ${missingElements.join(", ")}`;
         }

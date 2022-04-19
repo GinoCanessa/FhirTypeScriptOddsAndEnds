@@ -92,18 +92,18 @@ export class Meta extends fhir.FhirElement implements fhir.IMeta {
   /**
    * Check if the current Meta contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Meta from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMeta):Meta {
+  static override fromStrict(source:fhir.IMeta):Meta {
     var dest:Meta = new Meta(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Meta is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

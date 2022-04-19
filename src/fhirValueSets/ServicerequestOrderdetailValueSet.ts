@@ -10,27 +10,27 @@ import { Coding } from '../fhir'
  * An example value set of Codified order entry details concepts.  These concepts only make sense in the context of what is being ordered.  This example is for a patient ventilation order
  */
 export const ServicerequestOrderdetailValueSet = {
-  ServicerequestOrderdetailValueSet_PatientTriggeredInspiratoryAssistanceProcedure: Coding.FromStrict({
+  ServicerequestOrderdetailValueSet_PatientTriggeredInspiratoryAssistanceProcedure: new Coding({
     code: "243144002",
     display: "Patient triggered inspiratory assistance (procedure)",
     system: "http://snomed.info/sct"
   }),
-  ServicerequestOrderdetailValueSet_AssistedControlledMandatoryVentilationProcedure: Coding.FromStrict({
+  ServicerequestOrderdetailValueSet_AssistedControlledMandatoryVentilationProcedure: new Coding({
     code: "243150007",
     display: "Assisted controlled mandatory ventilation (procedure)",
     system: "http://snomed.info/sct"
   }),
-  ServicerequestOrderdetailValueSet_PressureControlledVentilationProcedure: Coding.FromStrict({
+  ServicerequestOrderdetailValueSet_PressureControlledVentilationProcedure: new Coding({
     code: "286812008",
     display: "Pressure controlled ventilation (procedure)",
     system: "http://snomed.info/sct"
   }),
-  ServicerequestOrderdetailValueSet_ContinuousPositiveAirwayPressureVentilationTreatmentRegimeTherapy: Coding.FromStrict({
+  ServicerequestOrderdetailValueSet_ContinuousPositiveAirwayPressureVentilationTreatmentRegimeTherapy: new Coding({
     code: "47545007",
     display: "Continuous positive airway pressure ventilation treatment (regime/therapy)",
     system: "http://snomed.info/sct"
   }),
-  ServicerequestOrderdetailValueSet_SynchronizedIntermittentMandatoryVentilationProcedure: Coding.FromStrict({
+  ServicerequestOrderdetailValueSet_SynchronizedIntermittentMandatoryVentilationProcedure: new Coding({
     code: "59427005",
     display: "Synchronized intermittent mandatory ventilation (procedure)",
     system: "http://snomed.info/sct"

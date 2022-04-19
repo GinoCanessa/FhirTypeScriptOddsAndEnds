@@ -13,7 +13,7 @@ export const DaysOfWeekValueSet = {
   /**
    * Friday.
    */
-  days_of_week_Friday: Coding.FromStrict({
+  days_of_week_Friday: new Coding({
     code: "fri",
     display: "Friday",
     system: "http://hl7.org/fhir/days-of-week"
@@ -21,7 +21,7 @@ export const DaysOfWeekValueSet = {
   /**
    * Monday.
    */
-  days_of_week_Monday: Coding.FromStrict({
+  days_of_week_Monday: new Coding({
     code: "mon",
     display: "Monday",
     system: "http://hl7.org/fhir/days-of-week"
@@ -29,7 +29,7 @@ export const DaysOfWeekValueSet = {
   /**
    * Saturday.
    */
-  days_of_week_Saturday: Coding.FromStrict({
+  days_of_week_Saturday: new Coding({
     code: "sat",
     display: "Saturday",
     system: "http://hl7.org/fhir/days-of-week"
@@ -37,7 +37,7 @@ export const DaysOfWeekValueSet = {
   /**
    * Sunday.
    */
-  days_of_week_Sunday: Coding.FromStrict({
+  days_of_week_Sunday: new Coding({
     code: "sun",
     display: "Sunday",
     system: "http://hl7.org/fhir/days-of-week"
@@ -45,7 +45,7 @@ export const DaysOfWeekValueSet = {
   /**
    * Thursday.
    */
-  days_of_week_Thursday: Coding.FromStrict({
+  days_of_week_Thursday: new Coding({
     code: "thu",
     display: "Thursday",
     system: "http://hl7.org/fhir/days-of-week"
@@ -53,7 +53,7 @@ export const DaysOfWeekValueSet = {
   /**
    * Tuesday.
    */
-  days_of_week_Tuesday: Coding.FromStrict({
+  days_of_week_Tuesday: new Coding({
     code: "tue",
     display: "Tuesday",
     system: "http://hl7.org/fhir/days-of-week"
@@ -61,7 +61,7 @@ export const DaysOfWeekValueSet = {
   /**
    * Wednesday.
    */
-  days_of_week_Wednesday: Coding.FromStrict({
+  days_of_week_Wednesday: new Coding({
     code: "wed",
     display: "Wednesday",
     system: "http://hl7.org/fhir/days-of-week"

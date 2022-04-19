@@ -13,7 +13,7 @@ export const ResearchElementTypeValueSet = {
     /**
      * The element defines an exposure within the population that is being researched.
      */
-    research_element_type_Exposure: Coding.FromStrict({
+    research_element_type_Exposure: new Coding({
         code: "exposure",
         display: "Exposure",
         system: "http://hl7.org/fhir/research-element-type"
@@ -21,7 +21,7 @@ export const ResearchElementTypeValueSet = {
     /**
      * The element defines an outcome within the population that is being researched.
      */
-    research_element_type_Outcome: Coding.FromStrict({
+    research_element_type_Outcome: new Coding({
         code: "outcome",
         display: "Outcome",
         system: "http://hl7.org/fhir/research-element-type"
@@ -29,7 +29,7 @@ export const ResearchElementTypeValueSet = {
     /**
      * The element defines the population that forms the basis for research.
      */
-    research_element_type_Population: Coding.FromStrict({
+    research_element_type_Population: new Coding({
         code: "population",
         display: "Population",
         system: "http://hl7.org/fhir/research-element-type"

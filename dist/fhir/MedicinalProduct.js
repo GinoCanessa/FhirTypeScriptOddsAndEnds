@@ -36,7 +36,7 @@ export class MedicinalProductNameNamePart extends fhir.BackboneElement {
     /**
      * Check if the current MedicinalProductNameNamePart contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["part"] === undefined) {
             missingElements.push("part");
@@ -44,16 +44,16 @@ export class MedicinalProductNameNamePart extends fhir.BackboneElement {
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductNameNamePart from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductNameNamePart(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductNameNamePart is missing elements: ${missingElements.join(", ")}`;
         }
@@ -90,7 +90,7 @@ export class MedicinalProductNameCountryLanguage extends fhir.BackboneElement {
     /**
      * Check if the current MedicinalProductNameCountryLanguage contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["country"] === undefined) {
             missingElements.push("country");
@@ -98,16 +98,16 @@ export class MedicinalProductNameCountryLanguage extends fhir.BackboneElement {
         if (this["language"] === undefined) {
             missingElements.push("language");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductNameCountryLanguage from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductNameCountryLanguage(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductNameCountryLanguage is missing elements: ${missingElements.join(", ")}`;
         }
@@ -143,21 +143,21 @@ export class MedicinalProductName extends fhir.BackboneElement {
     /**
      * Check if the current MedicinalProductName contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["productName"] === undefined) {
             missingElements.push("productName");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductName from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductName(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductName is missing elements: ${missingElements.join(", ")}`;
         }
@@ -198,18 +198,18 @@ export class MedicinalProductManufacturingBusinessOperation extends fhir.Backbon
     /**
      * Check if the current MedicinalProductManufacturingBusinessOperation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductManufacturingBusinessOperation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductManufacturingBusinessOperation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductManufacturingBusinessOperation is missing elements: ${missingElements.join(", ")}`;
         }
@@ -256,18 +256,18 @@ export class MedicinalProductSpecialDesignation extends fhir.BackboneElement {
     /**
      * Check if the current MedicinalProductSpecialDesignation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductSpecialDesignation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductSpecialDesignation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductSpecialDesignation is missing elements: ${missingElements.join(", ")}`;
         }
@@ -355,21 +355,21 @@ export class MedicinalProduct extends fhir.DomainResource {
     /**
      * Check if the current MedicinalProduct contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if ((!this["name"]) || (this["name"].length === 0)) {
             missingElements.push("name");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProduct from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProduct(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProduct is missing elements: ${missingElements.join(", ")}`;
         }

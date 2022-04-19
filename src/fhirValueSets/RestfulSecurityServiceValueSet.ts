@@ -13,7 +13,7 @@ export const RestfulSecurityServiceValueSet = {
   /**
    * Basic authentication defined in HTTP specification.
    */
-  restful_security_service_Basic: Coding.FromStrict({
+  restful_security_service_Basic: new Coding({
     code: "Basic",
     display: "Basic",
     system: "http://terminology.hl7.org/CodeSystem/restful-security-service"
@@ -21,7 +21,7 @@ export const RestfulSecurityServiceValueSet = {
   /**
    * SSL where client must have a certificate registered with the server.
    */
-  restful_security_service_Certificates: Coding.FromStrict({
+  restful_security_service_Certificates: new Coding({
     code: "Certificates",
     display: "Certificates",
     system: "http://terminology.hl7.org/CodeSystem/restful-security-service"
@@ -29,7 +29,7 @@ export const RestfulSecurityServiceValueSet = {
   /**
    * see http://www.ietf.org/rfc/rfc4120.txt.
    */
-  restful_security_service_Kerberos: Coding.FromStrict({
+  restful_security_service_Kerberos: new Coding({
     code: "Kerberos",
     display: "Kerberos",
     system: "http://terminology.hl7.org/CodeSystem/restful-security-service"
@@ -37,7 +37,7 @@ export const RestfulSecurityServiceValueSet = {
   /**
    * Microsoft NTLM Authentication.
    */
-  restful_security_service_NTLM: Coding.FromStrict({
+  restful_security_service_NTLM: new Coding({
     code: "NTLM",
     display: "NTLM",
     system: "http://terminology.hl7.org/CodeSystem/restful-security-service"
@@ -45,7 +45,7 @@ export const RestfulSecurityServiceValueSet = {
   /**
    * OAuth (unspecified version see oauth.net).
    */
-  restful_security_service_OAuth: Coding.FromStrict({
+  restful_security_service_OAuth: new Coding({
     code: "OAuth",
     display: "OAuth",
     system: "http://terminology.hl7.org/CodeSystem/restful-security-service"
@@ -53,7 +53,7 @@ export const RestfulSecurityServiceValueSet = {
   /**
    * OAuth2 using SMART-on-FHIR profile (see http://docs.smarthealthit.org/).
    */
-  restful_security_service_SMARTOnFHIR: Coding.FromStrict({
+  restful_security_service_SMARTOnFHIR: new Coding({
     code: "SMART-on-FHIR",
     display: "SMART-on-FHIR",
     system: "http://terminology.hl7.org/CodeSystem/restful-security-service"

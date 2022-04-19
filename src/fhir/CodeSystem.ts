@@ -333,21 +333,21 @@ export class CodeSystemFilter extends fhir.BackboneElement implements fhir.ICode
   /**
    * Check if the current CodeSystemFilter contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
     if ((!this["operator"]) || (this["operator"].length === 0)) { missingElements.push("operator"); }
     if (this["value"] === undefined) { missingElements.push("value"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CodeSystemFilter from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICodeSystemFilter):CodeSystemFilter {
+  static override fromStrict(source:fhir.ICodeSystemFilter):CodeSystemFilter {
     var dest:CodeSystemFilter = new CodeSystemFilter(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CodeSystemFilter is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -397,20 +397,20 @@ export class CodeSystemProperty extends fhir.BackboneElement implements fhir.ICo
   /**
    * Check if the current CodeSystemProperty contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CodeSystemProperty from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICodeSystemProperty):CodeSystemProperty {
+  static override fromStrict(source:fhir.ICodeSystemProperty):CodeSystemProperty {
     var dest:CodeSystemProperty = new CodeSystemProperty(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CodeSystemProperty is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -449,19 +449,19 @@ export class CodeSystemConceptDesignation extends fhir.BackboneElement implement
   /**
    * Check if the current CodeSystemConceptDesignation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["value"] === undefined) { missingElements.push("value"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CodeSystemConceptDesignation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICodeSystemConceptDesignation):CodeSystemConceptDesignation {
+  static override fromStrict(source:fhir.ICodeSystemConceptDesignation):CodeSystemConceptDesignation {
     var dest:CodeSystemConceptDesignation = new CodeSystemConceptDesignation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CodeSystemConceptDesignation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -535,19 +535,19 @@ export class CodeSystemConceptProperty extends fhir.BackboneElement implements f
   /**
    * Check if the current CodeSystemConceptProperty contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CodeSystemConceptProperty from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICodeSystemConceptProperty):CodeSystemConceptProperty {
+  static override fromStrict(source:fhir.ICodeSystemConceptProperty):CodeSystemConceptProperty {
     var dest:CodeSystemConceptProperty = new CodeSystemConceptProperty(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CodeSystemConceptProperty is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -603,19 +603,19 @@ export class CodeSystemConcept extends fhir.BackboneElement implements fhir.ICod
   /**
    * Check if the current CodeSystemConcept contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CodeSystemConcept from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICodeSystemConcept):CodeSystemConcept {
+  static override fromStrict(source:fhir.ICodeSystemConcept):CodeSystemConcept {
     var dest:CodeSystemConcept = new CodeSystemConcept(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CodeSystemConcept is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -813,20 +813,20 @@ export class CodeSystem extends fhir.DomainResource implements fhir.ICodeSystem 
   /**
    * Check if the current CodeSystem contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["content"] === undefined) { missingElements.push("content"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CodeSystem from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICodeSystem):CodeSystem {
+  static override fromStrict(source:fhir.ICodeSystem):CodeSystem {
     var dest:CodeSystem = new CodeSystem(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CodeSystem is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

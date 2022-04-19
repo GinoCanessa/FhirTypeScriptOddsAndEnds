@@ -13,7 +13,7 @@ export const ImmunizationFundingSourceValueSet = {
   /**
    * The vaccine was purchased with private funds.
    */
-  immunization_funding_source_Private: Coding.FromStrict({
+  immunization_funding_source_Private: new Coding({
     code: "private",
     display: "Private",
     system: "http://terminology.hl7.org/CodeSystem/immunization-funding-source"
@@ -21,7 +21,7 @@ export const ImmunizationFundingSourceValueSet = {
   /**
    * The vaccine was purchased with public funds.
    */
-  immunization_funding_source_Public: Coding.FromStrict({
+  immunization_funding_source_Public: new Coding({
     code: "public",
     display: "Public",
     system: "http://terminology.hl7.org/CodeSystem/immunization-funding-source"

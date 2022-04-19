@@ -43,18 +43,18 @@ export class VerificationResultPrimarySource extends fhir.BackboneElement {
     /**
      * Check if the current VerificationResultPrimarySource contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a VerificationResultPrimarySource from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new VerificationResultPrimarySource(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `VerificationResultPrimarySource is missing elements: ${missingElements.join(", ")}`;
         }
@@ -107,18 +107,18 @@ export class VerificationResultAttestation extends fhir.BackboneElement {
     /**
      * Check if the current VerificationResultAttestation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a VerificationResultAttestation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new VerificationResultAttestation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `VerificationResultAttestation is missing elements: ${missingElements.join(", ")}`;
         }
@@ -154,21 +154,21 @@ export class VerificationResultValidator extends fhir.BackboneElement {
     /**
      * Check if the current VerificationResultValidator contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["organization"] === undefined) {
             missingElements.push("organization");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a VerificationResultValidator from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new VerificationResultValidator(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `VerificationResultValidator is missing elements: ${missingElements.join(", ")}`;
         }
@@ -250,21 +250,21 @@ export class VerificationResult extends fhir.DomainResource {
     /**
      * Check if the current VerificationResult contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a VerificationResult from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new VerificationResult(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `VerificationResult is missing elements: ${missingElements.join(", ")}`;
         }

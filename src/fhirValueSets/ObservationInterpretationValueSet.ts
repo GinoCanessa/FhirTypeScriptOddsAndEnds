@@ -17,7 +17,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * Codes that specify interpretation of genetic analysis, such as "positive", "negative", "carrier", "responsive", etc.
    */
-  v3_ObservationInterpretation_GeneticObservationInterpretation: Coding.FromStrict({
+  v3_ObservationInterpretation_GeneticObservationInterpretation: new Coding({
     code: "_GeneticObservationInterpretation",
     display: "GeneticObservationInterpretation",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -25,7 +25,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * Interpretations of change of quantity and/or severity. At most one of B or W and one of U or D allowed.
    */
-  v3_ObservationInterpretation_ObservationInterpretationChange: Coding.FromStrict({
+  v3_ObservationInterpretation_ObservationInterpretationChange: new Coding({
     code: "_ObservationInterpretationChange",
     display: "ObservationInterpretationChange",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -33,7 +33,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * Technical exceptions resulting in the inability to provide an interpretation. At most one allowed. Does not imply normality or severity.
    */
-  v3_ObservationInterpretation_ObservationInterpretationExceptions: Coding.FromStrict({
+  v3_ObservationInterpretation_ObservationInterpretationExceptions: new Coding({
     code: "_ObservationInterpretationExceptions",
     display: "ObservationInterpretationExceptions",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -41,7 +41,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * Interpretation of normality or degree of abnormality (including critical or "alert" level). Concepts in this category are mutually exclusive, i.e., at most one is allowed.
    */
-  v3_ObservationInterpretation_ObservationInterpretationNormality: Coding.FromStrict({
+  v3_ObservationInterpretation_ObservationInterpretationNormality: new Coding({
     code: "_ObservationInterpretationNormality",
     display: "ObservationInterpretationNormality",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -49,7 +49,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * Interpretations of anti-microbial susceptibility testing results (microbiology). At most one allowed.
    */
-  v3_ObservationInterpretation_ObservationInterpretationSusceptibility: Coding.FromStrict({
+  v3_ObservationInterpretation_ObservationInterpretationSusceptibility: new Coding({
     code: "_ObservationInterpretationSusceptibility",
     display: "ObservationInterpretationSusceptibility",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -59,7 +59,7 @@ export const ObservationInterpretationValueSet = {
    * 
    *                         Synonyms: Below analytical limit, low off scale.
    */
-  v3_ObservationInterpretation_OffScaleLow: Coding.FromStrict({
+  v3_ObservationInterpretation_OffScaleLow: new Coding({
     code: "<",
     display: "Off scale low",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -69,7 +69,7 @@ export const ObservationInterpretationValueSet = {
    * 
    *                         Synonyms: Above analytical limit, high off scale.
    */
-  v3_ObservationInterpretation_OffScaleHigh: Coding.FromStrict({
+  v3_ObservationInterpretation_OffScaleHigh: new Coding({
     code: ">",
     display: "Off scale high",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -79,7 +79,7 @@ export const ObservationInterpretationValueSet = {
    * 
    *                         [Note: Typically applies to non-numeric results.]
    */
-  v3_ObservationInterpretation_Abnormal: Coding.FromStrict({
+  v3_ObservationInterpretation_Abnormal: new Coding({
     code: "A",
     display: "Abnormal",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -89,7 +89,7 @@ export const ObservationInterpretationValueSet = {
    * 
    *                         [Note: Typically applies to non-numeric results.  Analogous to critical/panic limits for numeric results.]
    */
-  v3_ObservationInterpretation_CriticalAbnormal: Coding.FromStrict({
+  v3_ObservationInterpretation_CriticalAbnormal: new Coding({
     code: "AA",
     display: "Critical abnormal",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -99,7 +99,7 @@ export const ObservationInterpretationValueSet = {
    * 
    *                         [Note: This can be applied to quantitative or qualitative observations.]
    */
-  v3_ObservationInterpretation_Better: Coding.FromStrict({
+  v3_ObservationInterpretation_Better: new Coding({
     code: "B",
     display: "Better",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -107,7 +107,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * The patient is considered as carrier based on the testing results. A carrier is an individual who carries an altered form of a gene which can lead to having a child or offspring in future generations with a genetic disorder.
    */
-  v3_ObservationInterpretation_Carrier: Coding.FromStrict({
+  v3_ObservationInterpretation_Carrier: new Coding({
     code: "CAR",
     display: "Carrier",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -115,7 +115,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * The current result has decreased from the previous result for a quantitative observation (the change is significant as defined in the respective test procedure).
    */
-  v3_ObservationInterpretation_SignificantChangeDown: Coding.FromStrict({
+  v3_ObservationInterpretation_SignificantChangeDown: new Coding({
     code: "D",
     display: "Significant change down",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -123,7 +123,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * The measurement of the specified component / analyte, organism or clinical sign above the limit of detection of the performed test or procedure.
    */
-  v3_ObservationInterpretation_Detected: Coding.FromStrict({
+  v3_ObservationInterpretation_Detected: new Coding({
     code: "DET",
     display: "Detected",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -131,7 +131,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * The test or procedure was successfully performed, but the results are borderline and can neither be declared positive / negative nor detected / not detected according to the current established criteria.
    */
-  v3_ObservationInterpretation_Equivocal: Coding.FromStrict({
+  v3_ObservationInterpretation_Equivocal: new Coding({
     code: "E",
     display: "Equivocal",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -144,7 +144,7 @@ export const ObservationInterpretationValueSet = {
    * These concepts/codes were proposed by RCRIM for use in the CTLaboratory message.  They were submitted and approved in the November 2005 Harmonization cycle in proposal "030103C_VOCAB_RCRIM_l_quade_RCRIM Obs Interp_20051028154455".  However, this proposal was not fully implemented in the vocabulary.  The proposal recommended creation of the x_ClinicalResearchExclusion domain in ObservationInterpretation with a value set including those three concepts/codes, but there is no subdomain of that name or equivalent with a binding to either of the value sets that contain these concepts/codes.
    * Members of the OO WG have recently attempted to contact members of RCRIM regarding these concepts, both by email and at the recent WGM in Atlanta, without response.  It is felt by OO that the best course of action to take at this time is to add this comprehensive Open Issue rather than deprecate these three concepts at this time, until further discussion is held.
    */
-  v3_ObservationInterpretation_OutsideThreshold: Coding.FromStrict({
+  v3_ObservationInterpretation_OutsideThreshold: new Coding({
     code: "EX",
     display: "outside threshold",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -152,7 +152,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * This result has been evaluated in light of known contraindicators.  Once those contraindicators have been taken into account the result is determined to be "Expected"  (e.g., presence of drugs in a patient that is taking prescription medication for pain management).
    */
-  v3_ObservationInterpretation_Expected: Coding.FromStrict({
+  v3_ObservationInterpretation_Expected: new Coding({
     code: "EXP",
     display: "Expected",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -162,7 +162,7 @@ export const ObservationInterpretationValueSet = {
    * 
    *                         Synonym: Above high normal
    */
-  v3_ObservationInterpretation_High: Coding.FromStrict({
+  v3_ObservationInterpretation_High: new Coding({
     code: "H",
     display: "High",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -172,7 +172,7 @@ export const ObservationInterpretationValueSet = {
    * 
    *                         Synonym: Above upper panic limits.
    */
-  v3_ObservationInterpretation_CriticalHigh: Coding.FromStrict({
+  v3_ObservationInterpretation_CriticalHigh: new Coding({
     code: "HH",
     display: "Critical high",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -180,7 +180,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * A test result that is significantly higher than the reference (normal) or therapeutic interval, but has not reached the critically high value and might need special attention, as defined by the laboratory or the clinician.
    */
-  v3_ObservationInterpretation_SignificantlyHigh: Coding.FromStrict({
+  v3_ObservationInterpretation_SignificantlyHigh: new Coding({
     code: "HU",
     display: "Significantly high",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -191,7 +191,7 @@ export const ObservationInterpretationValueSet = {
    *                         Example: A positive result on a Hepatitis screening test.
    *                            Open Issue: EX, HX, LX: These three concepts do not seem to meet a clear need in the vocabulary, and their use in observation interpretation appears likely to be covered by other existing concepts (e.g., A, H, L).  The only apparent significant difference is their reference to use in protocols for exclusion of study subjects.  These concepts/codes were proposed by RCRIM for use in the CTLaboratory message.  They were submitted and approved in the November 2005 Harmonization cycle in proposal "030103C_VOCAB_RCRIM_l_quade_RCRIM Obs Interp_20051028154455". However, this proposal was not fully implemented in the vocabulary.  The proposal recommended creation of the x_ClinicalResearchExclusion domain in ObservationInterpretation with a value set including those three concepts/codes, but there is no subdomain of that name or equivalent with a binding to either of the value sets that contain these concepts/codes.  Members of the OO WG have recently attempted to contact members of RCRIM regarding these concepts, both by email and at the recent WGM in Atlanta, without response.  It is felt by OO that the best course of action to take at this time is to add this comprehensive Open Issue rather than deprecate these three concepts at this time, until further discussion is held.
    */
-  v3_ObservationInterpretation_AboveHighThreshold: Coding.FromStrict({
+  v3_ObservationInterpretation_AboveHighThreshold: new Coding({
     code: "HX",
     display: "above high threshold",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -208,7 +208,7 @@ export const ObservationInterpretationValueSet = {
    * 
    *                         [Note 4: These breakpoints can be altered due to changes in circumstances (e.g., changes in commonly used drug dosages, emergence of new resistance mechanisms).]
    */
-  v3_ObservationInterpretation_Intermediate: Coding.FromStrict({
+  v3_ObservationInterpretation_Intermediate: new Coding({
     code: "I",
     display: "Intermediate",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -218,7 +218,7 @@ export const ObservationInterpretationValueSet = {
    * 
    *                         [Note: A MIC with "IE" and/or a comment may be reported (without an accompanying S, I or R-categorization).]
    */
-  v3_ObservationInterpretation_InsufficientEvidence: Coding.FromStrict({
+  v3_ObservationInterpretation_InsufficientEvidence: new Coding({
     code: "IE",
     display: "Insufficient evidence",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -229,7 +229,7 @@ export const ObservationInterpretationValueSet = {
    *                         
    *                            Usage Note: For example, if the specimen was degraded, poorly processed, or was missing the required anatomic structures, then "indeterminate" (i.e. "cannot be determined") is the appropriate response, not "equivocal".
    */
-  v3_ObservationInterpretation_Indeterminate: Coding.FromStrict({
+  v3_ObservationInterpretation_Indeterminate: new Coding({
     code: "IND",
     display: "Indeterminate",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -239,7 +239,7 @@ export const ObservationInterpretationValueSet = {
    * 
    *                         Synonym: Below low normal
    */
-  v3_ObservationInterpretation_Low: Coding.FromStrict({
+  v3_ObservationInterpretation_Low: new Coding({
     code: "L",
     display: "Low",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -249,7 +249,7 @@ export const ObservationInterpretationValueSet = {
    * 
    *                         Synonym: Below lower panic limits.
    */
-  v3_ObservationInterpretation_CriticalLow: Coding.FromStrict({
+  v3_ObservationInterpretation_CriticalLow: new Coding({
     code: "LL",
     display: "Critical low",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -257,7 +257,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * A test result that is significantly lower than the reference (normal) or therapeutic interval, but has not reached the critically low value and might need special attention, as defined by the laboratory or the clinician.
    */
-  v3_ObservationInterpretation_SignificantlyLow: Coding.FromStrict({
+  v3_ObservationInterpretation_SignificantlyLow: new Coding({
     code: "LU",
     display: "Significantly low",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -268,7 +268,7 @@ export const ObservationInterpretationValueSet = {
    *                         Example: A Total White Blood Cell Count falling below a protocol-defined threshold value of 3000/mm^3
    *                            Open Issue: EX, HX, LX: These three concepts do not seem to meet a clear need in the vocabulary, and their use in observation interpretation appears likely to be covered by other existing concepts (e.g., A, H, L).  The only apparent significant difference is their reference to use in protocols for exclusion of study subjects.  These concepts/codes were proposed by RCRIM for use in the CTLaboratory message.  They were submitted and approved in the November 2005 Harmonization cycle in proposal "030103C_VOCAB_RCRIM_l_quade_RCRIM Obs Interp_20051028154455".  However, this proposal was not fully implemented in the vocabulary.  The proposal recommended creation of the x_ClinicalResearchExclusion domain in ObservationInterpretation with a value set including those three concepts/codes, but there is no subdomain of that name or equivalent with a binding to either of the value sets that contain these concepts/codes.  Members of the OO WG have recently attempted to contact members of RCRIM regarding these concepts, both by email and at the recent WGM in Atlanta, without response.  It is felt by OO that the best course of action to take at this time is to add this comprehensive Open Issue rather than deprecate these three concepts at this time, until further discussion is held.
    */
-  v3_ObservationInterpretation_BelowLowThreshold: Coding.FromStrict({
+  v3_ObservationInterpretation_BelowLowThreshold: new Coding({
     code: "LX",
     display: "below low threshold",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -278,7 +278,7 @@ export const ObservationInterpretationValueSet = {
    * 
    *                         [Note: Applies to numeric or non-numeric results.]
    */
-  v3_ObservationInterpretation_Normal: Coding.FromStrict({
+  v3_ObservationInterpretation_Normal: new Coding({
     code: "N",
     display: "Normal",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -286,7 +286,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * Use when not enough clinical trial data published by the Clinical and Laboratory Standards Institutes (CLSI) is available to establish the breakpoints for susceptible / intermediate and resistant.
    */
-  v3_ObservationInterpretation_NoCLSIDefinedBreakpoint: Coding.FromStrict({
+  v3_ObservationInterpretation_NoCLSIDefinedBreakpoint: new Coding({
     code: "NCL",
     display: "No CLSI defined breakpoint",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -294,7 +294,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * The presence of the specified component / analyte, organism or clinical sign could not be determined within the limit of detection of the performed test or procedure.
    */
-  v3_ObservationInterpretation_NotDetected: Coding.FromStrict({
+  v3_ObservationInterpretation_NotDetected: new Coding({
     code: "ND",
     display: "Not detected",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -304,7 +304,7 @@ export const ObservationInterpretationValueSet = {
    * 
    *                         [Note: Negative does not necessarily imply the complete absence of the specified item.]
    */
-  v3_ObservationInterpretation_Negative: Coding.FromStrict({
+  v3_ObservationInterpretation_Negative: new Coding({
     code: "NEG",
     display: "Negative",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -312,7 +312,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * An absence finding used to indicate that the specified component / analyte did not react measurably with the reagent.
    */
-  v3_ObservationInterpretation_NonReactive: Coding.FromStrict({
+  v3_ObservationInterpretation_NonReactive: new Coding({
     code: "NR",
     display: "Non-reactive",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -326,7 +326,7 @@ export const ObservationInterpretationValueSet = {
    * 
    *                         Synonym: decreased susceptibility.
    */
-  v3_ObservationInterpretation_NonSusceptible: Coding.FromStrict({
+  v3_ObservationInterpretation_NonSusceptible: new Coding({
     code: "NS",
     display: "Non-susceptible",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -334,7 +334,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * Interpretations of the presence or absence of a component / analyte or organism in a test or of a sign in a clinical observation. In keeping with laboratory data processing practice, these concepts provide a categorical interpretation of the "meaning" of the quantitative value for the same observation.
    */
-  v3_ObservationInterpretation_ObservationInterpretationDetection: Coding.FromStrict({
+  v3_ObservationInterpretation_ObservationInterpretationDetection: new Coding({
     code: "ObservationInterpretationDetection",
     display: "ObservationInterpretationDetection",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -342,7 +342,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * Interpretation of the observed result taking into account additional information (contraindicators) about the patient's situation. Concepts in this category are mutually exclusive, i.e., at most one is allowed.
    */
-  v3_ObservationInterpretation_ObservationInterpretationExpectation: Coding.FromStrict({
+  v3_ObservationInterpretation_ObservationInterpretationExpectation: new Coding({
     code: "ObservationInterpretationExpectation",
     display: "ObservationInterpretationExpectation",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -350,7 +350,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * A presence finding of the specified component / analyte, organism or clinical sign based on the established threshold of the performed test or procedure.
    */
-  v3_ObservationInterpretation_Positive: Coding.FromStrict({
+  v3_ObservationInterpretation_Positive: new Coding({
     code: "POS",
     display: "Positive",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -364,7 +364,7 @@ export const ObservationInterpretationValueSet = {
    * 
    *                         [Note 2: This breakpoint can be altered due to changes in circumstances (e.g., changes in commonly used drug dosages, emergence of new resistance mechanisms).]
    */
-  v3_ObservationInterpretation_Resistant: Coding.FromStrict({
+  v3_ObservationInterpretation_Resistant: new Coding({
     code: "R",
     display: "Resistant",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -372,7 +372,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * Interpretations of the presence and level of reactivity of the specified component / analyte with the reagent in the performed laboratory test.
    */
-  v3_ObservationInterpretation_ReactivityObservationInterpretation: Coding.FromStrict({
+  v3_ObservationInterpretation_ReactivityObservationInterpretation: new Coding({
     code: "ReactivityObservationInterpretation",
     display: "ReactivityObservationInterpretation",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -380,7 +380,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * A presence finding used to indicate that the specified component / analyte reacted with the reagent above the reliably measurable limit of the performed test.
    */
-  v3_ObservationInterpretation_Reactive: Coding.FromStrict({
+  v3_ObservationInterpretation_Reactive: new Coding({
     code: "RR",
     display: "Reactive",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -394,7 +394,7 @@ export const ObservationInterpretationValueSet = {
    * 
    *                         [Note 2: This breakpoint can be altered due to changes in circumstances (e.g., changes in commonly used drug dosages, emergence of new resistance mechanisms).]
    */
-  v3_ObservationInterpretation_Susceptible: Coding.FromStrict({
+  v3_ObservationInterpretation_Susceptible: new Coding({
     code: "S",
     display: "Susceptible",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -404,7 +404,7 @@ export const ObservationInterpretationValueSet = {
    * 
    *                         Reference: CLSI document M44-A2 2009 "Method for antifungal disk diffusion susceptibility testing of yeasts; approved guideline - second edition" - page 2.
    */
-  v3_ObservationInterpretation_SusceptibleDoseDependent: Coding.FromStrict({
+  v3_ObservationInterpretation_SusceptibleDoseDependent: new Coding({
     code: "SDD",
     display: "Susceptible-dose dependent",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -418,7 +418,7 @@ export const ObservationInterpretationValueSet = {
    *                         
    *                            Open Issue: The print name of the code is very general and the description is very specific to a pair of classes of agents, which may lead to confusion of these concepts in the future should other synergies be found.
    */
-  v3_ObservationInterpretation_SynergyResistant: Coding.FromStrict({
+  v3_ObservationInterpretation_SynergyResistant: new Coding({
     code: "SYN-R",
     display: "Synergy - resistant",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -432,7 +432,7 @@ export const ObservationInterpretationValueSet = {
    *                         
    *                            Open Issue: The print name of the code is very general and the description is very specific to a pair of classes of agents, which may lead to confusion of these concepts in the future should other synergies be found.
    */
-  v3_ObservationInterpretation_SynergySusceptible: Coding.FromStrict({
+  v3_ObservationInterpretation_SynergySusceptible: new Coding({
     code: "SYN-S",
     display: "Synergy - susceptible",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -440,7 +440,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * The current result has increased from the previous result for a quantitative observation (the change is significant as defined in the respective test procedure).
    */
-  v3_ObservationInterpretation_SignificantChangeUp: Coding.FromStrict({
+  v3_ObservationInterpretation_SignificantChangeUp: new Coding({
     code: "U",
     display: "Significant change up",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -448,7 +448,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * This result has been evaluated in light of known contraindicators.  Once those contraindicators have been taken into account the result is determined to be "Unexpected" (e.g., presence of non-prescribed drugs in a patient that is taking prescription medication for pain management).
    */
-  v3_ObservationInterpretation_Unexpected: Coding.FromStrict({
+  v3_ObservationInterpretation_Unexpected: new Coding({
     code: "UNE",
     display: "Unexpected",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -458,7 +458,7 @@ export const ObservationInterpretationValueSet = {
    * 
    *                         [Note: This can be applied to quantitative or qualitative observations.]
    */
-  v3_ObservationInterpretation_Worse: Coding.FromStrict({
+  v3_ObservationInterpretation_Worse: new Coding({
     code: "W",
     display: "Worse",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
@@ -466,7 +466,7 @@ export const ObservationInterpretationValueSet = {
   /**
    * A weighted presence finding used to indicate that the specified component / analyte reacted with the reagent, but below the reliably measurable limit of the performed test.
    */
-  v3_ObservationInterpretation_WeaklyReactive: Coding.FromStrict({
+  v3_ObservationInterpretation_WeaklyReactive: new Coding({
     code: "WR",
     display: "Weakly reactive",
     system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"

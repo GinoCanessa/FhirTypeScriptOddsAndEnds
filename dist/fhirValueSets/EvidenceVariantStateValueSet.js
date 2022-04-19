@@ -13,7 +13,7 @@ export const EvidenceVariantStateValueSet = {
     /**
      * high risk estimate.
      */
-    evidence_variant_state_HighRisk: Coding.FromStrict({
+    evidence_variant_state_HighRisk: new Coding({
         code: "high-risk",
         display: "high risk",
         system: "http://terminology.hl7.org/CodeSystem/evidence-variant-state"
@@ -21,7 +21,7 @@ export const EvidenceVariantStateValueSet = {
     /**
      * low risk estimate.
      */
-    evidence_variant_state_LowRisk: Coding.FromStrict({
+    evidence_variant_state_LowRisk: new Coding({
         code: "low-risk",
         display: "low risk",
         system: "http://terminology.hl7.org/CodeSystem/evidence-variant-state"
@@ -29,7 +29,7 @@ export const EvidenceVariantStateValueSet = {
     /**
      * medium risk estimate.
      */
-    evidence_variant_state_MediumRisk: Coding.FromStrict({
+    evidence_variant_state_MediumRisk: new Coding({
         code: "medium-risk",
         display: "medium risk",
         system: "http://terminology.hl7.org/CodeSystem/evidence-variant-state"

@@ -13,7 +13,7 @@ export const SupplyrequestReasonValueSet = {
     /**
      * The supply has been requested for use in direct patient care.
      */
-    supplyrequest_reason_PatientCare: Coding.FromStrict({
+    supplyrequest_reason_PatientCare: new Coding({
         code: "patient-care",
         display: "Patient Care",
         system: "http://terminology.hl7.org/CodeSystem/supplyrequest-reason"
@@ -21,7 +21,7 @@ export const SupplyrequestReasonValueSet = {
     /**
      * The supply has been requested for creating or replenishing ward stock.
      */
-    supplyrequest_reason_WardStock: Coding.FromStrict({
+    supplyrequest_reason_WardStock: new Coding({
         code: "ward-stock",
         display: "Ward Stock",
         system: "http://terminology.hl7.org/CodeSystem/supplyrequest-reason"

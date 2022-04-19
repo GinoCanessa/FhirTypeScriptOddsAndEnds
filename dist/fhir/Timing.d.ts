@@ -197,11 +197,11 @@ export declare class TimingRepeat extends fhir.FhirElement implements fhir.ITimi
     /**
      * Check if the current TimingRepeat contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TimingRepeat from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITimingRepeat): TimingRepeat;
+    static fromStrict(source: fhir.ITimingRepeat): TimingRepeat;
 }
 /**
  * Specifies an event that may occur multiple times. Timing schedules are used to record when things are planned, expected or requested to occur. The most common usage is in dosage instructions for medications. They are also used when planning care of various kinds, and may be used for reporting the schedule to which past regular activities were carried out.
@@ -227,11 +227,11 @@ export declare class Timing extends fhir.BackboneElement implements fhir.ITiming
     /**
      * Check if the current Timing contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Timing from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITiming): Timing;
+    static fromStrict(source: fhir.ITiming): Timing;
 }
 /**
  * Code Values for the Timing.repeat.dayOfWeek field

@@ -185,11 +185,11 @@ export declare class MedicationStatement extends fhir.DomainResource implements 
     /**
      * Check if the current MedicationStatement contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationStatement from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationStatement): MedicationStatement;
+    static fromStrict(source: fhir.IMedicationStatement): MedicationStatement;
 }
 /**
  * Code Values for the MedicationStatement.status field

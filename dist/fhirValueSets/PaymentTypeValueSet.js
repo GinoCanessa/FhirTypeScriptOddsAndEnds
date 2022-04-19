@@ -13,7 +13,7 @@ export const PaymentTypeValueSet = {
     /**
      * The amount is an adjustment regarding claims already paid.
      */
-    payment_type_Adjustment: Coding.FromStrict({
+    payment_type_Adjustment: new Coding({
         code: "adjustment",
         display: "Adjustment",
         system: "http://terminology.hl7.org/CodeSystem/payment-type"
@@ -21,7 +21,7 @@ export const PaymentTypeValueSet = {
     /**
      * The amount is an advance against future claims.
      */
-    payment_type_Advance: Coding.FromStrict({
+    payment_type_Advance: new Coding({
         code: "advance",
         display: "Advance",
         system: "http://terminology.hl7.org/CodeSystem/payment-type"
@@ -29,7 +29,7 @@ export const PaymentTypeValueSet = {
     /**
      * The amount is partial or complete settlement of the amounts due.
      */
-    payment_type_Payment: Coding.FromStrict({
+    payment_type_Payment: new Coding({
         code: "payment",
         display: "Payment",
         system: "http://terminology.hl7.org/CodeSystem/payment-type"

@@ -130,11 +130,11 @@ export declare class ImmunizationRecommendationRecommendationDateCriterion exten
     /**
      * Check if the current ImmunizationRecommendationRecommendationDateCriterion contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImmunizationRecommendationRecommendationDateCriterion from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImmunizationRecommendationRecommendationDateCriterion): ImmunizationRecommendationRecommendationDateCriterion;
+    static fromStrict(source: fhir.IImmunizationRecommendationRecommendationDateCriterion): ImmunizationRecommendationRecommendationDateCriterion;
 }
 /**
  * Vaccine administration recommendations.
@@ -209,11 +209,11 @@ export declare class ImmunizationRecommendationRecommendation extends fhir.Backb
     /**
      * Check if the current ImmunizationRecommendationRecommendation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImmunizationRecommendationRecommendation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImmunizationRecommendationRecommendation): ImmunizationRecommendationRecommendation;
+    static fromStrict(source: fhir.IImmunizationRecommendationRecommendation): ImmunizationRecommendationRecommendation;
 }
 /**
  * A patient's point-in-time set of recommendations (i.e. forecasting) according to a published schedule with optional supporting justification.
@@ -251,10 +251,10 @@ export declare class ImmunizationRecommendation extends fhir.DomainResource impl
     /**
      * Check if the current ImmunizationRecommendation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ImmunizationRecommendation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IImmunizationRecommendation): ImmunizationRecommendation;
+    static fromStrict(source: fhir.IImmunizationRecommendation): ImmunizationRecommendation;
 }
 //# sourceMappingURL=ImmunizationRecommendation.d.ts.map

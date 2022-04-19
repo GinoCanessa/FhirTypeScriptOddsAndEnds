@@ -115,18 +115,18 @@ export class SupplyDeliverySuppliedItem extends fhir.BackboneElement implements 
   /**
    * Check if the current SupplyDeliverySuppliedItem contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SupplyDeliverySuppliedItem from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISupplyDeliverySuppliedItem):SupplyDeliverySuppliedItem {
+  static override fromStrict(source:fhir.ISupplyDeliverySuppliedItem):SupplyDeliverySuppliedItem {
     var dest:SupplyDeliverySuppliedItem = new SupplyDeliverySuppliedItem(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SupplyDeliverySuppliedItem is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -219,18 +219,18 @@ export class SupplyDelivery extends fhir.DomainResource implements fhir.ISupplyD
   /**
    * Check if the current SupplyDelivery contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SupplyDelivery from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISupplyDelivery):SupplyDelivery {
+  static override fromStrict(source:fhir.ISupplyDelivery):SupplyDelivery {
     var dest:SupplyDelivery = new SupplyDelivery(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SupplyDelivery is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

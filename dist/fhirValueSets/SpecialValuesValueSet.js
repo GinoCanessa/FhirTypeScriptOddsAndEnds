@@ -13,7 +13,7 @@ export const SpecialValuesValueSet = {
     /**
      * Boolean false.
      */
-    special_values_False: Coding.FromStrict({
+    special_values_False: new Coding({
         code: "false",
         display: "false",
         system: "http://terminology.hl7.org/CodeSystem/special-values"
@@ -21,7 +21,7 @@ export const SpecialValuesValueSet = {
     /**
      * The are no known applicable values in this context.
      */
-    special_values_NilKnown: Coding.FromStrict({
+    special_values_NilKnown: new Coding({
         code: "nil-known",
         display: "Nil Known",
         system: "http://terminology.hl7.org/CodeSystem/special-values"
@@ -29,7 +29,7 @@ export const SpecialValuesValueSet = {
     /**
      * The specific quantity is not known, but is known to be non-zero and is not specified because it makes up the bulk of the material.
      */
-    special_values_SufficientQuantity: Coding.FromStrict({
+    special_values_SufficientQuantity: new Coding({
         code: "sufficient",
         display: "Sufficient Quantity",
         system: "http://terminology.hl7.org/CodeSystem/special-values"
@@ -37,7 +37,7 @@ export const SpecialValuesValueSet = {
     /**
      * The content is greater than zero, but too small to be quantified.
      */
-    special_values_TraceAmountDetected: Coding.FromStrict({
+    special_values_TraceAmountDetected: new Coding({
         code: "trace",
         display: "Trace Amount Detected",
         system: "http://terminology.hl7.org/CodeSystem/special-values"
@@ -45,7 +45,7 @@ export const SpecialValuesValueSet = {
     /**
      * Boolean true.
      */
-    special_values_True: Coding.FromStrict({
+    special_values_True: new Coding({
         code: "true",
         display: "true",
         system: "http://terminology.hl7.org/CodeSystem/special-values"
@@ -53,7 +53,7 @@ export const SpecialValuesValueSet = {
     /**
      * The value is no longer available.
      */
-    special_values_ValueWithdrawn: Coding.FromStrict({
+    special_values_ValueWithdrawn: new Coding({
         code: "withdrawn",
         display: "Value Withdrawn",
         system: "http://terminology.hl7.org/CodeSystem/special-values"

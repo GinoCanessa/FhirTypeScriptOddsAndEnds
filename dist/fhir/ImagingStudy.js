@@ -29,21 +29,21 @@ export class ImagingStudySeriesPerformer extends fhir.BackboneElement {
     /**
      * Check if the current ImagingStudySeriesPerformer contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["actor"] === undefined) {
             missingElements.push("actor");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ImagingStudySeriesPerformer from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ImagingStudySeriesPerformer(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ImagingStudySeriesPerformer is missing elements: ${missingElements.join(", ")}`;
         }
@@ -92,7 +92,7 @@ export class ImagingStudySeriesInstance extends fhir.BackboneElement {
     /**
      * Check if the current ImagingStudySeriesInstance contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["sopClass"] === undefined) {
             missingElements.push("sopClass");
@@ -100,16 +100,16 @@ export class ImagingStudySeriesInstance extends fhir.BackboneElement {
         if (this["uid"] === undefined) {
             missingElements.push("uid");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ImagingStudySeriesInstance from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ImagingStudySeriesInstance(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ImagingStudySeriesInstance is missing elements: ${missingElements.join(", ")}`;
         }
@@ -188,7 +188,7 @@ export class ImagingStudySeries extends fhir.BackboneElement {
     /**
      * Check if the current ImagingStudySeries contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["modality"] === undefined) {
             missingElements.push("modality");
@@ -196,16 +196,16 @@ export class ImagingStudySeries extends fhir.BackboneElement {
         if (this["uid"] === undefined) {
             missingElements.push("uid");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ImagingStudySeries from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ImagingStudySeries(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ImagingStudySeries is missing elements: ${missingElements.join(", ")}`;
         }
@@ -309,7 +309,7 @@ export class ImagingStudy extends fhir.DomainResource {
     /**
      * Check if the current ImagingStudy contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["status"] === undefined) {
             missingElements.push("status");
@@ -317,16 +317,16 @@ export class ImagingStudy extends fhir.DomainResource {
         if (this["subject"] === undefined) {
             missingElements.push("subject");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ImagingStudy from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ImagingStudy(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ImagingStudy is missing elements: ${missingElements.join(", ")}`;
         }

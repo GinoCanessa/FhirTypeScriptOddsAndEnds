@@ -155,11 +155,11 @@ export declare class ObservationDefinitionQuantitativeDetails extends fhir.Backb
     /**
      * Check if the current ObservationDefinitionQuantitativeDetails contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ObservationDefinitionQuantitativeDetails from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IObservationDefinitionQuantitativeDetails): ObservationDefinitionQuantitativeDetails;
+    static fromStrict(source: fhir.IObservationDefinitionQuantitativeDetails): ObservationDefinitionQuantitativeDetails;
 }
 /**
  * Multiple  ranges of results qualified by different contexts for ordinal or continuous observations conforming to this ObservationDefinition.
@@ -207,11 +207,11 @@ export declare class ObservationDefinitionQualifiedInterval extends fhir.Backbon
     /**
      * Check if the current ObservationDefinitionQualifiedInterval contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ObservationDefinitionQualifiedInterval from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IObservationDefinitionQualifiedInterval): ObservationDefinitionQualifiedInterval;
+    static fromStrict(source: fhir.IObservationDefinitionQualifiedInterval): ObservationDefinitionQualifiedInterval;
 }
 /**
  * Set of definitional characteristics for a kind of observation or measurement produced or consumed by an orderable health care service.
@@ -283,11 +283,11 @@ export declare class ObservationDefinition extends fhir.DomainResource implement
     /**
      * Check if the current ObservationDefinition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ObservationDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IObservationDefinition): ObservationDefinition;
+    static fromStrict(source: fhir.IObservationDefinition): ObservationDefinition;
 }
 /**
  * Code Values for the ObservationDefinition.qualifiedInterval.category field

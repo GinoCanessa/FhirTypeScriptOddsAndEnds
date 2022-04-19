@@ -44,16 +44,16 @@ export class FhirElement implements fhir.IFhirElement {
   /**
    * Check if the current FhirElement contains all required elements.
    */
-  CheckRequiredElements():string[] {
+  checkRequiredElements():string[] {
     var missingElements:string[] = [];
     return missingElements;
   }
   /**
    * Factory function to create a FhirElement from an object that MUST contain all required elements.
    */
-  static FromStrict(source:fhir.IFhirElement):FhirElement {
+  static fromStrict(source:fhir.IFhirElement):FhirElement {
     var dest:FhirElement = new FhirElement(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `FhirElement is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

@@ -53,21 +53,21 @@ export class AllergyIntoleranceReaction extends fhir.BackboneElement {
     /**
      * Check if the current AllergyIntoleranceReaction contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if ((!this["manifestation"]) || (this["manifestation"].length === 0)) {
             missingElements.push("manifestation");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a AllergyIntoleranceReaction from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new AllergyIntoleranceReaction(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `AllergyIntoleranceReaction is missing elements: ${missingElements.join(", ")}`;
         }
@@ -173,21 +173,21 @@ export class AllergyIntolerance extends fhir.DomainResource {
     /**
      * Check if the current AllergyIntolerance contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["patient"] === undefined) {
             missingElements.push("patient");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a AllergyIntolerance from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new AllergyIntolerance(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `AllergyIntolerance is missing elements: ${missingElements.join(", ")}`;
         }

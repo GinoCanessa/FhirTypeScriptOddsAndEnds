@@ -10,397 +10,397 @@ import { Coding } from '../fhir';
  * This is the code representing the type of organizational setting where the clinical encounter, service, interaction, or treatment occurred. The value set used for Healthcare Facility Type has been defined by HITSP to be the value set reproduced from HITSP C80 Table 2-147.
  */
 export const C80FacilitycodesValueSet = {
-    C80FacilitycodesValueSet_HospitalOutpatientDentalClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientDentalClinic: new Coding({
         code: "10206005",
         display: "Hospital outpatient dental clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_FreeStandingAmbulatorySurgeryFacility: Coding.FromStrict({
+    C80FacilitycodesValueSet_FreeStandingAmbulatorySurgeryFacility: new Coding({
         code: "10531005",
         display: "Free-standing ambulatory surgery facility",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_AmbulanceBasedCare: Coding.FromStrict({
+    C80FacilitycodesValueSet_AmbulanceBasedCare: new Coding({
         code: "11424001",
         display: "Ambulance-based care",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientMentalHealthCenter: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientMentalHealthCenter: new Coding({
         code: "14866005",
         display: "Hospital outpatient mental health center",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_FreeStandingRadiologyFacility: Coding.FromStrict({
+    C80FacilitycodesValueSet_FreeStandingRadiologyFacility: new Coding({
         code: "1773006",
         display: "Free-standing radiology facility",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientGeriatricHealthCenter: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientGeriatricHealthCenter: new Coding({
         code: "1814000",
         display: "Hospital outpatient geriatric health center",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_FeeForServicePrivatePhysiciansQuoteGroupOffice: Coding.FromStrict({
+    C80FacilitycodesValueSet_FeeForServicePrivatePhysiciansQuoteGroupOffice: new Coding({
         code: "19602009",
         display: "Fee-for-service private physicians' group office",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_SubstanceAbuseTreatmentCenter: Coding.FromStrict({
+    C80FacilitycodesValueSet_SubstanceAbuseTreatmentCenter: new Coding({
         code: "20078004",
         display: "Substance abuse treatment center",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalShip: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalShip: new Coding({
         code: "2081004",
         display: "Hospital ship",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalPrison: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalPrison: new Coding({
         code: "224687002",
         display: "Hospital-prison",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientGynecologyClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientGynecologyClinic: new Coding({
         code: "22549003",
         display: "Hospital outpatient gynecology clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalCommunity: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalCommunity: new Coding({
         code: "225732001",
         display: "Hospital-community",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientOtorhinolaryngologyClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientOtorhinolaryngologyClinic: new Coding({
         code: "23392004",
         display: "Hospital outpatient otorhinolaryngology clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_SexuallyTransmittedDiseaseHealthCenter: Coding.FromStrict({
+    C80FacilitycodesValueSet_SexuallyTransmittedDiseaseHealthCenter: new Coding({
         code: "25681007",
         display: "Sexually transmitted disease health center",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_SportsFacility: Coding.FromStrict({
+    C80FacilitycodesValueSet_SportsFacility: new Coding({
         code: "272501009",
         display: "Sports facility",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_ElderlyAssessmentClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_ElderlyAssessmentClinic: new Coding({
         code: "275576008",
         display: "Elderly assessment clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospiceFacility: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospiceFacility: new Coding({
         code: "284546000",
         display: "Hospice facility",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientInfectiousDiseaseClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientInfectiousDiseaseClinic: new Coding({
         code: "2849009",
         display: "Hospital outpatient infectious disease clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_PsychogeriatricDayHospital: Coding.FromStrict({
+    C80FacilitycodesValueSet_PsychogeriatricDayHospital: new Coding({
         code: "309898008",
         display: "Psychogeriatric day hospital",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_CareOfTheElderlyDayHospital: Coding.FromStrict({
+    C80FacilitycodesValueSet_CareOfTheElderlyDayHospital: new Coding({
         code: "309900005",
         display: "Care of the elderly day hospital",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_PrivateResidentialHome: Coding.FromStrict({
+    C80FacilitycodesValueSet_PrivateResidentialHome: new Coding({
         code: "310205006",
         display: "Private residential home",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientFamilyMedicineClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientFamilyMedicineClinic: new Coding({
         code: "31628002",
         display: "Hospital outpatient family medicine clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalLongTermCare: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalLongTermCare: new Coding({
         code: "32074000",
         display: "Hospital-long term care",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalBasedOutpatientClinicOrDepartmentOTHERNOTLISTED: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalBasedOutpatientClinicOrDepartmentOTHERNOTLISTED: new Coding({
         code: "33022008",
         display: "Hospital-based outpatient clinic or department--OTHER-NOT LISTED",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientRheumatologyClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientRheumatologyClinic: new Coding({
         code: "331006",
         display: "Hospital outpatient rheumatology clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_AmbulatoryCareSiteOTHERNOTLISTED: Coding.FromStrict({
+    C80FacilitycodesValueSet_AmbulatoryCareSiteOTHERNOTLISTED: new Coding({
         code: "35971002",
         display: "Ambulatory care site--OTHER--NOT LISTED",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientAllergyClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientAllergyClinic: new Coding({
         code: "360957003",
         display: "Hospital outpatient allergy clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientImmunologyClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientImmunologyClinic: new Coding({
         code: "360966004",
         display: "Hospital outpatient immunology clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalTraumaCenter: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalTraumaCenter: new Coding({
         code: "36125001",
         display: "Hospital-trauma center",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientPainClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientPainClinic: new Coding({
         code: "36293008",
         display: "Hospital outpatient pain clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientPediatricClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientPediatricClinic: new Coding({
         code: "3729002",
         display: "Hospital outpatient pediatric clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientRehabilitationClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientRehabilitationClinic: new Coding({
         code: "37546005",
         display: "Hospital outpatient rehabilitation clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientDermatologyClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientDermatologyClinic: new Coding({
         code: "37550003",
         display: "Hospital outpatient dermatology clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientNeurologyClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientNeurologyClinic: new Coding({
         code: "38238005",
         display: "Hospital outpatient neurology clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_PrivatePhysiciansQuoteGroupOffice: Coding.FromStrict({
+    C80FacilitycodesValueSet_PrivatePhysiciansQuoteGroupOffice: new Coding({
         code: "39350007",
         display: "Private physicians' group office",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_IndependentAmbulatoryCareProviderSiteOTHERNOTLISTED: Coding.FromStrict({
+    C80FacilitycodesValueSet_IndependentAmbulatoryCareProviderSiteOTHERNOTLISTED: new Coding({
         code: "394759007",
         display: "Independent ambulatory care provider site--OTHER--NOT LISTED",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HealthEncounterSiteNOTLISTED: Coding.FromStrict({
+    C80FacilitycodesValueSet_HealthEncounterSiteNOTLISTED: new Coding({
         code: "394777002",
         display: "Health encounter site--NOT LISTED",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_ResidentialSchoolInfirmary: Coding.FromStrict({
+    C80FacilitycodesValueSet_ResidentialSchoolInfirmary: new Coding({
         code: "39913001",
         display: "Residential school infirmary",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_AmbulatorySurgeryCenter: Coding.FromStrict({
+    C80FacilitycodesValueSet_AmbulatorySurgeryCenter: new Coding({
         code: "405607001",
         display: "Ambulatory surgery center",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_ContainedCasualtySetting: Coding.FromStrict({
+    C80FacilitycodesValueSet_ContainedCasualtySetting: new Coding({
         code: "409519008",
         display: "Contained casualty setting",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_AdultDayCareCenter: Coding.FromStrict({
+    C80FacilitycodesValueSet_AdultDayCareCenter: new Coding({
         code: "413456002",
         display: "Adult day care center",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_ChildDayCareCenter: Coding.FromStrict({
+    C80FacilitycodesValueSet_ChildDayCareCenter: new Coding({
         code: "413817003",
         display: "Child day care center",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_FreeStandingGeriatricHealthCenter: Coding.FromStrict({
+    C80FacilitycodesValueSet_FreeStandingGeriatricHealthCenter: new Coding({
         code: "41844007",
         display: "Free-standing geriatric health center",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_DialysisUnitHospital: Coding.FromStrict({
+    C80FacilitycodesValueSet_DialysisUnitHospital: new Coding({
         code: "418518002",
         display: "Dialysis unit--hospital",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_ResidentialInstitution: Coding.FromStrict({
+    C80FacilitycodesValueSet_ResidentialInstitution: new Coding({
         code: "419955002",
         display: "Residential institution",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_NursingHome: Coding.FromStrict({
+    C80FacilitycodesValueSet_NursingHome: new Coding({
         code: "42665001",
         display: "Nursing home",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalMilitaryField: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalMilitaryField: new Coding({
         code: "4322002",
         display: "Hospital-military field",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_SkilledNursingFacility: Coding.FromStrict({
+    C80FacilitycodesValueSet_SkilledNursingFacility: new Coding({
         code: "45618002",
         display: "Skilled nursing facility",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_FreeStandingLaboratoryFacility: Coding.FromStrict({
+    C80FacilitycodesValueSet_FreeStandingLaboratoryFacility: new Coding({
         code: "45899008",
         display: "Free-standing laboratory facility",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_VaccinationClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_VaccinationClinic: new Coding({
         code: "46224007",
         display: "Vaccination clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalVeteransQuoteAdministration: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalVeteransQuoteAdministration: new Coding({
         code: "48311003",
         display: "Hospital-Veterans' Administration",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientUrologyClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientUrologyClinic: new Coding({
         code: "50569004",
         display: "Hospital outpatient urology clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_FreeStandingMentalHealthCenter: Coding.FromStrict({
+    C80FacilitycodesValueSet_FreeStandingMentalHealthCenter: new Coding({
         code: "51563005",
         display: "Free-standing mental health center",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalBirthingCenter: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalBirthingCenter: new Coding({
         code: "52668009",
         display: "Hospital birthing center",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientPeripheralVascularClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientPeripheralVascularClinic: new Coding({
         code: "5584006",
         display: "Hospital outpatient peripheral vascular clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientObstetricalClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientObstetricalClinic: new Coding({
         code: "56189001",
         display: "Hospital outpatient obstetrical clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientHematologyClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientHematologyClinic: new Coding({
         code: "56293002",
         display: "Hospital outpatient hematology clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientRespiratoryDiseaseClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientRespiratoryDiseaseClinic: new Coding({
         code: "57159002",
         display: "Hospital outpatient respiratory disease clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientGastroenterologyClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientGastroenterologyClinic: new Coding({
         code: "58482006",
         display: "Hospital outpatient gastroenterology clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_TravelerQuoteSAidClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_TravelerQuoteSAidClinic: new Coding({
         code: "59374000",
         display: "Traveler's aid clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalPsychiatric: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalPsychiatric: new Coding({
         code: "62480006",
         display: "Hospital-psychiatric",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_LocalCommunityHealthCenter: Coding.FromStrict({
+    C80FacilitycodesValueSet_LocalCommunityHealthCenter: new Coding({
         code: "6827000",
         display: "Local community health center",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalAmbulatorySurgeryFacility: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalAmbulatorySurgeryFacility: new Coding({
         code: "69362002",
         display: "Hospital ambulatory surgery facility",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HealthMaintenanceOrganization: Coding.FromStrict({
+    C80FacilitycodesValueSet_HealthMaintenanceOrganization: new Coding({
         code: "72311000",
         display: "Health maintenance organization",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientEndocrinologyClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientEndocrinologyClinic: new Coding({
         code: "73644007",
         display: "Hospital outpatient endocrinology clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_EmergencyDepartmentHospital: Coding.FromStrict({
+    C80FacilitycodesValueSet_EmergencyDepartmentHospital: new Coding({
         code: "73770003",
         display: "Emergency department--hospital",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_RuralHealthCenter: Coding.FromStrict({
+    C80FacilitycodesValueSet_RuralHealthCenter: new Coding({
         code: "77931003",
         display: "Rural health center",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientOrthopedicsClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientOrthopedicsClinic: new Coding({
         code: "78001009",
         display: "Hospital outpatient orthopedics clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientOphthalmologyClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientOphthalmologyClinic: new Coding({
         code: "78088001",
         display: "Hospital outpatient ophthalmology clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalRadiologyFacility: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalRadiologyFacility: new Coding({
         code: "79491001",
         display: "Hospital radiology facility",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalGovernment: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalGovernment: new Coding({
         code: "79993009",
         display: "Hospital-government",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalRehabilitation: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalRehabilitation: new Coding({
         code: "80522000",
         display: "Hospital-rehabilitation",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_WalkInClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_WalkInClinic: new Coding({
         code: "81234003",
         display: "Walk-in clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalChildrenQuoteS: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalChildrenQuoteS: new Coding({
         code: "82242000",
         display: "Hospital-children's",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_SoloPracticePrivateOffice: Coding.FromStrict({
+    C80FacilitycodesValueSet_SoloPracticePrivateOffice: new Coding({
         code: "83891005",
         display: "Solo practice private office",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientOncologyClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientOncologyClinic: new Coding({
         code: "89972002",
         display: "Hospital outpatient oncology clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HelicopterBasedCare: Coding.FromStrict({
+    C80FacilitycodesValueSet_HelicopterBasedCare: new Coding({
         code: "901005",
         display: "Helicopter-based care",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_HospitalOutpatientGeneralSurgeryClinic: Coding.FromStrict({
+    C80FacilitycodesValueSet_HospitalOutpatientGeneralSurgeryClinic: new Coding({
         code: "90484001",
         display: "Hospital outpatient general surgery clinic",
         system: "http://snomed.info/sct"
     }),
-    C80FacilitycodesValueSet_FreeStandingBirthingCenter: Coding.FromStrict({
+    C80FacilitycodesValueSet_FreeStandingBirthingCenter: new Coding({
         code: "91154008",
         display: "Free-standing birthing center",
         system: "http://snomed.info/sct"

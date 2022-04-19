@@ -10,17 +10,17 @@ import { Coding } from '../fhir'
  * Type of alerts/updates the primary source can send
  */
 export const VerificationresultPushTypeAvailableValueSet = {
-  verificationresult_push_type_available_AnyChanges: Coding.FromStrict({
+  verificationresult_push_type_available_AnyChanges: new Coding({
     code: "any",
     display: "Any changes",
     system: "http://terminology.hl7.org/CodeSystem/push-type-available"
   }),
-  verificationresult_push_type_available_AsDefinedBySource: Coding.FromStrict({
+  verificationresult_push_type_available_AsDefinedBySource: new Coding({
     code: "source",
     display: "As defined by source",
     system: "http://terminology.hl7.org/CodeSystem/push-type-available"
   }),
-  verificationresult_push_type_available_SpecificRequestedChanges: Coding.FromStrict({
+  verificationresult_push_type_available_SpecificRequestedChanges: new Coding({
     code: "specific",
     display: "Specific requested changes",
     system: "http://terminology.hl7.org/CodeSystem/push-type-available"

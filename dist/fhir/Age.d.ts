@@ -14,10 +14,10 @@ export declare class Age extends fhir.Quantity implements fhir.IAge {
     /**
      * Check if the current Age contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Age from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IAge): Age;
+    static fromStrict(source: fhir.IAge): Age;
 }
 //# sourceMappingURL=Age.d.ts.map

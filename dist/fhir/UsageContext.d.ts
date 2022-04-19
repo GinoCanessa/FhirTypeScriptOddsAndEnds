@@ -55,10 +55,10 @@ export declare class UsageContext extends fhir.FhirElement implements fhir.IUsag
     /**
      * Check if the current UsageContext contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a UsageContext from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IUsageContext): UsageContext;
+    static fromStrict(source: fhir.IUsageContext): UsageContext;
 }
 //# sourceMappingURL=UsageContext.d.ts.map

@@ -65,11 +65,11 @@ export declare class Quantity extends fhir.FhirElement implements fhir.IQuantity
     /**
      * Check if the current Quantity contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Quantity from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IQuantity): Quantity;
+    static fromStrict(source: fhir.IQuantity): Quantity;
 }
 /**
  * Code Values for the Quantity.comparator field

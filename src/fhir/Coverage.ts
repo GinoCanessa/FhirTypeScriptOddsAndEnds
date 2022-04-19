@@ -179,20 +179,20 @@ export class CoverageClass extends fhir.BackboneElement implements fhir.ICoverag
   /**
    * Check if the current CoverageClass contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
     if (this["value"] === undefined) { missingElements.push("value"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CoverageClass from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICoverageClass):CoverageClass {
+  static override fromStrict(source:fhir.ICoverageClass):CoverageClass {
     var dest:CoverageClass = new CoverageClass(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CoverageClass is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -222,19 +222,19 @@ export class CoverageCostToBeneficiaryException extends fhir.BackboneElement imp
   /**
    * Check if the current CoverageCostToBeneficiaryException contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CoverageCostToBeneficiaryException from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICoverageCostToBeneficiaryException):CoverageCostToBeneficiaryException {
+  static override fromStrict(source:fhir.ICoverageCostToBeneficiaryException):CoverageCostToBeneficiaryException {
     var dest:CoverageCostToBeneficiaryException = new CoverageCostToBeneficiaryException(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CoverageCostToBeneficiaryException is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -272,18 +272,18 @@ export class CoverageCostToBeneficiary extends fhir.BackboneElement implements f
   /**
    * Check if the current CoverageCostToBeneficiary contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CoverageCostToBeneficiary from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICoverageCostToBeneficiary):CoverageCostToBeneficiary {
+  static override fromStrict(source:fhir.ICoverageCostToBeneficiary):CoverageCostToBeneficiary {
     var dest:CoverageCostToBeneficiary = new CoverageCostToBeneficiary(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CoverageCostToBeneficiary is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -410,21 +410,21 @@ export class Coverage extends fhir.DomainResource implements fhir.ICoverage {
   /**
    * Check if the current Coverage contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["beneficiary"] === undefined) { missingElements.push("beneficiary"); }
     if ((!this["payor"]) || (this["payor"].length === 0)) { missingElements.push("payor"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Coverage from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICoverage):Coverage {
+  static override fromStrict(source:fhir.ICoverage):Coverage {
     var dest:Coverage = new Coverage(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Coverage is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

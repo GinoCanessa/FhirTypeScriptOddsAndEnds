@@ -49,7 +49,7 @@ export class MedicinalProductManufactured extends fhir.DomainResource {
     /**
      * Check if the current MedicinalProductManufactured contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["manufacturedDoseForm"] === undefined) {
             missingElements.push("manufacturedDoseForm");
@@ -57,16 +57,16 @@ export class MedicinalProductManufactured extends fhir.DomainResource {
         if (this["quantity"] === undefined) {
             missingElements.push("quantity");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductManufactured from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductManufactured(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductManufactured is missing elements: ${missingElements.join(", ")}`;
         }

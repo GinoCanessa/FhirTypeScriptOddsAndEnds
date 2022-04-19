@@ -13,7 +13,7 @@ export const ServiceUsclsValueSet = {
     /**
      * Exam, comp, primary
      */
-    service_uscls_ExamCompPrimary: Coding.FromStrict({
+    service_uscls_ExamCompPrimary: new Coding({
         code: "1101",
         display: "Exam, comp, primary",
         system: "http://terminology.hl7.org/CodeSystem/ex-USCLS"
@@ -21,7 +21,7 @@ export const ServiceUsclsValueSet = {
     /**
      * Exam, comp, mixed
      */
-    service_uscls_ExamCompMixed: Coding.FromStrict({
+    service_uscls_ExamCompMixed: new Coding({
         code: "1102",
         display: "Exam, comp, mixed",
         system: "http://terminology.hl7.org/CodeSystem/ex-USCLS"
@@ -29,7 +29,7 @@ export const ServiceUsclsValueSet = {
     /**
      * Exam, comp, permanent
      */
-    service_uscls_ExamCompPermanent: Coding.FromStrict({
+    service_uscls_ExamCompPermanent: new Coding({
         code: "1103",
         display: "Exam, comp, permanent",
         system: "http://terminology.hl7.org/CodeSystem/ex-USCLS"
@@ -37,7 +37,7 @@ export const ServiceUsclsValueSet = {
     /**
      * Polishing, 1 unit
      */
-    service_uscls_Polishing1Unit: Coding.FromStrict({
+    service_uscls_Polishing1Unit: new Coding({
         code: "11101",
         display: "Polishing, 1 unit",
         system: "http://terminology.hl7.org/CodeSystem/ex-USCLS"
@@ -45,7 +45,7 @@ export const ServiceUsclsValueSet = {
     /**
      * Polishing, 2 unit
      */
-    service_uscls_Polishing2Unit: Coding.FromStrict({
+    service_uscls_Polishing2Unit: new Coding({
         code: "11102",
         display: "Polishing, 2 unit",
         system: "http://terminology.hl7.org/CodeSystem/ex-USCLS"
@@ -53,7 +53,7 @@ export const ServiceUsclsValueSet = {
     /**
      * Polishing, 3 unit
      */
-    service_uscls_Polishing3Unit: Coding.FromStrict({
+    service_uscls_Polishing3Unit: new Coding({
         code: "11103",
         display: "Polishing, 3 unit",
         system: "http://terminology.hl7.org/CodeSystem/ex-USCLS"
@@ -61,7 +61,7 @@ export const ServiceUsclsValueSet = {
     /**
      * Polishing, 4 unit
      */
-    service_uscls_Polishing4Unit: Coding.FromStrict({
+    service_uscls_Polishing4Unit: new Coding({
         code: "11104",
         display: "Polishing, 4 unit",
         system: "http://terminology.hl7.org/CodeSystem/ex-USCLS"
@@ -69,7 +69,7 @@ export const ServiceUsclsValueSet = {
     /**
      * Exam, recall
      */
-    service_uscls_ExamRecall: Coding.FromStrict({
+    service_uscls_ExamRecall: new Coding({
         code: "1201",
         display: "Exam, recall",
         system: "http://terminology.hl7.org/CodeSystem/ex-USCLS"
@@ -77,7 +77,7 @@ export const ServiceUsclsValueSet = {
     /**
      * Exam, emergency
      */
-    service_uscls_ExamEmergency: Coding.FromStrict({
+    service_uscls_ExamEmergency: new Coding({
         code: "1205",
         display: "Exam, emergency",
         system: "http://terminology.hl7.org/CodeSystem/ex-USCLS"
@@ -85,7 +85,7 @@ export const ServiceUsclsValueSet = {
     /**
      * Radiograph, series (12)
      */
-    service_uscls_RadiographSeries12: Coding.FromStrict({
+    service_uscls_RadiographSeries12: new Coding({
         code: "2101",
         display: "Radiograph, series (12)",
         system: "http://terminology.hl7.org/CodeSystem/ex-USCLS"
@@ -93,7 +93,7 @@ export const ServiceUsclsValueSet = {
     /**
      * Radiograph, series (16)
      */
-    service_uscls_RadiographSeries16: Coding.FromStrict({
+    service_uscls_RadiographSeries16: new Coding({
         code: "2102",
         display: "Radiograph, series (16)",
         system: "http://terminology.hl7.org/CodeSystem/ex-USCLS"
@@ -101,7 +101,7 @@ export const ServiceUsclsValueSet = {
     /**
      * Amalgam, 1 surface
      */
-    service_uscls_Amalgam1Surface: Coding.FromStrict({
+    service_uscls_Amalgam1Surface: new Coding({
         code: "21211",
         display: "Amalgam, 1 surface",
         system: "http://terminology.hl7.org/CodeSystem/ex-USCLS"
@@ -109,7 +109,7 @@ export const ServiceUsclsValueSet = {
     /**
      * Amalgam, 2 surface
      */
-    service_uscls_Amalgam2Surface: Coding.FromStrict({
+    service_uscls_Amalgam2Surface: new Coding({
         code: "21212",
         display: "Amalgam, 2 surface",
         system: "http://terminology.hl7.org/CodeSystem/ex-USCLS"
@@ -117,7 +117,7 @@ export const ServiceUsclsValueSet = {
     /**
      * Radiograph, bitewing
      */
-    service_uscls_RadiographBitewing: Coding.FromStrict({
+    service_uscls_RadiographBitewing: new Coding({
         code: "2141",
         display: "Radiograph, bitewing",
         system: "http://terminology.hl7.org/CodeSystem/ex-USCLS"
@@ -125,7 +125,7 @@ export const ServiceUsclsValueSet = {
     /**
      * Radiograph, panoramic
      */
-    service_uscls_RadiographPanoramic: Coding.FromStrict({
+    service_uscls_RadiographPanoramic: new Coding({
         code: "2601",
         display: "Radiograph, panoramic",
         system: "http://terminology.hl7.org/CodeSystem/ex-USCLS"
@@ -133,7 +133,7 @@ export const ServiceUsclsValueSet = {
     /**
      * Crown, PFM
      */
-    service_uscls_CrownPFM: Coding.FromStrict({
+    service_uscls_CrownPFM: new Coding({
         code: "27211",
         display: "Crown, PFM",
         system: "http://terminology.hl7.org/CodeSystem/ex-USCLS"
@@ -141,7 +141,7 @@ export const ServiceUsclsValueSet = {
     /**
      * Maryland Bridge
      */
-    service_uscls_MarylandBridge: Coding.FromStrict({
+    service_uscls_MarylandBridge: new Coding({
         code: "67211",
         display: "Maryland Bridge",
         system: "http://terminology.hl7.org/CodeSystem/ex-USCLS"
@@ -149,7 +149,7 @@ export const ServiceUsclsValueSet = {
     /**
      * Lab, commercial
      */
-    service_uscls_LabCommercial: Coding.FromStrict({
+    service_uscls_LabCommercial: new Coding({
         code: "99111",
         display: "Lab, commercial",
         system: "http://terminology.hl7.org/CodeSystem/ex-USCLS"
@@ -157,7 +157,7 @@ export const ServiceUsclsValueSet = {
     /**
      * Lab, in office
      */
-    service_uscls_LabInOffice: Coding.FromStrict({
+    service_uscls_LabInOffice: new Coding({
         code: "99333",
         display: "Lab, in office",
         system: "http://terminology.hl7.org/CodeSystem/ex-USCLS"
@@ -165,7 +165,7 @@ export const ServiceUsclsValueSet = {
     /**
      * Expense
      */
-    service_uscls_Expense: Coding.FromStrict({
+    service_uscls_Expense: new Coding({
         code: "99555",
         display: "Expense",
         system: "http://terminology.hl7.org/CodeSystem/ex-USCLS"

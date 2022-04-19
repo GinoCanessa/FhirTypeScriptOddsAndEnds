@@ -13,7 +13,7 @@ export const ExposureStateValueSet = {
     /**
      * used when the results by exposure is describing the results for the primary exposure of interest.
      */
-    exposure_state_Exposure: Coding.FromStrict({
+    exposure_state_Exposure: new Coding({
         code: "exposure",
         display: "Exposure",
         system: "http://hl7.org/fhir/exposure-state"
@@ -21,7 +21,7 @@ export const ExposureStateValueSet = {
     /**
      * used when the results by exposure is describing the results for the alternative exposure state, control state or comparator state.
      */
-    exposure_state_ExposureAlternative: Coding.FromStrict({
+    exposure_state_ExposureAlternative: new Coding({
         code: "exposure-alternative",
         display: "Exposure Alternative",
         system: "http://hl7.org/fhir/exposure-state"

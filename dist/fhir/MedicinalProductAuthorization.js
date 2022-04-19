@@ -34,18 +34,18 @@ export class MedicinalProductAuthorizationJurisdictionalAuthorization extends fh
     /**
      * Check if the current MedicinalProductAuthorizationJurisdictionalAuthorization contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductAuthorizationJurisdictionalAuthorization from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductAuthorizationJurisdictionalAuthorization(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductAuthorizationJurisdictionalAuthorization is missing elements: ${missingElements.join(", ")}`;
         }
@@ -87,21 +87,21 @@ export class MedicinalProductAuthorizationProcedure extends fhir.BackboneElement
     /**
      * Check if the current MedicinalProductAuthorizationProcedure contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductAuthorizationProcedure from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductAuthorizationProcedure(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductAuthorizationProcedure is missing elements: ${missingElements.join(", ")}`;
         }
@@ -182,18 +182,18 @@ export class MedicinalProductAuthorization extends fhir.DomainResource {
     /**
      * Check if the current MedicinalProductAuthorization contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductAuthorization from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductAuthorization(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductAuthorization is missing elements: ${missingElements.join(", ")}`;
         }

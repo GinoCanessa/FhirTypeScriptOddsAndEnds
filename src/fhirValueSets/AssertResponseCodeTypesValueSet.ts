@@ -13,7 +13,7 @@ export const AssertResponseCodeTypesValueSet = {
   /**
    * Response code is 400.
    */
-  assert_response_code_types_Bad: Coding.FromStrict({
+  assert_response_code_types_Bad: new Coding({
     code: "bad",
     display: "bad",
     system: "http://hl7.org/fhir/assert-response-code-types"
@@ -21,7 +21,7 @@ export const AssertResponseCodeTypesValueSet = {
   /**
    * Response code is 409.
    */
-  assert_response_code_types_Conflict: Coding.FromStrict({
+  assert_response_code_types_Conflict: new Coding({
     code: "conflict",
     display: "conflict",
     system: "http://hl7.org/fhir/assert-response-code-types"
@@ -29,7 +29,7 @@ export const AssertResponseCodeTypesValueSet = {
   /**
    * Response code is 201.
    */
-  assert_response_code_types_Created: Coding.FromStrict({
+  assert_response_code_types_Created: new Coding({
     code: "created",
     display: "created",
     system: "http://hl7.org/fhir/assert-response-code-types"
@@ -37,7 +37,7 @@ export const AssertResponseCodeTypesValueSet = {
   /**
    * Response code is 403.
    */
-  assert_response_code_types_Forbidden: Coding.FromStrict({
+  assert_response_code_types_Forbidden: new Coding({
     code: "forbidden",
     display: "forbidden",
     system: "http://hl7.org/fhir/assert-response-code-types"
@@ -45,7 +45,7 @@ export const AssertResponseCodeTypesValueSet = {
   /**
    * Response code is 410.
    */
-  assert_response_code_types_Gone: Coding.FromStrict({
+  assert_response_code_types_Gone: new Coding({
     code: "gone",
     display: "gone",
     system: "http://hl7.org/fhir/assert-response-code-types"
@@ -53,7 +53,7 @@ export const AssertResponseCodeTypesValueSet = {
   /**
    * Response code is 405.
    */
-  assert_response_code_types_MethodNotAllowed: Coding.FromStrict({
+  assert_response_code_types_MethodNotAllowed: new Coding({
     code: "methodNotAllowed",
     display: "methodNotAllowed",
     system: "http://hl7.org/fhir/assert-response-code-types"
@@ -61,7 +61,7 @@ export const AssertResponseCodeTypesValueSet = {
   /**
    * Response code is 204.
    */
-  assert_response_code_types_NoContent: Coding.FromStrict({
+  assert_response_code_types_NoContent: new Coding({
     code: "noContent",
     display: "noContent",
     system: "http://hl7.org/fhir/assert-response-code-types"
@@ -69,7 +69,7 @@ export const AssertResponseCodeTypesValueSet = {
   /**
    * Response code is 404.
    */
-  assert_response_code_types_NotFound: Coding.FromStrict({
+  assert_response_code_types_NotFound: new Coding({
     code: "notFound",
     display: "notFound",
     system: "http://hl7.org/fhir/assert-response-code-types"
@@ -77,7 +77,7 @@ export const AssertResponseCodeTypesValueSet = {
   /**
    * Response code is 304.
    */
-  assert_response_code_types_NotModified: Coding.FromStrict({
+  assert_response_code_types_NotModified: new Coding({
     code: "notModified",
     display: "notModified",
     system: "http://hl7.org/fhir/assert-response-code-types"
@@ -85,7 +85,7 @@ export const AssertResponseCodeTypesValueSet = {
   /**
    * Response code is 200.
    */
-  assert_response_code_types_Okay: Coding.FromStrict({
+  assert_response_code_types_Okay: new Coding({
     code: "okay",
     display: "okay",
     system: "http://hl7.org/fhir/assert-response-code-types"
@@ -93,7 +93,7 @@ export const AssertResponseCodeTypesValueSet = {
   /**
    * Response code is 412.
    */
-  assert_response_code_types_PreconditionFailed: Coding.FromStrict({
+  assert_response_code_types_PreconditionFailed: new Coding({
     code: "preconditionFailed",
     display: "preconditionFailed",
     system: "http://hl7.org/fhir/assert-response-code-types"
@@ -101,7 +101,7 @@ export const AssertResponseCodeTypesValueSet = {
   /**
    * Response code is 422.
    */
-  assert_response_code_types_Unprocessable: Coding.FromStrict({
+  assert_response_code_types_Unprocessable: new Coding({
     code: "unprocessable",
     display: "unprocessable",
     system: "http://hl7.org/fhir/assert-response-code-types"

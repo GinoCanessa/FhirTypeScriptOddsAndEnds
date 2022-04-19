@@ -292,20 +292,20 @@ export class ConceptMapGroupElementTargetDependsOn extends fhir.BackboneElement 
   /**
    * Check if the current ConceptMapGroupElementTargetDependsOn contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["property"] === undefined) { missingElements.push("property"); }
     if (this["value"] === undefined) { missingElements.push("value"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ConceptMapGroupElementTargetDependsOn from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IConceptMapGroupElementTargetDependsOn):ConceptMapGroupElementTargetDependsOn {
+  static override fromStrict(source:fhir.IConceptMapGroupElementTargetDependsOn):ConceptMapGroupElementTargetDependsOn {
     var dest:ConceptMapGroupElementTargetDependsOn = new ConceptMapGroupElementTargetDependsOn(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ConceptMapGroupElementTargetDependsOn is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -363,19 +363,19 @@ export class ConceptMapGroupElementTarget extends fhir.BackboneElement implement
   /**
    * Check if the current ConceptMapGroupElementTarget contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["equivalence"] === undefined) { missingElements.push("equivalence"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ConceptMapGroupElementTarget from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IConceptMapGroupElementTarget):ConceptMapGroupElementTarget {
+  static override fromStrict(source:fhir.IConceptMapGroupElementTarget):ConceptMapGroupElementTarget {
     var dest:ConceptMapGroupElementTarget = new ConceptMapGroupElementTarget(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ConceptMapGroupElementTarget is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -412,18 +412,18 @@ export class ConceptMapGroupElement extends fhir.BackboneElement implements fhir
   /**
    * Check if the current ConceptMapGroupElement contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ConceptMapGroupElement from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IConceptMapGroupElement):ConceptMapGroupElement {
+  static override fromStrict(source:fhir.IConceptMapGroupElement):ConceptMapGroupElement {
     var dest:ConceptMapGroupElement = new ConceptMapGroupElement(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ConceptMapGroupElement is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -471,19 +471,19 @@ export class ConceptMapGroupUnmapped extends fhir.BackboneElement implements fhi
   /**
    * Check if the current ConceptMapGroupUnmapped contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["mode"] === undefined) { missingElements.push("mode"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ConceptMapGroupUnmapped from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IConceptMapGroupUnmapped):ConceptMapGroupUnmapped {
+  static override fromStrict(source:fhir.IConceptMapGroupUnmapped):ConceptMapGroupUnmapped {
     var dest:ConceptMapGroupUnmapped = new ConceptMapGroupUnmapped(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ConceptMapGroupUnmapped is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -541,19 +541,19 @@ export class ConceptMapGroup extends fhir.BackboneElement implements fhir.IConce
   /**
    * Check if the current ConceptMapGroup contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["element"]) || (this["element"].length === 0)) { missingElements.push("element"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ConceptMapGroup from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IConceptMapGroup):ConceptMapGroup {
+  static override fromStrict(source:fhir.IConceptMapGroup):ConceptMapGroup {
     var dest:ConceptMapGroup = new ConceptMapGroup(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ConceptMapGroup is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -710,19 +710,19 @@ export class ConceptMap extends fhir.DomainResource implements fhir.IConceptMap 
   /**
    * Check if the current ConceptMap contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ConceptMap from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IConceptMap):ConceptMap {
+  static override fromStrict(source:fhir.IConceptMap):ConceptMap {
     var dest:ConceptMap = new ConceptMap(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ConceptMap is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

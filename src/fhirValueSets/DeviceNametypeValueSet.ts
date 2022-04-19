@@ -13,7 +13,7 @@ export const DeviceNametypeValueSet = {
   /**
    * Manufacturer name.
    */
-  device_nametype_ManufacturerName: Coding.FromStrict({
+  device_nametype_ManufacturerName: new Coding({
     code: "manufacturer-name",
     display: "Manufacturer name",
     system: "http://hl7.org/fhir/device-nametype"
@@ -21,7 +21,7 @@ export const DeviceNametypeValueSet = {
   /**
    * Model name.
    */
-  device_nametype_ModelName: Coding.FromStrict({
+  device_nametype_ModelName: new Coding({
     code: "model-name",
     display: "Model name",
     system: "http://hl7.org/fhir/device-nametype"
@@ -29,7 +29,7 @@ export const DeviceNametypeValueSet = {
   /**
    * other.
    */
-  device_nametype_Other: Coding.FromStrict({
+  device_nametype_Other: new Coding({
     code: "other",
     display: "other",
     system: "http://hl7.org/fhir/device-nametype"
@@ -37,7 +37,7 @@ export const DeviceNametypeValueSet = {
   /**
    * Patient Reported name.
    */
-  device_nametype_PatientReportedName: Coding.FromStrict({
+  device_nametype_PatientReportedName: new Coding({
     code: "patient-reported-name",
     display: "Patient Reported name",
     system: "http://hl7.org/fhir/device-nametype"
@@ -45,7 +45,7 @@ export const DeviceNametypeValueSet = {
   /**
    * UDI Label name.
    */
-  device_nametype_UDILabelName: Coding.FromStrict({
+  device_nametype_UDILabelName: new Coding({
     code: "udi-label-name",
     display: "UDI Label name",
     system: "http://hl7.org/fhir/device-nametype"
@@ -53,7 +53,7 @@ export const DeviceNametypeValueSet = {
   /**
    * User Friendly name.
    */
-  device_nametype_UserFriendlyName: Coding.FromStrict({
+  device_nametype_UserFriendlyName: new Coding({
     code: "user-friendly-name",
     display: "User Friendly name",
     system: "http://hl7.org/fhir/device-nametype"

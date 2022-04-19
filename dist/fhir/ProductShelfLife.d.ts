@@ -47,10 +47,10 @@ export declare class ProductShelfLife extends fhir.BackboneElement implements fh
     /**
      * Check if the current ProductShelfLife contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ProductShelfLife from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IProductShelfLife): ProductShelfLife;
+    static fromStrict(source: fhir.IProductShelfLife): ProductShelfLife;
 }
 //# sourceMappingURL=ProductShelfLife.d.ts.map

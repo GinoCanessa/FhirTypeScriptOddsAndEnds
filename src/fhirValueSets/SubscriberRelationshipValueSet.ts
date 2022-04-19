@@ -13,7 +13,7 @@ export const SubscriberRelationshipValueSet = {
   /**
    * The Beneficiary is a child of the Subscriber
    */
-  subscriber_relationship_Child: Coding.FromStrict({
+  subscriber_relationship_Child: new Coding({
     code: "child",
     display: "Child",
     system: "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
@@ -21,7 +21,7 @@ export const SubscriberRelationshipValueSet = {
   /**
    * The Beneficiary is a common law spouse or equivalent of the Subscriber
    */
-  subscriber_relationship_CommonLawSpouse: Coding.FromStrict({
+  subscriber_relationship_CommonLawSpouse: new Coding({
     code: "common",
     display: "Common Law Spouse",
     system: "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
@@ -29,7 +29,7 @@ export const SubscriberRelationshipValueSet = {
   /**
    * The Beneficiary is covered under insurance of the subscriber due to an injury.
    */
-  subscriber_relationship_InjuredParty: Coding.FromStrict({
+  subscriber_relationship_InjuredParty: new Coding({
     code: "injured",
     display: "Injured Party",
     system: "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
@@ -37,7 +37,7 @@ export const SubscriberRelationshipValueSet = {
   /**
    * The Beneficiary has some other relationship the Subscriber
    */
-  subscriber_relationship_Other: Coding.FromStrict({
+  subscriber_relationship_Other: new Coding({
     code: "other",
     display: "Other",
     system: "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
@@ -45,7 +45,7 @@ export const SubscriberRelationshipValueSet = {
   /**
    * The Beneficiary is a parent of the Subscriber
    */
-  subscriber_relationship_Parent: Coding.FromStrict({
+  subscriber_relationship_Parent: new Coding({
     code: "parent",
     display: "Parent",
     system: "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
@@ -53,7 +53,7 @@ export const SubscriberRelationshipValueSet = {
   /**
    * The Beneficiary is the Subscriber
    */
-  subscriber_relationship_Self: Coding.FromStrict({
+  subscriber_relationship_Self: new Coding({
     code: "self",
     display: "Self",
     system: "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
@@ -61,7 +61,7 @@ export const SubscriberRelationshipValueSet = {
   /**
    * The Beneficiary is a spouse or equivalent of the Subscriber
    */
-  subscriber_relationship_Spouse: Coding.FromStrict({
+  subscriber_relationship_Spouse: new Coding({
     code: "spouse",
     display: "Spouse",
     system: "http://terminology.hl7.org/CodeSystem/subscriber-relationship"

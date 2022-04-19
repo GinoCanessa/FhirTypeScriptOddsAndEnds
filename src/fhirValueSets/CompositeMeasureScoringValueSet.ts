@@ -13,7 +13,7 @@ export const CompositeMeasureScoringValueSet = {
   /**
    * All-or-nothing scoring includes an individual in the numerator of the composite measure if they are in the numerators of all of the component measures in which they are in the denominator.
    */
-  composite_measure_scoring_AllOrNothing: Coding.FromStrict({
+  composite_measure_scoring_AllOrNothing: new Coding({
     code: "all-or-nothing",
     display: "All-or-nothing",
     system: "http://terminology.hl7.org/CodeSystem/composite-measure-scoring"
@@ -21,7 +21,7 @@ export const CompositeMeasureScoringValueSet = {
   /**
    * Linear scoring gives an individual a score based on the number of numerators in which they appear.
    */
-  composite_measure_scoring_Linear: Coding.FromStrict({
+  composite_measure_scoring_Linear: new Coding({
     code: "linear",
     display: "Linear",
     system: "http://terminology.hl7.org/CodeSystem/composite-measure-scoring"
@@ -29,7 +29,7 @@ export const CompositeMeasureScoringValueSet = {
   /**
    * Opportunity scoring combines the scores from component measures by combining the numerators and denominators for each component.
    */
-  composite_measure_scoring_Opportunity: Coding.FromStrict({
+  composite_measure_scoring_Opportunity: new Coding({
     code: "opportunity",
     display: "Opportunity",
     system: "http://terminology.hl7.org/CodeSystem/composite-measure-scoring"
@@ -37,7 +37,7 @@ export const CompositeMeasureScoringValueSet = {
   /**
    * Weighted scoring gives an individual a score based on a weighted factor for each component numerator in which they appear.
    */
-  composite_measure_scoring_Weighted: Coding.FromStrict({
+  composite_measure_scoring_Weighted: new Coding({
     code: "weighted",
     display: "Weighted",
     system: "http://terminology.hl7.org/CodeSystem/composite-measure-scoring"

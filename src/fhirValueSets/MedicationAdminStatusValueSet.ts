@@ -13,7 +13,7 @@ export const MedicationAdminStatusValueSet = {
   /**
    * The administration has started but has not yet completed.
    */
-  medication_admin_status_InProgress: Coding.FromStrict({
+  medication_admin_status_InProgress: new Coding({
     code: "in-progress",
     display: "In Progress",
     system: "http://terminology.hl7.org/CodeSystem/medication-admin-status"
@@ -21,7 +21,7 @@ export const MedicationAdminStatusValueSet = {
   /**
    * The administration was terminated prior to any impact on the subject (though preparatory actions may have been taken)
    */
-  medication_admin_status_NotDone: Coding.FromStrict({
+  medication_admin_status_NotDone: new Coding({
     code: "not-done",
     display: "Not Done",
     system: "http://terminology.hl7.org/CodeSystem/medication-admin-status"
@@ -29,7 +29,7 @@ export const MedicationAdminStatusValueSet = {
   /**
    * Actions implied by the administration have been temporarily halted, but are expected to continue later. May also be called 'suspended'.
    */
-  medication_admin_status_OnHold: Coding.FromStrict({
+  medication_admin_status_OnHold: new Coding({
     code: "on-hold",
     display: "On Hold",
     system: "http://terminology.hl7.org/CodeSystem/medication-admin-status"
@@ -37,7 +37,7 @@ export const MedicationAdminStatusValueSet = {
   /**
    * Actions implied by the administration have been permanently halted, before all of them occurred.
    */
-  medication_admin_status_Stopped: Coding.FromStrict({
+  medication_admin_status_Stopped: new Coding({
     code: "stopped",
     display: "Stopped",
     system: "http://terminology.hl7.org/CodeSystem/medication-admin-status"
@@ -45,7 +45,7 @@ export const MedicationAdminStatusValueSet = {
   /**
    * The authoring system does not know which of the status values currently applies for this request. Note: This concept is not to be used for 'other' - one of the listed statuses is presumed to apply, it's just not known which one.
    */
-  medication_admin_status_Unknown: Coding.FromStrict({
+  medication_admin_status_Unknown: new Coding({
     code: "unknown",
     display: "Unknown",
     system: "http://terminology.hl7.org/CodeSystem/medication-admin-status"

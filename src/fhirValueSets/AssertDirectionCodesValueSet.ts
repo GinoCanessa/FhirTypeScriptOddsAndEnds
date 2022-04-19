@@ -13,7 +13,7 @@ export const AssertDirectionCodesValueSet = {
   /**
    * The assertion is evaluated on the request.
    */
-  assert_direction_codes_Request: Coding.FromStrict({
+  assert_direction_codes_Request: new Coding({
     code: "request",
     display: "request",
     system: "http://hl7.org/fhir/assert-direction-codes"
@@ -21,7 +21,7 @@ export const AssertDirectionCodesValueSet = {
   /**
    * The assertion is evaluated on the response. This is the default value.
    */
-  assert_direction_codes_Response: Coding.FromStrict({
+  assert_direction_codes_Response: new Coding({
     code: "response",
     display: "response",
     system: "http://hl7.org/fhir/assert-direction-codes"

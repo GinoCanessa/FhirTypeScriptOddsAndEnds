@@ -91,10 +91,10 @@ export declare class BodyStructure extends fhir.DomainResource implements fhir.I
     /**
      * Check if the current BodyStructure contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a BodyStructure from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IBodyStructure): BodyStructure;
+    static fromStrict(source: fhir.IBodyStructure): BodyStructure;
 }
 //# sourceMappingURL=BodyStructure.d.ts.map

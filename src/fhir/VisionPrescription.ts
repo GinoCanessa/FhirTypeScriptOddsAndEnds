@@ -168,20 +168,20 @@ export class VisionPrescriptionLensSpecificationPrism extends fhir.BackboneEleme
   /**
    * Check if the current VisionPrescriptionLensSpecificationPrism contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["amount"] === undefined) { missingElements.push("amount"); }
     if (this["base"] === undefined) { missingElements.push("base"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a VisionPrescriptionLensSpecificationPrism from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IVisionPrescriptionLensSpecificationPrism):VisionPrescriptionLensSpecificationPrism {
+  static override fromStrict(source:fhir.IVisionPrescriptionLensSpecificationPrism):VisionPrescriptionLensSpecificationPrism {
     var dest:VisionPrescriptionLensSpecificationPrism = new VisionPrescriptionLensSpecificationPrism(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `VisionPrescriptionLensSpecificationPrism is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -294,20 +294,20 @@ export class VisionPrescriptionLensSpecification extends fhir.BackboneElement im
   /**
    * Check if the current VisionPrescriptionLensSpecification contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["eye"] === undefined) { missingElements.push("eye"); }
     if (this["product"] === undefined) { missingElements.push("product"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a VisionPrescriptionLensSpecification from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IVisionPrescriptionLensSpecification):VisionPrescriptionLensSpecification {
+  static override fromStrict(source:fhir.IVisionPrescriptionLensSpecification):VisionPrescriptionLensSpecification {
     var dest:VisionPrescriptionLensSpecification = new VisionPrescriptionLensSpecification(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `VisionPrescriptionLensSpecification is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -388,7 +388,7 @@ export class VisionPrescription extends fhir.DomainResource implements fhir.IVis
   /**
    * Check if the current VisionPrescription contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["created"] === undefined) { missingElements.push("created"); }
     if (this["dateWritten"] === undefined) { missingElements.push("dateWritten"); }
@@ -396,16 +396,16 @@ export class VisionPrescription extends fhir.DomainResource implements fhir.IVis
     if (this["patient"] === undefined) { missingElements.push("patient"); }
     if (this["prescriber"] === undefined) { missingElements.push("prescriber"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a VisionPrescription from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IVisionPrescription):VisionPrescription {
+  static override fromStrict(source:fhir.IVisionPrescription):VisionPrescription {
     var dest:VisionPrescription = new VisionPrescription(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `VisionPrescription is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

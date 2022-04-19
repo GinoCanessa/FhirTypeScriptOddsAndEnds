@@ -13,7 +13,7 @@ export const DeviceStatusReasonValueSet = {
   /**
    * The device hardware is disconnected.
    */
-  device_status_reason_HardwareDisconnected: Coding.FromStrict({
+  device_status_reason_HardwareDisconnected: new Coding({
     code: "hw-discon",
     display: "Hardware Disconnected",
     system: "http://terminology.hl7.org/CodeSystem/device-status-reason"
@@ -21,7 +21,7 @@ export const DeviceStatusReasonValueSet = {
   /**
    * The device is not ready.
    */
-  device_status_reason_NotReady: Coding.FromStrict({
+  device_status_reason_NotReady: new Coding({
     code: "not-ready",
     display: "Not Ready",
     system: "http://terminology.hl7.org/CodeSystem/device-status-reason"
@@ -29,7 +29,7 @@ export const DeviceStatusReasonValueSet = {
   /**
    * The device is off.
    */
-  device_status_reason_Off: Coding.FromStrict({
+  device_status_reason_Off: new Coding({
     code: "off",
     display: "Off",
     system: "http://terminology.hl7.org/CodeSystem/device-status-reason"
@@ -37,7 +37,7 @@ export const DeviceStatusReasonValueSet = {
   /**
    * The device is offline.
    */
-  device_status_reason_Offline: Coding.FromStrict({
+  device_status_reason_Offline: new Coding({
     code: "offline",
     display: "Offline",
     system: "http://terminology.hl7.org/CodeSystem/device-status-reason"
@@ -45,7 +45,7 @@ export const DeviceStatusReasonValueSet = {
   /**
    * The device is off.
    */
-  device_status_reason_Online: Coding.FromStrict({
+  device_status_reason_Online: new Coding({
     code: "online",
     display: "Online",
     system: "http://terminology.hl7.org/CodeSystem/device-status-reason"
@@ -53,7 +53,7 @@ export const DeviceStatusReasonValueSet = {
   /**
    * The device is paused.
    */
-  device_status_reason_Paused: Coding.FromStrict({
+  device_status_reason_Paused: new Coding({
     code: "paused",
     display: "Paused",
     system: "http://terminology.hl7.org/CodeSystem/device-status-reason"
@@ -61,7 +61,7 @@ export const DeviceStatusReasonValueSet = {
   /**
    * The device is ready but not actively operating.
    */
-  device_status_reason_Standby: Coding.FromStrict({
+  device_status_reason_Standby: new Coding({
     code: "standby",
     display: "Standby",
     system: "http://terminology.hl7.org/CodeSystem/device-status-reason"
@@ -69,7 +69,7 @@ export const DeviceStatusReasonValueSet = {
   /**
    * The device transducer is disconnected.
    */
-  device_status_reason_TransducerDisconnected: Coding.FromStrict({
+  device_status_reason_TransducerDisconnected: new Coding({
     code: "transduc-discon",
     display: "Transducer Disconnected",
     system: "http://terminology.hl7.org/CodeSystem/device-status-reason"

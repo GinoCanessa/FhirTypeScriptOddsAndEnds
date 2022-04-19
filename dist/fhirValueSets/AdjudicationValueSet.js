@@ -13,7 +13,7 @@ export const AdjudicationValueSet = {
     /**
      * Amount payable under the coverage
      */
-    adjudication_BenefitAmount: Coding.FromStrict({
+    adjudication_BenefitAmount: new Coding({
         code: "benefit",
         display: "Benefit Amount",
         system: "http://terminology.hl7.org/CodeSystem/adjudication"
@@ -21,7 +21,7 @@ export const AdjudicationValueSet = {
     /**
      * Patient Co-Payment
      */
-    adjudication_CoPay: Coding.FromStrict({
+    adjudication_CoPay: new Coding({
         code: "copay",
         display: "CoPay",
         system: "http://terminology.hl7.org/CodeSystem/adjudication"
@@ -29,7 +29,7 @@ export const AdjudicationValueSet = {
     /**
      * Amount deducted from the eligible amount prior to adjudication.
      */
-    adjudication_Deductible: Coding.FromStrict({
+    adjudication_Deductible: new Coding({
         code: "deductible",
         display: "Deductible",
         system: "http://terminology.hl7.org/CodeSystem/adjudication"
@@ -37,7 +37,7 @@ export const AdjudicationValueSet = {
     /**
      * Amount of the change which is considered for adjudication.
      */
-    adjudication_EligibleAmount: Coding.FromStrict({
+    adjudication_EligibleAmount: new Coding({
         code: "eligible",
         display: "Eligible Amount",
         system: "http://terminology.hl7.org/CodeSystem/adjudication"
@@ -45,7 +45,7 @@ export const AdjudicationValueSet = {
     /**
      * Eligible Percentage.
      */
-    adjudication_EligiblePercent: Coding.FromStrict({
+    adjudication_EligiblePercent: new Coding({
         code: "eligpercent",
         display: "Eligible %",
         system: "http://terminology.hl7.org/CodeSystem/adjudication"
@@ -53,7 +53,7 @@ export const AdjudicationValueSet = {
     /**
      * The total submitted amount for the claim or group or line item.
      */
-    adjudication_SubmittedAmount: Coding.FromStrict({
+    adjudication_SubmittedAmount: new Coding({
         code: "submitted",
         display: "Submitted Amount",
         system: "http://terminology.hl7.org/CodeSystem/adjudication"
@@ -61,7 +61,7 @@ export const AdjudicationValueSet = {
     /**
      * The amount of tax.
      */
-    adjudication_Tax: Coding.FromStrict({
+    adjudication_Tax: new Coding({
         code: "tax",
         display: "Tax",
         system: "http://terminology.hl7.org/CodeSystem/adjudication"
@@ -69,7 +69,7 @@ export const AdjudicationValueSet = {
     /**
      * The amount of deductible which could not allocated to other line items.
      */
-    adjudication_UnallocatedDeductible: Coding.FromStrict({
+    adjudication_UnallocatedDeductible: new Coding({
         code: "unallocdeduct",
         display: "Unallocated Deductible",
         system: "http://terminology.hl7.org/CodeSystem/adjudication"

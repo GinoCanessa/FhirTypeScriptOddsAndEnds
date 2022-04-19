@@ -13,7 +13,7 @@ export const AddressUseValueSet = {
     /**
      * An address to be used to send bills, invoices, receipts etc.
      */
-    address_use_Billing: Coding.FromStrict({
+    address_use_Billing: new Coding({
         code: "billing",
         display: "Billing",
         system: "http://hl7.org/fhir/address-use"
@@ -21,7 +21,7 @@ export const AddressUseValueSet = {
     /**
      * A communication address at a home.
      */
-    address_use_Home: Coding.FromStrict({
+    address_use_Home: new Coding({
         code: "home",
         display: "Home",
         system: "http://hl7.org/fhir/address-use"
@@ -29,7 +29,7 @@ export const AddressUseValueSet = {
     /**
      * This address is no longer in use (or was never correct but retained for records).
      */
-    address_use_OldIncorrect: Coding.FromStrict({
+    address_use_OldIncorrect: new Coding({
         code: "old",
         display: "Old / Incorrect",
         system: "http://hl7.org/fhir/address-use"
@@ -37,7 +37,7 @@ export const AddressUseValueSet = {
     /**
      * A temporary address. The period can provide more detailed information.
      */
-    address_use_Temporary: Coding.FromStrict({
+    address_use_Temporary: new Coding({
         code: "temp",
         display: "Temporary",
         system: "http://hl7.org/fhir/address-use"
@@ -45,7 +45,7 @@ export const AddressUseValueSet = {
     /**
      * An office address. First choice for business related contacts during business hours.
      */
-    address_use_Work: Coding.FromStrict({
+    address_use_Work: new Coding({
         code: "work",
         display: "Work",
         system: "http://hl7.org/fhir/address-use"

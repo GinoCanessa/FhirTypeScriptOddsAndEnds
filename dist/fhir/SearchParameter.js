@@ -39,7 +39,7 @@ export class SearchParameterComponent extends fhir.BackboneElement {
     /**
      * Check if the current SearchParameterComponent contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["definition"] === undefined) {
             missingElements.push("definition");
@@ -47,16 +47,16 @@ export class SearchParameterComponent extends fhir.BackboneElement {
         if (this["expression"] === undefined) {
             missingElements.push("expression");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SearchParameterComponent from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SearchParameterComponent(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SearchParameterComponent is missing elements: ${missingElements.join(", ")}`;
         }
@@ -249,7 +249,7 @@ export class SearchParameter extends fhir.DomainResource {
     /**
      * Check if the current SearchParameter contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if ((!this["base"]) || (this["base"].length === 0)) {
             missingElements.push("base");
@@ -272,16 +272,16 @@ export class SearchParameter extends fhir.DomainResource {
         if (this["url"] === undefined) {
             missingElements.push("url");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SearchParameter from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SearchParameter(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SearchParameter is missing elements: ${missingElements.join(", ")}`;
         }

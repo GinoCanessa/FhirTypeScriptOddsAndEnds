@@ -13,7 +13,7 @@ export const ParticipationstatusValueSet = {
     /**
      * The participant has accepted the appointment.
      */
-    participationstatus_Accepted: Coding.FromStrict({
+    participationstatus_Accepted: new Coding({
         code: "accepted",
         display: "Accepted",
         system: "http://hl7.org/fhir/participationstatus"
@@ -21,7 +21,7 @@ export const ParticipationstatusValueSet = {
     /**
      * The participant has declined the appointment and will not participate in the appointment.
      */
-    participationstatus_Declined: Coding.FromStrict({
+    participationstatus_Declined: new Coding({
         code: "declined",
         display: "Declined",
         system: "http://hl7.org/fhir/participationstatus"
@@ -29,7 +29,7 @@ export const ParticipationstatusValueSet = {
     /**
      * The participant needs to indicate if they accept the appointment by changing this status to one of the other statuses.
      */
-    participationstatus_NeedsAction: Coding.FromStrict({
+    participationstatus_NeedsAction: new Coding({
         code: "needs-action",
         display: "Needs Action",
         system: "http://hl7.org/fhir/participationstatus"
@@ -37,7 +37,7 @@ export const ParticipationstatusValueSet = {
     /**
      * The participant has  tentatively accepted the appointment. This could be automatically created by a system and requires further processing before it can be accepted. There is no commitment that attendance will occur.
      */
-    participationstatus_Tentative: Coding.FromStrict({
+    participationstatus_Tentative: new Coding({
         code: "tentative",
         display: "Tentative",
         system: "http://hl7.org/fhir/participationstatus"

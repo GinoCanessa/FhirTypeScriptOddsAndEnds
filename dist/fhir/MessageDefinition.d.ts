@@ -199,11 +199,11 @@ export declare class MessageDefinitionFocus extends fhir.BackboneElement impleme
     /**
      * Check if the current MessageDefinitionFocus contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MessageDefinitionFocus from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMessageDefinitionFocus): MessageDefinitionFocus;
+    static fromStrict(source: fhir.IMessageDefinitionFocus): MessageDefinitionFocus;
 }
 /**
  * This indicates an application level response to "close" a transaction implicit in a particular request message.  To define a complete workflow scenario, look to the [[PlanDefinition]] resource which allows the definition of complex orchestrations, conditionality, etc.
@@ -226,11 +226,11 @@ export declare class MessageDefinitionAllowedResponse extends fhir.BackboneEleme
     /**
      * Check if the current MessageDefinitionAllowedResponse contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MessageDefinitionAllowedResponse from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMessageDefinitionAllowedResponse): MessageDefinitionAllowedResponse;
+    static fromStrict(source: fhir.IMessageDefinitionAllowedResponse): MessageDefinitionAllowedResponse;
 }
 /**
  * Defines the characteristics of a message that can be shared between systems, including the type of event that initiates the message, the content to be transmitted and what response(s), if any, are permitted.
@@ -367,11 +367,11 @@ export declare class MessageDefinition extends fhir.DomainResource implements fh
     /**
      * Check if the current MessageDefinition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MessageDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMessageDefinition): MessageDefinition;
+    static fromStrict(source: fhir.IMessageDefinition): MessageDefinition;
 }
 /**
  * Code Values for the MessageDefinition.category field

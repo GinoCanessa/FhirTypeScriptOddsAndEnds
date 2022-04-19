@@ -13,7 +13,7 @@ export const ServiceProvisionConditionsValueSet = {
   /**
    * Fees apply for this service.
    */
-  service_provision_conditions_FeesApply: Coding.FromStrict({
+  service_provision_conditions_FeesApply: new Coding({
     code: "cost",
     display: "Fees apply",
     system: "http://terminology.hl7.org/CodeSystem/service-provision-conditions"
@@ -21,7 +21,7 @@ export const ServiceProvisionConditionsValueSet = {
   /**
    * There are discounts available on this service for qualifying patients.
    */
-  service_provision_conditions_DiscountsAvailable: Coding.FromStrict({
+  service_provision_conditions_DiscountsAvailable: new Coding({
     code: "disc",
     display: "Discounts Available",
     system: "http://terminology.hl7.org/CodeSystem/service-provision-conditions"
@@ -29,7 +29,7 @@ export const ServiceProvisionConditionsValueSet = {
   /**
    * This service is available for no patient cost.
    */
-  service_provision_conditions_Free: Coding.FromStrict({
+  service_provision_conditions_Free: new Coding({
     code: "free",
     display: "Free",
     system: "http://terminology.hl7.org/CodeSystem/service-provision-conditions"

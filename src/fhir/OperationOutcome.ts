@@ -110,20 +110,20 @@ export class OperationOutcomeIssue extends fhir.BackboneElement implements fhir.
   /**
    * Check if the current OperationOutcomeIssue contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
     if (this["severity"] === undefined) { missingElements.push("severity"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a OperationOutcomeIssue from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IOperationOutcomeIssue):OperationOutcomeIssue {
+  static override fromStrict(source:fhir.IOperationOutcomeIssue):OperationOutcomeIssue {
     var dest:OperationOutcomeIssue = new OperationOutcomeIssue(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `OperationOutcomeIssue is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -153,19 +153,19 @@ export class OperationOutcome extends fhir.DomainResource implements fhir.IOpera
   /**
    * Check if the current OperationOutcome contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["issue"]) || (this["issue"].length === 0)) { missingElements.push("issue"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a OperationOutcome from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IOperationOutcome):OperationOutcome {
+  static override fromStrict(source:fhir.IOperationOutcome):OperationOutcome {
     var dest:OperationOutcome = new OperationOutcome(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `OperationOutcome is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

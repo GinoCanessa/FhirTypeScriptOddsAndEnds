@@ -304,11 +304,11 @@ export declare class ObservationReferenceRange extends fhir.BackboneElement impl
     /**
      * Check if the current ObservationReferenceRange contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ObservationReferenceRange from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IObservationReferenceRange): ObservationReferenceRange;
+    static fromStrict(source: fhir.IObservationReferenceRange): ObservationReferenceRange;
 }
 /**
  * For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below.
@@ -387,11 +387,11 @@ export declare class ObservationComponent extends fhir.BackboneElement implement
     /**
      * Check if the current ObservationComponent contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ObservationComponent from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IObservationComponent): ObservationComponent;
+    static fromStrict(source: fhir.IObservationComponent): ObservationComponent;
 }
 /**
  * Measurements and simple assertions made about a patient, device or other subject.
@@ -567,11 +567,11 @@ export declare class Observation extends fhir.DomainResource implements fhir.IOb
     /**
      * Check if the current Observation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Observation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IObservation): Observation;
+    static fromStrict(source: fhir.IObservation): Observation;
 }
 /**
  * Code Values for the Observation.status field

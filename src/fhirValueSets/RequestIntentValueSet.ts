@@ -13,7 +13,7 @@ export const RequestIntentValueSet = {
   /**
    * The request represents a legally binding instruction authored by a Patient or RelatedPerson.
    */
-  request_intent_Directive: Coding.FromStrict({
+  request_intent_Directive: new Coding({
     code: "directive",
     display: "Directive",
     system: "http://hl7.org/fhir/request-intent"
@@ -21,7 +21,7 @@ export const RequestIntentValueSet = {
   /**
    * The request represents the view of an authorization instantiated by a fulfilling system representing the details of the fulfiller's intention to act upon a submitted order.
    */
-  request_intent_FillerOrder: Coding.FromStrict({
+  request_intent_FillerOrder: new Coding({
     code: "filler-order",
     display: "Filler Order",
     system: "http://hl7.org/fhir/request-intent"
@@ -29,7 +29,7 @@ export const RequestIntentValueSet = {
   /**
    * An order created in fulfillment of a broader order that represents the authorization for a single activity occurrence.  E.g. The administration of a single dose of a drug.
    */
-  request_intent_InstanceOrder: Coding.FromStrict({
+  request_intent_InstanceOrder: new Coding({
     code: "instance-order",
     display: "Instance Order",
     system: "http://hl7.org/fhir/request-intent"
@@ -37,7 +37,7 @@ export const RequestIntentValueSet = {
   /**
    * The request represents an original authorization for action.
    */
-  request_intent_OriginalOrder: Coding.FromStrict({
+  request_intent_OriginalOrder: new Coding({
     code: "original-order",
     display: "Original Order",
     system: "http://hl7.org/fhir/request-intent"
@@ -45,7 +45,7 @@ export const RequestIntentValueSet = {
   /**
    * The request represents an automatically generated supplemental authorization for action based on a parent authorization together with initial results of the action taken against that parent authorization.
    */
-  request_intent_ReflexOrder: Coding.FromStrict({
+  request_intent_ReflexOrder: new Coding({
     code: "reflex-order",
     display: "Reflex Order",
     system: "http://hl7.org/fhir/request-intent"

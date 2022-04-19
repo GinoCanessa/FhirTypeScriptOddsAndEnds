@@ -13,7 +13,7 @@ export const ReferencerangeMeaningValueSet = {
     /**
      * Endocrine related states that change the expected value.
      */
-    referencerange_meaning_Endocrine: Coding.FromStrict({
+    referencerange_meaning_Endocrine: new Coding({
         code: "endocrine",
         display: "Endocrine",
         system: "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
@@ -21,7 +21,7 @@ export const ReferencerangeMeaningValueSet = {
     /**
      * An expected range in an individual during the follicular stage of the cycle.
      */
-    referencerange_meaning_FollicularStage: Coding.FromStrict({
+    referencerange_meaning_FollicularStage: new Coding({
         code: "follicular",
         display: "Follicular Stage",
         system: "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
@@ -29,7 +29,7 @@ export const ReferencerangeMeaningValueSet = {
     /**
      * An expected range in an individual during the luteal stage of the cycle.
      */
-    referencerange_meaning_Luteal: Coding.FromStrict({
+    referencerange_meaning_Luteal: new Coding({
         code: "luteal",
         display: "Luteal",
         system: "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
@@ -37,7 +37,7 @@ export const ReferencerangeMeaningValueSet = {
     /**
      * An expected range in an individual during the midcycle stage of the cycle.
      */
-    referencerange_meaning_MidCycle: Coding.FromStrict({
+    referencerange_meaning_MidCycle: new Coding({
         code: "midcycle",
         display: "MidCycle",
         system: "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
@@ -45,7 +45,7 @@ export const ReferencerangeMeaningValueSet = {
     /**
      * Values expected for a normal member of the relevant control population being measured. Typically each results producer such as a laboratory has specific normal ranges and they are usually defined as within two standard deviations from the mean and account for 95.45% of this population.
      */
-    referencerange_meaning_NormalRange: Coding.FromStrict({
+    referencerange_meaning_NormalRange: new Coding({
         code: "normal",
         display: "Normal Range",
         system: "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
@@ -53,7 +53,7 @@ export const ReferencerangeMeaningValueSet = {
     /**
      * The optimal range for best therapeutic outcomes for a specimen taken immediately after administration.
      */
-    referencerange_meaning_PostTherapeuticDesiredLevel: Coding.FromStrict({
+    referencerange_meaning_PostTherapeuticDesiredLevel: new Coding({
         code: "post",
         display: "Post Therapeutic Desired Level",
         system: "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
@@ -61,7 +61,7 @@ export const ReferencerangeMeaningValueSet = {
     /**
      * An expected range in an individual post-menopause.
      */
-    referencerange_meaning_PostMenopause: Coding.FromStrict({
+    referencerange_meaning_PostMenopause: new Coding({
         code: "postmenopausal",
         display: "Post-Menopause",
         system: "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
@@ -69,7 +69,7 @@ export const ReferencerangeMeaningValueSet = {
     /**
      * The optimal range for best therapeutic outcomes for a specimen taken immediately before administration.
      */
-    referencerange_meaning_PreTherapeuticDesiredLevel: Coding.FromStrict({
+    referencerange_meaning_PreTherapeuticDesiredLevel: new Coding({
         code: "pre",
         display: "Pre Therapeutic Desired Level",
         system: "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
@@ -77,7 +77,7 @@ export const ReferencerangeMeaningValueSet = {
     /**
      * An expected range in an individual prior to puberty.
      */
-    referencerange_meaning_PrePuberty: Coding.FromStrict({
+    referencerange_meaning_PrePuberty: new Coding({
         code: "pre-puberty",
         display: "Pre-Puberty",
         system: "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
@@ -85,7 +85,7 @@ export const ReferencerangeMeaningValueSet = {
     /**
      * The range that is recommended by a relevant professional body.
      */
-    referencerange_meaning_RecommendedRange: Coding.FromStrict({
+    referencerange_meaning_RecommendedRange: new Coding({
         code: "recommended",
         display: "Recommended Range",
         system: "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
@@ -93,7 +93,7 @@ export const ReferencerangeMeaningValueSet = {
     /**
      * The optimal range for best therapeutic outcomes.
      */
-    referencerange_meaning_TherapeuticDesiredLevel: Coding.FromStrict({
+    referencerange_meaning_TherapeuticDesiredLevel: new Coding({
         code: "therapeutic",
         display: "Therapeutic Desired Level",
         system: "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
@@ -101,7 +101,7 @@ export const ReferencerangeMeaningValueSet = {
     /**
      * The range at which treatment would/should be considered.
      */
-    referencerange_meaning_TreatmentRange: Coding.FromStrict({
+    referencerange_meaning_TreatmentRange: new Coding({
         code: "treatment",
         display: "Treatment Range",
         system: "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
@@ -109,7 +109,7 @@ export const ReferencerangeMeaningValueSet = {
     /**
      * General types of reference range.
      */
-    referencerange_meaning_Type: Coding.FromStrict({
+    referencerange_meaning_Type: new Coding({
         code: "type",
         display: "Type",
         system: "http://terminology.hl7.org/CodeSystem/referencerange-meaning"

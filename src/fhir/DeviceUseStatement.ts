@@ -185,21 +185,21 @@ export class DeviceUseStatement extends fhir.DomainResource implements fhir.IDev
   /**
    * Check if the current DeviceUseStatement contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["device"] === undefined) { missingElements.push("device"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["subject"] === undefined) { missingElements.push("subject"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DeviceUseStatement from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDeviceUseStatement):DeviceUseStatement {
+  static override fromStrict(source:fhir.IDeviceUseStatement):DeviceUseStatement {
     var dest:DeviceUseStatement = new DeviceUseStatement(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DeviceUseStatement is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

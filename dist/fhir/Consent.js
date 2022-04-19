@@ -31,18 +31,18 @@ export class ConsentPolicy extends fhir.BackboneElement {
     /**
      * Check if the current ConsentPolicy contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ConsentPolicy from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ConsentPolicy(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ConsentPolicy is missing elements: ${missingElements.join(", ")}`;
         }
@@ -81,21 +81,21 @@ export class ConsentVerification extends fhir.BackboneElement {
     /**
      * Check if the current ConsentVerification contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["verified"] === undefined) {
             missingElements.push("verified");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ConsentVerification from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ConsentVerification(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ConsentVerification is missing elements: ${missingElements.join(", ")}`;
         }
@@ -129,7 +129,7 @@ export class ConsentProvisionActor extends fhir.BackboneElement {
     /**
      * Check if the current ConsentProvisionActor contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["reference"] === undefined) {
             missingElements.push("reference");
@@ -137,16 +137,16 @@ export class ConsentProvisionActor extends fhir.BackboneElement {
         if (this["role"] === undefined) {
             missingElements.push("role");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ConsentProvisionActor from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ConsentProvisionActor(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ConsentProvisionActor is missing elements: ${missingElements.join(", ")}`;
         }
@@ -183,7 +183,7 @@ export class ConsentProvisionData extends fhir.BackboneElement {
     /**
      * Check if the current ConsentProvisionData contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["meaning"] === undefined) {
             missingElements.push("meaning");
@@ -191,16 +191,16 @@ export class ConsentProvisionData extends fhir.BackboneElement {
         if (this["reference"] === undefined) {
             missingElements.push("reference");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ConsentProvisionData from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ConsentProvisionData(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ConsentProvisionData is missing elements: ${missingElements.join(", ")}`;
         }
@@ -256,18 +256,18 @@ export class ConsentProvision extends fhir.BackboneElement {
     /**
      * Check if the current ConsentProvision contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ConsentProvision from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ConsentProvision(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ConsentProvision is missing elements: ${missingElements.join(", ")}`;
         }
@@ -348,7 +348,7 @@ export class Consent extends fhir.DomainResource {
     /**
      * Check if the current Consent contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if ((!this["category"]) || (this["category"].length === 0)) {
             missingElements.push("category");
@@ -359,16 +359,16 @@ export class Consent extends fhir.DomainResource {
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a Consent from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new Consent(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `Consent is missing elements: ${missingElements.join(", ")}`;
         }

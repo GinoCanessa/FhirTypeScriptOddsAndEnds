@@ -162,11 +162,11 @@ export declare class MedicationAdministrationPerformer extends fhir.BackboneElem
     /**
      * Check if the current MedicationAdministrationPerformer contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationAdministrationPerformer from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationAdministrationPerformer): MedicationAdministrationPerformer;
+    static fromStrict(source: fhir.IMedicationAdministrationPerformer): MedicationAdministrationPerformer;
 }
 /**
  * Describes the medication dosage information details e.g. dose, rate, site, route, etc.
@@ -209,11 +209,11 @@ export declare class MedicationAdministrationDosage extends fhir.BackboneElement
     /**
      * Check if the current MedicationAdministrationDosage contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationAdministrationDosage from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationAdministrationDosage): MedicationAdministrationDosage;
+    static fromStrict(source: fhir.IMedicationAdministrationDosage): MedicationAdministrationDosage;
 }
 /**
  * Describes the event of a patient consuming or otherwise being administered a medication.  This may be as simple as swallowing a tablet or it may be a long running infusion.  Related resources tie this event to the authorizing prescription, and the specific encounter between patient and health care practitioner.
@@ -317,11 +317,11 @@ export declare class MedicationAdministration extends fhir.DomainResource implem
     /**
      * Check if the current MedicationAdministration contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicationAdministration from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicationAdministration): MedicationAdministration;
+    static fromStrict(source: fhir.IMedicationAdministration): MedicationAdministration;
 }
 /**
  * Code Values for the MedicationAdministration.status field

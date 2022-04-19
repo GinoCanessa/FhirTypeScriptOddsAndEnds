@@ -13,7 +13,7 @@ export const QuestionnaireEnableOperatorValueSet = {
     /**
      * True if whether at least no answer has a value that is equal to the enableWhen answer.
      */
-    questionnaire_enable_operator_NotEquals: Coding.FromStrict({
+    questionnaire_enable_operator_NotEquals: new Coding({
         code: "!=",
         display: "Not Equals",
         system: "http://hl7.org/fhir/questionnaire-enable-operator"
@@ -21,7 +21,7 @@ export const QuestionnaireEnableOperatorValueSet = {
     /**
      * True if whether at least no answer has a value that is less than the enableWhen answer.
      */
-    questionnaire_enable_operator_LessThan: Coding.FromStrict({
+    questionnaire_enable_operator_LessThan: new Coding({
         code: "<",
         display: "Less Than",
         system: "http://hl7.org/fhir/questionnaire-enable-operator"
@@ -29,7 +29,7 @@ export const QuestionnaireEnableOperatorValueSet = {
     /**
      * True if whether at least no answer has a value that is less or equal to the enableWhen answer.
      */
-    questionnaire_enable_operator_LessOrEquals: Coding.FromStrict({
+    questionnaire_enable_operator_LessOrEquals: new Coding({
         code: "<=",
         display: "Less or Equals",
         system: "http://hl7.org/fhir/questionnaire-enable-operator"
@@ -37,7 +37,7 @@ export const QuestionnaireEnableOperatorValueSet = {
     /**
      * True if whether at least one answer has a value that is equal to the enableWhen answer.
      */
-    questionnaire_enable_operator_Equals: Coding.FromStrict({
+    questionnaire_enable_operator_Equals: new Coding({
         code: "=",
         display: "Equals",
         system: "http://hl7.org/fhir/questionnaire-enable-operator"
@@ -45,7 +45,7 @@ export const QuestionnaireEnableOperatorValueSet = {
     /**
      * True if whether at least no answer has a value that is greater than the enableWhen answer.
      */
-    questionnaire_enable_operator_GreaterThan: Coding.FromStrict({
+    questionnaire_enable_operator_GreaterThan: new Coding({
         code: ">",
         display: "Greater Than",
         system: "http://hl7.org/fhir/questionnaire-enable-operator"
@@ -53,7 +53,7 @@ export const QuestionnaireEnableOperatorValueSet = {
     /**
      * True if whether at least no answer has a value that is greater or equal to the enableWhen answer.
      */
-    questionnaire_enable_operator_GreaterOrEquals: Coding.FromStrict({
+    questionnaire_enable_operator_GreaterOrEquals: new Coding({
         code: ">=",
         display: "Greater or Equals",
         system: "http://hl7.org/fhir/questionnaire-enable-operator"
@@ -61,7 +61,7 @@ export const QuestionnaireEnableOperatorValueSet = {
     /**
      * True if whether an answer exists is equal to the enableWhen answer (which must be a boolean).
      */
-    questionnaire_enable_operator_Exists: Coding.FromStrict({
+    questionnaire_enable_operator_Exists: new Coding({
         code: "exists",
         display: "Exists",
         system: "http://hl7.org/fhir/questionnaire-enable-operator"

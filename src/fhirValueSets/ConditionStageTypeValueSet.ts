@@ -10,5012 +10,5012 @@ import { Coding } from '../fhir'
  * Example value set for the type of stages of cancer and other conditions
  */
 export const ConditionStageTypeValueSet = {
-  ConditionStageTypeValueSet_GleasonQuoteSMicroscopicProstaticCarcinomaGradingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_GleasonQuoteSMicroscopicProstaticCarcinomaGradingSystem: new Coding({
     code: "106241006",
     display: "Gleason's microscopic prostatic carcinoma grading system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WalterReedStagingOfProstaticCancer: Coding.FromStrict({
+  ConditionStageTypeValueSet_WalterReedStagingOfProstaticCancer: new Coding({
     code: "106242004",
     display: "Walter Reed staging of prostatic cancer",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FIGOStagingSystemForEndometrialCarcinoma: Coding.FromStrict({
+  ConditionStageTypeValueSet_FIGOStagingSystemForEndometrialCarcinoma: new Coding({
     code: "106244003",
     display: "FIGO staging system for endometrial carcinoma",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FIGOVulvaTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_FIGOVulvaTumorStaging: new Coding({
     code: "106245002",
     display: "FIGO Vulva tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FIGOStagingSystemForVulvarMelanoma: Coding.FromStrict({
+  ConditionStageTypeValueSet_FIGOStagingSystemForVulvarMelanoma: new Coding({
     code: "106246001",
     display: "FIGO staging system for vulvar melanoma",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FIGOStagingSystemForEpithelialTumorOfOvary: Coding.FromStrict({
+  ConditionStageTypeValueSet_FIGOStagingSystemForEpithelialTumorOfOvary: new Coding({
     code: "106247005",
     display: "FIGO staging system for epithelial tumor of ovary",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FIGOCervicalTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_FIGOCervicalTumorStaging: new Coding({
     code: "106250008",
     display: "FIGO Cervical tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LymphomaStagingDescriptors: Coding.FromStrict({
+  ConditionStageTypeValueSet_LymphomaStagingDescriptors: new Coding({
     code: "106252000",
     display: "Lymphoma staging descriptors",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OverlappingTumor: Coding.FromStrict({
+  ConditionStageTypeValueSet_OverlappingTumor: new Coding({
     code: "110375007",
     display: "Overlapping tumor",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CanadianCardiovascularSocietyClassificationOfAngina: Coding.FromStrict({
+  ConditionStageTypeValueSet_CanadianCardiovascularSocietyClassificationOfAngina: new Coding({
     code: "134438001",
     display: "Canadian Cardiovascular Society classification of angina",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CardiovascularLimitationsAndSymptomsProfileAnginaScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_CardiovascularLimitationsAndSymptomsProfileAnginaScore: new Coding({
     code: "135831005",
     display: "Cardiovascular Limitations and Symptoms Profile angina score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CardiovascularLimitationsAndSymptomsProfileAnkleSwellingScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_CardiovascularLimitationsAndSymptomsProfileAnkleSwellingScore: new Coding({
     code: "135832003",
     display: "Cardiovascular Limitations and Symptoms Profile ankle swelling score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CardiovascularLimitationsAndSymptomsProfileShortnessOfBreathScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_CardiovascularLimitationsAndSymptomsProfileShortnessOfBreathScore: new Coding({
     code: "135833008",
     display: "Cardiovascular limitations and symptoms profile shortness of breath score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StrokeRisk: Coding.FromStrict({
+  ConditionStageTypeValueSet_StrokeRisk: new Coding({
     code: "135877001",
     display: "Stroke risk",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WRStage3: Coding.FromStrict({
+  ConditionStageTypeValueSet_WRStage3: new Coding({
     code: "13808002",
     display: "WR stage 3",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WalterReedWRStage2: Coding.FromStrict({
+  ConditionStageTypeValueSet_WalterReedWRStage2: new Coding({
     code: "15972002",
     display: "Walter Reed (WR) stage 2",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HousingDependencyScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_HousingDependencyScale: new Coding({
     code: "160723003",
     display: "Housing dependency scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PhysicalDisabilityAssessmentScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_PhysicalDisabilityAssessmentScore: new Coding({
     code: "165270003",
     display: "Physical disability assessment score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PhysicalDisabilityAdmissionScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_PhysicalDisabilityAdmissionScore: new Coding({
     code: "165271004",
     display: "Physical disability admission score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PhysicalDisabilityInpatientScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_PhysicalDisabilityInpatientScore: new Coding({
     code: "165272006",
     display: "Physical disability inpatient score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PhysicalDisabilityDischargeScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_PhysicalDisabilityDischargeScore: new Coding({
     code: "165273001",
     display: "Physical disability discharge score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PhysicalDisabilityOutpatientScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_PhysicalDisabilityOutpatientScore: new Coding({
     code: "165274007",
     display: "Physical disability outpatient score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PhysicalDisabilityDVScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_PhysicalDisabilityDVScore: new Coding({
     code: "165275008",
     display: "Physical disability DV score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SymptomRatings: Coding.FromStrict({
+  ConditionStageTypeValueSet_SymptomRatings: new Coding({
     code: "251893009",
     display: "Symptom ratings",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ExertionRating: Coding.FromStrict({
+  ConditionStageTypeValueSet_ExertionRating: new Coding({
     code: "251894003",
     display: "Exertion rating",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LegFatigueRating: Coding.FromStrict({
+  ConditionStageTypeValueSet_LegFatigueRating: new Coding({
     code: "251895002",
     display: "Leg fatigue rating",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BreathlessnessRating: Coding.FromStrict({
+  ConditionStageTypeValueSet_BreathlessnessRating: new Coding({
     code: "251896001",
     display: "Breathlessness rating",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ChestPainRating: Coding.FromStrict({
+  ConditionStageTypeValueSet_ChestPainRating: new Coding({
     code: "251897005",
     display: "Chest pain rating",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorStaging: new Coding({
     code: "254292007",
     display: "Tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TNMTumorStagingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_TNMTumorStagingSystem: new Coding({
     code: "254293002",
     display: "TNM tumor staging system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMHeadAndNeckTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMHeadAndNeckTumorStaging: new Coding({
     code: "254294008",
     display: "Tumor-node-metastasis (TNM) head and neck tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMLipAndOralCavityTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMLipAndOralCavityTumorStaging: new Coding({
     code: "254295009",
     display: "Tumor-node-metastasis (TNM) lip and oral cavity tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMOropharynxTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMOropharynxTumorStaging: new Coding({
     code: "254296005",
     display: "Tumor-node-metastasis (TNM) oropharynx tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMNasopharynxTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMNasopharynxTumorStaging: new Coding({
     code: "254297001",
     display: "Tumor-node-metastasis (TNM) nasopharynx tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMHypopharynxTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMHypopharynxTumorStaging: new Coding({
     code: "254298006",
     display: "Tumor-node-metastasis (TNM) hypopharynx tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMSupraglotticLarynxTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMSupraglotticLarynxTumorStaging: new Coding({
     code: "254299003",
     display: "Tumor-node-metastasis (TNM) supraglottic larynx tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMGlotticLarynxTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMGlotticLarynxTumorStaging: new Coding({
     code: "254300006",
     display: "Tumor-node-metastasis (TNM) glottic larynx tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMSubglotticLarynxTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMSubglotticLarynxTumorStaging: new Coding({
     code: "254301005",
     display: "Tumor-node-metastasis (TNM) subglottic larynx tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMMaxillarySinusTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMMaxillarySinusTumorStaging: new Coding({
     code: "254302003",
     display: "Tumor-node-metastasis (TNM) maxillary sinus tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMSalivaryGlandsTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMSalivaryGlandsTumorStaging: new Coding({
     code: "254303008",
     display: "Tumor-node-metastasis (TNM) salivary glands tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMThyroidGlandTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMThyroidGlandTumorStaging: new Coding({
     code: "254304002",
     display: "Tumor-node-metastasis (TNM) thyroid gland tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMDigestiveSystemTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMDigestiveSystemTumorStaging: new Coding({
     code: "254305001",
     display: "Tumor-node-metastasis (TNM) digestive system tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMEsophagusTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMEsophagusTumorStaging: new Coding({
     code: "254306000",
     display: "Tumor-node-metastasis (TNM) esophagus tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMStomachTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMStomachTumorStaging: new Coding({
     code: "254307009",
     display: "Tumor-node-metastasis (TNM) stomach tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMSmallIntestineTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMSmallIntestineTumorStaging: new Coding({
     code: "254309007",
     display: "Tumor-node-metastasis (TNM) Small intestine tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMColonAndRectumTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMColonAndRectumTumorStaging: new Coding({
     code: "254310002",
     display: "Tumor-node-metastasis (TNM) Colon and rectum tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMAnalCanalTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMAnalCanalTumorStaging: new Coding({
     code: "254311003",
     display: "Tumor-node-metastasis (TNM) anal canal tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMLiverTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMLiverTumorStaging: new Coding({
     code: "254312005",
     display: "Tumor-node-metastasis (TNM) liver tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMGallbladderTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMGallbladderTumorStaging: new Coding({
     code: "254313000",
     display: "Tumor-node-metastasis (TNM) gallbladder tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMExtrahepaticBileDuctsTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMExtrahepaticBileDuctsTumorStaging: new Coding({
     code: "254314006",
     display: "Tumor-node-metastasis (TNM) extrahepatic bile ducts tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMAmpullaOfVaterTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMAmpullaOfVaterTumorStaging: new Coding({
     code: "254315007",
     display: "Tumor-node-metastasis (TNM) ampulla of vater tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMPancreasTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMPancreasTumorStaging: new Coding({
     code: "254316008",
     display: "Tumor-node-metastasis (TNM) pancreas tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMLungAndPleuralTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMLungAndPleuralTumorStaging: new Coding({
     code: "254317004",
     display: "Tumor-node-metastasis (TNM) lung and pleural tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMLungTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMLungTumorStaging: new Coding({
     code: "254318009",
     display: "Tumor-node-metastasis (TNM) lung tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMPleuralMesotheliomaTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMPleuralMesotheliomaTumorStaging: new Coding({
     code: "254319001",
     display: "Tumor-node-metastasis (TNM) pleural mesothelioma tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMBoneAndSoftTissueTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMBoneAndSoftTissueTumorStaging: new Coding({
     code: "254320007",
     display: "Tumor-node-metastasis (TNM) bone and soft tissue tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMBoneTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMBoneTumorStaging: new Coding({
     code: "254321006",
     display: "Tumor-node-metastasis (TNM) bone tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMSoftTissuesTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMSoftTissuesTumorStaging: new Coding({
     code: "254322004",
     display: "Tumor-node-metastasis (TNM) soft tissues tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMSkinTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMSkinTumorStaging: new Coding({
     code: "254323009",
     display: "Tumor-node-metastasis (TNM) skin tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMCarcinomaOfSkinTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMCarcinomaOfSkinTumorStaging: new Coding({
     code: "254324003",
     display: "Tumor-node-metastasis (TNM) carcinoma of skin tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMMalignantMelanomaOfSkinStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMMalignantMelanomaOfSkinStaging: new Coding({
     code: "254325002",
     display: "Tumor-node-metastasis (TNM) malignant melanoma of skin staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMBreastTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMBreastTumorStaging: new Coding({
     code: "254326001",
     display: "Tumor-node-metastasis (TNM) breast tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMGynecologicalTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMGynecologicalTumorStaging: new Coding({
     code: "254327005",
     display: "Tumor-node-metastasis (TNM) gynecological tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMVulvaTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMVulvaTumorStaging: new Coding({
     code: "254328000",
     display: "Tumor-node-metastasis (TNM) vulva tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMVaginalTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMVaginalTumorStaging: new Coding({
     code: "254329008",
     display: "Tumor-node-metastasis (TNM) vaginal tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMCervixUteriTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMCervixUteriTumorStaging: new Coding({
     code: "254330003",
     display: "Tumor-node-metastasis (TNM) cervix uteri tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMCorpusUteriTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMCorpusUteriTumorStaging: new Coding({
     code: "254331004",
     display: "Tumor-node-metastasis (TNM) corpus uteri tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMOvaryTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMOvaryTumorStaging: new Coding({
     code: "254332006",
     display: "Tumor-node-metastasis (TNM) ovary tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMUrologicalTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMUrologicalTumorStaging: new Coding({
     code: "254333001",
     display: "Tumor-node-metastasis (TNM) urological tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMPenisTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMPenisTumorStaging: new Coding({
     code: "254334007",
     display: "Tumor-node-metastasis (TNM) penis tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMProstateTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMProstateTumorStaging: new Coding({
     code: "254335008",
     display: "Tumor-node-metastasis (TNM) Prostate tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMTestisTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMTestisTumorStaging: new Coding({
     code: "254336009",
     display: "Tumor-node-metastasis (TNM) testis tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMKidneyTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMKidneyTumorStaging: new Coding({
     code: "254337000",
     display: "Tumor-node-metastasis (TNM) kidney tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMRenalPelvisAndUreterTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMRenalPelvisAndUreterTumorStaging: new Coding({
     code: "254338005",
     display: "Tumor-node-metastasis (TNM) renal pelvis and ureter tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMUrinaryBladderTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMUrinaryBladderTumorStaging: new Coding({
     code: "254339002",
     display: "Tumor-node-metastasis (TNM) urinary bladder tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMUrethraTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMUrethraTumorStaging: new Coding({
     code: "254340000",
     display: "Tumor-node-metastasis (TNM) urethra tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMOphthalmicTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMOphthalmicTumorStaging: new Coding({
     code: "254341001",
     display: "Tumor-node-metastasis (TNM) ophthalmic tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMCarcinomaOfEyelidStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMCarcinomaOfEyelidStaging: new Coding({
     code: "254342008",
     display: "Tumor-node-metastasis (TNM) carcinoma of eyelid staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMMalignantMelanomaOfEyelidStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMMalignantMelanomaOfEyelidStaging: new Coding({
     code: "254343003",
     display: "Tumor-node-metastasis (TNM) malignant melanoma of eyelid staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMCarcinomaOfConjunctivaStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMCarcinomaOfConjunctivaStaging: new Coding({
     code: "254344009",
     display: "Tumor-node-metastasis (TNM) carcinoma of conjunctiva staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMMalignantMelanomaOfConjunctivaStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMMalignantMelanomaOfConjunctivaStaging: new Coding({
     code: "254345005",
     display: "Tumor-node-metastasis (TNM) malignant melanoma of conjunctiva staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMMalignantMelanomaOfUveaStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMMalignantMelanomaOfUveaStaging: new Coding({
     code: "254346006",
     display: "Tumor-node-metastasis (TNM) malignant melanoma of uvea staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMMalignantMelanomaOfIrisStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMMalignantMelanomaOfIrisStaging: new Coding({
     code: "254347002",
     display: "Tumor-node-metastasis (TNM) malignant melanoma of iris staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMMalignantMelanomaOfCiliaryBodyStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMMalignantMelanomaOfCiliaryBodyStaging: new Coding({
     code: "254348007",
     display: "Tumor-node-metastasis (TNM) malignant melanoma of ciliary body staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMMalignantMelanomaOfChoroidStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMMalignantMelanomaOfChoroidStaging: new Coding({
     code: "254349004",
     display: "Tumor-node-metastasis (TNM) malignant melanoma of choroid staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMRetinoblastomaStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMRetinoblastomaStaging: new Coding({
     code: "254350004",
     display: "Tumor-node-metastasis (TNM) retinoblastoma staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMSarcomaOfOrbitStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMSarcomaOfOrbitStaging: new Coding({
     code: "254351000",
     display: "Tumor-node-metastasis (TNM) sarcoma of orbit staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMLacrimalGlandCarcinomaStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMLacrimalGlandCarcinomaStaging: new Coding({
     code: "254352007",
     display: "Tumor-node-metastasis (TNM) lacrimal gland carcinoma staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMBrainTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMBrainTumorStaging: new Coding({
     code: "254353002",
     display: "Tumor-node-metastasis (TNM) brain tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMHodgkinQuoteSDiseaseStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMHodgkinQuoteSDiseaseStaging: new Coding({
     code: "254354008",
     display: "Tumor-node-metastasis (TNM) Hodgkin's disease staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMNonHodgkinQuoteSLymphomaStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMNonHodgkinQuoteSLymphomaStaging: new Coding({
     code: "254355009",
     display: "Tumor-node-metastasis (TNM) non-Hodgkin's lymphoma staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMPediatricTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMPediatricTumorStaging: new Coding({
     code: "254356005",
     display: "Tumor-node-metastasis (TNM) pediatric tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMWilmsQuoteTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMWilmsQuoteTumorStaging: new Coding({
     code: "254357001",
     display: "Tumor-node-metastasis (TNM) Wilms' tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMNeuroblastomaStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMNeuroblastomaStaging: new Coding({
     code: "254358006",
     display: "Tumor-node-metastasis (TNM) neuroblastoma staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMSoftTissueSarcomaStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMSoftTissueSarcomaStaging: new Coding({
     code: "254359003",
     display: "Tumor-node-metastasis (TNM) soft tissue sarcoma staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DukesStagingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_DukesStagingSystem: new Coding({
     code: "254360008",
     display: "Dukes staging system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AstlerCollerStagingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_AstlerCollerStagingSystem: new Coding({
     code: "254361007",
     display: "Astler-Coller staging system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ModifiedAstlerCollerStagingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_ModifiedAstlerCollerStagingSystem: new Coding({
     code: "254362000",
     display: "Modified Astler-Coller staging system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_InternationalNeuroblastomaStagingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_InternationalNeuroblastomaStagingSystem: new Coding({
     code: "254363005",
     display: "International neuroblastoma staging system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NWTSNationalWilmsQuoteTumorStudyStagingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_NWTSNationalWilmsQuoteTumorStudyStagingSystem: new Coding({
     code: "254364004",
     display: "NWTS - National Wilms' tumor study staging system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SiopelLiverStagingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_SiopelLiverStagingSystem: new Coding({
     code: "254365003",
     display: "Siopel liver staging system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StannardStagingSystemForRetinoblastoma: Coding.FromStrict({
+  ConditionStageTypeValueSet_StannardStagingSystemForRetinoblastoma: new Coding({
     code: "254366002",
     display: "Stannard staging system for retinoblastoma",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_UnitedKingdomChildrenQuoteSCancerStudyGroupCentralNervousSystemTumorStagingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_UnitedKingdomChildrenQuoteSCancerStudyGroupCentralNervousSystemTumorStagingSystem: new Coding({
     code: "254368001",
     display: "United Kingdom children's cancer study group central nervous system tumor staging system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StJudeMalignantHistiocytosisTumorStagingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_StJudeMalignantHistiocytosisTumorStagingSystem: new Coding({
     code: "254370005",
     display: "St Jude malignant histiocytosis tumor staging system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StJudeNonHodgkinLymphomaStagingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_StJudeNonHodgkinLymphomaStagingSystem: new Coding({
     code: "254371009",
     display: "St Jude non-Hodgkin lymphoma staging system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AnnArborLymphomaStagingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_AnnArborLymphomaStagingSystem: new Coding({
     code: "254372002",
     display: "Ann Arbor lymphoma staging system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AnnArborHodgkinDiseaseTumorStagingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_AnnArborHodgkinDiseaseTumorStagingSystem: new Coding({
     code: "254373007",
     display: "Ann Arbor Hodgkin disease tumor staging system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AnnArborNonHodgkinLymphomaTumorStagingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_AnnArborNonHodgkinLymphomaTumorStagingSystem: new Coding({
     code: "254374001",
     display: "Ann Arbor non-Hodgkin lymphoma tumor staging system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CotswoldsHodgkinDiseaseTumorStagingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_CotswoldsHodgkinDiseaseTumorStagingSystem: new Coding({
     code: "254375000",
     display: "Cotswolds Hodgkin disease tumor staging system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TesticularTumorStagingSystems: Coding.FromStrict({
+  ConditionStageTypeValueSet_TesticularTumorStagingSystems: new Coding({
     code: "254376004",
     display: "Testicular tumor staging systems",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WalterReedTesticularTumorStagingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_WalterReedTesticularTumorStagingSystem: new Coding({
     code: "254378003",
     display: "Walter Reed testicular tumor staging system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_IndianaUniversityTesticularTumorStagingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_IndianaUniversityTesticularTumorStagingSystem: new Coding({
     code: "254379006",
     display: "Indiana University testicular tumor staging system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MarshallModificationOfJewettStrongStagingSystemForUrinaryBladderTumor: Coding.FromStrict({
+  ConditionStageTypeValueSet_MarshallModificationOfJewettStrongStagingSystemForUrinaryBladderTumor: new Coding({
     code: "254380009",
     display: "Marshall Modification of Jewett-Strong staging system for urinary bladder tumor",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AmericanUrologicalAssociationStagingSystemForProstateCancer: Coding.FromStrict({
+  ConditionStageTypeValueSet_AmericanUrologicalAssociationStagingSystemForProstateCancer: new Coding({
     code: "254381008",
     display: "American Urological Association staging system for prostate cancer",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TrophoblasticMalignancyStagingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_TrophoblasticMalignancyStagingSystem: new Coding({
     code: "254382001",
     display: "Trophoblastic malignancy staging system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FIGOStagingSystemOfGynecologicalMalignancy: Coding.FromStrict({
+  ConditionStageTypeValueSet_FIGOStagingSystemOfGynecologicalMalignancy: new Coding({
     code: "254383006",
     display: "FIGO staging system of gynecological malignancy",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FIGOVaginalTumorStagingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_FIGOVaginalTumorStagingSystem: new Coding({
     code: "254384000",
     display: "FIGO Vaginal tumor staging system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FIGOUterineTumorStagingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_FIGOUterineTumorStagingSystem: new Coding({
     code: "254385004",
     display: "FIGO uterine tumor staging system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FIGOOvarianTumorStagingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_FIGOOvarianTumorStagingSystem: new Coding({
     code: "254386003",
     display: "FIGO ovarian tumor staging system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HIVHumanImmunodeficiencyVirusInfectionClassificationSystems: Coding.FromStrict({
+  ConditionStageTypeValueSet_HIVHumanImmunodeficiencyVirusInfectionClassificationSystems: new Coding({
     code: "254387007",
     display: "HIV - Human immunodeficiency virus infection classification systems",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CancerStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_CancerStaging: new Coding({
     code: "258232002",
     display: "Cancer staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GenericTumorStagingDescriptor: Coding.FromStrict({
+  ConditionStageTypeValueSet_GenericTumorStagingDescriptor: new Coding({
     code: "258233007",
     display: "Generic tumor staging descriptor",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorNodeMetastasisTNMTumorStagingClassifications: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorNodeMetastasisTNMTumorStagingClassifications: new Coding({
     code: "258234001",
     display: "Tumor-node-metastasis (TNM) tumor staging classifications",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_InternationalUnionAgainstCancerUICC: Coding.FromStrict({
+  ConditionStageTypeValueSet_InternationalUnionAgainstCancerUICC: new Coding({
     code: "258235000",
     display: "International Union Against Cancer (UICC)",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AmericanJointCommitteeOnCancerAJCC: Coding.FromStrict({
+  ConditionStageTypeValueSet_AmericanJointCommitteeOnCancerAJCC: new Coding({
     code: "258236004",
     display: "American Joint Committee on Cancer (AJCC)",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GStatus: Coding.FromStrict({
+  ConditionStageTypeValueSet_GStatus: new Coding({
     code: "258244004",
     display: "G status",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LStatus: Coding.FromStrict({
+  ConditionStageTypeValueSet_LStatus: new Coding({
     code: "258246002",
     display: "L status",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VStatus: Coding.FromStrict({
+  ConditionStageTypeValueSet_VStatus: new Coding({
     code: "258247006",
     display: "V status",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AdditionalTumorStagingDescriptor: Coding.FromStrict({
+  ConditionStageTypeValueSet_AdditionalTumorStagingDescriptor: new Coding({
     code: "258257007",
     display: "Additional tumor staging descriptor",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_F: Coding.FromStrict({
+  ConditionStageTypeValueSet_F: new Coding({
     code: "258258002",
     display: "(f)",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_Is: Coding.FromStrict({
+  ConditionStageTypeValueSet_Is: new Coding({
     code: "258259005",
     display: "is",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_D: Coding.FromStrict({
+  ConditionStageTypeValueSet_D: new Coding({
     code: "258260000",
     display: "(d)",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GenericTumorRiskStatusStages: Coding.FromStrict({
+  ConditionStageTypeValueSet_GenericTumorRiskStatusStages: new Coding({
     code: "258267002",
     display: "Generic tumor risk status stages",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LowRiskTumor: Coding.FromStrict({
+  ConditionStageTypeValueSet_LowRiskTumor: new Coding({
     code: "258268007",
     display: "Low risk tumor",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MediumRiskTumor: Coding.FromStrict({
+  ConditionStageTypeValueSet_MediumRiskTumor: new Coding({
     code: "258269004",
     display: "Medium risk tumor",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HighRiskTumor: Coding.FromStrict({
+  ConditionStageTypeValueSet_HighRiskTumor: new Coding({
     code: "258270003",
     display: "High risk tumor",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SpecificTumorStagingDescriptor: Coding.FromStrict({
+  ConditionStageTypeValueSet_SpecificTumorStagingDescriptor: new Coding({
     code: "258271004",
     display: "Specific tumor staging descriptor",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LiverTumorStagingDescriptor: Coding.FromStrict({
+  ConditionStageTypeValueSet_LiverTumorStagingDescriptor: new Coding({
     code: "258272006",
     display: "Liver tumor staging descriptor",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LiverTumorSizeIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_LiverTumorSizeIndex: new Coding({
     code: "258273001",
     display: "Liver tumor size index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TimingOfLiverTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_TimingOfLiverTumorStaging: new Coding({
     code: "258276009",
     display: "Timing of liver tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LymphomaStagingSymptomStatusValues: Coding.FromStrict({
+  ConditionStageTypeValueSet_LymphomaStagingSymptomStatusValues: new Coding({
     code: "258279002",
     display: "Lymphoma staging symptom status values",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LymphomatousExtranodalInvolvementStatusValues: Coding.FromStrict({
+  ConditionStageTypeValueSet_LymphomatousExtranodalInvolvementStatusValues: new Coding({
     code: "258280004",
     display: "Lymphomatous extranodal involvement status values",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SpleenPositiveMinimalLymphomatousExtranodalInvolvement: Coding.FromStrict({
+  ConditionStageTypeValueSet_SpleenPositiveMinimalLymphomatousExtranodalInvolvement: new Coding({
     code: "258281000",
     display: "Spleen-positive minimal lymphomatous extranodal involvement",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SpleenPositiveExtensiveLymphomatousExtranodalInvolvement: Coding.FromStrict({
+  ConditionStageTypeValueSet_SpleenPositiveExtensiveLymphomatousExtranodalInvolvement: new Coding({
     code: "258282007",
     display: "Spleen-positive extensive lymphomatous extranodal involvement",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LymphomatousNodalInvolvement: Coding.FromStrict({
+  ConditionStageTypeValueSet_LymphomatousNodalInvolvement: new Coding({
     code: "258283002",
     display: "Lymphomatous nodal involvement",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StannardsRetinoblastomaStages: Coding.FromStrict({
+  ConditionStageTypeValueSet_StannardsRetinoblastomaStages: new Coding({
     code: "258284008",
     display: "Stannards retinoblastoma stages",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OpticNerveTumorInvasionStatusInRetinoblastomaStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_OpticNerveTumorInvasionStatusInRetinoblastomaStaging: new Coding({
     code: "258285009",
     display: "Optic nerve tumor invasion status in retinoblastoma staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ChoroidalTumorInvasionStatusInRetinoblastomaStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_ChoroidalTumorInvasionStatusInRetinoblastomaStaging: new Coding({
     code: "258286005",
     display: "Choroidal tumor invasion status in retinoblastoma staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LymphNodalTumorInvasionStatusInRetinoblastomaStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_LymphNodalTumorInvasionStatusInRetinoblastomaStaging: new Coding({
     code: "258292004",
     display: "Lymph nodal tumor invasion status in retinoblastoma staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BrainTumorInvasionStatusInRetinoblastomaStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_BrainTumorInvasionStatusInRetinoblastomaStaging: new Coding({
     code: "258293009",
     display: "Brain tumor invasion status in retinoblastoma staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LangerhansCellHistiocytosisStage: Coding.FromStrict({
+  ConditionStageTypeValueSet_LangerhansCellHistiocytosisStage: new Coding({
     code: "258301001",
     display: "Langerhans cell histiocytosis stage",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NumberOfOrganSystemsInvolvedWithLangerhansCellHistiocytosis: Coding.FromStrict({
+  ConditionStageTypeValueSet_NumberOfOrganSystemsInvolvedWithLangerhansCellHistiocytosis: new Coding({
     code: "258302008",
     display: "Number of organ systems involved with Langerhans cell histiocytosis",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SingleSystemInvolvement: Coding.FromStrict({
+  ConditionStageTypeValueSet_SingleSystemInvolvement: new Coding({
     code: "258303003",
     display: "Single system involvement",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MultisystemInvolvement: Coding.FromStrict({
+  ConditionStageTypeValueSet_MultisystemInvolvement: new Coding({
     code: "258304009",
     display: "Multisystem involvement",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OrganFailureDueToLangerhansCellHistiocytosis: Coding.FromStrict({
+  ConditionStageTypeValueSet_OrganFailureDueToLangerhansCellHistiocytosis: new Coding({
     code: "258305005",
     display: "Organ failure due to Langerhans cell histiocytosis",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VitalOrganFailure: Coding.FromStrict({
+  ConditionStageTypeValueSet_VitalOrganFailure: new Coding({
     code: "258306006",
     display: "Vital organ failure",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NonVitalOrganFailure: Coding.FromStrict({
+  ConditionStageTypeValueSet_NonVitalOrganFailure: new Coding({
     code: "258307002",
     display: "Non-vital organ failure",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GenericLymphNodeTumorInvasionStatusStage: Coding.FromStrict({
+  ConditionStageTypeValueSet_GenericLymphNodeTumorInvasionStatusStage: new Coding({
     code: "258309004",
     display: "Generic lymph node tumor invasion status stage",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NeckNodeTumorInvolvement: Coding.FromStrict({
+  ConditionStageTypeValueSet_NeckNodeTumorInvolvement: new Coding({
     code: "258310009",
     display: "Neck node tumor involvement",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MPlus: Coding.FromStrict({
+  ConditionStageTypeValueSet_MPlus: new Coding({
     code: "258311008",
     display: "M+",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AxillaryLymphNodeLevel: Coding.FromStrict({
+  ConditionStageTypeValueSet_AxillaryLymphNodeLevel: new Coding({
     code: "258312001",
     display: "Axillary lymph node level",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LevelI: Coding.FromStrict({
+  ConditionStageTypeValueSet_LevelI: new Coding({
     code: "258313006",
     display: "Level I",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_Midaxilla: Coding.FromStrict({
+  ConditionStageTypeValueSet_Midaxilla: new Coding({
     code: "258314000",
     display: "Midaxilla",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LevelIII: Coding.FromStrict({
+  ConditionStageTypeValueSet_LevelIII: new Coding({
     code: "258315004",
     display: "Level III",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RetroperitonealLymphNodeTumorInvasionStatus: Coding.FromStrict({
+  ConditionStageTypeValueSet_RetroperitonealLymphNodeTumorInvasionStatus: new Coding({
     code: "258316003",
     display: "Retroperitoneal lymph node tumor invasion status",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GenericAnatomicalSiteTumorInvasionStatus: Coding.FromStrict({
+  ConditionStageTypeValueSet_GenericAnatomicalSiteTumorInvasionStatus: new Coding({
     code: "258318002",
     display: "Generic anatomical site tumor invasion status",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LungInvolvementStages: Coding.FromStrict({
+  ConditionStageTypeValueSet_LungInvolvementStages: new Coding({
     code: "258319005",
     display: "Lung involvement stages",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LungStageL2: Coding.FromStrict({
+  ConditionStageTypeValueSet_LungStageL2: new Coding({
     code: "258320004",
     display: "Lung stage L2",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LungStageL3: Coding.FromStrict({
+  ConditionStageTypeValueSet_LungStageL3: new Coding({
     code: "258321000",
     display: "Lung stage L3",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HPlus: Coding.FromStrict({
+  ConditionStageTypeValueSet_HPlus: new Coding({
     code: "258322007",
     display: "H+",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LiverSectors: Coding.FromStrict({
+  ConditionStageTypeValueSet_LiverSectors: new Coding({
     code: "258323002",
     display: "Liver sectors",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LiverSector1: Coding.FromStrict({
+  ConditionStageTypeValueSet_LiverSector1: new Coding({
     code: "258324008",
     display: "Liver sector 1",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LiverSector2: Coding.FromStrict({
+  ConditionStageTypeValueSet_LiverSector2: new Coding({
     code: "258325009",
     display: "Liver sector 2",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LiverSector3: Coding.FromStrict({
+  ConditionStageTypeValueSet_LiverSector3: new Coding({
     code: "258326005",
     display: "Liver sector 3",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LiverSector4: Coding.FromStrict({
+  ConditionStageTypeValueSet_LiverSector4: new Coding({
     code: "258327001",
     display: "Liver sector 4",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MarkersForLiverTumorStaging: Coding.FromStrict({
+  ConditionStageTypeValueSet_MarkersForLiverTumorStaging: new Coding({
     code: "258328006",
     display: "Markers for liver tumor staging",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ClinicalStagingQualifierValue: Coding.FromStrict({
+  ConditionStageTypeValueSet_ClinicalStagingQualifierValue: new Coding({
     code: "260998006",
     display: "Clinical staging (qualifier value)",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PathologicalStagingQualifierValue: Coding.FromStrict({
+  ConditionStageTypeValueSet_PathologicalStagingQualifierValue: new Coding({
     code: "261023001",
     display: "Pathological staging (qualifier value)",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TumorStageTa: Coding.FromStrict({
+  ConditionStageTypeValueSet_TumorStageTa: new Coding({
     code: "261663004",
     display: "Tumor stage Ta",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CentralNervousSystemCNSMetastases: Coding.FromStrict({
+  ConditionStageTypeValueSet_CentralNervousSystemCNSMetastases: new Coding({
     code: "261731003",
     display: "Central nervous system (CNS) metastases",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ExtraCentralNervousSystemMetastases: Coding.FromStrict({
+  ConditionStageTypeValueSet_ExtraCentralNervousSystemMetastases: new Coding({
     code: "261789009",
     display: "Extra central nervous system metastases",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NoMetastases: Coding.FromStrict({
+  ConditionStageTypeValueSet_NoMetastases: new Coding({
     code: "261985008",
     display: "No metastases",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BorgScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_BorgScale: new Coding({
     code: "263487004",
     display: "Borg scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EndometriosisClassificationOfAmericanFertilitySociety: Coding.FromStrict({
+  ConditionStageTypeValueSet_EndometriosisClassificationOfAmericanFertilitySociety: new Coding({
     code: "263638005",
     display: "Endometriosis classification of American Fertility Society",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AssessmentScales: Coding.FromStrict({
+  ConditionStageTypeValueSet_AssessmentScales: new Coding({
     code: "273249006",
     display: "Assessment scales",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AachenAphasiaTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_AachenAphasiaTest: new Coding({
     code: "273251005",
     display: "Aachen aphasia test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ABCChart: Coding.FromStrict({
+  ConditionStageTypeValueSet_ABCChart: new Coding({
     code: "273252003",
     display: "ABC chart",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ABCTestForMovement: Coding.FromStrict({
+  ConditionStageTypeValueSet_ABCTestForMovement: new Coding({
     code: "273253008",
     display: "ABC test for movement",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AISAbbreviatedInjuryScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_AISAbbreviatedInjuryScale: new Coding({
     code: "273254002",
     display: "AIS - Abbreviated injury scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AbbreviatedMentalTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_AbbreviatedMentalTest: new Coding({
     code: "273255001",
     display: "Abbreviated mental test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AIMSAbnormalInvoluntaryMovementScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_AIMSAbnormalInvoluntaryMovementScale: new Coding({
     code: "273256000",
     display: "AIMS - Abnormal involuntary movement scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AcutePhysiologyAndChronicHealthEvaluation: Coding.FromStrict({
+  ConditionStageTypeValueSet_AcutePhysiologyAndChronicHealthEvaluation: new Coding({
     code: "273257009",
     display: "Acute physiology and chronic health evaluation",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_APACHEIIAcutePhysiologyAndChronicHealthEvaluationII: Coding.FromStrict({
+  ConditionStageTypeValueSet_APACHEIIAcutePhysiologyAndChronicHealthEvaluationII: new Coding({
     code: "273258004",
     display: "APACHE II - Acute physiology and chronic health evaluation II",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AcutePhysiologyAndChronicHealthEvaluationIII: Coding.FromStrict({
+  ConditionStageTypeValueSet_AcutePhysiologyAndChronicHealthEvaluationIII: new Coding({
     code: "273259007",
     display: "Acute physiology and chronic health evaluation III",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AddictionSeverityIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_AddictionSeverityIndex: new Coding({
     code: "273260002",
     display: "Addiction severity index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AdultPersonalityRatingSchedule: Coding.FromStrict({
+  ConditionStageTypeValueSet_AdultPersonalityRatingSchedule: new Coding({
     code: "273261003",
     display: "Adult personality rating schedule",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ABSAffectBalanceScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_ABSAffectBalanceScale: new Coding({
     code: "273262005",
     display: "ABS - Affect balance scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AcquiredImmunodeficiencySyndromeAIDSRiskBehaviorKnowledgeTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_AcquiredImmunodeficiencySyndromeAIDSRiskBehaviorKnowledgeTest: new Coding({
     code: "273263000",
     display: "Acquired immunodeficiency syndrome (AIDS) risk behavior knowledge test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ADSAlcoholDependenceScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_ADSAlcoholDependenceScale: new Coding({
     code: "273264006",
     display: "ADS - Alcohol dependence scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AlcoholUseDisordersIdentificationTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_AlcoholUseDisordersIdentificationTest: new Coding({
     code: "273265007",
     display: "Alcohol use disorders identification test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AlcoholUseInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_AlcoholUseInventory: new Coding({
     code: "273266008",
     display: "Alcohol use inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AllenCognitiveLevelScreeningTool: Coding.FromStrict({
+  ConditionStageTypeValueSet_AllenCognitiveLevelScreeningTool: new Coding({
     code: "273267004",
     display: "Allen cognitive level screening tool",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AllenCognitivePerformanceTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_AllenCognitivePerformanceTest: new Coding({
     code: "273268009",
     display: "Allen cognitive performance test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AlzheimerDiseaseAssessmentScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_AlzheimerDiseaseAssessmentScale: new Coding({
     code: "273269001",
     display: "Alzheimer disease assessment scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AmericanSocietyOfAnesthesiologistsPhysicalStatusClassification: Coding.FromStrict({
+  ConditionStageTypeValueSet_AmericanSocietyOfAnesthesiologistsPhysicalStatusClassification: new Coding({
     code: "273270000",
     display: "American Society of Anesthesiologists physical status classification",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AmsterdamNijmegenEverydayLanguageTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_AmsterdamNijmegenEverydayLanguageTest: new Coding({
     code: "273271001",
     display: "Amsterdam-Nijmegen Everyday Language Test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AnomalousSentenceRepetitionTestWeeks: Coding.FromStrict({
+  ConditionStageTypeValueSet_AnomalousSentenceRepetitionTestWeeks: new Coding({
     code: "273272008",
     display: "Anomalous sentence repetition test - Weeks",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AnomalousSentenceTestKopelman: Coding.FromStrict({
+  ConditionStageTypeValueSet_AnomalousSentenceTestKopelman: new Coding({
     code: "273273003",
     display: "Anomalous sentence test - Kopelman",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AnorexicAttitudesQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_AnorexicAttitudesQuestionnaire: new Coding({
     code: "273274009",
     display: "Anorexic attitudes questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ABSAnorexicBehaviorScales: Coding.FromStrict({
+  ConditionStageTypeValueSet_ABSAnorexicBehaviorScales: new Coding({
     code: "273275005",
     display: "ABS - Anorexic behavior scales",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AphasiaLanguagePerformanceScales: Coding.FromStrict({
+  ConditionStageTypeValueSet_AphasiaLanguagePerformanceScales: new Coding({
     code: "273276006",
     display: "Aphasia language performance scales",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WhurrAphasiaScreeningTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_WhurrAphasiaScreeningTest: new Coding({
     code: "273277002",
     display: "Whurr - Aphasia screening test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ApraxiaBatteryForAdults: Coding.FromStrict({
+  ConditionStageTypeValueSet_ApraxiaBatteryForAdults: new Coding({
     code: "273279004",
     display: "Apraxia battery for adults",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ArizonaBatteryForCommunicationDisordersOfDementia: Coding.FromStrict({
+  ConditionStageTypeValueSet_ArizonaBatteryForCommunicationDisordersOfDementia: new Coding({
     code: "273280001",
     display: "Arizona battery for communication disorders of dementia",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AIMSIArthritisImpactMeasurementScaleI: Coding.FromStrict({
+  ConditionStageTypeValueSet_AIMSIArthritisImpactMeasurementScaleI: new Coding({
     code: "273281002",
     display: "AIMS I - Arthritis impact measurement scale I",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ArthritisImpactMeasurementScaleII: Coding.FromStrict({
+  ConditionStageTypeValueSet_ArthritisImpactMeasurementScaleII: new Coding({
     code: "273282009",
     display: "Arthritis impact measurement scale II",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ASEPSISScoreForWoundInfection: Coding.FromStrict({
+  ConditionStageTypeValueSet_ASEPSISScoreForWoundInfection: new Coding({
     code: "273283004",
     display: "ASEPSIS score for wound infection",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AshworthAssessmentScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_AshworthAssessmentScale: new Coding({
     code: "273284005",
     display: "Ashworth assessment scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AssessingReadingDifficulties: Coding.FromStrict({
+  ConditionStageTypeValueSet_AssessingReadingDifficulties: new Coding({
     code: "273285006",
     display: "Assessing reading difficulties",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AssessmentAndTherapyProgramForDysfluentChildren: Coding.FromStrict({
+  ConditionStageTypeValueSet_AssessmentAndTherapyProgramForDysfluentChildren: new Coding({
     code: "273286007",
     display: "Assessment and therapy program for dysfluent children",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AssessmentOfIntelligibility: Coding.FromStrict({
+  ConditionStageTypeValueSet_AssessmentOfIntelligibility: new Coding({
     code: "273287003",
     display: "Assessment of intelligibility",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AssessmentOfMotorAndProcessSkills: Coding.FromStrict({
+  ConditionStageTypeValueSet_AssessmentOfMotorAndProcessSkills: new Coding({
     code: "273288008",
     display: "Assessment of motor and process skills",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AOFAssessmentOfOccupationalFunction: Coding.FromStrict({
+  ConditionStageTypeValueSet_AOFAssessmentOfOccupationalFunction: new Coding({
     code: "273289000",
     display: "AOF - Assessment of occupational function",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AssessmentProtocolOfPragmaticLinguisticSkills: Coding.FromStrict({
+  ConditionStageTypeValueSet_AssessmentProtocolOfPragmaticLinguisticSkills: new Coding({
     code: "273290009",
     display: "Assessment protocol of pragmatic linguistic skills",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AstonIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_AstonIndex: new Coding({
     code: "273291008",
     display: "Aston index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AttributionalStyleQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_AttributionalStyleQuestionnaire: new Coding({
     code: "273292001",
     display: "Attributional style questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AuditoryComprehensionTestForSentences: Coding.FromStrict({
+  ConditionStageTypeValueSet_AuditoryComprehensionTestForSentences: new Coding({
     code: "273293006",
     display: "Auditory comprehension test for sentences",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AugmentativeCommunicationProfile: Coding.FromStrict({
+  ConditionStageTypeValueSet_AugmentativeCommunicationProfile: new Coding({
     code: "273294000",
     display: "Augmentative communication profile",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AutisticFeaturesChecklist: Coding.FromStrict({
+  ConditionStageTypeValueSet_AutisticFeaturesChecklist: new Coding({
     code: "273295004",
     display: "Autistic features checklist",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AutobiographicalMemoryInterview: Coding.FromStrict({
+  ConditionStageTypeValueSet_AutobiographicalMemoryInterview: new Coding({
     code: "273296003",
     display: "Autobiographical memory interview",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BamfordKowalAndBenchNonPictureRelated: Coding.FromStrict({
+  ConditionStageTypeValueSet_BamfordKowalAndBenchNonPictureRelated: new Coding({
     code: "273298002",
     display: "Bamford Kowal and Bench non-picture related",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BKBPRBamfordKowalAndBenchPictureRelated: Coding.FromStrict({
+  ConditionStageTypeValueSet_BKBPRBamfordKowalAndBenchPictureRelated: new Coding({
     code: "273299005",
     display: "BKBPR - Bamford Kowal and Bench picture related",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BangorDyslexiaTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_BangorDyslexiaTest: new Coding({
     code: "273300002",
     display: "Bangor dyslexia test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BanksonLanguageTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_BanksonLanguageTest: new Coding({
     code: "273301003",
     display: "Bankson language test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BarthelIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_BarthelIndex: new Coding({
     code: "273302005",
     display: "Barthel index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BayleyScaleOfInfantDevelopment: Coding.FromStrict({
+  ConditionStageTypeValueSet_BayleyScaleOfInfantDevelopment: new Coding({
     code: "273305007",
     display: "Bayley scale of infant development",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BeckDepressionInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_BeckDepressionInventory: new Coding({
     code: "273306008",
     display: "Beck depression inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BeckAnxietyStandardizedRatingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_BeckAnxietyStandardizedRatingScale: new Coding({
     code: "273307004",
     display: "Beck anxiety standardized rating scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BESTBedsideEvaluationAndScreeningTestOfAphasia: Coding.FromStrict({
+  ConditionStageTypeValueSet_BESTBedsideEvaluationAndScreeningTestOfAphasia: new Coding({
     code: "273308009",
     display: "BEST - Bedside evaluation and screening test of aphasia",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BeeryBuktenicaTestOfVisualMotorIntegration: Coding.FromStrict({
+  ConditionStageTypeValueSet_BeeryBuktenicaTestOfVisualMotorIntegration: new Coding({
     code: "273309001",
     display: "Beery-Buktenica test of visual motor integration",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BehaviorAndMoodDisturbanceScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_BehaviorAndMoodDisturbanceScale: new Coding({
     code: "273310006",
     display: "Behavior and mood disturbance scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BehaviorAssessmentBattery: Coding.FromStrict({
+  ConditionStageTypeValueSet_BehaviorAssessmentBattery: new Coding({
     code: "273311005",
     display: "Behavior assessment battery",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BehaviorProblemChecklist: Coding.FromStrict({
+  ConditionStageTypeValueSet_BehaviorProblemChecklist: new Coding({
     code: "273312003",
     display: "Behavior problem checklist",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BehaviorRatingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_BehaviorRatingScale: new Coding({
     code: "273313008",
     display: "Behavior rating scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BehavioralInattentionTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_BehavioralInattentionTest: new Coding({
     code: "273314002",
     display: "Behavioral inattention test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BOSBehavioralObservationSchedule: Coding.FromStrict({
+  ConditionStageTypeValueSet_BOSBehavioralObservationSchedule: new Coding({
     code: "273315001",
     display: "BOS - Behavioral observation schedule",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BehavioralScreeningQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_BehavioralScreeningQuestionnaire: new Coding({
     code: "273316000",
     display: "Behavioral screening questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BennettTestOfManualDexterity: Coding.FromStrict({
+  ConditionStageTypeValueSet_BennettTestOfManualDexterity: new Coding({
     code: "273317009",
     display: "Bennett test of manual dexterity",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BexleyMaudsleyAutomatedPsychologicalScreening: Coding.FromStrict({
+  ConditionStageTypeValueSet_BexleyMaudsleyAutomatedPsychologicalScreening: new Coding({
     code: "273319007",
     display: "Bexley-Maudsley automated psychological screening",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BingeEatingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_BingeEatingScale: new Coding({
     code: "273320001",
     display: "Binge eating scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BORBBirminghamObjectRecognitionBattery: Coding.FromStrict({
+  ConditionStageTypeValueSet_BORBBirminghamObjectRecognitionBattery: new Coding({
     code: "273321002",
     display: "BORB - Birmingham object recognition battery",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BlakelyDyspraxiaAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_BlakelyDyspraxiaAssessment: new Coding({
     code: "273322009",
     display: "Blakely dyspraxia assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BlessedDementiaRatingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_BlessedDementiaRatingScale: new Coding({
     code: "273323004",
     display: "Blessed dementia rating scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BlissymbolsTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_BlissymbolsTest: new Coding({
     code: "273324005",
     display: "Blissymbols test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BodyShapeQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_BodyShapeQuestionnaire: new Coding({
     code: "273325006",
     display: "Body shape questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BoehmTestOfBasicConcepts: Coding.FromStrict({
+  ConditionStageTypeValueSet_BoehmTestOfBasicConcepts: new Coding({
     code: "273326007",
     display: "Boehm test of basic concepts",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BookerHeterotopicOssificationScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_BookerHeterotopicOssificationScore: new Coding({
     code: "273327003",
     display: "Booker heterotopic ossification score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BostonAphasiaScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_BostonAphasiaScale: new Coding({
     code: "273328008",
     display: "Boston aphasia scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BostonDiagnosticAphasiaExamination: Coding.FromStrict({
+  ConditionStageTypeValueSet_BostonDiagnosticAphasiaExamination: new Coding({
     code: "273329000",
     display: "Boston diagnostic aphasia examination",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BostonNamingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_BostonNamingTest: new Coding({
     code: "273330005",
     display: "Boston naming test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BrackenTestOfBasicConceptScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_BrackenTestOfBasicConceptScale: new Coding({
     code: "273331009",
     display: "Bracken test of basic concept scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BriefActivitiesOfDailyLiving: Coding.FromStrict({
+  ConditionStageTypeValueSet_BriefActivitiesOfDailyLiving: new Coding({
     code: "273332002",
     display: "Brief activities of daily living",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BDRSBriefDepressionRatingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_BDRSBriefDepressionRatingScale: new Coding({
     code: "273333007",
     display: "BDRS - Brief depression rating scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BristolLanguageAssessmentScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_BristolLanguageAssessmentScale: new Coding({
     code: "273334001",
     display: "Bristol language assessment scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BritishAbilityScales: Coding.FromStrict({
+  ConditionStageTypeValueSet_BritishAbilityScales: new Coding({
     code: "273335000",
     display: "British ability scales",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BASRBritishAbilityScalesRevised: Coding.FromStrict({
+  ConditionStageTypeValueSet_BASRBritishAbilityScalesRevised: new Coding({
     code: "273336004",
     display: "BASR - British ability scales - revised",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BritishAbilityScalesReadingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_BritishAbilityScalesReadingTest: new Coding({
     code: "273337008",
     display: "British ability scales reading test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BASBritishAbilityScalesSpellingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_BASBritishAbilityScalesSpellingTest: new Coding({
     code: "273338003",
     display: "BAS - British ability scales spelling test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BritishIslesLupusAssessmentGroupScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_BritishIslesLupusAssessmentGroupScore: new Coding({
     code: "273339006",
     display: "British isles lupus assessment group score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BryantAndBradleyRhymingTask: Coding.FromStrict({
+  ConditionStageTypeValueSet_BryantAndBradleyRhymingTask: new Coding({
     code: "273341007",
     display: "Bryant and Bradley rhyming task",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BuffaloAssessmentProfileWilson: Coding.FromStrict({
+  ConditionStageTypeValueSet_BuffaloAssessmentProfileWilson: new Coding({
     code: "273342000",
     display: "Buffalo assessment profile - Wilson",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BulimiaTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_BulimiaTest: new Coding({
     code: "273343005",
     display: "Bulimia test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BulimicInvestigationTestEdinburgh: Coding.FromStrict({
+  ConditionStageTypeValueSet_BulimicInvestigationTestEdinburgh: new Coding({
     code: "273344004",
     display: "Bulimic investigation test - Edinburgh",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BusStory: Coding.FromStrict({
+  ConditionStageTypeValueSet_BusStory: new Coding({
     code: "273345003",
     display: "Bus story",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CageQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_CageQuestionnaire: new Coding({
     code: "273347006",
     display: "Cage questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CaliforniaPersonalityInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_CaliforniaPersonalityInventory: new Coding({
     code: "273348001",
     display: "California personality inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CallierAzusaScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_CallierAzusaScale: new Coding({
     code: "273349009",
     display: "Callier-Azusa scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CamberwellAssessmentForTheNeedsOfTheElderly: Coding.FromStrict({
+  ConditionStageTypeValueSet_CamberwellAssessmentForTheNeedsOfTheElderly: new Coding({
     code: "273350009",
     display: "Camberwell assessment for the needs of the elderly",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CABCambridgeApraxiaBattery: Coding.FromStrict({
+  ConditionStageTypeValueSet_CABCambridgeApraxiaBattery: new Coding({
     code: "273351008",
     display: "CAB - Cambridge apraxia battery",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CantrilLadderAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_CantrilLadderAssessment: new Coding({
     code: "273352001",
     display: "Cantril ladder assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CELICarrowElicitedLanguageInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_CELICarrowElicitedLanguageInventory: new Coding({
     code: "273353006",
     display: "CELI - Carrow elicited language inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CarrowScreeningTestOfAuditoryComprehension: Coding.FromStrict({
+  ConditionStageTypeValueSet_CarrowScreeningTestOfAuditoryComprehension: new Coding({
     code: "273354000",
     display: "Carrow screening test of auditory comprehension",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ChaileyHeritageLyingAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_ChaileyHeritageLyingAssessment: new Coding({
     code: "273355004",
     display: "Chailey Heritage lying assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ChaileyHeritageSeatingAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_ChaileyHeritageSeatingAssessment: new Coding({
     code: "273356003",
     display: "Chailey Heritage seating assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ChecklistOfCommunicativeCompetence: Coding.FromStrict({
+  ConditionStageTypeValueSet_ChecklistOfCommunicativeCompetence: new Coding({
     code: "273357007",
     display: "Checklist of communicative competence",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ChecklistOfConversationalAbilities: Coding.FromStrict({
+  ConditionStageTypeValueSet_ChecklistOfConversationalAbilities: new Coding({
     code: "273358002",
     display: "Checklist of conversational abilities",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ChecklistOfListeningBehaviors: Coding.FromStrict({
+  ConditionStageTypeValueSet_ChecklistOfListeningBehaviors: new Coding({
     code: "273359005",
     display: "Checklist of listening behaviors",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OTChessingtonOccupationalTherapyNeurologicalAssessmentBattery: Coding.FromStrict({
+  ConditionStageTypeValueSet_OTChessingtonOccupationalTherapyNeurologicalAssessmentBattery: new Coding({
     code: "273360000",
     display: "OT - Chessington occupational therapy neurological assessment battery",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ChildAssessmentSchedule: Coding.FromStrict({
+  ConditionStageTypeValueSet_ChildAssessmentSchedule: new Coding({
     code: "273361001",
     display: "Child assessment schedule",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CDSChildDepressionScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_CDSChildDepressionScale: new Coding({
     code: "273362008",
     display: "CDS - Child depression scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ChildrenQuoteSComaScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_ChildrenQuoteSComaScale: new Coding({
     code: "273363003",
     display: "Children's coma scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CrohnDiseaseActivityIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_CrohnDiseaseActivityIndex: new Coding({
     code: "273364009",
     display: "Crohn disease activity index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CAPECliftonAssessmentProceduresForTheElderly: Coding.FromStrict({
+  ConditionStageTypeValueSet_CAPECliftonAssessmentProceduresForTheElderly: new Coding({
     code: "273365005",
     display: "CAPE - Clifton assessment procedures for the elderly",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ClinicalAnxietyScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_ClinicalAnxietyScale: new Coding({
     code: "273366006",
     display: "Clinical anxiety scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ClinicalDementiaRatingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_ClinicalDementiaRatingScale: new Coding({
     code: "273367002",
     display: "Clinical dementia rating scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CEDRIClinicalEatingDisorderRatingInstrument: Coding.FromStrict({
+  ConditionStageTypeValueSet_CEDRIClinicalEatingDisorderRatingInstrument: new Coding({
     code: "273368007",
     display: "CEDRI - Clinical eating disorder rating instrument",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ClinicalEvaluationOfLanguageFunctionRevised: Coding.FromStrict({
+  ConditionStageTypeValueSet_ClinicalEvaluationOfLanguageFunctionRevised: new Coding({
     code: "273369004",
     display: "Clinical evaluation of language function revised",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ClinicalEvaluationOfLanguageFunctionRevisedScreeningTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_ClinicalEvaluationOfLanguageFunctionRevisedScreeningTest: new Coding({
     code: "273370003",
     display: "Clinical evaluation of language function revised - screening test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ClinicalEvaluationOfLanguageFunctionRevisedPreschoolTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_ClinicalEvaluationOfLanguageFunctionRevisedPreschoolTest: new Coding({
     code: "273371004",
     display: "Clinical evaluation of language function revised - preschool test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ClinicalObservationOfMotorAndPosturalSkills: Coding.FromStrict({
+  ConditionStageTypeValueSet_ClinicalObservationOfMotorAndPosturalSkills: new Coding({
     code: "273372006",
     display: "Clinical observation of motor and postural skills",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CAAPCocaineAbuseAssessmentProfile: Coding.FromStrict({
+  ConditionStageTypeValueSet_CAAPCocaineAbuseAssessmentProfile: new Coding({
     code: "273373001",
     display: "CAAP - Cocaine abuse assessment profile",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CognitionsQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_CognitionsQuestionnaire: new Coding({
     code: "273374007",
     display: "Cognitions questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CognitiveFailuresQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_CognitiveFailuresQuestionnaire: new Coding({
     code: "273375008",
     display: "Cognitive failures questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CASPCommunicationAssessmentProfileForAdultsWithAMentalHandicap: Coding.FromStrict({
+  ConditionStageTypeValueSet_CASPCommunicationAssessmentProfileForAdultsWithAMentalHandicap: new Coding({
     code: "273376009",
     display: "CASP - Communication assessment profile for adults with a mental handicap",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CommunicativeAbilitiesInDailyLiving: Coding.FromStrict({
+  ConditionStageTypeValueSet_CommunicativeAbilitiesInDailyLiving: new Coding({
     code: "273377000",
     display: "Communicative abilities in daily living",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CIDICompositeInternationalDiagnosticInterview: Coding.FromStrict({
+  ConditionStageTypeValueSet_CIDICompositeInternationalDiagnosticInterview: new Coding({
     code: "273378005",
     display: "CIDI - Composite international diagnostic interview",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ComprehensiveDrinkerProfile: Coding.FromStrict({
+  ConditionStageTypeValueSet_ComprehensiveDrinkerProfile: new Coding({
     code: "273379002",
     display: "Comprehensive drinker profile",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CRISComprehensiveInjuryScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_CRISComprehensiveInjuryScale: new Coding({
     code: "273380004",
     display: "CRIS - Comprehensive injury scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ComprehensiveOccupationalTherapyEvaluationScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_ComprehensiveOccupationalTherapyEvaluationScale: new Coding({
     code: "273381000",
     display: "Comprehensive occupational therapy evaluation scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CESCompulsiveEatingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_CESCompulsiveEatingScale: new Coding({
     code: "273382007",
     display: "CES - Compulsive eating scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ConstantAndMurleyShoulderAssessmentScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_ConstantAndMurleyShoulderAssessmentScore: new Coding({
     code: "273383002",
     display: "Constant and Murley shoulder assessment score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ConsumerSatisfactionQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_ConsumerSatisfactionQuestionnaire: new Coding({
     code: "273384008",
     display: "Consumer satisfaction questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CoOpFunctionCharts: Coding.FromStrict({
+  ConditionStageTypeValueSet_CoOpFunctionCharts: new Coding({
     code: "273385009",
     display: "Co-op function charts",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PFCTCooperPersonalizedFluencyControlTherapy: Coding.FromStrict({
+  ConditionStageTypeValueSet_PFCTCooperPersonalizedFluencyControlTherapy: new Coding({
     code: "273386005",
     display: "PFCT - Cooper personalized fluency control therapy",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CopingResponsesInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_CopingResponsesInventory: new Coding({
     code: "273387001",
     display: "Coping responses inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CrichtonVocabularyScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_CrichtonVocabularyScale: new Coding({
     code: "273388006",
     display: "Crichton vocabulary scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DailyActivitiesQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_DailyActivitiesQuestionnaire: new Coding({
     code: "273389003",
     display: "Daily activities questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DallasPainQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_DallasPainQuestionnaire: new Coding({
     code: "273390007",
     display: "Dallas pain questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DanielsAndDiackReadingTests: Coding.FromStrict({
+  ConditionStageTypeValueSet_DanielsAndDiackReadingTests: new Coding({
     code: "273391006",
     display: "Daniels and Diack reading tests",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DanielsAndDiackGradedWordSpellingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_DanielsAndDiackGradedWordSpellingTest: new Coding({
     code: "273392004",
     display: "Daniels and Diack graded word spelling test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DeGangiBerkSensoryFunctioningInInfants: Coding.FromStrict({
+  ConditionStageTypeValueSet_DeGangiBerkSensoryFunctioningInInfants: new Coding({
     code: "273393009",
     display: "De Gangi-Berk sensory functioning in infants",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DelightedTerribleFacesScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_DelightedTerribleFacesScale: new Coding({
     code: "273394003",
     display: "Delighted-terrible faces scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DenverDevelopmentScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_DenverDevelopmentScale: new Coding({
     code: "273395002",
     display: "Denver development scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DenverDevelopmentalSubscaleGrossMotor: Coding.FromStrict({
+  ConditionStageTypeValueSet_DenverDevelopmentalSubscaleGrossMotor: new Coding({
     code: "273396001",
     display: "Denver developmental subscale - gross motor",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DenverDevelopmentalSubscaleLanguage: Coding.FromStrict({
+  ConditionStageTypeValueSet_DenverDevelopmentalSubscaleLanguage: new Coding({
     code: "273397005",
     display: "Denver developmental subscale - language",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DenverDevelopmentalSubscalePersonalSocial: Coding.FromStrict({
+  ConditionStageTypeValueSet_DenverDevelopmentalSubscalePersonalSocial: new Coding({
     code: "273398000",
     display: "Denver developmental subscale - personal/social",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DenverDevelopmentalSubscaleFineMotorAdaptive: Coding.FromStrict({
+  ConditionStageTypeValueSet_DenverDevelopmentalSubscaleFineMotorAdaptive: new Coding({
     code: "273399008",
     display: "Denver developmental subscale - fine motor/adaptive",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DenverDevelopmentScaleScreeningTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_DenverDevelopmentScaleScreeningTest: new Coding({
     code: "273400001",
     display: "Denver development scale screening test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DenverDevelopmentScaleScreeningTestScheduleForGrowingSkills: Coding.FromStrict({
+  ConditionStageTypeValueSet_DenverDevelopmentScaleScreeningTestScheduleForGrowingSkills: new Coding({
     code: "273401002",
     display: "Denver development scale screening test - schedule for growing skills",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DepressionAnxietyScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_DepressionAnxietyScale: new Coding({
     code: "273402009",
     display: "Depression anxiety scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DepressionSelfRatingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_DepressionSelfRatingScale: new Coding({
     code: "273403004",
     display: "Depression self rating scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DermatologyLifeQualityIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_DermatologyLifeQualityIndex: new Coding({
     code: "273408008",
     display: "Dermatology life quality index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DSFIDerogatisSexualFunctioningInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_DSFIDerogatisSexualFunctioningInventory: new Coding({
     code: "273409000",
     display: "DSFI - Derogatis sexual functioning inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DiabetesClinicSatisfactionQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_DiabetesClinicSatisfactionQuestionnaire: new Coding({
     code: "273411009",
     display: "Diabetes clinic satisfaction questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DTSQDiabetesTreatmentSatisfactionQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_DTSQDiabetesTreatmentSatisfactionQuestionnaire: new Coding({
     code: "273412002",
     display: "DTSQ - Diabetes treatment satisfaction questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DiabetesWellbeingQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_DiabetesWellbeingQuestionnaire: new Coding({
     code: "273413007",
     display: "Diabetes wellbeing questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DICADiagnosticInterviewForChildrenAndAdolescents: Coding.FromStrict({
+  ConditionStageTypeValueSet_DICADiagnosticInterviewForChildrenAndAdolescents: new Coding({
     code: "273414001",
     display: "DICA - Diagnostic interview for children and adolescents",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DiagnosticInterviewSchedule: Coding.FromStrict({
+  ConditionStageTypeValueSet_DiagnosticInterviewSchedule: new Coding({
     code: "273415000",
     display: "Diagnostic interview schedule",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DSDTDiagnosticSpeechDiscriminationTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_DSDTDiagnosticSpeechDiscriminationTest: new Coding({
     code: "273416004",
     display: "DSDT - Diagnostic speech discrimination test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DiagnosticSurveyForEatingDisorders: Coding.FromStrict({
+  ConditionStageTypeValueSet_DiagnosticSurveyForEatingDisorders: new Coding({
     code: "273417008",
     display: "Diagnostic survey for eating disorders",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DINEDietaryInstrumentForNutritionEducationQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_DINEDietaryInstrumentForNutritionEducationQuestionnaire: new Coding({
     code: "273418003",
     display: "DINE - Dietary instrument for nutrition education questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DigitSequenceLearning: Coding.FromStrict({
+  ConditionStageTypeValueSet_DigitSequenceLearning: new Coding({
     code: "273419006",
     display: "Digit sequence learning",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DisabilityAssessmentSchedule: Coding.FromStrict({
+  ConditionStageTypeValueSet_DisabilityAssessmentSchedule: new Coding({
     code: "273420000",
     display: "Disability assessment schedule",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DisabilityRatingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_DisabilityRatingScale: new Coding({
     code: "273421001",
     display: "Disability rating scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DiscourseAbilitiesProfile: Coding.FromStrict({
+  ConditionStageTypeValueSet_DiscourseAbilitiesProfile: new Coding({
     code: "273422008",
     display: "Discourse abilities profile",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DolScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_DolScale: new Coding({
     code: "273423003",
     display: "Dol scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DoyleArticularIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_DoyleArticularIndex: new Coding({
     code: "273424009",
     display: "Doyle articular index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DrinkingProblemScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_DrinkingProblemScale: new Coding({
     code: "273425005",
     display: "Drinking problem scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DASTDrugAbuseScreeningTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_DASTDrugAbuseScreeningTest: new Coding({
     code: "273426006",
     display: "DAST - Drug abuse screening test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DubowitzScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_DubowitzScore: new Coding({
     code: "273427002",
     display: "Dubowitz score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DukeUNCHealthProfile: Coding.FromStrict({
+  ConditionStageTypeValueSet_DukeUNCHealthProfile: new Coding({
     code: "273428007",
     display: "Duke UNC health profile",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DundeeCardiovascularRiskScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_DundeeCardiovascularRiskScore: new Coding({
     code: "273429004",
     display: "Dundee cardiovascular risk score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DurrellTestOfListeningComprehension: Coding.FromStrict({
+  ConditionStageTypeValueSet_DurrellTestOfListeningComprehension: new Coding({
     code: "273430009",
     display: "Durrell test of listening comprehension",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EakinIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_EakinIndex: new Coding({
     code: "273431008",
     display: "Eakin index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EatingAttitudesTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_EatingAttitudesTest: new Coding({
     code: "273432001",
     display: "Eating attitudes test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EAT26AbbreviatedEatingAttitudesTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_EAT26AbbreviatedEatingAttitudesTest: new Coding({
     code: "273433006",
     display: "EAT 26 - Abbreviated eating attitudes test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EBRSEatingBehaviorRatingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_EBRSEatingBehaviorRatingScale: new Coding({
     code: "273434000",
     display: "EBRS - Eating behavior rating scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EatingDisordersInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_EatingDisordersInventory: new Coding({
     code: "273435004",
     display: "Eating disorders inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EatingInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_EatingInventory: new Coding({
     code: "273436003",
     display: "Eating inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EasternCooperativeOncologyGroupECOGScaleForPhysicalAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_EasternCooperativeOncologyGroupECOGScaleForPhysicalAssessment: new Coding({
     code: "273437007",
     display: "Eastern Cooperative Oncology Group (ECOG) scale for physical assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EdinburghArticulationTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_EdinburghArticulationTest: new Coding({
     code: "273438002",
     display: "Edinburgh articulation test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EFCPEdinburghFunctionalCommunicationProfile: Coding.FromStrict({
+  ConditionStageTypeValueSet_EFCPEdinburghFunctionalCommunicationProfile: new Coding({
     code: "273439005",
     display: "EFCP - Edinburgh functional communication profile",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RevisedEdinburghFunctionalCommunicationProfile: Coding.FromStrict({
+  ConditionStageTypeValueSet_RevisedEdinburghFunctionalCommunicationProfile: new Coding({
     code: "273440007",
     display: "Revised Edinburgh functional communication profile",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EdinburghPostnatalDepressionScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_EdinburghPostnatalDepressionScale: new Coding({
     code: "273441006",
     display: "Edinburgh postnatal depression scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EdmansADLIndexEdmansActivitiesOfDailyLivingIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_EdmansADLIndexEdmansActivitiesOfDailyLivingIndex: new Coding({
     code: "273442004",
     display: "Edmans ADL index - Edmans activities of daily living index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EliaNormogram: Coding.FromStrict({
+  ConditionStageTypeValueSet_EliaNormogram: new Coding({
     code: "273443009",
     display: "Elia normogram",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BritishPictureVocabularyScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_BritishPictureVocabularyScale: new Coding({
     code: "273444003",
     display: "British picture vocabulary scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EnthesitisIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_EnthesitisIndex: new Coding({
     code: "273445002",
     display: "Enthesitis index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EuropeanOrganizationForResearchAndTreatmentOfCancerEORTCQualityOfLifeQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_EuropeanOrganizationForResearchAndTreatmentOfCancerEORTCQualityOfLifeQuestionnaire: new Coding({
     code: "273446001",
     display: "European Organization for Research and Treatment of Cancer (EORTC) - Quality of life questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EuroQOL: Coding.FromStrict({
+  ConditionStageTypeValueSet_EuroQOL: new Coding({
     code: "273447005",
     display: "EuroQOL",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ExtendedActivitiesOfDailyLivingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_ExtendedActivitiesOfDailyLivingScale: new Coding({
     code: "273448000",
     display: "Extended activities of daily living scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EPIEysenckPersonalityInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_EPIEysenckPersonalityInventory: new Coding({
     code: "273449008",
     display: "EPI - Eysenck personality inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FacialRecognitionTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_FacialRecognitionTest: new Coding({
     code: "273450008",
     display: "Facial recognition test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FagerstromToleranceQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_FagerstromToleranceQuestionnaire: new Coding({
     code: "273451007",
     display: "Fagerstrom tolerance questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RTQRevisedToleranceQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_RTQRevisedToleranceQuestionnaire: new Coding({
     code: "273452000",
     display: "RTQ - Revised tolerance questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FagerstromTestForNicotineDependence: Coding.FromStrict({
+  ConditionStageTypeValueSet_FagerstromTestForNicotineDependence: new Coding({
     code: "273453005",
     display: "Fagerstrom test for nicotine dependence",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FearOfAcquiredImmunodeficiencySyndromeScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_FearOfAcquiredImmunodeficiencySyndromeScale: new Coding({
     code: "273454004",
     display: "Fear of acquired immunodeficiency syndrome scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FearSurveySchedule: Coding.FromStrict({
+  ConditionStageTypeValueSet_FearSurveySchedule: new Coding({
     code: "273455003",
     display: "Fear survey schedule",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FeedingAssessmentSchedule: Coding.FromStrict({
+  ConditionStageTypeValueSet_FeedingAssessmentSchedule: new Coding({
     code: "273456002",
     display: "Feeding assessment schedule",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FeelingsOfFatnessQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_FeelingsOfFatnessQuestionnaire: new Coding({
     code: "273457006",
     display: "Feelings of fatness questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FTTFingerTappingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_FTTFingerTappingTest: new Coding({
     code: "273458001",
     display: "FTT - Finger tapping test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FIRSTScreeningTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_FIRSTScreeningTest: new Coding({
     code: "273459009",
     display: "FIRST screening test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FrankelGradingSystemForSpinalCordInjury: Coding.FromStrict({
+  ConditionStageTypeValueSet_FrankelGradingSystemForSpinalCordInjury: new Coding({
     code: "273460004",
     display: "Frankel grading system for spinal cord injury",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FAIFrenchayActivitiesIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_FAIFrenchayActivitiesIndex: new Coding({
     code: "273461000",
     display: "FAI - Frenchay activities index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FrenchayAphasiaScreeningTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_FrenchayAphasiaScreeningTest: new Coding({
     code: "273462007",
     display: "Frenchay aphasia screening test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FDAFrenchayDysarthriaAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_FDAFrenchayDysarthriaAssessment: new Coding({
     code: "273463002",
     display: "FDA - Frenchay dysarthria assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FullertonLanguageTestForAdolescents: Coding.FromStrict({
+  ConditionStageTypeValueSet_FullertonLanguageTestForAdolescents: new Coding({
     code: "273465009",
     display: "Fullerton language test for adolescents",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FunctionalAssessmentMeasure: Coding.FromStrict({
+  ConditionStageTypeValueSet_FunctionalAssessmentMeasure: new Coding({
     code: "273466005",
     display: "Functional assessment measure",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FunctionalCommunicationAssessmentForPhysicallyHandicappedChildren: Coding.FromStrict({
+  ConditionStageTypeValueSet_FunctionalCommunicationAssessmentForPhysicallyHandicappedChildren: new Coding({
     code: "273467001",
     display: "Functional communication assessment for physically handicapped children",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FunctionalCommunicationProfile: Coding.FromStrict({
+  ConditionStageTypeValueSet_FunctionalCommunicationProfile: new Coding({
     code: "273468006",
     display: "Functional communication profile",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FIMFunctionalIndependenceMeasure: Coding.FromStrict({
+  ConditionStageTypeValueSet_FIMFunctionalIndependenceMeasure: new Coding({
     code: "273469003",
     display: "FIM - Functional independence measure",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FunctionalLimitationProfile: Coding.FromStrict({
+  ConditionStageTypeValueSet_FunctionalLimitationProfile: new Coding({
     code: "273470002",
     display: "Functional limitation profile",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FMPSFunctionalMealPreparationScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_FMPSFunctionalMealPreparationScale: new Coding({
     code: "273471003",
     display: "FMPS - Functional meal preparation scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FunctionalStatusIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_FunctionalStatusIndex: new Coding({
     code: "273472005",
     display: "Functional status index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FSSTFundamentalSpeechSkillsTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_FSSTFundamentalSpeechSkillsTest: new Coding({
     code: "273473000",
     display: "FSST - Fundamental speech skills test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GalvestonOrientationAndAmnesiaTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_GalvestonOrientationAndAmnesiaTest: new Coding({
     code: "273474006",
     display: "Galveston orientation and amnesia test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GathercoleNonWordRepetitionTask: Coding.FromStrict({
+  ConditionStageTypeValueSet_GathercoleNonWordRepetitionTask: new Coding({
     code: "273475007",
     display: "Gathercole - non-word repetition task",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GeneralAssessmentOfNeurologicalImpairment: Coding.FromStrict({
+  ConditionStageTypeValueSet_GeneralAssessmentOfNeurologicalImpairment: new Coding({
     code: "273477004",
     display: "General assessment of neurological impairment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GeneralClericalTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_GeneralClericalTest: new Coding({
     code: "273478009",
     display: "General clerical test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GeneralHealthQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_GeneralHealthQuestionnaire: new Coding({
     code: "273479001",
     display: "General health questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GWBSGeneralWellbeingSchedule: Coding.FromStrict({
+  ConditionStageTypeValueSet_GWBSGeneralWellbeingSchedule: new Coding({
     code: "273480003",
     display: "GWBS - General wellbeing schedule",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GeriatricDepressionScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_GeriatricDepressionScale: new Coding({
     code: "273481004",
     display: "Geriatric depression scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GermanTestOfWordfinding: Coding.FromStrict({
+  ConditionStageTypeValueSet_GermanTestOfWordfinding: new Coding({
     code: "273482006",
     display: "German test of wordfinding",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GlasgowAbbreviatedMentalTestScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_GlasgowAbbreviatedMentalTestScore: new Coding({
     code: "273483001",
     display: "Glasgow abbreviated mental test score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GlasgowOutcomeScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_GlasgowOutcomeScale: new Coding({
     code: "273484007",
     display: "Glasgow outcome scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GoldmanCardiacRiskIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_GoldmanCardiacRiskIndex: new Coding({
     code: "273485008",
     display: "Goldman cardiac risk index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GoldmanFristoeTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_GoldmanFristoeTest: new Coding({
     code: "273486009",
     display: "Goldman Fristoe test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GolombrokRustInventoryOfSexualSatisfaction: Coding.FromStrict({
+  ConditionStageTypeValueSet_GolombrokRustInventoryOfSexualSatisfaction: new Coding({
     code: "273487000",
     display: "Golombrok-Rust inventory of sexual satisfaction",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GoodenoughDrawAManTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_GoodenoughDrawAManTest: new Coding({
     code: "273488005",
     display: "Goodenough draw-a-man test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GoodenoughNorms: Coding.FromStrict({
+  ConditionStageTypeValueSet_GoodenoughNorms: new Coding({
     code: "273489002",
     display: "Goodenough norms",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GradeRoughBreathyAsthenicStrainGRBASScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_GradeRoughBreathyAsthenicStrainGRBASScale: new Coding({
     code: "273490006",
     display: "Grade-Rough-Breathy-Asthenic-Strain (GRBAS) scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GradedNamingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_GradedNamingTest: new Coding({
     code: "273492003",
     display: "Graded naming test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GrahamKendallMemoryForDesignsTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_GrahamKendallMemoryForDesignsTest: new Coding({
     code: "273493008",
     display: "Graham-Kendall memory for designs test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GrammaticalAnalysisOfElicitedLanguage: Coding.FromStrict({
+  ConditionStageTypeValueSet_GrammaticalAnalysisOfElicitedLanguage: new Coding({
     code: "273494002",
     display: "Grammatical analysis of elicited language",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GrammaticalContrastsTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_GrammaticalContrastsTest: new Coding({
     code: "273495001",
     display: "Grammatical contrasts test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GunzbergPrimaryProgressAssessmentChartOfSocialDevelopment: Coding.FromStrict({
+  ConditionStageTypeValueSet_GunzbergPrimaryProgressAssessmentChartOfSocialDevelopment: new Coding({
     code: "273496000",
     display: "Gunzberg primary progress assessment chart of social development",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GunzbergProgressAssessmentChartOfSocialDevelopmentNumber1: Coding.FromStrict({
+  ConditionStageTypeValueSet_GunzbergProgressAssessmentChartOfSocialDevelopmentNumber1: new Coding({
     code: "273497009",
     display: "Gunzberg progress assessment chart of social development number 1",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GunzbergProgressAssessmentChartOfSocialDevelopmentNumber2: Coding.FromStrict({
+  ConditionStageTypeValueSet_GunzbergProgressAssessmentChartOfSocialDevelopmentNumber2: new Coding({
     code: "273498004",
     display: "Gunzberg progress assessment chart of social development number 2",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HachinskiIschemiaScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_HachinskiIschemiaScore: new Coding({
     code: "273499007",
     display: "Hachinski ischemia score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HallAndBakerRehabilitationEvaluation: Coding.FromStrict({
+  ConditionStageTypeValueSet_HallAndBakerRehabilitationEvaluation: new Coding({
     code: "273500003",
     display: "Hall and Baker rehabilitation evaluation",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HalsteadReitanBattery: Coding.FromStrict({
+  ConditionStageTypeValueSet_HalsteadReitanBattery: new Coding({
     code: "273501004",
     display: "Halstead-Reitan battery",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HambHipScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_HambHipScore: new Coding({
     code: "273502006",
     display: "Hamb hip score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HamiltonRatingScaleForDepression: Coding.FromStrict({
+  ConditionStageTypeValueSet_HamiltonRatingScaleForDepression: new Coding({
     code: "273503001",
     display: "Hamilton rating scale for depression",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LorrQuoteSModifiedMultidimensionalScaleForRatingPsychiatricPatients: Coding.FromStrict({
+  ConditionStageTypeValueSet_LorrQuoteSModifiedMultidimensionalScaleForRatingPsychiatricPatients: new Coding({
     code: "273504007",
     display: "Lorr's modified multidimensional scale for rating psychiatric patients",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HampshireAssessmentForLivingWithOthers: Coding.FromStrict({
+  ConditionStageTypeValueSet_HampshireAssessmentForLivingWithOthers: new Coding({
     code: "273505008",
     display: "Hampshire assessment for living with others",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HanenEarlyLanguageProgram: Coding.FromStrict({
+  ConditionStageTypeValueSet_HanenEarlyLanguageProgram: new Coding({
     code: "273507000",
     display: "Hanen early language program",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HarveyAndBradshawIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_HarveyAndBradshawIndex: new Coding({
     code: "273508005",
     display: "Harvey and Bradshaw index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HauserAmbulatoryCategories: Coding.FromStrict({
+  ConditionStageTypeValueSet_HauserAmbulatoryCategories: new Coding({
     code: "273509002",
     display: "Hauser ambulatory categories",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HealthAssessmentQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_HealthAssessmentQuestionnaire: new Coding({
     code: "273510007",
     display: "Health assessment questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MHAQModifiedHealthAssessmentQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_MHAQModifiedHealthAssessmentQuestionnaire: new Coding({
     code: "273511006",
     display: "MHAQ - Modified health assessment questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HealthcareAssessmentQuestionnaireSidneyBenjamin: Coding.FromStrict({
+  ConditionStageTypeValueSet_HealthcareAssessmentQuestionnaireSidneyBenjamin: new Coding({
     code: "273512004",
     display: "Healthcare assessment questionnaire - Sidney Benjamin",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleGenericVersion: Coding.FromStrict({
+  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleGenericVersion: new Coding({
     code: "273513009",
     display: "Health of the Nation Outcome Scale (generic version)",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HealthStatusIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_HealthStatusIndex: new Coding({
     code: "273514003",
     display: "Health status index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HearingHandicapInventoryForTheElderly: Coding.FromStrict({
+  ConditionStageTypeValueSet_HearingHandicapInventoryForTheElderly: new Coding({
     code: "273515002",
     display: "Hearing handicap inventory for the elderly",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HHSHearingHandicapScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_HHSHearingHandicapScale: new Coding({
     code: "273516001",
     display: "HHS - Hearing handicap scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HiddenFiguresTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_HiddenFiguresTest: new Coding({
     code: "273517005",
     display: "Hidden figures test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HopelessnessScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_HopelessnessScale: new Coding({
     code: "273520002",
     display: "Hopelessness scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HopkinsSymptomChecklist: Coding.FromStrict({
+  ConditionStageTypeValueSet_HopkinsSymptomChecklist: new Coding({
     code: "273521003",
     display: "Hopkins symptom checklist",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HornsbyArticulationTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_HornsbyArticulationTest: new Coding({
     code: "273522005",
     display: "Hornsby articulation test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HornsbyTestOfLanguageDevelopment: Coding.FromStrict({
+  ConditionStageTypeValueSet_HornsbyTestOfLanguageDevelopment: new Coding({
     code: "273523000",
     display: "Hornsby test of language development",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HospitalAnxietyAndDepressionScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_HospitalAnxietyAndDepressionScale: new Coding({
     code: "273524006",
     display: "Hospital anxiety and depression scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HospitalTraumaIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_HospitalTraumaIndex: new Coding({
     code: "273525007",
     display: "Hospital trauma index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HumanInteractionAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_HumanInteractionAssessment: new Coding({
     code: "273526008",
     display: "Human interaction assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_IllinoisTestOfPsycholinguisticAbilities: Coding.FromStrict({
+  ConditionStageTypeValueSet_IllinoisTestOfPsycholinguisticAbilities: new Coding({
     code: "273527004",
     display: "Illinois test of psycholinguistic abilities",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_IISIIllnessInjurySeverityIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_IISIIllnessInjurySeverityIndex: new Coding({
     code: "273528009",
     display: "IISI - Illness-injury severity index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_IllnessBehaviorQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_IllnessBehaviorQuestionnaire: new Coding({
     code: "273529001",
     display: "Illness behavior questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ImpactOfEventScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_ImpactOfEventScale: new Coding({
     code: "273530006",
     display: "Impact of event scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_IndexOfIndependenceInActivitiesOfDailyLiving: Coding.FromStrict({
+  ConditionStageTypeValueSet_IndexOfIndependenceInActivitiesOfDailyLiving: new Coding({
     code: "273531005",
     display: "Index of independence in activities of daily living",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ISSInjurySeverityScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_ISSInjurySeverityScore: new Coding({
     code: "273533008",
     display: "ISS - Injury severity score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_InstrumentalADL: Coding.FromStrict({
+  ConditionStageTypeValueSet_InstrumentalADL: new Coding({
     code: "273534002",
     display: "Instrumental ADL",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_INREALInterReactiveLanguageAnalysis: Coding.FromStrict({
+  ConditionStageTypeValueSet_INREALInterReactiveLanguageAnalysis: new Coding({
     code: "273535001",
     display: "INREAL - Inter-reactive language analysis",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_InteractionChecklistForAugmentativeCommunication: Coding.FromStrict({
+  ConditionStageTypeValueSet_InteractionChecklistForAugmentativeCommunication: new Coding({
     code: "273536000",
     display: "Interaction checklist for augmentative communication",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_InterestChecklist: Coding.FromStrict({
+  ConditionStageTypeValueSet_InterestChecklist: new Coding({
     code: "273537009",
     display: "Interest checklist",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_IOWALowBackRatingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_IOWALowBackRatingScale: new Coding({
     code: "273538004",
     display: "IOWA low back rating scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_IOWAStructuredPsychiatricInterview: Coding.FromStrict({
+  ConditionStageTypeValueSet_IOWAStructuredPsychiatricInterview: new Coding({
     code: "273539007",
     display: "IOWA structured psychiatric interview",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_IschemiaScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_IschemiaScore: new Coding({
     code: "273540009",
     display: "Ischemia score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_JarmanIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_JarmanIndex: new Coding({
     code: "273542001",
     display: "Jarman index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_JebsenHandFunctionTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_JebsenHandFunctionTest: new Coding({
     code: "273543006",
     display: "Jebsen hand function test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_JonesWordOrderTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_JonesWordOrderTest: new Coding({
     code: "273544000",
     display: "Jones word order test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_KarnofskyIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_KarnofskyIndex: new Coding({
     code: "273546003",
     display: "Karnofsky index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_KatzActivitiesOfDailyLiving: Coding.FromStrict({
+  ConditionStageTypeValueSet_KatzActivitiesOfDailyLiving: new Coding({
     code: "273547007",
     display: "Katz activities of daily living",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_KASRKatzAdjustmentScaleRelativesForm: Coding.FromStrict({
+  ConditionStageTypeValueSet_KASRKatzAdjustmentScaleRelativesForm: new Coding({
     code: "273548002",
     display: "KASR - Katz adjustment scale - relatives form",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_KendrickBatteryForDetectionOfDementiaInTheElderly: Coding.FromStrict({
+  ConditionStageTypeValueSet_KendrickBatteryForDetectionOfDementiaInTheElderly: new Coding({
     code: "273549005",
     display: "Kendrick battery for detection of dementia in the elderly",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_KennyIndexOfADL: Coding.FromStrict({
+  ConditionStageTypeValueSet_KennyIndexOfADL: new Coding({
     code: "273550005",
     display: "Kenny index of ADL",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_KielhofnerRoleChecklist: Coding.FromStrict({
+  ConditionStageTypeValueSet_KielhofnerRoleChecklist: new Coding({
     code: "273551009",
     display: "Kielhofner role checklist",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_KirwanThompsonArticularIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_KirwanThompsonArticularIndex: new Coding({
     code: "273552002",
     display: "Kirwan Thompson articular index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_KleinBellActivitiesOfDailyLivingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_KleinBellActivitiesOfDailyLivingScale: new Coding({
     code: "273553007",
     display: "Klein-Bell Activities of Daily Living scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_KurtzkeMultipleSclerosisRatingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_KurtzkeMultipleSclerosisRatingScale: new Coding({
     code: "273554001",
     display: "Kurtzke multiple sclerosis rating scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LCSLambethCommunicationScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_LCSLambethCommunicationScale: new Coding({
     code: "273555000",
     display: "LCS - Lambeth communication scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LambethDisabilityScreeningQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_LambethDisabilityScreeningQuestionnaire: new Coding({
     code: "273556004",
     display: "Lambeth disability screening questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LamhAssessmentChecklist: Coding.FromStrict({
+  ConditionStageTypeValueSet_LamhAssessmentChecklist: new Coding({
     code: "273557008",
     display: "Lamh assessment checklist",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LanguageAssessmentRemediationAndScreeningProcedure: Coding.FromStrict({
+  ConditionStageTypeValueSet_LanguageAssessmentRemediationAndScreeningProcedure: new Coding({
     code: "273558003",
     display: "Language assessment remediation and screening procedure",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LansburyArticularIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_LansburyArticularIndex: new Coding({
     code: "273559006",
     display: "Lansbury articular index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LastSixMonthsOfDrinkingQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_LastSixMonthsOfDrinkingQuestionnaire: new Coding({
     code: "273560001",
     display: "Last six months of drinking questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LearningDevelopmentAidsHandwritingAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_LearningDevelopmentAidsHandwritingAssessment: new Coding({
     code: "273561002",
     display: "Learning development aids - handwriting assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LeedsScalesForTheSelfAssessmentOfAnxietyAndDepression: Coding.FromStrict({
+  ConditionStageTypeValueSet_LeedsScalesForTheSelfAssessmentOfAnxietyAndDepression: new Coding({
     code: "273562009",
     display: "Leeds scales for the self-assessment of anxiety and depression",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LeiterInternationalPerformanceScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_LeiterInternationalPerformanceScale: new Coding({
     code: "273564005",
     display: "Leiter international performance scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LequesneIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_LequesneIndex: new Coding({
     code: "273565006",
     display: "Lequesne index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LequesneIndexHip: Coding.FromStrict({
+  ConditionStageTypeValueSet_LequesneIndexHip: new Coding({
     code: "273566007",
     display: "Lequesne index - hip",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LequesneIndexKnee: Coding.FromStrict({
+  ConditionStageTypeValueSet_LequesneIndexKnee: new Coding({
     code: "273567003",
     display: "Lequesne index - knee",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LetterCancelationTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_LetterCancelationTest: new Coding({
     code: "273568008",
     display: "Letter cancelation test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LifeEventsAndDifficultiesScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_LifeEventsAndDifficultiesScale: new Coding({
     code: "273569000",
     display: "Life events and difficulties scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LifeEventsInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_LifeEventsInventory: new Coding({
     code: "273570004",
     display: "Life events inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LifeSatisfactionIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_LifeSatisfactionIndex: new Coding({
     code: "273571000",
     display: "Life satisfaction index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LSIALifeSatisfactionIndexA: Coding.FromStrict({
+  ConditionStageTypeValueSet_LSIALifeSatisfactionIndexA: new Coding({
     code: "273572007",
     display: "LSIA - Life satisfaction index A",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LifeSatisfactionIndexB: Coding.FromStrict({
+  ConditionStageTypeValueSet_LifeSatisfactionIndexB: new Coding({
     code: "273573002",
     display: "Life satisfaction index B",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LSIZLifeSatisfactionIndexZ: Coding.FromStrict({
+  ConditionStageTypeValueSet_LSIZLifeSatisfactionIndexZ: new Coding({
     code: "273574008",
     display: "LSIZ - Life satisfaction index Z",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LikertScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_LikertScale: new Coding({
     code: "273575009",
     display: "Likert scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LincolnRehabilitationAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_LincolnRehabilitationAssessment: new Coding({
     code: "273576005",
     display: "Lincoln rehabilitation assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LindamoodAuditoryConceptualizationTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_LindamoodAuditoryConceptualizationTest: new Coding({
     code: "273577001",
     display: "Lindamood auditory conceptualization test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LowensteinOccupationalTherapyCognitiveAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_LowensteinOccupationalTherapyCognitiveAssessment: new Coding({
     code: "273578006",
     display: "Lowenstein occupational therapy cognitive assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LondonHospitalPainChartAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_LondonHospitalPainChartAssessment: new Coding({
     code: "273580000",
     display: "London hospital pain chart assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LuriaNeuropsychologicalBattery: Coding.FromStrict({
+  ConditionStageTypeValueSet_LuriaNeuropsychologicalBattery: new Coding({
     code: "273581001",
     display: "Luria neuropsychological battery",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MacAndrewScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_MacAndrewScale: new Coding({
     code: "273582008",
     display: "MacAndrew scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MacMillanReadingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_MacMillanReadingTest: new Coding({
     code: "273583003",
     display: "MacMillan reading test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MakeAPictureStoryTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_MakeAPictureStoryTest: new Coding({
     code: "273584009",
     display: "Make-a-picture story test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MallampatiScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_MallampatiScale: new Coding({
     code: "273585005",
     display: "Mallampati scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MasterQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_MasterQuestionnaire: new Coding({
     code: "273586006",
     display: "Master questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RevisedMasterQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_RevisedMasterQuestionnaire: new Coding({
     code: "273587002",
     display: "Revised Master questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MatsonAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_MatsonAssessment: new Coding({
     code: "273588007",
     display: "Matson assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_McConkeyScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_McConkeyScore: new Coding({
     code: "273589004",
     display: "McConkey score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_McCormickMiniatureToyDiscriminationTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_McCormickMiniatureToyDiscriminationTest: new Coding({
     code: "273590008",
     display: "McCormick miniature toy discrimination test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_McCormickMiniatureToyDiscriminationTestAutomated: Coding.FromStrict({
+  ConditionStageTypeValueSet_McCormickMiniatureToyDiscriminationTestAutomated: new Coding({
     code: "273591007",
     display: "McCormick miniature toy discrimination test - automated",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_McCormickMiniatureToyDiscriminationTestManual: Coding.FromStrict({
+  ConditionStageTypeValueSet_McCormickMiniatureToyDiscriminationTestManual: new Coding({
     code: "273592000",
     display: "McCormick miniature toy discrimination test - manual",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_McGillPainChartQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_McGillPainChartQuestionnaire: new Coding({
     code: "273593005",
     display: "McGill pain chart questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MHIQMcMasterHealthIndexQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_MHIQMcMasterHealthIndexQuestionnaire: new Coding({
     code: "273594004",
     display: "MHIQ - McMaster health index questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_McTearsAssessmentOfConversation: Coding.FromStrict({
+  ConditionStageTypeValueSet_McTearsAssessmentOfConversation: new Coding({
     code: "273595003",
     display: "McTears assessment of conversation",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MedicalOutcomesStudyShortFormGeneralHealthSurvey: Coding.FromStrict({
+  ConditionStageTypeValueSet_MedicalOutcomesStudyShortFormGeneralHealthSurvey: new Coding({
     code: "273596002",
     display: "Medical outcomes study short form general health survey",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MedicalOutcomesStudyShortFormGeneralHealthSurvey36: Coding.FromStrict({
+  ConditionStageTypeValueSet_MedicalOutcomesStudyShortFormGeneralHealthSurvey36: new Coding({
     code: "273597006",
     display: "Medical outcomes study short form general health survey - 36",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MOSSF20MedicalOutcomesStudyShortFormGeneralHealthSurvey20: Coding.FromStrict({
+  ConditionStageTypeValueSet_MOSSF20MedicalOutcomesStudyShortFormGeneralHealthSurvey20: new Coding({
     code: "273598001",
     display: "MOS SF - 20 - Medical outcomes study short form general health survey - 20",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MedicalResearchCouncilMotorPowerScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_MedicalResearchCouncilMotorPowerScale: new Coding({
     code: "273599009",
     display: "Medical Research Council motor power scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MedicalResearchCouncilQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_MedicalResearchCouncilQuestionnaire: new Coding({
     code: "273600007",
     display: "Medical Research Council questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MentalStatusQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_MentalStatusQuestionnaire: new Coding({
     code: "273601006",
     display: "Mental status questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MentalTestQuotient: Coding.FromStrict({
+  ConditionStageTypeValueSet_MentalTestQuotient: new Coding({
     code: "273602004",
     display: "Mental test quotient",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MentalTestScoreLongVersion: Coding.FromStrict({
+  ConditionStageTypeValueSet_MentalTestScoreLongVersion: new Coding({
     code: "273603009",
     display: "Mental test score - long version",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MerleDQuoteAubigneCharnleyHipScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_MerleDQuoteAubigneCharnleyHipScore: new Coding({
     code: "273604003",
     display: "Merle d'Aubigne - Charnley hip score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MichiganAlcoholismScreeningTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_MichiganAlcoholismScreeningTest: new Coding({
     code: "273608000",
     display: "Michigan alcoholism screening test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BMASTBriefMichiganAlcoholismScreeningTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_BMASTBriefMichiganAlcoholismScreeningTest: new Coding({
     code: "273609008",
     display: "BMAST - Brief Michigan alcoholism screening test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ShortMichiganAlcoholismScreeningTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_ShortMichiganAlcoholismScreeningTest: new Coding({
     code: "273610003",
     display: "Short Michigan alcoholism screening test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MEAMSMiddlesexElderlyAssessmentOfMentalState: Coding.FromStrict({
+  ConditionStageTypeValueSet_MEAMSMiddlesexElderlyAssessmentOfMentalState: new Coding({
     code: "273611004",
     display: "MEAMS - Middlesex elderly assessment of mental state",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MidlandsSpellingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_MidlandsSpellingTest: new Coding({
     code: "273613001",
     display: "Midlands spelling test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MillHillVocabularyScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_MillHillVocabularyScale: new Coding({
     code: "273614007",
     display: "Mill Hill vocabulary scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MillerAssessmentForPreschoolers: Coding.FromStrict({
+  ConditionStageTypeValueSet_MillerAssessmentForPreschoolers: new Coding({
     code: "273615008",
     display: "Miller assessment for preschoolers",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MilwaukeeEvaluationOfDailyLivingSkills: Coding.FromStrict({
+  ConditionStageTypeValueSet_MilwaukeeEvaluationOfDailyLivingSkills: new Coding({
     code: "273616009",
     display: "Milwaukee evaluation of daily living skills",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MiniMentalStateExamination: Coding.FromStrict({
+  ConditionStageTypeValueSet_MiniMentalStateExamination: new Coding({
     code: "273617000",
     display: "Mini-mental state examination",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ModifiedMiniMentalState3MSExamination: Coding.FromStrict({
+  ConditionStageTypeValueSet_ModifiedMiniMentalState3MSExamination: new Coding({
     code: "273619002",
     display: "Modified mini-mental state 3MS examination",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MinnesotaTestForDifferentialDiagnosisOfAphasia: Coding.FromStrict({
+  ConditionStageTypeValueSet_MinnesotaTestForDifferentialDiagnosisOfAphasia: new Coding({
     code: "273621007",
     display: "Minnesota test for differential diagnosis of aphasia",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ShortenedSchuellShortenedMinnesotaTestForDifferentialDiagnosisOfAphasia: Coding.FromStrict({
+  ConditionStageTypeValueSet_ShortenedSchuellShortenedMinnesotaTestForDifferentialDiagnosisOfAphasia: new Coding({
     code: "273622000",
     display: "Shortened Schuell - Shortened Minnesota test for differential diagnosis of aphasia",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ModifiedCardSortingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_ModifiedCardSortingTest: new Coding({
     code: "273623005",
     display: "Modified card sorting test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MISSModifiedInjurySeverityScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_MISSModifiedInjurySeverityScale: new Coding({
     code: "273624004",
     display: "MISS - Modified injury severity scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ModifiedWordLearningTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_ModifiedWordLearningTest: new Coding({
     code: "273625003",
     display: "Modified word learning test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MontereyFluencyProgram: Coding.FromStrict({
+  ConditionStageTypeValueSet_MontereyFluencyProgram: new Coding({
     code: "273626002",
     display: "Monterey fluency program",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MoodAdjectiveChecklist: Coding.FromStrict({
+  ConditionStageTypeValueSet_MoodAdjectiveChecklist: new Coding({
     code: "273627006",
     display: "Mood adjective checklist",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MorganBarryAuditoryDiscriminationAndAttentionTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_MorganBarryAuditoryDiscriminationAndAttentionTest: new Coding({
     code: "273628001",
     display: "Morgan-Barry auditory discrimination and attention test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MorningsideRehabilitationStatusScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_MorningsideRehabilitationStatusScale: new Coding({
     code: "273629009",
     display: "Morningside rehabilitation status scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MortalityProbabilityModel: Coding.FromStrict({
+  ConditionStageTypeValueSet_MortalityProbabilityModel: new Coding({
     code: "273630004",
     display: "Mortality probability model",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MortalityPredictionModelII: Coding.FromStrict({
+  ConditionStageTypeValueSet_MortalityPredictionModelII: new Coding({
     code: "273631000",
     display: "Mortality prediction model II",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MFSMotivesForSmokingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_MFSMotivesForSmokingScale: new Coding({
     code: "273632007",
     display: "MFS - Motives for smoking scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MotorAssessmentScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_MotorAssessmentScale: new Coding({
     code: "273633002",
     display: "Motor assessment scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MotricityIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_MotricityIndex: new Coding({
     code: "273634008",
     display: "Motricity index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MountWilgaHighLevelLanguageScreeningAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_MountWilgaHighLevelLanguageScreeningAssessment: new Coding({
     code: "273635009",
     display: "Mount Wilga high level language screening assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MovementOfUpperLimbEvaluation: Coding.FromStrict({
+  ConditionStageTypeValueSet_MovementOfUpperLimbEvaluation: new Coding({
     code: "273636005",
     display: "Movement of upper limb evaluation",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MultilevelInformalLanguageInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_MultilevelInformalLanguageInventory: new Coding({
     code: "273637001",
     display: "Multilevel informal language inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MultilingualAphasiaExamination: Coding.FromStrict({
+  ConditionStageTypeValueSet_MultilingualAphasiaExamination: new Coding({
     code: "273638006",
     display: "Multilingual aphasia examination",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MunichAlcoholismTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_MunichAlcoholismTest: new Coding({
     code: "273639003",
     display: "Munich alcoholism test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NARTNationalAdultReadingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_NARTNationalAdultReadingTest: new Coding({
     code: "273640001",
     display: "NART - National adult reading test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NealeAnalysisOfReadingAbility: Coding.FromStrict({
+  ConditionStageTypeValueSet_NealeAnalysisOfReadingAbility: new Coding({
     code: "273641002",
     display: "Neale analysis of reading ability",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NelsonScheduleOfGrowingSkills: Coding.FromStrict({
+  ConditionStageTypeValueSet_NelsonScheduleOfGrowingSkills: new Coding({
     code: "273642009",
     display: "Nelson schedule of growing skills",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NeurobehavioralCognitiveStatusExamination: Coding.FromStrict({
+  ConditionStageTypeValueSet_NeurobehavioralCognitiveStatusExamination: new Coding({
     code: "273643004",
     display: "Neurobehavioral cognitive status examination",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NeuropsychologicalBattery: Coding.FromStrict({
+  ConditionStageTypeValueSet_NeuropsychologicalBattery: new Coding({
     code: "273644005",
     display: "Neuropsychological battery",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NewcastleArticulationTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_NewcastleArticulationTest: new Coding({
     code: "273645006",
     display: "Newcastle articulation test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NewcastleDyspraxiaAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_NewcastleDyspraxiaAssessment: new Coding({
     code: "273646007",
     display: "Newcastle dyspraxia assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NewcastlePhonologyAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_NewcastlePhonologyAssessment: new Coding({
     code: "273647003",
     display: "Newcastle phonology assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NineHolePegTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_NineHolePegTest: new Coding({
     code: "273648008",
     display: "Nine hole peg test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NorrisFunctionalScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_NorrisFunctionalScale: new Coding({
     code: "273649000",
     display: "Norris functional scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NorthwestSyntaxScreeningTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_NorthwestSyntaxScreeningTest: new Coding({
     code: "273650000",
     display: "Northwest syntax screening test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NorthwickParkIndexOfIndependenceInActivitiesOfDailyLiving: Coding.FromStrict({
+  ConditionStageTypeValueSet_NorthwickParkIndexOfIndependenceInActivitiesOfDailyLiving: new Coding({
     code: "273651001",
     display: "Northwick Park index of independence in activities of daily living",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NHPNottinghamHealthProfile: Coding.FromStrict({
+  ConditionStageTypeValueSet_NHPNottinghamHealthProfile: new Coding({
     code: "273652008",
     display: "NHP - Nottingham health profile",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NuffieldDyspraxiaAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_NuffieldDyspraxiaAssessment: new Coding({
     code: "273654009",
     display: "Nuffield dyspraxia assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ObjectNamingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_ObjectNamingTest: new Coding({
     code: "273656006",
     display: "Object naming test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OccasionsForSmokingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_OccasionsForSmokingScale: new Coding({
     code: "273657002",
     display: "Occasions for smoking scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OccupationalCaseAnalysisInterviewAndRatingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_OccupationalCaseAnalysisInterviewAndRatingScale: new Coding({
     code: "273658007",
     display: "Occupational case analysis interview and rating scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OccupationalPerformanceHistoryInterview: Coding.FromStrict({
+  ConditionStageTypeValueSet_OccupationalPerformanceHistoryInterview: new Coding({
     code: "273659004",
     display: "Occupational performance history interview",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OdstockHandAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_OdstockHandAssessment: new Coding({
     code: "273660009",
     display: "Odstock hand assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSDisabilityScales: Coding.FromStrict({
+  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSDisabilityScales: new Coding({
     code: "273661008",
     display: "Office of Population Census and Surveys (OPCS) disability scales",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSBehaviorDisabilityScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSBehaviorDisabilityScale: new Coding({
     code: "273662001",
     display: "Office of Population Census and Surveys (OPCS) behavior disability scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSCommunicationDisabilityScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSCommunicationDisabilityScale: new Coding({
     code: "273663006",
     display: "Office of Population Census and Surveys (OPCS) communication disability scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSConsciousnessDisabilityScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSConsciousnessDisabilityScale: new Coding({
     code: "273664000",
     display: "Office of Population Census and Surveys (OPCS) consciousness disability scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSContinenceDisabilityScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSContinenceDisabilityScale: new Coding({
     code: "273665004",
     display: "Office of Population Census and Surveys (OPCS) continence disability scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSDexterityDisabilityScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSDexterityDisabilityScale: new Coding({
     code: "273666003",
     display: "Office of Population Census and Surveys (OPCS) dexterity disability scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSDisfigurementDisabilityScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSDisfigurementDisabilityScale: new Coding({
     code: "273667007",
     display: "Office of Population Census and Surveys (OPCS) disfigurement disability scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSEatingDrinkingAndDigestionDisabilityScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSEatingDrinkingAndDigestionDisabilityScale: new Coding({
     code: "273668002",
     display: "Office of Population Census and Surveys (OPCS) eating, drinking and digestion disability scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSHearingDisabilityScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSHearingDisabilityScale: new Coding({
     code: "273669005",
     display: "Office of Population Census and Surveys (OPCS) hearing disability scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSIntellectualFunctioningDisabilityScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSIntellectualFunctioningDisabilityScale: new Coding({
     code: "273670006",
     display: "Office of Population Census and Surveys (OPCS) intellectual functioning disability scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSLocomotionDisabilityScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSLocomotionDisabilityScale: new Coding({
     code: "273671005",
     display: "Office of Population Census and Surveys (OPCS) locomotion disability scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSPersonalCareDisabilityScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSPersonalCareDisabilityScale: new Coding({
     code: "273672003",
     display: "Office of Population Census and Surveys (OPCS) personal care disability scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSReachingAndStretchingDisabilityScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSReachingAndStretchingDisabilityScale: new Coding({
     code: "273673008",
     display: "Office of Population Census and Surveys (OPCS) reaching and stretching disability scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSSeeingDisabilityScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_OfficeOfPopulationCensusAndSurveysOPCSSeeingDisabilityScale: new Coding({
     code: "273674002",
     display: "Office of Population Census and Surveys (OPCS) seeing disability scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OswestryDisabilityIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_OswestryDisabilityIndex: new Coding({
     code: "273675001",
     display: "Oswestry disability index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OswestryPainQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_OswestryPainQuestionnaire: new Coding({
     code: "273676000",
     display: "Oswestry pain questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_OxfordGradingScaleForMuscleStrength: Coding.FromStrict({
+  ConditionStageTypeValueSet_OxfordGradingScaleForMuscleStrength: new Coding({
     code: "273677009",
     display: "Oxford grading scale for muscle strength",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PaduaInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_PaduaInventory: new Coding({
     code: "273680005",
     display: "Padua inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PediatricClinicalTestOfSensoryIntegrationAndBalance: Coding.FromStrict({
+  ConditionStageTypeValueSet_PediatricClinicalTestOfSensoryIntegrationAndBalance: new Coding({
     code: "273681009",
     display: "Pediatric clinical test of sensory integration and balance",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PediatricOralSkillsProfile: Coding.FromStrict({
+  ConditionStageTypeValueSet_PediatricOralSkillsProfile: new Coding({
     code: "273682002",
     display: "Pediatric oral skills profile",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PRISMPediatricRiskOfMortality: Coding.FromStrict({
+  ConditionStageTypeValueSet_PRISMPediatricRiskOfMortality: new Coding({
     code: "273683007",
     display: "PRISM - Pediatric risk of mortality",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PediatricTraumaScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_PediatricTraumaScore: new Coding({
     code: "273684001",
     display: "Pediatric trauma score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PainDiary: Coding.FromStrict({
+  ConditionStageTypeValueSet_PainDiary: new Coding({
     code: "273685000",
     display: "Pain diary",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PantomimeTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_PantomimeTest: new Coding({
     code: "273686004",
     display: "Pantomime test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PartnersInAugmentativeCommunicationTraining: Coding.FromStrict({
+  ConditionStageTypeValueSet_PartnersInAugmentativeCommunicationTraining: new Coding({
     code: "273687008",
     display: "Partners in augmentative communication training",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PatientActivityChecklist: Coding.FromStrict({
+  ConditionStageTypeValueSet_PatientActivityChecklist: new Coding({
     code: "273688003",
     display: "Patient activity checklist",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PatientSatisfactionScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_PatientSatisfactionScore: new Coding({
     code: "273689006",
     display: "Patient satisfaction score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VAL16PFPersonalityFactorQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_VAL16PFPersonalityFactorQuestionnaire: new Coding({
     code: "273690002",
     display: "16PF - Personality factor questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PhonologicalEvaluationAndTranscriptionOfAudioVisualLanguagePETALSpeechAssessmentProcedure: Coding.FromStrict({
+  ConditionStageTypeValueSet_PhonologicalEvaluationAndTranscriptionOfAudioVisualLanguagePETALSpeechAssessmentProcedure: new Coding({
     code: "273691003",
     display: "Phonological Evaluation and Transcription of Audio-Visual Language (PETAL) speech assessment procedure",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PeabodyPictureVocabularyTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_PeabodyPictureVocabularyTest: new Coding({
     code: "273692005",
     display: "Peabody picture vocabulary test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PSIPerceptionsOfStutteringInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_PSIPerceptionsOfStutteringInventory: new Coding({
     code: "273693000",
     display: "PSI - Perceptions of stuttering inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PerformanceTestOfActivitiesOfDailyLiving: Coding.FromStrict({
+  ConditionStageTypeValueSet_PerformanceTestOfActivitiesOfDailyLiving: new Coding({
     code: "273694006",
     display: "Performance test of activities of daily living",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PersonalityAssessmentSchedule: Coding.FromStrict({
+  ConditionStageTypeValueSet_PersonalityAssessmentSchedule: new Coding({
     code: "273695007",
     display: "Personality assessment schedule",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PhiladelphiaGeriatricCenterMoraleScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_PhiladelphiaGeriatricCenterMoraleScale: new Coding({
     code: "273696008",
     display: "Philadelphia geriatric center morale scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PhonologicalAssessmentOfChildSpeech: Coding.FromStrict({
+  ConditionStageTypeValueSet_PhonologicalAssessmentOfChildSpeech: new Coding({
     code: "273697004",
     display: "Phonological assessment of child speech",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PIPDevelopmentalCharts: Coding.FromStrict({
+  ConditionStageTypeValueSet_PIPDevelopmentalCharts: new Coding({
     code: "273699001",
     display: "PIP developmental charts",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PicturePointingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_PicturePointingTest: new Coding({
     code: "273701001",
     display: "Picture pointing test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PorchIndexOfCommunicativeAbility: Coding.FromStrict({
+  ConditionStageTypeValueSet_PorchIndexOfCommunicativeAbility: new Coding({
     code: "273702008",
     display: "Porch index of communicative ability",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PANSSPositiveAndNegativeSyndromeScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_PANSSPositiveAndNegativeSyndromeScale: new Coding({
     code: "273703003",
     display: "PANSS - Positive and negative syndrome scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PragmaticsProfile: Coding.FromStrict({
+  ConditionStageTypeValueSet_PragmaticsProfile: new Coding({
     code: "273704009",
     display: "Pragmatics profile",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PragmaticsProfileOfEarlyCommunicationSkills: Coding.FromStrict({
+  ConditionStageTypeValueSet_PragmaticsProfileOfEarlyCommunicationSkills: new Coding({
     code: "273705005",
     display: "Pragmatics profile of early communication skills",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PreschoolBehaviorCheckList: Coding.FromStrict({
+  ConditionStageTypeValueSet_PreschoolBehaviorCheckList: new Coding({
     code: "273706006",
     display: "Preschool behavior check list",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PreSchoolBoehm: Coding.FromStrict({
+  ConditionStageTypeValueSet_PreSchoolBoehm: new Coding({
     code: "273707002",
     display: "Pre-school Boehm",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PreSpeechAssessmentScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_PreSpeechAssessmentScale: new Coding({
     code: "273709004",
     display: "Pre-speech assessment scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PreschoolLanguageScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_PreschoolLanguageScale: new Coding({
     code: "273711008",
     display: "Preschool language scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PreviousIntelligenceQuotientAssessmentByPronunciation: Coding.FromStrict({
+  ConditionStageTypeValueSet_PreviousIntelligenceQuotientAssessmentByPronunciation: new Coding({
     code: "273712001",
     display: "Previous intelligence quotient assessment by pronunciation",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ProbabilityOfDeathScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_ProbabilityOfDeathScore: new Coding({
     code: "273713006",
     display: "Probability of death score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ProblemOrientedMedicalRecord: Coding.FromStrict({
+  ConditionStageTypeValueSet_ProblemOrientedMedicalRecord: new Coding({
     code: "273714000",
     display: "Problem oriented medical record",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PRISMProfileInSemantics: Coding.FromStrict({
+  ConditionStageTypeValueSet_PRISMProfileInSemantics: new Coding({
     code: "273715004",
     display: "PRISM - Profile in semantics",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ProfileOfCommunicativeAppropriateness: Coding.FromStrict({
+  ConditionStageTypeValueSet_ProfileOfCommunicativeAppropriateness: new Coding({
     code: "273716003",
     display: "Profile of communicative appropriateness",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ProfileOfMoodStates: Coding.FromStrict({
+  ConditionStageTypeValueSet_ProfileOfMoodStates: new Coding({
     code: "273717007",
     display: "Profile of mood states",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PALPAPsycholinguisticAssessmentsOfLanguageProcessingInAphasia: Coding.FromStrict({
+  ConditionStageTypeValueSet_PALPAPsycholinguisticAssessmentsOfLanguageProcessingInAphasia: new Coding({
     code: "273718002",
     display: "PALPA - Psycholinguistic assessments of language processing in aphasia",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PsychologicalAdjustmentToIllnessScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_PsychologicalAdjustmentToIllnessScale: new Coding({
     code: "273719005",
     display: "Psychological adjustment to illness scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PULSESProfile: Coding.FromStrict({
+  ConditionStageTypeValueSet_PULSESProfile: new Coding({
     code: "273720004",
     display: "PULSES profile",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PurduePegboardScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_PurduePegboardScale: new Coding({
     code: "273721000",
     display: "Purdue pegboard scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PyramidsAndPalmTreesTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_PyramidsAndPalmTreesTest: new Coding({
     code: "273722007",
     display: "Pyramids and palm trees test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TetraplegiaIndexOfFunction: Coding.FromStrict({
+  ConditionStageTypeValueSet_TetraplegiaIndexOfFunction: new Coding({
     code: "273723002",
     display: "Tetraplegia index of function",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_QALYsQualityAdjustedLifeYears: Coding.FromStrict({
+  ConditionStageTypeValueSet_QALYsQualityAdjustedLifeYears: new Coding({
     code: "273724008",
     display: "QALYs - Quality adjusted life years",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_QualityOfLifeScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_QualityOfLifeScale: new Coding({
     code: "273725009",
     display: "Quality of life scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_QualityOfWellbeingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_QualityOfWellbeingScale: new Coding({
     code: "273726005",
     display: "Quality of wellbeing scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RanchoScaleLevelsOfCognitiveFunctioning: Coding.FromStrict({
+  ConditionStageTypeValueSet_RanchoScaleLevelsOfCognitiveFunctioning: new Coding({
     code: "273727001",
     display: "Rancho scale - levels of cognitive functioning",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RandFunctionalLimitationsBattery: Coding.FromStrict({
+  ConditionStageTypeValueSet_RandFunctionalLimitationsBattery: new Coding({
     code: "273728006",
     display: "Rand functional limitations battery",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RankinScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_RankinScale: new Coding({
     code: "273729003",
     display: "Rankin scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RappaportDisabilityRatingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_RappaportDisabilityRatingScale: new Coding({
     code: "273730008",
     display: "Rappaport disability rating scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RatingCommunicativeBehaviorInHeadInjuredAdults: Coding.FromStrict({
+  ConditionStageTypeValueSet_RatingCommunicativeBehaviorInHeadInjuredAdults: new Coding({
     code: "273731007",
     display: "Rating communicative behavior in head injured adults",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RavensColoredProgressiveMatrices: Coding.FromStrict({
+  ConditionStageTypeValueSet_RavensColoredProgressiveMatrices: new Coding({
     code: "273732000",
     display: "Ravens colored progressive matrices",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RavensStandardProgressiveMatrices: Coding.FromStrict({
+  ConditionStageTypeValueSet_RavensStandardProgressiveMatrices: new Coding({
     code: "273733005",
     display: "Ravens standard progressive matrices",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ReadWordDiscriminationTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_ReadWordDiscriminationTest: new Coding({
     code: "273735003",
     display: "Read word discrimination test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ReadingComprehensionBatteryForAphasia: Coding.FromStrict({
+  ConditionStageTypeValueSet_ReadingComprehensionBatteryForAphasia: new Coding({
     code: "273736002",
     display: "Reading comprehension battery for aphasia",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RFESReasonsForEatingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_RFESReasonsForEatingScale: new Coding({
     code: "273737006",
     display: "RFES - Reasons for eating scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ReasonsForSmokingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_ReasonsForSmokingScale: new Coding({
     code: "273738001",
     display: "Reasons for smoking scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BzochAndLeagueTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_BzochAndLeagueTest: new Coding({
     code: "273739009",
     display: "Bzoch and League test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RMTRecognitionMemoryTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_RMTRecognitionMemoryTest: new Coding({
     code: "273740006",
     display: "RMT - Recognition memory test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RelativesQuoteStressScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_RelativesQuoteStressScale: new Coding({
     code: "273741005",
     display: "Relatives' stress scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RIRenalIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_RIRenalIndex: new Coding({
     code: "273742003",
     display: "RI - Renal index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RAPTRenfrewActionPictureTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_RAPTRenfrewActionPictureTest: new Coding({
     code: "273743008",
     display: "RAPT - Renfrew action picture test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RenfrewArticulationTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_RenfrewArticulationTest: new Coding({
     code: "273744002",
     display: "Renfrew articulation test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RenfrewWordfinding: Coding.FromStrict({
+  ConditionStageTypeValueSet_RenfrewWordfinding: new Coding({
     code: "273745001",
     display: "Renfrew wordfinding",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RepertoryGrid: Coding.FromStrict({
+  ConditionStageTypeValueSet_RepertoryGrid: new Coding({
     code: "273746000",
     display: "Repertory grid",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ReportersTests: Coding.FromStrict({
+  ConditionStageTypeValueSet_ReportersTests: new Coding({
     code: "273747009",
     display: "Reporters tests",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ResistanceToChangeGrid: Coding.FromStrict({
+  ConditionStageTypeValueSet_ResistanceToChangeGrid: new Coding({
     code: "273748004",
     display: "Resistance to change grid",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RespiratoryIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_RespiratoryIndex: new Coding({
     code: "273749007",
     display: "Respiratory index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RestrainedEatingInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_RestrainedEatingInventory: new Coding({
     code: "273750007",
     display: "Restrained eating inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RevisedIowaScaleForRatingSeverity: Coding.FromStrict({
+  ConditionStageTypeValueSet_RevisedIowaScaleForRatingSeverity: new Coding({
     code: "273751006",
     display: "Revised Iowa scale for rating severity",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ReynellDevelopmentalLanguageScales: Coding.FromStrict({
+  ConditionStageTypeValueSet_ReynellDevelopmentalLanguageScales: new Coding({
     code: "273752004",
     display: "Reynell developmental language scales",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ReynellReceptiveLanguageAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_ReynellReceptiveLanguageAssessment: new Coding({
     code: "273753009",
     display: "Reynell receptive language assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ReynellExpressiveLanguageAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_ReynellExpressiveLanguageAssessment: new Coding({
     code: "273754003",
     display: "Reynell expressive language assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ReynellZinkinLanguageScaleForTheVisuallyImpaired: Coding.FromStrict({
+  ConditionStageTypeValueSet_ReynellZinkinLanguageScaleForTheVisuallyImpaired: new Coding({
     code: "273756001",
     display: "Reynell Zinkin language scale for the visually impaired",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RightHemisphereBattery: Coding.FromStrict({
+  ConditionStageTypeValueSet_RightHemisphereBattery: new Coding({
     code: "273757005",
     display: "Right hemisphere battery",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RitchieArticularIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_RitchieArticularIndex: new Coding({
     code: "273758000",
     display: "Ritchie articular index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RivermeadActivitiesOfDailyLivingIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_RivermeadActivitiesOfDailyLivingIndex: new Coding({
     code: "273759008",
     display: "Rivermead activities of daily living index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RBMTRivermeadBehavioralMemoryTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_RBMTRivermeadBehavioralMemoryTest: new Coding({
     code: "273761004",
     display: "RBMT - Rivermead behavioral memory test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RMARivermeadMotorAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_RMARivermeadMotorAssessment: new Coding({
     code: "273762006",
     display: "RMA - Rivermead motor assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RivermeadPerceptualAssessmentBattery: Coding.FromStrict({
+  ConditionStageTypeValueSet_RivermeadPerceptualAssessmentBattery: new Coding({
     code: "273763001",
     display: "Rivermead perceptual assessment battery",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RobertsonDysarthriaAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_RobertsonDysarthriaAssessment: new Coding({
     code: "273764007",
     display: "Robertson dysarthria assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RobertsonDysarthriaProfile: Coding.FromStrict({
+  ConditionStageTypeValueSet_RobertsonDysarthriaProfile: new Coding({
     code: "273765008",
     display: "Robertson dysarthria profile",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RoehamptonActivitiesOfDailyLivingForAmputees: Coding.FromStrict({
+  ConditionStageTypeValueSet_RoehamptonActivitiesOfDailyLivingForAmputees: new Coding({
     code: "273766009",
     display: "Roehampton activities of daily living for amputees",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RoseSummersPragmaticProfile: Coding.FromStrict({
+  ConditionStageTypeValueSet_RoseSummersPragmaticProfile: new Coding({
     code: "273767000",
     display: "Rose Summers pragmatic profile",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RossInformationProcessingAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_RossInformationProcessingAssessment: new Coding({
     code: "273768005",
     display: "Ross information processing assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RosserClassificationOfIllnessStates: Coding.FromStrict({
+  ConditionStageTypeValueSet_RosserClassificationOfIllnessStates: new Coding({
     code: "273769002",
     display: "Rosser classification of illness states",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RothAndSpekmanListOfCommunicativeIntentions: Coding.FromStrict({
+  ConditionStageTypeValueSet_RothAndSpekmanListOfCommunicativeIntentions: new Coding({
     code: "273770001",
     display: "Roth and Spekman list of communicative intentions",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RotterdamSymptomCheckList: Coding.FromStrict({
+  ConditionStageTypeValueSet_RotterdamSymptomCheckList: new Coding({
     code: "273771002",
     display: "Rotterdam symptom check list",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RoutineTaskInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_RoutineTaskInventory: new Coding({
     code: "273772009",
     display: "Routine task inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RutterBehaviorQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_RutterBehaviorQuestionnaire: new Coding({
     code: "273774005",
     display: "Rutter behavior questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RutterAScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_RutterAScale: new Coding({
     code: "273775006",
     display: "Rutter A scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RutterBScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_RutterBScale: new Coding({
     code: "273776007",
     display: "Rutter B scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RutterB2Scale: Coding.FromStrict({
+  ConditionStageTypeValueSet_RutterB2Scale: new Coding({
     code: "273777003",
     display: "Rutter B2 scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SScaleAndrewsAndCutler: Coding.FromStrict({
+  ConditionStageTypeValueSet_SScaleAndrewsAndCutler: new Coding({
     code: "273778008",
     display: "S scale Andrews and Cutler",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SalfordReadingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_SalfordReadingTest: new Coding({
     code: "273779000",
     display: "Salford reading test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SamaritanOrientationTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_SamaritanOrientationTest: new Coding({
     code: "273780002",
     display: "Samaritan orientation test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SandwellBilingualComprehensionTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_SandwellBilingualComprehensionTest: new Coding({
     code: "273781003",
     display: "Sandwell bilingual comprehension test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SantaClaraValleyMedicalCenterFunctionalAssessmentMeasure: Coding.FromStrict({
+  ConditionStageTypeValueSet_SantaClaraValleyMedicalCenterFunctionalAssessmentMeasure: new Coding({
     code: "273782005",
     display: "Santa Clara valley medical center functional assessment measure",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SavaryMillerScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_SavaryMillerScale: new Coding({
     code: "273783000",
     display: "Savary Miller scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ScaleOfEarlyCommunicationSkillsForHearingImpairedChildren: Coding.FromStrict({
+  ConditionStageTypeValueSet_ScaleOfEarlyCommunicationSkillsForHearingImpairedChildren: new Coding({
     code: "273784006",
     display: "Scale of early communication skills for hearing impaired children",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SchwachmannScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_SchwachmannScore: new Coding({
     code: "273785007",
     display: "Schwachmann score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SchedulesForClinicalAssessmentInNeuropsychiatry: Coding.FromStrict({
+  ConditionStageTypeValueSet_SchedulesForClinicalAssessmentInNeuropsychiatry: new Coding({
     code: "273786008",
     display: "Schedules for clinical assessment in neuropsychiatry",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SchnijdersOomanTestForDeafChildren: Coding.FromStrict({
+  ConditionStageTypeValueSet_SchnijdersOomanTestForDeafChildren: new Coding({
     code: "273787004",
     display: "Schnijders Ooman test for deaf children",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SchofieldEquation: Coding.FromStrict({
+  ConditionStageTypeValueSet_SchofieldEquation: new Coding({
     code: "273788009",
     display: "Schofield equation",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SchonellGradedWordReadingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_SchonellGradedWordReadingTest: new Coding({
     code: "273789001",
     display: "Schonell graded word reading test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SchonellGradedWordSpellingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_SchonellGradedWordSpellingTest: new Coding({
     code: "273790005",
     display: "Schonell graded word spelling test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ScissorSkillsChecklist: Coding.FromStrict({
+  ConditionStageTypeValueSet_ScissorSkillsChecklist: new Coding({
     code: "273791009",
     display: "Scissor skills checklist",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ScreeningForDevelopmentalApraxiaOfSpeech: Coding.FromStrict({
+  ConditionStageTypeValueSet_ScreeningForDevelopmentalApraxiaOfSpeech: new Coding({
     code: "273792002",
     display: "Screening for developmental apraxia of speech",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ScreeningTestForAuditoryProcessingDisorders: Coding.FromStrict({
+  ConditionStageTypeValueSet_ScreeningTestForAuditoryProcessingDisorders: new Coding({
     code: "273793007",
     display: "Screening test for auditory processing disorders",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SIPT: Coding.FromStrict({
+  ConditionStageTypeValueSet_SIPT: new Coding({
     code: "273795000",
     display: "SIPT",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SCTSentenceComprehensionTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_SCTSentenceComprehensionTest: new Coding({
     code: "273797008",
     display: "SCT - Sentence comprehension test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SerialSevensTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_SerialSevensTest: new Coding({
     code: "273798003",
     display: "Serial sevens test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SeverityOfAlcoholDependenceQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_SeverityOfAlcoholDependenceQuestionnaire: new Coding({
     code: "273799006",
     display: "Severity of alcohol dependence questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SODQSeverityOfOpiateDependenceQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_SODQSeverityOfOpiateDependenceQuestionnaire: new Coding({
     code: "273800005",
     display: "SODQ - Severity of opiate dependence questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ShaperIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_ShaperIndex: new Coding({
     code: "273801009",
     display: "Shaper index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ShortAlcoholDependenceData: Coding.FromStrict({
+  ConditionStageTypeValueSet_ShortAlcoholDependenceData: new Coding({
     code: "273802002",
     display: "Short alcohol dependence data",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ShortOrientationMemoryConcentrationTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_ShortOrientationMemoryConcentrationTest: new Coding({
     code: "273803007",
     display: "Short orientation - memory - concentration test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ShortOrientationMemoryConcentrationTestAlternativeVersion: Coding.FromStrict({
+  ConditionStageTypeValueSet_ShortOrientationMemoryConcentrationTestAlternativeVersion: new Coding({
     code: "273804001",
     display: "Short orientation-memory-concentration test - alternative version",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ShortTermMemoryTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_ShortTermMemoryTest: new Coding({
     code: "273805000",
     display: "Short-term memory test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ShulmanTestOfPragmaticSkills: Coding.FromStrict({
+  ConditionStageTypeValueSet_ShulmanTestOfPragmaticSkills: new Coding({
     code: "273806004",
     display: "Shulman test of pragmatic skills",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SicknessImpactProfile: Coding.FromStrict({
+  ConditionStageTypeValueSet_SicknessImpactProfile: new Coding({
     code: "273807008",
     display: "Sickness impact profile",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SilversCerebralFunctionTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_SilversCerebralFunctionTest: new Coding({
     code: "273809006",
     display: "Silvers cerebral function test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SimplifiedAcutePhysiologyScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_SimplifiedAcutePhysiologyScore: new Coding({
     code: "273811002",
     display: "Simplified acute physiology score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SimplifiedAcutePhysiologyScaleII: Coding.FromStrict({
+  ConditionStageTypeValueSet_SimplifiedAcutePhysiologyScaleII: new Coding({
     code: "273812009",
     display: "Simplified acute physiology scale II",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SCQSituationalConfidenceQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_SCQSituationalConfidenceQuestionnaire: new Coding({
     code: "273813004",
     display: "SCQ - Situational confidence questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SituationsForEatingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_SituationsForEatingScale: new Coding({
     code: "273814005",
     display: "Situations for eating scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SmithCognitiveQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_SmithCognitiveQuestionnaire: new Coding({
     code: "273815006",
     display: "Smith cognitive questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SocialAdjustmentScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_SocialAdjustmentScale: new Coding({
     code: "273816007",
     display: "Social adjustment scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SASIISocialAdjustmentScaleII: Coding.FromStrict({
+  ConditionStageTypeValueSet_SASIISocialAdjustmentScaleII: new Coding({
     code: "273817003",
     display: "SAS II - Social adjustment scale II",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SocialAdjustmentScaleSelfReport: Coding.FromStrict({
+  ConditionStageTypeValueSet_SocialAdjustmentScaleSelfReport: new Coding({
     code: "273818008",
     display: "Social adjustment scale self - report",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SocialBehaviorAssessmentScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_SocialBehaviorAssessmentScale: new Coding({
     code: "273819000",
     display: "Social behavior assessment scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SocialSupportQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_SocialSupportQuestionnaire: new Coding({
     code: "273820006",
     display: "Social support questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SocialUseOfLanguageProgram: Coding.FromStrict({
+  ConditionStageTypeValueSet_SocialUseOfLanguageProgram: new Coding({
     code: "273821005",
     display: "Social use of language program",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_STAPSouthTynesideAssessmentOfPhonology: Coding.FromStrict({
+  ConditionStageTypeValueSet_STAPSouthTynesideAssessmentOfPhonology: new Coding({
     code: "273822003",
     display: "STAP - South Tyneside assessment of phonology",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SouthTynesideAssessmentOfSyntacticStructures: Coding.FromStrict({
+  ConditionStageTypeValueSet_SouthTynesideAssessmentOfSyntacticStructures: new Coding({
     code: "273823008",
     display: "South Tyneside assessment of syntactic structures",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FGPSouthernCaliforniaFigureGroundVisualPerceptionTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_FGPSouthernCaliforniaFigureGroundVisualPerceptionTest: new Coding({
     code: "273824002",
     display: "FGP - Southern California figure ground visual perception test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SouthernCaliforniaPostrotaryNystagmusTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_SouthernCaliforniaPostrotaryNystagmusTest: new Coding({
     code: "273825001",
     display: "Southern California postrotary nystagmus test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SouthernCaliforniaSensoryIntegrationTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_SouthernCaliforniaSensoryIntegrationTest: new Coding({
     code: "273826000",
     display: "Southern California sensory integration test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SpareTimeActivitiesQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_SpareTimeActivitiesQuestionnaire: new Coding({
     code: "273827009",
     display: "Spare time activities questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SpecialHospitalsAssessmentOfPersonality: Coding.FromStrict({
+  ConditionStageTypeValueSet_SpecialHospitalsAssessmentOfPersonality: new Coding({
     code: "273828004",
     display: "Special hospitals assessment of personality",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SpeechIntelligibilityAssessmentProcedure: Coding.FromStrict({
+  ConditionStageTypeValueSet_SpeechIntelligibilityAssessmentProcedure: new Coding({
     code: "273829007",
     display: "Speech intelligibility assessment procedure",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SpielbergerStateTraitAnxietyInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_SpielbergerStateTraitAnxietyInventory: new Coding({
     code: "273830002",
     display: "Spielberger state-trait anxiety inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_QualityOfLifeIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_QualityOfLifeIndex: new Coding({
     code: "273831003",
     display: "Quality of life index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StGeorgeHospitalRespiratoryQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_StGeorgeHospitalRespiratoryQuestionnaire: new Coding({
     code: "273833000",
     display: "St George hospital respiratory questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StThomasDisabilityQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_StThomasDisabilityQuestionnaire: new Coding({
     code: "273834006",
     display: "St Thomas disability questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SAPStandardizedAssessmentOfPersonality: Coding.FromStrict({
+  ConditionStageTypeValueSet_SAPStandardizedAssessmentOfPersonality: new Coding({
     code: "273835007",
     display: "SAP - Standardized assessment of personality",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TermanMerrillScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_TermanMerrillScale: new Coding({
     code: "273836008",
     display: "Terman Merrill scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SteinbrockerFunctionalClassification: Coding.FromStrict({
+  ConditionStageTypeValueSet_SteinbrockerFunctionalClassification: new Coding({
     code: "273837004",
     display: "Steinbrocker functional classification",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StimulusResponseInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_StimulusResponseInventory: new Coding({
     code: "273838009",
     display: "Stimulus response inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StockerProbeTechniqueForDiagnosisAndTreatmentOfStutteringInYoungChildren: Coding.FromStrict({
+  ConditionStageTypeValueSet_StockerProbeTechniqueForDiagnosisAndTreatmentOfStutteringInYoungChildren: new Coding({
     code: "273839001",
     display: "Stocker probe technique for diagnosis and treatment of stuttering in young children",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StocktonGeriatricRatingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_StocktonGeriatricRatingScale: new Coding({
     code: "273840004",
     display: "Stockton geriatric rating scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StoryCompletionTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_StoryCompletionTest: new Coding({
     code: "273841000",
     display: "Story completion test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StructuredObservationTestOfFunction: Coding.FromStrict({
+  ConditionStageTypeValueSet_StructuredObservationTestOfFunction: new Coding({
     code: "273842007",
     display: "Structured observation test of function",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StructuredClinicalInterviewForDiagnosticAndStatisticalManualOfMentalDisordersThirdEditionRevised: Coding.FromStrict({
+  ConditionStageTypeValueSet_StructuredClinicalInterviewForDiagnosticAndStatisticalManualOfMentalDisordersThirdEditionRevised: new Coding({
     code: "273843002",
     display: "Structured clinical interview for Diagnostic and Statistical Manual of Mental Disorders-Third Edition Revised",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StructuredInterviewForDiagnosticAndStatisticalManualOfMentalDisordersThirdEditionPersonalityDisorders: Coding.FromStrict({
+  ConditionStageTypeValueSet_StructuredInterviewForDiagnosticAndStatisticalManualOfMentalDisordersThirdEditionPersonalityDisorders: new Coding({
     code: "273844008",
     display: "Structured interview for Diagnostic and Statistical Manual of Mental Disorders, Third Edition, personality disorders",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StutteringInterventionProgram: Coding.FromStrict({
+  ConditionStageTypeValueSet_StutteringInterventionProgram: new Coding({
     code: "273845009",
     display: "Stuttering intervention program",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StutteringPredictionInstrument: Coding.FromStrict({
+  ConditionStageTypeValueSet_StutteringPredictionInstrument: new Coding({
     code: "273846005",
     display: "Stuttering prediction instrument",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StutteringSeverityInstrument: Coding.FromStrict({
+  ConditionStageTypeValueSet_StutteringSeverityInstrument: new Coding({
     code: "273847001",
     display: "Stuttering severity instrument",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StycarHearingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_StycarHearingTest: new Coding({
     code: "273848006",
     display: "Stycar hearing test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SubjectiveGlobalAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_SubjectiveGlobalAssessment: new Coding({
     code: "273849003",
     display: "Subjective global assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SubstanceUseDisorderDiagnosticSchedule: Coding.FromStrict({
+  ConditionStageTypeValueSet_SubstanceUseDisorderDiagnosticSchedule: new Coding({
     code: "273850003",
     display: "Substance use disorder diagnostic schedule",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SueSpenceAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_SueSpenceAssessment: new Coding({
     code: "273851004",
     display: "Sue Spence assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SuicideRiskScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_SuicideRiskScale: new Coding({
     code: "273852006",
     display: "Suicide risk scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SunnybrookCordInjuryScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_SunnybrookCordInjuryScale: new Coding({
     code: "273853001",
     display: "Sunnybrook cord injury scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SupplementaryLanguageTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_SupplementaryLanguageTest: new Coding({
     code: "273854007",
     display: "Supplementary language test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SwollenJointCount: Coding.FromStrict({
+  ConditionStageTypeValueSet_SwollenJointCount: new Coding({
     code: "273856009",
     display: "Swollen joint count",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SymbolDigitModalitiesTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_SymbolDigitModalitiesTest: new Coding({
     code: "273857000",
     display: "Symbol digit modalities test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SymbolicPlayTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_SymbolicPlayTest: new Coding({
     code: "273858005",
     display: "Symbolic play test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SymptomChecklist: Coding.FromStrict({
+  ConditionStageTypeValueSet_SymptomChecklist: new Coding({
     code: "273859002",
     display: "Symptom checklist",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SLTSynonymLearningTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_SLTSynonymLearningTest: new Coding({
     code: "273860007",
     display: "SLT - Synonym learning test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SystematicFluencyTrainingForYoungChildren: Coding.FromStrict({
+  ConditionStageTypeValueSet_SystematicFluencyTrainingForYoungChildren: new Coding({
     code: "273861006",
     display: "Systematic fluency training for young children",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SystemicLupusActivityMeasure: Coding.FromStrict({
+  ConditionStageTypeValueSet_SystemicLupusActivityMeasure: new Coding({
     code: "273862004",
     display: "Systemic lupus activity measure",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SLEDAISystemicLupusErythematosusDiseaseActivityIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_SLEDAISystemicLupusErythematosusDiseaseActivityIndex: new Coding({
     code: "273863009",
     display: "SLEDAI - Systemic lupus erythematosus disease activity index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TambTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_TambTest: new Coding({
     code: "273864003",
     display: "Tamb test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TenderJointCount: Coding.FromStrict({
+  ConditionStageTypeValueSet_TenderJointCount: new Coding({
     code: "273865002",
     display: "Tender joint count",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TestForAuditoryPerceptionOfSpeech: Coding.FromStrict({
+  ConditionStageTypeValueSet_TestForAuditoryPerceptionOfSpeech: new Coding({
     code: "273867005",
     display: "Test for auditory perception of speech",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TACLTestOfAuditoryComprehensionOfLanguage: Coding.FromStrict({
+  ConditionStageTypeValueSet_TACLTestOfAuditoryComprehensionOfLanguage: new Coding({
     code: "273868000",
     display: "TACL - Test of auditory comprehension of language",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TestOfAuditoryDiscrimination: Coding.FromStrict({
+  ConditionStageTypeValueSet_TestOfAuditoryDiscrimination: new Coding({
     code: "273869008",
     display: "Test of auditory discrimination",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TestOfLanguageCompetence: Coding.FromStrict({
+  ConditionStageTypeValueSet_TestOfLanguageCompetence: new Coding({
     code: "273870009",
     display: "Test of language competence",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TestOfLanguageDevelopment2: Coding.FromStrict({
+  ConditionStageTypeValueSet_TestOfLanguageDevelopment2: new Coding({
     code: "273871008",
     display: "Test of language development 2",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TestOfMotorImpairmentStottMoyesHenderson: Coding.FromStrict({
+  ConditionStageTypeValueSet_TestOfMotorImpairmentStottMoyesHenderson: new Coding({
     code: "273872001",
     display: "Test of motor impairment - Stott-Moyes-Henderson",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TestOfPragmaticSkills: Coding.FromStrict({
+  ConditionStageTypeValueSet_TestOfPragmaticSkills: new Coding({
     code: "273873006",
     display: "Test of pragmatic skills",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TestOfReceptionOfGrammar: Coding.FromStrict({
+  ConditionStageTypeValueSet_TestOfReceptionOfGrammar: new Coding({
     code: "273874000",
     display: "Test of reception of grammar",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TSATestOfSyntacticAbilities: Coding.FromStrict({
+  ConditionStageTypeValueSet_TSATestOfSyntacticAbilities: new Coding({
     code: "273875004",
     display: "TSA - Test of syntactic abilities",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TestOfWordFindingInDiscourse: Coding.FromStrict({
+  ConditionStageTypeValueSet_TestOfWordFindingInDiscourse: new Coding({
     code: "273876003",
     display: "Test of word finding in discourse",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TestOfWordKnowledge: Coding.FromStrict({
+  ConditionStageTypeValueSet_TestOfWordKnowledge: new Coding({
     code: "273877007",
     display: "Test of word knowledge",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TherapeuticInterventionScoringSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_TherapeuticInterventionScoringSystem: new Coding({
     code: "273878002",
     display: "Therapeutic intervention scoring system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TLFBTimeLineFollowBack: Coding.FromStrict({
+  ConditionStageTypeValueSet_TLFBTimeLineFollowBack: new Coding({
     code: "273879005",
     display: "TLFB - Time line follow back",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TimeTradeOffAnalysis: Coding.FromStrict({
+  ConditionStageTypeValueSet_TimeTradeOffAnalysis: new Coding({
     code: "273880008",
     display: "Time trade off analysis",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TokenTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_TokenTest: new Coding({
     code: "273881007",
     display: "Token test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TrailMakingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_TrailMakingTest: new Coding({
     code: "273882000",
     display: "Trail making test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TraumaIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_TraumaIndex: new Coding({
     code: "273883005",
     display: "Trauma index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TraumaScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_TraumaScore: new Coding({
     code: "273884004",
     display: "Trauma score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RTSRevisedTraumaScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_RTSRevisedTraumaScore: new Coding({
     code: "273885003",
     display: "RTS - Revised trauma score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TraumaAndInjurySeverityScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_TraumaAndInjurySeverityScore: new Coding({
     code: "273886002",
     display: "Trauma and injury severity score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TriageIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_TriageIndex: new Coding({
     code: "273887006",
     display: "Triage index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ValentineAuditoryMemoryTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_ValentineAuditoryMemoryTest: new Coding({
     code: "273888001",
     display: "Valentine auditory memory test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_Valpar17PreVocationalReadinessBattery: Coding.FromStrict({
+  ConditionStageTypeValueSet_Valpar17PreVocationalReadinessBattery: new Coding({
     code: "273889009",
     display: "Valpar 17 pre-vocational readiness battery",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VernonClozeProcedureReadingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_VernonClozeProcedureReadingTest: new Coding({
     code: "273891001",
     display: "Vernon Cloze procedure reading test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VernonGradedWordReadingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_VernonGradedWordReadingTest: new Coding({
     code: "273892008",
     display: "Vernon graded word reading test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VinelandMaturityScalesAdaptedForTheBlind: Coding.FromStrict({
+  ConditionStageTypeValueSet_VinelandMaturityScalesAdaptedForTheBlind: new Coding({
     code: "273893003",
     display: "Vineland maturity scales adapted for the blind",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VinelandSocialMaturityScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_VinelandSocialMaturityScale: new Coding({
     code: "273894009",
     display: "Vineland social maturity scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VinelandSubquotientGeneralSelfHelp: Coding.FromStrict({
+  ConditionStageTypeValueSet_VinelandSubquotientGeneralSelfHelp: new Coding({
     code: "273895005",
     display: "Vineland subquotient - general self-help",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VinelandSubquotientCommunication: Coding.FromStrict({
+  ConditionStageTypeValueSet_VinelandSubquotientCommunication: new Coding({
     code: "273896006",
     display: "Vineland subquotient - communication",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VinelandSubquotientLocomotion: Coding.FromStrict({
+  ConditionStageTypeValueSet_VinelandSubquotientLocomotion: new Coding({
     code: "273897002",
     display: "Vineland subquotient - locomotion",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VinelandSubquotientOccupation: Coding.FromStrict({
+  ConditionStageTypeValueSet_VinelandSubquotientOccupation: new Coding({
     code: "273898007",
     display: "Vineland subquotient - occupation",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VinelandSubquotientSelfHelpInEating: Coding.FromStrict({
+  ConditionStageTypeValueSet_VinelandSubquotientSelfHelpInEating: new Coding({
     code: "273899004",
     display: "Vineland subquotient - self-help in eating",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VinelandSubquotientSocialization: Coding.FromStrict({
+  ConditionStageTypeValueSet_VinelandSubquotientSocialization: new Coding({
     code: "273900009",
     display: "Vineland subquotient - socialization",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VinelandBehavioralAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_VinelandBehavioralAssessment: new Coding({
     code: "273901008",
     display: "Vineland behavioral assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VisickSymptomGrade: Coding.FromStrict({
+  ConditionStageTypeValueSet_VisickSymptomGrade: new Coding({
     code: "273902001",
     display: "Visick symptom grade",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VASVisualAnalogScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_VASVisualAnalogScale: new Coding({
     code: "273903006",
     display: "VAS - Visual analog scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VisualAnalogPainScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_VisualAnalogPainScale: new Coding({
     code: "273904000",
     display: "Visual analog pain scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VisualAndPerceptualAssessmentProgram: Coding.FromStrict({
+  ConditionStageTypeValueSet_VisualAndPerceptualAssessmentProgram: new Coding({
     code: "273905004",
     display: "Visual and perceptual assessment program",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VisualObjectAndSpatialPerceptionTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_VisualObjectAndSpatialPerceptionTest: new Coding({
     code: "273906003",
     display: "Visual object and spatial perception test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VoiceAssessmentSheetMartin: Coding.FromStrict({
+  ConditionStageTypeValueSet_VoiceAssessmentSheetMartin: new Coding({
     code: "273908002",
     display: "Voice assessment sheet - Martin",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VoiceEvaluationForm: Coding.FromStrict({
+  ConditionStageTypeValueSet_VoiceEvaluationForm: new Coding({
     code: "273909005",
     display: "Voice evaluation form",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VoiceSkillsAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_VoiceSkillsAssessment: new Coding({
     code: "273910000",
     display: "Voice skills assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WaddellDisabilityIndex: Coding.FromStrict({
+  ConditionStageTypeValueSet_WaddellDisabilityIndex: new Coding({
     code: "273912008",
     display: "Waddell disability index",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WakefieldSelfAssessmentDepressionInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_WakefieldSelfAssessmentDepressionInventory: new Coding({
     code: "273913003",
     display: "Wakefield self-assessment depression inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WardBehaviorRatingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_WardBehaviorRatingScale: new Coding({
     code: "273914009",
     display: "Ward behavior rating scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WarnerDysphagiaAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_WarnerDysphagiaAssessment: new Coding({
     code: "273915005",
     display: "Warner dysphagia assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WechslerAdultIntelligenceScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_WechslerAdultIntelligenceScale: new Coding({
     code: "273916006",
     display: "Wechsler adult intelligence scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WechslerAdultIntelligenceTestRevised: Coding.FromStrict({
+  ConditionStageTypeValueSet_WechslerAdultIntelligenceTestRevised: new Coding({
     code: "273917002",
     display: "Wechsler adult intelligence test - revised",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WechslerIntelligenceScaleForChildren: Coding.FromStrict({
+  ConditionStageTypeValueSet_WechslerIntelligenceScaleForChildren: new Coding({
     code: "273918007",
     display: "Wechsler intelligence scale for children",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WechslerIntelligenceNonVerbalPerformanceAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_WechslerIntelligenceNonVerbalPerformanceAssessment: new Coding({
     code: "273919004",
     display: "Wechsler intelligence non-verbal performance assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WechslerIntelligenceVerbalAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_WechslerIntelligenceVerbalAssessment: new Coding({
     code: "273920005",
     display: "Wechsler intelligence verbal assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LogicalMemoryParagraphRecall: Coding.FromStrict({
+  ConditionStageTypeValueSet_LogicalMemoryParagraphRecall: new Coding({
     code: "273921009",
     display: "Logical memory paragraph recall",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WechslerPreSchoolAndPrimaryScaleOfIntelligence: Coding.FromStrict({
+  ConditionStageTypeValueSet_WechslerPreSchoolAndPrimaryScaleOfIntelligence: new Coding({
     code: "273922002",
     display: "Wechsler pre-school and primary scale of intelligence",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WeiglGoldsteinScheererColorFormSortingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_WeiglGoldsteinScheererColorFormSortingTest: new Coding({
     code: "273923007",
     display: "Weigl - Goldstein - Scheerer color form sorting test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WepmanAuditorySequentialMemoryTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_WepmanAuditorySequentialMemoryTest: new Coding({
     code: "273924001",
     display: "Wepman Auditory Sequential Memory Test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WepmanAuditoryDiscriminationTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_WepmanAuditoryDiscriminationTest: new Coding({
     code: "273925000",
     display: "Wepman Auditory Discrimination Test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WessexRevisedPortageLanguageChecklist: Coding.FromStrict({
+  ConditionStageTypeValueSet_WessexRevisedPortageLanguageChecklist: new Coding({
     code: "273926004",
     display: "Wessex revised portage language checklist",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WesternAphasiaBattery: Coding.FromStrict({
+  ConditionStageTypeValueSet_WesternAphasiaBattery: new Coding({
     code: "273927008",
     display: "Western aphasia battery",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WPTASWestmeadPostTraumaticAmnesiaScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_WPTASWestmeadPostTraumaticAmnesiaScale: new Coding({
     code: "273928003",
     display: "WPTAS - Westmead Post-Traumatic Amnesia Scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WorldHealthOrganizationWHODepressionScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_WorldHealthOrganizationWHODepressionScale: new Coding({
     code: "273929006",
     display: "World Health Organization (WHO) depression scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WorldHealthOrganizationWHOHandicapScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_WorldHealthOrganizationWHOHandicapScale: new Coding({
     code: "273930001",
     display: "World Health Organization (WHO) handicap scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WorldHealthOrganizationWHOClassificationOfImpairmentsDisabilitiesAndHandicapScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_WorldHealthOrganizationWHOClassificationOfImpairmentsDisabilitiesAndHandicapScale: new Coding({
     code: "273931002",
     display: "World Health Organization (WHO) classification of impairments, disabilities and handicap scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WorldHealthOrganizationWHOEconomicSelfSufficiencyHandicapScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_WorldHealthOrganizationWHOEconomicSelfSufficiencyHandicapScale: new Coding({
     code: "273932009",
     display: "World Health Organization (WHO) economic self-sufficiency handicap scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WorldHealthOrganizationWHOMobilityHandicapScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_WorldHealthOrganizationWHOMobilityHandicapScale: new Coding({
     code: "273933004",
     display: "World Health Organization (WHO) mobility handicap scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WorldHealthOrganizationWHOOccupationHandicapScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_WorldHealthOrganizationWHOOccupationHandicapScale: new Coding({
     code: "273934005",
     display: "World Health Organization (WHO) occupation handicap scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WorldHealthOrganizationWHOOrientationHandicapScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_WorldHealthOrganizationWHOOrientationHandicapScale: new Coding({
     code: "273935006",
     display: "World Health Organization (WHO) orientation handicap scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WorldHealthOrganizationWHOPhysicalIndependenceHandicapScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_WorldHealthOrganizationWHOPhysicalIndependenceHandicapScale: new Coding({
     code: "273936007",
     display: "World Health Organization (WHO) physical independence handicap scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WorldHealthOrganizationWHOSocialIntegrationHandicapScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_WorldHealthOrganizationWHOSocialIntegrationHandicapScale: new Coding({
     code: "273937003",
     display: "World Health Organization (WHO) social integration handicap scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WinslowFeedingChecklist: Coding.FromStrict({
+  ConditionStageTypeValueSet_WinslowFeedingChecklist: new Coding({
     code: "273938008",
     display: "Winslow feeding checklist",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WisconsinCardSortingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_WisconsinCardSortingTest: new Coding({
     code: "273939000",
     display: "Wisconsin card sorting test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SDSZungSelfRatingDepressionScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_SDSZungSelfRatingDepressionScale: new Coding({
     code: "273940003",
     display: "SDS - Zung self-rating depression scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ZungAnxietyStatusInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_ZungAnxietyStatusInventory: new Coding({
     code: "273941004",
     display: "Zung anxiety status inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ZungSelfRatingAnxietyScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_ZungSelfRatingAnxietyScale: new Coding({
     code: "273942006",
     display: "Zung self-rating anxiety scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_M: Coding.FromStrict({
+  ConditionStageTypeValueSet_M: new Coding({
     code: "277318003",
     display: "(m)",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HistologicalGradingSystems: Coding.FromStrict({
+  ConditionStageTypeValueSet_HistologicalGradingSystems: new Coding({
     code: "277457005",
     display: "Histological grading systems",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DaumasDuportGradingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_DaumasDuportGradingSystem: new Coding({
     code: "277459008",
     display: "Daumas-Duport grading system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WorldHealthOrganizationWHOCentralNervousSystemCNSTumorGradingSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_WorldHealthOrganizationWHOCentralNervousSystemCNSTumorGradingSystem: new Coding({
     code: "277460003",
     display: "World Health Organization (WHO) central nervous system (CNS) tumor grading system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AdditionalTNMDescriptors: Coding.FromStrict({
+  ConditionStageTypeValueSet_AdditionalTNMDescriptors: new Coding({
     code: "277645005",
     display: "Additional TNM descriptors",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AAtAutopsy: Coding.FromStrict({
+  ConditionStageTypeValueSet_AAtAutopsy: new Coding({
     code: "277646006",
     display: "a - At autopsy",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RTumorRecurrence: Coding.FromStrict({
+  ConditionStageTypeValueSet_RTumorRecurrence: new Coding({
     code: "277647002",
     display: "r - Tumor recurrence",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_YDuringTherapyFollowingTreatment: Coding.FromStrict({
+  ConditionStageTypeValueSet_YDuringTherapyFollowingTreatment: new Coding({
     code: "277649004",
     display: "y - During therapy/following treatment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MMultipleTumors: Coding.FromStrict({
+  ConditionStageTypeValueSet_MMultipleTumors: new Coding({
     code: "277650004",
     display: "m - Multiple tumors",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FFamilyHistory: Coding.FromStrict({
+  ConditionStageTypeValueSet_FFamilyHistory: new Coding({
     code: "277652007",
     display: "f - Family history",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DRetinalInvolvement: Coding.FromStrict({
+  ConditionStageTypeValueSet_DRetinalInvolvement: new Coding({
     code: "277676004",
     display: "d - Retinal involvement",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NodeStageG1InRetinoblastoma: Coding.FromStrict({
+  ConditionStageTypeValueSet_NodeStageG1InRetinoblastoma: new Coding({
     code: "278241006",
     display: "Node stage G1 in retinoblastoma",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NodeStageG2InRetinoblastoma: Coding.FromStrict({
+  ConditionStageTypeValueSet_NodeStageG2InRetinoblastoma: new Coding({
     code: "278242004",
     display: "Node stage G2 in retinoblastoma",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LungStageL1: Coding.FromStrict({
+  ConditionStageTypeValueSet_LungStageL1: new Coding({
     code: "278247005",
     display: "Lung stage L1",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ParsonnetScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_ParsonnetScore: new Coding({
     code: "278699003",
     display: "Parsonnet score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ShortFormMcGillPainQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_ShortFormMcGillPainQuestionnaire: new Coding({
     code: "278896008",
     display: "Short form McGill pain questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WaterlowPressureSoreRiskScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_WaterlowPressureSoreRiskScore: new Coding({
     code: "278897004",
     display: "Waterlow pressure sore risk score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_NortonScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_NortonScore: new Coding({
     code: "278898009",
     display: "Norton score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VerbalRatingScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_VerbalRatingScale: new Coding({
     code: "279101002",
     display: "Verbal rating scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleSummatedGenericVersion: Coding.FromStrict({
+  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleSummatedGenericVersion: new Coding({
     code: "281113000",
     display: "Health of the Nation Outcome Scale - summated (generic version)",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleSubscaleGenericVersion: Coding.FromStrict({
+  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleSubscaleGenericVersion: new Coding({
     code: "281114006",
     display: "Health of the Nation Outcome Scale subscale (generic version)",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleItem1AggressiveDisruptiveBehavior: Coding.FromStrict({
+  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleItem1AggressiveDisruptiveBehavior: new Coding({
     code: "281115007",
     display: "Health of the Nation Outcome Scale item 1 - aggressive/disruptive behavior",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleItem2NonAccidentalSelfInjury: Coding.FromStrict({
+  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleItem2NonAccidentalSelfInjury: new Coding({
     code: "281116008",
     display: "Health of the Nation Outcome Scale item 2 - non-accidental self injury",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HoNOSItem3AlcoholDrugProblem: Coding.FromStrict({
+  ConditionStageTypeValueSet_HoNOSItem3AlcoholDrugProblem: new Coding({
     code: "281117004",
     display: "HoNOS item 3 - alcohol/drug problem",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleItem4CognitiveProblems: Coding.FromStrict({
+  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleItem4CognitiveProblems: new Coding({
     code: "281118009",
     display: "Health of the Nation Outcome Scale item 4 - cognitive problems",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HoNOSItem5: Coding.FromStrict({
+  ConditionStageTypeValueSet_HoNOSItem5: new Coding({
     code: "281119001",
     display: "HoNOS item 5",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleItem6HallucinationsDelusions: Coding.FromStrict({
+  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleItem6HallucinationsDelusions: new Coding({
     code: "281120007",
     display: "Health of the Nation Outcome Scale item 6 - hallucinations/delusions",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HoNOSItem7: Coding.FromStrict({
+  ConditionStageTypeValueSet_HoNOSItem7: new Coding({
     code: "281121006",
     display: "HoNOS item 7",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleItem8OtherMentalBehavioralProblems: Coding.FromStrict({
+  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleItem8OtherMentalBehavioralProblems: new Coding({
     code: "281122004",
     display: "Health of the Nation Outcome Scale item 8 - other mental/behavioral problems",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HoNOSItem9: Coding.FromStrict({
+  ConditionStageTypeValueSet_HoNOSItem9: new Coding({
     code: "281123009",
     display: "HoNOS item 9",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HoNOSItem10: Coding.FromStrict({
+  ConditionStageTypeValueSet_HoNOSItem10: new Coding({
     code: "281124003",
     display: "HoNOS item 10",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleItem11LivingConditions: Coding.FromStrict({
+  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleItem11LivingConditions: new Coding({
     code: "281125002",
     display: "Health of the Nation Outcome scale item 11 - living conditions",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HoNOSItem12: Coding.FromStrict({
+  ConditionStageTypeValueSet_HoNOSItem12: new Coding({
     code: "281126001",
     display: "HoNOS item 12",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RamsaySedationScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_RamsaySedationScale: new Coding({
     code: "281400004",
     display: "Ramsay sedation scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GriffithsMentalDevelopmentalScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_GriffithsMentalDevelopmentalScale: new Coding({
     code: "281692008",
     display: "Griffiths mental developmental scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GessellDevelopmentalScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_GessellDevelopmentalScale: new Coding({
     code: "281693003",
     display: "Gessell developmental scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HealthOfTheNationOutcomeSubscaleA: Coding.FromStrict({
+  ConditionStageTypeValueSet_HealthOfTheNationOutcomeSubscaleA: new Coding({
     code: "281844006",
     display: "Health of the Nation Outcome subscale A",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HoNOSSubscaleB: Coding.FromStrict({
+  ConditionStageTypeValueSet_HoNOSSubscaleB: new Coding({
     code: "281845007",
     display: "HoNOS subscale B",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HealthOfTheNationOutcomeSubscaleC: Coding.FromStrict({
+  ConditionStageTypeValueSet_HealthOfTheNationOutcomeSubscaleC: new Coding({
     code: "281846008",
     display: "Health of the Nation Outcome subscale C",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HoNOSSubscaleD: Coding.FromStrict({
+  ConditionStageTypeValueSet_HoNOSSubscaleD: new Coding({
     code: "281848009",
     display: "HoNOS subscale D",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleItemGenericVersion: Coding.FromStrict({
+  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleItemGenericVersion: new Coding({
     code: "281849001",
     display: "Health of the Nation Outcome Scale item (generic version)",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VHepaticVeinMarker: Coding.FromStrict({
+  ConditionStageTypeValueSet_VHepaticVeinMarker: new Coding({
     code: "282402005",
     display: "V - Hepatic vein marker",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PPortalVeinMarker: Coding.FromStrict({
+  ConditionStageTypeValueSet_PPortalVeinMarker: new Coding({
     code: "282403000",
     display: "P - Portal vein marker",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EExtrahepaticMarker: Coding.FromStrict({
+  ConditionStageTypeValueSet_EExtrahepaticMarker: new Coding({
     code: "282404006",
     display: "E - Extrahepatic marker",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MMetastaticMarker: Coding.FromStrict({
+  ConditionStageTypeValueSet_MMetastaticMarker: new Coding({
     code: "282405007",
     display: "M - Metastatic marker",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EExtralymphaticOrganInvolvementMarker: Coding.FromStrict({
+  ConditionStageTypeValueSet_EExtralymphaticOrganInvolvementMarker: new Coding({
     code: "282436004",
     display: "E - Extralymphatic organ involvement marker",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SSplenicInvolvementMarker: Coding.FromStrict({
+  ConditionStageTypeValueSet_SSplenicInvolvementMarker: new Coding({
     code: "282437008",
     display: "S - Splenic involvement marker",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SuicideIntentScoreScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_SuicideIntentScoreScale: new Coding({
     code: "282466006",
     display: "Suicide intent score scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SuicideIntentScoreScaleSummated: Coding.FromStrict({
+  ConditionStageTypeValueSet_SuicideIntentScoreScaleSummated: new Coding({
     code: "282467002",
     display: "Suicide intent score scale - summated",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SuicideIntentScoreSubscale: Coding.FromStrict({
+  ConditionStageTypeValueSet_SuicideIntentScoreSubscale: new Coding({
     code: "282468007",
     display: "Suicide intent score subscale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SuicideIntentScoreSubscaleAttemptCircumstances: Coding.FromStrict({
+  ConditionStageTypeValueSet_SuicideIntentScoreSubscaleAttemptCircumstances: new Coding({
     code: "282469004",
     display: "Suicide intent score subscale - attempt circumstances",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SuicideIntentScoreSubscaleSelfReport: Coding.FromStrict({
+  ConditionStageTypeValueSet_SuicideIntentScoreSubscaleSelfReport: new Coding({
     code: "282470003",
     display: "Suicide intent score subscale - self report",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SuicideIntentScoreSubscaleRisk: Coding.FromStrict({
+  ConditionStageTypeValueSet_SuicideIntentScoreSubscaleRisk: new Coding({
     code: "282471004",
     display: "Suicide intent score subscale - risk",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GlobalAssessmentOfFunctioning1993DiagnosticAndStatisticalManualOfMentalDisordersFourthEditionAdaptation: Coding.FromStrict({
+  ConditionStageTypeValueSet_GlobalAssessmentOfFunctioning1993DiagnosticAndStatisticalManualOfMentalDisordersFourthEditionAdaptation: new Coding({
     code: "284061009",
     display: "Global assessment of functioning - 1993 Diagnostic and Statistical Manual of Mental Disorders, Fourth Edition adaptation",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BPRSBriefPsychiatricRatingScale1962: Coding.FromStrict({
+  ConditionStageTypeValueSet_BPRSBriefPsychiatricRatingScale1962: new Coding({
     code: "284064001",
     display: "BPRS - Brief psychiatric rating scale - 1962",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScales: Coding.FromStrict({
+  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScales: new Coding({
     code: "284464005",
     display: "Health of the Nation Outcome Scales",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GEMSGuideToEarlyMovementSkillsChecklist: Coding.FromStrict({
+  ConditionStageTypeValueSet_GEMSGuideToEarlyMovementSkillsChecklist: new Coding({
     code: "285713000",
     display: "GEMS - Guide to early movement skills checklist",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BSTSBereweekeSkillTeachingSystemChecklist: Coding.FromStrict({
+  ConditionStageTypeValueSet_BSTSBereweekeSkillTeachingSystemChecklist: new Coding({
     code: "285714006",
     display: "BSTS - Bereweeke skill teaching system checklist",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WebsterScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_WebsterScore: new Coding({
     code: "300991009",
     display: "Webster score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FerrimanAndGalwayScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_FerrimanAndGalwayScore: new Coding({
     code: "302029005",
     display: "Ferriman and Galway score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RuleOfNines: Coding.FromStrict({
+  ConditionStageTypeValueSet_RuleOfNines: new Coding({
     code: "303807002",
     display: "Rule of nines",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AmericanAssociationOnMentalRetardationAAMRAdaptiveBehaviorScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_AmericanAssociationOnMentalRetardationAAMRAdaptiveBehaviorScale: new Coding({
     code: "304705008",
     display: "American Association on Mental Retardation (AAMR) adaptive behavior scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AcceptanceOfIllnessScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_AcceptanceOfIllnessScale: new Coding({
     code: "304706009",
     display: "Acceptance of illness scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AnomalousSentencesRepetitionTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_AnomalousSentencesRepetitionTest: new Coding({
     code: "304707000",
     display: "Anomalous sentences repetition test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ArthritisImpactMeasurementScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_ArthritisImpactMeasurementScale: new Coding({
     code: "304708005",
     display: "Arthritis impact measurement scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AttitudesTowardsDoctorsAndMedicineScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_AttitudesTowardsDoctorsAndMedicineScale: new Coding({
     code: "304709002",
     display: "Attitudes towards doctors and medicine scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BeckHopelessnessScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_BeckHopelessnessScale: new Coding({
     code: "304710007",
     display: "Beck hopelessness scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BeckAnxietyInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_BeckAnxietyInventory: new Coding({
     code: "304711006",
     display: "Beck anxiety inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BeckScaleForSuicideIdeation: Coding.FromStrict({
+  ConditionStageTypeValueSet_BeckScaleForSuicideIdeation: new Coding({
     code: "304712004",
     display: "Beck scale for suicide ideation",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BPCQBeliefsAboutPainControlQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_BPCQBeliefsAboutPainControlQuestionnaire: new Coding({
     code: "304713009",
     display: "BPCQ - Beliefs about pain control questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BellakChildrenQuoteSApperceptionTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_BellakChildrenQuoteSApperceptionTest: new Coding({
     code: "304714003",
     display: "Bellak children's apperception test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BenderVisualMotorGestaltTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_BenderVisualMotorGestaltTest: new Coding({
     code: "304715002",
     display: "Bender visual motor gestalt test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BruininksOseretskyTestOfMotorProficiency: Coding.FromStrict({
+  ConditionStageTypeValueSet_BruininksOseretskyTestOfMotorProficiency: new Coding({
     code: "304716001",
     display: "Bruininks-Oseretsky test of motor proficiency",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CancerAttitudeInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_CancerAttitudeInventory: new Coding({
     code: "304717005",
     display: "Cancer attitude inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ChildDepressionScaleSecondResearchEdition: Coding.FromStrict({
+  ConditionStageTypeValueSet_ChildDepressionScaleSecondResearchEdition: new Coding({
     code: "304718000",
     display: "Child depression scale, second research edition",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ChildrenQuoteSHealthLocusOfControlScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_ChildrenQuoteSHealthLocusOfControlScale: new Coding({
     code: "304719008",
     display: "Children's health locus of control scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CECSCourtauldEmotionalControlScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_CECSCourtauldEmotionalControlScale: new Coding({
     code: "304720002",
     display: "CECS - Courtauld emotional control scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MiddlesexHospitalQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_MiddlesexHospitalQuestionnaire: new Coding({
     code: "304721003",
     display: "Middlesex hospital questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CultureFreeSelfEsteemInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_CultureFreeSelfEsteemInventory: new Coding({
     code: "304722005",
     display: "Culture-free self-esteem inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DelusionsSymptomsStatesInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_DelusionsSymptomsStatesInventory: new Coding({
     code: "304723000",
     display: "Delusions-symptoms-states inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EysenckPersonalityQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_EysenckPersonalityQuestionnaire: new Coding({
     code: "304724006",
     display: "Eysenck personality questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FamilyRelationsTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_FamilyRelationsTest: new Coding({
     code: "304725007",
     display: "Family relations test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ForcedChoiceRatingsOfHealthRelatedAttributes: Coding.FromStrict({
+  ConditionStageTypeValueSet_ForcedChoiceRatingsOfHealthRelatedAttributes: new Coding({
     code: "304726008",
     display: "Forced choice ratings of health-related attributes",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FraminghamAngerMeasure: Coding.FromStrict({
+  ConditionStageTypeValueSet_FraminghamAngerMeasure: new Coding({
     code: "304727004",
     display: "Framingham anger measure",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FraminghamTypeABehaviorPatternMeasure: Coding.FromStrict({
+  ConditionStageTypeValueSet_FraminghamTypeABehaviorPatternMeasure: new Coding({
     code: "304728009",
     display: "Framingham type A behavior pattern measure",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FuldObjectMemoryEvaluation: Coding.FromStrict({
+  ConditionStageTypeValueSet_FuldObjectMemoryEvaluation: new Coding({
     code: "304729001",
     display: "Fuld object memory evaluation",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_FunctionalPerformanceRecord: Coding.FromStrict({
+  ConditionStageTypeValueSet_FunctionalPerformanceRecord: new Coding({
     code: "304730006",
     display: "Functional performance record",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_GeneralPreventativeHealthBehaviorsChecklist: Coding.FromStrict({
+  ConditionStageTypeValueSet_GeneralPreventativeHealthBehaviorsChecklist: new Coding({
     code: "304731005",
     display: "General preventative health behaviors checklist",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HasslesScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_HasslesScale: new Coding({
     code: "304732003",
     display: "Hassles scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HealthKnowledgeMeasurement: Coding.FromStrict({
+  ConditionStageTypeValueSet_HealthKnowledgeMeasurement: new Coding({
     code: "304733008",
     display: "Health knowledge measurement",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HealthValueScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_HealthValueScale: new Coding({
     code: "304734002",
     display: "Health value scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_IllinoisTestOfPsycholinguisticAbilitiesRevisedEdition: Coding.FromStrict({
+  ConditionStageTypeValueSet_IllinoisTestOfPsycholinguisticAbilitiesRevisedEdition: new Coding({
     code: "304735001",
     display: "Illinois test of psycholinguistic abilities, revised edition",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_InventoryOfDrinkingSituations: Coding.FromStrict({
+  ConditionStageTypeValueSet_InventoryOfDrinkingSituations: new Coding({
     code: "304736000",
     display: "Inventory of drinking situations",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_KaufmanAssessmentBatteryForChildren: Coding.FromStrict({
+  ConditionStageTypeValueSet_KaufmanAssessmentBatteryForChildren: new Coding({
     code: "304738004",
     display: "Kaufman assessment battery for children",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LifeExperiencesChecklist: Coding.FromStrict({
+  ConditionStageTypeValueSet_LifeExperiencesChecklist: new Coding({
     code: "304739007",
     display: "Life experiences checklist",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LOTLifeOrientationTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_LOTLifeOrientationTest: new Coding({
     code: "304740009",
     display: "LOT - Life orientation test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LuriaNebraskaNeuropsychologicalBatteryChildrenQuoteSRevision: Coding.FromStrict({
+  ConditionStageTypeValueSet_LuriaNebraskaNeuropsychologicalBatteryChildrenQuoteSRevision: new Coding({
     code: "304741008",
     display: "Luria-Nebraska neuropsychological battery, children's revision",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_LuriaNebraskaNeuropsychologicalBatteryForm1: Coding.FromStrict({
+  ConditionStageTypeValueSet_LuriaNebraskaNeuropsychologicalBatteryForm1: new Coding({
     code: "304742001",
     display: "Luria-Nebraska neuropsychological battery, form 1",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MarlowCrowneScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_MarlowCrowneScale: new Coding({
     code: "304743006",
     display: "Marlow-Crowne scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MISSMedicalInterviewSatisfactionScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_MISSMedicalInterviewSatisfactionScale: new Coding({
     code: "304744000",
     display: "MISS - Medical interview satisfaction scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MentalAdjustmentToCancerScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_MentalAdjustmentToCancerScale: new Coding({
     code: "304745004",
     display: "Mental adjustment to cancer scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MerrilPalmerPreschoolPerformanceScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_MerrilPalmerPreschoolPerformanceScale: new Coding({
     code: "304746003",
     display: "Merril-Palmer preschool performance scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MotivationAnalysisTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_MotivationAnalysisTest: new Coding({
     code: "304747007",
     display: "Motivation analysis test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MultidimensionalHealthLocusOfControlScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_MultidimensionalHealthLocusOfControlScale: new Coding({
     code: "304748002",
     display: "Multidimensional health locus of control scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ObjectRelationsTechnique: Coding.FromStrict({
+  ConditionStageTypeValueSet_ObjectRelationsTechnique: new Coding({
     code: "304749005",
     display: "Object relations technique",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PainCopingStrategiesQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_PainCopingStrategiesQuestionnaire: new Coding({
     code: "304750005",
     display: "Pain coping strategies questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PILLPennebakerInventoryOfLinguidLanguidness: Coding.FromStrict({
+  ConditionStageTypeValueSet_PILLPennebakerInventoryOfLinguidLanguidness: new Coding({
     code: "304751009",
     display: "PILL - Pennebaker inventory of linguid languidness",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PerceivedControlOfInsulinDependentDiabetes: Coding.FromStrict({
+  ConditionStageTypeValueSet_PerceivedControlOfInsulinDependentDiabetes: new Coding({
     code: "304752002",
     display: "Perceived control of insulin-dependent diabetes",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PSSPerceivedStressScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_PSSPerceivedStressScale: new Coding({
     code: "304753007",
     display: "PSS - Perceived stress scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PersonalityDevianceScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_PersonalityDevianceScale: new Coding({
     code: "304754001",
     display: "Personality deviance scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PANASPositiveAndNegativeAffectSchedule: Coding.FromStrict({
+  ConditionStageTypeValueSet_PANASPositiveAndNegativeAffectSchedule: new Coding({
     code: "304755000",
     display: "PANAS - Positive and negative affect schedule",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PrejudicialEvaluationAndSocialInteractionScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_PrejudicialEvaluationAndSocialInteractionScale: new Coding({
     code: "304756004",
     display: "Prejudicial evaluation and social interaction scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ProfileOfMoodStatesBipolar: Coding.FromStrict({
+  ConditionStageTypeValueSet_ProfileOfMoodStatesBipolar: new Coding({
     code: "304757008",
     display: "Profile of mood states, bipolar",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_QuickNeurologicalScreeningTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_QuickNeurologicalScreeningTest: new Coding({
     code: "304758003",
     display: "Quick neurological screening test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RavenProgressiveMatricesAndVocabularyScales: Coding.FromStrict({
+  ConditionStageTypeValueSet_RavenProgressiveMatricesAndVocabularyScales: new Coding({
     code: "304759006",
     display: "Raven progressive matrices and vocabulary scales",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RLOCRecoveryLocusOfControlScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_RLOCRecoveryLocusOfControlScale: new Coding({
     code: "304760001",
     display: "RLOC - Recovery locus of control scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ReportedHealthBehaviorsChecklist: Coding.FromStrict({
+  ConditionStageTypeValueSet_ReportedHealthBehaviorsChecklist: new Coding({
     code: "304761002",
     display: "Reported health behaviors checklist",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RevisedTokenTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_RevisedTokenTest: new Coding({
     code: "304762009",
     display: "Revised token test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ReynellDevelopmentalLanguageScalesSecondRevision: Coding.FromStrict({
+  ConditionStageTypeValueSet_ReynellDevelopmentalLanguageScalesSecondRevision: new Coding({
     code: "304763004",
     display: "Reynell developmental language scales, second revision",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ReynellZinkinScaleForYoungVisuallyHandicappedChildren: Coding.FromStrict({
+  ConditionStageTypeValueSet_ReynellZinkinScaleForYoungVisuallyHandicappedChildren: new Coding({
     code: "304764005",
     display: "Reynell Zinkin scale for young visually handicapped children",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RogersPersonalAdjustmentInventoryRevised: Coding.FromStrict({
+  ConditionStageTypeValueSet_RogersPersonalAdjustmentInventoryRevised: new Coding({
     code: "304765006",
     display: "Rogers personal adjustment inventory, revised",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RSESRosenbergSelfEsteemScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_RSESRosenbergSelfEsteemScale: new Coding({
     code: "304766007",
     display: "RSES - Rosenberg self-esteem scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RustInventoryOfSchizotypalCognitions: Coding.FromStrict({
+  ConditionStageTypeValueSet_RustInventoryOfSchizotypalCognitions: new Coding({
     code: "304767003",
     display: "Rust inventory of schizotypal cognitions",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SatisfactionWithLifeScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_SatisfactionWithLifeScale: new Coding({
     code: "304768008",
     display: "Satisfaction with life scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ScreeningTestForTheLuriaNebraskaNeuropsychologicalBattery: Coding.FromStrict({
+  ConditionStageTypeValueSet_ScreeningTestForTheLuriaNebraskaNeuropsychologicalBattery: new Coding({
     code: "304769000",
     display: "Screening test for the Luria-Nebraska neuropsychological battery",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ShortFormSocialSupportQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_ShortFormSocialSupportQuestionnaire: new Coding({
     code: "304770004",
     display: "Short form social support questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SOSSignificantOthersScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_SOSSignificantOthersScale: new Coding({
     code: "304771000",
     display: "SOS - Significant others scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SnijdersOomenNonVerbalIntelligenceScaleRevised: Coding.FromStrict({
+  ConditionStageTypeValueSet_SnijdersOomenNonVerbalIntelligenceScaleRevised: new Coding({
     code: "304772007",
     display: "Snijders-Oomen non-verbal intelligence scale, revised",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StanfordBinetIntelligenceScaleFourthEdition: Coding.FromStrict({
+  ConditionStageTypeValueSet_StanfordBinetIntelligenceScaleFourthEdition: new Coding({
     code: "304773002",
     display: "Stanford Binet intelligence scale, fourth edition",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StanfordBinetFormLM: Coding.FromStrict({
+  ConditionStageTypeValueSet_StanfordBinetFormLM: new Coding({
     code: "304774008",
     display: "Stanford Binet form L/M",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StateTraitAngerExpressionInventory: Coding.FromStrict({
+  ConditionStageTypeValueSet_StateTraitAngerExpressionInventory: new Coding({
     code: "304775009",
     display: "State-trait anger expression inventory",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StroopNeuropsychologicalScreeningTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_StroopNeuropsychologicalScreeningTest: new Coding({
     code: "304776005",
     display: "Stroop neuropsychological screening test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_SymbolicPlayTestSecondEdition: Coding.FromStrict({
+  ConditionStageTypeValueSet_SymbolicPlayTestSecondEdition: new Coding({
     code: "304777001",
     display: "Symbolic play test, second edition",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TokenTestForChildren: Coding.FromStrict({
+  ConditionStageTypeValueSet_TokenTestForChildren: new Coding({
     code: "304778006",
     display: "Token test for children",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_UpliftsScale: Coding.FromStrict({
+  ConditionStageTypeValueSet_UpliftsScale: new Coding({
     code: "304779003",
     display: "Uplifts scale",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VarniThompsonPediatricPainQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_VarniThompsonPediatricPainQuestionnaire: new Coding({
     code: "304780000",
     display: "Varni-Thompson pediatric pain questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VinelandAdaptiveBehaviorScales: Coding.FromStrict({
+  ConditionStageTypeValueSet_VinelandAdaptiveBehaviorScales: new Coding({
     code: "304781001",
     display: "Vineland adaptive behavior scales",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DukeTreadmillScore: Coding.FromStrict({
+  ConditionStageTypeValueSet_DukeTreadmillScore: new Coding({
     code: "304915008",
     display: "Duke treadmill score",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_StrangeSituationTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_StrangeSituationTest: new Coding({
     code: "307791002",
     display: "Strange situation test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ReyFigureTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_ReyFigureTest: new Coding({
     code: "307792009",
     display: "Rey figure test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TestOfEverydayAttention: Coding.FromStrict({
+  ConditionStageTypeValueSet_TestOfEverydayAttention: new Coding({
     code: "307793004",
     display: "Test of everyday attention",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TestOfEverydayAttentionAdult: Coding.FromStrict({
+  ConditionStageTypeValueSet_TestOfEverydayAttentionAdult: new Coding({
     code: "307794005",
     display: "Test of everyday attention - adult",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_TestOfEverydayAttentionChild: Coding.FromStrict({
+  ConditionStageTypeValueSet_TestOfEverydayAttentionChild: new Coding({
     code: "307795006",
     display: "Test of everyday attention - child",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RivermeadBehavioralMemoryTestAdultVersion: Coding.FromStrict({
+  ConditionStageTypeValueSet_RivermeadBehavioralMemoryTestAdultVersion: new Coding({
     code: "307801002",
     display: "Rivermead behavioral memory test - adult version",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RivermeadBehavioralMemoryTestChildVersion: Coding.FromStrict({
+  ConditionStageTypeValueSet_RivermeadBehavioralMemoryTestChildVersion: new Coding({
     code: "307802009",
     display: "Rivermead behavioral memory test - child version",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WechslerObjectiveNumericalDimensionsTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_WechslerObjectiveNumericalDimensionsTest: new Coding({
     code: "307803004",
     display: "Wechsler objective numerical dimensions test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WOLDWechslerObjectiveLanguageDimensionsTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_WOLDWechslerObjectiveLanguageDimensionsTest: new Coding({
     code: "307804005",
     display: "WOLD - Wechsler objective language dimensions test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleForChildren: Coding.FromStrict({
+  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleForChildren: new Coding({
     code: "307805006",
     display: "Health of the Nation Outcome Scale for children",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleForAdolescents: Coding.FromStrict({
+  ConditionStageTypeValueSet_HealthOfTheNationOutcomeScaleForAdolescents: new Coding({
     code: "307806007",
     display: "Health of the Nation Outcome Scale for adolescents",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MaudsleyAddictionProfile: Coding.FromStrict({
+  ConditionStageTypeValueSet_MaudsleyAddictionProfile: new Coding({
     code: "307807003",
     display: "Maudsley addiction profile",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EducationScoreDiabetes: Coding.FromStrict({
+  ConditionStageTypeValueSet_EducationScoreDiabetes: new Coding({
     code: "309593006",
     display: "Education score - diabetes",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AttentionProcessTrainingQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_AttentionProcessTrainingQuestionnaire: new Coding({
     code: "311404002",
     display: "Attention process training questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_RatingScaleOfAttentionalBehavior: Coding.FromStrict({
+  ConditionStageTypeValueSet_RatingScaleOfAttentionalBehavior: new Coding({
     code: "311405001",
     display: "Rating scale of attentional behavior",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_EverydayMemoryQuestionnaire: Coding.FromStrict({
+  ConditionStageTypeValueSet_EverydayMemoryQuestionnaire: new Coding({
     code: "311406000",
     display: "Everyday memory questionnaire",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BehaviorAssessmentOfTheDysexecutiveSyndrome: Coding.FromStrict({
+  ConditionStageTypeValueSet_BehaviorAssessmentOfTheDysexecutiveSyndrome: new Coding({
     code: "311457001",
     display: "Behavior assessment of the dysexecutive syndrome",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_DoorsAndPeopleAssessment: Coding.FromStrict({
+  ConditionStageTypeValueSet_DoorsAndPeopleAssessment: new Coding({
     code: "311458006",
     display: "Doors and people assessment",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_Extended2And7Test: Coding.FromStrict({
+  ConditionStageTypeValueSet_Extended2And7Test: new Coding({
     code: "311471009",
     display: "Extended 2 & 7 test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AlphabetNumberAlterationTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_AlphabetNumberAlterationTest: new Coding({
     code: "311472002",
     display: "Alphabet number alteration test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_VigilWTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_VigilWTest: new Coding({
     code: "311473007",
     display: "Vigil/W test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AttentionalCapacityTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_AttentionalCapacityTest: new Coding({
     code: "311474001",
     display: "Attentional capacity test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ConsonantTrigramsTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_ConsonantTrigramsTest: new Coding({
     code: "311475000",
     display: "Consonant trigrams test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BuschkeSelectiveRemindingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_BuschkeSelectiveRemindingTest: new Coding({
     code: "311477008",
     display: "Buschke selective reminding test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CaliforniaVerbalLearningTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_CaliforniaVerbalLearningTest: new Coding({
     code: "311478003",
     display: "California verbal learning test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WilliamsMemoryAssessmentScales: Coding.FromStrict({
+  ConditionStageTypeValueSet_WilliamsMemoryAssessmentScales: new Coding({
     code: "311480009",
     display: "Williams memory assessment scales",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WechslerMemoryScaleRevised: Coding.FromStrict({
+  ConditionStageTypeValueSet_WechslerMemoryScaleRevised: new Coding({
     code: "311481008",
     display: "Wechsler memory scale revised",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_AssociationForNeuropsychologicalResearchAndDevelopmentProspectiveMemoryTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_AssociationForNeuropsychologicalResearchAndDevelopmentProspectiveMemoryTest: new Coding({
     code: "311483006",
     display: "Association for neuropsychological research and development prospective memory test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_PASATPacedAuditoryStimulationTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_PASATPacedAuditoryStimulationTest: new Coding({
     code: "311484000",
     display: "PASAT - Paced auditory stimulation test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_CategoryTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_CategoryTest: new Coding({
     code: "311485004",
     display: "Category test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_ProfileOfExecutiveControlSystem: Coding.FromStrict({
+  ConditionStageTypeValueSet_ProfileOfExecutiveControlSystem: new Coding({
     code: "311486003",
     display: "Profile of executive control system",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_BrixtonTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_BrixtonTest: new Coding({
     code: "311512008",
     display: "Brixton test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_HaylingTest: Coding.FromStrict({
+  ConditionStageTypeValueSet_HaylingTest: new Coding({
     code: "311513003",
     display: "Hayling test",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_MicrocogAssessmentOfCognitiveFunction: Coding.FromStrict({
+  ConditionStageTypeValueSet_MicrocogAssessmentOfCognitiveFunction: new Coding({
     code: "311514009",
     display: "Microcog - assessment of cognitive function",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WalterReedWRStage1: Coding.FromStrict({
+  ConditionStageTypeValueSet_WalterReedWRStage1: new Coding({
     code: "42114005",
     display: "Walter Reed (WR) stage 1",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WRStage5: Coding.FromStrict({
+  ConditionStageTypeValueSet_WRStage5: new Coding({
     code: "66470009",
     display: "WR stage 5",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WRStage4: Coding.FromStrict({
+  ConditionStageTypeValueSet_WRStage4: new Coding({
     code: "74542008",
     display: "WR stage 4",
     system: "http://snomed.info/sct"
   }),
-  ConditionStageTypeValueSet_WRStage6: Coding.FromStrict({
+  ConditionStageTypeValueSet_WRStage6: new Coding({
     code: "83200007",
     display: "WR stage 6",
     system: "http://snomed.info/sct"

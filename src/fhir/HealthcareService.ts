@@ -195,18 +195,18 @@ export class HealthcareServiceEligibility extends fhir.BackboneElement implement
   /**
    * Check if the current HealthcareServiceEligibility contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a HealthcareServiceEligibility from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IHealthcareServiceEligibility):HealthcareServiceEligibility {
+  static override fromStrict(source:fhir.IHealthcareServiceEligibility):HealthcareServiceEligibility {
     var dest:HealthcareServiceEligibility = new HealthcareServiceEligibility(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `HealthcareServiceEligibility is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -252,18 +252,18 @@ export class HealthcareServiceAvailableTime extends fhir.BackboneElement impleme
   /**
    * Check if the current HealthcareServiceAvailableTime contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a HealthcareServiceAvailableTime from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IHealthcareServiceAvailableTime):HealthcareServiceAvailableTime {
+  static override fromStrict(source:fhir.IHealthcareServiceAvailableTime):HealthcareServiceAvailableTime {
     var dest:HealthcareServiceAvailableTime = new HealthcareServiceAvailableTime(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `HealthcareServiceAvailableTime is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -295,19 +295,19 @@ export class HealthcareServiceNotAvailable extends fhir.BackboneElement implemen
   /**
    * Check if the current HealthcareServiceNotAvailable contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["description"] === undefined) { missingElements.push("description"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a HealthcareServiceNotAvailable from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IHealthcareServiceNotAvailable):HealthcareServiceNotAvailable {
+  static override fromStrict(source:fhir.IHealthcareServiceNotAvailable):HealthcareServiceNotAvailable {
     var dest:HealthcareServiceNotAvailable = new HealthcareServiceNotAvailable(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `HealthcareServiceNotAvailable is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -462,18 +462,18 @@ export class HealthcareService extends fhir.DomainResource implements fhir.IHeal
   /**
    * Check if the current HealthcareService contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a HealthcareService from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IHealthcareService):HealthcareService {
+  static override fromStrict(source:fhir.IHealthcareService):HealthcareService {
     var dest:HealthcareService = new HealthcareService(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `HealthcareService is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

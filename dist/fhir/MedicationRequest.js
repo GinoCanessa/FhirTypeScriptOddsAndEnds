@@ -25,18 +25,18 @@ export class MedicationRequestDispenseRequestInitialFill extends fhir.BackboneEl
     /**
      * Check if the current MedicationRequestDispenseRequestInitialFill contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicationRequestDispenseRequestInitialFill from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicationRequestDispenseRequestInitialFill(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicationRequestDispenseRequestInitialFill is missing elements: ${missingElements.join(", ")}`;
         }
@@ -80,18 +80,18 @@ export class MedicationRequestDispenseRequest extends fhir.BackboneElement {
     /**
      * Check if the current MedicationRequestDispenseRequest contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicationRequestDispenseRequest from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicationRequestDispenseRequest(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicationRequestDispenseRequest is missing elements: ${missingElements.join(", ")}`;
         }
@@ -123,18 +123,18 @@ export class MedicationRequestSubstitution extends fhir.BackboneElement {
     /**
      * Check if the current MedicationRequestSubstitution contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicationRequestSubstitution from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicationRequestSubstitution(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicationRequestSubstitution is missing elements: ${missingElements.join(", ")}`;
         }
@@ -293,7 +293,7 @@ export class MedicationRequest extends fhir.DomainResource {
     /**
      * Check if the current MedicationRequest contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["intent"] === undefined) {
             missingElements.push("intent");
@@ -304,16 +304,16 @@ export class MedicationRequest extends fhir.DomainResource {
         if (this["subject"] === undefined) {
             missingElements.push("subject");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicationRequest from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicationRequest(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicationRequest is missing elements: ${missingElements.join(", ")}`;
         }

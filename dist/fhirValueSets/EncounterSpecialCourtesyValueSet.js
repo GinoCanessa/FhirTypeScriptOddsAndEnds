@@ -13,7 +13,7 @@ export const EncounterSpecialCourtesyValueSet = {
     /**
      * extended courtesy
      */
-    v3_EncounterSpecialCourtesy_ExtendedCourtesy: Coding.FromStrict({
+    v3_EncounterSpecialCourtesy_ExtendedCourtesy: new Coding({
         code: "EXT",
         display: "extended courtesy",
         system: "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy"
@@ -21,7 +21,7 @@ export const EncounterSpecialCourtesyValueSet = {
     /**
      * normal courtesy
      */
-    v3_EncounterSpecialCourtesy_NormalCourtesy: Coding.FromStrict({
+    v3_EncounterSpecialCourtesy_NormalCourtesy: new Coding({
         code: "NRM",
         display: "normal courtesy",
         system: "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy"
@@ -29,7 +29,7 @@ export const EncounterSpecialCourtesyValueSet = {
     /**
      * professional courtesy
      */
-    v3_EncounterSpecialCourtesy_ProfessionalCourtesy: Coding.FromStrict({
+    v3_EncounterSpecialCourtesy_ProfessionalCourtesy: new Coding({
         code: "PRF",
         display: "professional courtesy",
         system: "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy"
@@ -37,7 +37,7 @@ export const EncounterSpecialCourtesyValueSet = {
     /**
      * Courtesies extended to the staff of the entity providing service.
      */
-    v3_EncounterSpecialCourtesy_Staff: Coding.FromStrict({
+    v3_EncounterSpecialCourtesy_Staff: new Coding({
         code: "STF",
         display: "staff",
         system: "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy"
@@ -52,7 +52,7 @@ export const EncounterSpecialCourtesyValueSet = {
      *                            Those properties themselves directly translate to a semantic of "unknown".  (E.g. a local code sent as a translation that conveys 'unknown')
      *                            Those properties further qualify the nature of what is unknown.  (E.g. specifying a use code of "H" and a URL prefix of "tel:" to convey that it is the home phone number that is unknown.)
      */
-    v3_NullFlavor_Unknown: Coding.FromStrict({
+    v3_NullFlavor_Unknown: new Coding({
         code: "UNK",
         display: "unknown",
         system: "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
@@ -60,7 +60,7 @@ export const EncounterSpecialCourtesyValueSet = {
     /**
      * very important person
      */
-    v3_EncounterSpecialCourtesy_VeryImportantPerson: Coding.FromStrict({
+    v3_EncounterSpecialCourtesy_VeryImportantPerson: new Coding({
         code: "VIP",
         display: "very important person",
         system: "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy"

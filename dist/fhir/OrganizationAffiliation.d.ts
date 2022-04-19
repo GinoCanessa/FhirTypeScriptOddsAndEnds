@@ -121,10 +121,10 @@ export declare class OrganizationAffiliation extends fhir.DomainResource impleme
     /**
      * Check if the current OrganizationAffiliation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a OrganizationAffiliation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IOrganizationAffiliation): OrganizationAffiliation;
+    static fromStrict(source: fhir.IOrganizationAffiliation): OrganizationAffiliation;
 }
 //# sourceMappingURL=OrganizationAffiliation.d.ts.map

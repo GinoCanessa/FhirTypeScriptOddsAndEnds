@@ -13,7 +13,7 @@ export const AppointmentstatusValueSet = {
     /**
      * The patient/patients has/have arrived and is/are waiting to be seen.
      */
-    appointmentstatus_Arrived: Coding.FromStrict({
+    appointmentstatus_Arrived: new Coding({
         code: "arrived",
         display: "Arrived",
         system: "http://hl7.org/fhir/appointmentstatus"
@@ -21,7 +21,7 @@ export const AppointmentstatusValueSet = {
     /**
      * All participant(s) have been considered and the appointment is confirmed to go ahead at the date/times specified.
      */
-    appointmentstatus_Booked: Coding.FromStrict({
+    appointmentstatus_Booked: new Coding({
         code: "booked",
         display: "Booked",
         system: "http://hl7.org/fhir/appointmentstatus"
@@ -29,7 +29,7 @@ export const AppointmentstatusValueSet = {
     /**
      * The appointment has been cancelled.
      */
-    appointmentstatus_Cancelled: Coding.FromStrict({
+    appointmentstatus_Cancelled: new Coding({
         code: "cancelled",
         display: "Cancelled",
         system: "http://hl7.org/fhir/appointmentstatus"
@@ -37,7 +37,7 @@ export const AppointmentstatusValueSet = {
     /**
      * When checked in, all pre-encounter administrative work is complete, and the encounter may begin. (where multiple patients are involved, they are all present).
      */
-    appointmentstatus_CheckedIn: Coding.FromStrict({
+    appointmentstatus_CheckedIn: new Coding({
         code: "checked-in",
         display: "Checked In",
         system: "http://hl7.org/fhir/appointmentstatus"
@@ -45,7 +45,7 @@ export const AppointmentstatusValueSet = {
     /**
      * This instance should not have been part of this patient's medical record.
      */
-    appointmentstatus_EnteredInError: Coding.FromStrict({
+    appointmentstatus_EnteredInError: new Coding({
         code: "entered-in-error",
         display: "Entered in error",
         system: "http://hl7.org/fhir/appointmentstatus"
@@ -53,7 +53,7 @@ export const AppointmentstatusValueSet = {
     /**
      * The planning stages of the appointment are now complete, the encounter resource will exist and will track further status changes. Note that an encounter may exist before the appointment status is fulfilled for many reasons.
      */
-    appointmentstatus_Fulfilled: Coding.FromStrict({
+    appointmentstatus_Fulfilled: new Coding({
         code: "fulfilled",
         display: "Fulfilled",
         system: "http://hl7.org/fhir/appointmentstatus"
@@ -61,7 +61,7 @@ export const AppointmentstatusValueSet = {
     /**
      * Some or all of the participant(s) have not/did not appear for the appointment (usually the patient).
      */
-    appointmentstatus_NoShow: Coding.FromStrict({
+    appointmentstatus_NoShow: new Coding({
         code: "noshow",
         display: "No Show",
         system: "http://hl7.org/fhir/appointmentstatus"
@@ -69,7 +69,7 @@ export const AppointmentstatusValueSet = {
     /**
      * Some or all of the participant(s) have not finalized their acceptance of the appointment request.
      */
-    appointmentstatus_Pending: Coding.FromStrict({
+    appointmentstatus_Pending: new Coding({
         code: "pending",
         display: "Pending",
         system: "http://hl7.org/fhir/appointmentstatus"
@@ -77,7 +77,7 @@ export const AppointmentstatusValueSet = {
     /**
      * None of the participant(s) have finalized their acceptance of the appointment request, and the start/end time might not be set yet.
      */
-    appointmentstatus_Proposed: Coding.FromStrict({
+    appointmentstatus_Proposed: new Coding({
         code: "proposed",
         display: "Proposed",
         system: "http://hl7.org/fhir/appointmentstatus"
@@ -86,7 +86,7 @@ export const AppointmentstatusValueSet = {
      * The appointment has been placed on a waitlist, to be scheduled/confirmed in the future when a slot/service is available.
      * A specific time might or might not be pre-allocated.
      */
-    appointmentstatus_Waitlisted: Coding.FromStrict({
+    appointmentstatus_Waitlisted: new Coding({
         code: "waitlist",
         display: "Waitlisted",
         system: "http://hl7.org/fhir/appointmentstatus"

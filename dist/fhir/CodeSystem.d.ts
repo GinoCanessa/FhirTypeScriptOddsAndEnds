@@ -310,11 +310,11 @@ export declare class CodeSystemFilter extends fhir.BackboneElement implements fh
     /**
      * Check if the current CodeSystemFilter contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CodeSystemFilter from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICodeSystemFilter): CodeSystemFilter;
+    static fromStrict(source: fhir.ICodeSystemFilter): CodeSystemFilter;
 }
 /**
  * A property defines an additional slot through which additional information can be provided about a concept.
@@ -347,11 +347,11 @@ export declare class CodeSystemProperty extends fhir.BackboneElement implements 
     /**
      * Check if the current CodeSystemProperty contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CodeSystemProperty from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICodeSystemProperty): CodeSystemProperty;
+    static fromStrict(source: fhir.ICodeSystemProperty): CodeSystemProperty;
 }
 /**
  * Concepts have both a ```display``` and an array of ```designation```. The display is equivalent to a special designation with an implied ```designation.use``` of "primary code" and a language equal to the [Resource Language](resource.html#language).
@@ -378,11 +378,11 @@ export declare class CodeSystemConceptDesignation extends fhir.BackboneElement i
     /**
      * Check if the current CodeSystemConceptDesignation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CodeSystemConceptDesignation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICodeSystemConceptDesignation): CodeSystemConceptDesignation;
+    static fromStrict(source: fhir.ICodeSystemConceptDesignation): CodeSystemConceptDesignation;
 }
 /**
  * A property value for this concept.
@@ -434,11 +434,11 @@ export declare class CodeSystemConceptProperty extends fhir.BackboneElement impl
     /**
      * Check if the current CodeSystemConceptProperty contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CodeSystemConceptProperty from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICodeSystemConceptProperty): CodeSystemConceptProperty;
+    static fromStrict(source: fhir.ICodeSystemConceptProperty): CodeSystemConceptProperty;
 }
 /**
  * If this is empty, it means that the code system resource does not represent the content of the code system.
@@ -478,11 +478,11 @@ export declare class CodeSystemConcept extends fhir.BackboneElement implements f
     /**
      * Check if the current CodeSystemConcept contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CodeSystemConcept from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICodeSystemConcept): CodeSystemConcept;
+    static fromStrict(source: fhir.ICodeSystemConcept): CodeSystemConcept;
 }
 /**
  * The CodeSystem resource is used to declare the existence of and describe a code system or code system supplement and its key properties, and optionally define a part or all of its content.
@@ -625,11 +625,11 @@ export declare class CodeSystem extends fhir.DomainResource implements fhir.ICod
     /**
      * Check if the current CodeSystem contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CodeSystem from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICodeSystem): CodeSystem;
+    static fromStrict(source: fhir.ICodeSystem): CodeSystem;
 }
 /**
  * Code Values for the CodeSystem.filter.operator field

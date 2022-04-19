@@ -143,11 +143,11 @@ export declare class SubstanceNucleicAcidSubunitLinkage extends fhir.BackboneEle
     /**
      * Check if the current SubstanceNucleicAcidSubunitLinkage contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceNucleicAcidSubunitLinkage from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceNucleicAcidSubunitLinkage): SubstanceNucleicAcidSubunitLinkage;
+    static fromStrict(source: fhir.ISubstanceNucleicAcidSubunitLinkage): SubstanceNucleicAcidSubunitLinkage;
 }
 /**
  * 5.3.6.8.1 Sugar ID (Mandatory).
@@ -174,11 +174,11 @@ export declare class SubstanceNucleicAcidSubunitSugar extends fhir.BackboneEleme
     /**
      * Check if the current SubstanceNucleicAcidSubunitSugar contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceNucleicAcidSubunitSugar from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceNucleicAcidSubunitSugar): SubstanceNucleicAcidSubunitSugar;
+    static fromStrict(source: fhir.ISubstanceNucleicAcidSubunitSugar): SubstanceNucleicAcidSubunitSugar;
 }
 /**
  * Subunits are listed in order of decreasing length; sequences of the same length will be ordered by molecular weight; subunits that have identical sequences will be repeated multiple times.
@@ -226,11 +226,11 @@ export declare class SubstanceNucleicAcidSubunit extends fhir.BackboneElement im
     /**
      * Check if the current SubstanceNucleicAcidSubunit contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceNucleicAcidSubunit from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceNucleicAcidSubunit): SubstanceNucleicAcidSubunit;
+    static fromStrict(source: fhir.ISubstanceNucleicAcidSubunit): SubstanceNucleicAcidSubunit;
 }
 /**
  * Nucleic acids are defined by three distinct elements: the base, sugar and linkage. Individual substance/moiety IDs will be created for each of these elements. The nucleotide sequence will be always entered in the 5’-3’ direction.
@@ -269,10 +269,10 @@ export declare class SubstanceNucleicAcid extends fhir.DomainResource implements
     /**
      * Check if the current SubstanceNucleicAcid contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceNucleicAcid from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceNucleicAcid): SubstanceNucleicAcid;
+    static fromStrict(source: fhir.ISubstanceNucleicAcid): SubstanceNucleicAcid;
 }
 //# sourceMappingURL=SubstanceNucleicAcid.d.ts.map

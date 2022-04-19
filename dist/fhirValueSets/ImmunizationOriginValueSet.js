@@ -13,7 +13,7 @@ export const ImmunizationOriginValueSet = {
     /**
      * The data for the immunization event originated with another provider.
      */
-    immunization_origin_OtherProvider: Coding.FromStrict({
+    immunization_origin_OtherProvider: new Coding({
         code: "provider",
         display: "Other Provider",
         system: "http://terminology.hl7.org/CodeSystem/immunization-origin"
@@ -21,7 +21,7 @@ export const ImmunizationOriginValueSet = {
     /**
      * The data for the immunization event originated from the recollection of the patient or parent/guardian of the patient.
      */
-    immunization_origin_ParentGuardianPatientRecall: Coding.FromStrict({
+    immunization_origin_ParentGuardianPatientRecall: new Coding({
         code: "recall",
         display: "Parent/Guardian/Patient Recall",
         system: "http://terminology.hl7.org/CodeSystem/immunization-origin"
@@ -29,7 +29,7 @@ export const ImmunizationOriginValueSet = {
     /**
      * The data for the immunization event originated with a written record for the patient.
      */
-    immunization_origin_WrittenRecord: Coding.FromStrict({
+    immunization_origin_WrittenRecord: new Coding({
         code: "record",
         display: "Written Record",
         system: "http://terminology.hl7.org/CodeSystem/immunization-origin"
@@ -37,7 +37,7 @@ export const ImmunizationOriginValueSet = {
     /**
      * The data for the immunization event originated with a school record for the patient.
      */
-    immunization_origin_SchoolRecord: Coding.FromStrict({
+    immunization_origin_SchoolRecord: new Coding({
         code: "school",
         display: "School Record",
         system: "http://terminology.hl7.org/CodeSystem/immunization-origin"

@@ -157,18 +157,18 @@ export class SupplyRequestParameter extends fhir.BackboneElement implements fhir
   /**
    * Check if the current SupplyRequestParameter contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SupplyRequestParameter from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISupplyRequestParameter):SupplyRequestParameter {
+  static override fromStrict(source:fhir.ISupplyRequestParameter):SupplyRequestParameter {
     var dest:SupplyRequestParameter = new SupplyRequestParameter(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SupplyRequestParameter is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -291,19 +291,19 @@ export class SupplyRequest extends fhir.DomainResource implements fhir.ISupplyRe
   /**
    * Check if the current SupplyRequest contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["quantity"] === undefined) { missingElements.push("quantity"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SupplyRequest from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISupplyRequest):SupplyRequest {
+  static override fromStrict(source:fhir.ISupplyRequest):SupplyRequest {
     var dest:SupplyRequest = new SupplyRequest(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SupplyRequest is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

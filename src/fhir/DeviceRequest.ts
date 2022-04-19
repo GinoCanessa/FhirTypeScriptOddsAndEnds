@@ -198,18 +198,18 @@ export class DeviceRequestParameter extends fhir.BackboneElement implements fhir
   /**
    * Check if the current DeviceRequestParameter contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DeviceRequestParameter from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDeviceRequestParameter):DeviceRequestParameter {
+  static override fromStrict(source:fhir.IDeviceRequestParameter):DeviceRequestParameter {
     var dest:DeviceRequestParameter = new DeviceRequestParameter(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DeviceRequestParameter is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -387,20 +387,20 @@ export class DeviceRequest extends fhir.DomainResource implements fhir.IDeviceRe
   /**
    * Check if the current DeviceRequest contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["intent"] === undefined) { missingElements.push("intent"); }
     if (this["subject"] === undefined) { missingElements.push("subject"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DeviceRequest from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDeviceRequest):DeviceRequest {
+  static override fromStrict(source:fhir.IDeviceRequest):DeviceRequest {
     var dest:DeviceRequest = new DeviceRequest(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DeviceRequest is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

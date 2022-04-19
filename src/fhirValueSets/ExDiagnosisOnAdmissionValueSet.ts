@@ -13,7 +13,7 @@ export const ExDiagnosisOnAdmissionValueSet = {
   /**
    * Diagnosis was not present at time of inpatient admission.
    */
-  ex_diagnosis_on_admission_No: Coding.FromStrict({
+  ex_diagnosis_on_admission_No: new Coding({
     code: "n",
     display: "No",
     system: "http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission"
@@ -21,7 +21,7 @@ export const ExDiagnosisOnAdmissionValueSet = {
   /**
    * Documentation insufficient to determine if condition was present at the time of inpatient admission.
    */
-  ex_diagnosis_on_admission_Unknown: Coding.FromStrict({
+  ex_diagnosis_on_admission_Unknown: new Coding({
     code: "u",
     display: "Unknown",
     system: "http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission"
@@ -29,7 +29,7 @@ export const ExDiagnosisOnAdmissionValueSet = {
   /**
    * Clinically undetermined. Provider unable to clinically determine whether the condition was present at the time of inpatient admission.
    */
-  ex_diagnosis_on_admission_Undetermined: Coding.FromStrict({
+  ex_diagnosis_on_admission_Undetermined: new Coding({
     code: "w",
     display: "Undetermined",
     system: "http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission"
@@ -37,7 +37,7 @@ export const ExDiagnosisOnAdmissionValueSet = {
   /**
    * Diagnosis was present at time of inpatient admission.
    */
-  ex_diagnosis_on_admission_Yes: Coding.FromStrict({
+  ex_diagnosis_on_admission_Yes: new Coding({
     code: "y",
     display: "Yes",
     system: "http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission"

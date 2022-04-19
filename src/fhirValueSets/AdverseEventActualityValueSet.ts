@@ -13,7 +13,7 @@ export const AdverseEventActualityValueSet = {
   /**
    * The adverse event actually happened regardless of whether anyone was affected or harmed.
    */
-  adverse_event_actuality_AdverseEvent: Coding.FromStrict({
+  adverse_event_actuality_AdverseEvent: new Coding({
     code: "actual",
     display: "Adverse Event",
     system: "http://hl7.org/fhir/adverse-event-actuality"
@@ -21,7 +21,7 @@ export const AdverseEventActualityValueSet = {
   /**
    * A potential adverse event.
    */
-  adverse_event_actuality_PotentialAdverseEvent: Coding.FromStrict({
+  adverse_event_actuality_PotentialAdverseEvent: new Coding({
     code: "potential",
     display: "Potential Adverse Event",
     system: "http://hl7.org/fhir/adverse-event-actuality"

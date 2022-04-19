@@ -226,11 +226,11 @@ export declare class MedicinalProductNameNamePart extends fhir.BackboneElement i
     /**
      * Check if the current MedicinalProductNameNamePart contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductNameNamePart from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductNameNamePart): MedicinalProductNameNamePart;
+    static fromStrict(source: fhir.IMedicinalProductNameNamePart): MedicinalProductNameNamePart;
 }
 /**
  * Country where the name applies.
@@ -255,11 +255,11 @@ export declare class MedicinalProductNameCountryLanguage extends fhir.BackboneEl
     /**
      * Check if the current MedicinalProductNameCountryLanguage contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductNameCountryLanguage from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductNameCountryLanguage): MedicinalProductNameCountryLanguage;
+    static fromStrict(source: fhir.IMedicinalProductNameCountryLanguage): MedicinalProductNameCountryLanguage;
 }
 /**
  * The product's name, including full name and possibly coded parts.
@@ -285,11 +285,11 @@ export declare class MedicinalProductName extends fhir.BackboneElement implement
     /**
      * Check if the current MedicinalProductName contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductName from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductName): MedicinalProductName;
+    static fromStrict(source: fhir.IMedicinalProductName): MedicinalProductName;
 }
 /**
  * An operation applied to the product, for manufacturing or adminsitrative purpose.
@@ -327,11 +327,11 @@ export declare class MedicinalProductManufacturingBusinessOperation extends fhir
     /**
      * Check if the current MedicinalProductManufacturingBusinessOperation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductManufacturingBusinessOperation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductManufacturingBusinessOperation): MedicinalProductManufacturingBusinessOperation;
+    static fromStrict(source: fhir.IMedicinalProductManufacturingBusinessOperation): MedicinalProductManufacturingBusinessOperation;
 }
 /**
  * Indicates if the medicinal product has an orphan designation for the treatment of a rare disease.
@@ -377,11 +377,11 @@ export declare class MedicinalProductSpecialDesignation extends fhir.BackboneEle
     /**
      * Check if the current MedicinalProductSpecialDesignation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductSpecialDesignation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductSpecialDesignation): MedicinalProductSpecialDesignation;
+    static fromStrict(source: fhir.IMedicinalProductSpecialDesignation): MedicinalProductSpecialDesignation;
 }
 /**
  * Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).
@@ -479,10 +479,10 @@ export declare class MedicinalProduct extends fhir.DomainResource implements fhi
     /**
      * Check if the current MedicinalProduct contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProduct from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProduct): MedicinalProduct;
+    static fromStrict(source: fhir.IMedicinalProduct): MedicinalProduct;
 }
 //# sourceMappingURL=MedicinalProduct.d.ts.map

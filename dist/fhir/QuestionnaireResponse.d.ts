@@ -221,11 +221,11 @@ export declare class QuestionnaireResponseItemAnswer extends fhir.BackboneElemen
     /**
      * Check if the current QuestionnaireResponseItemAnswer contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a QuestionnaireResponseItemAnswer from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IQuestionnaireResponseItemAnswer): QuestionnaireResponseItemAnswer;
+    static fromStrict(source: fhir.IQuestionnaireResponseItemAnswer): QuestionnaireResponseItemAnswer;
 }
 /**
  * Groups cannot have answers and therefore must nest directly within item. When dealing with questions, nesting must occur within each answer because some questions may have multiple answers (and the nesting occurs for each answer).
@@ -262,11 +262,11 @@ export declare class QuestionnaireResponseItem extends fhir.BackboneElement impl
     /**
      * Check if the current QuestionnaireResponseItem contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a QuestionnaireResponseItem from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IQuestionnaireResponseItem): QuestionnaireResponseItem;
+    static fromStrict(source: fhir.IQuestionnaireResponseItem): QuestionnaireResponseItem;
 }
 /**
  * A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to.
@@ -331,11 +331,11 @@ export declare class QuestionnaireResponse extends fhir.DomainResource implement
     /**
      * Check if the current QuestionnaireResponse contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a QuestionnaireResponse from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IQuestionnaireResponse): QuestionnaireResponse;
+    static fromStrict(source: fhir.IQuestionnaireResponse): QuestionnaireResponse;
 }
 /**
  * Code Values for the QuestionnaireResponse.status field

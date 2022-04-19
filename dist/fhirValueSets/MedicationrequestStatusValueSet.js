@@ -13,7 +13,7 @@ export const MedicationrequestStatusValueSet = {
     /**
      * The prescription is 'actionable', but not all actions that are implied by it have occurred yet.
      */
-    medicationrequest_status_Active: Coding.FromStrict({
+    medicationrequest_status_Active: new Coding({
         code: "active",
         display: "Active",
         system: "http://hl7.org/fhir/CodeSystem/medicationrequest-status"
@@ -21,7 +21,7 @@ export const MedicationrequestStatusValueSet = {
     /**
      * The prescription has been withdrawn before any administrations have occurred
      */
-    medicationrequest_status_Cancelled: Coding.FromStrict({
+    medicationrequest_status_Cancelled: new Coding({
         code: "cancelled",
         display: "Cancelled",
         system: "http://hl7.org/fhir/CodeSystem/medicationrequest-status"
@@ -29,7 +29,7 @@ export const MedicationrequestStatusValueSet = {
     /**
      * All actions that are implied by the prescription have occurred.
      */
-    medicationrequest_status_Completed: Coding.FromStrict({
+    medicationrequest_status_Completed: new Coding({
         code: "completed",
         display: "Completed",
         system: "http://hl7.org/fhir/CodeSystem/medicationrequest-status"
@@ -37,7 +37,7 @@ export const MedicationrequestStatusValueSet = {
     /**
      * The prescription is not yet 'actionable', e.g. it is a work in progress, requires sign-off, verification or needs to be run through decision support process.
      */
-    medicationrequest_status_Draft: Coding.FromStrict({
+    medicationrequest_status_Draft: new Coding({
         code: "draft",
         display: "Draft",
         system: "http://hl7.org/fhir/CodeSystem/medicationrequest-status"
@@ -45,7 +45,7 @@ export const MedicationrequestStatusValueSet = {
     /**
      * Some of the actions that are implied by the medication request may have occurred.  For example, the medication may have been dispensed and the patient may have taken some of the medication.  Clinical decision support systems should take this status into account
      */
-    medicationrequest_status_EnteredInError: Coding.FromStrict({
+    medicationrequest_status_EnteredInError: new Coding({
         code: "entered-in-error",
         display: "Entered in Error",
         system: "http://hl7.org/fhir/CodeSystem/medicationrequest-status"
@@ -53,7 +53,7 @@ export const MedicationrequestStatusValueSet = {
     /**
      * Actions implied by the prescription are to be temporarily halted, but are expected to continue later.  May also be called 'suspended'.
      */
-    medicationrequest_status_OnHold: Coding.FromStrict({
+    medicationrequest_status_OnHold: new Coding({
         code: "on-hold",
         display: "On Hold",
         system: "http://hl7.org/fhir/CodeSystem/medicationrequest-status"
@@ -61,7 +61,7 @@ export const MedicationrequestStatusValueSet = {
     /**
      * Actions implied by the prescription are to be permanently halted, before all of the administrations occurred. This should not be used if the original order was entered in error
      */
-    medicationrequest_status_Stopped: Coding.FromStrict({
+    medicationrequest_status_Stopped: new Coding({
         code: "stopped",
         display: "Stopped",
         system: "http://hl7.org/fhir/CodeSystem/medicationrequest-status"
@@ -69,7 +69,7 @@ export const MedicationrequestStatusValueSet = {
     /**
      * The authoring/source system does not know which of the status values currently applies for this observation. Note: This concept is not to be used for 'other' - one of the listed statuses is presumed to apply, but the authoring/source system does not know which.
      */
-    medicationrequest_status_Unknown: Coding.FromStrict({
+    medicationrequest_status_Unknown: new Coding({
         code: "unknown",
         display: "Unknown",
         system: "http://hl7.org/fhir/CodeSystem/medicationrequest-status"

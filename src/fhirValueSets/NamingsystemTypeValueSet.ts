@@ -13,7 +13,7 @@ export const NamingsystemTypeValueSet = {
   /**
    * The naming system is used to define concepts and symbols to represent those concepts; e.g. UCUM, LOINC, NDC code, local lab codes, etc.
    */
-  namingsystem_type_CodeSystem: Coding.FromStrict({
+  namingsystem_type_CodeSystem: new Coding({
     code: "codesystem",
     display: "Code System",
     system: "http://hl7.org/fhir/namingsystem-type"
@@ -21,7 +21,7 @@ export const NamingsystemTypeValueSet = {
   /**
    * The naming system is used to manage identifiers (e.g. license numbers, order numbers, etc.).
    */
-  namingsystem_type_Identifier: Coding.FromStrict({
+  namingsystem_type_Identifier: new Coding({
     code: "identifier",
     display: "Identifier",
     system: "http://hl7.org/fhir/namingsystem-type"
@@ -29,7 +29,7 @@ export const NamingsystemTypeValueSet = {
   /**
    * The naming system is used as the root for other identifiers and naming systems.
    */
-  namingsystem_type_Root: Coding.FromStrict({
+  namingsystem_type_Root: new Coding({
     code: "root",
     display: "Root",
     system: "http://hl7.org/fhir/namingsystem-type"

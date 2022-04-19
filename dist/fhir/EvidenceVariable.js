@@ -79,18 +79,18 @@ export class EvidenceVariableCharacteristic extends fhir.BackboneElement {
     /**
      * Check if the current EvidenceVariableCharacteristic contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a EvidenceVariableCharacteristic from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new EvidenceVariableCharacteristic(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `EvidenceVariableCharacteristic is missing elements: ${missingElements.join(", ")}`;
         }
@@ -242,7 +242,7 @@ export class EvidenceVariable extends fhir.DomainResource {
     /**
      * Check if the current EvidenceVariable contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if ((!this["characteristic"]) || (this["characteristic"].length === 0)) {
             missingElements.push("characteristic");
@@ -250,16 +250,16 @@ export class EvidenceVariable extends fhir.DomainResource {
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a EvidenceVariable from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new EvidenceVariable(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `EvidenceVariable is missing elements: ${missingElements.join(", ")}`;
         }

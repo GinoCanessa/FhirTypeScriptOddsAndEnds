@@ -10,1567 +10,1567 @@ import { Coding } from '../fhir';
  * FHIR Value set/code system definition for HL7 v2 table 0487 ( Specimen Type)
  */
 export const V20487ValueSet = {
-    v2_0487_Abscess: Coding.FromStrict({
+    v2_0487_Abscess: new Coding({
         code: "ABS",
         display: "Abscess",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_TissueAcne: Coding.FromStrict({
+    v2_0487_TissueAcne: new Coding({
         code: "ACNE",
         display: "Tissue, Acne",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_FluidAcne: Coding.FromStrict({
+    v2_0487_FluidAcne: new Coding({
         code: "ACNFLD",
         display: "Fluid, Acne",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_AirSample: Coding.FromStrict({
+    v2_0487_AirSample: new Coding({
         code: "AIRS",
         display: "Air Sample",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Allograft: Coding.FromStrict({
+    v2_0487_Allograft: new Coding({
         code: "ALL",
         display: "Allograft",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_AmnioticFluid: Coding.FromStrict({
+    v2_0487_AmnioticFluid: new Coding({
         code: "AMN",
         display: "Amniotic fluid",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Amputation: Coding.FromStrict({
+    v2_0487_Amputation: new Coding({
         code: "AMP",
         display: "Amputation",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CatheterTipAngio: Coding.FromStrict({
+    v2_0487_CatheterTipAngio: new Coding({
         code: "ANGI",
         display: "Catheter Tip, Angio",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CatheterTipArterial: Coding.FromStrict({
+    v2_0487_CatheterTipArterial: new Coding({
         code: "ARTC",
         display: "Catheter Tip, Arterial",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SerumAcute: Coding.FromStrict({
+    v2_0487_SerumAcute: new Coding({
         code: "ASERU",
         display: "Serum, Acute",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Aspirate: Coding.FromStrict({
+    v2_0487_Aspirate: new Coding({
         code: "ASP",
         display: "Aspirate",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_EnvironmentAttest: Coding.FromStrict({
+    v2_0487_EnvironmentAttest: new Coding({
         code: "ATTE",
         display: "Environment, Attest",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_EnvironmentalAutoclaveAmpule: Coding.FromStrict({
+    v2_0487_EnvironmentalAutoclaveAmpule: new Coding({
         code: "AUTOA",
         display: "Environmental, Autoclave Ampule",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_EnvironmentalAutoclaveCapsule: Coding.FromStrict({
+    v2_0487_EnvironmentalAutoclaveCapsule: new Coding({
         code: "AUTOC",
         display: "Environmental, Autoclave Capsule",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Autopsy: Coding.FromStrict({
+    v2_0487_Autopsy: new Coding({
         code: "AUTP",
         display: "Autopsy",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BloodBag: Coding.FromStrict({
+    v2_0487_BloodBag: new Coding({
         code: "BBL",
         display: "Blood bag",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CystBakerQuoteS: Coding.FromStrict({
+    v2_0487_CystBakerQuoteS: new Coding({
         code: "BCYST",
         display: "Cyst, Baker's",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_WholeBody: Coding.FromStrict({
+    v2_0487_WholeBody: new Coding({
         code: "BDY",
         display: "Whole body",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BileFluid: Coding.FromStrict({
+    v2_0487_BileFluid: new Coding({
         code: "BIFL",
         display: "Bile Fluid",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Bite: Coding.FromStrict({
+    v2_0487_Bite: new Coding({
         code: "BITE",
         display: "Bite",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_WholeBlood: Coding.FromStrict({
+    v2_0487_WholeBlood: new Coding({
         code: "BLD",
         display: "Whole blood",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BloodArterial: Coding.FromStrict({
+    v2_0487_BloodArterial: new Coding({
         code: "BLDA",
         display: "Blood arterial",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CordBlood: Coding.FromStrict({
+    v2_0487_CordBlood: new Coding({
         code: "BLDCO",
         display: "Cord blood",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BloodVenous: Coding.FromStrict({
+    v2_0487_BloodVenous: new Coding({
         code: "BLDV",
         display: "Blood venous",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Bleb: Coding.FromStrict({
+    v2_0487_Bleb: new Coding({
         code: "BLEB",
         display: "Bleb",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Blister: Coding.FromStrict({
+    v2_0487_Blister: new Coding({
         code: "BLIST",
         display: "Blister",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Boil: Coding.FromStrict({
+    v2_0487_Boil: new Coding({
         code: "BOIL",
         display: "Boil",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Bone: Coding.FromStrict({
+    v2_0487_Bone: new Coding({
         code: "BON",
         display: "Bone",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BowelContents: Coding.FromStrict({
+    v2_0487_BowelContents: new Coding({
         code: "BOWL",
         display: "Bowel contents",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Basophils: Coding.FromStrict({
+    v2_0487_Basophils: new Coding({
         code: "BPH",
         display: "Basophils",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BloodProductUnit: Coding.FromStrict({
+    v2_0487_BloodProductUnit: new Coding({
         code: "BPU",
         display: "Blood product unit",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Burn: Coding.FromStrict({
+    v2_0487_Burn: new Coding({
         code: "BRN",
         display: "Burn",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Brush: Coding.FromStrict({
+    v2_0487_Brush: new Coding({
         code: "BRSH",
         display: "Brush",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BreathUseEXHLD: Coding.FromStrict({
+    v2_0487_BreathUseEXHLD: new Coding({
         code: "BRTH",
         display: "Breath (use EXHLD)",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Brushing: Coding.FromStrict({
+    v2_0487_Brushing: new Coding({
         code: "BRUS",
         display: "Brushing",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Bubo: Coding.FromStrict({
+    v2_0487_Bubo: new Coding({
         code: "BUB",
         display: "Bubo",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BullaBullae: Coding.FromStrict({
+    v2_0487_BullaBullae: new Coding({
         code: "BULLA",
         display: "Bulla/Bullae",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Biopsy: Coding.FromStrict({
+    v2_0487_Biopsy: new Coding({
         code: "BX",
         display: "Biopsy",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CalculusEqualsStone: Coding.FromStrict({
+    v2_0487_CalculusEqualsStone: new Coding({
         code: "CALC",
         display: "Calculus (=Stone)",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Carbuncle: Coding.FromStrict({
+    v2_0487_Carbuncle: new Coding({
         code: "CARBU",
         display: "Carbuncle",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Catheter: Coding.FromStrict({
+    v2_0487_Catheter: new Coding({
         code: "CAT",
         display: "Catheter",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BiteCat: Coding.FromStrict({
+    v2_0487_BiteCat: new Coding({
         code: "CBITE",
         display: "Bite, Cat",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CardiacMuscle: Coding.FromStrict({
+    v2_0487_CardiacMuscle: new Coding({
         code: "CDM",
         display: "Cardiac muscle",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Clippings: Coding.FromStrict({
+    v2_0487_Clippings: new Coding({
         code: "CLIPP",
         display: "Clippings",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Conjunctiva: Coding.FromStrict({
+    v2_0487_Conjunctiva: new Coding({
         code: "CNJT",
         display: "Conjunctiva",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Cannula: Coding.FromStrict({
+    v2_0487_Cannula: new Coding({
         code: "CNL",
         display: "Cannula",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Colostrum: Coding.FromStrict({
+    v2_0487_Colostrum: new Coding({
         code: "COL",
         display: "Colostrum",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BiospyCone: Coding.FromStrict({
+    v2_0487_BiospyCone: new Coding({
         code: "CONE",
         display: "Biospy, Cone",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_ScratchCat: Coding.FromStrict({
+    v2_0487_ScratchCat: new Coding({
         code: "CSCR",
         display: "Scratch, Cat",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SerumConvalescent: Coding.FromStrict({
+    v2_0487_SerumConvalescent: new Coding({
         code: "CSERU",
         display: "Serum, Convalescent",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CerebralSpinalFluid: Coding.FromStrict({
+    v2_0487_CerebralSpinalFluid: new Coding({
         code: "CSF",
         display: "Cerebral spinal fluid",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CatheterInsertionSite: Coding.FromStrict({
+    v2_0487_CatheterInsertionSite: new Coding({
         code: "CSITE",
         display: "Catheter Insertion Site",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_FluidCystostomyTube: Coding.FromStrict({
+    v2_0487_FluidCystostomyTube: new Coding({
         code: "CSMY",
         display: "Fluid,  Cystostomy Tube",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_FluidCyst: Coding.FromStrict({
+    v2_0487_FluidCyst: new Coding({
         code: "CST",
         display: "Fluid, Cyst",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BloodCellSaver: Coding.FromStrict({
+    v2_0487_BloodCellSaver: new Coding({
         code: "CSVR",
         display: "Blood, Cell Saver",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CatheterTip: Coding.FromStrict({
+    v2_0487_CatheterTip: new Coding({
         code: "CTP",
         display: "Catheter tip",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Curretage: Coding.FromStrict({
+    v2_0487_Curretage: new Coding({
         code: "CUR",
         display: "Curretage",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CervicalMucus: Coding.FromStrict({
+    v2_0487_CervicalMucus: new Coding({
         code: "CVM",
         display: "Cervical Mucus",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SiteCVP: Coding.FromStrict({
+    v2_0487_SiteCVP: new Coding({
         code: "CVPS",
         display: "Site, CVP",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CatheterTipCVP: Coding.FromStrict({
+    v2_0487_CatheterTipCVP: new Coding({
         code: "CVPT",
         display: "Catheter Tip, CVP",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_NoduleCystic: Coding.FromStrict({
+    v2_0487_NoduleCystic: new Coding({
         code: "CYN",
         display: "Nodule, Cystic",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Cyst: Coding.FromStrict({
+    v2_0487_Cyst: new Coding({
         code: "CYST",
         display: "Cyst",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BiteDog: Coding.FromStrict({
+    v2_0487_BiteDog: new Coding({
         code: "DBITE",
         display: "Bite, Dog",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SputumDeepCough: Coding.FromStrict({
+    v2_0487_SputumDeepCough: new Coding({
         code: "DCS",
         display: "Sputum, Deep Cough",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_UlcerDecubitus: Coding.FromStrict({
+    v2_0487_UlcerDecubitus: new Coding({
         code: "DEC",
         display: "Ulcer, Decubitus",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_EnvironmentalWaterDeionized: Coding.FromStrict({
+    v2_0487_EnvironmentalWaterDeionized: new Coding({
         code: "DEION",
         display: "Environmental, Water  (Deionized)",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Dialysate: Coding.FromStrict({
+    v2_0487_Dialysate: new Coding({
         code: "DIA",
         display: "Dialysate",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_DialysisFluid: Coding.FromStrict({
+    v2_0487_DialysisFluid: new Coding({
         code: "DIAF",
         display: "Dialysis Fluid",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Discharge: Coding.FromStrict({
+    v2_0487_Discharge: new Coding({
         code: "DISCHG",
         display: "Discharge",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Diverticulum: Coding.FromStrict({
+    v2_0487_Diverticulum: new Coding({
         code: "DIV",
         display: "Diverticulum",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Drain: Coding.FromStrict({
+    v2_0487_Drain: new Coding({
         code: "DRN",
         display: "Drain",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_DrainageTube: Coding.FromStrict({
+    v2_0487_DrainageTube: new Coding({
         code: "DRNG",
         display: "Drainage, Tube",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_DrainagePenrose: Coding.FromStrict({
+    v2_0487_DrainagePenrose: new Coding({
         code: "DRNGP",
         display: "Drainage, Penrose",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_DuodenalFluid: Coding.FromStrict({
+    v2_0487_DuodenalFluid: new Coding({
         code: "DUFL",
         display: "Duodenal fluid",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_EarWaxCerumen: Coding.FromStrict({
+    v2_0487_EarWaxCerumen: new Coding({
         code: "EARW",
         display: "Ear wax (cerumen)",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BrushEsophageal: Coding.FromStrict({
+    v2_0487_BrushEsophageal: new Coding({
         code: "EBRUSH",
         display: "Brush, Esophageal",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_EnvironmentalEyeWash: Coding.FromStrict({
+    v2_0487_EnvironmentalEyeWash: new Coding({
         code: "EEYE",
         display: "Environmental, Eye Wash",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_EnvironmentalEffluent: Coding.FromStrict({
+    v2_0487_EnvironmentalEffluent: new Coding({
         code: "EFF",
         display: "Environmental, Effluent",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Effusion: Coding.FromStrict({
+    v2_0487_Effusion: new Coding({
         code: "EFFUS",
         display: "Effusion",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_EnvironmentalFood: Coding.FromStrict({
+    v2_0487_EnvironmentalFood: new Coding({
         code: "EFOD",
         display: "Environmental, Food",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_EnvironmentalIsolette: Coding.FromStrict({
+    v2_0487_EnvironmentalIsolette: new Coding({
         code: "EISO",
         display: "Environmental, Isolette",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Electrode: Coding.FromStrict({
+    v2_0487_Electrode: new Coding({
         code: "ELT",
         display: "Electrode",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_EnvironmentalUnidentifiedSubstance: Coding.FromStrict({
+    v2_0487_EnvironmentalUnidentifiedSubstance: new Coding({
         code: "ENVIR",
         display: "Environmental, Unidentified Substance",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Eosinophils: Coding.FromStrict({
+    v2_0487_Eosinophils: new Coding({
         code: "EOS",
         display: "Eosinophils",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_EnvironmentalOtherSubstance: Coding.FromStrict({
+    v2_0487_EnvironmentalOtherSubstance: new Coding({
         code: "EOTH",
         display: "Environmental, Other Substance",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_EnvironmentalSoil: Coding.FromStrict({
+    v2_0487_EnvironmentalSoil: new Coding({
         code: "ESOI",
         display: "Environmental, Soil",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_EnvironmentalSolutionSterile: Coding.FromStrict({
+    v2_0487_EnvironmentalSolutionSterile: new Coding({
         code: "ESOS",
         display: "Environmental, Solution (Sterile)",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_AspirateEndotrach: Coding.FromStrict({
+    v2_0487_AspirateEndotrach: new Coding({
         code: "ETA",
         display: "Aspirate,  Endotrach",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CatheterTipEndotracheal: Coding.FromStrict({
+    v2_0487_CatheterTipEndotracheal: new Coding({
         code: "ETTP",
         display: "Catheter Tip, Endotracheal",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_TubeEndotracheal: Coding.FromStrict({
+    v2_0487_TubeEndotracheal: new Coding({
         code: "ETTUB",
         display: "Tube, Endotracheal",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_EnvironmentalWhirlpool: Coding.FromStrict({
+    v2_0487_EnvironmentalWhirlpool: new Coding({
         code: "EWHI",
         display: "Environmental, Whirlpool",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_GasExhaledEqualsBreath: Coding.FromStrict({
+    v2_0487_GasExhaledEqualsBreath: new Coding({
         code: "EXG",
         display: "Gas, exhaled (=breath)",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_ShuntExternal: Coding.FromStrict({
+    v2_0487_ShuntExternal: new Coding({
         code: "EXS",
         display: "Shunt, External",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Exudate: Coding.FromStrict({
+    v2_0487_Exudate: new Coding({
         code: "EXUDTE",
         display: "Exudate",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_EnvironmentalWaterWell: Coding.FromStrict({
+    v2_0487_EnvironmentalWaterWell: new Coding({
         code: "FAW",
         display: "Environmental, Water  (Well)",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BloodFetal: Coding.FromStrict({
+    v2_0487_BloodFetal: new Coding({
         code: "FBLOOD",
         display: "Blood, Fetal",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_FluidAbdomen: Coding.FromStrict({
+    v2_0487_FluidAbdomen: new Coding({
         code: "FGA",
         display: "Fluid,  Abdomen",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Fibroblasts: Coding.FromStrict({
+    v2_0487_Fibroblasts: new Coding({
         code: "FIB",
         display: "Fibroblasts",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Fistula: Coding.FromStrict({
+    v2_0487_Fistula: new Coding({
         code: "FIST",
         display: "Fistula",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_FluidOther: Coding.FromStrict({
+    v2_0487_FluidOther: new Coding({
         code: "FLD",
         display: "Fluid, Other",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Filter: Coding.FromStrict({
+    v2_0487_Filter: new Coding({
         code: "FLT",
         display: "Filter",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_FluidBodyUnsp: Coding.FromStrict({
+    v2_0487_FluidBodyUnsp: new Coding({
         code: "FLU",
         display: "Fluid, Body unsp",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Fluid: Coding.FromStrict({
+    v2_0487_Fluid: new Coding({
         code: "FLUID",
         display: "Fluid",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CatheterTipFoley: Coding.FromStrict({
+    v2_0487_CatheterTipFoley: new Coding({
         code: "FOLEY",
         display: "Catheter Tip, Foley",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_FluidRespiratory: Coding.FromStrict({
+    v2_0487_FluidRespiratory: new Coding({
         code: "FRS",
         display: "Fluid, Respiratory",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_ScalpFetal: Coding.FromStrict({
+    v2_0487_ScalpFetal: new Coding({
         code: "FSCLP",
         display: "Scalp, Fetal",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Furuncle: Coding.FromStrict({
+    v2_0487_Furuncle: new Coding({
         code: "FUR",
         display: "Furuncle",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Gas: Coding.FromStrict({
+    v2_0487_Gas: new Coding({
         code: "GAS",
         display: "Gas",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_AspirateGastric: Coding.FromStrict({
+    v2_0487_AspirateGastric: new Coding({
         code: "GASA",
         display: "Aspirate, Gastric",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_AntrumGastric: Coding.FromStrict({
+    v2_0487_AntrumGastric: new Coding({
         code: "GASAN",
         display: "Antrum, Gastric",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BrushingGastric: Coding.FromStrict({
+    v2_0487_BrushingGastric: new Coding({
         code: "GASBR",
         display: "Brushing, Gastric",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_DrainageGastric: Coding.FromStrict({
+    v2_0487_DrainageGastric: new Coding({
         code: "GASD",
         display: "Drainage, Gastric",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_FluidContentsGastric: Coding.FromStrict({
+    v2_0487_FluidContentsGastric: new Coding({
         code: "GAST",
         display: "Fluid/contents, Gastric",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_GenitalLochia: Coding.FromStrict({
+    v2_0487_GenitalLochia: new Coding({
         code: "GENL",
         display: "Genital lochia",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_GenitalVaginal: Coding.FromStrict({
+    v2_0487_GenitalVaginal: new Coding({
         code: "GENV",
         display: "Genital vaginal",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Graft: Coding.FromStrict({
+    v2_0487_Graft: new Coding({
         code: "GRAFT",
         display: "Graft",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_GraftSite: Coding.FromStrict({
+    v2_0487_GraftSite: new Coding({
         code: "GRAFTS",
         display: "Graft Site",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Granuloma: Coding.FromStrict({
+    v2_0487_Granuloma: new Coding({
         code: "GRANU",
         display: "Granuloma",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CatheterGroshong: Coding.FromStrict({
+    v2_0487_CatheterGroshong: new Coding({
         code: "GROSH",
         display: "Catheter, Groshong",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SolutionGastrostomy: Coding.FromStrict({
+    v2_0487_SolutionGastrostomy: new Coding({
         code: "GSOL",
         display: "Solution, Gastrostomy",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BiopsyGastric: Coding.FromStrict({
+    v2_0487_BiopsyGastric: new Coding({
         code: "GSPEC",
         display: "Biopsy, Gastric",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_TubeGastric: Coding.FromStrict({
+    v2_0487_TubeGastric: new Coding({
         code: "GT",
         display: "Tube, Gastric",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_DrainageTubeDrainageGastrostomy: Coding.FromStrict({
+    v2_0487_DrainageTubeDrainageGastrostomy: new Coding({
         code: "GTUBE",
         display: "Drainage Tube, Drainage (Gastrostomy)",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Hair: Coding.FromStrict({
+    v2_0487_Hair: new Coding({
         code: "HAR",
         display: "Hair",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BiteHuman: Coding.FromStrict({
+    v2_0487_BiteHuman: new Coding({
         code: "HBITE",
         display: "Bite, Human",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BloodAutopsy: Coding.FromStrict({
+    v2_0487_BloodAutopsy: new Coding({
         code: "HBLUD",
         display: "Blood, Autopsy",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CatheterTipHemaquit: Coding.FromStrict({
+    v2_0487_CatheterTipHemaquit: new Coding({
         code: "HEMAQ",
         display: "Catheter Tip, Hemaquit",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CatheterTipHemovac: Coding.FromStrict({
+    v2_0487_CatheterTipHemovac: new Coding({
         code: "HEMO",
         display: "Catheter Tip, Hemovac",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_TissueHerniated: Coding.FromStrict({
+    v2_0487_TissueHerniated: new Coding({
         code: "HERNI",
         display: "Tissue, Herniated",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_DrainHemovac: Coding.FromStrict({
+    v2_0487_DrainHemovac: new Coding({
         code: "HEV",
         display: "Drain, Hemovac",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CatheterHickman: Coding.FromStrict({
+    v2_0487_CatheterHickman: new Coding({
         code: "HIC",
         display: "Catheter, Hickman",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_FluidHydrocele: Coding.FromStrict({
+    v2_0487_FluidHydrocele: new Coding({
         code: "HYDC",
         display: "Fluid, Hydrocele",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BiteInsect: Coding.FromStrict({
+    v2_0487_BiteInsect: new Coding({
         code: "IBITE",
         display: "Bite, Insect",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CystInclusion: Coding.FromStrict({
+    v2_0487_CystInclusion: new Coding({
         code: "ICYST",
         display: "Cyst, Inclusion",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CatheterTipIndwelling: Coding.FromStrict({
+    v2_0487_CatheterTipIndwelling: new Coding({
         code: "IDC",
         display: "Catheter Tip, Indwelling",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_GasInhaled: Coding.FromStrict({
+    v2_0487_GasInhaled: new Coding({
         code: "IHG",
         display: "Gas, Inhaled",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_DrainageIleostomy: Coding.FromStrict({
+    v2_0487_DrainageIleostomy: new Coding({
         code: "ILEO",
         display: "Drainage, Ileostomy",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SourceOfSpecimenIsIllegible: Coding.FromStrict({
+    v2_0487_SourceOfSpecimenIsIllegible: new Coding({
         code: "ILLEG",
         display: "Source of Specimen Is Illegible",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Implant: Coding.FromStrict({
+    v2_0487_Implant: new Coding({
         code: "IMP",
         display: "Implant",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SiteIncisionSurgical: Coding.FromStrict({
+    v2_0487_SiteIncisionSurgical: new Coding({
         code: "INCI",
         display: "Site, Incision/Surgical",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Infiltrate: Coding.FromStrict({
+    v2_0487_Infiltrate: new Coding({
         code: "INFIL",
         display: "Infiltrate",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Insect: Coding.FromStrict({
+    v2_0487_Insect: new Coding({
         code: "INS",
         display: "Insect",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CatheterTipIntroducer: Coding.FromStrict({
+    v2_0487_CatheterTipIntroducer: new Coding({
         code: "INTRD",
         display: "Catheter Tip, Introducer",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Isolate: Coding.FromStrict({
+    v2_0487_Isolate: new Coding({
         code: "ISLT",
         display: "Isolate",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_IntubationTube: Coding.FromStrict({
+    v2_0487_IntubationTube: new Coding({
         code: "IT",
         display: "Intubation tube",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_IntrauterineDevice: Coding.FromStrict({
+    v2_0487_IntrauterineDevice: new Coding({
         code: "IUD",
         display: "Intrauterine Device",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CatheterTipIV: Coding.FromStrict({
+    v2_0487_CatheterTipIV: new Coding({
         code: "IVCAT",
         display: "Catheter Tip, IV",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_FluidIV: Coding.FromStrict({
+    v2_0487_FluidIV: new Coding({
         code: "IVFLD",
         display: "Fluid, IV",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_TubingTipIV: Coding.FromStrict({
+    v2_0487_TubingTipIV: new Coding({
         code: "IVTIP",
         display: "Tubing Tip, IV",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_DrainageJejunal: Coding.FromStrict({
+    v2_0487_DrainageJejunal: new Coding({
         code: "JEJU",
         display: "Drainage, Jejunal",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_FluidJoint: Coding.FromStrict({
+    v2_0487_FluidJoint: new Coding({
         code: "JNTFLD",
         display: "Fluid, Joint",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_DrainageJacksonPratt: Coding.FromStrict({
+    v2_0487_DrainageJacksonPratt: new Coding({
         code: "JP",
         display: "Drainage, Jackson Pratt",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Lavage: Coding.FromStrict({
+    v2_0487_Lavage: new Coding({
         code: "KELOI",
         display: "Lavage",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_FluidKidney: Coding.FromStrict({
+    v2_0487_FluidKidney: new Coding({
         code: "KIDFLD",
         display: "Fluid, Kidney",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_LavageBronhial: Coding.FromStrict({
+    v2_0487_LavageBronhial: new Coding({
         code: "LAVG",
         display: "Lavage, Bronhial",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_LavageGastric: Coding.FromStrict({
+    v2_0487_LavageGastric: new Coding({
         code: "LAVGG",
         display: "Lavage, Gastric",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_LavagePeritoneal: Coding.FromStrict({
+    v2_0487_LavagePeritoneal: new Coding({
         code: "LAVGP",
         display: "Lavage, Peritoneal",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_LavagePreBronch: Coding.FromStrict({
+    v2_0487_LavagePreBronch: new Coding({
         code: "LAVPG",
         display: "Lavage, Pre-Bronch",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_ContactLens: Coding.FromStrict({
+    v2_0487_ContactLens: new Coding({
         code: "LENS1",
         display: "Contact Lens",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_ContactLensCase: Coding.FromStrict({
+    v2_0487_ContactLensCase: new Coding({
         code: "LENS2",
         display: "Contact Lens Case",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Lesion: Coding.FromStrict({
+    v2_0487_Lesion: new Coding({
         code: "LESN",
         display: "Lesion",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_LiquidUnspecified: Coding.FromStrict({
+    v2_0487_LiquidUnspecified: new Coding({
         code: "LIQ",
         display: "Liquid, Unspecified",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_LiquidOther: Coding.FromStrict({
+    v2_0487_LiquidOther: new Coding({
         code: "LIQO",
         display: "Liquid, Other",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_LineArterial: Coding.FromStrict({
+    v2_0487_LineArterial: new Coding({
         code: "LNA",
         display: "Line arterial",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_LineVenous: Coding.FromStrict({
+    v2_0487_LineVenous: new Coding({
         code: "LNV",
         display: "Line venous",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_FluidLumbarSac: Coding.FromStrict({
+    v2_0487_FluidLumbarSac: new Coding({
         code: "LSAC",
         display: "Fluid, Lumbar Sac",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Lymphocytes: Coding.FromStrict({
+    v2_0487_Lymphocytes: new Coding({
         code: "LYM",
         display: "Lymphocytes",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Macrophages: Coding.FromStrict({
+    v2_0487_Macrophages: new Coding({
         code: "MAC",
         display: "Macrophages",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CatheterTipMakurkour: Coding.FromStrict({
+    v2_0487_CatheterTipMakurkour: new Coding({
         code: "MAHUR",
         display: "Catheter Tip, Makurkour",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Marrow: Coding.FromStrict({
+    v2_0487_Marrow: new Coding({
         code: "MAR",
         display: "Marrow",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Mass: Coding.FromStrict({
+    v2_0487_Mass: new Coding({
         code: "MASS",
         display: "Mass",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BloodMenstrual: Coding.FromStrict({
+    v2_0487_BloodMenstrual: new Coding({
         code: "MBLD",
         display: "Blood, Menstrual",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Meconium: Coding.FromStrict({
+    v2_0487_Meconium: new Coding({
         code: "MEC",
         display: "Meconium",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BreastMilk: Coding.FromStrict({
+    v2_0487_BreastMilk: new Coding({
         code: "MILK",
         display: "Breast milk",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Milk: Coding.FromStrict({
+    v2_0487_Milk: new Coding({
         code: "MLK",
         display: "Milk",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Mucosa: Coding.FromStrict({
+    v2_0487_Mucosa: new Coding({
         code: "MUCOS",
         display: "Mucosa",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Mucus: Coding.FromStrict({
+    v2_0487_Mucus: new Coding({
         code: "MUCUS",
         display: "Mucus",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Nail: Coding.FromStrict({
+    v2_0487_Nail: new Coding({
         code: "NAIL",
         display: "Nail",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_DrainageNasal: Coding.FromStrict({
+    v2_0487_DrainageNasal: new Coding({
         code: "NASDR",
         display: "Drainage, Nasal",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Needle: Coding.FromStrict({
+    v2_0487_Needle: new Coding({
         code: "NEDL",
         display: "Needle",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SiteNephrostomy: Coding.FromStrict({
+    v2_0487_SiteNephrostomy: new Coding({
         code: "NEPH",
         display: "Site, Nephrostomy",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_AspirateNasogastric: Coding.FromStrict({
+    v2_0487_AspirateNasogastric: new Coding({
         code: "NGASP",
         display: "Aspirate, Nasogastric",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_DrainageNasogastric: Coding.FromStrict({
+    v2_0487_DrainageNasogastric: new Coding({
         code: "NGAST",
         display: "Drainage, Nasogastric",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SiteNasoGastric: Coding.FromStrict({
+    v2_0487_SiteNasoGastric: new Coding({
         code: "NGS",
         display: "Site, Naso/Gastric",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_NoduleS: Coding.FromStrict({
+    v2_0487_NoduleS: new Coding({
         code: "NODUL",
         display: "Nodule(s)",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SecretionNasal: Coding.FromStrict({
+    v2_0487_SecretionNasal: new Coding({
         code: "NSECR",
         display: "Secretion, Nasal",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Other: Coding.FromStrict({
+    v2_0487_Other: new Coding({
         code: "ORH",
         display: "Other",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_LesionOral: Coding.FromStrict({
+    v2_0487_LesionOral: new Coding({
         code: "ORL",
         display: "Lesion, Oral",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SourceOther: Coding.FromStrict({
+    v2_0487_SourceOther: new Coding({
         code: "OTH",
         display: "Source, Other",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Pacemaker: Coding.FromStrict({
+    v2_0487_Pacemaker: new Coding({
         code: "PACEM",
         display: "Pacemaker",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_PancreaticFluid: Coding.FromStrict({
+    v2_0487_PancreaticFluid: new Coding({
         code: "PAFL",
         display: "Pancreatic fluid",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_FluidPericardial: Coding.FromStrict({
+    v2_0487_FluidPericardial: new Coding({
         code: "PCFL",
         display: "Fluid, Pericardial",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SitePeritonealDialysis: Coding.FromStrict({
+    v2_0487_SitePeritonealDialysis: new Coding({
         code: "PDSIT",
         display: "Site, Peritoneal Dialysis",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SitePeritonealDialysisTunnel: Coding.FromStrict({
+    v2_0487_SitePeritonealDialysisTunnel: new Coding({
         code: "PDTS",
         display: "Site, Peritoneal Dialysis Tunnel",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_AbscessPelvic: Coding.FromStrict({
+    v2_0487_AbscessPelvic: new Coding({
         code: "PELVA",
         display: "Abscess, Pelvic",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_LesionPenile: Coding.FromStrict({
+    v2_0487_LesionPenile: new Coding({
         code: "PENIL",
         display: "Lesion, Penile",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_AbscessPerianal: Coding.FromStrict({
+    v2_0487_AbscessPerianal: new Coding({
         code: "PERIA",
         display: "Abscess, Perianal",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CystPilonidal: Coding.FromStrict({
+    v2_0487_CystPilonidal: new Coding({
         code: "PILOC",
         display: "Cyst, Pilonidal",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SitePin: Coding.FromStrict({
+    v2_0487_SitePin: new Coding({
         code: "PINS",
         display: "Site, Pin",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SitePacemakerInsetion: Coding.FromStrict({
+    v2_0487_SitePacemakerInsetion: new Coding({
         code: "PIS",
         display: "Site, Pacemaker Insetion",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_PlantMaterial: Coding.FromStrict({
+    v2_0487_PlantMaterial: new Coding({
         code: "PLAN",
         display: "Plant Material",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Plasma: Coding.FromStrict({
+    v2_0487_Plasma: new Coding({
         code: "PLAS",
         display: "Plasma",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_PlasmaBag: Coding.FromStrict({
+    v2_0487_PlasmaBag: new Coding({
         code: "PLB",
         display: "Plasma bag",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Placenta: Coding.FromStrict({
+    v2_0487_Placenta: new Coding({
         code: "PLC",
         display: "Placenta",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SerumPeakLevel: Coding.FromStrict({
+    v2_0487_SerumPeakLevel: new Coding({
         code: "PLEVS",
         display: "Serum, Peak Level",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_PleuralFluidThoracentesisFluid: Coding.FromStrict({
+    v2_0487_PleuralFluidThoracentesisFluid: new Coding({
         code: "PLR",
         display: "Pleural fluid (thoracentesis fluid)",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_PolymorphonuclearNeutrophils: Coding.FromStrict({
+    v2_0487_PolymorphonuclearNeutrophils: new Coding({
         code: "PMN",
         display: "Polymorphonuclear neutrophils",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_DrainagePenile: Coding.FromStrict({
+    v2_0487_DrainagePenile: new Coding({
         code: "PND",
         display: "Drainage, Penile",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Polyps: Coding.FromStrict({
+    v2_0487_Polyps: new Coding({
         code: "POL",
         display: "Polyps",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_GraftSitePopliteal: Coding.FromStrict({
+    v2_0487_GraftSitePopliteal: new Coding({
         code: "POPGS",
         display: "Graft Site, Popliteal",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_GraftPopliteal: Coding.FromStrict({
+    v2_0487_GraftPopliteal: new Coding({
         code: "POPLG",
         display: "Graft, Popliteal",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SitePoplitealVein: Coding.FromStrict({
+    v2_0487_SitePoplitealVein: new Coding({
         code: "POPLV",
         display: "Site, Popliteal Vein",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CatheterPorta: Coding.FromStrict({
+    v2_0487_CatheterPorta: new Coding({
         code: "PORTA",
         display: "Catheter, Porta",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_PlasmaPlateletPoor: Coding.FromStrict({
+    v2_0487_PlasmaPlateletPoor: new Coding({
         code: "PPP",
         display: "Plasma, Platelet poor",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_ProstheticDevice: Coding.FromStrict({
+    v2_0487_ProstheticDevice: new Coding({
         code: "PROST",
         display: "Prosthetic Device",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_PlasmaPlateletRich: Coding.FromStrict({
+    v2_0487_PlasmaPlateletRich: new Coding({
         code: "PRP",
         display: "Plasma, Platelet rich",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Pseudocyst: Coding.FromStrict({
+    v2_0487_Pseudocyst: new Coding({
         code: "PSC",
         display: "Pseudocyst",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_WoundPuncture: Coding.FromStrict({
+    v2_0487_WoundPuncture: new Coding({
         code: "PUNCT",
         display: "Wound, Puncture",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Pus: Coding.FromStrict({
+    v2_0487_Pus: new Coding({
         code: "PUS",
         display: "Pus",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Pustule: Coding.FromStrict({
+    v2_0487_Pustule: new Coding({
         code: "PUSFR",
         display: "Pustule",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Pus_2: Coding.FromStrict({
+    v2_0487_Pus_2: new Coding({
         code: "PUST",
         display: "Pus",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_QualityControl: Coding.FromStrict({
+    v2_0487_QualityControl: new Coding({
         code: "QC3",
         display: "Quality Control",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_UrineRandom: Coding.FromStrict({
+    v2_0487_UrineRandom: new Coding({
         code: "RANDU",
         display: "Urine, Random",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Erythrocytes: Coding.FromStrict({
+    v2_0487_Erythrocytes: new Coding({
         code: "RBC",
         display: "Erythrocytes",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BiteReptile: Coding.FromStrict({
+    v2_0487_BiteReptile: new Coding({
         code: "RBITE",
         display: "Bite, Reptile",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_DrainageRectal: Coding.FromStrict({
+    v2_0487_DrainageRectal: new Coding({
         code: "RECT",
         display: "Drainage, Rectal",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_AbscessRectal: Coding.FromStrict({
+    v2_0487_AbscessRectal: new Coding({
         code: "RECTA",
         display: "Abscess, Rectal",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CystRenal: Coding.FromStrict({
+    v2_0487_CystRenal: new Coding({
         code: "RENALC",
         display: "Cyst, Renal",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_FluidRenalCyst: Coding.FromStrict({
+    v2_0487_FluidRenalCyst: new Coding({
         code: "RENC",
         display: "Fluid, Renal Cyst",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Respiratory: Coding.FromStrict({
+    v2_0487_Respiratory: new Coding({
         code: "RES",
         display: "Respiratory",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Saliva: Coding.FromStrict({
+    v2_0487_Saliva: new Coding({
         code: "SAL",
         display: "Saliva",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_TissueKeloidScar: Coding.FromStrict({
+    v2_0487_TissueKeloidScar: new Coding({
         code: "SCAR",
         display: "Tissue, Keloid (Scar)",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CatheterTipSubclavian: Coding.FromStrict({
+    v2_0487_CatheterTipSubclavian: new Coding({
         code: "SCLV",
         display: "Catheter Tip, Subclavian",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_AbscessScrotal: Coding.FromStrict({
+    v2_0487_AbscessScrotal: new Coding({
         code: "SCROA",
         display: "Abscess, Scrotal",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SecretionS: Coding.FromStrict({
+    v2_0487_SecretionS: new Coding({
         code: "SECRE",
         display: "Secretion(s)",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Serum: Coding.FromStrict({
+    v2_0487_Serum: new Coding({
         code: "SER",
         display: "Serum",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SiteShunt: Coding.FromStrict({
+    v2_0487_SiteShunt: new Coding({
         code: "SHU",
         display: "Site, Shunt",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_FluidShunt: Coding.FromStrict({
+    v2_0487_FluidShunt: new Coding({
         code: "SHUNF",
         display: "Fluid, Shunt",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Shunt: Coding.FromStrict({
+    v2_0487_Shunt: new Coding({
         code: "SHUNT",
         display: "Shunt",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Site: Coding.FromStrict({
+    v2_0487_Site: new Coding({
         code: "SITE",
         display: "Site",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BiopsySkin: Coding.FromStrict({
+    v2_0487_BiopsySkin: new Coding({
         code: "SKBP",
         display: "Biopsy, Skin",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Skin: Coding.FromStrict({
+    v2_0487_Skin: new Coding({
         code: "SKN",
         display: "Skin",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_MassSubMandibular: Coding.FromStrict({
+    v2_0487_MassSubMandibular: new Coding({
         code: "SMM",
         display: "Mass, Sub-Mandibular",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SeminalFluid: Coding.FromStrict({
+    v2_0487_SeminalFluid: new Coding({
         code: "SMN",
         display: "Seminal fluid",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_FluidSynovialJointFluid: Coding.FromStrict({
+    v2_0487_FluidSynovialJointFluid: new Coding({
         code: "SNV",
         display: "Fluid, synovial (Joint fluid)",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Spermatozoa: Coding.FromStrict({
+    v2_0487_Spermatozoa: new Coding({
         code: "SPRM",
         display: "Spermatozoa",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CatheterTipSuprapubic: Coding.FromStrict({
+    v2_0487_CatheterTipSuprapubic: new Coding({
         code: "SPRP",
         display: "Catheter Tip, Suprapubic",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CathetherTipSuprapubic: Coding.FromStrict({
+    v2_0487_CathetherTipSuprapubic: new Coding({
         code: "SPRPB",
         display: "Cathether Tip, Suprapubic",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_EnvironmentalSporeStrip: Coding.FromStrict({
+    v2_0487_EnvironmentalSporeStrip: new Coding({
         code: "SPS",
         display: "Environmental, Spore Strip",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Sputum: Coding.FromStrict({
+    v2_0487_Sputum: new Coding({
         code: "SPT",
         display: "Sputum",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SputumCoughed: Coding.FromStrict({
+    v2_0487_SputumCoughed: new Coding({
         code: "SPTC",
         display: "Sputum - coughed",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SputumTrachealAspirate: Coding.FromStrict({
+    v2_0487_SputumTrachealAspirate: new Coding({
         code: "SPTT",
         display: "Sputum - tracheal aspirate",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SputumSimulated: Coding.FromStrict({
+    v2_0487_SputumSimulated: new Coding({
         code: "SPUT1",
         display: "Sputum, Simulated",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SputumInducted: Coding.FromStrict({
+    v2_0487_SputumInducted: new Coding({
         code: "SPUTIN",
         display: "Sputum, Inducted",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SputumSpontaneous: Coding.FromStrict({
+    v2_0487_SputumSpontaneous: new Coding({
         code: "SPUTSP",
         display: "Sputum, Spontaneous",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_EnvironmentalSterrad: Coding.FromStrict({
+    v2_0487_EnvironmentalSterrad: new Coding({
         code: "STER",
         display: "Environmental, Sterrad",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_StoolEqualsFecal: Coding.FromStrict({
+    v2_0487_StoolEqualsFecal: new Coding({
         code: "STL",
         display: "Stool = Fecal",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_StoneKidney: Coding.FromStrict({
+    v2_0487_StoneKidney: new Coding({
         code: "STONE",
         display: "Stone, Kidney",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_AbscessSubmandibular: Coding.FromStrict({
+    v2_0487_AbscessSubmandibular: new Coding({
         code: "SUBMA",
         display: "Abscess, Submandibular",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_AbscessSubmaxillary: Coding.FromStrict({
+    v2_0487_AbscessSubmaxillary: new Coding({
         code: "SUBMX",
         display: "Abscess, Submaxillary",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_DrainageSump: Coding.FromStrict({
+    v2_0487_DrainageSump: new Coding({
         code: "SUMP",
         display: "Drainage, Sump",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SuprapubicTap: Coding.FromStrict({
+    v2_0487_SuprapubicTap: new Coding({
         code: "SUP",
         display: "Suprapubic Tap",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Suture: Coding.FromStrict({
+    v2_0487_Suture: new Coding({
         code: "SUTUR",
         display: "Suture",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CatheterTipSwanGantz: Coding.FromStrict({
+    v2_0487_CatheterTipSwanGantz: new Coding({
         code: "SWGZ",
         display: "Catheter Tip, Swan Gantz",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Sweat: Coding.FromStrict({
+    v2_0487_Sweat: new Coding({
         code: "SWT",
         display: "Sweat",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_AspirateTracheal: Coding.FromStrict({
+    v2_0487_AspirateTracheal: new Coding({
         code: "TASP",
         display: "Aspirate, Tracheal",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Tears: Coding.FromStrict({
+    v2_0487_Tears: new Coding({
         code: "TEAR",
         display: "Tears",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_ThrombocytePlatelet: Coding.FromStrict({
+    v2_0487_ThrombocytePlatelet: new Coding({
         code: "THRB",
         display: "Thrombocyte (platelet)",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Tissue: Coding.FromStrict({
+    v2_0487_Tissue: new Coding({
         code: "TISS",
         display: "Tissue",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_TissueUlcer: Coding.FromStrict({
+    v2_0487_TissueUlcer: new Coding({
         code: "TISU",
         display: "Tissue ulcer",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CathetherTipTripleLumen: Coding.FromStrict({
+    v2_0487_CathetherTipTripleLumen: new Coding({
         code: "TLC",
         display: "Cathether Tip, Triple Lumen",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SiteTracheostomy: Coding.FromStrict({
+    v2_0487_SiteTracheostomy: new Coding({
         code: "TRAC",
         display: "Site, Tracheostomy",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Transudate: Coding.FromStrict({
+    v2_0487_Transudate: new Coding({
         code: "TRANS",
         display: "Transudate",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SerumTrough: Coding.FromStrict({
+    v2_0487_SerumTrough: new Coding({
         code: "TSERU",
         display: "Serum, Trough",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_AbscessTesticular: Coding.FromStrict({
+    v2_0487_AbscessTesticular: new Coding({
         code: "TSTES",
         display: "Abscess, Testicular",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_AspirateTranstracheal: Coding.FromStrict({
+    v2_0487_AspirateTranstracheal: new Coding({
         code: "TTRA",
         display: "Aspirate, Transtracheal",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Tubes: Coding.FromStrict({
+    v2_0487_Tubes: new Coding({
         code: "TUBES",
         display: "Tubes",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Tumor: Coding.FromStrict({
+    v2_0487_Tumor: new Coding({
         code: "TUMOR",
         display: "Tumor",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SmearTzanck: Coding.FromStrict({
+    v2_0487_SmearTzanck: new Coding({
         code: "TZANC",
         display: "Smear, Tzanck",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SourceUnidentified: Coding.FromStrict({
+    v2_0487_SourceUnidentified: new Coding({
         code: "UDENT",
         display: "Source, Unidentified",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_UnknownMedicine: Coding.FromStrict({
+    v2_0487_UnknownMedicine: new Coding({
         code: "UMED",
         display: "Unknown Medicine",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Urine: Coding.FromStrict({
+    v2_0487_Urine: new Coding({
         code: "UR",
         display: "Urine",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_UrineCleanCatch: Coding.FromStrict({
+    v2_0487_UrineCleanCatch: new Coding({
         code: "URC",
         display: "Urine clean catch",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_UrineBladderWashings: Coding.FromStrict({
+    v2_0487_UrineBladderWashings: new Coding({
         code: "URINB",
         display: "Urine, Bladder Washings",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_UrineCatheterized: Coding.FromStrict({
+    v2_0487_UrineCatheterized: new Coding({
         code: "URINC",
         display: "Urine, Catheterized",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_UrineMidstream: Coding.FromStrict({
+    v2_0487_UrineMidstream: new Coding({
         code: "URINM",
         display: "Urine, Midstream",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_UrineNephrostomy: Coding.FromStrict({
+    v2_0487_UrineNephrostomy: new Coding({
         code: "URINN",
         display: "Urine, Nephrostomy",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_UrinePedibag: Coding.FromStrict({
+    v2_0487_UrinePedibag: new Coding({
         code: "URINP",
         display: "Urine, Pedibag",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_UrineSediment: Coding.FromStrict({
+    v2_0487_UrineSediment: new Coding({
         code: "URNS",
         display: "Urine sediment",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_UrineCatheter: Coding.FromStrict({
+    v2_0487_UrineCatheter: new Coding({
         code: "URT",
         display: "Urine catheter",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_UrineCystoscopy: Coding.FromStrict({
+    v2_0487_UrineCystoscopy: new Coding({
         code: "USCOP",
         display: "Urine, Cystoscopy",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_SourceUnspecified: Coding.FromStrict({
+    v2_0487_SourceUnspecified: new Coding({
         code: "USPEC",
         display: "Source, Unspecified",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_UnkownSubstance: Coding.FromStrict({
+    v2_0487_UnkownSubstance: new Coding({
         code: "USUB",
         display: "Unkown substance",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CatheterTipVas: Coding.FromStrict({
+    v2_0487_CatheterTipVas: new Coding({
         code: "VASTIP",
         display: "Catheter Tip, Vas",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_CatheterTipVentricular: Coding.FromStrict({
+    v2_0487_CatheterTipVentricular: new Coding({
         code: "VENT",
         display: "Catheter Tip, Ventricular",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_VitreousFluid: Coding.FromStrict({
+    v2_0487_VitreousFluid: new Coding({
         code: "VITF",
         display: "Vitreous Fluid",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Vomitus: Coding.FromStrict({
+    v2_0487_Vomitus: new Coding({
         code: "VOM",
         display: "Vomitus",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Wash: Coding.FromStrict({
+    v2_0487_Wash: new Coding({
         code: "WASH",
         display: "Wash",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_WashingEGBronchialWashing: Coding.FromStrict({
+    v2_0487_WashingEGBronchialWashing: new Coding({
         code: "WASI",
         display: "Washing, e.g. bronchial washing",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Water: Coding.FromStrict({
+    v2_0487_Water: new Coding({
         code: "WAT",
         display: "Water",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_BloodWhole: Coding.FromStrict({
+    v2_0487_BloodWhole: new Coding({
         code: "WB",
         display: "Blood, Whole",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Leukocytes: Coding.FromStrict({
+    v2_0487_Leukocytes: new Coding({
         code: "WBC",
         display: "Leukocytes",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Wen: Coding.FromStrict({
+    v2_0487_Wen: new Coding({
         code: "WEN",
         display: "Wen",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Wick: Coding.FromStrict({
+    v2_0487_Wick: new Coding({
         code: "WICK",
         display: "Wick",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Wound: Coding.FromStrict({
+    v2_0487_Wound: new Coding({
         code: "WND",
         display: "Wound",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_WoundAbscess: Coding.FromStrict({
+    v2_0487_WoundAbscess: new Coding({
         code: "WNDA",
         display: "Wound abscess",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_WoundDrainage: Coding.FromStrict({
+    v2_0487_WoundDrainage: new Coding({
         code: "WNDD",
         display: "Wound drainage",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_WoundExudate: Coding.FromStrict({
+    v2_0487_WoundExudate: new Coding({
         code: "WNDE",
         display: "Wound exudate",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Worm: Coding.FromStrict({
+    v2_0487_Worm: new Coding({
         code: "WORM",
         display: "Worm",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_Wart: Coding.FromStrict({
+    v2_0487_Wart: new Coding({
         code: "WRT",
         display: "Wart",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_EnvironmentalWater: Coding.FromStrict({
+    v2_0487_EnvironmentalWater: new Coding({
         code: "WWA",
         display: "Environmental, Water",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_EnvironmentalWaterOcean: Coding.FromStrict({
+    v2_0487_EnvironmentalWaterOcean: new Coding({
         code: "WWO",
         display: "Environmental, Water (Ocean)",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
     }),
-    v2_0487_EnvironmentalWaterTap: Coding.FromStrict({
+    v2_0487_EnvironmentalWaterTap: new Coding({
         code: "WWT",
         display: "Environmental, Water  (Tap)",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"

@@ -83,15 +83,15 @@ export declare class HumanName extends fhir.FhirElement implements fhir.IHumanNa
     /**
      * Check if the current HumanName contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a HumanName from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IHumanName): HumanName;
+    static fromStrict(source: fhir.IHumanName): HumanName;
     /**
      * Convert a HumanName into a displayable string
      */
-    ToDisplay(familyFirst?: boolean, includeAnnotations?: boolean): string;
+    toDisplay(familyFirst?: boolean, includeAnnotations?: boolean): string;
 }
 /**
  * Code Values for the HumanName.use field

@@ -13,7 +13,7 @@ export const ActionConditionKindValueSet = {
   /**
    * The condition describes whether or not a given action is applicable.
    */
-  action_condition_kind_Applicability: Coding.FromStrict({
+  action_condition_kind_Applicability: new Coding({
     code: "applicability",
     display: "Applicability",
     system: "http://hl7.org/fhir/action-condition-kind"
@@ -21,7 +21,7 @@ export const ActionConditionKindValueSet = {
   /**
    * The condition is a starting condition for the action.
    */
-  action_condition_kind_Start: Coding.FromStrict({
+  action_condition_kind_Start: new Coding({
     code: "start",
     display: "Start",
     system: "http://hl7.org/fhir/action-condition-kind"
@@ -29,7 +29,7 @@ export const ActionConditionKindValueSet = {
   /**
    * The condition is a stop, or exit condition for the action.
    */
-  action_condition_kind_Stop: Coding.FromStrict({
+  action_condition_kind_Stop: new Coding({
     code: "stop",
     display: "Stop",
     system: "http://hl7.org/fhir/action-condition-kind"

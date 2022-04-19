@@ -24,7 +24,7 @@ export const V3ActSubstanceAdminSubstitutionCodeValueSet = {
      *                            Zestril  for Prinivil
      *                            Coumadin for Jantoven
      */
-    v3_substanceAdminSubstitution_BrandComposition: Coding.FromStrict({
+    v3_substanceAdminSubstitution_BrandComposition: new Coding({
         code: "BC",
         display: "brand composition",
         system: "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"
@@ -32,7 +32,7 @@ export const V3ActSubstanceAdminSubstitutionCodeValueSet = {
     /**
      * Description: Substitution occurred or is permitted with another bioequivalent and therapeutically equivalent product.
      */
-    v3_substanceAdminSubstitution_Equivalent: Coding.FromStrict({
+    v3_substanceAdminSubstitution_Equivalent: new Coding({
         code: "E",
         display: "equivalent",
         system: "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"
@@ -57,7 +57,7 @@ export const V3ActSubstanceAdminSubstitutionCodeValueSet = {
      *
      *                               Pharmaceutical equivalent: Lisonpril for Zestril
      */
-    v3_substanceAdminSubstitution_EquivalentComposition: Coding.FromStrict({
+    v3_substanceAdminSubstitution_EquivalentComposition: new Coding({
         code: "EC",
         display: "equivalent composition",
         system: "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"
@@ -65,7 +65,7 @@ export const V3ActSubstanceAdminSubstitutionCodeValueSet = {
     /**
      * Description: This substitution was performed or is permitted based on formulary guidelines.
      */
-    v3_substanceAdminSubstitution_Formulary: Coding.FromStrict({
+    v3_substanceAdminSubstitution_Formulary: new Coding({
         code: "F",
         display: "formulary",
         system: "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"
@@ -80,7 +80,7 @@ export const V3ActSubstanceAdminSubstitutionCodeValueSet = {
      *
      *                            Lisnopril (Lupin Corp) for Lisnopril (Wockhardt Corp)
      */
-    v3_substanceAdminSubstitution_GenericComposition: Coding.FromStrict({
+    v3_substanceAdminSubstitution_GenericComposition: new Coding({
         code: "G",
         display: "generic composition",
         system: "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"
@@ -88,7 +88,7 @@ export const V3ActSubstanceAdminSubstitutionCodeValueSet = {
     /**
      * No substitution occurred or is permitted.
      */
-    v3_substanceAdminSubstitution_None: Coding.FromStrict({
+    v3_substanceAdminSubstitution_None: new Coding({
         code: "N",
         display: "none",
         system: "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"
@@ -102,7 +102,7 @@ export const V3ActSubstanceAdminSubstitutionCodeValueSet = {
      *
      *                            Zantac for Tagamet
      */
-    v3_substanceAdminSubstitution_TherapeuticBrand: Coding.FromStrict({
+    v3_substanceAdminSubstitution_TherapeuticBrand: new Coding({
         code: "TB",
         display: "therapeutic brand",
         system: "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"
@@ -117,7 +117,7 @@ export const V3ActSubstanceAdminSubstitutionCodeValueSet = {
      *
      *                            ranitidine for Tagamet
      */
-    v3_substanceAdminSubstitution_TherapeuticAlternative: Coding.FromStrict({
+    v3_substanceAdminSubstitution_TherapeuticAlternative: new Coding({
         code: "TE",
         display: "therapeutic alternative",
         system: "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"
@@ -131,7 +131,7 @@ export const V3ActSubstanceAdminSubstitutionCodeValueSet = {
      *
      *                            Ranitidine  for cimetidine
      */
-    v3_substanceAdminSubstitution_TherapeuticGeneric: Coding.FromStrict({
+    v3_substanceAdminSubstitution_TherapeuticGeneric: new Coding({
         code: "TG",
         display: "therapeutic generic",
         system: "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"

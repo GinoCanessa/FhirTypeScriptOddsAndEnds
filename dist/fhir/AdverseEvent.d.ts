@@ -155,11 +155,11 @@ export declare class AdverseEventSuspectEntityCausality extends fhir.BackboneEle
     /**
      * Check if the current AdverseEventSuspectEntityCausality contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a AdverseEventSuspectEntityCausality from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IAdverseEventSuspectEntityCausality): AdverseEventSuspectEntityCausality;
+    static fromStrict(source: fhir.IAdverseEventSuspectEntityCausality): AdverseEventSuspectEntityCausality;
 }
 /**
  * Describes the entity that is suspected to have caused the adverse event.
@@ -180,11 +180,11 @@ export declare class AdverseEventSuspectEntity extends fhir.BackboneElement impl
     /**
      * Check if the current AdverseEventSuspectEntity contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a AdverseEventSuspectEntity from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IAdverseEventSuspectEntity): AdverseEventSuspectEntity;
+    static fromStrict(source: fhir.IAdverseEventSuspectEntity): AdverseEventSuspectEntity;
 }
 /**
  * Actual or  potential/avoided event causing unintended physical injury resulting from or contributed to by medical care, a research study or other healthcare setting factors that requires additional monitoring, treatment, or hospitalization, or that results in death.
@@ -285,11 +285,11 @@ export declare class AdverseEvent extends fhir.DomainResource implements fhir.IA
     /**
      * Check if the current AdverseEvent contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a AdverseEvent from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IAdverseEvent): AdverseEvent;
+    static fromStrict(source: fhir.IAdverseEvent): AdverseEvent;
 }
 /**
  * Code Values for the AdverseEvent.actuality field

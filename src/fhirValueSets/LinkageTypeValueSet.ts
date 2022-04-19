@@ -13,7 +13,7 @@ export const LinkageTypeValueSet = {
   /**
    * The resource represents an alternative view of the underlying event/condition/etc.  The resource may still be actively maintained, even though it is not considered to be the source of truth.
    */
-  linkage_type_AlternateRecord: Coding.FromStrict({
+  linkage_type_AlternateRecord: new Coding({
     code: "alternate",
     display: "Alternate Record",
     system: "http://hl7.org/fhir/linkage-type"
@@ -21,7 +21,7 @@ export const LinkageTypeValueSet = {
   /**
    * The resource represents an obsolete record of the underlying event/condition/etc.  It is not expected to be actively maintained.
    */
-  linkage_type_HistoricalObsoleteRecord: Coding.FromStrict({
+  linkage_type_HistoricalObsoleteRecord: new Coding({
     code: "historical",
     display: "Historical/Obsolete Record",
     system: "http://hl7.org/fhir/linkage-type"
@@ -29,7 +29,7 @@ export const LinkageTypeValueSet = {
   /**
    * The resource represents the "source of truth" (from the perspective of this Linkage resource) for the underlying event/condition/etc.
    */
-  linkage_type_SourceOfTruth: Coding.FromStrict({
+  linkage_type_SourceOfTruth: new Coding({
     code: "source",
     display: "Source of Truth",
     system: "http://hl7.org/fhir/linkage-type"

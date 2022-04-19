@@ -69,11 +69,11 @@ export declare class MedicinalProductInteractionInteractant extends fhir.Backbon
     /**
      * Check if the current MedicinalProductInteractionInteractant contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductInteractionInteractant from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductInteractionInteractant): MedicinalProductInteractionInteractant;
+    static fromStrict(source: fhir.IMedicinalProductInteractionInteractant): MedicinalProductInteractionInteractant;
 }
 /**
  * The interactions of the medicinal product with other medicinal products, or other forms of interactions.
@@ -119,10 +119,10 @@ export declare class MedicinalProductInteraction extends fhir.DomainResource imp
     /**
      * Check if the current MedicinalProductInteraction contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductInteraction from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductInteraction): MedicinalProductInteraction;
+    static fromStrict(source: fhir.IMedicinalProductInteraction): MedicinalProductInteraction;
 }
 //# sourceMappingURL=MedicinalProductInteraction.d.ts.map

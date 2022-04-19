@@ -13,7 +13,7 @@ export const ConditionalReadStatusValueSet = {
   /**
    * Conditional reads are supported, with both If-Modified-Since and If-None-Match HTTP Headers.
    */
-  conditional_read_status_FullSupport: Coding.FromStrict({
+  conditional_read_status_FullSupport: new Coding({
     code: "full-support",
     display: "Full Support",
     system: "http://hl7.org/fhir/conditional-read-status"
@@ -21,7 +21,7 @@ export const ConditionalReadStatusValueSet = {
   /**
    * Conditional reads are supported, but only with the If-Modified-Since HTTP Header.
    */
-  conditional_read_status_IfModifiedSince: Coding.FromStrict({
+  conditional_read_status_IfModifiedSince: new Coding({
     code: "modified-since",
     display: "If-Modified-Since",
     system: "http://hl7.org/fhir/conditional-read-status"
@@ -29,7 +29,7 @@ export const ConditionalReadStatusValueSet = {
   /**
    * Conditional reads are supported, but only with the If-None-Match HTTP Header.
    */
-  conditional_read_status_IfNoneMatch: Coding.FromStrict({
+  conditional_read_status_IfNoneMatch: new Coding({
     code: "not-match",
     display: "If-None-Match",
     system: "http://hl7.org/fhir/conditional-read-status"
@@ -37,7 +37,7 @@ export const ConditionalReadStatusValueSet = {
   /**
    * No support for conditional reads.
    */
-  conditional_read_status_NotSupported: Coding.FromStrict({
+  conditional_read_status_NotSupported: new Coding({
     code: "not-supported",
     display: "Not Supported",
     system: "http://hl7.org/fhir/conditional-read-status"

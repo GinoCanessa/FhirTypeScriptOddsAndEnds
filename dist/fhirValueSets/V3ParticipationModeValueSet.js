@@ -16,7 +16,7 @@ export const V3ParticipationModeValueSet = {
     /**
      * Participation by pre-recorded voice.  Communication is limited to one direction (from the recorder to recipient).
      */
-    v3_ParticipationMode_Dictated: Coding.FromStrict({
+    v3_ParticipationMode_Dictated: new Coding({
         code: "DICTATE",
         display: "dictated",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
@@ -24,7 +24,7 @@ export const V3ParticipationModeValueSet = {
     /**
      * Participation by non-human-languaged based electronic signal
      */
-    v3_ParticipationMode_ElectronicData: Coding.FromStrict({
+    v3_ParticipationMode_ElectronicData: new Coding({
         code: "ELECTRONIC",
         display: "electronic data",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
@@ -32,7 +32,7 @@ export const V3ParticipationModeValueSet = {
     /**
      * Participation by text or diagrams transmitted over an electronic mail system.
      */
-    v3_ParticipationMode_Email: Coding.FromStrict({
+    v3_ParticipationMode_Email: new Coding({
         code: "EMAILWRIT",
         display: "email",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
@@ -40,7 +40,7 @@ export const V3ParticipationModeValueSet = {
     /**
      * Participation by voice communication where parties speak to each other directly.
      */
-    v3_ParticipationMode_FaceToFace: Coding.FromStrict({
+    v3_ParticipationMode_FaceToFace: new Coding({
         code: "FACE",
         display: "face-to-face",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
@@ -48,7 +48,7 @@ export const V3ParticipationModeValueSet = {
     /**
      * Participation by text or diagrams printed on paper that have been transmitted over a fax device
      */
-    v3_ParticipationMode_Telefax: Coding.FromStrict({
+    v3_ParticipationMode_Telefax: new Coding({
         code: "FAXWRIT",
         display: "telefax",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
@@ -56,7 +56,7 @@ export const V3ParticipationModeValueSet = {
     /**
      * Participation by text or diagrams printed on paper or other recording medium
      */
-    v3_ParticipationMode_Handwritten: Coding.FromStrict({
+    v3_ParticipationMode_Handwritten: new Coding({
         code: "HANDWRIT",
         display: "handwritten",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
@@ -64,7 +64,7 @@ export const V3ParticipationModeValueSet = {
     /**
      * Participation by text or diagrams printed on paper transmitted physically (e.g. by courier service, postal service).
      */
-    v3_ParticipationMode_Mail: Coding.FromStrict({
+    v3_ParticipationMode_Mail: new Coding({
         code: "MAILWRIT",
         display: "mail",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
@@ -72,7 +72,7 @@ export const V3ParticipationModeValueSet = {
     /**
      * Participation by text or diagrams submitted by computer network, e.g. online survey.
      */
-    v3_ParticipationMode_OnlineWritten: Coding.FromStrict({
+    v3_ParticipationMode_OnlineWritten: new Coding({
         code: "ONLINEWRIT",
         display: "online written",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
@@ -80,7 +80,7 @@ export const V3ParticipationModeValueSet = {
     /**
      * Participation by voice communication where the voices of the communicating parties are transported over an electronic medium
      */
-    v3_ParticipationMode_Telephone: Coding.FromStrict({
+    v3_ParticipationMode_Telephone: new Coding({
         code: "PHONE",
         display: "telephone",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
@@ -88,7 +88,7 @@ export const V3ParticipationModeValueSet = {
     /**
      * Participation by direct action where subject and actor are in the same location. (The participation involves more than communication.)
      */
-    v3_ParticipationMode_PhysicalPresence: Coding.FromStrict({
+    v3_ParticipationMode_PhysicalPresence: new Coding({
         code: "PHYSICAL",
         display: "physical presence",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
@@ -96,7 +96,7 @@ export const V3ParticipationModeValueSet = {
     /**
      * Participation by direct action where subject and actor are in separate locations, and the actions of the actor are transmitted by electronic or mechanical means. (The participation involves more than communication.)
      */
-    v3_ParticipationMode_RemotePresence: Coding.FromStrict({
+    v3_ParticipationMode_RemotePresence: new Coding({
         code: "REMOTE",
         display: "remote presence",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
@@ -104,7 +104,7 @@ export const V3ParticipationModeValueSet = {
     /**
      * Participation by text or diagrams printed on paper or other recording medium where the recording was performed using a typewriter, typesetter, computer or similar mechanism.
      */
-    v3_ParticipationMode_Typewritten: Coding.FromStrict({
+    v3_ParticipationMode_Typewritten: new Coding({
         code: "TYPEWRIT",
         display: "typewritten",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
@@ -112,7 +112,7 @@ export const V3ParticipationModeValueSet = {
     /**
      * Participation by voice communication
      */
-    v3_ParticipationMode_Verbal: Coding.FromStrict({
+    v3_ParticipationMode_Verbal: new Coding({
         code: "VERBAL",
         display: "verbal",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
@@ -120,7 +120,7 @@ export const V3ParticipationModeValueSet = {
     /**
      * Participation by voice and visual communication where the voices and images of the communicating parties are transported over an electronic medium
      */
-    v3_ParticipationMode_Videoconferencing: Coding.FromStrict({
+    v3_ParticipationMode_Videoconferencing: new Coding({
         code: "VIDEOCONF",
         display: "videoconferencing",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"
@@ -128,7 +128,7 @@ export const V3ParticipationModeValueSet = {
     /**
      * Participation by human language recorded on a physical material
      */
-    v3_ParticipationMode_Written: Coding.FromStrict({
+    v3_ParticipationMode_Written: new Coding({
         code: "WRITTEN",
         display: "written",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationMode"

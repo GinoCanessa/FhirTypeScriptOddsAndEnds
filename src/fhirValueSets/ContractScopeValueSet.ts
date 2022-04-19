@@ -13,7 +13,7 @@ export const ContractScopeValueSet = {
   /**
    * To be completed
    */
-  contract_scope_Policy: Coding.FromStrict({
+  contract_scope_Policy: new Coding({
     code: "policy",
     display: "Policy",
     system: "http://hl7.org/fhir/contract-scope"

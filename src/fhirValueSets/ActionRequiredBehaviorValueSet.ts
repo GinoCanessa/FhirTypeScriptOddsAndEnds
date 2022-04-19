@@ -13,7 +13,7 @@ export const ActionRequiredBehaviorValueSet = {
   /**
    * An action with this behavior may be included in the set of actions processed by the end user.
    */
-  action_required_behavior_Could: Coding.FromStrict({
+  action_required_behavior_Could: new Coding({
     code: "could",
     display: "Could",
     system: "http://hl7.org/fhir/action-required-behavior"
@@ -21,7 +21,7 @@ export const ActionRequiredBehaviorValueSet = {
   /**
    * An action with this behavior must be included in the actions processed by the end user; the end user SHALL NOT choose not to include this action.
    */
-  action_required_behavior_Must: Coding.FromStrict({
+  action_required_behavior_Must: new Coding({
     code: "must",
     display: "Must",
     system: "http://hl7.org/fhir/action-required-behavior"
@@ -29,7 +29,7 @@ export const ActionRequiredBehaviorValueSet = {
   /**
    * An action with this behavior must be included in the set of actions processed by the end user, unless the end user provides documentation as to why the action was not included.
    */
-  action_required_behavior_MustUnlessDocumented: Coding.FromStrict({
+  action_required_behavior_MustUnlessDocumented: new Coding({
     code: "must-unless-documented",
     display: "Must Unless Documented",
     system: "http://hl7.org/fhir/action-required-behavior"

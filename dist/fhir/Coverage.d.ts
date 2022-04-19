@@ -161,11 +161,11 @@ export declare class CoverageClass extends fhir.BackboneElement implements fhir.
     /**
      * Check if the current CoverageClass contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CoverageClass from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICoverageClass): CoverageClass;
+    static fromStrict(source: fhir.ICoverageClass): CoverageClass;
 }
 /**
  * A suite of codes indicating exceptions or reductions to patient costs and their effective periods.
@@ -186,11 +186,11 @@ export declare class CoverageCostToBeneficiaryException extends fhir.BackboneEle
     /**
      * Check if the current CoverageCostToBeneficiaryException contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CoverageCostToBeneficiaryException from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICoverageCostToBeneficiaryException): CoverageCostToBeneficiaryException;
+    static fromStrict(source: fhir.ICoverageCostToBeneficiaryException): CoverageCostToBeneficiaryException;
 }
 /**
  * For example by knowing the patient visit co-pay, the provider can collect the amount prior to undertaking treatment.
@@ -219,11 +219,11 @@ export declare class CoverageCostToBeneficiary extends fhir.BackboneElement impl
     /**
      * Check if the current CoverageCostToBeneficiary contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CoverageCostToBeneficiary from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICoverageCostToBeneficiary): CoverageCostToBeneficiary;
+    static fromStrict(source: fhir.ICoverageCostToBeneficiary): CoverageCostToBeneficiary;
 }
 /**
  * Financial instrument which may be used to reimburse or pay for health care products and services. Includes both insurance and self-payment.
@@ -315,11 +315,11 @@ export declare class Coverage extends fhir.DomainResource implements fhir.ICover
     /**
      * Check if the current Coverage contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Coverage from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICoverage): Coverage;
+    static fromStrict(source: fhir.ICoverage): Coverage;
 }
 /**
  * Code Values for the Coverage.status field

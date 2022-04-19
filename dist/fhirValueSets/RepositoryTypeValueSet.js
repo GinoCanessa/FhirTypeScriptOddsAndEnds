@@ -13,7 +13,7 @@ export const RepositoryTypeValueSet = {
     /**
      * When URL is clicked, the resource can be seen directly (by webpage or by download link format).
      */
-    repository_type_ClickAndSee: Coding.FromStrict({
+    repository_type_ClickAndSee: new Coding({
         code: "directlink",
         display: "Click and see",
         system: "http://hl7.org/fhir/repository-type"
@@ -21,7 +21,7 @@ export const RepositoryTypeValueSet = {
     /**
      * When logged into the website, the resource can be seen.
      */
-    repository_type_ResultCannotBeAccessUnlessAnAccountIsLoggedIn: Coding.FromStrict({
+    repository_type_ResultCannotBeAccessUnlessAnAccountIsLoggedIn: new Coding({
         code: "login",
         display: "Result cannot be access unless an account is logged in",
         system: "http://hl7.org/fhir/repository-type"
@@ -29,7 +29,7 @@ export const RepositoryTypeValueSet = {
     /**
      * When logged in and  follow the API in the website related with URL, the resource can be seen.
      */
-    repository_type_ResultNeedToBeFetchedWithAPIAndNeedLOGINOrCookiesAreRequiredWhenVisitingTheLinkOfResource: Coding.FromStrict({
+    repository_type_ResultNeedToBeFetchedWithAPIAndNeedLOGINOrCookiesAreRequiredWhenVisitingTheLinkOfResource: new Coding({
         code: "oauth",
         display: "Result need to be fetched with API and need LOGIN( or cookies are required when visiting the link of resource)",
         system: "http://hl7.org/fhir/repository-type"
@@ -37,7 +37,7 @@ export const RepositoryTypeValueSet = {
     /**
      * When the API method (e.g. [base_url]/[parameter]) related with the URL of the website is executed, the resource can be seen directly (usually in JSON or XML format).
      */
-    repository_type_TheURLIsTheRESTfulOrOtherKindOfAPIThatCanAccessToTheResult: Coding.FromStrict({
+    repository_type_TheURLIsTheRESTfulOrOtherKindOfAPIThatCanAccessToTheResult: new Coding({
         code: "openapi",
         display: "The URL is the RESTful or other kind of API that can access to the result.",
         system: "http://hl7.org/fhir/repository-type"
@@ -45,7 +45,7 @@ export const RepositoryTypeValueSet = {
     /**
      * Some other complicated or particular way to get resource from URL.
      */
-    repository_type_SomeOtherComplicatedOrParticularWayToGetResourceFromURL: Coding.FromStrict({
+    repository_type_SomeOtherComplicatedOrParticularWayToGetResourceFromURL: new Coding({
         code: "other",
         display: "Some other complicated or particular way to get resource from URL.",
         system: "http://hl7.org/fhir/repository-type"

@@ -181,19 +181,19 @@ export class ResearchStudyArm extends fhir.BackboneElement implements fhir.IRese
   /**
    * Check if the current ResearchStudyArm contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["name"] === undefined) { missingElements.push("name"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ResearchStudyArm from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IResearchStudyArm):ResearchStudyArm {
+  static override fromStrict(source:fhir.IResearchStudyArm):ResearchStudyArm {
     var dest:ResearchStudyArm = new ResearchStudyArm(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ResearchStudyArm is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -223,18 +223,18 @@ export class ResearchStudyObjective extends fhir.BackboneElement implements fhir
   /**
    * Check if the current ResearchStudyObjective contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ResearchStudyObjective from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IResearchStudyObjective):ResearchStudyObjective {
+  static override fromStrict(source:fhir.IResearchStudyObjective):ResearchStudyObjective {
     var dest:ResearchStudyObjective = new ResearchStudyObjective(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ResearchStudyObjective is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -385,19 +385,19 @@ export class ResearchStudy extends fhir.DomainResource implements fhir.IResearch
   /**
    * Check if the current ResearchStudy contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ResearchStudy from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IResearchStudy):ResearchStudy {
+  static override fromStrict(source:fhir.IResearchStudy):ResearchStudy {
     var dest:ResearchStudy = new ResearchStudy(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ResearchStudy is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

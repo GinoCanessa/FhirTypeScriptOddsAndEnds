@@ -13,7 +13,7 @@ export const EventCapabilityModeValueSet = {
   /**
    * The application receives requests and sends responses.
    */
-  event_capability_mode_Receiver: Coding.FromStrict({
+  event_capability_mode_Receiver: new Coding({
     code: "receiver",
     display: "Receiver",
     system: "http://hl7.org/fhir/event-capability-mode"
@@ -21,7 +21,7 @@ export const EventCapabilityModeValueSet = {
   /**
    * The application sends requests and receives responses.
    */
-  event_capability_mode_Sender: Coding.FromStrict({
+  event_capability_mode_Sender: new Coding({
     code: "sender",
     display: "Sender",
     system: "http://hl7.org/fhir/event-capability-mode"

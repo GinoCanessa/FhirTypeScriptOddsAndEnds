@@ -13,7 +13,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: Application Entity has started
    */
-  dicom_dcim_ApplicationStart: Coding.FromStrict({
+  dicom_dcim_ApplicationStart: new Coding({
     code: "110120",
     display: "Application Start",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -21,7 +21,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: Application Entity has stopped
    */
-  dicom_dcim_ApplicationStop: Coding.FromStrict({
+  dicom_dcim_ApplicationStop: new Coding({
     code: "110121",
     display: "Application Stop",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -29,7 +29,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: User login has been attempted
    */
-  dicom_dcim_Login: Coding.FromStrict({
+  dicom_dcim_Login: new Coding({
     code: "110122",
     display: "Login",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -37,7 +37,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: User logout has been attempted
    */
-  dicom_dcim_Logout: Coding.FromStrict({
+  dicom_dcim_Logout: new Coding({
     code: "110123",
     display: "Logout",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -45,7 +45,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: Node has been attached
    */
-  dicom_dcim_Attach: Coding.FromStrict({
+  dicom_dcim_Attach: new Coding({
     code: "110124",
     display: "Attach",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -53,7 +53,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: Node has been detached
    */
-  dicom_dcim_Detach: Coding.FromStrict({
+  dicom_dcim_Detach: new Coding({
     code: "110125",
     display: "Detach",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -61,7 +61,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: Node Authentication has been attempted
    */
-  dicom_dcim_NodeAuthentication: Coding.FromStrict({
+  dicom_dcim_NodeAuthentication: new Coding({
     code: "110126",
     display: "Node Authentication",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -69,7 +69,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: Emergency Override has started
    */
-  dicom_dcim_EmergencyOverrideStarted: Coding.FromStrict({
+  dicom_dcim_EmergencyOverrideStarted: new Coding({
     code: "110127",
     display: "Emergency Override Started",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -77,7 +77,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: Network configuration has been changed
    */
-  dicom_dcim_NetworkConfiguration: Coding.FromStrict({
+  dicom_dcim_NetworkConfiguration: new Coding({
     code: "110128",
     display: "Network Configuration",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -85,7 +85,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: Security configuration has been changed
    */
-  dicom_dcim_SecurityConfiguration: Coding.FromStrict({
+  dicom_dcim_SecurityConfiguration: new Coding({
     code: "110129",
     display: "Security Configuration",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -93,7 +93,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: Hardware configuration has been changed
    */
-  dicom_dcim_HardwareConfiguration: Coding.FromStrict({
+  dicom_dcim_HardwareConfiguration: new Coding({
     code: "110130",
     display: "Hardware Configuration",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -101,7 +101,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: Software configuration has been changed
    */
-  dicom_dcim_SoftwareConfiguration: Coding.FromStrict({
+  dicom_dcim_SoftwareConfiguration: new Coding({
     code: "110131",
     display: "Software Configuration",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -109,7 +109,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: A use of a restricted function has been attempted
    */
-  dicom_dcim_UseOfRestrictedFunction: Coding.FromStrict({
+  dicom_dcim_UseOfRestrictedFunction: new Coding({
     code: "110132",
     display: "Use of Restricted Function",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -117,7 +117,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: Audit recording has been stopped
    */
-  dicom_dcim_AuditRecordingStopped: Coding.FromStrict({
+  dicom_dcim_AuditRecordingStopped: new Coding({
     code: "110133",
     display: "Audit Recording Stopped",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -125,7 +125,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: Audit recording has been started
    */
-  dicom_dcim_AuditRecordingStarted: Coding.FromStrict({
+  dicom_dcim_AuditRecordingStarted: new Coding({
     code: "110134",
     display: "Audit Recording Started",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -133,7 +133,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: Security attributes of an object have been changed
    */
-  dicom_dcim_ObjectSecurityAttributesChanged: Coding.FromStrict({
+  dicom_dcim_ObjectSecurityAttributesChanged: new Coding({
     code: "110135",
     display: "Object Security Attributes Changed",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -141,7 +141,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: Security roles have been changed
    */
-  dicom_dcim_SecurityRolesChanged: Coding.FromStrict({
+  dicom_dcim_SecurityRolesChanged: new Coding({
     code: "110136",
     display: "Security Roles Changed",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -149,7 +149,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: Security attributes of a user have been changed
    */
-  dicom_dcim_UserSecurityAttributesChanged: Coding.FromStrict({
+  dicom_dcim_UserSecurityAttributesChanged: new Coding({
     code: "110137",
     display: "User security Attributes Changed",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -157,7 +157,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: Emergency Override has Stopped
    */
-  dicom_dcim_EmergencyOverrideStopped: Coding.FromStrict({
+  dicom_dcim_EmergencyOverrideStopped: new Coding({
     code: "110138",
     display: "Emergency Override Stopped",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -165,7 +165,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: Remote Service Operation has Begun
    */
-  dicom_dcim_RemoteServiceOperationStarted: Coding.FromStrict({
+  dicom_dcim_RemoteServiceOperationStarted: new Coding({
     code: "110139",
     display: "Remote Service Operation Started",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -173,7 +173,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: Remote Service Operation has Stopped
    */
-  dicom_dcim_RemoteServiceOperationStopped: Coding.FromStrict({
+  dicom_dcim_RemoteServiceOperationStopped: new Coding({
     code: "110140",
     display: "Remote Service Operation Stopped",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -181,7 +181,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: Local Service Operation has Begun
    */
-  dicom_dcim_LocalServiceOperationStarted: Coding.FromStrict({
+  dicom_dcim_LocalServiceOperationStarted: new Coding({
     code: "110141",
     display: "Local Service Operation Started",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -189,7 +189,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Audit event: Local Service Operation Stopped
    */
-  dicom_dcim_LocalServiceOperationStopped: Coding.FromStrict({
+  dicom_dcim_LocalServiceOperationStopped: new Coding({
     code: "110142",
     display: "Local Service Operation Stopped",
     system: "http://dicom.nema.org/resources/ontology/DCM"
@@ -197,7 +197,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * perform a set of a separate interactions in a single http operation
    */
-  restful_interaction_Batch: Coding.FromStrict({
+  restful_interaction_Batch: new Coding({
     code: "batch",
     display: "batch",
     system: "http://hl7.org/fhir/restful-interaction"
@@ -205,7 +205,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Get a Capability Statement for the system.
    */
-  restful_interaction_Capabilities: Coding.FromStrict({
+  restful_interaction_Capabilities: new Coding({
     code: "capabilities",
     display: "capabilities",
     system: "http://hl7.org/fhir/restful-interaction"
@@ -213,7 +213,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Create a new resource with a server assigned id.
    */
-  restful_interaction_Create: Coding.FromStrict({
+  restful_interaction_Create: new Coding({
     code: "create",
     display: "create",
     system: "http://hl7.org/fhir/restful-interaction"
@@ -221,7 +221,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Delete a resource.
    */
-  restful_interaction_Delete: Coding.FromStrict({
+  restful_interaction_Delete: new Coding({
     code: "delete",
     display: "delete",
     system: "http://hl7.org/fhir/restful-interaction"
@@ -229,7 +229,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Retrieve the change history for a particular resource, type of resource, or the entire system.
    */
-  restful_interaction_History: Coding.FromStrict({
+  restful_interaction_History: new Coding({
     code: "history",
     display: "history",
     system: "http://hl7.org/fhir/restful-interaction"
@@ -237,7 +237,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Retrieve the change history for a particular resource.
    */
-  restful_interaction_HistoryInstance: Coding.FromStrict({
+  restful_interaction_HistoryInstance: new Coding({
     code: "history-instance",
     display: "history-instance",
     system: "http://hl7.org/fhir/restful-interaction"
@@ -245,7 +245,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Retrieve the change history for all resources on a system.
    */
-  restful_interaction_HistorySystem: Coding.FromStrict({
+  restful_interaction_HistorySystem: new Coding({
     code: "history-system",
     display: "history-system",
     system: "http://hl7.org/fhir/restful-interaction"
@@ -253,7 +253,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Retrieve the change history for all resources of a particular type.
    */
-  restful_interaction_HistoryType: Coding.FromStrict({
+  restful_interaction_HistoryType: new Coding({
     code: "history-type",
     display: "history-type",
     system: "http://hl7.org/fhir/restful-interaction"
@@ -261,7 +261,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Perform an operation as defined by an OperationDefinition.
    */
-  restful_interaction_Operation: Coding.FromStrict({
+  restful_interaction_Operation: new Coding({
     code: "operation",
     display: "operation",
     system: "http://hl7.org/fhir/restful-interaction"
@@ -269,7 +269,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Update an existing resource by posting a set of changes to it.
    */
-  restful_interaction_Patch: Coding.FromStrict({
+  restful_interaction_Patch: new Coding({
     code: "patch",
     display: "patch",
     system: "http://hl7.org/fhir/restful-interaction"
@@ -277,7 +277,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Read the current state of the resource.
    */
-  restful_interaction_Read: Coding.FromStrict({
+  restful_interaction_Read: new Coding({
     code: "read",
     display: "read",
     system: "http://hl7.org/fhir/restful-interaction"
@@ -285,7 +285,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Search a resource type or all resources based on some filter criteria.
    */
-  restful_interaction_Search: Coding.FromStrict({
+  restful_interaction_Search: new Coding({
     code: "search",
     display: "search",
     system: "http://hl7.org/fhir/restful-interaction"
@@ -293,7 +293,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Search all resources based on some filter criteria.
    */
-  restful_interaction_SearchSystem: Coding.FromStrict({
+  restful_interaction_SearchSystem: new Coding({
     code: "search-system",
     display: "search-system",
     system: "http://hl7.org/fhir/restful-interaction"
@@ -301,7 +301,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Search all resources of the specified type based on some filter criteria.
    */
-  restful_interaction_SearchType: Coding.FromStrict({
+  restful_interaction_SearchType: new Coding({
     code: "search-type",
     display: "search-type",
     system: "http://hl7.org/fhir/restful-interaction"
@@ -309,7 +309,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Update, create or delete a set of resources as a single transaction.
    */
-  restful_interaction_Transaction: Coding.FromStrict({
+  restful_interaction_Transaction: new Coding({
     code: "transaction",
     display: "transaction",
     system: "http://hl7.org/fhir/restful-interaction"
@@ -317,7 +317,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Update an existing resource by its id (or create it if it is new).
    */
-  restful_interaction_Update: Coding.FromStrict({
+  restful_interaction_Update: new Coding({
     code: "update",
     display: "update",
     system: "http://hl7.org/fhir/restful-interaction"
@@ -325,7 +325,7 @@ export const AuditEventSubTypeValueSet = {
   /**
    * Read the state of a specific version of the resource.
    */
-  restful_interaction_Vread: Coding.FromStrict({
+  restful_interaction_Vread: new Coding({
     code: "vread",
     display: "vread",
     system: "http://hl7.org/fhir/restful-interaction"

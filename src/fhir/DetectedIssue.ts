@@ -126,18 +126,18 @@ export class DetectedIssueEvidence extends fhir.BackboneElement implements fhir.
   /**
    * Check if the current DetectedIssueEvidence contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DetectedIssueEvidence from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDetectedIssueEvidence):DetectedIssueEvidence {
+  static override fromStrict(source:fhir.IDetectedIssueEvidence):DetectedIssueEvidence {
     var dest:DetectedIssueEvidence = new DetectedIssueEvidence(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DetectedIssueEvidence is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -174,19 +174,19 @@ export class DetectedIssueMitigation extends fhir.BackboneElement implements fhi
   /**
    * Check if the current DetectedIssueMitigation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["action"] === undefined) { missingElements.push("action"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DetectedIssueMitigation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDetectedIssueMitigation):DetectedIssueMitigation {
+  static override fromStrict(source:fhir.IDetectedIssueMitigation):DetectedIssueMitigation {
     var dest:DetectedIssueMitigation = new DetectedIssueMitigation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DetectedIssueMitigation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -286,19 +286,19 @@ export class DetectedIssue extends fhir.DomainResource implements fhir.IDetected
   /**
    * Check if the current DetectedIssue contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DetectedIssue from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDetectedIssue):DetectedIssue {
+  static override fromStrict(source:fhir.IDetectedIssue):DetectedIssue {
     var dest:DetectedIssue = new DetectedIssue(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DetectedIssue is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

@@ -10,15 +10,15 @@ import { Coding } from '../fhir'
  * Preferred value set for Condition/Diagnosis severity grading.
  */
 export const ConditionSeverityValueSet = {
-  ConditionSeverityValueSet_VAL24484000: Coding.FromStrict({
+  ConditionSeverityValueSet_VAL24484000: new Coding({
     code: "24484000",
     system: "http://snomed.info/sct"
   }),
-  ConditionSeverityValueSet_VAL255604002: Coding.FromStrict({
+  ConditionSeverityValueSet_VAL255604002: new Coding({
     code: "255604002",
     system: "http://snomed.info/sct"
   }),
-  ConditionSeverityValueSet_VAL6736007: Coding.FromStrict({
+  ConditionSeverityValueSet_VAL6736007: new Coding({
     code: "6736007",
     system: "http://snomed.info/sct"
   }),

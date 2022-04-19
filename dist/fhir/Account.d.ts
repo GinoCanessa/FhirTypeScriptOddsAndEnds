@@ -115,11 +115,11 @@ export declare class AccountCoverage extends fhir.BackboneElement implements fhi
     /**
      * Check if the current AccountCoverage contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a AccountCoverage from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IAccountCoverage): AccountCoverage;
+    static fromStrict(source: fhir.IAccountCoverage): AccountCoverage;
 }
 /**
  * The parties responsible for balancing the account if other payment options fall short.
@@ -145,11 +145,11 @@ export declare class AccountGuarantor extends fhir.BackboneElement implements fh
     /**
      * Check if the current AccountGuarantor contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a AccountGuarantor from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IAccountGuarantor): AccountGuarantor;
+    static fromStrict(source: fhir.IAccountGuarantor): AccountGuarantor;
 }
 /**
  * A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc.
@@ -215,11 +215,11 @@ export declare class Account extends fhir.DomainResource implements fhir.IAccoun
     /**
      * Check if the current Account contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Account from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IAccount): Account;
+    static fromStrict(source: fhir.IAccount): Account;
 }
 /**
  * Code Values for the Account.status field

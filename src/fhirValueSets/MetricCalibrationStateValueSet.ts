@@ -13,7 +13,7 @@ export const MetricCalibrationStateValueSet = {
   /**
    * The metric has been calibrated.
    */
-  metric_calibration_state_Calibrated: Coding.FromStrict({
+  metric_calibration_state_Calibrated: new Coding({
     code: "calibrated",
     display: "Calibrated",
     system: "http://hl7.org/fhir/metric-calibration-state"
@@ -21,7 +21,7 @@ export const MetricCalibrationStateValueSet = {
   /**
    * The metric needs to be calibrated.
    */
-  metric_calibration_state_CalibrationRequired: Coding.FromStrict({
+  metric_calibration_state_CalibrationRequired: new Coding({
     code: "calibration-required",
     display: "Calibration Required",
     system: "http://hl7.org/fhir/metric-calibration-state"
@@ -29,7 +29,7 @@ export const MetricCalibrationStateValueSet = {
   /**
    * The metric has not been calibrated.
    */
-  metric_calibration_state_NotCalibrated: Coding.FromStrict({
+  metric_calibration_state_NotCalibrated: new Coding({
     code: "not-calibrated",
     display: "Not Calibrated",
     system: "http://hl7.org/fhir/metric-calibration-state"
@@ -37,7 +37,7 @@ export const MetricCalibrationStateValueSet = {
   /**
    * The state of calibration of this metric is unspecified.
    */
-  metric_calibration_state_Unspecified: Coding.FromStrict({
+  metric_calibration_state_Unspecified: new Coding({
     code: "unspecified",
     display: "Unspecified",
     system: "http://hl7.org/fhir/metric-calibration-state"

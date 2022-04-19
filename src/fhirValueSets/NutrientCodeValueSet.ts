@@ -10,2787 +10,2787 @@ import { Coding } from '../fhir'
  * NutrientModifier :  Codes for types of nutrients that are being modified such as carbohydrate or sodium.  This value set includes codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 226355009 (Nutrients(substance)), and the concepts for Sodium, Potassium and Fluid. This is provided as a suggestive example.
  */
 export const NutrientCodeValueSet = {
-  NutrientCodeValueSet_Gliadin: Coding.FromStrict({
+  NutrientCodeValueSet_Gliadin: new Coding({
     code: "102258003",
     display: "Gliadin",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VAL4PyridoxicAcid: Coding.FromStrict({
+  NutrientCodeValueSet_VAL4PyridoxicAcid: new Coding({
     code: "102658006",
     display: "4-Pyridoxic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Galactose1Phosphate: Coding.FromStrict({
+  NutrientCodeValueSet_Galactose1Phosphate: new Coding({
     code: "102661007",
     display: "Galactose-1-phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Triosephosphate: Coding.FromStrict({
+  NutrientCodeValueSet_Triosephosphate: new Coding({
     code: "102663005",
     display: "Triosephosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Homocysteine: Coding.FromStrict({
+  NutrientCodeValueSet_Homocysteine: new Coding({
     code: "102747008",
     display: "Homocysteine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Phosphoserine: Coding.FromStrict({
+  NutrientCodeValueSet_Phosphoserine: new Coding({
     code: "102750006",
     display: "Phosphoserine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Retinaldehyde: Coding.FromStrict({
+  NutrientCodeValueSet_Retinaldehyde: new Coding({
     code: "103067001",
     display: "Retinaldehyde",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ProvitaminA: Coding.FromStrict({
+  NutrientCodeValueSet_ProvitaminA: new Coding({
     code: "103068006",
     display: "Provitamin A",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VitaminB: Coding.FromStrict({
+  NutrientCodeValueSet_VitaminB: new Coding({
     code: "103069003",
     display: "Vitamin B",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PyridoxineCongeners: Coding.FromStrict({
+  NutrientCodeValueSet_PyridoxineCongeners: new Coding({
     code: "103070002",
     display: "Pyridoxine congeners",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Ethylnicotinamide: Coding.FromStrict({
+  NutrientCodeValueSet_Ethylnicotinamide: new Coding({
     code: "103072005",
     display: "Ethylnicotinamide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_NPower1PowerMethyl3Carboxamide6Pyridone: Coding.FromStrict({
+  NutrientCodeValueSet_NPower1PowerMethyl3Carboxamide6Pyridone: new Coding({
     code: "103074006",
     display: "N^1^-methyl-3-carboxamide-6-pyridone",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IodineAndItsDerivatives: Coding.FromStrict({
+  NutrientCodeValueSet_IodineAndItsDerivatives: new Coding({
     code: "105824007",
     display: "Iodine and its derivatives",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Glucose6Phosphate: Coding.FromStrict({
+  NutrientCodeValueSet_Glucose6Phosphate: new Coding({
     code: "10796004",
     display: "Glucose-6-phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Paricalcitol: Coding.FromStrict({
+  NutrientCodeValueSet_Paricalcitol: new Coding({
     code: "108946001",
     display: "Paricalcitol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_HydrocortisoneSodiumPhosphate: Coding.FromStrict({
+  NutrientCodeValueSet_HydrocortisoneSodiumPhosphate: new Coding({
     code: "109064002",
     display: "Hydrocortisone sodium phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_EthiodizedOil: Coding.FromStrict({
+  NutrientCodeValueSet_EthiodizedOil: new Coding({
     code: "109224005",
     display: "Ethiodized oil",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Carrageenan: Coding.FromStrict({
+  NutrientCodeValueSet_Carrageenan: new Coding({
     code: "109240008",
     display: "Carrageenan",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ZincGluconate: Coding.FromStrict({
+  NutrientCodeValueSet_ZincGluconate: new Coding({
     code: "111039007",
     display: "Zinc gluconate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IodinePentoxide: Coding.FromStrict({
+  NutrientCodeValueSet_IodinePentoxide: new Coding({
     code: "111065006",
     display: "Iodine pentoxide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power133PowerIodine: Coding.FromStrict({
+  NutrientCodeValueSet_Power133PowerIodine: new Coding({
     code: "111066007",
     display: "^133^Iodine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CopperRadioisotope: Coding.FromStrict({
+  NutrientCodeValueSet_CopperRadioisotope: new Coding({
     code: "111069000",
     display: "Copper radioisotope",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CrChromium: Coding.FromStrict({
+  NutrientCodeValueSet_CrChromium: new Coding({
     code: "111070004",
     display: "Cr - Chromium",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ChromiumRadioisotope: Coding.FromStrict({
+  NutrientCodeValueSet_ChromiumRadioisotope: new Coding({
     code: "111071000",
     display: "Chromium radioisotope",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power55PowerCobalt: Coding.FromStrict({
+  NutrientCodeValueSet_Power55PowerCobalt: new Coding({
     code: "111078006",
     display: "^55^Cobalt",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_EssentialAminoAcid: Coding.FromStrict({
+  NutrientCodeValueSet_EssentialAminoAcid: new Coding({
     code: "112000000",
     display: "Essential amino acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VitaminU: Coding.FromStrict({
+  NutrientCodeValueSet_VitaminU: new Coding({
     code: "112121003",
     display: "Vitamin U",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Sucrose: Coding.FromStrict({
+  NutrientCodeValueSet_Sucrose: new Coding({
     code: "11320009",
     display: "Sucrose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_AcidCalciumPhosphate: Coding.FromStrict({
+  NutrientCodeValueSet_AcidCalciumPhosphate: new Coding({
     code: "115599005",
     display: "Acid calcium phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Doxercalciferol: Coding.FromStrict({
+  NutrientCodeValueSet_Doxercalciferol: new Coding({
     code: "116094003",
     display: "Doxercalciferol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_DisodiumPhosphateAnhydrous: Coding.FromStrict({
+  NutrientCodeValueSet_DisodiumPhosphateAnhydrous: new Coding({
     code: "116119005",
     display: "Disodium phosphate anhydrous",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_DipotassiumPhosphateAnhydrous: Coding.FromStrict({
+  NutrientCodeValueSet_DipotassiumPhosphateAnhydrous: new Coding({
     code: "116120004",
     display: "Dipotassium phosphate anhydrous",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_DibasicSodiumPhosphateAnhydrous: Coding.FromStrict({
+  NutrientCodeValueSet_DibasicSodiumPhosphateAnhydrous: new Coding({
     code: "116123002",
     display: "Dibasic sodium phosphate anhydrous",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_MonobasicSodiumPhosphate: Coding.FromStrict({
+  NutrientCodeValueSet_MonobasicSodiumPhosphate: new Coding({
     code: "116124008",
     display: "Monobasic sodium phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_MagnesiumChlorideHexahydrate: Coding.FromStrict({
+  NutrientCodeValueSet_MagnesiumChlorideHexahydrate: new Coding({
     code: "116128006",
     display: "Magnesium chloride hexahydrate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_TribasicPotassiumPhosphate: Coding.FromStrict({
+  NutrientCodeValueSet_TribasicPotassiumPhosphate: new Coding({
     code: "116256008",
     display: "Tribasic potassium phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Monosaccharide: Coding.FromStrict({
+  NutrientCodeValueSet_Monosaccharide: new Coding({
     code: "116257004",
     display: "Monosaccharide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Aldose: Coding.FromStrict({
+  NutrientCodeValueSet_Aldose: new Coding({
     code: "116258009",
     display: "Aldose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Hexose: Coding.FromStrict({
+  NutrientCodeValueSet_Hexose: new Coding({
     code: "116259001",
     display: "Hexose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Ketose: Coding.FromStrict({
+  NutrientCodeValueSet_Ketose: new Coding({
     code: "116260006",
     display: "Ketose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Tetrose: Coding.FromStrict({
+  NutrientCodeValueSet_Tetrose: new Coding({
     code: "116261005",
     display: "Tetrose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Triose: Coding.FromStrict({
+  NutrientCodeValueSet_Triose: new Coding({
     code: "116262003",
     display: "Triose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Heptose: Coding.FromStrict({
+  NutrientCodeValueSet_Heptose: new Coding({
     code: "116263008",
     display: "Heptose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Trisaccharide: Coding.FromStrict({
+  NutrientCodeValueSet_Trisaccharide: new Coding({
     code: "116264002",
     display: "Trisaccharide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Raffinose: Coding.FromStrict({
+  NutrientCodeValueSet_Raffinose: new Coding({
     code: "116265001",
     display: "Raffinose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SugarPhosphate: Coding.FromStrict({
+  NutrientCodeValueSet_SugarPhosphate: new Coding({
     code: "116266000",
     display: "Sugar phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SugarAlcohol: Coding.FromStrict({
+  NutrientCodeValueSet_SugarAlcohol: new Coding({
     code: "116267009",
     display: "Sugar alcohol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Galactitol: Coding.FromStrict({
+  NutrientCodeValueSet_Galactitol: new Coding({
     code: "116268004",
     display: "Galactitol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Maltitol: Coding.FromStrict({
+  NutrientCodeValueSet_Maltitol: new Coding({
     code: "116269007",
     display: "Maltitol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Ribitol: Coding.FromStrict({
+  NutrientCodeValueSet_Ribitol: new Coding({
     code: "116271007",
     display: "Ribitol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_DietaryFiber: Coding.FromStrict({
+  NutrientCodeValueSet_DietaryFiber: new Coding({
     code: "116272000",
     display: "Dietary fiber",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_DAlphaTocopherol: Coding.FromStrict({
+  NutrientCodeValueSet_DAlphaTocopherol: new Coding({
     code: "116776001",
     display: "D-alpha-tocopherol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_BetaTocopherol: Coding.FromStrict({
+  NutrientCodeValueSet_BetaTocopherol: new Coding({
     code: "116777005",
     display: "Beta tocopherol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_GammaTocopherol: Coding.FromStrict({
+  NutrientCodeValueSet_GammaTocopherol: new Coding({
     code: "116778000",
     display: "Gamma tocopherol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Ergosterol: Coding.FromStrict({
+  NutrientCodeValueSet_Ergosterol: new Coding({
     code: "116934003",
     display: "Ergosterol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_InorganicPhosphorus: Coding.FromStrict({
+  NutrientCodeValueSet_InorganicPhosphorus: new Coding({
     code: "117634005",
     display: "Inorganic phosphorus",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SodiumFolate: Coding.FromStrict({
+  NutrientCodeValueSet_SodiumFolate: new Coding({
     code: "126224002",
     display: "Sodium folate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CalciumPantothenate: Coding.FromStrict({
+  NutrientCodeValueSet_CalciumPantothenate: new Coding({
     code: "126225001",
     display: "Calcium pantothenate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Dexpanthenol: Coding.FromStrict({
+  NutrientCodeValueSet_Dexpanthenol: new Coding({
     code: "126226000",
     display: "Dexpanthenol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PyridoxineHydrochloride: Coding.FromStrict({
+  NutrientCodeValueSet_PyridoxineHydrochloride: new Coding({
     code: "126227009",
     display: "Pyridoxine hydrochloride",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ThiamineHydrochloride: Coding.FromStrict({
+  NutrientCodeValueSet_ThiamineHydrochloride: new Coding({
     code: "126228004",
     display: "Thiamine hydrochloride",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ThiamineNitrate: Coding.FromStrict({
+  NutrientCodeValueSet_ThiamineNitrate: new Coding({
     code: "126229007",
     display: "Thiamine nitrate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CalciumAscorbate: Coding.FromStrict({
+  NutrientCodeValueSet_CalciumAscorbate: new Coding({
     code: "126230002",
     display: "Calcium ascorbate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SodiumAscorbate: Coding.FromStrict({
+  NutrientCodeValueSet_SodiumAscorbate: new Coding({
     code: "126231003",
     display: "Sodium ascorbate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Dihydrotachysterol: Coding.FromStrict({
+  NutrientCodeValueSet_Dihydrotachysterol: new Coding({
     code: "126235007",
     display: "Dihydrotachysterol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_DeltaTocopherol: Coding.FromStrict({
+  NutrientCodeValueSet_DeltaTocopherol: new Coding({
     code: "126237004",
     display: "Delta tocopherol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VitaminKGreaterThan5LessThan: Coding.FromStrict({
+  NutrientCodeValueSet_VitaminKGreaterThan5LessThan: new Coding({
     code: "126238009",
     display: "Vitamin K>5<",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_MenadiolSodiumPhosphate: Coding.FromStrict({
+  NutrientCodeValueSet_MenadiolSodiumPhosphate: new Coding({
     code: "126239001",
     display: "Menadiol sodium phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IronSucrose: Coding.FromStrict({
+  NutrientCodeValueSet_IronSucrose: new Coding({
     code: "129497004",
     display: "Iron sucrose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Arabinose: Coding.FromStrict({
+  NutrientCodeValueSet_Arabinose: new Coding({
     code: "13863008",
     display: "Arabinose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Serine: Coding.FromStrict({
+  NutrientCodeValueSet_Serine: new Coding({
     code: "14125007",
     display: "Serine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ArginineGlutamate: Coding.FromStrict({
+  NutrientCodeValueSet_ArginineGlutamate: new Coding({
     code: "14139007",
     display: "Arginine glutamate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Amylopectin: Coding.FromStrict({
+  NutrientCodeValueSet_Amylopectin: new Coding({
     code: "14564001",
     display: "Amylopectin",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IleIsoleucine: Coding.FromStrict({
+  NutrientCodeValueSet_IleIsoleucine: new Coding({
     code: "14971004",
     display: "Ile - Isoleucine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Disaccharide: Coding.FromStrict({
+  NutrientCodeValueSet_Disaccharide: new Coding({
     code: "15472007",
     display: "Disaccharide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Ribose: Coding.FromStrict({
+  NutrientCodeValueSet_Ribose: new Coding({
     code: "16850006",
     display: "Ribose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Nicotinamide: Coding.FromStrict({
+  NutrientCodeValueSet_Nicotinamide: new Coding({
     code: "173196005",
     display: "Nicotinamide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_DXylose: Coding.FromStrict({
+  NutrientCodeValueSet_DXylose: new Coding({
     code: "19160003",
     display: "D-xylose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_BetaDFructopyranose: Coding.FromStrict({
+  NutrientCodeValueSet_BetaDFructopyranose: new Coding({
     code: "21239003",
     display: "beta-D-fructopyranose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Sorbose: Coding.FromStrict({
+  NutrientCodeValueSet_Sorbose: new Coding({
     code: "22555008",
     display: "Sorbose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Glycoasparagine: Coding.FromStrict({
+  NutrientCodeValueSet_Glycoasparagine: new Coding({
     code: "22559002",
     display: "Glycoasparagine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ProteinAndProteinDerivativesDietary: Coding.FromStrict({
+  NutrientCodeValueSet_ProteinAndProteinDerivativesDietary: new Coding({
     code: "226356005",
     display: "Protein and protein derivatives - dietary",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Tetrasaccharide: Coding.FromStrict({
+  NutrientCodeValueSet_Tetrasaccharide: new Coding({
     code: "226369009",
     display: "Tetrasaccharide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Stachyose: Coding.FromStrict({
+  NutrientCodeValueSet_Stachyose: new Coding({
     code: "226370005",
     display: "Stachyose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Pentasaccharide: Coding.FromStrict({
+  NutrientCodeValueSet_Pentasaccharide: new Coding({
     code: "226371009",
     display: "Pentasaccharide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Verbascose: Coding.FromStrict({
+  NutrientCodeValueSet_Verbascose: new Coding({
     code: "226372002",
     display: "Verbascose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Amylose: Coding.FromStrict({
+  NutrientCodeValueSet_Amylose: new Coding({
     code: "226373007",
     display: "Amylose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ComplexCarbohydrate: Coding.FromStrict({
+  NutrientCodeValueSet_ComplexCarbohydrate: new Coding({
     code: "226374001",
     display: "Complex carbohydrate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_RefinedCarbohydrate: Coding.FromStrict({
+  NutrientCodeValueSet_RefinedCarbohydrate: new Coding({
     code: "226375000",
     display: "Refined carbohydrate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SoyaSauce: Coding.FromStrict({
+  NutrientCodeValueSet_SoyaSauce: new Coding({
     code: "227537006",
     display: "Soya sauce",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SoyMinceGranules: Coding.FromStrict({
+  NutrientCodeValueSet_SoyMinceGranules: new Coding({
     code: "227948007",
     display: "Soy mince granules",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CarbohydrateFood: Coding.FromStrict({
+  NutrientCodeValueSet_CarbohydrateFood: new Coding({
     code: "227991002",
     display: "Carbohydrate food",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_HighCarbohydrateFood: Coding.FromStrict({
+  NutrientCodeValueSet_HighCarbohydrateFood: new Coding({
     code: "227992009",
     display: "High carbohydrate food",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_LowCarbohydrateFood: Coding.FromStrict({
+  NutrientCodeValueSet_LowCarbohydrateFood: new Coding({
     code: "227993004",
     display: "Low carbohydrate food",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ComplexCarbohydrateFood: Coding.FromStrict({
+  NutrientCodeValueSet_ComplexCarbohydrateFood: new Coding({
     code: "227994005",
     display: "Complex carbohydrate food",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_RefinedCarbohydrateFood: Coding.FromStrict({
+  NutrientCodeValueSet_RefinedCarbohydrateFood: new Coding({
     code: "227995006",
     display: "Refined carbohydrate food",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SimpleCarbohydrateFood: Coding.FromStrict({
+  NutrientCodeValueSet_SimpleCarbohydrateFood: new Coding({
     code: "227996007",
     display: "Simple carbohydrate food",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SoyFlour: Coding.FromStrict({
+  NutrientCodeValueSet_SoyFlour: new Coding({
     code: "229941008",
     display: "Soy flour",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_LowFatSoyFlour: Coding.FromStrict({
+  NutrientCodeValueSet_LowFatSoyFlour: new Coding({
     code: "229949005",
     display: "Low fat soy flour",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PhosphorusSesquisulfide: Coding.FromStrict({
+  NutrientCodeValueSet_PhosphorusSesquisulfide: new Coding({
     code: "255673007",
     display: "Phosphorus sesquisulfide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ZincOmadine: Coding.FromStrict({
+  NutrientCodeValueSet_ZincOmadine: new Coding({
     code: "255954005",
     display: "Zinc omadine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Agarose: Coding.FromStrict({
+  NutrientCodeValueSet_Agarose: new Coding({
     code: "256227006",
     display: "Agarose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_HACalciumHydroxyapatite: Coding.FromStrict({
+  NutrientCodeValueSet_HACalciumHydroxyapatite: new Coding({
     code: "256579008",
     display: "HA - Calcium hydroxyapatite",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_GlnGlutamine: Coding.FromStrict({
+  NutrientCodeValueSet_GlnGlutamine: new Coding({
     code: "25761002",
     display: "Gln - Glutamine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Calcitriol: Coding.FromStrict({
+  NutrientCodeValueSet_Calcitriol: new Coding({
     code: "259333003",
     display: "Calcitriol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VAL24RDihydroxycalcidiol: Coding.FromStrict({
+  NutrientCodeValueSet_VAL24RDihydroxycalcidiol: new Coding({
     code: "259336006",
     display: "24R-Dihydroxycalcidiol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Calcifediol: Coding.FromStrict({
+  NutrientCodeValueSet_Calcifediol: new Coding({
     code: "259337002",
     display: "Calcifediol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_AmylopectinGlycogen: Coding.FromStrict({
+  NutrientCodeValueSet_AmylopectinGlycogen: new Coding({
     code: "259382003",
     display: "Amylopectin glycogen",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FucoOligosaccharide: Coding.FromStrict({
+  NutrientCodeValueSet_FucoOligosaccharide: new Coding({
     code: "259403006",
     display: "Fuco-oligosaccharide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_MannoOligosaccharide: Coding.FromStrict({
+  NutrientCodeValueSet_MannoOligosaccharide: new Coding({
     code: "259406003",
     display: "Manno-oligosaccharide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Sialooligosaccharide: Coding.FromStrict({
+  NutrientCodeValueSet_Sialooligosaccharide: new Coding({
     code: "259411001",
     display: "Sialooligosaccharide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VAL5Deoxyadenosylcobalamin: Coding.FromStrict({
+  NutrientCodeValueSet_VAL5Deoxyadenosylcobalamin: new Coding({
     code: "259509008",
     display: "5-deoxyadenosylcobalamin",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Mecobalamin: Coding.FromStrict({
+  NutrientCodeValueSet_Mecobalamin: new Coding({
     code: "259512006",
     display: "Mecobalamin",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Cellobiose: Coding.FromStrict({
+  NutrientCodeValueSet_Cellobiose: new Coding({
     code: "259651009",
     display: "Cellobiose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Rhamnose: Coding.FromStrict({
+  NutrientCodeValueSet_Rhamnose: new Coding({
     code: "259655000",
     display: "Rhamnose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VitaminTraceElement: Coding.FromStrict({
+  NutrientCodeValueSet_VitaminTraceElement: new Coding({
     code: "259656004",
     display: "Vitamin / trace element",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VitaminB1: Coding.FromStrict({
+  NutrientCodeValueSet_VitaminB1: new Coding({
     code: "259659006",
     display: "Vitamin B1",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ThiaminePhosphate: Coding.FromStrict({
+  NutrientCodeValueSet_ThiaminePhosphate: new Coding({
     code: "259660001",
     display: "Thiamine phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Cocarboxylase: Coding.FromStrict({
+  NutrientCodeValueSet_Cocarboxylase: new Coding({
     code: "259661002",
     display: "Cocarboxylase",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VitaminB6: Coding.FromStrict({
+  NutrientCodeValueSet_VitaminB6: new Coding({
     code: "259662009",
     display: "Vitamin B6",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Pyridoxal5QuotePhosphate: Coding.FromStrict({
+  NutrientCodeValueSet_Pyridoxal5QuotePhosphate: new Coding({
     code: "259663004",
     display: "Pyridoxal 5'-phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VitaminD3Metabolite: Coding.FromStrict({
+  NutrientCodeValueSet_VitaminD3Metabolite: new Coding({
     code: "259665006",
     display: "Vitamin D3 metabolite",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_AlphaTocopherol: Coding.FromStrict({
+  NutrientCodeValueSet_AlphaTocopherol: new Coding({
     code: "259666007",
     display: "Alpha-tocopherol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FluorideToothpaste: Coding.FromStrict({
+  NutrientCodeValueSet_FluorideToothpaste: new Coding({
     code: "261353004",
     display: "Fluoride toothpaste",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_LHomocystine: Coding.FromStrict({
+  NutrientCodeValueSet_LHomocystine: new Coding({
     code: "26645004",
     display: "L-Homocystine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_StarchGlycerite: Coding.FromStrict({
+  NutrientCodeValueSet_StarchGlycerite: new Coding({
     code: "26766001",
     display: "Starch glycerite",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_LTyrosine: Coding.FromStrict({
+  NutrientCodeValueSet_LTyrosine: new Coding({
     code: "27378009",
     display: "L-Tyrosine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_NicotinicAcid: Coding.FromStrict({
+  NutrientCodeValueSet_NicotinicAcid: new Coding({
     code: "273943001",
     display: "Nicotinic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_DentalFluorideVarnish: Coding.FromStrict({
+  NutrientCodeValueSet_DentalFluorideVarnish: new Coding({
     code: "277951002",
     display: "Dental fluoride varnish",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_DentalFluorideGel: Coding.FromStrict({
+  NutrientCodeValueSet_DentalFluorideGel: new Coding({
     code: "277953004",
     display: "Dental fluoride gel",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_DentalFluorideSolution: Coding.FromStrict({
+  NutrientCodeValueSet_DentalFluorideSolution: new Coding({
     code: "277954005",
     display: "Dental fluoride solution",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SoyBasedBabyMilk: Coding.FromStrict({
+  NutrientCodeValueSet_SoyBasedBabyMilk: new Coding({
     code: "284460001",
     display: "Soy-based baby milk",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CoCobaltDietary: Coding.FromStrict({
+  NutrientCodeValueSet_CoCobaltDietary: new Coding({
     code: "290131005",
     display: "Co - Cobalt- dietary",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FreeGlycerol: Coding.FromStrict({
+  NutrientCodeValueSet_FreeGlycerol: new Coding({
     code: "301862003",
     display: "Free glycerol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IonizedMagnesium: Coding.FromStrict({
+  NutrientCodeValueSet_IonizedMagnesium: new Coding({
     code: "304051003",
     display: "Ionized magnesium",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ZincSulfide: Coding.FromStrict({
+  NutrientCodeValueSet_ZincSulfide: new Coding({
     code: "311719002",
     display: "Zinc sulfide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_LMethionine: Coding.FromStrict({
+  NutrientCodeValueSet_LMethionine: new Coding({
     code: "312184007",
     display: "L-Methionine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_TraceMetal: Coding.FromStrict({
+  NutrientCodeValueSet_TraceMetal: new Coding({
     code: "312276003",
     display: "Trace metal",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_DXylulose: Coding.FromStrict({
+  NutrientCodeValueSet_DXylulose: new Coding({
     code: "32741009",
     display: "d-Xylulose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Fluid: Coding.FromStrict({
+  NutrientCodeValueSet_Fluid: new Coding({
     code: "33463005",
     display: "Fluid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Ribulose: Coding.FromStrict({
+  NutrientCodeValueSet_Ribulose: new Coding({
     code: "35344005",
     display: "Ribulose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_MuramicAcid: Coding.FromStrict({
+  NutrientCodeValueSet_MuramicAcid: new Coding({
     code: "36397007",
     display: "Muramic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VAL1Methylhistidine: Coding.FromStrict({
+  NutrientCodeValueSet_VAL1Methylhistidine: new Coding({
     code: "36434002",
     display: "1-Methylhistidine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Glucose1Phosphate: Coding.FromStrict({
+  NutrientCodeValueSet_Glucose1Phosphate: new Coding({
     code: "36816009",
     display: "Glucose-1-phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Glycogen: Coding.FromStrict({
+  NutrientCodeValueSet_Glycogen: new Coding({
     code: "36998008",
     display: "Glycogen",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_LCarnitine: Coding.FromStrict({
+  NutrientCodeValueSet_LCarnitine: new Coding({
     code: "372601001",
     display: "L-Carnitine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Fluoride: Coding.FromStrict({
+  NutrientCodeValueSet_Fluoride: new Coding({
     code: "372639009",
     display: "Fluoride",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Galactose: Coding.FromStrict({
+  NutrientCodeValueSet_Galactose: new Coding({
     code: "38182007",
     display: "Galactose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_HydroxypropylCellulose: Coding.FromStrict({
+  NutrientCodeValueSet_HydroxypropylCellulose: new Coding({
     code: "386927006",
     display: "Hydroxypropyl cellulose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Hydroxyethylcellose: Coding.FromStrict({
+  NutrientCodeValueSet_Hydroxyethylcellose: new Coding({
     code: "386932007",
     display: "Hydroxyethylcellose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PovidoneIodine: Coding.FromStrict({
+  NutrientCodeValueSet_PovidoneIodine: new Coding({
     code: "386989006",
     display: "Povidone iodine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ZincSupplement: Coding.FromStrict({
+  NutrientCodeValueSet_ZincSupplement: new Coding({
     code: "387021003",
     display: "Zinc supplement",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CholineBitartrate: Coding.FromStrict({
+  NutrientCodeValueSet_CholineBitartrate: new Coding({
     code: "387030006",
     display: "Choline bitartrate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Calamine: Coding.FromStrict({
+  NutrientCodeValueSet_Calamine: new Coding({
     code: "387082008",
     display: "Calamine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Methylcellulose: Coding.FromStrict({
+  NutrientCodeValueSet_Methylcellulose: new Coding({
     code: "387131008",
     display: "Methylcellulose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PolysaccharideIronComplex: Coding.FromStrict({
+  NutrientCodeValueSet_PolysaccharideIronComplex: new Coding({
     code: "387206004",
     display: "Polysaccharide-iron complex",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ZincSulfate: Coding.FromStrict({
+  NutrientCodeValueSet_ZincSulfate: new Coding({
     code: "387367007",
     display: "Zinc sulfate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FluorideSalt: Coding.FromStrict({
+  NutrientCodeValueSet_FluorideSalt: new Coding({
     code: "387415009",
     display: "Fluoride salt",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_GlycerolTeichoicAcid: Coding.FromStrict({
+  NutrientCodeValueSet_GlycerolTeichoicAcid: new Coding({
     code: "38839009",
     display: "Glycerol teichoic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_AlginicAcid: Coding.FromStrict({
+  NutrientCodeValueSet_AlginicAcid: new Coding({
     code: "391734004",
     display: "Alginic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Starch: Coding.FromStrict({
+  NutrientCodeValueSet_Starch: new Coding({
     code: "39360003",
     display: "Starch",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Iodixanol: Coding.FromStrict({
+  NutrientCodeValueSet_Iodixanol: new Coding({
     code: "395750001",
     display: "Iodixanol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Iohexol: Coding.FromStrict({
+  NutrientCodeValueSet_Iohexol: new Coding({
     code: "395751002",
     display: "Iohexol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Iomazenil123I: Coding.FromStrict({
+  NutrientCodeValueSet_Iomazenil123I: new Coding({
     code: "395752009",
     display: "Iomazenil[123I]",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Iomeprol: Coding.FromStrict({
+  NutrientCodeValueSet_Iomeprol: new Coding({
     code: "395753004",
     display: "Iomeprol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Iopamidol: Coding.FromStrict({
+  NutrientCodeValueSet_Iopamidol: new Coding({
     code: "395754005",
     display: "Iopamidol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Iopromide: Coding.FromStrict({
+  NutrientCodeValueSet_Iopromide: new Coding({
     code: "395756007",
     display: "Iopromide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IothalamateMeglumine: Coding.FromStrict({
+  NutrientCodeValueSet_IothalamateMeglumine: new Coding({
     code: "395757003",
     display: "Iothalamate meglumine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Iotrolan: Coding.FromStrict({
+  NutrientCodeValueSet_Iotrolan: new Coding({
     code: "395758008",
     display: "Iotrolan",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Ioversol: Coding.FromStrict({
+  NutrientCodeValueSet_Ioversol: new Coding({
     code: "395759000",
     display: "Ioversol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Ioxaglate: Coding.FromStrict({
+  NutrientCodeValueSet_Ioxaglate: new Coding({
     code: "395760005",
     display: "Ioxaglate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Calcipotriol: Coding.FromStrict({
+  NutrientCodeValueSet_Calcipotriol: new Coding({
     code: "395766004",
     display: "Calcipotriol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_LevofolinicAcid: Coding.FromStrict({
+  NutrientCodeValueSet_LevofolinicAcid: new Coding({
     code: "395769006",
     display: "Levofolinic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_LSelenomethionine75Se: Coding.FromStrict({
+  NutrientCodeValueSet_LSelenomethionine75Se: new Coding({
     code: "395775002",
     display: "L-Selenomethionine[75Se]",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_MeglumineIotroxinate: Coding.FromStrict({
+  NutrientCodeValueSet_MeglumineIotroxinate: new Coding({
     code: "395782003",
     display: "Meglumine iotroxinate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Metaiodobenzylguanidine123I: Coding.FromStrict({
+  NutrientCodeValueSet_Metaiodobenzylguanidine123I: new Coding({
     code: "395787009",
     display: "Metaiodobenzylguanidine[123I]",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Metaiodobenzylguanidine131I: Coding.FromStrict({
+  NutrientCodeValueSet_Metaiodobenzylguanidine131I: new Coding({
     code: "395789007",
     display: "Metaiodobenzylguanidine[131I]",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Methylcellulose450: Coding.FromStrict({
+  NutrientCodeValueSet_Methylcellulose450: new Coding({
     code: "395791004",
     display: "Methylcellulose-450",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Metrizoate: Coding.FromStrict({
+  NutrientCodeValueSet_Metrizoate: new Coding({
     code: "395792006",
     display: "Metrizoate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Oxerutins: Coding.FromStrict({
+  NutrientCodeValueSet_Oxerutins: new Coding({
     code: "395815002",
     display: "Oxerutins",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_AlphaTocopherolAcetate: Coding.FromStrict({
+  NutrientCodeValueSet_AlphaTocopherolAcetate: new Coding({
     code: "395830006",
     display: "Alpha tocopherol acetate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PotassiumAminobenzoate: Coding.FromStrict({
+  NutrientCodeValueSet_PotassiumAminobenzoate: new Coding({
     code: "395838004",
     display: "Potassium aminobenzoate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PotassiumAscorbate: Coding.FromStrict({
+  NutrientCodeValueSet_PotassiumAscorbate: new Coding({
     code: "395839007",
     display: "Potassium ascorbate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PotassiumIodate: Coding.FromStrict({
+  NutrientCodeValueSet_PotassiumIodate: new Coding({
     code: "395840009",
     display: "Potassium iodate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SodiumDiatrizoate: Coding.FromStrict({
+  NutrientCodeValueSet_SodiumDiatrizoate: new Coding({
     code: "395875009",
     display: "Sodium diatrizoate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SodiumIopodate: Coding.FromStrict({
+  NutrientCodeValueSet_SodiumIopodate: new Coding({
     code: "395877001",
     display: "Sodium iopodate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SodiumIothalamate: Coding.FromStrict({
+  NutrientCodeValueSet_SodiumIothalamate: new Coding({
     code: "395878006",
     display: "Sodium iothalamate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SodiumIothalamate125I: Coding.FromStrict({
+  NutrientCodeValueSet_SodiumIothalamate125I: new Coding({
     code: "395879003",
     display: "Sodium iothalamate [125I]",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_TauroselcholicAcid75Se: Coding.FromStrict({
+  NutrientCodeValueSet_TauroselcholicAcid75Se: new Coding({
     code: "395894004",
     display: "Tauroselcholic acid[75Se]",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ZincSulfateMonohydrate: Coding.FromStrict({
+  NutrientCodeValueSet_ZincSulfateMonohydrate: new Coding({
     code: "395925008",
     display: "Zinc sulfate monohydrate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Chromium51CrEdetate: Coding.FromStrict({
+  NutrientCodeValueSet_Chromium51CrEdetate: new Coding({
     code: "395941009",
     display: "Chromium[51Cr] edetate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Xylitol: Coding.FromStrict({
+  NutrientCodeValueSet_Xylitol: new Coding({
     code: "395951005",
     display: "Xylitol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ZincAcetate: Coding.FromStrict({
+  NutrientCodeValueSet_ZincAcetate: new Coding({
     code: "395952003",
     display: "Zinc acetate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Iothalamate: Coding.FromStrict({
+  NutrientCodeValueSet_Iothalamate: new Coding({
     code: "395981002",
     display: "Iothalamate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IothalamicAcid: Coding.FromStrict({
+  NutrientCodeValueSet_IothalamicAcid: new Coding({
     code: "395982009",
     display: "Iothalamic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CalciumIopodate: Coding.FromStrict({
+  NutrientCodeValueSet_CalciumIopodate: new Coding({
     code: "396003009",
     display: "Calcium iopodate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Diatrizoate: Coding.FromStrict({
+  NutrientCodeValueSet_Diatrizoate: new Coding({
     code: "396020008",
     display: "Diatrizoate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FerricCitrate59Fe: Coding.FromStrict({
+  NutrientCodeValueSet_FerricCitrate59Fe: new Coding({
     code: "396056006",
     display: "Ferric citrate[59Fe]",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FolinicAcid: Coding.FromStrict({
+  NutrientCodeValueSet_FolinicAcid: new Coding({
     code: "396065004",
     display: "Folinic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Iodipamide: Coding.FromStrict({
+  NutrientCodeValueSet_Iodipamide: new Coding({
     code: "398939009",
     display: "Iodipamide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Fructose1Phosphate: Coding.FromStrict({
+  NutrientCodeValueSet_Fructose1Phosphate: new Coding({
     code: "40479008",
     display: "Fructose-1-phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_UnboundCopper: Coding.FromStrict({
+  NutrientCodeValueSet_UnboundCopper: new Coding({
     code: "409093004",
     display: "Unbound copper",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_BoundCopper: Coding.FromStrict({
+  NutrientCodeValueSet_BoundCopper: new Coding({
     code: "409094005",
     display: "Bound copper",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VitaminBGreaterThan12aLessThan: Coding.FromStrict({
+  NutrientCodeValueSet_VitaminBGreaterThan12aLessThan: new Coding({
     code: "409257009",
     display: "Vitamin B>12a<",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VitaminBGreaterThan12bLessThan: Coding.FromStrict({
+  NutrientCodeValueSet_VitaminBGreaterThan12bLessThan: new Coding({
     code: "409258004",
     display: "Vitamin B>12b<",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VAL1GreaterThan3BetaDGlucan: Coding.FromStrict({
+  NutrientCodeValueSet_VAL1GreaterThan3BetaDGlucan: new Coding({
     code: "409871008",
     display: "(1-->3)-beta-D-glucan",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ZincDiethyldithiocarbamate: Coding.FromStrict({
+  NutrientCodeValueSet_ZincDiethyldithiocarbamate: new Coding({
     code: "411332009",
     display: "Zinc diethyldithiocarbamate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Icodextrin: Coding.FromStrict({
+  NutrientCodeValueSet_Icodextrin: new Coding({
     code: "412135003",
     display: "Icodextrin",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Hesperidin: Coding.FromStrict({
+  NutrientCodeValueSet_Hesperidin: new Coding({
     code: "412203006",
     display: "Hesperidin",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IopanoicAcid: Coding.FromStrict({
+  NutrientCodeValueSet_IopanoicAcid: new Coding({
     code: "412227008",
     display: "Iopanoic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IoxaglateMeglumine: Coding.FromStrict({
+  NutrientCodeValueSet_IoxaglateMeglumine: new Coding({
     code: "412228003",
     display: "Ioxaglate meglumine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IoxaglateSodium: Coding.FromStrict({
+  NutrientCodeValueSet_IoxaglateSodium: new Coding({
     code: "412230001",
     display: "Ioxaglate sodium",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Menadione: Coding.FromStrict({
+  NutrientCodeValueSet_Menadione: new Coding({
     code: "412244007",
     display: "Menadione",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_MultivitaminAgent: Coding.FromStrict({
+  NutrientCodeValueSet_MultivitaminAgent: new Coding({
     code: "412250002",
     display: "Multivitamin agent",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Hypromellose: Coding.FromStrict({
+  NutrientCodeValueSet_Hypromellose: new Coding({
     code: "412410003",
     display: "Hypromellose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IpodateSodium: Coding.FromStrict({
+  NutrientCodeValueSet_IpodateSodium: new Coding({
     code: "412415008",
     display: "Ipodate sodium",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PyrophosphateSodium: Coding.FromStrict({
+  NutrientCodeValueSet_PyrophosphateSodium: new Coding({
     code: "412512009",
     display: "Pyrophosphate sodium",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CadexomerIodine: Coding.FromStrict({
+  NutrientCodeValueSet_CadexomerIodine: new Coding({
     code: "412595005",
     display: "Cadexomer iodine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_AlphaCarotene: Coding.FromStrict({
+  NutrientCodeValueSet_AlphaCarotene: new Coding({
     code: "413483001",
     display: "alpha-Carotene",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Erythrose: Coding.FromStrict({
+  NutrientCodeValueSet_Erythrose: new Coding({
     code: "41441005",
     display: "Erythrose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_InositolNiacinate: Coding.FromStrict({
+  NutrientCodeValueSet_InositolNiacinate: new Coding({
     code: "414506003",
     display: "Inositol niacinate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SodiumGlycerophosphate: Coding.FromStrict({
+  NutrientCodeValueSet_SodiumGlycerophosphate: new Coding({
     code: "415543009",
     display: "Sodium glycerophosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SoyBeanProduct: Coding.FromStrict({
+  NutrientCodeValueSet_SoyBeanProduct: new Coding({
     code: "415562007",
     display: "Soy bean product",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Iodophore: Coding.FromStrict({
+  NutrientCodeValueSet_Iodophore: new Coding({
     code: "417955006",
     display: "Iodophore",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CelluloseDerivative: Coding.FromStrict({
+  NutrientCodeValueSet_CelluloseDerivative: new Coding({
     code: "418346004",
     display: "Cellulose derivative",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CelluloseDerivedViscosityModifier: Coding.FromStrict({
+  NutrientCodeValueSet_CelluloseDerivedViscosityModifier: new Coding({
     code: "418407000",
     display: "Cellulose-derived viscosity modifier",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IodoformAgent: Coding.FromStrict({
+  NutrientCodeValueSet_IodoformAgent: new Coding({
     code: "418692007",
     display: "Iodoform agent",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Lactitol: Coding.FromStrict({
+  NutrientCodeValueSet_Lactitol: new Coding({
     code: "418929008",
     display: "Lactitol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_TryptophanAgent: Coding.FromStrict({
+  NutrientCodeValueSet_TryptophanAgent: new Coding({
     code: "418990001",
     display: "Tryptophan agent",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Lipiodol: Coding.FromStrict({
+  NutrientCodeValueSet_Lipiodol: new Coding({
     code: "419297002",
     display: "Lipiodol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Cyanocobalamin: Coding.FromStrict({
+  NutrientCodeValueSet_Cyanocobalamin: new Coding({
     code: "419382002",
     display: "Cyanocobalamin",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Carboxymethylcellulose: Coding.FromStrict({
+  NutrientCodeValueSet_Carboxymethylcellulose: new Coding({
     code: "419432008",
     display: "Carboxymethylcellulose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_TopicalSelenium: Coding.FromStrict({
+  NutrientCodeValueSet_TopicalSelenium: new Coding({
     code: "419508004",
     display: "Topical selenium",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VitaminB12Category: Coding.FromStrict({
+  NutrientCodeValueSet_VitaminB12Category: new Coding({
     code: "419679002",
     display: "Vitamin B12 - category",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_MonosodiumLAspartate: Coding.FromStrict({
+  NutrientCodeValueSet_MonosodiumLAspartate: new Coding({
     code: "420075002",
     display: "Monosodium L-aspartate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Menadiol: Coding.FromStrict({
+  NutrientCodeValueSet_Menadiol: new Coding({
     code: "421289007",
     display: "Menadiol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ZincGlycinate: Coding.FromStrict({
+  NutrientCodeValueSet_ZincGlycinate: new Coding({
     code: "421526004",
     display: "Zinc glycinate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_RetinolAcetate: Coding.FromStrict({
+  NutrientCodeValueSet_RetinolAcetate: new Coding({
     code: "421621000",
     display: "Retinol acetate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ZincCitrate: Coding.FromStrict({
+  NutrientCodeValueSet_ZincCitrate: new Coding({
     code: "421881000",
     display: "Zinc citrate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VitaminKGreaterThan4LessThan: Coding.FromStrict({
+  NutrientCodeValueSet_VitaminKGreaterThan4LessThan: new Coding({
     code: "422073002",
     display: "Vitamin K>4<",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VitaminAPalmitate: Coding.FromStrict({
+  NutrientCodeValueSet_VitaminAPalmitate: new Coding({
     code: "422160004",
     display: "Vitamin A palmitate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power62PowerCopper: Coding.FromStrict({
+  NutrientCodeValueSet_Power62PowerCopper: new Coding({
     code: "422934004",
     display: "^62^Copper",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FluorobenzothiazoleFPower18Power: Coding.FromStrict({
+  NutrientCodeValueSet_FluorobenzothiazoleFPower18Power: new Coding({
     code: "423061008",
     display: "Fluorobenzothiazole F^18^",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FluoromethaneFPower18Power: Coding.FromStrict({
+  NutrientCodeValueSet_FluoromethaneFPower18Power: new Coding({
     code: "423071005",
     display: "Fluoromethane F^18^",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_MonoclonalAntibodyIPower124Power: Coding.FromStrict({
+  NutrientCodeValueSet_MonoclonalAntibodyIPower124Power: new Coding({
     code: "423249007",
     display: "Monoclonal antibody I^124^",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FluorouracilFPower18Power: Coding.FromStrict({
+  NutrientCodeValueSet_FluorouracilFPower18Power: new Coding({
     code: "423373002",
     display: "Fluorouracil F^18^",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FluorethyltyrosinFPower18Power: Coding.FromStrict({
+  NutrientCodeValueSet_FluorethyltyrosinFPower18Power: new Coding({
     code: "423388007",
     display: "Fluorethyltyrosin F^18^",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ATSMCuPower64Power: Coding.FromStrict({
+  NutrientCodeValueSet_ATSMCuPower64Power: new Coding({
     code: "423432002",
     display: "ATSM Cu^64^",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_NicotinicAcidAndDerivatives: Coding.FromStrict({
+  NutrientCodeValueSet_NicotinicAcidAndDerivatives: new Coding({
     code: "423725005",
     display: "Nicotinic acid and derivatives",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FluoromisonidazoleFPower18Power: Coding.FromStrict({
+  NutrientCodeValueSet_FluoromisonidazoleFPower18Power: new Coding({
     code: "423795001",
     display: "Fluoromisonidazole F^18^",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PTSMCuPower62Power: Coding.FromStrict({
+  NutrientCodeValueSet_PTSMCuPower62Power: new Coding({
     code: "423809007",
     display: "PTSM Cu^62^",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Sphalerite: Coding.FromStrict({
+  NutrientCodeValueSet_Sphalerite: new Coding({
     code: "425329004",
     display: "Sphalerite",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power60PowerCopper: Coding.FromStrict({
+  NutrientCodeValueSet_Power60PowerCopper: new Coding({
     code: "425364008",
     display: "^60^Copper",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ZincSulfateHeptahydrate: Coding.FromStrict({
+  NutrientCodeValueSet_ZincSulfateHeptahydrate: new Coding({
     code: "425702007",
     display: "Zinc sulfate heptahydrate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SodiumPantothenate: Coding.FromStrict({
+  NutrientCodeValueSet_SodiumPantothenate: new Coding({
     code: "425867009",
     display: "Sodium pantothenate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Hydroxyapatite: Coding.FromStrict({
+  NutrientCodeValueSet_Hydroxyapatite: new Coding({
     code: "425874004",
     display: "Hydroxyapatite",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IodinatedContrastMedia: Coding.FromStrict({
+  NutrientCodeValueSet_IodinatedContrastMedia: new Coding({
     code: "426722004",
     display: "Iodinated contrast media",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Gluconolactone: Coding.FromStrict({
+  NutrientCodeValueSet_Gluconolactone: new Coding({
     code: "427638006",
     display: "Gluconolactone",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_HexylNicotinate: Coding.FromStrict({
+  NutrientCodeValueSet_HexylNicotinate: new Coding({
     code: "428732003",
     display: "Hexyl nicotinate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Polydextrose: Coding.FromStrict({
+  NutrientCodeValueSet_Polydextrose: new Coding({
     code: "429592005",
     display: "Polydextrose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_LevoleucovorinCalcium: Coding.FromStrict({
+  NutrientCodeValueSet_LevoleucovorinCalcium: new Coding({
     code: "429990006",
     display: "Levoleucovorin calcium",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VitaminB6_2: Coding.FromStrict({
+  NutrientCodeValueSet_VitaminB6_2: new Coding({
     code: "430469009",
     display: "Vitamin B6",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Pyridoxamine: Coding.FromStrict({
+  NutrientCodeValueSet_Pyridoxamine: new Coding({
     code: "430632000",
     display: "Pyridoxamine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Pyridoxine5QuotePhosphate: Coding.FromStrict({
+  NutrientCodeValueSet_Pyridoxine5QuotePhosphate: new Coding({
     code: "430633005",
     display: "Pyridoxine 5'-phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Pyridoxamine5QuotePhosphate: Coding.FromStrict({
+  NutrientCodeValueSet_Pyridoxamine5QuotePhosphate: new Coding({
     code: "430634004",
     display: "Pyridoxamine 5'-phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Pyridoxal: Coding.FromStrict({
+  NutrientCodeValueSet_Pyridoxal: new Coding({
     code: "430926008",
     display: "Pyridoxal",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_LMethylFolicAcid: Coding.FromStrict({
+  NutrientCodeValueSet_LMethylFolicAcid: new Coding({
     code: "432165000",
     display: "L-methyl folic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Cobalt57CoChloride: Coding.FromStrict({
+  NutrientCodeValueSet_Cobalt57CoChloride: new Coding({
     code: "432219009",
     display: "Cobalt[57Co] chloride",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Chlorotoxin131I: Coding.FromStrict({
+  NutrientCodeValueSet_Chlorotoxin131I: new Coding({
     code: "432884004",
     display: "Chlorotoxin [131I]",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_LevoleucovorinCalciumPentahydrate: Coding.FromStrict({
+  NutrientCodeValueSet_LevoleucovorinCalciumPentahydrate: new Coding({
     code: "433468002",
     display: "Levoleucovorin calcium pentahydrate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Maltose: Coding.FromStrict({
+  NutrientCodeValueSet_Maltose: new Coding({
     code: "43431002",
     display: "Maltose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_BetaDFructofuranose: Coding.FromStrict({
+  NutrientCodeValueSet_BetaDFructofuranose: new Coding({
     code: "43728004",
     display: "beta-D-fructofuranose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SugarAcid: Coding.FromStrict({
+  NutrientCodeValueSet_SugarAcid: new Coding({
     code: "438901003",
     display: "Sugar acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CyclicOligosaccharide: Coding.FromStrict({
+  NutrientCodeValueSet_CyclicOligosaccharide: new Coding({
     code: "442247006",
     display: "Cyclic oligosaccharide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ManganeseGluconate: Coding.FromStrict({
+  NutrientCodeValueSet_ManganeseGluconate: new Coding({
     code: "442330008",
     display: "Manganese gluconate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Sugammadex: Coding.FromStrict({
+  NutrientCodeValueSet_Sugammadex: new Coding({
     code: "442340006",
     display: "Sugammadex",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_RiboflavinSodiumPhosphate: Coding.FromStrict({
+  NutrientCodeValueSet_RiboflavinSodiumPhosphate: new Coding({
     code: "442346000",
     display: "Riboflavin sodium phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Omega5Gliadin: Coding.FromStrict({
+  NutrientCodeValueSet_Omega5Gliadin: new Coding({
     code: "443148002",
     display: "Omega-5 gliadin",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IodinePower131PowerMethylnorcholestenol: Coding.FromStrict({
+  NutrientCodeValueSet_IodinePower131PowerMethylnorcholestenol: new Coding({
     code: "446531006",
     display: "Iodine^131^ methylnorcholestenol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IodinePower123Power154Iodophenyl3RSMethylpentadecanoicAcid: Coding.FromStrict({
+  NutrientCodeValueSet_IodinePower123Power154Iodophenyl3RSMethylpentadecanoicAcid: new Coding({
     code: "447134003",
     display: "Iodine^123^ 15-(4-iodophenyl)-3(R,S)-methylpentadecanoic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_LevomefolateCalcium: Coding.FromStrict({
+  NutrientCodeValueSet_LevomefolateCalcium: new Coding({
     code: "449236003",
     display: "Levomefolate calcium",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_LAsparticAcid: Coding.FromStrict({
+  NutrientCodeValueSet_LAsparticAcid: new Coding({
     code: "44970006",
     display: "L-Aspartic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FluorocholineFPower18Power: Coding.FromStrict({
+  NutrientCodeValueSet_FluorocholineFPower18Power: new Coding({
     code: "456992002",
     display: "Fluorocholine F^18^",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FlorbetapirFPower18Power: Coding.FromStrict({
+  NutrientCodeValueSet_FlorbetapirFPower18Power: new Coding({
     code: "456995000",
     display: "Florbetapir F^18^",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FlutemetamolFPower18Power: Coding.FromStrict({
+  NutrientCodeValueSet_FlutemetamolFPower18Power: new Coding({
     code: "456997008",
     display: "Flutemetamol F^18^",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FluciclatideFPower18Power: Coding.FromStrict({
+  NutrientCodeValueSet_FluciclatideFPower18Power: new Coding({
     code: "456999006",
     display: "Fluciclatide F^18^",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FluciclovineFPower18Power: Coding.FromStrict({
+  NutrientCodeValueSet_FluciclovineFPower18Power: new Coding({
     code: "457000009",
     display: "Fluciclovine F^18^",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Collodion: Coding.FromStrict({
+  NutrientCodeValueSet_Collodion: new Coding({
     code: "45962009",
     display: "Collodion",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Oligosaccharide: Coding.FromStrict({
+  NutrientCodeValueSet_Oligosaccharide: new Coding({
     code: "46075000",
     display: "Oligosaccharide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Lactose: Coding.FromStrict({
+  NutrientCodeValueSet_Lactose: new Coding({
     code: "47703008",
     display: "Lactose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_RibitolTeichoicAcid: Coding.FromStrict({
+  NutrientCodeValueSet_RibitolTeichoicAcid: new Coding({
     code: "48736006",
     display: "Ribitol teichoic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power99PowerMolybdenum: Coding.FromStrict({
+  NutrientCodeValueSet_Power99PowerMolybdenum: new Coding({
     code: "48861002",
     display: "^99^Molybdenum",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_GluconicAcid: Coding.FromStrict({
+  NutrientCodeValueSet_GluconicAcid: new Coding({
     code: "49506005",
     display: "Gluconic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_GammaKetovalericAcid: Coding.FromStrict({
+  NutrientCodeValueSet_GammaKetovalericAcid: new Coding({
     code: "50233008",
     display: "gamma-Ketovaleric acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power120PowerIodine: Coding.FromStrict({
+  NutrientCodeValueSet_Power120PowerIodine: new Coding({
     code: "50374006",
     display: "^120^Iodine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CarmelloseSodium: Coding.FromStrict({
+  NutrientCodeValueSet_CarmelloseSodium: new Coding({
     code: "51224002",
     display: "Carmellose sodium",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power123PowerTin: Coding.FromStrict({
+  NutrientCodeValueSet_Power123PowerTin: new Coding({
     code: "51774004",
     display: "^123^Tin",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Quercetin: Coding.FromStrict({
+  NutrientCodeValueSet_Quercetin: new Coding({
     code: "52130006",
     display: "Quercetin",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_LArginine: Coding.FromStrict({
+  NutrientCodeValueSet_LArginine: new Coding({
     code: "52625008",
     display: "L-Arginine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IodateSalt: Coding.FromStrict({
+  NutrientCodeValueSet_IodateSalt: new Coding({
     code: "52717004",
     display: "Iodate salt",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_LThreonine: Coding.FromStrict({
+  NutrientCodeValueSet_LThreonine: new Coding({
     code: "52736009",
     display: "L-Threonine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power51PowerChromium: Coding.FromStrict({
+  NutrientCodeValueSet_Power51PowerChromium: new Coding({
     code: "52745005",
     display: "^51^Chromium",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ManganeseRadioisotope: Coding.FromStrict({
+  NutrientCodeValueSet_ManganeseRadioisotope: new Coding({
     code: "52860004",
     display: "Manganese radioisotope",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FlavinMononucleotide: Coding.FromStrict({
+  NutrientCodeValueSet_FlavinMononucleotide: new Coding({
     code: "53499005",
     display: "Flavin mononucleotide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ZincIsotope: Coding.FromStrict({
+  NutrientCodeValueSet_ZincIsotope: new Coding({
     code: "53560004",
     display: "Zinc isotope",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Fructose6Phosphate: Coding.FromStrict({
+  NutrientCodeValueSet_Fructose6Phosphate: new Coding({
     code: "53646005",
     display: "Fructose-6-phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power67PowerCopper: Coding.FromStrict({
+  NutrientCodeValueSet_Power67PowerCopper: new Coding({
     code: "53700003",
     display: "^67^Copper",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Hemicellulose: Coding.FromStrict({
+  NutrientCodeValueSet_Hemicellulose: new Coding({
     code: "53834009",
     display: "Hemicellulose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Glyceraldehyde: Coding.FromStrict({
+  NutrientCodeValueSet_Glyceraldehyde: new Coding({
     code: "54045000",
     display: "Glyceraldehyde",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IodicAcid: Coding.FromStrict({
+  NutrientCodeValueSet_IodicAcid: new Coding({
     code: "54083004",
     display: "Iodic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_HydrogenSelenide: Coding.FromStrict({
+  NutrientCodeValueSet_HydrogenSelenide: new Coding({
     code: "54517000",
     display: "Hydrogen selenide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CoCobalt: Coding.FromStrict({
+  NutrientCodeValueSet_CoCobalt: new Coding({
     code: "54808007",
     display: "Co - Cobalt",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_LTryptophan: Coding.FromStrict({
+  NutrientCodeValueSet_LTryptophan: new Coding({
     code: "54821000",
     display: "L-Tryptophan",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power28PowerMagnesium: Coding.FromStrict({
+  NutrientCodeValueSet_Power28PowerMagnesium: new Coding({
     code: "55328009",
     display: "^28^Magnesium",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_AcidulatedPhosphateFluoride: Coding.FromStrict({
+  NutrientCodeValueSet_AcidulatedPhosphateFluoride: new Coding({
     code: "55495002",
     display: "Acidulated phosphate fluoride",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Pectin: Coding.FromStrict({
+  NutrientCodeValueSet_Pectin: new Coding({
     code: "55946005",
     display: "Pectin",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power58mPowerCobalt: Coding.FromStrict({
+  NutrientCodeValueSet_Power58mPowerCobalt: new Coding({
     code: "56158000",
     display: "^58m^Cobalt",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Leucocyanidin: Coding.FromStrict({
+  NutrientCodeValueSet_Leucocyanidin: new Coding({
     code: "56383006",
     display: "Leucocyanidin",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Triiodotyrosine: Coding.FromStrict({
+  NutrientCodeValueSet_Triiodotyrosine: new Coding({
     code: "56740002",
     display: "Triiodotyrosine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IodineCompound: Coding.FromStrict({
+  NutrientCodeValueSet_IodineCompound: new Coding({
     code: "57272005",
     display: "Iodine compound",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ZincRadioisotope: Coding.FromStrict({
+  NutrientCodeValueSet_ZincRadioisotope: new Coding({
     code: "57273000",
     display: "Zinc radioisotope",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power57PowerNickel: Coding.FromStrict({
+  NutrientCodeValueSet_Power57PowerNickel: new Coding({
     code: "57279001",
     display: "^57^Nickel",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Fluorodopa18F: Coding.FromStrict({
+  NutrientCodeValueSet_Fluorodopa18F: new Coding({
     code: "5811000122108",
     display: "Fluorodopa [18F]",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Fructose: Coding.FromStrict({
+  NutrientCodeValueSet_Fructose: new Coding({
     code: "58202007",
     display: "Fructose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SeleniumHexafluoride: Coding.FromStrict({
+  NutrientCodeValueSet_SeleniumHexafluoride: new Coding({
     code: "58279004",
     display: "Selenium hexafluoride",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SeleniumSulfide: Coding.FromStrict({
+  NutrientCodeValueSet_SeleniumSulfide: new Coding({
     code: "58292001",
     display: "Selenium sulfide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_LAlanine: Coding.FromStrict({
+  NutrientCodeValueSet_LAlanine: new Coding({
     code: "58753009",
     display: "L-Alanine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VAL3Dehydroretinol: Coding.FromStrict({
+  NutrientCodeValueSet_VAL3Dehydroretinol: new Coding({
     code: "60244003",
     display: "3-Dehydroretinol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Histidine: Coding.FromStrict({
+  NutrientCodeValueSet_Histidine: new Coding({
     code: "60260004",
     display: "Histidine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_NeovitaminA: Coding.FromStrict({
+  NutrientCodeValueSet_NeovitaminA: new Coding({
     code: "60764009",
     display: "Neovitamin A",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power125PowerTin: Coding.FromStrict({
+  NutrientCodeValueSet_Power125PowerTin: new Coding({
     code: "60908004",
     display: "^125^Tin",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ColloidalIodine: Coding.FromStrict({
+  NutrientCodeValueSet_ColloidalIodine: new Coding({
     code: "61025005",
     display: "Colloidal iodine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Sedoheptulose: Coding.FromStrict({
+  NutrientCodeValueSet_Sedoheptulose: new Coding({
     code: "61045002",
     display: "Sedoheptulose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_MonobasicPotassiumPhosphate: Coding.FromStrict({
+  NutrientCodeValueSet_MonobasicPotassiumPhosphate: new Coding({
     code: "61244006",
     display: "Monobasic potassium phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Fructose16Phosphate: Coding.FromStrict({
+  NutrientCodeValueSet_Fructose16Phosphate: new Coding({
     code: "62174006",
     display: "Fructose-1-6-phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ChloriodizedOil: Coding.FromStrict({
+  NutrientCodeValueSet_ChloriodizedOil: new Coding({
     code: "62442005",
     display: "Chloriodized oil",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SodiumIodide: Coding.FromStrict({
+  NutrientCodeValueSet_SodiumIodide: new Coding({
     code: "62754006",
     display: "Sodium iodide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_TeichoicAcid: Coding.FromStrict({
+  NutrientCodeValueSet_TeichoicAcid: new Coding({
     code: "62763008",
     display: "Teichoic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Phenylalanine: Coding.FromStrict({
+  NutrientCodeValueSet_Phenylalanine: new Coding({
     code: "63004003",
     display: "Phenylalanine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Mannose: Coding.FromStrict({
+  NutrientCodeValueSet_Mannose: new Coding({
     code: "63089006",
     display: "Mannose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_NonessentialAminoAcid: Coding.FromStrict({
+  NutrientCodeValueSet_NonessentialAminoAcid: new Coding({
     code: "63330006",
     display: "Nonessential amino acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ZincCyanide: Coding.FromStrict({
+  NutrientCodeValueSet_ZincCyanide: new Coding({
     code: "63349005",
     display: "Zinc cyanide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ZincStearate: Coding.FromStrict({
+  NutrientCodeValueSet_ZincStearate: new Coding({
     code: "63383003",
     display: "Zinc stearate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FolicAcid: Coding.FromStrict({
+  NutrientCodeValueSet_FolicAcid: new Coding({
     code: "63718003",
     display: "Folic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PhosphorusCompound: Coding.FromStrict({
+  NutrientCodeValueSet_PhosphorusCompound: new Coding({
     code: "63793008",
     display: "Phosphorus compound",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ZincChloride: Coding.FromStrict({
+  NutrientCodeValueSet_ZincChloride: new Coding({
     code: "64179000",
     display: "Zinc chloride",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IodineHeptafluoride: Coding.FromStrict({
+  NutrientCodeValueSet_IodineHeptafluoride: new Coding({
     code: "64538009",
     display: "Iodine heptafluoride",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power62PowerZinc: Coding.FromStrict({
+  NutrientCodeValueSet_Power62PowerZinc: new Coding({
     code: "65054007",
     display: "^62^Zinc",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VitaminK: Coding.FromStrict({
+  NutrientCodeValueSet_VitaminK: new Coding({
     code: "65183007",
     display: "Vitamin K",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PhosphorusOxychloride: Coding.FromStrict({
+  NutrientCodeValueSet_PhosphorusOxychloride: new Coding({
     code: "65586005",
     display: "Phosphorus oxychloride",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VitaminKGreaterThan1LessThan: Coding.FromStrict({
+  NutrientCodeValueSet_VitaminKGreaterThan1LessThan: new Coding({
     code: "66656000",
     display: "Vitamin K>1<",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CobaltDust: Coding.FromStrict({
+  NutrientCodeValueSet_CobaltDust: new Coding({
     code: "66781008",
     display: "Cobalt dust",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Copper: Coding.FromStrict({
+  NutrientCodeValueSet_Copper: new Coding({
     code: "66925006",
     display: "Copper",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_WheatDextrin: Coding.FromStrict({
+  NutrientCodeValueSet_WheatDextrin: new Coding({
     code: "669361000168106",
     display: "Wheat dextrin",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PhosphiteSalt: Coding.FromStrict({
+  NutrientCodeValueSet_PhosphiteSalt: new Coding({
     code: "66945003",
     display: "Phosphite salt",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power122PowerIodine: Coding.FromStrict({
+  NutrientCodeValueSet_Power122PowerIodine: new Coding({
     code: "66956003",
     display: "^122^Iodine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VitaminDGreaterThan3LessThanPhosphateEster: Coding.FromStrict({
+  NutrientCodeValueSet_VitaminDGreaterThan3LessThanPhosphateEster: new Coding({
     code: "67060008",
     display: "Vitamin D>3<, phosphate ester",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Glucose: Coding.FromStrict({
+  NutrientCodeValueSet_Glucose: new Coding({
     code: "67079006",
     display: "Glucose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power66PowerNickel: Coding.FromStrict({
+  NutrientCodeValueSet_Power66PowerNickel: new Coding({
     code: "67154005",
     display: "^66^Nickel",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ChromiumIsotope: Coding.FromStrict({
+  NutrientCodeValueSet_ChromiumIsotope: new Coding({
     code: "67266008",
     display: "Chromium isotope",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PangamicAcid: Coding.FromStrict({
+  NutrientCodeValueSet_PangamicAcid: new Coding({
     code: "67377000",
     display: "Pangamic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VAL25HydroxyErgocalciferol: Coding.FromStrict({
+  NutrientCodeValueSet_VAL25HydroxyErgocalciferol: new Coding({
     code: "67517005",
     display: "25-Hydroxy ergocalciferol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ThiamineMonophosphate: Coding.FromStrict({
+  NutrientCodeValueSet_ThiamineMonophosphate: new Coding({
     code: "67535001",
     display: "Thiamine monophosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SodiumIodideIPower123Power: Coding.FromStrict({
+  NutrientCodeValueSet_SodiumIodideIPower123Power: new Coding({
     code: "67690002",
     display: "Sodium iodide I^123^",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IodineIsotope: Coding.FromStrict({
+  NutrientCodeValueSet_IodineIsotope: new Coding({
     code: "67719005",
     display: "Iodine isotope",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CelluloseAcetate: Coding.FromStrict({
+  NutrientCodeValueSet_CelluloseAcetate: new Coding({
     code: "68024001",
     display: "Cellulose acetate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Quercetin3Rutinoside: Coding.FromStrict({
+  NutrientCodeValueSet_Quercetin3Rutinoside: new Coding({
     code: "68077006",
     display: "Quercetin-3-rutinoside",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PyrophosphateSalt: Coding.FromStrict({
+  NutrientCodeValueSet_PyrophosphateSalt: new Coding({
     code: "68334004",
     display: "Pyrophosphate salt",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power59PowerIron: Coding.FromStrict({
+  NutrientCodeValueSet_Power59PowerIron: new Coding({
     code: "68580003",
     display: "^59^Iron",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power125PowerIodine: Coding.FromStrict({
+  NutrientCodeValueSet_Power125PowerIodine: new Coding({
     code: "68630002",
     display: "^125^Iodine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Cellulose: Coding.FromStrict({
+  NutrientCodeValueSet_Cellulose: new Coding({
     code: "68992005",
     display: "Cellulose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power52PowerIron: Coding.FromStrict({
+  NutrientCodeValueSet_Power52PowerIron: new Coding({
     code: "69089000",
     display: "^52^Iron",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VitaminKGreaterThan3LessThan: Coding.FromStrict({
+  NutrientCodeValueSet_VitaminKGreaterThan3LessThan: new Coding({
     code: "69169004",
     display: "Vitamin K>3<",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PhosphorusPentasulfide: Coding.FromStrict({
+  NutrientCodeValueSet_PhosphorusPentasulfide: new Coding({
     code: "69324000",
     display: "Phosphorus pentasulfide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power63PowerNickel: Coding.FromStrict({
+  NutrientCodeValueSet_Power63PowerNickel: new Coding({
     code: "69750003",
     display: "^63^Nickel",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IronRadioisotope: Coding.FromStrict({
+  NutrientCodeValueSet_IronRadioisotope: new Coding({
     code: "69770009",
     display: "Iron radioisotope",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_MeglumineIodipamide: Coding.FromStrict({
+  NutrientCodeValueSet_MeglumineIodipamide: new Coding({
     code: "69783005",
     display: "Meglumine iodipamide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Sulbutiamine: Coding.FromStrict({
+  NutrientCodeValueSet_Sulbutiamine: new Coding({
     code: "699182008",
     display: "Sulbutiamine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Adenine: Coding.FromStrict({
+  NutrientCodeValueSet_Adenine: new Coding({
     code: "70203000",
     display: "Adenine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Hidrosmin: Coding.FromStrict({
+  NutrientCodeValueSet_Hidrosmin: new Coding({
     code: "702796008",
     display: "Hidrosmin",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Methionine: Coding.FromStrict({
+  NutrientCodeValueSet_Methionine: new Coding({
     code: "70288006",
     display: "Methionine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CobaltFumes: Coding.FromStrict({
+  NutrientCodeValueSet_CobaltFumes: new Coding({
     code: "70319005",
     display: "Cobalt fumes",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_LAlanylLGlutamine: Coding.FromStrict({
+  NutrientCodeValueSet_LAlanylLGlutamine: new Coding({
     code: "703391005",
     display: "L-alanyl-L-glutamine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_AmmoniumIodide: Coding.FromStrict({
+  NutrientCodeValueSet_AmmoniumIodide: new Coding({
     code: "703394002",
     display: "Ammonium iodide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_AscorbylPalmitate: Coding.FromStrict({
+  NutrientCodeValueSet_AscorbylPalmitate: new Coding({
     code: "703395001",
     display: "Ascorbyl palmitate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Benfotiamine: Coding.FromStrict({
+  NutrientCodeValueSet_Benfotiamine: new Coding({
     code: "703399007",
     display: "Benfotiamine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Bisbentiamine: Coding.FromStrict({
+  NutrientCodeValueSet_Bisbentiamine: new Coding({
     code: "703402008",
     display: "Bisbentiamine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Iobitridol: Coding.FromStrict({
+  NutrientCodeValueSet_Iobitridol: new Coding({
     code: "704384003",
     display: "Iobitridol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Panthenol: Coding.FromStrict({
+  NutrientCodeValueSet_Panthenol: new Coding({
     code: "704430002",
     display: "Panthenol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_AlphaLipoicAcid: Coding.FromStrict({
+  NutrientCodeValueSet_AlphaLipoicAcid: new Coding({
     code: "70496003",
     display: "alpha-Lipoic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_BetaAlanine: Coding.FromStrict({
+  NutrientCodeValueSet_BetaAlanine: new Coding({
     code: "70587000",
     display: "beta Alanine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FreeTryptophan: Coding.FromStrict({
+  NutrientCodeValueSet_FreeTryptophan: new Coding({
     code: "706927001",
     display: "Free tryptophan",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FreeThiamine: Coding.FromStrict({
+  NutrientCodeValueSet_FreeThiamine: new Coding({
     code: "706929003",
     display: "Free thiamine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FreeRetinol: Coding.FromStrict({
+  NutrientCodeValueSet_FreeRetinol: new Coding({
     code: "706930008",
     display: "Free retinol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FreeIodine: Coding.FromStrict({
+  NutrientCodeValueSet_FreeIodine: new Coding({
     code: "706936002",
     display: "Free iodine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FreeInositol: Coding.FromStrict({
+  NutrientCodeValueSet_FreeInositol: new Coding({
     code: "706938001",
     display: "Free inositol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FreeHydroxylysine: Coding.FromStrict({
+  NutrientCodeValueSet_FreeHydroxylysine: new Coding({
     code: "706941005",
     display: "Free hydroxylysine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FreeHomocystine: Coding.FromStrict({
+  NutrientCodeValueSet_FreeHomocystine: new Coding({
     code: "706942003",
     display: "Free homocystine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FreeHomocysteine: Coding.FromStrict({
+  NutrientCodeValueSet_FreeHomocysteine: new Coding({
     code: "706943008",
     display: "Free homocysteine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Arabitol: Coding.FromStrict({
+  NutrientCodeValueSet_Arabitol: new Coding({
     code: "706978008",
     display: "Arabitol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Xylulose: Coding.FromStrict({
+  NutrientCodeValueSet_Xylulose: new Coding({
     code: "706980002",
     display: "Xylulose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VAL125DihydroxyvitaminD: Coding.FromStrict({
+  NutrientCodeValueSet_VAL125DihydroxyvitaminD: new Coding({
     code: "707019004",
     display: "1,25-Dihydroxyvitamin D",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VAL125DihydroxyvitaminD2: Coding.FromStrict({
+  NutrientCodeValueSet_VAL125DihydroxyvitaminD2: new Coding({
     code: "707020005",
     display: "1,25-Dihydroxyvitamin D2",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VAL25HydroxyvitaminD: Coding.FromStrict({
+  NutrientCodeValueSet_VAL25HydroxyvitaminD: new Coding({
     code: "707053000",
     display: "25-Hydroxyvitamin D",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Troxerutin: Coding.FromStrict({
+  NutrientCodeValueSet_Troxerutin: new Coding({
     code: "70706009",
     display: "Troxerutin",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VAL3Epi25HydroxyvitaminD2: Coding.FromStrict({
+  NutrientCodeValueSet_VAL3Epi25HydroxyvitaminD2: new Coding({
     code: "707070008",
     display: "3-epi-25-Hydroxyvitamin D2",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VAL3Epi25HydroxyvitaminD3: Coding.FromStrict({
+  NutrientCodeValueSet_VAL3Epi25HydroxyvitaminD3: new Coding({
     code: "707071007",
     display: "3-epi-25-Hydroxyvitamin D3",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VAL5Methyltetrahydrofolate: Coding.FromStrict({
+  NutrientCodeValueSet_VAL5Methyltetrahydrofolate: new Coding({
     code: "707184000",
     display: "5-Methyltetrahydrofolate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Dehydroascorbate: Coding.FromStrict({
+  NutrientCodeValueSet_Dehydroascorbate: new Coding({
     code: "707244004",
     display: "Dehydroascorbate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SeleniumCompound: Coding.FromStrict({
+  NutrientCodeValueSet_SeleniumCompound: new Coding({
     code: "70726008",
     display: "Selenium compound",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_InorganicIodine: Coding.FromStrict({
+  NutrientCodeValueSet_InorganicIodine: new Coding({
     code: "707614005",
     display: "Inorganic iodine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_MethionineSulfoxide: Coding.FromStrict({
+  NutrientCodeValueSet_MethionineSulfoxide: new Coding({
     code: "707661006",
     display: "Methionine sulfoxide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_NMethylValine: Coding.FromStrict({
+  NutrientCodeValueSet_NMethylValine: new Coding({
     code: "707677007",
     display: "N-methyl valine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SulfatedMonosaccharide: Coding.FromStrict({
+  NutrientCodeValueSet_SulfatedMonosaccharide: new Coding({
     code: "708047003",
     display: "Sulfated monosaccharide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Succinyladenosine: Coding.FromStrict({
+  NutrientCodeValueSet_Succinyladenosine: new Coding({
     code: "708053003",
     display: "Succinyladenosine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_MethioninePlusTryptophan: Coding.FromStrict({
+  NutrientCodeValueSet_MethioninePlusTryptophan: new Coding({
     code: "708259008",
     display: "Methionine + tryptophan",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IsoleucinePlusLeucinePlusValine: Coding.FromStrict({
+  NutrientCodeValueSet_IsoleucinePlusLeucinePlusValine: new Coding({
     code: "708264007",
     display: "Isoleucine + leucine + valine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IsoleucinePlusLeucine: Coding.FromStrict({
+  NutrientCodeValueSet_IsoleucinePlusLeucine: new Coding({
     code: "708267000",
     display: "Isoleucine + leucine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_GlutaminePlusHistidine: Coding.FromStrict({
+  NutrientCodeValueSet_GlutaminePlusHistidine: new Coding({
     code: "708272009",
     display: "Glutamine + histidine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_GlutamatePlusGlutaminePlusThreonine: Coding.FromStrict({
+  NutrientCodeValueSet_GlutamatePlusGlutaminePlusThreonine: new Coding({
     code: "708276007",
     display: "Glutamate + glutamine + threonine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_GlutamatePlusGlutamine: Coding.FromStrict({
+  NutrientCodeValueSet_GlutamatePlusGlutamine: new Coding({
     code: "708280002",
     display: "Glutamate + glutamine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CystinePlusHomocystine: Coding.FromStrict({
+  NutrientCodeValueSet_CystinePlusHomocystine: new Coding({
     code: "708290005",
     display: "Cystine + homocystine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CystinePlusHomocysteine: Coding.FromStrict({
+  NutrientCodeValueSet_CystinePlusHomocysteine: new Coding({
     code: "708296004",
     display: "Cystine + homocysteine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_AsparaginePlusOrnithine: Coding.FromStrict({
+  NutrientCodeValueSet_AsparaginePlusOrnithine: new Coding({
     code: "708303001",
     display: "Asparagine + ornithine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_AnserinePlusCarnosinePlusCysteinePlusHistidinePlusOrnithine: Coding.FromStrict({
+  NutrientCodeValueSet_AnserinePlusCarnosinePlusCysteinePlusHistidinePlusOrnithine: new Coding({
     code: "708310007",
     display: "Anserine + carnosine + cysteine + histidine + ornithine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_AlaninePlusHistidinePlusLeucinePlusPhenylalaninePlusTyrosine: Coding.FromStrict({
+  NutrientCodeValueSet_AlaninePlusHistidinePlusLeucinePlusPhenylalaninePlusTyrosine: new Coding({
     code: "708316001",
     display: "Alanine + histidine + leucine + phenylalanine + tyrosine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_AlaninePlusBetaAlaninePlusSarcosine: Coding.FromStrict({
+  NutrientCodeValueSet_AlaninePlusBetaAlaninePlusSarcosine: new Coding({
     code: "708348002",
     display: "Alanine + beta alanine + sarcosine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_AlaninePlusEthanolamine: Coding.FromStrict({
+  NutrientCodeValueSet_AlaninePlusEthanolamine: new Coding({
     code: "708351009",
     display: "Alanine + ethanolamine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_AlloisoleucinePlusHydroxyprolinePlusIsoleucinePlusLeucine: Coding.FromStrict({
+  NutrientCodeValueSet_AlloisoleucinePlusHydroxyprolinePlusIsoleucinePlusLeucine: new Coding({
     code: "708354001",
     display: "Alloisoleucine + hydroxyproline + isoleucine + leucine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_AlloisoleucinePlusHydroxyprolinePlusIsoleucinePlusLeucinePlusValine: Coding.FromStrict({
+  NutrientCodeValueSet_AlloisoleucinePlusHydroxyprolinePlusIsoleucinePlusLeucinePlusValine: new Coding({
     code: "708356004",
     display: "Alloisoleucine + hydroxyproline + isoleucine + leucine + valine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_XantinolNicotinate: Coding.FromStrict({
+  NutrientCodeValueSet_XantinolNicotinate: new Coding({
     code: "708562005",
     display: "Xantinol nicotinate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PhenylalaninePlusTyrosine: Coding.FromStrict({
+  NutrientCodeValueSet_PhenylalaninePlusTyrosine: new Coding({
     code: "708565007",
     display: "Phenylalanine + tyrosine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_MenadioneSodiumBisulfite: Coding.FromStrict({
+  NutrientCodeValueSet_MenadioneSodiumBisulfite: new Coding({
     code: "708600008",
     display: "Menadione sodium bisulfite",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ZincAminoAcidChelate: Coding.FromStrict({
+  NutrientCodeValueSet_ZincAminoAcidChelate: new Coding({
     code: "708658008",
     display: "Zinc amino acid chelate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_AlaninePlusCystinePlusHistidinePlusHomocysteinePlusLeucinePlusPhenylalaninePlusTyrosine: Coding.FromStrict({
+  NutrientCodeValueSet_AlaninePlusCystinePlusHistidinePlusHomocysteinePlusLeucinePlusPhenylalaninePlusTyrosine: new Coding({
     code: "708665000",
     display: "Alanine + cystine + histidine + homocysteine + leucine + phenylalanine + tyrosine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Tocotrienol: Coding.FromStrict({
+  NutrientCodeValueSet_Tocotrienol: new Coding({
     code: "708703004",
     display: "Tocotrienol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Threitol: Coding.FromStrict({
+  NutrientCodeValueSet_Threitol: new Coding({
     code: "708704005",
     display: "Threitol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VAL15Anhydroglucitol: Coding.FromStrict({
+  NutrientCodeValueSet_VAL15Anhydroglucitol: new Coding({
     code: "708715000",
     display: "1,5-Anhydroglucitol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ArgininePlusArgininosuccinatePlusLysinePlusSerinePlusTaurine: Coding.FromStrict({
+  NutrientCodeValueSet_ArgininePlusArgininosuccinatePlusLysinePlusSerinePlusTaurine: new Coding({
     code: "708748000",
     display: "Arginine + argininosuccinate + lysine + serine + taurine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CyanocobalaminPlusFolate: Coding.FromStrict({
+  NutrientCodeValueSet_CyanocobalaminPlusFolate: new Coding({
     code: "708846006",
     display: "Cyanocobalamin + folate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_N2HydroxyethylValine: Coding.FromStrict({
+  NutrientCodeValueSet_N2HydroxyethylValine: new Coding({
     code: "708850004",
     display: "N-2-hydroxyethyl valine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_AscorbatePlusDehydroascorbate: Coding.FromStrict({
+  NutrientCodeValueSet_AscorbatePlusDehydroascorbate: new Coding({
     code: "708864004",
     display: "Ascorbate + dehydroascorbate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_AspartatePlusCitrullinePlusGlycinePlusHomocystinePlusHydroxyproline: Coding.FromStrict({
+  NutrientCodeValueSet_AspartatePlusCitrullinePlusGlycinePlusHomocystinePlusHydroxyproline: new Coding({
     code: "709050009",
     display: "Aspartate + citrulline + glycine + homocystine + hydroxyproline",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Guanidinoacetate: Coding.FromStrict({
+  NutrientCodeValueSet_Guanidinoacetate: new Coding({
     code: "709131007",
     display: "Guanidinoacetate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ProteinBoundGlucose: Coding.FromStrict({
+  NutrientCodeValueSet_ProteinBoundGlucose: new Coding({
     code: "709610005",
     display: "Protein-bound glucose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_NCarbamoylBetaAlanine: Coding.FromStrict({
+  NutrientCodeValueSet_NCarbamoylBetaAlanine: new Coding({
     code: "709844000",
     display: "N-carbamoyl-beta-alanine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Selenomethionine: Coding.FromStrict({
+  NutrientCodeValueSet_Selenomethionine: new Coding({
     code: "710051007",
     display: "Selenomethionine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SodiumHypophosphite: Coding.FromStrict({
+  NutrientCodeValueSet_SodiumHypophosphite: new Coding({
     code: "710208001",
     display: "Sodium hypophosphite",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_DeltaAlanine: Coding.FromStrict({
+  NutrientCodeValueSet_DeltaAlanine: new Coding({
     code: "710238007",
     display: "delta Alanine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_BetaTocopherolPlusGammaTocopherol: Coding.FromStrict({
+  NutrientCodeValueSet_BetaTocopherolPlusGammaTocopherol: new Coding({
     code: "711264008",
     display: "Beta tocopherol + gamma tocopherol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Molybdenum: Coding.FromStrict({
+  NutrientCodeValueSet_Molybdenum: new Coding({
     code: "71128006",
     display: "Molybdenum",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_LysineAcetate: Coding.FromStrict({
+  NutrientCodeValueSet_LysineAcetate: new Coding({
     code: "712565006",
     display: "Lysine acetate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CalcifediolPlusErgocalciferol: Coding.FromStrict({
+  NutrientCodeValueSet_CalcifediolPlusErgocalciferol: new Coding({
     code: "712587002",
     display: "Calcifediol + ergocalciferol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CysteinePlusHomocysteineDisulfide: Coding.FromStrict({
+  NutrientCodeValueSet_CysteinePlusHomocysteineDisulfide: new Coding({
     code: "712590008",
     display: "Cysteine + homocysteine disulfide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_HistadinylIsoleucine: Coding.FromStrict({
+  NutrientCodeValueSet_HistadinylIsoleucine: new Coding({
     code: "712594004",
     display: "Histadinyl-isoleucine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SeleniousAcid: Coding.FromStrict({
+  NutrientCodeValueSet_SeleniousAcid: new Coding({
     code: "712681009",
     display: "Selenious acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Menatetrenone: Coding.FromStrict({
+  NutrientCodeValueSet_Menatetrenone: new Coding({
     code: "712684001",
     display: "Menatetrenone",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Fursultiamine: Coding.FromStrict({
+  NutrientCodeValueSet_Fursultiamine: new Coding({
     code: "712686004",
     display: "Fursultiamine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IoxitalamateMeglumine: Coding.FromStrict({
+  NutrientCodeValueSet_IoxitalamateMeglumine: new Coding({
     code: "712698009",
     display: "Ioxitalamate meglumine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Fructooligosaccharide: Coding.FromStrict({
+  NutrientCodeValueSet_Fructooligosaccharide: new Coding({
     code: "712713006",
     display: "Fructooligosaccharide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Florbetaben18F: Coding.FromStrict({
+  NutrientCodeValueSet_Florbetaben18F: new Coding({
     code: "712736002",
     display: "Florbetaben [18F]",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_GlycylTyrosine: Coding.FromStrict({
+  NutrientCodeValueSet_GlycylTyrosine: new Coding({
     code: "712800005",
     display: "Glycyl-tyrosine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_HesperidinComplex: Coding.FromStrict({
+  NutrientCodeValueSet_HesperidinComplex: new Coding({
     code: "712801009",
     display: "Hesperidin complex",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_FlavinAdenineDinucleotideSodium: Coding.FromStrict({
+  NutrientCodeValueSet_FlavinAdenineDinucleotideSodium: new Coding({
     code: "712808003",
     display: "Flavin adenine dinucleotide sodium",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Racemethionine: Coding.FromStrict({
+  NutrientCodeValueSet_Racemethionine: new Coding({
     code: "712847001",
     display: "Racemethionine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SoybeanOilRefined: Coding.FromStrict({
+  NutrientCodeValueSet_SoybeanOilRefined: new Coding({
     code: "713311003",
     display: "Soybean oil refined",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SodiumDihydrogenPhosphateMonohydrate: Coding.FromStrict({
+  NutrientCodeValueSet_SodiumDihydrogenPhosphateMonohydrate: new Coding({
     code: "713332006",
     display: "Sodium dihydrogen phosphate monohydrate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_N2LAlanylLGlutamine: Coding.FromStrict({
+  NutrientCodeValueSet_N2LAlanylLGlutamine: new Coding({
     code: "713337000",
     display: "N2-L-alanyl-L-glutamine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_MethiosulfoniumChloride: Coding.FromStrict({
+  NutrientCodeValueSet_MethiosulfoniumChloride: new Coding({
     code: "713357001",
     display: "Methiosulfonium chloride",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IronPeptonate: Coding.FromStrict({
+  NutrientCodeValueSet_IronPeptonate: new Coding({
     code: "713365003",
     display: "Iron peptonate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IodineNorcholestenol: Coding.FromStrict({
+  NutrientCodeValueSet_IodineNorcholestenol: new Coding({
     code: "713366002",
     display: "Iodine norcholestenol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ChromicChloride: Coding.FromStrict({
+  NutrientCodeValueSet_ChromicChloride: new Coding({
     code: "713393004",
     display: "Chromic chloride",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Acylglycine: Coding.FromStrict({
+  NutrientCodeValueSet_Acylglycine: new Coding({
     code: "713664008",
     display: "Acylglycine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power61PowerCopper: Coding.FromStrict({
+  NutrientCodeValueSet_Power61PowerCopper: new Coding({
     code: "71425003",
     display: "^61^Copper",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Polysaccharide: Coding.FromStrict({
+  NutrientCodeValueSet_Polysaccharide: new Coding({
     code: "71544008",
     display: "Polysaccharide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_DiOligosaccharide: Coding.FromStrict({
+  NutrientCodeValueSet_DiOligosaccharide: new Coding({
     code: "715884006",
     display: "Di-oligosaccharide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_MonoOligosaccharide: Coding.FromStrict({
+  NutrientCodeValueSet_MonoOligosaccharide: new Coding({
     code: "715885007",
     display: "Mono-oligosaccharide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Eluxadoline: Coding.FromStrict({
+  NutrientCodeValueSet_Eluxadoline: new Coding({
     code: "716119001",
     display: "Eluxadoline",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Inositol: Coding.FromStrict({
+  NutrientCodeValueSet_Inositol: new Coding({
     code: "72164009",
     display: "Inositol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VitaminPComplex: Coding.FromStrict({
+  NutrientCodeValueSet_VitaminPComplex: new Coding({
     code: "72309009",
     display: "Vitamin P complex",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Magnesium: Coding.FromStrict({
+  NutrientCodeValueSet_Magnesium: new Coding({
     code: "72717003",
     display: "Magnesium",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power119mPowerTin: Coding.FromStrict({
+  NutrientCodeValueSet_Power119mPowerTin: new Coding({
     code: "72835003",
     display: "^119m^Tin",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Valine: Coding.FromStrict({
+  NutrientCodeValueSet_Valine: new Coding({
     code: "72840006",
     display: "Valine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Carotene: Coding.FromStrict({
+  NutrientCodeValueSet_Carotene: new Coding({
     code: "73131003",
     display: "Carotene",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power54PowerManganese: Coding.FromStrict({
+  NutrientCodeValueSet_Power54PowerManganese: new Coding({
     code: "73353008",
     display: "^54^Manganese",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_DibasicPotassiumPhosphate: Coding.FromStrict({
+  NutrientCodeValueSet_DibasicPotassiumPhosphate: new Coding({
     code: "73722009",
     display: "Dibasic potassium phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SucroferricOxyhydroxide: Coding.FromStrict({
+  NutrientCodeValueSet_SucroferricOxyhydroxide: new Coding({
     code: "737661000168109",
     display: "Sucroferric oxyhydroxide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VAL5HydroxyTryptophan: Coding.FromStrict({
+  NutrientCodeValueSet_VAL5HydroxyTryptophan: new Coding({
     code: "73916008",
     display: "5-Hydroxy tryptophan",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ZincArsenate: Coding.FromStrict({
+  NutrientCodeValueSet_ZincArsenate: new Coding({
     code: "74718007",
     display: "Zinc arsenate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Sugar: Coding.FromStrict({
+  NutrientCodeValueSet_Sugar: new Coding({
     code: "74801000",
     display: "Sugar",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_E621: Coding.FromStrict({
+  NutrientCodeValueSet_E621: new Coding({
     code: "75665004",
     display: "E621",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Lysine: Coding.FromStrict({
+  NutrientCodeValueSet_Lysine: new Coding({
     code: "75799006",
     display: "Lysine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ZincUndecylenate: Coding.FromStrict({
+  NutrientCodeValueSet_ZincUndecylenate: new Coding({
     code: "75815006",
     display: "Zinc undecylenate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ArgininosuccinicAcid: Coding.FromStrict({
+  NutrientCodeValueSet_ArgininosuccinicAcid: new Coding({
     code: "75871008",
     display: "Argininosuccinic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SodiumAlginate: Coding.FromStrict({
+  NutrientCodeValueSet_SodiumAlginate: new Coding({
     code: "75876003",
     display: "Sodium alginate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IodineMonobromide: Coding.FromStrict({
+  NutrientCodeValueSet_IodineMonobromide: new Coding({
     code: "75951003",
     display: "Iodine monobromide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power18PowerFluorine: Coding.FromStrict({
+  NutrientCodeValueSet_Power18PowerFluorine: new Coding({
     code: "77004003",
     display: "^18^Fluorine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Homoserine: Coding.FromStrict({
+  NutrientCodeValueSet_Homoserine: new Coding({
     code: "77404006",
     display: "Homoserine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Mannoheptulose: Coding.FromStrict({
+  NutrientCodeValueSet_Mannoheptulose: new Coding({
     code: "77454000",
     display: "Mannoheptulose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PhosphorusRadioisotope: Coding.FromStrict({
+  NutrientCodeValueSet_PhosphorusRadioisotope: new Coding({
     code: "77923008",
     display: "Phosphorus radioisotope",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IofetamineIPower123PowerHydrochloride: Coding.FromStrict({
+  NutrientCodeValueSet_IofetamineIPower123PowerHydrochloride: new Coding({
     code: "78481003",
     display: "Iofetamine I^123^ hydrochloride",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Fucose: Coding.FromStrict({
+  NutrientCodeValueSet_Fucose: new Coding({
     code: "78527003",
     display: "Fucose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power130PowerIodine: Coding.FromStrict({
+  NutrientCodeValueSet_Power130PowerIodine: new Coding({
     code: "78529000",
     display: "^130^Iodine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ZincArsenite: Coding.FromStrict({
+  NutrientCodeValueSet_ZincArsenite: new Coding({
     code: "78671009",
     display: "Zinc arsenite",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CopperPower64PowerAcetate: Coding.FromStrict({
+  NutrientCodeValueSet_CopperPower64PowerAcetate: new Coding({
     code: "78686003",
     display: "Copper^64^ acetate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CobaltRadioisotope: Coding.FromStrict({
+  NutrientCodeValueSet_CobaltRadioisotope: new Coding({
     code: "78870008",
     display: "Cobalt radioisotope",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Diiodotyrosine: Coding.FromStrict({
+  NutrientCodeValueSet_Diiodotyrosine: new Coding({
     code: "80393001",
     display: "Diiodotyrosine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VAL123Propanetriol: Coding.FromStrict({
+  NutrientCodeValueSet_VAL123Propanetriol: new Coding({
     code: "80582002",
     display: "1,2,3-Propanetriol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PotassiumPhosphate: Coding.FromStrict({
+  NutrientCodeValueSet_PotassiumPhosphate: new Coding({
     code: "80916004",
     display: "Potassium phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Pentose: Coding.FromStrict({
+  NutrientCodeValueSet_Pentose: new Coding({
     code: "81100008",
     display: "Pentose",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_EthylMercuryPhosphate: Coding.FromStrict({
+  NutrientCodeValueSet_EthylMercuryPhosphate: new Coding({
     code: "82224005",
     display: "Ethyl mercury phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_WhitePhosphorus: Coding.FromStrict({
+  NutrientCodeValueSet_WhitePhosphorus: new Coding({
     code: "82481002",
     display: "White phosphorus",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VitaminA: Coding.FromStrict({
+  NutrientCodeValueSet_VitaminA: new Coding({
     code: "82622003",
     display: "Vitamin A",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Leucine: Coding.FromStrict({
+  NutrientCodeValueSet_Leucine: new Coding({
     code: "83797003",
     display: "Leucine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SodiumMonofluorophosphate: Coding.FromStrict({
+  NutrientCodeValueSet_SodiumMonofluorophosphate: new Coding({
     code: "83873000",
     display: "Sodium monofluorophosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power129PowerIodine: Coding.FromStrict({
+  NutrientCodeValueSet_Power129PowerIodine: new Coding({
     code: "83912003",
     display: "^129^Iodine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power93mPowerMolybdenum: Coding.FromStrict({
+  NutrientCodeValueSet_Power93mPowerMolybdenum: new Coding({
     code: "84553006",
     display: "^93m^Molybdenum",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_EthylPhosphate: Coding.FromStrict({
+  NutrientCodeValueSet_EthylPhosphate: new Coding({
     code: "84987009",
     display: "Ethyl phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_GlutamicAcid: Coding.FromStrict({
+  NutrientCodeValueSet_GlutamicAcid: new Coding({
     code: "85214009",
     display: "Glutamic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_TinRadioisotope: Coding.FromStrict({
+  NutrientCodeValueSet_TinRadioisotope: new Coding({
     code: "85369009",
     display: "Tin radioisotope",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power72PowerSelenium: Coding.FromStrict({
+  NutrientCodeValueSet_Power72PowerSelenium: new Coding({
     code: "85958004",
     display: "^72^Selenium",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_NickelIsotope: Coding.FromStrict({
+  NutrientCodeValueSet_NickelIsotope: new Coding({
     code: "86399009",
     display: "Nickel isotope",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PantothenicAcid: Coding.FromStrict({
+  NutrientCodeValueSet_PantothenicAcid: new Coding({
     code: "86431009",
     display: "Pantothenic acid",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Zinc: Coding.FromStrict({
+  NutrientCodeValueSet_Zinc: new Coding({
     code: "86739005",
     display: "Zinc",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power65PowerNickel: Coding.FromStrict({
+  NutrientCodeValueSet_Power65PowerNickel: new Coding({
     code: "86865003",
     display: "^65^Nickel",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_ZincSalt: Coding.FromStrict({
+  NutrientCodeValueSet_ZincSalt: new Coding({
     code: "86953001",
     display: "Zinc salt",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_VAL525DihydroxyCholecalciferol: Coding.FromStrict({
+  NutrientCodeValueSet_VAL525DihydroxyCholecalciferol: new Coding({
     code: "87116002",
     display: "5,25-Dihydroxy cholecalciferol",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Asparagine: Coding.FromStrict({
+  NutrientCodeValueSet_Asparagine: new Coding({
     code: "87136001",
     display: "Asparagine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PhosphoribosylPyrophosphate: Coding.FromStrict({
+  NutrientCodeValueSet_PhosphoribosylPyrophosphate: new Coding({
     code: "87371008",
     display: "Phosphoribosyl pyrophosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power73PowerSelenium: Coding.FromStrict({
+  NutrientCodeValueSet_Power73PowerSelenium: new Coding({
     code: "87437000",
     display: "^73^Selenium",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Ipodate: Coding.FromStrict({
+  NutrientCodeValueSet_Ipodate: new Coding({
     code: "87445005",
     display: "Ipodate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Vitamin: Coding.FromStrict({
+  NutrientCodeValueSet_Vitamin: new Coding({
     code: "87708000",
     display: "Vitamin",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power33PowerPhosphorus: Coding.FromStrict({
+  NutrientCodeValueSet_Power33PowerPhosphorus: new Coding({
     code: "87802005",
     display: "^33^Phosphorus",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_MnManganese: Coding.FromStrict({
+  NutrientCodeValueSet_MnManganese: new Coding({
     code: "87869004",
     display: "Mn - Manganese",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CopperPower64PowerVersenate: Coding.FromStrict({
+  NutrientCodeValueSet_CopperPower64PowerVersenate: new Coding({
     code: "88166005",
     display: "Copper^64^ versenate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Phosphine: Coding.FromStrict({
+  NutrientCodeValueSet_Phosphine: new Coding({
     code: "88236008",
     display: "Phosphine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Phenylphosphine: Coding.FromStrict({
+  NutrientCodeValueSet_Phenylphosphine: new Coding({
     code: "88262004",
     display: "Phenylphosphine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Potassium: Coding.FromStrict({
+  NutrientCodeValueSet_Potassium: new Coding({
     code: "88480006",
     display: "Potassium",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Sarcosine: Coding.FromStrict({
+  NutrientCodeValueSet_Sarcosine: new Coding({
     code: "88546006",
     display: "Sarcosine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_MagnesiumIsotope: Coding.FromStrict({
+  NutrientCodeValueSet_MagnesiumIsotope: new Coding({
     code: "88617009",
     display: "Magnesium isotope",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power55PowerIron: Coding.FromStrict({
+  NutrientCodeValueSet_Power55PowerIron: new Coding({
     code: "88954003",
     display: "^55^Iron",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power58PowerCobalt: Coding.FromStrict({
+  NutrientCodeValueSet_Power58PowerCobalt: new Coding({
     code: "89272005",
     display: "^58^Cobalt",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PotassiumIodide: Coding.FromStrict({
+  NutrientCodeValueSet_PotassiumIodide: new Coding({
     code: "89351005",
     display: "Potassium iodide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SeleniumSalt: Coding.FromStrict({
+  NutrientCodeValueSet_SeleniumSalt: new Coding({
     code: "89702005",
     display: "Selenium salt",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_TriorthocresylPhosphate: Coding.FromStrict({
+  NutrientCodeValueSet_TriorthocresylPhosphate: new Coding({
     code: "89867007",
     display: "Triorthocresyl phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power117mPowerTin: Coding.FromStrict({
+  NutrientCodeValueSet_Power117mPowerTin: new Coding({
     code: "90150007",
     display: "^117m^Tin",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IodineMonochloride: Coding.FromStrict({
+  NutrientCodeValueSet_IodineMonochloride: new Coding({
     code: "90544008",
     display: "Iodine monochloride",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_IronIsotope: Coding.FromStrict({
+  NutrientCodeValueSet_IronIsotope: new Coding({
     code: "90567005",
     display: "Iron isotope",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Power127PowerTin: Coding.FromStrict({
+  NutrientCodeValueSet_Power127PowerTin: new Coding({
     code: "90664008",
     display: "^127^Tin",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Metrizamide: Coding.FromStrict({
+  NutrientCodeValueSet_Metrizamide: new Coding({
     code: "90733003",
     display: "Metrizamide",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_Monoiodotyrosine: Coding.FromStrict({
+  NutrientCodeValueSet_Monoiodotyrosine: new Coding({
     code: "91166002",
     display: "Monoiodotyrosine",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_CopperFumes: Coding.FromStrict({
+  NutrientCodeValueSet_CopperFumes: new Coding({
     code: "91255004",
     display: "Copper fumes",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_TraceElement: Coding.FromStrict({
+  NutrientCodeValueSet_TraceElement: new Coding({
     code: "95970003",
     display: "Trace element",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_SodiumSelenite: Coding.FromStrict({
+  NutrientCodeValueSet_SodiumSelenite: new Coding({
     code: "96277001",
     display: "Sodium selenite",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_PrednisoloneSodiumPhosphate: Coding.FromStrict({
+  NutrientCodeValueSet_PrednisoloneSodiumPhosphate: new Coding({
     code: "96335004",
     display: "Prednisolone sodium phosphate",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_InvertSugar: Coding.FromStrict({
+  NutrientCodeValueSet_InvertSugar: new Coding({
     code: "999486711000087109",
     display: "Invert sugar",
     system: "http://snomed.info/sct"
   }),
-  NutrientCodeValueSet_XanthanGum: Coding.FromStrict({
+  NutrientCodeValueSet_XanthanGum: new Coding({
     code: "999487121000087103",
     display: "Xanthan gum",
     system: "http://snomed.info/sct"

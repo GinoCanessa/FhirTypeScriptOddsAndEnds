@@ -134,11 +134,11 @@ export declare class DosageDoseAndRate extends fhir.FhirElement implements fhir.
     /**
      * Check if the current DosageDoseAndRate contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DosageDoseAndRate from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDosageDoseAndRate): DosageDoseAndRate;
+    static fromStrict(source: fhir.IDosageDoseAndRate): DosageDoseAndRate;
 }
 /**
  * Indicates how the medication is/was taken or should be taken by the patient.
@@ -211,10 +211,10 @@ export declare class Dosage extends fhir.BackboneElement implements fhir.IDosage
     /**
      * Check if the current Dosage contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Dosage from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDosage): Dosage;
+    static fromStrict(source: fhir.IDosage): Dosage;
 }
 //# sourceMappingURL=Dosage.d.ts.map

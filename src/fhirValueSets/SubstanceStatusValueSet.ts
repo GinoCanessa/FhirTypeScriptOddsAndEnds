@@ -13,7 +13,7 @@ export const SubstanceStatusValueSet = {
   /**
    * The substance is considered for use or reference.
    */
-  substance_status_Active: Coding.FromStrict({
+  substance_status_Active: new Coding({
     code: "active",
     display: "Active",
     system: "http://hl7.org/fhir/substance-status"
@@ -21,7 +21,7 @@ export const SubstanceStatusValueSet = {
   /**
    * The substance was entered in error.
    */
-  substance_status_EnteredInError: Coding.FromStrict({
+  substance_status_EnteredInError: new Coding({
     code: "entered-in-error",
     display: "Entered in Error",
     system: "http://hl7.org/fhir/substance-status"
@@ -29,7 +29,7 @@ export const SubstanceStatusValueSet = {
   /**
    * The substance is considered for reference, but not for use.
    */
-  substance_status_Inactive: Coding.FromStrict({
+  substance_status_Inactive: new Coding({
     code: "inactive",
     display: "Inactive",
     system: "http://hl7.org/fhir/substance-status"

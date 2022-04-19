@@ -165,18 +165,18 @@ export class SubstanceReferenceInformationGene extends fhir.BackboneElement impl
   /**
    * Check if the current SubstanceReferenceInformationGene contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceReferenceInformationGene from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceReferenceInformationGene):SubstanceReferenceInformationGene {
+  static override fromStrict(source:fhir.ISubstanceReferenceInformationGene):SubstanceReferenceInformationGene {
     var dest:SubstanceReferenceInformationGene = new SubstanceReferenceInformationGene(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceReferenceInformationGene is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -209,18 +209,18 @@ export class SubstanceReferenceInformationGeneElement extends fhir.BackboneEleme
   /**
    * Check if the current SubstanceReferenceInformationGeneElement contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceReferenceInformationGeneElement from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceReferenceInformationGeneElement):SubstanceReferenceInformationGeneElement {
+  static override fromStrict(source:fhir.ISubstanceReferenceInformationGeneElement):SubstanceReferenceInformationGeneElement {
     var dest:SubstanceReferenceInformationGeneElement = new SubstanceReferenceInformationGeneElement(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceReferenceInformationGeneElement is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -258,18 +258,18 @@ export class SubstanceReferenceInformationClassification extends fhir.BackboneEl
   /**
    * Check if the current SubstanceReferenceInformationClassification contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceReferenceInformationClassification from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceReferenceInformationClassification):SubstanceReferenceInformationClassification {
+  static override fromStrict(source:fhir.ISubstanceReferenceInformationClassification):SubstanceReferenceInformationClassification {
     var dest:SubstanceReferenceInformationClassification = new SubstanceReferenceInformationClassification(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceReferenceInformationClassification is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -339,18 +339,18 @@ export class SubstanceReferenceInformationTarget extends fhir.BackboneElement im
   /**
    * Check if the current SubstanceReferenceInformationTarget contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceReferenceInformationTarget from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceReferenceInformationTarget):SubstanceReferenceInformationTarget {
+  static override fromStrict(source:fhir.ISubstanceReferenceInformationTarget):SubstanceReferenceInformationTarget {
     var dest:SubstanceReferenceInformationTarget = new SubstanceReferenceInformationTarget(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceReferenceInformationTarget is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -400,18 +400,18 @@ export class SubstanceReferenceInformation extends fhir.DomainResource implement
   /**
    * Check if the current SubstanceReferenceInformation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SubstanceReferenceInformation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISubstanceReferenceInformation):SubstanceReferenceInformation {
+  static override fromStrict(source:fhir.ISubstanceReferenceInformation):SubstanceReferenceInformation {
     var dest:SubstanceReferenceInformation = new SubstanceReferenceInformation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SubstanceReferenceInformation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

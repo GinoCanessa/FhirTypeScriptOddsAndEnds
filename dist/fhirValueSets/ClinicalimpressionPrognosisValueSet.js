@@ -10,32 +10,32 @@ import { Coding } from '../fhir';
  * Example value set for clinical impression prognosis.
  */
 export const ClinicalimpressionPrognosisValueSet = {
-    ClinicalimpressionPrognosisValueSet_GoodPrognosis: Coding.FromStrict({
+    ClinicalimpressionPrognosisValueSet_GoodPrognosis: new Coding({
         code: "170968001",
         display: "Good prognosis",
         system: "http://snomed.info/sct"
     }),
-    ClinicalimpressionPrognosisValueSet_PoorPrognosis: Coding.FromStrict({
+    ClinicalimpressionPrognosisValueSet_PoorPrognosis: new Coding({
         code: "170969009",
         display: "Poor prognosis",
         system: "http://snomed.info/sct"
     }),
-    ClinicalimpressionPrognosisValueSet_PrognosisUncertain: Coding.FromStrict({
+    ClinicalimpressionPrognosisValueSet_PrognosisUncertain: new Coding({
         code: "170970005",
         display: "Prognosis uncertain",
         system: "http://snomed.info/sct"
     }),
-    ClinicalimpressionPrognosisValueSet_ConditionalPrognosis: Coding.FromStrict({
+    ClinicalimpressionPrognosisValueSet_ConditionalPrognosis: new Coding({
         code: "60484009",
         display: "Conditional prognosis",
         system: "http://snomed.info/sct"
     }),
-    ClinicalimpressionPrognosisValueSet_FairPrognosis: Coding.FromStrict({
+    ClinicalimpressionPrognosisValueSet_FairPrognosis: new Coding({
         code: "65872000",
         display: "Fair prognosis",
         system: "http://snomed.info/sct"
     }),
-    ClinicalimpressionPrognosisValueSet_GuardedPrognosis: Coding.FromStrict({
+    ClinicalimpressionPrognosisValueSet_GuardedPrognosis: new Coding({
         code: "67334001",
         display: "Guarded prognosis",
         system: "http://snomed.info/sct"

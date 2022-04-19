@@ -10,22 +10,22 @@ import { Coding } from '../fhir';
  * This example value set defines a set of codes that can be used to indicate the type of encounter: a specific code indicating type of service provided.
  */
 export const EncounterTypeValueSet = {
-    encounter_type_AnnualDiabetesMellitusScreening: Coding.FromStrict({
+    encounter_type_AnnualDiabetesMellitusScreening: new Coding({
         code: "ADMS",
         display: "Annual diabetes mellitus screening",
         system: "http://terminology.hl7.org/CodeSystem/encounter-type"
     }),
-    encounter_type_BoneDrillingBoneMarrowPunctionInClinic: Coding.FromStrict({
+    encounter_type_BoneDrillingBoneMarrowPunctionInClinic: new Coding({
         code: "BD/BM-clin",
         display: "Bone drilling/bone marrow punction in clinic",
         system: "http://terminology.hl7.org/CodeSystem/encounter-type"
     }),
-    encounter_type_InfantColonScreening60Minutes: Coding.FromStrict({
+    encounter_type_InfantColonScreening60Minutes: new Coding({
         code: "CCS60",
         display: "Infant colon screening - 60 minutes",
         system: "http://terminology.hl7.org/CodeSystem/encounter-type"
     }),
-    encounter_type_OutpatientKenacortInjection: Coding.FromStrict({
+    encounter_type_OutpatientKenacortInjection: new Coding({
         code: "OKI",
         display: "Outpatient Kenacort injection",
         system: "http://terminology.hl7.org/CodeSystem/encounter-type"

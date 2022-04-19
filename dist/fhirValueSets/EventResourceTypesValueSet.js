@@ -13,7 +13,7 @@ export const EventResourceTypesValueSet = {
     /**
      * Item containing charge code(s) associated with the provision of healthcare provider products.
      */
-    event_resource_types_ChargeItem: Coding.FromStrict({
+    event_resource_types_ChargeItem: new Coding({
         code: "ChargeItem",
         display: "ChargeItem",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -21,7 +21,7 @@ export const EventResourceTypesValueSet = {
     /**
      * Remittance resource.
      */
-    event_resource_types_ClaimResponse: Coding.FromStrict({
+    event_resource_types_ClaimResponse: new Coding({
         code: "ClaimResponse",
         display: "ClaimResponse",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -29,7 +29,7 @@ export const EventResourceTypesValueSet = {
     /**
      * A clinical assessment performed when planning treatments and management strategies for a patient.
      */
-    event_resource_types_ClinicalImpression: Coding.FromStrict({
+    event_resource_types_ClinicalImpression: new Coding({
         code: "ClinicalImpression",
         display: "ClinicalImpression",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -37,7 +37,7 @@ export const EventResourceTypesValueSet = {
     /**
      * A record of information transmitted from a sender to a receiver.
      */
-    event_resource_types_Communication: Coding.FromStrict({
+    event_resource_types_Communication: new Coding({
         code: "Communication",
         display: "Communication",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -45,7 +45,7 @@ export const EventResourceTypesValueSet = {
     /**
      * A set of resources composed into a single coherent clinical statement with clinical attestation.
      */
-    event_resource_types_Composition: Coding.FromStrict({
+    event_resource_types_Composition: new Coding({
         code: "Composition",
         display: "Composition",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -53,7 +53,7 @@ export const EventResourceTypesValueSet = {
     /**
      * Detailed information about conditions, problems or diagnoses.
      */
-    event_resource_types_Condition: Coding.FromStrict({
+    event_resource_types_Condition: new Coding({
         code: "Condition",
         display: "Condition",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -61,7 +61,7 @@ export const EventResourceTypesValueSet = {
     /**
      * A healthcare consumer's policy choices to permits or denies recipients or roles to perform actions for specific purposes and periods of time.
      */
-    event_resource_types_Consent: Coding.FromStrict({
+    event_resource_types_Consent: new Coding({
         code: "Consent",
         display: "Consent",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -69,7 +69,7 @@ export const EventResourceTypesValueSet = {
     /**
      * Insurance or medical plan or a payment agreement.
      */
-    event_resource_types_Coverage: Coding.FromStrict({
+    event_resource_types_Coverage: new Coding({
         code: "Coverage",
         display: "Coverage",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -77,7 +77,7 @@ export const EventResourceTypesValueSet = {
     /**
      * Record of use of a device.
      */
-    event_resource_types_DeviceUseStatement: Coding.FromStrict({
+    event_resource_types_DeviceUseStatement: new Coding({
         code: "DeviceUseStatement",
         display: "DeviceUseStatement",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -85,7 +85,7 @@ export const EventResourceTypesValueSet = {
     /**
      * A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports.
      */
-    event_resource_types_DiagnosticReport: Coding.FromStrict({
+    event_resource_types_DiagnosticReport: new Coding({
         code: "DiagnosticReport",
         display: "DiagnosticReport",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -93,7 +93,7 @@ export const EventResourceTypesValueSet = {
     /**
      * A list that defines a set of documents.
      */
-    event_resource_types_DocumentManifest: Coding.FromStrict({
+    event_resource_types_DocumentManifest: new Coding({
         code: "DocumentManifest",
         display: "DocumentManifest",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -101,7 +101,7 @@ export const EventResourceTypesValueSet = {
     /**
      * A reference to a document.
      */
-    event_resource_types_DocumentReference: Coding.FromStrict({
+    event_resource_types_DocumentReference: new Coding({
         code: "DocumentReference",
         display: "DocumentReference",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -109,7 +109,7 @@ export const EventResourceTypesValueSet = {
     /**
      * An interaction during which services are provided to the patient.
      */
-    event_resource_types_Encounter: Coding.FromStrict({
+    event_resource_types_Encounter: new Coding({
         code: "Encounter",
         display: "Encounter",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -117,7 +117,7 @@ export const EventResourceTypesValueSet = {
     /**
      * EnrollmentResponse resource.
      */
-    event_resource_types_EnrollmentResponse: Coding.FromStrict({
+    event_resource_types_EnrollmentResponse: new Coding({
         code: "EnrollmentResponse",
         display: "EnrollmentResponse",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -125,7 +125,7 @@ export const EventResourceTypesValueSet = {
     /**
      * An association of a Patient with an Organization and  Healthcare Provider(s) for a period of time that the Organization assumes some level of responsibility.
      */
-    event_resource_types_EpisodeOfCare: Coding.FromStrict({
+    event_resource_types_EpisodeOfCare: new Coding({
         code: "EpisodeOfCare",
         display: "EpisodeOfCare",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -133,7 +133,7 @@ export const EventResourceTypesValueSet = {
     /**
      * Explanation of Benefit resource.
      */
-    event_resource_types_ExplanationOfBenefit: Coding.FromStrict({
+    event_resource_types_ExplanationOfBenefit: new Coding({
         code: "ExplanationOfBenefit",
         display: "ExplanationOfBenefit",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -141,7 +141,7 @@ export const EventResourceTypesValueSet = {
     /**
      * Information about patient's relatives, relevant for patient.
      */
-    event_resource_types_FamilyMemberHistory: Coding.FromStrict({
+    event_resource_types_FamilyMemberHistory: new Coding({
         code: "FamilyMemberHistory",
         display: "FamilyMemberHistory",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -149,7 +149,7 @@ export const EventResourceTypesValueSet = {
     /**
      * The formal response to a guidance request.
      */
-    event_resource_types_GuidanceResponse: Coding.FromStrict({
+    event_resource_types_GuidanceResponse: new Coding({
         code: "GuidanceResponse",
         display: "GuidanceResponse",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -157,7 +157,7 @@ export const EventResourceTypesValueSet = {
     /**
      * A set of images produced in single study (one or more series of references images).
      */
-    event_resource_types_ImagingStudy: Coding.FromStrict({
+    event_resource_types_ImagingStudy: new Coding({
         code: "ImagingStudy",
         display: "ImagingStudy",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -165,7 +165,7 @@ export const EventResourceTypesValueSet = {
     /**
      * Immunization event information.
      */
-    event_resource_types_Immunization: Coding.FromStrict({
+    event_resource_types_Immunization: new Coding({
         code: "Immunization",
         display: "Immunization",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -173,7 +173,7 @@ export const EventResourceTypesValueSet = {
     /**
      * Results of a measure evaluation.
      */
-    event_resource_types_MeasureReport: Coding.FromStrict({
+    event_resource_types_MeasureReport: new Coding({
         code: "MeasureReport",
         display: "MeasureReport",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -181,7 +181,7 @@ export const EventResourceTypesValueSet = {
     /**
      * A photo, video, or audio recording acquired or used in healthcare. The actual content may be inline or provided by direct reference.
      */
-    event_resource_types_Media: Coding.FromStrict({
+    event_resource_types_Media: new Coding({
         code: "Media",
         display: "Media",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -189,7 +189,7 @@ export const EventResourceTypesValueSet = {
     /**
      * Administration of medication to a patient.
      */
-    event_resource_types_MedicationAdministration: Coding.FromStrict({
+    event_resource_types_MedicationAdministration: new Coding({
         code: "MedicationAdministration",
         display: "MedicationAdministration",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -197,7 +197,7 @@ export const EventResourceTypesValueSet = {
     /**
      * Dispensing a medication to a named patient.
      */
-    event_resource_types_MedicationDispense: Coding.FromStrict({
+    event_resource_types_MedicationDispense: new Coding({
         code: "MedicationDispense",
         display: "MedicationDispense",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -205,7 +205,7 @@ export const EventResourceTypesValueSet = {
     /**
      * Record of medication being taken by a patient.
      */
-    event_resource_types_MedicationStatement: Coding.FromStrict({
+    event_resource_types_MedicationStatement: new Coding({
         code: "MedicationStatement",
         display: "MedicationStatement",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -213,7 +213,7 @@ export const EventResourceTypesValueSet = {
     /**
      * Measurements and simple assertions.
      */
-    event_resource_types_Observation: Coding.FromStrict({
+    event_resource_types_Observation: new Coding({
         code: "Observation",
         display: "Observation",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -221,7 +221,7 @@ export const EventResourceTypesValueSet = {
     /**
      * PaymentNotice request.
      */
-    event_resource_types_PaymentNotice: Coding.FromStrict({
+    event_resource_types_PaymentNotice: new Coding({
         code: "PaymentNotice",
         display: "PaymentNotice",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -229,7 +229,7 @@ export const EventResourceTypesValueSet = {
     /**
      * PaymentReconciliation resource.
      */
-    event_resource_types_PaymentReconciliation: Coding.FromStrict({
+    event_resource_types_PaymentReconciliation: new Coding({
         code: "PaymentReconciliation",
         display: "PaymentReconciliation",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -237,7 +237,7 @@ export const EventResourceTypesValueSet = {
     /**
      * An action that is being or was performed on a patient.
      */
-    event_resource_types_Procedure: Coding.FromStrict({
+    event_resource_types_Procedure: new Coding({
         code: "Procedure",
         display: "Procedure",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -245,7 +245,7 @@ export const EventResourceTypesValueSet = {
     /**
      * ProcessResponse resource.
      */
-    event_resource_types_ProcessResponse: Coding.FromStrict({
+    event_resource_types_ProcessResponse: new Coding({
         code: "ProcessResponse",
         display: "ProcessResponse",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -253,7 +253,7 @@ export const EventResourceTypesValueSet = {
     /**
      * A structured set of questions and their answers.
      */
-    event_resource_types_QuestionnaireResponse: Coding.FromStrict({
+    event_resource_types_QuestionnaireResponse: new Coding({
         code: "QuestionnaireResponse",
         display: "QuestionnaireResponse",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -261,7 +261,7 @@ export const EventResourceTypesValueSet = {
     /**
      * Potential outcomes for a subject with likelihood.
      */
-    event_resource_types_RiskAssessment: Coding.FromStrict({
+    event_resource_types_RiskAssessment: new Coding({
         code: "RiskAssessment",
         display: "RiskAssessment",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -269,7 +269,7 @@ export const EventResourceTypesValueSet = {
     /**
      * Delivery of bulk Supplies.
      */
-    event_resource_types_SupplyDelivery: Coding.FromStrict({
+    event_resource_types_SupplyDelivery: new Coding({
         code: "SupplyDelivery",
         display: "SupplyDelivery",
         system: "http://hl7.org/fhir/event-resource-types"
@@ -277,7 +277,7 @@ export const EventResourceTypesValueSet = {
     /**
      * A task to be performed.
      */
-    event_resource_types_Task: Coding.FromStrict({
+    event_resource_types_Task: new Coding({
         code: "Task",
         display: "Task",
         system: "http://hl7.org/fhir/event-resource-types"

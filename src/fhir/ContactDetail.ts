@@ -45,18 +45,18 @@ export class ContactDetail extends fhir.FhirElement implements fhir.IContactDeta
   /**
    * Check if the current ContactDetail contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ContactDetail from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IContactDetail):ContactDetail {
+  static override fromStrict(source:fhir.IContactDetail):ContactDetail {
     var dest:ContactDetail = new ContactDetail(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ContactDetail is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

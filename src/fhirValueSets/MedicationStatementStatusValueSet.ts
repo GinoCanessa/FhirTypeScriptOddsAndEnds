@@ -13,7 +13,7 @@ export const MedicationStatementStatusValueSet = {
   /**
    * The medication is still being taken.
    */
-  medication_statement_status_Active: Coding.FromStrict({
+  medication_statement_status_Active: new Coding({
     code: "active",
     display: "Active",
     system: "http://hl7.org/fhir/CodeSystem/medication-statement-status"
@@ -21,7 +21,7 @@ export const MedicationStatementStatusValueSet = {
   /**
    * The medication is no longer being taken.
    */
-  medication_statement_status_Completed: Coding.FromStrict({
+  medication_statement_status_Completed: new Coding({
     code: "completed",
     display: "Completed",
     system: "http://hl7.org/fhir/CodeSystem/medication-statement-status"
@@ -29,7 +29,7 @@ export const MedicationStatementStatusValueSet = {
   /**
    * Some of the actions that are implied by the medication statement may have occurred.  For example, the patient may have taken some of the medication.  Clinical decision support systems should take this status into account.
    */
-  medication_statement_status_EnteredInError: Coding.FromStrict({
+  medication_statement_status_EnteredInError: new Coding({
     code: "entered-in-error",
     display: "Entered in Error",
     system: "http://hl7.org/fhir/CodeSystem/medication-statement-status"
@@ -37,7 +37,7 @@ export const MedicationStatementStatusValueSet = {
   /**
    * The medication may be taken at some time in the future.
    */
-  medication_statement_status_Intended: Coding.FromStrict({
+  medication_statement_status_Intended: new Coding({
     code: "intended",
     display: "Intended",
     system: "http://hl7.org/fhir/CodeSystem/medication-statement-status"
@@ -45,7 +45,7 @@ export const MedicationStatementStatusValueSet = {
   /**
    * The medication was not consumed by the patient
    */
-  medication_statement_status_NotTaken: Coding.FromStrict({
+  medication_statement_status_NotTaken: new Coding({
     code: "not-taken",
     display: "Not Taken",
     system: "http://hl7.org/fhir/CodeSystem/medication-statement-status"
@@ -53,7 +53,7 @@ export const MedicationStatementStatusValueSet = {
   /**
    * Actions implied by the statement have been temporarily halted, but are expected to continue later. May also be called 'suspended'.
    */
-  medication_statement_status_OnHold: Coding.FromStrict({
+  medication_statement_status_OnHold: new Coding({
     code: "on-hold",
     display: "On Hold",
     system: "http://hl7.org/fhir/CodeSystem/medication-statement-status"
@@ -61,7 +61,7 @@ export const MedicationStatementStatusValueSet = {
   /**
    * Actions implied by the statement have been permanently halted, before all of them occurred. This should not be used if the statement was entered in error.
    */
-  medication_statement_status_Stopped: Coding.FromStrict({
+  medication_statement_status_Stopped: new Coding({
     code: "stopped",
     display: "Stopped",
     system: "http://hl7.org/fhir/CodeSystem/medication-statement-status"
@@ -69,7 +69,7 @@ export const MedicationStatementStatusValueSet = {
   /**
    * The state of the medication use is not currently known.
    */
-  medication_statement_status_Unknown: Coding.FromStrict({
+  medication_statement_status_Unknown: new Coding({
     code: "unknown",
     display: "Unknown",
     system: "http://hl7.org/fhir/CodeSystem/medication-statement-status"

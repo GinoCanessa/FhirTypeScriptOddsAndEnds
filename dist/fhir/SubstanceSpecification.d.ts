@@ -453,11 +453,11 @@ export declare class SubstanceSpecificationMoiety extends fhir.BackboneElement i
     /**
      * Check if the current SubstanceSpecificationMoiety contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceSpecificationMoiety from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceSpecificationMoiety): SubstanceSpecificationMoiety;
+    static fromStrict(source: fhir.ISubstanceSpecificationMoiety): SubstanceSpecificationMoiety;
 }
 /**
  * General specifications for this substance, including how it is related to other substances.
@@ -500,11 +500,11 @@ export declare class SubstanceSpecificationProperty extends fhir.BackboneElement
     /**
      * Check if the current SubstanceSpecificationProperty contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceSpecificationProperty from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceSpecificationProperty): SubstanceSpecificationProperty;
+    static fromStrict(source: fhir.ISubstanceSpecificationProperty): SubstanceSpecificationProperty;
 }
 /**
  * The molecular weight or weight range (for proteins, polymers or nucleic acids).
@@ -529,11 +529,11 @@ export declare class SubstanceSpecificationStructureIsotopeMolecularWeight exten
     /**
      * Check if the current SubstanceSpecificationStructureIsotopeMolecularWeight contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceSpecificationStructureIsotopeMolecularWeight from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceSpecificationStructureIsotopeMolecularWeight): SubstanceSpecificationStructureIsotopeMolecularWeight;
+    static fromStrict(source: fhir.ISubstanceSpecificationStructureIsotopeMolecularWeight): SubstanceSpecificationStructureIsotopeMolecularWeight;
 }
 /**
  * Applicable for single substances that contain a radionuclide or a non-natural isotopic ratio.
@@ -566,11 +566,11 @@ export declare class SubstanceSpecificationStructureIsotope extends fhir.Backbon
     /**
      * Check if the current SubstanceSpecificationStructureIsotope contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceSpecificationStructureIsotope from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceSpecificationStructureIsotope): SubstanceSpecificationStructureIsotope;
+    static fromStrict(source: fhir.ISubstanceSpecificationStructureIsotope): SubstanceSpecificationStructureIsotope;
 }
 /**
  * Molecular structural representation.
@@ -596,11 +596,11 @@ export declare class SubstanceSpecificationStructureRepresentation extends fhir.
     /**
      * Check if the current SubstanceSpecificationStructureRepresentation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceSpecificationStructureRepresentation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceSpecificationStructureRepresentation): SubstanceSpecificationStructureRepresentation;
+    static fromStrict(source: fhir.ISubstanceSpecificationStructureRepresentation): SubstanceSpecificationStructureRepresentation;
 }
 /**
  * Structural information.
@@ -647,11 +647,11 @@ export declare class SubstanceSpecificationStructure extends fhir.BackboneElemen
     /**
      * Check if the current SubstanceSpecificationStructure contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceSpecificationStructure from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceSpecificationStructure): SubstanceSpecificationStructure;
+    static fromStrict(source: fhir.ISubstanceSpecificationStructure): SubstanceSpecificationStructure;
 }
 /**
  * Codes associated with the substance.
@@ -686,11 +686,11 @@ export declare class SubstanceSpecificationCode extends fhir.BackboneElement imp
     /**
      * Check if the current SubstanceSpecificationCode contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceSpecificationCode from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceSpecificationCode): SubstanceSpecificationCode;
+    static fromStrict(source: fhir.ISubstanceSpecificationCode): SubstanceSpecificationCode;
 }
 /**
  * Details of the official nature of this name.
@@ -716,11 +716,11 @@ export declare class SubstanceSpecificationNameOfficial extends fhir.BackboneEle
     /**
      * Check if the current SubstanceSpecificationNameOfficial contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceSpecificationNameOfficial from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceSpecificationNameOfficial): SubstanceSpecificationNameOfficial;
+    static fromStrict(source: fhir.ISubstanceSpecificationNameOfficial): SubstanceSpecificationNameOfficial;
 }
 /**
  * Names applicable to this substance.
@@ -779,11 +779,11 @@ export declare class SubstanceSpecificationName extends fhir.BackboneElement imp
     /**
      * Check if the current SubstanceSpecificationName contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceSpecificationName from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceSpecificationName): SubstanceSpecificationName;
+    static fromStrict(source: fhir.ISubstanceSpecificationName): SubstanceSpecificationName;
 }
 /**
  * A link between this substance and another, with details of the relationship.
@@ -842,11 +842,11 @@ export declare class SubstanceSpecificationRelationship extends fhir.BackboneEle
     /**
      * Check if the current SubstanceSpecificationRelationship contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceSpecificationRelationship from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceSpecificationRelationship): SubstanceSpecificationRelationship;
+    static fromStrict(source: fhir.ISubstanceSpecificationRelationship): SubstanceSpecificationRelationship;
 }
 /**
  * The detailed description of a substance, typically at a level beyond what is used for prescribing.
@@ -941,10 +941,10 @@ export declare class SubstanceSpecification extends fhir.DomainResource implemen
     /**
      * Check if the current SubstanceSpecification contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceSpecification from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceSpecification): SubstanceSpecification;
+    static fromStrict(source: fhir.ISubstanceSpecification): SubstanceSpecification;
 }
 //# sourceMappingURL=SubstanceSpecification.d.ts.map

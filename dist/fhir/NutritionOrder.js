@@ -25,18 +25,18 @@ export class NutritionOrderOralDietNutrient extends fhir.BackboneElement {
     /**
      * Check if the current NutritionOrderOralDietNutrient contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a NutritionOrderOralDietNutrient from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new NutritionOrderOralDietNutrient(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `NutritionOrderOralDietNutrient is missing elements: ${missingElements.join(", ")}`;
         }
@@ -62,18 +62,18 @@ export class NutritionOrderOralDietTexture extends fhir.BackboneElement {
     /**
      * Check if the current NutritionOrderOralDietTexture contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a NutritionOrderOralDietTexture from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new NutritionOrderOralDietTexture(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `NutritionOrderOralDietTexture is missing elements: ${missingElements.join(", ")}`;
         }
@@ -114,18 +114,18 @@ export class NutritionOrderOralDiet extends fhir.BackboneElement {
     /**
      * Check if the current NutritionOrderOralDiet contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a NutritionOrderOralDiet from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new NutritionOrderOralDiet(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `NutritionOrderOralDiet is missing elements: ${missingElements.join(", ")}`;
         }
@@ -166,18 +166,18 @@ export class NutritionOrderSupplement extends fhir.BackboneElement {
     /**
      * Check if the current NutritionOrderSupplement contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a NutritionOrderSupplement from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new NutritionOrderSupplement(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `NutritionOrderSupplement is missing elements: ${missingElements.join(", ")}`;
         }
@@ -209,18 +209,18 @@ export class NutritionOrderEnteralFormulaAdministration extends fhir.BackboneEle
     /**
      * Check if the current NutritionOrderEnteralFormulaAdministration contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a NutritionOrderEnteralFormulaAdministration from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new NutritionOrderEnteralFormulaAdministration(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `NutritionOrderEnteralFormulaAdministration is missing elements: ${missingElements.join(", ")}`;
         }
@@ -276,18 +276,18 @@ export class NutritionOrderEnteralFormula extends fhir.BackboneElement {
     /**
      * Check if the current NutritionOrderEnteralFormula contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a NutritionOrderEnteralFormula from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new NutritionOrderEnteralFormula(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `NutritionOrderEnteralFormula is missing elements: ${missingElements.join(", ")}`;
         }
@@ -393,7 +393,7 @@ export class NutritionOrder extends fhir.DomainResource {
     /**
      * Check if the current NutritionOrder contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["dateTime"] === undefined) {
             missingElements.push("dateTime");
@@ -407,16 +407,16 @@ export class NutritionOrder extends fhir.DomainResource {
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a NutritionOrder from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new NutritionOrder(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `NutritionOrder is missing elements: ${missingElements.join(", ")}`;
         }

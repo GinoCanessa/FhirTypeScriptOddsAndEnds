@@ -10,5002 +10,5002 @@ import { Coding } from '../fhir'
  * This value set includes Anatomical Structure codes from SNOMED CT - provided as an exemplar.
  */
 export const ApproachSiteCodesValueSet = {
-  ApproachSiteCodesValueSet_LateralMeniscusOfKneeJoint: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LateralMeniscusOfKneeJoint: new Coding({
     code: "10013000",
     display: "Lateral meniscus of knee joint",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BaseOfLung: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BaseOfLung: new Coding({
     code: "10024003",
     display: "Base of lung",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BaseOfPhalanxOfIndexFinger: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BaseOfPhalanxOfIndexFinger: new Coding({
     code: "10025002",
     display: "Base of phalanx of index finger",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_VentralSpinocerebellarTractOfPons: Coding.FromStrict({
+  ApproachSiteCodesValueSet_VentralSpinocerebellarTractOfPons: new Coding({
     code: "10026001",
     display: "Ventral spinocerebellar tract of pons",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_NucleusPulposusOfIntervertebralDiscOfEighthThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_NucleusPulposusOfIntervertebralDiscOfEighthThoracicVertebra: new Coding({
     code: "10036009",
     display: "Nucleus pulposus of intervertebral disc of eighth thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IntervertebralForamenOfFifthThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IntervertebralForamenOfFifthThoracicVertebra: new Coding({
     code: "10042008",
     display: "Intervertebral foramen of fifth thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TransplantedLung: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TransplantedLung: new Coding({
     code: "10047002",
     display: "Transplanted lung",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EntireDiaphragmaticLymphNode: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EntireDiaphragmaticLymphNode: new Coding({
     code: "1005009",
     display: "Entire diaphragmatic lymph node",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Male: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Male: new Coding({
     code: "10052007",
     display: "Male",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_OphthalmicNerve: Coding.FromStrict({
+  ApproachSiteCodesValueSet_OphthalmicNerve: new Coding({
     code: "10056005",
     display: "Ophthalmic nerve",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LevatorLabiiSuperiorisMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LevatorLabiiSuperiorisMuscle: new Coding({
     code: "10062000",
     display: "Levator labii superioris muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DeepVolarArchOfRadialArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DeepVolarArchOfRadialArtery: new Coding({
     code: "10119003",
     display: "Deep volar arch of radial artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfFibrousPortionOfPericardium: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfFibrousPortionOfPericardium: new Coding({
     code: "1012000",
     display: "Structure of fibrous portion of pericardium",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DeepDorsalSacrococcygealLigament: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DeepDorsalSacrococcygealLigament: new Coding({
     code: "10124000",
     display: "Deep dorsal sacrococcygeal ligament",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MedialSurfaceOfThirdToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MedialSurfaceOfThirdToe: new Coding({
     code: "10134009",
     display: "Medial surface of third toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfPeritonsillarTissue: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfPeritonsillarTissue: new Coding({
     code: "1015003",
     display: "Structure of peritonsillar tissue",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SebaceousGlandStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SebaceousGlandStructure: new Coding({
     code: "1028005",
     display: "Sebaceous gland structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfVesicularBursaOfSternohyoidMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfVesicularBursaOfSternohyoidMuscle: new Coding({
     code: "1030007",
     display: "Structure of vesicular bursa of sternohyoid muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorCarpalRegion: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorCarpalRegion: new Coding({
     code: "106004",
     display: "Posterior carpal region",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FrontozygomaticSutureOfSkull: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FrontozygomaticSutureOfSkull: new Coding({
     code: "1063000",
     display: "Frontozygomatic suture of skull",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FetalPartOfPlacenta: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FetalPartOfPlacenta: new Coding({
     code: "107008",
     display: "Fetal part of placenta",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Promonocyte: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Promonocyte: new Coding({
     code: "1075005",
     display: "Promonocyte",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousPrepatellarBursa: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousPrepatellarBursa: new Coding({
     code: "1076006",
     display: "Subcutaneous prepatellar bursa",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CondylarEmissaryVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CondylarEmissaryVein: new Coding({
     code: "108003",
     display: "Condylar emissary vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Female: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Female: new Coding({
     code: "1086007",
     display: "Female",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SternothyroidMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SternothyroidMuscle: new Coding({
     code: "1087003",
     display: "Sternothyroid muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperiorOccipitalGyrus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperiorOccipitalGyrus: new Coding({
     code: "1092001",
     display: "Superior occipital gyrus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ThymicCortex: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ThymicCortex: new Coding({
     code: "1099005",
     display: "Thymic cortex",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_VisceralLayerOfBowmanQuoteSCapsule: Coding.FromStrict({
+  ApproachSiteCodesValueSet_VisceralLayerOfBowmanQuoteSCapsule: new Coding({
     code: "110001",
     display: "Visceral layer of Bowman's capsule",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CranialCavity: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CranialCavity: new Coding({
     code: "1101003",
     display: "Cranial cavity",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MajorCalyx: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MajorCalyx: new Coding({
     code: "1106008",
     display: "Major calyx",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TarsalGland: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TarsalGland: new Coding({
     code: "1110006",
     display: "Tarsal gland",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ParathyroidGland: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ParathyroidGland: new Coding({
     code: "111002",
     display: "Parathyroid gland",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InferiorLongitudinalMuscleOfTongue: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InferiorLongitudinalMuscleOfTongue: new Coding({
     code: "1122009",
     display: "Inferior longitudinal muscle of tongue",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AortopulmonarySeptum: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AortopulmonarySeptum: new Coding({
     code: "1136004",
     display: "Aortopulmonary septum",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FrenulumLinguae: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FrenulumLinguae: new Coding({
     code: "1159005",
     display: "Frenulum linguae",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueOfMedialSurfaceOfIndexFinger: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueOfMedialSurfaceOfIndexFinger: new Coding({
     code: "116007",
     display: "Subcutaneous tissue of medial surface of index finger",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_OdontoidProcessOfAxis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_OdontoidProcessOfAxis: new Coding({
     code: "1172006",
     display: "Odontoid process of axis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MandibularNerve: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MandibularNerve: new Coding({
     code: "1173001",
     display: "Mandibular nerve",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ChromosomesGroupE: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ChromosomesGroupE: new Coding({
     code: "1174007",
     display: "Chromosomes, group E",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TeresMajorMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TeresMajorMuscle: new Coding({
     code: "1193009",
     display: "Teres major muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Synostosis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Synostosis: new Coding({
     code: "1216008",
     display: "Synostosis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CentralNervousSystemMeninges: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CentralNervousSystemMeninges: new Coding({
     code: "1231004",
     display: "Central nervous system meninges",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DuodenalSerosa: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DuodenalSerosa: new Coding({
     code: "1236009",
     display: "Duodenal serosa",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CoronoidProcessOfMandible: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CoronoidProcessOfMandible: new Coding({
     code: "124002",
     display: "Coronoid process of mandible",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InferiorArticularProcessOfSixthCervicalVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InferiorArticularProcessOfSixthCervicalVertebra: new Coding({
     code: "1243003",
     display: "Inferior articular process of sixth cervical vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DorsalDigitalNervesOfRadialNerve: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DorsalDigitalNervesOfRadialNerve: new Coding({
     code: "1246006",
     display: "Dorsal digital nerves of radial nerve",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DistinctiveArrangementOfMicrotubules: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DistinctiveArrangementOfMicrotubules: new Coding({
     code: "1263005",
     display: "Distinctive arrangement of microtubules",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_VertebralNerve: Coding.FromStrict({
+  ApproachSiteCodesValueSet_VertebralNerve: new Coding({
     code: "1277008",
     display: "Vertebral nerve",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Glottis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Glottis: new Coding({
     code: "1307006",
     display: "Glottis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TelogenHair: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TelogenHair: new Coding({
     code: "1311000",
     display: "Telogen hair",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DeepFlexorTendonOfIndexFinger: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DeepFlexorTendonOfIndexFinger: new Coding({
     code: "1350001",
     display: "Deep flexor tendon of index finger",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_GastricSerosa: Coding.FromStrict({
+  ApproachSiteCodesValueSet_GastricSerosa: new Coding({
     code: "1353004",
     display: "Gastric serosa",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_VastusLateralisMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_VastusLateralisMuscle: new Coding({
     code: "1403006",
     display: "Vastus lateralis muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorLimbOfStapes: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorLimbOfStapes: new Coding({
     code: "1425000",
     display: "Posterior limb of stapes",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ParavesicularLymphNode: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ParavesicularLymphNode: new Coding({
     code: "1439000",
     display: "Paravesicular lymph node",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LaryngealSaccule: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LaryngealSaccule: new Coding({
     code: "1441004",
     display: "Laryngeal saccule",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_YellowFibrocartilage: Coding.FromStrict({
+  ApproachSiteCodesValueSet_YellowFibrocartilage: new Coding({
     code: "1456008",
     display: "Yellow fibrocartilage",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ParietalBranchOfSuperficialTemporalArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ParietalBranchOfSuperficialTemporalArtery: new Coding({
     code: "1467009",
     display: "Parietal branch of superficial temporal artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfMetatarsalRegionOfFoot: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfMetatarsalRegionOfFoot: new Coding({
     code: "1484003",
     display: "Structure of metatarsal region of foot",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SoftTissuesOfTrunk: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SoftTissuesOfTrunk: new Coding({
     code: "1490004",
     display: "Soft tissues of trunk",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CentralPairOfMicrotubulesCiliumOrFlagellumNotBacterial: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CentralPairOfMicrotubulesCiliumOrFlagellumNotBacterial: new Coding({
     code: "149003",
     display: "Central pair of microtubules, cilium or flagellum, not bacterial",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AnteriorCecalArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AnteriorCecalArtery: new Coding({
     code: "1502004",
     display: "Anterior cecal artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EjaculatoryDuct: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EjaculatoryDuct: new Coding({
     code: "1511004",
     display: "Ejaculatory duct",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FrontomentalDiameterOfHead: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FrontomentalDiameterOfHead: new Coding({
     code: "1516009",
     display: "Frontomental diameter of head",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LaminaOfFourthThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LaminaOfFourthThoracicVertebra: new Coding({
     code: "1527006",
     display: "Lamina of fourth thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IntervertebralDiscOfEleventhThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IntervertebralDiscOfEleventhThoracicVertebra: new Coding({
     code: "1537001",
     display: "Intervertebral disc of eleventh thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CoccygealPlexus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CoccygealPlexus: new Coding({
     code: "1541002",
     display: "Coccygeal plexus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DeepCircumflexArteryOfIlium: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DeepCircumflexArteryOfIlium: new Coding({
     code: "155008",
     display: "Deep circumflex artery of ilium",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_NucleusPulposusOfIntervertebralDiscOfThirdLumbarVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_NucleusPulposusOfIntervertebralDiscOfThirdLumbarVertebra: new Coding({
     code: "1562001",
     display: "Nucleus pulposus of intervertebral disc of third lumbar vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_NailOfThirdToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_NailOfThirdToe: new Coding({
     code: "1569005",
     display: "Nail of third toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_NucleusVentralisLateralis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_NucleusVentralisLateralis: new Coding({
     code: "1580005",
     display: "Nucleus ventralis lateralis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IlealArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IlealArtery: new Coding({
     code: "1581009",
     display: "Ileal artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Symphysis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Symphysis: new Coding({
     code: "1584001",
     display: "Symphysis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SpleniusCapitisMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SpleniusCapitisMuscle: new Coding({
     code: "1600003",
     display: "Splenius capitis muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Histioblast: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Histioblast: new Coding({
     code: "1605008",
     display: "Histioblast",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Otoconia: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Otoconia: new Coding({
     code: "1610007",
     display: "Otoconia",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ParamammaryLymphNode: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ParamammaryLymphNode: new Coding({
     code: "1611006",
     display: "Paramammary lymph node",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IntrinsicLarynx: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IntrinsicLarynx: new Coding({
     code: "1617005",
     display: "Intrinsic larynx",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MetaphaseNucleus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MetaphaseNucleus: new Coding({
     code: "1620002",
     display: "Metaphase nucleus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ThirdThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ThirdThoracicVertebra: new Coding({
     code: "1626008",
     display: "Third thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MedialCollateralLigamentOfKneeJoint: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MedialCollateralLigamentOfKneeJoint: new Coding({
     code: "1627004",
     display: "Medial collateral ligament of knee joint",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SupraorbitalVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SupraorbitalVein: new Coding({
     code: "1630006",
     display: "Supraorbital vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Foregut: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Foregut: new Coding({
     code: "1631005",
     display: "Foregut",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_HilumOfLeftLung: Coding.FromStrict({
+  ApproachSiteCodesValueSet_HilumOfLeftLung: new Coding({
     code: "1650005",
     display: "Hilum of left lung",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TransversePeduncularTractNucleus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TransversePeduncularTractNucleus: new Coding({
     code: "1655000",
     display: "Transverse peduncular tract nucleus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_NucleusMedialisDorsalis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_NucleusMedialisDorsalis: new Coding({
     code: "1659006",
     display: "Nucleus medialis dorsalis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SupraclavicularPartOfBrachialPlexus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SupraclavicularPartOfBrachialPlexus: new Coding({
     code: "167005",
     display: "Supraclavicular part of brachial plexus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LigamentumTeresOfLiver: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LigamentumTeresOfLiver: new Coding({
     code: "1684009",
     display: "Ligamentum teres of liver",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ThymicLobule: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ThymicLobule: new Coding({
     code: "1706004",
     display: "Thymic lobule",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_VentralNuclearGroupOfThalamus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_VentralNuclearGroupOfThalamus: new Coding({
     code: "1707008",
     display: "Ventral nuclear group of thalamus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PeriorbitalRegion: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PeriorbitalRegion: new Coding({
     code: "1711002",
     display: "Periorbital region",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CupulaAmpullaris: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CupulaAmpullaris: new Coding({
     code: "1716007",
     display: "Cupula ampullaris",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RightTonsil: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RightTonsil: new Coding({
     code: "1721005",
     display: "Right tonsil",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CentralTegmentalTract: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CentralTegmentalTract: new Coding({
     code: "1729007",
     display: "Central tegmental tract",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TDThoracicDuct: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TDThoracicDuct: new Coding({
     code: "1732005",
     display: "TD - Thoracic duct",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfLymphaticVesselOfThorax: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfLymphaticVesselOfThorax: new Coding({
     code: "1765002",
     display: "Structure of lymphatic vessel of thorax",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Premelanosome: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Premelanosome: new Coding({
     code: "1780008",
     display: "Premelanosome",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SacroiliacRegion: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SacroiliacRegion: new Coding({
     code: "1781007",
     display: "Sacroiliac region",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Naris: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Naris: new Coding({
     code: "1797002",
     display: "Naris",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_GreaterCirculusArteriosusOfIris: Coding.FromStrict({
+  ApproachSiteCodesValueSet_GreaterCirculusArteriosusOfIris: new Coding({
     code: "1818002",
     display: "Greater circulus arteriosus of iris",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RootOfNose: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RootOfNose: new Coding({
     code: "1825009",
     display: "Root of nose",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ScleralConjunctiva: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ScleralConjunctiva: new Coding({
     code: "1832000",
     display: "Scleral conjunctiva",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ArrectorPiliMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ArrectorPiliMuscle: new Coding({
     code: "1840006",
     display: "Arrector pili muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PharyngealRecess: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PharyngealRecess: new Coding({
     code: "1849007",
     display: "Pharyngeal recess",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSuprahyoidMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSuprahyoidMuscle: new Coding({
     code: "1853009",
     display: "Structure of suprahyoid muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PromontoryLymphNode: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PromontoryLymphNode: new Coding({
     code: "1874005",
     display: "Promontory lymph node",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_JointOfUpperExtremity: Coding.FromStrict({
+  ApproachSiteCodesValueSet_JointOfUpperExtremity: new Coding({
     code: "1893007",
     display: "Joint of upper extremity",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MusculophrenicVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MusculophrenicVein: new Coding({
     code: "1895000",
     display: "Musculophrenic vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SkinOfExternalEar: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SkinOfExternalEar: new Coding({
     code: "1902009",
     display: "Skin of external ear",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Ear: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Ear: new Coding({
     code: "1910005",
     display: "Ear",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuprarenalAorta: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuprarenalAorta: new Coding({
     code: "1918003",
     display: "Suprarenal aorta",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LeftElbow: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LeftElbow: new Coding({
     code: "1927002",
     display: "Left elbow",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PorusAcusticusInternus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PorusAcusticusInternus: new Coding({
     code: "1992003",
     display: "Porus acusticus internus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CingulumDentis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CingulumDentis: new Coding({
     code: "1997009",
     display: "Cingulum dentis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ClavicularFacetOfScapula: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ClavicularFacetOfScapula: new Coding({
     code: "2010005",
     display: "Clavicular facet of scapula",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperiorThoracicArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperiorThoracicArtery: new Coding({
     code: "2020000",
     display: "Superior thoracic artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AnteriorDivisionOfRenalArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AnteriorDivisionOfRenalArtery: new Coding({
     code: "202009",
     display: "Anterior division of renal artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfAnteriorMedianFissureOfSpinalCord: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfAnteriorMedianFissureOfSpinalCord: new Coding({
     code: "2031008",
     display: "Structure of anterior median fissure of spinal cord",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RightFallopianTube: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RightFallopianTube: new Coding({
     code: "2033006",
     display: "Right fallopian tube",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_VaginalNerves: Coding.FromStrict({
+  ApproachSiteCodesValueSet_VaginalNerves: new Coding({
     code: "2044003",
     display: "Vaginal nerves",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LingualTonsil: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LingualTonsil: new Coding({
     code: "2048000",
     display: "Lingual tonsil",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ChorionicVilli: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ChorionicVilli: new Coding({
     code: "2049008",
     display: "Chorionic villi",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LeftCommissureOfAorticValve: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LeftCommissureOfAorticValve: new Coding({
     code: "205006",
     display: "Left commissure of aortic valve",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SkinOfEarLobule: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SkinOfEarLobule: new Coding({
     code: "2059009",
     display: "Skin of ear lobule",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_GluteusMaximusMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_GluteusMaximusMuscle: new Coding({
     code: "206007",
     display: "Gluteus maximus muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ReticularFormationOfSpinalCord: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ReticularFormationOfSpinalCord: new Coding({
     code: "2071003",
     display: "Reticular formation of spinal cord",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_HeadOfPhalanxOfHand: Coding.FromStrict({
+  ApproachSiteCodesValueSet_HeadOfPhalanxOfHand: new Coding({
     code: "2076008",
     display: "Head of phalanx of hand",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_NucleusAmbiguus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_NucleusAmbiguus: new Coding({
     code: "2083001",
     display: "Nucleus ambiguus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AccessorySinus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AccessorySinus: new Coding({
     code: "2095001",
     display: "Accessory sinus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MammilloinfundibularNucleus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MammilloinfundibularNucleus: new Coding({
     code: "2123001",
     display: "Mammilloinfundibular nucleus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_UrinaryTractTransitionalEpithelialCell: Coding.FromStrict({
+  ApproachSiteCodesValueSet_UrinaryTractTransitionalEpithelialCell: new Coding({
     code: "2150006",
     display: "Urinary tract transitional epithelial cell",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_GlialCell: Coding.FromStrict({
+  ApproachSiteCodesValueSet_GlialCell: new Coding({
     code: "2156000",
     display: "Glial cell",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LigamentumArteriosum: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LigamentumArteriosum: new Coding({
     code: "2160002",
     display: "Ligamentum arteriosum",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PharyngealCavity: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PharyngealCavity: new Coding({
     code: "2175005",
     display: "Pharyngeal cavity",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EndometrialZonaBasalis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EndometrialZonaBasalis: new Coding({
     code: "2182009",
     display: "Endometrial zona basalis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ClavicularPartOfPectoralisMajorMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ClavicularPartOfPectoralisMajorMuscle: new Coding({
     code: "2192001",
     display: "Clavicular part of pectoralis major muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LaminaOfFifthThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LaminaOfFifthThoracicVertebra: new Coding({
     code: "2205003",
     display: "Lamina of fifth thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CerebralBasalSurface: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CerebralBasalSurface: new Coding({
     code: "2209009",
     display: "Cerebral basal surface",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ArticularSurfacePhalangesOfFourthMetacarpalBone: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ArticularSurfacePhalangesOfFourthMetacarpalBone: new Coding({
     code: "221001",
     display: "Articular surface, phalanges, of fourth metacarpal bone",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LesserOsseousPelvis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LesserOsseousPelvis: new Coding({
     code: "2236006",
     display: "Lesser osseous pelvis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TypeIHairCell: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TypeIHairCell: new Coding({
     code: "2246008",
     display: "Type I hair cell",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Subserosa: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Subserosa: new Coding({
     code: "2255006",
     display: "Subserosa",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CanalOfHering: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CanalOfHering: new Coding({
     code: "227002",
     display: "Canal of Hering",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfTorcularHerophili: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfTorcularHerophili: new Coding({
     code: "2285001",
     display: "Structure of torcular Herophili",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfNasopharyngealGland: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfNasopharyngealGland: new Coding({
     code: "2292006",
     display: "Structure of nasopharyngeal gland",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_VeinOfTheKnee: Coding.FromStrict({
+  ApproachSiteCodesValueSet_VeinOfTheKnee: new Coding({
     code: "2302002",
     display: "Vein of the knee",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSpinousProcessOfCervicalVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSpinousProcessOfCervicalVertebra: new Coding({
     code: "2305000",
     display: "Structure of spinous process of cervical vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfBaseOfThirdMetacarpalBone: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfBaseOfThirdMetacarpalBone: new Coding({
     code: "2306004",
     display: "Structure of base of third metacarpal bone",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SalivarySeromucousGland: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SalivarySeromucousGland: new Coding({
     code: "2327009",
     display: "Salivary seromucous gland",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSegmentalBronchialBranches: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSegmentalBronchialBranches: new Coding({
     code: "2330002",
     display: "Structure of segmental bronchial branches",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_HepatocolicLigament: Coding.FromStrict({
+  ApproachSiteCodesValueSet_HepatocolicLigament: new Coding({
     code: "233006",
     display: "Hepatocolic ligament",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MetencephalonOfFoetus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MetencephalonOfFoetus: new Coding({
     code: "2332005",
     display: "Metencephalon of foetus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RenalCalyx: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RenalCalyx: new Coding({
     code: "2334006",
     display: "Renal calyx",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfNasalSutureOfSkull: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfNasalSutureOfSkull: new Coding({
     code: "2349003",
     display: "Structure of nasal suture of skull",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperiorLabialArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperiorLabialArtery: new Coding({
     code: "235004",
     display: "Superior labial artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfMedialSurfaceOfToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfMedialSurfaceOfToe: new Coding({
     code: "2372001",
     display: "Structure of medial surface of toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfPapillaryMusclesOfRightVentricle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfPapillaryMusclesOfRightVentricle: new Coding({
     code: "2383005",
     display: "Structure of papillary muscles of right ventricle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSuperiorMarginOfAdrenalGland: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSuperiorMarginOfAdrenalGland: new Coding({
     code: "2389009",
     display: "Structure of superior margin of adrenal gland",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfTransverseFacialArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfTransverseFacialArtery: new Coding({
     code: "2395005",
     display: "Structure of transverse facial artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfFirstMetatarsalFacetOfMedialCuneiformBone: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfFirstMetatarsalFacetOfMedialCuneiformBone: new Coding({
     code: "2397002",
     display: "Structure of first metatarsal facet of medial cuneiform bone",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_UniversalDesignation21: Coding.FromStrict({
+  ApproachSiteCodesValueSet_UniversalDesignation21: new Coding({
     code: "2400006",
     display: "Universal designation 21",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfDorsumOfFoot: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfDorsumOfFoot: new Coding({
     code: "2402003",
     display: "Structure of dorsum of foot",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSubmaxillaryGanglion: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSubmaxillaryGanglion: new Coding({
     code: "2421006",
     display: "Structure of submaxillary ganglion",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfDigitalTendonAndTendonSheathOfFoot: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfDigitalTendonAndTendonSheathOfFoot: new Coding({
     code: "2433001",
     display: "Structure of digital tendon and tendon sheath of foot",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TunicaIntimaOfVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TunicaIntimaOfVein: new Coding({
     code: "2436009",
     display: "Tunica intima of vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfPosteriorSurfaceOfForearm: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfPosteriorSurfaceOfForearm: new Coding({
     code: "2453002",
     display: "Subcutaneous tissue structure of posterior surface of forearm",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfArticularSurfaceThirdMetacarpalOfSecondMetacarpalBone: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfArticularSurfaceThirdMetacarpalOfSecondMetacarpalBone: new Coding({
     code: "2454008",
     display: "Structure of articular surface, third metacarpal, of second metacarpal bone",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LateralVestibularNucleus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LateralVestibularNucleus: new Coding({
     code: "246001",
     display: "Lateral vestibular nucleus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Mesotympanum: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Mesotympanum: new Coding({
     code: "247005",
     display: "Mesotympanum",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SkinStructureOfFrenulumOfClitoris: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SkinStructureOfFrenulumOfClitoris: new Coding({
     code: "2484000",
     display: "Skin structure of frenulum of clitoris",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfMedialCheckLigamentOfEye: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfMedialCheckLigamentOfEye: new Coding({
     code: "2489005",
     display: "Structure of medial check ligament of eye",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EntireCisternaPontis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EntireCisternaPontis: new Coding({
     code: "2499000",
     display: "Entire cisterna pontis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MembraneOfLysosome: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MembraneOfLysosome: new Coding({
     code: "2502001",
     display: "Membrane of lysosome",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfPancreaticPlexus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfPancreaticPlexus: new Coding({
     code: "2504000",
     display: "Structure of pancreatic plexus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FemoralTriangleStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FemoralTriangleStructure: new Coding({
     code: "2510000",
     display: "Femoral triangle structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PectoralRegion: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PectoralRegion: new Coding({
     code: "251007",
     display: "Pectoral region",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSuperiorRectalArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSuperiorRectalArtery: new Coding({
     code: "2539000",
     display: "Structure of superior rectal artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfCuboidArticularFacetOfFourthMetatarsalBone: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfCuboidArticularFacetOfFourthMetatarsalBone: new Coding({
     code: "2543001",
     display: "Structure of cuboid articular facet of fourth metatarsal bone",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BoneStructureOfPhalanxOfThumb: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BoneStructureOfPhalanxOfThumb: new Coding({
     code: "2550002",
     display: "Bone structure of phalanx of thumb",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_KupfferCell: Coding.FromStrict({
+  ApproachSiteCodesValueSet_KupfferCell: new Coding({
     code: "256002",
     display: "Kupffer cell",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfGracilisMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfGracilisMuscle: new Coding({
     code: "2577006",
     display: "Structure of gracilis muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Plasmablast: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Plasmablast: new Coding({
     code: "2579009",
     display: "Plasmablast",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AllExtremities: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AllExtremities: new Coding({
     code: "2592007",
     display: "All extremities",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfFlexorPollicisLongusMuscleTendon: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfFlexorPollicisLongusMuscleTendon: new Coding({
     code: "2600000",
     display: "Structure of flexor pollicis longus muscle tendon",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IntervertebralDiscStructureOfThirdThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IntervertebralDiscStructureOfThirdThoracicVertebra: new Coding({
     code: "2620004",
     display: "Intervertebral disc structure of third thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ThoracicNerve: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ThoracicNerve: new Coding({
     code: "263002",
     display: "Thoracic nerve",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_NeuroendocrineTissue: Coding.FromStrict({
+  ApproachSiteCodesValueSet_NeuroendocrineTissue: new Coding({
     code: "2639009",
     display: "Neuroendocrine tissue",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfPosteriorThalamicRadiationOfInternalCapsule: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfPosteriorThalamicRadiationOfInternalCapsule: new Coding({
     code: "2653009",
     display: "Structure of posterior thalamic radiation of internal capsule",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RightLowerLobeOfLung: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RightLowerLobeOfLung: new Coding({
     code: "266005",
     display: "Right lower lobe of lung",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSemispinalisCapitisMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSemispinalisCapitisMuscle: new Coding({
     code: "2666009",
     display: "Structure of semispinalis capitis muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfAnteriorCutaneousBranchOfLumbosacralPlexus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfAnteriorCutaneousBranchOfLumbosacralPlexus: new Coding({
     code: "2672009",
     display: "Structure of anterior cutaneous branch of lumbosacral plexus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfAnteriorEthmoidalArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfAnteriorEthmoidalArtery: new Coding({
     code: "2675006",
     display: "Structure of anterior ethmoidal artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfDorsalNerveOfPenis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfDorsalNerveOfPenis: new Coding({
     code: "2681003",
     display: "Structure of dorsal nerve of penis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BladderMucosa: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BladderMucosa: new Coding({
     code: "2682005",
     display: "Bladder mucosa",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfMedialOlfactoryGyrus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfMedialOlfactoryGyrus: new Coding({
     code: "2686008",
     display: "Structure of medial olfactory gyrus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfBowmanSpace: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfBowmanSpace: new Coding({
     code: "2687004",
     display: "Structure of Bowman space",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LeftMaxillarySinusStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LeftMaxillarySinusStructure: new Coding({
     code: "2695000",
     display: "Left maxillary sinus structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EntireCalcarineArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EntireCalcarineArtery: new Coding({
     code: "2703009",
     display: "Entire calcarine artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfCapsuleOfAnkleJoint: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfCapsuleOfAnkleJoint: new Coding({
     code: "2712006",
     display: "Structure of capsule of ankle joint",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfApicalForamenOfTooth: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfApicalForamenOfTooth: new Coding({
     code: "2718005",
     display: "Structure of apical foramen of tooth",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperiorArticularProcessOfLumbarVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperiorArticularProcessOfLumbarVertebra: new Coding({
     code: "272005",
     display: "Superior articular process of lumbar vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfFoldForStapes: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfFoldForStapes: new Coding({
     code: "2726002",
     display: "Structure of fold for stapes",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LateralMyocardium: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LateralMyocardium: new Coding({
     code: "273000",
     display: "Lateral myocardium",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EntireVitellineVeinOfPlacenta: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EntireVitellineVeinOfPlacenta: new Coding({
     code: "2730004",
     display: "Entire vitelline vein of placenta",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EndometrialStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EndometrialStructure: new Coding({
     code: "2739003",
     display: "Endometrial structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfMedialOccipitotemporalGyrus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfMedialOccipitotemporalGyrus: new Coding({
     code: "2741002",
     display: "Structure of medial occipitotemporal gyrus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CircularLayerOfGastricMuscularis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CircularLayerOfGastricMuscularis: new Coding({
     code: "2746007",
     display: "Circular layer of gastric muscularis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SpinalCordStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SpinalCordStructure: new Coding({
     code: "2748008",
     display: "Spinal cord structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EccrineGlandStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EccrineGlandStructure: new Coding({
     code: "2759004",
     display: "Eccrine gland structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LaminaPropriaOfUreter: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LaminaPropriaOfUreter: new Coding({
     code: "2771005",
     display: "Lamina propria of ureter",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ApocrineGlandStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ApocrineGlandStructure: new Coding({
     code: "2789006",
     display: "Apocrine gland structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfParsTensaOfTympanicMembrane: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfParsTensaOfTympanicMembrane: new Coding({
     code: "2792005",
     display: "Structure of pars tensa of tympanic membrane",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfTendonSheathOfPopliteusMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfTendonSheathOfPopliteusMuscle: new Coding({
     code: "2803000",
     display: "Structure of tendon sheath of popliteus muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfCremastericFascia: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfCremastericFascia: new Coding({
     code: "2810006",
     display: "Structure of cremasteric fascia",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfHeadOfFemur: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfHeadOfFemur: new Coding({
     code: "2812003",
     display: "Structure of head of femur",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSpinousProcessOfFourthThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSpinousProcessOfFourthThoracicVertebra: new Coding({
     code: "2824005",
     display: "Structure of spinous process of fourth thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfLaminaOfFourthLumbarVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfLaminaOfFourthLumbarVertebra: new Coding({
     code: "2826007",
     display: "Structure of lamina of fourth lumbar vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfDorsalDigitalNervesOfLateralHalluxAndMedialSecondToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfDorsalDigitalNervesOfLateralHalluxAndMedialSecondToe: new Coding({
     code: "2830005",
     display: "Structure of dorsal digital nerves of lateral hallux and medial second toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CentralAxillaryLymphNode: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CentralAxillaryLymphNode: new Coding({
     code: "283001",
     display: "Central axillary lymph node",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfPerivesicularTissuesOfSeminalVesicles: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfPerivesicularTissuesOfSeminalVesicles: new Coding({
     code: "2839006",
     display: "Structure of perivesicular tissues of seminal vesicles",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FlexorTendonAndTendonSheathOfFourthToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FlexorTendonAndTendonSheathOfFourthToe: new Coding({
     code: "284007",
     display: "Flexor tendon and tendon sheath of fourth toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RenalArteryStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RenalArteryStructure: new Coding({
     code: "2841007",
     display: "Renal artery structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfRespiratoryEpithelium: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfRespiratoryEpithelium: new Coding({
     code: "2845003",
     display: "Structure of respiratory epithelium",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSuperficialEpigastricArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSuperficialEpigastricArtery: new Coding({
     code: "2848001",
     display: "Structure of superficial epigastric artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfAccessoryCephalicVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfAccessoryCephalicVein: new Coding({
     code: "2855004",
     display: "Structure of accessory cephalic vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EntireGlandOrgan: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EntireGlandOrgan: new Coding({
     code: "2861001",
     display: "Entire gland (organ)",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MetacarpophalangealJointOfIndexFinger: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MetacarpophalangealJointOfIndexFinger: new Coding({
     code: "289002",
     display: "Metacarpophalangeal joint of index finger",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfPosteriorEpiglottis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfPosteriorEpiglottis: new Coding({
     code: "2894003",
     display: "Structure of posterior epiglottis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfAnteriorLigamentOfUterus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfAnteriorLigamentOfUterus: new Coding({
     code: "2905008",
     display: "Structure of anterior ligament of uterus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfPosteriorPortionOfDiaphragmaticAspectOfLiver: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfPosteriorPortionOfDiaphragmaticAspectOfLiver: new Coding({
     code: "2909002",
     display: "Structure of posterior portion of diaphragmatic aspect of liver",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfFacialNerveMotorBranch: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfFacialNerveMotorBranch: new Coding({
     code: "2920002",
     display: "Structure of facial nerve motor branch",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfPosteriorPapillaryMuscleOfLeftVentricle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfPosteriorPapillaryMuscleOfLeftVentricle: new Coding({
     code: "2922005",
     display: "Structure of posterior papillary muscle of left ventricle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfSupraorbitalArea: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfSupraorbitalArea: new Coding({
     code: "2923000",
     display: "Subcutaneous tissue structure of supraorbital area",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SupernumeraryDeciduousTooth: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SupernumeraryDeciduousTooth: new Coding({
     code: "2954001",
     display: "Supernumerary deciduous tooth",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AnatomicalSpaceStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AnatomicalSpaceStructure: new Coding({
     code: "2969000",
     display: "Anatomical space structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BoneStructureOfMedialCuneiform: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BoneStructureOfMedialCuneiform: new Coding({
     code: "2979003",
     display: "Bone structure of medial cuneiform",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfTalarFacetOfNavicularBoneOfFoot: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfTalarFacetOfNavicularBoneOfFoot: new Coding({
     code: "2986006",
     display: "Structure of talar facet of navicular bone of foot",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EntireRightMarginOfUterus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EntireRightMarginOfUterus: new Coding({
     code: "2998001",
     display: "Entire right margin of uterus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InternalCapsuleAnteriorLimbStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InternalCapsuleAnteriorLimbStructure: new Coding({
     code: "3003007",
     display: "Internal capsule anterior limb structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_WhiteFibrocartilage: Coding.FromStrict({
+  ApproachSiteCodesValueSet_WhiteFibrocartilage: new Coding({
     code: "3008003",
     display: "White fibrocartilage",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FifthMetatarsalBone: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FifthMetatarsalBone: new Coding({
     code: "301000",
     display: "Fifth metatarsal bone",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TransitionalEpithelialCell: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TransitionalEpithelialCell: new Coding({
     code: "3028004",
     display: "Transitional epithelial cell",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfThigh: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfThigh: new Coding({
     code: "3039001",
     display: "Subcutaneous tissue structure of thigh",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfGlomerularUrinaryPole: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfGlomerularUrinaryPole: new Coding({
     code: "3042007",
     display: "Structure of glomerular urinary pole",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfArticularSurfaceMetacarpalOfPhalanxOfThumb: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfArticularSurfaceMetacarpalOfPhalanxOfThumb: new Coding({
     code: "3054007",
     display: "Structure of articular surface, metacarpal, of phalanx of thumb",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfBoneMarrowOfVertebralBody: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfBoneMarrowOfVertebralBody: new Coding({
     code: "3055008",
     display: "Structure of bone marrow of vertebral body",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfAnteroventralNucleusOfThalamus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfAnteroventralNucleusOfThalamus: new Coding({
     code: "3056009",
     display: "Structure of anteroventral nucleus of thalamus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_NerveStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_NerveStructure: new Coding({
     code: "3057000",
     display: "Nerve structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PNSPeripheralNervousSystem: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PNSPeripheralNervousSystem: new Coding({
     code: "3058005",
     display: "PNS - Peripheral nervous system",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SpinalArachnoid: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SpinalArachnoid: new Coding({
     code: "3062004",
     display: "Spinal arachnoid",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSeminalVesicleLumen: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSeminalVesicleLumen: new Coding({
     code: "3068000",
     display: "Structure of seminal vesicle lumen",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MitochondrionInDivision: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MitochondrionInDivision: new Coding({
     code: "3081007",
     display: "Mitochondrion in division",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfTendinousArchOfPelvicFascia: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfTendinousArchOfPelvicFascia: new Coding({
     code: "3093003",
     display: "Structure of tendinous arch of pelvic fascia",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ClinicalCrownOfTooth: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ClinicalCrownOfTooth: new Coding({
     code: "3100007",
     display: "Clinical crown of tooth",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PlantarSurfaceOfGreatToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PlantarSurfaceOfGreatToe: new Coding({
     code: "311007",
     display: "Plantar surface of great toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSuprachoroidalSpace: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSuprachoroidalSpace: new Coding({
     code: "3113001",
     display: "Structure of suprachoroidal space",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfDorsalSurfaceOfIndexFinger: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfDorsalSurfaceOfIndexFinger: new Coding({
     code: "3117000",
     display: "Structure of dorsal surface of index finger",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfTrabeculaCarneaOfLeftVentricle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfTrabeculaCarneaOfLeftVentricle: new Coding({
     code: "3118005",
     display: "Structure of trabecula carnea of left ventricle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PleuralMembraneStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PleuralMembraneStructure: new Coding({
     code: "3120008",
     display: "Pleural membrane structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfHeadOfFourthMetatarsalBone: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfHeadOfFourthMetatarsalBone: new Coding({
     code: "3134008",
     display: "Structure of head of fourth metatarsal bone",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BoneTissue: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BoneTissue: new Coding({
     code: "3138006",
     display: "Bone tissue",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SkinOfUmbilicus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SkinOfUmbilicus: new Coding({
     code: "315003",
     display: "Skin of umbilicus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfTractusOlivocochlearis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfTractusOlivocochlearis: new Coding({
     code: "3153003",
     display: "Structure of tractus olivocochlearis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfObturatorArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfObturatorArtery: new Coding({
     code: "3156006",
     display: "Structure of obturator artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfCostocervicalTrunk: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfCostocervicalTrunk: new Coding({
     code: "3159004",
     display: "Structure of costocervical trunk",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SpinalNerveStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SpinalNerveStructure: new Coding({
     code: "3169005",
     display: "Spinal nerve structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfRapheOfSoftPalate: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfRapheOfSoftPalate: new Coding({
     code: "3178004",
     display: "Structure of raphe of soft palate",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CardiacImpressionOfLiver: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CardiacImpressionOfLiver: new Coding({
     code: "318001",
     display: "Cardiac impression of liver",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EndocardiumOfRightAtrium: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EndocardiumOfRightAtrium: new Coding({
     code: "3194006",
     display: "Endocardium of right atrium",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MonostomaticSublingualGland: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MonostomaticSublingualGland: new Coding({
     code: "3198009",
     display: "Monostomatic sublingual gland",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfNuchalRegion: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfNuchalRegion: new Coding({
     code: "3215002",
     display: "Subcutaneous tissue structure of nuchal region",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AllLargeArteries: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AllLargeArteries: new Coding({
     code: "3222005",
     display: "All large arteries",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LeftCoronaryArteryMainStem: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LeftCoronaryArteryMainStem: new Coding({
     code: "3227004",
     display: "Left coronary artery main stem",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfPosteriorSegmentOfRightUpperLobeOfLung: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfPosteriorSegmentOfRightUpperLobeOfLung: new Coding({
     code: "3236000",
     display: "Structure of posterior segment of right upper lobe of lung",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfParametrialLymphNode: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfParametrialLymphNode: new Coding({
     code: "3243006",
     display: "Structure of parametrial lymph node",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PapillaryArea: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PapillaryArea: new Coding({
     code: "3255000",
     display: "Papillary area",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfRootCanalOfTooth: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfRootCanalOfTooth: new Coding({
     code: "3262009",
     display: "Structure of root canal of tooth",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfPedicleOfThirdCervicalVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfPedicleOfThirdCervicalVertebra: new Coding({
     code: "3279003",
     display: "Structure of pedicle of third cervical vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfVentralAnteriorNucleusOfThalamus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfVentralAnteriorNucleusOfThalamus: new Coding({
     code: "3295003",
     display: "Structure of ventral anterior nucleus of thalamus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TectopontineFibers: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TectopontineFibers: new Coding({
     code: "3301002",
     display: "Tectopontine fibers",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SplenicBranchOfSplenicArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SplenicBranchOfSplenicArtery: new Coding({
     code: "3302009",
     display: "Splenic branch of splenic artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfVestibulospinalTract: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfVestibulospinalTract: new Coding({
     code: "3315000",
     display: "Structure of vestibulospinal tract",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_OccipitofrontalDiameterOfHead: Coding.FromStrict({
+  ApproachSiteCodesValueSet_OccipitofrontalDiameterOfHead: new Coding({
     code: "3332001",
     display: "Occipitofrontal diameter of head",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_HaversianCanal: Coding.FromStrict({
+  ApproachSiteCodesValueSet_HaversianCanal: new Coding({
     code: "3336003",
     display: "Haversian canal",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RightLungStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RightLungStructure: new Coding({
     code: "3341006",
     display: "Right lung structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EntireRightCommissureOfPulmonicValve: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EntireRightCommissureOfPulmonicValve: new Coding({
     code: "3350008",
     display: "Entire right commissure of pulmonic valve",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IntertragalIncisureStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IntertragalIncisureStructure: new Coding({
     code: "3362007",
     display: "Intertragal incisure structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfAnteriorPapillaryMuscleOfLeftVentricle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfAnteriorPapillaryMuscleOfLeftVentricle: new Coding({
     code: "3366005",
     display: "Structure of anterior papillary muscle of left ventricle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSupportingTissueOfRectum: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSupportingTissueOfRectum: new Coding({
     code: "3370002",
     display: "Structure of supporting tissue of rectum",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SecondarySpermatocyte: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SecondarySpermatocyte: new Coding({
     code: "3374006",
     display: "Secondary spermatocyte",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfAggerNasi: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfAggerNasi: new Coding({
     code: "3377004",
     display: "Structure of agger nasi",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfRimaOris: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfRimaOris: new Coding({
     code: "3382006",
     display: "Structure of rima oris",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_NonsegmentedBasophil: Coding.FromStrict({
+  ApproachSiteCodesValueSet_NonsegmentedBasophil: new Coding({
     code: "3383001",
     display: "Nonsegmented basophil",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuboccipitobregmaticDiameterOfHead: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuboccipitobregmaticDiameterOfHead: new Coding({
     code: "3394002",
     display: "Suboccipitobregmatic diameter of head",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSuperiorPalpebralArch: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSuperiorPalpebralArch: new Coding({
     code: "3395001",
     display: "Structure of superior palpebral arch",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfMesogastrium: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfMesogastrium: new Coding({
     code: "3396000",
     display: "Structure of mesogastrium",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CellOfBone: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CellOfBone: new Coding({
     code: "3400000",
     display: "Cell of bone",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfLateralMarginOfForearm: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfLateralMarginOfForearm: new Coding({
     code: "3409004",
     display: "Structure of lateral margin of forearm",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfRotatorMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfRotatorMuscle: new Coding({
     code: "3417007",
     display: "Structure of rotator muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DeepLymphaticOfUpperExtremity: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DeepLymphaticOfUpperExtremity: new Coding({
     code: "3438001",
     display: "Deep lymphatic of upper extremity",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Ankle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Ankle: new Coding({
     code: "344001",
     display: "Ankle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ThalamostriateVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ThalamostriateVein: new Coding({
     code: "3444002",
     display: "Thalamostriate vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PenetratedOocyte: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PenetratedOocyte: new Coding({
     code: "3447009",
     display: "Penetrated oocyte",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PenetratingAtrioventricularBundle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PenetratingAtrioventricularBundle: new Coding({
     code: "345000",
     display: "Penetrating atrioventricular bundle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfAnterodorsalNucleusOfThalamus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfAnterodorsalNucleusOfThalamus: new Coding({
     code: "3460003",
     display: "Structure of anterodorsal nucleus of thalamus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfCommissureOfTricuspidValve: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfCommissureOfTricuspidValve: new Coding({
     code: "3462006",
     display: "Structure of commissure of tricuspid valve",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorMidlineOfTrunk: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorMidlineOfTrunk: new Coding({
     code: "3471002",
     display: "Posterior midline of trunk",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfVastusMedialisMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfVastusMedialisMuscle: new Coding({
     code: "3478008",
     display: "Structure of vastus medialis muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfEmbryonicTestis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfEmbryonicTestis: new Coding({
     code: "3481003",
     display: "Structure of embryonic testis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AnnulateLamellaCisternalLumen: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AnnulateLamellaCisternalLumen: new Coding({
     code: "3488009",
     display: "Annulate lamella, cisternal lumen",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfSuboccipitalRegion: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfSuboccipitalRegion: new Coding({
     code: "3490005",
     display: "Subcutaneous tissue structure of suboccipital region",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfLateralWallOfMastoidAntrum: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfLateralWallOfMastoidAntrum: new Coding({
     code: "3524005",
     display: "Structure of lateral wall of mastoid antrum",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfCapsuleOfProximalTibiofibularJoint: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfCapsuleOfProximalTibiofibularJoint: new Coding({
     code: "3538003",
     display: "Structure of capsule of proximal tibiofibular joint",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfDorsalMetatarsalArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfDorsalMetatarsalArtery: new Coding({
     code: "3541007",
     display: "Structure of dorsal metatarsal artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfThyroidCapsule: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfThyroidCapsule: new Coding({
     code: "3553006",
     display: "Structure of thyroid capsule",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfDorsalNucleusOfTrapezoidBody: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfDorsalNucleusOfTrapezoidBody: new Coding({
     code: "3556003",
     display: "Structure of dorsal nucleus of trapezoid body",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ReticularCorium: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ReticularCorium: new Coding({
     code: "356000",
     display: "Reticular corium",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MuscularisOfUreter: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MuscularisOfUreter: new Coding({
     code: "3563003",
     display: "Muscularis of ureter",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_VertebralBody: Coding.FromStrict({
+  ApproachSiteCodesValueSet_VertebralBody: new Coding({
     code: "3572006",
     display: "Vertebral body",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfBodyOfGallbladder: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfBodyOfGallbladder: new Coding({
     code: "3578005",
     display: "Structure of body of gallbladder",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfGastrophrenicLigament: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfGastrophrenicLigament: new Coding({
     code: "3582007",
     display: "Structure of gastrophrenic ligament",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_T10DorsalArch: Coding.FromStrict({
+  ApproachSiteCodesValueSet_T10DorsalArch: new Coding({
     code: "3584008",
     display: "T10 dorsal arch",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfStraightPartOfLongusColliMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfStraightPartOfLongusColliMuscle: new Coding({
     code: "3594003",
     display: "Structure of straight part of longus colli muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IschiococcygeusMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IschiococcygeusMuscle: new Coding({
     code: "3608004",
     display: "Ischiococcygeus muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfOccipitalBranchOfPosteriorAuricularArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfOccipitalBranchOfPosteriorAuricularArtery: new Coding({
     code: "3609007",
     display: "Structure of occipital branch of posterior auricular artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Lamellipodium: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Lamellipodium: new Coding({
     code: "3646006",
     display: "Lamellipodium",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfTympanicOstiumOfEustachianTube: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfTympanicOstiumOfEustachianTube: new Coding({
     code: "3663005",
     display: "Structure of tympanic ostium of Eustachian tube",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PelvicWallStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PelvicWallStructure: new Coding({
     code: "3665003",
     display: "Pelvic wall structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EntireSubpyloricLymphNode: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EntireSubpyloricLymphNode: new Coding({
     code: "3670005",
     display: "Entire subpyloric lymph node",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_GreatVessel: Coding.FromStrict({
+  ApproachSiteCodesValueSet_GreatVessel: new Coding({
     code: "3711007",
     display: "Great vessel",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfLateralThoracicArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfLateralThoracicArtery: new Coding({
     code: "3743007",
     display: "Structure of lateral thoracic artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfNucleusPulposusOfIntervertebralDiscOfFirstThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfNucleusPulposusOfIntervertebralDiscOfFirstThoracicVertebra: new Coding({
     code: "3761003",
     display: "Structure of nucleus pulposus of intervertebral disc of first thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfLowerExtremity: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfLowerExtremity: new Coding({
     code: "3766008",
     display: "Subcutaneous tissue structure of lower extremity",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EntireDorsalMetacarpalLigament: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EntireDorsalMetacarpalLigament: new Coding({
     code: "3785006",
     display: "Entire dorsal metacarpal ligament",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfApicalSegmentOfRightLowerLobeOfLung: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfApicalSegmentOfRightLowerLobeOfLung: new Coding({
     code: "3788008",
     display: "Structure of apical segment of right lower lobe of lung",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EnteroendocrineCell: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EnteroendocrineCell: new Coding({
     code: "3789000",
     display: "Enteroendocrine cell",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SeptalCartilageStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SeptalCartilageStructure: new Coding({
     code: "3810000",
     display: "Septal cartilage structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfApexOfCoccyx: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfApexOfCoccyx: new Coding({
     code: "3838008",
     display: "Structure of apex of coccyx",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfTransplantedLiver: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfTransplantedLiver: new Coding({
     code: "3860006",
     display: "Structure of transplanted liver",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfInterscapularRegionOfBack: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfInterscapularRegionOfBack: new Coding({
     code: "3865001",
     display: "Structure of interscapular region of back",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfDorsalSurfaceOfGreatToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfDorsalSurfaceOfGreatToe: new Coding({
     code: "3867009",
     display: "Structure of dorsal surface of great toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfFemoralRegion: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfFemoralRegion: new Coding({
     code: "3876002",
     display: "Subcutaneous tissue structure of femoral region",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfCommonCarotidPlexus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfCommonCarotidPlexus: new Coding({
     code: "3877006",
     display: "Structure of common carotid plexus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfLateralSurfaceOfFourthToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfLateralSurfaceOfFourthToe: new Coding({
     code: "3910004",
     display: "Subcutaneous tissue structure of lateral surface of fourth toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfOccipitalLymphNode: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfOccipitalLymphNode: new Coding({
     code: "3916005",
     display: "Structure of occipital lymph node",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfPericardiophrenicArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfPericardiophrenicArtery: new Coding({
     code: "3924000",
     display: "Structure of pericardiophrenic artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_WallOfUrinaryBladder: Coding.FromStrict({
+  ApproachSiteCodesValueSet_WallOfUrinaryBladder: new Coding({
     code: "393006",
     display: "Wall of urinary bladder",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_OWOvalWindow: Coding.FromStrict({
+  ApproachSiteCodesValueSet_OWOvalWindow: new Coding({
     code: "3931001",
     display: "OW - Oval window",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_HeadOfTenthRibStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_HeadOfTenthRibStructure: new Coding({
     code: "3935005",
     display: "Head of tenth rib structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfEntorhinalCortex: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfEntorhinalCortex: new Coding({
     code: "3937002",
     display: "Structure of entorhinal cortex",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LacrimalSacStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LacrimalSacStructure: new Coding({
     code: "3954005",
     display: "Lacrimal sac structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfFifthMetatarsalArticularFacetOfFourthMetatarsalBone: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfFifthMetatarsalArticularFacetOfFourthMetatarsalBone: new Coding({
     code: "3956007",
     display: "Structure of fifth metatarsal articular facet of fourth metatarsal bone",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfRectusCapitisMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfRectusCapitisMuscle: new Coding({
     code: "3959000",
     display: "Structure of rectus capitis muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_OlfactoryTractStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_OlfactoryTractStructure: new Coding({
     code: "3960005",
     display: "Olfactory tract structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfGyrusOfBrain: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfGyrusOfBrain: new Coding({
     code: "3964001",
     display: "Structure of gyrus of brain",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EntireParietalBranchOfAnteriorCerebralArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EntireParietalBranchOfAnteriorCerebralArtery: new Coding({
     code: "3966004",
     display: "Entire parietal branch of anterior cerebral artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfConcha: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfConcha: new Coding({
     code: "3977005",
     display: "Subcutaneous tissue structure of concha",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DeepVeinOfClitoris: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DeepVeinOfClitoris: new Coding({
     code: "3984002",
     display: "Deep vein of clitoris",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfMedialGlobusPallidus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfMedialGlobusPallidus: new Coding({
     code: "3989007",
     display: "Structure of medial globus pallidus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ChromosomesGroupA: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ChromosomesGroupA: new Coding({
     code: "4015004",
     display: "Chromosomes, group A",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorCommissureOfLabiumMajorum: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorCommissureOfLabiumMajorum: new Coding({
     code: "4019005",
     display: "Posterior commissure of labium majorum",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DentalBranchesOfInferiorAlveolarArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DentalBranchesOfInferiorAlveolarArtery: new Coding({
     code: "402006",
     display: "Dental branches of inferior alveolar artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EosinophilicProgranulocyte: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EosinophilicProgranulocyte: new Coding({
     code: "4029003",
     display: "Eosinophilic progranulocyte",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorTemporalDiploicVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorTemporalDiploicVein: new Coding({
     code: "405008",
     display: "Posterior temporal diploic vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LateralOrbitalWall: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LateralOrbitalWall: new Coding({
     code: "4061004",
     display: "Lateral orbital wall",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfCapsuleOfProximalInterphalangealJointOfIndexFinger: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfCapsuleOfProximalInterphalangealJointOfIndexFinger: new Coding({
     code: "4066009",
     display: "Structure of capsule of proximal interphalangeal joint of index finger",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfFourthCoccygealVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfFourthCoccygealVertebra: new Coding({
     code: "4072009",
     display: "Structure of fourth coccygeal vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EntireDorsalLingualVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EntireDorsalLingualVein: new Coding({
     code: "4081003",
     display: "Entire dorsal lingual vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfVagusNerveBronchialBranch: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfVagusNerveBronchialBranch: new Coding({
     code: "4093007",
     display: "Structure of vagus nerve bronchial branch",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MaculaOfTheSaccule: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MaculaOfTheSaccule: new Coding({
     code: "4111006",
     display: "Macula of the saccule",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LumbosacralSpinalCordCentralCanalStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LumbosacralSpinalCordCentralCanalStructure: new Coding({
     code: "4117005",
     display: "Lumbosacral spinal cord central canal structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSuperiorFrontalSulcus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSuperiorFrontalSulcus: new Coding({
     code: "4121003",
     display: "Structure of superior frontal sulcus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_GastricFundus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_GastricFundus: new Coding({
     code: "414003",
     display: "Gastric fundus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfArteryOfExtremity: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfArteryOfExtremity: new Coding({
     code: "4146003",
     display: "Structure of artery of extremity",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfPalmarSurfaceOfLittleFinger: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfPalmarSurfaceOfLittleFinger: new Coding({
     code: "4148002",
     display: "Structure of palmar surface of little finger",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CeliacNervousPlexusStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CeliacNervousPlexusStructure: new Coding({
     code: "4150005",
     display: "Celiac nervous plexus structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AbdominalAorticPlexusStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AbdominalAorticPlexusStructure: new Coding({
     code: "4158003",
     display: "Abdominal aortic plexus structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_HyparterialBronchus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_HyparterialBronchus: new Coding({
     code: "4159006",
     display: "Hyparterial bronchus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BothLowerExtremities: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BothLowerExtremities: new Coding({
     code: "4180000",
     display: "Both lower extremities",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EntireExtensorTendonAndTendonSheathOfFifthToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EntireExtensorTendonAndTendonSheathOfFifthToe: new Coding({
     code: "4193005",
     display: "Entire extensor tendon and tendon sheath of fifth toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TurkCell: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TurkCell: new Coding({
     code: "4205002",
     display: "Türk cell",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EpithelialCells: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EpithelialCells: new Coding({
     code: "4212006",
     display: "Epithelial cells",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_HeadOfSecondRibStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_HeadOfSecondRibStructure: new Coding({
     code: "4215008",
     display: "Head of second rib structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InferiorSurfaceOfTongue: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InferiorSurfaceOfTongue: new Coding({
     code: "422005",
     display: "Inferior surface of tongue",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BoneStructureOfFirstMetacarpal: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BoneStructureOfFirstMetacarpal: new Coding({
     code: "4247003",
     display: "Bone structure of first metacarpal",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorTibialVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorTibialVein: new Coding({
     code: "4258007",
     display: "Posterior tibial vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LateralSpinorubralTract: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LateralSpinorubralTract: new Coding({
     code: "4268002",
     display: "Lateral spinorubral tract",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfInferiorArticularProcessOfSeventhCervicalVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfInferiorArticularProcessOfSeventhCervicalVertebra: new Coding({
     code: "4276000",
     display: "Structure of inferior articular process of seventh cervical vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfMiddlePortionOfIleum: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfMiddlePortionOfIleum: new Coding({
     code: "4281009",
     display: "Structure of middle portion of ileum",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfParacorticalAreaOfLymphNode: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfParacorticalAreaOfLymphNode: new Coding({
     code: "4295007",
     display: "Structure of paracortical area of lymph node",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CartilageCanal: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CartilageCanal: new Coding({
     code: "4303006",
     display: "Cartilage canal",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AnteriorMidlineOfAbdomen: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AnteriorMidlineOfAbdomen: new Coding({
     code: "4312008",
     display: "Anterior midline of abdomen",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSpinalisMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSpinalisMuscle: new Coding({
     code: "4317002",
     display: "Structure of spinalis muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ProtoplasmicAstrocyte: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ProtoplasmicAstrocyte: new Coding({
     code: "4328003",
     display: "Protoplasmic astrocyte",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_UpperJawRegion: Coding.FromStrict({
+  ApproachSiteCodesValueSet_UpperJawRegion: new Coding({
     code: "4335006",
     display: "Upper jaw region",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSubchorionicSpace: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSubchorionicSpace: new Coding({
     code: "4352005",
     display: "Structure of subchorionic space",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfLateralSurfaceOfLittleFinger: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfLateralSurfaceOfLittleFinger: new Coding({
     code: "4358009",
     display: "Structure of lateral surface of little finger",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StratumSpinosumStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StratumSpinosumStructure: new Coding({
     code: "4360006",
     display: "Stratum spinosum structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SmallIntestineMucousMembraneStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SmallIntestineMucousMembraneStructure: new Coding({
     code: "4369007",
     display: "Small intestine mucous membrane structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfFourthMetatarsalFacetOfLateralCuneiformBone: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfFourthMetatarsalFacetOfLateralCuneiformBone: new Coding({
     code: "4371007",
     display: "Structure of fourth metatarsal facet of lateral cuneiform bone",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfIncisureOfCartilaginousPortionOfAuditoryCanal: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfIncisureOfCartilaginousPortionOfAuditoryCanal: new Coding({
     code: "4375003",
     display: "Structure of incisure of cartilaginous portion of auditory canal",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfParafascicularNucleusOfThalamus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfParafascicularNucleusOfThalamus: new Coding({
     code: "4377006",
     display: "Structure of parafascicular nucleus of thalamus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ScalaVestibuliStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ScalaVestibuliStructure: new Coding({
     code: "4394008",
     display: "Scala vestibuli structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfAnteriorArticularSurfaceForTalus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfAnteriorArticularSurfaceForTalus: new Coding({
     code: "4402002",
     display: "Structure of anterior articular surface for talus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TrachealSubmucosa: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TrachealSubmucosa: new Coding({
     code: "4419000",
     display: "Tracheal submucosa",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CellularStructures: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CellularStructures: new Coding({
     code: "4421005",
     display: "Cellular structures",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfClivusOssisSphenoidalis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfClivusOssisSphenoidalis: new Coding({
     code: "4430002",
     display: "Structure of clivus ossis sphenoidalis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfDuctusArteriosus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfDuctusArteriosus: new Coding({
     code: "4432005",
     display: "Structure of ductus arteriosus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DentalArchStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DentalArchStructure: new Coding({
     code: "4442007",
     display: "Dental arch structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TrochantericBursa: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TrochantericBursa: new Coding({
     code: "446003",
     display: "Trochanteric bursa",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfAccessorySinusGland: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfAccessorySinusGland: new Coding({
     code: "4486002",
     display: "Structure of accessory sinus gland",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSubclavianPlexus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSubclavianPlexus: new Coding({
     code: "4524000",
     display: "Structure of subclavian plexus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_JointStructureOfLowerExtremity: Coding.FromStrict({
+  ApproachSiteCodesValueSet_JointStructureOfLowerExtremity: new Coding({
     code: "4527007",
     display: "Joint structure of lower extremity",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfInternalMedullaryLaminaOfThalamus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfInternalMedullaryLaminaOfThalamus: new Coding({
     code: "4537002",
     display: "Structure of internal medullary lamina of thalamus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LamellatedGranuleAsInSurfactantSecretingCell: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LamellatedGranuleAsInSurfactantSecretingCell: new Coding({
     code: "4548009",
     display: "Lamellated granule, as in surfactant-secreting cell",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EntireVagusNerveParasympatheticFibersToLiverGallbladderBileDuctsAndPancreas: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EntireVagusNerveParasympatheticFibersToLiverGallbladderBileDuctsAndPancreas: new Coding({
     code: "4549001",
     display: "Entire vagus nerve parasympathetic fibers to liver, gallbladder, bile ducts and pancreas",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfTentoriumCerebelli: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfTentoriumCerebelli: new Coding({
     code: "4566004",
     display: "Structure of tentorium cerebelli",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CollateralLigament: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CollateralLigament: new Coding({
     code: "457008",
     display: "Collateral ligament",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Desmosome: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Desmosome: new Coding({
     code: "4573009",
     display: "Desmosome",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SkinStructureOfPosteriorSurfaceOfThigh: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SkinStructureOfPosteriorSurfaceOfThigh: new Coding({
     code: "4578000",
     display: "Skin structure of posterior surface of thigh",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSpleniusMuscleOfTrunk: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSpleniusMuscleOfTrunk: new Coding({
     code: "4583008",
     display: "Structure of splenius muscle of trunk",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfMiddleTrunkOfBrachialPlexus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfMiddleTrunkOfBrachialPlexus: new Coding({
     code: "4588004",
     display: "Structure of middle trunk of brachial plexus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LarynxStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LarynxStructure: new Coding({
     code: "4596009",
     display: "Larynx structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfBaseOfPhalanxOfFoot: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfBaseOfPhalanxOfFoot: new Coding({
     code: "4603002",
     display: "Structure of base of phalanx of foot",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TubercleOfEighthRibStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TubercleOfEighthRibStructure: new Coding({
     code: "4606005",
     display: "Tubercle of eighth rib structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LateralCorticospinalTract: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LateralCorticospinalTract: new Coding({
     code: "461002",
     display: "Lateral corticospinal tract",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfLesserTuberosityOfHumerus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfLesserTuberosityOfHumerus: new Coding({
     code: "4621004",
     display: "Structure of lesser tuberosity of humerus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfLymphaticCord: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfLymphaticCord: new Coding({
     code: "4624007",
     display: "Structure of lymphatic cord",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BasophilicNormoblast: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BasophilicNormoblast: new Coding({
     code: "464005",
     display: "Basophilic normoblast",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LipidDropletHomogeneous: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LipidDropletHomogeneous: new Coding({
     code: "4647008",
     display: "Lipid droplet, homogeneous",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AscendingFrontalGyrus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AscendingFrontalGyrus: new Coding({
     code: "465006",
     display: "Ascending frontal gyrus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfTunicaAlbugineaOfCorpusSpongiosum: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfTunicaAlbugineaOfCorpusSpongiosum: new Coding({
     code: "4651005",
     display: "Structure of tunica albuginea of corpus spongiosum",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SkinStructureOfNuchalRegion: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SkinStructureOfNuchalRegion: new Coding({
     code: "4658004",
     display: "Skin structure of nuchal region",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BasalLaminaInclusionInSubepithelialLocation: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BasalLaminaInclusionInSubepithelialLocation: new Coding({
     code: "4677002",
     display: "Basal lamina, inclusion in subepithelial location",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CardinalVeinStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CardinalVeinStructure: new Coding({
     code: "4703008",
     display: "Cardinal vein structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FlexorHallucisLongusInLeg: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FlexorHallucisLongusInLeg: new Coding({
     code: "471000",
     display: "Flexor hallucis longus in leg",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_NeutrophilicMyelocyte: Coding.FromStrict({
+  ApproachSiteCodesValueSet_NeutrophilicMyelocyte: new Coding({
     code: "4717004",
     display: "Neutrophilic myelocyte",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EntireVenousPlexusOfTheForamenOvaleBasisCranii: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EntireVenousPlexusOfTheForamenOvaleBasisCranii: new Coding({
     code: "4718009",
     display: "Entire venous plexus of the foramen ovale basis cranii",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfVentralSacrococcygealLigament: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfVentralSacrococcygealLigament: new Coding({
     code: "4743003",
     display: "Structure of ventral sacrococcygeal ligament",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfMedialSurfaceOfGreatToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfMedialSurfaceOfGreatToe: new Coding({
     code: "4755009",
     display: "Structure of medial surface of great toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfGemellusMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfGemellusMuscle: new Coding({
     code: "4759003",
     display: "Structure of gemellus muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSupracardinalVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSupracardinalVein: new Coding({
     code: "4766002",
     display: "Structure of supracardinal vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfPerinealNerve: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfPerinealNerve: new Coding({
     code: "4768001",
     display: "Structure of perineal nerve",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfPhrenicNervePericardialBranch: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfPhrenicNervePericardialBranch: new Coding({
     code: "4774001",
     display: "Structure of phrenic nerve pericardial branch",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfVentralPosteriorInferiorNucleus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfVentralPosteriorInferiorNucleus: new Coding({
     code: "4775000",
     display: "Structure of ventral posterior inferior nucleus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DeiterCell: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DeiterCell: new Coding({
     code: "4799000",
     display: "Deiter cell",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CardiopulmonaryCirculatorySystem: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CardiopulmonaryCirculatorySystem: new Coding({
     code: "480000",
     display: "Cardiopulmonary circulatory system",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfUterineVenousPlexus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfUterineVenousPlexus: new Coding({
     code: "4810005",
     display: "Structure of uterine venous plexus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AnteriorTibialCompartmentStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AnteriorTibialCompartmentStructure: new Coding({
     code: "4812002",
     display: "Anterior tibial compartment structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FemoralCanalStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FemoralCanalStructure: new Coding({
     code: "4828007",
     display: "Femoral canal structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfRingFinger: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfRingFinger: new Coding({
     code: "4840007",
     display: "Subcutaneous tissue structure of ring finger",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AmpullaOfSemicircularDuct: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AmpullaOfSemicircularDuct: new Coding({
     code: "4843009",
     display: "Ampulla of semicircular duct",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TCTransverseColon: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TCTransverseColon: new Coding({
     code: "485005",
     display: "TC - Transverse colon",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfTuberculumImpar: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfTuberculumImpar: new Coding({
     code: "4861000",
     display: "Structure of tuberculum impar",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ConstrictorMuscleOfPharynxStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ConstrictorMuscleOfPharynxStructure: new Coding({
     code: "4866005",
     display: "Constrictor muscle of pharynx structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfDorsalTegmentalNucleiOfMidbrain: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfDorsalTegmentalNucleiOfMidbrain: new Coding({
     code: "4870002",
     display: "Structure of dorsal tegmental nuclei of midbrain",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LaminaOfModiolusOfCochlea: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LaminaOfModiolusOfCochlea: new Coding({
     code: "4871003",
     display: "Lamina of modiolus of cochlea",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EntireSublingualVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EntireSublingualVein: new Coding({
     code: "4881004",
     display: "Entire sublingual vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EntireInterlobularVeinOfKidney: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EntireInterlobularVeinOfKidney: new Coding({
     code: "4888005",
     display: "Entire interlobular vein of kidney",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CellMembraneProkaryotic: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CellMembraneProkaryotic: new Coding({
     code: "4897009",
     display: "Cell membrane, prokaryotic",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfUterovaginalPlexus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfUterovaginalPlexus: new Coding({
     code: "4905007",
     display: "Structure of uterovaginal plexus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MastoidAntrumStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MastoidAntrumStructure: new Coding({
     code: "4906008",
     display: "Mastoid antrum structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CerebellarGracileLobule: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CerebellarGracileLobule: new Coding({
     code: "4924005",
     display: "Cerebellar gracile lobule",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LowerLimbLymphNodeStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LowerLimbLymphNodeStructure: new Coding({
     code: "4942000",
     display: "Lower limb lymph node structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfRadialNotchOfUlna: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfRadialNotchOfUlna: new Coding({
     code: "4954000",
     display: "Structure of radial notch of ulna",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfBack: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueStructureOfBack: new Coding({
     code: "4956003",
     display: "Subcutaneous tissue structure of back",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AmygdaloidStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AmygdaloidStructure: new Coding({
     code: "4958002",
     display: "Amygdaloid structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSuperiorTemporalSulcus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSuperiorTemporalSulcus: new Coding({
     code: "5001007",
     display: "Structure of superior temporal sulcus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfYellowBoneMarrow: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfYellowBoneMarrow: new Coding({
     code: "5023006",
     display: "Structure of yellow bone marrow",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfPosteriorSurfaceOfProstate: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfPosteriorSurfaceOfProstate: new Coding({
     code: "5026003",
     display: "Structure of posterior surface of prostate",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSuperficialDorsalVeinsOfClitoris: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSuperficialDorsalVeinsOfClitoris: new Coding({
     code: "5046008",
     display: "Structure of superficial dorsal veins of clitoris",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfObturatorInternusMuscleIschialBursa: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfObturatorInternusMuscleIschialBursa: new Coding({
     code: "5068003",
     display: "Structure of obturator internus muscle ischial bursa",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfRugalColumn: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfRugalColumn: new Coding({
     code: "5069006",
     display: "Structure of rugal column",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfInfrasternalAngle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfInfrasternalAngle: new Coding({
     code: "5076001",
     display: "Structure of infrasternal angle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfPosteriorAuricularVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfPosteriorAuricularVein: new Coding({
     code: "5115006",
     display: "Structure of posterior auricular vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EntireAngleOfFirstRib: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EntireAngleOfFirstRib: new Coding({
     code: "5122003",
     display: "Entire angle of first rib",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LensZonules: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LensZonules: new Coding({
     code: "5128004",
     display: "Lens zonules",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PermanentUpperRight6Tooth: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PermanentUpperRight6Tooth: new Coding({
     code: "5140004",
     display: "Permanent upper right 6 tooth",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfIntervertebralForamenOfTwelfthThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfIntervertebralForamenOfTwelfthThoracicVertebra: new Coding({
     code: "5192008",
     display: "Structure of intervertebral foramen of twelfth thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfEpitheliumOfLens: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfEpitheliumOfLens: new Coding({
     code: "5194009",
     display: "Structure of epithelium of lens",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfRightExternalCarotidArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfRightExternalCarotidArtery: new Coding({
     code: "5195005",
     display: "Structure of right external carotid artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperiorIleocecalRecess: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperiorIleocecalRecess: new Coding({
     code: "5204005",
     display: "Superior ileocecal recess",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FrontalVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FrontalVein: new Coding({
     code: "5213007",
     display: "Frontal vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfUterineOstiumOfFallopianTube: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfUterineOstiumOfFallopianTube: new Coding({
     code: "5225005",
     display: "Structure of uterine ostium of fallopian tube",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RightCerebralHemisphereStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RightCerebralHemisphereStructure: new Coding({
     code: "5228007",
     display: "Right cerebral hemisphere structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfMucosaOfGallbladder: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfMucosaOfGallbladder: new Coding({
     code: "5229004",
     display: "Structure of mucosa of gallbladder",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfThoracicIntervertebralDisc: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfThoracicIntervertebralDisc: new Coding({
     code: "5261000",
     display: "Structure of thoracic intervertebral disc",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SkinStructureOfLateralPortionOfNeck: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SkinStructureOfLateralPortionOfNeck: new Coding({
     code: "5272005",
     display: "Skin structure of lateral portion of neck",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfForamenSingulare: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfForamenSingulare: new Coding({
     code: "5279001",
     display: "Structure of foramen singulare",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CostalSurfaceOfLung: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CostalSurfaceOfLung: new Coding({
     code: "528006",
     display: "Costal surface of lung",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfAnteriorMediastinalLymphNode: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfAnteriorMediastinalLymphNode: new Coding({
     code: "5296000",
     display: "Structure of anterior mediastinal lymph node",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfSuperiorPoleOfKidney: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfSuperiorPoleOfKidney: new Coding({
     code: "5324007",
     display: "Structure of superior pole of kidney",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BoneStructureOfC4: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BoneStructureOfC4: new Coding({
     code: "5329002",
     display: "Bone structure of C4",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfInferiorFrontalGyrus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfInferiorFrontalGyrus: new Coding({
     code: "5336001",
     display: "Structure of inferior frontal gyrus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SynapticSpecializationCytoplasmic: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SynapticSpecializationCytoplasmic: new Coding({
     code: "5347008",
     display: "Synaptic specialization, cytoplasmic",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfMedianArcuateLigamentOfDiaphragm: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfMedianArcuateLigamentOfDiaphragm: new Coding({
     code: "5362005",
     display: "Structure of median arcuate ligament of diaphragm",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_HippocampalStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_HippocampalStructure: new Coding({
     code: "5366008",
     display: "Hippocampal structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SmallIntestineMuscularisPropria: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SmallIntestineMuscularisPropria: new Coding({
     code: "5379004",
     display: "Small intestine muscularis propria",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperiorFasciaOfPerineum: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperiorFasciaOfPerineum: new Coding({
     code: "5382009",
     display: "Superior fascia of perineum",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_UterineParacervicalLymphNode: Coding.FromStrict({
+  ApproachSiteCodesValueSet_UterineParacervicalLymphNode: new Coding({
     code: "5394000",
     display: "Uterine paracervical lymph node",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_NormalFatPad: Coding.FromStrict({
+  ApproachSiteCodesValueSet_NormalFatPad: new Coding({
     code: "5398002",
     display: "Normal fat pad",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ArticularProcessOfThirdLumbarVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ArticularProcessOfThirdLumbarVertebra: new Coding({
     code: "5403001",
     display: "Articular process of third lumbar vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SexChromosomeY: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SexChromosomeY: new Coding({
     code: "5421003",
     display: "Sex chromosome Y",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ApocrineIntraepidermalDuct: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ApocrineIntraepidermalDuct: new Coding({
     code: "5427004",
     display: "Apocrine intraepidermal duct",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DeepArteryOfClitoris: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DeepArteryOfClitoris: new Coding({
     code: "5458003",
     display: "Deep artery of clitoris",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CardiacIncisureOfStomach: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CardiacIncisureOfStomach: new Coding({
     code: "5459006",
     display: "Cardiac incisure of stomach",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LacrimalPartOfOrbicularisOculiMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LacrimalPartOfOrbicularisOculiMuscle: new Coding({
     code: "5491007",
     display: "Lacrimal part of orbicularis oculi muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MetacarpophalangealJointOfLittleFinger: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MetacarpophalangealJointOfLittleFinger: new Coding({
     code: "5493005",
     display: "Metacarpophalangeal joint of little finger",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperiorAberrantDuctuleOfEpididymis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperiorAberrantDuctuleOfEpididymis: new Coding({
     code: "5498001",
     display: "Superior aberrant ductule of epididymis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_HyaloidArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_HyaloidArtery: new Coding({
     code: "5501001",
     display: "Hyaloid artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueOfChin: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueOfChin: new Coding({
     code: "5520004",
     display: "Subcutaneous tissue of chin",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_VagusNerveParasympatheticFibersToCardiacPlexus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_VagusNerveParasympatheticFibersToCardiacPlexus: new Coding({
     code: "552004",
     display: "Vagus nerve parasympathetic fibers to cardiac plexus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TegmentalPortionOfPons: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TegmentalPortionOfPons: new Coding({
     code: "5538001",
     display: "Tegmental portion of pons",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CristaMarginalisOfTooth: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CristaMarginalisOfTooth: new Coding({
     code: "5542003",
     display: "Crista marginalis of tooth",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LongitudinalLayerOfDuodenalMuscularisPropria: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LongitudinalLayerOfDuodenalMuscularisPropria: new Coding({
     code: "5544002",
     display: "Longitudinal layer of duodenal muscularis propria",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AlveolarRidgeMucousMembrane: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AlveolarRidgeMucousMembrane: new Coding({
     code: "5560003",
     display: "Alveolar ridge mucous membrane",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Singlet: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Singlet: new Coding({
     code: "5564007",
     display: "Singlet",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SeventhCostalCartilage: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SeventhCostalCartilage: new Coding({
     code: "5574005",
     display: "Seventh costal cartilage",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TendonOfSupraspinatusMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TendonOfSupraspinatusMuscle: new Coding({
     code: "5580002",
     display: "Tendon of supraspinatus muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RetinaOfRightEye: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RetinaOfRightEye: new Coding({
     code: "5597008",
     display: "Retina of right eye",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AnulusFibrosusOfIntervertebralDiscOfFifthCervicalVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AnulusFibrosusOfIntervertebralDiscOfFifthCervicalVertebra: new Coding({
     code: "5611001",
     display: "Anulus fibrosus of intervertebral disc of fifth cervical vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_NavicularFacetOfIntermediateCuneiformBone: Coding.FromStrict({
+  ApproachSiteCodesValueSet_NavicularFacetOfIntermediateCuneiformBone: new Coding({
     code: "5625000",
     display: "Navicular facet of intermediate cuneiform bone",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RightVisceralPleura: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RightVisceralPleura: new Coding({
     code: "5627008",
     display: "Right visceral pleura",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MuscularPortionOfInterventricularSeptum: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MuscularPortionOfInterventricularSeptum: new Coding({
     code: "5633004",
     display: "Muscular portion of interventricular septum",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CanalOfStomach: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CanalOfStomach: new Coding({
     code: "5643001",
     display: "Canal of stomach",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FracturedMembranePFace: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FracturedMembranePFace: new Coding({
     code: "5644007",
     display: "Fractured membrane P face",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IntervertebralDiscSpaceOfFifthLumbarVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IntervertebralDiscSpaceOfFifthLumbarVertebra: new Coding({
     code: "565008",
     display: "Intervertebral disc space of fifth lumbar vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InnerSurfaceOfSeventhRib: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InnerSurfaceOfSeventhRib: new Coding({
     code: "5653000",
     display: "Inner surface of seventh rib",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Retina: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Retina: new Coding({
     code: "5665001",
     display: "Retina",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LowerDigestiveTract: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LowerDigestiveTract: new Coding({
     code: "5668004",
     display: "Lower digestive tract",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LenticularFasciculus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LenticularFasciculus: new Coding({
     code: "5677006",
     display: "Lenticular fasciculus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueOfUpperExtremity: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueOfUpperExtremity: new Coding({
     code: "5682004",
     display: "Subcutaneous tissue of upper extremity",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ArticularPartOfTubercleOfNinthRib: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ArticularPartOfTubercleOfNinthRib: new Coding({
     code: "5696005",
     display: "Articular part of tubercle of ninth rib",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SkinOfLateralSurfaceOfFinger: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SkinOfLateralSurfaceOfFinger: new Coding({
     code: "5697001",
     display: "Skin of lateral surface of finger",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MultifidusMuscles: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MultifidusMuscles: new Coding({
     code: "5709001",
     display: "Multifidus muscles",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubmandibularTriangle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubmandibularTriangle: new Coding({
     code: "5713008",
     display: "Submandibular triangle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TemporalFossa: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TemporalFossa: new Coding({
     code: "5717009",
     display: "Temporal fossa",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TendonAndTendonSheathOfLegAndAnkle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TendonAndTendonSheathOfLegAndAnkle: new Coding({
     code: "5718004",
     display: "Tendon and tendon sheath of leg and ankle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AnteriorCervicalLymphNode: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AnteriorCervicalLymphNode: new Coding({
     code: "5727003",
     display: "Anterior cervical lymph node",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SkinOfForearm: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SkinOfForearm: new Coding({
     code: "5742000",
     display: "Skin of forearm",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueOfAnteriorPortionOfNeck: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueOfAnteriorPortionOfNeck: new Coding({
     code: "5751008",
     display: "Subcutaneous tissue of anterior portion of neck",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EndocervicalEpithelium: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EndocervicalEpithelium: new Coding({
     code: "5769004",
     display: "Endocervical epithelium",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Paradidymis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Paradidymis: new Coding({
     code: "5780004",
     display: "Paradidymis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Diaphragm: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Diaphragm: new Coding({
     code: "5798000",
     display: "Diaphragm",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MediumSizedNeuron: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MediumSizedNeuron: new Coding({
     code: "5802004",
     display: "Medium sized neuron",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AngleOfSeventhRib: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AngleOfSeventhRib: new Coding({
     code: "5814007",
     display: "Angle of seventh rib",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperiorRectusMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperiorRectusMuscle: new Coding({
     code: "5815008",
     display: "Superior rectus muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DuodenalFold: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DuodenalFold: new Coding({
     code: "5816009",
     display: "Duodenal fold",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_HeadOfPhalanxOfGreatToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_HeadOfPhalanxOfGreatToe: new Coding({
     code: "582005",
     display: "Head of phalanx of great toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubstantiaPropriaOfSclera: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubstantiaPropriaOfSclera: new Coding({
     code: "5825003",
     display: "Substantia propria of sclera",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorCordOfBrachialPlexus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorCordOfBrachialPlexus: new Coding({
     code: "5828001",
     display: "Posterior cord of brachial plexus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperiorArticularProcessOfSeventhCervicalVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperiorArticularProcessOfSeventhCervicalVertebra: new Coding({
     code: "5847003",
     display: "Superior articular process of seventh cervical vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_OrbitalPlateOfEthmoidBone: Coding.FromStrict({
+  ApproachSiteCodesValueSet_OrbitalPlateOfEthmoidBone: new Coding({
     code: "5854009",
     display: "Orbital plate of ethmoid bone",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SerosaOfUrinaryBladder: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SerosaOfUrinaryBladder: new Coding({
     code: "5868002",
     display: "Serosa of urinary bladder",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CapsuleOfProximalInterphalangealJointOfThirdToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CapsuleOfProximalInterphalangealJointOfThirdToe: new Coding({
     code: "587004",
     display: "Capsule of proximal interphalangeal joint of third toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueOfLateralBorderOfSoleOfFoot: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueOfLateralBorderOfSoleOfFoot: new Coding({
     code: "5872003",
     display: "Subcutaneous tissue of lateral border of sole of foot",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TuberosityOfDistalPhalanxOfHand: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TuberosityOfDistalPhalanxOfHand: new Coding({
     code: "5881009",
     display: "Tuberosity of distal phalanx of hand",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EndothelialSievePlate: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EndothelialSievePlate: new Coding({
     code: "5882002",
     display: "Endothelial sieve plate",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ArticularSurfaceThirdMetacarpalOfFourthMetacarpalBone: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ArticularSurfaceThirdMetacarpalOfFourthMetacarpalBone: new Coding({
     code: "5889006",
     display: "Articular surface, third metacarpal, of fourth metacarpal bone",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorCellsOfEthmoidSinus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorCellsOfEthmoidSinus: new Coding({
     code: "5890002",
     display: "Posterior cells of ethmoid sinus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InterventricularSeptum: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InterventricularSeptum: new Coding({
     code: "589001",
     display: "Interventricular septum",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperiorRecessOfTympanicMembrane: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperiorRecessOfTympanicMembrane: new Coding({
     code: "5893000",
     display: "Superior recess of tympanic membrane",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Myotome: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Myotome: new Coding({
     code: "5898009",
     display: "Myotome",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ArticularProcessOfTwelfthThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ArticularProcessOfTwelfthThoracicVertebra: new Coding({
     code: "5923009",
     display: "Articular process of twelfth thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BronchialLumen: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BronchialLumen: new Coding({
     code: "5926001",
     display: "Bronchial lumen",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_GreatCardiacVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_GreatCardiacVein: new Coding({
     code: "5928000",
     display: "Great cardiac vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TensorTympaniMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TensorTympaniMuscle: new Coding({
     code: "5942008",
     display: "Tensor tympani muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_VestibularVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_VestibularVein: new Coding({
     code: "5943003",
     display: "Vestibular vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorPalatineArch: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorPalatineArch: new Coding({
     code: "5944009",
     display: "Posterior palatine arch",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CapsuleOfDistalInterphalangealJointOfThirdToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CapsuleOfDistalInterphalangealJointOfThirdToe: new Coding({
     code: "5948007",
     display: "Capsule of distal interphalangeal joint of third toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PalpebralFissure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PalpebralFissure: new Coding({
     code: "595000",
     display: "Palpebral fissure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LeftWrist: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LeftWrist: new Coding({
     code: "5951000",
     display: "Left wrist",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EighthRib: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EighthRib: new Coding({
     code: "5953002",
     display: "Eighth rib",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueOfEyelid: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueOfEyelid: new Coding({
     code: "5976004",
     display: "Subcutaneous tissue of eyelid",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EpiscleralArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EpiscleralArtery: new Coding({
     code: "5979006",
     display: "Episcleral artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ChromosomesGroupD: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ChromosomesGroupD: new Coding({
     code: "5996007",
     display: "Chromosomes, group D",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_QuadratusLumborumMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_QuadratusLumborumMuscle: new Coding({
     code: "6001004",
     display: "Quadratus lumborum muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IntervertebralDiscOfSecondThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IntervertebralDiscOfSecondThoracicVertebra: new Coding({
     code: "6004007",
     display: "Intervertebral disc of second thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CircularLayerOfDuodenalMuscularisPropria: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CircularLayerOfDuodenalMuscularisPropria: new Coding({
     code: "6006009",
     display: "Circular layer of duodenal muscularis propria",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MesenteryOfAscendingColon: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MesenteryOfAscendingColon: new Coding({
     code: "6009002",
     display: "Mesentery of ascending colon",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ReticuloendothelialSystem: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ReticuloendothelialSystem: new Coding({
     code: "6013009",
     display: "Reticuloendothelial system",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PenicilliaryArteries: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PenicilliaryArteries: new Coding({
     code: "6014003",
     display: "Penicilliary arteries",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Heterolysosome: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Heterolysosome: new Coding({
     code: "6023000",
     display: "Heterolysosome",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ColumnarEpithelialCell: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ColumnarEpithelialCell: new Coding({
     code: "6032003",
     display: "Columnar epithelial cell",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_OuterSurfaceOfThirdRib: Coding.FromStrict({
+  ApproachSiteCodesValueSet_OuterSurfaceOfThirdRib: new Coding({
     code: "6046003",
     display: "Outer surface of third rib",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LacrimalVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LacrimalVein: new Coding({
     code: "6050005",
     display: "Lacrimal vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MetacarpophalangealJointOfMiddleFinger: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MetacarpophalangealJointOfMiddleFinger: new Coding({
     code: "6059006",
     display: "Metacarpophalangeal joint of middle finger",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DeciduousMandibularRightCanineTooth: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DeciduousMandibularRightCanineTooth: new Coding({
     code: "6062009",
     display: "Deciduous mandibular right canine tooth",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LigamentOfLeftSuperiorVenaCava: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LigamentOfLeftSuperiorVenaCava: new Coding({
     code: "6073002",
     display: "Ligament of left superior vena cava",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CapsuleOfTemporomandibularJoint: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CapsuleOfTemporomandibularJoint: new Coding({
     code: "6074008",
     display: "Capsule of temporomandibular joint",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_GastrointestinalSubserosa: Coding.FromStrict({
+  ApproachSiteCodesValueSet_GastrointestinalSubserosa: new Coding({
     code: "6076005",
     display: "Gastrointestinal subserosa",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueOfPhiltrum: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueOfPhiltrum: new Coding({
     code: "608002",
     display: "Subcutaneous tissue of philtrum",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubclavianNerve: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubclavianNerve: new Coding({
     code: "6104005",
     display: "Subclavian nerve",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BodyOfFifthThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BodyOfFifthThoracicVertebra: new Coding({
     code: "6105006",
     display: "Body of fifth thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FacialNerveParasympatheticFibers: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FacialNerveParasympatheticFibers: new Coding({
     code: "6110005",
     display: "Facial nerve parasympathetic fibers",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_NailOfFourthToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_NailOfFourthToe: new Coding({
     code: "6194002",
     display: "Nail of fourth toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MultivesicularBodyInternalVesicles: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MultivesicularBodyInternalVesicles: new Coding({
     code: "621009",
     display: "Multivesicular body, internal vesicles",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PostcapillaryVenule: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PostcapillaryVenule: new Coding({
     code: "6216007",
     display: "Postcapillary venule",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PiriformRecess: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PiriformRecess: new Coding({
     code: "6217003",
     display: "Piriform recess",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_OsLacrimale: Coding.FromStrict({
+  ApproachSiteCodesValueSet_OsLacrimale: new Coding({
     code: "6229007",
     display: "Os lacrimale",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SulcusTerminalisCordis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SulcusTerminalisCordis: new Coding({
     code: "6253001",
     display: "Sulcus terminalis cordis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AccessoryPhrenicNerves: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AccessoryPhrenicNerves: new Coding({
     code: "6268000",
     display: "Accessory phrenic nerves",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueOfScalp: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueOfScalp: new Coding({
     code: "6269008",
     display: "Subcutaneous tissue of scalp",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SkinOfDorsalSurfaceOfFinger: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SkinOfDorsalSurfaceOfFinger: new Coding({
     code: "6279005",
     display: "Skin of dorsal surface of finger",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorBasalBranchOfLeftPulmonaryArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorBasalBranchOfLeftPulmonaryArtery: new Coding({
     code: "6317000",
     display: "Posterior basal branch of left pulmonary artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AryepiglotticMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AryepiglotticMuscle: new Coding({
     code: "6325003",
     display: "Aryepiglottic muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FetalAtloidArticulation: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FetalAtloidArticulation: new Coding({
     code: "6326002",
     display: "Fetal atloid articulation",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LymphoidFollicleOfStomach: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LymphoidFollicleOfStomach: new Coding({
     code: "6335009",
     display: "Lymphoid follicle of stomach",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TuberosityOfDistalPhalanxOfLittleToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TuberosityOfDistalPhalanxOfLittleToe: new Coding({
     code: "635006",
     display: "Tuberosity of distal phalanx of little toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_HairMedulla: Coding.FromStrict({
+  ApproachSiteCodesValueSet_HairMedulla: new Coding({
     code: "6359004",
     display: "Hair medulla",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LymphaticsOfThyroidGland: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LymphaticsOfThyroidGland: new Coding({
     code: "6371005",
     display: "Lymphatics of thyroid gland",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CavernousPortionOfUrethra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CavernousPortionOfUrethra: new Coding({
     code: "6375001",
     display: "Cavernous portion of urethra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CoccygealNerve: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CoccygealNerve: new Coding({
     code: "6392005",
     display: "Coccygeal nerve",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LigamentumNuchae: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LigamentumNuchae: new Coding({
     code: "6404004",
     display: "Ligamentum nuchae",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PresymphysialLymphNode: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PresymphysialLymphNode: new Coding({
     code: "6413002",
     display: "Presymphysial lymph node",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MedialMalleolus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MedialMalleolus: new Coding({
     code: "6417001",
     display: "Medial malleolus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SupraspinatusMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SupraspinatusMuscle: new Coding({
     code: "6423006",
     display: "Supraspinatus muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfRadiatingPortionOfCorticalLobuleOfKidney: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfRadiatingPortionOfCorticalLobuleOfKidney: new Coding({
     code: "6424000",
     display: "Structure of radiating portion of cortical lobule of kidney",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MastCell: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MastCell: new Coding({
     code: "6445007",
     display: "Mast cell",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorVagalTrunk: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorVagalTrunk: new Coding({
     code: "6448009",
     display: "Posterior vagal trunk",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Cytotrophoblast: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Cytotrophoblast: new Coding({
     code: "6450001",
     display: "Cytotrophoblast",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MedialAspectOfOvary: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MedialAspectOfOvary: new Coding({
     code: "6472004",
     display: "Medial aspect of ovary",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperiorArticularProcessOfSeventhThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperiorArticularProcessOfSeventhThoracicVertebra: new Coding({
     code: "650002",
     display: "Superior articular process of seventh thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_GlansClitoridis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_GlansClitoridis: new Coding({
     code: "6504002",
     display: "Glans clitoridis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DistalPortionOfCircumflexBranchOfLeftCoronaryArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DistalPortionOfCircumflexBranchOfLeftCoronaryArtery: new Coding({
     code: "6511003",
     display: "Distal portion of circumflex branch of left coronary artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CardiacValveLeaflet: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CardiacValveLeaflet: new Coding({
     code: "6530003",
     display: "Cardiac valve leaflet",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ColonicHaustra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ColonicHaustra: new Coding({
     code: "6533001",
     display: "Colonic haustra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ThyrocervicalTrunk: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ThyrocervicalTrunk: new Coding({
     code: "6538005",
     display: "Thyrocervical trunk",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AnteriorCommissureOfMitralValve: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AnteriorCommissureOfMitralValve: new Coding({
     code: "6541001",
     display: "Anterior commissure of mitral valve",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_GastrohepaticLigament: Coding.FromStrict({
+  ApproachSiteCodesValueSet_GastrohepaticLigament: new Coding({
     code: "6544009",
     display: "Gastrohepatic ligament",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AngularIncisureOfStomach: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AngularIncisureOfStomach: new Coding({
     code: "6550004",
     display: "Angular incisure of stomach",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PollicisArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PollicisArtery: new Coding({
     code: "6551000",
     display: "Pollicis artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InferiorNasalTurbinate: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InferiorNasalTurbinate: new Coding({
     code: "6553002",
     display: "Inferior nasal turbinate",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MedialBorderOfSole: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MedialBorderOfSole: new Coding({
     code: "6564004",
     display: "Medial border of sole",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CerebellarHemisphere: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CerebellarHemisphere: new Coding({
     code: "6566002",
     display: "Cerebellar hemisphere",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BaseOfPhalanxOfMiddleFinger: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BaseOfPhalanxOfMiddleFinger: new Coding({
     code: "6572002",
     display: "Base of phalanx of middle finger",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LingualNerve: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LingualNerve: new Coding({
     code: "6598008",
     display: "Lingual nerve",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TrachealMucousMembrane: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TrachealMucousMembrane: new Coding({
     code: "660006",
     display: "Tracheal mucous membrane",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfDorsalIntercuneiformLigaments: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfDorsalIntercuneiformLigaments: new Coding({
     code: "6606008",
     display: "Structure of dorsal intercuneiform ligaments",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SphenoparietalSinus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SphenoparietalSinus: new Coding({
     code: "6608009",
     display: "Sphenoparietal sinus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_JawRegion: Coding.FromStrict({
+  ApproachSiteCodesValueSet_JawRegion: new Coding({
     code: "661005",
     display: "Jaw region",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CuticleOfNail: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CuticleOfNail: new Coding({
     code: "6620001",
     display: "Cuticle of nail",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SternalMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SternalMuscle: new Coding({
     code: "6623004",
     display: "Sternal muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RightPosteriorCerebralArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RightPosteriorCerebralArtery: new Coding({
     code: "6633007",
     display: "Right posterior cerebral artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RightAnteriorCerebralArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RightAnteriorCerebralArtery: new Coding({
     code: "6643005",
     display: "Right anterior cerebral artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AnteriorFossaOfCranialCavity: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AnteriorFossaOfCranialCavity: new Coding({
     code: "6646002",
     display: "Anterior fossa of cranial cavity",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_UterineSubserosa: Coding.FromStrict({
+  ApproachSiteCodesValueSet_UterineSubserosa: new Coding({
     code: "6649009",
     display: "Uterine subserosa",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CentralLobuleOfCerebellum: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CentralLobuleOfCerebellum: new Coding({
     code: "6651008",
     display: "Central lobule of cerebellum",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EmbryologicalStructure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EmbryologicalStructure: new Coding({
     code: "667009",
     display: "Embryological structure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ArticularFacetOfHeadOfFibula: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ArticularFacetOfHeadOfFibula: new Coding({
     code: "6684008",
     display: "Articular facet of head of fibula",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RightAnkle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RightAnkle: new Coding({
     code: "6685009",
     display: "Right ankle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ArchOfSecondLumbarVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ArchOfSecondLumbarVertebra: new Coding({
     code: "6711001",
     display: "Arch of second lumbar vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FemoralNerveLateralMuscularBranches: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FemoralNerveLateralMuscularBranches: new Coding({
     code: "6720005",
     display: "Femoral nerve lateral muscular branches",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PleuralRecess: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PleuralRecess: new Coding({
     code: "6731002",
     display: "Pleural recess",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ChordaTympani: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ChordaTympani: new Coding({
     code: "6739000",
     display: "Chorda tympani",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CallosomarginalBranchOfAnteriorCerebralArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CallosomarginalBranchOfAnteriorCerebralArtery: new Coding({
     code: "6742006",
     display: "Callosomarginal branch of anterior cerebral artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MitochondrialInclusion: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MitochondrialInclusion: new Coding({
     code: "6750002",
     display: "Mitochondrial inclusion",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RightKnee: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RightKnee: new Coding({
     code: "6757004",
     display: "Right knee",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TendonAndTendonSheathOfHand: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TendonAndTendonSheathOfHand: new Coding({
     code: "6787005",
     display: "Tendon and tendon sheath of hand",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Spermatozoa: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Spermatozoa: new Coding({
     code: "6789008",
     display: "Spermatozoa",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MaculaOfUtricle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MaculaOfUtricle: new Coding({
     code: "6799003",
     display: "Macula of utricle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InterstitialTissueOfSpleen: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InterstitialTissueOfSpleen: new Coding({
     code: "6805009",
     display: "Interstitial tissue of spleen",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ObturatorNerveAnteriorBranch: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ObturatorNerveAnteriorBranch: new Coding({
     code: "6820003",
     display: "Obturator nerve anterior branch",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LigamentOfLumbosacralJoint: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LigamentOfLumbosacralJoint: new Coding({
     code: "6828005",
     display: "Ligament of lumbosacral joint",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ParsCiliarisOfRetina: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ParsCiliarisOfRetina: new Coding({
     code: "6829002",
     display: "Pars ciliaris of retina",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AxialSkeleton: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AxialSkeleton: new Coding({
     code: "6834003",
     display: "Axial skeleton",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CorticomedullaryJunctionOfKidney: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CorticomedullaryJunctionOfKidney: new Coding({
     code: "6841009",
     display: "Corticomedullary junction of kidney",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SporeCrystal: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SporeCrystal: new Coding({
     code: "6844001",
     display: "Spore crystal",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SecondaryFootProcess: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SecondaryFootProcess: new Coding({
     code: "6850006",
     display: "Secondary foot process",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LeafOfEpiglottis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LeafOfEpiglottis: new Coding({
     code: "6864006",
     display: "Leaf of epiglottis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_HabenularCommissure: Coding.FromStrict({
+  ApproachSiteCodesValueSet_HabenularCommissure: new Coding({
     code: "6866008",
     display: "Habenular commissure",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_VisceralPericardium: Coding.FromStrict({
+  ApproachSiteCodesValueSet_VisceralPericardium: new Coding({
     code: "6871001",
     display: "Visceral pericardium",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FetalHyaloidArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FetalHyaloidArtery: new Coding({
     code: "688000",
     display: "Fetal hyaloid artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MedialSurfaceOfArm: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MedialSurfaceOfArm: new Coding({
     code: "6894000",
     display: "Medial surface of arm",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PoplitealRegion: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PoplitealRegion: new Coding({
     code: "6902008",
     display: "Popliteal region",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueOfMedialSurfaceOfThirdToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueOfMedialSurfaceOfThirdToe: new Coding({
     code: "6905005",
     display: "Subcutaneous tissue of medial surface of third toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SmallIntestineSubmucosa: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SmallIntestineSubmucosa: new Coding({
     code: "691000",
     display: "Small intestine submucosa",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LowerAlveolarRidgeMucosa: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LowerAlveolarRidgeMucosa: new Coding({
     code: "6912001",
     display: "Lower alveolar ridge mucosa",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PerivascularSpace: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PerivascularSpace: new Coding({
     code: "6914000",
     display: "Perivascular space",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BodyOfIschium: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BodyOfIschium: new Coding({
     code: "692007",
     display: "Body of ischium",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RightUpperExtremity: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RightUpperExtremity: new Coding({
     code: "6921000",
     display: "Right upper extremity",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_JugularArch: Coding.FromStrict({
+  ApproachSiteCodesValueSet_JugularArch: new Coding({
     code: "6930008",
     display: "Jugular arch",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AnteriorLabialVeins: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AnteriorLabialVeins: new Coding({
     code: "6944002",
     display: "Anterior labial veins",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LymphocyticTissue: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LymphocyticTissue: new Coding({
     code: "6969002",
     display: "Lymphocytic tissue",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AnteriorMyocardium: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AnteriorMyocardium: new Coding({
     code: "6975006",
     display: "Anterior myocardium",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorHypothalamicNucleus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorHypothalamicNucleus: new Coding({
     code: "6981003",
     display: "Posterior hypothalamic nucleus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CollateralSulcus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CollateralSulcus: new Coding({
     code: "6987004",
     display: "Collateral sulcus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ThoracolumbarRegionOfBack: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ThoracolumbarRegionOfBack: new Coding({
     code: "6989001",
     display: "Thoracolumbar region of back",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueOfJaw: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueOfJaw: new Coding({
     code: "6991009",
     display: "Subcutaneous tissue of jaw",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BileDuctMucousMembrane: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BileDuctMucousMembrane: new Coding({
     code: "7035006",
     display: "Bile duct mucous membrane",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueOfExternalGenitalia: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueOfExternalGenitalia: new Coding({
     code: "7050002",
     display: "Subcutaneous tissue of external genitalia",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RightColicArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RightColicArtery: new Coding({
     code: "7067009",
     display: "Right colic artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InterstitialTissueOfMyocardium: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InterstitialTissueOfMyocardium: new Coding({
     code: "7076002",
     display: "Interstitial tissue of myocardium",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MiddlePhalanxOfIndexFinger: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MiddlePhalanxOfIndexFinger: new Coding({
     code: "7083009",
     display: "Middle phalanx of index finger",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SupraaorticBranches: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SupraaorticBranches: new Coding({
     code: "7090004",
     display: "Supraaortic branches",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_VentralPosterolateralNucleusOfThalamus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_VentralPosterolateralNucleusOfThalamus: new Coding({
     code: "7091000",
     display: "Ventral posterolateral nucleus of thalamus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AttachmentPlaqueOfDesmosomeOrHemidesmosome: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AttachmentPlaqueOfDesmosomeOrHemidesmosome: new Coding({
     code: "7099003",
     display: "Attachment plaque of desmosome or hemidesmosome",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FetalImplantationSite: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FetalImplantationSite: new Coding({
     code: "7117004",
     display: "Fetal implantation site",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MaxillaryRightSecondMolarTooth: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MaxillaryRightSecondMolarTooth: new Coding({
     code: "7121006",
     display: "Maxillary right second molar tooth",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AnulusFibrosusOfIntervertebralDiscOfThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AnulusFibrosusOfIntervertebralDiscOfThoracicVertebra: new Coding({
     code: "7148007",
     display: "Anulus fibrosus of intervertebral disc of thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FalseRib: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FalseRib: new Coding({
     code: "7149004",
     display: "False rib",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TrigeminalGanglionSensoryRoot: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TrigeminalGanglionSensoryRoot: new Coding({
     code: "7154008",
     display: "Trigeminal ganglion sensory root",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BaseOfMetacarpalBone: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BaseOfMetacarpalBone: new Coding({
     code: "7160008",
     display: "Base of metacarpal bone",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ParaduodenalRecess: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ParaduodenalRecess: new Coding({
     code: "7167006",
     display: "Paraduodenal recess",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CaudaEquina: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CaudaEquina: new Coding({
     code: "7173007",
     display: "Cauda equina",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_GustatoryPore: Coding.FromStrict({
+  ApproachSiteCodesValueSet_GustatoryPore: new Coding({
     code: "7188002",
     display: "Gustatory pore",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IsthmusTympaniPosticus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IsthmusTympaniPosticus: new Coding({
     code: "7192009",
     display: "Isthmus tympani posticus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_HypoglossalNerveIntrinsicTongueMuscleBranch: Coding.FromStrict({
+  ApproachSiteCodesValueSet_HypoglossalNerveIntrinsicTongueMuscleBranch: new Coding({
     code: "7227003",
     display: "Hypoglossal nerve intrinsic tongue muscle branch",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DenseIntermediateFilamentBundles: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DenseIntermediateFilamentBundles: new Coding({
     code: "723004",
     display: "Dense intermediate filament bundles",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InferiorChoroidVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InferiorChoroidVein: new Coding({
     code: "7234001",
     display: "Inferior choroid vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AppendicealMuscularisPropria: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AppendicealMuscularisPropria: new Coding({
     code: "7242000",
     display: "Appendiceal muscularis propria",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LymphaticsOfAppendixAndLargeIntestine: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LymphaticsOfAppendixAndLargeIntestine: new Coding({
     code: "7275008",
     display: "Lymphatics of appendix and large intestine",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MuscleOfPerineum: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MuscleOfPerineum: new Coding({
     code: "7295002",
     display: "Muscle of perineum",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DeepInguinalRing: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DeepInguinalRing: new Coding({
     code: "7296001",
     display: "Deep inguinal ring",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AnteriorSurfaceOfArm: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AnteriorSurfaceOfArm: new Coding({
     code: "7311008",
     display: "Anterior surface of arm",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LingualGyrus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LingualGyrus: new Coding({
     code: "7344002",
     display: "Lingual gyrus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CiliaryProcesses: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CiliaryProcesses: new Coding({
     code: "7345001",
     display: "Ciliary processes",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InfratendinousOlecranonBursa: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InfratendinousOlecranonBursa: new Coding({
     code: "7347009",
     display: "Infratendinous olecranon bursa",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LymphaticOfHead: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LymphaticOfHead: new Coding({
     code: "7362006",
     display: "Lymphatic of head",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LeftMarginOfUterus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LeftMarginOfUterus: new Coding({
     code: "7376007",
     display: "Left margin of uterus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ParaventricularNucleusOfThalamus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ParaventricularNucleusOfThalamus: new Coding({
     code: "7378008",
     display: "Paraventricular nucleus of thalamus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PlantarCalcaneocuboidalLigament: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PlantarCalcaneocuboidalLigament: new Coding({
     code: "7384006",
     display: "Plantar calcaneocuboidal ligament",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AnteriorSemicircularDuct: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AnteriorSemicircularDuct: new Coding({
     code: "7404008",
     display: "Anterior semicircular duct",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_OvarianLigament: Coding.FromStrict({
+  ApproachSiteCodesValueSet_OvarianLigament: new Coding({
     code: "7435002",
     display: "Ovarian ligament",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LateralSurfaceOfSublingualGland: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LateralSurfaceOfSublingualGland: new Coding({
     code: "7471001",
     display: "Lateral surface of sublingual gland",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LipidCrystalline: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LipidCrystalline: new Coding({
     code: "7477002",
     display: "Lipid, crystalline",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IliotibialTract: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IliotibialTract: new Coding({
     code: "7480001",
     display: "Iliotibial tract",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CerebellarLenticularNucleus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CerebellarLenticularNucleus: new Coding({
     code: "7494000",
     display: "Cerebellar lenticular nucleus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PlantarTarsalLigaments: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PlantarTarsalLigaments: new Coding({
     code: "7498002",
     display: "Plantar tarsal ligaments",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AnteriorLigamentOfHeadOfFibula: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AnteriorLigamentOfHeadOfFibula: new Coding({
     code: "7507003",
     display: "Anterior ligament of head of fibula",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_VasaVasorum: Coding.FromStrict({
+  ApproachSiteCodesValueSet_VasaVasorum: new Coding({
     code: "7524009",
     display: "Vasa vasorum",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_VagusNerveParasympatheticFibers: Coding.FromStrict({
+  ApproachSiteCodesValueSet_VagusNerveParasympatheticFibers: new Coding({
     code: "7532001",
     display: "Vagus nerve parasympathetic fibers",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DeepHeadOfFlexorPollicisBrevisMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DeepHeadOfFlexorPollicisBrevisMuscle: new Coding({
     code: "7554004",
     display: "Deep head of flexor pollicis brevis muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MitoticCellInAnaphase: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MitoticCellInAnaphase: new Coding({
     code: "7566005",
     display: "Mitotic cell in anaphase",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Finger: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Finger: new Coding({
     code: "7569003",
     display: "Finger",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IntervertebralDiscSpaceOfEleventhThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IntervertebralDiscSpaceOfEleventhThoracicVertebra: new Coding({
     code: "7591005",
     display: "Intervertebral disc space of eleventh thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueOfVertex: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueOfVertex: new Coding({
     code: "7597009",
     display: "Subcutaneous tissue of vertex",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Connexon: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Connexon: new Coding({
     code: "7605000",
     display: "Connexon",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TenthThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TenthThoracicVertebra: new Coding({
     code: "7610001",
     display: "Tenth thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ThalamoolivaryTract: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ThalamoolivaryTract: new Coding({
     code: "7629007",
     display: "Thalamoolivary tract",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IntervenousTubercleOfRightAtrium: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IntervenousTubercleOfRightAtrium: new Coding({
     code: "7651004",
     display: "Intervenous tubercle of right atrium",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FrenulumLabii: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FrenulumLabii: new Coding({
     code: "7652006",
     display: "Frenulum labii",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FemoralArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FemoralArtery: new Coding({
     code: "7657000",
     display: "Femoral artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubtendinousBursaOfTricepsBrachiiMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubtendinousBursaOfTricepsBrachiiMuscle: new Coding({
     code: "7658005",
     display: "Subtendinous bursa of triceps brachii muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PontinePortionOfMedialLongitudinalFasciculus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PontinePortionOfMedialLongitudinalFasciculus: new Coding({
     code: "7697002",
     display: "Pontine portion of medial longitudinal fasciculus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubduralSpaceOfSpinalRegion: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubduralSpaceOfSpinalRegion: new Coding({
     code: "7712004",
     display: "Subdural space of spinal region",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SkinOfMedialSurfaceOfFifthToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SkinOfMedialSurfaceOfFifthToe: new Coding({
     code: "7726008",
     display: "Skin of medial surface of fifth toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorChoroidalArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorChoroidalArtery: new Coding({
     code: "7736000",
     display: "Posterior choroidal artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_HeadAndNeck: Coding.FromStrict({
+  ApproachSiteCodesValueSet_HeadAndNeck: new Coding({
     code: "774007",
     display: "Head and neck",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PalatineDuct: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PalatineDuct: new Coding({
     code: "7742001",
     display: "Palatine duct",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SkinAppendage: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SkinAppendage: new Coding({
     code: "7748002",
     display: "Skin appendage",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MesovarianMarginOfOvary: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MesovarianMarginOfOvary: new Coding({
     code: "7755000",
     display: "Mesovarian margin of ovary",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LaminaOfThirdThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LaminaOfThirdThoracicVertebra: new Coding({
     code: "7756004",
     display: "Lamina of third thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StriateArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StriateArtery: new Coding({
     code: "7764005",
     display: "Striate artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RightFoot: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RightFoot: new Coding({
     code: "7769000",
     display: "Right foot",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SympatheticTrunkSpinalNerveBranch: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SympatheticTrunkSpinalNerveBranch: new Coding({
     code: "7783003",
     display: "Sympathetic trunk spinal nerve branch",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LateralPosteriorNucleusOfThalamus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LateralPosteriorNucleusOfThalamus: new Coding({
     code: "7820009",
     display: "Lateral posterior nucleus of thalamus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AnteriorSurfaceOfManubrium: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AnteriorSurfaceOfManubrium: new Coding({
     code: "7829005",
     display: "Anterior surface of manubrium",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AbdominalAorta: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AbdominalAorta: new Coding({
     code: "7832008",
     display: "Abdominal aorta",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorMarginOfNasalSeptum: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorMarginOfNasalSeptum: new Coding({
     code: "7835005",
     display: "Posterior margin of nasal septum",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueOfSubmentalArea: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueOfSubmentalArea: new Coding({
     code: "7840002",
     display: "Subcutaneous tissue of submental area",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MacrocyticNormochromicErythrocyte: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MacrocyticNormochromicErythrocyte: new Coding({
     code: "7841003",
     display: "Macrocytic normochromic erythrocyte",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SternoclavicularJoint: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SternoclavicularJoint: new Coding({
     code: "7844006",
     display: "Sternoclavicular joint",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IntracranialSubduralSpace: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IntracranialSubduralSpace: new Coding({
     code: "7851002",
     display: "Intracranial subdural space",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MandibularCanal: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MandibularCanal: new Coding({
     code: "7854005",
     display: "Mandibular canal",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MyocardiumOfVentricle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MyocardiumOfVentricle: new Coding({
     code: "7872004",
     display: "Myocardium of ventricle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ScapularRegionOfBack: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ScapularRegionOfBack: new Coding({
     code: "7874003",
     display: "Scapular region of back",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RhopheocytoticVesicle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RhopheocytoticVesicle: new Coding({
     code: "7880006",
     display: "Rhopheocytotic vesicle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CornealCorpuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CornealCorpuscle: new Coding({
     code: "7884002",
     display: "Corneal corpuscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RotatorCuffIncludingMusclesAndTendons: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RotatorCuffIncludingMusclesAndTendons: new Coding({
     code: "7885001",
     display: "Rotator cuff including muscles and tendons",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubmucosaOfAnalCanal: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubmucosaOfAnalCanal: new Coding({
     code: "7892006",
     display: "Submucosa of anal canal",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_OccipitalAngleOfParietalBone: Coding.FromStrict({
+  ApproachSiteCodesValueSet_OccipitalAngleOfParietalBone: new Coding({
     code: "7896009",
     display: "Occipital angle of parietal bone",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_VisceralSurfaceOfLiver: Coding.FromStrict({
+  ApproachSiteCodesValueSet_VisceralSurfaceOfLiver: new Coding({
     code: "790007",
     display: "Visceral surface of liver",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_OlivocerebellarFibers: Coding.FromStrict({
+  ApproachSiteCodesValueSet_OlivocerebellarFibers: new Coding({
     code: "7911004",
     display: "Olivocerebellar fibers",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ProximalPhalanxOfThirdToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ProximalPhalanxOfThirdToe: new Coding({
     code: "7925003",
     display: "Proximal phalanx of third toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LigamentOfDiaphragm: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LigamentOfDiaphragm: new Coding({
     code: "7936005",
     display: "Ligament of diaphragm",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_HelperCell: Coding.FromStrict({
+  ApproachSiteCodesValueSet_HelperCell: new Coding({
     code: "7944005",
     display: "Helper cell",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LaminaPropriaOfEthmoidSinus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LaminaPropriaOfEthmoidSinus: new Coding({
     code: "7954009",
     display: "Lamina propria of ethmoid sinus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FirstLeftAorticArch: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FirstLeftAorticArch: new Coding({
     code: "7967007",
     display: "First left aortic arch",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DeepTemporalVeins: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DeepTemporalVeins: new Coding({
     code: "798000",
     display: "Deep temporal veins",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AbdominopelvicPortionOfSympatheticNervousSystem: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AbdominopelvicPortionOfSympatheticNervousSystem: new Coding({
     code: "7986004",
     display: "Abdominopelvic portion of sympathetic nervous system",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SkinOfGlansPenis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SkinOfGlansPenis: new Coding({
     code: "7991003",
     display: "Skin of glans penis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ArticulationsOfAuditoryOssicles: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ArticulationsOfAuditoryOssicles: new Coding({
     code: "7999001",
     display: "Articulations of auditory ossicles",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MucousMembraneOfTongue: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MucousMembraneOfTongue: new Coding({
     code: "8001006",
     display: "Mucous membrane of tongue",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AnteriorCommunicatingArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AnteriorCommunicatingArtery: new Coding({
     code: "8012006",
     display: "Anterior communicating artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InflowTractOfRightVentricle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InflowTractOfRightVentricle: new Coding({
     code: "8017000",
     display: "Inflow tract of right ventricle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LimitansNucleus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LimitansNucleus: new Coding({
     code: "8024004",
     display: "Limitans nucleus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousAcromialBursa: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousAcromialBursa: new Coding({
     code: "8039003",
     display: "Subcutaneous acromial bursa",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperficialFlexorTendonOfLittleFinger: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperficialFlexorTendonOfLittleFinger: new Coding({
     code: "8040001",
     display: "Superficial flexor tendon of little finger",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MembraneCoatingGranuleAmorphous: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MembraneCoatingGranuleAmorphous: new Coding({
     code: "8045006",
     display: "Membrane-coating granule, amorphous",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LateralNucleiOfGlobusPallidus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LateralNucleiOfGlobusPallidus: new Coding({
     code: "8057002",
     display: "Lateral nuclei of globus pallidus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PancreaticVeins: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PancreaticVeins: new Coding({
     code: "8059004",
     display: "Pancreatic veins",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperficialCircumflexIliacVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperficialCircumflexIliacVein: new Coding({
     code: "8067007",
     display: "Superficial circumflex iliac vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StratumLemnisciOfCorporaQuadrigemina: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StratumLemnisciOfCorporaQuadrigemina: new Coding({
     code: "8068002",
     display: "Stratum lemnisci of corpora quadrigemina",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RadialNerve: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RadialNerve: new Coding({
     code: "8079007",
     display: "Radial nerve",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorIntercostalArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorIntercostalArtery: new Coding({
     code: "808000",
     display: "Posterior intercostal artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FetalChondrocranium: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FetalChondrocranium: new Coding({
     code: "809008",
     display: "Fetal chondrocranium",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IntervertebralDiscSpaceOfTwelfthThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IntervertebralDiscSpaceOfTwelfthThoracicVertebra: new Coding({
     code: "8091003",
     display: "Intervertebral disc space of twelfth thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InfundibulumOfFallopianTube: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InfundibulumOfFallopianTube: new Coding({
     code: "8100009",
     display: "Infundibulum of Fallopian tube",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IntranuclearCrystal: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IntranuclearCrystal: new Coding({
     code: "8111001",
     display: "Intranuclear crystal",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Hindgut: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Hindgut: new Coding({
     code: "8112008",
     display: "Hindgut",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DelphianLymphNode: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DelphianLymphNode: new Coding({
     code: "8119004",
     display: "Delphian lymph node",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SupraaorticValveArea: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SupraaorticValveArea: new Coding({
     code: "8128003",
     display: "Supraaortic valve area",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperiorAnastomoticVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperiorAnastomoticVein: new Coding({
     code: "8133004",
     display: "Superior anastomotic vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_VeinOfHead: Coding.FromStrict({
+  ApproachSiteCodesValueSet_VeinOfHead: new Coding({
     code: "8157004",
     display: "Vein of head",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InterlobarDuctOfPancreas: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InterlobarDuctOfPancreas: new Coding({
     code: "8158009",
     display: "Interlobar duct of pancreas",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperiorColliculusOfCorporaQuadrigemina: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperiorColliculusOfCorporaQuadrigemina: new Coding({
     code: "8159001",
     display: "Superior colliculus of corpora quadrigemina",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LateralStriateArteries: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LateralStriateArteries: new Coding({
     code: "8160006",
     display: "Lateral striate arteries",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InfraorbitalNerve: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InfraorbitalNerve: new Coding({
     code: "8161005",
     display: "Infraorbital nerve",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperiorArticularProcessOfFifthThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperiorArticularProcessOfFifthThoracicVertebra: new Coding({
     code: "8165001",
     display: "Superior articular process of fifth thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Wrist: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Wrist: new Coding({
     code: "8205005",
     display: "Wrist",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AccessoryAtrioventricularBundle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AccessoryAtrioventricularBundle: new Coding({
     code: "8225009",
     display: "Accessory atrioventricular bundle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorCervicalSpinalCordNerveRoot: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorCervicalSpinalCordNerveRoot: new Coding({
     code: "823005",
     display: "Posterior cervical spinal cord nerve root",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ApicalBranchOfRightPulmonaryArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ApicalBranchOfRightPulmonaryArtery: new Coding({
     code: "8242003",
     display: "Apical branch of right pulmonary artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_OsseousPortionOfEustachianTube: Coding.FromStrict({
+  ApproachSiteCodesValueSet_OsseousPortionOfEustachianTube: new Coding({
     code: "8251006",
     display: "Osseous portion of Eustachian tube",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TunicaInternaOfEyeball: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TunicaInternaOfEyeball: new Coding({
     code: "8264007",
     display: "Tunica interna of eyeball",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ArticularSurfaceMetacarpalOfPhalanxOfHand: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ArticularSurfaceMetacarpalOfPhalanxOfHand: new Coding({
     code: "8265008",
     display: "Articular surface, metacarpal, of phalanx of hand",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SmallIntestineSerosa: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SmallIntestineSerosa: new Coding({
     code: "8266009",
     display: "Small intestine serosa",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PelvicViscus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PelvicViscus: new Coding({
     code: "8279000",
     display: "Pelvic viscus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BelowKneeRegion: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BelowKneeRegion: new Coding({
     code: "8289001",
     display: "Below knee region",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InterlobularArteriesOfLiver: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InterlobularArteriesOfLiver: new Coding({
     code: "8292002",
     display: "Interlobular arteries of liver",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SpinousProcessOfFifthThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SpinousProcessOfFifthThoracicVertebra: new Coding({
     code: "830004",
     display: "Spinous process of fifth thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MastoidFontanelOfSkull: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MastoidFontanelOfSkull: new Coding({
     code: "8314003",
     display: "Mastoid fontanel of skull",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LumbarLymphNode: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LumbarLymphNode: new Coding({
     code: "8334002",
     display: "Lumbar lymph node",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ColicLymphNode: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ColicLymphNode: new Coding({
     code: "8356004",
     display: "Colic lymph node",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_OralRegionOfFace: Coding.FromStrict({
+  ApproachSiteCodesValueSet_OralRegionOfFace: new Coding({
     code: "836005",
     display: "Oral region of face",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TunicaIntima: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TunicaIntima: new Coding({
     code: "8361002",
     display: "Tunica intima",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SphincterPupillaeMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SphincterPupillaeMuscle: new Coding({
     code: "8369000",
     display: "Sphincter pupillae muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_JugumOfSphenoidBone: Coding.FromStrict({
+  ApproachSiteCodesValueSet_JugumOfSphenoidBone: new Coding({
     code: "8373002",
     display: "Jugum of sphenoid bone",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LaminaOfEighthThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LaminaOfEighthThoracicVertebra: new Coding({
     code: "8387002",
     display: "Lamina of eighth thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BirthCanal: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BirthCanal: new Coding({
     code: "8389004",
     display: "Birth canal",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IliacFossa: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IliacFossa: new Coding({
     code: "8412003",
     display: "Iliac fossa",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RenalSurfaceOfAdrenalGland: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RenalSurfaceOfAdrenalGland: new Coding({
     code: "8415001",
     display: "Renal surface of adrenal gland",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_JointOfLumbarVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_JointOfLumbarVertebra: new Coding({
     code: "8454000",
     display: "Joint of lumbar vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LigamentOfSacroiliacJointAndPubicSymphysis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LigamentOfSacroiliacJointAndPubicSymphysis: new Coding({
     code: "8464009",
     display: "Ligament of sacroiliac joint and pubic symphysis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SinoatrialNodeBranchOfRightCoronaryArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SinoatrialNodeBranchOfRightCoronaryArtery: new Coding({
     code: "8482007",
     display: "Sinoatrial node branch of right coronary artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MesialSurfaceOfTooth: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MesialSurfaceOfTooth: new Coding({
     code: "8483002",
     display: "Mesial surface of tooth",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ObliquusCapitisMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ObliquusCapitisMuscle: new Coding({
     code: "8496001",
     display: "Obliquus capitis muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InferiorArticularProcessOfTwelfthThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InferiorArticularProcessOfTwelfthThoracicVertebra: new Coding({
     code: "8523001",
     display: "Inferior articular process of twelfth thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorIntercavernousSinus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorIntercavernousSinus: new Coding({
     code: "8546004",
     display: "Posterior intercavernous sinus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LipidDroplet: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LipidDroplet: new Coding({
     code: "8556000",
     display: "Lipid droplet",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_JuxtaintestinalLymphNode: Coding.FromStrict({
+  ApproachSiteCodesValueSet_JuxtaintestinalLymphNode: new Coding({
     code: "8559007",
     display: "Juxtaintestinal lymph node",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InterclavicularLigament: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InterclavicularLigament: new Coding({
     code: "8560002",
     display: "Interclavicular ligament",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AbdominalLymphNodes: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AbdominalLymphNodes: new Coding({
     code: "8568009",
     display: "Abdominal lymph nodes",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BothFeet: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BothFeet: new Coding({
     code: "8580001",
     display: "Both feet",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MeissnerQuoteSPlexus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MeissnerQuoteSPlexus: new Coding({
     code: "8595004",
     display: "Meissner's plexus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AcousticNerve: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AcousticNerve: new Coding({
     code: "8598002",
     display: "Acoustic nerve",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CricoidCartilage: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CricoidCartilage: new Coding({
     code: "8600008",
     display: "Cricoid cartilage",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AdductorHallucisMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AdductorHallucisMuscle: new Coding({
     code: "8603005",
     display: "Adductor hallucis muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MedullaOblongataFasciculusCuneatus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MedullaOblongataFasciculusCuneatus: new Coding({
     code: "8604004",
     display: "Medulla oblongata fasciculus cuneatus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RightMarginOfHeart: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RightMarginOfHeart: new Coding({
     code: "8608001",
     display: "Right margin of heart",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ZygomaticRegionOfFace: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ZygomaticRegionOfFace: new Coding({
     code: "8617001",
     display: "Zygomatic region of face",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TransplantedUreter: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TransplantedUreter: new Coding({
     code: "8623006",
     display: "Transplanted ureter",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperiorRightPulmonaryVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperiorRightPulmonaryVein: new Coding({
     code: "8629005",
     display: "Superior right pulmonary vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ChoroidalBranchesOfPosteriorSpinalArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ChoroidalBranchesOfPosteriorSpinalArtery: new Coding({
     code: "8640002",
     display: "Choroidal branches of posterior spinal artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_GlycogenVacuole: Coding.FromStrict({
+  ApproachSiteCodesValueSet_GlycogenVacuole: new Coding({
     code: "8668003",
     display: "Glycogen vacuole",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AllToes: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AllToes: new Coding({
     code: "8671006",
     display: "All toes",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BodyOfRightAtrium: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BodyOfRightAtrium: new Coding({
     code: "8677005",
     display: "Body of right atrium",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LateralOlfactoryGyrus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LateralOlfactoryGyrus: new Coding({
     code: "8688004",
     display: "Lateral olfactory gyrus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IntervertebralForamenOfSecondLumbarVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IntervertebralForamenOfSecondLumbarVertebra: new Coding({
     code: "8695008",
     display: "Intervertebral foramen of second lumbar vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MinorSublingualDucts: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MinorSublingualDucts: new Coding({
     code: "8710005",
     display: "Minor sublingual ducts",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PeriodontalTissues: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PeriodontalTissues: new Coding({
     code: "8711009",
     display: "Periodontal tissues",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueOfInterdigitalSpaceOfHand: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueOfInterdigitalSpaceOfHand: new Coding({
     code: "8714001",
     display: "Subcutaneous tissue of interdigital space of hand",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CavernousPortionOfInternalCarotidArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CavernousPortionOfInternalCarotidArtery: new Coding({
     code: "8752000",
     display: "Cavernous portion of internal carotid artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_NailOfSecondToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_NailOfSecondToe: new Coding({
     code: "8770002",
     display: "Nail of second toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TendinousArch: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TendinousArch: new Coding({
     code: "8775007",
     display: "Tendinous arch",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IntranuclearBodyGranularWithFilamentousCapsule: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IntranuclearBodyGranularWithFilamentousCapsule: new Coding({
     code: "8784007",
     display: "Intranuclear body, granular with filamentous capsule",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CorticomedullaryJunctionOfAdrenalGland: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CorticomedullaryJunctionOfAdrenalGland: new Coding({
     code: "8810002",
     display: "Corticomedullary junction of adrenal gland",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IliacTuberosity: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IliacTuberosity: new Coding({
     code: "8814006",
     display: "Iliac tuberosity",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ThenarAndHypothenarSpaces: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ThenarAndHypothenarSpaces: new Coding({
     code: "8815007",
     display: "Thenar and hypothenar spaces",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PedicleOfEleventhThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PedicleOfEleventhThoracicVertebra: new Coding({
     code: "8820007",
     display: "Pedicle of eleventh thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PeronealArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PeronealArtery: new Coding({
     code: "8821006",
     display: "Peroneal artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ShaftOfPhalanxOfMiddleFinger: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ShaftOfPhalanxOfMiddleFinger: new Coding({
     code: "8827005",
     display: "Shaft of phalanx of middle finger",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AgranularEndoplasmicReticulumConnectionWithOtherOrganelle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AgranularEndoplasmicReticulumConnectionWithOtherOrganelle: new Coding({
     code: "8839002",
     display: "Agranular endoplasmic reticulum, connection with other organelle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubtendinousPrepatellarBursa: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubtendinousPrepatellarBursa: new Coding({
     code: "8845005",
     display: "Subtendinous prepatellar bursa",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LaminaMuscularisOfColonicMucousMembrane: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LaminaMuscularisOfColonicMucousMembrane: new Coding({
     code: "885000",
     display: "Lamina muscularis of colonic mucous membrane",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ProperFasciculus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ProperFasciculus: new Coding({
     code: "8850004",
     display: "Proper fasciculus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CristaGalli: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CristaGalli: new Coding({
     code: "8854008",
     display: "Crista galli",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PalmarSurfaceOfMiddleFinger: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PalmarSurfaceOfMiddleFinger: new Coding({
     code: "8862000",
     display: "Palmar surface of middle finger",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MandibularRightSecondPremolarTooth: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MandibularRightSecondPremolarTooth: new Coding({
     code: "8873007",
     display: "Mandibular right second premolar tooth",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BrachiocephalicVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BrachiocephalicVein: new Coding({
     code: "8887007",
     display: "Brachiocephalic vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DiaphragmaticSurfaceOfLung: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DiaphragmaticSurfaceOfLung: new Coding({
     code: "8892009",
     display: "Diaphragmatic surface of lung",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_GastricCardiacGland: Coding.FromStrict({
+  ApproachSiteCodesValueSet_GastricCardiacGland: new Coding({
     code: "8894005",
     display: "Gastric cardiac gland",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LateralGlossoepiglotticFold: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LateralGlossoepiglotticFold: new Coding({
     code: "8897003",
     display: "Lateral glossoepiglottic fold",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LeftUlnarArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LeftUlnarArtery: new Coding({
     code: "8907008",
     display: "Left ulnar artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InferiorTransverseScapularLigament: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InferiorTransverseScapularLigament: new Coding({
     code: "8910001",
     display: "Inferior transverse scapular ligament",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EndocardiumOfRightVentricle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EndocardiumOfRightVentricle: new Coding({
     code: "8911002",
     display: "Endocardium of right ventricle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InguinalLymphNode: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InguinalLymphNode: new Coding({
     code: "8928004",
     display: "Inguinal lymph node",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CoracoidProcessOfScapula: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CoracoidProcessOfScapula: new Coding({
     code: "8931003",
     display: "Coracoid process of scapula",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CerebralMeninges: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CerebralMeninges: new Coding({
     code: "8935007",
     display: "Cerebral meninges",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TrapezoidLigament: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TrapezoidLigament: new Coding({
     code: "8942007",
     display: "Trapezoid ligament",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AnteriorCruciateLigamentOfKneeJoint: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AnteriorCruciateLigamentOfKneeJoint: new Coding({
     code: "895007",
     display: "Anterior cruciate ligament of knee joint",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StratumZonaleOfCorporaQuadrigemina: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StratumZonaleOfCorporaQuadrigemina: new Coding({
     code: "8965002",
     display: "Stratum zonale of corpora quadrigemina",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LeftEye: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LeftEye: new Coding({
     code: "8966001",
     display: "Left eye",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_JointStructureOfVertebralColumn: Coding.FromStrict({
+  ApproachSiteCodesValueSet_JointStructureOfVertebralColumn: new Coding({
     code: "8983005",
     display: "Joint structure of vertebral column",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MarginalPartOfOrbicularisOrisMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MarginalPartOfOrbicularisOrisMuscle: new Coding({
     code: "8988001",
     display: "Marginal part of orbicularis oris muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_HepaticVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_HepaticVein: new Coding({
     code: "8993003",
     display: "Hepatic vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CerebellarPeduncle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CerebellarPeduncle: new Coding({
     code: "9000002",
     display: "Cerebellar peduncle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LeftParietalLobe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LeftParietalLobe: new Coding({
     code: "9003000",
     display: "Left parietal lobe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MiddleColicVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MiddleColicVein: new Coding({
     code: "9018004",
     display: "Middle colic vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AscendingColon: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AscendingColon: new Coding({
     code: "9040008",
     display: "Ascending colon",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BothForearms: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BothForearms: new Coding({
     code: "9055004",
     display: "Both forearms",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_WhiteMatterOfInsula: Coding.FromStrict({
+  ApproachSiteCodesValueSet_WhiteMatterOfInsula: new Coding({
     code: "9073001",
     display: "White matter of insula",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SplenicSinusoids: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SplenicSinusoids: new Coding({
     code: "9081000",
     display: "Splenic sinusoids",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperiorLaryngealVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperiorLaryngealVein: new Coding({
     code: "9086005",
     display: "Superior laryngeal vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ArchOfFoot: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ArchOfFoot: new Coding({
     code: "9089003",
     display: "Arch of foot",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_VeinOfTheScalaTympani: Coding.FromStrict({
+  ApproachSiteCodesValueSet_VeinOfTheScalaTympani: new Coding({
     code: "9108007",
     display: "Vein of the scala tympani",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TransverseFoldsOfPalate: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TransverseFoldsOfPalate: new Coding({
     code: "9127001",
     display: "Transverse folds of palate",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_EmbryoStage1: Coding.FromStrict({
+  ApproachSiteCodesValueSet_EmbryoStage1: new Coding({
     code: "9156001",
     display: "Embryo stage 1",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperiorLaryngealAperture: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperiorLaryngealAperture: new Coding({
     code: "917004",
     display: "Superior laryngeal aperture",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AccessoryCarpalBone: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AccessoryCarpalBone: new Coding({
     code: "9181003",
     display: "Accessory carpal bone",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CapsuleOfMetatarsophalangealJointOfFifthToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CapsuleOfMetatarsophalangealJointOfFifthToe: new Coding({
     code: "9185007",
     display: "Capsule of metatarsophalangeal joint of fifth toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FilamentsOfContractileApparatus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FilamentsOfContractileApparatus: new Coding({
     code: "9186008",
     display: "Filaments of contractile apparatus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IntervertebralDiscOfEighthThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IntervertebralDiscOfEighthThoracicVertebra: new Coding({
     code: "9188009",
     display: "Intervertebral disc of eighth thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Centriole: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Centriole: new Coding({
     code: "9208002",
     display: "Centriole",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ThyrohyoidBranchOfAnsaCervicalis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ThyrohyoidBranchOfAnsaCervicalis: new Coding({
     code: "921006",
     display: "Thyrohyoid branch of ansa cervicalis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ShaftOfFifthMetatarsalBone: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ShaftOfFifthMetatarsalBone: new Coding({
     code: "9212008",
     display: "Shaft of fifth metatarsal bone",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RotatoresLumborumMuscles: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RotatoresLumborumMuscles: new Coding({
     code: "9229006",
     display: "Rotatores lumborum muscles",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ExternalPudendalVeins: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ExternalPudendalVeins: new Coding({
     code: "9231002",
     display: "External pudendal veins",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_NiemannPickCell: Coding.FromStrict({
+  ApproachSiteCodesValueSet_NiemannPickCell: new Coding({
     code: "9240003",
     display: "Niemann-Pick cell",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorSegmentOfRightLobeOfLiver: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorSegmentOfRightLobeOfLiver: new Coding({
     code: "9242006",
     display: "Posterior segment of right lobe of liver",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_GravidUterus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_GravidUterus: new Coding({
     code: "9258009",
     display: "Gravid uterus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TendonAndTendonSheathOfSecondToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TendonAndTendonSheathOfSecondToe: new Coding({
     code: "9261005",
     display: "Tendon and tendon sheath of second toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FasciaOfPelvis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FasciaOfPelvis: new Coding({
     code: "9262003",
     display: "Fascia of pelvis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CorpusCavernosumOfPenis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CorpusCavernosumOfPenis: new Coding({
     code: "9284003",
     display: "Corpus cavernosum of penis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorIntraoccipitalSynchondrosis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorIntraoccipitalSynchondrosis: new Coding({
     code: "9290004",
     display: "Posterior intraoccipital synchondrosis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LabialVeins: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LabialVeins: new Coding({
     code: "9305001",
     display: "Labial veins",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MerkelQuoteSTactileDisc: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MerkelQuoteSTactileDisc: new Coding({
     code: "9317004",
     display: "Merkel's tactile disc",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubtendinousIliacBursa: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubtendinousIliacBursa: new Coding({
     code: "9320007",
     display: "Subtendinous iliac bursa",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TailOfEpididymis: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TailOfEpididymis: new Coding({
     code: "9321006",
     display: "Tail of epididymis",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InterdentalPapillaOfGingiva: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InterdentalPapillaOfGingiva: new Coding({
     code: "9325002",
     display: "Interdental papilla of gingiva",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LateralLigamentOfTemporomandibularJoint: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LateralLigamentOfTemporomandibularJoint: new Coding({
     code: "9332006",
     display: "Lateral ligament of temporomandibular joint",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SkinOfMedialSurfaceOfMiddleFinger: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SkinOfMedialSurfaceOfMiddleFinger: new Coding({
     code: "9348007",
     display: "Skin of medial surface of middle finger",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PermanentTeeth: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PermanentTeeth: new Coding({
     code: "9379006",
     display: "Permanent teeth",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PectenAni: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PectenAni: new Coding({
     code: "9380009",
     display: "Pecten ani",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LumbarVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LumbarVein: new Coding({
     code: "9384000",
     display: "Lumbar vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LymphaticsOfStomach: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LymphaticsOfStomach: new Coding({
     code: "9390001",
     display: "Lymphatics of stomach",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PlantarSurfaceOfFourthToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PlantarSurfaceOfFourthToe: new Coding({
     code: "9432007",
     display: "Plantar surface of fourth toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_StructureOfDeepCervicalLymphaticVessel: Coding.FromStrict({
+  ApproachSiteCodesValueSet_StructureOfDeepCervicalLymphaticVessel: new Coding({
     code: "9438006",
     display: "Structure of deep cervical lymphatic vessel",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubclavianVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubclavianVein: new Coding({
     code: "9454009",
     display: "Subclavian vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MedialCartilaginousLaminaOfEustachianTube: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MedialCartilaginousLaminaOfEustachianTube: new Coding({
     code: "9455005",
     display: "Medial cartilaginous lamina of Eustachian tube",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CrusOfDiaphragm: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CrusOfDiaphragm: new Coding({
     code: "947002",
     display: "Crus of diaphragm",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AmacrineCellsOfRetina: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AmacrineCellsOfRetina: new Coding({
     code: "9475001",
     display: "Amacrine cells of retina",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AfferentGlomerularArteriole: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AfferentGlomerularArteriole: new Coding({
     code: "9481009",
     display: "Afferent glomerular arteriole",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PulmonaryLigament: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PulmonaryLigament: new Coding({
     code: "9490002",
     display: "Pulmonary ligament",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_HeadOfMetacarpalBone: Coding.FromStrict({
+  ApproachSiteCodesValueSet_HeadOfMetacarpalBone: new Coding({
     code: "9498009",
     display: "Head of metacarpal bone",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CoronalDepressionOfTooth: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CoronalDepressionOfTooth: new Coding({
     code: "9502002",
     display: "Coronal depression of tooth",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CalcaneocuboidalLigament: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CalcaneocuboidalLigament: new Coding({
     code: "9512009",
     display: "Calcaneocuboidal ligament",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PyramidOfMedullaOblongata: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PyramidOfMedullaOblongata: new Coding({
     code: "9535007",
     display: "Pyramid of medulla oblongata",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Bronchus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Bronchus: new Coding({
     code: "955009",
     display: "Bronchus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FacetForFifthCostalCartilageOfSternum: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FacetForFifthCostalCartilageOfSternum: new Coding({
     code: "9558005",
     display: "Facet for fifth costal cartilage of sternum",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DuodenalLumen: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DuodenalLumen: new Coding({
     code: "9566001",
     display: "Duodenal lumen",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueOfAreola: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueOfAreola: new Coding({
     code: "9568000",
     display: "Subcutaneous tissue of areola",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DeepBranchOfUlnarNerve: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DeepBranchOfUlnarNerve: new Coding({
     code: "9596006",
     display: "Deep branch of ulnar nerve",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorProcessOfNasalSeptalCartilage: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorProcessOfNasalSeptalCartilage: new Coding({
     code: "9609000",
     display: "Posterior process of nasal septal cartilage",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LanugoHair: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LanugoHair: new Coding({
     code: "9625005",
     display: "Lanugo hair",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LeftSuperiorVenaCava: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LeftSuperiorVenaCava: new Coding({
     code: "9642004",
     display: "Left superior vena cava",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperiorTransverseScapularLigament: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperiorTransverseScapularLigament: new Coding({
     code: "9646001",
     display: "Superior transverse scapular ligament",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_GastricMucousGland: Coding.FromStrict({
+  ApproachSiteCodesValueSet_GastricMucousGland: new Coding({
     code: "9654004",
     display: "Gastric mucous gland",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InfraclavicularLymphNodes: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InfraclavicularLymphNodes: new Coding({
     code: "9659009",
     display: "Infraclavicular lymph nodes",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubcutaneousTissueOfLowerMarginOfNasalSeptum: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubcutaneousTissueOfLowerMarginOfNasalSeptum: new Coding({
     code: "9662007",
     display: "Subcutaneous tissue of lower margin of nasal septum",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CiliaryMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CiliaryMuscle: new Coding({
     code: "9668006",
     display: "Ciliary muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_HeadOfSecondMetatarsalBone: Coding.FromStrict({
+  ApproachSiteCodesValueSet_HeadOfSecondMetatarsalBone: new Coding({
     code: "9677004",
     display: "Head of second metatarsal bone",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Melanocyte: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Melanocyte: new Coding({
     code: "9683001",
     display: "Melanocyte",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorScrotalBranchesOfInternalPudendalArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorScrotalBranchesOfInternalPudendalArtery: new Coding({
     code: "9684007",
     display: "Posterior scrotal branches of internal pudendal artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IliacFascia: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IliacFascia: new Coding({
     code: "9708001",
     display: "Iliac fascia",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MedialSupraclavicularNerves: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MedialSupraclavicularNerves: new Coding({
     code: "9732008",
     display: "Medial supraclavicular nerves",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RightWrist: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RightWrist: new Coding({
     code: "9736006",
     display: "Right wrist",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TendonOfIndexFinger: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TendonOfIndexFinger: new Coding({
     code: "9743000",
     display: "Tendon of index finger",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SubmucosaOfTonsil: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SubmucosaOfTonsil: new Coding({
     code: "9758008",
     display: "Submucosa of tonsil",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_OvarianVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_OvarianVein: new Coding({
     code: "976004",
     display: "Ovarian vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_GenitalTubercle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_GenitalTubercle: new Coding({
     code: "9770007",
     display: "Genital tubercle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_LeftCarotidSinus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_LeftCarotidSinus: new Coding({
     code: "9775002",
     display: "Left carotid sinus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DistinctiveShapeOfMitochondrialCristae: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DistinctiveShapeOfMitochondrialCristae: new Coding({
     code: "9779008",
     display: "Distinctive shape of mitochondrial cristae",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperficialLymphaticsOfThorax: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperficialLymphaticsOfThorax: new Coding({
     code: "9783008",
     display: "Superficial lymphatics of thorax",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DeepVenousSystemOfLowerExtremity: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DeepVenousSystemOfLowerExtremity: new Coding({
     code: "9791004",
     display: "Deep venous system of lower extremity",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SkeletalMuscleFiberTypeIIb: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SkeletalMuscleFiberTypeIIb: new Coding({
     code: "9796009",
     display: "Skeletal muscle fiber, type IIb",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FasciaOfUpperExtremity: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FasciaOfUpperExtremity: new Coding({
     code: "9813009",
     display: "Fascia of upper extremity",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ProximalPhalanxOfLittleToe: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ProximalPhalanxOfLittleToe: new Coding({
     code: "9825007",
     display: "Proximal phalanx of little toe",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PerforatingBranchesOfInternalThoracicArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PerforatingBranchesOfInternalThoracicArtery: new Coding({
     code: "9837009",
     display: "Perforating branches of internal thoracic artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_BiparietalDiameterOfHead: Coding.FromStrict({
+  ApproachSiteCodesValueSet_BiparietalDiameterOfHead: new Coding({
     code: "9840009",
     display: "Biparietal diameter of head",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_InterspinalisThoracisMuscles: Coding.FromStrict({
+  ApproachSiteCodesValueSet_InterspinalisThoracisMuscles: new Coding({
     code: "9841008",
     display: "Interspinalis thoracis muscles",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RightKidney: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RightKidney: new Coding({
     code: "9846003",
     display: "Right kidney",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_HilumOfAdrenalGland: Coding.FromStrict({
+  ApproachSiteCodesValueSet_HilumOfAdrenalGland: new Coding({
     code: "9847007",
     display: "Hilum of adrenal gland",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_FornixOfLacrimalSac: Coding.FromStrict({
+  ApproachSiteCodesValueSet_FornixOfLacrimalSac: new Coding({
     code: "9849005",
     display: "Fornix of lacrimal sac",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_CarunculaeHymenales: Coding.FromStrict({
+  ApproachSiteCodesValueSet_CarunculaeHymenales: new Coding({
     code: "9870004",
     display: "Carunculae hymenales",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_Thymus: Coding.FromStrict({
+  ApproachSiteCodesValueSet_Thymus: new Coding({
     code: "9875009",
     display: "Thymus",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_AppendicularVein: Coding.FromStrict({
+  ApproachSiteCodesValueSet_AppendicularVein: new Coding({
     code: "9878006",
     display: "Appendicular vein",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ThyroidTubercle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ThyroidTubercle: new Coding({
     code: "9880000",
     display: "Thyroid tubercle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PeripheralNerveMyelinatedNerveFiber: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PeripheralNerveMyelinatedNerveFiber: new Coding({
     code: "9881001",
     display: "Peripheral nerve myelinated nerve fiber",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_TransverseArytenoidMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_TransverseArytenoidMuscle: new Coding({
     code: "9891007",
     display: "Transverse arytenoid muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_ParacentralLobule: Coding.FromStrict({
+  ApproachSiteCodesValueSet_ParacentralLobule: new Coding({
     code: "9898001",
     display: "Paracentral lobule",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PosteriorEthmoidalNerve: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PosteriorEthmoidalNerve: new Coding({
     code: "9951005",
     display: "Posterior ethmoidal nerve",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_MeningealBranchOfOccipitalArtery: Coding.FromStrict({
+  ApproachSiteCodesValueSet_MeningealBranchOfOccipitalArtery: new Coding({
     code: "996007",
     display: "Meningeal branch of occipital artery",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_PrimaryFootProcess: Coding.FromStrict({
+  ApproachSiteCodesValueSet_PrimaryFootProcess: new Coding({
     code: "9968009",
     display: "Primary foot process",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_IleocecalOstium: Coding.FromStrict({
+  ApproachSiteCodesValueSet_IleocecalOstium: new Coding({
     code: "9970000",
     display: "Ileocecal ostium",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_RhomboideusCervicisMuscle: Coding.FromStrict({
+  ApproachSiteCodesValueSet_RhomboideusCervicisMuscle: new Coding({
     code: "9976006",
     display: "Rhomboideus cervicis muscle",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_SuperiorArticularProcessOfSixthThoracicVertebra: Coding.FromStrict({
+  ApproachSiteCodesValueSet_SuperiorArticularProcessOfSixthThoracicVertebra: new Coding({
     code: "9994000",
     display: "Superior articular process of sixth thoracic vertebra",
     system: "http://snomed.info/sct"
   }),
-  ApproachSiteCodesValueSet_DuodenalAmpulla: Coding.FromStrict({
+  ApproachSiteCodesValueSet_DuodenalAmpulla: new Coding({
     code: "9999005",
     display: "Duodenal ampulla",
     system: "http://snomed.info/sct"

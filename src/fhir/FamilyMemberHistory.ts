@@ -229,19 +229,19 @@ export class FamilyMemberHistoryCondition extends fhir.BackboneElement implement
   /**
    * Check if the current FamilyMemberHistoryCondition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a FamilyMemberHistoryCondition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IFamilyMemberHistoryCondition):FamilyMemberHistoryCondition {
+  static override fromStrict(source:fhir.IFamilyMemberHistoryCondition):FamilyMemberHistoryCondition {
     var dest:FamilyMemberHistoryCondition = new FamilyMemberHistoryCondition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `FamilyMemberHistoryCondition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -424,21 +424,21 @@ export class FamilyMemberHistory extends fhir.DomainResource implements fhir.IFa
   /**
    * Check if the current FamilyMemberHistory contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["patient"] === undefined) { missingElements.push("patient"); }
     if (this["relationship"] === undefined) { missingElements.push("relationship"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a FamilyMemberHistory from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IFamilyMemberHistory):FamilyMemberHistory {
+  static override fromStrict(source:fhir.IFamilyMemberHistory):FamilyMemberHistory {
     var dest:FamilyMemberHistory = new FamilyMemberHistory(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `FamilyMemberHistory is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

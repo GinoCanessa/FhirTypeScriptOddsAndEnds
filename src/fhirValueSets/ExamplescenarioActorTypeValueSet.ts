@@ -13,7 +13,7 @@ export const ExamplescenarioActorTypeValueSet = {
   /**
    * A system.
    */
-  examplescenario_actor_type_System: Coding.FromStrict({
+  examplescenario_actor_type_System: new Coding({
     code: "entity",
     display: "System",
     system: "http://hl7.org/fhir/examplescenario-actor-type"
@@ -21,7 +21,7 @@ export const ExamplescenarioActorTypeValueSet = {
   /**
    * A person.
    */
-  examplescenario_actor_type_Person: Coding.FromStrict({
+  examplescenario_actor_type_Person: new Coding({
     code: "person",
     display: "Person",
     system: "http://hl7.org/fhir/examplescenario-actor-type"

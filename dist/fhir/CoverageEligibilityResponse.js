@@ -56,21 +56,21 @@ export class CoverageEligibilityResponseInsuranceItemBenefit extends fhir.Backbo
     /**
      * Check if the current CoverageEligibilityResponseInsuranceItemBenefit contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a CoverageEligibilityResponseInsuranceItemBenefit from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new CoverageEligibilityResponseInsuranceItemBenefit(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `CoverageEligibilityResponseInsuranceItemBenefit is missing elements: ${missingElements.join(", ")}`;
         }
@@ -147,18 +147,18 @@ export class CoverageEligibilityResponseInsuranceItem extends fhir.BackboneEleme
     /**
      * Check if the current CoverageEligibilityResponseInsuranceItem contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a CoverageEligibilityResponseInsuranceItem from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new CoverageEligibilityResponseInsuranceItem(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `CoverageEligibilityResponseInsuranceItem is missing elements: ${missingElements.join(", ")}`;
         }
@@ -197,21 +197,21 @@ export class CoverageEligibilityResponseInsurance extends fhir.BackboneElement {
     /**
      * Check if the current CoverageEligibilityResponseInsurance contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["coverage"] === undefined) {
             missingElements.push("coverage");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a CoverageEligibilityResponseInsurance from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new CoverageEligibilityResponseInsurance(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `CoverageEligibilityResponseInsurance is missing elements: ${missingElements.join(", ")}`;
         }
@@ -238,21 +238,21 @@ export class CoverageEligibilityResponseError extends fhir.BackboneElement {
     /**
      * Check if the current CoverageEligibilityResponseError contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["code"] === undefined) {
             missingElements.push("code");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a CoverageEligibilityResponseError from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new CoverageEligibilityResponseError(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `CoverageEligibilityResponseError is missing elements: ${missingElements.join(", ")}`;
         }
@@ -370,7 +370,7 @@ export class CoverageEligibilityResponse extends fhir.DomainResource {
     /**
      * Check if the current CoverageEligibilityResponse contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["created"] === undefined) {
             missingElements.push("created");
@@ -393,16 +393,16 @@ export class CoverageEligibilityResponse extends fhir.DomainResource {
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a CoverageEligibilityResponse from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new CoverageEligibilityResponse(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `CoverageEligibilityResponse is missing elements: ${missingElements.join(", ")}`;
         }

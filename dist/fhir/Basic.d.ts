@@ -67,10 +67,10 @@ export declare class Basic extends fhir.DomainResource implements fhir.IBasic {
     /**
      * Check if the current Basic contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Basic from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IBasic): Basic;
+    static fromStrict(source: fhir.IBasic): Basic;
 }
 //# sourceMappingURL=Basic.d.ts.map

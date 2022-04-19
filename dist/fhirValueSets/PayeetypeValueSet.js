@@ -13,7 +13,7 @@ export const PayeetypeValueSet = {
     /**
      * Any benefit payable will be paid to a third party such as a guarrantor.
      */
-    payeetype_Provider: Coding.FromStrict({
+    payeetype_Provider: new Coding({
         code: "other",
         display: "Provider",
         system: "http://terminology.hl7.org/CodeSystem/payeetype"
@@ -21,7 +21,7 @@ export const PayeetypeValueSet = {
     /**
      * Any benefit payable will be paid to the provider (Assignment of Benefit).
      */
-    payeetype_Provider_2: Coding.FromStrict({
+    payeetype_Provider_2: new Coding({
         code: "provider",
         display: "Provider",
         system: "http://terminology.hl7.org/CodeSystem/payeetype"
@@ -29,7 +29,7 @@ export const PayeetypeValueSet = {
     /**
      * The subscriber (policy holder) will be reimbursed.
      */
-    payeetype_Subscriber: Coding.FromStrict({
+    payeetype_Subscriber: new Coding({
         code: "subscriber",
         display: "Subscriber",
         system: "http://terminology.hl7.org/CodeSystem/payeetype"

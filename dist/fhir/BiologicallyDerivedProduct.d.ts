@@ -176,11 +176,11 @@ export declare class BiologicallyDerivedProductCollection extends fhir.BackboneE
     /**
      * Check if the current BiologicallyDerivedProductCollection contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a BiologicallyDerivedProductCollection from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IBiologicallyDerivedProductCollection): BiologicallyDerivedProductCollection;
+    static fromStrict(source: fhir.IBiologicallyDerivedProductCollection): BiologicallyDerivedProductCollection;
 }
 /**
  * Any processing of the product during collection that does not change the fundamental nature of the product. For example adding anti-coagulants during the collection of Peripheral Blood Stem Cells.
@@ -215,11 +215,11 @@ export declare class BiologicallyDerivedProductProcessing extends fhir.BackboneE
     /**
      * Check if the current BiologicallyDerivedProductProcessing contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a BiologicallyDerivedProductProcessing from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IBiologicallyDerivedProductProcessing): BiologicallyDerivedProductProcessing;
+    static fromStrict(source: fhir.IBiologicallyDerivedProductProcessing): BiologicallyDerivedProductProcessing;
 }
 /**
  * Any manipulation of product post-collection that is intended to alter the product.  For example a buffy-coat enrichment or CD8 reduction of Peripheral Blood Stem Cells to make it more suitable for infusion.
@@ -246,11 +246,11 @@ export declare class BiologicallyDerivedProductManipulation extends fhir.Backbon
     /**
      * Check if the current BiologicallyDerivedProductManipulation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a BiologicallyDerivedProductManipulation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IBiologicallyDerivedProductManipulation): BiologicallyDerivedProductManipulation;
+    static fromStrict(source: fhir.IBiologicallyDerivedProductManipulation): BiologicallyDerivedProductManipulation;
 }
 /**
  * Product storage.
@@ -282,11 +282,11 @@ export declare class BiologicallyDerivedProductStorage extends fhir.BackboneElem
     /**
      * Check if the current BiologicallyDerivedProductStorage contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a BiologicallyDerivedProductStorage from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IBiologicallyDerivedProductStorage): BiologicallyDerivedProductStorage;
+    static fromStrict(source: fhir.IBiologicallyDerivedProductStorage): BiologicallyDerivedProductStorage;
 }
 /**
  * A material substance originating from a biological entity intended to be transplanted or infused
@@ -351,11 +351,11 @@ export declare class BiologicallyDerivedProduct extends fhir.DomainResource impl
     /**
      * Check if the current BiologicallyDerivedProduct contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a BiologicallyDerivedProduct from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IBiologicallyDerivedProduct): BiologicallyDerivedProduct;
+    static fromStrict(source: fhir.IBiologicallyDerivedProduct): BiologicallyDerivedProduct;
 }
 /**
  * Code Values for the BiologicallyDerivedProduct.storage.scale field

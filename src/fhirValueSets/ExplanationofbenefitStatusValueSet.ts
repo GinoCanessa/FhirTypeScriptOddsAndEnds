@@ -13,7 +13,7 @@ export const ExplanationofbenefitStatusValueSet = {
   /**
    * The resource instance is currently in-force.
    */
-  explanationofbenefit_status_Active: Coding.FromStrict({
+  explanationofbenefit_status_Active: new Coding({
     code: "active",
     display: "Active",
     system: "http://hl7.org/fhir/explanationofbenefit-status"
@@ -21,7 +21,7 @@ export const ExplanationofbenefitStatusValueSet = {
   /**
    * The resource instance is withdrawn, rescinded or reversed.
    */
-  explanationofbenefit_status_Cancelled: Coding.FromStrict({
+  explanationofbenefit_status_Cancelled: new Coding({
     code: "cancelled",
     display: "Cancelled",
     system: "http://hl7.org/fhir/explanationofbenefit-status"
@@ -29,7 +29,7 @@ export const ExplanationofbenefitStatusValueSet = {
   /**
    * A new resource instance the contents of which is not complete.
    */
-  explanationofbenefit_status_Draft: Coding.FromStrict({
+  explanationofbenefit_status_Draft: new Coding({
     code: "draft",
     display: "Draft",
     system: "http://hl7.org/fhir/explanationofbenefit-status"
@@ -37,7 +37,7 @@ export const ExplanationofbenefitStatusValueSet = {
   /**
    * The resource instance was entered in error.
    */
-  explanationofbenefit_status_EnteredInError: Coding.FromStrict({
+  explanationofbenefit_status_EnteredInError: new Coding({
     code: "entered-in-error",
     display: "Entered In Error",
     system: "http://hl7.org/fhir/explanationofbenefit-status"

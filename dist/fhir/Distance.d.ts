@@ -14,10 +14,10 @@ export declare class Distance extends fhir.Quantity implements fhir.IDistance {
     /**
      * Check if the current Distance contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Distance from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDistance): Distance;
+    static fromStrict(source: fhir.IDistance): Distance;
 }
 //# sourceMappingURL=Distance.d.ts.map

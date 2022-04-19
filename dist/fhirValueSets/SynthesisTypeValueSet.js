@@ -13,7 +13,7 @@ export const SynthesisTypeValueSet = {
     /**
      * An approach describing a body of evidence by categorically classifying individual studies (eg 3 studies showed beneft and 2 studied found no effect).
      */
-    synthesis_type_ClassifcationOfResults: Coding.FromStrict({
+    synthesis_type_ClassifcationOfResults: new Coding({
         code: "classification",
         display: "classifcation of results",
         system: "http://terminology.hl7.org/CodeSystem/synthesis-type"
@@ -21,7 +21,7 @@ export const SynthesisTypeValueSet = {
     /**
      * An composite meta-analysis derived from direct comparisons and indirect comparisons in a network meta-analysis.
      */
-    synthesis_type_CombinedDirectPlusIndirectNetworkMetaAnalysis: Coding.FromStrict({
+    synthesis_type_CombinedDirectPlusIndirectNetworkMetaAnalysis: new Coding({
         code: "combined-NMA",
         display: "combined direct plus indirect network meta-analysis",
         system: "http://terminology.hl7.org/CodeSystem/synthesis-type"
@@ -29,7 +29,7 @@ export const SynthesisTypeValueSet = {
     /**
      * An indirect meta-analysis derived from 2 or more direct comparisons in a network meta-analysis.
      */
-    synthesis_type_IndirectNetworkMetaAnalysis: Coding.FromStrict({
+    synthesis_type_IndirectNetworkMetaAnalysis: new Coding({
         code: "indirect-NMA",
         display: "indirect network meta-analysis",
         system: "http://terminology.hl7.org/CodeSystem/synthesis-type"
@@ -37,7 +37,7 @@ export const SynthesisTypeValueSet = {
     /**
      * A meta-analysis of the individual participant data from individual studies or data sets.
      */
-    synthesis_type_IndividualPatientDataMetaAnalysis: Coding.FromStrict({
+    synthesis_type_IndividualPatientDataMetaAnalysis: new Coding({
         code: "IPD-MA",
         display: "individual patient data meta-analysis",
         system: "http://terminology.hl7.org/CodeSystem/synthesis-type"
@@ -45,7 +45,7 @@ export const SynthesisTypeValueSet = {
     /**
      * A range of results across a body of evidence.
      */
-    synthesis_type_RangeOfResults: Coding.FromStrict({
+    synthesis_type_RangeOfResults: new Coding({
         code: "range",
         display: "range of results",
         system: "http://terminology.hl7.org/CodeSystem/synthesis-type"
@@ -53,7 +53,7 @@ export const SynthesisTypeValueSet = {
     /**
      * A meta-analysis of the summary data of estimates from individual studies or data sets.
      */
-    synthesis_type_SummaryDataMetaAnalysis: Coding.FromStrict({
+    synthesis_type_SummaryDataMetaAnalysis: new Coding({
         code: "std-MA",
         display: "summary data meta-analysis",
         system: "http://terminology.hl7.org/CodeSystem/synthesis-type"

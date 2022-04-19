@@ -13,7 +13,7 @@ export const EligibilityresponsePurposeValueSet = {
     /**
      * The prior authorization requirements for the listed, or discovered if specified, converages for the categories of service and/or specifed biling codes are requested.
      */
-    eligibilityresponse_purpose_CoverageAuthRequirements: Coding.FromStrict({
+    eligibilityresponse_purpose_CoverageAuthRequirements: new Coding({
         code: "auth-requirements",
         display: "Coverage auth-requirements",
         system: "http://hl7.org/fhir/eligibilityresponse-purpose"
@@ -21,7 +21,7 @@ export const EligibilityresponsePurposeValueSet = {
     /**
      * The plan benefits and optionally benefits consumed  for the listed, or discovered if specified, converages are requested.
      */
-    eligibilityresponse_purpose_CoverageBenefits: Coding.FromStrict({
+    eligibilityresponse_purpose_CoverageBenefits: new Coding({
         code: "benefits",
         display: "Coverage benefits",
         system: "http://hl7.org/fhir/eligibilityresponse-purpose"
@@ -29,7 +29,7 @@ export const EligibilityresponsePurposeValueSet = {
     /**
      * The insurer is requested to report on any coverages which they are aware of in addition to any specifed.
      */
-    eligibilityresponse_purpose_CoverageDiscovery: Coding.FromStrict({
+    eligibilityresponse_purpose_CoverageDiscovery: new Coding({
         code: "discovery",
         display: "Coverage Discovery",
         system: "http://hl7.org/fhir/eligibilityresponse-purpose"
@@ -37,7 +37,7 @@ export const EligibilityresponsePurposeValueSet = {
     /**
      * A check that the specified coverages are in-force is requested.
      */
-    eligibilityresponse_purpose_CoverageValidation: Coding.FromStrict({
+    eligibilityresponse_purpose_CoverageValidation: new Coding({
         code: "validation",
         display: "Coverage Validation",
         system: "http://hl7.org/fhir/eligibilityresponse-purpose"

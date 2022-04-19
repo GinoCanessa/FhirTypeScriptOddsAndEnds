@@ -13,7 +13,7 @@ export const ParticipantrequiredValueSet = {
     /**
      * The participant is excluded from the appointment, and might not be informed of the appointment taking place. (Appointment is about them, not for them - such as 2 doctors discussing results about a patient's test).
      */
-    participantrequired_InformationOnly: Coding.FromStrict({
+    participantrequired_InformationOnly: new Coding({
         code: "information-only",
         display: "Information Only",
         system: "http://hl7.org/fhir/participantrequired"
@@ -21,7 +21,7 @@ export const ParticipantrequiredValueSet = {
     /**
      * The participant may optionally attend the appointment.
      */
-    participantrequired_Optional: Coding.FromStrict({
+    participantrequired_Optional: new Coding({
         code: "optional",
         display: "Optional",
         system: "http://hl7.org/fhir/participantrequired"
@@ -29,7 +29,7 @@ export const ParticipantrequiredValueSet = {
     /**
      * The participant is required to attend the appointment.
      */
-    participantrequired_Required: Coding.FromStrict({
+    participantrequired_Required: new Coding({
         code: "required",
         display: "Required",
         system: "http://hl7.org/fhir/participantrequired"

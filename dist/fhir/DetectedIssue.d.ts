@@ -115,11 +115,11 @@ export declare class DetectedIssueEvidence extends fhir.BackboneElement implemen
     /**
      * Check if the current DetectedIssueEvidence contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DetectedIssueEvidence from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDetectedIssueEvidence): DetectedIssueEvidence;
+    static fromStrict(source: fhir.IDetectedIssueEvidence): DetectedIssueEvidence;
 }
 /**
  * Indicates an action that has been taken or is committed to reduce or eliminate the likelihood of the risk identified by the detected issue from manifesting.  Can also reflect an observation of known mitigating factors that may reduce/eliminate the need for any action.
@@ -145,11 +145,11 @@ export declare class DetectedIssueMitigation extends fhir.BackboneElement implem
     /**
      * Check if the current DetectedIssueMitigation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DetectedIssueMitigation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDetectedIssueMitigation): DetectedIssueMitigation;
+    static fromStrict(source: fhir.IDetectedIssueMitigation): DetectedIssueMitigation;
 }
 /**
  * Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction, Ineffective treatment frequency, Procedure-condition conflict, etc.
@@ -223,11 +223,11 @@ export declare class DetectedIssue extends fhir.DomainResource implements fhir.I
     /**
      * Check if the current DetectedIssue contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DetectedIssue from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDetectedIssue): DetectedIssue;
+    static fromStrict(source: fhir.IDetectedIssue): DetectedIssue;
 }
 /**
  * Code Values for the DetectedIssue.severity field

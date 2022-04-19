@@ -216,19 +216,19 @@ export class CompositionAttester extends fhir.BackboneElement implements fhir.IC
   /**
    * Check if the current CompositionAttester contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["mode"] === undefined) { missingElements.push("mode"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CompositionAttester from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICompositionAttester):CompositionAttester {
+  static override fromStrict(source:fhir.ICompositionAttester):CompositionAttester {
     var dest:CompositionAttester = new CompositionAttester(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CompositionAttester is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -265,19 +265,19 @@ export class CompositionRelatesTo extends fhir.BackboneElement implements fhir.I
   /**
    * Check if the current CompositionRelatesTo contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CompositionRelatesTo from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICompositionRelatesTo):CompositionRelatesTo {
+  static override fromStrict(source:fhir.ICompositionRelatesTo):CompositionRelatesTo {
     var dest:CompositionRelatesTo = new CompositionRelatesTo(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CompositionRelatesTo is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -310,18 +310,18 @@ export class CompositionEvent extends fhir.BackboneElement implements fhir.IComp
   /**
    * Check if the current CompositionEvent contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CompositionEvent from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICompositionEvent):CompositionEvent {
+  static override fromStrict(source:fhir.ICompositionEvent):CompositionEvent {
     var dest:CompositionEvent = new CompositionEvent(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CompositionEvent is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -394,18 +394,18 @@ export class CompositionSection extends fhir.BackboneElement implements fhir.ICo
   /**
    * Check if the current CompositionSection contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CompositionSection from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICompositionSection):CompositionSection {
+  static override fromStrict(source:fhir.ICompositionSection):CompositionSection {
     var dest:CompositionSection = new CompositionSection(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CompositionSection is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -522,23 +522,23 @@ export class Composition extends fhir.DomainResource implements fhir.ICompositio
   /**
    * Check if the current Composition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["author"]) || (this["author"].length === 0)) { missingElements.push("author"); }
     if (this["date"] === undefined) { missingElements.push("date"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["title"] === undefined) { missingElements.push("title"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Composition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IComposition):Composition {
+  static override fromStrict(source:fhir.IComposition):Composition {
     var dest:Composition = new Composition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Composition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

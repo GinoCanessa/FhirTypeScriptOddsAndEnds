@@ -275,18 +275,18 @@ export class InsurancePlanContact extends fhir.BackboneElement implements fhir.I
   /**
    * Check if the current InsurancePlanContact contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a InsurancePlanContact from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IInsurancePlanContact):InsurancePlanContact {
+  static override fromStrict(source:fhir.IInsurancePlanContact):InsurancePlanContact {
     var dest:InsurancePlanContact = new InsurancePlanContact(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `InsurancePlanContact is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -314,18 +314,18 @@ export class InsurancePlanCoverageBenefitLimit extends fhir.BackboneElement impl
   /**
    * Check if the current InsurancePlanCoverageBenefitLimit contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a InsurancePlanCoverageBenefitLimit from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IInsurancePlanCoverageBenefitLimit):InsurancePlanCoverageBenefitLimit {
+  static override fromStrict(source:fhir.IInsurancePlanCoverageBenefitLimit):InsurancePlanCoverageBenefitLimit {
     var dest:InsurancePlanCoverageBenefitLimit = new InsurancePlanCoverageBenefitLimit(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `InsurancePlanCoverageBenefitLimit is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -362,19 +362,19 @@ export class InsurancePlanCoverageBenefit extends fhir.BackboneElement implement
   /**
    * Check if the current InsurancePlanCoverageBenefit contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a InsurancePlanCoverageBenefit from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IInsurancePlanCoverageBenefit):InsurancePlanCoverageBenefit {
+  static override fromStrict(source:fhir.IInsurancePlanCoverageBenefit):InsurancePlanCoverageBenefit {
     var dest:InsurancePlanCoverageBenefit = new InsurancePlanCoverageBenefit(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `InsurancePlanCoverageBenefit is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -411,20 +411,20 @@ export class InsurancePlanCoverage extends fhir.BackboneElement implements fhir.
   /**
    * Check if the current InsurancePlanCoverage contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["benefit"]) || (this["benefit"].length === 0)) { missingElements.push("benefit"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a InsurancePlanCoverage from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IInsurancePlanCoverage):InsurancePlanCoverage {
+  static override fromStrict(source:fhir.IInsurancePlanCoverage):InsurancePlanCoverage {
     var dest:InsurancePlanCoverage = new InsurancePlanCoverage(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `InsurancePlanCoverage is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -466,18 +466,18 @@ export class InsurancePlanPlanGeneralCost extends fhir.BackboneElement implement
   /**
    * Check if the current InsurancePlanPlanGeneralCost contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a InsurancePlanPlanGeneralCost from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IInsurancePlanPlanGeneralCost):InsurancePlanPlanGeneralCost {
+  static override fromStrict(source:fhir.IInsurancePlanPlanGeneralCost):InsurancePlanPlanGeneralCost {
     var dest:InsurancePlanPlanGeneralCost = new InsurancePlanPlanGeneralCost(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `InsurancePlanPlanGeneralCost is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -517,19 +517,19 @@ export class InsurancePlanPlanSpecificCostBenefitCost extends fhir.BackboneEleme
   /**
    * Check if the current InsurancePlanPlanSpecificCostBenefitCost contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a InsurancePlanPlanSpecificCostBenefitCost from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IInsurancePlanPlanSpecificCostBenefitCost):InsurancePlanPlanSpecificCostBenefitCost {
+  static override fromStrict(source:fhir.IInsurancePlanPlanSpecificCostBenefitCost):InsurancePlanPlanSpecificCostBenefitCost {
     var dest:InsurancePlanPlanSpecificCostBenefitCost = new InsurancePlanPlanSpecificCostBenefitCost(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `InsurancePlanPlanSpecificCostBenefitCost is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -559,19 +559,19 @@ export class InsurancePlanPlanSpecificCostBenefit extends fhir.BackboneElement i
   /**
    * Check if the current InsurancePlanPlanSpecificCostBenefit contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a InsurancePlanPlanSpecificCostBenefit from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IInsurancePlanPlanSpecificCostBenefit):InsurancePlanPlanSpecificCostBenefit {
+  static override fromStrict(source:fhir.IInsurancePlanPlanSpecificCostBenefit):InsurancePlanPlanSpecificCostBenefit {
     var dest:InsurancePlanPlanSpecificCostBenefit = new InsurancePlanPlanSpecificCostBenefit(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `InsurancePlanPlanSpecificCostBenefit is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -601,19 +601,19 @@ export class InsurancePlanPlanSpecificCost extends fhir.BackboneElement implemen
   /**
    * Check if the current InsurancePlanPlanSpecificCost contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["category"] === undefined) { missingElements.push("category"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a InsurancePlanPlanSpecificCost from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IInsurancePlanPlanSpecificCost):InsurancePlanPlanSpecificCost {
+  static override fromStrict(source:fhir.IInsurancePlanPlanSpecificCost):InsurancePlanPlanSpecificCost {
     var dest:InsurancePlanPlanSpecificCost = new InsurancePlanPlanSpecificCost(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `InsurancePlanPlanSpecificCost is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -661,18 +661,18 @@ export class InsurancePlanPlan extends fhir.BackboneElement implements fhir.IIns
   /**
    * Check if the current InsurancePlanPlan contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a InsurancePlanPlan from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IInsurancePlanPlan):InsurancePlanPlan {
+  static override fromStrict(source:fhir.IInsurancePlanPlan):InsurancePlanPlan {
     var dest:InsurancePlanPlan = new InsurancePlanPlan(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `InsurancePlanPlan is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -771,18 +771,18 @@ export class InsurancePlan extends fhir.DomainResource implements fhir.IInsuranc
   /**
    * Check if the current InsurancePlan contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a InsurancePlan from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IInsurancePlan):InsurancePlan {
+  static override fromStrict(source:fhir.IInsurancePlan):InsurancePlan {
     var dest:InsurancePlan = new InsurancePlan(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `InsurancePlan is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

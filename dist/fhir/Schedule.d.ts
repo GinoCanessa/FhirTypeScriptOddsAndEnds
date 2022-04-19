@@ -91,10 +91,10 @@ export declare class Schedule extends fhir.DomainResource implements fhir.ISched
     /**
      * Check if the current Schedule contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Schedule from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISchedule): Schedule;
+    static fromStrict(source: fhir.ISchedule): Schedule;
 }
 //# sourceMappingURL=Schedule.d.ts.map

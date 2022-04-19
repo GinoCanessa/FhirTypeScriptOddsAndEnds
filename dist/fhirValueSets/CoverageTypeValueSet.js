@@ -15,7 +15,7 @@ export const CoverageTypeValueSet = {
      *
      *                         For example, a policy holder may pay $10,000, and in return receive $150 each month until he dies; or $1,000 for each of 14 years or death benefits if he dies before the full term of the annuity has elapsed.
      */
-    v3_ActCode_AnnuityPolicy: Coding.FromStrict({
+    v3_ActCode_AnnuityPolicy: new Coding({
         code: "ANNU",
         display: "annuity policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -23,7 +23,7 @@ export const CoverageTypeValueSet = {
     /**
      * Insurance policy for injuries sustained in an automobile accident.  Will also typically covered non-named parties to the policy, such as pedestrians 	and passengers.
      */
-    v3_ActCode_Automobile: Coding.FromStrict({
+    v3_ActCode_Automobile: new Coding({
         code: "AUTOPOL",
         display: "automobile",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -34,7 +34,7 @@ export const CoverageTypeValueSet = {
      *
      *                            Example: To improve women's access to screening for breast and cervical cancers, Congress passed the Breast and Cervical Cancer Mortality Prevention Act of 1990, which guided CDC in creating the National Breast and Cervical Cancer Early Detection Program (NBCCEDP), which  provides access to critical breast and cervical cancer screening services for underserved women in the United States.  An estimated 7 to 10% of U.S. women of screening age are eligible to receive NBCCEDP services. Federal guidelines establish an eligibility baseline to direct services to uninsured and underinsured women at or below 250% of federal poverty level; ages 18 to 64 for cervical screening; ages 40 to 64 for breast screening.
      */
-    v3_ActCode_WomenQuoteSCancerDetectionProgram: Coding.FromStrict({
+    v3_ActCode_WomenQuoteSCancerDetectionProgram: new Coding({
         code: "CANPRG",
         display: "women's cancer detection program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -42,7 +42,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: A program that covers the cost of services provided directly to a beneficiary who typically has no other source of coverage without charge.
      */
-    v3_ActCode_CharityProgram: Coding.FromStrict({
+    v3_ActCode_CharityProgram: new Coding({
         code: "CHAR",
         display: "charity program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -50,7 +50,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: An automobile insurance policy under which the insurance company will cover the cost of damages to an automobile owned by the named insured that are caused by accident or intentionally by another party.
      */
-    v3_ActCode_CollisionCoveragePolicy: Coding.FromStrict({
+    v3_ActCode_CollisionCoveragePolicy: new Coding({
         code: "COL",
         display: "collision coverage policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -58,7 +58,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: A program that covers the cost of services provided to crime victims for injuries or losses related to the occurrence of a crime.
      */
-    v3_ActCode_CrimeVictimProgram: Coding.FromStrict({
+    v3_ActCode_CrimeVictimProgram: new Coding({
         code: "CRIME",
         display: "crime victim program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -66,7 +66,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: A health insurance policy that that covers benefits for dental services.
      */
-    v3_ActCode_DentalCarePolicy: Coding.FromStrict({
+    v3_ActCode_DentalCarePolicy: new Coding({
         code: "DENTAL",
         display: "dental care policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -74,7 +74,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: A public or government health program that administers and funds coverage for dental care to assist program eligible who meet financial and health status criteria.
      */
-    v3_ActCode_DentalProgram: Coding.FromStrict({
+    v3_ActCode_DentalProgram: new Coding({
         code: "DENTPRG",
         display: "dental program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -82,7 +82,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: An insurance policy that provides a regular payment to compensate for income lost due to the covered party's inability to work because of illness or injury.
      */
-    v3_ActCode_DisabilityInsurancePolicy: Coding.FromStrict({
+    v3_ActCode_DisabilityInsurancePolicy: new Coding({
         code: "DIS",
         display: "disability insurance policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -90,7 +90,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: A health insurance policy that covers benefits for healthcare services provided for named conditions under the policy, e.g., cancer, diabetes, or HIV-AIDS.
      */
-    v3_ActCode_DiseaseSpecificPolicy: Coding.FromStrict({
+    v3_ActCode_DiseaseSpecificPolicy: new Coding({
         code: "DISEASE",
         display: "disease specific policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -101,7 +101,7 @@ export const CoverageTypeValueSet = {
      *
      *                            Example: Reproductive health, sexually transmitted disease, and end renal disease programs.
      */
-    v3_ActCode_PublicHealthProgram: Coding.FromStrict({
+    v3_ActCode_PublicHealthProgram: new Coding({
         code: "DISEASEPRG",
         display: "public health program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -109,7 +109,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: A health insurance policy that covers benefits for prescription drugs, pharmaceuticals, and supplies.
      */
-    v3_ActCode_DrugPolicy: Coding.FromStrict({
+    v3_ActCode_DrugPolicy: new Coding({
         code: "DRUGPOL",
         display: "drug policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -117,7 +117,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: An employee assistance program is run by an employer or employee organization for the purpose of providing benefits and covering all or part of the cost for employees to receive counseling, referrals, and advice in dealing with stressful issues in their lives. These may include substance abuse, bereavement, marital problems, weight issues, or general wellness issues.  The services are usually provided by a third-party, rather than the company itself, and the company receives only summary statistical data from the service provider. Employee's names and services received are kept confidential.
      */
-    v3_ActCode_EmployeeAssistanceProgram: Coding.FromStrict({
+    v3_ActCode_EmployeeAssistanceProgram: new Coding({
         code: "EAP",
         display: "employee assistance program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -125,7 +125,7 @@ export const CoverageTypeValueSet = {
     /**
      * Private insurance policy that provides coverage in addition to other policies (e.g. in addition to a Public Healthcare insurance policy).
      */
-    v3_ActCode_ExtendedHealthcare: Coding.FromStrict({
+    v3_ActCode_ExtendedHealthcare: new Coding({
         code: "EHCPOL",
         display: "extended healthcare",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -135,7 +135,7 @@ export const CoverageTypeValueSet = {
      *
      *                         Example: In the U.S., the Medicare End-stage Renal Disease program (ESRD), the National Kidney Foundation (NKF) American Kidney Fund (AKF) The Organ Transplant Fund.
      */
-    v3_ActCode_EndRenalProgram: Coding.FromStrict({
+    v3_ActCode_EndRenalProgram: new Coding({
         code: "ENDRENAL",
         display: "end renal program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -143,7 +143,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: An insurance policy under a benefit plan run by an employer or employee organization for the purpose of providing benefits other than pension-related to employees and their families. Typically provides health-related benefits, benefits for disability, disease or unemployment, or day care and scholarship benefits, among others.  An employer sponsored health policy includes coverage of health care expenses arising from sickness or accidental injury, coverage for on-site medical clinics or for dental or vision benefits, which are typically provided under a separate policy.  Coverage excludes health care expenses covered by accident or disability, workers' compensation, liability or automobile insurance.
      */
-    v3_ActCode_EmployeeWelfareBenefitPlanPolicy: Coding.FromStrict({
+    v3_ActCode_EmployeeWelfareBenefitPlanPolicy: new Coding({
         code: "EWB",
         display: "employee welfare benefit plan policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -154,7 +154,7 @@ export const CoverageTypeValueSet = {
      *
      *                             Discussion: See UnderwriterRoleTypeCode flexible benefit plan which is defined as a benefit plan that allows employees to choose from several life, health, disability, dental, and other insurance plans according to their individual needs. Also known as cafeteria plans.  Authorized under Section 125 of the Revenue Act of 1978.
      */
-    v3_ActCode_FlexibleBenefitPlanPolicy: Coding.FromStrict({
+    v3_ActCode_FlexibleBenefitPlanPolicy: new Coding({
         code: "FLEXP",
         display: "flexible benefit plan policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -165,7 +165,7 @@ export const CoverageTypeValueSet = {
      *
      *                            Example: Federal employee health benefit program in the U.S.
      */
-    v3_ActCode_GovernmentEmployeeHealthProgram: Coding.FromStrict({
+    v3_ActCode_GovernmentEmployeeHealthProgram: new Coding({
         code: "GOVEMP",
         display: "government employee health program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -176,7 +176,7 @@ export const CoverageTypeValueSet = {
      *
      *                            Discussion: Health insurance policies are offered by health insurance plans that typically reimburse providers for covered services on a fee-for-service basis, that is, a fee that is the allowable amount that a provider may charge.  This is in contrast to managed care plans, which typically prepay providers a per-member/per-month amount or capitation as reimbursement for all covered services rendered.  Health insurance plans include indemnity and healthcare services plans.
      */
-    v3_ActCode_HealthInsurancePlanPolicy: Coding.FromStrict({
+    v3_ActCode_HealthInsurancePlanPolicy: new Coding({
         code: "HIP",
         display: "health insurance plan policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -184,7 +184,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: A government program that provides health coverage to individuals who are considered medically uninsurable or high risk, and who have been denied health insurance due to a serious health condition. In certain cases, it also applies to those who have been quoted very high premiums a" again, due to a serious health condition.  The pool charges premiums for coverage.  Because the pool covers high-risk people, it incurs a higher level of claims than premiums can cover. The insurance industry pays into the pool to make up the difference and help it remain viable.
      */
-    v3_ActCode_HighRiskPoolProgram: Coding.FromStrict({
+    v3_ActCode_HighRiskPoolProgram: new Coding({
         code: "HIRISK",
         display: "high risk pool program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -195,7 +195,7 @@ export const CoverageTypeValueSet = {
      *
      *                            Example: In the U.S., the Ryan White program, which is administered by the Health Resources and Services Administration.
      */
-    v3_ActCode_HIVAIDSProgram: Coding.FromStrict({
+    v3_ActCode_HIVAIDSProgram: new Coding({
         code: "HIVAIDS",
         display: "HIV-AIDS program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -203,7 +203,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: A policy for a health plan that provides coverage for health care only through contracted or employed physicians and hospitals located in particular geographic or service areas.  HMOs emphasize prevention and early detection of illness. Eligibility to enroll in an HMO is determined by where a covered party lives or works.
      */
-    v3_ActCode_HealthMaintenanceOrganizationPolicy: Coding.FromStrict({
+    v3_ActCode_HealthMaintenanceOrganizationPolicy: new Coding({
         code: "HMO",
         display: "health maintenance organization policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -211,7 +211,7 @@ export const CoverageTypeValueSet = {
     /**
      * Insurance policy that provides for an allotment of funds replenished on a periodic (e.g. annual) basis. The use of the funds under this policy is at the 	discretion of the covered party.
      */
-    v3_ActCode_HealthSpendingAccount: Coding.FromStrict({
+    v3_ActCode_HealthSpendingAccount: new Coding({
         code: "HSAPOL",
         display: "health spending account",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -222,7 +222,7 @@ export const CoverageTypeValueSet = {
      *
      *                            Example: Indian Health Service in the U.S.
      */
-    v3_ActCode_IndigenousPeoplesHealthProgram: Coding.FromStrict({
+    v3_ActCode_IndigenousPeoplesHealthProgram: new Coding({
         code: "IND",
         display: "indigenous peoples health program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -233,7 +233,7 @@ export const CoverageTypeValueSet = {
      *
      *                            Discussion:A life insurance policy may be used by the covered party as a source of health care coverage in the case of  a viatical settlement, which is the sale of a life insurance policy by the policy owner, before the policy matures. Such a sale, at a price discounted from the face amount of the policy but usually in excess of the premiums paid or current cash surrender value, provides the seller an immediate cash settlement. Generally, viatical settlements involve insured individuals with a life expectancy of less than two years. In countries without state-subsidized healthcare and high healthcare costs (e.g. United States), this is a practical way to pay extremely high health insurance premiums that severely ill people face. Some people are also familiar with life settlements, which are similar transactions but involve insureds with longer life expectancies (two to fifteen years).
      */
-    v3_ActCode_LifeInsurancePolicy: Coding.FromStrict({
+    v3_ActCode_LifeInsurancePolicy: new Coding({
         code: "LIFE",
         display: "life insurance policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -257,7 +257,7 @@ export const CoverageTypeValueSet = {
      *
      *                               Skilled care provided in a nursing home
      */
-    v3_ActCode_LongTermCarePolicy: Coding.FromStrict({
+    v3_ActCode_LongTermCarePolicy: new Coding({
         code: "LTC",
         display: "long term care policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -265,7 +265,7 @@ export const CoverageTypeValueSet = {
     /**
      * mandatory health program
      */
-    v3_ActCode_MandatoryHealthProgram: Coding.FromStrict({
+    v3_ActCode_MandatoryHealthProgram: new Coding({
         code: "MANDPOL",
         display: "mandatory health program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -278,7 +278,7 @@ export const CoverageTypeValueSet = {
      *
      *                            Discussion: Managed care policies are offered by managed care plans that contract with selected providers or health care organizations to provide comprehensive health care at a discount to covered parties and coordinate the financing and delivery of health care. Managed care uses medical protocols and procedures agreed on by the medical profession to be cost effective, also known as medical practice guidelines. Providers are typically reimbursed for covered services by a capitated amount on a per member per month basis that may reflect difference in the health status and level of services anticipated to be needed by the member.
      */
-    v3_ActCode_ManagedCarePolicy: Coding.FromStrict({
+    v3_ActCode_ManagedCarePolicy: new Coding({
         code: "MCPOL",
         display: "managed care policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -286,7 +286,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: A health insurance policy that covers benefits for mental health services and prescriptions.
      */
-    v3_ActCode_MentalHealthPolicy: Coding.FromStrict({
+    v3_ActCode_MentalHealthPolicy: new Coding({
         code: "MENTPOL",
         display: "mental health policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -297,7 +297,7 @@ export const CoverageTypeValueSet = {
      *
      *                            Example: In the U.S., states receive funding for substance use programs from the Substance Abuse Mental Health Administration (SAMHSA).
      */
-    v3_ActCode_MentalHealthProgram: Coding.FromStrict({
+    v3_ActCode_MentalHealthProgram: new Coding({
         code: "MENTPRG",
         display: "mental health program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -308,7 +308,7 @@ export const CoverageTypeValueSet = {
      *
      *                            Example: In the U.S., TRICARE, CHAMPUS.
      */
-    v3_ActCode_MilitaryHealthProgram: Coding.FromStrict({
+    v3_ActCode_MilitaryHealthProgram: new Coding({
         code: "MILITARY",
         display: "military health program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -316,7 +316,7 @@ export const CoverageTypeValueSet = {
     /**
      * An individual or organization is paying directly for goods and services.
      */
-    coverage_selfpay_Pay: Coding.FromStrict({
+    coverage_selfpay_Pay: new Coding({
         code: "pay",
         display: "Pay",
         system: "http://terminology.hl7.org/CodeSystem/coverage-selfpay"
@@ -324,7 +324,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: A type of insurance that covers damage to or loss of the policyholderaTMs property by providing payments for damages to property damage or the injury or death of living subjects.  The terms "casualty" and "liability" insurance are often used interchangeably. Both cover the policyholder's legal liability for damages caused to other persons and/or their property.
      */
-    v3_ActCode_PropertyAndCasualtyInsurancePolicy: Coding.FromStrict({
+    v3_ActCode_PropertyAndCasualtyInsurancePolicy: new Coding({
         code: "PNC",
         display: "property and casualty insurance policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -332,7 +332,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: A policy for a health plan that has features of both an HMO and a FFS plan.  Like an HMO, a POS plan encourages the use its HMO network to maintain discounted fees with participating providers, but recognizes that sometimes covered parties want to choose their own provider.  The POS plan allows a covered party to use providers who are not part of the HMO network (non-participating providers).  However, there is a greater cost associated with choosing these non-network providers. A covered party will usually pay deductibles and coinsurances that are substantially higher than the payments when he or she uses a plan provider. Use of non-participating providers often requires the covered party to pay the provider directly and then to file a claim for reimbursement, like in an FFS plan.
      */
-    v3_ActCode_PointOfServicePolicy: Coding.FromStrict({
+    v3_ActCode_PointOfServicePolicy: new Coding({
         code: "POS",
         display: "point of service policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -340,7 +340,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: A network-based, managed care plan that allows a covered party to choose any health care provider. However, if care is received from a "preferred" (participating in-network) provider, there are generally higher benefit coverage and lower deductibles.
      */
-    v3_ActCode_PreferredProviderOrganizationPolicy: Coding.FromStrict({
+    v3_ActCode_PreferredProviderOrganizationPolicy: new Coding({
         code: "PPO",
         display: "preferred provider organization policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -348,7 +348,7 @@ export const CoverageTypeValueSet = {
     /**
      * Insurance policy funded by a public health system such as a provincial or national health plan.  Examples include BC MSP (British Columbia 	Medical Services Plan) OHIP (Ontario Health Insurance Plan), NHS (National Health Service).
      */
-    v3_ActCode_PublicHealthcare: Coding.FromStrict({
+    v3_ActCode_PublicHealthcare: new Coding({
         code: "PUBLICPOL",
         display: "public healthcare",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -361,7 +361,7 @@ export const CoverageTypeValueSet = {
      *
      *                         For example, an HMO may purchase a reinsurance policy to protect itself from losing too much money from one insured's particularly expensive health care costs. An insurance company issuing an automobile liability policy, with a limit of $100,000 per accident may reinsure its liability in excess of $10,000. A fire insurance company which issues a large policy generally reinsures a portion of the risk with one or several other companies. Also called risk control insurance or stop-loss insurance.
      */
-    v3_ActCode_ReinsurancePolicy: Coding.FromStrict({
+    v3_ActCode_ReinsurancePolicy: new Coding({
         code: "REI",
         display: "reinsurance policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -369,7 +369,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: A government mandated program with specific eligibility requirements based on premium contributions made during employment, length of employment, age, and employment status, e.g., being retired, disabled, or a dependent of a covered party under this program.   Benefits typically include ambulatory, inpatient, and long-term care, such as hospice care, home health care and respite care.
      */
-    v3_ActCode_RetireeHealthProgram: Coding.FromStrict({
+    v3_ActCode_RetireeHealthProgram: new Coding({
         code: "RETIRE",
         display: "retiree health program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -380,7 +380,7 @@ export const CoverageTypeValueSet = {
      *
      *                            Example: In the U.S., safety net providers such as federally qualified health centers (FQHC) receive funding under PHSA Section 330 grants administered by the Health Resources and Services Administration.
      */
-    v3_ActCode_SafetyNetClinicProgram: Coding.FromStrict({
+    v3_ActCode_SafetyNetClinicProgram: new Coding({
         code: "SAFNET",
         display: "safety net clinic program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -391,7 +391,7 @@ export const CoverageTypeValueSet = {
      *
      *                            Example: Programs providing habilitation, food, lodging, medicine, transportation, equipment, devices, products, education, training, counseling, alteration of living or work space, and other resources to persons meeting eligibility criteria.
      */
-    v3_ActCode_SocialServiceProgram: Coding.FromStrict({
+    v3_ActCode_SocialServiceProgram: new Coding({
         code: "SOCIAL",
         display: "social service program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -399,7 +399,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: A health insurance policy that covers benefits for substance use services.
      */
-    v3_ActCode_SubstanceUsePolicy: Coding.FromStrict({
+    v3_ActCode_SubstanceUsePolicy: new Coding({
         code: "SUBPOL",
         display: "substance use policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -410,7 +410,7 @@ export const CoverageTypeValueSet = {
      *
      *                            Example: In the U.S., states receive funding for substance use programs from the Substance Abuse Mental Health Administration (SAMHSA).
      */
-    v3_ActCode_SubstanceUseProgram: Coding.FromStrict({
+    v3_ActCode_SubstanceUseProgram: new Coding({
         code: "SUBPRG",
         display: "substance use program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -418,7 +418,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: A government health program that provides coverage for health services to persons meeting eligibility criteria such as income, location of residence, access to other coverages, health condition, and age, the cost of which is to some extent subsidized by public funds.
      */
-    v3_ActCode_SubsidizedHealthProgram: Coding.FromStrict({
+    v3_ActCode_SubsidizedHealthProgram: new Coding({
         code: "SUBSIDIZ",
         display: "subsidized health program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -429,7 +429,7 @@ export const CoverageTypeValueSet = {
      *
      *                            Discussion: The structure and business processes for underwriting and administering a subsidized managed care program is further specified by the Underwriter and Payer Role.class and Role.code.
      */
-    v3_ActCode_SubsidizedManagedCareProgram: Coding.FromStrict({
+    v3_ActCode_SubsidizedManagedCareProgram: new Coding({
         code: "SUBSIDMC",
         display: "subsidized managed care program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -443,7 +443,7 @@ export const CoverageTypeValueSet = {
      *
      *                            Discussion: The structure and business processes for underwriting and administering a subsidized supplemental retiree health program is further specified by the Underwriter and Payer Role.class and Role.code.
      */
-    v3_ActCode_SubsidizedSupplementalHealthProgram: Coding.FromStrict({
+    v3_ActCode_SubsidizedSupplementalHealthProgram: new Coding({
         code: "SUBSUPP",
         display: "subsidized supplemental health program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -460,7 +460,7 @@ export const CoverageTypeValueSet = {
      *
      *                               Insurance written by unauthorized insurance companies. Surplus lines insurance is insurance placed with unauthorized insurance companies through licensed surplus lines agents or brokers.
      */
-    v3_ActCode_SurplusLineInsurancePolicy: Coding.FromStrict({
+    v3_ActCode_SurplusLineInsurancePolicy: new Coding({
         code: "SURPL",
         display: "surplus line insurance policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -468,7 +468,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: Life insurance under which the benefit is payable only if the insured dies during a specified period. If an insured dies during that period, the beneficiary receives the death payments. If the insured survives, the policy ends and the beneficiary receives nothing.
      */
-    v3_ActCode_TermLifeInsurancePolicy: Coding.FromStrict({
+    v3_ActCode_TermLifeInsurancePolicy: new Coding({
         code: "TLIFE",
         display: "term life insurance policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -476,7 +476,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: Life insurance under which the benefit is payable upon the insuredaTMs death or diagnosis of a terminal illness.  If an insured dies during that period, the beneficiary receives the death payments. If the insured survives, the policy ends and the beneficiary receives nothing
      */
-    v3_ActCode_UniversalLifeInsurancePolicy: Coding.FromStrict({
+    v3_ActCode_UniversalLifeInsurancePolicy: new Coding({
         code: "ULIFE",
         display: "universal life insurance policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -484,7 +484,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: A form of insurance protection that provides additional liability coverage after the limits of your underlying policy are reached. An umbrella liability policy also protects you (the insured) in many situations not covered by the usual liability policies.
      */
-    v3_ActCode_UmbrellaLiabilityInsurancePolicy: Coding.FromStrict({
+    v3_ActCode_UmbrellaLiabilityInsurancePolicy: new Coding({
         code: "UMBRL",
         display: "umbrella liability insurance policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -492,7 +492,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: An automobile insurance policy under which the insurance company will indemnify a loss for which another motorist is liable if that motorist is unable to pay because he or she is uninsured.  Coverage under the policy applies to bodily injury damages only.  Injuries to the covered party caused by a hit-and-run driver are also covered.
      */
-    v3_ActCode_UninsuredMotoristPolicy: Coding.FromStrict({
+    v3_ActCode_UninsuredMotoristPolicy: new Coding({
         code: "UNINSMOT",
         display: "uninsured motorist policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -500,7 +500,7 @@ export const CoverageTypeValueSet = {
     /**
      * Definition: Services provided directly and through contracted and operated veteran health programs.
      */
-    v3_ActCode_VeteranHealthProgram: Coding.FromStrict({
+    v3_ActCode_VeteranHealthProgram: new Coding({
         code: "VET",
         display: "veteran health program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -510,7 +510,7 @@ export const CoverageTypeValueSet = {
      *
      *                         A health insurance policy that covers benefits for vision care services, prescriptions, and products.
      */
-    v3_ActCode_VisionCarePolicy: Coding.FromStrict({
+    v3_ActCode_VisionCarePolicy: new Coding({
         code: "VISPOL",
         display: "vision care policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -518,7 +518,7 @@ export const CoverageTypeValueSet = {
     /**
      * Insurance policy for injuries sustained in the work place or in the course of employment.
      */
-    v3_ActCode_WorkerQuoteSCompensation: Coding.FromStrict({
+    v3_ActCode_WorkerQuoteSCompensation: new Coding({
         code: "WCBPOL",
         display: "worker's compensation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"

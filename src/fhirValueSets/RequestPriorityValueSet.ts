@@ -13,7 +13,7 @@ export const RequestPriorityValueSet = {
   /**
    * The request should be actioned as soon as possible - higher priority than urgent.
    */
-  request_priority_ASAP: Coding.FromStrict({
+  request_priority_ASAP: new Coding({
     code: "asap",
     display: "ASAP",
     system: "http://hl7.org/fhir/request-priority"
@@ -21,7 +21,7 @@ export const RequestPriorityValueSet = {
   /**
    * The request has normal priority.
    */
-  request_priority_Routine: Coding.FromStrict({
+  request_priority_Routine: new Coding({
     code: "routine",
     display: "Routine",
     system: "http://hl7.org/fhir/request-priority"
@@ -29,7 +29,7 @@ export const RequestPriorityValueSet = {
   /**
    * The request should be actioned immediately - highest possible priority.  E.g. an emergency.
    */
-  request_priority_STAT: Coding.FromStrict({
+  request_priority_STAT: new Coding({
     code: "stat",
     display: "STAT",
     system: "http://hl7.org/fhir/request-priority"
@@ -37,7 +37,7 @@ export const RequestPriorityValueSet = {
   /**
    * The request should be actioned promptly - higher priority than routine.
    */
-  request_priority_Urgent: Coding.FromStrict({
+  request_priority_Urgent: new Coding({
     code: "urgent",
     display: "Urgent",
     system: "http://hl7.org/fhir/request-priority"

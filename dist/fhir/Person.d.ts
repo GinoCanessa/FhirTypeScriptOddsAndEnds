@@ -85,11 +85,11 @@ export declare class PersonLink extends fhir.BackboneElement implements fhir.IPe
     /**
      * Check if the current PersonLink contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a PersonLink from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPersonLink): PersonLink;
+    static fromStrict(source: fhir.IPersonLink): PersonLink;
 }
 /**
  * Demographics and administrative information about a person independent of a specific health-related context.
@@ -149,11 +149,11 @@ export declare class Person extends fhir.DomainResource implements fhir.IPerson 
     /**
      * Check if the current Person contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Person from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IPerson): Person;
+    static fromStrict(source: fhir.IPerson): Person;
 }
 /**
  * Code Values for the Person.link.assurance field

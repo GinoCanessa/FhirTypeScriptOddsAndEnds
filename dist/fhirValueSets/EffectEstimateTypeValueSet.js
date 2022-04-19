@@ -13,7 +13,7 @@ export const EffectEstimateTypeValueSet = {
     /**
      * absolute risk difference (a type of absolute effect estimate).
      */
-    effect_estimate_type_AbsoluteRiskDifference: Coding.FromStrict({
+    effect_estimate_type_AbsoluteRiskDifference: new Coding({
         code: "absolute-ARD",
         display: "absolute risk difference",
         system: "http://terminology.hl7.org/CodeSystem/effect-estimate-type"
@@ -21,7 +21,7 @@ export const EffectEstimateTypeValueSet = {
     /**
      * mean difference (a type of absolute effect estimate).
      */
-    effect_estimate_type_MeanDifference: Coding.FromStrict({
+    effect_estimate_type_MeanDifference: new Coding({
         code: "absolute-MeanDiff",
         display: "mean difference",
         system: "http://terminology.hl7.org/CodeSystem/effect-estimate-type"
@@ -29,7 +29,7 @@ export const EffectEstimateTypeValueSet = {
     /**
      * median difference (a type of absolute effect estimate).
      */
-    effect_estimate_type_MedianDifference: Coding.FromStrict({
+    effect_estimate_type_MedianDifference: new Coding({
         code: "absolute-MedianDiff",
         display: "median difference",
         system: "http://terminology.hl7.org/CodeSystem/effect-estimate-type"
@@ -37,7 +37,7 @@ export const EffectEstimateTypeValueSet = {
     /**
      * standardized mean difference (a type of absolute effect estimate).
      */
-    effect_estimate_type_StandardizedMeanDifference: Coding.FromStrict({
+    effect_estimate_type_StandardizedMeanDifference: new Coding({
         code: "absolute-SMD",
         display: "standardized mean difference",
         system: "http://terminology.hl7.org/CodeSystem/effect-estimate-type"
@@ -45,7 +45,7 @@ export const EffectEstimateTypeValueSet = {
     /**
      * hazard ratio (a type of relative effect estimate).
      */
-    effect_estimate_type_HazardRatio: Coding.FromStrict({
+    effect_estimate_type_HazardRatio: new Coding({
         code: "relative-HR",
         display: "hazard ratio",
         system: "http://terminology.hl7.org/CodeSystem/effect-estimate-type"
@@ -53,7 +53,7 @@ export const EffectEstimateTypeValueSet = {
     /**
      * odds ratio (a type of relative effect estimate).
      */
-    effect_estimate_type_OddsRatio: Coding.FromStrict({
+    effect_estimate_type_OddsRatio: new Coding({
         code: "relative-OR",
         display: "odds ratio",
         system: "http://terminology.hl7.org/CodeSystem/effect-estimate-type"
@@ -61,7 +61,7 @@ export const EffectEstimateTypeValueSet = {
     /**
      * relative risk (a type of relative effect estimate).
      */
-    effect_estimate_type_RelativeRisk: Coding.FromStrict({
+    effect_estimate_type_RelativeRisk: new Coding({
         code: "relative-RR",
         display: "relative risk",
         system: "http://terminology.hl7.org/CodeSystem/effect-estimate-type"

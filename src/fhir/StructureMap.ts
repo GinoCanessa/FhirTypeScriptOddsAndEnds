@@ -623,20 +623,20 @@ export class StructureMapStructure extends fhir.BackboneElement implements fhir.
   /**
    * Check if the current StructureMapStructure contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["mode"] === undefined) { missingElements.push("mode"); }
     if (this["url"] === undefined) { missingElements.push("url"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a StructureMapStructure from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IStructureMapStructure):StructureMapStructure {
+  static override fromStrict(source:fhir.IStructureMapStructure):StructureMapStructure {
     var dest:StructureMapStructure = new StructureMapStructure(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `StructureMapStructure is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -686,20 +686,20 @@ export class StructureMapGroupInput extends fhir.BackboneElement implements fhir
   /**
    * Check if the current StructureMapGroupInput contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["mode"] === undefined) { missingElements.push("mode"); }
     if (this["name"] === undefined) { missingElements.push("name"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a StructureMapGroupInput from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IStructureMapGroupInput):StructureMapGroupInput {
+  static override fromStrict(source:fhir.IStructureMapGroupInput):StructureMapGroupInput {
     var dest:StructureMapGroupInput = new StructureMapGroupInput(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `StructureMapGroupInput is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1077,19 +1077,19 @@ export class StructureMapGroupRuleSource extends fhir.BackboneElement implements
   /**
    * Check if the current StructureMapGroupRuleSource contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["context"] === undefined) { missingElements.push("context"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a StructureMapGroupRuleSource from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IStructureMapGroupRuleSource):StructureMapGroupRuleSource {
+  static override fromStrict(source:fhir.IStructureMapGroupRuleSource):StructureMapGroupRuleSource {
     var dest:StructureMapGroupRuleSource = new StructureMapGroupRuleSource(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `StructureMapGroupRuleSource is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1142,18 +1142,18 @@ export class StructureMapGroupRuleTargetParameter extends fhir.BackboneElement i
   /**
    * Check if the current StructureMapGroupRuleTargetParameter contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a StructureMapGroupRuleTargetParameter from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IStructureMapGroupRuleTargetParameter):StructureMapGroupRuleTargetParameter {
+  static override fromStrict(source:fhir.IStructureMapGroupRuleTargetParameter):StructureMapGroupRuleTargetParameter {
     var dest:StructureMapGroupRuleTargetParameter = new StructureMapGroupRuleTargetParameter(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `StructureMapGroupRuleTargetParameter is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1225,18 +1225,18 @@ export class StructureMapGroupRuleTarget extends fhir.BackboneElement implements
   /**
    * Check if the current StructureMapGroupRuleTarget contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a StructureMapGroupRuleTarget from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IStructureMapGroupRuleTarget):StructureMapGroupRuleTarget {
+  static override fromStrict(source:fhir.IStructureMapGroupRuleTarget):StructureMapGroupRuleTarget {
     var dest:StructureMapGroupRuleTarget = new StructureMapGroupRuleTarget(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `StructureMapGroupRuleTarget is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1272,20 +1272,20 @@ export class StructureMapGroupRuleDependent extends fhir.BackboneElement impleme
   /**
    * Check if the current StructureMapGroupRuleDependent contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["name"] === undefined) { missingElements.push("name"); }
     if ((!this["variable"]) || (this["variable"].length === 0)) { missingElements.push("variable"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a StructureMapGroupRuleDependent from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IStructureMapGroupRuleDependent):StructureMapGroupRuleDependent {
+  static override fromStrict(source:fhir.IStructureMapGroupRuleDependent):StructureMapGroupRuleDependent {
     var dest:StructureMapGroupRuleDependent = new StructureMapGroupRuleDependent(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `StructureMapGroupRuleDependent is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1341,20 +1341,20 @@ export class StructureMapGroupRule extends fhir.BackboneElement implements fhir.
   /**
    * Check if the current StructureMapGroupRule contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["name"] === undefined) { missingElements.push("name"); }
     if ((!this["source"]) || (this["source"].length === 0)) { missingElements.push("source"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a StructureMapGroupRule from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IStructureMapGroupRule):StructureMapGroupRule {
+  static override fromStrict(source:fhir.IStructureMapGroupRule):StructureMapGroupRule {
     var dest:StructureMapGroupRule = new StructureMapGroupRule(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `StructureMapGroupRule is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1418,22 +1418,22 @@ export class StructureMapGroup extends fhir.BackboneElement implements fhir.IStr
   /**
    * Check if the current StructureMapGroup contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["input"]) || (this["input"].length === 0)) { missingElements.push("input"); }
     if (this["name"] === undefined) { missingElements.push("name"); }
     if ((!this["rule"]) || (this["rule"].length === 0)) { missingElements.push("rule"); }
     if (this["typeMode"] === undefined) { missingElements.push("typeMode"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a StructureMapGroup from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IStructureMapGroup):StructureMapGroup {
+  static override fromStrict(source:fhir.IStructureMapGroup):StructureMapGroup {
     var dest:StructureMapGroup = new StructureMapGroup(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `StructureMapGroup is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1580,22 +1580,22 @@ export class StructureMap extends fhir.DomainResource implements fhir.IStructure
   /**
    * Check if the current StructureMap contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["group"]) || (this["group"].length === 0)) { missingElements.push("group"); }
     if (this["name"] === undefined) { missingElements.push("name"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["url"] === undefined) { missingElements.push("url"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a StructureMap from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IStructureMap):StructureMap {
+  static override fromStrict(source:fhir.IStructureMap):StructureMap {
     var dest:StructureMap = new StructureMap(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `StructureMap is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

@@ -10,5032 +10,5032 @@ import { Coding } from '../fhir';
  * Roles of participants that may be included in a care team.  Defined as: Is a Person, Healthcare professional (occupation) or Healthcare related organization (qualifier value).
  */
 export const ParticipantRoleValueSet = {
-    ParticipantRoleValueSet_MaternalAunt: Coding.FromStrict({
+    ParticipantRoleValueSet_MaternalAunt: new Coding({
         code: "100217091000087103",
         display: "Maternal aunt",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HomosexualParents: Coding.FromStrict({
+    ParticipantRoleValueSet_HomosexualParents: new Coding({
         code: "105428002",
         display: "Homosexual parents",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ElderlyParents: Coding.FromStrict({
+    ParticipantRoleValueSet_ElderlyParents: new Coding({
         code: "105429005",
         display: "Elderly parents",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AdoptedPerson: Coding.FromStrict({
+    ParticipantRoleValueSet_AdoptedPerson: new Coding({
         code: "105431001",
         display: "Adopted person",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ElderlyPerson: Coding.FromStrict({
+    ParticipantRoleValueSet_ElderlyPerson: new Coding({
         code: "105436006",
         display: "Elderly person",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ElderlyMan: Coding.FromStrict({
+    ParticipantRoleValueSet_ElderlyMan: new Coding({
         code: "105437002",
         display: "Elderly man",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ElderlyWoman: Coding.FromStrict({
+    ParticipantRoleValueSet_ElderlyWoman: new Coding({
         code: "105438007",
         display: "Elderly woman",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SickRelative: Coding.FromStrict({
+    ParticipantRoleValueSet_SickRelative: new Coding({
         code: "105449001",
         display: "Sick relative",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AlcoholicRelative: Coding.FromStrict({
+    ParticipantRoleValueSet_AlcoholicRelative: new Coding({
         code: "105450001",
         display: "Alcoholic relative",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DementedRelative: Coding.FromStrict({
+    ParticipantRoleValueSet_DementedRelative: new Coding({
         code: "105451002",
         display: "Demented relative",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DiabeticRelative: Coding.FromStrict({
+    ParticipantRoleValueSet_DiabeticRelative: new Coding({
         code: "105452009",
         display: "Diabetic relative",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SchizophrenicRelative: Coding.FromStrict({
+    ParticipantRoleValueSet_SchizophrenicRelative: new Coding({
         code: "105453004",
         display: "Schizophrenic relative",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DisabledRelative: Coding.FromStrict({
+    ParticipantRoleValueSet_DisabledRelative: new Coding({
         code: "105454005",
         display: "Disabled relative",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DonorForMedicalOrSurgicalProcedure: Coding.FromStrict({
+    ParticipantRoleValueSet_DonorForMedicalOrSurgicalProcedure: new Coding({
         code: "105455006",
         display: "Donor for medical or surgical procedure",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LiveDonor: Coding.FromStrict({
+    ParticipantRoleValueSet_LiveDonor: new Coding({
         code: "105456007",
         display: "Live donor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CadaverDonor: Coding.FromStrict({
+    ParticipantRoleValueSet_CadaverDonor: new Coding({
         code: "105457003",
         display: "Cadaver donor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CandidateDonor: Coding.FromStrict({
+    ParticipantRoleValueSet_CandidateDonor: new Coding({
         code: "105458008",
         display: "Candidate donor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AcceptedDonor: Coding.FromStrict({
+    ParticipantRoleValueSet_AcceptedDonor: new Coding({
         code: "105459000",
         display: "Accepted donor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RejectedDonor: Coding.FromStrict({
+    ParticipantRoleValueSet_RejectedDonor: new Coding({
         code: "105460005",
         display: "Rejected donor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OrganDonor: Coding.FromStrict({
+    ParticipantRoleValueSet_OrganDonor: new Coding({
         code: "105461009",
         display: "Organ donor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DonorOfKidneyForTransplant: Coding.FromStrict({
+    ParticipantRoleValueSet_DonorOfKidneyForTransplant: new Coding({
         code: "105462002",
         display: "Donor of kidney for transplant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DonorForLiverTransplant: Coding.FromStrict({
+    ParticipantRoleValueSet_DonorForLiverTransplant: new Coding({
         code: "105463007",
         display: "Donor for liver transplant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_EyeDonorForCornealTransplant: Coding.FromStrict({
+    ParticipantRoleValueSet_EyeDonorForCornealTransplant: new Coding({
         code: "105464001",
         display: "Eye donor for corneal transplant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DonorForHeartTransplant: Coding.FromStrict({
+    ParticipantRoleValueSet_DonorForHeartTransplant: new Coding({
         code: "105465000",
         display: "Donor for heart transplant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DonorForLungTransplant: Coding.FromStrict({
+    ParticipantRoleValueSet_DonorForLungTransplant: new Coding({
         code: "105466004",
         display: "Donor for lung transplant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DonorForHeartLungTransplant: Coding.FromStrict({
+    ParticipantRoleValueSet_DonorForHeartLungTransplant: new Coding({
         code: "105467008",
         display: "Donor for heart-lung transplant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TissueDonor: Coding.FromStrict({
+    ParticipantRoleValueSet_TissueDonor: new Coding({
         code: "105468003",
         display: "Tissue donor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_BoneTissueDonor: Coding.FromStrict({
+    ParticipantRoleValueSet_BoneTissueDonor: new Coding({
         code: "105469006",
         display: "Bone tissue donor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_BloodDonor: Coding.FromStrict({
+    ParticipantRoleValueSet_BloodDonor: new Coding({
         code: "105470007",
         display: "Blood donor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_BoneMarrowDonor: Coding.FromStrict({
+    ParticipantRoleValueSet_BoneMarrowDonor: new Coding({
         code: "105471006",
         display: "Bone marrow donor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SpermDonorForArtificialInsemination: Coding.FromStrict({
+    ParticipantRoleValueSet_SpermDonorForArtificialInsemination: new Coding({
         code: "105472004",
         display: "Sperm donor for artificial insemination",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HusbandSpermDonorForArtificialInsemination: Coding.FromStrict({
+    ParticipantRoleValueSet_HusbandSpermDonorForArtificialInsemination: new Coding({
         code: "105473009",
         display: "Husband sperm donor for artificial insemination",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RelatedSpermDonorForArtificialInsemination: Coding.FromStrict({
+    ParticipantRoleValueSet_RelatedSpermDonorForArtificialInsemination: new Coding({
         code: "105474003",
         display: "Related sperm donor for artificial insemination",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DentalSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_DentalSurgeon: new Coding({
         code: "106289002",
         display: "Dental surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DieticianANDORPublicHealthNutritionist: Coding.FromStrict({
+    ParticipantRoleValueSet_DieticianANDORPublicHealthNutritionist: new Coding({
         code: "106291005",
         display: "Dietician AND/OR public health nutritionist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Nurse: Coding.FromStrict({
+    ParticipantRoleValueSet_Nurse: new Coding({
         code: "106292003",
         display: "Nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NursingPersonnel: Coding.FromStrict({
+    ParticipantRoleValueSet_NursingPersonnel: new Coding({
         code: "106293008",
         display: "Nursing personnel",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MidwiferyPersonnel: Coding.FromStrict({
+    ParticipantRoleValueSet_MidwiferyPersonnel: new Coding({
         code: "106294002",
         display: "Midwifery personnel",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PhysiotherapistANDOROccupationalTherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_PhysiotherapistANDOROccupationalTherapist: new Coding({
         code: "106296000",
         display: "Physiotherapist AND/OR occupational therapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PhilologistTranslatorANDORInterpreter: Coding.FromStrict({
+    ParticipantRoleValueSet_PhilologistTranslatorANDORInterpreter: new Coding({
         code: "106330007",
         display: "Philologist, translator AND/OR interpreter",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_IdenticalTwinSibling: Coding.FromStrict({
+    ParticipantRoleValueSet_IdenticalTwinSibling: new Coding({
         code: "10896006",
         display: "Identical twin sibling",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_WorkingFather: Coding.FromStrict({
+    ParticipantRoleValueSet_WorkingFather: new Coding({
         code: "10960006",
         display: "Working father",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MedicalDoctor: Coding.FromStrict({
+    ParticipantRoleValueSet_MedicalDoctor: new Coding({
         code: "112247003",
         display: "Medical doctor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TwinSibling: Coding.FromStrict({
+    ParticipantRoleValueSet_TwinSibling: new Coding({
         code: "11286003",
         display: "Twin sibling",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Grandmother: Coding.FromStrict({
+    ParticipantRoleValueSet_Grandmother: new Coding({
         code: "113157001",
         display: "Grandmother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FraternalTwinSibling: Coding.FromStrict({
+    ParticipantRoleValueSet_FraternalTwinSibling: new Coding({
         code: "113158006",
         display: "Fraternal twin sibling",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LegalDaughter: Coding.FromStrict({
+    ParticipantRoleValueSet_LegalDaughter: new Coding({
         code: "113159003",
         display: "Legal daughter",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NaturalSon: Coding.FromStrict({
+    ParticipantRoleValueSet_NaturalSon: new Coding({
         code: "113160008",
         display: "Natural son",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FemaleFiance: Coding.FromStrict({
+    ParticipantRoleValueSet_FemaleFiance: new Coding({
         code: "113161007",
         display: "Female fiance",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Friend: Coding.FromStrict({
+    ParticipantRoleValueSet_Friend: new Coding({
         code: "113163005",
         display: "Friend",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GreatGreatGrandChild: Coding.FromStrict({
+    ParticipantRoleValueSet_GreatGreatGrandChild: new Coding({
         code: "11393001",
         display: "Great-great grand child",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MaleSecondCousin: Coding.FromStrict({
+    ParticipantRoleValueSet_MaleSecondCousin: new Coding({
         code: "11434005",
         display: "Male second cousin",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DonorOfControlMaterial: Coding.FromStrict({
+    ParticipantRoleValueSet_DonorOfControlMaterial: new Coding({
         code: "116153009",
         display: "Donor of control material",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Patient: Coding.FromStrict({
+    ParticipantRoleValueSet_Patient: new Coding({
         code: "116154003",
         display: "Patient",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Neuropathologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Neuropathologist: new Coding({
         code: "11661002",
         display: "Neuropathologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LegalBrother: Coding.FromStrict({
+    ParticipantRoleValueSet_LegalBrother: new Coding({
         code: "11773006",
         display: "Legal brother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Nephrologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Nephrologist: new Coding({
         code: "11911009",
         display: "Nephrologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Obstetrician: Coding.FromStrict({
+    ParticipantRoleValueSet_Obstetrician: new Coding({
         code: "11935004",
         display: "Obstetrician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MaleFirstCousin: Coding.FromStrict({
+    ParticipantRoleValueSet_MaleFirstCousin: new Coding({
         code: "11993008",
         display: "Male first cousin",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FosterSon: Coding.FromStrict({
+    ParticipantRoleValueSet_FosterSon: new Coding({
         code: "12241003",
         display: "Foster son",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Relative: Coding.FromStrict({
+    ParticipantRoleValueSet_Relative: new Coding({
         code: "125677006",
         display: "Relative",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FirstDegreeBloodRelative: Coding.FromStrict({
+    ParticipantRoleValueSet_FirstDegreeBloodRelative: new Coding({
         code: "125678001",
         display: "First degree blood relative",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_BloodRelative: Coding.FromStrict({
+    ParticipantRoleValueSet_BloodRelative: new Coding({
         code: "125679009",
         display: "Blood relative",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SingleMother: Coding.FromStrict({
+    ParticipantRoleValueSet_SingleMother: new Coding({
         code: "12629003",
         display: "Single mother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Spouse: Coding.FromStrict({
+    ParticipantRoleValueSet_Spouse: new Coding({
         code: "127848009",
         display: "Spouse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Husband: Coding.FromStrict({
+    ParticipantRoleValueSet_Husband: new Coding({
         code: "127849001",
         display: "Husband",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Wife: Coding.FromStrict({
+    ParticipantRoleValueSet_Wife: new Coding({
         code: "127850001",
         display: "Wife",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Fiance: Coding.FromStrict({
+    ParticipantRoleValueSet_Fiance: new Coding({
         code: "127851002",
         display: "Fiance",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OlderBrother: Coding.FromStrict({
+    ParticipantRoleValueSet_OlderBrother: new Coding({
         code: "13038009",
         display: "Older brother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OlderSibling: Coding.FromStrict({
+    ParticipantRoleValueSet_OlderSibling: new Coding({
         code: "13157002",
         display: "Older sibling",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Infant: Coding.FromStrict({
+    ParticipantRoleValueSet_Infant: new Coding({
         code: "133931009",
         display: "Infant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Caregiver: Coding.FromStrict({
+    ParticipantRoleValueSet_Caregiver: new Coding({
         code: "133932002",
         display: "Caregiver",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Newborn: Coding.FromStrict({
+    ParticipantRoleValueSet_Newborn: new Coding({
         code: "133933007",
         display: "Newborn",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Adult: Coding.FromStrict({
+    ParticipantRoleValueSet_Adult: new Coding({
         code: "133936004",
         display: "Adult",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Adolescent: Coding.FromStrict({
+    ParticipantRoleValueSet_Adolescent: new Coding({
         code: "133937008",
         display: "Adolescent",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SecondCousin: Coding.FromStrict({
+    ParticipantRoleValueSet_SecondCousin: new Coding({
         code: "13443008",
         display: "Second cousin",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OrphanFemale: Coding.FromStrict({
+    ParticipantRoleValueSet_OrphanFemale: new Coding({
         code: "1354005",
         display: "Orphan female",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SchoolDentalAssistant: Coding.FromStrict({
+    ParticipantRoleValueSet_SchoolDentalAssistant: new Coding({
         code: "13580004",
         display: "School dental assistant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NaturalParent: Coding.FromStrict({
+    ParticipantRoleValueSet_NaturalParent: new Coding({
         code: "13646006",
         display: "Natural parent",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SpecializedSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_SpecializedSurgeon: new Coding({
         code: "1421009",
         display: "Specialized surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LegalChild: Coding.FromStrict({
+    ParticipantRoleValueSet_LegalChild: new Coding({
         code: "14469008",
         display: "Legal child",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MedicalMicrobiologist: Coding.FromStrict({
+    ParticipantRoleValueSet_MedicalMicrobiologist: new Coding({
         code: "14698002",
         display: "Medical microbiologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SurrogateParent: Coding.FromStrict({
+    ParticipantRoleValueSet_SurrogateParent: new Coding({
         code: "15130002",
         display: "Surrogate parent",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MedicalPractitioner: Coding.FromStrict({
+    ParticipantRoleValueSet_MedicalPractitioner: new Coding({
         code: "158965000",
         display: "Medical practitioner",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MedicalAdministratorNational: Coding.FromStrict({
+    ParticipantRoleValueSet_MedicalAdministratorNational: new Coding({
         code: "158966004",
         display: "Medical administrator - national",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ConsultantPhysician: Coding.FromStrict({
+    ParticipantRoleValueSet_ConsultantPhysician: new Coding({
         code: "158967008",
         display: "Consultant physician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ConsultantSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_ConsultantSurgeon: new Coding({
         code: "158968003",
         display: "Consultant surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ConsultantGynecologyAndObstetrics: Coding.FromStrict({
+    ParticipantRoleValueSet_ConsultantGynecologyAndObstetrics: new Coding({
         code: "158969006",
         display: "Consultant gynecology and obstetrics",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Anesthetist: Coding.FromStrict({
+    ParticipantRoleValueSet_Anesthetist: new Coding({
         code: "158970007",
         display: "Anesthetist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HospitalRegistrar: Coding.FromStrict({
+    ParticipantRoleValueSet_HospitalRegistrar: new Coding({
         code: "158971006",
         display: "Hospital registrar",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HouseOfficer: Coding.FromStrict({
+    ParticipantRoleValueSet_HouseOfficer: new Coding({
         code: "158972004",
         display: "House officer",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OccupationalPhysician: Coding.FromStrict({
+    ParticipantRoleValueSet_OccupationalPhysician: new Coding({
         code: "158973009",
         display: "Occupational physician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ClinicalMedicalOfficer: Coding.FromStrict({
+    ParticipantRoleValueSet_ClinicalMedicalOfficer: new Coding({
         code: "158974003",
         display: "Clinical medical officer",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MedicalPractitionerTeaching: Coding.FromStrict({
+    ParticipantRoleValueSet_MedicalPractitionerTeaching: new Coding({
         code: "158975002",
         display: "Medical practitioner - teaching",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DentalAdministrator: Coding.FromStrict({
+    ParticipantRoleValueSet_DentalAdministrator: new Coding({
         code: "158977005",
         display: "Dental administrator",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DentalConsultant: Coding.FromStrict({
+    ParticipantRoleValueSet_DentalConsultant: new Coding({
         code: "158978000",
         display: "Dental consultant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DentalGeneralPractitioner: Coding.FromStrict({
+    ParticipantRoleValueSet_DentalGeneralPractitioner: new Coding({
         code: "158979008",
         display: "Dental general practitioner",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DentalPractitionerTeaching: Coding.FromStrict({
+    ParticipantRoleValueSet_DentalPractitionerTeaching: new Coding({
         code: "158980006",
         display: "Dental practitioner - teaching",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NurseAdministratorNational: Coding.FromStrict({
+    ParticipantRoleValueSet_NurseAdministratorNational: new Coding({
         code: "158983008",
         display: "Nurse administrator - national",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NursingOfficerRegion: Coding.FromStrict({
+    ParticipantRoleValueSet_NursingOfficerRegion: new Coding({
         code: "158984002",
         display: "Nursing officer - region",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NursingOfficerDistrict: Coding.FromStrict({
+    ParticipantRoleValueSet_NursingOfficerDistrict: new Coding({
         code: "158985001",
         display: "Nursing officer - district",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NursingAdministratorProfessionalBody: Coding.FromStrict({
+    ParticipantRoleValueSet_NursingAdministratorProfessionalBody: new Coding({
         code: "158986000",
         display: "Nursing administrator - professional body",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NursingOfficerDivision: Coding.FromStrict({
+    ParticipantRoleValueSet_NursingOfficerDivision: new Coding({
         code: "158987009",
         display: "Nursing officer - division",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NurseEducationDirector: Coding.FromStrict({
+    ParticipantRoleValueSet_NurseEducationDirector: new Coding({
         code: "158988004",
         display: "Nurse education director",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OccupationalHealthNursingOfficer: Coding.FromStrict({
+    ParticipantRoleValueSet_OccupationalHealthNursingOfficer: new Coding({
         code: "158989007",
         display: "Occupational health nursing officer",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NursingOfficer: Coding.FromStrict({
+    ParticipantRoleValueSet_NursingOfficer: new Coding({
         code: "158990003",
         display: "Nursing officer",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MidwiferySister: Coding.FromStrict({
+    ParticipantRoleValueSet_MidwiferySister: new Coding({
         code: "158992006",
         display: "Midwifery sister",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NursingSisterTheatre: Coding.FromStrict({
+    ParticipantRoleValueSet_NursingSisterTheatre: new Coding({
         code: "158993001",
         display: "Nursing sister (theatre)",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_StaffNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_StaffNurse: new Coding({
         code: "158994007",
         display: "Staff nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_StaffMidwife: Coding.FromStrict({
+    ParticipantRoleValueSet_StaffMidwife: new Coding({
         code: "158995008",
         display: "Staff midwife",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_StateEnrolledNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_StateEnrolledNurse: new Coding({
         code: "158996009",
         display: "State enrolled nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DistrictNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_DistrictNurse: new Coding({
         code: "158997000",
         display: "District nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PrivateNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_PrivateNurse: new Coding({
         code: "158998005",
         display: "Private nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CommunityMidwife: Coding.FromStrict({
+    ParticipantRoleValueSet_CommunityMidwife: new Coding({
         code: "158999002",
         display: "Community midwife",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ClinicNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_ClinicNurse: new Coding({
         code: "159001001",
         display: "Clinic nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PracticeNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_PracticeNurse: new Coding({
         code: "159002008",
         display: "Practice nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SchoolNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_SchoolNurse: new Coding({
         code: "159003003",
         display: "School nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NurseTeaching: Coding.FromStrict({
+    ParticipantRoleValueSet_NurseTeaching: new Coding({
         code: "159004009",
         display: "Nurse - teaching",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_StudentNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_StudentNurse: new Coding({
         code: "159005005",
         display: "Student nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DentalNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_DentalNurse: new Coding({
         code: "159006006",
         display: "Dental nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CommunityPediatricNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_CommunityPediatricNurse: new Coding({
         code: "159007002",
         display: "Community pediatric nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HospitalPharmacist: Coding.FromStrict({
+    ParticipantRoleValueSet_HospitalPharmacist: new Coding({
         code: "159010009",
         display: "Hospital pharmacist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RetailPharmacist: Coding.FromStrict({
+    ParticipantRoleValueSet_RetailPharmacist: new Coding({
         code: "159011008",
         display: "Retail pharmacist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_IndustrialPharmacist: Coding.FromStrict({
+    ParticipantRoleValueSet_IndustrialPharmacist: new Coding({
         code: "159012001",
         display: "Industrial pharmacist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PharmaceuticalOfficerHA: Coding.FromStrict({
+    ParticipantRoleValueSet_PharmaceuticalOfficerHA: new Coding({
         code: "159013006",
         display: "Pharmaceutical officer H.A.",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TraineePharmacist: Coding.FromStrict({
+    ParticipantRoleValueSet_TraineePharmacist: new Coding({
         code: "159014000",
         display: "Trainee pharmacist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MedicalRadiographer: Coding.FromStrict({
+    ParticipantRoleValueSet_MedicalRadiographer: new Coding({
         code: "159016003",
         display: "Medical radiographer",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DiagnosticRadiographer: Coding.FromStrict({
+    ParticipantRoleValueSet_DiagnosticRadiographer: new Coding({
         code: "159017007",
         display: "Diagnostic radiographer",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TherapeuticRadiographer: Coding.FromStrict({
+    ParticipantRoleValueSet_TherapeuticRadiographer: new Coding({
         code: "159018002",
         display: "Therapeutic radiographer",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TraineeRadiographer: Coding.FromStrict({
+    ParticipantRoleValueSet_TraineeRadiographer: new Coding({
         code: "159019005",
         display: "Trainee radiographer",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OphthalmicOptician: Coding.FromStrict({
+    ParticipantRoleValueSet_OphthalmicOptician: new Coding({
         code: "159021000",
         display: "Ophthalmic optician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TraineeOptician: Coding.FromStrict({
+    ParticipantRoleValueSet_TraineeOptician: new Coding({
         code: "159022007",
         display: "Trainee optician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RemedialGymnast: Coding.FromStrict({
+    ParticipantRoleValueSet_RemedialGymnast: new Coding({
         code: "159025009",
         display: "Remedial gymnast",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SpeechAndLanguageTherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_SpeechAndLanguageTherapist: new Coding({
         code: "159026005",
         display: "Speech and language therapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Orthoptist: Coding.FromStrict({
+    ParticipantRoleValueSet_Orthoptist: new Coding({
         code: "159027001",
         display: "Orthoptist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TraineeRemedialTherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_TraineeRemedialTherapist: new Coding({
         code: "159028006",
         display: "Trainee remedial therapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Dietician: Coding.FromStrict({
+    ParticipantRoleValueSet_Dietician: new Coding({
         code: "159033005",
         display: "Dietician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Podiatrist: Coding.FromStrict({
+    ParticipantRoleValueSet_Podiatrist: new Coding({
         code: "159034004",
         display: "Podiatrist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DentalAuxiliary: Coding.FromStrict({
+    ParticipantRoleValueSet_DentalAuxiliary: new Coding({
         code: "159035003",
         display: "Dental auxiliary",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ECGTechnician: Coding.FromStrict({
+    ParticipantRoleValueSet_ECGTechnician: new Coding({
         code: "159036002",
         display: "ECG technician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_EEGTechnician: Coding.FromStrict({
+    ParticipantRoleValueSet_EEGTechnician: new Coding({
         code: "159037006",
         display: "EEG technician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ArtificialLimbFitter: Coding.FromStrict({
+    ParticipantRoleValueSet_ArtificialLimbFitter: new Coding({
         code: "159038001",
         display: "Artificial limb fitter",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ATAudiologyTechnician: Coding.FromStrict({
+    ParticipantRoleValueSet_ATAudiologyTechnician: new Coding({
         code: "159039009",
         display: "AT - Audiology technician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PharmacyTechnician: Coding.FromStrict({
+    ParticipantRoleValueSet_PharmacyTechnician: new Coding({
         code: "159040006",
         display: "Pharmacy technician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TraineeMedicalTechnician: Coding.FromStrict({
+    ParticipantRoleValueSet_TraineeMedicalTechnician: new Coding({
         code: "159041005",
         display: "Trainee medical technician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Geneticist: Coding.FromStrict({
+    ParticipantRoleValueSet_Geneticist: new Coding({
         code: "159141008",
         display: "Geneticist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SurgicalCorsetFitter: Coding.FromStrict({
+    ParticipantRoleValueSet_SurgicalCorsetFitter: new Coding({
         code: "159972006",
         display: "Surgical corset fitter",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DentalTechnician: Coding.FromStrict({
+    ParticipantRoleValueSet_DentalTechnician: new Coding({
         code: "160008000",
         display: "Dental technician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SalvationArmyMember: Coding.FromStrict({
+    ParticipantRoleValueSet_SalvationArmyMember: new Coding({
         code: "160234004",
         display: "Salvation Army member",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SchoolChild: Coding.FromStrict({
+    ParticipantRoleValueSet_SchoolChild: new Coding({
         code: "160498000",
         display: "School child",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CommonLawHusband: Coding.FromStrict({
+    ParticipantRoleValueSet_CommonLawHusband: new Coding({
         code: "160505009",
         display: "Common-law husband",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CommonLawWife: Coding.FromStrict({
+    ParticipantRoleValueSet_CommonLawWife: new Coding({
         code: "160506005",
         display: "Common-law wife",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RomanCatholic: Coding.FromStrict({
+    ParticipantRoleValueSet_RomanCatholic: new Coding({
         code: "160540005",
         display: "Roman Catholic",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Atheist: Coding.FromStrict({
+    ParticipantRoleValueSet_Atheist: new Coding({
         code: "160542002",
         display: "Atheist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Jew: Coding.FromStrict({
+    ParticipantRoleValueSet_Jew: new Coding({
         code: "160543007",
         display: "Jew",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ChristianScienceChurch: Coding.FromStrict({
+    ParticipantRoleValueSet_ChristianScienceChurch: new Coding({
         code: "160544001",
         display: "Christian Science Church",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Hindu: Coding.FromStrict({
+    ParticipantRoleValueSet_Hindu: new Coding({
         code: "160545000",
         display: "Hindu",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Christian: Coding.FromStrict({
+    ParticipantRoleValueSet_Christian: new Coding({
         code: "160549006",
         display: "Christian",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Baptist: Coding.FromStrict({
+    ParticipantRoleValueSet_Baptist: new Coding({
         code: "160557009",
         display: "Baptist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Methodist: Coding.FromStrict({
+    ParticipantRoleValueSet_Methodist: new Coding({
         code: "160558004",
         display: "Methodist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Presbyterian: Coding.FromStrict({
+    ParticipantRoleValueSet_Presbyterian: new Coding({
         code: "160560002",
         display: "Presbyterian",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Pentecostal: Coding.FromStrict({
+    ParticipantRoleValueSet_Pentecostal: new Coding({
         code: "160562005",
         display: "Pentecostal",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Evangelist: Coding.FromStrict({
+    ParticipantRoleValueSet_Evangelist: new Coding({
         code: "160563000",
         display: "Evangelist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Christadelphian: Coding.FromStrict({
+    ParticipantRoleValueSet_Christadelphian: new Coding({
         code: "160566008",
         display: "Christadelphian",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Agnostic: Coding.FromStrict({
+    ParticipantRoleValueSet_Agnostic: new Coding({
         code: "160567004",
         display: "Agnostic",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_VoluntaryWorker: Coding.FromStrict({
+    ParticipantRoleValueSet_VoluntaryWorker: new Coding({
         code: "160772005",
         display: "Voluntary worker",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Immigrant: Coding.FromStrict({
+    ParticipantRoleValueSet_Immigrant: new Coding({
         code: "161158003",
         display: "Immigrant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MaternalGreatGrandFather: Coding.FromStrict({
+    ParticipantRoleValueSet_MaternalGreatGrandFather: new Coding({
         code: "166557991000087101",
         display: "Maternal great grand-father",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MaleFiance: Coding.FromStrict({
+    ParticipantRoleValueSet_MaleFiance: new Coding({
         code: "17219007",
         display: "Male fiance",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PaternalFirstCousin: Coding.FromStrict({
+    ParticipantRoleValueSet_PaternalFirstCousin: new Coding({
         code: "173704201000087107",
         display: "Paternal first cousin",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Cardiologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Cardiologist: new Coding({
         code: "17561000",
         display: "Cardiologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AdoptiveBrother: Coding.FromStrict({
+    ParticipantRoleValueSet_AdoptiveBrother: new Coding({
         code: "17925003",
         display: "Adoptive brother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NaturalGrandmother: Coding.FromStrict({
+    ParticipantRoleValueSet_NaturalGrandmother: new Coding({
         code: "17945006",
         display: "Natural grandmother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_WesleyanMethodistFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_WesleyanMethodistFollowerOfReligion: new Coding({
         code: "18205005",
         display: "Wesleyan Methodist, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MinistryOfHealthSaskatchewan: Coding.FromStrict({
+    ParticipantRoleValueSet_MinistryOfHealthSaskatchewan: new Coding({
         code: "183033871000087106",
         display: "Ministry of Health Saskatchewan",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Dermatologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Dermatologist: new Coding({
         code: "18803008",
         display: "Dermatologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LaboratoryHematologist: Coding.FromStrict({
+    ParticipantRoleValueSet_LaboratoryHematologist: new Coding({
         code: "18850004",
         display: "Laboratory hematologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FosterSibling: Coding.FromStrict({
+    ParticipantRoleValueSet_FosterSibling: new Coding({
         code: "18906004",
         display: "Foster sibling",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MinistryOfHealthQuebec: Coding.FromStrict({
+    ParticipantRoleValueSet_MinistryOfHealthQuebec: new Coding({
         code: "189542671000087101",
         display: "Ministry of Health Quebec",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Gerodontist: Coding.FromStrict({
+    ParticipantRoleValueSet_Gerodontist: new Coding({
         code: "19244007",
         display: "Gerodontist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TwinSister: Coding.FromStrict({
+    ParticipantRoleValueSet_TwinSister: new Coding({
         code: "19343003",
         display: "Twin sister",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MaternalGreatGrandMother: Coding.FromStrict({
+    ParticipantRoleValueSet_MaternalGreatGrandMother: new Coding({
         code: "194907391000087109",
         display: "Maternal great grand-mother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_YoungerSister: Coding.FromStrict({
+    ParticipantRoleValueSet_YoungerSister: new Coding({
         code: "19686009",
         display: "Younger sister",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RemovableProsthodontist: Coding.FromStrict({
+    ParticipantRoleValueSet_RemovableProsthodontist: new Coding({
         code: "20145008",
         display: "Removable prosthodontist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HalfSibling: Coding.FromStrict({
+    ParticipantRoleValueSet_HalfSibling: new Coding({
         code: "21093007",
         display: "Half-sibling",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SpecializedDentist: Coding.FromStrict({
+    ParticipantRoleValueSet_SpecializedDentist: new Coding({
         code: "21365001",
         display: "Specialized dentist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Neuropsychiatrist: Coding.FromStrict({
+    ParticipantRoleValueSet_Neuropsychiatrist: new Coding({
         code: "21450003",
         display: "Neuropsychiatrist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AdoptiveMother: Coding.FromStrict({
+    ParticipantRoleValueSet_AdoptiveMother: new Coding({
         code: "21464003",
         display: "Adoptive mother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FemaleSecondCousin: Coding.FromStrict({
+    ParticipantRoleValueSet_FemaleSecondCousin: new Coding({
         code: "21506002",
         display: "Female second cousin",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PaternalGreatGrandMother: Coding.FromStrict({
+    ParticipantRoleValueSet_PaternalGreatGrandMother: new Coding({
         code: "215424891000087101",
         display: "Paternal great grand-mother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SurrogateChild: Coding.FromStrict({
+    ParticipantRoleValueSet_SurrogateChild: new Coding({
         code: "22387007",
         display: "Surrogate child",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CommittedChristianFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_CommittedChristianFollowerOfReligion: new Coding({
         code: "224080001",
         display: "Committed Christian, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Woman: Coding.FromStrict({
+    ParticipantRoleValueSet_Woman: new Coding({
         code: "224526002",
         display: "Woman",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PersonInTheWorkEnvironment: Coding.FromStrict({
+    ParticipantRoleValueSet_PersonInTheWorkEnvironment: new Coding({
         code: "224527006",
         display: "Person in the work environment",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Employee: Coding.FromStrict({
+    ParticipantRoleValueSet_Employee: new Coding({
         code: "224528001",
         display: "Employee",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ClinicalAssistant: Coding.FromStrict({
+    ParticipantRoleValueSet_ClinicalAssistant: new Coding({
         code: "224529009",
         display: "Clinical assistant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SeniorRegistrar: Coding.FromStrict({
+    ParticipantRoleValueSet_SeniorRegistrar: new Coding({
         code: "224530004",
         display: "Senior registrar",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Registrar: Coding.FromStrict({
+    ParticipantRoleValueSet_Registrar: new Coding({
         code: "224531000",
         display: "Registrar",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SeniorHouseOfficer: Coding.FromStrict({
+    ParticipantRoleValueSet_SeniorHouseOfficer: new Coding({
         code: "224532007",
         display: "Senior house officer",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MOMedicalOfficer: Coding.FromStrict({
+    ParticipantRoleValueSet_MOMedicalOfficer: new Coding({
         code: "224533002",
         display: "MO - Medical officer",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthVisitorNurseMidwife: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthVisitorNurseMidwife: new Coding({
         code: "224534008",
         display: "Health visitor, nurse/midwife",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RegisteredNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_RegisteredNurse: new Coding({
         code: "224535009",
         display: "Registered nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MidwiferyTutor: Coding.FromStrict({
+    ParticipantRoleValueSet_MidwiferyTutor: new Coding({
         code: "224536005",
         display: "Midwifery tutor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AccidentAndEmergencyNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_AccidentAndEmergencyNurse: new Coding({
         code: "224537001",
         display: "Accident and Emergency nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TriageNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_TriageNurse: new Coding({
         code: "224538006",
         display: "Triage nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CommunityNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_CommunityNurse: new Coding({
         code: "224540001",
         display: "Community nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NursingContinenceAdvisor: Coding.FromStrict({
+    ParticipantRoleValueSet_NursingContinenceAdvisor: new Coding({
         code: "224541002",
         display: "Nursing continence advisor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CoronaryCareNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_CoronaryCareNurse: new Coding({
         code: "224542009",
         display: "Coronary care nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DiabeticNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_DiabeticNurse: new Coding({
         code: "224543004",
         display: "Diabetic nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FamilyPlanningNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_FamilyPlanningNurse: new Coding({
         code: "224544005",
         display: "Family planning nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CareOfTheElderlyNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_CareOfTheElderlyNurse: new Coding({
         code: "224545006",
         display: "Care of the elderly nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ICNInfectionControlNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_ICNInfectionControlNurse: new Coding({
         code: "224546007",
         display: "ICN - Infection control nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_IntensiveTherapyNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_IntensiveTherapyNurse: new Coding({
         code: "224547003",
         display: "Intensive therapy nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LearningDisabilitiesNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_LearningDisabilitiesNurse: new Coding({
         code: "224548008",
         display: "Learning disabilities nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NeonatalNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_NeonatalNurse: new Coding({
         code: "224549000",
         display: "Neonatal nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NeurologyNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_NeurologyNurse: new Coding({
         code: "224550000",
         display: "Neurology nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_IndustrialNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_IndustrialNurse: new Coding({
         code: "224551001",
         display: "Industrial nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OncologyNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_OncologyNurse: new Coding({
         code: "224552008",
         display: "Oncology nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MacmillanNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_MacmillanNurse: new Coding({
         code: "224553003",
         display: "Macmillan nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MarieCurieNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_MarieCurieNurse: new Coding({
         code: "224554009",
         display: "Marie Curie nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PainControlNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_PainControlNurse: new Coding({
         code: "224555005",
         display: "Pain control nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PalliativeCareNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_PalliativeCareNurse: new Coding({
         code: "224556006",
         display: "Palliative care nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ChemotherapyNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_ChemotherapyNurse: new Coding({
         code: "224557002",
         display: "Chemotherapy nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RadiotherapyNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_RadiotherapyNurse: new Coding({
         code: "224558007",
         display: "Radiotherapy nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PACUNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_PACUNurse: new Coding({
         code: "224559004",
         display: "PACU nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Stomatherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_Stomatherapist: new Coding({
         code: "224560009",
         display: "Stomatherapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TheatreNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_TheatreNurse: new Coding({
         code: "224561008",
         display: "Theatre nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PediatricNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_PediatricNurse: new Coding({
         code: "224562001",
         display: "Pediatric nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PsychiatricNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_PsychiatricNurse: new Coding({
         code: "224563006",
         display: "Psychiatric nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CommunityMentalHealthNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_CommunityMentalHealthNurse: new Coding({
         code: "224564000",
         display: "Community mental health nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RenalNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_RenalNurse: new Coding({
         code: "224565004",
         display: "Renal nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HemodialysisNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_HemodialysisNurse: new Coding({
         code: "224566003",
         display: "Hemodialysis nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_WoundCareNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_WoundCareNurse: new Coding({
         code: "224567007",
         display: "Wound care nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NurseGrade: Coding.FromStrict({
+    ParticipantRoleValueSet_NurseGrade: new Coding({
         code: "224569005",
         display: "Nurse grade",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ClinicalNurseSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_ClinicalNurseSpecialist: new Coding({
         code: "224570006",
         display: "Clinical nurse specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NursePractitioner: Coding.FromStrict({
+    ParticipantRoleValueSet_NursePractitioner: new Coding({
         code: "224571005",
         display: "Nurse practitioner",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NursingSister: Coding.FromStrict({
+    ParticipantRoleValueSet_NursingSister: new Coding({
         code: "224572003",
         display: "Nursing sister",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CNChargeNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_CNChargeNurse: new Coding({
         code: "224573008",
         display: "CN - Charge nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_WardManager: Coding.FromStrict({
+    ParticipantRoleValueSet_WardManager: new Coding({
         code: "224574002",
         display: "Ward manager",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NursingTeamLeader: Coding.FromStrict({
+    ParticipantRoleValueSet_NursingTeamLeader: new Coding({
         code: "224575001",
         display: "Nursing team leader",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NursingAssistant: Coding.FromStrict({
+    ParticipantRoleValueSet_NursingAssistant: new Coding({
         code: "224576000",
         display: "Nursing assistant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthcareAssistant: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthcareAssistant: new Coding({
         code: "224577009",
         display: "Healthcare assistant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NurseryNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_NurseryNurse: new Coding({
         code: "224578004",
         display: "Nursery nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthcareServiceManager: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthcareServiceManager: new Coding({
         code: "224579007",
         display: "Healthcare service manager",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OccupationalHealthServiceManager: Coding.FromStrict({
+    ParticipantRoleValueSet_OccupationalHealthServiceManager: new Coding({
         code: "224580005",
         display: "Occupational health service manager",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CommunityNurseManager: Coding.FromStrict({
+    ParticipantRoleValueSet_CommunityNurseManager: new Coding({
         code: "224581009",
         display: "Community nurse manager",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_BehaviorTherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_BehaviorTherapist: new Coding({
         code: "224583007",
         display: "Behavior therapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_BehaviorTherapyAssistant: Coding.FromStrict({
+    ParticipantRoleValueSet_BehaviorTherapyAssistant: new Coding({
         code: "224584001",
         display: "Behavior therapy assistant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DramaTherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_DramaTherapist: new Coding({
         code: "224585000",
         display: "Drama therapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DomiciliaryOccupationalTherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_DomiciliaryOccupationalTherapist: new Coding({
         code: "224586004",
         display: "Domiciliary occupational therapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OccupationalTherapyHelper: Coding.FromStrict({
+    ParticipantRoleValueSet_OccupationalTherapyHelper: new Coding({
         code: "224587008",
         display: "Occupational therapy helper",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Psychotherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_Psychotherapist: new Coding({
         code: "224588003",
         display: "Psychotherapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CommunityBasedPhysiotherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_CommunityBasedPhysiotherapist: new Coding({
         code: "224589006",
         display: "Community-based physiotherapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PlayTherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_PlayTherapist: new Coding({
         code: "224590002",
         display: "Play therapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PlaySpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_PlaySpecialist: new Coding({
         code: "224591003",
         display: "Play specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PlayLeader: Coding.FromStrict({
+    ParticipantRoleValueSet_PlayLeader: new Coding({
         code: "224592005",
         display: "Play leader",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CommunityBasedSpeechLanguageTherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_CommunityBasedSpeechLanguageTherapist: new Coding({
         code: "224593000",
         display: "Community-based speech/language therapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SpeechLanguageAssistant: Coding.FromStrict({
+    ParticipantRoleValueSet_SpeechLanguageAssistant: new Coding({
         code: "224594006",
         display: "Speech/language assistant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ProfessionalCounselor: Coding.FromStrict({
+    ParticipantRoleValueSet_ProfessionalCounselor: new Coding({
         code: "224595007",
         display: "Professional counselor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MarriageGuidanceCounselor: Coding.FromStrict({
+    ParticipantRoleValueSet_MarriageGuidanceCounselor: new Coding({
         code: "224596008",
         display: "Marriage guidance counselor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TrainedNurseCounselor: Coding.FromStrict({
+    ParticipantRoleValueSet_TrainedNurseCounselor: new Coding({
         code: "224597004",
         display: "Trained nurse counselor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TrainedSocialWorkerCounselor: Coding.FromStrict({
+    ParticipantRoleValueSet_TrainedSocialWorkerCounselor: new Coding({
         code: "224598009",
         display: "Trained social worker counselor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TrainedPersonnelCounselor: Coding.FromStrict({
+    ParticipantRoleValueSet_TrainedPersonnelCounselor: new Coding({
         code: "224599001",
         display: "Trained personnel counselor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Psychoanalyst: Coding.FromStrict({
+    ParticipantRoleValueSet_Psychoanalyst: new Coding({
         code: "224600003",
         display: "Psychoanalyst",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AssistantPsychologist: Coding.FromStrict({
+    ParticipantRoleValueSet_AssistantPsychologist: new Coding({
         code: "224601004",
         display: "Assistant psychologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CommunityBasedPodiatrist: Coding.FromStrict({
+    ParticipantRoleValueSet_CommunityBasedPodiatrist: new Coding({
         code: "224602006",
         display: "Community-based podiatrist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FootCareWorker: Coding.FromStrict({
+    ParticipantRoleValueSet_FootCareWorker: new Coding({
         code: "224603001",
         display: "Foot care worker",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Audiometrician: Coding.FromStrict({
+    ParticipantRoleValueSet_Audiometrician: new Coding({
         code: "224604007",
         display: "Audiometrician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Audiometrist: Coding.FromStrict({
+    ParticipantRoleValueSet_Audiometrist: new Coding({
         code: "224605008",
         display: "Audiometrist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TechnicalHealthcareOccupation: Coding.FromStrict({
+    ParticipantRoleValueSet_TechnicalHealthcareOccupation: new Coding({
         code: "224606009",
         display: "Technical healthcare occupation",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OccupationalTherapyTechnicalInstructor: Coding.FromStrict({
+    ParticipantRoleValueSet_OccupationalTherapyTechnicalInstructor: new Coding({
         code: "224607000",
         display: "Occupational therapy technical instructor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AdministrativeHealthcareStaff: Coding.FromStrict({
+    ParticipantRoleValueSet_AdministrativeHealthcareStaff: new Coding({
         code: "224608005",
         display: "Administrative healthcare staff",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ComplementaryHealthWorker: Coding.FromStrict({
+    ParticipantRoleValueSet_ComplementaryHealthWorker: new Coding({
         code: "224609002",
         display: "Complementary health worker",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SupportingServicesPersonnel: Coding.FromStrict({
+    ParticipantRoleValueSet_SupportingServicesPersonnel: new Coding({
         code: "224610007",
         display: "Supporting services personnel",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ResearchAssociate: Coding.FromStrict({
+    ParticipantRoleValueSet_ResearchAssociate: new Coding({
         code: "224614003",
         display: "Research associate",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ResearchNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_ResearchNurse: new Coding({
         code: "224615002",
         display: "Research nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Migrant: Coding.FromStrict({
+    ParticipantRoleValueSet_Migrant: new Coding({
         code: "224619008",
         display: "Migrant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HumanAidToCommunication: Coding.FromStrict({
+    ParticipantRoleValueSet_HumanAidToCommunication: new Coding({
         code: "224620002",
         display: "Human aid to communication",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Palantypist: Coding.FromStrict({
+    ParticipantRoleValueSet_Palantypist: new Coding({
         code: "224621003",
         display: "Palantypist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NoteTaker: Coding.FromStrict({
+    ParticipantRoleValueSet_NoteTaker: new Coding({
         code: "224622005",
         display: "Note taker",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Cuer: Coding.FromStrict({
+    ParticipantRoleValueSet_Cuer: new Coding({
         code: "224623000",
         display: "Cuer",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Lipspeaker: Coding.FromStrict({
+    ParticipantRoleValueSet_Lipspeaker: new Coding({
         code: "224624006",
         display: "Lipspeaker",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_InterpreterForBritishSignLanguage: Coding.FromStrict({
+    ParticipantRoleValueSet_InterpreterForBritishSignLanguage: new Coding({
         code: "224625007",
         display: "Interpreter for British sign language",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_InterpreterForSignsSupportingEnglish: Coding.FromStrict({
+    ParticipantRoleValueSet_InterpreterForSignsSupportingEnglish: new Coding({
         code: "224626008",
         display: "Interpreter for Signs supporting English",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GeneralCategoryOfPerson: Coding.FromStrict({
+    ParticipantRoleValueSet_GeneralCategoryOfPerson: new Coding({
         code: "224627004",
         display: "General category of person",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GeneralPractitionerLocum: Coding.FromStrict({
+    ParticipantRoleValueSet_GeneralPractitionerLocum: new Coding({
         code: "224936003",
         display: "General practitioner locum",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MedicalAssistant: Coding.FromStrict({
+    ParticipantRoleValueSet_MedicalAssistant: new Coding({
         code: "22515006",
         display: "Medical assistant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LactationConsultant: Coding.FromStrict({
+    ParticipantRoleValueSet_LactationConsultant: new Coding({
         code: "225726006",
         display: "Lactation consultant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MidwifeCounselor: Coding.FromStrict({
+    ParticipantRoleValueSet_MidwifeCounselor: new Coding({
         code: "225727002",
         display: "Midwife counselor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Stepdaughter: Coding.FromStrict({
+    ParticipantRoleValueSet_Stepdaughter: new Coding({
         code: "22573006",
         display: "Stepdaughter",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AdoptiveGrandparent: Coding.FromStrict({
+    ParticipantRoleValueSet_AdoptiveGrandparent: new Coding({
         code: "22609000",
         display: "Adoptive grandparent",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HalfSister: Coding.FromStrict({
+    ParticipantRoleValueSet_HalfSister: new Coding({
         code: "2272004",
         display: "Half-sister",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OrthopedicSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_OrthopedicSurgeon: new Coding({
         code: "22731001",
         display: "Orthopedic surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LegalSister: Coding.FromStrict({
+    ParticipantRoleValueSet_LegalSister: new Coding({
         code: "22963000",
         display: "Legal sister",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ThoracicSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_ThoracicSurgeon: new Coding({
         code: "22983004",
         display: "Thoracic surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Naturopath: Coding.FromStrict({
+    ParticipantRoleValueSet_Naturopath: new Coding({
         code: "231189271000087109",
         display: "Naturopath",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AdoptiveSon: Coding.FromStrict({
+    ParticipantRoleValueSet_AdoptiveSon: new Coding({
         code: "2316007",
         display: "Adoptive son",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CommunityHealthPhysician: Coding.FromStrict({
+    ParticipantRoleValueSet_CommunityHealthPhysician: new Coding({
         code: "23278007",
         display: "Community health physician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Prosthetist: Coding.FromStrict({
+    ParticipantRoleValueSet_Prosthetist: new Coding({
         code: "236749831000087105",
         display: "Prosthetist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GreatGreatGrandmother: Coding.FromStrict({
+    ParticipantRoleValueSet_GreatGreatGrandmother: new Coding({
         code: "2368000",
         display: "Great-great grandmother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PhysicalMedicineSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_PhysicalMedicineSpecialist: new Coding({
         code: "24430003",
         display: "Physical medicine specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Urologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Urologist: new Coding({
         code: "24590004",
         display: "Urologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_WorkingMother: Coding.FromStrict({
+    ParticipantRoleValueSet_WorkingMother: new Coding({
         code: "2481008",
         display: "Working mother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RastafarianFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_RastafarianFollowerOfReligion: new Coding({
         code: "248544006",
         display: "Rastafarian, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CommunityHealthCenter: Coding.FromStrict({
+    ParticipantRoleValueSet_CommunityHealthCenter: new Coding({
         code: "249236551000087105",
         display: "Community health center",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NovaScotiaDepartmentOfHealthAndWellness: Coding.FromStrict({
+    ParticipantRoleValueSet_NovaScotiaDepartmentOfHealthAndWellness: new Coding({
         code: "250624661000087107",
         display: "Nova Scotia Department of Health and Wellness",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Aunt: Coding.FromStrict({
+    ParticipantRoleValueSet_Aunt: new Coding({
         code: "25211005",
         display: "Aunt",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NunavutDepartmentOfHealthAndSocialServices: Coding.FromStrict({
+    ParticipantRoleValueSet_NunavutDepartmentOfHealthAndSocialServices: new Coding({
         code: "254693751000087105",
         display: "Nunavut Department of Health and Social Services",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PregnantWoman: Coding.FromStrict({
+    ParticipantRoleValueSet_PregnantWoman: new Coding({
         code: "255409004",
         display: "Pregnant woman",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AnimalRider: Coding.FromStrict({
+    ParticipantRoleValueSet_AnimalRider: new Coding({
         code: "257497009",
         display: "Animal rider",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RiderOfMotorcycle: Coding.FromStrict({
+    ParticipantRoleValueSet_RiderOfMotorcycle: new Coding({
         code: "257498004",
         display: "Rider of motorcycle",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PedalCyclist: Coding.FromStrict({
+    ParticipantRoleValueSet_PedalCyclist: new Coding({
         code: "257499007",
         display: "Pedal cyclist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Passenger: Coding.FromStrict({
+    ParticipantRoleValueSet_Passenger: new Coding({
         code: "257500003",
         display: "Passenger",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OccupantOfMotorVehicle: Coding.FromStrict({
+    ParticipantRoleValueSet_OccupantOfMotorVehicle: new Coding({
         code: "257501004",
         display: "Occupant of motor vehicle",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OccupantOfTram: Coding.FromStrict({
+    ParticipantRoleValueSet_OccupantOfTram: new Coding({
         code: "257502006",
         display: "Occupant of tram",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PillionPassenger: Coding.FromStrict({
+    ParticipantRoleValueSet_PillionPassenger: new Coding({
         code: "257503001",
         display: "Pillion passenger",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PersonRidingOnOutsideOfVehicle: Coding.FromStrict({
+    ParticipantRoleValueSet_PersonRidingOnOutsideOfVehicle: new Coding({
         code: "257504007",
         display: "Person riding on outside of vehicle",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PersonTravellingOnOutsideOfTrain: Coding.FromStrict({
+    ParticipantRoleValueSet_PersonTravellingOnOutsideOfTrain: new Coding({
         code: "257505008",
         display: "Person travelling on outside of train",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FrontSeatPassenger: Coding.FromStrict({
+    ParticipantRoleValueSet_FrontSeatPassenger: new Coding({
         code: "257506009",
         display: "Front seat passenger",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_BackSeatPassenger: Coding.FromStrict({
+    ParticipantRoleValueSet_BackSeatPassenger: new Coding({
         code: "257508005",
         display: "Back seat passenger",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OccupantOfAnimalDrawnVehicle: Coding.FromStrict({
+    ParticipantRoleValueSet_OccupantOfAnimalDrawnVehicle: new Coding({
         code: "257509002",
         display: "Occupant of animal-drawn vehicle",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PassengerOnCommercialWatercraft: Coding.FromStrict({
+    ParticipantRoleValueSet_PassengerOnCommercialWatercraft: new Coding({
         code: "257510007",
         display: "Passenger on commercial watercraft",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PassengerOnStation: Coding.FromStrict({
+    ParticipantRoleValueSet_PassengerOnStation: new Coding({
         code: "257511006",
         display: "Passenger on station",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PassengerOnTrain: Coding.FromStrict({
+    ParticipantRoleValueSet_PassengerOnTrain: new Coding({
         code: "257512004",
         display: "Passenger on train",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MemberOfPublic: Coding.FromStrict({
+    ParticipantRoleValueSet_MemberOfPublic: new Coding({
         code: "257513009",
         display: "Member of public",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MemberOfPublicInvolvedIncidentally: Coding.FromStrict({
+    ParticipantRoleValueSet_MemberOfPublicInvolvedIncidentally: new Coding({
         code: "257514003",
         display: "Member of public involved incidentally",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MemberOfPublicOnGround: Coding.FromStrict({
+    ParticipantRoleValueSet_MemberOfPublicOnGround: new Coding({
         code: "257516001",
         display: "Member of public on ground",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OccupantOfNonmotorVehicle: Coding.FromStrict({
+    ParticipantRoleValueSet_OccupantOfNonmotorVehicle: new Coding({
         code: "257517005",
         display: "Occupant of nonmotor vehicle",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Pedestrian: Coding.FromStrict({
+    ParticipantRoleValueSet_Pedestrian: new Coding({
         code: "257518000",
         display: "Pedestrian",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PersonTrespassingOnRailwayLine: Coding.FromStrict({
+    ParticipantRoleValueSet_PersonTrespassingOnRailwayLine: new Coding({
         code: "257519008",
         display: "Person trespassing on railway line",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RailwayEmployeeOnTrain: Coding.FromStrict({
+    ParticipantRoleValueSet_RailwayEmployeeOnTrain: new Coding({
         code: "257521003",
         display: "Railway employee on train",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RecreationalWatercraftUser: Coding.FromStrict({
+    ParticipantRoleValueSet_RecreationalWatercraftUser: new Coding({
         code: "257522005",
         display: "Recreational watercraft user",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Swimmer: Coding.FromStrict({
+    ParticipantRoleValueSet_Swimmer: new Coding({
         code: "257523000",
         display: "Swimmer",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_UserOfAnimalDrawnVehicle: Coding.FromStrict({
+    ParticipantRoleValueSet_UserOfAnimalDrawnVehicle: new Coding({
         code: "257524006",
         display: "User of animal-drawn vehicle",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_WatercraftDweller: Coding.FromStrict({
+    ParticipantRoleValueSet_WatercraftDweller: new Coding({
         code: "257525007",
         display: "Watercraft dweller",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Waterskier: Coding.FromStrict({
+    ParticipantRoleValueSet_Waterskier: new Coding({
         code: "257526008",
         display: "Waterskier",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HipAndKneeSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_HipAndKneeSurgeon: new Coding({
         code: "258508741000087105",
         display: "Hip and knee surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ElectroencephalographySpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_ElectroencephalographySpecialist: new Coding({
         code: "25961008",
         display: "Electroencephalography specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DentalHygienist: Coding.FromStrict({
+    ParticipantRoleValueSet_DentalHygienist: new Coding({
         code: "26042002",
         display: "Dental hygienist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Hepatologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Hepatologist: new Coding({
         code: "260767431000087107",
         display: "Hepatologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Companion: Coding.FromStrict({
+    ParticipantRoleValueSet_Companion: new Coding({
         code: "262043009",
         display: "Companion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PublicHealthNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_PublicHealthNurse: new Coding({
         code: "26369006",
         display: "Public health nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NursingOccupation: Coding.FromStrict({
+    ParticipantRoleValueSet_NursingOccupation: new Coding({
         code: "265937000",
         display: "Nursing occupation",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MedicalDentalTechnicians: Coding.FromStrict({
+    ParticipantRoleValueSet_MedicalDentalTechnicians: new Coding({
         code: "265939002",
         display: "Medical/dental technicians",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SingleParent: Coding.FromStrict({
+    ParticipantRoleValueSet_SingleParent: new Coding({
         code: "266943008",
         display: "Single parent",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Sportsman: Coding.FromStrict({
+    ParticipantRoleValueSet_Sportsman: new Coding({
         code: "268557009",
         display: "Sportsman",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FemaleFirstCousin: Coding.FromStrict({
+    ParticipantRoleValueSet_FemaleFirstCousin: new Coding({
         code: "270002",
         display: "Female first cousin",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AnglicanFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_AnglicanFollowerOfReligion: new Coding({
         code: "271448006",
         display: "Anglican, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SurrogateMother: Coding.FromStrict({
+    ParticipantRoleValueSet_SurrogateMother: new Coding({
         code: "27508009",
         display: "Surrogate mother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_VoluntaryHelper: Coding.FromStrict({
+    ParticipantRoleValueSet_VoluntaryHelper: new Coding({
         code: "276035002",
         display: "Voluntary helper",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_VoluntaryVisitor: Coding.FromStrict({
+    ParticipantRoleValueSet_VoluntaryVisitor: new Coding({
         code: "276036001",
         display: "Voluntary visitor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_VolunteerHelper: Coding.FromStrict({
+    ParticipantRoleValueSet_VolunteerHelper: new Coding({
         code: "276037005",
         display: "Volunteer helper",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Nonconformist: Coding.FromStrict({
+    ParticipantRoleValueSet_Nonconformist: new Coding({
         code: "276119007",
         display: "Nonconformist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SrSister: Coding.FromStrict({
+    ParticipantRoleValueSet_SrSister: new Coding({
         code: "27733009",
         display: "Sr - Sister",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ShiiteMuslimFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_ShiiteMuslimFollowerOfReligion: new Coding({
         code: "28010004",
         display: "Shiite muslim, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Optometrist: Coding.FromStrict({
+    ParticipantRoleValueSet_Optometrist: new Coding({
         code: "28229004",
         display: "Optometrist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ParkinsonDiseaseNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_ParkinsonDiseaseNurse: new Coding({
         code: "283875005",
         display: "Parkinson disease nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Neonatologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Neonatologist: new Coding({
         code: "28411006",
         display: "Neonatologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ChemicalPathologist: Coding.FromStrict({
+    ParticipantRoleValueSet_ChemicalPathologist: new Coding({
         code: "28544002",
         display: "Chemical pathologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ShoulderSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_ShoulderSurgeon: new Coding({
         code: "285631911000087106",
         display: "Shoulder surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MaternalCousin: Coding.FromStrict({
+    ParticipantRoleValueSet_MaternalCousin: new Coding({
         code: "286864561000087100",
         display: "Maternal cousin",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ProviderBillingNumber: Coding.FromStrict({
+    ParticipantRoleValueSet_ProviderBillingNumber: new Coding({
         code: "287697331000087102",
         display: "Provider billing number",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_InterventionalRadiologist: Coding.FromStrict({
+    ParticipantRoleValueSet_InterventionalRadiologist: new Coding({
         code: "291705421000087106",
         display: "Interventional radiologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_YoungerSibling: Coding.FromStrict({
+    ParticipantRoleValueSet_YoungerSibling: new Coding({
         code: "29539002",
         display: "Younger sibling",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FemaleCousin: Coding.FromStrict({
+    ParticipantRoleValueSet_FemaleCousin: new Coding({
         code: "2959006",
         display: "Female cousin",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FraternalTwinSister: Coding.FromStrict({
+    ParticipantRoleValueSet_FraternalTwinSister: new Coding({
         code: "29644004",
         display: "Fraternal twin sister",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FosterBrother: Coding.FromStrict({
+    ParticipantRoleValueSet_FosterBrother: new Coding({
         code: "29787005",
         display: "Foster brother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SpecialistRegistrar: Coding.FromStrict({
+    ParticipantRoleValueSet_SpecialistRegistrar: new Coding({
         code: "302211009",
         display: "Specialist registrar",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PersonInTheTransportEnvironment: Coding.FromStrict({
+    ParticipantRoleValueSet_PersonInTheTransportEnvironment: new Coding({
         code: "303069001",
         display: "Person in the transport environment",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PersonInTheFamily: Coding.FromStrict({
+    ParticipantRoleValueSet_PersonInTheFamily: new Coding({
         code: "303071001",
         display: "Person in the family",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PersonInTheHomeEnvironment: Coding.FromStrict({
+    ParticipantRoleValueSet_PersonInTheHomeEnvironment: new Coding({
         code: "303072008",
         display: "Person in the home environment",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PersonInTheReligiousEnvironment: Coding.FromStrict({
+    ParticipantRoleValueSet_PersonInTheReligiousEnvironment: new Coding({
         code: "303073003",
         display: "Person in the religious environment",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PersonInTheHealthcareEnvironment: Coding.FromStrict({
+    ParticipantRoleValueSet_PersonInTheHealthcareEnvironment: new Coding({
         code: "303118004",
         display: "Person in the healthcare environment",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PersonInTheCommunityEnvironment: Coding.FromStrict({
+    ParticipantRoleValueSet_PersonInTheCommunityEnvironment: new Coding({
         code: "303119007",
         display: "Person in the community environment",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PersonInTheRecreationalEnvironment: Coding.FromStrict({
+    ParticipantRoleValueSet_PersonInTheRecreationalEnvironment: new Coding({
         code: "303120001",
         display: "Person in the recreational environment",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PersonInTheEducationalEnvironment: Coding.FromStrict({
+    ParticipantRoleValueSet_PersonInTheEducationalEnvironment: new Coding({
         code: "303121002",
         display: "Person in the educational environment",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Crewmember: Coding.FromStrict({
+    ParticipantRoleValueSet_Crewmember: new Coding({
         code: "303122009",
         display: "Crewmember",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MemberOfMentalHealthReviewTribunal: Coding.FromStrict({
+    ParticipantRoleValueSet_MemberOfMentalHealthReviewTribunal: new Coding({
         code: "303124005",
         display: "Member of mental health review tribunal",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HospitalManager: Coding.FromStrict({
+    ParticipantRoleValueSet_HospitalManager: new Coding({
         code: "303129000",
         display: "Hospital manager",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ResponsibleMedicalOfficer: Coding.FromStrict({
+    ParticipantRoleValueSet_ResponsibleMedicalOfficer: new Coding({
         code: "303133007",
         display: "Responsible medical officer",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_IndependentDoctor: Coding.FromStrict({
+    ParticipantRoleValueSet_IndependentDoctor: new Coding({
         code: "303134001",
         display: "Independent doctor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OccupantOfRailwayVehicle: Coding.FromStrict({
+    ParticipantRoleValueSet_OccupantOfRailwayVehicle: new Coding({
         code: "303977004",
         display: "Occupant of railway vehicle",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DriverOfMotorVehicle: Coding.FromStrict({
+    ParticipantRoleValueSet_DriverOfMotorVehicle: new Coding({
         code: "303980003",
         display: "Driver of motor vehicle",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DriverOfAnimalDrawnVehicle: Coding.FromStrict({
+    ParticipantRoleValueSet_DriverOfAnimalDrawnVehicle: new Coding({
         code: "303981004",
         display: "Driver of animal-drawn vehicle",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PassengerOfAnimalDrawnVehicle: Coding.FromStrict({
+    ParticipantRoleValueSet_PassengerOfAnimalDrawnVehicle: new Coding({
         code: "303983001",
         display: "Passenger of animal-drawn vehicle",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PassengerOnPedalCycle: Coding.FromStrict({
+    ParticipantRoleValueSet_PassengerOnPedalCycle: new Coding({
         code: "303984007",
         display: "Passenger on pedal cycle",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OccupantOfWatercraft: Coding.FromStrict({
+    ParticipantRoleValueSet_OccupantOfWatercraft: new Coding({
         code: "303985008",
         display: "Occupant of watercraft",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OccupantOfAircraft: Coding.FromStrict({
+    ParticipantRoleValueSet_OccupantOfAircraft: new Coding({
         code: "303986009",
         display: "Occupant of aircraft",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HorseRider: Coding.FromStrict({
+    ParticipantRoleValueSet_HorseRider: new Coding({
         code: "303987000",
         display: "Horse rider",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PassengerOnAircraft: Coding.FromStrict({
+    ParticipantRoleValueSet_PassengerOnAircraft: new Coding({
         code: "303988005",
         display: "Passenger on aircraft",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CrewmemberOnAircraft: Coding.FromStrict({
+    ParticipantRoleValueSet_CrewmemberOnAircraft: new Coding({
         code: "303989002",
         display: "Crewmember on aircraft",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PassengerOfMotorVehicle: Coding.FromStrict({
+    ParticipantRoleValueSet_PassengerOfMotorVehicle: new Coding({
         code: "303990006",
         display: "Passenger of motor vehicle",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Trespasser: Coding.FromStrict({
+    ParticipantRoleValueSet_Trespasser: new Coding({
         code: "303991005",
         display: "Trespasser",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CarPassenger: Coding.FromStrict({
+    ParticipantRoleValueSet_CarPassenger: new Coding({
         code: "303992003",
         display: "Car passenger",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CoachPassenger: Coding.FromStrict({
+    ParticipantRoleValueSet_CoachPassenger: new Coding({
         code: "303993008",
         display: "Coach passenger",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_BereavementCounselor: Coding.FromStrict({
+    ParticipantRoleValueSet_BereavementCounselor: new Coding({
         code: "304291006",
         display: "Bereavement counselor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Surgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_Surgeon: new Coding({
         code: "304292004",
         display: "Surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Stepfather: Coding.FromStrict({
+    ParticipantRoleValueSet_Stepfather: new Coding({
         code: "30578000",
         display: "Stepfather",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MedicalTechnician: Coding.FromStrict({
+    ParticipantRoleValueSet_MedicalTechnician: new Coding({
         code: "307988006",
         display: "Medical technician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RemedialTherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_RemedialTherapist: new Coding({
         code: "308002005",
         display: "Remedial therapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AccidentAndEmergencyDoctor: Coding.FromStrict({
+    ParticipantRoleValueSet_AccidentAndEmergencyDoctor: new Coding({
         code: "309294001",
         display: "Accident and Emergency doctor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ClinicalOncologist: Coding.FromStrict({
+    ParticipantRoleValueSet_ClinicalOncologist: new Coding({
         code: "309295000",
         display: "Clinical oncologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FamilyPlanningDoctor: Coding.FromStrict({
+    ParticipantRoleValueSet_FamilyPlanningDoctor: new Coding({
         code: "309296004",
         display: "Family planning doctor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AssociateGeneralPractitioner: Coding.FromStrict({
+    ParticipantRoleValueSet_AssociateGeneralPractitioner: new Coding({
         code: "309322005",
         display: "Associate general practitioner",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PartnerOfGeneralPractitioner: Coding.FromStrict({
+    ParticipantRoleValueSet_PartnerOfGeneralPractitioner: new Coding({
         code: "309323000",
         display: "Partner of general practitioner",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AssistantGP: Coding.FromStrict({
+    ParticipantRoleValueSet_AssistantGP: new Coding({
         code: "309324006",
         display: "Assistant GP",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DeputizingGeneralPractitioner: Coding.FromStrict({
+    ParticipantRoleValueSet_DeputizingGeneralPractitioner: new Coding({
         code: "309326008",
         display: "Deputizing general practitioner",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GeneralPractitionerRegistrar: Coding.FromStrict({
+    ParticipantRoleValueSet_GeneralPractitionerRegistrar: new Coding({
         code: "309327004",
         display: "General practitioner registrar",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AmbulatoryPediatrician: Coding.FromStrict({
+    ParticipantRoleValueSet_AmbulatoryPediatrician: new Coding({
         code: "309328009",
         display: "Ambulatory pediatrician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CommunityPediatrician: Coding.FromStrict({
+    ParticipantRoleValueSet_CommunityPediatrician: new Coding({
         code: "309329001",
         display: "Community pediatrician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PediatricCardiologist: Coding.FromStrict({
+    ParticipantRoleValueSet_PediatricCardiologist: new Coding({
         code: "309330006",
         display: "Pediatric cardiologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PediatricEndocrinologist: Coding.FromStrict({
+    ParticipantRoleValueSet_PediatricEndocrinologist: new Coding({
         code: "309331005",
         display: "Pediatric endocrinologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PediatricGastroenterologist: Coding.FromStrict({
+    ParticipantRoleValueSet_PediatricGastroenterologist: new Coding({
         code: "309332003",
         display: "Pediatric gastroenterologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PediatricNephrologist: Coding.FromStrict({
+    ParticipantRoleValueSet_PediatricNephrologist: new Coding({
         code: "309333008",
         display: "Pediatric nephrologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PediatricNeurologist: Coding.FromStrict({
+    ParticipantRoleValueSet_PediatricNeurologist: new Coding({
         code: "309334002",
         display: "Pediatric neurologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PediatricRheumatologist: Coding.FromStrict({
+    ParticipantRoleValueSet_PediatricRheumatologist: new Coding({
         code: "309335001",
         display: "Pediatric rheumatologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PediatricOncologist: Coding.FromStrict({
+    ParticipantRoleValueSet_PediatricOncologist: new Coding({
         code: "309336000",
         display: "Pediatric oncologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PainManagementSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_PainManagementSpecialist: new Coding({
         code: "309337009",
         display: "Pain management specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_IntensiveCareSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_IntensiveCareSpecialist: new Coding({
         code: "309338004",
         display: "Intensive care specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AdultIntensiveCareSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_AdultIntensiveCareSpecialist: new Coding({
         code: "309339007",
         display: "Adult intensive care specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PediatricIntensiveCareSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_PediatricIntensiveCareSpecialist: new Coding({
         code: "309340009",
         display: "Pediatric intensive care specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_BloodTransfusionDoctor: Coding.FromStrict({
+    ParticipantRoleValueSet_BloodTransfusionDoctor: new Coding({
         code: "309341008",
         display: "Blood transfusion doctor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Histopathologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Histopathologist: new Coding({
         code: "309342001",
         display: "Histopathologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Physician: Coding.FromStrict({
+    ParticipantRoleValueSet_Physician: new Coding({
         code: "309343006",
         display: "Physician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ChestPhysician: Coding.FromStrict({
+    ParticipantRoleValueSet_ChestPhysician: new Coding({
         code: "309345004",
         display: "Chest physician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ThoracicPhysician: Coding.FromStrict({
+    ParticipantRoleValueSet_ThoracicPhysician: new Coding({
         code: "309346003",
         display: "Thoracic physician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ClinicalHematologist: Coding.FromStrict({
+    ParticipantRoleValueSet_ClinicalHematologist: new Coding({
         code: "309347007",
         display: "Clinical hematologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ClinicalNeurophysiologist: Coding.FromStrict({
+    ParticipantRoleValueSet_ClinicalNeurophysiologist: new Coding({
         code: "309348002",
         display: "Clinical neurophysiologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ClinicalPhysiologist: Coding.FromStrict({
+    ParticipantRoleValueSet_ClinicalPhysiologist: new Coding({
         code: "309349005",
         display: "Clinical physiologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Diabetologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Diabetologist: new Coding({
         code: "309350005",
         display: "Diabetologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Andrologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Andrologist: new Coding({
         code: "309351009",
         display: "Andrologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Neuroendocrinologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Neuroendocrinologist: new Coding({
         code: "309352002",
         display: "Neuroendocrinologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ReproductiveEndocrinologist: Coding.FromStrict({
+    ParticipantRoleValueSet_ReproductiveEndocrinologist: new Coding({
         code: "309353007",
         display: "Reproductive endocrinologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Thyroidologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Thyroidologist: new Coding({
         code: "309354001",
         display: "Thyroidologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ClinicalGeneticist: Coding.FromStrict({
+    ParticipantRoleValueSet_ClinicalGeneticist: new Coding({
         code: "309355000",
         display: "Clinical geneticist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ClinicalCytogeneticist: Coding.FromStrict({
+    ParticipantRoleValueSet_ClinicalCytogeneticist: new Coding({
         code: "309356004",
         display: "Clinical cytogeneticist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ClinicalMolecularGeneticist: Coding.FromStrict({
+    ParticipantRoleValueSet_ClinicalMolecularGeneticist: new Coding({
         code: "309357008",
         display: "Clinical molecular geneticist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GenitourinaryMedicinePhysician: Coding.FromStrict({
+    ParticipantRoleValueSet_GenitourinaryMedicinePhysician: new Coding({
         code: "309358003",
         display: "Genitourinary medicine physician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PalliativeCarePhysician: Coding.FromStrict({
+    ParticipantRoleValueSet_PalliativeCarePhysician: new Coding({
         code: "309359006",
         display: "Palliative care physician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RehabilitationPhysician: Coding.FromStrict({
+    ParticipantRoleValueSet_RehabilitationPhysician: new Coding({
         code: "309360001",
         display: "Rehabilitation physician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ChildAndAdolescentPsychiatrist: Coding.FromStrict({
+    ParticipantRoleValueSet_ChildAndAdolescentPsychiatrist: new Coding({
         code: "309361002",
         display: "Child and adolescent psychiatrist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ForensicPsychiatrist: Coding.FromStrict({
+    ParticipantRoleValueSet_ForensicPsychiatrist: new Coding({
         code: "309362009",
         display: "Forensic psychiatrist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LiaisonPsychiatrist: Coding.FromStrict({
+    ParticipantRoleValueSet_LiaisonPsychiatrist: new Coding({
         code: "309363004",
         display: "Liaison psychiatrist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Psychogeriatrician: Coding.FromStrict({
+    ParticipantRoleValueSet_Psychogeriatrician: new Coding({
         code: "309364005",
         display: "Psychogeriatrician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PsychiatristForMentalHandicap: Coding.FromStrict({
+    ParticipantRoleValueSet_PsychiatristForMentalHandicap: new Coding({
         code: "309365006",
         display: "Psychiatrist for mental handicap",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RehabilitationPsychiatrist: Coding.FromStrict({
+    ParticipantRoleValueSet_RehabilitationPsychiatrist: new Coding({
         code: "309366007",
         display: "Rehabilitation psychiatrist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ObstetricianAndGynecologist: Coding.FromStrict({
+    ParticipantRoleValueSet_ObstetricianAndGynecologist: new Coding({
         code: "309367003",
         display: "Obstetrician and gynecologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_BreastSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_BreastSurgeon: new Coding({
         code: "309368008",
         display: "Breast surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CardiothoracicSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_CardiothoracicSurgeon: new Coding({
         code: "309369000",
         display: "Cardiothoracic surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CardiacSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_CardiacSurgeon: new Coding({
         code: "309371000",
         display: "Cardiac surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_EarNoseAndThroatSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_EarNoseAndThroatSurgeon: new Coding({
         code: "309372007",
         display: "Ear, nose and throat surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_EndocrineSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_EndocrineSurgeon: new Coding({
         code: "309373002",
         display: "Endocrine surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ThyroidSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_ThyroidSurgeon: new Coding({
         code: "309374008",
         display: "Thyroid surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PituitarySurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_PituitarySurgeon: new Coding({
         code: "309375009",
         display: "Pituitary surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GastrointestinalSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_GastrointestinalSurgeon: new Coding({
         code: "309376005",
         display: "Gastrointestinal surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GeneralGastrointestinalSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_GeneralGastrointestinalSurgeon: new Coding({
         code: "309377001",
         display: "General gastrointestinal surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_UpperGastrointestinalSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_UpperGastrointestinalSurgeon: new Coding({
         code: "309378006",
         display: "Upper gastrointestinal surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ColorectalSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_ColorectalSurgeon: new Coding({
         code: "309379003",
         display: "Colorectal surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HandSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_HandSurgeon: new Coding({
         code: "309380000",
         display: "Hand surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HepatobiliarySurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_HepatobiliarySurgeon: new Coding({
         code: "309381001",
         display: "Hepatobiliary surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OphthalmicSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_OphthalmicSurgeon: new Coding({
         code: "309382008",
         display: "Ophthalmic surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PediatricSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_PediatricSurgeon: new Coding({
         code: "309383003",
         display: "Pediatric surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PancreaticSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_PancreaticSurgeon: new Coding({
         code: "309384009",
         display: "Pancreatic surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TransplantSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_TransplantSurgeon: new Coding({
         code: "309385005",
         display: "Transplant surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TraumaSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_TraumaSurgeon: new Coding({
         code: "309386006",
         display: "Trauma surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_VascularSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_VascularSurgeon: new Coding({
         code: "309388007",
         display: "Vascular surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MedicalPractitionerGrade: Coding.FromStrict({
+    ParticipantRoleValueSet_MedicalPractitionerGrade: new Coding({
         code: "309389004",
         display: "Medical practitioner grade",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HospitalConsultant: Coding.FromStrict({
+    ParticipantRoleValueSet_HospitalConsultant: new Coding({
         code: "309390008",
         display: "Hospital consultant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_VisitingSpecialistRegistrar: Coding.FromStrict({
+    ParticipantRoleValueSet_VisitingSpecialistRegistrar: new Coding({
         code: "309391007",
         display: "Visiting specialist registrar",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ResearchRegistrar: Coding.FromStrict({
+    ParticipantRoleValueSet_ResearchRegistrar: new Coding({
         code: "309392000",
         display: "Research registrar",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GeneralPractitionerGrade: Coding.FromStrict({
+    ParticipantRoleValueSet_GeneralPractitionerGrade: new Coding({
         code: "309393005",
         display: "General practitioner grade",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GeneralPractitionerPrincipal: Coding.FromStrict({
+    ParticipantRoleValueSet_GeneralPractitionerPrincipal: new Coding({
         code: "309394004",
         display: "General practitioner principal",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HospitalSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_HospitalSpecialist: new Coding({
         code: "309395003",
         display: "Hospital specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AssociateSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_AssociateSpecialist: new Coding({
         code: "309396002",
         display: "Associate specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ResearchFellow: Coding.FromStrict({
+    ParticipantRoleValueSet_ResearchFellow: new Coding({
         code: "309397006",
         display: "Research fellow",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AlliedHealthProfessional: Coding.FromStrict({
+    ParticipantRoleValueSet_AlliedHealthProfessional: new Coding({
         code: "309398001",
         display: "Allied health professional",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HospitalDietitian: Coding.FromStrict({
+    ParticipantRoleValueSet_HospitalDietitian: new Coding({
         code: "309399009",
         display: "Hospital dietitian",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DomiciliaryPhysiotherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_DomiciliaryPhysiotherapist: new Coding({
         code: "309400002",
         display: "Domiciliary physiotherapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GeneralPractitionerBasedPhysiotherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_GeneralPractitionerBasedPhysiotherapist: new Coding({
         code: "309401003",
         display: "General practitioner-based physiotherapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HospitalBasedPhysiotherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_HospitalBasedPhysiotherapist: new Coding({
         code: "309402005",
         display: "Hospital-based physiotherapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PrivatePhysiotherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_PrivatePhysiotherapist: new Coding({
         code: "309403000",
         display: "Private physiotherapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PhysiotherapyAssistant: Coding.FromStrict({
+    ParticipantRoleValueSet_PhysiotherapyAssistant: new Coding({
         code: "309404006",
         display: "Physiotherapy assistant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HospitalBasedSpeechAndLanguageTherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_HospitalBasedSpeechAndLanguageTherapist: new Coding({
         code: "309409001",
         display: "Hospital-based speech and language therapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ArtsTherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_ArtsTherapist: new Coding({
         code: "309410006",
         display: "Arts therapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DanceTherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_DanceTherapist: new Coding({
         code: "309411005",
         display: "Dance therapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MusicTherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_MusicTherapist: new Coding({
         code: "309412003",
         display: "Music therapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RenalDietitian: Coding.FromStrict({
+    ParticipantRoleValueSet_RenalDietitian: new Coding({
         code: "309413008",
         display: "Renal dietitian",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LiverDietitian: Coding.FromStrict({
+    ParticipantRoleValueSet_LiverDietitian: new Coding({
         code: "309414002",
         display: "Liver dietitian",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OncologyDietitian: Coding.FromStrict({
+    ParticipantRoleValueSet_OncologyDietitian: new Coding({
         code: "309415001",
         display: "Oncology dietitian",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PediatricDietitian: Coding.FromStrict({
+    ParticipantRoleValueSet_PediatricDietitian: new Coding({
         code: "309416000",
         display: "Pediatric dietitian",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DiabetesDietitian: Coding.FromStrict({
+    ParticipantRoleValueSet_DiabetesDietitian: new Coding({
         code: "309417009",
         display: "Diabetes dietitian",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Audiologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Audiologist: new Coding({
         code: "309418004",
         display: "Audiologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HearingTherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_HearingTherapist: new Coding({
         code: "309419007",
         display: "Hearing therapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AudiologicalScientist: Coding.FromStrict({
+    ParticipantRoleValueSet_AudiologicalScientist: new Coding({
         code: "309420001",
         display: "Audiological scientist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HearingAidDispenser: Coding.FromStrict({
+    ParticipantRoleValueSet_HearingAidDispenser: new Coding({
         code: "309421002",
         display: "Hearing aid dispenser",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CommunityBasedOccupationalTherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_CommunityBasedOccupationalTherapist: new Coding({
         code: "309422009",
         display: "Community-based occupational therapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HospitalOccupationalTherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_HospitalOccupationalTherapist: new Coding({
         code: "309423004",
         display: "Hospital occupational therapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SocialServicesOccupationalTherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_SocialServicesOccupationalTherapist: new Coding({
         code: "309427003",
         display: "Social services occupational therapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Orthotist: Coding.FromStrict({
+    ParticipantRoleValueSet_Orthotist: new Coding({
         code: "309428008",
         display: "Orthotist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SurgicalFitter: Coding.FromStrict({
+    ParticipantRoleValueSet_SurgicalFitter: new Coding({
         code: "309429000",
         display: "Surgical fitter",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HospitalBasedPodiatrist: Coding.FromStrict({
+    ParticipantRoleValueSet_HospitalBasedPodiatrist: new Coding({
         code: "309434001",
         display: "Hospital-based podiatrist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PodiatryAssistant: Coding.FromStrict({
+    ParticipantRoleValueSet_PodiatryAssistant: new Coding({
         code: "309435000",
         display: "Podiatry assistant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LymphedemaNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_LymphedemaNurse: new Coding({
         code: "309436004",
         display: "Lymphedema nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CommunityLearningDisabilitiesNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_CommunityLearningDisabilitiesNurse: new Coding({
         code: "309437008",
         display: "Community learning disabilities nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ClinicalNurseTeacher: Coding.FromStrict({
+    ParticipantRoleValueSet_ClinicalNurseTeacher: new Coding({
         code: "309439006",
         display: "Clinical nurse teacher",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CommunityPracticeNurseTeacher: Coding.FromStrict({
+    ParticipantRoleValueSet_CommunityPracticeNurseTeacher: new Coding({
         code: "309440008",
         display: "Community practice nurse teacher",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NurseTutor: Coding.FromStrict({
+    ParticipantRoleValueSet_NurseTutor: new Coding({
         code: "309441007",
         display: "Nurse tutor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NurseTeacherPractitioner: Coding.FromStrict({
+    ParticipantRoleValueSet_NurseTeacherPractitioner: new Coding({
         code: "309442000",
         display: "Nurse teacher practitioner",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NurseLecturerPractitioner: Coding.FromStrict({
+    ParticipantRoleValueSet_NurseLecturerPractitioner: new Coding({
         code: "309443005",
         display: "Nurse lecturer practitioner",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OutreachNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_OutreachNurse: new Coding({
         code: "309444004",
         display: "Outreach nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AnestheticNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_AnestheticNurse: new Coding({
         code: "309445003",
         display: "Anesthetic nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NurseManager: Coding.FromStrict({
+    ParticipantRoleValueSet_NurseManager: new Coding({
         code: "309446002",
         display: "Nurse manager",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NurseAdministrator: Coding.FromStrict({
+    ParticipantRoleValueSet_NurseAdministrator: new Coding({
         code: "309450009",
         display: "Nurse administrator",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MidwiferyGrade: Coding.FromStrict({
+    ParticipantRoleValueSet_MidwiferyGrade: new Coding({
         code: "309452001",
         display: "Midwifery grade",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Midwife: Coding.FromStrict({
+    ParticipantRoleValueSet_Midwife: new Coding({
         code: "309453006",
         display: "Midwife",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_StudentMidwife: Coding.FromStrict({
+    ParticipantRoleValueSet_StudentMidwife: new Coding({
         code: "309454000",
         display: "Student midwife",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ParentcraftSister: Coding.FromStrict({
+    ParticipantRoleValueSet_ParentcraftSister: new Coding({
         code: "309455004",
         display: "Parentcraft sister",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Clergy: Coding.FromStrict({
+    ParticipantRoleValueSet_Clergy: new Coding({
         code: "309456003",
         display: "Clergy",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthcareProfessionalGrade: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthcareProfessionalGrade: new Coding({
         code: "309459005",
         display: "Healthcare professional grade",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RestorativeDentist: Coding.FromStrict({
+    ParticipantRoleValueSet_RestorativeDentist: new Coding({
         code: "309460000",
         display: "Restorative dentist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_BuddhistFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_BuddhistFollowerOfReligion: new Coding({
         code: "309687009",
         display: "Buddhist, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MuslimFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_MuslimFollowerOfReligion: new Coding({
         code: "309884000",
         display: "Muslim, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ProtestantFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_ProtestantFollowerOfReligion: new Coding({
         code: "309885004",
         display: "Protestant, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_QuakerFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_QuakerFollowerOfReligion: new Coding({
         code: "309886003",
         display: "Quaker, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PediatricAudiologist: Coding.FromStrict({
+    ParticipantRoleValueSet_PediatricAudiologist: new Coding({
         code: "310170009",
         display: "Pediatric audiologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Immunopathologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Immunopathologist: new Coding({
         code: "310171008",
         display: "Immunopathologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AudiologicalPhysician: Coding.FromStrict({
+    ParticipantRoleValueSet_AudiologicalPhysician: new Coding({
         code: "310172001",
         display: "Audiological physician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ClinicalPharmacologist: Coding.FromStrict({
+    ParticipantRoleValueSet_ClinicalPharmacologist: new Coding({
         code: "310173006",
         display: "Clinical pharmacologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PrivateDoctor: Coding.FromStrict({
+    ParticipantRoleValueSet_PrivateDoctor: new Coding({
         code: "310174000",
         display: "Private doctor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AgencyNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_AgencyNurse: new Coding({
         code: "310175004",
         display: "Agency nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_BehavioralTherapistNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_BehavioralTherapistNurse: new Coding({
         code: "310176003",
         display: "Behavioral therapist nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CardiacRehabilitationNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_CardiacRehabilitationNurse: new Coding({
         code: "310177007",
         display: "Cardiac rehabilitation nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GenitourinaryNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_GenitourinaryNurse: new Coding({
         code: "310178002",
         display: "Genitourinary nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RheumatologyNurseSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_RheumatologyNurseSpecialist: new Coding({
         code: "310179005",
         display: "Rheumatology nurse specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ContinenceNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_ContinenceNurse: new Coding({
         code: "310180008",
         display: "Continence nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ContactTracingNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_ContactTracingNurse: new Coding({
         code: "310181007",
         display: "Contact tracing nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GeneralNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_GeneralNurse: new Coding({
         code: "310182000",
         display: "General nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NurseForTheMentallyHandicapped: Coding.FromStrict({
+    ParticipantRoleValueSet_NurseForTheMentallyHandicapped: new Coding({
         code: "310183005",
         display: "Nurse for the mentally handicapped",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LiaisonNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_LiaisonNurse: new Coding({
         code: "310184004",
         display: "Liaison nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DiabeticLiaisonNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_DiabeticLiaisonNurse: new Coding({
         code: "310185003",
         display: "Diabetic liaison nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NursePsychotherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_NursePsychotherapist: new Coding({
         code: "310186002",
         display: "Nurse psychotherapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CompanyNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_CompanyNurse: new Coding({
         code: "310187006",
         display: "Company nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HospitalMidwife: Coding.FromStrict({
+    ParticipantRoleValueSet_HospitalMidwife: new Coding({
         code: "310188001",
         display: "Hospital midwife",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GeneticCounselor: Coding.FromStrict({
+    ParticipantRoleValueSet_GeneticCounselor: new Coding({
         code: "310189009",
         display: "Genetic counselor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MentalHealthCounselor: Coding.FromStrict({
+    ParticipantRoleValueSet_MentalHealthCounselor: new Coding({
         code: "310190000",
         display: "Mental health counselor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ClinicalPsychologist: Coding.FromStrict({
+    ParticipantRoleValueSet_ClinicalPsychologist: new Coding({
         code: "310191001",
         display: "Clinical psychologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_EducationalPsychologist: Coding.FromStrict({
+    ParticipantRoleValueSet_EducationalPsychologist: new Coding({
         code: "310192008",
         display: "Educational psychologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Coroner: Coding.FromStrict({
+    ParticipantRoleValueSet_Coroner: new Coding({
         code: "310193003",
         display: "Coroner",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ApplianceOfficer: Coding.FromStrict({
+    ParticipantRoleValueSet_ApplianceOfficer: new Coding({
         code: "310194009",
         display: "Appliance officer",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MedicalOncologist: Coding.FromStrict({
+    ParticipantRoleValueSet_MedicalOncologist: new Coding({
         code: "310512001",
         display: "Medical oncologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Graduate: Coding.FromStrict({
+    ParticipantRoleValueSet_Graduate: new Coding({
         code: "310543008",
         display: "Graduate",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SchoolMedicalOfficer: Coding.FromStrict({
+    ParticipantRoleValueSet_SchoolMedicalOfficer: new Coding({
         code: "311441001",
         display: "School medical officer",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_IntegratedMidwife: Coding.FromStrict({
+    ParticipantRoleValueSet_IntegratedMidwife: new Coding({
         code: "312485001",
         display: "Integrated midwife",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_IdenticalTwin: Coding.FromStrict({
+    ParticipantRoleValueSet_IdenticalTwin: new Coding({
         code: "313415001",
         display: "Identical twin",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HeterozygousTwin: Coding.FromStrict({
+    ParticipantRoleValueSet_HeterozygousTwin: new Coding({
         code: "313416000",
         display: "Heterozygous twin",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Parachutist: Coding.FromStrict({
+    ParticipantRoleValueSet_Parachutist: new Coding({
         code: "314712007",
         display: "Parachutist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_BirdFancier: Coding.FromStrict({
+    ParticipantRoleValueSet_BirdFancier: new Coding({
         code: "314767008",
         display: "Bird fancier",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AdoptiveGrandmother: Coding.FromStrict({
+    ParticipantRoleValueSet_AdoptiveGrandmother: new Coding({
         code: "31656007",
         display: "Adoptive grandmother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_IndependentHealthCareFacility: Coding.FromStrict({
+    ParticipantRoleValueSet_IndependentHealthCareFacility: new Coding({
         code: "317817411000087104",
         display: "Independent health care facility",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FosterDaughter: Coding.FromStrict({
+    ParticipantRoleValueSet_FosterDaughter: new Coding({
         code: "31831004",
         display: "Foster daughter",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GreatGrandparent: Coding.FromStrict({
+    ParticipantRoleValueSet_GreatGrandparent: new Coding({
         code: "33969000",
         display: "Great-grandparent",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Man: Coding.FromStrict({
+    ParticipantRoleValueSet_Man: new Coding({
         code: "339947000",
         display: "Man",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PediatricRadiologist: Coding.FromStrict({
+    ParticipantRoleValueSet_PediatricRadiologist: new Coding({
         code: "341320851000087105",
         display: "Pediatric radiologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OldestDaughter: Coding.FromStrict({
+    ParticipantRoleValueSet_OldestDaughter: new Coding({
         code: "3425009",
         display: "Oldest daughter",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RadiationTherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_RadiationTherapist: new Coding({
         code: "3430008",
         display: "Radiation therapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Niece: Coding.FromStrict({
+    ParticipantRoleValueSet_Niece: new Coding({
         code: "34581001",
         display: "Niece",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Grandfather: Coding.FromStrict({
+    ParticipantRoleValueSet_Grandfather: new Coding({
         code: "34871008",
         display: "Grandfather",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OnlyDaughter: Coding.FromStrict({
+    ParticipantRoleValueSet_OnlyDaughter: new Coding({
         code: "34972000",
         display: "Only daughter",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthRegulatoryBodyForOccupationalTherapists: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthRegulatoryBodyForOccupationalTherapists: new Coding({
         code: "357174231000087105",
         display: "Health regulatory body for occupational therapists",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Bum: Coding.FromStrict({
+    ParticipantRoleValueSet_Bum: new Coding({
         code: "360852005",
         display: "Bum",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Beggar: Coding.FromStrict({
+    ParticipantRoleValueSet_Beggar: new Coding({
         code: "360863008",
         display: "Beggar",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HasidicJewFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_HasidicJewFollowerOfReligion: new Coding({
         code: "360984002",
         display: "Hasidic Jew, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SikhFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_SikhFollowerOfReligion: new Coding({
         code: "366740002",
         display: "Sikh, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PTPhysiotherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_PTPhysiotherapist: new Coding({
         code: "36682004",
         display: "PT - Physiotherapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_EmergencyMedicineSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_EmergencyMedicineSpecialist: new Coding({
         code: "368890881000087105",
         display: "Emergency medicine specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthRegulatoryBodyForPhysiotherapists: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthRegulatoryBodyForPhysiotherapists: new Coding({
         code: "371439331000087102",
         display: "Health regulatory body for physiotherapists",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Periodontist: Coding.FromStrict({
+    ParticipantRoleValueSet_Periodontist: new Coding({
         code: "37154003",
         display: "Periodontist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RNFirstAssist: Coding.FromStrict({
+    ParticipantRoleValueSet_RNFirstAssist: new Coding({
         code: "372102007",
         display: "RN First Assist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Outpatient: Coding.FromStrict({
+    ParticipantRoleValueSet_Outpatient: new Coding({
         code: "373864002",
         display: "Outpatient",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OrphanChild: Coding.FromStrict({
+    ParticipantRoleValueSet_OrphanChild: new Coding({
         code: "373929005",
         display: "Orphan child",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Sibling: Coding.FromStrict({
+    ParticipantRoleValueSet_Sibling: new Coding({
         code: "375005",
         display: "Sibling",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Orthodontist: Coding.FromStrict({
+    ParticipantRoleValueSet_Orthodontist: new Coding({
         code: "37504001",
         display: "Orthodontist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Uncle: Coding.FromStrict({
+    ParticipantRoleValueSet_Uncle: new Coding({
         code: "38048003",
         display: "Uncle",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OldestSon: Coding.FromStrict({
+    ParticipantRoleValueSet_OldestSon: new Coding({
         code: "38248007",
         display: "Oldest son",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FosterMother: Coding.FromStrict({
+    ParticipantRoleValueSet_FosterMother: new Coding({
         code: "38265003",
         display: "Foster mother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Grandparent: Coding.FromStrict({
+    ParticipantRoleValueSet_Grandparent: new Coding({
         code: "38312007",
         display: "Grandparent",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Chiropractor: Coding.FromStrict({
+    ParticipantRoleValueSet_Chiropractor: new Coding({
         code: "3842006",
         display: "Chiropractor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SurrogateDaughter: Coding.FromStrict({
+    ParticipantRoleValueSet_SurrogateDaughter: new Coding({
         code: "3851003",
         display: "Surrogate daughter",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Individual: Coding.FromStrict({
+    ParticipantRoleValueSet_Individual: new Coding({
         code: "385435006",
         display: "Individual",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Optician: Coding.FromStrict({
+    ParticipantRoleValueSet_Optician: new Coding({
         code: "387619007",
         display: "Optician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FosterChild: Coding.FromStrict({
+    ParticipantRoleValueSet_FosterChild: new Coding({
         code: "39062003",
         display: "Foster child",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AsylumSeeker: Coding.FromStrict({
+    ParticipantRoleValueSet_AsylumSeeker: new Coding({
         code: "390790000",
         display: "Asylum seeker",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthRegulatoryBodyForDentalHygienists: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthRegulatoryBodyForDentalHygienists: new Coding({
         code: "392685081000087107",
         display: "Health regulatory body for dental hygienists",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GreatGrandson: Coding.FromStrict({
+    ParticipantRoleValueSet_GreatGrandson: new Coding({
         code: "394566006",
         display: "Great-grandson",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GreatGranddaughter: Coding.FromStrict({
+    ParticipantRoleValueSet_GreatGranddaughter: new Coding({
         code: "394567002",
         display: "Great-granddaughter",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ExtendedFamilyMember: Coding.FromStrict({
+    ParticipantRoleValueSet_ExtendedFamilyMember: new Coding({
         code: "394568007",
         display: "Extended family member",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Employer: Coding.FromStrict({
+    ParticipantRoleValueSet_Employer: new Coding({
         code: "394571004",
         display: "Employer",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MedicalSecretary: Coding.FromStrict({
+    ParticipantRoleValueSet_MedicalSecretary: new Coding({
         code: "394572006",
         display: "Medical secretary",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HospitalNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_HospitalNurse: new Coding({
         code: "394618009",
         display: "Hospital nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Guardian: Coding.FromStrict({
+    ParticipantRoleValueSet_Guardian: new Coding({
         code: "394619001",
         display: "Guardian",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OtherRelatedPersons: Coding.FromStrict({
+    ParticipantRoleValueSet_OtherRelatedPersons: new Coding({
         code: "394738000",
         display: "Other related persons",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GeneralPracticeOrganisation: Coding.FromStrict({
+    ParticipantRoleValueSet_GeneralPracticeOrganisation: new Coding({
         code: "394745000",
         display: "General practice (organisation)",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RegionalOffice: Coding.FromStrict({
+    ParticipantRoleValueSet_RegionalOffice: new Coding({
         code: "394746004",
         display: "Regional office",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthAuthority: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthAuthority: new Coding({
         code: "394747008",
         display: "Health Authority",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PrimaryCareGroup: Coding.FromStrict({
+    ParticipantRoleValueSet_PrimaryCareGroup: new Coding({
         code: "394748003",
         display: "Primary Care Group",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PrimaryCareTrust: Coding.FromStrict({
+    ParticipantRoleValueSet_PrimaryCareTrust: new Coding({
         code: "394749006",
         display: "Primary Care Trust",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SpecialHealthAuthority: Coding.FromStrict({
+    ParticipantRoleValueSet_SpecialHealthAuthority: new Coding({
         code: "394751005",
         display: "Special Health Authority",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HospiceIndependent: Coding.FromStrict({
+    ParticipantRoleValueSet_HospiceIndependent: new Coding({
         code: "394757009",
         display: "Hospice - independent",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_IndependentProvider: Coding.FromStrict({
+    ParticipantRoleValueSet_IndependentProvider: new Coding({
         code: "394758004",
         display: "Independent provider",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GPPractice: Coding.FromStrict({
+    ParticipantRoleValueSet_GPPractice: new Coding({
         code: "394760002",
         display: "GP practice",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GDPPractice: Coding.FromStrict({
+    ParticipantRoleValueSet_GDPPractice: new Coding({
         code: "394762005",
         display: "GDP practice",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MoDPractice: Coding.FromStrict({
+    ParticipantRoleValueSet_MoDPractice: new Coding({
         code: "394763000",
         display: "MoD practice",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MoDHospital: Coding.FromStrict({
+    ParticipantRoleValueSet_MoDHospital: new Coding({
         code: "394764006",
         display: "MoD hospital",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PrisonPractice: Coding.FromStrict({
+    ParticipantRoleValueSet_PrisonPractice: new Coding({
         code: "394765007",
         display: "Prison practice",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ImmediateFamilyMember: Coding.FromStrict({
+    ParticipantRoleValueSet_ImmediateFamilyMember: new Coding({
         code: "394854006",
         display: "Immediate family member",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NonImmediateFamilyMember: Coding.FromStrict({
+    ParticipantRoleValueSet_NonImmediateFamilyMember: new Coding({
         code: "394855007",
         display: "Non-immediate family member",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PaternalGrandFather: Coding.FromStrict({
+    ParticipantRoleValueSet_PaternalGrandFather: new Coding({
         code: "394856008",
         display: "Paternal grand-father",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MaternalGrandFather: Coding.FromStrict({
+    ParticipantRoleValueSet_MaternalGrandFather: new Coding({
         code: "394857004",
         display: "Maternal grand-father",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PaternalGrandMother: Coding.FromStrict({
+    ParticipantRoleValueSet_PaternalGrandMother: new Coding({
         code: "394858009",
         display: "Paternal grand-mother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MaternalGrandMother: Coding.FromStrict({
+    ParticipantRoleValueSet_MaternalGrandMother: new Coding({
         code: "394859001",
         display: "Maternal grand-mother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DistantRelative: Coding.FromStrict({
+    ParticipantRoleValueSet_DistantRelative: new Coding({
         code: "394860006",
         display: "Distant relative",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GreatUncle: Coding.FromStrict({
+    ParticipantRoleValueSet_GreatUncle: new Coding({
         code: "394861005",
         display: "Great-uncle",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GreatAunt: Coding.FromStrict({
+    ParticipantRoleValueSet_GreatAunt: new Coding({
         code: "394862003",
         display: "Great-aunt",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NonFamilyMember: Coding.FromStrict({
+    ParticipantRoleValueSet_NonFamilyMember: new Coding({
         code: "394863008",
         display: "Non-family member",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Cohabitee: Coding.FromStrict({
+    ParticipantRoleValueSet_Cohabitee: new Coding({
         code: "394921008",
         display: "Cohabitee",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PaternalCousin: Coding.FromStrict({
+    ParticipantRoleValueSet_PaternalCousin: new Coding({
         code: "396762341000087100",
         display: "Paternal cousin",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_InternalMedicineSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_InternalMedicineSpecialist: new Coding({
         code: "39677007",
         display: "Internal medicine specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ConsultantAnesthetist: Coding.FromStrict({
+    ParticipantRoleValueSet_ConsultantAnesthetist: new Coding({
         code: "397824005",
         display: "Consultant anesthetist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Paramedic: Coding.FromStrict({
+    ParticipantRoleValueSet_Paramedic: new Coding({
         code: "397897005",
         display: "Paramedic",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_StaffGradeObstetrician: Coding.FromStrict({
+    ParticipantRoleValueSet_StaffGradeObstetrician: new Coding({
         code: "397903001",
         display: "Staff grade obstetrician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_StaffGradePractitioner: Coding.FromStrict({
+    ParticipantRoleValueSet_StaffGradePractitioner: new Coding({
         code: "397908005",
         display: "Staff grade practitioner",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NurseComplexCaseManager: Coding.FromStrict({
+    ParticipantRoleValueSet_NurseComplexCaseManager: new Coding({
         code: "3981000175106",
         display: "Nurse complex case manager",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MedicalStudent: Coding.FromStrict({
+    ParticipantRoleValueSet_MedicalStudent: new Coding({
         code: "398130009",
         display: "Medical student",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_QualityImprovementTemplateTaskForce: Coding.FromStrict({
+    ParticipantRoleValueSet_QualityImprovementTemplateTaskForce: new Coding({
         code: "398154004",
         display: "Quality Improvement Template Task Force",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ActingObstetricRegistrar: Coding.FromStrict({
+    ParticipantRoleValueSet_ActingObstetricRegistrar: new Coding({
         code: "398238009",
         display: "Acting obstetric registrar",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AssociationOfAnesthesiaClinicalDirectors: Coding.FromStrict({
+    ParticipantRoleValueSet_AssociationOfAnesthesiaClinicalDirectors: new Coding({
         code: "398255008",
         display: "Association of anesthesia clinical directors",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FamilyMedicineSpecialistPalliativeCare: Coding.FromStrict({
+    ParticipantRoleValueSet_FamilyMedicineSpecialistPalliativeCare: new Coding({
         code: "398480381000087106",
         display: "Family medicine specialist - palliative care",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PaternalGreatGrandFather: Coding.FromStrict({
+    ParticipantRoleValueSet_PaternalGreatGrandFather: new Coding({
         code: "398524981000087101",
         display: "Paternal great grand-father",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DietitianGeneral: Coding.FromStrict({
+    ParticipantRoleValueSet_DietitianGeneral: new Coding({
         code: "40127002",
         display: "Dietitian (general)",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Hematologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Hematologist: new Coding({
         code: "40204001",
         display: "Hematologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PhysiotherapistTechnicalInstructor: Coding.FromStrict({
+    ParticipantRoleValueSet_PhysiotherapistTechnicalInstructor: new Coding({
         code: "404940000",
         display: "Physiotherapist technical instructor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ResidentPhysician: Coding.FromStrict({
+    ParticipantRoleValueSet_ResidentPhysician: new Coding({
         code: "405277009",
         display: "Resident physician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CertifiedRegisteredNurseAnesthetist: Coding.FromStrict({
+    ParticipantRoleValueSet_CertifiedRegisteredNurseAnesthetist: new Coding({
         code: "405278004",
         display: "Certified registered nurse anesthetist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AttendingPhysician: Coding.FromStrict({
+    ParticipantRoleValueSet_AttendingPhysician: new Coding({
         code: "405279007",
         display: "Attending physician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AssignedPractitioner: Coding.FromStrict({
+    ParticipantRoleValueSet_AssignedPractitioner: new Coding({
         code: "405623001",
         display: "Assigned practitioner",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ProfessionalInitiatingSurgicalCase: Coding.FromStrict({
+    ParticipantRoleValueSet_ProfessionalInitiatingSurgicalCase: new Coding({
         code: "405684005",
         display: "Professional initiating surgical case",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ProfessionalProvidingStaffReliefDuringSurgicalProcedure: Coding.FromStrict({
+    ParticipantRoleValueSet_ProfessionalProvidingStaffReliefDuringSurgicalProcedure: new Coding({
         code: "405685006",
         display: "Professional providing staff relief during surgical procedure",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Interpreter: Coding.FromStrict({
+    ParticipantRoleValueSet_Interpreter: new Coding({
         code: "40570005",
         display: "Interpreter",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Parent: Coding.FromStrict({
+    ParticipantRoleValueSet_Parent: new Coding({
         code: "40683002",
         display: "Parent",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_InformalCarer: Coding.FromStrict({
+    ParticipantRoleValueSet_InformalCarer: new Coding({
         code: "407542009",
         display: "Informal carer",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PrimaryCarer: Coding.FromStrict({
+    ParticipantRoleValueSet_PrimaryCarer: new Coding({
         code: "407543004",
         display: "Primary carer",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ConsultantPediatrician: Coding.FromStrict({
+    ParticipantRoleValueSet_ConsultantPediatrician: new Coding({
         code: "408798009",
         display: "Consultant pediatrician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ConsultantNeonatologist: Coding.FromStrict({
+    ParticipantRoleValueSet_ConsultantNeonatologist: new Coding({
         code: "408799001",
         display: "Consultant neonatologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthEducator: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthEducator: new Coding({
         code: "409974004",
         display: "Health educator",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CertifiedHealthEducationSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_CertifiedHealthEducationSpecialist: new Coding({
         code: "409975003",
         display: "Certified health education specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SurrogateSon: Coding.FromStrict({
+    ParticipantRoleValueSet_SurrogateSon: new Coding({
         code: "41057000",
         display: "Surrogate son",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PersonCategorizedByReligiousAffiliation: Coding.FromStrict({
+    ParticipantRoleValueSet_PersonCategorizedByReligiousAffiliation: new Coding({
         code: "410597007",
         display: "Person categorized by religious affiliation",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PersonCategorizedByAge: Coding.FromStrict({
+    ParticipantRoleValueSet_PersonCategorizedByAge: new Coding({
         code: "410598002",
         display: "Person categorized by age",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Minor: Coding.FromStrict({
+    ParticipantRoleValueSet_Minor: new Coding({
         code: "410599005",
         display: "Minor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PreTeen: Coding.FromStrict({
+    ParticipantRoleValueSet_PreTeen: new Coding({
         code: "410600008",
         display: "Pre-teen",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Child: Coding.FromStrict({
+    ParticipantRoleValueSet_Child: new Coding({
         code: "410601007",
         display: "Child",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PreschoolChild: Coding.FromStrict({
+    ParticipantRoleValueSet_PreschoolChild: new Coding({
         code: "410602000",
         display: "Preschool child",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PersonInTheLegalEnvironment: Coding.FromStrict({
+    ParticipantRoleValueSet_PersonInTheLegalEnvironment: new Coding({
         code: "410603005",
         display: "Person in the legal environment",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SubjectOfRecord: Coding.FromStrict({
+    ParticipantRoleValueSet_SubjectOfRecord: new Coding({
         code: "410604004",
         display: "Subject of record",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_StudentInFullTimeEducation: Coding.FromStrict({
+    ParticipantRoleValueSet_StudentInFullTimeEducation: new Coding({
         code: "413327003",
         display: "Student in full time education",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CirculatingNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_CirculatingNurse: new Coding({
         code: "413854007",
         display: "Circulating nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DomesticPartner: Coding.FromStrict({
+    ParticipantRoleValueSet_DomesticPartner: new Coding({
         code: "414043009",
         display: "Domestic partner",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PerioperativeNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_PerioperativeNurse: new Coding({
         code: "415075003",
         display: "Perioperative nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ScrubNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_ScrubNurse: new Coding({
         code: "415506007",
         display: "Scrub nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PrimaryScreener: Coding.FromStrict({
+    ParticipantRoleValueSet_PrimaryScreener: new Coding({
         code: "416034003",
         display: "Primary screener",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SecondaryScreener: Coding.FromStrict({
+    ParticipantRoleValueSet_SecondaryScreener: new Coding({
         code: "416035002",
         display: "Secondary screener",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FellowOfAmericanAcademyOfOsteopathy: Coding.FromStrict({
+    ParticipantRoleValueSet_FellowOfAmericanAcademyOfOsteopathy: new Coding({
         code: "416160000",
         display: "Fellow of American Academy of Osteopathy",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SurgicalOncologist: Coding.FromStrict({
+    ParticipantRoleValueSet_SurgicalOncologist: new Coding({
         code: "416186861000087101",
         display: "Surgical oncologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DentalAssistant: Coding.FromStrict({
+    ParticipantRoleValueSet_DentalAssistant: new Coding({
         code: "4162009",
         display: "Dental assistant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FamilyReunionImmigrant: Coding.FromStrict({
+    ParticipantRoleValueSet_FamilyReunionImmigrant: new Coding({
         code: "416625007",
         display: "Family reunion immigrant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RespiratoryPhysician: Coding.FromStrict({
+    ParticipantRoleValueSet_RespiratoryPhysician: new Coding({
         code: "41672002",
         display: "Respiratory physician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Inpatient: Coding.FromStrict({
+    ParticipantRoleValueSet_Inpatient: new Coding({
         code: "416800000",
         display: "Inpatient",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LegalSon: Coding.FromStrict({
+    ParticipantRoleValueSet_LegalSon: new Coding({
         code: "41795004",
         display: "Legal son",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_InfantChild: Coding.FromStrict({
+    ParticipantRoleValueSet_InfantChild: new Coding({
         code: "418119000",
         display: "Infant child",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MedicalXRayTechnician: Coding.FromStrict({
+    ParticipantRoleValueSet_MedicalXRayTechnician: new Coding({
         code: "41904004",
         display: "Medical X-ray technician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SubjectOfRecordOrOtherProviderOfHistory: Coding.FromStrict({
+    ParticipantRoleValueSet_SubjectOfRecordOrOtherProviderOfHistory: new Coding({
         code: "419358007",
         display: "Subject of record or other provider of history",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AdoptiveParent: Coding.FromStrict({
+    ParticipantRoleValueSet_AdoptiveParent: new Coding({
         code: "41953004",
         display: "Adoptive parent",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ProviderOfHistoryOtherThanSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_ProviderOfHistoryOtherThanSubject: new Coding({
         code: "420058008",
         display: "Provider of history other than subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PerformerOfMethod: Coding.FromStrict({
+    ParticipantRoleValueSet_PerformerOfMethod: new Coding({
         code: "420158005",
         display: "Performer of method",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthRegulatoryBodyForMassageTherapists: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthRegulatoryBodyForMassageTherapists: new Coding({
         code: "420314821000087103",
         display: "Health regulatory body for massage therapists",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OculoplasticSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_OculoplasticSurgeon: new Coding({
         code: "420409002",
         display: "Oculoplastic surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RetinalSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_RetinalSurgeon: new Coding({
         code: "420678001",
         display: "Retinal surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AdmittingPhysician: Coding.FromStrict({
+    ParticipantRoleValueSet_AdmittingPhysician: new Coding({
         code: "421841007",
         display: "Admitting physician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MedicalOphthalmologist: Coding.FromStrict({
+    ParticipantRoleValueSet_MedicalOphthalmologist: new Coding({
         code: "422140007",
         display: "Medical ophthalmologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Ophthalmologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Ophthalmologist: new Coding({
         code: "422234006",
         display: "Ophthalmologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Neighbor: Coding.FromStrict({
+    ParticipantRoleValueSet_Neighbor: new Coding({
         code: "427568008",
         display: "Neighbor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ElimPentecostalistFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_ElimPentecostalistFollowerOfReligion: new Coding({
         code: "427729003",
         display: "Elim Pentecostalist, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LiberalJew: Coding.FromStrict({
+    ParticipantRoleValueSet_LiberalJew: new Coding({
         code: "427754003",
         display: "Liberal Jew",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LutheranFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_LutheranFollowerOfReligion: new Coding({
         code: "427755002",
         display: "Lutheran, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CongregationalistFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_CongregationalistFollowerOfReligion: new Coding({
         code: "427874000",
         display: "Congregationalist, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HarediJew: Coding.FromStrict({
+    ParticipantRoleValueSet_HarediJew: new Coding({
         code: "427950002",
         display: "Haredi Jew",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AdvaitinHinduFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_AdvaitinHinduFollowerOfReligion: new Coding({
         code: "427963008",
         display: "Advaitin Hindu, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ZenBuddhist: Coding.FromStrict({
+    ParticipantRoleValueSet_ZenBuddhist: new Coding({
         code: "427981006",
         display: "Zen Buddhist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ClinicalTrialParticipant: Coding.FromStrict({
+    ParticipantRoleValueSet_ClinicalTrialParticipant: new Coding({
         code: "428024001",
         display: "Clinical trial participant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AnabaptistFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_AnabaptistFollowerOfReligion: new Coding({
         code: "428315004",
         display: "Anabaptist, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AryaSamajHindu: Coding.FromStrict({
+    ParticipantRoleValueSet_AryaSamajHindu: new Coding({
         code: "428347009",
         display: "Arya Samaj Hindu",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CopticOrthodoxFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_CopticOrthodoxFollowerOfReligion: new Coding({
         code: "428373004",
         display: "Coptic Orthodox, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_EasternCatholic: Coding.FromStrict({
+    ParticipantRoleValueSet_EasternCatholic: new Coding({
         code: "428376007",
         display: "Eastern Catholic",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_EthiopianOrthodoxTewahedoFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_EthiopianOrthodoxTewahedoFollowerOfReligion: new Coding({
         code: "428378008",
         display: "Ethiopian Orthodox Tewahedo, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TheravadaBuddhist: Coding.FromStrict({
+    ParticipantRoleValueSet_TheravadaBuddhist: new Coding({
         code: "428407001",
         display: "Theravada Buddhist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Wiccan: Coding.FromStrict({
+    ParticipantRoleValueSet_Wiccan: new Coding({
         code: "428408006",
         display: "Wiccan",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ShaktiHindu: Coding.FromStrict({
+    ParticipantRoleValueSet_ShaktiHindu: new Coding({
         code: "428410008",
         display: "Shakti Hindu",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TibetanBuddhistFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_TibetanBuddhistFollowerOfReligion: new Coding({
         code: "428496003",
         display: "Tibetan Buddhist, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OrthodoxChristian: Coding.FromStrict({
+    ParticipantRoleValueSet_OrthodoxChristian: new Coding({
         code: "428503004",
         display: "Orthodox Christian",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ChristianSpiritualistFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_ChristianSpiritualistFollowerOfReligion: new Coding({
         code: "428504005",
         display: "Christian Spiritualist, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DruidFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_DruidFollowerOfReligion: new Coding({
         code: "428506007",
         display: "Druid, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SmartaHindu: Coding.FromStrict({
+    ParticipantRoleValueSet_SmartaHindu: new Coding({
         code: "428620006",
         display: "Smarta Hindu",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NichirenBuddhist: Coding.FromStrict({
+    ParticipantRoleValueSet_NichirenBuddhist: new Coding({
         code: "428666001",
         display: "Nichiren Buddhist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CaseContact: Coding.FromStrict({
+    ParticipantRoleValueSet_CaseContact: new Coding({
         code: "428792000",
         display: "Case contact",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_IsmailiMuslim: Coding.FromStrict({
+    ParticipantRoleValueSet_IsmailiMuslim: new Coding({
         code: "428801007",
         display: "Ismaili Muslim",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AhmadiFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_AhmadiFollowerOfReligion: new Coding({
         code: "428815009",
         display: "Ahmadi, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ArmenianCatholic: Coding.FromStrict({
+    ParticipantRoleValueSet_ArmenianCatholic: new Coding({
         code: "428816005",
         display: "Armenian Catholic",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PureLandBuddhistFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_PureLandBuddhistFollowerOfReligion: new Coding({
         code: "428820009",
         display: "Pure Land Buddhist, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SeventhDayAdventist: Coding.FromStrict({
+    ParticipantRoleValueSet_SeventhDayAdventist: new Coding({
         code: "428821008",
         display: "Seventh Day Adventist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GreekOrthodox: Coding.FromStrict({
+    ParticipantRoleValueSet_GreekOrthodox: new Coding({
         code: "429158002",
         display: "Greek Orthodox",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Spiritualist: Coding.FromStrict({
+    ParticipantRoleValueSet_Spiritualist: new Coding({
         code: "429171004",
         display: "Spiritualist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ShivaHinduFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_ShivaHinduFollowerOfReligion: new Coding({
         code: "429379008",
         display: "Shiva Hindu, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ReformJewFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_ReformJewFollowerOfReligion: new Coding({
         code: "429509008",
         display: "Reform Jew, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_VaishnavaHindu: Coding.FromStrict({
+    ParticipantRoleValueSet_VaishnavaHindu: new Coding({
         code: "429511004",
         display: "Vaishnava Hindu",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NewKadampaTraditionBuddhist: Coding.FromStrict({
+    ParticipantRoleValueSet_NewKadampaTraditionBuddhist: new Coding({
         code: "429527006",
         display: "New Kadampa Tradition Buddhist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MahayanaBuddhist: Coding.FromStrict({
+    ParticipantRoleValueSet_MahayanaBuddhist: new Coding({
         code: "429533002",
         display: "Mahayana Buddhist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MasortiJewFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_MasortiJewFollowerOfReligion: new Coding({
         code: "429534008",
         display: "Masorti Jew, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Calvinist: Coding.FromStrict({
+    ParticipantRoleValueSet_Calvinist: new Coding({
         code: "429539003",
         display: "Calvinist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TaoistFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_TaoistFollowerOfReligion: new Coding({
         code: "429543004",
         display: "Taoist, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RussianOrthodoxFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_RussianOrthodoxFollowerOfReligion: new Coding({
         code: "429544005",
         display: "Russian Orthodox, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SanatanaDharmaFollower: Coding.FromStrict({
+    ParticipantRoleValueSet_SanatanaDharmaFollower: new Coding({
         code: "429545006",
         display: "Sanatana Dharma follower",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Shinto: Coding.FromStrict({
+    ParticipantRoleValueSet_Shinto: new Coding({
         code: "429547003",
         display: "Shinto",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PatientAdvocate: Coding.FromStrict({
+    ParticipantRoleValueSet_PatientAdvocate: new Coding({
         code: "429577009",
         display: "Patient advocate",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OrthodoxJewFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_OrthodoxJewFollowerOfReligion: new Coding({
         code: "429644000",
         display: "Orthodox Jew, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_UnitarianFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_UnitarianFollowerOfReligion: new Coding({
         code: "429708003",
         display: "Unitarian, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_BahaQuoteI: Coding.FromStrict({
+    ParticipantRoleValueSet_BahaQuoteI: new Coding({
         code: "429732005",
         display: "Baha'i",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_JainFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_JainFollowerOfReligion: new Coding({
         code: "429787006",
         display: "Jain, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ZoroastrianFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_ZoroastrianFollowerOfReligion: new Coding({
         code: "429790000",
         display: "Zoroastrian, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DonorForIntestineTransplant: Coding.FromStrict({
+    ParticipantRoleValueSet_DonorForIntestineTransplant: new Coding({
         code: "430098004",
         display: "Donor for intestine transplant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_WholeBloodDonor: Coding.FromStrict({
+    ParticipantRoleValueSet_WholeBloodDonor: new Coding({
         code: "430101000",
         display: "Whole blood donor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_StemCellDonor: Coding.FromStrict({
+    ParticipantRoleValueSet_StemCellDonor: new Coding({
         code: "430792005",
         display: "Stem cell donor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_EggDonor: Coding.FromStrict({
+    ParticipantRoleValueSet_EggDonor: new Coding({
         code: "430882007",
         display: "Egg donor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FemaleChild: Coding.FromStrict({
+    ParticipantRoleValueSet_FemaleChild: new Coding({
         code: "431549007",
         display: "Female child",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthCoach: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthCoach: new Coding({
         code: "432100008",
         display: "Health coach",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_JurisdictionalHealthNumber: Coding.FromStrict({
+    ParticipantRoleValueSet_JurisdictionalHealthNumber: new Coding({
         code: "432233171000087103",
         display: "Jurisdictional health number",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Boy: Coding.FromStrict({
+    ParticipantRoleValueSet_Boy: new Coding({
         code: "433152004",
         display: "Boy",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HumanOocyteDonorAge35AndOlder: Coding.FromStrict({
+    ParticipantRoleValueSet_HumanOocyteDonorAge35AndOlder: new Coding({
         code: "433475001",
         display: "Human oocyte donor, age 35 and older",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OccupationalHealthNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_OccupationalHealthNurse: new Coding({
         code: "43702002",
         display: "Occupational health nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ProvincialAndOrTerritorialGovernmentPlanOutOfJurisdiction: Coding.FromStrict({
+    ParticipantRoleValueSet_ProvincialAndOrTerritorialGovernmentPlanOutOfJurisdiction: new Coding({
         code: "437208901000087109",
         display: "Provincial and/or territorial government plan - out of jurisdiction",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PersonCategorizedByAffiliationWithBeliefSystem: Coding.FromStrict({
+    ParticipantRoleValueSet_PersonCategorizedByAffiliationWithBeliefSystem: new Coding({
         code: "438347000",
         display: "Person categorized by affiliation with belief system",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ProviderNumberIssuedByThirdParty: Coding.FromStrict({
+    ParticipantRoleValueSet_ProviderNumberIssuedByThirdParty: new Coding({
         code: "439182891000087102",
         display: "Provider number issued by third party",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthRegulatoryBodyForPhysiciansAndSurgeons: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthRegulatoryBodyForPhysiciansAndSurgeons: new Coding({
         code: "441144831000087108",
         display: "Health regulatory body for physicians and surgeons",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SpermDonor: Coding.FromStrict({
+    ParticipantRoleValueSet_SpermDonor: new Coding({
         code: "441463002",
         display: "Sperm donor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_StrangerIsSpermDonorForArtificialInsemination: Coding.FromStrict({
+    ParticipantRoleValueSet_StrangerIsSpermDonorForArtificialInsemination: new Coding({
         code: "441465009",
         display: "Stranger is sperm donor for artificial insemination",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_UnrelatedKnownSpermDonorForArtificialInsemination: Coding.FromStrict({
+    ParticipantRoleValueSet_UnrelatedKnownSpermDonorForArtificialInsemination: new Coding({
         code: "441468006",
         display: "Unrelated known sperm donor for artificial insemination",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Granddaughter: Coding.FromStrict({
+    ParticipantRoleValueSet_Granddaughter: new Coding({
         code: "44181008",
         display: "Granddaughter",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RespiratoryTherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_RespiratoryTherapist: new Coding({
         code: "442867008",
         display: "Respiratory therapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PodiatricSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_PodiatricSurgeon: new Coding({
         code: "443090005",
         display: "Podiatric surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MinistryOfHealth: Coding.FromStrict({
+    ParticipantRoleValueSet_MinistryOfHealth: new Coding({
         code: "443470051000087109",
         display: "Ministry of health",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LegalSibling: Coding.FromStrict({
+    ParticipantRoleValueSet_LegalSibling: new Coding({
         code: "444000",
         display: "Legal sibling",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PersonWithCharacteristicRelatedToSubjectOfRecord: Coding.FromStrict({
+    ParticipantRoleValueSet_PersonWithCharacteristicRelatedToSubjectOfRecord: new Coding({
         code: "444018008",
         display: "Person with characteristic related to subject of record",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SpouseOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_SpouseOfSubject: new Coding({
         code: "444052006",
         display: "Spouse of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HusbandOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_HusbandOfSubject: new Coding({
         code: "444053001",
         display: "Husband of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_WifeOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_WifeOfSubject: new Coding({
         code: "444054007",
         display: "Wife of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_UncleOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_UncleOfSubject: new Coding({
         code: "444055008",
         display: "Uncle of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PartnerInRelationshipWithSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_PartnerInRelationshipWithSubject: new Coding({
         code: "444145006",
         display: "Partner in relationship with subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_BoyfriendOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_BoyfriendOfSubject: new Coding({
         code: "444146007",
         display: "Boyfriend of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GirlfriendOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_GirlfriendOfSubject: new Coding({
         code: "444147003",
         display: "Girlfriend of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PersonInFamilyOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_PersonInFamilyOfSubject: new Coding({
         code: "444148008",
         display: "Person in family of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Homemaker: Coding.FromStrict({
+    ParticipantRoleValueSet_Homemaker: new Coding({
         code: "444168002",
         display: "Homemaker",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HouseHusband: Coding.FromStrict({
+    ParticipantRoleValueSet_HouseHusband: new Coding({
         code: "444169005",
         display: "House husband",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AuntOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_AuntOfSubject: new Coding({
         code: "444191003",
         display: "Aunt of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ChildOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_ChildOfSubject: new Coding({
         code: "444192005",
         display: "Child of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FirstDegreeBloodRelativeOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_FirstDegreeBloodRelativeOfSubject: new Coding({
         code: "444193000",
         display: "First degree blood relative of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DaughterOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_DaughterOfSubject: new Coding({
         code: "444194006",
         display: "Daughter of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FriendOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_FriendOfSubject: new Coding({
         code: "444199001",
         display: "Friend of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CohabiteeInRelationshipWithSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_CohabiteeInRelationshipWithSubject: new Coding({
         code: "444210007",
         display: "Cohabitee in relationship with subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CommonLawHusbandOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_CommonLawHusbandOfSubject: new Coding({
         code: "444211006",
         display: "Common law husband of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CommonLawWifeOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_CommonLawWifeOfSubject: new Coding({
         code: "444212004",
         display: "Common law wife of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DomesticPartnerOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_DomesticPartnerOfSubject: new Coding({
         code: "444213009",
         display: "Domestic partner of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SonOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_SonOfSubject: new Coding({
         code: "444241008",
         display: "Son of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GrandparentOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_GrandparentOfSubject: new Coding({
         code: "444242001",
         display: "Grandparent of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MaternalGrandfatherOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_MaternalGrandfatherOfSubject: new Coding({
         code: "444243006",
         display: "Maternal grandfather of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MaternalGrandmotherOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_MaternalGrandmotherOfSubject: new Coding({
         code: "444244000",
         display: "Maternal grandmother of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FianceOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_FianceOfSubject: new Coding({
         code: "444278006",
         display: "Fiance of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FemaleFianceOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_FemaleFianceOfSubject: new Coding({
         code: "444279003",
         display: "Female fiance of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MaleFianceOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_MaleFianceOfSubject: new Coding({
         code: "444280000",
         display: "Male fiance of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PaternalGrandfatherOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_PaternalGrandfatherOfSubject: new Coding({
         code: "444292000",
         display: "Paternal grandfather of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PaternalGrandmotherOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_PaternalGrandmotherOfSubject: new Coding({
         code: "444293005",
         display: "Paternal grandmother of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ParentOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_ParentOfSubject: new Coding({
         code: "444294004",
         display: "Parent of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FatherOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_FatherOfSubject: new Coding({
         code: "444295003",
         display: "Father of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MotherOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_MotherOfSubject: new Coding({
         code: "444301002",
         display: "Mother of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SiblingOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_SiblingOfSubject: new Coding({
         code: "444302009",
         display: "Sibling of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_BrotherOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_BrotherOfSubject: new Coding({
         code: "444303004",
         display: "Brother of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SisterOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_SisterOfSubject: new Coding({
         code: "444304005",
         display: "Sister of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_RecipientOfBiologicalMaterialFromSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_RecipientOfBiologicalMaterialFromSubject: new Coding({
         code: "444464007",
         display: "Recipient of biological material from subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ApostolicPentecostalistFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_ApostolicPentecostalistFollowerOfReligion: new Coding({
         code: "444870008",
         display: "Apostolic Pentecostalist, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Hypnotherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_Hypnotherapist: new Coding({
         code: "444912007",
         display: "Hypnotherapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AsthmaNurseSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_AsthmaNurseSpecialist: new Coding({
         code: "445313000",
         display: "Asthma nurse specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NurseCaseManager: Coding.FromStrict({
+    ParticipantRoleValueSet_NurseCaseManager: new Coding({
         code: "445451001",
         display: "Nurse case manager",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PCPPrimaryCarePhysician: Coding.FromStrict({
+    ParticipantRoleValueSet_PCPPrimaryCarePhysician: new Coding({
         code: "446050000",
         display: "PCP - Primary care physician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PharmaceuticalAssistant: Coding.FromStrict({
+    ParticipantRoleValueSet_PharmaceuticalAssistant: new Coding({
         code: "44652006",
         display: "Pharmaceutical assistant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Refugee: Coding.FromStrict({
+    ParticipantRoleValueSet_Refugee: new Coding({
         code: "446654005",
         display: "Refugee",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AddictionMedicineSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_AddictionMedicineSpecialist: new Coding({
         code: "446701002",
         display: "Addiction medicine specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PAPhysicianAssistant: Coding.FromStrict({
+    ParticipantRoleValueSet_PAPhysicianAssistant: new Coding({
         code: "449161006",
         display: "PA - physician assistant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Acupuncturist: Coding.FromStrict({
+    ParticipantRoleValueSet_Acupuncturist: new Coding({
         code: "450044741000087104",
         display: "Acupuncturist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_InternationalStudent: Coding.FromStrict({
+    ParticipantRoleValueSet_InternationalStudent: new Coding({
         code: "450768005",
         display: "International student",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Masseur: Coding.FromStrict({
+    ParticipantRoleValueSet_Masseur: new Coding({
         code: "45419001",
         display: "Masseur",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Rheumatologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Rheumatologist: new Coding({
         code: "45440000",
         display: "Rheumatologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Neurosurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_Neurosurgeon: new Coding({
         code: "45544007",
         display: "Neurosurgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FirstCousin: Coding.FromStrict({
+    ParticipantRoleValueSet_FirstCousin: new Coding({
         code: "4577005",
         display: "First cousin",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HalfBrother: Coding.FromStrict({
+    ParticipantRoleValueSet_HalfBrother: new Coding({
         code: "45929001",
         display: "Half-brother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Sanitarian: Coding.FromStrict({
+    ParticipantRoleValueSet_Sanitarian: new Coding({
         code: "45956004",
         display: "Sanitarian",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NewBrunswickDepartmentOfHealth: Coding.FromStrict({
+    ParticipantRoleValueSet_NewBrunswickDepartmentOfHealth: new Coding({
         code: "460276491000087102",
         display: "New Brunswick Department of Health",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Pharmacist: Coding.FromStrict({
+    ParticipantRoleValueSet_Pharmacist: new Coding({
         code: "46255001",
         display: "Pharmacist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Stepsister: Coding.FromStrict({
+    ParticipantRoleValueSet_Stepsister: new Coding({
         code: "46363003",
         display: "Stepsister",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PediatricOrthopedicSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_PediatricOrthopedicSurgeon: new Coding({
         code: "465511991000087105",
         display: "Pediatric orthopedic surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MultiOrganDonor: Coding.FromStrict({
+    ParticipantRoleValueSet_MultiOrganDonor: new Coding({
         code: "471000122100",
         display: "Multi-organ donor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GovernmentMidwife: Coding.FromStrict({
+    ParticipantRoleValueSet_GovernmentMidwife: new Coding({
         code: "471302004",
         display: "Government midwife",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MaleCousin: Coding.FromStrict({
+    ParticipantRoleValueSet_MaleCousin: new Coding({
         code: "47801002",
         display: "Male cousin",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Acquaintance: Coding.FromStrict({
+    ParticipantRoleValueSet_Acquaintance: new Coding({
         code: "48385004",
         display: "Acquaintance",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AdoptiveChild: Coding.FromStrict({
+    ParticipantRoleValueSet_AdoptiveChild: new Coding({
         code: "48673000",
         display: "Adoptive child",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Philologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Philologist: new Coding({
         code: "48740002",
         display: "Philologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DispensingOptometrist: Coding.FromStrict({
+    ParticipantRoleValueSet_DispensingOptometrist: new Coding({
         code: "49203003",
         display: "Dispensing optometrist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PediatricHematologist: Coding.FromStrict({
+    ParticipantRoleValueSet_PediatricHematologist: new Coding({
         code: "494782281000087101",
         display: "Pediatric hematologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MaxillofacialSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_MaxillofacialSurgeon: new Coding({
         code: "49993003",
         display: "Maxillofacial surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_IdenticalTwinSister: Coding.FromStrict({
+    ParticipantRoleValueSet_IdenticalTwinSister: new Coding({
         code: "50058005",
         display: "Identical twin sister",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Endodontist: Coding.FromStrict({
+    ParticipantRoleValueSet_Endodontist: new Coding({
         code: "50149000",
         display: "Endodontist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GreatGrandfather: Coding.FromStrict({
+    ParticipantRoleValueSet_GreatGrandfather: new Coding({
         code: "50261002",
         display: "Great-grandfather",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SephardicJewFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_SephardicJewFollowerOfReligion: new Coding({
         code: "51616000",
         display: "Sephardic Jew, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NANursingAuxiliary: Coding.FromStrict({
+    ParticipantRoleValueSet_NANursingAuxiliary: new Coding({
         code: "5275007",
         display: "NA - Nursing auxiliary",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OlderSister: Coding.FromStrict({
+    ParticipantRoleValueSet_OlderSister: new Coding({
         code: "53201003",
         display: "Older sister",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AlbertaHealthAndWellness: Coding.FromStrict({
+    ParticipantRoleValueSet_AlbertaHealthAndWellness: new Coding({
         code: "539773351000087101",
         display: "Alberta Health and Wellness",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Trustee: Coding.FromStrict({
+    ParticipantRoleValueSet_Trustee: new Coding({
         code: "54056000",
         display: "Trustee",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FaithHealer: Coding.FromStrict({
+    ParticipantRoleValueSet_FaithHealer: new Coding({
         code: "54503009",
         display: "Faith healer",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthRegulatoryBodyForDenturists: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthRegulatoryBodyForDenturists: new Coding({
         code: "548886741000087101",
         display: "Health regulatory body for denturists",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthRegulatoryBodyForChiropractors: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthRegulatoryBodyForChiropractors: new Coding({
         code: "549577861000087101",
         display: "Health regulatory body for chiropractors",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NewfoundlandAndLabradorDepartmentOfHealthAndCommunityServices: Coding.FromStrict({
+    ParticipantRoleValueSet_NewfoundlandAndLabradorDepartmentOfHealthAndCommunityServices: new Coding({
         code: "553641311000087101",
         display: "Newfoundland and Labrador Department of Health and Community Services",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Cousin: Coding.FromStrict({
+    ParticipantRoleValueSet_Cousin: new Coding({
         code: "55538000",
         display: "Cousin",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CanadianJurisdictionBased: Coding.FromStrict({
+    ParticipantRoleValueSet_CanadianJurisdictionBased: new Coding({
         code: "5581000087108",
         display: "Canadian jurisdiction-based",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Neurologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Neurologist: new Coding({
         code: "56397003",
         display: "Neurologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CommunityPhysician: Coding.FromStrict({
+    ParticipantRoleValueSet_CommunityPhysician: new Coding({
         code: "56466003",
         display: "Community physician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MedicalRecordAdministrator: Coding.FromStrict({
+    ParticipantRoleValueSet_MedicalRecordAdministrator: new Coding({
         code: "56542007",
         display: "Medical record administrator",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CardiovascularSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_CardiovascularSurgeon: new Coding({
         code: "56545009",
         display: "Cardiovascular surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CancerPlanSaskatchewanAndSexuallyTransmittedDiseasesPlan: Coding.FromStrict({
+    ParticipantRoleValueSet_CancerPlanSaskatchewanAndSexuallyTransmittedDiseasesPlan: new Coding({
         code: "567496441000087102",
         display: "Cancer Plan (Saskatchewan) and Sexually Transmitted Diseases Plan",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_YukonDepartmentOfHealthAndSocialServices: Coding.FromStrict({
+    ParticipantRoleValueSet_YukonDepartmentOfHealthAndSocialServices: new Coding({
         code: "569232871000087107",
         display: "Yukon Department of Health and Social Services",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FixedProsthodontist: Coding.FromStrict({
+    ParticipantRoleValueSet_FixedProsthodontist: new Coding({
         code: "57654006",
         display: "Fixed prosthodontist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FosterSister: Coding.FromStrict({
+    ParticipantRoleValueSet_FosterSister: new Coding({
         code: "58293006",
         display: "Foster sister",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MaternalUncle: Coding.FromStrict({
+    ParticipantRoleValueSet_MaternalUncle: new Coding({
         code: "583114651000087104",
         display: "Maternal uncle",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LegalGuardian: Coding.FromStrict({
+    ParticipantRoleValueSet_LegalGuardian: new Coding({
         code: "58626002",
         display: "Legal guardian",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PaternalUncle: Coding.FromStrict({
+    ParticipantRoleValueSet_PaternalUncle: new Coding({
         code: "589612571000087102",
         display: "Paternal uncle",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GeneralPhysician: Coding.FromStrict({
+    ParticipantRoleValueSet_GeneralPhysician: new Coding({
         code: "59058001",
         display: "General physician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OrthopedicTechnician: Coding.FromStrict({
+    ParticipantRoleValueSet_OrthopedicTechnician: new Coding({
         code: "59169001",
         display: "Orthopedic technician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Psychologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Psychologist: new Coding({
         code: "59944000",
         display: "Psychologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CommunityBasedDietitian: Coding.FromStrict({
+    ParticipantRoleValueSet_CommunityBasedDietitian: new Coding({
         code: "60008001",
         display: "Community-based dietitian",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NaturalBrother: Coding.FromStrict({
+    ParticipantRoleValueSet_NaturalBrother: new Coding({
         code: "60614009",
         display: "Natural brother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AdoptiveFather: Coding.FromStrict({
+    ParticipantRoleValueSet_AdoptiveFather: new Coding({
         code: "609005",
         display: "Adoptive father",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthRegulatoryBodyForPharmacists: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthRegulatoryBodyForPharmacists: new Coding({
         code: "609564621000087104",
         display: "Health regulatory body for pharmacists",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MedicalPathologist: Coding.FromStrict({
+    ParticipantRoleValueSet_MedicalPathologist: new Coding({
         code: "61207006",
         display: "Medical pathologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LaboratoryMedicineSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_LaboratoryMedicineSpecialist: new Coding({
         code: "61246008",
         display: "Laboratory medicine specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Otorhinolaryngologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Otorhinolaryngologist: new Coding({
         code: "61345009",
         display: "Otorhinolaryngologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Endocrinologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Endocrinologist: new Coding({
         code: "61894003",
         display: "Endocrinologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Neuroradiologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Neuroradiologist: new Coding({
         code: "619197631000087102",
         display: "Neuroradiologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LegalMother: Coding.FromStrict({
+    ParticipantRoleValueSet_LegalMother: new Coding({
         code: "62090008",
         display: "Legal mother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FamilyMedicineSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_FamilyMedicineSpecialist: new Coding({
         code: "62247001",
         display: "Family medicine specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NaturalGrandFather: Coding.FromStrict({
+    ParticipantRoleValueSet_NaturalGrandFather: new Coding({
         code: "62296006",
         display: "Natural grand-father",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FamilyMedicineSpecialistAnesthetist: Coding.FromStrict({
+    ParticipantRoleValueSet_FamilyMedicineSpecialistAnesthetist: new Coding({
         code: "623630151000087105",
         display: "Family medicine specialist - anesthetist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ClinicalImmunologist: Coding.FromStrict({
+    ParticipantRoleValueSet_ClinicalImmunologist: new Coding({
         code: "63098009",
         display: "Clinical immunologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthRegulatoryBodyForSocialWorkers: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthRegulatoryBodyForSocialWorkers: new Coding({
         code: "643545671000087106",
         display: "Health regulatory body for social workers",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MinistryOfHealthAndLongTermCareOntario: Coding.FromStrict({
+    ParticipantRoleValueSet_MinistryOfHealthAndLongTermCareOntario: new Coding({
         code: "644191431000087105",
         display: "Ministry of Health and Long-Term Care Ontario",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SunniMuslimFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_SunniMuslimFollowerOfReligion: new Coding({
         code: "64988008",
         display: "Sunni muslim, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_StepMother: Coding.FromStrict({
+    ParticipantRoleValueSet_StepMother: new Coding({
         code: "65412001",
         display: "Step-mother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Son: Coding.FromStrict({
+    ParticipantRoleValueSet_Son: new Coding({
         code: "65616008",
         display: "Son",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NaturalMother: Coding.FromStrict({
+    ParticipantRoleValueSet_NaturalMother: new Coding({
         code: "65656005",
         display: "Natural mother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Student: Coding.FromStrict({
+    ParticipantRoleValueSet_Student: new Coding({
         code: "65853000",
         display: "Student",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Daughter: Coding.FromStrict({
+    ParticipantRoleValueSet_Daughter: new Coding({
         code: "66089001",
         display: "Daughter",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OralPathologist: Coding.FromStrict({
+    ParticipantRoleValueSet_OralPathologist: new Coding({
         code: "66476003",
         display: "Oral pathologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthRegulatoryBodyForMidwives: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthRegulatoryBodyForMidwives: new Coding({
         code: "666298511000087107",
         display: "Health regulatory body for midwives",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Doula: Coding.FromStrict({
+    ParticipantRoleValueSet_Doula: new Coding({
         code: "666997781000087107",
         display: "Doula",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_YoungestDaughter: Coding.FromStrict({
+    ParticipantRoleValueSet_YoungestDaughter: new Coding({
         code: "6676009",
         display: "Youngest daughter",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Father: Coding.FromStrict({
+    ParticipantRoleValueSet_Father: new Coding({
         code: "66839005",
         display: "Father",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Radiologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Radiologist: new Coding({
         code: "66862007",
         display: "Radiologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AdoptiveDaughter: Coding.FromStrict({
+    ParticipantRoleValueSet_AdoptiveDaughter: new Coding({
         code: "67005001",
         display: "Adoptive daughter",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LegalFather: Coding.FromStrict({
+    ParticipantRoleValueSet_LegalFather: new Coding({
         code: "67147004",
         display: "Legal father",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ProviderRegistrationNumber: Coding.FromStrict({
+    ParticipantRoleValueSet_ProviderRegistrationNumber: new Coding({
         code: "673433971000087102",
         display: "Provider registration number",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TraditionalHerbalMedicineSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_TraditionalHerbalMedicineSpecialist: new Coding({
         code: "673825031000087109",
         display: "Traditional herbal medicine specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Child_2: Coding.FromStrict({
+    ParticipantRoleValueSet_Child_2: new Coding({
         code: "67822003",
         display: "Child",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GreatGreatGrandParent: Coding.FromStrict({
+    ParticipantRoleValueSet_GreatGreatGrandParent: new Coding({
         code: "68021009",
         display: "Great-great grand-parent",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SpecializedNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_SpecializedNurse: new Coding({
         code: "6816002",
         display: "Specialized nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OccupationalMedicineSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_OccupationalMedicineSpecialist: new Coding({
         code: "682131381000087105",
         display: "Occupational medicine specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HospitalAdministrator: Coding.FromStrict({
+    ParticipantRoleValueSet_HospitalAdministrator: new Coding({
         code: "6868009",
         display: "Hospital administrator",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PublicHealthDentist: Coding.FromStrict({
+    ParticipantRoleValueSet_PublicHealthDentist: new Coding({
         code: "68867008",
         display: "Public health dentist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Prosthodontist: Coding.FromStrict({
+    ParticipantRoleValueSet_Prosthodontist: new Coding({
         code: "68950000",
         display: "Prosthodontist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PaternalAunt: Coding.FromStrict({
+    ParticipantRoleValueSet_PaternalAunt: new Coding({
         code: "691349461000087102",
         display: "Paternal aunt",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SpecializedPhysician: Coding.FromStrict({
+    ParticipantRoleValueSet_SpecializedPhysician: new Coding({
         code: "69280009",
         display: "Specialized physician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SecondDegreeBloodRelative: Coding.FromStrict({
+    ParticipantRoleValueSet_SecondDegreeBloodRelative: new Coding({
         code: "699110007",
         display: "Second degree blood relative",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SecondDegreeBloodRelativeOfSubject: Coding.FromStrict({
+    ParticipantRoleValueSet_SecondDegreeBloodRelativeOfSubject: new Coding({
         code: "699111006",
         display: "Second degree blood relative of subject",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GrandSon: Coding.FromStrict({
+    ParticipantRoleValueSet_GrandSon: new Coding({
         code: "70578009",
         display: "Grand son",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ContactPerson: Coding.FromStrict({
+    ParticipantRoleValueSet_ContactPerson: new Coding({
         code: "70862002",
         display: "Contact person",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Brother: Coding.FromStrict({
+    ParticipantRoleValueSet_Brother: new Coding({
         code: "70924004",
         display: "Brother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CadaverDonorForLungTransplant: Coding.FromStrict({
+    ParticipantRoleValueSet_CadaverDonorForLungTransplant: new Coding({
         code: "713176007",
         display: "Cadaver donor for lung transplant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CadaverDonorForHeartTransplant: Coding.FromStrict({
+    ParticipantRoleValueSet_CadaverDonorForHeartTransplant: new Coding({
         code: "713177003",
         display: "Cadaver donor for heart transplant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CadaverDonorForLiverTransplant: Coding.FromStrict({
+    ParticipantRoleValueSet_CadaverDonorForLiverTransplant: new Coding({
         code: "713178008",
         display: "Cadaver donor for liver transplant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CadaverDonorForCornealTransplant: Coding.FromStrict({
+    ParticipantRoleValueSet_CadaverDonorForCornealTransplant: new Coding({
         code: "713179000",
         display: "Cadaver donor for corneal transplant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CadaverDonorForKidneyTransplant: Coding.FromStrict({
+    ParticipantRoleValueSet_CadaverDonorForKidneyTransplant: new Coding({
         code: "713183000",
         display: "Cadaver donor for kidney transplant",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_BloodProductDonor: Coding.FromStrict({
+    ParticipantRoleValueSet_BloodProductDonor: new Coding({
         code: "713184006",
         display: "Blood product donor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SkinDonor: Coding.FromStrict({
+    ParticipantRoleValueSet_SkinDonor: new Coding({
         code: "713352007",
         display: "Skin donor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LiveRelatedLiverDonor: Coding.FromStrict({
+    ParticipantRoleValueSet_LiveRelatedLiverDonor: new Coding({
         code: "713353002",
         display: "Live related liver donor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LiveRelatedKidneyDonor: Coding.FromStrict({
+    ParticipantRoleValueSet_LiveRelatedKidneyDonor: new Coding({
         code: "713369009",
         display: "Live related kidney donor",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OpenEpiscopalChurchFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_OpenEpiscopalChurchFollowerOfReligion: new Coding({
         code: "715167002",
         display: "Open Episcopal Church follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Gastroenterologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Gastroenterologist: new Coding({
         code: "71838004",
         display: "Gastroenterologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GreatGrandChild: Coding.FromStrict({
+    ParticipantRoleValueSet_GreatGrandChild: new Coding({
         code: "72012000",
         display: "Great grand child",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthRegulatoryBodyForRespiratoryTherapists: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthRegulatoryBodyForRespiratoryTherapists: new Coding({
         code: "724022191000087108",
         display: "Health regulatory body for respiratory therapists",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PediatricEmergencyMedicineSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_PediatricEmergencyMedicineSpecialist: new Coding({
         code: "724111801000087104",
         display: "Pediatric emergency medicine specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ProvincialAndOrTerritorialGovernmentPlanResident: Coding.FromStrict({
+    ParticipantRoleValueSet_ProvincialAndOrTerritorialGovernmentPlanResident: new Coding({
         code: "726220521000087101",
         display: "Provincial and/or territorial government plan - resident",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Mother: Coding.FromStrict({
+    ParticipantRoleValueSet_Mother: new Coding({
         code: "72705000",
         display: "Mother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NursingAid: Coding.FromStrict({
+    ParticipantRoleValueSet_NursingAid: new Coding({
         code: "73265009",
         display: "Nursing aid",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NaturalSister: Coding.FromStrict({
+    ParticipantRoleValueSet_NaturalSister: new Coding({
         code: "73678001",
         display: "Natural sister",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_StepParent: Coding.FromStrict({
+    ParticipantRoleValueSet_StepParent: new Coding({
         code: "74128007",
         display: "Step parent",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_YoungerChild: Coding.FromStrict({
+    ParticipantRoleValueSet_YoungerChild: new Coding({
         code: "74489007",
         display: "Younger child",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_WorkersQuoteCompensationNumber: Coding.FromStrict({
+    ParticipantRoleValueSet_WorkersQuoteCompensationNumber: new Coding({
         code: "745424761000087106",
         display: "Workers' Compensation number",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FamilyMedicineSpecialistCareOfTheElderly: Coding.FromStrict({
+    ParticipantRoleValueSet_FamilyMedicineSpecialistCareOfTheElderly: new Coding({
         code: "747936471000087102",
         display: "Family medicine specialist - care of the elderly",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NaturalChild: Coding.FromStrict({
+    ParticipantRoleValueSet_NaturalChild: new Coding({
         code: "75226009",
         display: "Natural child",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MWMidwife: Coding.FromStrict({
+    ParticipantRoleValueSet_MWMidwife: new Coding({
         code: "75271001",
         display: "MW - Midwife",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MinistryOfHealthNorthwestTerritories: Coding.FromStrict({
+    ParticipantRoleValueSet_MinistryOfHealthNorthwestTerritories: new Coding({
         code: "753977441000087109",
         display: "Ministry of Health Northwest Territories",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SurrogateFather: Coding.FromStrict({
+    ParticipantRoleValueSet_SurrogateFather: new Coding({
         code: "75615008",
         display: "Surrogate father",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AdoptiveSister: Coding.FromStrict({
+    ParticipantRoleValueSet_AdoptiveSister: new Coding({
         code: "76022008",
         display: "Adoptive sister",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_StepBrother: Coding.FromStrict({
+    ParticipantRoleValueSet_StepBrother: new Coding({
         code: "76087000",
         display: "Step brother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PracticalAidPharmacy: Coding.FromStrict({
+    ParticipantRoleValueSet_PracticalAidPharmacy: new Coding({
         code: "76166008",
         display: "Practical aid (pharmacy)",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Osteopath: Coding.FromStrict({
+    ParticipantRoleValueSet_Osteopath: new Coding({
         code: "76231001",
         display: "Osteopath",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthRegulatoryBodyForAudiologistsAndSpeechLanguagePathologists: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthRegulatoryBodyForAudiologistsAndSpeechLanguagePathologists: new Coding({
         code: "762510691000087106",
         display: "Health regulatory body for audiologists and speech-language pathologists",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TravelMedicineSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_TravelMedicineSpecialist: new Coding({
         code: "766788081000087100",
         display: "Travel medicine specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SpineSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_SpineSurgeon: new Coding({
         code: "767205061000087108",
         display: "Spine surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_InfectiousDiseasesPhysician: Coding.FromStrict({
+    ParticipantRoleValueSet_InfectiousDiseasesPhysician: new Coding({
         code: "76899008",
         display: "Infectious diseases physician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_IdenticalTwinBrother: Coding.FromStrict({
+    ParticipantRoleValueSet_IdenticalTwinBrother: new Coding({
         code: "78194006",
         display: "Identical twin brother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NaturalGrandParent: Coding.FromStrict({
+    ParticipantRoleValueSet_NaturalGrandParent: new Coding({
         code: "78272007",
         display: "Natural grand-parent",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GreatGrandMother: Coding.FromStrict({
+    ParticipantRoleValueSet_GreatGrandMother: new Coding({
         code: "78652007",
         display: "Great grand-mother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GeneralSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_GeneralSurgeon: new Coding({
         code: "78703002",
         display: "General surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_DiagnosticRadiologist: Coding.FromStrict({
+    ParticipantRoleValueSet_DiagnosticRadiologist: new Coding({
         code: "78729002",
         display: "Diagnostic radiologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OrphanMale: Coding.FromStrict({
+    ParticipantRoleValueSet_OrphanMale: new Coding({
         code: "78872000",
         display: "Orphan male",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AdoptiveSibling: Coding.FromStrict({
+    ParticipantRoleValueSet_AdoptiveSibling: new Coding({
         code: "79508001",
         display: "Adoptive sibling",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Boyfriend: Coding.FromStrict({
+    ParticipantRoleValueSet_Boyfriend: new Coding({
         code: "79756005",
         display: "Boyfriend",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AuxiliaryMidwife: Coding.FromStrict({
+    ParticipantRoleValueSet_AuxiliaryMidwife: new Coding({
         code: "79898004",
         display: "Auxiliary midwife",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GreatGreatGrandFather: Coding.FromStrict({
+    ParticipantRoleValueSet_GreatGreatGrandFather: new Coding({
         code: "80386000",
         display: "Great-great grand-father",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Translator: Coding.FromStrict({
+    ParticipantRoleValueSet_Translator: new Coding({
         code: "80409005",
         display: "Translator",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_JurisdictionDriverLicenseNumber: Coding.FromStrict({
+    ParticipantRoleValueSet_JurisdictionDriverLicenseNumber: new Coding({
         code: "8051000087100",
         display: "Jurisdiction driver license number",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OTOccupationalTherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_OTOccupationalTherapist: new Coding({
         code: "80546007",
         display: "OT - Occupational therapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Psychiatrist: Coding.FromStrict({
+    ParticipantRoleValueSet_Psychiatrist: new Coding({
         code: "80584001",
         display: "Psychiatrist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_JehovahQuoteSWitnessFollowerOfReligion: Coding.FromStrict({
+    ParticipantRoleValueSet_JehovahQuoteSWitnessFollowerOfReligion: new Coding({
         code: "80587008",
         display: "Jehovah's Witness, follower of religion",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_JurisdictionalBirthCertificateRegistrationNumber: Coding.FromStrict({
+    ParticipantRoleValueSet_JurisdictionalBirthCertificateRegistrationNumber: new Coding({
         code: "8061000087102",
         display: "Jurisdictional birth certificate registration number",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_InterimHealthProgramCertificateNumber: Coding.FromStrict({
+    ParticipantRoleValueSet_InterimHealthProgramCertificateNumber: new Coding({
         code: "8071000087106",
         display: "Interim health program certificate number",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NuclearMedicinePhysician: Coding.FromStrict({
+    ParticipantRoleValueSet_NuclearMedicinePhysician: new Coding({
         code: "80933006",
         display: "Nuclear medicine physician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OnlySon: Coding.FromStrict({
+    ParticipantRoleValueSet_OnlySon: new Coding({
         code: "81173009",
         display: "Only son",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_TwinBrother: Coding.FromStrict({
+    ParticipantRoleValueSet_TwinBrother: new Coding({
         code: "81276006",
         display: "Twin brother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MaternalOrFetalMedicineSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_MaternalOrFetalMedicineSpecialist: new Coding({
         code: "813758161000087106",
         display: "Maternal or fetal medicine specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ClinicalPathologist: Coding.FromStrict({
+    ParticipantRoleValueSet_ClinicalPathologist: new Coding({
         code: "81464008",
         display: "Clinical pathologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FraternalTwinBrother: Coding.FromStrict({
+    ParticipantRoleValueSet_FraternalTwinBrother: new Coding({
         code: "81467001",
         display: "Fraternal twin brother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AshkenaziJew: Coding.FromStrict({
+    ParticipantRoleValueSet_AshkenaziJew: new Coding({
         code: "81706006",
         display: "Ashkenazi Jew",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NaturalSibling: Coding.FromStrict({
+    ParticipantRoleValueSet_NaturalSibling: new Coding({
         code: "82101005",
         display: "Natural sibling",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MassageTherapist: Coding.FromStrict({
+    ParticipantRoleValueSet_MassageTherapist: new Coding({
         code: "822410621000087104",
         display: "Massage therapist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Pediatrician: Coding.FromStrict({
+    ParticipantRoleValueSet_Pediatrician: new Coding({
         code: "82296001",
         display: "Pediatrician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OtherProfessionalNurse: Coding.FromStrict({
+    ParticipantRoleValueSet_OtherProfessionalNurse: new Coding({
         code: "83189004",
         display: "Other professional nurse",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AnatomicPathologist: Coding.FromStrict({
+    ParticipantRoleValueSet_AnatomicPathologist: new Coding({
         code: "83273008",
         display: "Anatomic pathologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_WorkingParent: Coding.FromStrict({
+    ParticipantRoleValueSet_WorkingParent: new Coding({
         code: "83408003",
         display: "Working parent",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NaturalDaughter: Coding.FromStrict({
+    ParticipantRoleValueSet_NaturalDaughter: new Coding({
         code: "83420006",
         display: "Natural daughter",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Nephew: Coding.FromStrict({
+    ParticipantRoleValueSet_Nephew: new Coding({
         code: "83559000",
         display: "Nephew",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Gynecologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Gynecologist: new Coding({
         code: "83685006",
         display: "Gynecologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Girlfriend: Coding.FromStrict({
+    ParticipantRoleValueSet_Girlfriend: new Coding({
         code: "84390006",
         display: "Girlfriend",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MaternalFirstCousin: Coding.FromStrict({
+    ParticipantRoleValueSet_MaternalFirstCousin: new Coding({
         code: "844670641000087109",
         display: "Maternal first cousin",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FosterFather: Coding.FromStrict({
+    ParticipantRoleValueSet_FosterFather: new Coding({
         code: "8458002",
         display: "Foster father",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Hospitalist: Coding.FromStrict({
+    ParticipantRoleValueSet_Hospitalist: new Coding({
         code: "847240411000087102",
         display: "Hospitalist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_AdoptiveGrandfather: Coding.FromStrict({
+    ParticipantRoleValueSet_AdoptiveGrandfather: new Coding({
         code: "85058002",
         display: "Adoptive grandfather",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SportsMedicineSpecialist: Coding.FromStrict({
+    ParticipantRoleValueSet_SportsMedicineSpecialist: new Coding({
         code: "853827051000087104",
         display: "Sports medicine specialist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_YoungerBrother: Coding.FromStrict({
+    ParticipantRoleValueSet_YoungerBrother: new Coding({
         code: "85411004",
         display: "Younger brother",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_SingleFather: Coding.FromStrict({
+    ParticipantRoleValueSet_SingleFather: new Coding({
         code: "85683001",
         display: "Single father",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GeneralPathologist: Coding.FromStrict({
+    ParticipantRoleValueSet_GeneralPathologist: new Coding({
         code: "85733003",
         display: "General pathologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MedicalCarePlanHospitalTechnicalServicesQuebec: Coding.FromStrict({
+    ParticipantRoleValueSet_MedicalCarePlanHospitalTechnicalServicesQuebec: new Coding({
         code: "859430851000087100",
         display: "Medical Care Plan - Hospital Technical Services (Quebec)",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_GrandChild: Coding.FromStrict({
+    ParticipantRoleValueSet_GrandChild: new Coding({
         code: "86372007",
         display: "Grand child",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_StepSon: Coding.FromStrict({
+    ParticipantRoleValueSet_StepSon: new Coding({
         code: "8674003",
         display: "Step son",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_StepChild: Coding.FromStrict({
+    ParticipantRoleValueSet_StepChild: new Coding({
         code: "86764008",
         display: "Step child",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PlasticSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_PlasticSurgeon: new Coding({
         code: "8724009",
         display: "Plastic surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthRegulatoryBodyForNurses: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthRegulatoryBodyForNurses: new Coding({
         code: "874107021000087108",
         display: "Health regulatory body for nurses",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthRegulatoryBodyForParamedics: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthRegulatoryBodyForParamedics: new Coding({
         code: "876612791000087101",
         display: "Health regulatory body for paramedics",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Anesthesiologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Anesthesiologist: new Coding({
         code: "88189002",
         display: "Anesthesiologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_MinistryOfHealthBritishColumbia: Coding.FromStrict({
+    ParticipantRoleValueSet_MinistryOfHealthBritishColumbia: new Coding({
         code: "882121321000087100",
         display: "Ministry of Health British Columbia",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_OtherDietitiansAndPublicHealthNutritionists: Coding.FromStrict({
+    ParticipantRoleValueSet_OtherDietitiansAndPublicHealthNutritionists: new Coding({
         code: "88475002",
         display: "Other dietitians and public health nutritionists",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_StepSibling: Coding.FromStrict({
+    ParticipantRoleValueSet_StepSibling: new Coding({
         code: "88510002",
         display: "Step sibling",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_YoungestSon: Coding.FromStrict({
+    ParticipantRoleValueSet_YoungestSon: new Coding({
         code: "89681006",
         display: "Youngest son",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PediatricDentist: Coding.FromStrict({
+    ParticipantRoleValueSet_PediatricDentist: new Coding({
         code: "90201008",
         display: "Pediatric dentist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CareOfTheElderlyPhysician: Coding.FromStrict({
+    ParticipantRoleValueSet_CareOfTheElderlyPhysician: new Coding({
         code: "90655003",
         display: "Care of the elderly physician",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FosterParent: Coding.FromStrict({
+    ParticipantRoleValueSet_FosterParent: new Coding({
         code: "90921004",
         display: "Foster parent",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthRegulatoryBodyForPracticalNurses: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthRegulatoryBodyForPracticalNurses: new Coding({
         code: "912320101000087109",
         display: "Health regulatory body for practical nurses",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PediatricRespirologist: Coding.FromStrict({
+    ParticipantRoleValueSet_PediatricRespirologist: new Coding({
         code: "926871431000087103",
         display: "Pediatric respirologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthRegulatoryBodyForDietitians: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthRegulatoryBodyForDietitians: new Coding({
         code: "930012821000087105",
         display: "Health regulatory body for dietitians",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_LegalParent: Coding.FromStrict({
+    ParticipantRoleValueSet_LegalParent: new Coding({
         code: "9306000",
         display: "Legal parent",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Homeopath: Coding.FromStrict({
+    ParticipantRoleValueSet_Homeopath: new Coding({
         code: "954544641000087107",
         display: "Homeopath",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FamilyMedicineSpecialistEmergencyMedicine: Coding.FromStrict({
+    ParticipantRoleValueSet_FamilyMedicineSpecialistEmergencyMedicine: new Coding({
         code: "956387501000087102",
         display: "Family medicine specialist - emergency medicine",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_PediatricHematologistOrOncologist: Coding.FromStrict({
+    ParticipantRoleValueSet_PediatricHematologistOrOncologist: new Coding({
         code: "969118571000087109",
         display: "Pediatric hematologist or oncologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_FootAndAnkleSurgeon: Coding.FromStrict({
+    ParticipantRoleValueSet_FootAndAnkleSurgeon: new Coding({
         code: "984095901000087105",
         display: "Foot and ankle surgeon",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_InvasiveCardiologist: Coding.FromStrict({
+    ParticipantRoleValueSet_InvasiveCardiologist: new Coding({
         code: "990928611000087105",
         display: "Invasive cardiologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_NaturalFather: Coding.FromStrict({
+    ParticipantRoleValueSet_NaturalFather: new Coding({
         code: "9947008",
         display: "Natural father",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthPEI: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthPEI: new Coding({
         code: "998711551000087102",
         display: "Health PEI",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_ManitobaHealth: Coding.FromStrict({
+    ParticipantRoleValueSet_ManitobaHealth: new Coding({
         code: "998820271000087109",
         display: "Manitoba Health",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_CaseManager: Coding.FromStrict({
+    ParticipantRoleValueSet_CaseManager: new Coding({
         code: "999480451000087102",
         display: "Case manager",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_Kinesthesiologist: Coding.FromStrict({
+    ParticipantRoleValueSet_Kinesthesiologist: new Coding({
         code: "999480461000087104",
         display: "Kinesthesiologist",
         system: "http://snomed.info/sct"
     }),
-    ParticipantRoleValueSet_HealthRegulatoryBodyForNaturopathicPractitioners: Coding.FromStrict({
+    ParticipantRoleValueSet_HealthRegulatoryBodyForNaturopathicPractitioners: new Coding({
         code: "999483971000087108",
         display: "Health regulatory body for naturopathic practitioners",
         system: "http://snomed.info/sct"

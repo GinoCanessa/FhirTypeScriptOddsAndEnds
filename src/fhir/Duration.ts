@@ -24,18 +24,18 @@ export class Duration extends fhir.Quantity implements fhir.IDuration {
   /**
    * Check if the current Duration contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Duration from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDuration):Duration {
+  static override fromStrict(source:fhir.IDuration):Duration {
     var dest:Duration = new Duration(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Duration is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

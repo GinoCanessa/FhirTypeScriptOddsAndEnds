@@ -35,21 +35,21 @@ export class MeasureGroupPopulation extends fhir.BackboneElement {
     /**
      * Check if the current MeasureGroupPopulation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["criteria"] === undefined) {
             missingElements.push("criteria");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MeasureGroupPopulation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MeasureGroupPopulation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MeasureGroupPopulation is missing elements: ${missingElements.join(", ")}`;
         }
@@ -85,21 +85,21 @@ export class MeasureGroupStratifierComponent extends fhir.BackboneElement {
     /**
      * Check if the current MeasureGroupStratifierComponent contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["criteria"] === undefined) {
             missingElements.push("criteria");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MeasureGroupStratifierComponent from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MeasureGroupStratifierComponent(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MeasureGroupStratifierComponent is missing elements: ${missingElements.join(", ")}`;
         }
@@ -134,18 +134,18 @@ export class MeasureGroupStratifier extends fhir.BackboneElement {
     /**
      * Check if the current MeasureGroupStratifier contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MeasureGroupStratifier from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MeasureGroupStratifier(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MeasureGroupStratifier is missing elements: ${missingElements.join(", ")}`;
         }
@@ -180,18 +180,18 @@ export class MeasureGroup extends fhir.BackboneElement {
     /**
      * Check if the current MeasureGroup contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MeasureGroup from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MeasureGroup(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MeasureGroup is missing elements: ${missingElements.join(", ")}`;
         }
@@ -230,21 +230,21 @@ export class MeasureSupplementalData extends fhir.BackboneElement {
     /**
      * Check if the current MeasureSupplementalData contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["criteria"] === undefined) {
             missingElements.push("criteria");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MeasureSupplementalData from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MeasureSupplementalData(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MeasureSupplementalData is missing elements: ${missingElements.join(", ")}`;
         }
@@ -464,21 +464,21 @@ export class Measure extends fhir.DomainResource {
     /**
      * Check if the current Measure contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a Measure from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new Measure(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `Measure is missing elements: ${missingElements.join(", ")}`;
         }

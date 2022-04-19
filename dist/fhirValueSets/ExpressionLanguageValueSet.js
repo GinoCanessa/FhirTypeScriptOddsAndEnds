@@ -13,7 +13,7 @@ export const ExpressionLanguageValueSet = {
     /**
      * FHIR's RESTful query syntax - typically independent of base URL.
      */
-    expression_language_FHIRQuery: Coding.FromStrict({
+    expression_language_FHIRQuery: new Coding({
         code: "application/x-fhir-query",
         display: "FHIR Query",
         system: "http://hl7.org/fhir/expression-language"
@@ -21,7 +21,7 @@ export const ExpressionLanguageValueSet = {
     /**
      * Clinical Quality Language.
      */
-    expression_language_CQL: Coding.FromStrict({
+    expression_language_CQL: new Coding({
         code: "text/cql",
         display: "CQL",
         system: "http://hl7.org/fhir/expression-language"
@@ -29,7 +29,7 @@ export const ExpressionLanguageValueSet = {
     /**
      * FHIRPath.
      */
-    expression_language_FHIRPath: Coding.FromStrict({
+    expression_language_FHIRPath: new Coding({
         code: "text/fhirpath",
         display: "FHIRPath",
         system: "http://hl7.org/fhir/expression-language"

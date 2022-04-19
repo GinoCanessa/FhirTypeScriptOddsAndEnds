@@ -13,7 +13,7 @@ export const MapSourceListModeValueSet = {
   /**
    * Only process this rule for the first in the list.
    */
-  map_source_list_mode_First: Coding.FromStrict({
+  map_source_list_mode_First: new Coding({
     code: "first",
     display: "First",
     system: "http://hl7.org/fhir/map-source-list-mode"
@@ -21,7 +21,7 @@ export const MapSourceListModeValueSet = {
   /**
    * Only process this rule for the last in the list.
    */
-  map_source_list_mode_Last: Coding.FromStrict({
+  map_source_list_mode_Last: new Coding({
     code: "last",
     display: "Last",
     system: "http://hl7.org/fhir/map-source-list-mode"
@@ -29,7 +29,7 @@ export const MapSourceListModeValueSet = {
   /**
    * Process this rule for all but the first.
    */
-  map_source_list_mode_AllButTheFirst: Coding.FromStrict({
+  map_source_list_mode_AllButTheFirst: new Coding({
     code: "not_first",
     display: "All but the first",
     system: "http://hl7.org/fhir/map-source-list-mode"
@@ -37,7 +37,7 @@ export const MapSourceListModeValueSet = {
   /**
    * Process this rule for all but the last.
    */
-  map_source_list_mode_AllButTheLast: Coding.FromStrict({
+  map_source_list_mode_AllButTheLast: new Coding({
     code: "not_last",
     display: "All but the last",
     system: "http://hl7.org/fhir/map-source-list-mode"
@@ -45,7 +45,7 @@ export const MapSourceListModeValueSet = {
   /**
    * Only process this rule is there is only item.
    */
-  map_source_list_mode_EnforceOnlyOne: Coding.FromStrict({
+  map_source_list_mode_EnforceOnlyOne: new Coding({
     code: "only_one",
     display: "Enforce only one",
     system: "http://hl7.org/fhir/map-source-list-mode"

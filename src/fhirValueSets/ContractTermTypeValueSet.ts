@@ -13,7 +13,7 @@ export const ContractTermTypeValueSet = {
   /**
    * Based on specialized statutes that deal with particular subjects.
    */
-  contract_term_type_Statutory: Coding.FromStrict({
+  contract_term_type_Statutory: new Coding({
     code: "statutory",
     display: "Statutory",
     system: "http://terminology.hl7.org/CodeSystem/contracttermtypecodes"
@@ -21,7 +21,7 @@ export const ContractTermTypeValueSet = {
   /**
    * Execution of the term in the contract is conditional on the execution of other actions.
    */
-  contract_term_type_SubjectTo: Coding.FromStrict({
+  contract_term_type_SubjectTo: new Coding({
     code: "subject-to",
     display: "Subject To",
     system: "http://terminology.hl7.org/CodeSystem/contracttermtypecodes"

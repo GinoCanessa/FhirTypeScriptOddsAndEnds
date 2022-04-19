@@ -23,10 +23,10 @@ export declare class BackboneElement extends fhir.FhirElement implements fhir.IB
     /**
      * Check if the current BackboneElement contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a BackboneElement from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IBackboneElement): BackboneElement;
+    static fromStrict(source: fhir.IBackboneElement): BackboneElement;
 }
 //# sourceMappingURL=BackboneElement.d.ts.map

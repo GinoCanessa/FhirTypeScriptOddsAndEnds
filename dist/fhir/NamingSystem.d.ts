@@ -132,11 +132,11 @@ export declare class NamingSystemUniqueId extends fhir.BackboneElement implement
     /**
      * Check if the current NamingSystemUniqueId contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a NamingSystemUniqueId from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.INamingSystemUniqueId): NamingSystemUniqueId;
+    static fromStrict(source: fhir.INamingSystemUniqueId): NamingSystemUniqueId;
 }
 /**
  * A curated namespace that issues unique symbols within that namespace for the identification of concepts, people, devices, etc.  Represents a "System" used within the Identifier and Coding data types.
@@ -213,11 +213,11 @@ export declare class NamingSystem extends fhir.DomainResource implements fhir.IN
     /**
      * Check if the current NamingSystem contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a NamingSystem from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.INamingSystem): NamingSystem;
+    static fromStrict(source: fhir.INamingSystem): NamingSystem;
 }
 /**
  * Code Values for the NamingSystem.uniqueId.type field

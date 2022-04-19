@@ -113,11 +113,11 @@ export declare class Address extends fhir.FhirElement implements fhir.IAddress {
     /**
      * Check if the current Address contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Address from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IAddress): Address;
+    static fromStrict(source: fhir.IAddress): Address;
 }
 /**
  * Code Values for the Address.type field

@@ -58,18 +58,18 @@ export class HumanName extends fhir.FhirElement {
     /**
      * Check if the current HumanName contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a HumanName from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new HumanName(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `HumanName is missing elements: ${missingElements.join(", ")}`;
         }
@@ -78,7 +78,7 @@ export class HumanName extends fhir.FhirElement {
     /**
      * Convert a HumanName into a displayable string
      */
-    ToDisplay(familyFirst = true, includeAnnotations = false) {
+    toDisplay(familyFirst = true, includeAnnotations = false) {
         if ((this.text) && (this.text.length > 0)) {
             return this.text;
         }

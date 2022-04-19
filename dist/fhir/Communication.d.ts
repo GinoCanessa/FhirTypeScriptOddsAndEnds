@@ -148,11 +148,11 @@ export declare class CommunicationPayload extends fhir.BackboneElement implement
     /**
      * Check if the current CommunicationPayload contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CommunicationPayload from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICommunicationPayload): CommunicationPayload;
+    static fromStrict(source: fhir.ICommunicationPayload): CommunicationPayload;
 }
 /**
  * An occurrence of information being transmitted; e.g. an alert that was sent to a responsible provider, a public health agency that was notified about a reportable condition.
@@ -267,11 +267,11 @@ export declare class Communication extends fhir.DomainResource implements fhir.I
     /**
      * Check if the current Communication contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Communication from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICommunication): Communication;
+    static fromStrict(source: fhir.ICommunication): Communication;
 }
 /**
  * Code Values for the Communication.priority field

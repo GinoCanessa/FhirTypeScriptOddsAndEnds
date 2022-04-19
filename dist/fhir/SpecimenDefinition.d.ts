@@ -171,11 +171,11 @@ export declare class SpecimenDefinitionTypeTestedContainerAdditive extends fhir.
     /**
      * Check if the current SpecimenDefinitionTypeTestedContainerAdditive contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SpecimenDefinitionTypeTestedContainerAdditive from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISpecimenDefinitionTypeTestedContainerAdditive): SpecimenDefinitionTypeTestedContainerAdditive;
+    static fromStrict(source: fhir.ISpecimenDefinitionTypeTestedContainerAdditive): SpecimenDefinitionTypeTestedContainerAdditive;
 }
 /**
  * The specimen's container.
@@ -227,11 +227,11 @@ export declare class SpecimenDefinitionTypeTestedContainer extends fhir.Backbone
     /**
      * Check if the current SpecimenDefinitionTypeTestedContainer contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SpecimenDefinitionTypeTestedContainer from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISpecimenDefinitionTypeTestedContainer): SpecimenDefinitionTypeTestedContainer;
+    static fromStrict(source: fhir.ISpecimenDefinitionTypeTestedContainer): SpecimenDefinitionTypeTestedContainer;
 }
 /**
  * Set of instructions for preservation/transport of the specimen at a defined temperature interval, prior the testing process.
@@ -261,11 +261,11 @@ export declare class SpecimenDefinitionTypeTestedHandling extends fhir.BackboneE
     /**
      * Check if the current SpecimenDefinitionTypeTestedHandling contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SpecimenDefinitionTypeTestedHandling from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISpecimenDefinitionTypeTestedHandling): SpecimenDefinitionTypeTestedHandling;
+    static fromStrict(source: fhir.ISpecimenDefinitionTypeTestedHandling): SpecimenDefinitionTypeTestedHandling;
 }
 /**
  * Specimen conditioned in a container as expected by the testing laboratory.
@@ -313,11 +313,11 @@ export declare class SpecimenDefinitionTypeTested extends fhir.BackboneElement i
     /**
      * Check if the current SpecimenDefinitionTypeTested contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SpecimenDefinitionTypeTested from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISpecimenDefinitionTypeTested): SpecimenDefinitionTypeTested;
+    static fromStrict(source: fhir.ISpecimenDefinitionTypeTested): SpecimenDefinitionTypeTested;
 }
 /**
  * A kind of specimen with associated set of requirements.
@@ -359,11 +359,11 @@ export declare class SpecimenDefinition extends fhir.DomainResource implements f
     /**
      * Check if the current SpecimenDefinition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SpecimenDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISpecimenDefinition): SpecimenDefinition;
+    static fromStrict(source: fhir.ISpecimenDefinition): SpecimenDefinition;
 }
 /**
  * Code Values for the SpecimenDefinition.typeTested.preference field

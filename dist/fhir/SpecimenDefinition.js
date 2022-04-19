@@ -25,18 +25,18 @@ export class SpecimenDefinitionTypeTestedContainerAdditive extends fhir.Backbone
     /**
      * Check if the current SpecimenDefinitionTypeTestedContainerAdditive contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SpecimenDefinitionTypeTestedContainerAdditive from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SpecimenDefinitionTypeTestedContainerAdditive(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SpecimenDefinitionTypeTestedContainerAdditive is missing elements: ${missingElements.join(", ")}`;
         }
@@ -92,18 +92,18 @@ export class SpecimenDefinitionTypeTestedContainer extends fhir.BackboneElement 
     /**
      * Check if the current SpecimenDefinitionTypeTestedContainer contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SpecimenDefinitionTypeTestedContainer from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SpecimenDefinitionTypeTestedContainer(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SpecimenDefinitionTypeTestedContainer is missing elements: ${missingElements.join(", ")}`;
         }
@@ -138,18 +138,18 @@ export class SpecimenDefinitionTypeTestedHandling extends fhir.BackboneElement {
     /**
      * Check if the current SpecimenDefinitionTypeTestedHandling contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SpecimenDefinitionTypeTestedHandling from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SpecimenDefinitionTypeTestedHandling(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SpecimenDefinitionTypeTestedHandling is missing elements: ${missingElements.join(", ")}`;
         }
@@ -206,21 +206,21 @@ export class SpecimenDefinitionTypeTested extends fhir.BackboneElement {
     /**
      * Check if the current SpecimenDefinitionTypeTested contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["preference"] === undefined) {
             missingElements.push("preference");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SpecimenDefinitionTypeTested from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SpecimenDefinitionTypeTested(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SpecimenDefinitionTypeTested is missing elements: ${missingElements.join(", ")}`;
         }
@@ -262,18 +262,18 @@ export class SpecimenDefinition extends fhir.DomainResource {
     /**
      * Check if the current SpecimenDefinition contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a SpecimenDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new SpecimenDefinition(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `SpecimenDefinition is missing elements: ${missingElements.join(", ")}`;
         }

@@ -13,7 +13,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * A role of a place that further classifies the clinical setting (e.g., cardiology clinic, primary care clinic, rehabilitation hospital, skilled nursing facility) in which care is delivered during an encounter.
      */
-    v3_RoleCode_DedicatedClinicalLocationRoleType: Coding.FromStrict({
+    v3_RoleCode_DedicatedClinicalLocationRoleType: new Coding({
         code: "_DedicatedClinicalLocationRoleType",
         display: "DedicatedClinicalLocationRoleType",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -21,7 +21,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * A role of a place that further classifies a setting that is intended to house the provision of non-clinical services.
      */
-    v3_RoleCode_DedicatedNonClinicalLocationRoleType: Coding.FromStrict({
+    v3_RoleCode_DedicatedNonClinicalLocationRoleType: new Coding({
         code: "_DedicatedNonClinicalLocationRoleType",
         display: "DedicatedNonClinicalLocationRoleType",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -29,7 +29,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * A role of a place that further classifies a setting that is intended to house the provision of services.
      */
-    v3_RoleCode_DedicatedServiceDeliveryLocationRoleType: Coding.FromStrict({
+    v3_RoleCode_DedicatedServiceDeliveryLocationRoleType: new Coding({
         code: "_DedicatedServiceDeliveryLocationRoleType",
         display: "DedicatedServiceDeliveryLocationRoleType",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -37,7 +37,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * IncidentalServiceDeliveryLocationRoleType
      */
-    v3_RoleCode_IncidentalServiceDeliveryLocationRoleType: Coding.FromStrict({
+    v3_RoleCode_IncidentalServiceDeliveryLocationRoleType: new Coding({
         code: "_IncidentalServiceDeliveryLocationRoleType",
         display: "IncidentalServiceDeliveryLocationRoleType",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -45,7 +45,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Location of an accident where healthcare service was delivered, such as a roadside.
      */
-    v3_RoleCode_AccidentSite: Coding.FromStrict({
+    v3_RoleCode_AccidentSite: new Coding({
         code: "ACC",
         display: "accident site",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -53,7 +53,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Allergy clinic
      */
-    v3_RoleCode_AllergyClinic: Coding.FromStrict({
+    v3_RoleCode_AllergyClinic: new Coding({
         code: "ALL",
         display: "Allergy clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -61,7 +61,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Location (mobile) where healthcare service was delivered, identified specifically as an ambulance.
      */
-    v3_RoleCode_Ambulance: Coding.FromStrict({
+    v3_RoleCode_Ambulance: new Coding({
         code: "AMB",
         display: "Ambulance",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -69,7 +69,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Amputee clinic
      */
-    v3_RoleCode_AmputeeClinic: Coding.FromStrict({
+    v3_RoleCode_AmputeeClinic: new Coding({
         code: "AMPUT",
         display: "Amputee clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -77,7 +77,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Bone marrow transplant clinic
      */
-    v3_RoleCode_BoneMarrowTransplantClinic: Coding.FromStrict({
+    v3_RoleCode_BoneMarrowTransplantClinic: new Coding({
         code: "BMTC",
         display: "Bone marrow transplant clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -85,7 +85,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Bone marrow transplant unit
      */
-    v3_RoleCode_BoneMarrowTransplantUnit: Coding.FromStrict({
+    v3_RoleCode_BoneMarrowTransplantUnit: new Coding({
         code: "BMTU",
         display: "Bone marrow transplant unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -93,7 +93,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Breast clinic
      */
-    v3_RoleCode_BreastClinic: Coding.FromStrict({
+    v3_RoleCode_BreastClinic: new Coding({
         code: "BREAST",
         display: "Breast clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -101,7 +101,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Child and adolescent neurology clinic
      */
-    v3_RoleCode_ChildAndAdolescentNeurologyClinic: Coding.FromStrict({
+    v3_RoleCode_ChildAndAdolescentNeurologyClinic: new Coding({
         code: "CANC",
         display: "Child and adolescent neurology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -109,7 +109,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Child and adolescent psychiatry clinic
      */
-    v3_RoleCode_ChildAndAdolescentPsychiatryClinic: Coding.FromStrict({
+    v3_RoleCode_ChildAndAdolescentPsychiatryClinic: new Coding({
         code: "CAPC",
         display: "Child and adolescent psychiatry clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -117,7 +117,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Ambulatory Health Care Facilities; Clinic/Center; Rehabilitation: Cardiac Facilities
      */
-    v3_RoleCode_AmbulatoryHealthCareFacilitiesClinicCenterRehabilitationCardiacFacilities: Coding.FromStrict({
+    v3_RoleCode_AmbulatoryHealthCareFacilitiesClinicCenterRehabilitationCardiacFacilities: new Coding({
         code: "CARD",
         display: "Ambulatory Health Care Facilities; Clinic/Center; Rehabilitation: Cardiac Facilities",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -125,7 +125,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Cardiac catheterization lab
      */
-    v3_RoleCode_CardiacCatheterizationLab: Coding.FromStrict({
+    v3_RoleCode_CardiacCatheterizationLab: new Coding({
         code: "CATH",
         display: "Cardiac catheterization lab",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -133,7 +133,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Coronary care unit
      */
-    v3_RoleCode_CoronaryCareUnit: Coding.FromStrict({
+    v3_RoleCode_CoronaryCareUnit: new Coding({
         code: "CCU",
         display: "Coronary care unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -141,7 +141,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * A specialty unit in hospital that focuses on chronic respirator patients and pulmonary failure
      */
-    v3_RoleCode_ChestUnit: Coding.FromStrict({
+    v3_RoleCode_ChestUnit: new Coding({
         code: "CHEST",
         display: "Chest unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -149,7 +149,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * (1) A hospital including a physical plant and personnel that provides multidisciplinary diagnosis and treatment for diseases that have one or more of the following characteristics: is permanent; leaves residual disability; is caused by nonreversible pathological alteration; requires special training of the patient for rehabilitation; and/or may be expected to require a long period of supervision or care. In addition, patients require the safety, security, and shelter of these specialized inpatient or partial hospitalization settings. (2) A hospital that provides medical and skilled nursing services to patients with long-term illnesses who are not in an acute phase but who require an intensity of services not available in nursing homes
      */
-    v3_RoleCode_ChronicCareFacility: Coding.FromStrict({
+    v3_RoleCode_ChronicCareFacility: new Coding({
         code: "CHR",
         display: "Chronic Care Facility",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -157,7 +157,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Coagulation clinic
      */
-    v3_RoleCode_CoagulationClinic: Coding.FromStrict({
+    v3_RoleCode_CoagulationClinic: new Coding({
         code: "COAG",
         display: "Coagulation clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -165,7 +165,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Community location where healthcare is delivered.
      */
-    v3_RoleCode_CommunityLocation: Coding.FromStrict({
+    v3_RoleCode_CommunityLocation: new Coding({
         code: "COMM",
         display: "Community Location",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -173,7 +173,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Colon and rectal surgery clinic
      */
-    v3_RoleCode_ColonAndRectalSurgeryClinic: Coding.FromStrict({
+    v3_RoleCode_ColonAndRectalSurgeryClinic: new Coding({
         code: "CRS",
         display: "Colon and rectal surgery clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -181,7 +181,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Description: A location that plays the role of delivering services which may include providing front-line services to the population of a defined geographic area such as: healthcare services and social services, preventive or curative, rehabilitation or reintegration.
      */
-    v3_RoleCode_CommunityServiceCenter: Coding.FromStrict({
+    v3_RoleCode_CommunityServiceCenter: new Coding({
         code: "CSC",
         display: "community service center",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -189,7 +189,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * A practice setting where cardiovascular diagnostic procedures or therapeutic interventions are performed (e.g., cardiac catheterization lab, echocardiography suite)
      */
-    v3_RoleCode_CardiovascularDiagnosticsOrTherapeuticsUnit: Coding.FromStrict({
+    v3_RoleCode_CardiovascularDiagnosticsOrTherapeuticsUnit: new Coding({
         code: "CVDX",
         display: "Cardiovascular diagnostics or therapeutics unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -197,7 +197,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Location address where medical supplies were transported to for use.
      */
-    v3_RoleCode_DeliveryAddress: Coding.FromStrict({
+    v3_RoleCode_DeliveryAddress: new Coding({
         code: "DADDR",
         display: "Delivery Address",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -205,7 +205,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Dermatology clinic
      */
-    v3_RoleCode_DermatologyClinic: Coding.FromStrict({
+    v3_RoleCode_DermatologyClinic: new Coding({
         code: "DERM",
         display: "Dermatology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -213,7 +213,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * A practice setting where diagnostic procedures or therapeutic interventions are performed
      */
-    v3_RoleCode_DiagnosticsOrTherapeuticsUnit: Coding.FromStrict({
+    v3_RoleCode_DiagnosticsOrTherapeuticsUnit: new Coding({
         code: "DX",
         display: "Diagnostics or therapeutics unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -221,7 +221,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Echocardiography lab
      */
-    v3_RoleCode_EchocardiographyLab: Coding.FromStrict({
+    v3_RoleCode_EchocardiographyLab: new Coding({
         code: "ECHO",
         display: "Echocardiography lab",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -229,7 +229,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Endocrinology clinic
      */
-    v3_RoleCode_EndocrinologyClinic: Coding.FromStrict({
+    v3_RoleCode_EndocrinologyClinic: new Coding({
         code: "ENDO",
         display: "Endocrinology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -237,7 +237,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * (X12N 261QD0000N)
      */
-    v3_RoleCode_EndoscopyLab: Coding.FromStrict({
+    v3_RoleCode_EndoscopyLab: new Coding({
         code: "ENDOS",
         display: "Endoscopy lab",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -245,7 +245,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Otorhinolaryngology clinic
      */
-    v3_RoleCode_OtorhinolaryngologyClinic: Coding.FromStrict({
+    v3_RoleCode_OtorhinolaryngologyClinic: new Coding({
         code: "ENT",
         display: "Otorhinolaryngology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -253,7 +253,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Epilepsy unit
      */
-    v3_RoleCode_EpilepsyUnit: Coding.FromStrict({
+    v3_RoleCode_EpilepsyUnit: new Coding({
         code: "EPIL",
         display: "Epilepsy unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -261,7 +261,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * The section of a health care facility for providing rapid treatment to victims of sudden illness or trauma.
      */
-    v3_RoleCode_EmergencyRoom: Coding.FromStrict({
+    v3_RoleCode_EmergencyRoom: new Coding({
         code: "ER",
         display: "Emergency room",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -269,7 +269,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Emergency trauma unit
      */
-    v3_RoleCode_EmergencyTraumaUnit: Coding.FromStrict({
+    v3_RoleCode_EmergencyTraumaUnit: new Coding({
         code: "ETU",
         display: "Emergency trauma unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -277,7 +277,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Family medicine clinic
      */
-    v3_RoleCode_FamilyMedicineClinic: Coding.FromStrict({
+    v3_RoleCode_FamilyMedicineClinic: new Coding({
         code: "FMC",
         display: "Family medicine clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -285,7 +285,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * (X12N 282N00000N)
      */
-    v3_RoleCode_HospitalsGeneralAcuteCareHospital: Coding.FromStrict({
+    v3_RoleCode_HospitalsGeneralAcuteCareHospital: new Coding({
         code: "GACH",
         display: "Hospitals; General Acute Care Hospital",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -293,7 +293,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Gastroenterology clinic
      */
-    v3_RoleCode_GastroenterologyClinic: Coding.FromStrict({
+    v3_RoleCode_GastroenterologyClinic: new Coding({
         code: "GI",
         display: "Gastroenterology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -301,7 +301,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * A practice setting where GI procedures (such as endoscopies) are performed
      */
-    v3_RoleCode_GastroenterologyDiagnosticsOrTherapeuticsLab: Coding.FromStrict({
+    v3_RoleCode_GastroenterologyDiagnosticsOrTherapeuticsLab: new Coding({
         code: "GIDX",
         display: "Gastroenterology diagnostics or therapeutics lab",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -309,7 +309,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * General internal medicine clinic
      */
-    v3_RoleCode_GeneralInternalMedicineClinic: Coding.FromStrict({
+    v3_RoleCode_GeneralInternalMedicineClinic: new Coding({
         code: "GIM",
         display: "General internal medicine clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -317,7 +317,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Gynecology clinic
      */
-    v3_RoleCode_GynecologyClinic: Coding.FromStrict({
+    v3_RoleCode_GynecologyClinic: new Coding({
         code: "GYN",
         display: "Gynecology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -325,7 +325,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Hand clinic
      */
-    v3_RoleCode_HandClinic: Coding.FromStrict({
+    v3_RoleCode_HandClinic: new Coding({
         code: "HAND",
         display: "Hand clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -333,7 +333,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Hemodialysis unit
      */
-    v3_RoleCode_HemodialysisUnit: Coding.FromStrict({
+    v3_RoleCode_HemodialysisUnit: new Coding({
         code: "HD",
         display: "Hemodialysis unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -341,7 +341,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Hematology clinic
      */
-    v3_RoleCode_HematologyClinic: Coding.FromStrict({
+    v3_RoleCode_HematologyClinic: new Coding({
         code: "HEM",
         display: "Hematology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -349,7 +349,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Description: A location that plays the role of delivering services which may include tests done based on clinical specimens to get health information about a patient as pertaining to the diagnosis, treatment and prevention of disease.  Hospital laboratories may be further divided into specialized units such as Anatomic Pathology, Microbiology, and Biochemistry.
      */
-    v3_RoleCode_HospitalLaboratory: Coding.FromStrict({
+    v3_RoleCode_HospitalLaboratory: new Coding({
         code: "HLAB",
         display: "hospital laboratory",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -357,7 +357,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * An acute care institution that provides medical, surgical, or psychiatric care and treatment for the sick or the injured.
      */
-    v3_RoleCode_Hospital: Coding.FromStrict({
+    v3_RoleCode_Hospital: new Coding({
         code: "HOSP",
         display: "Hospital",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -365,7 +365,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Description: A location that plays the role of delivering services which may include the branch of medicine that uses ionizing and non-ionizing radiation to diagnose and treat diseases.  The radiology unit may be further divided into subspecialties such as Imaging, Cardiovascular, Thoracic, and Ultrasound.
      */
-    v3_RoleCode_RadiologyUnit: Coding.FromStrict({
+    v3_RoleCode_RadiologyUnit: new Coding({
         code: "HRAD",
         display: "radiology unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -373,7 +373,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Hypertension clinic
      */
-    v3_RoleCode_HypertensionClinic: Coding.FromStrict({
+    v3_RoleCode_HypertensionClinic: new Coding({
         code: "HTN",
         display: "Hypertension clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -381,7 +381,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Hospital unit
      */
-    v3_RoleCode_HospitalUnit: Coding.FromStrict({
+    v3_RoleCode_HospitalUnit: new Coding({
         code: "HU",
         display: "Hospital unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -389,7 +389,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Description: A location that plays the role of delivering services which may include collecting specimens and/or samples from patients for laboratory testing purposes, but does not perform any tests or analysis functions.
      */
-    v3_RoleCode_SpecimenCollectionSite: Coding.FromStrict({
+    v3_RoleCode_SpecimenCollectionSite: new Coding({
         code: "HUSCS",
         display: "specimen collection site",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -397,7 +397,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Intensive care unit
      */
-    v3_RoleCode_IntensiveCareUnit: Coding.FromStrict({
+    v3_RoleCode_IntensiveCareUnit: new Coding({
         code: "ICU",
         display: "Intensive care unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -405,7 +405,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Focuses on assessing disability
      */
-    v3_RoleCode_ImpairmentEvaluationCenter: Coding.FromStrict({
+    v3_RoleCode_ImpairmentEvaluationCenter: new Coding({
         code: "IEC",
         display: "Impairment evaluation center",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -413,7 +413,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Infectious disease clinic
      */
-    v3_RoleCode_InfectiousDiseaseClinic: Coding.FromStrict({
+    v3_RoleCode_InfectiousDiseaseClinic: new Coding({
         code: "INFD",
         display: "Infectious disease clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -421,7 +421,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Description: A location that plays the role of delivering services which may include tests are done on clinical specimens to get health information about a patient pertaining to the diagnosis, treatment, and prevention of disease for a hospital visit longer than one day.
      */
-    v3_RoleCode_InpatientLaboratory: Coding.FromStrict({
+    v3_RoleCode_InpatientLaboratory: new Coding({
         code: "INLAB",
         display: "inpatient laboratory",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -429,7 +429,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Description: A location that plays the role of delivering services which may include providing judicious, safe, efficacious, appropriate and cost effective use of medicines for treatment of patients for visits longer than one day. The distinction between inpatient pharmacies and retail (or outpatient) pharmacies is that they are part of a patient's continuity of care while staying in the hospital.
      */
-    v3_RoleCode_InpatientPharmacy: Coding.FromStrict({
+    v3_RoleCode_InpatientPharmacy: new Coding({
         code: "INPHARM",
         display: "inpatient pharmacy",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -437,7 +437,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Infertility clinic
      */
-    v3_RoleCode_InfertilityClinic: Coding.FromStrict({
+    v3_RoleCode_InfertilityClinic: new Coding({
         code: "INV",
         display: "Infertility clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -445,7 +445,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Lympedema clinic
      */
-    v3_RoleCode_LympedemaClinic: Coding.FromStrict({
+    v3_RoleCode_LympedemaClinic: new Coding({
         code: "LYMPH",
         display: "Lympedema clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -453,7 +453,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Description: A location that plays the role of delivering services which include biochemistry, hematology, microbiology, immunochemistry, and toxicology.
      */
-    v3_RoleCode_MedicalLaboratory: Coding.FromStrict({
+    v3_RoleCode_MedicalLaboratory: new Coding({
         code: "MBL",
         display: "medical laboratory",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -461,7 +461,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Medical genetics clinic
      */
-    v3_RoleCode_MedicalGeneticsClinic: Coding.FromStrict({
+    v3_RoleCode_MedicalGeneticsClinic: new Coding({
         code: "MGEN",
         display: "Medical genetics clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -469,7 +469,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * A health care facility operated by the Department of Defense or other military operation.
      */
-    v3_RoleCode_MilitaryHospital: Coding.FromStrict({
+    v3_RoleCode_MilitaryHospital: new Coding({
         code: "MHSP",
         display: "Military Hospital",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -477,7 +477,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Location (mobile) where healthcare service was delivered.
      */
-    v3_RoleCode_MobileUnit: Coding.FromStrict({
+    v3_RoleCode_MobileUnit: new Coding({
         code: "MOBL",
         display: "Mobile Unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -485,7 +485,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Nursing or custodial care facility
      */
-    v3_RoleCode_NursingOrCustodialCareFacility: Coding.FromStrict({
+    v3_RoleCode_NursingOrCustodialCareFacility: new Coding({
         code: "NCCF",
         display: "Nursing or custodial care facility",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -493,7 +493,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Neurology critical care and stroke unit
      */
-    v3_RoleCode_NeurologyCriticalCareAndStrokeUnit: Coding.FromStrict({
+    v3_RoleCode_NeurologyCriticalCareAndStrokeUnit: new Coding({
         code: "NCCS",
         display: "Neurology critical care and stroke unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -501,7 +501,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Nephrology clinic
      */
-    v3_RoleCode_NephrologyClinic: Coding.FromStrict({
+    v3_RoleCode_NephrologyClinic: new Coding({
         code: "NEPH",
         display: "Nephrology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -509,7 +509,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Neurology clinic
      */
-    v3_RoleCode_NeurologyClinic: Coding.FromStrict({
+    v3_RoleCode_NeurologyClinic: new Coding({
         code: "NEUR",
         display: "Neurology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -517,7 +517,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Neurosurgery unit
      */
-    v3_RoleCode_NeurosurgeryUnit: Coding.FromStrict({
+    v3_RoleCode_NeurosurgeryUnit: new Coding({
         code: "NS",
         display: "Neurosurgery unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -525,7 +525,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Obstetrics clinic
      */
-    v3_RoleCode_ObstetricsClinic: Coding.FromStrict({
+    v3_RoleCode_ObstetricsClinic: new Coding({
         code: "OB",
         display: "Obstetrics clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -533,7 +533,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Outpatient facility
      */
-    v3_RoleCode_OutpatientFacility: Coding.FromStrict({
+    v3_RoleCode_OutpatientFacility: new Coding({
         code: "OF",
         display: "Outpatient facility",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -541,7 +541,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Oral and maxillofacial surgery clinic
      */
-    v3_RoleCode_OralAndMaxillofacialSurgeryClinic: Coding.FromStrict({
+    v3_RoleCode_OralAndMaxillofacialSurgeryClinic: new Coding({
         code: "OMS",
         display: "Oral and maxillofacial surgery clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -549,7 +549,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Medical oncology clinic
      */
-    v3_RoleCode_MedicalOncologyClinic: Coding.FromStrict({
+    v3_RoleCode_MedicalOncologyClinic: new Coding({
         code: "ONCL",
         display: "Medical oncology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -557,7 +557,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Opthalmology clinic
      */
-    v3_RoleCode_OpthalmologyClinic: Coding.FromStrict({
+    v3_RoleCode_OpthalmologyClinic: new Coding({
         code: "OPH",
         display: "Opthalmology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -565,7 +565,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Description: A location that plays the role of delivering services which may include examination, diagnosis, treatment, management, and prevention of diseases and disorders of the eye as well as prescribing and fitting appropriate corrective lenses (glasses or contact lenses) as needed.  Optometry clinics may also provide tests for visual field screening, measuring intra-ocular pressure and ophthalmoscopy, as and when required.
      */
-    v3_RoleCode_OptometryClinic: Coding.FromStrict({
+    v3_RoleCode_OptometryClinic: new Coding({
         code: "OPTC",
         display: "optometry clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -573,7 +573,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Orthopedics clinic
      */
-    v3_RoleCode_OrthopedicsClinic: Coding.FromStrict({
+    v3_RoleCode_OrthopedicsClinic: new Coding({
         code: "ORTHO",
         display: "Orthopedics clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -581,7 +581,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Description: A location that plays the role of delivering services which may include tests are done on clinical specimens to get health information about a patient pertaining to the diagnosis, treatment, and prevention of disease for same day visits.
      */
-    v3_RoleCode_OutpatientLaboratory: Coding.FromStrict({
+    v3_RoleCode_OutpatientLaboratory: new Coding({
         code: "OUTLAB",
         display: "outpatient laboratory",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -589,7 +589,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Description: A location that plays the role of delivering services which may include providing judicious, safe, efficacious, appropriate and cost effective use of medicines for treatment of patients for outpatient visits and may also be used for discharge prescriptions.
      */
-    v3_RoleCode_OutpatientPharmacy: Coding.FromStrict({
+    v3_RoleCode_OutpatientPharmacy: new Coding({
         code: "OUTPHARM",
         display: "outpatient pharmacy",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -597,7 +597,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * (X12N 261QP3300N)
      */
-    v3_RoleCode_PainClinic: Coding.FromStrict({
+    v3_RoleCode_PainClinic: new Coding({
         code: "PAINCL",
         display: "Pain clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -605,7 +605,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * (X12N 261QP2300N)
      */
-    v3_RoleCode_PrimaryCareClinic: Coding.FromStrict({
+    v3_RoleCode_PrimaryCareClinic: new Coding({
         code: "PC",
         display: "Primary care clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -613,7 +613,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Pediatrics clinic
      */
-    v3_RoleCode_PediatricsClinic: Coding.FromStrict({
+    v3_RoleCode_PediatricsClinic: new Coding({
         code: "PEDC",
         display: "Pediatrics clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -621,7 +621,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Pediatric cardiology clinic
      */
-    v3_RoleCode_PediatricCardiologyClinic: Coding.FromStrict({
+    v3_RoleCode_PediatricCardiologyClinic: new Coding({
         code: "PEDCARD",
         display: "Pediatric cardiology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -629,7 +629,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Pediatric endocrinology clinic
      */
-    v3_RoleCode_PediatricEndocrinologyClinic: Coding.FromStrict({
+    v3_RoleCode_PediatricEndocrinologyClinic: new Coding({
         code: "PEDE",
         display: "Pediatric endocrinology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -637,7 +637,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Pediatric gastroenterology clinic
      */
-    v3_RoleCode_PediatricGastroenterologyClinic: Coding.FromStrict({
+    v3_RoleCode_PediatricGastroenterologyClinic: new Coding({
         code: "PEDGI",
         display: "Pediatric gastroenterology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -645,7 +645,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Pediatric hematology clinic
      */
-    v3_RoleCode_PediatricHematologyClinic: Coding.FromStrict({
+    v3_RoleCode_PediatricHematologyClinic: new Coding({
         code: "PEDHEM",
         display: "Pediatric hematology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -653,7 +653,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Pediatric oncology clinic
      */
-    v3_RoleCode_PediatricOncologyClinic: Coding.FromStrict({
+    v3_RoleCode_PediatricOncologyClinic: new Coding({
         code: "PEDHO",
         display: "Pediatric oncology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -661,7 +661,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Pediatric intensive care unit
      */
-    v3_RoleCode_PediatricIntensiveCareUnit: Coding.FromStrict({
+    v3_RoleCode_PediatricIntensiveCareUnit: new Coding({
         code: "PEDICU",
         display: "Pediatric intensive care unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -669,7 +669,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Pediatric infectious disease clinic
      */
-    v3_RoleCode_PediatricInfectiousDiseaseClinic: Coding.FromStrict({
+    v3_RoleCode_PediatricInfectiousDiseaseClinic: new Coding({
         code: "PEDID",
         display: "Pediatric infectious disease clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -677,7 +677,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Pediatric nephrology clinic
      */
-    v3_RoleCode_PediatricNephrologyClinic: Coding.FromStrict({
+    v3_RoleCode_PediatricNephrologyClinic: new Coding({
         code: "PEDNEPH",
         display: "Pediatric nephrology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -685,7 +685,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Pediatric neonatal intensive care unit
      */
-    v3_RoleCode_PediatricNeonatalIntensiveCareUnit: Coding.FromStrict({
+    v3_RoleCode_PediatricNeonatalIntensiveCareUnit: new Coding({
         code: "PEDNICU",
         display: "Pediatric neonatal intensive care unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -693,7 +693,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Pediatric rheumatology clinic
      */
-    v3_RoleCode_PediatricRheumatologyClinic: Coding.FromStrict({
+    v3_RoleCode_PediatricRheumatologyClinic: new Coding({
         code: "PEDRHEUM",
         display: "Pediatric rheumatology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -701,7 +701,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Pediatric unit
      */
-    v3_RoleCode_PediatricUnit: Coding.FromStrict({
+    v3_RoleCode_PediatricUnit: new Coding({
         code: "PEDU",
         display: "Pediatric unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -709,7 +709,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Location where healthcare service was delivered, identified as a pharmacy.
      */
-    v3_RoleCode_Pharmacy: Coding.FromStrict({
+    v3_RoleCode_Pharmacy: new Coding({
         code: "PHARM",
         display: "Pharmacy",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -717,7 +717,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * (X12N 273R00000N)
      */
-    v3_RoleCode_PsychiatricHospitalUnit: Coding.FromStrict({
+    v3_RoleCode_PsychiatricHospitalUnit: new Coding({
         code: "PHU",
         display: "Psychiatric hospital unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -725,7 +725,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Plastic surgery clinic
      */
-    v3_RoleCode_PlasticSurgeryClinic: Coding.FromStrict({
+    v3_RoleCode_PlasticSurgeryClinic: new Coding({
         code: "PLS",
         display: "Plastic surgery clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -733,7 +733,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * (X12N 261QP1100N)
      */
-    v3_RoleCode_PodiatryClinic: Coding.FromStrict({
+    v3_RoleCode_PodiatryClinic: new Coding({
         code: "POD",
         display: "Podiatry clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -741,7 +741,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Pain rehabilitation center
      */
-    v3_RoleCode_PainRehabilitationCenter: Coding.FromStrict({
+    v3_RoleCode_PainRehabilitationCenter: new Coding({
         code: "PRC",
         display: "Pain rehabilitation center",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -749,7 +749,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Preventive medicine clinic
      */
-    v3_RoleCode_PreventiveMedicineClinic: Coding.FromStrict({
+    v3_RoleCode_PreventiveMedicineClinic: new Coding({
         code: "PREV",
         display: "Preventive medicine clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -757,7 +757,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Proctology clinic
      */
-    v3_RoleCode_ProctologyClinic: Coding.FromStrict({
+    v3_RoleCode_ProctologyClinic: new Coding({
         code: "PROCTO",
         display: "Proctology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -765,7 +765,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Location where healthcare service was delivered, identified as the healthcare provider's practice office.
      */
-    v3_RoleCode_ProviderQuoteSOffice: Coding.FromStrict({
+    v3_RoleCode_ProviderQuoteSOffice: new Coding({
         code: "PROFF",
         display: "Provider's Office",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -773,7 +773,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Prosthodontics clinic
      */
-    v3_RoleCode_ProsthodonticsClinic: Coding.FromStrict({
+    v3_RoleCode_ProsthodonticsClinic: new Coding({
         code: "PROS",
         display: "Prosthodontics clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -781,7 +781,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Psychology clinic
      */
-    v3_RoleCode_PsychologyClinic: Coding.FromStrict({
+    v3_RoleCode_PsychologyClinic: new Coding({
         code: "PSI",
         display: "Psychology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -789,7 +789,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Psychiatry clinic
      */
-    v3_RoleCode_PsychiatryClinic: Coding.FromStrict({
+    v3_RoleCode_PsychiatryClinic: new Coding({
         code: "PSY",
         display: "Psychiatry clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -797,7 +797,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Healthcare facility that cares for patients with psychiatric illness(s).
      */
-    v3_RoleCode_PsychatricCareFacility: Coding.FromStrict({
+    v3_RoleCode_PsychatricCareFacility: new Coding({
         code: "PSYCHF",
         display: "Psychatric Care Facility",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -805,7 +805,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * location where healthcare was delivered which is the residence of the Patient.
      */
-    v3_RoleCode_PatientQuoteSResidence: Coding.FromStrict({
+    v3_RoleCode_PatientQuoteSResidence: new Coding({
         code: "PTRES",
         display: "Patient's Residence",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -813,7 +813,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * A practice setting where radiology services (diagnostic or therapeutic) are provided            (X12N 261QR0200N)
      */
-    v3_RoleCode_RadiologyDiagnosticsOrTherapeuticsUnit: Coding.FromStrict({
+    v3_RoleCode_RadiologyDiagnosticsOrTherapeuticsUnit: new Coding({
         code: "RADDX",
         display: "Radiology diagnostics or therapeutics unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -821,7 +821,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * (X12N 261QX0203N)
      */
-    v3_RoleCode_RadiationOncologyUnit: Coding.FromStrict({
+    v3_RoleCode_RadiationOncologyUnit: new Coding({
         code: "RADO",
         display: "Radiation oncology unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -829,7 +829,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * (X12N 283X00000N)
      */
-    v3_RoleCode_RehabilitationHospital: Coding.FromStrict({
+    v3_RoleCode_RehabilitationHospital: new Coding({
         code: "RH",
         display: "Rehabilitation hospital",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -837,7 +837,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Description: A location that plays the role of delivering services which may include life training and/or social support to people with addictions.
      */
-    v3_RoleCode_AddictionTreatmentCenter: Coding.FromStrict({
+    v3_RoleCode_AddictionTreatmentCenter: new Coding({
         code: "RHAT",
         display: "addiction treatment center",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -845,7 +845,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Rheumatology clinic
      */
-    v3_RoleCode_RheumatologyClinic: Coding.FromStrict({
+    v3_RoleCode_RheumatologyClinic: new Coding({
         code: "RHEUM",
         display: "Rheumatology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -853,7 +853,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Description: A location that plays the role of delivering services which may include adaptation, rehabilitation and social integration services for people with intellectual and/or pervasive development disorders such as autism or severe behaviour disorder.
      */
-    v3_RoleCode_IntellectualImpairmentCenter: Coding.FromStrict({
+    v3_RoleCode_IntellectualImpairmentCenter: new Coding({
         code: "RHII",
         display: "intellectual impairment center",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -861,7 +861,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Description: A location that plays the role of delivering services which may social support services for adolescents who are pregnant or have child and are experiencing adaptation issues/difficulties in their current or eventual parenting role.
      */
-    v3_RoleCode_ParentsWithAdjustmentDifficultiesCenter: Coding.FromStrict({
+    v3_RoleCode_ParentsWithAdjustmentDifficultiesCenter: new Coding({
         code: "RHMAD",
         display: "parents with adjustment difficulties center",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -869,7 +869,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Description: A location that plays the role of delivering services which may include adaptation, rehabilitation and social integration services for people with physical impairments.
      */
-    v3_RoleCode_PhysicalImpairmentCenter: Coding.FromStrict({
+    v3_RoleCode_PhysicalImpairmentCenter: new Coding({
         code: "RHPI",
         display: "physical impairment center",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -877,7 +877,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Description: A location that plays the role of delivering services for people with hearing impairments.
      */
-    v3_RoleCode_PhysicalImpairmentHearingCenter: Coding.FromStrict({
+    v3_RoleCode_PhysicalImpairmentHearingCenter: new Coding({
         code: "RHPIH",
         display: "physical impairment - hearing center",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -885,7 +885,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Description: A location that plays the role of delivering services for people with motor skill impairments.
      */
-    v3_RoleCode_PhysicalImpairmentMotorSkillsCenter: Coding.FromStrict({
+    v3_RoleCode_PhysicalImpairmentMotorSkillsCenter: new Coding({
         code: "RHPIMS",
         display: "physical impairment - motor skills center",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -893,7 +893,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Description: A location that plays the role of delivering services for people with visual skill impairments.
      */
-    v3_RoleCode_PhysicalImpairmentVisualSkillsCenter: Coding.FromStrict({
+    v3_RoleCode_PhysicalImpairmentVisualSkillsCenter: new Coding({
         code: "RHPIVS",
         display: "physical impairment - visual skills center",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -901,7 +901,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Rehabilitation hospital unit
      */
-    v3_RoleCode_RehabilitationHospitalUnit: Coding.FromStrict({
+    v3_RoleCode_RehabilitationHospitalUnit: new Coding({
         code: "RHU",
         display: "Rehabilitation hospital unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -909,7 +909,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Description: A location that plays the role of delivering services which may include life training and/or social support services for the adaption, rehabilitation and social integration of youths with adjustment difficulties.
      */
-    v3_RoleCode_YouthsWithAdjustmentDifficultiesCenter: Coding.FromStrict({
+    v3_RoleCode_YouthsWithAdjustmentDifficultiesCenter: new Coding({
         code: "RHYAD",
         display: "youths with adjustment difficulties center",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -917,7 +917,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Neuroradiology unit
      */
-    v3_RoleCode_NeuroradiologyUnit: Coding.FromStrict({
+    v3_RoleCode_NeuroradiologyUnit: new Coding({
         code: "RNEU",
         display: "Neuroradiology unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -925,7 +925,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Residential treatment facility
      */
-    v3_RoleCode_ResidentialTreatmentFacility: Coding.FromStrict({
+    v3_RoleCode_ResidentialTreatmentFacility: new Coding({
         code: "RTF",
         display: "Residential treatment facility",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -933,7 +933,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Location where healthcare service was delivered, identified as a school or educational facility.
      */
-    v3_RoleCode_School: Coding.FromStrict({
+    v3_RoleCode_School: new Coding({
         code: "SCHOOL",
         display: "school",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -941,7 +941,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * (X12N 261QA1200N)
      */
-    v3_RoleCode_SleepDisordersUnit: Coding.FromStrict({
+    v3_RoleCode_SleepDisordersUnit: new Coding({
         code: "SLEEP",
         display: "Sleep disorders unit",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -949,7 +949,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * (X12N 314000000N)
      */
-    v3_RoleCode_SkilledNursingFacility: Coding.FromStrict({
+    v3_RoleCode_SkilledNursingFacility: new Coding({
         code: "SNF",
         display: "Skilled nursing facility",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -957,7 +957,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Sports medicine clinic
      */
-    v3_RoleCode_SportsMedicineClinic: Coding.FromStrict({
+    v3_RoleCode_SportsMedicineClinic: new Coding({
         code: "SPMED",
         display: "Sports medicine clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -965,7 +965,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Surgery clinic
      */
-    v3_RoleCode_SurgeryClinic: Coding.FromStrict({
+    v3_RoleCode_SurgeryClinic: new Coding({
         code: "SU",
         display: "Surgery clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -973,7 +973,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * (X12N 324500000N)
      */
-    v3_RoleCode_SubstanceUseRehabilitationFacility: Coding.FromStrict({
+    v3_RoleCode_SubstanceUseRehabilitationFacility: new Coding({
         code: "SURF",
         display: "Substance use rehabilitation facility",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -981,7 +981,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Transplant clinic
      */
-    v3_RoleCode_TransplantClinic: Coding.FromStrict({
+    v3_RoleCode_TransplantClinic: new Coding({
         code: "TR",
         display: "Transplant clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -989,7 +989,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Travel and geographic medicine clinic
      */
-    v3_RoleCode_TravelAndGeographicMedicineClinic: Coding.FromStrict({
+    v3_RoleCode_TravelAndGeographicMedicineClinic: new Coding({
         code: "TRAVEL",
         display: "Travel and geographic medicine clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -997,7 +997,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Description: A location that plays the role of delivering services which may include: social emergency services required for a young person as required under any jurisdictional youth laws, child placement, and family mediation in the defined geographical area the SDL is responsible for. It may provide expertise in a judiciary setting on child custody, adoption and biological history research.
      */
-    v3_RoleCode_UnderageProtectionCenter: Coding.FromStrict({
+    v3_RoleCode_UnderageProtectionCenter: new Coding({
         code: "UPC",
         display: "underage protection center",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -1005,7 +1005,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Urology clinic
      */
-    v3_RoleCode_UrologyClinic: Coding.FromStrict({
+    v3_RoleCode_UrologyClinic: new Coding({
         code: "URO",
         display: "Urology clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -1013,7 +1013,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Wound clinic
      */
-    v3_RoleCode_WoundClinic: Coding.FromStrict({
+    v3_RoleCode_WoundClinic: new Coding({
         code: "WND",
         display: "Wound clinic",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -1021,7 +1021,7 @@ export const V3ServiceDeliveryLocationRoleTypeValueSet = {
     /**
      * Location where healthcare service was delivered, identified as a work place.
      */
-    v3_RoleCode_WorkSite: Coding.FromStrict({
+    v3_RoleCode_WorkSite: new Coding({
         code: "WORK",
         display: "work site",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"

@@ -61,20 +61,20 @@ export class Contributor extends fhir.FhirElement implements fhir.IContributor {
   /**
    * Check if the current Contributor contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["name"] === undefined) { missingElements.push("name"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Contributor from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IContributor):Contributor {
+  static override fromStrict(source:fhir.IContributor):Contributor {
     var dest:Contributor = new Contributor(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Contributor is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

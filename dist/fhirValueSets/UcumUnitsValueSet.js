@@ -10,4922 +10,4922 @@ import { Coding } from '../fhir';
  * Unified Code for Units of Measure (UCUM). This value set includes all UCUM codes
  */
 export const UcumUnitsValueSet = {
-    UcumUnitsValueSet_IgAAnticardiolipinUnit: Coding.FromStrict({
+    UcumUnitsValueSet_IgAAnticardiolipinUnit: new Coding({
         code: "[APL'U]",
         display: "IgA anticardiolipin unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_IgAAnticardiolipinUnitPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_IgAAnticardiolipinUnitPerMilliliter: new Coding({
         code: "[APL'U]/mL",
         display: "IgA anticardiolipin unit per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ArbitraryUnit: Coding.FromStrict({
+    UcumUnitsValueSet_ArbitraryUnit: new Coding({
         code: "[arb'U]",
         display: "arbitrary unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ArbitaryUnitLiter: Coding.FromStrict({
+    UcumUnitsValueSet_ArbitaryUnitLiter: new Coding({
         code: "[arb'U]/L",
         display: "arbitary unit / liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ArbitraryUnitPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_ArbitraryUnitPerMilliliter: new Coding({
         code: "[arb'U]/mL",
         display: "arbitrary unit per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_AllergyUnit: Coding.FromStrict({
+    UcumUnitsValueSet_AllergyUnit: new Coding({
         code: "[AU]",
         display: "allergy unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_BioequivalentAllergenUnit: Coding.FromStrict({
+    UcumUnitsValueSet_BioequivalentAllergenUnit: new Coding({
         code: "[BAU]",
         display: "bioequivalent allergen unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_BodanskyUnit: Coding.FromStrict({
+    UcumUnitsValueSet_BodanskyUnit: new Coding({
         code: "[bdsk'U]",
         display: "Bodansky unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_BethesdaUnit: Coding.FromStrict({
+    UcumUnitsValueSet_BethesdaUnit: new Coding({
         code: "[beth'U]",
         display: "Bethesda unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ColonyFormingUnit: Coding.FromStrict({
+    UcumUnitsValueSet_ColonyFormingUnit: new Coding({
         code: "[CFU]",
         display: "colony forming unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ColonyFormingUnitPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_ColonyFormingUnitPerLiter: new Coding({
         code: "[CFU]/L",
         display: "colony forming unit per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ColonyFormingUnitPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_ColonyFormingUnitPerMilliliter: new Coding({
         code: "[CFU]/mL",
         display: "colony forming unit per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_FrenchCatheterGauge: Coding.FromStrict({
+    UcumUnitsValueSet_FrenchCatheterGauge: new Coding({
         code: "[Ch]",
         display: "French (catheter gauge)",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CubicInch: Coding.FromStrict({
+    UcumUnitsValueSet_CubicInch: new Coding({
         code: "[cin_i]",
         display: "cubic inch",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Cup: Coding.FromStrict({
+    UcumUnitsValueSet_Cup: new Coding({
         code: "[cup_us]",
         display: "cup",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_DegreeFahrenheit: Coding.FromStrict({
+    UcumUnitsValueSet_DegreeFahrenheit: new Coding({
         code: "[degF]",
         display: "degree Fahrenheit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_DramUSAndBritish: Coding.FromStrict({
+    UcumUnitsValueSet_DramUSAndBritish: new Coding({
         code: "[dr_av]",
         display: "Dram (US and British)",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Drop: Coding.FromStrict({
+    UcumUnitsValueSet_Drop: new Coding({
         code: "[drp]",
         display: "drop",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_DropHPF: Coding.FromStrict({
+    UcumUnitsValueSet_DropHPF: new Coding({
         code: "[drp]/[HPF]",
         display: "drop / HPF",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_DropHour: Coding.FromStrict({
+    UcumUnitsValueSet_DropHour: new Coding({
         code: "[drp]/h",
         display: "drop / hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_DropMinute: Coding.FromStrict({
+    UcumUnitsValueSet_DropMinute: new Coding({
         code: "[drp]/min",
         display: "drop / minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_DropMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_DropMilliliter: new Coding({
         code: "[drp]/mL",
         display: "drop / milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_DropSecond: Coding.FromStrict({
+    UcumUnitsValueSet_DropSecond: new Coding({
         code: "[drp]/s",
         display: "drop / second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_FluidDram: Coding.FromStrict({
+    UcumUnitsValueSet_FluidDram: new Coding({
         code: "[fdr_us]",
         display: "fluid dram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_FluidOunce: Coding.FromStrict({
+    UcumUnitsValueSet_FluidOunce: new Coding({
         code: "[foz_br]",
         display: "fluid ounce",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_FluidOunce_2: Coding.FromStrict({
+    UcumUnitsValueSet_FluidOunce_2: new Coding({
         code: "[foz_us]",
         display: "fluid ounce",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Feet: Coding.FromStrict({
+    UcumUnitsValueSet_Feet: new Coding({
         code: "[ft_i]",
         display: "Feet",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Fathom: Coding.FromStrict({
+    UcumUnitsValueSet_Fathom: new Coding({
         code: "[fth_i]",
         display: "fathom",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Gallon: Coding.FromStrict({
+    UcumUnitsValueSet_Gallon: new Coding({
         code: "[gal_br]",
         display: "gallon",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_QueenAnneQuoteSWineGallon: Coding.FromStrict({
+    UcumUnitsValueSet_QueenAnneQuoteSWineGallon: new Coding({
         code: "[gal_us]",
         display: "Queen Anne's wine gallon",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_IgGAnticardiolipinUnit: Coding.FromStrict({
+    UcumUnitsValueSet_IgGAnticardiolipinUnit: new Coding({
         code: "[GPL'U]",
         display: "IgG anticardiolipin unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_IgGAnticardiolipinUnitPerMilliliterAsteriskAsterisk: Coding.FromStrict({
+    UcumUnitsValueSet_IgGAnticardiolipinUnitPerMilliliterAsteriskAsterisk: new Coding({
         code: "[GPL'U]/mL",
         display: "IgG anticardiolipin unit per milliliter**",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Grain: Coding.FromStrict({
+    UcumUnitsValueSet_Grain: new Coding({
         code: "[gr]",
         display: "grain",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_HighPowerField: Coding.FromStrict({
+    UcumUnitsValueSet_HighPowerField: new Coding({
         code: "[HPF]",
         display: "high power field",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InchInternationalOfWater: Coding.FromStrict({
+    UcumUnitsValueSet_InchInternationalOfWater: new Coding({
         code: "[in_i'H2O]",
         display: "inch (international) of water",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InchInternational: Coding.FromStrict({
+    UcumUnitsValueSet_InchInternational: new Coding({
         code: "[in_i]",
         display: "inch (international)",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InternationalUnit: Coding.FromStrict({
+    UcumUnitsValueSet_InternationalUnit: new Coding({
         code: "[iU]",
         display: "international unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InternationalUnit_2: Coding.FromStrict({
+    UcumUnitsValueSet_InternationalUnit_2: new Coding({
         code: "[IU]",
         display: "international unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InternationalUnitPer2Hour: Coding.FromStrict({
+    UcumUnitsValueSet_InternationalUnitPer2Hour: new Coding({
         code: "[IU]/(2.h)",
         display: "international unit per 2 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InternationalUnitPer24Hour: Coding.FromStrict({
+    UcumUnitsValueSet_InternationalUnitPer24Hour: new Coding({
         code: "[IU]/(24.h)",
         display: "international unit per 24 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InternationalUnitPerBillionRedBloodCells: Coding.FromStrict({
+    UcumUnitsValueSet_InternationalUnitPerBillionRedBloodCells: new Coding({
         code: "[IU]/10*9{RBCs}",
         display: "international unit per billion red blood cells",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InternationalUnitPerDay: Coding.FromStrict({
+    UcumUnitsValueSet_InternationalUnitPerDay: new Coding({
         code: "[IU]/d",
         display: "international unit per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InternationalUnitPerDeciliter: Coding.FromStrict({
+    UcumUnitsValueSet_InternationalUnitPerDeciliter: new Coding({
         code: "[IU]/dL",
         display: "international unit per deciliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InternationalUnitPerGram: Coding.FromStrict({
+    UcumUnitsValueSet_InternationalUnitPerGram: new Coding({
         code: "[IU]/g",
         display: "international unit per gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InternationalUnitPerGramOfHemoglobin: Coding.FromStrict({
+    UcumUnitsValueSet_InternationalUnitPerGramOfHemoglobin: new Coding({
         code: "[IU]/g{Hb}",
         display: "international unit per gram of hemoglobin",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InternationalUnitGramHgb: Coding.FromStrict({
+    UcumUnitsValueSet_InternationalUnitGramHgb: new Coding({
         code: "[iU]/g{Hgb}",
         display: "international unit / gram Hgb",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InternationalUnitPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_InternationalUnitPerHour: new Coding({
         code: "[IU]/h",
         display: "international unit per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InternationalUnitPerKilogram: Coding.FromStrict({
+    UcumUnitsValueSet_InternationalUnitPerKilogram: new Coding({
         code: "[IU]/kg",
         display: "international unit per kilogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InternationalUnitPerKilogramPerDay: Coding.FromStrict({
+    UcumUnitsValueSet_InternationalUnitPerKilogramPerDay: new Coding({
         code: "[IU]/kg/d",
         display: "international unit per kilogram per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InternationalUnitPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_InternationalUnitPerLiter: new Coding({
         code: "[IU]/L",
         display: "international unit per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InternationalUnitPerLiterAt37DegreesCelsius: Coding.FromStrict({
+    UcumUnitsValueSet_InternationalUnitPerLiterAt37DegreesCelsius: new Coding({
         code: "[IU]/L{37Cel}",
         display: "international unit per liter at 37 degrees Celsius",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InternationalUnitPerMilligramOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_InternationalUnitPerMilligramOfCreatinine: new Coding({
         code: "[IU]/mg{creat}",
         display: "international unit per milligram of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InternationalUnitPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_InternationalUnitPerMinute: new Coding({
         code: "[IU]/min",
         display: "international unit per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InternationalUnitPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_InternationalUnitPerMilliliter: new Coding({
         code: "[IU]/mL",
         display: "international unit per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KingArmstrongUnit: Coding.FromStrict({
+    UcumUnitsValueSet_KingArmstrongUnit: new Coding({
         code: "[ka'U]",
         display: "King Armstrong unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PoundUSAndBritish: Coding.FromStrict({
+    UcumUnitsValueSet_PoundUSAndBritish: new Coding({
         code: "[lb_av]",
         display: "pound (US and British)",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LowPowerField: Coding.FromStrict({
+    UcumUnitsValueSet_LowPowerField: new Coding({
         code: "[LPF]",
         display: "low power field",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MacLaganUnit: Coding.FromStrict({
+    UcumUnitsValueSet_MacLaganUnit: new Coding({
         code: "[mclg'U]",
         display: "Mac Lagan unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_StatuteMile: Coding.FromStrict({
+    UcumUnitsValueSet_StatuteMile: new Coding({
         code: "[mi_i]",
         display: "statute mile",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Mile: Coding.FromStrict({
+    UcumUnitsValueSet_Mile: new Coding({
         code: "[mi_us]",
         display: "mile",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Minim: Coding.FromStrict({
+    UcumUnitsValueSet_Minim: new Coding({
         code: "[min_us]",
         display: "minim",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_IgMAnticardiolipinUnit: Coding.FromStrict({
+    UcumUnitsValueSet_IgMAnticardiolipinUnit: new Coding({
         code: "[MPL'U]",
         display: "IgM anticardiolipin unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_IgMAnticardiolipinUnitPerMilliliterAsteriskAsterisk: Coding.FromStrict({
+    UcumUnitsValueSet_IgMAnticardiolipinUnitPerMilliliterAsteriskAsterisk: new Coding({
         code: "[MPL'U]/mL",
         display: "IgM anticardiolipin unit per milliliter**",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NauticalMile: Coding.FromStrict({
+    UcumUnitsValueSet_NauticalMile: new Coding({
         code: "[nmi_i]",
         display: "nautical mile",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_OunceUSAndBritish: Coding.FromStrict({
+    UcumUnitsValueSet_OunceUSAndBritish: new Coding({
         code: "[oz_av]",
         display: "ounce (US and British)",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Ounce: Coding.FromStrict({
+    UcumUnitsValueSet_Ounce: new Coding({
         code: "[oz_tr]",
         display: "ounce",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PH: Coding.FromStrict({
+    UcumUnitsValueSet_PH: new Coding({
         code: "[pH]",
         display: "pH",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_TheNumberPiAsteriskRadianMinute: Coding.FromStrict({
+    UcumUnitsValueSet_TheNumberPiAsteriskRadianMinute: new Coding({
         code: "[pi].rad/min",
         display: "the number pi * radian / minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PartPerBillion: Coding.FromStrict({
+    UcumUnitsValueSet_PartPerBillion: new Coding({
         code: "[ppb]",
         display: "part per billion",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PartPerMillion: Coding.FromStrict({
+    UcumUnitsValueSet_PartPerMillion: new Coding({
         code: "[ppm]",
         display: "part per million",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PartPerMillionInVolumePerVolume: Coding.FromStrict({
+    UcumUnitsValueSet_PartPerMillionInVolumePerVolume: new Coding({
         code: "[ppm]{v/v}",
         display: "part per million in volume per volume",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PartsPerThousand: Coding.FromStrict({
+    UcumUnitsValueSet_PartsPerThousand: new Coding({
         code: "[ppth]",
         display: "parts per thousand",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PartPerTrillion: Coding.FromStrict({
+    UcumUnitsValueSet_PartPerTrillion: new Coding({
         code: "[pptr]",
         display: "part per trillion",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PoundPerSquareInch: Coding.FromStrict({
+    UcumUnitsValueSet_PoundPerSquareInch: new Coding({
         code: "[psi]",
         display: "pound per square inch",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Pint: Coding.FromStrict({
+    UcumUnitsValueSet_Pint: new Coding({
         code: "[pt_br]",
         display: "pint",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Quart: Coding.FromStrict({
+    UcumUnitsValueSet_Quart: new Coding({
         code: "[qt_br]",
         display: "quart",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Quart_2: Coding.FromStrict({
+    UcumUnitsValueSet_Quart_2: new Coding({
         code: "[qt_us]",
         display: "quart",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_SquareFootInternational: Coding.FromStrict({
+    UcumUnitsValueSet_SquareFootInternational: new Coding({
         code: "[sft_i]",
         display: "square foot (international)",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_SquareInchInternational: Coding.FromStrict({
+    UcumUnitsValueSet_SquareInchInternational: new Coding({
         code: "[sin_i]",
         display: "square inch (international)",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ShortTonUSTon: Coding.FromStrict({
+    UcumUnitsValueSet_ShortTonUSTon: new Coding({
         code: "[ston_av]",
         display: "short ton U.S. ton",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_SquareYard: Coding.FromStrict({
+    UcumUnitsValueSet_SquareYard: new Coding({
         code: "[syd_i]",
         display: "square yard",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_TuberculinUnit: Coding.FromStrict({
+    UcumUnitsValueSet_TuberculinUnit: new Coding({
         code: "[tb'U]",
         display: "tuberculin unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_TablespoonUS: Coding.FromStrict({
+    UcumUnitsValueSet_TablespoonUS: new Coding({
         code: "[tbs_us]",
         display: "tablespoon (US)",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ToddUnit: Coding.FromStrict({
+    UcumUnitsValueSet_ToddUnit: new Coding({
         code: "[todd'U]",
         display: "Todd unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Teaspoon: Coding.FromStrict({
+    UcumUnitsValueSet_Teaspoon: new Coding({
         code: "[tsp_us]",
         display: "teaspoon",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Yard: Coding.FromStrict({
+    UcumUnitsValueSet_Yard: new Coding({
         code: "[yd_i]",
         display: "yard",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NumberOfCalculi: Coding.FromStrict({
+    UcumUnitsValueSet_NumberOfCalculi: new Coding({
         code: "{# of calculi}",
         display: "# of calculi",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NumberOfDonorInformativeMarkers: Coding.FromStrict({
+    UcumUnitsValueSet_NumberOfDonorInformativeMarkers: new Coding({
         code: "{# of donor informative markers}",
         display: "# of donor informative markers",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NumberOfFetuses: Coding.FromStrict({
+    UcumUnitsValueSet_NumberOfFetuses: new Coding({
         code: "{# of fetuses}",
         display: "# of fetuses",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NumberOfInformativeMarkers: Coding.FromStrict({
+    UcumUnitsValueSet_NumberOfInformativeMarkers: new Coding({
         code: "{# of informative markers}",
         display: "# of informative markers",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Number: Coding.FromStrict({
+    UcumUnitsValueSet_Number: new Coding({
         code: "{#}",
         display: "#",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_VAL2Or3TimesDay: Coding.FromStrict({
+    UcumUnitsValueSet_VAL2Or3TimesDay: new Coding({
         code: "{2 or 3 times}/d",
         display: "2 or 3 times / day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_VAL3TimesDay: Coding.FromStrict({
+    UcumUnitsValueSet_VAL3TimesDay: new Coding({
         code: "{3 times}/d",
         display: "3 times / day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_VAL4TimesDay: Coding.FromStrict({
+    UcumUnitsValueSet_VAL4TimesDay: new Coding({
         code: "{4 times}/d",
         display: "4 times / day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_VAL5TimesDay: Coding.FromStrict({
+    UcumUnitsValueSet_VAL5TimesDay: new Coding({
         code: "{5 times}/d",
         display: "5 times / day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_AbsorbanceQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_AbsorbanceQuoteU: new Coding({
         code: "{Absorbance'U}",
         display: "Absorbance'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_AbsorbanceQuoteUMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_AbsorbanceQuoteUMilliliter: new Coding({
         code: "{Absorbance'U}/mL",
         display: "Absorbance'U / milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Absorbance: Coding.FromStrict({
+    UcumUnitsValueSet_Absorbance: new Coding({
         code: "{absorbance}",
         display: "absorbance",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Activity: Coding.FromStrict({
+    UcumUnitsValueSet_Activity: new Coding({
         code: "{activity}",
         display: "activity",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ActivityCoefficient: Coding.FromStrict({
+    UcumUnitsValueSet_ActivityCoefficient: new Coding({
         code: "{ActivityCoefficient}",
         display: "ActivityCoefficient",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_AHFQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_AHFQuoteU: new Coding({
         code: "{AHF'U}",
         display: "AHF'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_AntibodyResponseQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_AntibodyResponseQuoteU: new Coding({
         code: "{AntibodyResponse'U}",
         display: "AntibodyResponse'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Applicator: Coding.FromStrict({
+    UcumUnitsValueSet_Applicator: new Coding({
         code: "{Applicator}",
         display: "Applicator",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_IgAAntiphosphatidylserineUnit: Coding.FromStrict({
+    UcumUnitsValueSet_IgAAntiphosphatidylserineUnit: new Coding({
         code: "{APS'U}",
         display: "IgA antiphosphatidylserine unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_AspirinResponseUnit: Coding.FromStrict({
+    UcumUnitsValueSet_AspirinResponseUnit: new Coding({
         code: "{ARU}",
         display: "aspirin response unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_AspirinReactionQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_AspirinReactionQuoteU: new Coding({
         code: "{AspirinReaction'U}",
         display: "AspirinReaction'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Bead: Coding.FromStrict({
+    UcumUnitsValueSet_Bead: new Coding({
         code: "{Bead}",
         display: "Bead",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_HeartBeatsPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_HeartBeatsPerMinute: new Coding({
         code: "{beats}/min",
         display: "heart beats per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_BeatsMinute: Coding.FromStrict({
+    UcumUnitsValueSet_BeatsMinute: new Coding({
         code: "{Beats}/min",
         display: "Beats / minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_BindingIndex: Coding.FromStrict({
+    UcumUnitsValueSet_BindingIndex: new Coding({
         code: "{binding_index}",
         display: "binding index",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Bottle: Coding.FromStrict({
+    UcumUnitsValueSet_Bottle: new Coding({
         code: "{Bottle}",
         display: "Bottle",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_BowlsDay: Coding.FromStrict({
+    UcumUnitsValueSet_BowlsDay: new Coding({
         code: "{Bowls}/d",
         display: "Bowls / day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_BreathsMinute: Coding.FromStrict({
+    UcumUnitsValueSet_BreathsMinute: new Coding({
         code: "{Breaths}/min",
         display: "Breaths / minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ComplementActivityEnzymeUnit: Coding.FromStrict({
+    UcumUnitsValueSet_ComplementActivityEnzymeUnit: new Coding({
         code: "{CAE'U}",
         display: "complement activity enzyme unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CAGTrinucleotideRepeats: Coding.FromStrict({
+    UcumUnitsValueSet_CAGTrinucleotideRepeats: new Coding({
         code: "{CAG_repeats}",
         display: "CAG trinucleotide repeats",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CagRepeat: Coding.FromStrict({
+    UcumUnitsValueSet_CagRepeat: new Coding({
         code: "{CagRepeat}",
         display: "CagRepeat",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Can: Coding.FromStrict({
+    UcumUnitsValueSet_Can: new Coding({
         code: "{Can}",
         display: "Can",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CansWeek: Coding.FromStrict({
+    UcumUnitsValueSet_CansWeek: new Coding({
         code: "{Cans}/wk",
         display: "Cans / week",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Capsule: Coding.FromStrict({
+    UcumUnitsValueSet_Capsule: new Coding({
         code: "{Capsule}",
         display: "Capsule",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Cell: Coding.FromStrict({
+    UcumUnitsValueSet_Cell: new Coding({
         code: "{Cell}",
         display: "Cell",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Cells: Coding.FromStrict({
+    UcumUnitsValueSet_Cells: new Coding({
         code: "{cells}",
         display: "cells",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CellsPerHighPowerField: Coding.FromStrict({
+    UcumUnitsValueSet_CellsPerHighPowerField: new Coding({
         code: "{cells}/[HPF]",
         display: "cells per high power field",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CellsMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_CellsMilliliter: new Coding({
         code: "{Cells}/mL",
         display: "Cells / milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CellsPerMicroliter: Coding.FromStrict({
+    UcumUnitsValueSet_CellsPerMicroliter: new Coding({
         code: "{cells}/uL",
         display: "cells per microliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CfTiter: Coding.FromStrict({
+    UcumUnitsValueSet_CfTiter: new Coding({
         code: "{CfTiter}",
         display: "CfTiter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Cfu: Coding.FromStrict({
+    UcumUnitsValueSet_Cfu: new Coding({
         code: "{cfu}",
         display: "cfu",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CfuMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_CfuMilliliter: new Coding({
         code: "{cfu}/mL",
         display: "cfu / milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CGGRepeats: Coding.FromStrict({
+    UcumUnitsValueSet_CGGRepeats: new Coding({
         code: "{CGG_repeats}",
         display: "CGG_repeats",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CGG: Coding.FromStrict({
+    UcumUnitsValueSet_CGG: new Coding({
         code: "{CGG}",
         display: "CGG",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ComplementCH100Unit: Coding.FromStrict({
+    UcumUnitsValueSet_ComplementCH100Unit: new Coding({
         code: "{CH100'U}",
         display: "complement CH100 unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ClockTime: Coding.FromStrict({
+    UcumUnitsValueSet_ClockTime: new Coding({
         code: "{clock time}",
         display: "clock time",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ClockTime_2: Coding.FromStrict({
+    UcumUnitsValueSet_ClockTime_2: new Coding({
         code: "{clock_time}",
         display: "clock_time",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ComplementActivityEnzymeQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_ComplementActivityEnzymeQuoteU: new Coding({
         code: "{ComplementActivityEnzyme'U}",
         display: "ComplementActivityEnzyme'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ComplementCH100QuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_ComplementCH100QuoteU: new Coding({
         code: "{ComplementCH100'U}",
         display: "ComplementCH100'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ComplementCH50QuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_ComplementCH50QuoteU: new Coding({
         code: "{ComplementCH50'U}",
         display: "ComplementCH50'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Copies: Coding.FromStrict({
+    UcumUnitsValueSet_Copies: new Coding({
         code: "{copies}",
         display: "copies",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CopiesPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_CopiesPerMilliliter: new Coding({
         code: "{copies}/mL",
         display: "copies per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CopiesPerMicrogram: Coding.FromStrict({
+    UcumUnitsValueSet_CopiesPerMicrogram: new Coding({
         code: "{copies}/ug",
         display: "copies per microgram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CopiesMicroliter: Coding.FromStrict({
+    UcumUnitsValueSet_CopiesMicroliter: new Coding({
         code: "{Copies}/uL",
         display: "Copies / microliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Count: Coding.FromStrict({
+    UcumUnitsValueSet_Count: new Coding({
         code: "{count}",
         display: "count",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Count_2: Coding.FromStrict({
+    UcumUnitsValueSet_Count_2: new Coding({
         code: "{Count}",
         display: "Count",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CountsMinute: Coding.FromStrict({
+    UcumUnitsValueSet_CountsMinute: new Coding({
         code: "{Counts}/min",
         display: "Counts / minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CountsPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_CountsPerMinute: new Coding({
         code: "{CPM}",
         display: "counts per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CountsPerMinutePerThousandCells: Coding.FromStrict({
+    UcumUnitsValueSet_CountsPerMinutePerThousandCells: new Coding({
         code: "{CPM}/10*3{cell}",
         display: "counts per minute per thousand cells",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Dalton: Coding.FromStrict({
+    UcumUnitsValueSet_Dalton: new Coding({
         code: "{Dalton}",
         display: "Dalton",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_DdTiter: Coding.FromStrict({
+    UcumUnitsValueSet_DdTiter: new Coding({
         code: "{DdTiter}",
         display: "DdTiter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ChangeInDeltaOpticalDensity: Coding.FromStrict({
+    UcumUnitsValueSet_ChangeInDeltaOpticalDensity: new Coding({
         code: "{delta_OD}",
         display: "change in (delta) optical density",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_DeltaOpticalDensity: Coding.FromStrict({
+    UcumUnitsValueSet_DeltaOpticalDensity: new Coding({
         code: "{DeltaOpticalDensity}",
         display: "DeltaOpticalDensity",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Dilution: Coding.FromStrict({
+    UcumUnitsValueSet_Dilution: new Coding({
         code: "{dilution}",
         display: "dilution",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Dilution_2: Coding.FromStrict({
+    UcumUnitsValueSet_Dilution_2: new Coding({
         code: "{Dilution}",
         display: "dilution",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_DisintegrationsMinute: Coding.FromStrict({
+    UcumUnitsValueSet_DisintegrationsMinute: new Coding({
         code: "{Disintegrations}/min",
         display: "Disintegrations / minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Dose: Coding.FromStrict({
+    UcumUnitsValueSet_Dose: new Coding({
         code: "{Dose}",
         display: "Dose",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_DrinksDay: Coding.FromStrict({
+    UcumUnitsValueSet_DrinksDay: new Coding({
         code: "{Drinks}/d",
         display: "Drinks / day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Each: Coding.FromStrict({
+    UcumUnitsValueSet_Each: new Coding({
         code: "{Each}",
         display: "Each",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EhrlichUnit: Coding.FromStrict({
+    UcumUnitsValueSet_EhrlichUnit: new Coding({
         code: "{Ehrlich'U}",
         display: "Ehrlich unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EhrlichUnitPer2Hour: Coding.FromStrict({
+    UcumUnitsValueSet_EhrlichUnitPer2Hour: new Coding({
         code: "{Ehrlich'U}/(2.h)",
         display: "Ehrlich unit per 2 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EhrlichUnitPer100Gram: Coding.FromStrict({
+    UcumUnitsValueSet_EhrlichUnitPer100Gram: new Coding({
         code: "{Ehrlich'U}/100.g",
         display: "Ehrlich unit per 100 gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EhrlichUnitPerDay: Coding.FromStrict({
+    UcumUnitsValueSet_EhrlichUnitPerDay: new Coding({
         code: "{Ehrlich'U}/d",
         display: "Ehrlich unit per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EhrilichUnitPerDeciliter: Coding.FromStrict({
+    UcumUnitsValueSet_EhrilichUnitPerDeciliter: new Coding({
         code: "{Ehrlich'U}/dL",
         display: "Ehrilich unit per deciliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EhrlichQuoteUMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_EhrlichQuoteUMilliliter: new Coding({
         code: "{Ehrlich'U}/mL",
         display: "Ehrlich'U / milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EIAIndex: Coding.FromStrict({
+    UcumUnitsValueSet_EIAIndex: new Coding({
         code: "{EIA_index}",
         display: "EIA index",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EIATiter: Coding.FromStrict({
+    UcumUnitsValueSet_EIATiter: new Coding({
         code: "{EIA_titer}",
         display: "EIA titer",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EIAUnit: Coding.FromStrict({
+    UcumUnitsValueSet_EIAUnit: new Coding({
         code: "{EIA'U}",
         display: "EIA unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EIAUnitPerEnzymeUnit: Coding.FromStrict({
+    UcumUnitsValueSet_EIAUnitPerEnzymeUnit: new Coding({
         code: "{EIA'U}/U",
         display: "EIA unit per enzyme Unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EIAIndex_2: Coding.FromStrict({
+    UcumUnitsValueSet_EIAIndex_2: new Coding({
         code: "{EIAIndex}",
         display: "EIA index",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EIATiter_2: Coding.FromStrict({
+    UcumUnitsValueSet_EIATiter_2: new Coding({
         code: "{EIATiter}",
         display: "EIA titer",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ELISAUnit: Coding.FromStrict({
+    UcumUnitsValueSet_ELISAUnit: new Coding({
         code: "{ELISA'U}",
         display: "ELISA unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ElisaQuoteUMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_ElisaQuoteUMilliliter: new Coding({
         code: "{Elisa'U}/mL",
         display: "Elisa'U / milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ElisaIndex: Coding.FromStrict({
+    UcumUnitsValueSet_ElisaIndex: new Coding({
         code: "{ElisaIndex}",
         display: "ElisaIndex",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ElisaValue: Coding.FromStrict({
+    UcumUnitsValueSet_ElisaValue: new Coding({
         code: "{ElisaValue}",
         display: "ElisaValue",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ErythrocytePerMicroliter: Coding.FromStrict({
+    UcumUnitsValueSet_ErythrocytePerMicroliter: new Coding({
         code: "{ERY}/uL",
         display: "erythrocyte per microliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EIAValue: Coding.FromStrict({
+    UcumUnitsValueSet_EIAValue: new Coding({
         code: "{EV}",
         display: "EIA value",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Events: Coding.FromStrict({
+    UcumUnitsValueSet_Events: new Coding({
         code: "{Events}",
         display: "Events",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_FluorescentIntensityUnit: Coding.FromStrict({
+    UcumUnitsValueSet_FluorescentIntensityUnit: new Coding({
         code: "{FIU}",
         display: "fluorescent intensity unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_FluorescenceIntensityQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_FluorescenceIntensityQuoteU: new Coding({
         code: "{FluorescenceIntensity'U}",
         display: "FluorescenceIntensity'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Fraction: Coding.FromStrict({
+    UcumUnitsValueSet_Fraction: new Coding({
         code: "{fraction}",
         display: "fraction",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GPortionPhospholipids: Coding.FromStrict({
+    UcumUnitsValueSet_GPortionPhospholipids: new Coding({
         code: "{G-PortionPhospholipids}",
         display: "G-PortionPhospholipids",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GAATrinucleotideRepeats: Coding.FromStrict({
+    UcumUnitsValueSet_GAATrinucleotideRepeats: new Coding({
         code: "{GAA_repeats}",
         display: "GAA trinucleotide repeats",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GenomesPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_GenomesPerMilliliter: new Coding({
         code: "{genomes}/mL",
         display: "genomes per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GliadinIndexValue: Coding.FromStrict({
+    UcumUnitsValueSet_GliadinIndexValue: new Coding({
         code: "{GliadinIndexValue}",
         display: "GliadinIndexValue",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GlobulesDropsPerHighPowerField: Coding.FromStrict({
+    UcumUnitsValueSet_GlobulesDropsPerHighPowerField: new Coding({
         code: "{Globules}/[HPF]",
         display: "globules (drops)  per high power field",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_IgGAntiphosphatidylserineUnit: Coding.FromStrict({
+    UcumUnitsValueSet_IgGAntiphosphatidylserineUnit: new Coding({
         code: "{GPS'U}",
         display: "IgG antiphosphatidylserine unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InfluenzaHemagglutinationTiter: Coding.FromStrict({
+    UcumUnitsValueSet_InfluenzaHemagglutinationTiter: new Coding({
         code: "{HA_titer}",
         display: "influenza hemagglutination titer",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_HaTiter: Coding.FromStrict({
+    UcumUnitsValueSet_HaTiter: new Coding({
         code: "{HaTiter}",
         display: "HaTiter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ImmunofluorescenceAssayIndex: Coding.FromStrict({
+    UcumUnitsValueSet_ImmunofluorescenceAssayIndex: new Coding({
         code: "{IFA_index}",
         display: "immunofluorescence assay index",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ImmunofluorescenceAssayTiter: Coding.FromStrict({
+    UcumUnitsValueSet_ImmunofluorescenceAssayTiter: new Coding({
         code: "{IFA_titer}",
         display: "Immunofluorescence assay titer",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_IfaIndex: Coding.FromStrict({
+    UcumUnitsValueSet_IfaIndex: new Coding({
         code: "{IfaIndex}",
         display: "IfaIndex",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_IfaTiter: Coding.FromStrict({
+    UcumUnitsValueSet_IfaTiter: new Coding({
         code: "{IfaTiter}",
         display: "IfaTiter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_IgAAntiphosphatidyleserineQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_IgAAntiphosphatidyleserineQuoteU: new Coding({
         code: "{IgAAntiphosphatidyleserine'U}",
         display: "IgAAntiphosphatidyleserine'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_IgAPhospholipidQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_IgAPhospholipidQuoteU: new Coding({
         code: "{IgAPhospholipid'U}",
         display: "IgAPhospholipid'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_IgGAntiphosphatidyleserineQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_IgGAntiphosphatidyleserineQuoteU: new Coding({
         code: "{IgGAntiphosphatidyleserine'U}",
         display: "IgGAntiphosphatidyleserine'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_IgGIndex: Coding.FromStrict({
+    UcumUnitsValueSet_IgGIndex: new Coding({
         code: "{IgGIndex}",
         display: "IgGIndex",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_IgMAntiphosphatidyleserineQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_IgMAntiphosphatidyleserineQuoteU: new Coding({
         code: "{IgMAntiphosphatidyleserine'U}",
         display: "IgMAntiphosphatidyleserine'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_IgMIndex: Coding.FromStrict({
+    UcumUnitsValueSet_IgMIndex: new Coding({
         code: "{IgMIndex}",
         display: "IgMIndex",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ImmuneComplexUnit: Coding.FromStrict({
+    UcumUnitsValueSet_ImmuneComplexUnit: new Coding({
         code: "{ImmuneComplex'U}",
         display: "immune complex unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ImmuneStatusRatio: Coding.FromStrict({
+    UcumUnitsValueSet_ImmuneStatusRatio: new Coding({
         code: "{ImmuneStatusRatio}",
         display: "ImmuneStatusRatio",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Immunity: Coding.FromStrict({
+    UcumUnitsValueSet_Immunity: new Coding({
         code: "{Immunity}",
         display: "Immunity",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_IndexValue: Coding.FromStrict({
+    UcumUnitsValueSet_IndexValue: new Coding({
         code: "{index_val}",
         display: "index value",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_IndexVal: Coding.FromStrict({
+    UcumUnitsValueSet_IndexVal: new Coding({
         code: "{Index_val}",
         display: "Index_val",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Index: Coding.FromStrict({
+    UcumUnitsValueSet_Index: new Coding({
         code: "{index}",
         display: "index",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_IndexValue_2: Coding.FromStrict({
+    UcumUnitsValueSet_IndexValue_2: new Coding({
         code: "{IndexValue}",
         display: "IndexValue",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InhaledTobaccoUseAmountYears: Coding.FromStrict({
+    UcumUnitsValueSet_InhaledTobaccoUseAmountYears: new Coding({
         code: "{InhaledTobaccoUseAmountYears}",
         display: "InhaledTobaccoUseAmountYears",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InhaledTobaccoUsePacksDay: Coding.FromStrict({
+    UcumUnitsValueSet_InhaledTobaccoUsePacksDay: new Coding({
         code: "{InhaledTobaccoUsePacks}/d",
         display: "InhaledTobaccoUsePacks / day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_INRQuoteUnit: Coding.FromStrict({
+    UcumUnitsValueSet_INRQuoteUnit: new Coding({
         code: "{INR'unit}",
         display: "INR'unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_InternationalNormalizedRatio: Coding.FromStrict({
+    UcumUnitsValueSet_InternationalNormalizedRatio: new Coding({
         code: "{INR}",
         display: "international normalized ratio",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ImmuneStatusRatio_2: Coding.FromStrict({
+    UcumUnitsValueSet_ImmuneStatusRatio_2: new Coding({
         code: "{ISR}",
         display: "immune status ratio",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_JuvenileDiabetesFoundationUnit: Coding.FromStrict({
+    UcumUnitsValueSet_JuvenileDiabetesFoundationUnit: new Coding({
         code: "{JDF'U}",
         display: "Juvenile Diabetes Foundation unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_JuvenileDiabetesFoundationUnitPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_JuvenileDiabetesFoundationUnitPerLiter: new Coding({
         code: "{JDF'U}/L",
         display: "Juvenile Diabetes Foundation unit per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_JuvenileDiabetesFoundQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_JuvenileDiabetesFoundQuoteU: new Coding({
         code: "{JuvenileDiabetesFound'U}",
         display: "JuvenileDiabetesFound'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KaolinClottingTime: Coding.FromStrict({
+    UcumUnitsValueSet_KaolinClottingTime: new Coding({
         code: "{KCT'U}",
         display: "kaolin clotting time",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KronusUnitPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_KronusUnitPerLiter: new Coding({
         code: "{KRONU'U}/L",
         display: "Kronus unit per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KronusUnitPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_KronusUnitPerMilliliter: new Coding({
         code: "{KRONU'U}/mL",
         display: "Kronus unit per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LgCopiesMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_LgCopiesMilliliter: new Coding({
         code: "{lgCopies}/ml",
         display: "lgCopies / milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LogBase10CopiesPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_LogBase10CopiesPerMilliliter: new Coding({
         code: "{log_copies}/mL",
         display: "log (base 10) copies per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LogBase10CopiesPerMilliliter_2: Coding.FromStrict({
+    UcumUnitsValueSet_LogBase10CopiesPerMilliliter_2: new Coding({
         code: "{Log_copies}/mL",
         display: "log (base 10) copies per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LogBase10InternationalUnit: Coding.FromStrict({
+    UcumUnitsValueSet_LogBase10InternationalUnit: new Coding({
         code: "{Log_IU}",
         display: "log (base 10) international unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LogBase10InternationalUnitPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_LogBase10InternationalUnitPerMilliliter: new Coding({
         code: "{log_IU}/mL",
         display: "log (base 10) international unit per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LogBase10InternationalUnitPerMilliliter_2: Coding.FromStrict({
+    UcumUnitsValueSet_LogBase10InternationalUnitPerMilliliter_2: new Coding({
         code: "{Log_IU}/mL",
         display: "log (base 10) international unit per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LogBase10: Coding.FromStrict({
+    UcumUnitsValueSet_LogBase10: new Coding({
         code: "{Log}",
         display: "log base 10",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LymeIndexValue: Coding.FromStrict({
+    UcumUnitsValueSet_LymeIndexValue: new Coding({
         code: "{Lyme_index_value}",
         display: "Lyme index value",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LymeIndexValue_2: Coding.FromStrict({
+    UcumUnitsValueSet_LymeIndexValue_2: new Coding({
         code: "{LymeIndexValue}",
         display: "LymeIndexValue",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MPortionPhospholipids: Coding.FromStrict({
+    UcumUnitsValueSet_MPortionPhospholipids: new Coding({
         code: "{M-PortionPhospholipids}",
         display: "M-PortionPhospholipids",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MOM: Coding.FromStrict({
+    UcumUnitsValueSet_MOM: new Coding({
         code: "{M.o.M.}",
         display: "M.o.M.",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MultipleOfTheMedian: Coding.FromStrict({
+    UcumUnitsValueSet_MultipleOfTheMedian: new Coding({
         code: "{M.o.M}",
         display: "multiple of the median",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Markers: Coding.FromStrict({
+    UcumUnitsValueSet_Markers: new Coding({
         code: "{Markers}",
         display: "Markers",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Minidrp: Coding.FromStrict({
+    UcumUnitsValueSet_Minidrp: new Coding({
         code: "{minidrp}",
         display: "minidrp",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MoleculePlatelet: Coding.FromStrict({
+    UcumUnitsValueSet_MoleculePlatelet: new Coding({
         code: "{Molecule}/{Platelet}",
         display: "Molecule / Platelet",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_IgMAntiphosphatidylserineUnit: Coding.FromStrict({
+    UcumUnitsValueSet_IgMAntiphosphatidylserineUnit: new Coding({
         code: "{MPS'U}",
         display: "IgM antiphosphatidylserine unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_IgMAntiphosphatidylserineUnitPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_IgMAntiphosphatidylserineUnitPerMilliliter: new Coding({
         code: "{MPS'U}/mL",
         display: "IgM antiphosphatidylserine unit per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MultOfMean: Coding.FromStrict({
+    UcumUnitsValueSet_MultOfMean: new Coding({
         code: "{MultOfMean}",
         display: "MultOfMean",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NonspecificOunce: Coding.FromStrict({
+    UcumUnitsValueSet_NonspecificOunce: new Coding({
         code: "{NonspecificOunce}",
         display: "NonspecificOunce",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Number_2: Coding.FromStrict({
+    UcumUnitsValueSet_Number_2: new Coding({
         code: "{Number}",
         display: "Number",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_OpticalDensityUnit: Coding.FromStrict({
+    UcumUnitsValueSet_OpticalDensityUnit: new Coding({
         code: "{OD_unit}",
         display: "optical density unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_OnceDay: Coding.FromStrict({
+    UcumUnitsValueSet_OnceDay: new Coding({
         code: "{Once}/d",
         display: "Once / day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_OpticalDensity: Coding.FromStrict({
+    UcumUnitsValueSet_OpticalDensity: new Coding({
         code: "{OpticalDensity}",
         display: "OpticalDensity",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_OpticalDensityIndex: Coding.FromStrict({
+    UcumUnitsValueSet_OpticalDensityIndex: new Coding({
         code: "{OpticalDensityIndex}",
         display: "OpticalDensityIndex",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_OpticalDensityRatio: Coding.FromStrict({
+    UcumUnitsValueSet_OpticalDensityRatio: new Coding({
         code: "{OpticalDensityRatio}",
         display: "OpticalDensityRatio",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_P2Y12ReactionUnits: Coding.FromStrict({
+    UcumUnitsValueSet_P2Y12ReactionUnits: new Coding({
         code: "{P2Y12 Reaction Units}",
         display: "P2Y12 Reaction Units",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Package: Coding.FromStrict({
+    UcumUnitsValueSet_Package: new Coding({
         code: "{Package}",
         display: "Package",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PacksDay: Coding.FromStrict({
+    UcumUnitsValueSet_PacksDay: new Coding({
         code: "{Packs}/d",
         display: "Packs / day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PackYears: Coding.FromStrict({
+    UcumUnitsValueSet_PackYears: new Coding({
         code: "{PackYears}",
         display: "PackYears",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Patch: Coding.FromStrict({
+    UcumUnitsValueSet_Patch: new Coding({
         code: "{Patch}",
         display: "Patch",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Percentile: Coding.FromStrict({
+    UcumUnitsValueSet_Percentile: new Coding({
         code: "{Percentile}",
         display: "Percentile",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Pill: Coding.FromStrict({
+    UcumUnitsValueSet_Pill: new Coding({
         code: "{Pill}",
         display: "Pill",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PouchesWeek: Coding.FromStrict({
+    UcumUnitsValueSet_PouchesWeek: new Coding({
         code: "{Pouches}/wk",
         display: "Pouches / week",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_RadioactiveT3UptakeRatio: Coding.FromStrict({
+    UcumUnitsValueSet_RadioactiveT3UptakeRatio: new Coding({
         code: "{RadioactiveT3UptakeRatio}",
         display: "RadioactiveT3UptakeRatio",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Ratio: Coding.FromStrict({
+    UcumUnitsValueSet_Ratio: new Coding({
         code: "{ratio}",
         display: "ratio",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_RedBloodCellPerMicroliter: Coding.FromStrict({
+    UcumUnitsValueSet_RedBloodCellPerMicroliter: new Coding({
         code: "{RBC}/uL",
         display: "red blood cell per microliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_RecTiter: Coding.FromStrict({
+    UcumUnitsValueSet_RecTiter: new Coding({
         code: "{RecTiter}",
         display: "RecTiter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_RelativeQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_RelativeQuoteU: new Coding({
         code: "{Relative'U}",
         display: "Relative'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_RelativeViscosity: Coding.FromStrict({
+    UcumUnitsValueSet_RelativeViscosity: new Coding({
         code: "{RelativeViscosity}",
         display: "RelativeViscosity",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_RPIQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_RPIQuoteU: new Coding({
         code: "{RPI'U}",
         display: "RPI'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_RubellaVirus: Coding.FromStrict({
+    UcumUnitsValueSet_RubellaVirus: new Coding({
         code: "{RubellaVirus}",
         display: "RubellaVirus",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_SatIndex: Coding.FromStrict({
+    UcumUnitsValueSet_SatIndex: new Coding({
         code: "{SatIndex}",
         display: "SatIndex",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Scoop: Coding.FromStrict({
+    UcumUnitsValueSet_Scoop: new Coding({
         code: "{Scoop}",
         display: "Scoop",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ScoreOf: Coding.FromStrict({
+    UcumUnitsValueSet_ScoreOf: new Coding({
         code: "{ScoreOf}",
         display: "ScoreOf",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Shift: Coding.FromStrict({
+    UcumUnitsValueSet_Shift: new Coding({
         code: "{shift}",
         display: "shift",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_SpermatozoaPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_SpermatozoaPerMilliliter: new Coding({
         code: "{spermatozoa}/mL",
         display: "spermatozoa per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Spray: Coding.FromStrict({
+    UcumUnitsValueSet_Spray: new Coding({
         code: "{spray}",
         display: "spray",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_StandardDeviation: Coding.FromStrict({
+    UcumUnitsValueSet_StandardDeviation: new Coding({
         code: "{StandardDeviation}",
         display: "StandardDeviation",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_StandardIgAQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_StandardIgAQuoteU: new Coding({
         code: "{StandardIgA'U}",
         display: "StandardIgA'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_StandardIgGQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_StandardIgGQuoteU: new Coding({
         code: "{StandardIgG'U}",
         display: "StandardIgG'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_StandardIgMQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_StandardIgMQuoteU: new Coding({
         code: "{StandardIgM'U}",
         display: "StandardIgM'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_StdDeviationQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_StdDeviationQuoteU: new Coding({
         code: "{StdDeviation'U}",
         display: "StdDeviation'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_StimulatingIndex: Coding.FromStrict({
+    UcumUnitsValueSet_StimulatingIndex: new Coding({
         code: "{StimulatingIndex}",
         display: "StimulatingIndex",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_StreptozymeQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_StreptozymeQuoteU: new Coding({
         code: "{Streptozyme'U}",
         display: "Streptozyme'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ThyroxinUptakeQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_ThyroxinUptakeQuoteU: new Coding({
         code: "{ThyroxinUptake'U}",
         display: "ThyroxinUptake'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_TIBCQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_TIBCQuoteU: new Coding({
         code: "{TIBC'U}",
         display: "TIBC'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_TimesWeek: Coding.FromStrict({
+    UcumUnitsValueSet_TimesWeek: new Coding({
         code: "{Times}/wk",
         display: "Times / week",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_TineQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_TineQuoteU: new Coding({
         code: "{Tine'U}",
         display: "Tine'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Titer: Coding.FromStrict({
+    UcumUnitsValueSet_Titer: new Coding({
         code: "{titer}",
         display: "titer",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ToxoplasmaIndexValue: Coding.FromStrict({
+    UcumUnitsValueSet_ToxoplasmaIndexValue: new Coding({
         code: "{ToxoplasmaIndexValue}",
         display: "ToxoplasmaIndexValue",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Vial: Coding.FromStrict({
+    UcumUnitsValueSet_Vial: new Coding({
         code: "{Vial}",
         display: "Vial",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_VolumeVvolume: Coding.FromStrict({
+    UcumUnitsValueSet_VolumeVvolume: new Coding({
         code: "{Volume}/{Vvolume}",
         display: "Volume / Vvolume",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_WeeksDays: Coding.FromStrict({
+    UcumUnitsValueSet_WeeksDays: new Coding({
         code: "{WeeksDays}",
         display: "WeeksDays",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_WhiteBloodCell: Coding.FromStrict({
+    UcumUnitsValueSet_WhiteBloodCell: new Coding({
         code: "{WhiteBloodCell}",
         display: "WhiteBloodCell",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Per12AsteriskHour: Coding.FromStrict({
+    UcumUnitsValueSet_Per12AsteriskHour: new Coding({
         code: "/(12.h)",
         display: "per 12 * hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerArbitraryUnit: Coding.FromStrict({
+    UcumUnitsValueSet_PerArbitraryUnit: new Coding({
         code: "/[arb'U]",
         display: "per arbitrary unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerHighPowerField: Coding.FromStrict({
+    UcumUnitsValueSet_PerHighPowerField: new Coding({
         code: "/[HPF]",
         display: "per high power field",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerInternationalUnit: Coding.FromStrict({
+    UcumUnitsValueSet_PerInternationalUnit: new Coding({
         code: "/[iU]",
         display: "per international unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerLowPowerField: Coding.FromStrict({
+    UcumUnitsValueSet_PerLowPowerField: new Coding({
         code: "/[LPF]",
         display: "per low power field",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerEntity: Coding.FromStrict({
+    UcumUnitsValueSet_PerEntity: new Coding({
         code: "/{Entity}",
         display: "per Entity",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerOif: Coding.FromStrict({
+    UcumUnitsValueSet_PerOif: new Coding({
         code: "/{oif}",
         display: "per oif",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerSpecimen: Coding.FromStrict({
+    UcumUnitsValueSet_PerSpecimen: new Coding({
         code: "/{Specimen}",
         display: "per Specimen",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerTot: Coding.FromStrict({
+    UcumUnitsValueSet_PerTot: new Coding({
         code: "/{tot}",
         display: "per tot",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerTenGiga: Coding.FromStrict({
+    UcumUnitsValueSet_PerTenGiga: new Coding({
         code: "/10*10",
         display: "PerTenGiga",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerTrillion: Coding.FromStrict({
+    UcumUnitsValueSet_PerTrillion: new Coding({
         code: "/10*12",
         display: "PerTrillion",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerTrillionRedBloodCells: Coding.FromStrict({
+    UcumUnitsValueSet_PerTrillionRedBloodCells: new Coding({
         code: "/10*12{rbc}",
         display: "PerTrillionRedBloodCells",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerMillion: Coding.FromStrict({
+    UcumUnitsValueSet_PerMillion: new Coding({
         code: "/10*6",
         display: "PerMillion",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerBillion: Coding.FromStrict({
+    UcumUnitsValueSet_PerBillion: new Coding({
         code: "/10*9",
         display: "PerBillion",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Per100: Coding.FromStrict({
+    UcumUnitsValueSet_Per100: new Coding({
         code: "/100",
         display: "per 100",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Per100Cells: Coding.FromStrict({
+    UcumUnitsValueSet_Per100Cells: new Coding({
         code: "/100{cells}",
         display: "per 100 cells",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Per100Neutrophils: Coding.FromStrict({
+    UcumUnitsValueSet_Per100Neutrophils: new Coding({
         code: "/100{neutrophils}",
         display: "per 100 neutrophils",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Per100Spermatozoa: Coding.FromStrict({
+    UcumUnitsValueSet_Per100Spermatozoa: new Coding({
         code: "/100{spermatozoa}",
         display: "per 100 spermatozoa",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Per100WBC: Coding.FromStrict({
+    UcumUnitsValueSet_Per100WBC: new Coding({
         code: "/100{WBC}",
         display: "Per100WBC",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Per100WBC_2: Coding.FromStrict({
+    UcumUnitsValueSet_Per100WBC_2: new Coding({
         code: "/100{WBCs}",
         display: "Per100WBC",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerYear: Coding.FromStrict({
+    UcumUnitsValueSet_PerYear: new Coding({
         code: "/a",
         display: "/ year",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerCentimeterOfWater: Coding.FromStrict({
+    UcumUnitsValueSet_PerCentimeterOfWater: new Coding({
         code: "/cm[H2O]",
         display: "per centimeter of water",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerDay: Coding.FromStrict({
+    UcumUnitsValueSet_PerDay: new Coding({
         code: "/d",
         display: "per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerDeciliter: Coding.FromStrict({
+    UcumUnitsValueSet_PerDeciliter: new Coding({
         code: "/dL",
         display: "per deciliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerGram: Coding.FromStrict({
+    UcumUnitsValueSet_PerGram: new Coding({
         code: "/g",
         display: "per gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerGramCreat: Coding.FromStrict({
+    UcumUnitsValueSet_PerGramCreat: new Coding({
         code: "/g{creat}",
         display: "per gram creat",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerGramHgb: Coding.FromStrict({
+    UcumUnitsValueSet_PerGramHgb: new Coding({
         code: "/g{hgb}",
         display: "per gram hgb",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerGramTotQuoteNit: Coding.FromStrict({
+    UcumUnitsValueSet_PerGramTotQuoteNit: new Coding({
         code: "/g{tot'nit}",
         display: "per gram tot'nit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerGramTotQuoteProt: Coding.FromStrict({
+    UcumUnitsValueSet_PerGramTotQuoteProt: new Coding({
         code: "/g{tot'prot}",
         display: "per gram tot'prot",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerGramWetQuoteTis: Coding.FromStrict({
+    UcumUnitsValueSet_PerGramWetQuoteTis: new Coding({
         code: "/g{wet'tis}",
         display: "per gram wet'tis",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerHour: Coding.FromStrict({
+    UcumUnitsValueSet_PerHour: new Coding({
         code: "/h",
         display: "per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerKilogram: Coding.FromStrict({
+    UcumUnitsValueSet_PerKilogram: new Coding({
         code: "/kg",
         display: "per kilogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerKilogramBodyWt: Coding.FromStrict({
+    UcumUnitsValueSet_PerKilogramBodyWt: new Coding({
         code: "/kg{body'wt}",
         display: "per kilogram body wt",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_PerLiter: new Coding({
         code: "/L",
         display: "per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerSquareMeter: Coding.FromStrict({
+    UcumUnitsValueSet_PerSquareMeter: new Coding({
         code: "/m2",
         display: "per square meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerMilligram: Coding.FromStrict({
+    UcumUnitsValueSet_PerMilligram: new Coding({
         code: "/mg",
         display: "per milligram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_PerMinute: new Coding({
         code: "/min",
         display: "per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_PerMilliliter: new Coding({
         code: "/mL",
         display: "per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerCubicMillimeter: Coding.FromStrict({
+    UcumUnitsValueSet_PerCubicMillimeter: new Coding({
         code: "/mm3",
         display: "per cubic millimeter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerMillimole: Coding.FromStrict({
+    UcumUnitsValueSet_PerMillimole: new Coding({
         code: "/mmol",
         display: "per millimole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerMonth: Coding.FromStrict({
+    UcumUnitsValueSet_PerMonth: new Coding({
         code: "/mo",
         display: "per month",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerSecond: Coding.FromStrict({
+    UcumUnitsValueSet_PerSecond: new Coding({
         code: "/s",
         display: "per second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerEnzymeUnit: Coding.FromStrict({
+    UcumUnitsValueSet_PerEnzymeUnit: new Coding({
         code: "/U",
         display: "per enzyme unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerMicrogram: Coding.FromStrict({
+    UcumUnitsValueSet_PerMicrogram: new Coding({
         code: "/ug",
         display: "per microgram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerMicroliter: Coding.FromStrict({
+    UcumUnitsValueSet_PerMicroliter: new Coding({
         code: "/uL",
         display: "per microliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PerWeek: Coding.FromStrict({
+    UcumUnitsValueSet_PerWeek: new Coding({
         code: "/wk",
         display: "per week",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Percent: Coding.FromStrict({
+    UcumUnitsValueSet_Percent: new Coding({
         code: "%",
         display: "percent",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Percent0to3Hours: Coding.FromStrict({
+    UcumUnitsValueSet_Percent0to3Hours: new Coding({
         code: "%{0to3Hours}",
         display: "percent 0to3Hours",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentAbnormal: Coding.FromStrict({
+    UcumUnitsValueSet_PercentAbnormal: new Coding({
         code: "%{Abnormal}",
         display: "percent Abnormal",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentActivity: Coding.FromStrict({
+    UcumUnitsValueSet_PercentActivity: new Coding({
         code: "%{Activity}",
         display: "percent Activity",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentBasalActivity: Coding.FromStrict({
+    UcumUnitsValueSet_PercentBasalActivity: new Coding({
         code: "%{BasalActivity}",
         display: "percent BasalActivity",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentBinding: Coding.FromStrict({
+    UcumUnitsValueSet_PercentBinding: new Coding({
         code: "%{Binding}",
         display: "percent Binding",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentBlockade: Coding.FromStrict({
+    UcumUnitsValueSet_PercentBlockade: new Coding({
         code: "%{Blockade}",
         display: "percent Blockade",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentCarboxyhemoglobin: Coding.FromStrict({
+    UcumUnitsValueSet_PercentCarboxyhemoglobin: new Coding({
         code: "%{Carboxyhemoglobin}",
         display: "percent Carboxyhemoglobin",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentConversion: Coding.FromStrict({
+    UcumUnitsValueSet_PercentConversion: new Coding({
         code: "%{Conversion}",
         display: "percent Conversion",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentCound: Coding.FromStrict({
+    UcumUnitsValueSet_PercentCound: new Coding({
         code: "%{Cound}",
         display: "percent Cound",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentEosSeen: Coding.FromStrict({
+    UcumUnitsValueSet_PercentEosSeen: new Coding({
         code: "%{EosSeen}",
         display: "percent EosSeen",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentExcretion: Coding.FromStrict({
+    UcumUnitsValueSet_PercentExcretion: new Coding({
         code: "%{Excretion}",
         display: "percent Excretion",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentFat: Coding.FromStrict({
+    UcumUnitsValueSet_PercentFat: new Coding({
         code: "%{Fat}",
         display: "percent Fat",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentFetalErythrocytes: Coding.FromStrict({
+    UcumUnitsValueSet_PercentFetalErythrocytes: new Coding({
         code: "%{FetalErythrocytes}",
         display: "percent FetalErythrocytes",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentHemoglobin: Coding.FromStrict({
+    UcumUnitsValueSet_PercentHemoglobin: new Coding({
         code: "%{Hemoglobin}",
         display: "percent Hemoglobin",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentHemoglobinA1C: Coding.FromStrict({
+    UcumUnitsValueSet_PercentHemoglobinA1C: new Coding({
         code: "%{HemoglobinA1C}",
         display: "percent HemoglobinA1C",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentHemoglobinSaturation: Coding.FromStrict({
+    UcumUnitsValueSet_PercentHemoglobinSaturation: new Coding({
         code: "%{HemoglobinSaturation}",
         display: "percent HemoglobinSaturation",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentHemolysis: Coding.FromStrict({
+    UcumUnitsValueSet_PercentHemolysis: new Coding({
         code: "%{Hemolysis}",
         display: "percent Hemolysis",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentHumanResponse: Coding.FromStrict({
+    UcumUnitsValueSet_PercentHumanResponse: new Coding({
         code: "%{HumanResponse}",
         display: "percent HumanResponse",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentIndex: Coding.FromStrict({
+    UcumUnitsValueSet_PercentIndex: new Coding({
         code: "%{Index}",
         display: "percent Index",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentInhibition: Coding.FromStrict({
+    UcumUnitsValueSet_PercentInhibition: new Coding({
         code: "%{Inhibition}",
         display: "percent Inhibition",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentLive: Coding.FromStrict({
+    UcumUnitsValueSet_PercentLive: new Coding({
         code: "%{Live}",
         display: "percent Live",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentNegativeControl: Coding.FromStrict({
+    UcumUnitsValueSet_PercentNegativeControl: new Coding({
         code: "%{Negative Control}",
         display: "percent Negative Control",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentNormal: Coding.FromStrict({
+    UcumUnitsValueSet_PercentNormal: new Coding({
         code: "%{Normal}",
         display: "percent Normal",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentNormalControl: Coding.FromStrict({
+    UcumUnitsValueSet_PercentNormalControl: new Coding({
         code: "%{NormalControl}",
         display: "percent NormalControl",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentNormalPooledPlasma: Coding.FromStrict({
+    UcumUnitsValueSet_PercentNormalPooledPlasma: new Coding({
         code: "%{NormalPooledPlasma}",
         display: "percent NormalPooledPlasma",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentOfAvailable: Coding.FromStrict({
+    UcumUnitsValueSet_PercentOfAvailable: new Coding({
         code: "%{ofAvailable}",
         display: "percent ofAvailable",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentOfBacteria: Coding.FromStrict({
+    UcumUnitsValueSet_PercentOfBacteria: new Coding({
         code: "%{ofBacteria}",
         display: "percent ofBacteria",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentOfLymphocytes: Coding.FromStrict({
+    UcumUnitsValueSet_PercentOfLymphocytes: new Coding({
         code: "%{OfLymphocytes}",
         display: "percent OfLymphocytes",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentOfWBCs: Coding.FromStrict({
+    UcumUnitsValueSet_PercentOfWBCs: new Coding({
         code: "%{OfWBCs}",
         display: "percent OfWBCs",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentOxygen: Coding.FromStrict({
+    UcumUnitsValueSet_PercentOxygen: new Coding({
         code: "%{Oxygen}",
         display: "percent Oxygen",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentPositive: Coding.FromStrict({
+    UcumUnitsValueSet_PercentPositive: new Coding({
         code: "%{Positive}",
         display: "percent Positive",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentPrecipitate: Coding.FromStrict({
+    UcumUnitsValueSet_PercentPrecipitate: new Coding({
         code: "%{Precipitate}",
         display: "percent Precipitate",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentReactivity: Coding.FromStrict({
+    UcumUnitsValueSet_PercentReactivity: new Coding({
         code: "%{Reactivity}",
         display: "percent Reactivity",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentResponse: Coding.FromStrict({
+    UcumUnitsValueSet_PercentResponse: new Coding({
         code: "%{response}",
         display: "percent response",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentRisk: Coding.FromStrict({
+    UcumUnitsValueSet_PercentRisk: new Coding({
         code: "%{risk}",
         display: "percent risk",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentSpermMotility: Coding.FromStrict({
+    UcumUnitsValueSet_PercentSpermMotility: new Coding({
         code: "%{SpermMotility}",
         display: "percent SpermMotility",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentTotQuoteCholesterol: Coding.FromStrict({
+    UcumUnitsValueSet_PercentTotQuoteCholesterol: new Coding({
         code: "%{Tot'Cholesterol}",
         display: "percent Tot'Cholesterol",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentTotQuoteHgb: Coding.FromStrict({
+    UcumUnitsValueSet_PercentTotQuoteHgb: new Coding({
         code: "%{Tot'Hgb}",
         display: "percent Tot'Hgb",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentTotal: Coding.FromStrict({
+    UcumUnitsValueSet_PercentTotal: new Coding({
         code: "%{Total}",
         display: "percent Total",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentTotalProtein: Coding.FromStrict({
+    UcumUnitsValueSet_PercentTotalProtein: new Coding({
         code: "%{TotalProtein}",
         display: "percent TotalProtein",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentUptake: Coding.FromStrict({
+    UcumUnitsValueSet_PercentUptake: new Coding({
         code: "%{Uptake}",
         display: "percent Uptake",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_VolumePercent: Coding.FromStrict({
+    UcumUnitsValueSet_VolumePercent: new Coding({
         code: "%{vol}",
         display: "VolumePercent",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PercentWeightToWeight: Coding.FromStrict({
+    UcumUnitsValueSet_PercentWeightToWeight: new Coding({
         code: "%{WeightToWeight}",
         display: "percent WeightToWeight",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Percent100WBC: Coding.FromStrict({
+    UcumUnitsValueSet_Percent100WBC: new Coding({
         code: "%/100{WBC}",
         display: "percent / 100 WBC",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_OnePerDay: Coding.FromStrict({
+    UcumUnitsValueSet_OnePerDay: new Coding({
         code: "1/d",
         display: "one per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_OnePerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_OnePerMinute: new Coding({
         code: "1/min",
         display: "one per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_VAL10LiterPerMinutePerSquareMeter: Coding.FromStrict({
+    UcumUnitsValueSet_VAL10LiterPerMinutePerSquareMeter: new Coding({
         code: "10.L/(min.m2)",
         display: "10 liter per minute per square meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_VAL10LiterPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_VAL10LiterPerMinute: new Coding({
         code: "10.L/min",
         display: "10 liter per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_VAL10AsteriskMicroNewtonAsteriskSecondCentimeterAsteriskMeterPower2: Coding.FromStrict({
+    UcumUnitsValueSet_VAL10AsteriskMicroNewtonAsteriskSecondCentimeterAsteriskMeterPower2: new Coding({
         code: "10.uN.s/(cm.m2)",
         display: "10 * microNewton * second / centimeter * (meter ^ 2)",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_VAL10MicronewtonSecondPerCentimeterToTheFifthPowerPerSquareMeter: Coding.FromStrict({
+    UcumUnitsValueSet_VAL10MicronewtonSecondPerCentimeterToTheFifthPowerPerSquareMeter: new Coding({
         code: "10.uN.s/(cm5.m2)",
         display: "10 micronewton second per centimeter to the fifth power per square meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_VAL10AsteriskMicroNewtonAsteriskSecondCentimeter: Coding.FromStrict({
+    UcumUnitsValueSet_VAL10AsteriskMicroNewtonAsteriskSecondCentimeter: new Coding({
         code: "10.uN.s/cm",
         display: "10 * microNewton * second / centimeter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_VAL10AsteriskMicroNewtonAsteriskSecondCentimeterPower2: Coding.FromStrict({
+    UcumUnitsValueSet_VAL10AsteriskMicroNewtonAsteriskSecondCentimeterPower2: new Coding({
         code: "10.uN.s/cm2",
         display: "10 * microNewton * second / (centimeter ^ 2)",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_TheNumberTenForArbitraryPowersPower3PolarizationQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_TheNumberTenForArbitraryPowersPower3PolarizationQuoteU: new Coding({
         code: "10*-3{Polarization'U}",
         display: "(the number ten for arbitrary powers ^ -3) Polarization'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_TheNumberTenForArbitraryPowersPower6ImmunofluorescenceQuoteU: Coding.FromStrict({
+    UcumUnitsValueSet_TheNumberTenForArbitraryPowersPower6ImmunofluorescenceQuoteU: new Coding({
         code: "10*-6{Immunofluorescence'U}",
         display: "(the number ten for arbitrary powers ^ -6) Immunofluorescence'U",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_TrillionPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_TrillionPerLiter: new Coding({
         code: "10*12/L",
         display: "trillion per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Thousand: Coding.FromStrict({
+    UcumUnitsValueSet_Thousand: new Coding({
         code: "10*3",
         display: "Thousand",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ThousandRedBloodCells: Coding.FromStrict({
+    UcumUnitsValueSet_ThousandRedBloodCells: new Coding({
         code: "10*3.{RBC}",
         display: "Thousand Red Blood Cells",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ThousandPerAsteriskUnit: Coding.FromStrict({
+    UcumUnitsValueSet_ThousandPerAsteriskUnit: new Coding({
         code: "10*3.U",
         display: "Thousand Per * Unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ThousandCopiesPerMilliLiter: Coding.FromStrict({
+    UcumUnitsValueSet_ThousandCopiesPerMilliLiter: new Coding({
         code: "10*3{Copies}/mL",
         display: "Thousand Copies Per MilliLiter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ThousandPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_ThousandPerLiter: new Coding({
         code: "10*3/L",
         display: "Thousand Per Liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ThousandPerMilliLiter: Coding.FromStrict({
+    UcumUnitsValueSet_ThousandPerMilliLiter: new Coding({
         code: "10*3/mL",
         display: "Thousand Per MilliLiter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_ThousandsPerMicroLiter: Coding.FromStrict({
+    UcumUnitsValueSet_ThousandsPerMicroLiter: new Coding({
         code: "10*3/uL",
         display: "Thousands Per MicroLiter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_VAL10ThousandPerMicroliter: Coding.FromStrict({
+    UcumUnitsValueSet_VAL10ThousandPerMicroliter: new Coding({
         code: "10*4/uL",
         display: "10 thousand per microliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_OneHundredThousand: Coding.FromStrict({
+    UcumUnitsValueSet_OneHundredThousand: new Coding({
         code: "10*5",
         display: "OneHundredThousand",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Million: Coding.FromStrict({
+    UcumUnitsValueSet_Million: new Coding({
         code: "10*6",
         display: "Million",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillionInternationalUnit: Coding.FromStrict({
+    UcumUnitsValueSet_MillionInternationalUnit: new Coding({
         code: "10*6.[iU]",
         display: "MillionInternationalUnit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillionEquivalentsPerMilliLiter: Coding.FromStrict({
+    UcumUnitsValueSet_MillionEquivalentsPerMilliLiter: new Coding({
         code: "10*6.eq/mL",
         display: "MillionEquivalentsPerMilliLiter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_TheNumberTenForArbitraryPowersPower6AsteriskUnit: Coding.FromStrict({
+    UcumUnitsValueSet_TheNumberTenForArbitraryPowersPower6AsteriskUnit: new Coding({
         code: "10*6.U",
         display: "(the number ten for arbitrary powers ^ 6) * Unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillionPerSpecimen: Coding.FromStrict({
+    UcumUnitsValueSet_MillionPerSpecimen: new Coding({
         code: "10*6/{Specimen}",
         display: "MillionPerSpecimen",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillionPerKilogram: Coding.FromStrict({
+    UcumUnitsValueSet_MillionPerKilogram: new Coding({
         code: "10*6/kg",
         display: "million per kilogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillionPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_MillionPerLiter: new Coding({
         code: "10*6/L",
         display: "million per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillionPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_MillionPerMilliliter: new Coding({
         code: "10*6/mL",
         display: "million per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_TheNumberTenForArbitraryPowersPower6MillimeterPower3: Coding.FromStrict({
+    UcumUnitsValueSet_TheNumberTenForArbitraryPowersPower6MillimeterPower3: new Coding({
         code: "10*6/mm3",
         display: "(the number ten for arbitrary powers ^ 6) / (millimeter ^ 3)",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillionPerMicroliter: Coding.FromStrict({
+    UcumUnitsValueSet_MillionPerMicroliter: new Coding({
         code: "10*6/uL",
         display: "million per microliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_TenToEighth: Coding.FromStrict({
+    UcumUnitsValueSet_TenToEighth: new Coding({
         code: "10*8",
         display: "TenToEighth",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_BillionPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_BillionPerLiter: new Coding({
         code: "10*9/L",
         display: "billion per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_BillionPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_BillionPerMilliliter: new Coding({
         code: "10*9/mL",
         display: "billion per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_BillionPerMicroliter: Coding.FromStrict({
+    UcumUnitsValueSet_BillionPerMicroliter: new Coding({
         code: "10*9/uL",
         display: "billion per microliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_VAL24Hour: Coding.FromStrict({
+    UcumUnitsValueSet_VAL24Hour: new Coding({
         code: "24.h",
         display: "24 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Ampere: Coding.FromStrict({
+    UcumUnitsValueSet_Ampere: new Coding({
         code: "A",
         display: "Ampère",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_AmpereMeter: Coding.FromStrict({
+    UcumUnitsValueSet_AmpereMeter: new Coding({
         code: "A/m",
         display: "Ampère / meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_AttogramPerCell: Coding.FromStrict({
+    UcumUnitsValueSet_AttogramPerCell: new Coding({
         code: "ag/{cell}",
         display: "attogram per cell",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_StandardAtmosphere: Coding.FromStrict({
+    UcumUnitsValueSet_StandardAtmosphere: new Coding({
         code: "atm",
         display: "standard atmosphere",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_TechnicalAtmosphere: Coding.FromStrict({
+    UcumUnitsValueSet_TechnicalAtmosphere: new Coding({
         code: "att",
         display: "technical atmosphere",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Bar: Coding.FromStrict({
+    UcumUnitsValueSet_Bar: new Coding({
         code: "bar",
         display: "bar",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Becquerel: Coding.FromStrict({
+    UcumUnitsValueSet_Becquerel: new Coding({
         code: "Bq",
         display: "Becquerel",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Calorie: Coding.FromStrict({
+    UcumUnitsValueSet_Calorie: new Coding({
         code: "cal",
         display: "calorie",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_DegreeCelsius: Coding.FromStrict({
+    UcumUnitsValueSet_DegreeCelsius: new Coding({
         code: "Cel",
         display: "degree Celsius",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Centigram: Coding.FromStrict({
+    UcumUnitsValueSet_Centigram: new Coding({
         code: "cg",
         display: "centigram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Centiliter: Coding.FromStrict({
+    UcumUnitsValueSet_Centiliter: new Coding({
         code: "cL",
         display: "centiliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Centimeter: Coding.FromStrict({
+    UcumUnitsValueSet_Centimeter: new Coding({
         code: "cm",
         display: "centimeter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CentimeterOfWater: Coding.FromStrict({
+    UcumUnitsValueSet_CentimeterOfWater: new Coding({
         code: "cm[H2O]",
         display: "centimeter of water",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CentimeterOfWaterColumnSecondAsteriskMeter: Coding.FromStrict({
+    UcumUnitsValueSet_CentimeterOfWaterColumnSecondAsteriskMeter: new Coding({
         code: "cm[H2O]/(s.m)",
         display: "centimeter of water column / second * meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CentimeterOfWaterPerLiterPerSecond: Coding.FromStrict({
+    UcumUnitsValueSet_CentimeterOfWaterPerLiterPerSecond: new Coding({
         code: "cm[H2O]/L/s",
         display: "centimeter of water per liter per second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CentimeterOfWaterPerSecondPerMeter: Coding.FromStrict({
+    UcumUnitsValueSet_CentimeterOfWaterPerSecondPerMeter: new Coding({
         code: "cm[H2O]/s/m",
         display: "centimeter of water per second per meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CentimeterOfMercury: Coding.FromStrict({
+    UcumUnitsValueSet_CentimeterOfMercury: new Coding({
         code: "cm[Hg]",
         display: "centimeter of mercury",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_SquareCentimeter: Coding.FromStrict({
+    UcumUnitsValueSet_SquareCentimeter: new Coding({
         code: "cm2",
         display: "square centimeter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_SquareCentimeterPerSecond: Coding.FromStrict({
+    UcumUnitsValueSet_SquareCentimeterPerSecond: new Coding({
         code: "cm2/s",
         display: "square centimeter per second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CubicCentimeter: Coding.FromStrict({
+    UcumUnitsValueSet_CubicCentimeter: new Coding({
         code: "cm3",
         display: "cubic centimeter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CentiPoise: Coding.FromStrict({
+    UcumUnitsValueSet_CentiPoise: new Coding({
         code: "cP",
         display: "centiPoise",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CentiStokes: Coding.FromStrict({
+    UcumUnitsValueSet_CentiStokes: new Coding({
         code: "cSt",
         display: "centiStokes",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_DekaliterPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_DekaliterPerMinute: new Coding({
         code: "daL/min",
         display: "dekaliter per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_DekaliterPerMinutePerSquareMeter: Coding.FromStrict({
+    UcumUnitsValueSet_DekaliterPerMinutePerSquareMeter: new Coding({
         code: "daL/min/m2",
         display: "dekaliter per minute per square meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Decibel: Coding.FromStrict({
+    UcumUnitsValueSet_Decibel: new Coding({
         code: "dB",
         display: "decibel",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Degree: Coding.FromStrict({
+    UcumUnitsValueSet_Degree: new Coding({
         code: "deg",
         display: "degree",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_DegreePerSecond: Coding.FromStrict({
+    UcumUnitsValueSet_DegreePerSecond: new Coding({
         code: "deg/s",
         display: "degree per second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Decigram: Coding.FromStrict({
+    UcumUnitsValueSet_Decigram: new Coding({
         code: "dg",
         display: "decigram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Deciliter: Coding.FromStrict({
+    UcumUnitsValueSet_Deciliter: new Coding({
         code: "dL",
         display: "deciliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Decimeter: Coding.FromStrict({
+    UcumUnitsValueSet_Decimeter: new Coding({
         code: "dm",
         display: "decimeter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_SquareDecimeterPerSquareSecond: Coding.FromStrict({
+    UcumUnitsValueSet_SquareDecimeterPerSquareSecond: new Coding({
         code: "dm2/s2",
         display: "square decimeter per square second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_DyneSecondPerCentimeterPerSquareMeter: Coding.FromStrict({
+    UcumUnitsValueSet_DyneSecondPerCentimeterPerSquareMeter: new Coding({
         code: "dyn.s/(cm.m2)",
         display: "dyne second per centimeter per square meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_DyneSecondPerCentimeter: Coding.FromStrict({
+    UcumUnitsValueSet_DyneSecondPerCentimeter: new Coding({
         code: "dyn.s/cm",
         display: "dyne second per centimeter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Equivalents: Coding.FromStrict({
+    UcumUnitsValueSet_Equivalents: new Coding({
         code: "eq",
         display: "equivalents",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EquivalentsLiter: Coding.FromStrict({
+    UcumUnitsValueSet_EquivalentsLiter: new Coding({
         code: "eq/L",
         display: "equivalents / liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EquivalentsMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_EquivalentsMilliliter: new Coding({
         code: "eq/mL",
         display: "equivalents / milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EquivalentsMillimole: Coding.FromStrict({
+    UcumUnitsValueSet_EquivalentsMillimole: new Coding({
         code: "eq/mmol",
         display: "equivalents / millimole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EquivalentsMicromole: Coding.FromStrict({
+    UcumUnitsValueSet_EquivalentsMicromole: new Coding({
         code: "eq/umol",
         display: "equivalents / micromole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Erg: Coding.FromStrict({
+    UcumUnitsValueSet_Erg: new Coding({
         code: "erg",
         display: "erg",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Electronvolt: Coding.FromStrict({
+    UcumUnitsValueSet_Electronvolt: new Coding({
         code: "eV",
         display: "electronvolt",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Farad: Coding.FromStrict({
+    UcumUnitsValueSet_Farad: new Coding({
         code: "F",
         display: "Farad",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Femtogram: Coding.FromStrict({
+    UcumUnitsValueSet_Femtogram: new Coding({
         code: "fg",
         display: "femtogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Femtoliter: Coding.FromStrict({
+    UcumUnitsValueSet_Femtoliter: new Coding({
         code: "fL",
         display: "femtoliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_FemtoliterNanoliter: Coding.FromStrict({
+    UcumUnitsValueSet_FemtoliterNanoliter: new Coding({
         code: "fL/nL",
         display: "femtoliter / nanoliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Femtometer: Coding.FromStrict({
+    UcumUnitsValueSet_Femtometer: new Coding({
         code: "fm",
         display: "femtometer",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Femtomole: Coding.FromStrict({
+    UcumUnitsValueSet_Femtomole: new Coding({
         code: "fmol",
         display: "femtomole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_FemtomolePerGram: Coding.FromStrict({
+    UcumUnitsValueSet_FemtomolePerGram: new Coding({
         code: "fmol/g",
         display: "femtomole per gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_FemtomolePerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_FemtomolePerLiter: new Coding({
         code: "fmol/L",
         display: "femtomole per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_FemtomoleMilligram: Coding.FromStrict({
+    UcumUnitsValueSet_FemtomoleMilligram: new Coding({
         code: "fmol/mg",
         display: "femtomole / milligram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_FemtomolePerMilligramOfCytosolProtein: Coding.FromStrict({
+    UcumUnitsValueSet_FemtomolePerMilligramOfCytosolProtein: new Coding({
         code: "fmol/mg{cytosol_protein}",
         display: "femtomole per milligram of cytosol protein",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_FemtomolePerMilligramOfProtein: Coding.FromStrict({
+    UcumUnitsValueSet_FemtomolePerMilligramOfProtein: new Coding({
         code: "fmol/mg{protein}",
         display: "femtomole per milligram of protein",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_FemtomoleMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_FemtomoleMilliliter: new Coding({
         code: "fmol/mL",
         display: "femtomole / milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Gram: Coding.FromStrict({
+    UcumUnitsValueSet_Gram: new Coding({
         code: "g",
         display: "gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramAsteriskMeter: Coding.FromStrict({
+    UcumUnitsValueSet_GramAsteriskMeter: new Coding({
         code: "g.m",
         display: "gram * meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramAsteriskMeterHbAsteriskMeterPower2: Coding.FromStrict({
+    UcumUnitsValueSet_GramAsteriskMeterHbAsteriskMeterPower2: new Coding({
         code: "g.m/({hb}.m2)",
         display: "gram * meter / hb * (meter ^ 2)",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramMeterPerHeartBeat: Coding.FromStrict({
+    UcumUnitsValueSet_GramMeterPerHeartBeat: new Coding({
         code: "g.m/{beat}",
         display: "gram meter per heart beat",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramAsteriskMeterHb: Coding.FromStrict({
+    UcumUnitsValueSet_GramAsteriskMeterHb: new Coding({
         code: "g.m/{hb}",
         display: "gram * meter / hb",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_GramOfCreatinine: new Coding({
         code: "g{creat}",
         display: "gram of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramOfHemoglobin: Coding.FromStrict({
+    UcumUnitsValueSet_GramOfHemoglobin: new Coding({
         code: "g{Hb}",
         display: "gram of hemoglobin",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramOfTotalNitrogen: Coding.FromStrict({
+    UcumUnitsValueSet_GramOfTotalNitrogen: new Coding({
         code: "g{total_nit}",
         display: "gram of total nitrogen",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramOfTotalProtein: Coding.FromStrict({
+    UcumUnitsValueSet_GramOfTotalProtein: new Coding({
         code: "g{total_prot}",
         display: "gram of total protein",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramOfWetTissue: Coding.FromStrict({
+    UcumUnitsValueSet_GramOfWetTissue: new Coding({
         code: "g{wet_tissue}",
         display: "gram of wet tissue",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPer100Gram: Coding.FromStrict({
+    UcumUnitsValueSet_GramPer100Gram: new Coding({
         code: "g/(100.g)",
         display: "gram per 100 gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPer12Hour: Coding.FromStrict({
+    UcumUnitsValueSet_GramPer12Hour: new Coding({
         code: "g/(12.h)",
         display: "gram per 12 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPer24Hour: Coding.FromStrict({
+    UcumUnitsValueSet_GramPer24Hour: new Coding({
         code: "g/(24.h)",
         display: "gram per 24 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPer3Days: Coding.FromStrict({
+    UcumUnitsValueSet_GramPer3Days: new Coding({
         code: "g/(3.d)",
         display: "gram per 3 days",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPer4Hour: Coding.FromStrict({
+    UcumUnitsValueSet_GramPer4Hour: new Coding({
         code: "g/(4.h)",
         display: "gram per 4 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPer48Hour: Coding.FromStrict({
+    UcumUnitsValueSet_GramPer48Hour: new Coding({
         code: "g/(48.h)",
         display: "gram per 48 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPer5Hour: Coding.FromStrict({
+    UcumUnitsValueSet_GramPer5Hour: new Coding({
         code: "g/(5.h)",
         display: "gram per 5 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPer6Hour: Coding.FromStrict({
+    UcumUnitsValueSet_GramPer6Hour: new Coding({
         code: "g/(6.h)",
         display: "gram per 6 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPer72Hour: Coding.FromStrict({
+    UcumUnitsValueSet_GramPer72Hour: new Coding({
         code: "g/(72.h)",
         display: "gram per 72 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Gram8AsteriskHour: Coding.FromStrict({
+    UcumUnitsValueSet_Gram8AsteriskHour: new Coding({
         code: "g/(8.h)",
         display: "gram / 8 * hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPer8HourShift: Coding.FromStrict({
+    UcumUnitsValueSet_GramPer8HourShift: new Coding({
         code: "g/(8.h){shift}",
         display: "gram per 8 hour shift",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Gram8AsteriskKilogramAsteriskHour: Coding.FromStrict({
+    UcumUnitsValueSet_Gram8AsteriskKilogramAsteriskHour: new Coding({
         code: "g/(8.kg.h)",
         display: "gram / 8 * kilogram * hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramKilogramAsteriskHour: Coding.FromStrict({
+    UcumUnitsValueSet_GramKilogramAsteriskHour: new Coding({
         code: "g/(kg.h)",
         display: "gram / kilogram * hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramKilogramAsteriskMinute: Coding.FromStrict({
+    UcumUnitsValueSet_GramKilogramAsteriskMinute: new Coding({
         code: "g/(kg.min)",
         display: "gram / kilogram * minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerSpecimen: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerSpecimen: new Coding({
         code: "g/{specimen}",
         display: "gram per specimen",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerTotalOutput: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerTotalOutput: new Coding({
         code: "g/{total_output}",
         display: "gram per total output",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerTotalWeight: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerTotalWeight: new Coding({
         code: "g/{total_weight}",
         display: "gram per total weight",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramTotalWeight: Coding.FromStrict({
+    UcumUnitsValueSet_GramTotalWeight: new Coding({
         code: "g/{TotalWeight}",
         display: "gram / TotalWeight",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerCubicCentimeter: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerCubicCentimeter: new Coding({
         code: "g/cm3",
         display: "gram per cubic centimeter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerDay: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerDay: new Coding({
         code: "g/d",
         display: "gram per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerDeciliter: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerDeciliter: new Coding({
         code: "g/dL",
         display: "gram per deciliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerGram: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerGram: new Coding({
         code: "g/g",
         display: "gram per gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramGramCre: Coding.FromStrict({
+    UcumUnitsValueSet_GramGramCre: new Coding({
         code: "g/g{Cre}",
         display: "gram / gram Cre",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramGramCreat: Coding.FromStrict({
+    UcumUnitsValueSet_GramGramCreat: new Coding({
         code: "g/g{creat}",
         display: "gram / gram creat",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerGramOfGlobulin: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerGramOfGlobulin: new Coding({
         code: "g/g{globulin}",
         display: "gram per gram of globulin",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerGramOfTissue: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerGramOfTissue: new Coding({
         code: "g/g{tissue}",
         display: "gram per gram of tissue",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerHour: new Coding({
         code: "g/h",
         display: "gram per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerHourPerSquareMeter: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerHourPerSquareMeter: new Coding({
         code: "g/h/m2",
         display: "gram per hour per square meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerKilogram: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerKilogram: new Coding({
         code: "g/kg",
         display: "gram per kilogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerKilogramPer8Hour: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerKilogramPer8Hour: new Coding({
         code: "g/kg/(8.h)",
         display: "gram per  kilogram per 8 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerKilogramPer8HourShift: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerKilogramPer8HourShift: new Coding({
         code: "g/kg/(8.h){shift}",
         display: "gram per kilogram per 8 hour shift",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerKilogramPerDay: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerKilogramPerDay: new Coding({
         code: "g/kg/d",
         display: "gram per kilogram per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerKilogramPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerKilogramPerHour: new Coding({
         code: "g/kg/h",
         display: "gram per kilogram per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerKilogramPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerKilogramPerMinute: new Coding({
         code: "g/kg/min",
         display: "gram per kilogram per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerLiter: new Coding({
         code: "g/L",
         display: "gram per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramsPerSquareMeter: Coding.FromStrict({
+    UcumUnitsValueSet_GramsPerSquareMeter: new Coding({
         code: "g/m2",
         display: "grams Per Square Meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerMilligram: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerMilligram: new Coding({
         code: "g/mg",
         display: "gram per milligram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerMinute: new Coding({
         code: "g/min",
         display: "gram per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerMilliliter: new Coding({
         code: "g/mL",
         display: "gram per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerMillimole: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerMillimole: new Coding({
         code: "g/mmol",
         display: "gram per millimole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramMillimoleCreat: Coding.FromStrict({
+    UcumUnitsValueSet_GramMillimoleCreat: new Coding({
         code: "g/mmol{creat}",
         display: "gram / millimole creat",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerMole: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerMole: new Coding({
         code: "g/mol",
         display: "gram per mole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GramPerMoleOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_GramPerMoleOfCreatinine: new Coding({
         code: "g/mol{creat}",
         display: "gram per mole of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GigaBecquerel: Coding.FromStrict({
+    UcumUnitsValueSet_GigaBecquerel: new Coding({
         code: "GBq",
         display: "gigaBecquerel",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Gray: Coding.FromStrict({
+    UcumUnitsValueSet_Gray: new Coding({
         code: "Gy",
         display: "Gray",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Henry: Coding.FromStrict({
+    UcumUnitsValueSet_Henry: new Coding({
         code: "H",
         display: "Henry",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Hectoliter: Coding.FromStrict({
+    UcumUnitsValueSet_Hectoliter: new Coding({
         code: "hL",
         display: "hectoliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Hertz: Coding.FromStrict({
+    UcumUnitsValueSet_Hertz: new Coding({
         code: "Hz",
         display: "Hertz",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Joule: Coding.FromStrict({
+    UcumUnitsValueSet_Joule: new Coding({
         code: "J",
         display: "joule",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_JoulePerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_JoulePerLiter: new Coding({
         code: "J/L",
         display: "joule per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Kelvin: Coding.FromStrict({
+    UcumUnitsValueSet_Kelvin: new Coding({
         code: "K",
         display: "Kelvin",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KiloInternationalUnitPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_KiloInternationalUnitPerLiter: new Coding({
         code: "k[IU]/L",
         display: "kilo international unit per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KiloInternationalUnitPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_KiloInternationalUnitPerMilliliter: new Coding({
         code: "k[IU]/mL",
         display: "kilo international unit per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KelvinWatt: Coding.FromStrict({
+    UcumUnitsValueSet_KelvinWatt: new Coding({
         code: "K/W",
         display: "Kelvin / Watt",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Katal: Coding.FromStrict({
+    UcumUnitsValueSet_Katal: new Coding({
         code: "kat",
         display: "katal",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KatalKilogram: Coding.FromStrict({
+    UcumUnitsValueSet_KatalKilogram: new Coding({
         code: "kat/kg",
         display: "katal / kilogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KatalLiter: Coding.FromStrict({
+    UcumUnitsValueSet_KatalLiter: new Coding({
         code: "kat/L",
         display: "katal / liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KiloBecquerel: Coding.FromStrict({
+    UcumUnitsValueSet_KiloBecquerel: new Coding({
         code: "kBq",
         display: "kiloBecquerel",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Kilocalorie: Coding.FromStrict({
+    UcumUnitsValueSet_Kilocalorie: new Coding({
         code: "kcal",
         display: "kilocalorie",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Kilocalorie8AsteriskHour: Coding.FromStrict({
+    UcumUnitsValueSet_Kilocalorie8AsteriskHour: new Coding({
         code: "kcal/(8.h)",
         display: "kilocalorie / 8 * hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KilocaloriePerOunceUSAndBritish: Coding.FromStrict({
+    UcumUnitsValueSet_KilocaloriePerOunceUSAndBritish: new Coding({
         code: "kcal/[oz_av]",
         display: "kilocalorie per ounce (US & British)",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KilocaloriePerDay: Coding.FromStrict({
+    UcumUnitsValueSet_KilocaloriePerDay: new Coding({
         code: "kcal/d",
         display: "kilocalorie per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KilocaloriePerHour: Coding.FromStrict({
+    UcumUnitsValueSet_KilocaloriePerHour: new Coding({
         code: "kcal/h",
         display: "kilocalorie per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KilocaloriePerKilogramPer24Hour: Coding.FromStrict({
+    UcumUnitsValueSet_KilocaloriePerKilogramPer24Hour: new Coding({
         code: "kcal/kg/(24.h)",
         display: "kilocalorie per kilogram per 24 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Kilogram: Coding.FromStrict({
+    UcumUnitsValueSet_Kilogram: new Coding({
         code: "kg",
         display: "kilogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KilogramMeterPerSecond: Coding.FromStrict({
+    UcumUnitsValueSet_KilogramMeterPerSecond: new Coding({
         code: "kg.m/s",
         display: "kilogram meter per second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KilogramPerSecondPerSquareMeter: Coding.FromStrict({
+    UcumUnitsValueSet_KilogramPerSecondPerSquareMeter: new Coding({
         code: "kg/(s.m2)",
         display: "kilogram per second per square meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KilogramPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_KilogramPerHour: new Coding({
         code: "kg/h",
         display: "kilogram per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KilogramPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_KilogramPerLiter: new Coding({
         code: "kg/L",
         display: "kilogram per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KilogramMeterPower2: Coding.FromStrict({
+    UcumUnitsValueSet_KilogramMeterPower2: new Coding({
         code: "kg/m2",
         display: "kilogram / (meter ^ 2)",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KilogramMeterPower3: Coding.FromStrict({
+    UcumUnitsValueSet_KilogramMeterPower3: new Coding({
         code: "kg/m3",
         display: "kilogram / (meter ^ 3)",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KilogramMinute: Coding.FromStrict({
+    UcumUnitsValueSet_KilogramMinute: new Coding({
         code: "kg/min",
         display: "kilogram / minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KilogramPerMole: Coding.FromStrict({
+    UcumUnitsValueSet_KilogramPerMole: new Coding({
         code: "kg/mol",
         display: "kilogram per mole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KilogramSecond: Coding.FromStrict({
+    UcumUnitsValueSet_KilogramSecond: new Coding({
         code: "kg/s",
         display: "kilogram / second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Kiloliter: Coding.FromStrict({
+    UcumUnitsValueSet_Kiloliter: new Coding({
         code: "kL",
         display: "kiloliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KiloPascal: Coding.FromStrict({
+    UcumUnitsValueSet_KiloPascal: new Coding({
         code: "kPa",
         display: "kiloPascal",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Kilosecond: Coding.FromStrict({
+    UcumUnitsValueSet_Kilosecond: new Coding({
         code: "ks",
         display: "kilosecond",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KiloEnzymeUnit: Coding.FromStrict({
+    UcumUnitsValueSet_KiloEnzymeUnit: new Coding({
         code: "kU",
         display: "kilo enzyme unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KiloenzymeUnitPerGram: Coding.FromStrict({
+    UcumUnitsValueSet_KiloenzymeUnitPerGram: new Coding({
         code: "kU/g",
         display: "kiloenzyme Unit per gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KiloUnitHour: Coding.FromStrict({
+    UcumUnitsValueSet_KiloUnitHour: new Coding({
         code: "kU/h",
         display: "kiloUnit / hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KiloenzymeUnitPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_KiloenzymeUnitPerLiter: new Coding({
         code: "kU/L",
         display: "kiloenzyme Unit per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KiloEnzymeUnitPerLiterClass: Coding.FromStrict({
+    UcumUnitsValueSet_KiloEnzymeUnitPerLiterClass: new Coding({
         code: "kU/L{class}",
         display: "kilo enzyme unit per liter class",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_KiloEnzymeUnitPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_KiloEnzymeUnitPerMilliliter: new Coding({
         code: "kU/mL",
         display: "kilo enzyme unit per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Liter: Coding.FromStrict({
+    UcumUnitsValueSet_Liter: new Coding({
         code: "L",
         display: "liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LiterAsteriskSecondPower2Second: Coding.FromStrict({
+    UcumUnitsValueSet_LiterAsteriskSecondPower2Second: new Coding({
         code: "L.s2/s",
         display: "liter * (second ^ 2) / second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LiterPer24Hour: Coding.FromStrict({
+    UcumUnitsValueSet_LiterPer24Hour: new Coding({
         code: "L/(24.h)",
         display: "liter per 24 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LiterPer8Hour: Coding.FromStrict({
+    UcumUnitsValueSet_LiterPer8Hour: new Coding({
         code: "L/(8.h)",
         display: "liter per 8 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LiterPerMinutePerSquareMeter: Coding.FromStrict({
+    UcumUnitsValueSet_LiterPerMinutePerSquareMeter: new Coding({
         code: "L/(min.m2)",
         display: "liter per minute per square meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LiterPerDay: Coding.FromStrict({
+    UcumUnitsValueSet_LiterPerDay: new Coding({
         code: "L/d",
         display: "liter per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LiterPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_LiterPerHour: new Coding({
         code: "L/h",
         display: "liter per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LiterPerKilogram: Coding.FromStrict({
+    UcumUnitsValueSet_LiterPerKilogram: new Coding({
         code: "L/kg",
         display: "liter per kilogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LiterPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_LiterPerLiter: new Coding({
         code: "L/L",
         display: "liter per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LiterPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_LiterPerMinute: new Coding({
         code: "L/min",
         display: "liter per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LiterSecond: Coding.FromStrict({
+    UcumUnitsValueSet_LiterSecond: new Coding({
         code: "L/s",
         display: "liter / second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LiterPerSecondPerSquareSecond: Coding.FromStrict({
+    UcumUnitsValueSet_LiterPerSecondPerSquareSecond: new Coding({
         code: "L/s/s2",
         display: "liter per second per square second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Lumen: Coding.FromStrict({
+    UcumUnitsValueSet_Lumen: new Coding({
         code: "lm",
         display: "lumen",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LumenSquareMeter: Coding.FromStrict({
+    UcumUnitsValueSet_LumenSquareMeter: new Coding({
         code: "lm.m2",
         display: "lumen square meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_LumenMeterPower2: Coding.FromStrict({
+    UcumUnitsValueSet_LumenMeterPower2: new Coding({
         code: "lm/m2",
         display: "lumen / (meter ^ 2)",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliinternationalUnit: Coding.FromStrict({
+    UcumUnitsValueSet_MilliinternationalUnit: new Coding({
         code: "m[iU]",
         display: "milliinternational unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliInternationalUnitPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_MilliInternationalUnitPerLiter: new Coding({
         code: "m[IU]/L",
         display: "milli international unit per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliInternationalUnitPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_MilliInternationalUnitPerMilliliter: new Coding({
         code: "m[IU]/mL",
         display: "milli international unit per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MeterPerSecond: Coding.FromStrict({
+    UcumUnitsValueSet_MeterPerSecond: new Coding({
         code: "m/s",
         display: "meter per second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MeterPerSquareSecond: Coding.FromStrict({
+    UcumUnitsValueSet_MeterPerSquareSecond: new Coding({
         code: "m/s2",
         display: "meter per square second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_SquareMeter: Coding.FromStrict({
+    UcumUnitsValueSet_SquareMeter: new Coding({
         code: "m2",
         display: "square meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_SquareMeterPerSecond: Coding.FromStrict({
+    UcumUnitsValueSet_SquareMeterPerSecond: new Coding({
         code: "m2/s",
         display: "square meter per second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CubicMeterPerSecond: Coding.FromStrict({
+    UcumUnitsValueSet_CubicMeterPerSecond: new Coding({
         code: "m3/s",
         display: "cubic meter per second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliAmpere: Coding.FromStrict({
+    UcumUnitsValueSet_MilliAmpere: new Coding({
         code: "mA",
         display: "milliAmpère",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Millibar: Coding.FromStrict({
+    UcumUnitsValueSet_Millibar: new Coding({
         code: "mbar",
         display: "millibar",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillibarSecondPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_MillibarSecondPerLiter: new Coding({
         code: "mbar.s/L",
         display: "millibar second per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MegaBecquerel: Coding.FromStrict({
+    UcumUnitsValueSet_MegaBecquerel: new Coding({
         code: "MBq",
         display: "megaBecquerel",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliCurie: Coding.FromStrict({
+    UcumUnitsValueSet_MilliCurie: new Coding({
         code: "mCi",
         display: "milliCurie",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Milliequivalent: Coding.FromStrict({
+    UcumUnitsValueSet_Milliequivalent: new Coding({
         code: "meq",
         display: "milliequivalent",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliequivalentPer12Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MilliequivalentPer12Hour: new Coding({
         code: "meq/(12.h)",
         display: "milliequivalent per 12 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliequivalentPer2Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MilliequivalentPer2Hour: new Coding({
         code: "meq/(2.h)",
         display: "milliequivalent per 2 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliequivalentPer24Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MilliequivalentPer24Hour: new Coding({
         code: "meq/(24.h)",
         display: "milliequivalent per 24 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Milliequivalents8AsteriskHourAsteriskKilogram: Coding.FromStrict({
+    UcumUnitsValueSet_Milliequivalents8AsteriskHourAsteriskKilogram: new Coding({
         code: "meq/(8.h.kg)",
         display: "milliequivalents / 8 * hour * kilogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliequivalentPer8Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MilliequivalentPer8Hour: new Coding({
         code: "meq/(8.h)",
         display: "milliequivalent per 8 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliequivalentsKilogramAsteriskDay: Coding.FromStrict({
+    UcumUnitsValueSet_MilliequivalentsKilogramAsteriskDay: new Coding({
         code: "meq/(kg.d)",
         display: "milliequivalents / kilogram * day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliequivalentsSpecimen: Coding.FromStrict({
+    UcumUnitsValueSet_MilliequivalentsSpecimen: new Coding({
         code: "meq/{Specimen}",
         display: "milliequivalents / Specimen",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliequivalentPerDay: Coding.FromStrict({
+    UcumUnitsValueSet_MilliequivalentPerDay: new Coding({
         code: "meq/d",
         display: "milliequivalent per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliequivalentPerDeciliter: Coding.FromStrict({
+    UcumUnitsValueSet_MilliequivalentPerDeciliter: new Coding({
         code: "meq/dL",
         display: "milliequivalent per deciliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliequivalentPerGram: Coding.FromStrict({
+    UcumUnitsValueSet_MilliequivalentPerGram: new Coding({
         code: "meq/g",
         display: "milliequivalent per gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliequivalentsGramCre: Coding.FromStrict({
+    UcumUnitsValueSet_MilliequivalentsGramCre: new Coding({
         code: "meq/g{Cre}",
         display: "milliequivalents / gram Cre",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliequivalentPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_MilliequivalentPerHour: new Coding({
         code: "meq/h",
         display: "milliequivalent per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliequivalentPerKilogram: Coding.FromStrict({
+    UcumUnitsValueSet_MilliequivalentPerKilogram: new Coding({
         code: "meq/kg",
         display: "milliequivalent per kilogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliequivalentPerKilogramPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_MilliequivalentPerKilogramPerHour: new Coding({
         code: "meq/kg/h",
         display: "milliequivalent per kilogram per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliequivalentsKilogramMinute: Coding.FromStrict({
+    UcumUnitsValueSet_MilliequivalentsKilogramMinute: new Coding({
         code: "meq/kg/min",
         display: "milliequivalents / kilogram / minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliequivalentPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_MilliequivalentPerLiter: new Coding({
         code: "meq/L",
         display: "milliequivalent per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliequivalentPerSquareMeter: Coding.FromStrict({
+    UcumUnitsValueSet_MilliequivalentPerSquareMeter: new Coding({
         code: "meq/m2",
         display: "milliequivalent per square meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliequivalentPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_MilliequivalentPerMinute: new Coding({
         code: "meq/min",
         display: "milliequivalent per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliequivalentPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_MilliequivalentPerMilliliter: new Coding({
         code: "meq/mL",
         display: "milliequivalent per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Milligram: Coding.FromStrict({
+    UcumUnitsValueSet_Milligram: new Coding({
         code: "mg",
         display: "milligram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPhenylketonesDeciliter: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPhenylketonesDeciliter: new Coding({
         code: "mg{Phenylketones}/dL",
         display: "milligram Phenylketones / deciliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPer10Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPer10Hour: new Coding({
         code: "mg/(10.h)",
         display: "milligram per 10 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPer12Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPer12Hour: new Coding({
         code: "mg/(12.h)",
         display: "milligram per 12 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPer18Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPer18Hour: new Coding({
         code: "mg/(18.h)",
         display: "milligram per 18 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPer2Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPer2Hour: new Coding({
         code: "mg/(2.h)",
         display: "milligram per 2 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPer24Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPer24Hour: new Coding({
         code: "mg/(24.h)",
         display: "milligram per 24 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPer72Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPer72Hour: new Coding({
         code: "mg/(72.h)",
         display: "milligram per 72 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Milligram8AsteriskHourAsteriskKilogram: Coding.FromStrict({
+    UcumUnitsValueSet_Milligram8AsteriskHourAsteriskKilogram: new Coding({
         code: "mg/(8.h.kg)",
         display: "milligram / 8 * hour * kilogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPer8Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPer8Hour: new Coding({
         code: "mg/(8.h)",
         display: "milligram per 8 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramKilogramAsteriskHour: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramKilogramAsteriskHour: new Coding({
         code: "mg/(kg.h)",
         display: "milligram / kilogram * hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramHgbGram: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramHgbGram: new Coding({
         code: "mg/{Hgb}/g",
         display: "milligram / Hgb / gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramSpecimen: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramSpecimen: new Coding({
         code: "mg/{Specimen}",
         display: "milligram / Specimen",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramTotQuoteVolume: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramTotQuoteVolume: new Coding({
         code: "mg/{Tot'Volume}",
         display: "milligram / Tot'Volume",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramVolume: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramVolume: new Coding({
         code: "mg/{Volume}",
         display: "milligram / Volume",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPerDay: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPerDay: new Coding({
         code: "mg/d",
         display: "milligram per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramDay173AsteriskTheNumberTenForArbitraryPowersPower2AsteriskMeterPower2: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramDay173AsteriskTheNumberTenForArbitraryPowersPower2AsteriskMeterPower2: new Coding({
         code: "mg/d/(173.10*-2.m2)",
         display: "milligram / day / 173 * (the number ten for arbitrary powers ^ -2) * (meter ^ 2)",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPerDeciliter: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPerDeciliter: new Coding({
         code: "mg/dL",
         display: "milligram per deciliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPerGram: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPerGram: new Coding({
         code: "mg/g",
         display: "milligram per gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramGramCre: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramGramCre: new Coding({
         code: "mg/g{Cre}",
         display: "milligram / gram Cre",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPerGramOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPerGramOfCreatinine: new Coding({
         code: "mg/g{creat}",
         display: "milligram per gram of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPerHour: new Coding({
         code: "mg/h",
         display: "milligram per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPerKilogram: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPerKilogram: new Coding({
         code: "mg/kg",
         display: "milligram per kilogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramKilogram24AsteriskHour: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramKilogram24AsteriskHour: new Coding({
         code: "mg/kg/(24.h)",
         display: "milligram / kilogram / 24 * hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPerKilogramPerDay: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPerKilogramPerDay: new Coding({
         code: "mg/kg/d",
         display: "milligram per kilogram per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPerKilogramPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPerKilogramPerMinute: new Coding({
         code: "mg/kg/min",
         display: "milligram per kilogram per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPerLiter: new Coding({
         code: "mg/L",
         display: "milligram per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPerSquareMeter: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPerSquareMeter: new Coding({
         code: "mg/m2",
         display: "milligram per square meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPerCubicMeter: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPerCubicMeter: new Coding({
         code: "mg/m3",
         display: "milligram per cubic meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPerMilligram: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPerMilligram: new Coding({
         code: "mg/mg",
         display: "milligram per milligram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramMilligramCre: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramMilligramCre: new Coding({
         code: "mg/mg{cre}",
         display: "milligram / milligram cre",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPerMinute: new Coding({
         code: "mg/min",
         display: "milligram per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPerMilliliter: new Coding({
         code: "mg/mL",
         display: "milligram per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPerMillimole: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPerMillimole: new Coding({
         code: "mg/mmol",
         display: "milligram per millimole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramMillimoleCre: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramMillimoleCre: new Coding({
         code: "mg/mmol{Cre}",
         display: "milligram / millimole Cre",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPerMillimoleOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPerMillimoleOfCreatinine: new Coding({
         code: "mg/mmol{creat}",
         display: "milligram per millimole of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilligramPerWeek: Coding.FromStrict({
+    UcumUnitsValueSet_MilligramPerWeek: new Coding({
         code: "mg/wk",
         display: "milligram per week",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Milliliter: Coding.FromStrict({
+    UcumUnitsValueSet_Milliliter: new Coding({
         code: "mL",
         display: "milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterHQuoteBAsteriskMeterPower2: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterHQuoteBAsteriskMeterPower2: new Coding({
         code: "mL/({h'b}.m2)",
         display: "milliliter / h'b * (meter ^ 2)",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPer10Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPer10Hour: new Coding({
         code: "mL/(10.h)",
         display: "milliliter per 10 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPer12Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPer12Hour: new Coding({
         code: "mL/(12.h)",
         display: "milliliter per 12 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPer2Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPer2Hour: new Coding({
         code: "mL/(2.h)",
         display: "milliliter per 2 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPer24Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPer24Hour: new Coding({
         code: "mL/(24.h)",
         display: "milliliter per 24 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPer4Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPer4Hour: new Coding({
         code: "mL/(4.h)",
         display: "milliliter per 4 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPer72Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPer72Hour: new Coding({
         code: "mL/(72.h)",
         display: "milliliter per 72 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPer8Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPer8Hour: new Coding({
         code: "mL/(8.h)",
         display: "milliliter per 8 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterKilogramAsteriskMinute: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterKilogramAsteriskMinute: new Coding({
         code: "mL/(kg.min)",
         display: "milliliter / kilogram * minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPerSquareInchInternational: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPerSquareInchInternational: new Coding({
         code: "mL/[sin_i]",
         display: "milliliter per square inch (international)",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliLitersPerHeartbeatSIVolumeUnits: Coding.FromStrict({
+    UcumUnitsValueSet_MilliLitersPerHeartbeatSIVolumeUnits: new Coding({
         code: "mL/{h'b}",
         display: "MilliLitersPerHeartbeat [SI Volume Units]",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterCentimeterOfWaterColumn: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterCentimeterOfWaterColumn: new Coding({
         code: "mL/cm[H2O]",
         display: "milliliter / centimeter of water column",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPerDay: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPerDay: new Coding({
         code: "mL/d",
         display: "milliliter per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPerDeciliter: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPerDeciliter: new Coding({
         code: "mL/dL",
         display: "milliliter per deciliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPerHour: new Coding({
         code: "mL/h",
         display: "milliliter per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPerKilogram: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPerKilogram: new Coding({
         code: "mL/kg",
         display: "milliliter per kilogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPerKilogramPer8Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPerKilogramPer8Hour: new Coding({
         code: "mL/kg/(8.h)",
         display: "milliliter per kilogram per 8 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPerKilogramPerDay: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPerKilogramPerDay: new Coding({
         code: "mL/kg/d",
         display: "milliliter per kilogram per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPerKilogramPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPerKilogramPerHour: new Coding({
         code: "mL/kg/h",
         display: "milliliter per kilogram per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPerKilogramPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPerKilogramPerMinute: new Coding({
         code: "mL/kg/min",
         display: "milliliter per kilogram per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPerLiter: new Coding({
         code: "mL/L",
         display: "milliliter per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPerSquareMeter: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPerSquareMeter: new Coding({
         code: "mL/m2",
         display: "milliliter per square meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPerMillibar: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPerMillibar: new Coding({
         code: "mL/mbar",
         display: "milliliter per millibar",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPerMinute: new Coding({
         code: "mL/min",
         display: "milliliter per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterMinute173AsteriskTheNumberTenForArbitraryPowersPower2AsteriskMeterPower2: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterMinute173AsteriskTheNumberTenForArbitraryPowersPower2AsteriskMeterPower2: new Coding({
         code: "mL/min/(173.10*-2.m2)",
         display: "milliliter / minute / 173 * (the number ten for arbitrary powers ^ -2) * (meter ^ 2)",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPerMinutePer173SquareMeter: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPerMinutePer173SquareMeter: new Coding({
         code: "mL/min/{1.73_m2}",
         display: "milliliter per minute per 1.73 square meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPerMinutePerSquareMeter: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPerMinutePerSquareMeter: new Coding({
         code: "mL/min/m2",
         display: "milliliter per minute per square meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPerMillimeter: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPerMillimeter: new Coding({
         code: "mL/mm",
         display: "milliliter per millimeter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliliterPerSecond: Coding.FromStrict({
+    UcumUnitsValueSet_MilliliterPerSecond: new Coding({
         code: "mL/s",
         display: "milliliter per second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimeterOfWater: Coding.FromStrict({
+    UcumUnitsValueSet_MillimeterOfWater: new Coding({
         code: "mm[H2O]",
         display: "millimeter of water",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimeterOfMercury: Coding.FromStrict({
+    UcumUnitsValueSet_MillimeterOfMercury: new Coding({
         code: "mm[Hg]",
         display: "millimeter of mercury",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimeterPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_MillimeterPerHour: new Coding({
         code: "mm/h",
         display: "millimeter per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimeterPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_MillimeterPerMinute: new Coding({
         code: "mm/min",
         display: "millimeter per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_SquareMillimeter: Coding.FromStrict({
+    UcumUnitsValueSet_SquareMillimeter: new Coding({
         code: "mm2",
         display: "square millimeter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_CubicMillimeter: Coding.FromStrict({
+    UcumUnitsValueSet_CubicMillimeter: new Coding({
         code: "mm3",
         display: "cubic millimeter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Millimole: Coding.FromStrict({
+    UcumUnitsValueSet_Millimole: new Coding({
         code: "mmol",
         display: "millimole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePer12Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePer12Hour: new Coding({
         code: "mmol/(12.h)",
         display: "millimole per 12 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePer18Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePer18Hour: new Coding({
         code: "mmol/(18.h)",
         display: "millimole per 18 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePer2Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePer2Hour: new Coding({
         code: "mmol/(2.h)",
         display: "millimole per 2 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePer24Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePer24Hour: new Coding({
         code: "mmol/(24.h)",
         display: "millimole per 24 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePer6Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePer6Hour: new Coding({
         code: "mmol/(6.h)",
         display: "millimole per 6 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Millimole8AsteriskHourAsteriskKilogram: Coding.FromStrict({
+    UcumUnitsValueSet_Millimole8AsteriskHourAsteriskKilogram: new Coding({
         code: "mmol/(8.h.kg)",
         display: "millimole / 8 * hour * kilogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePer8Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePer8Hour: new Coding({
         code: "mmol/(8.h)",
         display: "millimole per 8 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimoleTotQuoteVolume: Coding.FromStrict({
+    UcumUnitsValueSet_MillimoleTotQuoteVolume: new Coding({
         code: "mmol/{Tot'Volume}",
         display: "millimole / Tot'Volume",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePerDay: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePerDay: new Coding({
         code: "mmol/d",
         display: "millimole per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePerDeciliter: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePerDeciliter: new Coding({
         code: "mmol/dL",
         display: "millimole per deciliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePerGram: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePerGram: new Coding({
         code: "mmol/g",
         display: "millimole per gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePerGramOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePerGramOfCreatinine: new Coding({
         code: "mmol/g{creat}",
         display: "millimole per gram of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePerGramOfHemoglobin: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePerGramOfHemoglobin: new Coding({
         code: "mmol/g{hemoglobin}",
         display: "millimole per gram of hemoglobin",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePerHour: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePerHour: new Coding({
         code: "mmol/h",
         display: "millimole per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePerHourPerMilligramOfHemoglobin: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePerHourPerMilligramOfHemoglobin: new Coding({
         code: "mmol/h/mg{Hb}",
         display: "millimole per hour per milligram of hemoglobin",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePerHourPerMilligramOfProtein: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePerHourPerMilligramOfProtein: new Coding({
         code: "mmol/h/mg{protein}",
         display: "millimole per hour per milligram of protein",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePerKilogram: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePerKilogram: new Coding({
         code: "mmol/kg",
         display: "millimole per kilogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePerKilogramOfWater: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePerKilogramOfWater: new Coding({
         code: "mmol/kg{H2O}",
         display: "millimole per kilogram of water",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePerKilogramPerDay: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePerKilogramPerDay: new Coding({
         code: "mmol/kg/d",
         display: "millimole per kilogram per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePerKilogramPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePerKilogramPerHour: new Coding({
         code: "mmol/kg/h",
         display: "millimole per kilogram per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePerKilogramPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePerKilogramPerMinute: new Coding({
         code: "mmol/kg/min",
         display: "millimole per kilogram per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePerLiter: new Coding({
         code: "mmol/L",
         display: "millimole per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePerLiterPerSecond: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePerLiterPerSecond: new Coding({
         code: "mmol/L/s",
         display: "millimole per liter per second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimoleMeter: Coding.FromStrict({
+    UcumUnitsValueSet_MillimoleMeter: new Coding({
         code: "mmol/m",
         display: "millimole / meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePerSquareMeter: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePerSquareMeter: new Coding({
         code: "mmol/m2",
         display: "millimole per square meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePerMinute: new Coding({
         code: "mmol/min",
         display: "millimole per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePerMillimole: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePerMillimole: new Coding({
         code: "mmol/mmol",
         display: "millimole per millimole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePerMole: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePerMole: new Coding({
         code: "mmol/mol",
         display: "millimole per mole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePerMoleOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePerMoleOfCreatinine: new Coding({
         code: "mmol/mol{creat}",
         display: "millimole per mole of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillimolePerSecondPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_MillimolePerSecondPerLiter: new Coding({
         code: "mmol/s/L",
         display: "millimole per second per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Mole: Coding.FromStrict({
+    UcumUnitsValueSet_Mole: new Coding({
         code: "mol",
         display: "mole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MolePerDay: Coding.FromStrict({
+    UcumUnitsValueSet_MolePerDay: new Coding({
         code: "mol/d",
         display: "mole per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MolePerKilogram: Coding.FromStrict({
+    UcumUnitsValueSet_MolePerKilogram: new Coding({
         code: "mol/kg",
         display: "mole per kilogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MolePerKilogramPerSecond: Coding.FromStrict({
+    UcumUnitsValueSet_MolePerKilogramPerSecond: new Coding({
         code: "mol/kg/s",
         display: "mole per kilogram per second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MolePerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_MolePerLiter: new Coding({
         code: "mol/L",
         display: "mole per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MolePerCubicMeter: Coding.FromStrict({
+    UcumUnitsValueSet_MolePerCubicMeter: new Coding({
         code: "mol/m3",
         display: "mole per cubic meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MolePerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_MolePerMilliliter: new Coding({
         code: "mol/mL",
         display: "mole per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MolePerMole: Coding.FromStrict({
+    UcumUnitsValueSet_MolePerMole: new Coding({
         code: "mol/mol",
         display: "mole per mole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MoleMoleCreat: Coding.FromStrict({
+    UcumUnitsValueSet_MoleMoleCreat: new Coding({
         code: "mol/mol{creat}",
         display: "mole / mole creat",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MolePerSecond: Coding.FromStrict({
+    UcumUnitsValueSet_MolePerSecond: new Coding({
         code: "mol/s",
         display: "mole per second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Milliosmole: Coding.FromStrict({
+    UcumUnitsValueSet_Milliosmole: new Coding({
         code: "mosm",
         display: "milliosmole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliosmolePerKilogram: Coding.FromStrict({
+    UcumUnitsValueSet_MilliosmolePerKilogram: new Coding({
         code: "mosm/kg",
         display: "milliosmole per kilogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliosmolePerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_MilliosmolePerLiter: new Coding({
         code: "mosm/L",
         display: "milliosmole per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Millipascal: Coding.FromStrict({
+    UcumUnitsValueSet_Millipascal: new Coding({
         code: "mPa",
         display: "millipascal",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Megasecond: Coding.FromStrict({
+    UcumUnitsValueSet_Megasecond: new Coding({
         code: "Ms",
         display: "megasecond",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillienzymeUnit: Coding.FromStrict({
+    UcumUnitsValueSet_MillienzymeUnit: new Coding({
         code: "mU",
         display: "millienzyme Unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillienzymeUnitPerGram: Coding.FromStrict({
+    UcumUnitsValueSet_MillienzymeUnitPerGram: new Coding({
         code: "mU/g",
         display: "millienzyme Unit per gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliEnzymeUnitPerGramOfHemoglobin: Coding.FromStrict({
+    UcumUnitsValueSet_MilliEnzymeUnitPerGramOfHemoglobin: new Coding({
         code: "mU/g{Hb}",
         display: "milli enzyme unit per gram of hemoglobin",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliUnitGramHgb: Coding.FromStrict({
+    UcumUnitsValueSet_MilliUnitGramHgb: new Coding({
         code: "mU/g{Hgb}",
         display: "milliUnit / gram Hgb",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliEnzymeUnitPerGramOfProtein: Coding.FromStrict({
+    UcumUnitsValueSet_MilliEnzymeUnitPerGramOfProtein: new Coding({
         code: "mU/g{protein}",
         display: "milli enzyme unit per gram of protein",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillienzymeUnitPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_MillienzymeUnitPerLiter: new Coding({
         code: "mU/L",
         display: "millienzyme Unit per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliUnitMilligram: Coding.FromStrict({
+    UcumUnitsValueSet_MilliUnitMilligram: new Coding({
         code: "mU/mg",
         display: "milliUnit / milligram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliUnitMilligramCre: Coding.FromStrict({
+    UcumUnitsValueSet_MilliUnitMilligramCre: new Coding({
         code: "mU/mg{Cre}",
         display: "milliUnit / milligram Cre",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliUnitMinute: Coding.FromStrict({
+    UcumUnitsValueSet_MilliUnitMinute: new Coding({
         code: "mU/min",
         display: "milliUnit / minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillienzymeUnitPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_MillienzymeUnitPerMilliliter: new Coding({
         code: "mU/mL",
         display: "millienzyme Unit per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillienzymeUnitPerMilliliterPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_MillienzymeUnitPerMilliliterPerMinute: new Coding({
         code: "mU/mL/min",
         display: "millienzyme Unit per milliliter per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliEnzymeUnitPerMillimoleOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_MilliEnzymeUnitPerMillimoleOfCreatinine: new Coding({
         code: "mU/mmol{creat}",
         display: "milli  enzyme unit per millimole of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillienzymeUnitPerMillimoleOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_MillienzymeUnitPerMillimoleOfCreatinine: new Coding({
         code: "mU/mmol{creatinine}",
         display: "millienzyme Unit per millimole of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MillienzymeUnitPerMillimoleOfRedBloodCells: Coding.FromStrict({
+    UcumUnitsValueSet_MillienzymeUnitPerMillimoleOfRedBloodCells: new Coding({
         code: "mU/mmol{RBCs}",
         display: "millienzyme Unit per millimole of red blood cells",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MilliVolt: Coding.FromStrict({
+    UcumUnitsValueSet_MilliVolt: new Coding({
         code: "mV",
         display: "milliVolt",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Newton: Coding.FromStrict({
+    UcumUnitsValueSet_Newton: new Coding({
         code: "N",
         display: "Newton",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NewtonCentimeter: Coding.FromStrict({
+    UcumUnitsValueSet_NewtonCentimeter: new Coding({
         code: "N.cm",
         display: "Newton centimeter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NewtonSecond: Coding.FromStrict({
+    UcumUnitsValueSet_NewtonSecond: new Coding({
         code: "N.s",
         display: "Newton second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanoCurie: Coding.FromStrict({
+    UcumUnitsValueSet_NanoCurie: new Coding({
         code: "nCi",
         display: "nanoCurie",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Nanogram: Coding.FromStrict({
+    UcumUnitsValueSet_Nanogram: new Coding({
         code: "ng",
         display: "nanogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramPer24Hour: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramPer24Hour: new Coding({
         code: "ng/(24.h)",
         display: "nanogram per 24 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Nanogram8AsteriskHourAsteriskKilogram: Coding.FromStrict({
+    UcumUnitsValueSet_Nanogram8AsteriskHourAsteriskKilogram: new Coding({
         code: "ng/(8.h.kg)",
         display: "nanogram / 8 * hour * kilogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramPer8Hour: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramPer8Hour: new Coding({
         code: "ng/(8.h)",
         display: "nanogram per 8 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramKilogramAsteriskDay: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramKilogramAsteriskDay: new Coding({
         code: "ng/(kg.d)",
         display: "nanogram / kilogram * day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramKilogramAsteriskHour: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramKilogramAsteriskHour: new Coding({
         code: "ng/(kg.h)",
         display: "nanogram / kilogram * hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramKilogramAsteriskMinute: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramKilogramAsteriskMinute: new Coding({
         code: "ng/(kg.min)",
         display: "nanogram / kilogram * minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramPerMillion: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramPerMillion: new Coding({
         code: "ng/10*6",
         display: "nanogram per million",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramPerDay: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramPerDay: new Coding({
         code: "ng/d",
         display: "nanogram per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramPerDeciliter: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramPerDeciliter: new Coding({
         code: "ng/dL",
         display: "nanogram per deciliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramDeciliterHour: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramDeciliterHour: new Coding({
         code: "ng/dL/h",
         display: "nanogram / deciliter / hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramPerGram: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramPerGram: new Coding({
         code: "ng/g",
         display: "nanogram per gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramGramCre: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramGramCre: new Coding({
         code: "ng/g{Cre}",
         display: "nanogram / gram Cre",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramPerGramOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramPerGramOfCreatinine: new Coding({
         code: "ng/g{creat}",
         display: "nanogram per gram of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramPerHour: new Coding({
         code: "ng/h",
         display: "nanogram per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramPerKilogram: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramPerKilogram: new Coding({
         code: "ng/kg",
         display: "nanogram per kilogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramPerKilogramPer8Hour: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramPerKilogramPer8Hour: new Coding({
         code: "ng/kg/(8.h)",
         display: "nanogram per kilogram per 8 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramPerKilogramPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramPerKilogramPerHour: new Coding({
         code: "ng/kg/h",
         display: "nanogram per kilogram per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramPerKilogramPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramPerKilogramPerMinute: new Coding({
         code: "ng/kg/min",
         display: "nanogram per kilogram per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramPerLiter: new Coding({
         code: "ng/L",
         display: "nanogram per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramPerSquareMeter: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramPerSquareMeter: new Coding({
         code: "ng/m2",
         display: "nanogram per square meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramPerMilligram: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramPerMilligram: new Coding({
         code: "ng/mg",
         display: "nanogram per milligram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramMilligramProtein: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramMilligramProtein: new Coding({
         code: "ng/mg{Protein}",
         display: "nanogram / milligram Protein",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramPerMilligramPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramPerMilligramPerHour: new Coding({
         code: "ng/mg/h",
         display: "nanogram per milligram per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramPerMinute: new Coding({
         code: "ng/min",
         display: "nanogram per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramPerMillliiter: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramPerMillliiter: new Coding({
         code: "ng/mL",
         display: "nanogram per millliiter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramMilliliterRbc: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramMilliliterRbc: new Coding({
         code: "ng/mL{rbc}",
         display: "nanogram / milliliter rbc",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramPerMilliliterPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramPerMilliliterPerHour: new Coding({
         code: "ng/mL/h",
         display: "nanogram per milliliter per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanogramPerSecond: Coding.FromStrict({
+    UcumUnitsValueSet_NanogramPerSecond: new Coding({
         code: "ng/s",
         display: "nanogram per second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Nanokatal: Coding.FromStrict({
+    UcumUnitsValueSet_Nanokatal: new Coding({
         code: "nkat",
         display: "nanokatal",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Nanoliter: Coding.FromStrict({
+    UcumUnitsValueSet_Nanoliter: new Coding({
         code: "nL",
         display: "nanoliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanometerPerSecondPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_NanometerPerSecondPerLiter: new Coding({
         code: "nm/s/L",
         display: "nanometer per second per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Nanomole: Coding.FromStrict({
+    UcumUnitsValueSet_Nanomole: new Coding({
         code: "nmol",
         display: "nanomole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePer24Hour: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePer24Hour: new Coding({
         code: "nmol/(24.h)",
         display: "nanomole per 24 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerDay: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerDay: new Coding({
         code: "nmol/d",
         display: "nanomole per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerDeciliter: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerDeciliter: new Coding({
         code: "nmol/dL",
         display: "nanomole per deciliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerGram: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerGram: new Coding({
         code: "nmol/g",
         display: "nanomole per gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomoleGramCre: Coding.FromStrict({
+    UcumUnitsValueSet_NanomoleGramCre: new Coding({
         code: "nmol/g{Cre}",
         display: "nanomole / gram Cre",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerGramOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerGramOfCreatinine: new Coding({
         code: "nmol/g{creat}",
         display: "nanomole per gram of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerGramOfDryWeight: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerGramOfDryWeight: new Coding({
         code: "nmol/g{dry_wt}",
         display: "nanomole per gram of dry weight",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerHourPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerHourPerLiter: new Coding({
         code: "nmol/h/L",
         display: "nanomole per hour per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerHourPerMilligramOfProtein: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerHourPerMilligramOfProtein: new Coding({
         code: "nmol/h/mg{protein}",
         display: "nanomole per hour per milligram of protein",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerHourPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerHourPerMilliliter: new Coding({
         code: "nmol/h/mL",
         display: "nanomole per hour per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerLiter: new Coding({
         code: "nmol/L",
         display: "nanomole per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerLiterOfRedBloodCells: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerLiterOfRedBloodCells: new Coding({
         code: "nmol/L{RBCs}",
         display: "nanomole per liter of red blood cells",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerLiterPerMillimoleOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerLiterPerMillimoleOfCreatinine: new Coding({
         code: "nmol/L/mmol{creat}",
         display: "nanomole per liter per millimole of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerLiterPerSecond: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerLiterPerSecond: new Coding({
         code: "nmol/L/s",
         display: "nanomole per liter per second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerMeterPerMilligramOfProtein: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerMeterPerMilligramOfProtein: new Coding({
         code: "nmol/m/mg{protein}",
         display: "nanomole per meter per milligram of protein",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerMilligram: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerMilligram: new Coding({
         code: "nmol/mg",
         display: "nanomole per milligram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerMilligramPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerMilligramPerHour: new Coding({
         code: "nmol/mg/h",
         display: "nanomole per milligram per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerMinutePerMilligramOfHemoglobin: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerMinutePerMilligramOfHemoglobin: new Coding({
         code: "nmol/min/mg{hemoglobin}",
         display: "nanomole per minute per milligram of hemoglobin",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerMinutePerMilligramOfProtein: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerMinutePerMilligramOfProtein: new Coding({
         code: "nmol/min/mg{protein}",
         display: "nanomole per minute per milligram of protein",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerMinutePerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerMinutePerMilliliter: new Coding({
         code: "nmol/min/mL",
         display: "nanomole per minute per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerMilliliter: new Coding({
         code: "nmol/mL",
         display: "nanomole per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerMilliliterPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerMilliliterPerHour: new Coding({
         code: "nmol/mL/h",
         display: "nanomole per milliliter per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerMilliliterPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerMilliliterPerMinute: new Coding({
         code: "nmol/mL/min",
         display: "nanomole per milliliter per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerMillimole: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerMillimole: new Coding({
         code: "nmol/mmol",
         display: "nanomole per millimole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomoleMillimoleCre: Coding.FromStrict({
+    UcumUnitsValueSet_NanomoleMillimoleCre: new Coding({
         code: "nmol/mmol{Cre}",
         display: "nanomole / millimole Cre",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerMillimoleOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerMillimoleOfCreatinine: new Coding({
         code: "nmol/mmol{creat}",
         display: "nanomole per millimole of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerMole: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerMole: new Coding({
         code: "nmol/mol",
         display: "nanomole per mole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerNanomole: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerNanomole: new Coding({
         code: "nmol/nmol",
         display: "nanomole per nanomole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerSecond: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerSecond: new Coding({
         code: "nmol/s",
         display: "nanomole per second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerSecondPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerSecondPerLiter: new Coding({
         code: "nmol/s/L",
         display: "nanomole per second per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_NanomolePerMicromoleOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_NanomolePerMicromoleOfCreatinine: new Coding({
         code: "nmol/umol{creat}",
         display: "nanomole per micromole  of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Nanosecond: Coding.FromStrict({
+    UcumUnitsValueSet_Nanosecond: new Coding({
         code: "ns",
         display: "nanosecond",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Ohm: Coding.FromStrict({
+    UcumUnitsValueSet_Ohm: new Coding({
         code: "Ohm",
         display: "Ohm",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_OsmolePerKilogram: Coding.FromStrict({
+    UcumUnitsValueSet_OsmolePerKilogram: new Coding({
         code: "osm/kg",
         display: "osmole per kilogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_OsmolePerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_OsmolePerLiter: new Coding({
         code: "osm/L",
         display: "osmole per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Pascal: Coding.FromStrict({
+    UcumUnitsValueSet_Pascal: new Coding({
         code: "Pa",
         display: "Pascal",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Picogram: Coding.FromStrict({
+    UcumUnitsValueSet_Picogram: new Coding({
         code: "pg",
         display: "picogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PicogramPerDeciliter: Coding.FromStrict({
+    UcumUnitsValueSet_PicogramPerDeciliter: new Coding({
         code: "pg/dL",
         display: "picogram per deciliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PicogramPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_PicogramPerLiter: new Coding({
         code: "pg/L",
         display: "picogram per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PicogramPerMilligram: Coding.FromStrict({
+    UcumUnitsValueSet_PicogramPerMilligram: new Coding({
         code: "pg/mg",
         display: "picogram per milligram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PicogramPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_PicogramPerMilliliter: new Coding({
         code: "pg/mL",
         display: "picogram per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PicogramPerMillimeter: Coding.FromStrict({
+    UcumUnitsValueSet_PicogramPerMillimeter: new Coding({
         code: "pg/mm",
         display: "picogram per millimeter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Picokatal: Coding.FromStrict({
+    UcumUnitsValueSet_Picokatal: new Coding({
         code: "pkat",
         display: "picokatal",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Picoliter: Coding.FromStrict({
+    UcumUnitsValueSet_Picoliter: new Coding({
         code: "pL",
         display: "picoliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Picometer: Coding.FromStrict({
+    UcumUnitsValueSet_Picometer: new Coding({
         code: "pm",
         display: "picometer",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Picomole: Coding.FromStrict({
+    UcumUnitsValueSet_Picomole: new Coding({
         code: "pmol",
         display: "picomole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PicomolePerDay: Coding.FromStrict({
+    UcumUnitsValueSet_PicomolePerDay: new Coding({
         code: "pmol/d",
         display: "picomole per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PicomolePerDeciliter: Coding.FromStrict({
+    UcumUnitsValueSet_PicomolePerDeciliter: new Coding({
         code: "pmol/dL",
         display: "picomole per deciliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PicomolePerGram: Coding.FromStrict({
+    UcumUnitsValueSet_PicomolePerGram: new Coding({
         code: "pmol/g",
         display: "picomole per gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PicomolePerHourPerMilligramOfProtein: Coding.FromStrict({
+    UcumUnitsValueSet_PicomolePerHourPerMilligramOfProtein: new Coding({
         code: "pmol/h/mg{protein}",
         display: "picomole per hour per milligram of protein",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PicomolePerHourPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_PicomolePerHourPerMilliliter: new Coding({
         code: "pmol/h/mL",
         display: "picomole per hour per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PicomolePerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_PicomolePerLiter: new Coding({
         code: "pmol/L",
         display: "picomole per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PicomolePerMilligramOfProtein: Coding.FromStrict({
+    UcumUnitsValueSet_PicomolePerMilligramOfProtein: new Coding({
         code: "pmol/mg{protein}",
         display: "picomole per milligram of protein",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PicomolePerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_PicomolePerMinute: new Coding({
         code: "pmol/min",
         display: "picomole per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PicomolePerMinutePerMilligramOfProtein: Coding.FromStrict({
+    UcumUnitsValueSet_PicomolePerMinutePerMilligramOfProtein: new Coding({
         code: "pmol/min/mg{protein}",
         display: "picomole per minute per milligram of protein",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PicomolePerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_PicomolePerMilliliter: new Coding({
         code: "pmol/mL",
         display: "picomole per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PicomolePerMillimole: Coding.FromStrict({
+    UcumUnitsValueSet_PicomolePerMillimole: new Coding({
         code: "pmol/mmol",
         display: "picomole per millimole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PicomolePerMillimoleOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_PicomolePerMillimoleOfCreatinine: new Coding({
         code: "pmol/mmol{creat}",
         display: "picomole per millimole of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PicomolePerMole: Coding.FromStrict({
+    UcumUnitsValueSet_PicomolePerMole: new Coding({
         code: "pmol/mol",
         display: "picomole per mole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PicomolePerMicromole: Coding.FromStrict({
+    UcumUnitsValueSet_PicomolePerMicromole: new Coding({
         code: "pmol/umol",
         display: "picomole per micromole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_PicomolePerMicromoleOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_PicomolePerMicromoleOfCreatinine: new Coding({
         code: "pmol/umol{creat}",
         display: "picomole per micromole of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Picosecond: Coding.FromStrict({
+    UcumUnitsValueSet_Picosecond: new Coding({
         code: "ps",
         display: "picosecond",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Picotesla: Coding.FromStrict({
+    UcumUnitsValueSet_Picotesla: new Coding({
         code: "pT",
         display: "picotesla",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Stokes: Coding.FromStrict({
+    UcumUnitsValueSet_Stokes: new Coding({
         code: "St",
         display: "Stokes",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Tonne: Coding.FromStrict({
+    UcumUnitsValueSet_Tonne: new Coding({
         code: "t",
         display: "tonne",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnit: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnit: new Coding({
         code: "U",
         display: "enzyme Unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicroInternationalUnit: Coding.FromStrict({
+    UcumUnitsValueSet_MicroInternationalUnit: new Coding({
         code: "u[IU]",
         display: "micro international unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrointernationalUnitPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_MicrointernationalUnitPerLiter: new Coding({
         code: "u[IU]/L",
         display: "microinternational unit per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicroInternationalUnitPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_MicroInternationalUnitPerMilliliter: new Coding({
         code: "u[IU]/mL",
         display: "micro international unit per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerLiterAt25DegCelsius: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerLiterAt25DegCelsius: new Coding({
         code: "U{25Cel}/L",
         display: "enzyme unit per liter at 25 deg Celsius",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerLiterAt37DegCelsius: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerLiterAt37DegCelsius: new Coding({
         code: "U{37Cel}/L",
         display: "enzyme unit per liter at 37 deg Celsius",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_GUnit: Coding.FromStrict({
+    UcumUnitsValueSet_GUnit: new Coding({
         code: "U{G}",
         display: "G unit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPer1Hour: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPer1Hour: new Coding({
         code: "U/(1.h)",
         display: "enzyme Unit per 1 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPer10GramOfFeces: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPer10GramOfFeces: new Coding({
         code: "U/(10.g){feces}",
         display: "enzyme unit per 10 gram of feces",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPer12Hour: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPer12Hour: new Coding({
         code: "U/(12.h)",
         display: "enzyme unit per 12 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPer18Hour: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPer18Hour: new Coding({
         code: "U/(18.h)",
         display: "enzyme Unit per 18 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPer2Hour: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPer2Hour: new Coding({
         code: "U/(2.h)",
         display: "enzyme unit per 2 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPer24Hour: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPer24Hour: new Coding({
         code: "U/(24.h)",
         display: "enzyme unit per 24 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPer10: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPer10: new Coding({
         code: "U/10",
         display: "enzyme unit per 10",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPer10Billion: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPer10Billion: new Coding({
         code: "U/10*10",
         display: "enzyme unit per 10 billion",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPer10BillionCells: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPer10BillionCells: new Coding({
         code: "U/10*10{cells}",
         display: "enzyme unit per 10 billion cells",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerTrillion: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerTrillion: new Coding({
         code: "U/10*12",
         display: "enzyme unit per trillion",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerTrillionRedBloodCells: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerTrillionRedBloodCells: new Coding({
         code: "U/10*12{RBCs}",
         display: "enzyme unit per trillion red blood cells",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerMillion: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerMillion: new Coding({
         code: "U/10*6",
         display: "enzyme unit per million",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerBillion: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerBillion: new Coding({
         code: "U/10*9",
         display: "enzyme unit per billion",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerDay: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerDay: new Coding({
         code: "U/d",
         display: "enzyme unit per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerDeciliter: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerDeciliter: new Coding({
         code: "U/dL",
         display: "enzyme unit per deciliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerGram: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerGram: new Coding({
         code: "U/g",
         display: "enzyme unit per gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_UnitGramCre: Coding.FromStrict({
+    UcumUnitsValueSet_UnitGramCre: new Coding({
         code: "U/g{Cre}",
         display: "Unit / gram Cre",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerGramOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerGramOfCreatinine: new Coding({
         code: "U/g{creat}",
         display: "enzyme unit per gram of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerGramOfHemoglobin: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerGramOfHemoglobin: new Coding({
         code: "U/g{Hb}",
         display: "enzyme unit per gram of hemoglobin",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerGramOfHemoglobin_2: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerGramOfHemoglobin_2: new Coding({
         code: "U/g{hemoglobin}",
         display: "enzyme Unit per gram of hemoglobin",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_UnitsPerGramHemoglobin: Coding.FromStrict({
+    UcumUnitsValueSet_UnitsPerGramHemoglobin: new Coding({
         code: "U/g{Hgb}",
         display: "UnitsPerGramHemoglobin",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerGramOfProtein: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerGramOfProtein: new Coding({
         code: "U/g{protein}",
         display: "enzyme unit per gram of protein",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerHour: new Coding({
         code: "U/h",
         display: "enzyme unit per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerKilogramOfHemoglobin: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerKilogramOfHemoglobin: new Coding({
         code: "U/kg{Hb}",
         display: "enzyme unit per kilogram of hemoglobin",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerKilogramOfHemoglobin_2: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerKilogramOfHemoglobin_2: new Coding({
         code: "U/kg{hemoglobin}",
         display: "enzyme Unit per kilogram of hemoglobin",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_UnitKilogramHour: Coding.FromStrict({
+    UcumUnitsValueSet_UnitKilogramHour: new Coding({
         code: "U/kg/h",
         display: "Unit / kilogram / hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerLiter: new Coding({
         code: "U/L",
         display: "enzyme unit per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerMinute: new Coding({
         code: "U/min",
         display: "enzyme unit per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerMilliliter: new Coding({
         code: "U/mL",
         display: "enzyme unit per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_UnitMilliliterRBC: Coding.FromStrict({
+    UcumUnitsValueSet_UnitMilliliterRBC: new Coding({
         code: "U/mL{RBC}",
         display: "Unit / milliliter RBC",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerMilliliterOfRedBloodCells: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerMilliliterOfRedBloodCells: new Coding({
         code: "U/mL{RBCs}",
         display: "enzyme unit per milliliter of red blood cells",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerMillimoleOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerMillimoleOfCreatinine: new Coding({
         code: "U/mmol{creat}",
         display: "enzyme unit per millimole of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerMole: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerMole: new Coding({
         code: "U/mol",
         display: "enzyme Unit per mole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerSecond: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerSecond: new Coding({
         code: "U/s",
         display: "enzyme unit per second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_EnzymeUnitPerMicromole: Coding.FromStrict({
+    UcumUnitsValueSet_EnzymeUnitPerMicromole: new Coding({
         code: "U/umol",
         display: "enzyme Unit per micromole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Microequivalents: Coding.FromStrict({
+    UcumUnitsValueSet_Microequivalents: new Coding({
         code: "ueq",
         display: "microequivalents",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicroequivalentPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_MicroequivalentPerLiter: new Coding({
         code: "ueq/L",
         display: "microequivalent per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicroequivalentPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_MicroequivalentPerMilliliter: new Coding({
         code: "ueq/mL",
         display: "microequivalent per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Microgram: Coding.FromStrict({
+    UcumUnitsValueSet_Microgram: new Coding({
         code: "ug",
         display: "microgram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramFibrinogenEquivalentUnitPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramFibrinogenEquivalentUnitPerMilliliter: new Coding({
         code: "ug{FEU}/mL",
         display: "microgram fibrinogen equivalent unit per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramT4Deciliter: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramT4Deciliter: new Coding({
         code: "ug{T4}/dL",
         display: "microgram T4 / deciliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPer100Gram: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPer100Gram: new Coding({
         code: "ug/(100.g)",
         display: "microgram per 100 gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPer24Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPer24Hour: new Coding({
         code: "ug/(24.h)",
         display: "microgram per 24 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPer8Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPer8Hour: new Coding({
         code: "ug/(8.h)",
         display: "microgram per 8 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramKilogramAsteriskDay: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramKilogramAsteriskDay: new Coding({
         code: "ug/(kg.d)",
         display: "microgram / kilogram * day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramKilogramAsteriskHour: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramKilogramAsteriskHour: new Coding({
         code: "ug/(kg.h)",
         display: "microgram / kilogram * hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerSquareFootInternational: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerSquareFootInternational: new Coding({
         code: "ug/[sft_i]",
         display: "microgram per square foot (international)",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerSpecimen: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerSpecimen: new Coding({
         code: "ug/{specimen}",
         display: "microgram per specimen",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramSpecimen: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramSpecimen: new Coding({
         code: "ug/{Specimen}",
         display: "microgram / Specimen",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicroGramsPerTotalVolume: Coding.FromStrict({
+    UcumUnitsValueSet_MicroGramsPerTotalVolume: new Coding({
         code: "ug/{TotalVolume}",
         display: "MicroGramsPerTotalVolume",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerDay: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerDay: new Coding({
         code: "ug/d",
         display: "microgram per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerDeciliter: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerDeciliter: new Coding({
         code: "ug/dL",
         display: "microgram per deciliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramDeciliterRbc: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramDeciliterRbc: new Coding({
         code: "ug/dL{rbc}",
         display: "microgram / deciliter rbc",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerDeciliterOfRedBloodCells: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerDeciliterOfRedBloodCells: new Coding({
         code: "ug/dL{RBCs}",
         display: "microgram per deciliter of red blood cells",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerGram: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerGram: new Coding({
         code: "ug/g",
         display: "microgram per gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramGramCre: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramGramCre: new Coding({
         code: "ug/g{Cre}",
         display: "microgram / gram Cre",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerGramOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerGramOfCreatinine: new Coding({
         code: "ug/g{creat}",
         display: "microgram per gram of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerGramOfDryTissue: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerGramOfDryTissue: new Coding({
         code: "ug/g{dry_tissue}",
         display: "microgram per gram of dry tissue",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerGramOfDryWeight: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerGramOfDryWeight: new Coding({
         code: "ug/g{dry_wt}",
         display: "microgram per gram of dry weight",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramGramDryWeight: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramGramDryWeight: new Coding({
         code: "ug/g{DryWeight}",
         display: "microgram / gram DryWeight",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerGramOfFeces: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerGramOfFeces: new Coding({
         code: "ug/g{feces}",
         display: "microgram  per gram of feces",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerGramOfHair: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerGramOfHair: new Coding({
         code: "ug/g{hair}",
         display: "microgram per gram of hair",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerGramOfHemoglobin: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerGramOfHemoglobin: new Coding({
         code: "ug/g{Hb}",
         display: "microgram per gram of hemoglobin",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramGramHgb: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramGramHgb: new Coding({
         code: "ug/g{Hgb}",
         display: "microgram / gram Hgb",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerGramOfTissue: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerGramOfTissue: new Coding({
         code: "ug/g{tissue}",
         display: "microgram per gram of tissue",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramGramTissue: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramGramTissue: new Coding({
         code: "ug/g{Tissue}",
         display: "microgram / gram Tissue",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerHour: new Coding({
         code: "ug/h",
         display: "microgram per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerKilogram: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerKilogram: new Coding({
         code: "ug/kg",
         display: "microgram per kilogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerKilogramPer8Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerKilogramPer8Hour: new Coding({
         code: "ug/kg/(8.h)",
         display: "microgram per kilogram per 8 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerKilogramPerDay: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerKilogramPerDay: new Coding({
         code: "ug/kg/d",
         display: "microgram per kilogram per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerKilogramPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerKilogramPerHour: new Coding({
         code: "ug/kg/h",
         display: "microgram per kilogram per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerKilogramPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerKilogramPerMinute: new Coding({
         code: "ug/kg/min",
         display: "microgram per kilogram per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerLiter: new Coding({
         code: "ug/L",
         display: "microgram per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramLiterDDU: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramLiterDDU: new Coding({
         code: "ug/L{DDU}",
         display: "microgram / liter DDU",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerLiterOfRedBloodCells: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerLiterOfRedBloodCells: new Coding({
         code: "ug/L{RBCs}",
         display: "microgram per liter of red blood cells",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerLiterPer24Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerLiterPer24Hour: new Coding({
         code: "ug/L/(24.h)",
         display: "microgram per liter per 24 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerSquareMeter: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerSquareMeter: new Coding({
         code: "ug/m2",
         display: "microgram per square meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerCubicMeter: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerCubicMeter: new Coding({
         code: "ug/m3",
         display: "microgram per cubic meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerMilligram: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerMilligram: new Coding({
         code: "ug/mg",
         display: "microgram per milligram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramMilligramCre: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramMilligramCre: new Coding({
         code: "ug/mg{Cre}",
         display: "microgram / milligram Cre",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerMilligramOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerMilligramOfCreatinine: new Coding({
         code: "ug/mg{creat}",
         display: "microgram per milligram of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerMinute: new Coding({
         code: "ug/min",
         display: "microgram per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerMilliliter: new Coding({
         code: "ug/mL",
         display: "microgram per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerMilliliterClass: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerMilliliterClass: new Coding({
         code: "ug/mL{class}",
         display: "microgram per milliliter class",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerMilliliterEquivalent: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerMilliliterEquivalent: new Coding({
         code: "ug/mL{eqv}",
         display: "microgram per milliliter equivalent",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramMilliliterFEU: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramMilliliterFEU: new Coding({
         code: "ug/mL{FEU}",
         display: "microgram / milliliter FEU",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerMillimole: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerMillimole: new Coding({
         code: "ug/mmol",
         display: "microgram per millimole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerMillimoleOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerMillimoleOfCreatinine: new Coding({
         code: "ug/mmol{creat}",
         display: "microgram per millimole of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrogramPerNanogram: Coding.FromStrict({
+    UcumUnitsValueSet_MicrogramPerNanogram: new Coding({
         code: "ug/ng",
         display: "microgram per nanogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Microkatal: Coding.FromStrict({
+    UcumUnitsValueSet_Microkatal: new Coding({
         code: "ukat",
         display: "microkatal",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Microliter: Coding.FromStrict({
+    UcumUnitsValueSet_Microliter: new Coding({
         code: "uL",
         display: "microliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicroliterPer2Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MicroliterPer2Hour: new Coding({
         code: "uL/(2.h)",
         display: "microliter per 2 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicroliterPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_MicroliterPerHour: new Coding({
         code: "uL/h",
         display: "microliter per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicrometerPerSecond: Coding.FromStrict({
+    UcumUnitsValueSet_MicrometerPerSecond: new Coding({
         code: "um/s",
         display: "micrometer per second",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Micromole: Coding.FromStrict({
+    UcumUnitsValueSet_Micromole: new Coding({
         code: "umol",
         display: "micromole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromoleBoneCollagenEquivalentPerMole: Coding.FromStrict({
+    UcumUnitsValueSet_MicromoleBoneCollagenEquivalentPerMole: new Coding({
         code: "umol{BCE}/mol",
         display: "micromole bone collagen equivalent per mole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePer2Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePer2Hour: new Coding({
         code: "umol/(2.h)",
         display: "micromole per 2 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePer24Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePer24Hour: new Coding({
         code: "umol/(24.h)",
         display: "micromole per 24 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePer8Hour: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePer8Hour: new Coding({
         code: "umol/(8.h)",
         display: "micromole per 8 hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerDay: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerDay: new Coding({
         code: "umol/d",
         display: "micromole per day",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerDeciliter: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerDeciliter: new Coding({
         code: "umol/dL",
         display: "micromole per deciliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerDeciliterOfGlomerularFiltrate: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerDeciliterOfGlomerularFiltrate: new Coding({
         code: "umol/dL{GF}",
         display: "micromole per deciliter of glomerular filtrate",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerGram: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerGram: new Coding({
         code: "umol/g",
         display: "micromole per gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromoleGramCre: Coding.FromStrict({
+    UcumUnitsValueSet_MicromoleGramCre: new Coding({
         code: "umol/g{Cre}",
         display: "micromole / gram Cre",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerGramOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerGramOfCreatinine: new Coding({
         code: "umol/g{creat}",
         display: "micromole per gram of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerGramOfHemoglobin: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerGramOfHemoglobin: new Coding({
         code: "umol/g{Hb}",
         display: "micromole per gram of hemoglobin",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerGramOfHemoglobin_2: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerGramOfHemoglobin_2: new Coding({
         code: "umol/g{hemoglobin}",
         display: "micromole per gram of hemoglobin",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromoleGramHgb: Coding.FromStrict({
+    UcumUnitsValueSet_MicromoleGramHgb: new Coding({
         code: "umol/g{Hgb}",
         display: "micromole / gram Hgb",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerHour: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerHour: new Coding({
         code: "umol/h",
         display: "micromole per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromoleHourGram: Coding.FromStrict({
+    UcumUnitsValueSet_MicromoleHourGram: new Coding({
         code: "umol/h/g",
         display: "micromole / hour / gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerHourPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerHourPerLiter: new Coding({
         code: "umol/h/L",
         display: "micromole per hour per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerHourPerMilligramOfProtein: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerHourPerMilligramOfProtein: new Coding({
         code: "umol/h/mg{protein}",
         display: "micromole per hour per milligram of protein",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerKilogram: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerKilogram: new Coding({
         code: "umol/kg",
         display: "micromole per kilogram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerKilogramOfFeces: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerKilogramOfFeces: new Coding({
         code: "umol/kg{feces}",
         display: "micromole per kilogram of feces",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerLiter: new Coding({
         code: "umol/L",
         display: "micromole per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerLiterOfRedBloodCells: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerLiterOfRedBloodCells: new Coding({
         code: "umol/L{rbc}",
         display: "micromole per liter of red blood cells",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerLiterOfRedBloodCells_2: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerLiterOfRedBloodCells_2: new Coding({
         code: "umol/L{RBCs}",
         display: "micromole per liter of red blood cells",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerLiterPerHour: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerLiterPerHour: new Coding({
         code: "umol/L/h",
         display: "micromole per liter per hour",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromoleMeter: Coding.FromStrict({
+    UcumUnitsValueSet_MicromoleMeter: new Coding({
         code: "umol/m",
         display: "micromole / meter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerMilligram: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerMilligram: new Coding({
         code: "umol/mg",
         display: "micromole per milligram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromoleMilligramCre: Coding.FromStrict({
+    UcumUnitsValueSet_MicromoleMilligramCre: new Coding({
         code: "umol/mg{Cre}",
         display: "micromole / milligram Cre",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerMilligramOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerMilligramOfCreatinine: new Coding({
         code: "umol/mg{creat}",
         display: "micromole per milligram of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerMinute: new Coding({
         code: "umol/min",
         display: "micromole per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerMinutePerGram: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerMinutePerGram: new Coding({
         code: "umol/min/g",
         display: "micromole per minute per gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerMinutePerGramOfMucosa: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerMinutePerGramOfMucosa: new Coding({
         code: "umol/min/g{mucosa}",
         display: "micromole per minute per gram of mucosa",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromoleMinuteGramProt: Coding.FromStrict({
+    UcumUnitsValueSet_MicromoleMinuteGramProt: new Coding({
         code: "umol/min/g{prot}",
         display: "micromole / minute / gram prot",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerMinutePerGramOfProtein: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerMinutePerGramOfProtein: new Coding({
         code: "umol/min/g{protein}",
         display: "micromole per minute per gram of protein",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerMinutePerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerMinutePerLiter: new Coding({
         code: "umol/min/L",
         display: "micromole per minute per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerMilliliter: new Coding({
         code: "umol/mL",
         display: "micromole per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerMilliliterPerMinute: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerMilliliterPerMinute: new Coding({
         code: "umol/mL/min",
         display: "micromole per milliliter per minute",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerMillimole: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerMillimole: new Coding({
         code: "umol/mmol",
         display: "micromole per millimole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerMillimoleOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerMillimoleOfCreatinine: new Coding({
         code: "umol/mmol{creat}",
         display: "micromole per millimole of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerMole: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerMole: new Coding({
         code: "umol/mol",
         display: "micromole per mole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromoleMoleCre: Coding.FromStrict({
+    UcumUnitsValueSet_MicromoleMoleCre: new Coding({
         code: "umol/mol{Cre}",
         display: "micromole / mole Cre",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerMoleOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerMoleOfCreatinine: new Coding({
         code: "umol/mol{creat}",
         display: "micromole per mole of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerMoleOfHemoglobin: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerMoleOfHemoglobin: new Coding({
         code: "umol/mol{Hb}",
         display: "micromole per mole of hemoglobin",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerMicromole: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerMicromole: new Coding({
         code: "umol/umol",
         display: "micromole per micromole",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicromolePerMicromoleOfCreatinine: Coding.FromStrict({
+    UcumUnitsValueSet_MicromolePerMicromoleOfCreatinine: new Coding({
         code: "umol/umol{creat}",
         display: "micromole per micromole of creatinine",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicroOhm: Coding.FromStrict({
+    UcumUnitsValueSet_MicroOhm: new Coding({
         code: "uOhm",
         display: "microOhm",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Microsecond: Coding.FromStrict({
+    UcumUnitsValueSet_Microsecond: new Coding({
         code: "us",
         display: "microsecond",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicroUnit: Coding.FromStrict({
+    UcumUnitsValueSet_MicroUnit: new Coding({
         code: "uU",
         display: "microUnit",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicroEnzymeUnitPerGram: Coding.FromStrict({
+    UcumUnitsValueSet_MicroEnzymeUnitPerGram: new Coding({
         code: "uU/g",
         display: "micro enzyme unit per gram",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicroEnzymeUnitPerLiter: Coding.FromStrict({
+    UcumUnitsValueSet_MicroEnzymeUnitPerLiter: new Coding({
         code: "uU/L",
         display: "micro enzyme unit per liter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_MicroEnzymeUnitPerMilliliter: Coding.FromStrict({
+    UcumUnitsValueSet_MicroEnzymeUnitPerMilliliter: new Coding({
         code: "uU/mL",
         display: "micro enzyme unit per milliliter",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Microvolt: Coding.FromStrict({
+    UcumUnitsValueSet_Microvolt: new Coding({
         code: "uV",
         display: "microvolt",
         system: "http://unitsofmeasure.org"
     }),
-    UcumUnitsValueSet_Volt: Coding.FromStrict({
+    UcumUnitsValueSet_Volt: new Coding({
         code: "V",
         display: "volt",
         system: "http://unitsofmeasure.org"

@@ -220,20 +220,20 @@ export class MessageDefinitionFocus extends fhir.BackboneElement implements fhir
   /**
    * Check if the current MessageDefinitionFocus contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
     if (this["min"] === undefined) { missingElements.push("min"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MessageDefinitionFocus from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMessageDefinitionFocus):MessageDefinitionFocus {
+  static override fromStrict(source:fhir.IMessageDefinitionFocus):MessageDefinitionFocus {
     var dest:MessageDefinitionFocus = new MessageDefinitionFocus(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MessageDefinitionFocus is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -267,19 +267,19 @@ export class MessageDefinitionAllowedResponse extends fhir.BackboneElement imple
   /**
    * Check if the current MessageDefinitionAllowedResponse contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["message"] === undefined) { missingElements.push("message"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MessageDefinitionAllowedResponse from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMessageDefinitionAllowedResponse):MessageDefinitionAllowedResponse {
+  static override fromStrict(source:fhir.IMessageDefinitionAllowedResponse):MessageDefinitionAllowedResponse {
     var dest:MessageDefinitionAllowedResponse = new MessageDefinitionAllowedResponse(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MessageDefinitionAllowedResponse is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -469,20 +469,20 @@ export class MessageDefinition extends fhir.DomainResource implements fhir.IMess
   /**
    * Check if the current MessageDefinition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["date"] === undefined) { missingElements.push("date"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MessageDefinition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMessageDefinition):MessageDefinition {
+  static override fromStrict(source:fhir.IMessageDefinition):MessageDefinition {
     var dest:MessageDefinition = new MessageDefinition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MessageDefinition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

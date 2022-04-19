@@ -99,11 +99,11 @@ export declare class AppointmentResponse extends fhir.DomainResource implements 
     /**
      * Check if the current AppointmentResponse contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a AppointmentResponse from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IAppointmentResponse): AppointmentResponse;
+    static fromStrict(source: fhir.IAppointmentResponse): AppointmentResponse;
 }
 /**
  * Code Values for the AppointmentResponse.participantStatus field

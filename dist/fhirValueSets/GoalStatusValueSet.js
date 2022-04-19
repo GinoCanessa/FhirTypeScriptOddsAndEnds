@@ -13,7 +13,7 @@ export const GoalStatusValueSet = {
     /**
      * A proposed goal was accepted or acknowledged.
      */
-    goal_status_Accepted: Coding.FromStrict({
+    goal_status_Accepted: new Coding({
         code: "accepted",
         display: "Accepted",
         system: "http://hl7.org/fhir/goal-status"
@@ -21,7 +21,7 @@ export const GoalStatusValueSet = {
     /**
      * The goal is being sought actively.
      */
-    goal_status_Active: Coding.FromStrict({
+    goal_status_Active: new Coding({
         code: "active",
         display: "Active",
         system: "http://hl7.org/fhir/goal-status"
@@ -29,7 +29,7 @@ export const GoalStatusValueSet = {
     /**
      * The goal has been abandoned.
      */
-    goal_status_Cancelled: Coding.FromStrict({
+    goal_status_Cancelled: new Coding({
         code: "cancelled",
         display: "Cancelled",
         system: "http://hl7.org/fhir/goal-status"
@@ -37,7 +37,7 @@ export const GoalStatusValueSet = {
     /**
      * The goal is no longer being sought.
      */
-    goal_status_Completed: Coding.FromStrict({
+    goal_status_Completed: new Coding({
         code: "completed",
         display: "Completed",
         system: "http://hl7.org/fhir/goal-status"
@@ -45,7 +45,7 @@ export const GoalStatusValueSet = {
     /**
      * The goal was entered in error and voided.
      */
-    goal_status_EnteredInError: Coding.FromStrict({
+    goal_status_EnteredInError: new Coding({
         code: "entered-in-error",
         display: "Entered in Error",
         system: "http://hl7.org/fhir/goal-status"
@@ -53,7 +53,7 @@ export const GoalStatusValueSet = {
     /**
      * The goal remains a long term objective but is no longer being actively pursued for a temporary period of time.
      */
-    goal_status_OnHold: Coding.FromStrict({
+    goal_status_OnHold: new Coding({
         code: "on-hold",
         display: "On Hold",
         system: "http://hl7.org/fhir/goal-status"
@@ -61,7 +61,7 @@ export const GoalStatusValueSet = {
     /**
      * A goal is planned for this patient.
      */
-    goal_status_Planned: Coding.FromStrict({
+    goal_status_Planned: new Coding({
         code: "planned",
         display: "Planned",
         system: "http://hl7.org/fhir/goal-status"
@@ -69,7 +69,7 @@ export const GoalStatusValueSet = {
     /**
      * A goal is proposed for this patient.
      */
-    goal_status_Proposed: Coding.FromStrict({
+    goal_status_Proposed: new Coding({
         code: "proposed",
         display: "Proposed",
         system: "http://hl7.org/fhir/goal-status"
@@ -77,7 +77,7 @@ export const GoalStatusValueSet = {
     /**
      * A proposed goal was rejected.
      */
-    goal_status_Rejected: Coding.FromStrict({
+    goal_status_Rejected: new Coding({
         code: "rejected",
         display: "Rejected",
         system: "http://hl7.org/fhir/goal-status"

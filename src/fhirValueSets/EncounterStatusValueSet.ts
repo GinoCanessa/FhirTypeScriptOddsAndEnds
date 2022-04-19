@@ -13,7 +13,7 @@ export const EncounterStatusValueSet = {
   /**
    * The Patient is present for the encounter, however is not currently meeting with a practitioner.
    */
-  encounter_status_Arrived: Coding.FromStrict({
+  encounter_status_Arrived: new Coding({
     code: "arrived",
     display: "Arrived",
     system: "http://hl7.org/fhir/encounter-status"
@@ -21,7 +21,7 @@ export const EncounterStatusValueSet = {
   /**
    * The Encounter has ended before it has begun.
    */
-  encounter_status_Cancelled: Coding.FromStrict({
+  encounter_status_Cancelled: new Coding({
     code: "cancelled",
     display: "Cancelled",
     system: "http://hl7.org/fhir/encounter-status"
@@ -29,7 +29,7 @@ export const EncounterStatusValueSet = {
   /**
    * This instance should not have been part of this patient's medical record.
    */
-  encounter_status_EnteredInError: Coding.FromStrict({
+  encounter_status_EnteredInError: new Coding({
     code: "entered-in-error",
     display: "Entered in Error",
     system: "http://hl7.org/fhir/encounter-status"
@@ -37,7 +37,7 @@ export const EncounterStatusValueSet = {
   /**
    * The Encounter has ended.
    */
-  encounter_status_Finished: Coding.FromStrict({
+  encounter_status_Finished: new Coding({
     code: "finished",
     display: "Finished",
     system: "http://hl7.org/fhir/encounter-status"
@@ -45,7 +45,7 @@ export const EncounterStatusValueSet = {
   /**
    * The Encounter has begun and the patient is present / the practitioner and the patient are meeting.
    */
-  encounter_status_InProgress: Coding.FromStrict({
+  encounter_status_InProgress: new Coding({
     code: "in-progress",
     display: "In Progress",
     system: "http://hl7.org/fhir/encounter-status"
@@ -53,7 +53,7 @@ export const EncounterStatusValueSet = {
   /**
    * The Encounter has begun, but the patient is temporarily on leave.
    */
-  encounter_status_OnLeave: Coding.FromStrict({
+  encounter_status_OnLeave: new Coding({
     code: "onleave",
     display: "On Leave",
     system: "http://hl7.org/fhir/encounter-status"
@@ -61,7 +61,7 @@ export const EncounterStatusValueSet = {
   /**
    * The Encounter has not yet started.
    */
-  encounter_status_Planned: Coding.FromStrict({
+  encounter_status_Planned: new Coding({
     code: "planned",
     display: "Planned",
     system: "http://hl7.org/fhir/encounter-status"
@@ -69,7 +69,7 @@ export const EncounterStatusValueSet = {
   /**
    * The patient has been assessed for the priority of their treatment based on the severity of their condition.
    */
-  encounter_status_Triaged: Coding.FromStrict({
+  encounter_status_Triaged: new Coding({
     code: "triaged",
     display: "Triaged",
     system: "http://hl7.org/fhir/encounter-status"
@@ -77,7 +77,7 @@ export const EncounterStatusValueSet = {
   /**
    * The encounter status is unknown. Note that "unknown" is a value of last resort and every attempt should be made to provide a meaningful value other than "unknown".
    */
-  encounter_status_Unknown: Coding.FromStrict({
+  encounter_status_Unknown: new Coding({
     code: "unknown",
     display: "Unknown",
     system: "http://hl7.org/fhir/encounter-status"

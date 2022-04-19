@@ -13,7 +13,7 @@ export const AuditEventActionValueSet = {
   /**
    * Create a new database object, such as placing an order.
    */
-  audit_event_action_Create: Coding.FromStrict({
+  audit_event_action_Create: new Coding({
     code: "C",
     display: "Create",
     system: "http://hl7.org/fhir/audit-event-action"
@@ -21,7 +21,7 @@ export const AuditEventActionValueSet = {
   /**
    * Delete items, such as a doctor master file record.
    */
-  audit_event_action_Delete: Coding.FromStrict({
+  audit_event_action_Delete: new Coding({
     code: "D",
     display: "Delete",
     system: "http://hl7.org/fhir/audit-event-action"
@@ -29,7 +29,7 @@ export const AuditEventActionValueSet = {
   /**
    * Perform a system or application function such as log-on, program execution or use of an object's method, or perform a query/search operation.
    */
-  audit_event_action_Execute: Coding.FromStrict({
+  audit_event_action_Execute: new Coding({
     code: "E",
     display: "Execute",
     system: "http://hl7.org/fhir/audit-event-action"
@@ -37,7 +37,7 @@ export const AuditEventActionValueSet = {
   /**
    * Display or print data, such as a doctor census.
    */
-  audit_event_action_ReadViewPrint: Coding.FromStrict({
+  audit_event_action_ReadViewPrint: new Coding({
     code: "R",
     display: "Read/View/Print",
     system: "http://hl7.org/fhir/audit-event-action"
@@ -45,7 +45,7 @@ export const AuditEventActionValueSet = {
   /**
    * Update data, such as revise patient information.
    */
-  audit_event_action_Update: Coding.FromStrict({
+  audit_event_action_Update: new Coding({
     code: "U",
     display: "Update",
     system: "http://hl7.org/fhir/audit-event-action"

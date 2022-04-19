@@ -33,10 +33,10 @@ export declare class ContactDetail extends fhir.FhirElement implements fhir.ICon
     /**
      * Check if the current ContactDetail contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ContactDetail from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IContactDetail): ContactDetail;
+    static fromStrict(source: fhir.IContactDetail): ContactDetail;
 }
 //# sourceMappingURL=ContactDetail.d.ts.map

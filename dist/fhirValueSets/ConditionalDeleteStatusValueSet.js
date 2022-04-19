@@ -13,7 +13,7 @@ export const ConditionalDeleteStatusValueSet = {
     /**
      * Conditional deletes are supported, and multiple resources can be deleted in a single interaction.
      */
-    conditional_delete_status_MultipleDeletesSupported: Coding.FromStrict({
+    conditional_delete_status_MultipleDeletesSupported: new Coding({
         code: "multiple",
         display: "Multiple Deletes Supported",
         system: "http://hl7.org/fhir/conditional-delete-status"
@@ -21,7 +21,7 @@ export const ConditionalDeleteStatusValueSet = {
     /**
      * No support for conditional deletes.
      */
-    conditional_delete_status_NotSupported: Coding.FromStrict({
+    conditional_delete_status_NotSupported: new Coding({
         code: "not-supported",
         display: "Not Supported",
         system: "http://hl7.org/fhir/conditional-delete-status"
@@ -29,7 +29,7 @@ export const ConditionalDeleteStatusValueSet = {
     /**
      * Conditional deletes are supported, but only single resources at a time.
      */
-    conditional_delete_status_SingleDeletesSupported: Coding.FromStrict({
+    conditional_delete_status_SingleDeletesSupported: new Coding({
         code: "single",
         display: "Single Deletes Supported",
         system: "http://hl7.org/fhir/conditional-delete-status"

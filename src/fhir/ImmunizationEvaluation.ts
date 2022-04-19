@@ -202,23 +202,23 @@ export class ImmunizationEvaluation extends fhir.DomainResource implements fhir.
   /**
    * Check if the current ImmunizationEvaluation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["doseStatus"] === undefined) { missingElements.push("doseStatus"); }
     if (this["immunizationEvent"] === undefined) { missingElements.push("immunizationEvent"); }
     if (this["patient"] === undefined) { missingElements.push("patient"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["targetDisease"] === undefined) { missingElements.push("targetDisease"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ImmunizationEvaluation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IImmunizationEvaluation):ImmunizationEvaluation {
+  static override fromStrict(source:fhir.IImmunizationEvaluation):ImmunizationEvaluation {
     var dest:ImmunizationEvaluation = new ImmunizationEvaluation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ImmunizationEvaluation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

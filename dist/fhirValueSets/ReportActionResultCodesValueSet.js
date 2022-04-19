@@ -13,7 +13,7 @@ export const ReportActionResultCodesValueSet = {
     /**
      * The action encountered a fatal error and the engine was unable to process.
      */
-    report_action_result_codes_Error: Coding.FromStrict({
+    report_action_result_codes_Error: new Coding({
         code: "error",
         display: "Error",
         system: "http://hl7.org/fhir/report-action-result-codes"
@@ -21,7 +21,7 @@ export const ReportActionResultCodesValueSet = {
     /**
      * The action failed.
      */
-    report_action_result_codes_Fail: Coding.FromStrict({
+    report_action_result_codes_Fail: new Coding({
         code: "fail",
         display: "Fail",
         system: "http://hl7.org/fhir/report-action-result-codes"
@@ -29,7 +29,7 @@ export const ReportActionResultCodesValueSet = {
     /**
      * The action was successful.
      */
-    report_action_result_codes_Pass: Coding.FromStrict({
+    report_action_result_codes_Pass: new Coding({
         code: "pass",
         display: "Pass",
         system: "http://hl7.org/fhir/report-action-result-codes"
@@ -37,7 +37,7 @@ export const ReportActionResultCodesValueSet = {
     /**
      * The action was skipped.
      */
-    report_action_result_codes_Skip: Coding.FromStrict({
+    report_action_result_codes_Skip: new Coding({
         code: "skip",
         display: "Skip",
         system: "http://hl7.org/fhir/report-action-result-codes"
@@ -45,7 +45,7 @@ export const ReportActionResultCodesValueSet = {
     /**
      * The action passed but with warnings.
      */
-    report_action_result_codes_Warning: Coding.FromStrict({
+    report_action_result_codes_Warning: new Coding({
         code: "warning",
         display: "Warning",
         system: "http://hl7.org/fhir/report-action-result-codes"

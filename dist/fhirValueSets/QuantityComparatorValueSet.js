@@ -13,7 +13,7 @@ export const QuantityComparatorValueSet = {
     /**
      * The actual value is less than the given value.
      */
-    quantity_comparator_LessThan: Coding.FromStrict({
+    quantity_comparator_LessThan: new Coding({
         code: "<",
         display: "Less than",
         system: "http://hl7.org/fhir/quantity-comparator"
@@ -21,7 +21,7 @@ export const QuantityComparatorValueSet = {
     /**
      * The actual value is less than or equal to the given value.
      */
-    quantity_comparator_LessOrEqualTo: Coding.FromStrict({
+    quantity_comparator_LessOrEqualTo: new Coding({
         code: "<=",
         display: "Less or Equal to",
         system: "http://hl7.org/fhir/quantity-comparator"
@@ -29,7 +29,7 @@ export const QuantityComparatorValueSet = {
     /**
      * The actual value is greater than the given value.
      */
-    quantity_comparator_GreaterThan: Coding.FromStrict({
+    quantity_comparator_GreaterThan: new Coding({
         code: ">",
         display: "Greater than",
         system: "http://hl7.org/fhir/quantity-comparator"
@@ -37,7 +37,7 @@ export const QuantityComparatorValueSet = {
     /**
      * The actual value is greater than or equal to the given value.
      */
-    quantity_comparator_GreaterOrEqualTo: Coding.FromStrict({
+    quantity_comparator_GreaterOrEqualTo: new Coding({
         code: ">=",
         display: "Greater or Equal to",
         system: "http://hl7.org/fhir/quantity-comparator"

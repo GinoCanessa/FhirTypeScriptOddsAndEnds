@@ -13,7 +13,7 @@ export const CompartmentTypeValueSet = {
   /**
    * The compartment definition is for the device compartment.
    */
-  compartment_type_Device: Coding.FromStrict({
+  compartment_type_Device: new Coding({
     code: "Device",
     display: "Device",
     system: "http://hl7.org/fhir/compartment-type"
@@ -21,7 +21,7 @@ export const CompartmentTypeValueSet = {
   /**
    * The compartment definition is for the encounter compartment.
    */
-  compartment_type_Encounter: Coding.FromStrict({
+  compartment_type_Encounter: new Coding({
     code: "Encounter",
     display: "Encounter",
     system: "http://hl7.org/fhir/compartment-type"
@@ -29,7 +29,7 @@ export const CompartmentTypeValueSet = {
   /**
    * The compartment definition is for the patient compartment.
    */
-  compartment_type_Patient: Coding.FromStrict({
+  compartment_type_Patient: new Coding({
     code: "Patient",
     display: "Patient",
     system: "http://hl7.org/fhir/compartment-type"
@@ -37,7 +37,7 @@ export const CompartmentTypeValueSet = {
   /**
    * The compartment definition is for the practitioner compartment.
    */
-  compartment_type_Practitioner: Coding.FromStrict({
+  compartment_type_Practitioner: new Coding({
     code: "Practitioner",
     display: "Practitioner",
     system: "http://hl7.org/fhir/compartment-type"
@@ -45,7 +45,7 @@ export const CompartmentTypeValueSet = {
   /**
    * The compartment definition is for the related-person compartment.
    */
-  compartment_type_RelatedPerson: Coding.FromStrict({
+  compartment_type_RelatedPerson: new Coding({
     code: "RelatedPerson",
     display: "RelatedPerson",
     system: "http://hl7.org/fhir/compartment-type"

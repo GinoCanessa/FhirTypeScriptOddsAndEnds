@@ -89,11 +89,11 @@ export declare class Flag extends fhir.DomainResource implements fhir.IFlag {
     /**
      * Check if the current Flag contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Flag from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IFlag): Flag;
+    static fromStrict(source: fhir.IFlag): Flag;
 }
 /**
  * Code Values for the Flag.status field

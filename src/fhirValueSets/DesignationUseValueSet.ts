@@ -10,11 +10,11 @@ import { Coding } from '../fhir'
  * Details of how a designation would be used
  */
 export const DesignationUseValueSet = {
-  DesignationUseValueSet_VAL900000000000003001: Coding.FromStrict({
+  DesignationUseValueSet_VAL900000000000003001: new Coding({
     code: "900000000000003001",
     system: "http://snomed.info/sct"
   }),
-  DesignationUseValueSet_VAL900000000000013009: Coding.FromStrict({
+  DesignationUseValueSet_VAL900000000000013009: new Coding({
     code: "900000000000013009",
     system: "http://snomed.info/sct"
   }),

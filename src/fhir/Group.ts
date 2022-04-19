@@ -178,20 +178,20 @@ export class GroupCharacteristic extends fhir.BackboneElement implements fhir.IG
   /**
    * Check if the current GroupCharacteristic contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
     if (this["exclude"] === undefined) { missingElements.push("exclude"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a GroupCharacteristic from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IGroupCharacteristic):GroupCharacteristic {
+  static override fromStrict(source:fhir.IGroupCharacteristic):GroupCharacteristic {
     var dest:GroupCharacteristic = new GroupCharacteristic(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `GroupCharacteristic is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -228,19 +228,19 @@ export class GroupMember extends fhir.BackboneElement implements fhir.IGroupMemb
   /**
    * Check if the current GroupMember contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["entity"] === undefined) { missingElements.push("entity"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a GroupMember from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IGroupMember):GroupMember {
+  static override fromStrict(source:fhir.IGroupMember):GroupMember {
     var dest:GroupMember = new GroupMember(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `GroupMember is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -327,20 +327,20 @@ export class Group extends fhir.DomainResource implements fhir.IGroup {
   /**
    * Check if the current Group contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["actual"] === undefined) { missingElements.push("actual"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Group from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IGroup):Group {
+  static override fromStrict(source:fhir.IGroup):Group {
     var dest:Group = new Group(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Group is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

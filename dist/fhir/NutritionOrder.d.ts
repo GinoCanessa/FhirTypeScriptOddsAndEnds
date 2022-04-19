@@ -249,11 +249,11 @@ export declare class NutritionOrderOralDietNutrient extends fhir.BackboneElement
     /**
      * Check if the current NutritionOrderOralDietNutrient contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a NutritionOrderOralDietNutrient from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.INutritionOrderOralDietNutrient): NutritionOrderOralDietNutrient;
+    static fromStrict(source: fhir.INutritionOrderOralDietNutrient): NutritionOrderOralDietNutrient;
 }
 /**
  * Class that describes any texture modifications required for the patient to safely consume various types of solid foods.
@@ -274,11 +274,11 @@ export declare class NutritionOrderOralDietTexture extends fhir.BackboneElement 
     /**
      * Check if the current NutritionOrderOralDietTexture contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a NutritionOrderOralDietTexture from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.INutritionOrderOralDietTexture): NutritionOrderOralDietTexture;
+    static fromStrict(source: fhir.INutritionOrderOralDietTexture): NutritionOrderOralDietTexture;
 }
 /**
  * Diet given orally in contrast to enteral (tube) feeding.
@@ -316,11 +316,11 @@ export declare class NutritionOrderOralDiet extends fhir.BackboneElement impleme
     /**
      * Check if the current NutritionOrderOralDiet contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a NutritionOrderOralDiet from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.INutritionOrderOralDiet): NutritionOrderOralDiet;
+    static fromStrict(source: fhir.INutritionOrderOralDiet): NutritionOrderOralDiet;
 }
 /**
  * Oral nutritional products given in order to add further nutritional value to the patient's diet.
@@ -355,11 +355,11 @@ export declare class NutritionOrderSupplement extends fhir.BackboneElement imple
     /**
      * Check if the current NutritionOrderSupplement contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a NutritionOrderSupplement from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.INutritionOrderSupplement): NutritionOrderSupplement;
+    static fromStrict(source: fhir.INutritionOrderSupplement): NutritionOrderSupplement;
 }
 /**
  * See implementation notes below for further discussion on how to order continuous vs bolus enteral feeding using this resource.
@@ -388,11 +388,11 @@ export declare class NutritionOrderEnteralFormulaAdministration extends fhir.Bac
     /**
      * Check if the current NutritionOrderEnteralFormulaAdministration contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a NutritionOrderEnteralFormulaAdministration from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.INutritionOrderEnteralFormulaAdministration): NutritionOrderEnteralFormulaAdministration;
+    static fromStrict(source: fhir.INutritionOrderEnteralFormulaAdministration): NutritionOrderEnteralFormulaAdministration;
 }
 /**
  * Feeding provided through the gastrointestinal tract via a tube, catheter, or stoma that delivers nutrition distal to the oral cavity.
@@ -444,11 +444,11 @@ export declare class NutritionOrderEnteralFormula extends fhir.BackboneElement i
     /**
      * Check if the current NutritionOrderEnteralFormula contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a NutritionOrderEnteralFormula from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.INutritionOrderEnteralFormula): NutritionOrderEnteralFormula;
+    static fromStrict(source: fhir.INutritionOrderEnteralFormula): NutritionOrderEnteralFormula;
 }
 /**
  * A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.
@@ -539,11 +539,11 @@ export declare class NutritionOrder extends fhir.DomainResource implements fhir.
     /**
      * Check if the current NutritionOrder contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a NutritionOrder from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.INutritionOrder): NutritionOrder;
+    static fromStrict(source: fhir.INutritionOrder): NutritionOrder;
 }
 /**
  * Code Values for the NutritionOrder.intent field

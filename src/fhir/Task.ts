@@ -652,18 +652,18 @@ export class TaskRestriction extends fhir.BackboneElement implements fhir.ITaskR
   /**
    * Check if the current TaskRestriction contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TaskRestriction from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITaskRestriction):TaskRestriction {
+  static override fromStrict(source:fhir.ITaskRestriction):TaskRestriction {
     var dest:TaskRestriction = new TaskRestriction(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TaskRestriction is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -976,19 +976,19 @@ export class TaskInput extends fhir.BackboneElement implements fhir.ITaskInput {
   /**
    * Check if the current TaskInput contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TaskInput from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITaskInput):TaskInput {
+  static override fromStrict(source:fhir.ITaskInput):TaskInput {
     var dest:TaskInput = new TaskInput(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TaskInput is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1301,19 +1301,19 @@ export class TaskOutput extends fhir.BackboneElement implements fhir.ITaskOutput
   /**
    * Check if the current TaskOutput contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TaskOutput from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITaskOutput):TaskOutput {
+  static override fromStrict(source:fhir.ITaskOutput):TaskOutput {
     var dest:TaskOutput = new TaskOutput(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TaskOutput is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1512,20 +1512,20 @@ export class Task extends fhir.DomainResource implements fhir.ITask {
   /**
    * Check if the current Task contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["intent"] === undefined) { missingElements.push("intent"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Task from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITask):Task {
+  static override fromStrict(source:fhir.ITask):Task {
     var dest:Task = new Task(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Task is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

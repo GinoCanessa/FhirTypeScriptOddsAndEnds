@@ -13,7 +13,7 @@ export const ReactionEventSeverityValueSet = {
   /**
    * Causes mild physiological effects.
    */
-  reaction_event_severity_Mild: Coding.FromStrict({
+  reaction_event_severity_Mild: new Coding({
     code: "mild",
     display: "Mild",
     system: "http://hl7.org/fhir/reaction-event-severity"
@@ -21,7 +21,7 @@ export const ReactionEventSeverityValueSet = {
   /**
    * Causes moderate physiological effects.
    */
-  reaction_event_severity_Moderate: Coding.FromStrict({
+  reaction_event_severity_Moderate: new Coding({
     code: "moderate",
     display: "Moderate",
     system: "http://hl7.org/fhir/reaction-event-severity"
@@ -29,7 +29,7 @@ export const ReactionEventSeverityValueSet = {
   /**
    * Causes severe physiological effects.
    */
-  reaction_event_severity_Severe: Coding.FromStrict({
+  reaction_event_severity_Severe: new Coding({
     code: "severe",
     display: "Severe",
     system: "http://hl7.org/fhir/reaction-event-severity"

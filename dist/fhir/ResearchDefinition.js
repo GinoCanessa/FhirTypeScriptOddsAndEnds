@@ -187,7 +187,7 @@ export class ResearchDefinition extends fhir.DomainResource {
     /**
      * Check if the current ResearchDefinition contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["population"] === undefined) {
             missingElements.push("population");
@@ -195,16 +195,16 @@ export class ResearchDefinition extends fhir.DomainResource {
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ResearchDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ResearchDefinition(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ResearchDefinition is missing elements: ${missingElements.join(", ")}`;
         }

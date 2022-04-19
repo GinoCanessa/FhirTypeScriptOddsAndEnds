@@ -13,7 +13,7 @@ export const SubscriptionStatusValueSet = {
     /**
      * The subscription is active.
      */
-    subscription_status_Active: Coding.FromStrict({
+    subscription_status_Active: new Coding({
         code: "active",
         display: "Active",
         system: "http://hl7.org/fhir/subscription-status"
@@ -21,7 +21,7 @@ export const SubscriptionStatusValueSet = {
     /**
      * The server has an error executing the notification.
      */
-    subscription_status_Error: Coding.FromStrict({
+    subscription_status_Error: new Coding({
         code: "error",
         display: "Error",
         system: "http://hl7.org/fhir/subscription-status"
@@ -29,7 +29,7 @@ export const SubscriptionStatusValueSet = {
     /**
      * Too many errors have occurred or the subscription has expired.
      */
-    subscription_status_Off: Coding.FromStrict({
+    subscription_status_Off: new Coding({
         code: "off",
         display: "Off",
         system: "http://hl7.org/fhir/subscription-status"
@@ -37,7 +37,7 @@ export const SubscriptionStatusValueSet = {
     /**
      * The client has requested the subscription, and the server has not yet set it up.
      */
-    subscription_status_Requested: Coding.FromStrict({
+    subscription_status_Requested: new Coding({
         code: "requested",
         display: "Requested",
         system: "http://hl7.org/fhir/subscription-status"

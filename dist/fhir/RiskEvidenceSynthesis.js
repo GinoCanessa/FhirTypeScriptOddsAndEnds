@@ -37,18 +37,18 @@ export class RiskEvidenceSynthesisSampleSize extends fhir.BackboneElement {
     /**
      * Check if the current RiskEvidenceSynthesisSampleSize contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a RiskEvidenceSynthesisSampleSize from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new RiskEvidenceSynthesisSampleSize(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `RiskEvidenceSynthesisSampleSize is missing elements: ${missingElements.join(", ")}`;
         }
@@ -89,18 +89,18 @@ export class RiskEvidenceSynthesisRiskEstimatePrecisionEstimate extends fhir.Bac
     /**
      * Check if the current RiskEvidenceSynthesisRiskEstimatePrecisionEstimate contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a RiskEvidenceSynthesisRiskEstimatePrecisionEstimate from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new RiskEvidenceSynthesisRiskEstimatePrecisionEstimate(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `RiskEvidenceSynthesisRiskEstimatePrecisionEstimate is missing elements: ${missingElements.join(", ")}`;
         }
@@ -153,18 +153,18 @@ export class RiskEvidenceSynthesisRiskEstimate extends fhir.BackboneElement {
     /**
      * Check if the current RiskEvidenceSynthesisRiskEstimate contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a RiskEvidenceSynthesisRiskEstimate from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new RiskEvidenceSynthesisRiskEstimate(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `RiskEvidenceSynthesisRiskEstimate is missing elements: ${missingElements.join(", ")}`;
         }
@@ -193,18 +193,18 @@ export class RiskEvidenceSynthesisCertaintyCertaintySubcomponent extends fhir.Ba
     /**
      * Check if the current RiskEvidenceSynthesisCertaintyCertaintySubcomponent contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a RiskEvidenceSynthesisCertaintyCertaintySubcomponent from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new RiskEvidenceSynthesisCertaintyCertaintySubcomponent(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `RiskEvidenceSynthesisCertaintyCertaintySubcomponent is missing elements: ${missingElements.join(", ")}`;
         }
@@ -233,18 +233,18 @@ export class RiskEvidenceSynthesisCertainty extends fhir.BackboneElement {
     /**
      * Check if the current RiskEvidenceSynthesisCertainty contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a RiskEvidenceSynthesisCertainty from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new RiskEvidenceSynthesisCertainty(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `RiskEvidenceSynthesisCertainty is missing elements: ${missingElements.join(", ")}`;
         }
@@ -403,7 +403,7 @@ export class RiskEvidenceSynthesis extends fhir.DomainResource {
     /**
      * Check if the current RiskEvidenceSynthesis contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["outcome"] === undefined) {
             missingElements.push("outcome");
@@ -414,16 +414,16 @@ export class RiskEvidenceSynthesis extends fhir.DomainResource {
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a RiskEvidenceSynthesis from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new RiskEvidenceSynthesis(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `RiskEvidenceSynthesis is missing elements: ${missingElements.join(", ")}`;
         }

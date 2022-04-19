@@ -97,11 +97,11 @@ export declare class SubstanceInstance extends fhir.BackboneElement implements f
     /**
      * Check if the current SubstanceInstance contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceInstance from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceInstance): SubstanceInstance;
+    static fromStrict(source: fhir.ISubstanceInstance): SubstanceInstance;
 }
 /**
  * A substance can be composed of other substances.
@@ -126,11 +126,11 @@ export declare class SubstanceIngredient extends fhir.BackboneElement implements
     /**
      * Check if the current SubstanceIngredient contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a SubstanceIngredient from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstanceIngredient): SubstanceIngredient;
+    static fromStrict(source: fhir.ISubstanceIngredient): SubstanceIngredient;
 }
 /**
  * A homogeneous material with a definite composition.
@@ -177,11 +177,11 @@ export declare class Substance extends fhir.DomainResource implements fhir.ISubs
     /**
      * Check if the current Substance contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Substance from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ISubstance): Substance;
+    static fromStrict(source: fhir.ISubstance): Substance;
 }
 /**
  * Code Values for the Substance.status field

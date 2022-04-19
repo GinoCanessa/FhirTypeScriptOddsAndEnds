@@ -10,31 +10,31 @@ import { Coding } from '../fhir';
  * Procedure Category code: A selection of relevant SNOMED CT codes.
  */
 export const ProcedureCategoryValueSet = {
-    ProcedureCategoryValueSet_VAL103693007: Coding.FromStrict({
+    ProcedureCategoryValueSet_VAL103693007: new Coding({
         code: "103693007",
         system: "http://snomed.info/sct"
     }),
-    ProcedureCategoryValueSet_VAL24642003: Coding.FromStrict({
+    ProcedureCategoryValueSet_VAL24642003: new Coding({
         code: "24642003",
         system: "http://snomed.info/sct"
     }),
-    ProcedureCategoryValueSet_VAL387713003: Coding.FromStrict({
+    ProcedureCategoryValueSet_VAL387713003: new Coding({
         code: "387713003",
         system: "http://snomed.info/sct"
     }),
-    ProcedureCategoryValueSet_VAL409063005: Coding.FromStrict({
+    ProcedureCategoryValueSet_VAL409063005: new Coding({
         code: "409063005",
         system: "http://snomed.info/sct"
     }),
-    ProcedureCategoryValueSet_VAL409073007: Coding.FromStrict({
+    ProcedureCategoryValueSet_VAL409073007: new Coding({
         code: "409073007",
         system: "http://snomed.info/sct"
     }),
-    ProcedureCategoryValueSet_VAL410606002: Coding.FromStrict({
+    ProcedureCategoryValueSet_VAL410606002: new Coding({
         code: "410606002",
         system: "http://snomed.info/sct"
     }),
-    ProcedureCategoryValueSet_VAL46947000: Coding.FromStrict({
+    ProcedureCategoryValueSet_VAL46947000: new Coding({
         code: "46947000",
         system: "http://snomed.info/sct"
     }),

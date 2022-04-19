@@ -200,11 +200,11 @@ export declare class ChargeItemDefinitionApplicability extends fhir.BackboneElem
     /**
      * Check if the current ChargeItemDefinitionApplicability contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ChargeItemDefinitionApplicability from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IChargeItemDefinitionApplicability): ChargeItemDefinitionApplicability;
+    static fromStrict(source: fhir.IChargeItemDefinitionApplicability): ChargeItemDefinitionApplicability;
 }
 /**
  * The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice of how the prices have been calculated.
@@ -235,11 +235,11 @@ export declare class ChargeItemDefinitionPropertyGroupPriceComponent extends fhi
     /**
      * Check if the current ChargeItemDefinitionPropertyGroupPriceComponent contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ChargeItemDefinitionPropertyGroupPriceComponent from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IChargeItemDefinitionPropertyGroupPriceComponent): ChargeItemDefinitionPropertyGroupPriceComponent;
+    static fromStrict(source: fhir.IChargeItemDefinitionPropertyGroupPriceComponent): ChargeItemDefinitionPropertyGroupPriceComponent;
 }
 /**
  * Group of properties which are applicable under the same conditions. If no applicability rules are established for the group, then all properties always apply.
@@ -260,11 +260,11 @@ export declare class ChargeItemDefinitionPropertyGroup extends fhir.BackboneElem
     /**
      * Check if the current ChargeItemDefinitionPropertyGroup contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ChargeItemDefinitionPropertyGroup from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IChargeItemDefinitionPropertyGroup): ChargeItemDefinitionPropertyGroup;
+    static fromStrict(source: fhir.IChargeItemDefinitionPropertyGroup): ChargeItemDefinitionPropertyGroup;
 }
 /**
  * The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system.
@@ -389,11 +389,11 @@ export declare class ChargeItemDefinition extends fhir.DomainResource implements
     /**
      * Check if the current ChargeItemDefinition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ChargeItemDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IChargeItemDefinition): ChargeItemDefinition;
+    static fromStrict(source: fhir.IChargeItemDefinition): ChargeItemDefinition;
 }
 /**
  * Code Values for the ChargeItemDefinition.propertyGroup.priceComponent.type field

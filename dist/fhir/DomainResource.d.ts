@@ -47,10 +47,10 @@ export declare class DomainResource extends fhir.Resource implements fhir.IDomai
     /**
      * Check if the current DomainResource contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DomainResource from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDomainResource): DomainResource;
+    static fromStrict(source: fhir.IDomainResource): DomainResource;
 }
 //# sourceMappingURL=DomainResource.d.ts.map

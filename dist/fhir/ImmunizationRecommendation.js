@@ -36,7 +36,7 @@ export class ImmunizationRecommendationRecommendationDateCriterion extends fhir.
     /**
      * Check if the current ImmunizationRecommendationRecommendationDateCriterion contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["code"] === undefined) {
             missingElements.push("code");
@@ -44,16 +44,16 @@ export class ImmunizationRecommendationRecommendationDateCriterion extends fhir.
         if (this["value"] === undefined) {
             missingElements.push("value");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ImmunizationRecommendationRecommendationDateCriterion from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ImmunizationRecommendationRecommendationDateCriterion(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ImmunizationRecommendationRecommendationDateCriterion is missing elements: ${missingElements.join(", ")}`;
         }
@@ -137,21 +137,21 @@ export class ImmunizationRecommendationRecommendation extends fhir.BackboneEleme
     /**
      * Check if the current ImmunizationRecommendationRecommendation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["forecastStatus"] === undefined) {
             missingElements.push("forecastStatus");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ImmunizationRecommendationRecommendation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ImmunizationRecommendationRecommendation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ImmunizationRecommendationRecommendation is missing elements: ${missingElements.join(", ")}`;
         }
@@ -202,7 +202,7 @@ export class ImmunizationRecommendation extends fhir.DomainResource {
     /**
      * Check if the current ImmunizationRecommendation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["date"] === undefined) {
             missingElements.push("date");
@@ -213,16 +213,16 @@ export class ImmunizationRecommendation extends fhir.DomainResource {
         if ((!this["recommendation"]) || (this["recommendation"].length === 0)) {
             missingElements.push("recommendation");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ImmunizationRecommendation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ImmunizationRecommendation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ImmunizationRecommendation is missing elements: ${missingElements.join(", ")}`;
         }

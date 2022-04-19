@@ -56,21 +56,21 @@ export class PaymentReconciliationDetail extends fhir.BackboneElement {
     /**
      * Check if the current PaymentReconciliationDetail contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a PaymentReconciliationDetail from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new PaymentReconciliationDetail(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `PaymentReconciliationDetail is missing elements: ${missingElements.join(", ")}`;
         }
@@ -102,18 +102,18 @@ export class PaymentReconciliationProcessNote extends fhir.BackboneElement {
     /**
      * Check if the current PaymentReconciliationProcessNote contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a PaymentReconciliationProcessNote from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new PaymentReconciliationProcessNote(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `PaymentReconciliationProcessNote is missing elements: ${missingElements.join(", ")}`;
         }
@@ -210,7 +210,7 @@ export class PaymentReconciliation extends fhir.DomainResource {
     /**
      * Check if the current PaymentReconciliation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["created"] === undefined) {
             missingElements.push("created");
@@ -224,16 +224,16 @@ export class PaymentReconciliation extends fhir.DomainResource {
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a PaymentReconciliation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new PaymentReconciliation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `PaymentReconciliation is missing elements: ${missingElements.join(", ")}`;
         }

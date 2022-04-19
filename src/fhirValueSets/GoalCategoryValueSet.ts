@@ -13,7 +13,7 @@ export const GoalCategoryValueSet = {
   /**
    * Goals related to the manner in which the subject acts.
    */
-  goal_category_Behavioral: Coding.FromStrict({
+  goal_category_Behavioral: new Coding({
     code: "behavioral",
     display: "Behavioral",
     system: "http://terminology.hl7.org/CodeSystem/goal-category"
@@ -21,7 +21,7 @@ export const GoalCategoryValueSet = {
   /**
    * Goals related to the consumption of food and/or beverages.
    */
-  goal_category_Dietary: Coding.FromStrict({
+  goal_category_Dietary: new Coding({
     code: "dietary",
     display: "Dietary",
     system: "http://terminology.hl7.org/CodeSystem/goal-category"
@@ -29,7 +29,7 @@ export const GoalCategoryValueSet = {
   /**
    * Goals related to the practice of nursing or established by nurses.
    */
-  goal_category_Nursing: Coding.FromStrict({
+  goal_category_Nursing: new Coding({
     code: "nursing",
     display: "Nursing",
     system: "http://terminology.hl7.org/CodeSystem/goal-category"
@@ -37,7 +37,7 @@ export const GoalCategoryValueSet = {
   /**
    * Goals related to the mobility and/or motor capability of the subject.
    */
-  goal_category_Physiotherapy: Coding.FromStrict({
+  goal_category_Physiotherapy: new Coding({
     code: "physiotherapy",
     display: "Physiotherapy",
     system: "http://terminology.hl7.org/CodeSystem/goal-category"
@@ -45,7 +45,7 @@ export const GoalCategoryValueSet = {
   /**
    * Goals related to the personal protection of the subject.
    */
-  goal_category_Safety: Coding.FromStrict({
+  goal_category_Safety: new Coding({
     code: "safety",
     display: "Safety",
     system: "http://terminology.hl7.org/CodeSystem/goal-category"

@@ -13,7 +13,7 @@ export const NoteTypeValueSet = {
   /**
    * Display the note.
    */
-  note_type_Display: Coding.FromStrict({
+  note_type_Display: new Coding({
     code: "display",
     display: "Display",
     system: "http://hl7.org/fhir/note-type"
@@ -21,7 +21,7 @@ export const NoteTypeValueSet = {
   /**
    * Print the note on the form.
    */
-  note_type_PrintForm: Coding.FromStrict({
+  note_type_PrintForm: new Coding({
     code: "print",
     display: "Print (Form)",
     system: "http://hl7.org/fhir/note-type"
@@ -29,7 +29,7 @@ export const NoteTypeValueSet = {
   /**
    * Print the note for the operator.
    */
-  note_type_PrintOperator: Coding.FromStrict({
+  note_type_PrintOperator: new Coding({
     code: "printoper",
     display: "Print (Operator)",
     system: "http://hl7.org/fhir/note-type"

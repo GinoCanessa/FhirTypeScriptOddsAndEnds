@@ -13,7 +13,7 @@ export const MapContextTypeValueSet = {
   /**
    * The context specifies a type.
    */
-  map_context_type_Type: Coding.FromStrict({
+  map_context_type_Type: new Coding({
     code: "type",
     display: "Type",
     system: "http://hl7.org/fhir/map-context-type"
@@ -21,7 +21,7 @@ export const MapContextTypeValueSet = {
   /**
    * The context specifies a variable.
    */
-  map_context_type_Variable: Coding.FromStrict({
+  map_context_type_Variable: new Coding({
     code: "variable",
     display: "Variable",
     system: "http://hl7.org/fhir/map-context-type"

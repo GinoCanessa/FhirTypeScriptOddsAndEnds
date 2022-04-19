@@ -229,11 +229,11 @@ export declare class Media extends fhir.DomainResource implements fhir.IMedia {
     /**
      * Check if the current Media contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Media from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedia): Media;
+    static fromStrict(source: fhir.IMedia): Media;
 }
 /**
  * Code Values for the Media.status field

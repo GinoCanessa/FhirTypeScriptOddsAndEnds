@@ -29,21 +29,21 @@ export class MedicinalProductPackagedBatchIdentifier extends fhir.BackboneElemen
     /**
      * Check if the current MedicinalProductPackagedBatchIdentifier contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["outerPackaging"] === undefined) {
             missingElements.push("outerPackaging");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductPackagedBatchIdentifier from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductPackagedBatchIdentifier(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductPackagedBatchIdentifier is missing elements: ${missingElements.join(", ")}`;
         }
@@ -107,7 +107,7 @@ export class MedicinalProductPackagedPackageItem extends fhir.BackboneElement {
     /**
      * Check if the current MedicinalProductPackagedPackageItem contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["quantity"] === undefined) {
             missingElements.push("quantity");
@@ -115,16 +115,16 @@ export class MedicinalProductPackagedPackageItem extends fhir.BackboneElement {
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductPackagedPackageItem from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductPackagedPackageItem(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductPackagedPackageItem is missing elements: ${missingElements.join(", ")}`;
         }
@@ -179,21 +179,21 @@ export class MedicinalProductPackaged extends fhir.DomainResource {
     /**
      * Check if the current MedicinalProductPackaged contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if ((!this["packageItem"]) || (this["packageItem"].length === 0)) {
             missingElements.push("packageItem");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a MedicinalProductPackaged from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new MedicinalProductPackaged(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `MedicinalProductPackaged is missing elements: ${missingElements.join(", ")}`;
         }

@@ -10,92 +10,92 @@ import { Coding } from '../fhir'
  * FHIR Document Codes - all LOINC codes where scale type = 'DOC'.
  */
 export const DocTypecodesValueSet = {
-  DocTypecodesValueSet_DeprecatedSpeechTherapyInitialAssessmentNoteAtFirstEncounter: Coding.FromStrict({
+  DocTypecodesValueSet_DeprecatedSpeechTherapyInitialAssessmentNoteAtFirstEncounter: new Coding({
     code: "11499-1",
     display: "Deprecated Speech therapy Initial assessment note at First encounter",
     system: "http://loinc.org"
   }),
-  DocTypecodesValueSet_DeprecatedCardiacEchoStudy: Coding.FromStrict({
+  DocTypecodesValueSet_DeprecatedCardiacEchoStudy: new Coding({
     code: "11522-0",
     display: "Deprecated Cardiac echo study",
     system: "http://loinc.org"
   }),
-  DocTypecodesValueSet_DeprecatedRadiologyUnspecifiedSiteAndModalityStudy: Coding.FromStrict({
+  DocTypecodesValueSet_DeprecatedRadiologyUnspecifiedSiteAndModalityStudy: new Coding({
     code: "11528-7",
     display: "Deprecated Radiology Unspecified site and modality Study",
     system: "http://loinc.org"
   }),
-  DocTypecodesValueSet_DeprecatedCTChestStudy: Coding.FromStrict({
+  DocTypecodesValueSet_DeprecatedCTChestStudy: new Coding({
     code: "11538-6",
     display: "Deprecated CT Chest study",
     system: "http://loinc.org"
   }),
-  DocTypecodesValueSet_DeprecatedCTHeadStudy: Coding.FromStrict({
+  DocTypecodesValueSet_DeprecatedCTHeadStudy: new Coding({
     code: "11539-4",
     display: "Deprecated CT Head study",
     system: "http://loinc.org"
   }),
-  DocTypecodesValueSet_DeprecatedCTAbdomenStudy: Coding.FromStrict({
+  DocTypecodesValueSet_DeprecatedCTAbdomenStudy: new Coding({
     code: "11540-2",
     display: "Deprecated CT Abdomen study",
     system: "http://loinc.org"
   }),
-  DocTypecodesValueSet_DeprecatedProviderUnspecifiedVisitNote: Coding.FromStrict({
+  DocTypecodesValueSet_DeprecatedProviderUnspecifiedVisitNote: new Coding({
     code: "11542-8",
     display: "Deprecated Provider-unspecified visit note",
     system: "http://loinc.org"
   }),
-  DocTypecodesValueSet_DeprecatedAttendingPhysicianProgressNote: Coding.FromStrict({
+  DocTypecodesValueSet_DeprecatedAttendingPhysicianProgressNote: new Coding({
     code: "18741-9",
     display: "Deprecated Attending physician progress note",
     system: "http://loinc.org"
   }),
-  DocTypecodesValueSet_DeprecatedCTUnspecifiedSystemStudy: Coding.FromStrict({
+  DocTypecodesValueSet_DeprecatedCTUnspecifiedSystemStudy: new Coding({
     code: "18747-6",
     display: "Deprecated CT Unspecified system Study",
     system: "http://loinc.org"
   }),
-  DocTypecodesValueSet_DeprecatedMRIUnspecifiedSiteStudy: Coding.FromStrict({
+  DocTypecodesValueSet_DeprecatedMRIUnspecifiedSiteStudy: new Coding({
     code: "18755-9",
     display: "Deprecated MRI Unspecified site study",
     system: "http://loinc.org"
   }),
-  DocTypecodesValueSet_DeprecatedNuclearMedicineStudy: Coding.FromStrict({
+  DocTypecodesValueSet_DeprecatedNuclearMedicineStudy: new Coding({
     code: "18757-5",
     display: "Deprecated Nuclear medicine study",
     system: "http://loinc.org"
   }),
-  DocTypecodesValueSet_DeprecatedPETScanUnspecifiedSystemStudy: Coding.FromStrict({
+  DocTypecodesValueSet_DeprecatedPETScanUnspecifiedSystemStudy: new Coding({
     code: "18758-3",
     display: "Deprecated PET scan Unspecified system Study",
     system: "http://loinc.org"
   }),
-  DocTypecodesValueSet_DeprecatedUSUnspecifiedSystemStudy: Coding.FromStrict({
+  DocTypecodesValueSet_DeprecatedUSUnspecifiedSystemStudy: new Coding({
     code: "18760-9",
     display: "Deprecated US Unspecified system Study",
     system: "http://loinc.org"
   }),
-  DocTypecodesValueSet_DeprecatedChiropractorProgressNote: Coding.FromStrict({
+  DocTypecodesValueSet_DeprecatedChiropractorProgressNote: new Coding({
     code: "18762-5",
     display: "Deprecated Chiropractor Progress note",
     system: "http://loinc.org"
   }),
-  DocTypecodesValueSet_DeprecatedNursePractitionerProgressNote: Coding.FromStrict({
+  DocTypecodesValueSet_DeprecatedNursePractitionerProgressNote: new Coding({
     code: "18764-1",
     display: "Deprecated Nurse practitioner Progress note",
     system: "http://loinc.org"
   }),
-  DocTypecodesValueSet_DeprecatedPodiatryVisitNote: Coding.FromStrict({
+  DocTypecodesValueSet_DeprecatedPodiatryVisitNote: new Coding({
     code: "18765-8",
     display: "Deprecated Podiatry visit note",
     system: "http://loinc.org"
   }),
-  DocTypecodesValueSet_DeprecatedPsychologyVisitNote: Coding.FromStrict({
+  DocTypecodesValueSet_DeprecatedPsychologyVisitNote: new Coding({
     code: "18766-6",
     display: "Deprecated Psychology visit note",
     system: "http://loinc.org"
   }),
-  DocTypecodesValueSet_DeprecatedCardiacEchoStudy_2: Coding.FromStrict({
+  DocTypecodesValueSet_DeprecatedCardiacEchoStudy_2: new Coding({
     code: "28032-1",
     display: "Deprecated Cardiac echo, study",
     system: "http://loinc.org"

@@ -95,10 +95,10 @@ export declare class Attachment extends fhir.FhirElement implements fhir.IAttach
     /**
      * Check if the current Attachment contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Attachment from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IAttachment): Attachment;
+    static fromStrict(source: fhir.IAttachment): Attachment;
 }
 //# sourceMappingURL=Attachment.d.ts.map

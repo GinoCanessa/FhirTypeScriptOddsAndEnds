@@ -13,7 +13,7 @@ export const ClaimExceptionValueSet = {
   /**
    * Disabled
    */
-  claim_exception_Disabled: Coding.FromStrict({
+  claim_exception_Disabled: new Coding({
     code: "disabled",
     display: "Disabled",
     system: "http://terminology.hl7.org/CodeSystem/claim-exception"
@@ -21,7 +21,7 @@ export const ClaimExceptionValueSet = {
   /**
    * Fulltime Student
    */
-  claim_exception_StudentFulltime: Coding.FromStrict({
+  claim_exception_StudentFulltime: new Coding({
     code: "student",
     display: "Student (Fulltime)",
     system: "http://terminology.hl7.org/CodeSystem/claim-exception"

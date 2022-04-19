@@ -271,11 +271,11 @@ export declare class ConceptMapGroupElementTargetDependsOn extends fhir.Backbone
     /**
      * Check if the current ConceptMapGroupElementTargetDependsOn contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ConceptMapGroupElementTargetDependsOn from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IConceptMapGroupElementTargetDependsOn): ConceptMapGroupElementTargetDependsOn;
+    static fromStrict(source: fhir.IConceptMapGroupElementTargetDependsOn): ConceptMapGroupElementTargetDependsOn;
 }
 /**
  * Ideally there would only be one map, with equal or equivalent mapping. But multiple maps are allowed for several narrower options, or to assert that other concepts are unmatched.
@@ -316,11 +316,11 @@ export declare class ConceptMapGroupElementTarget extends fhir.BackboneElement i
     /**
      * Check if the current ConceptMapGroupElementTarget contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ConceptMapGroupElementTarget from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IConceptMapGroupElementTarget): ConceptMapGroupElementTarget;
+    static fromStrict(source: fhir.IConceptMapGroupElementTarget): ConceptMapGroupElementTarget;
 }
 /**
  * Generally, the ideal is that there would only be one mapping for each concept in the source value set, but a given concept may be mapped multiple times with different comments or dependencies.
@@ -347,11 +347,11 @@ export declare class ConceptMapGroupElement extends fhir.BackboneElement impleme
     /**
      * Check if the current ConceptMapGroupElement contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ConceptMapGroupElement from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IConceptMapGroupElement): ConceptMapGroupElement;
+    static fromStrict(source: fhir.IConceptMapGroupElement): ConceptMapGroupElement;
 }
 /**
  * This only applies if the source code has a system value that matches the system defined for the group.
@@ -384,11 +384,11 @@ export declare class ConceptMapGroupUnmapped extends fhir.BackboneElement implem
     /**
      * Check if the current ConceptMapGroupUnmapped contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ConceptMapGroupUnmapped from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IConceptMapGroupUnmapped): ConceptMapGroupUnmapped;
+    static fromStrict(source: fhir.IConceptMapGroupUnmapped): ConceptMapGroupUnmapped;
 }
 /**
  * A group of mappings that all have the same source and target system.
@@ -429,11 +429,11 @@ export declare class ConceptMapGroup extends fhir.BackboneElement implements fhi
     /**
      * Check if the current ConceptMapGroup contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ConceptMapGroup from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IConceptMapGroup): ConceptMapGroup;
+    static fromStrict(source: fhir.IConceptMapGroup): ConceptMapGroup;
 }
 /**
  * A statement of relationships from one set of concepts to one or more other concepts - either concepts in code systems, or data element/data element concepts, or classes in class models.
@@ -547,11 +547,11 @@ export declare class ConceptMap extends fhir.DomainResource implements fhir.ICon
     /**
      * Check if the current ConceptMap contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ConceptMap from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IConceptMap): ConceptMap;
+    static fromStrict(source: fhir.IConceptMap): ConceptMap;
 }
 /**
  * Code Values for the ConceptMap.group.element.target.equivalence field

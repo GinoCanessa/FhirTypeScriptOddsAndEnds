@@ -86,11 +86,11 @@ export declare class OperationOutcomeIssue extends fhir.BackboneElement implemen
     /**
      * Check if the current OperationOutcomeIssue contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a OperationOutcomeIssue from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IOperationOutcomeIssue): OperationOutcomeIssue;
+    static fromStrict(source: fhir.IOperationOutcomeIssue): OperationOutcomeIssue;
 }
 /**
  * A collection of error, warning, or information messages that result from a system action.
@@ -111,11 +111,11 @@ export declare class OperationOutcome extends fhir.DomainResource implements fhi
     /**
      * Check if the current OperationOutcome contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a OperationOutcome from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IOperationOutcome): OperationOutcome;
+    static fromStrict(source: fhir.IOperationOutcome): OperationOutcome;
 }
 /**
  * Code Values for the OperationOutcome.issue.severity field

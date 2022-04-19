@@ -13,7 +13,7 @@ export const ImmunizationEvaluationStatusValueSet = {
   /**
    * All actions that are implied by the administration have occurred.
    */
-  medication_admin_status_Completed: Coding.FromStrict({
+  medication_admin_status_Completed: new Coding({
     code: "completed",
     display: "Completed",
     system: "http://terminology.hl7.org/CodeSystem/medication-admin-status"
@@ -21,7 +21,7 @@ export const ImmunizationEvaluationStatusValueSet = {
   /**
    * The administration was entered in error and therefore nullified.
    */
-  medication_admin_status_EnteredInError: Coding.FromStrict({
+  medication_admin_status_EnteredInError: new Coding({
     code: "entered-in-error",
     display: "Entered in Error",
     system: "http://terminology.hl7.org/CodeSystem/medication-admin-status"

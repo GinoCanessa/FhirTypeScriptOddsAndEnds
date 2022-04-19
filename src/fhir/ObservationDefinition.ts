@@ -170,18 +170,18 @@ export class ObservationDefinitionQuantitativeDetails extends fhir.BackboneEleme
   /**
    * Check if the current ObservationDefinitionQuantitativeDetails contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ObservationDefinitionQuantitativeDetails from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IObservationDefinitionQuantitativeDetails):ObservationDefinitionQuantitativeDetails {
+  static override fromStrict(source:fhir.IObservationDefinitionQuantitativeDetails):ObservationDefinitionQuantitativeDetails {
     var dest:ObservationDefinitionQuantitativeDetails = new ObservationDefinitionQuantitativeDetails(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ObservationDefinitionQuantitativeDetails is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -245,18 +245,18 @@ export class ObservationDefinitionQualifiedInterval extends fhir.BackboneElement
   /**
    * Check if the current ObservationDefinitionQualifiedInterval contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ObservationDefinitionQualifiedInterval from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IObservationDefinitionQualifiedInterval):ObservationDefinitionQualifiedInterval {
+  static override fromStrict(source:fhir.IObservationDefinitionQualifiedInterval):ObservationDefinitionQualifiedInterval {
     var dest:ObservationDefinitionQualifiedInterval = new ObservationDefinitionQualifiedInterval(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ObservationDefinitionQualifiedInterval is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -352,19 +352,19 @@ export class ObservationDefinition extends fhir.DomainResource implements fhir.I
   /**
    * Check if the current ObservationDefinition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ObservationDefinition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IObservationDefinition):ObservationDefinition {
+  static override fromStrict(source:fhir.IObservationDefinition):ObservationDefinition {
     var dest:ObservationDefinition = new ObservationDefinition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ObservationDefinition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

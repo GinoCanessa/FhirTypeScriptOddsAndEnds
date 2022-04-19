@@ -480,18 +480,18 @@ export class PlanDefinitionGoalTarget extends fhir.BackboneElement implements fh
   /**
    * Check if the current PlanDefinitionGoalTarget contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PlanDefinitionGoalTarget from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPlanDefinitionGoalTarget):PlanDefinitionGoalTarget {
+  static override fromStrict(source:fhir.IPlanDefinitionGoalTarget):PlanDefinitionGoalTarget {
     var dest:PlanDefinitionGoalTarget = new PlanDefinitionGoalTarget(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `PlanDefinitionGoalTarget is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -546,19 +546,19 @@ export class PlanDefinitionGoal extends fhir.BackboneElement implements fhir.IPl
   /**
    * Check if the current PlanDefinitionGoal contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["description"] === undefined) { missingElements.push("description"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PlanDefinitionGoal from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPlanDefinitionGoal):PlanDefinitionGoal {
+  static override fromStrict(source:fhir.IPlanDefinitionGoal):PlanDefinitionGoal {
     var dest:PlanDefinitionGoal = new PlanDefinitionGoal(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `PlanDefinitionGoal is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -590,19 +590,19 @@ export class PlanDefinitionActionCondition extends fhir.BackboneElement implemen
   /**
    * Check if the current PlanDefinitionActionCondition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["kind"] === undefined) { missingElements.push("kind"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PlanDefinitionActionCondition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPlanDefinitionActionCondition):PlanDefinitionActionCondition {
+  static override fromStrict(source:fhir.IPlanDefinitionActionCondition):PlanDefinitionActionCondition {
     var dest:PlanDefinitionActionCondition = new PlanDefinitionActionCondition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `PlanDefinitionActionCondition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -648,20 +648,20 @@ export class PlanDefinitionActionRelatedAction extends fhir.BackboneElement impl
   /**
    * Check if the current PlanDefinitionActionRelatedAction contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["actionId"] === undefined) { missingElements.push("actionId"); }
     if (this["relationship"] === undefined) { missingElements.push("relationship"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PlanDefinitionActionRelatedAction from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPlanDefinitionActionRelatedAction):PlanDefinitionActionRelatedAction {
+  static override fromStrict(source:fhir.IPlanDefinitionActionRelatedAction):PlanDefinitionActionRelatedAction {
     var dest:PlanDefinitionActionRelatedAction = new PlanDefinitionActionRelatedAction(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `PlanDefinitionActionRelatedAction is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -693,19 +693,19 @@ export class PlanDefinitionActionParticipant extends fhir.BackboneElement implem
   /**
    * Check if the current PlanDefinitionActionParticipant contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PlanDefinitionActionParticipant from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPlanDefinitionActionParticipant):PlanDefinitionActionParticipant {
+  static override fromStrict(source:fhir.IPlanDefinitionActionParticipant):PlanDefinitionActionParticipant {
     var dest:PlanDefinitionActionParticipant = new PlanDefinitionActionParticipant(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `PlanDefinitionActionParticipant is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -735,18 +735,18 @@ export class PlanDefinitionActionDynamicValue extends fhir.BackboneElement imple
   /**
    * Check if the current PlanDefinitionActionDynamicValue contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PlanDefinitionActionDynamicValue from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPlanDefinitionActionDynamicValue):PlanDefinitionActionDynamicValue {
+  static override fromStrict(source:fhir.IPlanDefinitionActionDynamicValue):PlanDefinitionActionDynamicValue {
     var dest:PlanDefinitionActionDynamicValue = new PlanDefinitionActionDynamicValue(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `PlanDefinitionActionDynamicValue is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -966,18 +966,18 @@ export class PlanDefinitionAction extends fhir.BackboneElement implements fhir.I
   /**
    * Check if the current PlanDefinitionAction contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PlanDefinitionAction from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPlanDefinitionAction):PlanDefinitionAction {
+  static override fromStrict(source:fhir.IPlanDefinitionAction):PlanDefinitionAction {
     var dest:PlanDefinitionAction = new PlanDefinitionAction(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `PlanDefinitionAction is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1196,19 +1196,19 @@ export class PlanDefinition extends fhir.DomainResource implements fhir.IPlanDef
   /**
    * Check if the current PlanDefinition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PlanDefinition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IPlanDefinition):PlanDefinition {
+  static override fromStrict(source:fhir.IPlanDefinition):PlanDefinition {
     var dest:PlanDefinition = new PlanDefinition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `PlanDefinition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

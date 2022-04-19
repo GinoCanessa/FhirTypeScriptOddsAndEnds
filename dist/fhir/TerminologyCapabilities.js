@@ -35,21 +35,21 @@ export class TerminologyCapabilitiesSoftware extends fhir.BackboneElement {
     /**
      * Check if the current TerminologyCapabilitiesSoftware contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["name"] === undefined) {
             missingElements.push("name");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a TerminologyCapabilitiesSoftware from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new TerminologyCapabilitiesSoftware(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `TerminologyCapabilitiesSoftware is missing elements: ${missingElements.join(", ")}`;
         }
@@ -85,21 +85,21 @@ export class TerminologyCapabilitiesImplementation extends fhir.BackboneElement 
     /**
      * Check if the current TerminologyCapabilitiesImplementation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["description"] === undefined) {
             missingElements.push("description");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a TerminologyCapabilitiesImplementation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new TerminologyCapabilitiesImplementation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `TerminologyCapabilitiesImplementation is missing elements: ${missingElements.join(", ")}`;
         }
@@ -139,7 +139,7 @@ export class TerminologyCapabilitiesCodeSystemVersionFilter extends fhir.Backbon
     /**
      * Check if the current TerminologyCapabilitiesCodeSystemVersionFilter contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["code"] === undefined) {
             missingElements.push("code");
@@ -147,16 +147,16 @@ export class TerminologyCapabilitiesCodeSystemVersionFilter extends fhir.Backbon
         if ((!this["op"]) || (this["op"].length === 0)) {
             missingElements.push("op");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a TerminologyCapabilitiesCodeSystemVersionFilter from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new TerminologyCapabilitiesCodeSystemVersionFilter(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `TerminologyCapabilitiesCodeSystemVersionFilter is missing elements: ${missingElements.join(", ")}`;
         }
@@ -209,18 +209,18 @@ export class TerminologyCapabilitiesCodeSystemVersion extends fhir.BackboneEleme
     /**
      * Check if the current TerminologyCapabilitiesCodeSystemVersion contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a TerminologyCapabilitiesCodeSystemVersion from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new TerminologyCapabilitiesCodeSystemVersion(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `TerminologyCapabilitiesCodeSystemVersion is missing elements: ${missingElements.join(", ")}`;
         }
@@ -255,18 +255,18 @@ export class TerminologyCapabilitiesCodeSystem extends fhir.BackboneElement {
     /**
      * Check if the current TerminologyCapabilitiesCodeSystem contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a TerminologyCapabilitiesCodeSystem from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new TerminologyCapabilitiesCodeSystem(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `TerminologyCapabilitiesCodeSystem is missing elements: ${missingElements.join(", ")}`;
         }
@@ -302,21 +302,21 @@ export class TerminologyCapabilitiesExpansionParameter extends fhir.BackboneElem
     /**
      * Check if the current TerminologyCapabilitiesExpansionParameter contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["name"] === undefined) {
             missingElements.push("name");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a TerminologyCapabilitiesExpansionParameter from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new TerminologyCapabilitiesExpansionParameter(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `TerminologyCapabilitiesExpansionParameter is missing elements: ${missingElements.join(", ")}`;
         }
@@ -363,18 +363,18 @@ export class TerminologyCapabilitiesExpansion extends fhir.BackboneElement {
     /**
      * Check if the current TerminologyCapabilitiesExpansion contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a TerminologyCapabilitiesExpansion from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new TerminologyCapabilitiesExpansion(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `TerminologyCapabilitiesExpansion is missing elements: ${missingElements.join(", ")}`;
         }
@@ -404,21 +404,21 @@ export class TerminologyCapabilitiesValidateCode extends fhir.BackboneElement {
     /**
      * Check if the current TerminologyCapabilitiesValidateCode contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["translations"] === undefined) {
             missingElements.push("translations");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a TerminologyCapabilitiesValidateCode from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new TerminologyCapabilitiesValidateCode(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `TerminologyCapabilitiesValidateCode is missing elements: ${missingElements.join(", ")}`;
         }
@@ -448,21 +448,21 @@ export class TerminologyCapabilitiesTranslation extends fhir.BackboneElement {
     /**
      * Check if the current TerminologyCapabilitiesTranslation contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["needsMap"] === undefined) {
             missingElements.push("needsMap");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a TerminologyCapabilitiesTranslation from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new TerminologyCapabilitiesTranslation(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `TerminologyCapabilitiesTranslation is missing elements: ${missingElements.join(", ")}`;
         }
@@ -488,18 +488,18 @@ export class TerminologyCapabilitiesClosure extends fhir.BackboneElement {
     /**
      * Check if the current TerminologyCapabilitiesClosure contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a TerminologyCapabilitiesClosure from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new TerminologyCapabilitiesClosure(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `TerminologyCapabilitiesClosure is missing elements: ${missingElements.join(", ")}`;
         }
@@ -646,7 +646,7 @@ export class TerminologyCapabilities extends fhir.DomainResource {
     /**
      * Check if the current TerminologyCapabilities contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["date"] === undefined) {
             missingElements.push("date");
@@ -657,16 +657,16 @@ export class TerminologyCapabilities extends fhir.DomainResource {
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a TerminologyCapabilities from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new TerminologyCapabilities(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `TerminologyCapabilities is missing elements: ${missingElements.join(", ")}`;
         }

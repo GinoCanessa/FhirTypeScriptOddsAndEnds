@@ -164,11 +164,11 @@ export declare class ChargeItemPerformer extends fhir.BackboneElement implements
     /**
      * Check if the current ChargeItemPerformer contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ChargeItemPerformer from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IChargeItemPerformer): ChargeItemPerformer;
+    static fromStrict(source: fhir.IChargeItemPerformer): ChargeItemPerformer;
 }
 /**
  * The resource ChargeItem describes the provision of healthcare provider products for a certain patient, therefore referring not only to the product, but containing in addition details of the provision, like date, time, amounts and participating organizations and persons. Main Usage of the ChargeItem is to enable the billing process and internal cost allocation.
@@ -309,11 +309,11 @@ export declare class ChargeItem extends fhir.DomainResource implements fhir.ICha
     /**
      * Check if the current ChargeItem contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ChargeItem from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IChargeItem): ChargeItem;
+    static fromStrict(source: fhir.IChargeItem): ChargeItem;
 }
 /**
  * Code Values for the ChargeItem.status field

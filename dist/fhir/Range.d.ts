@@ -31,10 +31,10 @@ export declare class Range extends fhir.FhirElement implements fhir.IRange {
     /**
      * Check if the current Range contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Range from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IRange): Range;
+    static fromStrict(source: fhir.IRange): Range;
 }
 //# sourceMappingURL=Range.d.ts.map

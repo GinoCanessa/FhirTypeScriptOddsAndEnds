@@ -221,11 +221,11 @@ export declare class TestReportParticipant extends fhir.BackboneElement implemen
     /**
      * Check if the current TestReportParticipant contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestReportParticipant from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestReportParticipant): TestReportParticipant;
+    static fromStrict(source: fhir.ITestReportParticipant): TestReportParticipant;
 }
 /**
  * The operation performed.
@@ -253,11 +253,11 @@ export declare class TestReportSetupActionOperation extends fhir.BackboneElement
     /**
      * Check if the current TestReportSetupActionOperation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestReportSetupActionOperation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestReportSetupActionOperation): TestReportSetupActionOperation;
+    static fromStrict(source: fhir.ITestReportSetupActionOperation): TestReportSetupActionOperation;
 }
 /**
  * The results of the assertion performed on the previous operations.
@@ -285,11 +285,11 @@ export declare class TestReportSetupActionAssert extends fhir.BackboneElement im
     /**
      * Check if the current TestReportSetupActionAssert contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestReportSetupActionAssert from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestReportSetupActionAssert): TestReportSetupActionAssert;
+    static fromStrict(source: fhir.ITestReportSetupActionAssert): TestReportSetupActionAssert;
 }
 /**
  * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
@@ -310,11 +310,11 @@ export declare class TestReportSetupAction extends fhir.BackboneElement implemen
     /**
      * Check if the current TestReportSetupAction contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestReportSetupAction from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestReportSetupAction): TestReportSetupAction;
+    static fromStrict(source: fhir.ITestReportSetupAction): TestReportSetupAction;
 }
 /**
  * The results of the series of required setup operations before the tests were executed.
@@ -331,11 +331,11 @@ export declare class TestReportSetup extends fhir.BackboneElement implements fhi
     /**
      * Check if the current TestReportSetup contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestReportSetup from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestReportSetup): TestReportSetup;
+    static fromStrict(source: fhir.ITestReportSetup): TestReportSetup;
 }
 /**
  * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
@@ -356,11 +356,11 @@ export declare class TestReportTestAction extends fhir.BackboneElement implement
     /**
      * Check if the current TestReportTestAction contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestReportTestAction from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestReportTestAction): TestReportTestAction;
+    static fromStrict(source: fhir.ITestReportTestAction): TestReportTestAction;
 }
 /**
  * A test executed from the test script.
@@ -387,11 +387,11 @@ export declare class TestReportTest extends fhir.BackboneElement implements fhir
     /**
      * Check if the current TestReportTest contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestReportTest from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestReportTest): TestReportTest;
+    static fromStrict(source: fhir.ITestReportTest): TestReportTest;
 }
 /**
  * An action should contain either an operation or an assertion but not both.  It can contain any number of variables.
@@ -408,11 +408,11 @@ export declare class TestReportTeardownAction extends fhir.BackboneElement imple
     /**
      * Check if the current TestReportTeardownAction contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestReportTeardownAction from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestReportTeardownAction): TestReportTeardownAction;
+    static fromStrict(source: fhir.ITestReportTeardownAction): TestReportTeardownAction;
 }
 /**
  * The results of the series of operations required to clean up after all the tests were executed (successfully or otherwise).
@@ -429,11 +429,11 @@ export declare class TestReportTeardown extends fhir.BackboneElement implements 
     /**
      * Check if the current TestReportTeardown contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestReportTeardown from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestReportTeardown): TestReportTeardown;
+    static fromStrict(source: fhir.ITestReportTeardown): TestReportTeardown;
 }
 /**
  * A summary of information based on the results of executing a TestScript.
@@ -505,11 +505,11 @@ export declare class TestReport extends fhir.DomainResource implements fhir.ITes
     /**
      * Check if the current TestReport contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TestReport from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITestReport): TestReport;
+    static fromStrict(source: fhir.ITestReport): TestReport;
 }
 /**
  * Code Values for the TestReport.participant.type field

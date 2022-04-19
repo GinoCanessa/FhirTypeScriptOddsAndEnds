@@ -183,11 +183,11 @@ export declare class DeviceRequestParameter extends fhir.BackboneElement impleme
     /**
      * Check if the current DeviceRequestParameter contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DeviceRequestParameter from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDeviceRequestParameter): DeviceRequestParameter;
+    static fromStrict(source: fhir.IDeviceRequestParameter): DeviceRequestParameter;
 }
 /**
  * Represents a request for a patient to employ a medical device. The device may be an implantable device, or an external assistive device, such as a walker.
@@ -321,11 +321,11 @@ export declare class DeviceRequest extends fhir.DomainResource implements fhir.I
     /**
      * Check if the current DeviceRequest contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a DeviceRequest from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IDeviceRequest): DeviceRequest;
+    static fromStrict(source: fhir.IDeviceRequest): DeviceRequest;
 }
 /**
  * Code Values for the DeviceRequest.intent field

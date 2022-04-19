@@ -13,7 +13,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Identifies types of detected issues regarding the administration or supply of an item to a patient.
      */
-    v3_ActCode_ActSuppliedItemDetectedIssueCode: Coding.FromStrict({
+    v3_ActCode_ActSuppliedItemDetectedIssueCode: new Coding({
         code: "_ActSuppliedItemDetectedIssueCode",
         display: "ActSuppliedItemDetectedIssueCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -21,7 +21,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Administration of the proposed therapy may be inappropriate or contraindicated as proposed
      */
-    v3_ActCode_AdministrationDetectedIssueCode: Coding.FromStrict({
+    v3_ActCode_AdministrationDetectedIssueCode: new Coding({
         code: "_AdministrationDetectedIssueCode",
         display: "AdministrationDetectedIssueCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -29,7 +29,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * AppropriatenessDetectedIssueCode
      */
-    v3_ActCode_AppropriatenessDetectedIssueCode: Coding.FromStrict({
+    v3_ActCode_AppropriatenessDetectedIssueCode: new Coding({
         code: "_AppropriatenessDetectedIssueCode",
         display: "AppropriatenessDetectedIssueCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -37,7 +37,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * InteractionDetectedIssueCode
      */
-    v3_ActCode_InteractionDetectedIssueCode: Coding.FromStrict({
+    v3_ActCode_InteractionDetectedIssueCode: new Coding({
         code: "_InteractionDetectedIssueCode",
         display: "InteractionDetectedIssueCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -45,7 +45,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Supplying the product at this time may be inappropriate or indicate compliance issues with the associated therapy
      */
-    v3_ActCode_SupplyDetectedIssueCode: Coding.FromStrict({
+    v3_ActCode_SupplyDetectedIssueCode: new Coding({
         code: "_SupplyDetectedIssueCode",
         display: "SupplyDetectedIssueCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -53,7 +53,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Proposed therapy may be inappropriate or ineffective based on the proposed start or end time.
      */
-    v3_ActCode_TimingDetectedIssueCode: Coding.FromStrict({
+    v3_ActCode_TimingDetectedIssueCode: new Coding({
         code: "_TimingDetectedIssueCode",
         display: "TimingDetectedIssueCode",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -61,7 +61,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Definition:The requested action has already been performed and so this request has no effect
      */
-    v3_ActCode_AlreadyPerformed: Coding.FromStrict({
+    v3_ActCode_AlreadyPerformed: new Coding({
         code: "ALLDONE",
         display: "already performed",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -69,7 +69,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Definition:Proposed therapy may be inappropriate or ineffective because the end of administration is too close to another planned therapy.
      */
-    v3_ActCode_EndTooLateAlert: Coding.FromStrict({
+    v3_ActCode_EndTooLateAlert: new Coding({
         code: "ALRTENDLATE",
         display: "end too late alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -77,7 +77,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Definition:Proposed therapy may be inappropriate or ineffective because the start of administration is too late after the onset of the condition.
      */
-    v3_ActCode_StartTooLateAlert: Coding.FromStrict({
+    v3_ActCode_StartTooLateAlert: new Coding({
         code: "ALRTSTRTLATE",
         display: "start too late alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -85,7 +85,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Description:Proposed therapy may be contraindicated or ineffective based on an existing or recent drug therapy.
      */
-    v3_ActCode_DrugActionDetectedIssue: Coding.FromStrict({
+    v3_ActCode_DrugActionDetectedIssue: new Coding({
         code: "DACT",
         display: "drug action detected issue",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -93,7 +93,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Proposed therapy may interact with an existing or recent drug therapy
      */
-    v3_ActCode_DrugInteractionAlert: Coding.FromStrict({
+    v3_ActCode_DrugInteractionAlert: new Coding({
         code: "DRG",
         display: "Drug Interaction Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -101,7 +101,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Proposed therapy may be inappropriate or ineffective because the end of administration is too close to another planned therapy
      */
-    v3_ActCode_EndTooLateAlert_2: Coding.FromStrict({
+    v3_ActCode_EndTooLateAlert_2: new Coding({
         code: "ENDLATE",
         display: "End Too Late Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -109,7 +109,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Proposed therapy may interact with certain foods
      */
-    v3_ActCode_FoodInteractionAlert: Coding.FromStrict({
+    v3_ActCode_FoodInteractionAlert: new Coding({
         code: "FOOD",
         display: "Food Interaction Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -117,7 +117,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Definition:The therapy being performed is in some way out of alignment with the requested therapy.
      */
-    v3_ActCode_FulfillmentAlert: Coding.FromStrict({
+    v3_ActCode_FulfillmentAlert: new Coding({
         code: "FULFIL",
         display: "fulfillment alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -125,7 +125,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Definition:There should be no actions taken in fulfillment of a request that has been held or suspended.
      */
-    v3_ActCode_HeldSuspendedAlert: Coding.FromStrict({
+    v3_ActCode_HeldSuspendedAlert: new Coding({
         code: "HELD",
         display: "held/suspended alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -133,7 +133,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Description: While the record was accepted in the repository, there is a more recent version of a record of this type.
      */
-    v3_ActCode_RecordRecordedAsHistorical: Coding.FromStrict({
+    v3_ActCode_RecordRecordedAsHistorical: new Coding({
         code: "HISTORIC",
         display: "record recorded as historical",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -141,7 +141,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Definition:The therapy action is being performed outside the bounds of the time period requested
      */
-    v3_ActCode_OutsideRequestedTime: Coding.FromStrict({
+    v3_ActCode_OutsideRequestedTime: new Coding({
         code: "INTERVAL",
         display: "outside requested time",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -149,7 +149,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Definition:The therapy action is being performed too soon after the previous occurrence based on the requested frequency
      */
-    v3_ActCode_TooSoonWithinFrequencyBasedOnTheUsage: Coding.FromStrict({
+    v3_ActCode_TooSoonWithinFrequencyBasedOnTheUsage: new Coding({
         code: "MINFREQ",
         display: "too soon within frequency based on the usage",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -157,7 +157,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Proposed therapy may interact with existing or recent natural health product therapy
      */
-    v3_ActCode_NaturalHealthProductAlert: Coding.FromStrict({
+    v3_ActCode_NaturalHealthProductAlert: new Coding({
         code: "NHP",
         display: "Natural Health Product Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -165,7 +165,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Proposed therapy may interact with a non-prescription drug (e.g. alcohol, tobacco, Aspirin)
      */
-    v3_ActCode_NonPrescriptionInteractionAlert: Coding.FromStrict({
+    v3_ActCode_NonPrescriptionInteractionAlert: new Coding({
         code: "NONRX",
         display: "Non-Prescription Interaction Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -173,7 +173,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Definition:The status of the request being fulfilled has changed such that it is no longer actionable.  This may be because the request has expired, has already been completely fulfilled or has been otherwise stopped or disabled.  (Not used for 'suspended' orders.)
      */
-    v3_ActCode_NoLongerActionable: Coding.FromStrict({
+    v3_ActCode_NoLongerActionable: new Coding({
         code: "NOTACTN",
         display: "no longer actionable",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -181,7 +181,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Definition:The therapy being performed is not sufficiently equivalent to the therapy which was requested.
      */
-    v3_ActCode_NotEquivalentAlert: Coding.FromStrict({
+    v3_ActCode_NotEquivalentAlert: new Coding({
         code: "NOTEQUIV",
         display: "not equivalent alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -189,7 +189,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Definition:The therapy being performed is not generically equivalent (having the identical biological action) to the therapy which was requested.
      */
-    v3_ActCode_NotGenericallyEquivalentAlert: Coding.FromStrict({
+    v3_ActCode_NotGenericallyEquivalentAlert: new Coding({
         code: "NOTEQUIVGEN",
         display: "not generically equivalent alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -197,7 +197,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Definition:The therapy being performed is not therapeutically equivalent (having the same overall patient effect) to the therapy which was requested.
      */
-    v3_ActCode_NotTherapeuticallyEquivalentAlert: Coding.FromStrict({
+    v3_ActCode_NotTherapeuticallyEquivalentAlert: new Coding({
         code: "NOTEQUIVTHER",
         display: "not therapeutically equivalent alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -205,7 +205,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Definition:The proposed therapy goes against preferences or consent constraints recorded in the patient's record.
      */
-    v3_ActCode_ViolatesStatedPreferences: Coding.FromStrict({
+    v3_ActCode_ViolatesStatedPreferences: new Coding({
         code: "PATPREF",
         display: "violates stated preferences",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -213,7 +213,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Definition:The proposed therapy goes against preferences or consent constraints recorded in the patient's record.  An alternate therapy meeting those constraints is available.
      */
-    v3_ActCode_ViolatesStatedPreferencesAlternateAvailable: Coding.FromStrict({
+    v3_ActCode_ViolatesStatedPreferencesAlternateAvailable: new Coding({
         code: "PATPREFALT",
         display: "violates stated preferences, alternate available",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -221,7 +221,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Definition:The same or similar treatment has previously been attempted with the patient without achieving a positive effect.
      */
-    v3_ActCode_PreviouslyIneffective: Coding.FromStrict({
+    v3_ActCode_PreviouslyIneffective: new Coding({
         code: "PREVINEF",
         display: "previously ineffective",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -229,7 +229,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Proposed therapy may be inappropriate or ineffective because the start of administration is too late after the onset of the condition
      */
-    v3_ActCode_StartTooLateAlert_2: Coding.FromStrict({
+    v3_ActCode_StartTooLateAlert_2: new Coding({
         code: "STRTLATE",
         display: "Start Too Late Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -237,7 +237,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Description:Proposed therapy may be inappropriate or ineffective based on the proposed start or end time.
      */
-    v3_ActCode_TimingDetectedIssue: Coding.FromStrict({
+    v3_ActCode_TimingDetectedIssue: new Coding({
         code: "TIME",
         display: "timing detected issue",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -245,7 +245,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Definition:The therapy is being performed at a time which diverges from the time the therapy was requested
      */
-    v3_ActCode_EventTimingIncorrectAlert: Coding.FromStrict({
+    v3_ActCode_EventTimingIncorrectAlert: new Coding({
         code: "TIMING",
         display: "event timing incorrect alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -253,7 +253,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * The patient is receiving a subsequent fill significantly later than would be expected based on the amount previously supplied and the therapy dosage instructions
      */
-    v3_ActCode_RefillTooLateAlert: Coding.FromStrict({
+    v3_ActCode_RefillTooLateAlert: new Coding({
         code: "TOOLATE",
         display: "Refill Too Late Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -261,7 +261,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * The patient is receiving a subsequent fill significantly earlier than would be expected based on the amount previously supplied and the therapy dosage instructions
      */
-    v3_ActCode_RefillTooSoonAlert: Coding.FromStrict({
+    v3_ActCode_RefillTooSoonAlert: new Coding({
         code: "TOOSOON",
         display: "Refill Too Soon Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -269,7 +269,7 @@ export const DetectedissueCategoryValueSet = {
     /**
      * Proposed therapy may interact with an existing or recent therapeutic product
      */
-    v3_ActCode_TherapeuticProductAlert: Coding.FromStrict({
+    v3_ActCode_TherapeuticProductAlert: new Coding({
         code: "TPROD",
         display: "Therapeutic Product Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"

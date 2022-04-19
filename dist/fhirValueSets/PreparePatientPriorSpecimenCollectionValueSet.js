@@ -10,227 +10,227 @@ import { Coding } from '../fhir';
  * Checks on the patient prior specimen collection. All SNOMED CT concepts descendants of 703763000 |Precondition value (qualifier value)|
  */
 export const PreparePatientPriorSpecimenCollectionValueSet = {
-    PreparePatientPriorSpecimenCollectionValueSet_VAL1HPost50GGlucosePO: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_VAL1HPost50GGlucosePO: new Coding({
         code: "703760002",
         display: "1H post 50 g glucose PO",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_VAL2HPost75GGlucosePO: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_VAL2HPost75GGlucosePO: new Coding({
         code: "703761003",
         display: "2H post 75 g glucose PO",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_VAL1HPost100GGlucosePO: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_VAL1HPost100GGlucosePO: new Coding({
         code: "703762005",
         display: "1H post 100 g glucose PO",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_AtTimeOfPeakLevel: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_AtTimeOfPeakLevel: new Coding({
         code: "703764006",
         display: "At time of peak level",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_AtTimeOfTroughLevel: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_AtTimeOfTroughLevel: new Coding({
         code: "703765007",
         display: "At time of trough level",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_VAL1HPost75GGlucosePO: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_VAL1HPost75GGlucosePO: new Coding({
         code: "703766008",
         display: "1H post 75 g glucose PO",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_OneHourAfterAMeal: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_OneHourAfterAMeal: new Coding({
         code: "703767004",
         display: "One hour after a meal",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_TwoHoursAfterAMeal: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_TwoHoursAfterAMeal: new Coding({
         code: "703768009",
         display: "Two hours after a meal",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_VAL1HPostDoseGlucose: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_VAL1HPostDoseGlucose: new Coding({
         code: "703769001",
         display: "1H post dose glucose",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_TwoHoursAfterGlucoseDose: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_TwoHoursAfterGlucoseDose: new Coding({
         code: "703770000",
         display: "Two hours after glucose dose",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_Pre100GGlucosePO: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_Pre100GGlucosePO: new Coding({
         code: "703771001",
         display: "pre 100 g glucose PO",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_VAL2HPost100GGlucosePO: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_VAL2HPost100GGlucosePO: new Coding({
         code: "703772008",
         display: "2H post 100 g glucose PO",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_ThreeHoursAfterGlucoseDose: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_ThreeHoursAfterGlucoseDose: new Coding({
         code: "703773003",
         display: "Three hours after glucose dose",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_VAL3HPost100GGlucosePO: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_VAL3HPost100GGlucosePO: new Coding({
         code: "703774009",
         display: "3H post 100 g glucose PO",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_VAL30MPost75GGlucosePO: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_VAL30MPost75GGlucosePO: new Coding({
         code: "703775005",
         display: "30M post 75 g glucose PO",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_ThirtyMinutesAfterResting: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_ThirtyMinutesAfterResting: new Coding({
         code: "707707000",
         display: "Thirty minutes after resting",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_OneHourAfterResting: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_OneHourAfterResting: new Coding({
         code: "707708005",
         display: "One hour after resting",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_NinetyMinutesAfterResting: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_NinetyMinutesAfterResting: new Coding({
         code: "707709002",
         display: "Ninety minutes after resting",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_TwentyMinutesAfterIncubation: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_TwentyMinutesAfterIncubation: new Coding({
         code: "707710007",
         display: "Twenty minutes after incubation",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_ThirtyMinutesAfterIncubation: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_ThirtyMinutesAfterIncubation: new Coding({
         code: "707712004",
         display: "Thirty minutes after incubation",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_OneHourAfterIncubation: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_OneHourAfterIncubation: new Coding({
         code: "707714003",
         display: "One hour after incubation",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_TwoHoursAfterIncubation: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_TwoHoursAfterIncubation: new Coding({
         code: "707715002",
         display: "Two hours after incubation",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_ThreeHoursAfterIncubation: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_ThreeHoursAfterIncubation: new Coding({
         code: "707716001",
         display: "Three hours after incubation",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_FourHoursAfterIncubation: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_FourHoursAfterIncubation: new Coding({
         code: "707717005",
         display: "Four hours after incubation",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_OneDayAfterIncubation: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_OneDayAfterIncubation: new Coding({
         code: "707718000",
         display: "One day after incubation",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_SevenDaysAfterIncubation: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_SevenDaysAfterIncubation: new Coding({
         code: "707719008",
         display: "Seven days after incubation",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_TwoHoursAfterPeritonealDialysis: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_TwoHoursAfterPeritonealDialysis: new Coding({
         code: "707720002",
         display: "Two hours after peritoneal dialysis",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_FourHoursAfterPeritonealDialysis: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_FourHoursAfterPeritonealDialysis: new Coding({
         code: "707721003",
         display: "Four hours after peritoneal dialysis",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_TwelveHoursAfterPeritonealDialysis: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_TwelveHoursAfterPeritonealDialysis: new Coding({
         code: "707722005",
         display: "Twelve hours after peritoneal dialysis",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_TwentyFourHoursAfterPeritonealDialysis: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_TwentyFourHoursAfterPeritonealDialysis: new Coding({
         code: "707723000",
         display: "Twenty four hours after peritoneal dialysis",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_VAL30MPostDoseCorticotropin: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_VAL30MPostDoseCorticotropin: new Coding({
         code: "707757008",
         display: "30M post dose corticotropin",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_VAL1HPostDoseCorticotropin: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_VAL1HPostDoseCorticotropin: new Coding({
         code: "707758003",
         display: "1H post dose corticotropin",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_VAL15MPreDoseOrnithine: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_VAL15MPreDoseOrnithine: new Coding({
         code: "707759006",
         display: "15M pre dose ornithine",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_AfterUreaDose: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_AfterUreaDose: new Coding({
         code: "707760001",
         display: "After urea dose",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_PreContrast: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_PreContrast: new Coding({
         code: "707761002",
         display: "Pre contrast",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_PreWashing: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_PreWashing: new Coding({
         code: "707762009",
         display: "Pre washing",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_AfterPrecipitation: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_AfterPrecipitation: new Coding({
         code: "707763004",
         display: "After precipitation",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_PostTransfusionReaction: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_PostTransfusionReaction: new Coding({
         code: "707764005",
         display: "Post transfusion reaction",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_OnVentilator: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_OnVentilator: new Coding({
         code: "707765006",
         display: "On ventilator",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_ImmediatelyAfterAdditionOfNormalPlasma: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_ImmediatelyAfterAdditionOfNormalPlasma: new Coding({
         code: "707815009",
         display: "Immediately after addition of normal plasma",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_ImmediatelyAfterAdditionOfProtamineSulfate: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_ImmediatelyAfterAdditionOfProtamineSulfate: new Coding({
         code: "707816005",
         display: "Immediately after addition of protamine sulfate",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_OnMenstrualCycleDay10: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_OnMenstrualCycleDay10: new Coding({
         code: "707817001",
         display: "On menstrual cycle day 10",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_OnMenstrualCycleDay11: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_OnMenstrualCycleDay11: new Coding({
         code: "707818006",
         display: "On menstrual cycle day 11",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_OnMenstrualCycleDay21: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_OnMenstrualCycleDay21: new Coding({
         code: "707819003",
         display: "On menstrual cycle day 21",
         system: "http://snomed.info/sct"
     }),
-    PreparePatientPriorSpecimenCollectionValueSet_OnMenstrualCycleDay3: Coding.FromStrict({
+    PreparePatientPriorSpecimenCollectionValueSet_OnMenstrualCycleDay3: new Coding({
         code: "707820009",
         display: "On menstrual cycle day 3",
         system: "http://snomed.info/sct"

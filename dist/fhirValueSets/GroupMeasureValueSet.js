@@ -13,7 +13,7 @@ export const GroupMeasureValueSet = {
     /**
      * Aggregated using Mean of participant values.
      */
-    group_measure_Mean: Coding.FromStrict({
+    group_measure_Mean: new Coding({
         code: "mean",
         display: "Mean",
         system: "http://hl7.org/fhir/group-measure"
@@ -21,7 +21,7 @@ export const GroupMeasureValueSet = {
     /**
      * Aggregated using Mean of study mean values.
      */
-    group_measure_MeanOfStudyMeans: Coding.FromStrict({
+    group_measure_MeanOfStudyMeans: new Coding({
         code: "mean-of-mean",
         display: "Mean of Study Means",
         system: "http://hl7.org/fhir/group-measure"
@@ -29,7 +29,7 @@ export const GroupMeasureValueSet = {
     /**
      * Aggregated using Mean of study median values.
      */
-    group_measure_MeanOfStudyMedins: Coding.FromStrict({
+    group_measure_MeanOfStudyMedins: new Coding({
         code: "mean-of-median",
         display: "Mean of Study Medins",
         system: "http://hl7.org/fhir/group-measure"
@@ -37,7 +37,7 @@ export const GroupMeasureValueSet = {
     /**
      * Aggregated using Median of participant values.
      */
-    group_measure_Median: Coding.FromStrict({
+    group_measure_Median: new Coding({
         code: "median",
         display: "Median",
         system: "http://hl7.org/fhir/group-measure"
@@ -45,7 +45,7 @@ export const GroupMeasureValueSet = {
     /**
      * Aggregated using Median of study mean values.
      */
-    group_measure_MedianOfStudyMeans: Coding.FromStrict({
+    group_measure_MedianOfStudyMeans: new Coding({
         code: "median-of-mean",
         display: "Median of Study Means",
         system: "http://hl7.org/fhir/group-measure"
@@ -53,7 +53,7 @@ export const GroupMeasureValueSet = {
     /**
      * Aggregated using Median of study median values.
      */
-    group_measure_MedianOfStudyMedians: Coding.FromStrict({
+    group_measure_MedianOfStudyMedians: new Coding({
         code: "median-of-median",
         display: "Median of Study Medians",
         system: "http://hl7.org/fhir/group-measure"

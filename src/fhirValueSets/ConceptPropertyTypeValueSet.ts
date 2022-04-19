@@ -13,7 +13,7 @@ export const ConceptPropertyTypeValueSet = {
   /**
    * The property value is a boolean true | false.
    */
-  concept_property_type_Boolean: Coding.FromStrict({
+  concept_property_type_Boolean: new Coding({
     code: "boolean",
     display: "boolean",
     system: "http://hl7.org/fhir/concept-property-type"
@@ -21,7 +21,7 @@ export const ConceptPropertyTypeValueSet = {
   /**
    * The property value is a code that identifies a concept defined in the code system.
    */
-  concept_property_type_CodeInternalReference: Coding.FromStrict({
+  concept_property_type_CodeInternalReference: new Coding({
     code: "code",
     display: "code (internal reference)",
     system: "http://hl7.org/fhir/concept-property-type"
@@ -29,7 +29,7 @@ export const ConceptPropertyTypeValueSet = {
   /**
    * The property  value is a code defined in an external code system. This may be used for translations, but is not the intent.
    */
-  concept_property_type_CodingExternalReference: Coding.FromStrict({
+  concept_property_type_CodingExternalReference: new Coding({
     code: "Coding",
     display: "Coding (external reference)",
     system: "http://hl7.org/fhir/concept-property-type"
@@ -37,7 +37,7 @@ export const ConceptPropertyTypeValueSet = {
   /**
    * The property is a date or a date + time.
    */
-  concept_property_type_DateTime: Coding.FromStrict({
+  concept_property_type_DateTime: new Coding({
     code: "dateTime",
     display: "dateTime",
     system: "http://hl7.org/fhir/concept-property-type"
@@ -45,7 +45,7 @@ export const ConceptPropertyTypeValueSet = {
   /**
    * The property value is a decimal number.
    */
-  concept_property_type_Decimal: Coding.FromStrict({
+  concept_property_type_Decimal: new Coding({
     code: "decimal",
     display: "decimal",
     system: "http://hl7.org/fhir/concept-property-type"
@@ -53,7 +53,7 @@ export const ConceptPropertyTypeValueSet = {
   /**
    * The property value is a string (often used to assign ranking values to concepts for supporting score assessments).
    */
-  concept_property_type_Integer: Coding.FromStrict({
+  concept_property_type_Integer: new Coding({
     code: "integer",
     display: "integer",
     system: "http://hl7.org/fhir/concept-property-type"
@@ -61,7 +61,7 @@ export const ConceptPropertyTypeValueSet = {
   /**
    * The property value is a string.
    */
-  concept_property_type_String: Coding.FromStrict({
+  concept_property_type_String: new Coding({
     code: "string",
     display: "string",
     system: "http://hl7.org/fhir/concept-property-type"

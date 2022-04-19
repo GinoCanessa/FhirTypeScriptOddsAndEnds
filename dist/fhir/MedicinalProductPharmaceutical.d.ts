@@ -132,11 +132,11 @@ export declare class MedicinalProductPharmaceuticalCharacteristics extends fhir.
     /**
      * Check if the current MedicinalProductPharmaceuticalCharacteristics contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductPharmaceuticalCharacteristics from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductPharmaceuticalCharacteristics): MedicinalProductPharmaceuticalCharacteristics;
+    static fromStrict(source: fhir.IMedicinalProductPharmaceuticalCharacteristics): MedicinalProductPharmaceuticalCharacteristics;
 }
 /**
  * A species specific time during which consumption of animal product is not appropriate.
@@ -162,11 +162,11 @@ export declare class MedicinalProductPharmaceuticalRouteOfAdministrationTargetSp
     /**
      * Check if the current MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod): MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod;
+    static fromStrict(source: fhir.IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod): MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod;
 }
 /**
  * A species for which this route applies.
@@ -187,11 +187,11 @@ export declare class MedicinalProductPharmaceuticalRouteOfAdministrationTargetSp
     /**
      * Check if the current MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies): MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies;
+    static fromStrict(source: fhir.IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies): MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies;
 }
 /**
  * The path by which the pharmaceutical product is taken into or makes contact with the body.
@@ -232,11 +232,11 @@ export declare class MedicinalProductPharmaceuticalRouteOfAdministration extends
     /**
      * Check if the current MedicinalProductPharmaceuticalRouteOfAdministration contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductPharmaceuticalRouteOfAdministration from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductPharmaceuticalRouteOfAdministration): MedicinalProductPharmaceuticalRouteOfAdministration;
+    static fromStrict(source: fhir.IMedicinalProductPharmaceuticalRouteOfAdministration): MedicinalProductPharmaceuticalRouteOfAdministration;
 }
 /**
  * A pharmaceutical product described in terms of its composition and dose form.
@@ -281,10 +281,10 @@ export declare class MedicinalProductPharmaceutical extends fhir.DomainResource 
     /**
      * Check if the current MedicinalProductPharmaceutical contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a MedicinalProductPharmaceutical from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IMedicinalProductPharmaceutical): MedicinalProductPharmaceutical;
+    static fromStrict(source: fhir.IMedicinalProductPharmaceutical): MedicinalProductPharmaceutical;
 }
 //# sourceMappingURL=MedicinalProductPharmaceutical.d.ts.map

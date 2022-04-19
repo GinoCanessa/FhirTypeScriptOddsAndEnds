@@ -13,7 +13,7 @@ export const FlagStatusValueSet = {
     /**
      * A current flag that should be displayed to a user. A system may use the category to determine which user roles should view the flag.
      */
-    flag_status_Active: Coding.FromStrict({
+    flag_status_Active: new Coding({
         code: "active",
         display: "Active",
         system: "http://hl7.org/fhir/flag-status"
@@ -21,7 +21,7 @@ export const FlagStatusValueSet = {
     /**
      * The flag was added in error and should no longer be displayed.
      */
-    flag_status_EnteredInError: Coding.FromStrict({
+    flag_status_EnteredInError: new Coding({
         code: "entered-in-error",
         display: "Entered in Error",
         system: "http://hl7.org/fhir/flag-status"
@@ -29,7 +29,7 @@ export const FlagStatusValueSet = {
     /**
      * The flag no longer needs to be displayed.
      */
-    flag_status_Inactive: Coding.FromStrict({
+    flag_status_Inactive: new Coding({
         code: "inactive",
         display: "Inactive",
         system: "http://hl7.org/fhir/flag-status"

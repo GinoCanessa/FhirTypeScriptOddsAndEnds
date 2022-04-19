@@ -87,11 +87,11 @@ export declare class TriggerDefinition extends fhir.FhirElement implements fhir.
     /**
      * Check if the current TriggerDefinition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a TriggerDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ITriggerDefinition): TriggerDefinition;
+    static fromStrict(source: fhir.ITriggerDefinition): TriggerDefinition;
 }
 /**
  * Code Values for the TriggerDefinition.type field

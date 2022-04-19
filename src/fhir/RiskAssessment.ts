@@ -189,18 +189,18 @@ export class RiskAssessmentPrediction extends fhir.BackboneElement implements fh
   /**
    * Check if the current RiskAssessmentPrediction contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a RiskAssessmentPrediction from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IRiskAssessmentPrediction):RiskAssessmentPrediction {
+  static override fromStrict(source:fhir.IRiskAssessmentPrediction):RiskAssessmentPrediction {
     var dest:RiskAssessmentPrediction = new RiskAssessmentPrediction(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `RiskAssessmentPrediction is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -323,20 +323,20 @@ export class RiskAssessment extends fhir.DomainResource implements fhir.IRiskAss
   /**
    * Check if the current RiskAssessment contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["subject"] === undefined) { missingElements.push("subject"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a RiskAssessment from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IRiskAssessment):RiskAssessment {
+  static override fromStrict(source:fhir.IRiskAssessment):RiskAssessment {
     var dest:RiskAssessment = new RiskAssessment(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `RiskAssessment is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

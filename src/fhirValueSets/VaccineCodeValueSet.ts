@@ -10,1342 +10,1342 @@ import { Coding } from '../fhir'
  * This identifies the vaccine substance administered - CVX codes.
  */
 export const VaccineCodeValueSet = {
-  sid_cvx_DTP: Coding.FromStrict({
+  sid_cvx_DTP: new Coding({
     code: "01",
     display: "DTP",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_OPV: Coding.FromStrict({
+  sid_cvx_OPV: new Coding({
     code: "02",
     display: "OPV",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_MMR: Coding.FromStrict({
+  sid_cvx_MMR: new Coding({
     code: "03",
     display: "MMR",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_MR: Coding.FromStrict({
+  sid_cvx_MR: new Coding({
     code: "04",
     display: "M/R",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_Measles: Coding.FromStrict({
+  sid_cvx_Measles: new Coding({
     code: "05",
     display: "measles",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_Rubella: Coding.FromStrict({
+  sid_cvx_Rubella: new Coding({
     code: "06",
     display: "rubella",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_Mumps: Coding.FromStrict({
+  sid_cvx_Mumps: new Coding({
     code: "07",
     display: "mumps",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HepBAdolescentOrPediatric: Coding.FromStrict({
+  sid_cvx_HepBAdolescentOrPediatric: new Coding({
     code: "08",
     display: "Hep B, adolescent or pediatric",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TdAdult2LfTetanusToxoidPreservativeFreeAdsorbed: Coding.FromStrict({
+  sid_cvx_TdAdult2LfTetanusToxoidPreservativeFreeAdsorbed: new Coding({
     code: "09",
     display: "Td (adult), 2 Lf tetanus toxoid, preservative free, adsorbed",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_IPV: Coding.FromStrict({
+  sid_cvx_IPV: new Coding({
     code: "10",
     display: "IPV",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_PneumococcalConjugatePCV7: Coding.FromStrict({
+  sid_cvx_PneumococcalConjugatePCV7: new Coding({
     code: "100",
     display: "pneumococcal conjugate PCV 7",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TyphoidViCPs: Coding.FromStrict({
+  sid_cvx_TyphoidViCPs: new Coding({
     code: "101",
     display: "typhoid, ViCPs",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_DTPHibHepB: Coding.FromStrict({
+  sid_cvx_DTPHibHepB: new Coding({
     code: "102",
     display: "DTP-Hib-Hep B",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_MeningococcalCConjugate: Coding.FromStrict({
+  sid_cvx_MeningococcalCConjugate: new Coding({
     code: "103",
     display: "meningococcal C conjugate",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HepAHepB: Coding.FromStrict({
+  sid_cvx_HepAHepB: new Coding({
     code: "104",
     display: "Hep A-Hep B",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_VacciniaSmallpoxDiluted: Coding.FromStrict({
+  sid_cvx_VacciniaSmallpoxDiluted: new Coding({
     code: "105",
     display: "vaccinia (smallpox) diluted",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_DTaP5PertussisAntigens: Coding.FromStrict({
+  sid_cvx_DTaP5PertussisAntigens: new Coding({
     code: "106",
     display: "DTaP, 5 pertussis antigens",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_DTaPUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_DTaPUnspecifiedFormulation: new Coding({
     code: "107",
     display: "DTaP, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_MeningococcalACWYUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_MeningococcalACWYUnspecifiedFormulation: new Coding({
     code: "108",
     display: "meningococcal ACWY, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_PneumococcalUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_PneumococcalUnspecifiedFormulation: new Coding({
     code: "109",
     display: "pneumococcal, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_Pertussis: Coding.FromStrict({
+  sid_cvx_Pertussis: new Coding({
     code: "11",
     display: "pertussis",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_DTaPHepBIPV: Coding.FromStrict({
+  sid_cvx_DTaPHepBIPV: new Coding({
     code: "110",
     display: "DTaP-Hep B-IPV",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaLiveIntranasal: Coding.FromStrict({
+  sid_cvx_InfluenzaLiveIntranasal: new Coding({
     code: "111",
     display: "influenza, live, intranasal",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TetanusToxoidUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_TetanusToxoidUnspecifiedFormulation: new Coding({
     code: "112",
     display: "tetanus toxoid, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TdAdult5LfTetanusToxoidPreservativeFreeAdsorbed: Coding.FromStrict({
+  sid_cvx_TdAdult5LfTetanusToxoidPreservativeFreeAdsorbed: new Coding({
     code: "113",
     display: "Td (adult), 5 Lf tetanus toxoid, preservative free, adsorbed",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_MeningococcalMCV4P: Coding.FromStrict({
+  sid_cvx_MeningococcalMCV4P: new Coding({
     code: "114",
     display: "meningococcal MCV4P",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_Tdap: Coding.FromStrict({
+  sid_cvx_Tdap: new Coding({
     code: "115",
     display: "Tdap",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_RotavirusPentavalent: Coding.FromStrict({
+  sid_cvx_RotavirusPentavalent: new Coding({
     code: "116",
     display: "rotavirus, pentavalent",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_VZIGIND: Coding.FromStrict({
+  sid_cvx_VZIGIND: new Coding({
     code: "117",
     display: "VZIG (IND)",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HPVBivalent: Coding.FromStrict({
+  sid_cvx_HPVBivalent: new Coding({
     code: "118",
     display: "HPV, bivalent",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_RotavirusMonovalent: Coding.FromStrict({
+  sid_cvx_RotavirusMonovalent: new Coding({
     code: "119",
     display: "rotavirus, monovalent",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_DiphtheriaAntitoxin: Coding.FromStrict({
+  sid_cvx_DiphtheriaAntitoxin: new Coding({
     code: "12",
     display: "diphtheria antitoxin",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_DTaPHibIPV: Coding.FromStrict({
+  sid_cvx_DTaPHibIPV: new Coding({
     code: "120",
     display: "DTaP-Hib-IPV",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_ZosterLive: Coding.FromStrict({
+  sid_cvx_ZosterLive: new Coding({
     code: "121",
     display: "zoster live",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_RotavirusUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_RotavirusUnspecifiedFormulation: new Coding({
     code: "122",
     display: "rotavirus, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaH5N11203: Coding.FromStrict({
+  sid_cvx_InfluenzaH5N11203: new Coding({
     code: "123",
     display: "influenza, H5N1-1203",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_NovelInfluenzaH1N109Nasal: Coding.FromStrict({
+  sid_cvx_NovelInfluenzaH1N109Nasal: new Coding({
     code: "125",
     display: "Novel Influenza-H1N1-09, nasal",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_NovelInfluenzaH1N109PreservativeFree: Coding.FromStrict({
+  sid_cvx_NovelInfluenzaH1N109PreservativeFree: new Coding({
     code: "126",
     display: "Novel influenza-H1N1-09, preservative-free",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_NovelInfluenzaH1N109: Coding.FromStrict({
+  sid_cvx_NovelInfluenzaH1N109: new Coding({
     code: "127",
     display: "Novel influenza-H1N1-09",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_NovelInfluenzaH1N109AllFormulations: Coding.FromStrict({
+  sid_cvx_NovelInfluenzaH1N109AllFormulations: new Coding({
     code: "128",
     display: "Novel Influenza-H1N1-09, all formulations",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_JapaneseEncephalitisUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_JapaneseEncephalitisUnspecifiedFormulation: new Coding({
     code: "129",
     display: "Japanese Encephalitis, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TIG: Coding.FromStrict({
+  sid_cvx_TIG: new Coding({
     code: "13",
     display: "TIG",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_DTaPIPV: Coding.FromStrict({
+  sid_cvx_DTaPIPV: new Coding({
     code: "130",
     display: "DTaP-IPV",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TyphusHistorical: Coding.FromStrict({
+  sid_cvx_TyphusHistorical: new Coding({
     code: "131",
     display: "typhus, historical",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_DTaPIPVHIBHEPBHistorical: Coding.FromStrict({
+  sid_cvx_DTaPIPVHIBHEPBHistorical: new Coding({
     code: "132",
     display: "DTaP-IPV-HIB-HEP B, historical",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_PneumococcalConjugatePCV13: Coding.FromStrict({
+  sid_cvx_PneumococcalConjugatePCV13: new Coding({
     code: "133",
     display: "Pneumococcal conjugate PCV 13",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_JapaneseEncephalitisIM: Coding.FromStrict({
+  sid_cvx_JapaneseEncephalitisIM: new Coding({
     code: "134",
     display: "Japanese Encephalitis IM",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaHighDoseSeasonal: Coding.FromStrict({
+  sid_cvx_InfluenzaHighDoseSeasonal: new Coding({
     code: "135",
     display: "Influenza, high dose seasonal",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_MeningococcalMCV4O: Coding.FromStrict({
+  sid_cvx_MeningococcalMCV4O: new Coding({
     code: "136",
     display: "Meningococcal MCV4O",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HPVUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_HPVUnspecifiedFormulation: new Coding({
     code: "137",
     display: "HPV, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TdAdult: Coding.FromStrict({
+  sid_cvx_TdAdult: new Coding({
     code: "138",
     display: "Td (adult)",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TdAdultUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_TdAdultUnspecifiedFormulation: new Coding({
     code: "139",
     display: "Td(adult) unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_IGUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_IGUnspecifiedFormulation: new Coding({
     code: "14",
     display: "IG, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaSeasonalInjectablePreservativeFree: Coding.FromStrict({
+  sid_cvx_InfluenzaSeasonalInjectablePreservativeFree: new Coding({
     code: "140",
     display: "Influenza, seasonal, injectable, preservative free",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaSeasonalInjectable: Coding.FromStrict({
+  sid_cvx_InfluenzaSeasonalInjectable: new Coding({
     code: "141",
     display: "Influenza, seasonal, injectable",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TetanusToxoidNotAdsorbed: Coding.FromStrict({
+  sid_cvx_TetanusToxoidNotAdsorbed: new Coding({
     code: "142",
     display: "tetanus toxoid, not adsorbed",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_AdenovirusTypes4And7: Coding.FromStrict({
+  sid_cvx_AdenovirusTypes4And7: new Coding({
     code: "143",
     display: "Adenovirus types 4 and 7",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaSeasonalIntradermalPreservativeFree: Coding.FromStrict({
+  sid_cvx_InfluenzaSeasonalIntradermalPreservativeFree: new Coding({
     code: "144",
     display: "influenza, seasonal, intradermal, preservative free",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_RSVMAbNew: Coding.FromStrict({
+  sid_cvx_RSVMAbNew: new Coding({
     code: "145",
     display: "RSV-MAb (new)",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_DTaPIPVHibHepB: Coding.FromStrict({
+  sid_cvx_DTaPIPVHibHepB: new Coding({
     code: "146",
     display: "DTaP,IPV,Hib,HepB",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_MeningococcalMCV4UnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_MeningococcalMCV4UnspecifiedFormulation: new Coding({
     code: "147",
     display: "meningococcal MCV4, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_MeningococcalCYHIBPRP: Coding.FromStrict({
+  sid_cvx_MeningococcalCYHIBPRP: new Coding({
     code: "148",
     display: "Meningococcal C/Y-HIB PRP",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaLiveIntranasalQuadrivalent: Coding.FromStrict({
+  sid_cvx_InfluenzaLiveIntranasalQuadrivalent: new Coding({
     code: "149",
     display: "influenza, live, intranasal, quadrivalent",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaSplitInclPurifiedSurfaceAntigen: Coding.FromStrict({
+  sid_cvx_InfluenzaSplitInclPurifiedSurfaceAntigen: new Coding({
     code: "15",
     display: "influenza, split (incl. purified surface antigen)",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaInjectableQuadrivalentPreservativeFree: Coding.FromStrict({
+  sid_cvx_InfluenzaInjectableQuadrivalentPreservativeFree: new Coding({
     code: "150",
     display: "influenza, injectable, quadrivalent, preservative free",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaNasalUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_InfluenzaNasalUnspecifiedFormulation: new Coding({
     code: "151",
     display: "influenza nasal, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_PneumococcalConjugateUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_PneumococcalConjugateUnspecifiedFormulation: new Coding({
     code: "152",
     display: "Pneumococcal Conjugate, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaInjectableMDCKPreservativeFree: Coding.FromStrict({
+  sid_cvx_InfluenzaInjectableMDCKPreservativeFree: new Coding({
     code: "153",
     display: "Influenza, injectable, MDCK, preservative free",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HepAIG: Coding.FromStrict({
+  sid_cvx_HepAIG: new Coding({
     code: "154",
     display: "Hep A, IG",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaRecombinantInjectablePreservativeFree: Coding.FromStrict({
+  sid_cvx_InfluenzaRecombinantInjectablePreservativeFree: new Coding({
     code: "155",
     display: "influenza, recombinant, injectable, preservative free",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_RhoDIG: Coding.FromStrict({
+  sid_cvx_RhoDIG: new Coding({
     code: "156",
     display: "Rho(D)-IG",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_RhoDIGIM: Coding.FromStrict({
+  sid_cvx_RhoDIGIM: new Coding({
     code: "157",
     display: "Rho(D) -IG IM",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaInjectableQuadrivalent: Coding.FromStrict({
+  sid_cvx_InfluenzaInjectableQuadrivalent: new Coding({
     code: "158",
     display: "influenza, injectable, quadrivalent",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_RhoDUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_RhoDUnspecifiedFormulation: new Coding({
     code: "159",
     display: "Rho(D) - Unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaWhole: Coding.FromStrict({
+  sid_cvx_InfluenzaWhole: new Coding({
     code: "16",
     display: "influenza, whole",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaAMonovalentH5N1ADJUVANTED2013: Coding.FromStrict({
+  sid_cvx_InfluenzaAMonovalentH5N1ADJUVANTED2013: new Coding({
     code: "160",
     display: "Influenza A monovalent (H5N1), ADJUVANTED-2013",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaInjectableQuadrivalentPreservativeFreePediatric: Coding.FromStrict({
+  sid_cvx_InfluenzaInjectableQuadrivalentPreservativeFreePediatric: new Coding({
     code: "161",
     display: "Influenza, injectable,quadrivalent, preservative free, pediatric",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_MeningococcalBRecombinant: Coding.FromStrict({
+  sid_cvx_MeningococcalBRecombinant: new Coding({
     code: "162",
     display: "meningococcal B, recombinant",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_MeningococcalBOMV: Coding.FromStrict({
+  sid_cvx_MeningococcalBOMV: new Coding({
     code: "163",
     display: "meningococcal B, OMV",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_MeningococcalBUnspecified: Coding.FromStrict({
+  sid_cvx_MeningococcalBUnspecified: new Coding({
     code: "164",
     display: "meningococcal B, unspecified",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HPV9: Coding.FromStrict({
+  sid_cvx_HPV9: new Coding({
     code: "165",
     display: "HPV9",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaIntradermalQuadrivalentPreservativeFree: Coding.FromStrict({
+  sid_cvx_InfluenzaIntradermalQuadrivalentPreservativeFree: new Coding({
     code: "166",
     display: "influenza, intradermal, quadrivalent, preservative free",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_MeningococcalUnknownSerogroups: Coding.FromStrict({
+  sid_cvx_MeningococcalUnknownSerogroups: new Coding({
     code: "167",
     display: "meningococcal, unknown serogroups",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaTrivalentAdjuvanted: Coding.FromStrict({
+  sid_cvx_InfluenzaTrivalentAdjuvanted: new Coding({
     code: "168",
     display: "influenza, trivalent, adjuvanted",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HepALiveAttenuated: Coding.FromStrict({
+  sid_cvx_HepALiveAttenuated: new Coding({
     code: "169",
     display: "Hep A, live attenuated",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HibUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_HibUnspecifiedFormulation: new Coding({
     code: "17",
     display: "Hib, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_DTAPIPVHIBNonUS: Coding.FromStrict({
+  sid_cvx_DTAPIPVHIBNonUS: new Coding({
     code: "170",
     display: "DTAP/IPV/HIB - non-US",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaInjectableMDCKPreservativeFreeQuadrivalent: Coding.FromStrict({
+  sid_cvx_InfluenzaInjectableMDCKPreservativeFreeQuadrivalent: new Coding({
     code: "171",
     display: "Influenza, injectable, MDCK, preservative free, quadrivalent",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_CholeraWCRBS: Coding.FromStrict({
+  sid_cvx_CholeraWCRBS: new Coding({
     code: "172",
     display: "cholera, WC-rBS",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_CholeraBivWC: Coding.FromStrict({
+  sid_cvx_CholeraBivWC: new Coding({
     code: "173",
     display: "cholera, BivWC",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_CholeraLiveAttenuated: Coding.FromStrict({
+  sid_cvx_CholeraLiveAttenuated: new Coding({
     code: "174",
     display: "cholera, live attenuated",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_RabiesIMDiploidCellCulture: Coding.FromStrict({
+  sid_cvx_RabiesIMDiploidCellCulture: new Coding({
     code: "175",
     display: "Rabies - IM Diploid cell culture",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_RabiesIMFibroblastCulture: Coding.FromStrict({
+  sid_cvx_RabiesIMFibroblastCulture: new Coding({
     code: "176",
     display: "Rabies - IM fibroblast culture",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_PCV10: Coding.FromStrict({
+  sid_cvx_PCV10: new Coding({
     code: "177",
     display: "PCV10",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_OPVBivalent: Coding.FromStrict({
+  sid_cvx_OPVBivalent: new Coding({
     code: "178",
     display: "OPV bivalent",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_OPVMonovalentUnspecified: Coding.FromStrict({
+  sid_cvx_OPVMonovalentUnspecified: new Coding({
     code: "179",
     display: "OPV ,monovalent, unspecified",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_RabiesIntramuscularInjection: Coding.FromStrict({
+  sid_cvx_RabiesIntramuscularInjection: new Coding({
     code: "18",
     display: "rabies, intramuscular injection",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TetanusImmuneGlobulin: Coding.FromStrict({
+  sid_cvx_TetanusImmuneGlobulin: new Coding({
     code: "180",
     display: "tetanus immune globulin",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_AnthraxImmuneGlobulin: Coding.FromStrict({
+  sid_cvx_AnthraxImmuneGlobulin: new Coding({
     code: "181",
     display: "anthrax immune globulin",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_OPVUnspecified: Coding.FromStrict({
+  sid_cvx_OPVUnspecified: new Coding({
     code: "182",
     display: "OPV, Unspecified",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_YellowFeverVaccineAlt: Coding.FromStrict({
+  sid_cvx_YellowFeverVaccineAlt: new Coding({
     code: "183",
     display: "Yellow fever vaccine - alt",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_YellowFeverUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_YellowFeverUnspecifiedFormulation: new Coding({
     code: "184",
     display: "Yellow fever, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaRecombinantQuadrivalentInjectablePreservativeFree: Coding.FromStrict({
+  sid_cvx_InfluenzaRecombinantQuadrivalentInjectablePreservativeFree: new Coding({
     code: "185",
     display: "influenza, recombinant, quadrivalent,injectable, preservative free",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaInjectableMDCKQuadrivalentPreservative: Coding.FromStrict({
+  sid_cvx_InfluenzaInjectableMDCKQuadrivalentPreservative: new Coding({
     code: "186",
     display: "Influenza, injectable, MDCK, quadrivalent, preservative",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_ZosterRecombinant: Coding.FromStrict({
+  sid_cvx_ZosterRecombinant: new Coding({
     code: "187",
     display: "zoster recombinant",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_ZosterUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_ZosterUnspecifiedFormulation: new Coding({
     code: "188",
     display: "zoster, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HepBCpG: Coding.FromStrict({
+  sid_cvx_HepBCpG: new Coding({
     code: "189",
     display: "HepB-CpG",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_BCG: Coding.FromStrict({
+  sid_cvx_BCG: new Coding({
     code: "19",
     display: "BCG",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TyphoidConjugateVaccineTCV: Coding.FromStrict({
+  sid_cvx_TyphoidConjugateVaccineTCV: new Coding({
     code: "190",
     display: "Typhoid conjugate vaccine (TCV)",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_MeningococcalAPolysaccharideNonUS: Coding.FromStrict({
+  sid_cvx_MeningococcalAPolysaccharideNonUS: new Coding({
     code: "191",
     display: "meningococcal A polysaccharide (non-US)",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_MeningococcalACPolysaccharideNonUS: Coding.FromStrict({
+  sid_cvx_MeningococcalACPolysaccharideNonUS: new Coding({
     code: "192",
     display: "meningococcal AC polysaccharide (non-US)",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HepAHepBPediatricAdolescent: Coding.FromStrict({
+  sid_cvx_HepAHepBPediatricAdolescent: new Coding({
     code: "193",
     display: "Hep A-Hep B, pediatric/adolescent",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_DTaP: Coding.FromStrict({
+  sid_cvx_DTaP: new Coding({
     code: "20",
     display: "DTaP",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_Varicella: Coding.FromStrict({
+  sid_cvx_Varicella: new Coding({
     code: "21",
     display: "varicella",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_DTPHib: Coding.FromStrict({
+  sid_cvx_DTPHib: new Coding({
     code: "22",
     display: "DTP-Hib",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_Plague: Coding.FromStrict({
+  sid_cvx_Plague: new Coding({
     code: "23",
     display: "plague",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_Anthrax: Coding.FromStrict({
+  sid_cvx_Anthrax: new Coding({
     code: "24",
     display: "anthrax",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TyphoidOral: Coding.FromStrict({
+  sid_cvx_TyphoidOral: new Coding({
     code: "25",
     display: "typhoid, oral",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_CholeraUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_CholeraUnspecifiedFormulation: new Coding({
     code: "26",
     display: "cholera, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_BotulinumAntitoxin: Coding.FromStrict({
+  sid_cvx_BotulinumAntitoxin: new Coding({
     code: "27",
     display: "botulinum antitoxin",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_DTPediatric: Coding.FromStrict({
+  sid_cvx_DTPediatric: new Coding({
     code: "28",
     display: "DT (pediatric)",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_CMVIG: Coding.FromStrict({
+  sid_cvx_CMVIG: new Coding({
     code: "29",
     display: "CMVIG",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HBIG: Coding.FromStrict({
+  sid_cvx_HBIG: new Coding({
     code: "30",
     display: "HBIG",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HepAPediatricUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_HepAPediatricUnspecifiedFormulation: new Coding({
     code: "31",
     display: "Hep A, pediatric, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_MeningococcalMPSV4: Coding.FromStrict({
+  sid_cvx_MeningococcalMPSV4: new Coding({
     code: "32",
     display: "meningococcal MPSV4",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_PneumococcalPolysaccharidePPV23: Coding.FromStrict({
+  sid_cvx_PneumococcalPolysaccharidePPV23: new Coding({
     code: "33",
     display: "pneumococcal polysaccharide PPV23",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_RIG: Coding.FromStrict({
+  sid_cvx_RIG: new Coding({
     code: "34",
     display: "RIG",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TetanusToxoidAdsorbed: Coding.FromStrict({
+  sid_cvx_TetanusToxoidAdsorbed: new Coding({
     code: "35",
     display: "tetanus toxoid, adsorbed",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_VZIG: Coding.FromStrict({
+  sid_cvx_VZIG: new Coding({
     code: "36",
     display: "VZIG",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_YellowFever: Coding.FromStrict({
+  sid_cvx_YellowFever: new Coding({
     code: "37",
     display: "yellow fever",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_RubellaMumps: Coding.FromStrict({
+  sid_cvx_RubellaMumps: new Coding({
     code: "38",
     display: "rubella/mumps",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_JapaneseEncephalitisSC: Coding.FromStrict({
+  sid_cvx_JapaneseEncephalitisSC: new Coding({
     code: "39",
     display: "Japanese encephalitis SC",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_RabiesIntradermalInjection: Coding.FromStrict({
+  sid_cvx_RabiesIntradermalInjection: new Coding({
     code: "40",
     display: "rabies, intradermal injection",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TyphoidParenteral: Coding.FromStrict({
+  sid_cvx_TyphoidParenteral: new Coding({
     code: "41",
     display: "typhoid, parenteral",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HepBAdolescentHighRiskInfant: Coding.FromStrict({
+  sid_cvx_HepBAdolescentHighRiskInfant: new Coding({
     code: "42",
     display: "Hep B, adolescent/high risk infant",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HepBAdult: Coding.FromStrict({
+  sid_cvx_HepBAdult: new Coding({
     code: "43",
     display: "Hep B, adult",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HepBDialysis: Coding.FromStrict({
+  sid_cvx_HepBDialysis: new Coding({
     code: "44",
     display: "Hep B, dialysis",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HepBUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_HepBUnspecifiedFormulation: new Coding({
     code: "45",
     display: "Hep B, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HibPRPD: Coding.FromStrict({
+  sid_cvx_HibPRPD: new Coding({
     code: "46",
     display: "Hib (PRP-D)",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HibHbOC: Coding.FromStrict({
+  sid_cvx_HibHbOC: new Coding({
     code: "47",
     display: "Hib (HbOC)",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HibPRPT: Coding.FromStrict({
+  sid_cvx_HibPRPT: new Coding({
     code: "48",
     display: "Hib (PRP-T)",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HibPRPOMP: Coding.FromStrict({
+  sid_cvx_HibPRPOMP: new Coding({
     code: "49",
     display: "Hib (PRP-OMP)",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_DTaPHib: Coding.FromStrict({
+  sid_cvx_DTaPHib: new Coding({
     code: "50",
     display: "DTaP-Hib",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HibHepB: Coding.FromStrict({
+  sid_cvx_HibHepB: new Coding({
     code: "51",
     display: "Hib-Hep B",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HepAAdult: Coding.FromStrict({
+  sid_cvx_HepAAdult: new Coding({
     code: "52",
     display: "Hep A, adult",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TyphoidParenteralAKDUSMilitary: Coding.FromStrict({
+  sid_cvx_TyphoidParenteralAKDUSMilitary: new Coding({
     code: "53",
     display: "typhoid, parenteral, AKD (U.S. military)",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_AdenovirusType4: Coding.FromStrict({
+  sid_cvx_AdenovirusType4: new Coding({
     code: "54",
     display: "adenovirus, type 4",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_AdenovirusType7: Coding.FromStrict({
+  sid_cvx_AdenovirusType7: new Coding({
     code: "55",
     display: "adenovirus, type 7",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_DengueFever: Coding.FromStrict({
+  sid_cvx_DengueFever: new Coding({
     code: "56",
     display: "dengue fever",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_Hantavirus: Coding.FromStrict({
+  sid_cvx_Hantavirus: new Coding({
     code: "57",
     display: "hantavirus",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HepC: Coding.FromStrict({
+  sid_cvx_HepC: new Coding({
     code: "58",
     display: "Hep C",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HepE: Coding.FromStrict({
+  sid_cvx_HepE: new Coding({
     code: "59",
     display: "Hep E",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HerpesSimplex2: Coding.FromStrict({
+  sid_cvx_HerpesSimplex2: new Coding({
     code: "60",
     display: "herpes simplex 2",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HIV: Coding.FromStrict({
+  sid_cvx_HIV: new Coding({
     code: "61",
     display: "HIV",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HPVQuadrivalent: Coding.FromStrict({
+  sid_cvx_HPVQuadrivalent: new Coding({
     code: "62",
     display: "HPV, quadrivalent",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_JuninVirus: Coding.FromStrict({
+  sid_cvx_JuninVirus: new Coding({
     code: "63",
     display: "Junin virus",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_Leishmaniasis: Coding.FromStrict({
+  sid_cvx_Leishmaniasis: new Coding({
     code: "64",
     display: "leishmaniasis",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_Leprosy: Coding.FromStrict({
+  sid_cvx_Leprosy: new Coding({
     code: "65",
     display: "leprosy",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_LymeDisease: Coding.FromStrict({
+  sid_cvx_LymeDisease: new Coding({
     code: "66",
     display: "Lyme disease",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_Malaria: Coding.FromStrict({
+  sid_cvx_Malaria: new Coding({
     code: "67",
     display: "malaria",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_Melanoma: Coding.FromStrict({
+  sid_cvx_Melanoma: new Coding({
     code: "68",
     display: "melanoma",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_Parainfluenza3: Coding.FromStrict({
+  sid_cvx_Parainfluenza3: new Coding({
     code: "69",
     display: "parainfluenza-3",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_QFever: Coding.FromStrict({
+  sid_cvx_QFever: new Coding({
     code: "70",
     display: "Q fever",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_RSVIGIV: Coding.FromStrict({
+  sid_cvx_RSVIGIV: new Coding({
     code: "71",
     display: "RSV-IGIV",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_RheumaticFever: Coding.FromStrict({
+  sid_cvx_RheumaticFever: new Coding({
     code: "72",
     display: "rheumatic fever",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_RiftValleyFever: Coding.FromStrict({
+  sid_cvx_RiftValleyFever: new Coding({
     code: "73",
     display: "Rift Valley fever",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_RotavirusTetravalent: Coding.FromStrict({
+  sid_cvx_RotavirusTetravalent: new Coding({
     code: "74",
     display: "rotavirus, tetravalent",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_VacciniaSmallpox: Coding.FromStrict({
+  sid_cvx_VacciniaSmallpox: new Coding({
     code: "75",
     display: "vaccinia (smallpox)",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_StaphylococcusBacterioLysate: Coding.FromStrict({
+  sid_cvx_StaphylococcusBacterioLysate: new Coding({
     code: "76",
     display: "Staphylococcus bacterio lysate",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TickBorneEncephalitis: Coding.FromStrict({
+  sid_cvx_TickBorneEncephalitis: new Coding({
     code: "77",
     display: "tick-borne encephalitis",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TularemiaVaccine: Coding.FromStrict({
+  sid_cvx_TularemiaVaccine: new Coding({
     code: "78",
     display: "tularemia vaccine",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_VacciniaImmuneGlobulin: Coding.FromStrict({
+  sid_cvx_VacciniaImmuneGlobulin: new Coding({
     code: "79",
     display: "vaccinia immune globulin",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_VEELive: Coding.FromStrict({
+  sid_cvx_VEELive: new Coding({
     code: "80",
     display: "VEE, live",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_AS03Adjuvant: Coding.FromStrict({
+  sid_cvx_AS03Adjuvant: new Coding({
     code: "801",
     display: "AS03 Adjuvant",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_VEEInactivated: Coding.FromStrict({
+  sid_cvx_VEEInactivated: new Coding({
     code: "81",
     display: "VEE, inactivated",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_AdenovirusUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_AdenovirusUnspecifiedFormulation: new Coding({
     code: "82",
     display: "adenovirus, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HepAPedAdol2Dose: Coding.FromStrict({
+  sid_cvx_HepAPedAdol2Dose: new Coding({
     code: "83",
     display: "Hep A, ped/adol, 2 dose",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HepAPedAdol3Dose: Coding.FromStrict({
+  sid_cvx_HepAPedAdol3Dose: new Coding({
     code: "84",
     display: "Hep A, ped/adol, 3 dose",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_HepAUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_HepAUnspecifiedFormulation: new Coding({
     code: "85",
     display: "Hep A, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_IG: Coding.FromStrict({
+  sid_cvx_IG: new Coding({
     code: "86",
     display: "IG",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_IGIV: Coding.FromStrict({
+  sid_cvx_IGIV: new Coding({
     code: "87",
     display: "IGIV",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_InfluenzaUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_InfluenzaUnspecifiedFormulation: new Coding({
     code: "88",
     display: "influenza, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_PolioUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_PolioUnspecifiedFormulation: new Coding({
     code: "89",
     display: "polio, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_RabiesUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_RabiesUnspecifiedFormulation: new Coding({
     code: "90",
     display: "rabies, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TyphoidUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_TyphoidUnspecifiedFormulation: new Coding({
     code: "91",
     display: "typhoid, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_VEEUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_VEEUnspecifiedFormulation: new Coding({
     code: "92",
     display: "VEE, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_RSVMAb: Coding.FromStrict({
+  sid_cvx_RSVMAb: new Coding({
     code: "93",
     display: "RSV-MAb",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_MMRV: Coding.FromStrict({
+  sid_cvx_MMRV: new Coding({
     code: "94",
     display: "MMRV",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TSTOTTineTest: Coding.FromStrict({
+  sid_cvx_TSTOTTineTest: new Coding({
     code: "95",
     display: "TST-OT tine test",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TSTPPDIntradermal: Coding.FromStrict({
+  sid_cvx_TSTPPDIntradermal: new Coding({
     code: "96",
     display: "TST-PPD intradermal",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TSTPPDTineTest: Coding.FromStrict({
+  sid_cvx_TSTPPDTineTest: new Coding({
     code: "97",
     display: "TST-PPD tine test",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_TSTUnspecifiedFormulation: Coding.FromStrict({
+  sid_cvx_TSTUnspecifiedFormulation: new Coding({
     code: "98",
     display: "TST, unspecified formulation",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_RESERVEDDoNotUse: Coding.FromStrict({
+  sid_cvx_RESERVEDDoNotUse: new Coding({
     code: "99",
     display: "RESERVED - do not use",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_NoVaccineAdministered: Coding.FromStrict({
+  sid_cvx_NoVaccineAdministered: new Coding({
     code: "998",
     display: "no vaccine administered",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  sid_cvx_Unknown: Coding.FromStrict({
+  sid_cvx_Unknown: new Coding({
     code: "999",
     display: "unknown",
     system: "http://hl7.org/fhir/sid/cvx"
   }),
-  VaccineCodeValueSet_Agrippal: Coding.FromStrict({
+  VaccineCodeValueSet_Agrippal: new Coding({
     code: "AGRPAL",
     display: "Agrippal",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Avaxim: Coding.FromStrict({
+  VaccineCodeValueSet_Avaxim: new Coding({
     code: "AVAXM",
     display: "Avaxim",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_BCG: Coding.FromStrict({
+  VaccineCodeValueSet_BCG: new Coding({
     code: "BCG",
     display: "BCG",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_CDT: Coding.FromStrict({
+  VaccineCodeValueSet_CDT: new Coding({
     code: "CDT",
     display: "CDT",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_COMVAX: Coding.FromStrict({
+  VaccineCodeValueSet_COMVAX: new Coding({
     code: "CMX",
     display: "COMVAX",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_TripleAntigen: Coding.FromStrict({
+  VaccineCodeValueSet_TripleAntigen: new Coding({
     code: "DTP",
     display: "Triple Antigen",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_DTPa: Coding.FromStrict({
+  VaccineCodeValueSet_DTPa: new Coding({
     code: "DTPA",
     display: "DTPa",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_EngerixB: Coding.FromStrict({
+  VaccineCodeValueSet_EngerixB: new Coding({
     code: "ENGP",
     display: "Engerix B",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Fluarix: Coding.FromStrict({
+  VaccineCodeValueSet_Fluarix: new Coding({
     code: "FLRIX",
     display: "Fluarix",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Fluvax: Coding.FromStrict({
+  VaccineCodeValueSet_Fluvax: new Coding({
     code: "FLUVAX",
     display: "Fluvax",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Fluvirin: Coding.FromStrict({
+  VaccineCodeValueSet_Fluvirin: new Coding({
     code: "FLVRN",
     display: "Fluvirin",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_FluvaxJunior: Coding.FromStrict({
+  VaccineCodeValueSet_FluvaxJunior: new Coding({
     code: "FVXJNR",
     display: "Fluvax Junior",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Diphtheria: Coding.FromStrict({
+  VaccineCodeValueSet_Diphtheria: new Coding({
     code: "GNDIP",
     display: "Diphtheria",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Influenza: Coding.FromStrict({
+  VaccineCodeValueSet_Influenza: new Coding({
     code: "GNFLU",
     display: "Influenza",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_HepatitisB: Coding.FromStrict({
+  VaccineCodeValueSet_HepatitisB: new Coding({
     code: "GNHEP",
     display: "Hepatitis B",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_HIB: Coding.FromStrict({
+  VaccineCodeValueSet_HIB: new Coding({
     code: "GNHIB",
     display: "HIB",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_HepatitisA: Coding.FromStrict({
+  VaccineCodeValueSet_HepatitisA: new Coding({
     code: "GNHPA",
     display: "Hepatitis A",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_JapaneseEncephalitis: Coding.FromStrict({
+  VaccineCodeValueSet_JapaneseEncephalitis: new Coding({
     code: "GNJEN",
     display: "Japanese Encephalitis",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Measles: Coding.FromStrict({
+  VaccineCodeValueSet_Measles: new Coding({
     code: "GNMEA",
     display: "Measles",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_MeningococcalC: Coding.FromStrict({
+  VaccineCodeValueSet_MeningococcalC: new Coding({
     code: "GNMEN",
     display: "Meningococcal C",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Mumps: Coding.FromStrict({
+  VaccineCodeValueSet_Mumps: new Coding({
     code: "GNMUM",
     display: "Mumps",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Pneumococcal: Coding.FromStrict({
+  VaccineCodeValueSet_Pneumococcal: new Coding({
     code: "GNPNE",
     display: "Pneumococcal",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Polio: Coding.FromStrict({
+  VaccineCodeValueSet_Polio: new Coding({
     code: "GNPOL",
     display: "Polio",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Rotavirus: Coding.FromStrict({
+  VaccineCodeValueSet_Rotavirus: new Coding({
     code: "GNROX",
     display: "Rotavirus",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Rubella: Coding.FromStrict({
+  VaccineCodeValueSet_Rubella: new Coding({
     code: "GNRUB",
     display: "Rubella",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Tetanus: Coding.FromStrict({
+  VaccineCodeValueSet_Tetanus: new Coding({
     code: "GNTET",
     display: "Tetanus",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Varicella: Coding.FromStrict({
+  VaccineCodeValueSet_Varicella: new Coding({
     code: "GNVAR",
     display: "Varicella",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_TwinrixJunior: Coding.FromStrict({
+  VaccineCodeValueSet_TwinrixJunior: new Coding({
     code: "HATWNJ",
     display: "Twinrix Junior",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_VaqtaPaedAdol: Coding.FromStrict({
+  VaccineCodeValueSet_VaqtaPaedAdol: new Coding({
     code: "HAVAQ",
     display: "Vaqta Paed/Adol",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_HavrixJunior: Coding.FromStrict({
+  VaccineCodeValueSet_HavrixJunior: new Coding({
     code: "HAVJ",
     display: "Havrix Junior",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_HibTITER: Coding.FromStrict({
+  VaccineCodeValueSet_HibTITER: new Coding({
     code: "HBOC",
     display: "HibTITER",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_HBV: Coding.FromStrict({
+  VaccineCodeValueSet_HBV: new Coding({
     code: "HBV",
     display: "HBV",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_HBVAXII: Coding.FromStrict({
+  VaccineCodeValueSet_HBVAXII: new Coding({
     code: "HBVP",
     display: "HBVAX II",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Hiberix: Coding.FromStrict({
+  VaccineCodeValueSet_Hiberix: new Coding({
     code: "HBX",
     display: "Hiberix",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_InfanrixHexa: Coding.FromStrict({
+  VaccineCodeValueSet_InfanrixHexa: new Coding({
     code: "IFHX",
     display: "Infanrix Hexa",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_InfanrixIPV: Coding.FromStrict({
+  VaccineCodeValueSet_InfanrixIPV: new Coding({
     code: "IFIP",
     display: "Infanrix-IPV",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_InfanrixPenta: Coding.FromStrict({
+  VaccineCodeValueSet_InfanrixPenta: new Coding({
     code: "IFPA",
     display: "Infanrix Penta",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Infanrix: Coding.FromStrict({
+  VaccineCodeValueSet_Infanrix: new Coding({
     code: "IFX",
     display: "Infanrix",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_InfanrixHepB: Coding.FromStrict({
+  VaccineCodeValueSet_InfanrixHepB: new Coding({
     code: "IFXB",
     display: "InfanrixHepB",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Influvac: Coding.FromStrict({
+  VaccineCodeValueSet_Influvac: new Coding({
     code: "INFLUV",
     display: "Influvac",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_IPOL: Coding.FromStrict({
+  VaccineCodeValueSet_IPOL: new Coding({
     code: "IPV",
     display: "IPOL",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_JEVAX: Coding.FromStrict({
+  VaccineCodeValueSet_JEVAX: new Coding({
     code: "JEVAX",
     display: "JE-VAX",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Menjugate: Coding.FromStrict({
+  VaccineCodeValueSet_Menjugate: new Coding({
     code: "MENJUG",
     display: "Menjugate",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Meningitec: Coding.FromStrict({
+  VaccineCodeValueSet_Meningitec: new Coding({
     code: "MENTEC",
     display: "Meningitec",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Menomune: Coding.FromStrict({
+  VaccineCodeValueSet_Menomune: new Coding({
     code: "MENUME",
     display: "Menomune",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_MencevaxACWY: Coding.FromStrict({
+  VaccineCodeValueSet_MencevaxACWY: new Coding({
     code: "MENVAX",
     display: "Mencevax ACWY",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_MMR: Coding.FromStrict({
+  VaccineCodeValueSet_MMR: new Coding({
     code: "MMR",
     display: "MMR",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_MMRII: Coding.FromStrict({
+  VaccineCodeValueSet_MMRII: new Coding({
     code: "MMRCSL",
     display: "MMR II",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Priorix: Coding.FromStrict({
+  VaccineCodeValueSet_Priorix: new Coding({
     code: "MMRSKB",
     display: "Priorix",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Menitorix: Coding.FromStrict({
+  VaccineCodeValueSet_Menitorix: new Coding({
     code: "MNTRX",
     display: "Menitorix",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_NeisVacC: Coding.FromStrict({
+  VaccineCodeValueSet_NeisVacC: new Coding({
     code: "NEISVC",
     display: "NeisVac-C",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Polio_2: Coding.FromStrict({
+  VaccineCodeValueSet_Polio_2: new Coding({
     code: "OPV",
     display: "Polio",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Pertussis: Coding.FromStrict({
+  VaccineCodeValueSet_Pertussis: new Coding({
     code: "P",
     display: "Pertussis",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Panvax: Coding.FromStrict({
+  VaccineCodeValueSet_Panvax: new Coding({
     code: "PANVAX",
     display: "Panvax",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Pediacel: Coding.FromStrict({
+  VaccineCodeValueSet_Pediacel: new Coding({
     code: "PDCL",
     display: "Pediacel",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Poliacel: Coding.FromStrict({
+  VaccineCodeValueSet_Poliacel: new Coding({
     code: "PLCL",
     display: "Poliacel",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Pneumovax: Coding.FromStrict({
+  VaccineCodeValueSet_Pneumovax: new Coding({
     code: "PNEUMO",
     display: "Pneumovax",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_ProQuad: Coding.FromStrict({
+  VaccineCodeValueSet_ProQuad: new Coding({
     code: "PROQAD",
     display: "ProQuad",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_ProHIBit: Coding.FromStrict({
+  VaccineCodeValueSet_ProHIBit: new Coding({
     code: "PRPD",
     display: "ProHIBit",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_PedvaxHIB: Coding.FromStrict({
+  VaccineCodeValueSet_PedvaxHIB: new Coding({
     code: "PRPOMP",
     display: "PedvaxHIB",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_ActHIB: Coding.FromStrict({
+  VaccineCodeValueSet_ActHIB: new Coding({
     code: "PRPT",
     display: "ActHIB",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Prevenar7: Coding.FromStrict({
+  VaccineCodeValueSet_Prevenar7: new Coding({
     code: "PRVNR",
     display: "Prevenar 7",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Prevenar13: Coding.FromStrict({
+  VaccineCodeValueSet_Prevenar13: new Coding({
     code: "PRVTH",
     display: "Prevenar 13",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_PriorixTetra: Coding.FromStrict({
+  VaccineCodeValueSet_PriorixTetra: new Coding({
     code: "PRXTEX",
     display: "Priorix-Tetra",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Quadracel: Coding.FromStrict({
+  VaccineCodeValueSet_Quadracel: new Coding({
     code: "QDCL",
     display: "Quadracel",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Rotarix: Coding.FromStrict({
+  VaccineCodeValueSet_Rotarix: new Coding({
     code: "ROTRIX",
     display: "Rotarix",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Rotateq: Coding.FromStrict({
+  VaccineCodeValueSet_Rotateq: new Coding({
     code: "ROTTEQ",
     display: "Rotateq",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Synflorix: Coding.FromStrict({
+  VaccineCodeValueSet_Synflorix: new Coding({
     code: "SYNFLX",
     display: "Synflorix",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Tripacel: Coding.FromStrict({
+  VaccineCodeValueSet_Tripacel: new Coding({
     code: "TCL",
     display: "Tripacel",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Vaxigrip: Coding.FromStrict({
+  VaccineCodeValueSet_Vaxigrip: new Coding({
     code: "VAXGRP",
     display: "Vaxigrip",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_VaxigripJunior: Coding.FromStrict({
+  VaccineCodeValueSet_VaxigripJunior: new Coding({
     code: "VGRJNR",
     display: "Vaxigrip Junior",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Varilrix: Coding.FromStrict({
+  VaccineCodeValueSet_Varilrix: new Coding({
     code: "VLRIX",
     display: "Varilrix",
     system: "urn:oid:1.2.36.1.2001.1005.17"
   }),
-  VaccineCodeValueSet_Varivax: Coding.FromStrict({
+  VaccineCodeValueSet_Varivax: new Coding({
     code: "VRVAX",
     display: "Varivax",
     system: "urn:oid:1.2.36.1.2001.1005.17"

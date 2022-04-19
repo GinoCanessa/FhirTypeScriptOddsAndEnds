@@ -143,19 +143,19 @@ export class MedicinalProductPackagedBatchIdentifier extends fhir.BackboneElemen
   /**
    * Check if the current MedicinalProductPackagedBatchIdentifier contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["outerPackaging"] === undefined) { missingElements.push("outerPackaging"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicinalProductPackagedBatchIdentifier from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicinalProductPackagedBatchIdentifier):MedicinalProductPackagedBatchIdentifier {
+  static override fromStrict(source:fhir.IMedicinalProductPackagedBatchIdentifier):MedicinalProductPackagedBatchIdentifier {
     var dest:MedicinalProductPackagedBatchIdentifier = new MedicinalProductPackagedBatchIdentifier(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicinalProductPackagedBatchIdentifier is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -237,20 +237,20 @@ export class MedicinalProductPackagedPackageItem extends fhir.BackboneElement im
   /**
    * Check if the current MedicinalProductPackagedPackageItem contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["quantity"] === undefined) { missingElements.push("quantity"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicinalProductPackagedPackageItem from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicinalProductPackagedPackageItem):MedicinalProductPackagedPackageItem {
+  static override fromStrict(source:fhir.IMedicinalProductPackagedPackageItem):MedicinalProductPackagedPackageItem {
     var dest:MedicinalProductPackagedPackageItem = new MedicinalProductPackagedPackageItem(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicinalProductPackagedPackageItem is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -322,19 +322,19 @@ export class MedicinalProductPackaged extends fhir.DomainResource implements fhi
   /**
    * Check if the current MedicinalProductPackaged contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["packageItem"]) || (this["packageItem"].length === 0)) { missingElements.push("packageItem"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a MedicinalProductPackaged from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IMedicinalProductPackaged):MedicinalProductPackaged {
+  static override fromStrict(source:fhir.IMedicinalProductPackaged):MedicinalProductPackaged {
     var dest:MedicinalProductPackaged = new MedicinalProductPackaged(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `MedicinalProductPackaged is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

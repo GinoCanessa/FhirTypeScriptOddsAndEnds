@@ -13,7 +13,7 @@ export const SortDirectionValueSet = {
   /**
    * Sort by the value ascending, so that lower values appear first.
    */
-  sort_direction_Ascending: Coding.FromStrict({
+  sort_direction_Ascending: new Coding({
     code: "ascending",
     display: "Ascending",
     system: "http://hl7.org/fhir/sort-direction"
@@ -21,7 +21,7 @@ export const SortDirectionValueSet = {
   /**
    * Sort by the value descending, so that lower values appear last.
    */
-  sort_direction_Descending: Coding.FromStrict({
+  sort_direction_Descending: new Coding({
     code: "descending",
     display: "Descending",
     system: "http://hl7.org/fhir/sort-direction"

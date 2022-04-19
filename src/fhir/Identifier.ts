@@ -87,18 +87,18 @@ export class Identifier extends fhir.FhirElement implements fhir.IIdentifier {
   /**
    * Check if the current Identifier contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Identifier from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IIdentifier):Identifier {
+  static override fromStrict(source:fhir.IIdentifier):Identifier {
     var dest:Identifier = new Identifier(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Identifier is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

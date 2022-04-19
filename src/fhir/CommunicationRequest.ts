@@ -160,18 +160,18 @@ export class CommunicationRequestPayload extends fhir.BackboneElement implements
   /**
    * Check if the current CommunicationRequestPayload contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CommunicationRequestPayload from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICommunicationRequestPayload):CommunicationRequestPayload {
+  static override fromStrict(source:fhir.ICommunicationRequestPayload):CommunicationRequestPayload {
     var dest:CommunicationRequestPayload = new CommunicationRequestPayload(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CommunicationRequestPayload is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -321,19 +321,19 @@ export class CommunicationRequest extends fhir.DomainResource implements fhir.IC
   /**
    * Check if the current CommunicationRequest contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CommunicationRequest from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICommunicationRequest):CommunicationRequest {
+  static override fromStrict(source:fhir.ICommunicationRequest):CommunicationRequest {
     var dest:CommunicationRequest = new CommunicationRequest(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CommunicationRequest is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

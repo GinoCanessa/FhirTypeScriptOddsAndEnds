@@ -10,27 +10,27 @@ import { Coding } from '../fhir'
  * Unified Code for Units of Measure (UCUM). This value set includes common UCUM codes for units of distance
  */
 export const DistanceUnitsValueSet = {
-  DistanceUnitsValueSet_Kilometers: Coding.FromStrict({
+  DistanceUnitsValueSet_Kilometers: new Coding({
     code: "km",
     display: "kilometers",
     system: "http://unitsofmeasure.org"
   }),
-  DistanceUnitsValueSet_Meters: Coding.FromStrict({
+  DistanceUnitsValueSet_Meters: new Coding({
     code: "m",
     display: "meters",
     system: "http://unitsofmeasure.org"
   }),
-  DistanceUnitsValueSet_Millimeters: Coding.FromStrict({
+  DistanceUnitsValueSet_Millimeters: new Coding({
     code: "mm",
     display: "millimeters",
     system: "http://unitsofmeasure.org"
   }),
-  DistanceUnitsValueSet_Nanometers: Coding.FromStrict({
+  DistanceUnitsValueSet_Nanometers: new Coding({
     code: "nm",
     display: "nanometers",
     system: "http://unitsofmeasure.org"
   }),
-  DistanceUnitsValueSet_Micrometers: Coding.FromStrict({
+  DistanceUnitsValueSet_Micrometers: new Coding({
     code: "um",
     display: "micrometers",
     system: "http://unitsofmeasure.org"

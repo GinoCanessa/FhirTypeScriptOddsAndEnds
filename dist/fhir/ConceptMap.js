@@ -51,7 +51,7 @@ export class ConceptMapGroupElementTargetDependsOn extends fhir.BackboneElement 
     /**
      * Check if the current ConceptMapGroupElementTargetDependsOn contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["property"] === undefined) {
             missingElements.push("property");
@@ -59,16 +59,16 @@ export class ConceptMapGroupElementTargetDependsOn extends fhir.BackboneElement 
         if (this["value"] === undefined) {
             missingElements.push("value");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ConceptMapGroupElementTargetDependsOn from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ConceptMapGroupElementTargetDependsOn(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ConceptMapGroupElementTargetDependsOn is missing elements: ${missingElements.join(", ")}`;
         }
@@ -122,21 +122,21 @@ export class ConceptMapGroupElementTarget extends fhir.BackboneElement {
     /**
      * Check if the current ConceptMapGroupElementTarget contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["equivalence"] === undefined) {
             missingElements.push("equivalence");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ConceptMapGroupElementTarget from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ConceptMapGroupElementTarget(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ConceptMapGroupElementTarget is missing elements: ${missingElements.join(", ")}`;
         }
@@ -171,18 +171,18 @@ export class ConceptMapGroupElement extends fhir.BackboneElement {
     /**
      * Check if the current ConceptMapGroupElement contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ConceptMapGroupElement from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ConceptMapGroupElement(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ConceptMapGroupElement is missing elements: ${missingElements.join(", ")}`;
         }
@@ -230,21 +230,21 @@ export class ConceptMapGroupUnmapped extends fhir.BackboneElement {
     /**
      * Check if the current ConceptMapGroupUnmapped contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["mode"] === undefined) {
             missingElements.push("mode");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ConceptMapGroupUnmapped from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ConceptMapGroupUnmapped(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ConceptMapGroupUnmapped is missing elements: ${missingElements.join(", ")}`;
         }
@@ -298,21 +298,21 @@ export class ConceptMapGroup extends fhir.BackboneElement {
     /**
      * Check if the current ConceptMapGroup contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if ((!this["element"]) || (this["element"].length === 0)) {
             missingElements.push("element");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ConceptMapGroup from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ConceptMapGroup(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ConceptMapGroup is missing elements: ${missingElements.join(", ")}`;
         }
@@ -442,21 +442,21 @@ export class ConceptMap extends fhir.DomainResource {
     /**
      * Check if the current ConceptMap contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ConceptMap from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ConceptMap(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ConceptMap is missing elements: ${missingElements.join(", ")}`;
         }

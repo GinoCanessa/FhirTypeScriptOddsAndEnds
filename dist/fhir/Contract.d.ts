@@ -773,11 +773,11 @@ export declare class ContractContentDefinition extends fhir.BackboneElement impl
     /**
      * Check if the current ContractContentDefinition contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ContractContentDefinition from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IContractContentDefinition): ContractContentDefinition;
+    static fromStrict(source: fhir.IContractContentDefinition): ContractContentDefinition;
 }
 /**
  * Security labels that protect the handling of information about the term and its elements, which may be specifically identified..
@@ -807,11 +807,11 @@ export declare class ContractTermSecurityLabel extends fhir.BackboneElement impl
     /**
      * Check if the current ContractTermSecurityLabel contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ContractTermSecurityLabel from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IContractTermSecurityLabel): ContractTermSecurityLabel;
+    static fromStrict(source: fhir.IContractTermSecurityLabel): ContractTermSecurityLabel;
 }
 /**
  * Offer Recipient.
@@ -832,11 +832,11 @@ export declare class ContractTermOfferParty extends fhir.BackboneElement impleme
     /**
      * Check if the current ContractTermOfferParty contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ContractTermOfferParty from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IContractTermOfferParty): ContractTermOfferParty;
+    static fromStrict(source: fhir.IContractTermOfferParty): ContractTermOfferParty;
 }
 /**
  * Response to offer text.
@@ -905,11 +905,11 @@ export declare class ContractTermOfferAnswer extends fhir.BackboneElement implem
     /**
      * Check if the current ContractTermOfferAnswer contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ContractTermOfferAnswer from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IContractTermOfferAnswer): ContractTermOfferAnswer;
+    static fromStrict(source: fhir.IContractTermOfferAnswer): ContractTermOfferAnswer;
 }
 /**
  * The matter of concern in the context of this provision of the agrement.
@@ -968,11 +968,11 @@ export declare class ContractTermOffer extends fhir.BackboneElement implements f
     /**
      * Check if the current ContractTermOffer contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ContractTermOffer from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IContractTermOffer): ContractTermOffer;
+    static fromStrict(source: fhir.IContractTermOffer): ContractTermOffer;
 }
 /**
  * Circumstance of the asset.
@@ -998,11 +998,11 @@ export declare class ContractTermAssetContext extends fhir.BackboneElement imple
     /**
      * Check if the current ContractTermAssetContext contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ContractTermAssetContext from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IContractTermAssetContext): ContractTermAssetContext;
+    static fromStrict(source: fhir.IContractTermAssetContext): ContractTermAssetContext;
 }
 /**
  * Contract Valued Item List.
@@ -1082,11 +1082,11 @@ export declare class ContractTermAssetValuedItem extends fhir.BackboneElement im
     /**
      * Check if the current ContractTermAssetValuedItem contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ContractTermAssetValuedItem from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IContractTermAssetValuedItem): ContractTermAssetValuedItem;
+    static fromStrict(source: fhir.IContractTermAssetValuedItem): ContractTermAssetValuedItem;
 }
 /**
  * Contract Term Asset List.
@@ -1163,11 +1163,11 @@ export declare class ContractTermAsset extends fhir.BackboneElement implements f
     /**
      * Check if the current ContractTermAsset contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ContractTermAsset from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IContractTermAsset): ContractTermAsset;
+    static fromStrict(source: fhir.IContractTermAsset): ContractTermAsset;
 }
 /**
  * Entity of the action.
@@ -1188,11 +1188,11 @@ export declare class ContractTermActionSubject extends fhir.BackboneElement impl
     /**
      * Check if the current ContractTermActionSubject contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ContractTermActionSubject from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IContractTermActionSubject): ContractTermActionSubject;
+    static fromStrict(source: fhir.IContractTermActionSubject): ContractTermActionSubject;
 }
 /**
  * Several agents may be associated (i.e. has some responsibility for an activity) with an activity and vice-versa.
@@ -1307,11 +1307,11 @@ export declare class ContractTermAction extends fhir.BackboneElement implements 
     /**
      * Check if the current ContractTermAction contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ContractTermAction from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IContractTermAction): ContractTermAction;
+    static fromStrict(source: fhir.IContractTermAction): ContractTermAction;
 }
 /**
  * One or more Contract Provisions, which may be related and conveyed as a group, and may contain nested groups.
@@ -1379,11 +1379,11 @@ export declare class ContractTerm extends fhir.BackboneElement implements fhir.I
     /**
      * Check if the current ContractTerm contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ContractTerm from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IContractTerm): ContractTerm;
+    static fromStrict(source: fhir.IContractTerm): ContractTerm;
 }
 /**
  * Signers who are principal parties to the contract are bound by the Contract.activity related to the Contract.topic, and the Contract.term(s), which either extend or restrict the overall action on the topic by, for example, stipulating specific policies or obligations constraining actions, action reason, or agents with respect to some or all of the topic.
@@ -1409,11 +1409,11 @@ export declare class ContractSigner extends fhir.BackboneElement implements fhir
     /**
      * Check if the current ContractSigner contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ContractSigner from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IContractSigner): ContractSigner;
+    static fromStrict(source: fhir.IContractSigner): ContractSigner;
 }
 /**
  * The "patient friendly language" versionof the Contract in whole or in parts. "Patient friendly language" means the representation of the Contract and Contract Provisions in a manner that is readily accessible and understandable by a layperson in accordance with best practices for communication styles that ensure that those agreeing to or signing the Contract understand the roles, actions, obligations, responsibilities, and implication of the agreement.
@@ -1434,11 +1434,11 @@ export declare class ContractFriendly extends fhir.BackboneElement implements fh
     /**
      * Check if the current ContractFriendly contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ContractFriendly from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IContractFriendly): ContractFriendly;
+    static fromStrict(source: fhir.IContractFriendly): ContractFriendly;
 }
 /**
  * List of Legal expressions or representations of this Contract.
@@ -1459,11 +1459,11 @@ export declare class ContractLegal extends fhir.BackboneElement implements fhir.
     /**
      * Check if the current ContractLegal contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ContractLegal from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IContractLegal): ContractLegal;
+    static fromStrict(source: fhir.IContractLegal): ContractLegal;
 }
 /**
  * List of Computable Policy Rule Language Representations of this Contract.
@@ -1484,11 +1484,11 @@ export declare class ContractRule extends fhir.BackboneElement implements fhir.I
     /**
      * Check if the current ContractRule contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ContractRule from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IContractRule): ContractRule;
+    static fromStrict(source: fhir.IContractRule): ContractRule;
 }
 /**
  * Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement.
@@ -1657,11 +1657,11 @@ export declare class Contract extends fhir.DomainResource implements fhir.IContr
     /**
      * Check if the current Contract contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Contract from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IContract): Contract;
+    static fromStrict(source: fhir.IContract): Contract;
 }
 /**
  * Code Values for the Contract.contentDefinition.publicationStatus field

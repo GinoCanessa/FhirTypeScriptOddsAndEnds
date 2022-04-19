@@ -352,11 +352,11 @@ export declare class ValueSetComposeIncludeConceptDesignation extends fhir.Backb
     /**
      * Check if the current ValueSetComposeIncludeConceptDesignation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ValueSetComposeIncludeConceptDesignation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IValueSetComposeIncludeConceptDesignation): ValueSetComposeIncludeConceptDesignation;
+    static fromStrict(source: fhir.IValueSetComposeIncludeConceptDesignation): ValueSetComposeIncludeConceptDesignation;
 }
 /**
  * The list of concepts is considered ordered, though the order might not have any particular significance. Typically, the order of an expansion follows that defined in the compose element.
@@ -383,11 +383,11 @@ export declare class ValueSetComposeIncludeConcept extends fhir.BackboneElement 
     /**
      * Check if the current ValueSetComposeIncludeConcept contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ValueSetComposeIncludeConcept from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IValueSetComposeIncludeConcept): ValueSetComposeIncludeConcept;
+    static fromStrict(source: fhir.IValueSetComposeIncludeConcept): ValueSetComposeIncludeConcept;
 }
 /**
  * Selecting codes by specifying filters based on properties is only possible where the underlying code system defines appropriate properties. Note that in some cases, the underlying code system defines the logical concepts but not the literal codes for the concepts. In such cases, the literal definitions may be provided by a third party.
@@ -415,11 +415,11 @@ export declare class ValueSetComposeIncludeFilter extends fhir.BackboneElement i
     /**
      * Check if the current ValueSetComposeIncludeFilter contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ValueSetComposeIncludeFilter from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IValueSetComposeIncludeFilter): ValueSetComposeIncludeFilter;
+    static fromStrict(source: fhir.IValueSetComposeIncludeFilter): ValueSetComposeIncludeFilter;
 }
 /**
  * All the conditions in an include must be true. If a system is listed, all the codes from the system are listed. If one or more filters are listed, all of the filters must apply. If one or more value sets are listed, the codes must be in all the value sets. E.g. each include is 'include all the codes that meet all these conditions'.
@@ -455,11 +455,11 @@ export declare class ValueSetComposeInclude extends fhir.BackboneElement impleme
     /**
      * Check if the current ValueSetComposeInclude contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ValueSetComposeInclude from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IValueSetComposeInclude): ValueSetComposeInclude;
+    static fromStrict(source: fhir.IValueSetComposeInclude): ValueSetComposeInclude;
 }
 /**
  * A set of criteria that define the contents of the value set by including or excluding codes selected from the specified code system(s) that the value set draws from. This is also known as the Content Logical Definition (CLD).
@@ -491,11 +491,11 @@ export declare class ValueSetCompose extends fhir.BackboneElement implements fhi
     /**
      * Check if the current ValueSetCompose contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ValueSetCompose from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IValueSetCompose): ValueSetCompose;
+    static fromStrict(source: fhir.IValueSetCompose): ValueSetCompose;
 }
 /**
  * The server decides which parameters to include here, but at a minimum, the list SHOULD include all of the parameters that affect the $expand operation. If the expansion will be persisted all of these parameters SHALL be included. If the codeSystem on the server has a specified version then this version SHALL be provided as a parameter in the expansion (note that not all code systems have a version).
@@ -548,11 +548,11 @@ export declare class ValueSetExpansionParameter extends fhir.BackboneElement imp
     /**
      * Check if the current ValueSetExpansionParameter contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ValueSetExpansionParameter from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IValueSetExpansionParameter): ValueSetExpansionParameter;
+    static fromStrict(source: fhir.IValueSetExpansionParameter): ValueSetExpansionParameter;
 }
 /**
  * The codes that are contained in the value set expansion.
@@ -603,11 +603,11 @@ export declare class ValueSetExpansionContains extends fhir.BackboneElement impl
     /**
      * Check if the current ValueSetExpansionContains contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ValueSetExpansionContains from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IValueSetExpansionContains): ValueSetExpansionContains;
+    static fromStrict(source: fhir.IValueSetExpansionContains): ValueSetExpansionContains;
 }
 /**
  * Expansion is performed to produce a collection of codes that are ready to use for data entry or validation. Value set expansions are always considered to be stateless - they are a record of the set of codes in the value set at a point in time under a given set of conditions, and are not subject to ongoing maintenance.
@@ -649,11 +649,11 @@ export declare class ValueSetExpansion extends fhir.BackboneElement implements f
     /**
      * Check if the current ValueSetExpansion contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ValueSetExpansion from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IValueSetExpansion): ValueSetExpansion;
+    static fromStrict(source: fhir.IValueSetExpansion): ValueSetExpansion;
 }
 /**
  * A ValueSet resource instance specifies a set of codes drawn from one or more code systems, intended for use in a particular context. Value sets link between [CodeSystem](codesystem.html) definitions and their use in [coded elements](terminologies.html).
@@ -757,11 +757,11 @@ export declare class ValueSet extends fhir.DomainResource implements fhir.IValue
     /**
      * Check if the current ValueSet contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ValueSet from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IValueSet): ValueSet;
+    static fromStrict(source: fhir.IValueSet): ValueSet;
 }
 /**
  * Code Values for the ValueSet.compose.include.filter.op field

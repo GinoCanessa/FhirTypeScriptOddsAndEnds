@@ -109,11 +109,11 @@ export declare class EpisodeOfCareStatusHistory extends fhir.BackboneElement imp
     /**
      * Check if the current EpisodeOfCareStatusHistory contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a EpisodeOfCareStatusHistory from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEpisodeOfCareStatusHistory): EpisodeOfCareStatusHistory;
+    static fromStrict(source: fhir.IEpisodeOfCareStatusHistory): EpisodeOfCareStatusHistory;
 }
 /**
  * The list of diagnosis relevant to this episode of care.
@@ -139,11 +139,11 @@ export declare class EpisodeOfCareDiagnosis extends fhir.BackboneElement impleme
     /**
      * Check if the current EpisodeOfCareDiagnosis contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a EpisodeOfCareDiagnosis from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEpisodeOfCareDiagnosis): EpisodeOfCareDiagnosis;
+    static fromStrict(source: fhir.IEpisodeOfCareDiagnosis): EpisodeOfCareDiagnosis;
 }
 /**
  * An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.
@@ -209,11 +209,11 @@ export declare class EpisodeOfCare extends fhir.DomainResource implements fhir.I
     /**
      * Check if the current EpisodeOfCare contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a EpisodeOfCare from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IEpisodeOfCare): EpisodeOfCare;
+    static fromStrict(source: fhir.IEpisodeOfCare): EpisodeOfCare;
 }
 /**
  * Code Values for the EpisodeOfCare.statusHistory.status field

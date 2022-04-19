@@ -260,18 +260,18 @@ export class NutritionOrderOralDietNutrient extends fhir.BackboneElement impleme
   /**
    * Check if the current NutritionOrderOralDietNutrient contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a NutritionOrderOralDietNutrient from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.INutritionOrderOralDietNutrient):NutritionOrderOralDietNutrient {
+  static override fromStrict(source:fhir.INutritionOrderOralDietNutrient):NutritionOrderOralDietNutrient {
     var dest:NutritionOrderOralDietNutrient = new NutritionOrderOralDietNutrient(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `NutritionOrderOralDietNutrient is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -299,18 +299,18 @@ export class NutritionOrderOralDietTexture extends fhir.BackboneElement implemen
   /**
    * Check if the current NutritionOrderOralDietTexture contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a NutritionOrderOralDietTexture from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.INutritionOrderOralDietTexture):NutritionOrderOralDietTexture {
+  static override fromStrict(source:fhir.INutritionOrderOralDietTexture):NutritionOrderOralDietTexture {
     var dest:NutritionOrderOralDietTexture = new NutritionOrderOralDietTexture(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `NutritionOrderOralDietTexture is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -360,18 +360,18 @@ export class NutritionOrderOralDiet extends fhir.BackboneElement implements fhir
   /**
    * Check if the current NutritionOrderOralDiet contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a NutritionOrderOralDiet from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.INutritionOrderOralDiet):NutritionOrderOralDiet {
+  static override fromStrict(source:fhir.INutritionOrderOralDiet):NutritionOrderOralDiet {
     var dest:NutritionOrderOralDiet = new NutritionOrderOralDiet(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `NutritionOrderOralDiet is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -418,18 +418,18 @@ export class NutritionOrderSupplement extends fhir.BackboneElement implements fh
   /**
    * Check if the current NutritionOrderSupplement contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a NutritionOrderSupplement from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.INutritionOrderSupplement):NutritionOrderSupplement {
+  static override fromStrict(source:fhir.INutritionOrderSupplement):NutritionOrderSupplement {
     var dest:NutritionOrderSupplement = new NutritionOrderSupplement(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `NutritionOrderSupplement is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -467,18 +467,18 @@ export class NutritionOrderEnteralFormulaAdministration extends fhir.BackboneEle
   /**
    * Check if the current NutritionOrderEnteralFormulaAdministration contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a NutritionOrderEnteralFormulaAdministration from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.INutritionOrderEnteralFormulaAdministration):NutritionOrderEnteralFormulaAdministration {
+  static override fromStrict(source:fhir.INutritionOrderEnteralFormulaAdministration):NutritionOrderEnteralFormulaAdministration {
     var dest:NutritionOrderEnteralFormulaAdministration = new NutritionOrderEnteralFormulaAdministration(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `NutritionOrderEnteralFormulaAdministration is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -547,18 +547,18 @@ export class NutritionOrderEnteralFormula extends fhir.BackboneElement implement
   /**
    * Check if the current NutritionOrderEnteralFormula contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a NutritionOrderEnteralFormula from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.INutritionOrderEnteralFormula):NutritionOrderEnteralFormula {
+  static override fromStrict(source:fhir.INutritionOrderEnteralFormula):NutritionOrderEnteralFormula {
     var dest:NutritionOrderEnteralFormula = new NutritionOrderEnteralFormula(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `NutritionOrderEnteralFormula is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -686,22 +686,22 @@ export class NutritionOrder extends fhir.DomainResource implements fhir.INutriti
   /**
    * Check if the current NutritionOrder contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["dateTime"] === undefined) { missingElements.push("dateTime"); }
     if (this["intent"] === undefined) { missingElements.push("intent"); }
     if (this["patient"] === undefined) { missingElements.push("patient"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a NutritionOrder from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.INutritionOrder):NutritionOrder {
+  static override fromStrict(source:fhir.INutritionOrder):NutritionOrder {
     var dest:NutritionOrder = new NutritionOrder(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `NutritionOrder is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

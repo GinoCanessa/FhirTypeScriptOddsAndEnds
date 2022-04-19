@@ -169,18 +169,18 @@ export class AdverseEventSuspectEntityCausality extends fhir.BackboneElement imp
   /**
    * Check if the current AdverseEventSuspectEntityCausality contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a AdverseEventSuspectEntityCausality from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IAdverseEventSuspectEntityCausality):AdverseEventSuspectEntityCausality {
+  static override fromStrict(source:fhir.IAdverseEventSuspectEntityCausality):AdverseEventSuspectEntityCausality {
     var dest:AdverseEventSuspectEntityCausality = new AdverseEventSuspectEntityCausality(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `AdverseEventSuspectEntityCausality is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -210,19 +210,19 @@ export class AdverseEventSuspectEntity extends fhir.BackboneElement implements f
   /**
    * Check if the current AdverseEventSuspectEntity contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["instance"] === undefined) { missingElements.push("instance"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a AdverseEventSuspectEntity from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IAdverseEventSuspectEntity):AdverseEventSuspectEntity {
+  static override fromStrict(source:fhir.IAdverseEventSuspectEntity):AdverseEventSuspectEntity {
     var dest:AdverseEventSuspectEntity = new AdverseEventSuspectEntity(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `AdverseEventSuspectEntity is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -357,20 +357,20 @@ export class AdverseEvent extends fhir.DomainResource implements fhir.IAdverseEv
   /**
    * Check if the current AdverseEvent contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["actuality"] === undefined) { missingElements.push("actuality"); }
     if (this["subject"] === undefined) { missingElements.push("subject"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a AdverseEvent from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IAdverseEvent):AdverseEvent {
+  static override fromStrict(source:fhir.IAdverseEvent):AdverseEvent {
     var dest:AdverseEvent = new AdverseEvent(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `AdverseEvent is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

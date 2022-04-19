@@ -13,7 +13,7 @@ export const CareTeamStatusValueSet = {
     /**
      * The care team is currently participating in the coordination and delivery of care.
      */
-    care_team_status_Active: Coding.FromStrict({
+    care_team_status_Active: new Coding({
         code: "active",
         display: "Active",
         system: "http://hl7.org/fhir/care-team-status"
@@ -21,7 +21,7 @@ export const CareTeamStatusValueSet = {
     /**
      * The care team should have never existed.
      */
-    care_team_status_EnteredInError: Coding.FromStrict({
+    care_team_status_EnteredInError: new Coding({
         code: "entered-in-error",
         display: "Entered in Error",
         system: "http://hl7.org/fhir/care-team-status"
@@ -29,7 +29,7 @@ export const CareTeamStatusValueSet = {
     /**
      * The care team was, but is no longer, participating in the coordination and delivery of care.
      */
-    care_team_status_Inactive: Coding.FromStrict({
+    care_team_status_Inactive: new Coding({
         code: "inactive",
         display: "Inactive",
         system: "http://hl7.org/fhir/care-team-status"
@@ -37,7 +37,7 @@ export const CareTeamStatusValueSet = {
     /**
      * The care team has been drafted and proposed, but not yet participating in the coordination and delivery of patient care.
      */
-    care_team_status_Proposed: Coding.FromStrict({
+    care_team_status_Proposed: new Coding({
         code: "proposed",
         display: "Proposed",
         system: "http://hl7.org/fhir/care-team-status"
@@ -45,7 +45,7 @@ export const CareTeamStatusValueSet = {
     /**
      * The care team is temporarily on hold or suspended and not participating in the coordination and delivery of care.
      */
-    care_team_status_Suspended: Coding.FromStrict({
+    care_team_status_Suspended: new Coding({
         code: "suspended",
         display: "Suspended",
         system: "http://hl7.org/fhir/care-team-status"

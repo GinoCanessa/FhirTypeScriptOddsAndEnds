@@ -13,7 +13,7 @@ export const MeasureReportTypeValueSet = {
   /**
    * A data collection report that contains data-of-interest for the measure.
    */
-  measure_report_type_DataCollection: Coding.FromStrict({
+  measure_report_type_DataCollection: new Coding({
     code: "data-collection",
     display: "Data Collection",
     system: "http://hl7.org/fhir/measure-report-type"
@@ -21,7 +21,7 @@ export const MeasureReportTypeValueSet = {
   /**
    * An individual report that provides information on the performance for a given measure with respect to a single subject.
    */
-  measure_report_type_Individual: Coding.FromStrict({
+  measure_report_type_Individual: new Coding({
     code: "individual",
     display: "Individual",
     system: "http://hl7.org/fhir/measure-report-type"
@@ -29,7 +29,7 @@ export const MeasureReportTypeValueSet = {
   /**
    * A subject list report that includes a listing of subjects that satisfied each population criteria in the measure.
    */
-  measure_report_type_SubjectList: Coding.FromStrict({
+  measure_report_type_SubjectList: new Coding({
     code: "subject-list",
     display: "Subject List",
     system: "http://hl7.org/fhir/measure-report-type"
@@ -37,7 +37,7 @@ export const MeasureReportTypeValueSet = {
   /**
    * A summary report that returns the number of members in each population criteria for the measure.
    */
-  measure_report_type_Summary: Coding.FromStrict({
+  measure_report_type_Summary: new Coding({
     code: "summary",
     display: "Summary",
     system: "http://hl7.org/fhir/measure-report-type"

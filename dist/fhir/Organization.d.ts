@@ -102,11 +102,11 @@ export declare class OrganizationContact extends fhir.BackboneElement implements
     /**
      * Check if the current OrganizationContact contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a OrganizationContact from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IOrganizationContact): OrganizationContact;
+    static fromStrict(source: fhir.IOrganizationContact): OrganizationContact;
 }
 /**
  * A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.
@@ -169,10 +169,10 @@ export declare class Organization extends fhir.DomainResource implements fhir.IO
     /**
      * Check if the current Organization contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Organization from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IOrganization): Organization;
+    static fromStrict(source: fhir.IOrganization): Organization;
 }
 //# sourceMappingURL=Organization.d.ts.map

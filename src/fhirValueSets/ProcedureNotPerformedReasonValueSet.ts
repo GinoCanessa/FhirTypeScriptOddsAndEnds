@@ -10,2027 +10,2027 @@ import { Coding } from '../fhir'
  * Situation codes describing the reason that a procedure, which might otherwise be expected, was not performed, or a procedure that was started and was not completed. Consists of SNOMED CT codes, children of procedure contraindicated (183932001), procedure discontinued (416406003), procedure not done (416237000), procedure not indicated (428119001), procedure not offered (416064006), procedure not wanted (416432009), procedure refused (183944003), and procedure stopped (394908001).
  */
 export const ProcedureNotPerformedReasonValueSet = {
-  ProcedureNotPerformedReasonValueSet_ColonoscopyRefused: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ColonoscopyRefused: new Coding({
     code: "116101000119100",
     display: "Colonoscopy refused",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RadiographicImagingProcedureNotCarriedOut: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RadiographicImagingProcedureNotCarriedOut: new Coding({
     code: "168497006",
     display: "Radiographic imaging procedure not carried out",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RadiologyRefused: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RadiologyRefused: new Coding({
     code: "168499009",
     display: "Radiology refused",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RadiotherapyStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RadiotherapyStopped: new Coding({
     code: "168533005",
     display: "Radiotherapy stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ContraceptionContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ContraceptionContraindicated: new Coding({
     code: "169551000",
     display: "Contraception contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_NoAntenatalCare: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_NoAntenatalCare: new Coding({
     code: "169607004",
     display: "No antenatal care",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AntenatalCareNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AntenatalCareNotOffered: new Coding({
     code: "169608009",
     display: "Antenatal care: not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AntenatalCareNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AntenatalCareNotWanted: new Coding({
     code: "169609001",
     display: "Antenatal care: not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AntenatalCareNotAttended: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AntenatalCareNotAttended: new Coding({
     code: "169610006",
     display: "Antenatal care: not attended",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_NoAntenatalCareNotKnownPregnant: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_NoAntenatalCareNotKnownPregnant: new Coding({
     code: "169611005",
     display: "No antenatal care: not known pregnant",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ParentCraftNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ParentCraftNotWanted: new Coding({
     code: "169635000",
     display: "Parent craft not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ANAmniocentesisNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ANAmniocentesisNotWanted: new Coding({
     code: "169649009",
     display: "A/N amniocentesis - not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ANUSScanNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ANUSScanNotWanted: new Coding({
     code: "169660000",
     display: "A/N U/S scan not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AlphaFetoproteinGeneAFPBloodTestNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AlphaFetoproteinGeneAFPBloodTestNotWanted: new Coding({
     code: "169687001",
     display: "Alpha-fetoprotein gene (AFP) blood test not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RubellaScreeningNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RubellaScreeningNotWanted: new Coding({
     code: "169693009",
     display: "Rubella screening not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AntenatalSyphilisScreeningNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AntenatalSyphilisScreeningNotDone: new Coding({
     code: "169699008",
     display: "Antenatal syphilis screening not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AntenatalBloodGroupScreeningNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AntenatalBloodGroupScreeningNotDone: new Coding({
     code: "169704000",
     display: "Antenatal blood group screening not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AntenatalSickleScreeningNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AntenatalSickleScreeningNotDone: new Coding({
     code: "169708002",
     display: "Antenatal sickle screening not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_TripleTestNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_TripleTestNotWanted: new Coding({
     code: "169795009",
     display: "Triple test not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DoubleTestNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DoubleTestNotWanted: new Coding({
     code: "169796005",
     display: "Double test not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ChildNotExaminedAtBirth: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ChildNotExaminedAtBirth: new Coding({
     code: "170100005",
     display: "Child not examined at birth",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ChildNotExaminedAt10Days: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ChildNotExaminedAt10Days: new Coding({
     code: "170108003",
     display: "Child not examined at 10 days",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child6WeekExaminationNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child6WeekExaminationNotOffered: new Coding({
     code: "170115006",
     display: "Child 6 week examination not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child6WeekExaminationNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child6WeekExaminationNotWanted: new Coding({
     code: "170116007",
     display: "Child 6 week examination not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child6WeekExaminationNotAttended: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child6WeekExaminationNotAttended: new Coding({
     code: "170117003",
     display: "Child 6 week examination not attended",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL89MonthExamNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL89MonthExamNotOffered: new Coding({
     code: "170124002",
     display: "8-9 month exam not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL89MonthExamNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL89MonthExamNotWanted: new Coding({
     code: "170125001",
     display: "8-9 month exam not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL89MonthExamNotAttended: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL89MonthExamNotAttended: new Coding({
     code: "170126000",
     display: "8-9 month exam not attended",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL18MonthExaminationNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL18MonthExaminationNotOffered: new Coding({
     code: "170133000",
     display: "18 month examination not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL18MonthExaminationNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL18MonthExaminationNotWanted: new Coding({
     code: "170134006",
     display: "18 month examination not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL18MonthExaminationNotAttended: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL18MonthExaminationNotAttended: new Coding({
     code: "170135007",
     display: "18 month examination not attended",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL25YearExaminationNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL25YearExaminationNotOffered: new Coding({
     code: "170142007",
     display: "2.5 year examination not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL25YearExaminationNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL25YearExaminationNotWanted: new Coding({
     code: "170143002",
     display: "2.5 year examination not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL25YearExaminationNotAttended: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL25YearExaminationNotAttended: new Coding({
     code: "170144008",
     display: "2.5 year examination not attended",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL35YearExaminationNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL35YearExaminationNotOffered: new Coding({
     code: "170151004",
     display: "3.5 year examination not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL35YearExaminationNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL35YearExaminationNotWanted: new Coding({
     code: "170152006",
     display: "3.5 year examination not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL35YearExaminationNotAttended: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL35YearExaminationNotAttended: new Coding({
     code: "170153001",
     display: "3.5 year examination not attended",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL45YearExaminationNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL45YearExaminationNotOffered: new Coding({
     code: "170160007",
     display: "4.5 year examination not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL45YearExaminationNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL45YearExaminationNotWanted: new Coding({
     code: "170161006",
     display: "4.5 year examination not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL45YearExaminationNotAttended: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL45YearExaminationNotAttended: new Coding({
     code: "170162004",
     display: "4.5 year examination not attended",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL10YearExaminationNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL10YearExaminationNotOffered: new Coding({
     code: "170169008",
     display: "10 year examination not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL10YearExaminationNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL10YearExaminationNotWanted: new Coding({
     code: "170170009",
     display: "10 year examination not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL10YearExaminationNotAttended: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL10YearExaminationNotAttended: new Coding({
     code: "170171008",
     display: "10 year examination not attended",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL15YearExaminationNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL15YearExaminationNotOffered: new Coding({
     code: "170178002",
     display: "15 year examination not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL15YearExaminationNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL15YearExaminationNotWanted: new Coding({
     code: "170179005",
     display: "15 year examination not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL15YearExaminationNotAttended: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL15YearExaminationNotAttended: new Coding({
     code: "170180008",
     display: "15 year examination not attended",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child1YearExaminationNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child1YearExaminationNotOffered: new Coding({
     code: "170255003",
     display: "Child 1 year examination not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child1YearExaminationNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child1YearExaminationNotWanted: new Coding({
     code: "170256002",
     display: "Child 1 year examination not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child1YearExaminationNotAttended: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child1YearExaminationNotAttended: new Coding({
     code: "170257006",
     display: "Child 1 year examination not attended",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child6MonthExaminationNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child6MonthExaminationNotOffered: new Coding({
     code: "170264008",
     display: "Child 6 month examination not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child6MonthExaminationNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child6MonthExaminationNotWanted: new Coding({
     code: "170265009",
     display: "Child 6 month examination not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child6MonthExaminationNotAttended: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child6MonthExaminationNotAttended: new Coding({
     code: "170266005",
     display: "Child 6 month examination not attended",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child21MonthExaminationNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child21MonthExaminationNotOffered: new Coding({
     code: "170273000",
     display: "Child 21 month examination not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child21MonthExaminationNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child21MonthExaminationNotWanted: new Coding({
     code: "170274006",
     display: "Child 21 month examination not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child21MonthExaminationNotAttended: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child21MonthExaminationNotAttended: new Coding({
     code: "170275007",
     display: "Child 21 month examination not attended",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child3YearExamNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child3YearExamNotOffered: new Coding({
     code: "170282006",
     display: "Child 3 year exam not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child3YearExamNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child3YearExamNotWanted: new Coding({
     code: "170283001",
     display: "Child 3 year exam not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child3YearExamNotAttended: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child3YearExamNotAttended: new Coding({
     code: "170284007",
     display: "Child 3 year exam not attended",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child39MonthExaminationNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child39MonthExaminationNotOffered: new Coding({
     code: "170291005",
     display: "Child 39 month examination not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child39MonthExaminationNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child39MonthExaminationNotWanted: new Coding({
     code: "170292003",
     display: "Child 39 month examination not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child39MonthExaminationNotAttended: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child39MonthExaminationNotAttended: new Coding({
     code: "170293008",
     display: "Child 39 month examination not attended",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child8WeekExaminationNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child8WeekExaminationNotOffered: new Coding({
     code: "170301000",
     display: "Child 8 week examination not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child8WeekExaminationNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child8WeekExaminationNotWanted: new Coding({
     code: "170302007",
     display: "Child 8 week examination not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child8WeekExaminationNotAttended: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child8WeekExaminationNotAttended: new Coding({
     code: "170304008",
     display: "Child 8 week examination not attended",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CardiacDiseaseTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CardiacDiseaseTreatmentStopped: new Coding({
     code: "170585007",
     display: "Cardiac disease treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_TreatmentForHypertensionStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_TreatmentForHypertensionStopped: new Coding({
     code: "170588009",
     display: "Treatment for hypertension stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RespiratoryDiseaseTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RespiratoryDiseaseTreatmentStopped: new Coding({
     code: "170620005",
     display: "Respiratory disease treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_HomeOxygenSupplyStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_HomeOxygenSupplyStopped: new Coding({
     code: "170621009",
     display: "Home oxygen supply stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_OralSteroidsStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_OralSteroidsStopped: new Coding({
     code: "170624001",
     display: "Oral steroids stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_GastrointestinalTractTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_GastrointestinalTractTreatmentStopped: new Coding({
     code: "170675003",
     display: "Gastrointestinal tract treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_PsychiatricTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_PsychiatricTreatmentStopped: new Coding({
     code: "170687005",
     display: "Psychiatric treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_LithiumStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_LithiumStopped: new Coding({
     code: "170688000",
     display: "Lithium stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_InjectablePhenothiazineStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_InjectablePhenothiazineStopped: new Coding({
     code: "170689008",
     display: "Injectable phenothiazine stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_NeurologicalDisorderTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_NeurologicalDisorderTreatmentStopped: new Coding({
     code: "170700002",
     display: "Neurological disorder treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_EpilepsyTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_EpilepsyTreatmentStopped: new Coding({
     code: "170712003",
     display: "Epilepsy treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_OphthalmologicalTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_OphthalmologicalTreatmentStopped: new Coding({
     code: "170725006",
     display: "Ophthalmological treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_TreatmentOfObesityStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_TreatmentOfObesityStopped: new Coding({
     code: "170800007",
     display: "Treatment of obesity stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_EndocrineDiseaseTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_EndocrineDiseaseTreatmentStopped: new Coding({
     code: "170816009",
     display: "Endocrine disease treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_B12InjectionsStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_B12InjectionsStopped: new Coding({
     code: "170826002",
     display: "B12 injections stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_BloodDisorderTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_BloodDisorderTreatmentStopped: new Coding({
     code: "170834008",
     display: "Blood disorder treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AllergicDisorderTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AllergicDisorderTreatmentStopped: new Coding({
     code: "170843004",
     display: "Allergic disorder treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RheumatologyDisorderTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RheumatologyDisorderTreatmentStopped: new Coding({
     code: "170854009",
     display: "Rheumatology disorder treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_SkinDisorderTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_SkinDisorderTreatmentStopped: new Coding({
     code: "170863006",
     display: "Skin disorder treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_GynecologicalDisorderTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_GynecologicalDisorderTreatmentStopped: new Coding({
     code: "170872003",
     display: "Gynecological disorder treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_UrinaryDisorderTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_UrinaryDisorderTreatmentStopped: new Coding({
     code: "170882002",
     display: "Urinary disorder treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ENTDiseaseTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ENTDiseaseTreatmentStopped: new Coding({
     code: "170894006",
     display: "ENT disease treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_OstomyTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_OstomyTreatmentStopped: new Coding({
     code: "170904002",
     display: "Ostomy - treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_HighRiskTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_HighRiskTreatmentStopped: new Coding({
     code: "170912005",
     display: "High risk treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_WarfarinTherapyStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_WarfarinTherapyStopped: new Coding({
     code: "170919001",
     display: "Warfarin therapy stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RepeatPrescriptionTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RepeatPrescriptionTreatmentStopped: new Coding({
     code: "170929008",
     display: "Repeat prescription treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_HormoneReplacementTherapyHRTContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_HormoneReplacementTherapyHRTContraindicated: new Coding({
     code: "170954008",
     display: "Hormone replacement therapy (HRT) contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_HormonalReplacementTherapyHRTStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_HormonalReplacementTherapyHRTStopped: new Coding({
     code: "170958006",
     display: "Hormonal replacement therapy (HRT) stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_HealthEducationNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_HealthEducationNotWanted: new Coding({
     code: "171034000",
     display: "Health education not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ScreeningNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ScreeningNotWanted: new Coding({
     code: "171103002",
     display: "Screening not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CancerOfCervixScreeningNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CancerOfCervixScreeningNotWanted: new Coding({
     code: "171152003",
     display: "Cancer of cervix screening not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_SensitivityCIImmunization: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_SensitivityCIImmunization: new Coding({
     code: "171277005",
     display: "Sensitivity C/I - immunization",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_PertussisVaccineContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_PertussisVaccineContraindicated: new Coding({
     code: "171284002",
     display: "Pertussis vaccine contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_OperationAborted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_OperationAborted: new Coding({
     code: "180863000",
     display: "Operation aborted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DrugTreatmentStoppedMedicalAdvice: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DrugTreatmentStoppedMedicalAdvice: new Coding({
     code: "182840001",
     display: "Drug treatment stopped - medical advice",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DrStoppedDrugsIneffective: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DrStoppedDrugsIneffective: new Coding({
     code: "182841002",
     display: "Dr stopped drugs - ineffective",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DoctorStoppedDrugsSideEffect: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DoctorStoppedDrugsSideEffect: new Coding({
     code: "182842009",
     display: "Doctor stopped drugs - side effect",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DrStoppedDrugsInconvenient: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DrStoppedDrugsInconvenient: new Coding({
     code: "182843004",
     display: "Dr stopped drugs -inconvenient",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DoctorStoppedDrugsPatientDislikes: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DoctorStoppedDrugsPatientDislikes: new Coding({
     code: "182844005",
     display: "Doctor stopped drugs - patient dislikes",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DoctorStoppedDrugsAvoidInteraction: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DoctorStoppedDrugsAvoidInteraction: new Coding({
     code: "182845006",
     display: "Doctor stopped drugs - avoid interaction",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DoctorStoppedDrugsMedicalAimAchieved: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DoctorStoppedDrugsMedicalAimAchieved: new Coding({
     code: "182846007",
     display: "Doctor stopped drugs - medical aim achieved",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_NoDrugTherapyPrescribed: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_NoDrugTherapyPrescribed: new Coding({
     code: "182849000",
     display: "No drug therapy prescribed",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DrugDeclinedByPatient: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DrugDeclinedByPatient: new Coding({
     code: "182895007",
     display: "Drug declined by patient",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DrugDeclinedByPatientDislikesTaste: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DrugDeclinedByPatientDislikesTaste: new Coding({
     code: "182896008",
     display: "Drug declined by patient - dislikes taste",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DrugDeclinedByPatientSideEffects: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DrugDeclinedByPatientSideEffects: new Coding({
     code: "182897004",
     display: "Drug declined by patient - side effects",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DrugDeclinedByPatientInconvenient: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DrugDeclinedByPatientInconvenient: new Coding({
     code: "182898009",
     display: "Drug declined by patient - inconvenient",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DrugDeclinedByPatientProblemSwallowing: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DrugDeclinedByPatientProblemSwallowing: new Coding({
     code: "182899001",
     display: "Drug declined by patient - problem swallowing",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DrugDeclinedByPatientPatientBeliefs: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DrugDeclinedByPatientPatientBeliefs: new Coding({
     code: "182900006",
     display: "Drug declined by patient - patient beliefs",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DrugDeclinedByPatientAlternativeTherapy: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DrugDeclinedByPatientAlternativeTherapy: new Coding({
     code: "182901005",
     display: "Drug declined by patient - alternative therapy",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DrugDeclinedByPatientCannotPayScript: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DrugDeclinedByPatientCannotPayScript: new Coding({
     code: "182902003",
     display: "Drug declined by patient - cannot pay script",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DrugDeclinedByPatientReasonUnknown: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DrugDeclinedByPatientReasonUnknown: new Coding({
     code: "182903008",
     display: "Drug declined by patient - reason unknown",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ResidenceRemoteFromMedicalCare: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ResidenceRemoteFromMedicalCare: new Coding({
     code: "183928007",
     display: "Residence remote from medical care",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_NoHomeMedicalServices: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_NoHomeMedicalServices: new Coding({
     code: "183929004",
     display: "No home medical services",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AwaitingAdmissionElsewhere: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AwaitingAdmissionElsewhere: new Coding({
     code: "183930009",
     display: "Awaiting admission elsewhere",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_SensitivityContraindicationToProcedure: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_SensitivityContraindicationToProcedure: new Coding({
     code: "183934000",
     display: "Sensitivity contraindication to procedure",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ContraindicationToLiveImmunization: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ContraindicationToLiveImmunization: new Coding({
     code: "183936003",
     display: "Contraindication to live immunization",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ProcedureRefusedForReligiousReason: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ProcedureRefusedForReligiousReason: new Coding({
     code: "183945002",
     display: "Procedure refused for religious reason",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ProcedureRefusedUncooperative: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ProcedureRefusedUncooperative: new Coding({
     code: "183946001",
     display: "Procedure refused - uncooperative",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RefusedProcedureAfterThought: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RefusedProcedureAfterThought: new Coding({
     code: "183947005",
     display: "Refused procedure - after thought",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RefusedProcedureParentQuoteSWish: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RefusedProcedureParentQuoteSWish: new Coding({
     code: "183948000",
     display: "Refused procedure - parent's wish",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AssessmentExaminationRefused: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AssessmentExaminationRefused: new Coding({
     code: "183949008",
     display: "Assessment examination refused",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CareHelpRefusedByPatient: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CareHelpRefusedByPatient: new Coding({
     code: "183956002",
     display: "Care/help refused by patient",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_PatientRefusesDayHospital: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_PatientRefusesDayHospital: new Coding({
     code: "183957006",
     display: "Patient refuses day hospital",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RefusesMealsOnWheels: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RefusesMealsOnWheels: new Coding({
     code: "183958001",
     display: "Refuses meals on wheels",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_SocialServicesHelpRefused: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_SocialServicesHelpRefused: new Coding({
     code: "183959009",
     display: "Social Services help refused",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_PatientRefusesHospitalAdmit: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_PatientRefusesHospitalAdmit: new Coding({
     code: "183960004",
     display: "Patient refuses hospital admit",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_PartIIIAccommodationRefused: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_PartIIIAccommodationRefused: new Coding({
     code: "183961000",
     display: "Part III accommodation refused",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_PatientNonCompliantWithSpecificAdvice: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_PatientNonCompliantWithSpecificAdvice: new Coding({
     code: "183962007",
     display: "Patient non-compliant with specific advice",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_TreatmentNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_TreatmentNotIndicated: new Coding({
     code: "183964008",
     display: "Treatment not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_SurgeryNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_SurgeryNotIndicated: new Coding({
     code: "183965009",
     display: "Surgery not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DrugTreatmentNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DrugTreatmentNotIndicated: new Coding({
     code: "183966005",
     display: "Drug treatment not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ChildSurveillanceNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ChildSurveillanceNotWanted: new Coding({
     code: "184163005",
     display: "Child surveillance not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RefusesDiabetesMonitoring: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RefusesDiabetesMonitoring: new Coding({
     code: "185754009",
     display: "Refuses diabetes monitoring",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MedicalCareUnavailable: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MedicalCareUnavailable: new Coding({
     code: "266756008",
     display: "Medical care unavailable",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MedicalContraindicationToProcedure: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MedicalContraindicationToProcedure: new Coding({
     code: "266757004",
     display: "Medical contraindication to procedure",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ImmunizationContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ImmunizationContraindicated: new Coding({
     code: "266758009",
     display: "Immunization contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_NoHistoryTaken: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_NoHistoryTaken: new Coding({
     code: "266881002",
     display: "No history taken",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ThyroidDiseaseTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ThyroidDiseaseTreatmentStopped: new Coding({
     code: "268521004",
     display: "Thyroid disease treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MedicalCIImmunization: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MedicalCIImmunization: new Coding({
     code: "268560002",
     display: "Medical C/I - immunization",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DrugTherapyDiscontinued: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DrugTherapyDiscontinued: new Coding({
     code: "274512008",
     display: "Drug therapy discontinued",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_SurgeryContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_SurgeryContraindicated: new Coding({
     code: "275935009",
     display: "Surgery contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_PatientNoncomplianceGeneral: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_PatientNoncomplianceGeneral: new Coding({
     code: "275936005",
     display: "Patient noncompliance - general",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MeaslesMumpsRubellaVaccineContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MeaslesMumpsRubellaVaccineContraindicated: new Coding({
     code: "275974002",
     display: "Measles/mumps/rubella vaccine contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_OperationAbandonedBeforeOnset: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_OperationAbandonedBeforeOnset: new Coding({
     code: "288120003",
     display: "Operation abandoned before onset",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ThyroxineTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ThyroxineTreatmentStopped: new Coding({
     code: "309841001",
     display: "Thyroxine treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_TreatmentNotAvailable: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_TreatmentNotAvailable: new Coding({
     code: "309846006",
     display: "Treatment not available",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MammographyNotAttended: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MammographyNotAttended: new Coding({
     code: "310352003",
     display: "Mammography not attended",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AspirinProphylaxisContraIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AspirinProphylaxisContraIndicated: new Coding({
     code: "312451002",
     display: "Aspirin prophylaxis contra-indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VAL360DegreeSweepOfCervixNotPerformed: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VAL360DegreeSweepOfCervixNotPerformed: new Coding({
     code: "314374001",
     display: "360 degree sweep of cervix not performed",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DecidedToWaitForASpecificProvider: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DecidedToWaitForASpecificProvider: new Coding({
     code: "314553311000087102",
     display: "Decided to wait for a specific provider",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_BetaBlockerTherapyRefused: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_BetaBlockerTherapyRefused: new Coding({
     code: "315020006",
     display: "Beta blocker therapy refused",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RefusesCHDMonitoring: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RefusesCHDMonitoring: new Coding({
     code: "315021005",
     display: "Refuses CHD monitoring",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_NicotineReplacementTherapyRefused: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_NicotineReplacementTherapyRefused: new Coding({
     code: "315022003",
     display: "Nicotine replacement therapy refused",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AspirinProphylaxisRefused: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AspirinProphylaxisRefused: new Coding({
     code: "315023008",
     display: "Aspirin prophylaxis refused",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_WarfarinContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_WarfarinContraindicated: new Coding({
     code: "315061006",
     display: "Warfarin contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_BetaBlockerContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_BetaBlockerContraindicated: new Coding({
     code: "315062004",
     display: "Beta blocker contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_BetaBlockerNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_BetaBlockerNotIndicated: new Coding({
     code: "315214003",
     display: "Beta blocker not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_StatinsContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_StatinsContraindicated: new Coding({
     code: "315363002",
     display: "Statins contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AngiotensinConvertingEnzymeInhibitorsContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AngiotensinConvertingEnzymeInhibitorsContraindicated: new Coding({
     code: "315364008",
     display: "Angiotensin converting enzyme inhibitors contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_FibratesContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_FibratesContraindicated: new Coding({
     code: "315591006",
     display: "Fibrates contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_InfluenzaVaccinationDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_InfluenzaVaccinationDeclined: new Coding({
     code: "315640000",
     display: "Influenza vaccination declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RefusalOfTreatmentByParents: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RefusalOfTreatmentByParents: new Coding({
     code: "371138003",
     display: "Refusal of treatment by parents",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MedicationNotAdministered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MedicationNotAdministered: new Coding({
     code: "371900001",
     display: "Medication not administered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MedicationNotAdministeredBecauseContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MedicationNotAdministeredBecauseContraindicated: new Coding({
     code: "373147003",
     display: "Medication not administered because contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ThrombolyticAgentNotAdministeredBecauseContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ThrombolyticAgentNotAdministeredBecauseContraindicated: new Coding({
     code: "373148008",
     display: "Thrombolytic agent not administered because contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_PneumococcalVaccinationContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_PneumococcalVaccinationContraindicated: new Coding({
     code: "390795005",
     display: "Pneumococcal vaccination contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_InfluenzaVaccinationContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_InfluenzaVaccinationContraindicated: new Coding({
     code: "390796006",
     display: "Influenza vaccination contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RetinaeNotExamined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RetinaeNotExamined: new Coding({
     code: "390848004",
     display: "Retinae not examined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ThrombolysisContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ThrombolysisContraindicated: new Coding({
     code: "390910005",
     display: "Thrombolysis contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ThrombolyticTherapyRefused: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ThrombolyticTherapyRefused: new Coding({
     code: "390914001",
     display: "Thrombolytic therapy refused",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_OsteoporosisRiskAssessmentRefused: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_OsteoporosisRiskAssessmentRefused: new Coding({
     code: "391015007",
     display: "Osteoporosis risk assessment refused",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_OsteoporosisRiskAssessmentDefaulted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_OsteoporosisRiskAssessmentDefaulted: new Coding({
     code: "391016008",
     display: "Osteoporosis risk assessment defaulted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_OsteoporosisTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_OsteoporosisTreatmentStopped: new Coding({
     code: "391021006",
     display: "Osteoporosis treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_SyringeDriverDiscontinued: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_SyringeDriverDiscontinued: new Coding({
     code: "394909009",
     display: "Syringe driver discontinued",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_UrineLeukocyteTestNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_UrineLeukocyteTestNotDone: new Coding({
     code: "394965000",
     display: "Urine leukocyte test not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AngiotensinIIReceptorAntagonistsContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AngiotensinIIReceptorAntagonistsContraindicated: new Coding({
     code: "394987009",
     display: "Angiotensin II receptor antagonists contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MedicationStoppedInteraction: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MedicationStoppedInteraction: new Coding({
     code: "395006008",
     display: "Medication stopped - interaction",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MedicationStoppedIneffective: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MedicationStoppedIneffective: new Coding({
     code: "395007004",
     display: "Medication stopped - ineffective",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MedicationStoppedContraIndication: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MedicationStoppedContraIndication: new Coding({
     code: "395008009",
     display: "Medication stopped - contra-indication",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MedicationStoppedSideEffect: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MedicationStoppedSideEffect: new Coding({
     code: "395009001",
     display: "Medication stopped - side effect",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_NicotineReplacementTherapyContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_NicotineReplacementTherapyContraindicated: new Coding({
     code: "395174005",
     display: "Nicotine replacement therapy contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_BupropionContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_BupropionContraindicated: new Coding({
     code: "395175006",
     display: "Bupropion contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_BupropionRefused: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_BupropionRefused: new Coding({
     code: "395176007",
     display: "Bupropion refused",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_OralContraceptivePillContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_OralContraceptivePillContraindicated: new Coding({
     code: "395675007",
     display: "Oral contraceptive pill contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MeningitisCImmunizationRefused: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MeningitisCImmunizationRefused: new Coding({
     code: "395703005",
     display: "Meningitis C immunization refused",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_NoChemotherapyANDORRadiationTherapyPriorToLymphadenectomy: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_NoChemotherapyANDORRadiationTherapyPriorToLymphadenectomy: new Coding({
     code: "396781004",
     display: "No chemotherapy AND/OR radiation therapy prior to lymphadenectomy",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ImmunophenotypicAnalysisNotPerformed: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ImmunophenotypicAnalysisNotPerformed: new Coding({
     code: "397004005",
     display: "Immunophenotypic analysis not performed",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_OperationNotCompleted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_OperationNotCompleted: new Coding({
     code: "397023003",
     display: "Operation not completed",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CellPhenotypingNotPerformed: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CellPhenotypingNotPerformed: new Coding({
     code: "397399004",
     display: "Cell phenotyping not performed",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CytogeneticStudyNotPerformed: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CytogeneticStudyNotPerformed: new Coding({
     code: "399538001",
     display: "Cytogenetic study not performed",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_HypertensionTreatmentRefused: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_HypertensionTreatmentRefused: new Coding({
     code: "401047000",
     display: "Hypertension treatment refused",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AngiotensinIIReceptorAntagonistDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AngiotensinIIReceptorAntagonistDeclined: new Coding({
     code: "401084003",
     display: "Angiotensin II receptor antagonist declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_PneumococcalVaccinationDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_PneumococcalVaccinationDeclined: new Coding({
     code: "401086001",
     display: "Pneumococcal vaccination declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ShuttleWalkingTestNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ShuttleWalkingTestNotDone: new Coding({
     code: "401318002",
     display: "Shuttle walking test not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MedicationRefused: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MedicationRefused: new Coding({
     code: "406149000",
     display: "Medication refused",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ClopidogrelNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ClopidogrelNotIndicated: new Coding({
     code: "407571005",
     display: "Clopidogrel not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AngiotensinIIReceptorAntagonistNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AngiotensinIIReceptorAntagonistNotIndicated: new Coding({
     code: "407572003",
     display: "Angiotensin II receptor antagonist not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_InfluenzaVaccinationNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_InfluenzaVaccinationNotIndicated: new Coding({
     code: "407573008",
     display: "Influenza vaccination not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ClopidogrelContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ClopidogrelContraindicated: new Coding({
     code: "407582002",
     display: "Clopidogrel contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ClopidogrelDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ClopidogrelDeclined: new Coding({
     code: "407583007",
     display: "Clopidogrel declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ThrombolysisTherapyNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ThrombolysisTherapyNotIndicated: new Coding({
     code: "408339001",
     display: "Thrombolysis therapy not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DiabeticRetinopathyScreeningNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DiabeticRetinopathyScreeningNotIndicated: new Coding({
     code: "408396006",
     display: "Diabetic retinopathy screening not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DiabeticFootExaminationNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DiabeticFootExaminationNotIndicated: new Coding({
     code: "408397002",
     display: "Diabetic foot examination not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_SmokingReviewNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_SmokingReviewNotIndicated: new Coding({
     code: "408398007",
     display: "Smoking review not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child7MonthExaminationNotAttended: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child7MonthExaminationNotAttended: new Coding({
     code: "408504000",
     display: "Child 7 month examination not attended",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child7MonthExaminationNotWanted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child7MonthExaminationNotWanted: new Coding({
     code: "408505004",
     display: "Child 7 month examination not wanted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Child7MonthExaminationNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Child7MonthExaminationNotOffered: new Coding({
     code: "408506003",
     display: "Child 7 month examination not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MagneticResonanceImagingScanDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MagneticResonanceImagingScanDeclined: new Coding({
     code: "408548005",
     display: "Magnetic resonance imaging scan declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AngiocardiographyDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AngiocardiographyDeclined: new Coding({
     code: "408549002",
     display: "Angiocardiography declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ExerciseToleranceTestRefused: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ExerciseToleranceTestRefused: new Coding({
     code: "408551003",
     display: "Exercise tolerance test refused",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MultidisciplinaryTeamFallsAssessmentDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MultidisciplinaryTeamFallsAssessmentDeclined: new Coding({
     code: "408558009",
     display: "Multidisciplinary team falls assessment declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_PrimaryHealthCareTeamFallsAssessmentDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_PrimaryHealthCareTeamFallsAssessmentDeclined: new Coding({
     code: "408559001",
     display: "Primary health care team falls assessment declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_EchocardiogramDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_EchocardiogramDeclined: new Coding({
     code: "408566000",
     display: "Echocardiogram declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CTScanBrainDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CTScanBrainDeclined: new Coding({
     code: "408567009",
     display: "CT scan brain declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DiagnosticProcedureDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DiagnosticProcedureDeclined: new Coding({
     code: "408569007",
     display: "Diagnostic procedure declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CarotidArteryDopplerDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CarotidArteryDopplerDeclined: new Coding({
     code: "408572000",
     display: "Carotid artery doppler declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_HepatitisBImmunizationDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_HepatitisBImmunizationDeclined: new Coding({
     code: "408778004",
     display: "Hepatitis B immunization declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_BCGVaccinationDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_BCGVaccinationDeclined: new Coding({
     code: "408791003",
     display: "BCG vaccination declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VitaminKProphylaxisDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VitaminKProphylaxisDeclined: new Coding({
     code: "408795007",
     display: "Vitamin K prophylaxis declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_SampleNotObtained: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_SampleNotObtained: new Coding({
     code: "408836004",
     display: "Sample not obtained",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AmniocentesisSampleNotObtained: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AmniocentesisSampleNotObtained: new Coding({
     code: "408837008",
     display: "Amniocentesis sample not obtained",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CoronaryArteriographyDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CoronaryArteriographyDeclined: new Coding({
     code: "412713002",
     display: "Coronary arteriography declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ChlamydiaScreeningDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ChlamydiaScreeningDeclined: new Coding({
     code: "412718006",
     display: "Chlamydia screening declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MedicationReviewDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MedicationReviewDeclined: new Coding({
     code: "412725004",
     display: "Medication review declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DiabeticFootExaminationDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DiabeticFootExaminationDeclined: new Coding({
     code: "412752009",
     display: "Diabetic foot examination declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_InappropriateMedicationStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_InappropriateMedicationStopped: new Coding({
     code: "412782003",
     display: "Inappropriate medication stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DiabeticRetinopathyScreeningRefused: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DiabeticRetinopathyScreeningRefused: new Coding({
     code: "413122001",
     display: "Diabetic retinopathy screening refused",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_BloodPressureProcedureRefused: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_BloodPressureProcedureRefused: new Coding({
     code: "413123006",
     display: "Blood pressure procedure refused",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CompressionBandagingNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CompressionBandagingNotIndicated: new Coding({
     code: "413167008",
     display: "Compression bandaging not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_PatientNonCompliantRefusedAccessToServices: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_PatientNonCompliantRefusedAccessToServices: new Coding({
     code: "413310006",
     display: "Patient non-compliant - refused access to services",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_PatientNonCompliantRefusedInterventionSupport: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_PatientNonCompliantRefusedInterventionSupport: new Coding({
     code: "413311005",
     display: "Patient non-compliant - refused intervention / support",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_PatientNonCompliantRefusedService: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_PatientNonCompliantRefusedService: new Coding({
     code: "413312003",
     display: "Patient non-compliant - refused service",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AnticoagulationContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AnticoagulationContraindicated: new Coding({
     code: "413558003",
     display: "Anticoagulation contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AnticoagulationDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AnticoagulationDeclined: new Coding({
     code: "413559006",
     display: "Anticoagulation declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AnticoagulationNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AnticoagulationNotIndicated: new Coding({
     code: "413560001",
     display: "Anticoagulation not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CardiacRehabilitationDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CardiacRehabilitationDeclined: new Coding({
     code: "413756001",
     display: "Cardiac rehabilitation declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CervicalSmearNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CervicalSmearNotIndicated: new Coding({
     code: "413812009",
     display: "Cervical smear not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DrugDependenceHomeDetoxificationContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DrugDependenceHomeDetoxificationContraindicated: new Coding({
     code: "414055003",
     display: "Drug dependence home detoxification contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ERCPNotCompletedDueToAnatomicalDerangementsFromPreviousSurgery: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ERCPNotCompletedDueToAnatomicalDerangementsFromPreviousSurgery: new Coding({
     code: "414120003",
     display: "ERCP not completed due to anatomical derangements from previous surgery",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ExerciseToleranceTestContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ExerciseToleranceTestContraindicated: new Coding({
     code: "414159007",
     display: "Exercise tolerance test contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MetforminContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MetforminContraindicated: new Coding({
     code: "414677003",
     display: "Metformin contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_PneumococcalVaccinationNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_PneumococcalVaccinationNotIndicated: new Coding({
     code: "415119001",
     display: "Pneumococcal vaccination not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_SpirometryNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_SpirometryNotIndicated: new Coding({
     code: "415570002",
     display: "Spirometry not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_SpirometryReversibilityTestingContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_SpirometryReversibilityTestingContraindicated: new Coding({
     code: "415571003",
     display: "Spirometry reversibility testing contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_SpirometryTestDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_SpirometryTestDeclined: new Coding({
     code: "415572005",
     display: "Spirometry test declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AdministrationOfSulfonylureaContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AdministrationOfSulfonylureaContraindicated: new Coding({
     code: "415666001",
     display: "Administration of sulfonylurea contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AdministrationOfSulfonylureaNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AdministrationOfSulfonylureaNotIndicated: new Coding({
     code: "415667005",
     display: "Administration of sulfonylurea not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_GlitazonesContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_GlitazonesContraindicated: new Coding({
     code: "416091008",
     display: "Glitazones contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_BisphosphonatesDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_BisphosphonatesDeclined: new Coding({
     code: "416126007",
     display: "Bisphosphonates declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_NoPastHistoryOfProcedure: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_NoPastHistoryOfProcedure: new Coding({
     code: "416128008",
     display: "No past history of procedure",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CombinedCalciumAndVitaminD3PreparationContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CombinedCalciumAndVitaminD3PreparationContraindicated: new Coding({
     code: "416475003",
     display: "Combined calcium and vitamin D3 preparation contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_StrontiumRanelateDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_StrontiumRanelateDeclined: new Coding({
     code: "416522000",
     display: "Strontium ranelate declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_SelectiveEstrogenReceptorModulatorNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_SelectiveEstrogenReceptorModulatorNotIndicated: new Coding({
     code: "416664005",
     display: "Selective estrogen receptor modulator not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_GlitazonesNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_GlitazonesNotIndicated: new Coding({
     code: "416670004",
     display: "Glitazones not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CombinedCalciumAndVitaminD3PreparationNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CombinedCalciumAndVitaminD3PreparationNotIndicated: new Coding({
     code: "416678006",
     display: "Combined calcium and vitamin D3 preparation not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DXAScanContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DXAScanContraindicated: new Coding({
     code: "416704001",
     display: "DXA scan contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_StrontiumRanelateNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_StrontiumRanelateNotIndicated: new Coding({
     code: "416741000",
     display: "Strontium ranelate not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_NonSteroidalAntiInflammatoryDrugsContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_NonSteroidalAntiInflammatoryDrugsContraindicated: new Coding({
     code: "416759002",
     display: "Non-steroidal anti-inflammatory drugs contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DXAScanDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DXAScanDeclined: new Coding({
     code: "416888009",
     display: "DXA scan declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_StrontiumRanelateContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_StrontiumRanelateContraindicated: new Coding({
     code: "416996000",
     display: "Strontium ranelate contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DXAScanNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DXAScanNotIndicated: new Coding({
     code: "417013004",
     display: "DXA scan not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CombinedCalciumAndVitaminD3PreparationDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CombinedCalciumAndVitaminD3PreparationDeclined: new Coding({
     code: "417045009",
     display: "Combined calcium and vitamin D3 preparation declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_SelectiveEstrogenReceptorModulatorContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_SelectiveEstrogenReceptorModulatorContraindicated: new Coding({
     code: "417101006",
     display: "Selective estrogen receptor modulator contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RefusedReferralToMinorAilmentsClinic: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RefusedReferralToMinorAilmentsClinic: new Coding({
     code: "417114007",
     display: "Refused referral to minor ailments clinic",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_BisphosphonatesContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_BisphosphonatesContraindicated: new Coding({
     code: "417128001",
     display: "Bisphosphonates contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CarotidUltrasoundNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CarotidUltrasoundNotIndicated: new Coding({
     code: "417218000",
     display: "Carotid ultrasound not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_BisphosphonatesNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_BisphosphonatesNotIndicated: new Coding({
     code: "417434004",
     display: "Bisphosphonates not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_SelectiveEstrogenReceptorModulatorDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_SelectiveEstrogenReceptorModulatorDeclined: new Coding({
     code: "417512003",
     display: "Selective estrogen receptor modulator declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ProcedureNotOrdered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ProcedureNotOrdered: new Coding({
     code: "418014008",
     display: "Procedure not ordered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_NoStainApplied: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_NoStainApplied: new Coding({
     code: "418731009",
     display: "No stain applied",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CardiopulmonaryResuscitationDiscontinuedDueToMedicalControlOrder: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CardiopulmonaryResuscitationDiscontinuedDueToMedicalControlOrder: new Coding({
     code: "425519007",
     display: "Cardiopulmonary resuscitation discontinued due to medical control order",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CardiopulmonaryResuscitationDiscontinuedDueToDoNotResuscitateOrder: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CardiopulmonaryResuscitationDiscontinuedDueToDoNotResuscitateOrder: new Coding({
     code: "425921008",
     display: "Cardiopulmonary resuscitation discontinued due to do not resuscitate order",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_HistoryRefused: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_HistoryRefused: new Coding({
     code: "426544006",
     display: "History refused",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CardiopulmonaryResuscitationDiscontinuedDueToReturnOfSpontaneousCirculation: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CardiopulmonaryResuscitationDiscontinuedDueToReturnOfSpontaneousCirculation: new Coding({
     code: "426970003",
     display: "Cardiopulmonary resuscitation discontinued due to return of spontaneous circulation",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CardiopulmonaryResuscitationDiscontinuedDueToSignsOfDeath: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CardiopulmonaryResuscitationDiscontinuedDueToSignsOfDeath: new Coding({
     code: "426999008",
     display: "Cardiopulmonary resuscitation discontinued due to signs of death",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CardiopulmonaryResuscitationDiscontinuedAsPerProtocol: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CardiopulmonaryResuscitationDiscontinuedAsPerProtocol: new Coding({
     code: "427569000",
     display: "Cardiopulmonary resuscitation discontinued as per protocol",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MediumChainAcylCoenzymeADehydrogenaseDeficiencyScreeningTestDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MediumChainAcylCoenzymeADehydrogenaseDeficiencyScreeningTestDeclined: new Coding({
     code: "428042006",
     display: "Medium-chain acyl-coenzyme A dehydrogenase deficiency screening test declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AlcoholConsumptionScreeningTestDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AlcoholConsumptionScreeningTestDeclined: new Coding({
     code: "428073005",
     display: "Alcohol consumption screening test declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_SickleCellScreeningDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_SickleCellScreeningDeclined: new Coding({
     code: "428299008",
     display: "Sickle cell screening declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CardiopulmonaryResuscitationNotAttempted: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CardiopulmonaryResuscitationNotAttempted: new Coding({
     code: "428348004",
     display: "Cardiopulmonary resuscitation not attempted",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CongenitalHypothyroidismScreeningDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CongenitalHypothyroidismScreeningDeclined: new Coding({
     code: "428650003",
     display: "Congenital hypothyroidism screening declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CysticFibrosisScreeningDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CysticFibrosisScreeningDeclined: new Coding({
     code: "428841003",
     display: "Cystic fibrosis screening declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CVDRiskAssessmentDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CVDRiskAssessmentDeclined: new Coding({
     code: "429284000",
     display: "CVD risk assessment declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_NurseTriageDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_NurseTriageDeclined: new Coding({
     code: "429688007",
     display: "Nurse triage declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_PhenylketonuriaScreeningDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_PhenylketonuriaScreeningDeclined: new Coding({
     code: "429726000",
     display: "Phenylketonuria screening declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_PatientRefusedTransportation: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_PatientRefusedTransportation: new Coding({
     code: "429739001",
     display: "Patient refused transportation",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DrugTreatmentStoppedAtEndOfClinicalTrial: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DrugTreatmentStoppedAtEndOfClinicalTrial: new Coding({
     code: "430279008",
     display: "Drug treatment stopped at end of clinical trial",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VascularDiseaseRiskAssessmentDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VascularDiseaseRiskAssessmentDeclined: new Coding({
     code: "438370008",
     display: "Vascular disease risk assessment declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_PeritonealDialysisTherapyDiscontinued: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_PeritonealDialysisTherapyDiscontinued: new Coding({
     code: "438604008",
     display: "Peritoneal dialysis therapy discontinued",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_HumanPapillomavirusVaccinationDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_HumanPapillomavirusVaccinationDeclined: new Coding({
     code: "438765003",
     display: "Human papillomavirus vaccination declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_TerminationOfPregnancyContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_TerminationOfPregnancyContraindicated: new Coding({
     code: "438767006",
     display: "Termination of pregnancy contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AdministrationOfDrugOrMedicamentContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AdministrationOfDrugOrMedicamentContraindicated: new Coding({
     code: "438833006",
     display: "Administration of drug or medicament contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CounselingDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CounselingDeclined: new Coding({
     code: "439495000",
     display: "Counseling declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_HemodialysisTherapyDiscontinued: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_HemodialysisTherapyDiscontinued: new Coding({
     code: "439516000",
     display: "Hemodialysis therapy discontinued",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DeterminationOfPatternOfResistanceToAntiviralAgentNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DeterminationOfPatternOfResistanceToAntiviralAgentNotDone: new Coding({
     code: "439867009",
     display: "Determination of pattern of resistance to antiviral agent not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ReferralDeclinedByPatient: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ReferralDeclinedByPatient: new Coding({
     code: "440621003",
     display: "Referral declined by patient",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DelayedHypersensitivitySkinTestForHistoplasminNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DelayedHypersensitivitySkinTestForHistoplasminNotDone: new Coding({
     code: "441989008",
     display: "Delayed hypersensitivity skin test for histoplasmin not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AntenatalScreeningDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AntenatalScreeningDeclined: new Coding({
     code: "442324008",
     display: "Antenatal screening declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AmbulanceTransportToHospitalDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AmbulanceTransportToHospitalDeclined: new Coding({
     code: "442392002",
     display: "Ambulance transport to hospital declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ReferralToSpecialistAlcoholTreatmentServiceDeclinedByPatient: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ReferralToSpecialistAlcoholTreatmentServiceDeclinedByPatient: new Coding({
     code: "442444001",
     display: "Referral to specialist alcohol treatment service declined by patient",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MaternalPostnatalExaminationNotAttended: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MaternalPostnatalExaminationNotAttended: new Coding({
     code: "443788002",
     display: "Maternal postnatal examination not attended",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MaternalPostnatalExaminationRefused: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MaternalPostnatalExaminationRefused: new Coding({
     code: "444020006",
     display: "Maternal postnatal examination refused",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MaternalPostnatalExaminationNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MaternalPostnatalExaminationNotOffered: new Coding({
     code: "444062004",
     display: "Maternal postnatal examination not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AsthmaActionPlanNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AsthmaActionPlanNotDone: new Coding({
     code: "4451000175106",
     display: "Asthma action plan not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CervicalCancerScreeningNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CervicalCancerScreeningNotDone: new Coding({
     code: "4461000175108",
     display: "Cervical cancer screening not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ColorectalCancerScreeningNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ColorectalCancerScreeningNotDone: new Coding({
     code: "4471000175100",
     display: "Colorectal cancer screening not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_HemoglobinA1CTestNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_HemoglobinA1CTestNotDone: new Coding({
     code: "4501000175108",
     display: "Hemoglobin A1C test not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_SpirometryNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_SpirometryNotDone: new Coding({
     code: "4541000175105",
     display: "Spirometry not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DiabeticFootExamNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DiabeticFootExamNotDone: new Coding({
     code: "4551000175107",
     display: "Diabetic foot exam not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_BoneDensityScreeningNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_BoneDensityScreeningNotDone: new Coding({
     code: "4591000175100",
     display: "Bone density screening not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_LongActingReversibleContraceptionDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_LongActingReversibleContraceptionDeclined: new Coding({
     code: "473149004",
     display: "Long acting reversible contraception declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VaccineRefusedByPatient: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VaccineRefusedByPatient: new Coding({
     code: "591000119102",
     display: "Vaccine refused by patient",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_PeakExpiratoryFlowNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_PeakExpiratoryFlowNotDone: new Coding({
     code: "5991000175105",
     display: "Peak expiratory flow not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VaccinationForDiphtheriaPertussisAndTetanusNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VaccinationForDiphtheriaPertussisAndTetanusNotDone: new Coding({
     code: "6021000175100",
     display: "Vaccination for diphtheria, pertussis, and tetanus not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VaricellaVaccinationNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VaricellaVaccinationNotDone: new Coding({
     code: "6031000175102",
     display: "Varicella vaccination not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_HepatitisAVaccinationNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_HepatitisAVaccinationNotDone: new Coding({
     code: "6041000175108",
     display: "Hepatitis A vaccination not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_HepatitisBVaccinationNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_HepatitisBVaccinationNotDone: new Coding({
     code: "6051000175105",
     display: "Hepatitis B vaccination not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AbdominalAorticAneurysmScreeningDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AbdominalAorticAneurysmScreeningDeclined: new Coding({
     code: "698357006",
     display: "Abdominal aortic aneurysm screening declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AnkleBrachialPressureIndexTestDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AnkleBrachialPressureIndexTestDeclined: new Coding({
     code: "698451006",
     display: "Ankle brachial pressure index test declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AntidepressantDrugTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AntidepressantDrugTreatmentStopped: new Coding({
     code: "698459008",
     display: "Antidepressant drug treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AntiviralTherapyDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AntiviralTherapyDeclined: new Coding({
     code: "698460003",
     display: "Antiviral therapy declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_BisoprololContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_BisoprololContraindicated: new Coding({
     code: "698468005",
     display: "Bisoprolol contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_BloodGlucoseTestDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_BloodGlucoseTestDeclined: new Coding({
     code: "698473004",
     display: "Blood glucose test declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_WeightManagementAdviceDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_WeightManagementAdviceDeclined: new Coding({
     code: "698483000",
     display: "Weight management advice declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MeasurementOfWaistCircumferenceDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MeasurementOfWaistCircumferenceDeclined: new Coding({
     code: "698484006",
     display: "Measurement of waist circumference declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_UrineDipstickTestDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_UrineDipstickTestDeclined: new Coding({
     code: "698490005",
     display: "Urine dipstick test declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_SimvastatinContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_SimvastatinContraindicated: new Coding({
     code: "698521002",
     display: "Simvastatin contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_PostnatalDepressionNotDiscussed: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_PostnatalDepressionNotDiscussed: new Coding({
     code: "698569004",
     display: "Postnatal depression not discussed",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_NeverHadCervicalSmear: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_NeverHadCervicalSmear: new Coding({
     code: "698753008",
     display: "Never had cervical smear",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_NebivololTherapyRefused: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_NebivololTherapyRefused: new Coding({
     code: "698758004",
     display: "Nebivolol therapy refused",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_InfluenzaAVirusSubtypeH1N1VaccinationDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_InfluenzaAVirusSubtypeH1N1VaccinationDeclined: new Coding({
     code: "698950001",
     display: "Influenza A virus subtype H1N1 vaccination declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_HomeOxygenTherapyDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_HomeOxygenTherapyDeclined: new Coding({
     code: "699034004",
     display: "Home oxygen therapy declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_HepatitisBVaccinationContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_HepatitisBVaccinationContraindicated: new Coding({
     code: "699037006",
     display: "Hepatitis B vaccination contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_HistoryTakingOfSexualOrientationDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_HistoryTakingOfSexualOrientationDeclined: new Coding({
     code: "699042003",
     display: "History taking of sexual orientation declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ExerciseToleranceTestNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ExerciseToleranceTestNotIndicated: new Coding({
     code: "699048004",
     display: "Exercise tolerance test not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_FootPulseCheckDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_FootPulseCheckDeclined: new Coding({
     code: "699053009",
     display: "Foot pulse check declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AdministrationOfBloodProductDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AdministrationOfBloodProductDeclined: new Coding({
     code: "699054003",
     display: "Administration of blood product declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_BloodTransfusionDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_BloodTransfusionDeclined: new Coding({
     code: "699128009",
     display: "Blood transfusion declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_CarvedilolTherapyDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_CarvedilolTherapyDeclined: new Coding({
     code: "699137009",
     display: "Carvedilol therapy declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DomesticAbuseNotDiscussed: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DomesticAbuseNotDiscussed: new Coding({
     code: "699231000",
     display: "Domestic abuse not discussed",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_BisphosphonateProphylaxisSuspended: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_BisphosphonateProphylaxisSuspended: new Coding({
     code: "700110004",
     display: "Bisphosphonate prophylaxis suspended",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_BoosterMeningitisCVaccinationDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_BoosterMeningitisCVaccinationDeclined: new Coding({
     code: "700359005",
     display: "Booster meningitis C vaccination declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AntibioticProphylaxisNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AntibioticProphylaxisNotIndicated: new Coding({
     code: "700384008",
     display: "Antibiotic prophylaxis not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RoutineEnquiryAboutDomesticAbuseDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RoutineEnquiryAboutDomesticAbuseDeclined: new Coding({
     code: "700411009",
     display: "Routine enquiry about domestic abuse declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RefusalOfTreatmentByPatientAgainstDentalAdvice: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RefusalOfTreatmentByPatientAgainstDentalAdvice: new Coding({
     code: "703427001",
     display: "Refusal of treatment by patient against dental advice",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_NeverHadMammogram: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_NeverHadMammogram: new Coding({
     code: "703942005",
     display: "Never had mammogram",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_HepatitisAVaccinationNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_HepatitisAVaccinationNotIndicated: new Coding({
     code: "703971006",
     display: "Hepatitis A vaccination not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_TeriparatideTherapyDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_TeriparatideTherapyDeclined: new Coding({
     code: "703989007",
     display: "Teriparatide therapy declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RaloxifeneTherapyDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RaloxifeneTherapyDeclined: new Coding({
     code: "703991004",
     display: "Raloxifene therapy declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_BreastfeedingSupportDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_BreastfeedingSupportDeclined: new Coding({
     code: "703992006",
     display: "Breastfeeding support declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_TeriparatideNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_TeriparatideNotIndicated: new Coding({
     code: "703996009",
     display: "Teriparatide not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_TeriparatideContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_TeriparatideContraindicated: new Coding({
     code: "703997000",
     display: "Teriparatide contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RaloxifeneContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RaloxifeneContraindicated: new Coding({
     code: "703999002",
     display: "Raloxifene contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RaloxifeneNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RaloxifeneNotIndicated: new Coding({
     code: "704000000",
     display: "Raloxifene not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Phosphodiesterase5InhibitorNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Phosphodiesterase5InhibitorNotIndicated: new Coding({
     code: "704033005",
     display: "Phosphodiesterase 5 inhibitor not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MentalHealthAssessmentDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MentalHealthAssessmentDeclined: new Coding({
     code: "704046000",
     display: "Mental health assessment declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Phosphodiesterase5InhibitorDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Phosphodiesterase5InhibitorDeclined: new Coding({
     code: "704047009",
     display: "Phosphodiesterase 5 inhibitor declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ReferralToErectileDysfunctionClinicDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ReferralToErectileDysfunctionClinicDeclined: new Coding({
     code: "704049007",
     display: "Referral to erectile dysfunction clinic declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ReferralToCardiacRehabilitationProgramDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ReferralToCardiacRehabilitationProgramDeclined: new Coding({
     code: "704051006",
     display: "Referral to cardiac rehabilitation program declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ReferralToCardiacRehabilitationProgramNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ReferralToCardiacRehabilitationProgramNotIndicated: new Coding({
     code: "704052004",
     display: "Referral to cardiac rehabilitation program not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ReferralToHeartFailureExerciseProgramNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ReferralToHeartFailureExerciseProgramNotIndicated: new Coding({
     code: "704096004",
     display: "Referral to heart failure exercise program not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ReferralToHeartFailureExerciseProgramDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ReferralToHeartFailureExerciseProgramDeclined: new Coding({
     code: "704097008",
     display: "Referral to heart failure exercise program declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_PhysicalHealthAssessmentDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_PhysicalHealthAssessmentDeclined: new Coding({
     code: "705140004",
     display: "Physical health assessment declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VaginalBirthAfterPreviousCesareanSectionRefused: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VaginalBirthAfterPreviousCesareanSectionRefused: new Coding({
     code: "706890009",
     display: "Vaginal birth after previous cesarean section refused",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_HepatitisBVaccinationNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_HepatitisBVaccinationNotIndicated: new Coding({
     code: "707287001",
     display: "Hepatitis B vaccination not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Phosphodiesterase5InhibitorContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Phosphodiesterase5InhibitorContraindicated: new Coding({
     code: "707298000",
     display: "Phosphodiesterase-5 inhibitor contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_TuberculosisScreeningDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_TuberculosisScreeningDeclined: new Coding({
     code: "707745004",
     display: "Tuberculosis screening declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ScreeningChestXRayDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ScreeningChestXRayDeclined: new Coding({
     code: "707746003",
     display: "Screening chest X-ray declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_TestingForEbolaVirusNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_TestingForEbolaVirusNotIndicated: new Coding({
     code: "707853004",
     display: "Testing for Ebola virus not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_InsulinTreatmentStopped: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_InsulinTreatmentStopped: new Coding({
     code: "708000007",
     display: "Insulin treatment stopped",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_TransfusionOfBloodProductRefusedForReligiousReason: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_TransfusionOfBloodProductRefusedForReligiousReason: new Coding({
     code: "708129006",
     display: "Transfusion of blood product refused for religious reason",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_EducationNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_EducationNotIndicated: new Coding({
     code: "709198003",
     display: "Education not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_WoundDrainDiscontinued: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_WoundDrainDiscontinued: new Coding({
     code: "710765004",
     display: "Wound drain discontinued",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_MedicationMonitoringNotIndicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_MedicationMonitoringNotIndicated: new Coding({
     code: "712740006",
     display: "Medication monitoring not indicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RadiationTherapyNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RadiationTherapyNotDone: new Coding({
     code: "712751006",
     display: "Radiation therapy not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_TripleTestNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_TripleTestNotOffered: new Coding({
     code: "712790005",
     display: "Triple test not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AdministrationOfAntiDGlobulinNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AdministrationOfAntiDGlobulinNotOffered: new Coding({
     code: "712803007",
     display: "Administration of Anti-D globulin not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AntenatalUltrasoundScanNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AntenatalUltrasoundScanNotOffered: new Coding({
     code: "712812009",
     display: "Antenatal ultrasound scan not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AlphaFetoproteinBloodTestNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AlphaFetoproteinBloodTestNotOffered: new Coding({
     code: "712851004",
     display: "Alpha-fetoprotein blood test not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AmniocentesisNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AmniocentesisNotOffered: new Coding({
     code: "712852006",
     display: "Amniocentesis not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AntenatalScreeningForViralHepatitisTypeBNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AntenatalScreeningForViralHepatitisTypeBNotOffered: new Coding({
     code: "712854007",
     display: "Antenatal screening for viral hepatitis type B not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AntenatalHIVHumanImmunodeficiencyVirusScreeningNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AntenatalHIVHumanImmunodeficiencyVirusScreeningNotOffered: new Coding({
     code: "712869008",
     display: "Antenatal HIV (human immunodeficiency virus) screening not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AntenatalRhesusAntibodyScreeningNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AntenatalRhesusAntibodyScreeningNotOffered: new Coding({
     code: "712870009",
     display: "Antenatal Rhesus antibody screening not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AntenatalThalassemiaScreeningNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AntenatalThalassemiaScreeningNotOffered: new Coding({
     code: "712872001",
     display: "Antenatal thalassemia screening not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ChemotherapyNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ChemotherapyNotDone: new Coding({
     code: "712985002",
     display: "Chemotherapy not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ParentingEducationNotOffered: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ParentingEducationNotOffered: new Coding({
     code: "712996005",
     display: "Parenting education not offered",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_Over75YearsOfAgeHealthCheckDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_Over75YearsOfAgeHealthCheckDeclined: new Coding({
     code: "713068007",
     display: "Over 75 years of age health check declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_NeckDissectionNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_NeckDissectionNotDone: new Coding({
     code: "713207007",
     display: "Neck dissection not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ProcedureDiscontinuedByHealthcareProfessional: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ProcedureDiscontinuedByHealthcareProfessional: new Coding({
     code: "713246009",
     display: "Procedure discontinued by healthcare professional",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ProcedureDiscontinuedByPatient: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ProcedureDiscontinuedByPatient: new Coding({
     code: "713247000",
     display: "Procedure discontinued by patient",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ProcedureDiscontinuedByDoctor: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ProcedureDiscontinuedByDoctor: new Coding({
     code: "713248005",
     display: "Procedure discontinued by doctor",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AdvanceCarePlanningDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AdvanceCarePlanningDeclined: new Coding({
     code: "713615000",
     display: "Advance care planning declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DiscussionAboutAdvanceCarePlanningDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DiscussionAboutAdvanceCarePlanningDeclined: new Coding({
     code: "714747005",
     display: "Discussion about advance care planning declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_DiphtheriaVaccinationContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_DiphtheriaVaccinationContraindicated: new Coding({
     code: "715163003",
     display: "Diphtheria vaccination contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_BacillusCalmetteGuerinVaccinationContraindicated: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_BacillusCalmetteGuerinVaccinationContraindicated: new Coding({
     code: "715166006",
     display: "Bacillus Calmette-Guerin vaccination contraindicated",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_AssessmentUsingGeneralizedAnxietyDisorder7ItemScaleDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_AssessmentUsingGeneralizedAnxietyDisorder7ItemScaleDeclined: new Coding({
     code: "715508000",
     display: "Assessment using Generalized Anxiety Disorder 7 item scale declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_HeartFailureEducationNotDone: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_HeartFailureEducationNotDone: new Coding({
     code: "715621003",
     display: "Heart failure education not done",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_WarfarinNotPrescribed: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_WarfarinNotPrescribed: new Coding({
     code: "715622005",
     display: "Warfarin not prescribed",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_ReviewOfAdvanceCarePlanDeclined: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_ReviewOfAdvanceCarePlanDeclined: new Coding({
     code: "716048005",
     display: "Review of advance care plan declined",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_RequestProcedureDeferral: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_RequestProcedureDeferral: new Coding({
     code: "914933391000087108",
     display: "Request procedure deferral",
     system: "http://snomed.info/sct"
   }),
-  ProcedureNotPerformedReasonValueSet_VaccineRefusedByParent: Coding.FromStrict({
+  ProcedureNotPerformedReasonValueSet_VaccineRefusedByParent: new Coding({
     code: "921000119109",
     display: "Vaccine refused by parent",
     system: "http://snomed.info/sct"

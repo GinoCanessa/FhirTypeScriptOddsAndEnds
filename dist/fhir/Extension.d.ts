@@ -463,10 +463,10 @@ export declare class Extension extends fhir.FhirElement implements fhir.IExtensi
     /**
      * Check if the current Extension contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a Extension from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IExtension): Extension;
+    static fromStrict(source: fhir.IExtension): Extension;
 }
 //# sourceMappingURL=Extension.d.ts.map

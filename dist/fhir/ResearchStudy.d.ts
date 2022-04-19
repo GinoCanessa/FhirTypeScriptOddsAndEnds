@@ -165,11 +165,11 @@ export declare class ResearchStudyArm extends fhir.BackboneElement implements fh
     /**
      * Check if the current ResearchStudyArm contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ResearchStudyArm from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IResearchStudyArm): ResearchStudyArm;
+    static fromStrict(source: fhir.IResearchStudyArm): ResearchStudyArm;
 }
 /**
  * A goal that the study is aiming to achieve in terms of a scientific question to be answered by the analysis of data collected during the study.
@@ -191,11 +191,11 @@ export declare class ResearchStudyObjective extends fhir.BackboneElement impleme
     /**
      * Check if the current ResearchStudyObjective contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ResearchStudyObjective from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IResearchStudyObjective): ResearchStudyObjective;
+    static fromStrict(source: fhir.IResearchStudyObjective): ResearchStudyObjective;
 }
 /**
  * A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques.  A ResearchStudy involves the gathering of information about human or animal subjects.
@@ -311,11 +311,11 @@ export declare class ResearchStudy extends fhir.DomainResource implements fhir.I
     /**
      * Check if the current ResearchStudy contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a ResearchStudy from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.IResearchStudy): ResearchStudy;
+    static fromStrict(source: fhir.IResearchStudy): ResearchStudy;
 }
 /**
  * Code Values for the ResearchStudy.status field

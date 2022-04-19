@@ -117,18 +117,18 @@ export class EnrollmentResponse extends fhir.DomainResource implements fhir.IEnr
   /**
    * Check if the current EnrollmentResponse contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a EnrollmentResponse from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IEnrollmentResponse):EnrollmentResponse {
+  static override fromStrict(source:fhir.IEnrollmentResponse):EnrollmentResponse {
     var dest:EnrollmentResponse = new EnrollmentResponse(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `EnrollmentResponse is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

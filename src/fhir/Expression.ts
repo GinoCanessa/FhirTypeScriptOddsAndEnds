@@ -86,19 +86,19 @@ export class Expression extends fhir.FhirElement implements fhir.IExpression {
   /**
    * Check if the current Expression contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["language"] === undefined) { missingElements.push("language"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Expression from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IExpression):Expression {
+  static override fromStrict(source:fhir.IExpression):Expression {
     var dest:Expression = new Expression(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Expression is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

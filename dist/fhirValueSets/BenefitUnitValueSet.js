@@ -13,7 +13,7 @@ export const BenefitUnitValueSet = {
     /**
      * A family, typically includes self, spouse(s) and children to a defined age
      */
-    benefit_unit_Family: Coding.FromStrict({
+    benefit_unit_Family: new Coding({
         code: "family",
         display: "Family",
         system: "http://terminology.hl7.org/CodeSystem/benefit-unit"
@@ -21,7 +21,7 @@ export const BenefitUnitValueSet = {
     /**
      * A single individual
      */
-    benefit_unit_Individual: Coding.FromStrict({
+    benefit_unit_Individual: new Coding({
         code: "individual",
         display: "Individual",
         system: "http://terminology.hl7.org/CodeSystem/benefit-unit"

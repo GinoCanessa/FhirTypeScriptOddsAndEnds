@@ -189,20 +189,20 @@ export class SearchParameterComponent extends fhir.BackboneElement implements fh
   /**
    * Check if the current SearchParameterComponent contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["definition"] === undefined) { missingElements.push("definition"); }
     if (this["expression"] === undefined) { missingElements.push("expression"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SearchParameterComponent from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISearchParameterComponent):SearchParameterComponent {
+  static override fromStrict(source:fhir.ISearchParameterComponent):SearchParameterComponent {
     var dest:SearchParameterComponent = new SearchParameterComponent(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SearchParameterComponent is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -415,7 +415,7 @@ export class SearchParameter extends fhir.DomainResource implements fhir.ISearch
   /**
    * Check if the current SearchParameter contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["base"]) || (this["base"].length === 0)) { missingElements.push("base"); }
     if (this["code"] === undefined) { missingElements.push("code"); }
@@ -424,16 +424,16 @@ export class SearchParameter extends fhir.DomainResource implements fhir.ISearch
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
     if (this["url"] === undefined) { missingElements.push("url"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SearchParameter from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ISearchParameter):SearchParameter {
+  static override fromStrict(source:fhir.ISearchParameter):SearchParameter {
     var dest:SearchParameter = new SearchParameter(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `SearchParameter is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

@@ -494,11 +494,11 @@ export declare class CapabilityStatementSoftware extends fhir.BackboneElement im
     /**
      * Check if the current CapabilityStatementSoftware contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CapabilityStatementSoftware from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICapabilityStatementSoftware): CapabilityStatementSoftware;
+    static fromStrict(source: fhir.ICapabilityStatementSoftware): CapabilityStatementSoftware;
 }
 /**
  * Identifies a specific implementation instance that is described by the capability statement - i.e. a particular installation, rather than the capabilities of a software program.
@@ -525,11 +525,11 @@ export declare class CapabilityStatementImplementation extends fhir.BackboneElem
     /**
      * Check if the current CapabilityStatementImplementation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CapabilityStatementImplementation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICapabilityStatementImplementation): CapabilityStatementImplementation;
+    static fromStrict(source: fhir.ICapabilityStatementImplementation): CapabilityStatementImplementation;
 }
 /**
  * Information about security implementation from an interface perspective - what a client needs to know.
@@ -556,11 +556,11 @@ export declare class CapabilityStatementRestSecurity extends fhir.BackboneElemen
     /**
      * Check if the current CapabilityStatementRestSecurity contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CapabilityStatementRestSecurity from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICapabilityStatementRestSecurity): CapabilityStatementRestSecurity;
+    static fromStrict(source: fhir.ICapabilityStatementRestSecurity): CapabilityStatementRestSecurity;
 }
 /**
  * In general, a Resource will only appear in a CapabilityStatement if the server actually has some capabilities - e.g. there is at least one interaction supported. However interactions can be omitted to support summarization (_summary = true).
@@ -583,11 +583,11 @@ export declare class CapabilityStatementRestResourceInteraction extends fhir.Bac
     /**
      * Check if the current CapabilityStatementRestResourceInteraction contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CapabilityStatementRestResourceInteraction from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICapabilityStatementRestResourceInteraction): CapabilityStatementRestResourceInteraction;
+    static fromStrict(source: fhir.ICapabilityStatementRestResourceInteraction): CapabilityStatementRestResourceInteraction;
 }
 /**
  * The search parameters should include the control search parameters such as _sort, _count, etc. that also apply to this resource (though many will be listed at [CapabilityStatement.rest.searchParam](capabilitystatement-definitions.html#CapabilityStatement.rest.searchParam)). The behavior of some search parameters may be further described by other code or extension elements, or narrative within the capability statement or linked [SearchParameter](searchparameter.html#) definitions.
@@ -620,11 +620,11 @@ export declare class CapabilityStatementRestResourceSearchParam extends fhir.Bac
     /**
      * Check if the current CapabilityStatementRestResourceSearchParam contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CapabilityStatementRestResourceSearchParam from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICapabilityStatementRestResourceSearchParam): CapabilityStatementRestResourceSearchParam;
+    static fromStrict(source: fhir.ICapabilityStatementRestResourceSearchParam): CapabilityStatementRestResourceSearchParam;
 }
 /**
  * Operations linked from CapabilityStatement.rest.resource.operation must have OperationDefinition.type = true or OperationDefinition.instance = true.
@@ -653,11 +653,11 @@ export declare class CapabilityStatementRestResourceOperation extends fhir.Backb
     /**
      * Check if the current CapabilityStatementRestResourceOperation contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CapabilityStatementRestResourceOperation from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICapabilityStatementRestResourceOperation): CapabilityStatementRestResourceOperation;
+    static fromStrict(source: fhir.ICapabilityStatementRestResourceOperation): CapabilityStatementRestResourceOperation;
 }
 /**
  * Max of one repetition per resource type.
@@ -753,11 +753,11 @@ export declare class CapabilityStatementRestResource extends fhir.BackboneElemen
     /**
      * Check if the current CapabilityStatementRestResource contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CapabilityStatementRestResource from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICapabilityStatementRestResource): CapabilityStatementRestResource;
+    static fromStrict(source: fhir.ICapabilityStatementRestResource): CapabilityStatementRestResource;
 }
 /**
  * A specification of restful operations supported by the system.
@@ -780,11 +780,11 @@ export declare class CapabilityStatementRestInteraction extends fhir.BackboneEle
     /**
      * Check if the current CapabilityStatementRestInteraction contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CapabilityStatementRestInteraction from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICapabilityStatementRestInteraction): CapabilityStatementRestInteraction;
+    static fromStrict(source: fhir.ICapabilityStatementRestInteraction): CapabilityStatementRestInteraction;
 }
 /**
  * Multiple repetitions allow definition of both client and/or server behaviors or possibly behaviors under different configuration settings (for software or requirements statements).
@@ -832,11 +832,11 @@ export declare class CapabilityStatementRest extends fhir.BackboneElement implem
     /**
      * Check if the current CapabilityStatementRest contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CapabilityStatementRest from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICapabilityStatementRest): CapabilityStatementRest;
+    static fromStrict(source: fhir.ICapabilityStatementRest): CapabilityStatementRest;
 }
 /**
  * An endpoint (network accessible address) to which messages and/or replies are to be sent.
@@ -858,11 +858,11 @@ export declare class CapabilityStatementMessagingEndpoint extends fhir.BackboneE
     /**
      * Check if the current CapabilityStatementMessagingEndpoint contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CapabilityStatementMessagingEndpoint from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICapabilityStatementMessagingEndpoint): CapabilityStatementMessagingEndpoint;
+    static fromStrict(source: fhir.ICapabilityStatementMessagingEndpoint): CapabilityStatementMessagingEndpoint;
 }
 /**
  * This is a proposed alternative to the messaging.event structure.
@@ -885,11 +885,11 @@ export declare class CapabilityStatementMessagingSupportedMessage extends fhir.B
     /**
      * Check if the current CapabilityStatementMessagingSupportedMessage contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CapabilityStatementMessagingSupportedMessage from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICapabilityStatementMessagingSupportedMessage): CapabilityStatementMessagingSupportedMessage;
+    static fromStrict(source: fhir.ICapabilityStatementMessagingSupportedMessage): CapabilityStatementMessagingSupportedMessage;
 }
 /**
  * Multiple repetitions allow the documentation of multiple endpoints per solution.
@@ -920,11 +920,11 @@ export declare class CapabilityStatementMessaging extends fhir.BackboneElement i
     /**
      * Check if the current CapabilityStatementMessaging contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CapabilityStatementMessaging from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICapabilityStatementMessaging): CapabilityStatementMessaging;
+    static fromStrict(source: fhir.ICapabilityStatementMessaging): CapabilityStatementMessaging;
 }
 /**
  * A document definition.
@@ -952,11 +952,11 @@ export declare class CapabilityStatementDocument extends fhir.BackboneElement im
     /**
      * Check if the current CapabilityStatementDocument contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CapabilityStatementDocument from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICapabilityStatementDocument): CapabilityStatementDocument;
+    static fromStrict(source: fhir.ICapabilityStatementDocument): CapabilityStatementDocument;
 }
 /**
  * A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
@@ -1099,11 +1099,11 @@ export declare class CapabilityStatement extends fhir.DomainResource implements 
     /**
      * Check if the current CapabilityStatement contains all required elements.
      */
-    CheckRequiredElements(): string[];
+    checkRequiredElements(): string[];
     /**
      * Factory function to create a CapabilityStatement from an object that MUST contain all required elements.
      */
-    static FromStrict(source: fhir.ICapabilityStatement): CapabilityStatement;
+    static fromStrict(source: fhir.ICapabilityStatement): CapabilityStatement;
 }
 /**
  * Code Values for the CapabilityStatement.rest.resource.interaction.code field

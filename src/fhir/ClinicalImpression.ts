@@ -162,19 +162,19 @@ export class ClinicalImpressionInvestigation extends fhir.BackboneElement implem
   /**
    * Check if the current ClinicalImpressionInvestigation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ClinicalImpressionInvestigation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IClinicalImpressionInvestigation):ClinicalImpressionInvestigation {
+  static override fromStrict(source:fhir.IClinicalImpressionInvestigation):ClinicalImpressionInvestigation {
     var dest:ClinicalImpressionInvestigation = new ClinicalImpressionInvestigation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ClinicalImpressionInvestigation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -209,18 +209,18 @@ export class ClinicalImpressionFinding extends fhir.BackboneElement implements f
   /**
    * Check if the current ClinicalImpressionFinding contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ClinicalImpressionFinding from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IClinicalImpressionFinding):ClinicalImpressionFinding {
+  static override fromStrict(source:fhir.IClinicalImpressionFinding):ClinicalImpressionFinding {
     var dest:ClinicalImpressionFinding = new ClinicalImpressionFinding(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ClinicalImpressionFinding is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -365,20 +365,20 @@ export class ClinicalImpression extends fhir.DomainResource implements fhir.ICli
   /**
    * Check if the current ClinicalImpression contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["subject"] === undefined) { missingElements.push("subject"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ClinicalImpression from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IClinicalImpression):ClinicalImpression {
+  static override fromStrict(source:fhir.IClinicalImpression):ClinicalImpression {
     var dest:ClinicalImpression = new ClinicalImpression(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ClinicalImpression is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

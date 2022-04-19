@@ -300,18 +300,18 @@ export class DeviceUdiCarrier extends fhir.BackboneElement implements fhir.IDevi
   /**
    * Check if the current DeviceUdiCarrier contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DeviceUdiCarrier from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDeviceUdiCarrier):DeviceUdiCarrier {
+  static override fromStrict(source:fhir.IDeviceUdiCarrier):DeviceUdiCarrier {
     var dest:DeviceUdiCarrier = new DeviceUdiCarrier(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DeviceUdiCarrier is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -348,20 +348,20 @@ export class DeviceDeviceName extends fhir.BackboneElement implements fhir.IDevi
   /**
    * Check if the current DeviceDeviceName contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["name"] === undefined) { missingElements.push("name"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DeviceDeviceName from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDeviceDeviceName):DeviceDeviceName {
+  static override fromStrict(source:fhir.IDeviceDeviceName):DeviceDeviceName {
     var dest:DeviceDeviceName = new DeviceDeviceName(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DeviceDeviceName is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -393,19 +393,19 @@ export class DeviceSpecialization extends fhir.BackboneElement implements fhir.I
   /**
    * Check if the current DeviceSpecialization contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["systemType"] === undefined) { missingElements.push("systemType"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DeviceSpecialization from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDeviceSpecialization):DeviceSpecialization {
+  static override fromStrict(source:fhir.IDeviceSpecialization):DeviceSpecialization {
     var dest:DeviceSpecialization = new DeviceSpecialization(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DeviceSpecialization is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -442,19 +442,19 @@ export class DeviceVersion extends fhir.BackboneElement implements fhir.IDeviceV
   /**
    * Check if the current DeviceVersion contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["value"] === undefined) { missingElements.push("value"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DeviceVersion from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDeviceVersion):DeviceVersion {
+  static override fromStrict(source:fhir.IDeviceVersion):DeviceVersion {
     var dest:DeviceVersion = new DeviceVersion(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DeviceVersion is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -489,19 +489,19 @@ export class DeviceProperty extends fhir.BackboneElement implements fhir.IDevice
   /**
    * Check if the current DeviceProperty contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a DeviceProperty from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDeviceProperty):DeviceProperty {
+  static override fromStrict(source:fhir.IDeviceProperty):DeviceProperty {
     var dest:DeviceProperty = new DeviceProperty(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `DeviceProperty is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -674,18 +674,18 @@ export class Device extends fhir.DomainResource implements fhir.IDevice {
   /**
    * Check if the current Device contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Device from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IDevice):Device {
+  static override fromStrict(source:fhir.IDevice):Device {
     var dest:Device = new Device(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Device is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

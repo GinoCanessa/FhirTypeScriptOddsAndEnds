@@ -13,7 +13,7 @@ export const CoverageCopayTypeValueSet = {
   /**
    * A standard fixed currency amount applied to all classes or service or product not otherwise specified.
    */
-  coverage_copay_type_CopayAmount: Coding.FromStrict({
+  coverage_copay_type_CopayAmount: new Coding({
     code: "copay",
     display: "Copay Amount",
     system: "http://terminology.hl7.org/CodeSystem/coverage-copay-type"
@@ -21,7 +21,7 @@ export const CoverageCopayTypeValueSet = {
   /**
    * A standard percentage applied to all classes or service or product not otherwise specified.
    */
-  coverage_copay_type_CopayPercentage: Coding.FromStrict({
+  coverage_copay_type_CopayPercentage: new Coding({
     code: "copaypct",
     display: "Copay Percentage",
     system: "http://terminology.hl7.org/CodeSystem/coverage-copay-type"
@@ -29,7 +29,7 @@ export const CoverageCopayTypeValueSet = {
   /**
    * The accumulated amount of patient payment before the coverage begins to pay for services.
    */
-  coverage_copay_type_Deductible: Coding.FromStrict({
+  coverage_copay_type_Deductible: new Coding({
     code: "deductible",
     display: "Deductible",
     system: "http://terminology.hl7.org/CodeSystem/coverage-copay-type"
@@ -37,7 +37,7 @@ export const CoverageCopayTypeValueSet = {
   /**
    * An episode in an emergency department.
    */
-  coverage_copay_type_Emergency: Coding.FromStrict({
+  coverage_copay_type_Emergency: new Coding({
     code: "emergency",
     display: "Emergency",
     system: "http://terminology.hl7.org/CodeSystem/coverage-copay-type"
@@ -45,7 +45,7 @@ export const CoverageCopayTypeValueSet = {
   /**
    * An office visit for a general practitioner of a discipline.
    */
-  coverage_copay_type_GPOfficeVisit: Coding.FromStrict({
+  coverage_copay_type_GPOfficeVisit: new Coding({
     code: "gpvisit",
     display: "GP Office Visit",
     system: "http://terminology.hl7.org/CodeSystem/coverage-copay-type"
@@ -53,7 +53,7 @@ export const CoverageCopayTypeValueSet = {
   /**
    * An episode of an Inpatient hospital stay.
    */
-  coverage_copay_type_InpatientHospital: Coding.FromStrict({
+  coverage_copay_type_InpatientHospital: new Coding({
     code: "inpthosp",
     display: "Inpatient Hospital",
     system: "http://terminology.hl7.org/CodeSystem/coverage-copay-type"
@@ -61,7 +61,7 @@ export const CoverageCopayTypeValueSet = {
   /**
    * The maximum amout of payment for services which a patient, or family, is expected to incur - typically annually.
    */
-  coverage_copay_type_MaximumOutOfPocket: Coding.FromStrict({
+  coverage_copay_type_MaximumOutOfPocket: new Coding({
     code: "maxoutofpocket",
     display: "Maximum out of pocket",
     system: "http://terminology.hl7.org/CodeSystem/coverage-copay-type"
@@ -69,7 +69,7 @@ export const CoverageCopayTypeValueSet = {
   /**
    * An office visit for a specialist practitioner of a discipline
    */
-  coverage_copay_type_SpecialistOfficeVisit: Coding.FromStrict({
+  coverage_copay_type_SpecialistOfficeVisit: new Coding({
     code: "spvisit",
     display: "Specialist Office Visit",
     system: "http://terminology.hl7.org/CodeSystem/coverage-copay-type"
@@ -77,7 +77,7 @@ export const CoverageCopayTypeValueSet = {
   /**
    * A visit held where the patient is remote relative to the practitioner, e.g. by phone, computer or video conference.
    */
-  coverage_copay_type_TeleVisit: Coding.FromStrict({
+  coverage_copay_type_TeleVisit: new Coding({
     code: "televisit",
     display: "Tele-visit",
     system: "http://terminology.hl7.org/CodeSystem/coverage-copay-type"
@@ -85,7 +85,7 @@ export const CoverageCopayTypeValueSet = {
   /**
    * A visit to an urgent care facility - typically a community care clinic.
    */
-  coverage_copay_type_UrgentCare: Coding.FromStrict({
+  coverage_copay_type_UrgentCare: new Coding({
     code: "urgentcare",
     display: "Urgent Care",
     system: "http://terminology.hl7.org/CodeSystem/coverage-copay-type"

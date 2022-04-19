@@ -10,207 +10,207 @@ import { Coding } from '../fhir'
  * This value set includes all the codes in HL7 V2 table 0074.
  */
 export const DiagnosticServiceSectionsValueSet = {
-  v2_0074_Audiology: Coding.FromStrict({
+  v2_0074_Audiology: new Coding({
     code: "AU",
     display: "Audiology",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_BloodGases: Coding.FromStrict({
+  v2_0074_BloodGases: new Coding({
     code: "BG",
     display: "Blood Gases",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_BloodBank: Coding.FromStrict({
+  v2_0074_BloodBank: new Coding({
     code: "BLB",
     display: "Blood Bank",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_Cytogenetics: Coding.FromStrict({
+  v2_0074_Cytogenetics: new Coding({
     code: "CG",
     display: "Cytogenetics",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_Chemistry: Coding.FromStrict({
+  v2_0074_Chemistry: new Coding({
     code: "CH",
     display: "Chemistry",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_Cytopathology: Coding.FromStrict({
+  v2_0074_Cytopathology: new Coding({
     code: "CP",
     display: "Cytopathology",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_CATScan: Coding.FromStrict({
+  v2_0074_CATScan: new Coding({
     code: "CT",
     display: "CAT Scan",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_CardiacCatheterization: Coding.FromStrict({
+  v2_0074_CardiacCatheterization: new Coding({
     code: "CTH",
     display: "Cardiac Catheterization",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_CardiacUltrasound: Coding.FromStrict({
+  v2_0074_CardiacUltrasound: new Coding({
     code: "CUS",
     display: "Cardiac Ultrasound",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_ElectrocardiacEGEKGEECHolter: Coding.FromStrict({
+  v2_0074_ElectrocardiacEGEKGEECHolter: new Coding({
     code: "EC",
     display: "Electrocardiac (e.g., EKG,  EEC, Holter)",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_ElectroneuroEEGEMGEPPSG: Coding.FromStrict({
+  v2_0074_ElectroneuroEEGEMGEPPSG: new Coding({
     code: "EN",
     display: "Electroneuro (EEG, EMG,EP,PSG)",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_Genetics: Coding.FromStrict({
+  v2_0074_Genetics: new Coding({
     code: "GE",
     display: "Genetics",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_Hematology: Coding.FromStrict({
+  v2_0074_Hematology: new Coding({
     code: "HM",
     display: "Hematology",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_BedsideICUMonitoring: Coding.FromStrict({
+  v2_0074_BedsideICUMonitoring: new Coding({
     code: "ICU",
     display: "Bedside ICU Monitoring",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_Immunology: Coding.FromStrict({
+  v2_0074_Immunology: new Coding({
     code: "IMM",
     display: "Immunology",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_Laboratory: Coding.FromStrict({
+  v2_0074_Laboratory: new Coding({
     code: "LAB",
     display: "Laboratory",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_Microbiology: Coding.FromStrict({
+  v2_0074_Microbiology: new Coding({
     code: "MB",
     display: "Microbiology",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_Mycobacteriology: Coding.FromStrict({
+  v2_0074_Mycobacteriology: new Coding({
     code: "MCB",
     display: "Mycobacteriology",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_Mycology: Coding.FromStrict({
+  v2_0074_Mycology: new Coding({
     code: "MYC",
     display: "Mycology",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_NuclearMagneticResonance: Coding.FromStrict({
+  v2_0074_NuclearMagneticResonance: new Coding({
     code: "NMR",
     display: "Nuclear Magnetic Resonance",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_NuclearMedicineScan: Coding.FromStrict({
+  v2_0074_NuclearMedicineScan: new Coding({
     code: "NMS",
     display: "Nuclear Medicine Scan",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_NursingServiceMeasures: Coding.FromStrict({
+  v2_0074_NursingServiceMeasures: new Coding({
     code: "NRS",
     display: "Nursing Service Measures",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_OutsideLab: Coding.FromStrict({
+  v2_0074_OutsideLab: new Coding({
     code: "OSL",
     display: "Outside Lab",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_OccupationalTherapy: Coding.FromStrict({
+  v2_0074_OccupationalTherapy: new Coding({
     code: "OT",
     display: "Occupational Therapy",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_Other: Coding.FromStrict({
+  v2_0074_Other: new Coding({
     code: "OTH",
     display: "Other",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_OBUltrasound: Coding.FromStrict({
+  v2_0074_OBUltrasound: new Coding({
     code: "OUS",
     display: "OB Ultrasound",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_PulmonaryFunction: Coding.FromStrict({
+  v2_0074_PulmonaryFunction: new Coding({
     code: "PF",
     display: "Pulmonary Function",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_Pharmacy: Coding.FromStrict({
+  v2_0074_Pharmacy: new Coding({
     code: "PHR",
     display: "Pharmacy",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_PhysicianHxDxAdmissionNoteEtc: Coding.FromStrict({
+  v2_0074_PhysicianHxDxAdmissionNoteEtc: new Coding({
     code: "PHY",
     display: "Physician (Hx. Dx, admission note, etc.)",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_PhysicalTherapy: Coding.FromStrict({
+  v2_0074_PhysicalTherapy: new Coding({
     code: "PT",
     display: "Physical Therapy",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_Radiology: Coding.FromStrict({
+  v2_0074_Radiology: new Coding({
     code: "RAD",
     display: "Radiology",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_RespiratoryCareTherapy: Coding.FromStrict({
+  v2_0074_RespiratoryCareTherapy: new Coding({
     code: "RC",
     display: "Respiratory Care (therapy)",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_RadiationTherapy: Coding.FromStrict({
+  v2_0074_RadiationTherapy: new Coding({
     code: "RT",
     display: "Radiation Therapy",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_RadiologyUltrasound: Coding.FromStrict({
+  v2_0074_RadiologyUltrasound: new Coding({
     code: "RUS",
     display: "Radiology Ultrasound",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_Radiograph: Coding.FromStrict({
+  v2_0074_Radiograph: new Coding({
     code: "RX",
     display: "Radiograph",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_SurgicalPathology: Coding.FromStrict({
+  v2_0074_SurgicalPathology: new Coding({
     code: "SP",
     display: "Surgical Pathology",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_Serology: Coding.FromStrict({
+  v2_0074_Serology: new Coding({
     code: "SR",
     display: "Serology",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_Toxicology: Coding.FromStrict({
+  v2_0074_Toxicology: new Coding({
     code: "TX",
     display: "Toxicology",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_Virology: Coding.FromStrict({
+  v2_0074_Virology: new Coding({
     code: "VR",
     display: "Virology",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_VascularUltrasound: Coding.FromStrict({
+  v2_0074_VascularUltrasound: new Coding({
     code: "VUS",
     display: "Vascular Ultrasound",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"
   }),
-  v2_0074_Cineradiograph: Coding.FromStrict({
+  v2_0074_Cineradiograph: new Coding({
     code: "XRC",
     display: "Cineradiograph",
     system: "http://terminology.hl7.org/CodeSystem/v2-0074"

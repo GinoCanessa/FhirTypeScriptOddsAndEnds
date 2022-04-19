@@ -52,18 +52,18 @@ export class RiskAssessmentPrediction extends fhir.BackboneElement {
     /**
      * Check if the current RiskAssessmentPrediction contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a RiskAssessmentPrediction from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new RiskAssessmentPrediction(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `RiskAssessmentPrediction is missing elements: ${missingElements.join(", ")}`;
         }
@@ -155,7 +155,7 @@ export class RiskAssessment extends fhir.DomainResource {
     /**
      * Check if the current RiskAssessment contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["status"] === undefined) {
             missingElements.push("status");
@@ -163,16 +163,16 @@ export class RiskAssessment extends fhir.DomainResource {
         if (this["subject"] === undefined) {
             missingElements.push("subject");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a RiskAssessment from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new RiskAssessment(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `RiskAssessment is missing elements: ${missingElements.join(", ")}`;
         }

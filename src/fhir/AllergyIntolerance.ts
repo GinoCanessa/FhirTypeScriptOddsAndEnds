@@ -197,19 +197,19 @@ export class AllergyIntoleranceReaction extends fhir.BackboneElement implements 
   /**
    * Check if the current AllergyIntoleranceReaction contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["manifestation"]) || (this["manifestation"].length === 0)) { missingElements.push("manifestation"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a AllergyIntoleranceReaction from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IAllergyIntoleranceReaction):AllergyIntoleranceReaction {
+  static override fromStrict(source:fhir.IAllergyIntoleranceReaction):AllergyIntoleranceReaction {
     var dest:AllergyIntoleranceReaction = new AllergyIntoleranceReaction(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `AllergyIntoleranceReaction is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -351,19 +351,19 @@ export class AllergyIntolerance extends fhir.DomainResource implements fhir.IAll
   /**
    * Check if the current AllergyIntolerance contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["patient"] === undefined) { missingElements.push("patient"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a AllergyIntolerance from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IAllergyIntolerance):AllergyIntolerance {
+  static override fromStrict(source:fhir.IAllergyIntolerance):AllergyIntolerance {
     var dest:AllergyIntolerance = new AllergyIntolerance(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `AllergyIntolerance is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

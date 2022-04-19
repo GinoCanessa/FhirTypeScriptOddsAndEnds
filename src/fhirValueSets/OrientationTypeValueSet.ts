@@ -13,7 +13,7 @@ export const OrientationTypeValueSet = {
   /**
    * Antisense orientation of reference sequence.
    */
-  orientation_type_AntisenseOrientationOfReferenceSeq: Coding.FromStrict({
+  orientation_type_AntisenseOrientationOfReferenceSeq: new Coding({
     code: "antisense",
     display: "Antisense orientation of referenceSeq",
     system: "http://hl7.org/fhir/orientation-type"
@@ -21,7 +21,7 @@ export const OrientationTypeValueSet = {
   /**
    * Sense orientation of reference sequence.
    */
-  orientation_type_SenseOrientationOfReferenceSeq: Coding.FromStrict({
+  orientation_type_SenseOrientationOfReferenceSeq: new Coding({
     code: "sense",
     display: "Sense orientation of referenceSeq",
     system: "http://hl7.org/fhir/orientation-type"

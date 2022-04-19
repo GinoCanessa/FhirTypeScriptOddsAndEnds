@@ -42,7 +42,7 @@ export class CoverageClass extends fhir.BackboneElement {
     /**
      * Check if the current CoverageClass contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["type"] === undefined) {
             missingElements.push("type");
@@ -50,16 +50,16 @@ export class CoverageClass extends fhir.BackboneElement {
         if (this["value"] === undefined) {
             missingElements.push("value");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a CoverageClass from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new CoverageClass(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `CoverageClass is missing elements: ${missingElements.join(", ")}`;
         }
@@ -89,21 +89,21 @@ export class CoverageCostToBeneficiaryException extends fhir.BackboneElement {
     /**
      * Check if the current CoverageCostToBeneficiaryException contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["type"] === undefined) {
             missingElements.push("type");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a CoverageCostToBeneficiaryException from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new CoverageCostToBeneficiaryException(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `CoverageCostToBeneficiaryException is missing elements: ${missingElements.join(", ")}`;
         }
@@ -135,18 +135,18 @@ export class CoverageCostToBeneficiary extends fhir.BackboneElement {
     /**
      * Check if the current CoverageCostToBeneficiary contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a CoverageCostToBeneficiary from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new CoverageCostToBeneficiary(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `CoverageCostToBeneficiary is missing elements: ${missingElements.join(", ")}`;
         }
@@ -248,7 +248,7 @@ export class Coverage extends fhir.DomainResource {
     /**
      * Check if the current Coverage contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["beneficiary"] === undefined) {
             missingElements.push("beneficiary");
@@ -259,16 +259,16 @@ export class Coverage extends fhir.DomainResource {
         if (this["status"] === undefined) {
             missingElements.push("status");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a Coverage from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new Coverage(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `Coverage is missing elements: ${missingElements.join(", ")}`;
         }

@@ -13,7 +13,7 @@ export const DefinitionTopicValueSet = {
     /**
      * The definition is related to assessment of the patient.
      */
-    definition_topic_Assessment: Coding.FromStrict({
+    definition_topic_Assessment: new Coding({
         code: "assessment",
         display: "Assessment",
         system: "http://terminology.hl7.org/CodeSystem/definition-topic"
@@ -21,7 +21,7 @@ export const DefinitionTopicValueSet = {
     /**
      * The definition is related to education of the patient.
      */
-    definition_topic_Education: Coding.FromStrict({
+    definition_topic_Education: new Coding({
         code: "education",
         display: "Education",
         system: "http://terminology.hl7.org/CodeSystem/definition-topic"
@@ -29,7 +29,7 @@ export const DefinitionTopicValueSet = {
     /**
      * The definition is related to treatment of the patient.
      */
-    definition_topic_Treatment: Coding.FromStrict({
+    definition_topic_Treatment: new Coding({
         code: "treatment",
         display: "Treatment",
         system: "http://terminology.hl7.org/CodeSystem/definition-topic"

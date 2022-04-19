@@ -13,7 +13,7 @@ export const ExProcedureTypeValueSet = {
     /**
      * The first procedure in a series required to produce and overall patient outcome.
      */
-    ex_procedure_type_PrimaryProcedure: Coding.FromStrict({
+    ex_procedure_type_PrimaryProcedure: new Coding({
         code: "primary",
         display: "Primary procedure",
         system: "http://terminology.hl7.org/CodeSystem/ex-procedure-type"
@@ -21,7 +21,7 @@ export const ExProcedureTypeValueSet = {
     /**
      * The second procedure in a series required to produce and overall patient outcome.
      */
-    ex_procedure_type_SecondaryProcedure: Coding.FromStrict({
+    ex_procedure_type_SecondaryProcedure: new Coding({
         code: "secondary",
         display: "Secondary procedure",
         system: "http://terminology.hl7.org/CodeSystem/ex-procedure-type"

@@ -114,20 +114,20 @@ export class CatalogEntryRelatedEntry extends fhir.BackboneElement implements fh
   /**
    * Check if the current CatalogEntryRelatedEntry contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["item"] === undefined) { missingElements.push("item"); }
     if (this["relationtype"] === undefined) { missingElements.push("relationtype"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CatalogEntryRelatedEntry from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICatalogEntryRelatedEntry):CatalogEntryRelatedEntry {
+  static override fromStrict(source:fhir.ICatalogEntryRelatedEntry):CatalogEntryRelatedEntry {
     var dest:CatalogEntryRelatedEntry = new CatalogEntryRelatedEntry(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CatalogEntryRelatedEntry is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -227,20 +227,20 @@ export class CatalogEntry extends fhir.DomainResource implements fhir.ICatalogEn
   /**
    * Check if the current CatalogEntry contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["orderable"] === undefined) { missingElements.push("orderable"); }
     if (this["referencedItem"] === undefined) { missingElements.push("referencedItem"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CatalogEntry from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ICatalogEntry):CatalogEntry {
+  static override fromStrict(source:fhir.ICatalogEntry):CatalogEntry {
     var dest:CatalogEntry = new CatalogEntry(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `CatalogEntry is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

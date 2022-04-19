@@ -609,20 +609,20 @@ export class TestScriptOrigin extends fhir.BackboneElement implements fhir.ITest
   /**
    * Check if the current TestScriptOrigin contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["index"] === undefined) { missingElements.push("index"); }
     if (this["profile"] === undefined) { missingElements.push("profile"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TestScriptOrigin from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITestScriptOrigin):TestScriptOrigin {
+  static override fromStrict(source:fhir.ITestScriptOrigin):TestScriptOrigin {
     var dest:TestScriptOrigin = new TestScriptOrigin(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TestScriptOrigin is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -658,20 +658,20 @@ export class TestScriptDestination extends fhir.BackboneElement implements fhir.
   /**
    * Check if the current TestScriptDestination contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["index"] === undefined) { missingElements.push("index"); }
     if (this["profile"] === undefined) { missingElements.push("profile"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TestScriptDestination from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITestScriptDestination):TestScriptDestination {
+  static override fromStrict(source:fhir.ITestScriptDestination):TestScriptDestination {
     var dest:TestScriptDestination = new TestScriptDestination(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TestScriptDestination is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -705,19 +705,19 @@ export class TestScriptMetadataLink extends fhir.BackboneElement implements fhir
   /**
    * Check if the current TestScriptMetadataLink contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["url"] === undefined) { missingElements.push("url"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TestScriptMetadataLink from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITestScriptMetadataLink):TestScriptMetadataLink {
+  static override fromStrict(source:fhir.ITestScriptMetadataLink):TestScriptMetadataLink {
     var dest:TestScriptMetadataLink = new TestScriptMetadataLink(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TestScriptMetadataLink is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -790,21 +790,21 @@ export class TestScriptMetadataCapability extends fhir.BackboneElement implement
   /**
    * Check if the current TestScriptMetadataCapability contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["capabilities"] === undefined) { missingElements.push("capabilities"); }
     if (this["required"] === undefined) { missingElements.push("required"); }
     if (this["validated"] === undefined) { missingElements.push("validated"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TestScriptMetadataCapability from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITestScriptMetadataCapability):TestScriptMetadataCapability {
+  static override fromStrict(source:fhir.ITestScriptMetadataCapability):TestScriptMetadataCapability {
     var dest:TestScriptMetadataCapability = new TestScriptMetadataCapability(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TestScriptMetadataCapability is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -834,19 +834,19 @@ export class TestScriptMetadata extends fhir.BackboneElement implements fhir.ITe
   /**
    * Check if the current TestScriptMetadata contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["capability"]) || (this["capability"].length === 0)) { missingElements.push("capability"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TestScriptMetadata from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITestScriptMetadata):TestScriptMetadata {
+  static override fromStrict(source:fhir.ITestScriptMetadata):TestScriptMetadata {
     var dest:TestScriptMetadata = new TestScriptMetadata(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TestScriptMetadata is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -887,20 +887,20 @@ export class TestScriptFixture extends fhir.BackboneElement implements fhir.ITes
   /**
    * Check if the current TestScriptFixture contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["autocreate"] === undefined) { missingElements.push("autocreate"); }
     if (this["autodelete"] === undefined) { missingElements.push("autodelete"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TestScriptFixture from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITestScriptFixture):TestScriptFixture {
+  static override fromStrict(source:fhir.ITestScriptFixture):TestScriptFixture {
     var dest:TestScriptFixture = new TestScriptFixture(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TestScriptFixture is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -976,19 +976,19 @@ export class TestScriptVariable extends fhir.BackboneElement implements fhir.ITe
   /**
    * Check if the current TestScriptVariable contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["name"] === undefined) { missingElements.push("name"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TestScriptVariable from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITestScriptVariable):TestScriptVariable {
+  static override fromStrict(source:fhir.ITestScriptVariable):TestScriptVariable {
     var dest:TestScriptVariable = new TestScriptVariable(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TestScriptVariable is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1024,20 +1024,20 @@ export class TestScriptSetupActionOperationRequestHeader extends fhir.BackboneEl
   /**
    * Check if the current TestScriptSetupActionOperationRequestHeader contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["field"] === undefined) { missingElements.push("field"); }
     if (this["value"] === undefined) { missingElements.push("value"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TestScriptSetupActionOperationRequestHeader from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITestScriptSetupActionOperationRequestHeader):TestScriptSetupActionOperationRequestHeader {
+  static override fromStrict(source:fhir.ITestScriptSetupActionOperationRequestHeader):TestScriptSetupActionOperationRequestHeader {
     var dest:TestScriptSetupActionOperationRequestHeader = new TestScriptSetupActionOperationRequestHeader(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TestScriptSetupActionOperationRequestHeader is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1172,19 +1172,19 @@ export class TestScriptSetupActionOperation extends fhir.BackboneElement impleme
   /**
    * Check if the current TestScriptSetupActionOperation contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["encodeRequestUrl"] === undefined) { missingElements.push("encodeRequestUrl"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TestScriptSetupActionOperation from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITestScriptSetupActionOperation):TestScriptSetupActionOperation {
+  static override fromStrict(source:fhir.ITestScriptSetupActionOperation):TestScriptSetupActionOperation {
     var dest:TestScriptSetupActionOperation = new TestScriptSetupActionOperation(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TestScriptSetupActionOperation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1358,19 +1358,19 @@ export class TestScriptSetupActionAssert extends fhir.BackboneElement implements
   /**
    * Check if the current TestScriptSetupActionAssert contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["warningOnly"] === undefined) { missingElements.push("warningOnly"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TestScriptSetupActionAssert from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITestScriptSetupActionAssert):TestScriptSetupActionAssert {
+  static override fromStrict(source:fhir.ITestScriptSetupActionAssert):TestScriptSetupActionAssert {
     var dest:TestScriptSetupActionAssert = new TestScriptSetupActionAssert(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TestScriptSetupActionAssert is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1398,18 +1398,18 @@ export class TestScriptSetupAction extends fhir.BackboneElement implements fhir.
   /**
    * Check if the current TestScriptSetupAction contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TestScriptSetupAction from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITestScriptSetupAction):TestScriptSetupAction {
+  static override fromStrict(source:fhir.ITestScriptSetupAction):TestScriptSetupAction {
     var dest:TestScriptSetupAction = new TestScriptSetupAction(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TestScriptSetupAction is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1434,19 +1434,19 @@ export class TestScriptSetup extends fhir.BackboneElement implements fhir.ITestS
   /**
    * Check if the current TestScriptSetup contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["action"]) || (this["action"].length === 0)) { missingElements.push("action"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TestScriptSetup from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITestScriptSetup):TestScriptSetup {
+  static override fromStrict(source:fhir.ITestScriptSetup):TestScriptSetup {
     var dest:TestScriptSetup = new TestScriptSetup(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TestScriptSetup is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1474,18 +1474,18 @@ export class TestScriptTestAction extends fhir.BackboneElement implements fhir.I
   /**
    * Check if the current TestScriptTestAction contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TestScriptTestAction from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITestScriptTestAction):TestScriptTestAction {
+  static override fromStrict(source:fhir.ITestScriptTestAction):TestScriptTestAction {
     var dest:TestScriptTestAction = new TestScriptTestAction(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TestScriptTestAction is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1524,19 +1524,19 @@ export class TestScriptTest extends fhir.BackboneElement implements fhir.ITestSc
   /**
    * Check if the current TestScriptTest contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["action"]) || (this["action"].length === 0)) { missingElements.push("action"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TestScriptTest from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITestScriptTest):TestScriptTest {
+  static override fromStrict(source:fhir.ITestScriptTest):TestScriptTest {
     var dest:TestScriptTest = new TestScriptTest(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TestScriptTest is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1561,19 +1561,19 @@ export class TestScriptTeardownAction extends fhir.BackboneElement implements fh
   /**
    * Check if the current TestScriptTeardownAction contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["operation"] === undefined) { missingElements.push("operation"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TestScriptTeardownAction from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITestScriptTeardownAction):TestScriptTeardownAction {
+  static override fromStrict(source:fhir.ITestScriptTeardownAction):TestScriptTeardownAction {
     var dest:TestScriptTeardownAction = new TestScriptTeardownAction(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TestScriptTeardownAction is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1598,19 +1598,19 @@ export class TestScriptTeardown extends fhir.BackboneElement implements fhir.ITe
   /**
    * Check if the current TestScriptTeardown contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["action"]) || (this["action"].length === 0)) { missingElements.push("action"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TestScriptTeardown from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITestScriptTeardown):TestScriptTeardown {
+  static override fromStrict(source:fhir.ITestScriptTeardown):TestScriptTeardown {
     var dest:TestScriptTeardown = new TestScriptTeardown(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TestScriptTeardown is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1783,21 +1783,21 @@ export class TestScript extends fhir.DomainResource implements fhir.ITestScript 
   /**
    * Check if the current TestScript contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["name"] === undefined) { missingElements.push("name"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["url"] === undefined) { missingElements.push("url"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TestScript from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.ITestScript):TestScript {
+  static override fromStrict(source:fhir.ITestScript):TestScript {
     var dest:TestScript = new TestScript(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `TestScript is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }

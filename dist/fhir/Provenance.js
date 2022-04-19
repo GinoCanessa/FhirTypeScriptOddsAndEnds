@@ -35,21 +35,21 @@ export class ProvenanceAgent extends fhir.BackboneElement {
     /**
      * Check if the current ProvenanceAgent contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["who"] === undefined) {
             missingElements.push("who");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ProvenanceAgent from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ProvenanceAgent(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ProvenanceAgent is missing elements: ${missingElements.join(", ")}`;
         }
@@ -89,7 +89,7 @@ export class ProvenanceEntity extends fhir.BackboneElement {
     /**
      * Check if the current ProvenanceEntity contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if (this["role"] === undefined) {
             missingElements.push("role");
@@ -97,16 +97,16 @@ export class ProvenanceEntity extends fhir.BackboneElement {
         if (this["what"] === undefined) {
             missingElements.push("what");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a ProvenanceEntity from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new ProvenanceEntity(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `ProvenanceEntity is missing elements: ${missingElements.join(", ")}`;
         }
@@ -181,7 +181,7 @@ export class Provenance extends fhir.DomainResource {
     /**
      * Check if the current Provenance contains all required elements.
      */
-    CheckRequiredElements() {
+    checkRequiredElements() {
         var missingElements = [];
         if ((!this["agent"]) || (this["agent"].length === 0)) {
             missingElements.push("agent");
@@ -192,16 +192,16 @@ export class Provenance extends fhir.DomainResource {
         if ((!this["target"]) || (this["target"].length === 0)) {
             missingElements.push("target");
         }
-        var parentMissing = super.CheckRequiredElements();
+        var parentMissing = super.checkRequiredElements();
         missingElements.push(...parentMissing);
         return missingElements;
     }
     /**
      * Factory function to create a Provenance from an object that MUST contain all required elements.
      */
-    static FromStrict(source) {
+    static fromStrict(source) {
         var dest = new Provenance(source);
-        var missingElements = dest.CheckRequiredElements();
+        var missingElements = dest.checkRequiredElements();
         if (missingElements.length !== 0) {
             throw `Provenance is missing elements: ${missingElements.join(", ")}`;
         }

@@ -795,20 +795,20 @@ export class ContractContentDefinition extends fhir.BackboneElement implements f
   /**
    * Check if the current ContractContentDefinition contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["publicationStatus"] === undefined) { missingElements.push("publicationStatus"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ContractContentDefinition from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IContractContentDefinition):ContractContentDefinition {
+  static override fromStrict(source:fhir.IContractContentDefinition):ContractContentDefinition {
     var dest:ContractContentDefinition = new ContractContentDefinition(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ContractContentDefinition is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -850,19 +850,19 @@ export class ContractTermSecurityLabel extends fhir.BackboneElement implements f
   /**
    * Check if the current ContractTermSecurityLabel contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["classification"] === undefined) { missingElements.push("classification"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ContractTermSecurityLabel from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IContractTermSecurityLabel):ContractTermSecurityLabel {
+  static override fromStrict(source:fhir.IContractTermSecurityLabel):ContractTermSecurityLabel {
     var dest:ContractTermSecurityLabel = new ContractTermSecurityLabel(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ContractTermSecurityLabel is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -894,20 +894,20 @@ export class ContractTermOfferParty extends fhir.BackboneElement implements fhir
   /**
    * Check if the current ContractTermOfferParty contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["reference"]) || (this["reference"].length === 0)) { missingElements.push("reference"); }
     if (this["role"] === undefined) { missingElements.push("role"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ContractTermOfferParty from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IContractTermOfferParty):ContractTermOfferParty {
+  static override fromStrict(source:fhir.IContractTermOfferParty):ContractTermOfferParty {
     var dest:ContractTermOfferParty = new ContractTermOfferParty(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ContractTermOfferParty is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1001,18 +1001,18 @@ export class ContractTermOfferAnswer extends fhir.BackboneElement implements fhi
   /**
    * Check if the current ContractTermOfferAnswer contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ContractTermOfferAnswer from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IContractTermOfferAnswer):ContractTermOfferAnswer {
+  static override fromStrict(source:fhir.IContractTermOfferAnswer):ContractTermOfferAnswer {
     var dest:ContractTermOfferAnswer = new ContractTermOfferAnswer(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ContractTermOfferAnswer is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1089,18 +1089,18 @@ export class ContractTermOffer extends fhir.BackboneElement implements fhir.ICon
   /**
    * Check if the current ContractTermOffer contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ContractTermOffer from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IContractTermOffer):ContractTermOffer {
+  static override fromStrict(source:fhir.IContractTermOffer):ContractTermOffer {
     var dest:ContractTermOffer = new ContractTermOffer(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ContractTermOffer is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1135,18 +1135,18 @@ export class ContractTermAssetContext extends fhir.BackboneElement implements fh
   /**
    * Check if the current ContractTermAssetContext contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ContractTermAssetContext from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IContractTermAssetContext):ContractTermAssetContext {
+  static override fromStrict(source:fhir.IContractTermAssetContext):ContractTermAssetContext {
     var dest:ContractTermAssetContext = new ContractTermAssetContext(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ContractTermAssetContext is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1253,18 +1253,18 @@ export class ContractTermAssetValuedItem extends fhir.BackboneElement implements
   /**
    * Check if the current ContractTermAssetValuedItem contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ContractTermAssetValuedItem from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IContractTermAssetValuedItem):ContractTermAssetValuedItem {
+  static override fromStrict(source:fhir.IContractTermAssetValuedItem):ContractTermAssetValuedItem {
     var dest:ContractTermAssetValuedItem = new ContractTermAssetValuedItem(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ContractTermAssetValuedItem is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1365,18 +1365,18 @@ export class ContractTermAsset extends fhir.BackboneElement implements fhir.ICon
   /**
    * Check if the current ContractTermAsset contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ContractTermAsset from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IContractTermAsset):ContractTermAsset {
+  static override fromStrict(source:fhir.IContractTermAsset):ContractTermAsset {
     var dest:ContractTermAsset = new ContractTermAsset(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ContractTermAsset is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1406,19 +1406,19 @@ export class ContractTermActionSubject extends fhir.BackboneElement implements f
   /**
    * Check if the current ContractTermActionSubject contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if ((!this["reference"]) || (this["reference"].length === 0)) { missingElements.push("reference"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ContractTermActionSubject from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IContractTermActionSubject):ContractTermActionSubject {
+  static override fromStrict(source:fhir.IContractTermActionSubject):ContractTermActionSubject {
     var dest:ContractTermActionSubject = new ContractTermActionSubject(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ContractTermActionSubject is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1576,21 +1576,21 @@ export class ContractTermAction extends fhir.BackboneElement implements fhir.ICo
   /**
    * Check if the current ContractTermAction contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["intent"] === undefined) { missingElements.push("intent"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ContractTermAction from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IContractTermAction):ContractTermAction {
+  static override fromStrict(source:fhir.IContractTermAction):ContractTermAction {
     var dest:ContractTermAction = new ContractTermAction(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ContractTermAction is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1680,19 +1680,19 @@ export class ContractTerm extends fhir.BackboneElement implements fhir.IContract
   /**
    * Check if the current ContractTerm contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["offer"] === undefined) { missingElements.push("offer"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ContractTerm from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IContractTerm):ContractTerm {
+  static override fromStrict(source:fhir.IContractTerm):ContractTerm {
     var dest:ContractTerm = new ContractTerm(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ContractTerm is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1732,21 +1732,21 @@ export class ContractSigner extends fhir.BackboneElement implements fhir.IContra
   /**
    * Check if the current ContractSigner contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["party"] === undefined) { missingElements.push("party"); }
     if ((!this["signature"]) || (this["signature"].length === 0)) { missingElements.push("signature"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ContractSigner from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IContractSigner):ContractSigner {
+  static override fromStrict(source:fhir.IContractSigner):ContractSigner {
     var dest:ContractSigner = new ContractSigner(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ContractSigner is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1774,18 +1774,18 @@ export class ContractFriendly extends fhir.BackboneElement implements fhir.ICont
   /**
    * Check if the current ContractFriendly contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ContractFriendly from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IContractFriendly):ContractFriendly {
+  static override fromStrict(source:fhir.IContractFriendly):ContractFriendly {
     var dest:ContractFriendly = new ContractFriendly(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ContractFriendly is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1813,18 +1813,18 @@ export class ContractLegal extends fhir.BackboneElement implements fhir.IContrac
   /**
    * Check if the current ContractLegal contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ContractLegal from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IContractLegal):ContractLegal {
+  static override fromStrict(source:fhir.IContractLegal):ContractLegal {
     var dest:ContractLegal = new ContractLegal(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ContractLegal is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -1852,18 +1852,18 @@ export class ContractRule extends fhir.BackboneElement implements fhir.IContract
   /**
    * Check if the current ContractRule contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ContractRule from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IContractRule):ContractRule {
+  static override fromStrict(source:fhir.IContractRule):ContractRule {
     var dest:ContractRule = new ContractRule(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `ContractRule is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
@@ -2082,18 +2082,18 @@ export class Contract extends fhir.DomainResource implements fhir.IContract {
   /**
    * Check if the current Contract contains all required elements.
    */
-  override CheckRequiredElements():string[] {
+  override checkRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.CheckRequiredElements();
+    var parentMissing:string[] = super.checkRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Contract from an object that MUST contain all required elements.
    */
-  static override FromStrict(source:fhir.IContract):Contract {
+  static override fromStrict(source:fhir.IContract):Contract {
     var dest:Contract = new Contract(source);
-    var missingElements:string[] = dest.CheckRequiredElements();
+    var missingElements:string[] = dest.checkRequiredElements();
     if (missingElements.length !== 0) { throw `Contract is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
